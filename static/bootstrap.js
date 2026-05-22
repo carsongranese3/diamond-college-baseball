@@ -1,0 +1,59 @@
+// Loads real SEC season data from the Flask backend (which proxies/caches the
+// ncaa.com NCAA API). Teams + schedules come up front; team stats and game box
+// scores are fetched lazily and memoized, since each is an expensive crawl.
+
+const _teamCache = {};
+const _gameCache = {};
+
+window.fetchTeam = function (seo) {
+  if (!_teamCache[seo]) {
+    _teamCache[seo] = fetch("/api/team/" + encodeURIComponent(seo)).then((r) => {
+      if (!r.ok) throw new Error("team " + r.status);
+      return r.json();
+    });
+  }
+  return _teamCache[seo];
+};
+
+// Pass the host team + date + the host's run total so the backend can match
+// this game to a locally-saved 2026/ folder (real play-by-play); it falls back
+// to the ncaa.com API when there's no local copy.
+window.fetchGame = function (game, hostTeamId) {
+  const runs = game.score ? game.score.us : "";
+  const oppSeo = (game.opp && game.opp.id) || "";
+  const qs =
+    "?team=" + encodeURIComponent(hostTeamId || "") +
+    "&iso=" + encodeURIComponent(game.iso || "") +
+    "&runs=" + encodeURIComponent(runs) +
+    "&opp=" + encodeURIComponent(oppSeo);
+  const key = game.id + qs;
+  if (!_gameCache[key]) {
+    _gameCache[key] = fetch(
+      "/api/game/" + encodeURIComponent(game.id) + qs
+    ).then((r) => {
+      if (!r.ok) throw new Error("game " + r.status);
+      return r.json();
+    });
+  }
+  return _gameCache[key];
+};
+
+window.__bootstrapReady = fetch("/api/bootstrap")
+  .then((res) => {
+    if (!res.ok) throw new Error("bootstrap " + res.status);
+    return res.json();
+  })
+  .then((d) => {
+    window.TEAMS = d.teams;
+    window.TEAM_BY_ID = Object.fromEntries(d.teams.map((t) => [t.id, t]));
+    window.SCHEDULES = d.schedules;
+    window.SEASON_UPDATED = d.updated;
+  })
+  .catch((err) => {
+    document.getElementById("root").innerHTML =
+      '<div style="padding:48px;font-family:sans-serif;color:#74808a">' +
+      "Failed to load season data: " +
+      err.message +
+      ". Is the Flask server running?</div>";
+    throw err;
+  });
