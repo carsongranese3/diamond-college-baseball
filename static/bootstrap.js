@@ -4,6 +4,22 @@
 
 const _teamCache = {};
 const _gameCache = {};
+const _playerCache = {};
+
+// One player's per-season totals + game log, from the local 2026/ folders.
+window.fetchPlayer = function (seo, playerName) {
+  const key = seo + "::" + playerName;
+  if (!_playerCache[key]) {
+    _playerCache[key] = fetch(
+      "/api/player/" + encodeURIComponent(seo) +
+      "?player=" + encodeURIComponent(playerName)
+    ).then((r) => {
+      if (!r.ok) throw new Error("player " + r.status);
+      return r.json();
+    });
+  }
+  return _playerCache[key];
+};
 
 window.fetchTeam = function (seo) {
   if (!_teamCache[seo]) {

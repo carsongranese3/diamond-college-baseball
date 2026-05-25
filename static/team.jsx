@@ -1,6 +1,6 @@
 // Team detail view — continuous schedule + Team/Players stats toggle
 
-const TeamDetail = ({ teamId, onBack, onGameClick }) => {
+const TeamDetail = ({ teamId, onBack, onGameClick, onPlayerClick }) => {
   const team = window.TEAM_BY_ID[teamId];
   const [tab, setTab] = React.useState("schedule");
   const [statMode, setStatMode] = React.useState("team");      // team | players
@@ -112,6 +112,7 @@ const TeamDetail = ({ teamId, onBack, onGameClick }) => {
           roster={teamData.roster}
           playerView={playerView}
           setPlayerView={setPlayerView}
+          onPlayerClick={onPlayerClick}
         />
       )}
     </div>
@@ -154,10 +155,20 @@ const ScheduleView = ({ schedule, team, onGameClick }) => {
 
       <div className="sched-list">
         {schedule.map((g, i) => {
-          const showDivider = i === firstUpcomingIdx && firstUpcomingIdx > 0;
+          const phase = g.phase || "regular";
+          const prevPhase = i > 0 ? (schedule[i - 1].phase || "regular") : "regular";
+          const showPhase = phase !== "regular" && phase !== prevPhase;
+          const showUpcoming = i === firstUpcomingIdx && firstUpcomingIdx > 0 && !showPhase;
           return (
             <React.Fragment key={g.id}>
-              {showDivider && (
+              {showPhase && (
+                <div className="sched-divider sched-divider--phase">
+                  <span className="sched-divider__line" />
+                  <span className="sched-divider__label">{phase}</span>
+                  <span className="sched-divider__line" />
+                </div>
+              )}
+              {showUpcoming && (
                 <div className="sched-divider">
                   <span className="sched-divider__line" />
                   <span className="sched-divider__label">Upcoming</span>
@@ -274,7 +285,7 @@ const TeamStatsView = ({ stats, team }) => {
   );
 };
 
-const PlayerStatsView = ({ roster, playerView, setPlayerView }) => {
+const PlayerStatsView = ({ roster, playerView, setPlayerView, onPlayerClick }) => {
   const [sortKey, setSortKey] = React.useState(null);
   const [sortDir, setSortDir] = React.useState("desc");
 
@@ -334,7 +345,7 @@ const PlayerStatsView = ({ roster, playerView, setPlayerView }) => {
               {sortRows(roster.batters).map((p, i) => (
                 <tr key={i}>
                   <td className="td mono muted small">{p.num}</td>
-                  <td className="td"><span className="player-name">{p.name}</span></td>
+                  <td className="td"><span className="player-name player-link" onClick={() => onPlayerClick && onPlayerClick(p.name)}>{p.name}</span></td>
                   <td className="td mono small muted">{p.pos}</td>
                   <td className="td td--right mono">{p.g}</td>
                   <td className="td td--right mono">{p.ab}</td>
@@ -383,7 +394,7 @@ const PlayerStatsView = ({ roster, playerView, setPlayerView }) => {
               {sortRows(roster.pitchers).map((p, i) => (
                 <tr key={i}>
                   <td className="td mono muted small">{p.num}</td>
-                  <td className="td"><span className="player-name">{p.name}</span></td>
+                  <td className="td"><span className="player-name player-link" onClick={() => onPlayerClick && onPlayerClick(p.name)}>{p.name}</span></td>
                   <td className="td mono small muted">{p.pos}</td>
                   <td className="td td--right mono">{p.g}</td>
                   <td className="td td--right mono">{p.gs}</td>

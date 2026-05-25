@@ -1,6 +1,6 @@
 // Game detail view — box score + player lines
 
-const GameDetail = ({ game, hostTeamId, onBack, onTeamClick, backLabel }) => {
+const GameDetail = ({ game, hostTeamId, onBack, onTeamClick, onPlayerClick, backLabel }) => {
   const host = window.TEAM_BY_ID[hostTeamId];
   const backText = backLabel || `${host.name} schedule`;
   const [detail, setDetail] = React.useState(null);
@@ -114,11 +114,11 @@ const GameDetail = ({ game, hostTeamId, onBack, onTeamClick, backLabel }) => {
 
       <section className="boxscore">
         <Eyebrow>Batters · {detail.line[statTeam].name}</Eyebrow>
-        <BatterTable rows={detail.batters[statTeam]} />
+        <BatterTable rows={detail.batters[statTeam]} seo={detail.line[statTeam].seo} onPlayerClick={onPlayerClick} />
       </section>
       <section className="boxscore">
         <Eyebrow>Pitchers · {detail.line[statTeam].name}</Eyebrow>
-        <PitcherTable rows={detail.pitchers[statTeam]} />
+        <PitcherTable rows={detail.pitchers[statTeam]} seo={detail.line[statTeam].seo} onPlayerClick={onPlayerClick} />
       </section>
 
       {detail.plays && detail.plays.length > 0 && (
@@ -202,7 +202,7 @@ const OpponentCard = ({ game, hostTeamId, onTeamClick }) => {
   );
 };
 
-const BatterTable = ({ rows }) => {
+const BatterTable = ({ rows, seo, onPlayerClick }) => {
   const totals = rows.reduce((acc, r) => ({
     ab: acc.ab + r.ab, rr: acc.rr + r.r, h: acc.h + r.h, rbi: acc.rbi + r.rbi, bb: acc.bb + r.bb, k: acc.k + r.k
   }), { ab:0, rr:0, h:0, rbi:0, bb:0, k:0 });
@@ -224,7 +224,7 @@ const BatterTable = ({ rows }) => {
       <tbody>
         {rows.map((r, i) => (
           <tr key={i}>
-            <td className="td">{r.name}</td>
+            <td className="td"><span className="player-link" onClick={() => onPlayerClick && seo && onPlayerClick(seo, r.name)}>{r.name}</span></td>
             <td className="td mono small muted">{r.pos}</td>
             <td className="td td--right mono">{r.ab}</td>
             <td className="td td--right mono">{r.r}</td>
@@ -251,7 +251,7 @@ const BatterTable = ({ rows }) => {
   );
 };
 
-const PitcherTable = ({ rows }) => (
+const PitcherTable = ({ rows, seo, onPlayerClick }) => (
   <table className="box-table">
     <thead>
       <tr>
@@ -269,7 +269,7 @@ const PitcherTable = ({ rows }) => (
     <tbody>
       {rows.map((r, i) => (
         <tr key={i}>
-          <td className="td">{r.name}</td>
+          <td className="td"><span className="player-link" onClick={() => onPlayerClick && seo && onPlayerClick(seo, r.name)}>{r.name}</span></td>
           <td className="td td--right mono">{r.ip}</td>
           <td className="td td--right mono">{r.h}</td>
           <td className="td td--right mono">{r.r}</td>

@@ -12,13 +12,17 @@ const App = () => {
   const goGame = (game, hostTeamId, origin) => setView({ name: "game", game, hostTeamId, origin });
   const goStandings = () => setView({ name: "standings" });
   const goScores = () => setView({ name: "scores" });
+  // origin describes where to return (a "team" or "game" view) so Back works.
+  const goPlayer = (seo, playerName, origin) =>
+    setView({ name: "player", seo, playerName, origin });
 
-  // Which top-nav section the current view belongs to (a game inherits the
-  // section it was opened from, so the tab stays highlighted on the detail page).
-  const section =
-    view.name === "scores" || (view.name === "game" && view.origin === "scores")
-      ? "scores"
-      : "standings";
+  // Which top-nav section the current view belongs to (detail views inherit the
+  // section they were opened from, so the right tab stays highlighted).
+  const fromScores =
+    (view.name === "game" && view.origin === "scores") ||
+    (view.name === "player" && view.origin && view.origin.view === "game" &&
+      view.origin.gameOrigin === "scores");
+  const section = view.name === "scores" || fromScores ? "scores" : "standings";
 
   return (
     <div className="app">
@@ -33,6 +37,8 @@ const App = () => {
             teamId={view.teamId}
             onBack={goStandings}
             onGameClick={(g, hostTeamId) => goGame(g, hostTeamId || view.teamId, "team")}
+            onPlayerClick={(playerName) =>
+              goPlayer(view.teamId, playerName, { view: "team", teamId: view.teamId })}
           />
         )}
         {view.name === "game" && (
@@ -42,6 +48,28 @@ const App = () => {
             onBack={view.origin === "scores" ? goScores : () => goTeam(view.hostTeamId)}
             backLabel={view.origin === "scores" ? "Scores" : null}
             onTeamClick={(id) => goTeam(id)}
+            onPlayerClick={(sideSeo, playerName) =>
+              goPlayer(sideSeo, playerName, {
+                view: "game", game: view.game,
+                hostTeamId: view.hostTeamId, gameOrigin: view.origin,
+              })}
+          />
+        )}
+        {view.name === "player" && (
+          <PlayerDetail
+            seo={view.seo}
+            playerName={view.playerName}
+            backLabel={view.origin && view.origin.view === "game" ? "Box score" : null}
+            onBack={() => {
+              const o = view.origin || {};
+              if (o.view === "game") {
+                setView({ name: "game", game: o.game, hostTeamId: o.hostTeamId, origin: o.gameOrigin });
+              } else if (o.view === "team") {
+                goTeam(o.teamId);
+              } else {
+                goStandings();
+              }
+            }}
           />
         )}
       </main>

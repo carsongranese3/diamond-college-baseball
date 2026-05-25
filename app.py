@@ -43,9 +43,13 @@ def _memo(key, ttl, producer):
 @app.route("/api/bootstrap")
 def bootstrap():
     data = _memo("season", season.SEASON_AGGREGATE_TTL, season.build_season)
+    # Schedules/scores come solely from the local 2026/ folders; the API still
+    # supplies the team list, rankings (rank/RPI/order), and logos.
+    schedules = _memo("local_schedules", season.SEASON_AGGREGATE_TTL,
+                      lambda: local_data.schedules(data["teams"]))
     return jsonify({
         "teams": data["teams"],
-        "schedules": data["schedules"],
+        "schedules": schedules,
         "updated": data["updated"],
     })
 
@@ -63,6 +67,21 @@ def team(seo):
         return local if local is not None else compute_team_stats(seo, sched)
 
     return jsonify(_memo(f"team:{seo}", 21600, producer))
+
+
+@app.route("/api/player/<seo>")
+def player(seo):
+    # Per-season totals + game log for one player, built solely from 2026/ (and
+    # future-season) folders. The team name is resolved server-side from the seo.
+    player_name = request.args.get("player", "")
+
+    def producer():
+        return local_data.player(seo, _team_name(seo), player_name)
+
+    result = _memo(f"player:{seo}:{player_name}", 21600, producer)
+    if result is None:
+        abort(404)
+    return jsonify(result)
 
 
 @app.route("/api/game/<game_id>")
