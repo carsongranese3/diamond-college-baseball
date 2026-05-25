@@ -9,26 +9,38 @@ const App = () => {
   }, [view]);
 
   const goTeam = (teamId) => setView({ name: "team", teamId });
-  const goGame = (game, hostTeamId) => setView({ name: "game", game, hostTeamId });
+  const goGame = (game, hostTeamId, origin) => setView({ name: "game", game, hostTeamId, origin });
   const goStandings = () => setView({ name: "standings" });
+  const goScores = () => setView({ name: "scores" });
+
+  // Which top-nav section the current view belongs to (a game inherits the
+  // section it was opened from, so the tab stays highlighted on the detail page).
+  const section =
+    view.name === "scores" || (view.name === "game" && view.origin === "scores")
+      ? "scores"
+      : "standings";
 
   return (
     <div className="app">
-      <Topbar onHome={goStandings} />
+      <Topbar section={section} onHome={goStandings} onScores={goScores} />
       <main className="container">
         {view.name === "standings" && <Standings onTeamClick={goTeam} />}
+        {view.name === "scores" && (
+          <Scores onGameClick={(g, hostTeamId) => goGame(g, hostTeamId, "scores")} />
+        )}
         {view.name === "team" && (
           <TeamDetail
             teamId={view.teamId}
             onBack={goStandings}
-            onGameClick={(g, hostTeamId) => goGame(g, hostTeamId || view.teamId)}
+            onGameClick={(g, hostTeamId) => goGame(g, hostTeamId || view.teamId, "team")}
           />
         )}
         {view.name === "game" && (
           <GameDetail
             game={view.game}
             hostTeamId={view.hostTeamId}
-            onBack={() => goTeam(view.hostTeamId)}
+            onBack={view.origin === "scores" ? goScores : () => goTeam(view.hostTeamId)}
+            backLabel={view.origin === "scores" ? "Scores" : null}
             onTeamClick={(id) => goTeam(id)}
           />
         )}
@@ -40,22 +52,22 @@ const App = () => {
   );
 };
 
-const Topbar = ({ onHome }) => (
-  <header className="topbar">
-    <button className="topbar__brand" onClick={onHome}>
-      <span className="topbar__mark">◆</span>
-      <span className="topbar__title">DIAMOND<span className="topbar__title-thin">/SEC</span></span>
-    </button>
-    <nav className="topbar__nav">
-      <a className="topbar__link topbar__link--active" onClick={onHome}>Standings</a>
-      <a className="topbar__link muted">Polls</a>
-      <a className="topbar__link muted">Stats</a>
-      <a className="topbar__link muted">Scores</a>
-      <a className="topbar__link muted">Bracket</a>
-    </nav>
-    <div className="topbar__date mono">2026 SEASON · NCAA.COM</div>
-  </header>
-);
+const Topbar = ({ section, onHome, onScores }) => {
+  const scoresActive = section === "scores";
+  return (
+    <header className="topbar">
+      <button className="topbar__brand" onClick={onHome}>
+        <span className="topbar__mark">◆</span>
+        <span className="topbar__title">DIAMOND<span className="topbar__title-thin">/SEC</span></span>
+      </button>
+      <nav className="topbar__nav">
+        <a className={`topbar__link ${scoresActive ? "muted" : "topbar__link--active"}`} onClick={onHome}>Standings</a>
+        <a className={`topbar__link ${scoresActive ? "topbar__link--active" : "muted"}`} onClick={onScores}>Scores</a>
+      </nav>
+      <div className="topbar__date mono">2026 SEASON · NCAA.COM</div>
+    </header>
+  );
+};
 
 window.__bootstrapReady.then(() => {
   ReactDOM.createRoot(document.getElementById("root")).render(<App />);

@@ -301,7 +301,10 @@ def _table_rows(table):
 def team_schedule(school_id, season):
     """List of games for a team/season: contest_id, date, opponent, home, result."""
     stid = get_season_team_id(school_id, season)
-    soup = BeautifulSoup(fetch_html(f"{NCAA_BASE}/teams/{stid}"), "lxml")
+    # The schedule is a living index — games appear as they're played — so always
+    # re-fetch it instead of serving the permanent cache; otherwise newly played
+    # games (e.g. conference-tournament games) are never discovered.
+    soup = BeautifulSoup(fetch_html(f"{NCAA_BASE}/teams/{stid}", use_cache=False), "lxml")
     games, seen = [], set()
     for a in soup.find_all("a", href=True):
         m = _CONTEST_RE.search(a["href"])

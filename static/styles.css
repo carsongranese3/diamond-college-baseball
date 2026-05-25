@@ -617,6 +617,114 @@ a { color: inherit; text-decoration: none; }
 .result-chip.win { background: var(--win); color: white; }
 .result-chip.loss { background: var(--loss); color: white; }
 
+/* ─── Scores (daily scoreboard) ─── */
+.scores__header { margin-bottom: 18px; }
+
+.scores__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 20px;
+  padding: 12px 18px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.scores__arrow {
+  font-size: 24px;
+  line-height: 1;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 120ms;
+}
+.scores__arrow:hover:not(:disabled) {
+  background: var(--hover);
+  border-color: var(--line-2);
+  color: var(--accent);
+}
+.scores__arrow:disabled { opacity: 0.3; cursor: default; }
+
+.scores__date-wrap { position: relative; text-align: center; min-width: 260px; }
+.scores__date-main { font-family: var(--font-serif); font-size: 24px; line-height: 1.1; }
+.scores__date-sub {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 3px;
+}
+/* The native <select> is laid over the date label so any day is one click away. */
+.scores__select {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.score-row {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) 24px;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--line);
+  transition: 100ms;
+  cursor: pointer;
+}
+.score-row:last-child { border-bottom: 0; }
+.score-row:hover { background: var(--hover); }
+.score-row--upcoming { cursor: default; background: var(--bg-2); }
+.score-row--upcoming:hover { background: var(--bg-2); }
+
+.score-row__final {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+.score-row__time { font-size: 12px; color: var(--muted); }
+
+.score-row__teams { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.score-row__team {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) 32px;
+  align-items: center;
+  gap: 10px;
+}
+.score-row__name {
+  font-weight: 600;
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.score-row__num { font-size: 16px; font-weight: 700; text-align: right; }
+.score-row__team--lose { color: var(--muted); }
+.score-row__team--win .score-row__num { color: var(--accent); }
+
+.score-row__chev {
+  color: var(--muted);
+  font-size: 18px;
+  text-align: right;
+  transition: 120ms;
+}
+.score-row:not(.score-row--upcoming):hover .score-row__chev {
+  color: var(--accent);
+  transform: translateX(2px);
+}
+
 /* ─── Stats ─── */
 .stats-section { margin-bottom: 32px; }
 .stat-grid {

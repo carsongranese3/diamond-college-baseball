@@ -1,7 +1,8 @@
 // Game detail view — box score + player lines
 
-const GameDetail = ({ game, hostTeamId, onBack, onTeamClick }) => {
+const GameDetail = ({ game, hostTeamId, onBack, onTeamClick, backLabel }) => {
   const host = window.TEAM_BY_ID[hostTeamId];
+  const backText = backLabel || `${host.name} schedule`;
   const [detail, setDetail] = React.useState(null);
   const [error, setError] = React.useState(null);
   // Which team's box-score tables to show; default to the host team's side.
@@ -17,7 +18,7 @@ const GameDetail = ({ game, hostTeamId, onBack, onTeamClick }) => {
   if (error) {
     return (
       <div className="game-detail">
-        <BackLink onClick={onBack}>{host.name} schedule</BackLink>
+        <BackLink onClick={onBack}>{backText}</BackLink>
         <div className="loading-block">No box score available — {error}</div>
       </div>
     );
@@ -25,7 +26,7 @@ const GameDetail = ({ game, hostTeamId, onBack, onTeamClick }) => {
   if (!detail) {
     return (
       <div className="game-detail">
-        <BackLink onClick={onBack}>{host.name} schedule</BackLink>
+        <BackLink onClick={onBack}>{backText}</BackLink>
         <div className="loading-block">Loading box score…</div>
       </div>
     );
@@ -45,7 +46,7 @@ const GameDetail = ({ game, hostTeamId, onBack, onTeamClick }) => {
 
   return (
     <div className="game-detail">
-      <BackLink onClick={onBack}>{host.name} schedule</BackLink>
+      <BackLink onClick={onBack}>{backText}</BackLink>
 
       <header className="game-hero">
         <Eyebrow>{game.date}{detail.venue ? ` · ${detail.venue}` : ""}</Eyebrow>
