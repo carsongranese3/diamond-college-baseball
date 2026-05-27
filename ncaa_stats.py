@@ -36,9 +36,13 @@ NCAA_BASE = "https://stats.ncaa.org"
 SPORT_CODE = "MBA"  # men's baseball
 CACHE_DIR = os.path.join(os.path.dirname(__file__), "cache_ncaa_stats")
 
-SETTLE_MS_FIRST = 3500  # FIRST navigation: let the Akamai challenge fully clear
+SETTLE_MS_FIRST = 5000  # FIRST navigation: let the Akamai challenge fully clear
 SETTLE_MS = 1200        # later navigations reuse the cleared session, so shorter
-POLITE_DELAY = 1.0      # seconds between navigations (rate-limit)
+CHALLENGE_RETRIES = 3   # reloads to clear the Akamai JS challenge if it lingers
+CHALLENGE_WAIT_MS = 2500  # extra wait before each challenge-clearing reload
+MIN_REAL_PAGE = 2000    # a real stats.ncaa.org page is tens of KB; shorter = challenge
+POLITE_DELAY = 4.0      # seconds between navigations (rate-limit; kept conservative
+                        # to avoid tripping Akamai's bot protection — ~0.25 req/s)
 NAV_TIMEOUT = 60000     # ms
 VERBOSE = False         # when True, print each page fetch live (pullers set this)
 
@@ -73,6 +77,17 @@ def _browser_loop():
                     # subsequent pages render fast, so a short settle is enough.
                     page.wait_for_timeout(SETTLE_MS if cleared else SETTLE_MS_FIRST)
                     html = page.content()
+                    # Akamai sometimes serves a tiny JS challenge page first; it sets
+                    # a clearance cookie, then a reload returns the real page. Reload
+                    # a few times before giving up — far more reliable than "re-run".
+                    tries = 0
+                    while (len(html) < MIN_REAL_PAGE and not _looks_blocked(html)
+                           and tries < CHALLENGE_RETRIES):
+                        tries += 1
+                        page.wait_for_timeout(CHALLENGE_WAIT_MS)
+                        page.reload(wait_until="domcontentloaded", timeout=NAV_TIMEOUT)
+                        page.wait_for_timeout(SETTLE_MS_FIRST)
+                        html = page.content()
                     result = ("ok", html)
                     cleared = True
                 except Exception as exc:  # navigation failure
@@ -98,7 +113,15 @@ def _ensure_worker():
             _worker_err[0] = None
             _worker = threading.Thread(target=_browser_loop, daemon=True)
             _worker.start()
-    _ready.wait(timeout=120)
+    # Wait generously for the browser to boot. A slow cold start used to slip past
+    # this and surface later as a cryptic queue timeout; now we wait longer and, if
+    # it's truly stuck, raise a clear message instead.
+    if not _ready.wait(timeout=240):
+        if _worker_err[0]:
+            raise RuntimeError("Camoufox failed to start: " + _worker_err[0])
+        raise RuntimeError(
+            "Camoufox didn't finish booting in 240s — usually resource contention "
+            "(stop the webpage / close heavy apps) or a slow cold start. Just re-run.")
     if _worker_err[0]:
         raise RuntimeError("Camoufox failed to start: " + _worker_err[0])
 
@@ -141,7 +164,8 @@ def fetch_html(url, use_cache=True):
         reply = queue.Queue()
         _result_map[req_id] = reply
     _url_queue.put((req_id, url))
-    status, payload = reply.get(timeout=NAV_TIMEOUT / 1000 + 30)
+    # Generous: covers the nav plus a few Akamai challenge-clearing reloads.
+    status, payload = reply.get(timeout=NAV_TIMEOUT / 1000 + 90)
     with _result_lock:
         _result_map.pop(req_id, None)
 
@@ -404,21 +428,43 @@ def contest_player_stats(cid):
 
 
 def contest_play_by_play(cid):
-    """Ordered list of plays [{text, score}] for a contest."""
+    """Ordered [{side, team, text, score}] for a contest — BOTH teams' at-bats.
+
+    Each inning is laid out in three columns: [away | score | home]. A row's play
+    sits in whichever side column is batting. The old version read only the away
+    column (cells[0]), so it silently dropped the home team's half of every game.
+    """
     soup = BeautifulSoup(
         fetch_html(f"{NCAA_BASE}/contests/{cid}/play_by_play"), "lxml")
     verbs = ("walked", "singled", "grounded", "struck out", "flied", "doubled",
              "tripled", "homered", "reached", "popped", "lined", "fouled",
              "hit by pitch", "to ", "advanced", "scored", "stole")
+
+    def _is_play(text):
+        return bool(text) and any(w in text for w in verbs)
+
+    away_name = home_name = ""
     plays = []
     for t in soup.find_all("table"):
         if not any(w in t.get_text(" ", strip=True) for w in verbs):
             continue
         for tr in t.find_all("tr"):
             cells = [c.get_text(" ", strip=True) for c in tr.find_all(["td", "th"])]
-            if cells and cells[0] and any(w in cells[0] for w in verbs):
-                plays.append({"text": cells[0],
-                              "score": cells[1] if len(cells) > 1 else ""})
+            if len(cells) < 2:
+                continue
+            # Header row "<Away> | Score | <Home>": capture team names, then skip.
+            if len(cells) >= 3 and cells[1].strip().lower() == "score":
+                away_name, home_name = cells[0], cells[2]
+                continue
+            score = cells[1]
+            away_text = cells[0]
+            home_text = cells[2] if len(cells) >= 3 else ""
+            if _is_play(away_text):
+                plays.append({"side": "away", "team": away_name,
+                              "text": away_text, "score": score})
+            if _is_play(home_text):
+                plays.append({"side": "home", "team": home_name,
+                              "text": home_text, "score": score})
     return plays
 
 

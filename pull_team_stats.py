@@ -47,12 +47,12 @@ ns.VERBOSE = True  # print each page fetch live so progress is always visible
 # ─── CONFIG ──────────────────────────────────────────────────────────────────
 SEASON = 2026
 ALL_SEC = False           # True = pull ALL 16 SEC teams (ignores TEAM_SCHOOL/LABEL)
-TEAM_SCHOOL = "Vanderbilt"     # single team: school name (matched vs the NCAA table)
-TEAM_LABEL = "Vanderbilt"      # single team: folder name under <SEASON>/
+TEAM_SCHOOL = "Alabama"     # single team: school name (matched vs the NCAA table)
+TEAM_LABEL = "Alabama"      # single team: folder name under <SEASON>/
 START_DATE = ""           # ISO "YYYY-MM-DD"; "" = no lower bound (season start)
 END_DATE = ""             # ISO "YYYY-MM-DD"; "" = no upper bound (season end)
 LIMIT = 0                 # 0 = whole season; >0 = first N games (for testing)
-FORCE = False             # True = re-pull games even if already saved in <SEASON>/
+FORCE = True             # True = re-pull games even if already saved in <SEASON>/
 # ─────────────────────────────────────────────────────────────────────────────
 
 # The 16 SEC baseball schools (names verified against the collegebaseball lookup
@@ -62,6 +62,8 @@ SEC_TEAMS = [
     "Mississippi St.", "Missouri", "Oklahoma", "Ole Miss", "South Carolina",
     "Tennessee", "Texas", "Texas A&M", "Vanderbilt",
 ]
+
+INTER_TEAM_DELAY = 5   # seconds to pause between teams in pull_all_sec (politeness)
 
 _FILES = ("boxscore.json", "player_stats.json", "play_by_play.json")
 
@@ -128,6 +130,9 @@ def pull(school=TEAM_SCHOOL, label=TEAM_LABEL, season=SEASON, limit=LIMIT,
         except ns.BlockedError as e:
             errors.append((name, "BLOCKED"))
             print(f"  [{i:>2}/{len(games)}] {name}/  BLOCKED: {e}")
+            print("     ⛔ Akamai blocked this IP — stopping now so the ban isn't "
+                  "made worse.\n     Switch IP or wait, then re-run (saved games skip).")
+            break
         except Exception as e:  # keep going on a bad game
             errors.append((name, f"{type(e).__name__}: {e}"))
             print(f"  [{i:>2}/{len(games)}] {name}/  ERROR: {type(e).__name__}: {e}")
@@ -157,6 +162,7 @@ def pull_all_sec(season=SEASON, start_date=START_DATE, end_date=END_DATE,
 
     totals = {"written": 0, "skipped": 0, "game_errors": 0}
     team_failures = []
+    blocked = False
     for n, team in enumerate(SEC_TEAMS, 1):
         print(f"\n──────── [{n}/{len(SEC_TEAMS)}] {team} ────────")
         try:
@@ -165,9 +171,25 @@ def pull_all_sec(season=SEASON, start_date=START_DATE, end_date=END_DATE,
             totals["written"] += res["written"]
             totals["skipped"] += res["skipped"]
             totals["game_errors"] += len(res["errors"])
+            # Games coming back BLOCKED means the IP just got flagged mid-run.
+            if any("BLOCK" in str(msg).upper() for _nm, msg in res["errors"]):
+                blocked = True
+        except ns.BlockedError as e:
+            blocked = True
+            print(f"  !! {team}: BLOCKED — {e}")
         except Exception as e:  # whole-team failure (lookup/schedule) — keep going
             team_failures.append((team, f"{type(e).__name__}: {e}"))
             print(f"  !! {team} failed: {type(e).__name__}: {e}")
+
+        if blocked:
+            # Once Akamai blocks the IP, every further request just digs the ban
+            # deeper — stop immediately. Already-saved games are skipped on re-run.
+            print("\n  ⛔ stats.ncaa.org is blocking this IP (Akamai). Aborting the run.\n"
+                  "     Switch to a different IP (phone hotspot / VPN / new router IP)\n"
+                  "     or wait, verify with stats.ncaa.org in a browser, then re-run.")
+            break
+        if n < len(SEC_TEAMS):
+            time.sleep(INTER_TEAM_DELAY)  # breather between teams (good citizen)
 
     ns.shutdown()  # one shutdown for the whole run
     print(f"\n════════ ALL SEC DONE in {time.time() - started:.0f}s ════════")
