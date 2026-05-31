@@ -33,8 +33,10 @@ def build_for_team(team_label):
     # not play_by_play.json — so don't go through _iter_games (which requires all
     # three and would skip games whose PBP file is iCloud-offloaded).
     by_name = {}
-    for d in sorted(os.listdir(team_dir)):
-        game_dir = os.path.join(team_dir, d)
+    sched_dir = os.path.join(team_dir, "schedule")
+    game_names = sorted(os.listdir(sched_dir)) if os.path.isdir(sched_dir) else []
+    for d in game_names:
+        game_dir = os.path.join(sched_dir, d)
         if not os.path.isdir(game_dir):
             continue
         bp = os.path.join(game_dir, "boxscore.json")

@@ -82,7 +82,7 @@ def pull(team_seo=TEAM_SEO, team_label=TEAM_LABEL, year=YEAR, fresh=FRESH):
             name = f"{name}_{gid}"
         used.add(name)
 
-        game_dir = os.path.join(out_dir, name)
+        game_dir = os.path.join(out_dir, "schedule", name)
         os.makedirs(game_dir, exist_ok=True)
 
         # 1. raw box score

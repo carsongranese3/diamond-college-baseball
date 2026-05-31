@@ -129,8 +129,11 @@ def _load(game_dir):
 
 
 def _iter_games(team_dir):
-    for d in sorted(os.listdir(team_dir)):
-        full = os.path.join(team_dir, d)
+    sched_dir = os.path.join(team_dir, "schedule")
+    if not os.path.isdir(sched_dir):
+        return
+    for d in sorted(os.listdir(sched_dir)):
+        full = os.path.join(sched_dir, d)
         if os.path.isdir(full):
             data = _load(full)
             if data:

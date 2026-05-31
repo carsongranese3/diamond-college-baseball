@@ -114,7 +114,7 @@ def pull(school=TEAM_SCHOOL, label=TEAM_LABEL, season=SEASON, limit=LIMIT,
         cid = g["contest_id"]
         vs = "vs" if g["home"] else "at"
         name = f"{g['iso']}_{vs}_{_slug(g['opponent'])}"
-        game_dir = os.path.join(out_root, name)
+        game_dir = os.path.join(out_root, "schedule", name)
         # #2: skip games already fully saved (no fetch, no parse) unless forced.
         if not force and _already_saved(game_dir):
             skipped += 1

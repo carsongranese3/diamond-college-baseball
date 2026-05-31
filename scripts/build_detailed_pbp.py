@@ -12,7 +12,7 @@ Source quirks handled:
   * Innings aren't marked, so we delimit half-innings by counting to 3 outs.
 
 Run (game dir is relative to the project root):
-    .venv/bin/python scripts/build_detailed_pbp.py "2026/Texas/2026-02-13_vs_uc-davis"
+    .venv/bin/python scripts/build_detailed_pbp.py "2026/Texas/schedule/2026-02-13_vs_uc-davis"
 """
 
 import json
@@ -247,7 +247,7 @@ def build(game_dir):
 
 
 if __name__ == "__main__":
-    gd = sys.argv[1] if len(sys.argv) > 1 else "2026/Texas/2026-02-13_vs_uc-davis"
+    gd = sys.argv[1] if len(sys.argv) > 1 else "2026/Texas/schedule/2026-02-13_vs_uc-davis"
     if not os.path.isabs(gd):
         gd = os.path.join(_PROJECT_ROOT, gd)   # resolve against project root
     dest, data = build(gd)
