@@ -1,13 +1,2 @@
-# Web app (ncaa.com / henrygd pipeline)
 Flask==3.1.3
-
-# stats.ncaa.org scraping (Camoufox stealth browser defeats the Akamai 403)
-camoufox==0.4.11          # also run once after install:  python -m camoufox fetch
-beautifulsoup4==4.14.3
-lxml==6.1.1
-
-# School-name -> NCAA id lookup table used by ncaa_stats.get_school_id().
-# collegebaseball ships a parquet table (needs pyarrow). On Python 3.12+ install with:
-#   pip install --no-build-isolation "git+https://github.com/nathanblumenfeld/collegebaseball"
-collegebaseball @ git+https://github.com/nathanblumenfeld/collegebaseball
-pyarrow==24.0.0
+gunicorn==23.0.0
