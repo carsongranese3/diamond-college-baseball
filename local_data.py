@@ -464,6 +464,39 @@ def schedules(teams):
     return out
 
 
+def regular_season_records(schedules):
+    """{seo: {confW, confL, ovrW, ovrL, streak}} computed from regular-season
+    games only — SEC and NCAA tournament games (phase != 'regular') are excluded,
+    so the standings reflect the conference regular season, not postseason play.
+    `schedules` is the dict produced by schedules() above (each game carries its
+    phase, result, and opponent conf flag)."""
+    out = {}
+    for seo, games in schedules.items():
+        cw = cl = ow = ol = 0
+        seq = []
+        for g in sorted(games, key=lambda x: x.get("iso") or ""):
+            if g.get("phase") != "regular" or g.get("result") not in ("W", "L"):
+                continue
+            seq.append(g["result"])
+            if g["result"] == "W":
+                ow += 1
+                cw += 1 if g["opp"]["conf"] else 0
+            else:
+                ol += 1
+                cl += 1 if g["opp"]["conf"] else 0
+        streak = "—"
+        if seq:
+            last = seq[-1]
+            n = 0
+            for r in reversed(seq):
+                if r != last:
+                    break
+                n += 1
+            streak = f"{last}{n}"
+        out[seo] = {"confW": cw, "confL": cl, "ovrW": ow, "ovrL": ol, "streak": streak}
+    return out
+
+
 # ── Per-player career (per-season totals + game-by-game log) ─────────────────
 def _bat_game_line(row):
     ab, h = to_int(row.get("AB")), to_int(row.get("H"))

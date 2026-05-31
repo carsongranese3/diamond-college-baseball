@@ -47,8 +47,13 @@ def bootstrap():
     # supplies the team list, rankings (rank/RPI/order), and logos.
     schedules = _memo("local_schedules", season.SEASON_AGGREGATE_TTL,
                       lambda: local_data.schedules(data["teams"]))
+    # Standings reflect the conference regular season only — overlay W/L records
+    # computed from regular-season games (postseason games are excluded). Overlay
+    # onto copies so the memoized team objects keep their API values.
+    records = local_data.regular_season_records(schedules)
+    teams = [{**t, **records.get(t["id"], {})} for t in data["teams"]]
     return jsonify({
-        "teams": data["teams"],
+        "teams": teams,
         "schedules": schedules,
         "updated": data["updated"],
     })
