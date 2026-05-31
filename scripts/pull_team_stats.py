@@ -13,14 +13,14 @@ Layout (mirrors pull_team.py):
         play_by_play.json    ordered plays with running score
 
 Run:
-    .venv/bin/python pull_team_stats.py            # uses CONFIG below
-    .venv/bin/python pull_team_stats.py Georgia Georgia
-    .venv/bin/python pull_team_stats.py Texas Texas 3   # 3rd arg = limit (testing)
-    .venv/bin/python pull_team_stats.py Texas Texas 0 2026-05-19 2026-05-24
+    .venv/bin/python scripts/pull_team_stats.py            # uses CONFIG below
+    .venv/bin/python scripts/pull_team_stats.py Georgia Georgia
+    .venv/bin/python scripts/pull_team_stats.py Texas Texas 3   # 3rd arg = limit (testing)
+    .venv/bin/python scripts/pull_team_stats.py Texas Texas 0 2026-05-19 2026-05-24
         # args 4 & 5 = start/end date (ISO, inclusive); 0 = no game-count limit.
         # Or just set START_DATE / END_DATE in CONFIG and run with no args.
-    .venv/bin/python pull_team_stats.py all          # every SEC team, whole season
-    .venv/bin/python pull_team_stats.py all 2026-05-19 2026-05-24   # SEC, date window
+    .venv/bin/python scripts/pull_team_stats.py all          # every SEC team, whole season
+    .venv/bin/python scripts/pull_team_stats.py all 2026-05-19 2026-05-24   # SEC, date window
 
 First run is slow: each game = 3 stealth-browser page loads, rate-limited.
 Pages are cached in cache_ncaa_stats/, so re-runs are fast. A full all-SEC pull is
@@ -33,6 +33,12 @@ import os
 import re
 import sys
 import time
+
+# This file now lives in scripts/; add the project root to sys.path so the
+# library modules (ncaa_stats, etc.) at the project root resolve, and remember
+# the project root for the game-folder output paths below.
+_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, _PROJECT_ROOT)
 
 # All output is flushed immediately so progress shows up live in the terminal.
 print = functools.partial(print, flush=True)
@@ -81,7 +87,7 @@ def _already_saved(game_dir):
 
 def pull(school=TEAM_SCHOOL, label=TEAM_LABEL, season=SEASON, limit=LIMIT,
          force=FORCE, start_date=START_DATE, end_date=END_DATE, shutdown=True):
-    out_root = os.path.join(os.path.dirname(__file__), str(season), label)
+    out_root = os.path.join(_PROJECT_ROOT, str(season), label)
     os.makedirs(out_root, exist_ok=True)
 
     print(f"Looking up {school} and its {season} schedule on stats.ncaa.org…")

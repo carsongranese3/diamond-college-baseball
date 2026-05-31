@@ -69,6 +69,15 @@ def team(seo):
     return jsonify(_memo(f"team:{seo}", 21600, producer))
 
 
+@app.route("/api/roster/<seo>")
+def roster(seo):
+    """Team roster, read from 2026/<Team>/roster.txt (built by build_roster.py)."""
+    data = local_data.read_roster(seo, _team_name(seo))
+    if data is None:
+        abort(404)
+    return jsonify(data)
+
+
 @app.route("/api/player/<seo>")
 def player(seo):
     # Per-season totals + game log for one player, built solely from 2026/ (and

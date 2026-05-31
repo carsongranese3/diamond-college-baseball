@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Diamond/SEC — College Baseball</title>
 
+  <!-- Apply the saved theme before paint so dark mode doesn't flash light. -->
+  <script>
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -28,6 +33,7 @@
   <script type="text/babel" src="/static/game.jsx"></script>
   <script type="text/babel" src="/static/scores.jsx"></script>
   <script type="text/babel" src="/static/player.jsx"></script>
+  <script type="text/babel" src="/static/compare.jsx"></script>
   <script type="text/babel" src="/static/app.jsx"></script>
 </body>
 </html>

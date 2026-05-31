@@ -42,6 +42,13 @@ def _read_cache(path, ttl):
         return None
     if ttl is not None and (time.time() - os.path.getmtime(path)) > ttl:
         return None
+    # iCloud-offloaded files are treated as a cache miss (reading them would
+    # stall on a slow iCloud download); the caller refetches from the API.
+    try:
+        if os.stat(path).st_flags & 0x40000000:  # SF_DATALESS
+            return None
+    except (OSError, AttributeError):
+        pass
     try:
         with open(path, "r", encoding="utf-8") as fh:
             return json.load(fh)

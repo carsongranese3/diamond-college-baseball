@@ -11,14 +11,18 @@ Source quirks handled:
   * Names in the PBP are last-name only; full names come from player_stats.json.
   * Innings aren't marked, so we delimit half-innings by counting to 3 outs.
 
-Run:
-    .venv/bin/python build_detailed_pbp.py "2026/Texas/2026-02-13_vs_uc-davis"
+Run (game dir is relative to the project root):
+    .venv/bin/python scripts/build_detailed_pbp.py "2026/Texas/2026-02-13_vs_uc-davis"
 """
 
 import json
 import os
 import re
 import sys
+
+# This file now lives in scripts/; resolve relative game-dir args against the
+# project root, not the scripts/ folder.
+_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # ── name lookups ─────────────────────────────────────────────────────────────
 def _last(full):
@@ -244,6 +248,8 @@ def build(game_dir):
 
 if __name__ == "__main__":
     gd = sys.argv[1] if len(sys.argv) > 1 else "2026/Texas/2026-02-13_vs_uc-davis"
+    if not os.path.isabs(gd):
+        gd = os.path.join(_PROJECT_ROOT, gd)   # resolve against project root
     dest, data = build(gd)
     print(f"wrote {dest} — {len(data['plays'])} plays")
     print(f"batting: {data['batting_team']}  pitching: {data['pitching_team']}")

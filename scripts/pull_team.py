@@ -2,7 +2,7 @@
 
 Edit the CONFIG block below and run:
 
-    .venv/bin/python pull_team.py
+    .venv/bin/python scripts/pull_team.py
 
 It discovers the team's full schedule from the NCAA scoreboard API, then for
 every played game creates a folder containing three files:
@@ -22,6 +22,11 @@ import os
 import sys
 import time
 
+# This file now lives in scripts/; add the project root to sys.path so the
+# library modules (ncaa, season, gamedetail) at the project root resolve.
+_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, _PROJECT_ROOT)
+
 import ncaa
 import season
 from gamedetail import build_game
@@ -35,7 +40,7 @@ FRESH = False           # True = re-pull every box score from the API
 
 
 def pull(team_seo=TEAM_SEO, team_label=TEAM_LABEL, year=YEAR, fresh=FRESH):
-    out_dir = os.path.join(os.path.dirname(__file__), str(year), team_label)
+    out_dir = os.path.join(_PROJECT_ROOT, str(year), team_label)
     os.makedirs(out_dir, exist_ok=True)
 
     print(f"Discovering {team_label}'s {year} schedule via the NCAA API…")
