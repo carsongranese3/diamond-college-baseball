@@ -113,10 +113,12 @@ def ncaa_bracket(year=2026):
                 if s and s["seo"] and s["seo"] not in seen:
                     seen[s["seo"]] = {"name": s["name"], "seo": s["seo"],
                                       "seed": s["seed"], "logo": s["logo"]}
-        # Regional seeds 1–4: Game 1 is #1 vs #4, Game 2 is #2 vs #3.
+        # Regional seeds 1–4 by bracket slot: Game 1 is #1 (top, the host) vs #4
+        # (bottom); Game 2 is #3 (top) vs #2 (bottom) — the #2 seed is the bottom
+        # team. Verified against the live bracket's top/bottom ordering.
         if sid // 100 == 1 and len(games) >= 2:
             for s, rseed in [(games[0]["top"], 1), (games[0]["bottom"], 4),
-                             (games[1]["top"], 2), (games[1]["bottom"], 3)]:
+                             (games[1]["top"], 3), (games[1]["bottom"], 2)]:
                 if s and s["seo"] in seen:
                     seen[s["seo"]]["rseed"] = rseed
         teams = sorted(seen.values(),

@@ -280,8 +280,11 @@ def team_stats(seo, name):
     avg_l = max((b for b in batters if b["ab"] >= max(20, tab // 80)),
                 key=lambda r: float(r["avg"] or 0), default=None)
     hr_l = max(batters, key=lambda r: r["hr"], default=None)
+    # ERA leader: lowest ERA among pitchers with enough innings (60 outs = 20 IP).
     era_l = min((p for p in pitchers if p["_outs"] >= 60),
                 key=lambda r: float(r["era"] or 99), default=None)
+    # Strikeout leader: most K, regardless of innings.
+    k_l = max(pitchers, key=lambda r: r["k"], default=None)
     leaders = []
     if avg_l:
         leaders.append({"name": avg_l["name"], "pos": avg_l["pos"],
@@ -293,7 +296,12 @@ def team_stats(seo, name):
                         "note": "Home runs"})
     if era_l:
         leaders.append({"name": era_l["name"], "pos": era_l["pos"],
-                        "line": f"{era_l['era']} ERA / {era_l['k']} K", "note": "Ace"})
+                        "line": f"{era_l['era']} ERA / {era_l['k']} K / {era_l['ip']} IP",
+                        "note": "ERA"})
+    if k_l and k_l["k"] > 0:
+        leaders.append({"name": k_l["name"], "pos": k_l["pos"],
+                        "line": f"{k_l['k']} K / {k_l['era']} ERA / {k_l['ip']} IP",
+                        "note": "Strikeouts"})
 
     for b in batters:
         b.pop("_tb", None)
