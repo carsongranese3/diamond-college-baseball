@@ -1,7 +1,47 @@
 // Root app — manages view state (standings / team / game)
 
+// Map the main views to real URL paths so each has its own shareable link and
+// the browser back/forward buttons work. Detail views that carry passed-in
+// object state (game, player) aren't deep-linked — they return null and leave
+// the URL on the section they were opened from.
+function pathForView(view) {
+  switch (view.name) {
+    case "standings": return "/standings";
+    case "scores": return "/scores";
+    case "bracket": return "/postseason";
+    case "compare": return "/compare";
+    case "team": return "/team/" + encodeURIComponent(view.teamId);
+    default: return null;
+  }
+}
+
+function viewForPath(pathname) {
+  const p = (pathname || "/").replace(/\/+$/, "") || "/";
+  if (p === "/scores") return { name: "scores" };
+  if (p === "/postseason") return { name: "bracket" };
+  if (p === "/compare") return { name: "compare" };
+  if (p.startsWith("/team/")) {
+    return { name: "team", teamId: decodeURIComponent(p.slice("/team/".length)) };
+  }
+  return { name: "standings" };
+}
+
 const App = () => {
-  const [view, setView] = React.useState({ name: "standings" });
+  const [view, setView] = React.useState(() => viewForPath(window.location.pathname));
+
+  // Keep the URL in sync with the view (push a history entry when the path
+  // changes), and restore the view when the user hits back/forward.
+  React.useEffect(() => {
+    const path = pathForView(view);
+    if (path && path !== window.location.pathname) {
+      window.history.pushState({}, "", path);
+    }
+  }, [view]);
+  React.useEffect(() => {
+    const onPop = () => setView(viewForPath(window.location.pathname));
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
 
   // Dark mode: initialized from the data-theme set by the inline script in
   // index.html (which reads localStorage before paint to avoid a flash).

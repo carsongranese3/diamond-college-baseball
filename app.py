@@ -140,7 +140,12 @@ def bracket_sec():
 
 
 @app.route("/")
-def index():
+@app.route("/<path:_clientpath>")
+def index(_clientpath=""):
+    # Single-page app: every non-API, non-static path serves index.html so the
+    # client-side router can render the right view (e.g. /scores, /postseason,
+    # /team/texas) on a direct load or refresh. /api/* and /static/* are matched
+    # by their own routes first, so they never reach here.
     return send_from_directory(app.static_folder, "index.html")
 
 
