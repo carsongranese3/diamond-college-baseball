@@ -180,6 +180,14 @@ def playbyplay(game_id, fresh=False):
     return get(f"/game/{game_id}/play-by-play", ttl=1800 if fresh else None)
 
 
+_LOGO_DIR = os.path.join(os.path.dirname(__file__), "static", "logos")
+
+
 def logo_url(seo, dark=False):
+    # Prefer a logo bundled in static/logos/ (downloaded once, slug-corrected for
+    # schools whose stats.ncaa.org slug differs from ncaa.com's logo filename,
+    # e.g. the-citadel -> citadel). Fall back to the live API otherwise.
+    if seo and os.path.exists(os.path.join(_LOGO_DIR, f"{seo}.svg")):
+        return f"/static/logos/{seo}.svg"
     url = f"{BASE}/logo/{seo}.svg"
     return url + "?dark=true" if dark else url
