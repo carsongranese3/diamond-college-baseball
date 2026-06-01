@@ -42,9 +42,16 @@ def _slug(s):
 def _clean_opp(name):
     """Strip the cruft stats.ncaa.org adds to neutral-site/tournament opponents,
     e.g. '#8 Mississippi St. @Hoover, AL (2026 SEC Baseball Championship)'
-    -> 'Mississippi St.' (so it matches an SEC team and gets the right logo)."""
+    -> 'Mississippi St.' (so it matches an SEC team and gets the right logo).
+    Opponents come in three shapes:
+      '#2 Wake Forest @Granville, WV (2026 NCAA ... Championship)'  (@venue + paren)
+      '#4 Rider 2026 NCAA Division I Baseball Championship'         (bare event tag)
+      '#3 Texas A&M'                                                (just a rank)"""
     s = re.sub(r"\s*@.*$", "", name or "")     # drop "@Venue, ST (Event)" onward
     s = re.sub(r"\s*\([^)]*\)\s*$", "", s)      # drop a trailing "(...)" if no @
+    # Drop a trailing event tag with no @/parens, e.g. "... 2026 NCAA ...
+    # Championship" or "... 2026 SEC Baseball Tournament" — cut from the year on.
+    s = re.sub(r"\s+\d{4}\s+(?:NCAA|SEC)\b.*$", "", s)
     s = re.sub(r"^#\d+\s+", "", s)              # drop a leading rank like "#8 "
     return s.strip()
 
