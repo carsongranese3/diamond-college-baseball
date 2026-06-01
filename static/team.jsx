@@ -294,9 +294,45 @@ const TeamStatsView = ({ stats, team }) => {
   );
 };
 
+// Column sets per view + level. Each column: {k, label, cls?}. cls applies to
+// the data cell ("bold" for the headline stat, "muted" for secondary). Advanced
+// columns have no value in the data yet, so they render blank ("—") for now.
+const STAT_COLUMNS = {
+  batting: {
+    basic: [
+      { k: "g", label: "G" }, { k: "ab", label: "AB" }, { k: "r", label: "R" },
+      { k: "h", label: "H" }, { k: "hr", label: "HR" }, { k: "rbi", label: "RBI" },
+      { k: "bb", label: "BB" }, { k: "k", label: "K" }, { k: "sb", label: "SB" },
+      { k: "avg", label: "AVG", cls: "bold" }, { k: "obp", label: "OBP", cls: "muted" },
+      { k: "slg", label: "SLG", cls: "muted" }, { k: "ops", label: "OPS" },
+    ],
+    advanced: [
+      { k: "babip", label: "BABIP" }, { k: "bbpct", label: "BB%" },
+      { k: "kpct", label: "K%" }, { k: "secavg", label: "SEC" },
+      { k: "rc", label: "RC" },
+    ],
+  },
+  pitching: {
+    basic: [
+      { k: "g", label: "G" }, { k: "gs", label: "GS" }, { k: "w", label: "W" },
+      { k: "l", label: "L" }, { k: "sv", label: "SV" }, { k: "ip", label: "IP" },
+      { k: "h", label: "H" }, { k: "r", label: "R" }, { k: "er", label: "ER" },
+      { k: "bb", label: "BB" }, { k: "k", label: "K" },
+      { k: "era", label: "ERA", cls: "bold" }, { k: "whip", label: "WHIP", cls: "muted" },
+    ],
+    advanced: [
+      { k: "whip", label: "WHIP" }, { k: "k9", label: "K/9" },
+      { k: "bb9", label: "BB/9" }, { k: "hr9", label: "HR/9" },
+      { k: "kbb", label: "K/BB" }, { k: "fip", label: "FIP" },
+      { k: "kbbpct", label: "K-BB%" }, { k: "lobpct", label: "LOB%" },
+    ],
+  },
+};
+
 const PlayerStatsView = ({ roster, playerView, setPlayerView, onPlayerClick }) => {
   const [sortKey, setSortKey] = React.useState(null);
   const [sortDir, setSortDir] = React.useState("desc");
+  const [statLevel, setStatLevel] = React.useState("basic"); // basic | advanced
 
   const onSort = (key) => {
     if (sortKey === key) setSortDir(d => d === "desc" ? "asc" : "desc");
@@ -314,119 +350,69 @@ const PlayerStatsView = ({ roster, playerView, setPlayerView, onPlayerClick }) =
     });
   };
 
+  const cols = STAT_COLUMNS[playerView][statLevel];
+  const rows = playerView === "batting" ? roster.batters : roster.pitchers;
+  const idLabel = playerView === "batting" ? "Batter" : "Pitcher";
+  const posLabel = playerView === "batting" ? "Pos" : "Role";
+  // Advanced cells have no value yet — show a dash placeholder.
+  const cell = (p, c) => (p[c.k] === undefined || p[c.k] === "" || p[c.k] === null) ? "—" : p[c.k];
+
   return (
     <div className="stats">
-      <div className="player-toggle">
-        <button
-          className={`player-toggle__btn ${playerView === "batting" ? "player-toggle__btn--active" : ""}`}
-          onClick={() => setPlayerView("batting")}
-        >Batting ({roster.batters.length})</button>
-        <button
-          className={`player-toggle__btn ${playerView === "pitching" ? "player-toggle__btn--active" : ""}`}
-          onClick={() => setPlayerView("pitching")}
-        >Pitching ({roster.pitchers.length})</button>
+      <div className="player-statsbar">
+        <div className="player-toggle">
+          <button
+            className={`player-toggle__btn ${playerView === "batting" ? "player-toggle__btn--active" : ""}`}
+            onClick={() => setPlayerView("batting")}
+          >Batting ({roster.batters.length})</button>
+          <button
+            className={`player-toggle__btn ${playerView === "pitching" ? "player-toggle__btn--active" : ""}`}
+            onClick={() => setPlayerView("pitching")}
+          >Pitching ({roster.pitchers.length})</button>
+        </div>
+        <div className="segmented segmented--sm">
+          <button
+            className={`segmented__btn ${statLevel === "basic" ? "segmented__btn--active" : ""}`}
+            onClick={() => setStatLevel("basic")}
+          >Basic</button>
+          <button
+            className={`segmented__btn ${statLevel === "advanced" ? "segmented__btn--active" : ""}`}
+            onClick={() => setStatLevel("advanced")}
+          >Advanced</button>
+        </div>
       </div>
 
-      {playerView === "batting" && (
-        <div className="boxscore__wrap">
-          <table className="box-table player-table">
-            <thead>
-              <tr>
-                <th className="th th--left">#</th>
-                <th className="th th--left">Batter</th>
-                <th className="th th--left">Pos</th>
-                <Sh k="g"   label="G"   sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="ab"  label="AB"  sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="r"   label="R"   sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="h"   label="H"   sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="hr"  label="HR"  sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="rbi" label="RBI" sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="bb"  label="BB"  sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="k"   label="K"   sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="sb"  label="SB"  sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="avg" label="AVG" sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="obp" label="OBP" sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="slg" label="SLG" sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="ops" label="OPS" sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-              </tr>
-            </thead>
-            <tbody>
-              {sortRows(roster.batters).map((p, i) => (
-                <tr key={i}>
-                  <td className="td mono muted small">{p.num}</td>
-                  <td className="td"><span className="player-name player-link" onClick={() => onPlayerClick && onPlayerClick(p.name)}>{p.name}</span></td>
-                  <td className="td mono small muted">{p.pos}</td>
-                  <td className="td td--right mono">{p.g}</td>
-                  <td className="td td--right mono">{p.ab}</td>
-                  <td className="td td--right mono">{p.r}</td>
-                  <td className="td td--right mono">{p.h}</td>
-                  <td className="td td--right mono">{p.hr}</td>
-                  <td className="td td--right mono">{p.rbi}</td>
-                  <td className="td td--right mono">{p.bb}</td>
-                  <td className="td td--right mono">{p.k}</td>
-                  <td className="td td--right mono">{p.sb}</td>
-                  <td className="td td--right mono bold">{p.avg}</td>
-                  <td className="td td--right mono muted">{p.obp}</td>
-                  <td className="td td--right mono muted">{p.slg}</td>
-                  <td className="td td--right mono">{p.ops}</td>
-                </tr>
+      <div className="boxscore__wrap">
+        <table className="box-table player-table">
+          <thead>
+            <tr>
+              <th className="th th--left">#</th>
+              <th className="th th--left">{idLabel}</th>
+              <th className="th th--left">{posLabel}</th>
+              {cols.map((c) => (
+                <Sh key={c.k} k={c.k} label={c.label}
+                    sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
               ))}
-            </tbody>
-          </table>
-        </div>
-      )}
-
-      {playerView === "pitching" && (
-        <div className="boxscore__wrap">
-          <table className="box-table player-table">
-            <thead>
-              <tr>
-                <th className="th th--left">#</th>
-                <th className="th th--left">Pitcher</th>
-                <th className="th th--left">Role</th>
-                <Sh k="g"    label="G"    sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="gs"   label="GS"   sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="w"    label="W"    sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="l"    label="L"    sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="sv"   label="SV"   sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="ip"   label="IP"   sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="h"    label="H"    sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="r"    label="R"    sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="er"   label="ER"   sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="bb"   label="BB"   sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="k"    label="K"    sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="era"  label="ERA"  sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
-                <Sh k="whip" label="WHIP" sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
+            </tr>
+          </thead>
+          <tbody>
+            {sortRows(rows).map((p, i) => (
+              <tr key={i}>
+                <td className="td mono muted small">{p.num}</td>
+                <td className="td"><span className="player-name player-link" onClick={() => onPlayerClick && onPlayerClick(p.name)}>{p.name}</span></td>
+                <td className="td mono small muted">{p.pos}</td>
+                {cols.map((c) => (
+                  <td key={c.k} className={`td td--right mono ${c.cls || ""}`}>{cell(p, c)}</td>
+                ))}
               </tr>
-            </thead>
-            <tbody>
-              {sortRows(roster.pitchers).map((p, i) => (
-                <tr key={i}>
-                  <td className="td mono muted small">{p.num}</td>
-                  <td className="td"><span className="player-name player-link" onClick={() => onPlayerClick && onPlayerClick(p.name)}>{p.name}</span></td>
-                  <td className="td mono small muted">{p.pos}</td>
-                  <td className="td td--right mono">{p.g}</td>
-                  <td className="td td--right mono">{p.gs}</td>
-                  <td className="td td--right mono">{p.w}</td>
-                  <td className="td td--right mono">{p.l}</td>
-                  <td className="td td--right mono">{p.sv}</td>
-                  <td className="td td--right mono">{p.ip}</td>
-                  <td className="td td--right mono">{p.h}</td>
-                  <td className="td td--right mono">{p.r}</td>
-                  <td className="td td--right mono">{p.er}</td>
-                  <td className="td td--right mono">{p.bb}</td>
-                  <td className="td td--right mono">{p.k}</td>
-                  <td className="td td--right mono bold">{p.era}</td>
-                  <td className="td td--right mono muted">{p.whip}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <div className="player-note muted small">
         Cumulative season totals. Click a column header to sort.
+        {statLevel === "advanced" && " Advanced metrics are coming soon."}
       </div>
     </div>
   );
