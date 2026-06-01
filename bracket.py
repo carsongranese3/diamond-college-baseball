@@ -278,6 +278,13 @@ def sec_bracket(teams, schedules, records):
     for gm in ordered:
         a, b = gm["top"]["seo"], gm["bottom"]["seo"]
         gm["_round"] = 1 + max(won_round.get(a, 0), won_round.get(b, 0))
+        # In the #1 overall seed's ENTERING game (it arrives on a bye, so it
+        # hasn't appeared yet), put it on the BOTTOM so its bye drops beneath the
+        # game it feeds into — mirroring the bottom half of the bracket. Scoped to
+        # just this game (not Georgia's later games), so nothing else reorders.
+        if gm["top"].get("seed") == 1 and gm["_round"] > 1 and a not in appeared:
+            gm["top"], gm["bottom"] = gm["bottom"], gm["top"]
+            a, b = b, a
         gm["type"] = "game"
         gm["children"] = {}
         for key, seo in (("top", a), ("bottom", b)):

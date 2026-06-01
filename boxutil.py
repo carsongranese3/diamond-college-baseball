@@ -41,6 +41,45 @@ def fmt2(x):
     return f"{x:.2f}"
 
 
+def fmt_pct(x):
+    """Rate as a percentage string, e.g. 0.123 -> '12.3%'."""
+    return f"{x * 100:.1f}%"
+
+
+# ── Advanced sabermetrics (computed from raw season totals) ──────────────────
+# Each returns "—" when its inputs are missing/zero, so the UI can show a blank.
+def babip(h, hr, ab, k, sf):
+    denom = ab - k - hr + sf
+    return fmt3((h - hr) / denom) if denom > 0 else "—"
+
+
+def secondary_avg(tb, h, bb, sb, cs, ab):
+    return fmt3((tb - h + bb + sb - cs) / ab) if ab > 0 else "—"
+
+
+def runs_created(h, bb, tb, ab):
+    denom = ab + bb
+    return fmt2((h + bb) * tb / denom) if denom > 0 else "—"
+
+
+def per9(stat, outs):
+    return fmt2(stat * 27 / outs) if outs > 0 else "—"
+
+
+def ratio(num, den):
+    return fmt2(num / den) if den > 0 else "—"
+
+
+def fip(hr, bb, hbp, k, outs, constant=3.10):
+    ip = outs / 3
+    return fmt2((13 * hr + 3 * (bb + hbp) - 2 * k) / ip + constant) if ip > 0 else "—"
+
+
+def lob_pct(h, bb, hbp, r, hr):
+    denom = h + bb + hbp - 1.4 * hr
+    return fmt_pct((h + bb + hbp - r) / denom) if denom > 0 else "—"
+
+
 def player_name(p):
     first = (p.get("firstName") or "").strip()
     last = (p.get("lastName") or "").strip()

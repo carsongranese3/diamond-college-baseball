@@ -15,7 +15,8 @@ import os
 import re
 
 import ncaa
-from boxutil import fmt2, fmt3, ip_to_outs, outs_to_ip, to_int
+from boxutil import (babip, fip, fmt2, fmt3, fmt_pct, ip_to_outs, lob_pct,
+                     outs_to_ip, per9, ratio, runs_created, secondary_avg, to_int)
 from colors import for_seo
 
 DATA_ROOT = os.path.join(os.path.dirname(__file__), "2026")
@@ -195,7 +196,7 @@ def team_stats(seo, name):
                 "name": row.get("Name", ""), "pos": row.get("P", ""),
                 "num": row.get("#", ""), "g": 0, "ab": 0, "r": 0, "h": 0,
                 "2b": 0, "3b": 0, "hr": 0, "rbi": 0, "bb": 0, "k": 0,
-                "hbp": 0, "sf": 0, "sb": 0,
+                "hbp": 0, "sf": 0, "sb": 0, "cs": 0,
             })
             b["g"] += 1
             b["ab"] += ab
@@ -210,6 +211,7 @@ def team_stats(seo, name):
             b["hbp"] += to_int(row.get("HBP"))
             b["sf"] += to_int(row.get("SF"))
             b["sb"] += to_int(row.get("SB"))
+            b["cs"] += to_int(row.get("CS"))
 
         for row in side.get("pitching", []):
             outs = ip_to_outs(row.get("IP"))
@@ -219,7 +221,7 @@ def team_stats(seo, name):
             p = pit.setdefault(key, {
                 "name": row.get("Name", ""), "pos": row.get("P", "P"),
                 "num": row.get("#", ""), "g": 0, "outs": 0, "h": 0, "r": 0,
-                "er": 0, "bb": 0, "k": 0,
+                "er": 0, "bb": 0, "k": 0, "hra": 0, "hbp": 0, "bf": 0,
             })
             p["g"] += 1
             p["outs"] += outs
@@ -228,6 +230,9 @@ def team_stats(seo, name):
             p["er"] += to_int(row.get("ER"))
             p["bb"] += to_int(row.get("BB"))
             p["k"] += to_int(row.get("SO"))
+            p["hra"] += to_int(row.get("HR-A"))
+            p["hbp"] += to_int(row.get("HB"))
+            p["bf"] += to_int(row.get("BF"))
 
         for row in side.get("fielding", []):
             field["po"] += to_int(row.get("PO"))
@@ -244,11 +249,19 @@ def team_stats(seo, name):
         avg = h / ab if ab else 0.0
         obp = (h + bb + hbp) / (ab + bb + hbp + sf) if (ab + bb + hbp + sf) else 0.0
         slg = tb / ab if ab else 0.0
+        pa = ab + bb + hbp + sf
         batters.append({
             "name": b["name"], "pos": b["pos"], "num": b["num"], "g": b["g"],
-            "ab": ab, "r": b["r"], "h": h, "hr": b["hr"], "rbi": b["rbi"],
+            "ab": ab, "pa": pa, "r": b["r"], "h": h,
+            "hr": b["hr"], "rbi": b["rbi"],
             "bb": bb, "k": b["k"], "sb": b["sb"], "avg": fmt3(avg),
             "obp": fmt3(obp), "slg": fmt3(slg), "ops": fmt3(obp + slg), "_tb": tb,
+            # Advanced (computed from raw totals; "—" when inputs are missing).
+            "bbpct": fmt_pct(bb / pa) if pa else "—",
+            "kpct": fmt_pct(b["k"] / pa) if pa else "—",
+            "babip": babip(h, b["hr"], ab, b["k"], sf),
+            "secavg": secondary_avg(tb, h, bb, b["sb"], b["cs"], ab),
+            "rc": runs_created(h, bb, tb, ab),
         })
     batters.sort(key=lambda x: x["ab"], reverse=True)
 
@@ -257,11 +270,19 @@ def team_stats(seo, name):
         ipnum = p["outs"] / 3 if p["outs"] else 0.0
         era = (p["er"] * 9 / ipnum) if ipnum else 0.0
         whip = ((p["bb"] + p["h"]) / ipnum) if ipnum else 0.0
+        outs = p["outs"]
+        kbb_pct = ((p["k"] - p["bb"]) / p["bf"]) if p["bf"] else None
         pitchers.append({
             "name": p["name"], "pos": p["pos"], "num": p["num"], "g": p["g"],
             "gs": "", "w": "", "l": "", "sv": "", "ip": outs_to_ip(p["outs"]),
             "h": p["h"], "r": p["r"], "er": p["er"], "bb": p["bb"], "k": p["k"],
             "era": fmt2(era), "whip": fmt2(whip), "_outs": p["outs"],
+            # Advanced (computed from raw totals; "—" when inputs are missing).
+            "k9": per9(p["k"], outs), "bb9": per9(p["bb"], outs),
+            "hr9": per9(p["hra"], outs), "kbb": ratio(p["k"], p["bb"]),
+            "fip": fip(p["hra"], p["bb"], p["hbp"], p["k"], outs),
+            "kbbpct": fmt_pct(kbb_pct) if kbb_pct is not None else "—",
+            "lobpct": lob_pct(p["h"], p["bb"], p["hbp"], p["r"], p["hra"]),
         })
     pitchers.sort(key=lambda x: x["_outs"], reverse=True)
 

@@ -300,16 +300,29 @@ const TeamStatsView = ({ stats, team }) => {
 const STAT_COLUMNS = {
   batting: {
     basic: [
-      { k: "g", label: "G" }, { k: "ab", label: "AB" }, { k: "r", label: "R" },
+      { k: "g", label: "G" }, { k: "ab", label: "AB" }, { k: "pa", label: "PA" },
+      { k: "r", label: "R" },
       { k: "h", label: "H" }, { k: "hr", label: "HR" }, { k: "rbi", label: "RBI" },
       { k: "bb", label: "BB" }, { k: "k", label: "K" }, { k: "sb", label: "SB" },
-      { k: "avg", label: "AVG", cls: "bold" }, { k: "obp", label: "OBP", cls: "muted" },
-      { k: "slg", label: "SLG", cls: "muted" }, { k: "ops", label: "OPS" },
+      { k: "avg", label: "AVG", cls: "bold" },
     ],
     advanced: [
-      { k: "babip", label: "BABIP" }, { k: "bbpct", label: "BB%" },
-      { k: "kpct", label: "K%" }, { k: "secavg", label: "SEC" },
-      { k: "rc", label: "RC" },
+      { k: "obp", label: "OBP", cls: "muted",
+        desc: "On-base percentage — (H + BB + HBP) / (AB + BB + HBP + SF). How often a batter reaches base." },
+      { k: "slg", label: "SLG", cls: "muted",
+        desc: "Slugging percentage — total bases per at-bat (TB / AB). Measures power." },
+      { k: "ops", label: "OPS", cls: "bold",
+        desc: "On-base plus slugging — OBP + SLG. A quick all-around offense number." },
+      { k: "babip", label: "BABIP",
+        desc: "Batting avg on balls in play — (H − HR) / (AB − K − HR + SF). High values can signal luck." },
+      { k: "bbpct", label: "BB%",
+        desc: "Walk rate — walks per plate appearance (BB / PA)." },
+      { k: "kpct", label: "K%",
+        desc: "Strikeout rate — strikeouts per plate appearance (K / PA)." },
+      { k: "secavg", label: "SEC",
+        desc: "Secondary average — (TB − H + BB + SB − CS) / AB. Value beyond batting average." },
+      { k: "rc", label: "RC",
+        desc: "Runs created — (H + BB) × TB / (AB + BB). Estimated runs a hitter generates." },
     ],
   },
   pitching: {
@@ -318,13 +331,25 @@ const STAT_COLUMNS = {
       { k: "l", label: "L" }, { k: "sv", label: "SV" }, { k: "ip", label: "IP" },
       { k: "h", label: "H" }, { k: "r", label: "R" }, { k: "er", label: "ER" },
       { k: "bb", label: "BB" }, { k: "k", label: "K" },
-      { k: "era", label: "ERA", cls: "bold" }, { k: "whip", label: "WHIP", cls: "muted" },
+      { k: "era", label: "ERA", cls: "bold" },
     ],
     advanced: [
-      { k: "whip", label: "WHIP" }, { k: "k9", label: "K/9" },
-      { k: "bb9", label: "BB/9" }, { k: "hr9", label: "HR/9" },
-      { k: "kbb", label: "K/BB" }, { k: "fip", label: "FIP" },
-      { k: "kbbpct", label: "K-BB%" }, { k: "lobpct", label: "LOB%" },
+      { k: "whip", label: "WHIP",
+        desc: "Walks + hits per inning pitched — (BB + H) / IP. Baserunners allowed per inning." },
+      { k: "k9", label: "K/9",
+        desc: "Strikeouts per 9 innings — K × 9 / IP." },
+      { k: "bb9", label: "BB/9",
+        desc: "Walks per 9 innings — BB × 9 / IP." },
+      { k: "hr9", label: "HR/9",
+        desc: "Home runs allowed per 9 innings — HR × 9 / IP." },
+      { k: "kbb", label: "K/BB",
+        desc: "Strikeout-to-walk ratio — K / BB. Command indicator." },
+      { k: "fip", label: "FIP",
+        desc: "Fielding independent pitching — (13×HR + 3×(BB+HBP) − 2×K) / IP + 3.10. ERA estimator using only outcomes a pitcher controls." },
+      { k: "kbbpct", label: "K-BB%",
+        desc: "Strikeout rate minus walk rate — (K − BB) / batters faced. Very predictive." },
+      { k: "lobpct", label: "LOB%",
+        desc: "Left-on-base % — (H + BB + HBP − R) / (H + BB + HBP − 1.4×HR). Share of baserunners stranded." },
     ],
   },
 };
@@ -390,7 +415,7 @@ const PlayerStatsView = ({ roster, playerView, setPlayerView, onPlayerClick }) =
               <th className="th th--left">{idLabel}</th>
               <th className="th th--left">{posLabel}</th>
               {cols.map((c) => (
-                <Sh key={c.k} k={c.k} label={c.label}
+                <Sh key={c.k} k={c.k} label={c.label} desc={c.desc}
                     sortKey={sortKey} sortDir={sortDir} onSort={onSort} />
               ))}
             </tr>
@@ -418,13 +443,19 @@ const PlayerStatsView = ({ roster, playerView, setPlayerView, onPlayerClick }) =
   );
 };
 
-// Sortable header cell
-const Sh = ({ k, label, sortKey, sortDir, onSort }) => (
+// Sortable header cell. When `desc` is given, the label gets a dotted underline
+// and a tooltip explaining the stat (its formula) on hover.
+const Sh = ({ k, label, desc, sortKey, sortDir, onSort }) => (
   <th
     className={`th th--right th--sortable ${sortKey === k ? "th--active" : ""}`}
     onClick={() => onSort(k)}
   >
-    {label}
+    {desc
+      ? <span className="th-help" tabIndex={0}>
+          {label}
+          <span className="th-tip">{desc}</span>
+        </span>
+      : label}
     {sortKey === k && <span className="th__sort"> {sortDir === "desc" ? "▾" : "▴"}</span>}
   </th>
 );

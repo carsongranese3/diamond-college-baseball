@@ -1,11 +1,12 @@
 """Fill in missing game data for a team by pulling it from stats.ncaa.org.
 
-Each team's schedule.txt (built by build_schedule.py) starts with a line giving
-the number of games on the season schedule. This script compares that recorded
-number to how many game folders are actually saved under 2026/<Team>/schedule/.
-When they differ, it boots the stealth browser (ncaa_stats), works out which
-games have no saved folder, and pulls them — looking first at games AFTER the
-last saved game, then backward through the earlier games to fill any gaps.
+For each team it looks at, this FIRST refreshes 2026/<Team>/schedule.txt from the
+live ncaa.com API (so the recorded game count always reflects reality, including
+games played today), THEN compares that count to how many game folders are
+actually saved under 2026/<Team>/schedule/. When they differ, it boots the
+stealth browser (ncaa_stats), works out which games have no saved folder, and
+pulls them — looking first at games AFTER the last saved game, then backward
+through the earlier games to fill any gaps.
 
 Only games stats.ncaa.org actually has a box score for are pulled (unplayed and
 TBA games have no contest page, so they're never attempted). Each missing game is
@@ -34,9 +35,11 @@ TEAM = "all"   # a team folder label (e.g. "Arkansas"), or "all" for every team
 
 SEASON = 2026
 
-# This file lives in scripts/; add the project root so ncaa_stats imports.
+# This file lives in scripts/; add the project root (for season/local_data) and
+# the scripts dir (to reuse build_schedule) to the import path.
 _PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, _PROJECT_ROOT)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 # The scraping stack (bs4, camoufox, collegebaseball, …) lives in .venv-dev, not
 # the Flask-only deploy .venv. If we were launched with a different interpreter
@@ -218,6 +221,33 @@ def pull_missing(label):
     return True
 
 
+def refresh_schedules(labels):
+    """Regenerate 2026/<Team>/schedule.txt from the live ncaa.com API for each
+    targeted team, so the recorded game count reflects reality (incl. games
+    played today) BEFORE we compare it to the saved folders. One API season
+    build covers every team; we match each folder label to its API team by name.
+    Returns the set of labels that were refreshed."""
+    import build_schedule
+    import season
+
+    print("Refreshing schedule.txt from the ncaa.com API…")
+    data = season.build_season(fresh=True)
+    by_name = {t["name"]: t for t in data["teams"]}
+    refreshed = set()
+    for label in labels:
+        team = by_name.get(label)
+        if not team:
+            print(f"  SKIP {label} (not in the API team list)")
+            continue
+        res = build_schedule.build_for_team(team, data["schedules"].get(team["id"], []))
+        if res:
+            _, n = res
+            print(f"  {label}: schedule.txt -> {n} games")
+            refreshed.add(label)
+    print()
+    return refreshed
+
+
 def process(label):
     """Compare recorded vs saved counts for one team; pull if they differ."""
     recorded = _recorded_count(label)
@@ -243,6 +273,10 @@ def main():
             print(f"  '{TEAM}' is not an SEC team. Set TEAM to one of:\n  "
                   + ", ".join(SEC_TEAMS))
             return
+
+    # 1) Refresh every targeted team's schedule.txt from the live API, then
+    # 2) run the count check (now against fresh numbers) and pull what's missing.
+    refresh_schedules(targets)
 
     for t in targets:
         if not process(t):

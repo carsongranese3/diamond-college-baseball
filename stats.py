@@ -6,8 +6,8 @@ block and is summed from per-game `pitcherStats`.
 """
 
 import ncaa
-from boxutil import (find_team_entry, fmt2, fmt3, ip_to_outs, outs_to_ip,
-                      player_name, to_int)
+from boxutil import (babip, find_team_entry, fmt2, fmt3, fmt_pct, ip_to_outs,
+                      outs_to_ip, per9, player_name, ratio, runs_created, to_int)
 
 
 def _pkey(p):
@@ -98,13 +98,20 @@ def compute_team_stats(seo, schedule):
         avg = h / ab if ab else 0.0
         obp = (h + bb) / (ab + bb) if (ab + bb) else 0.0
         slg = tb_ / ab if ab else 0.0
+        pa = ab + bb
         batters.append({
             "name": b["name"], "pos": b["pos"], "num": b["num"],
-            "g": b["g"], "ab": ab, "r": b["r"], "h": h, "hr": b["hr"],
-            "rbi": b["rbi"], "bb": bb, "k": b["k"], "sb": "—",
+            "g": b["g"], "ab": ab, "pa": pa, "r": b["r"], "h": h,
+            "hr": b["hr"], "rbi": b["rbi"], "bb": bb, "k": b["k"], "sb": "—",
             "avg": fmt3(avg), "obp": fmt3(obp), "slg": fmt3(slg),
             "ops": fmt3(obp + slg),
             "_tb": tb_,
+            # Advanced — the API source lacks HBP/SF/CS, so SF=0 here and
+            # secondary avg (needs SB/CS) is omitted; UI shows "—" for those.
+            "bbpct": fmt_pct(bb / pa) if pa else "—",
+            "kpct": fmt_pct(b["k"] / pa) if pa else "—",
+            "babip": babip(h, b["hr"], ab, b["k"], 0),
+            "rc": runs_created(h, bb, tb_, ab),
         })
     batters.sort(key=lambda x: x["ab"], reverse=True)
 
@@ -120,6 +127,10 @@ def compute_team_stats(seo, schedule):
             "ip": outs_to_ip(outs), "h": p["h"], "r": p["r"], "er": p["er"],
             "bb": p["bb"], "k": p["k"], "era": fmt2(era), "whip": fmt2(whip),
             "_outs": outs,
+            # Advanced — the API source lacks HR-allowed/HBP/BF, so FIP, HR/9,
+            # K-BB% and LOB% can't be computed and show "—".
+            "k9": per9(p["k"], outs), "bb9": per9(p["bb"], outs),
+            "kbb": ratio(p["k"], p["bb"]),
         })
     pitchers.sort(key=lambda x: x["_outs"], reverse=True)
 
