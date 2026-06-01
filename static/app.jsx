@@ -24,6 +24,7 @@ const App = () => {
   const goStandings = () => setView({ name: "standings" });
   const goScores = () => setView({ name: "scores" });
   const goCompare = () => setView({ name: "compare" });
+  const goBracket = () => setView({ name: "bracket" });
   // origin describes where to return (a "team" or "game" view) so Back works.
   const goPlayer = (seo, playerName, origin) =>
     setView({ name: "player", seo, playerName, origin });
@@ -34,18 +35,24 @@ const App = () => {
     (view.name === "game" && view.origin === "scores") ||
     (view.name === "player" && view.origin && view.origin.view === "game" &&
       view.origin.gameOrigin === "scores");
+  const fromBracket =
+    (view.name === "game" && view.origin === "bracket");
   const section = view.name === "compare" ? "compare"
+    : view.name === "bracket" || fromBracket ? "bracket"
     : view.name === "scores" || fromScores ? "scores"
     : "standings";
 
   return (
     <div className="app">
       <Topbar section={section} onHome={goStandings} onScores={goScores} onCompare={goCompare}
-              theme={theme} onToggleTheme={toggleTheme} />
+              onBracket={goBracket} theme={theme} onToggleTheme={toggleTheme} />
       <main className="container">
         {view.name === "standings" && <Standings onTeamClick={goTeam} />}
         {view.name === "scores" && (
           <Scores onGameClick={(g, hostTeamId) => goGame(g, hostTeamId, "scores")} />
+        )}
+        {view.name === "bracket" && (
+          <Bracket onGameClick={(g, hostTeamId) => goGame(g, hostTeamId, "bracket")} />
         )}
         {view.name === "compare" && <Compare />}
         {view.name === "team" && (
@@ -61,8 +68,11 @@ const App = () => {
           <GameDetail
             game={view.game}
             hostTeamId={view.hostTeamId}
-            onBack={view.origin === "scores" ? goScores : () => goTeam(view.hostTeamId)}
-            backLabel={view.origin === "scores" ? "Scores" : null}
+            onBack={view.origin === "scores" ? goScores
+                    : view.origin === "bracket" ? goBracket
+                    : () => goTeam(view.hostTeamId)}
+            backLabel={view.origin === "scores" ? "Scores"
+                       : view.origin === "bracket" ? "Postseason" : null}
             onTeamClick={(id) => goTeam(id)}
             onPlayerClick={(sideSeo, playerName) =>
               goPlayer(sideSeo, playerName, {
@@ -96,7 +106,7 @@ const App = () => {
   );
 };
 
-const Topbar = ({ section, onHome, onScores, onCompare, theme, onToggleTheme }) => {
+const Topbar = ({ section, onHome, onScores, onCompare, onBracket, theme, onToggleTheme }) => {
   const link = (active) => `topbar__link ${active ? "topbar__link--active" : "muted"}`;
   return (
     <header className="topbar">
@@ -107,6 +117,7 @@ const Topbar = ({ section, onHome, onScores, onCompare, theme, onToggleTheme }) 
       <nav className="topbar__nav">
         <a className={link(section === "standings")} onClick={onHome}>Standings</a>
         <a className={link(section === "scores")} onClick={onScores}>Scores</a>
+        <a className={link(section === "bracket")} onClick={onBracket}>Postseason</a>
         <a className={link(section === "compare")} onClick={onCompare}>Compare</a>
       </nav>
       <div className="topbar__right">

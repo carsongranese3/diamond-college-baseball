@@ -61,7 +61,9 @@ def _phase(raw_opponent):
         return "NCAA Super Regional"
     if "regional" in s:
         return "NCAA Regional"
-    if "hoover" in s or ("sec" in s and ("championship" in s or "tournament" in s)):
+    # The SEC championship event tag — NOT just the Hoover venue, since some
+    # regular-season games are also played there (e.g. 'Samford @Hoover, AL').
+    if "sec" in s and ("championship" in s or "tournament" in s):
         return "SEC Tournament"
     if "ncaa" in s:
         return "NCAA Tournament"

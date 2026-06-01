@@ -162,6 +162,12 @@ def scoreboard(year, month, day, fresh=False):
     )
 
 
+def bracket(year, ttl=1800):
+    """The full NCAA D1 championship bracket for a season (every region, all
+    rounds). The tournament is live while it runs, so cache for 30 minutes."""
+    return get(f"/brackets/{SPORT}/{DIV}/{year:04d}", ttl=ttl)
+
+
 def game_meta(game_id, fresh=False):
     return get(f"/game/{game_id}", ttl=1800 if fresh else None)
 

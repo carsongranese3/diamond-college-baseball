@@ -11,6 +11,7 @@ import time
 
 from flask import Flask, abort, jsonify, request, send_from_directory
 
+import bracket
 import local_data
 import ncaa
 import season
@@ -120,6 +121,22 @@ def game(game_id):
         abort(404)
     except ncaa.APIError:
         abort(503)
+
+
+@app.route("/api/bracket/ncaa")
+def bracket_ncaa():
+    # Full 64-team NCAA bracket, straight from the API (covers every team, not
+    # just the SEC ones). Cached 30 min since the tournament is live.
+    return jsonify(_memo("bracket_ncaa", 1800, bracket.ncaa_bracket))
+
+
+@app.route("/api/bracket/sec")
+def bracket_sec():
+    data = _memo("season", season.SEASON_AGGREGATE_TTL, season.build_season)
+    schedules = _memo("local_schedules", season.SEASON_AGGREGATE_TTL,
+                      lambda: local_data.schedules(data["teams"]))
+    records = local_data.regular_season_records(schedules)
+    return jsonify(bracket.sec_bracket(data["teams"], schedules, records))
 
 
 @app.route("/")

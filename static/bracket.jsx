@@ -1,0 +1,475 @@
+// Bracket view — SEC Tournament (from local games) and the NCAA tournament
+// (from the ncaa.com bracket API), rendered as a left/right bracket of regionals
+// feeding super regionals.
+
+const _bracketCache = {};
+function fetchBracket(which) {
+  if (!_bracketCache[which]) {
+    _bracketCache[which] = fetch("/api/bracket/" + which)
+      .then((r) => { if (!r.ok) throw new Error("bracket " + r.status); return r.json(); });
+  }
+  return _bracketCache[which];
+}
+
+// One team row inside a game card. `t` is {seed, name, seo, score, logo} or null.
+const BTeam = ({ t, win, lose }) => {
+  if (!t || !t.name) {
+    return (
+      <div className="bteam bteam--tbd">
+        <span className="bteam__name muted">TBD</span>
+      </div>
+    );
+  }
+  return (
+    <div className={`bteam ${win ? "bteam--win" : ""} ${lose ? "bteam--lose" : ""}`}>
+      {t.seed != null && <span className="bteam__seed">{t.seed}</span>}
+      {t.logo
+        ? <img className="bteam__logo" src={t.logo} alt=""
+               onError={(e) => { e.target.style.visibility = "hidden"; }} />
+        : <span className="bteam__logo" />}
+      <span className="bteam__name">{t.name}</span>
+      <span className="bteam__score mono">{t.score != null ? t.score : ""}</span>
+    </div>
+  );
+};
+
+const BGame = ({ g, onOpen }) => {
+  const topWin = g.top && (g.top.winner || (g.winner && g.top.seo === g.winner));
+  const botWin = g.bottom && (g.bottom.winner || (g.winner && g.bottom.seo === g.winner));
+  const decided = topWin || botWin;
+  const topLose = decided && !topWin && g.top && g.top.name;
+  const botLose = decided && !botWin && g.bottom && g.bottom.name;
+  const live = g.state === "I" || g.state === "H";
+  const clickable = !!onOpen;
+  return (
+    <div
+      className={`bgame ${clickable ? "bgame--click" : ""} ${live ? "bgame--live" : ""}`}
+      onClick={clickable ? () => onOpen(g) : undefined}
+    >
+      <BTeam t={g.top} win={topWin} lose={topLose} />
+      <BTeam t={g.bottom} win={botWin} lose={botLose} />
+      {live && <span className="bgame__tag bgame__tag--live">LIVE</span>}
+      {g.ifNecessary && !live && <span className="bgame__tag">if nec.</span>}
+    </div>
+  );
+};
+
+// A bye shown as a one-sided "game" — a single team box, no score.
+const BByeCell = ({ team }) => (
+  <div className="bgame bbye">
+    <div className="bteam">
+      {team.seed != null && <span className="bteam__seed">{team.seed}</span>}
+      {team.logo
+        ? <img className="bteam__logo" src={team.logo} alt=""
+               onError={(e) => { e.target.style.visibility = "hidden"; }} />
+        : <span className="bteam__logo" />}
+      <span className="bteam__name">{team.name}</span>
+    </div>
+  </div>
+);
+
+// ── SEC: a true bracket tree of cells (games + bye boxes) ─────────────────────
+const SecBracket = ({ data, onGameClick }) => {
+  const roundsRef = React.useRef(null);
+  const cellRefs = React.useRef({});
+  const [paths, setPaths] = React.useState([]);
+  const [dims, setDims] = React.useState({ w: 0, h: 0 });
+
+  const openGame = (g) => {
+    if (!onGameClick || !g.top || !g.bottom) return;
+    onGameClick({
+      id: g.id, iso: g.iso,
+      score: { us: g.top.score, them: g.bottom.score },
+      opp: { id: g.bottom.seo, name: g.bottom.name },
+    }, g.top.seo);
+  };
+
+  const measure = React.useCallback(() => {
+    const wrap = roundsRef.current;
+    if (!wrap) return;
+    const base = wrap.getBoundingClientRect();
+    const rectOf = (id) => {
+      const el = cellRefs.current[id];
+      return el ? el.getBoundingClientRect() : null;
+    };
+    const segs = [];
+    for (const r of data.rounds) {
+      for (const c of r.cells) {
+        if (c.type !== "game" || !c.children) continue;
+        const gr = rectOf(c.id);
+        if (!gr) continue;
+        const gx = gr.left - base.left, top = gr.top - base.top, h = gr.height;
+        const rowY = { top: top + h * 0.27, bottom: top + h * 0.73 };
+        for (const key of ["top", "bottom"]) {
+          const childId = c.children[key];
+          if (childId == null) continue;
+          const cr = rectOf(childId);
+          if (!cr) continue;
+          const fx = cr.right - base.left, fy = cr.top - base.top + cr.height / 2;
+          const midX = (fx + gx) / 2;
+          segs.push(`M ${fx} ${fy} H ${midX} V ${rowY[key]} H ${gx}`);
+        }
+      }
+    }
+    setDims({ w: wrap.scrollWidth, h: wrap.scrollHeight });
+    setPaths(segs);
+  }, [data]);
+
+  React.useLayoutEffect(() => {
+    measure();
+    const t = setTimeout(measure, 300);
+    const ro = new ResizeObserver(measure);
+    if (roundsRef.current) ro.observe(roundsRef.current);
+    window.addEventListener("resize", measure);
+    return () => {
+      clearTimeout(t); ro.disconnect();
+      window.removeEventListener("resize", measure);
+    };
+  }, [measure]);
+
+  return (
+    <div className="bracket-sec">
+      <div className="brounds" ref={roundsRef}>
+        <svg className="bconnect" width={dims.w} height={dims.h}>
+          {paths.map((d, i) => <path key={i} d={d} />)}
+        </svg>
+        {data.rounds.map((r) => (
+          <div className="bround" key={r.number}>
+            <div className="bround__head">{r.title}</div>
+            <div className="bround__games">
+              {r.cells.map((c) => (
+                <div className="bslot" key={c.id}
+                     style={{ top: (3 + c.y * 94) + "%" }}
+                     ref={(el) => { if (el) cellRefs.current[c.id] = el; }}>
+                  {c.type === "game"
+                    ? <BGame g={c} onOpen={c.id ? () => openGame(c) : undefined} />
+                    : <BByeCell team={c.team} />}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// ── NCAA: regionals as 4-team pods; click one for its full bracket ────────────
+// Double elimination: a team is out after 2 losses.
+function _eliminated(group) {
+  const losses = {};
+  for (const g of group.games || []) {
+    if (g.state !== "F") continue;
+    for (const side of [g.top, g.bottom]) {
+      if (side && side.seo && !side.winner) losses[side.seo] = (losses[side.seo] || 0) + 1;
+    }
+  }
+  return losses;
+}
+
+const RegionalPod = ({ group, onClick }) => {
+  const losses = _eliminated(group);
+  const out = (t) => (losses[t.seo] || 0) >= 2;
+  const alive = group.teams.filter((t) => !out(t));
+  const champion = alive.length === 1 ? alive[0].seo : null;
+  return (
+    <div className="bpod bpod--click" onClick={onClick}>
+      <div className="bpod__head">
+        {group.seed != null && <span className="bpod__seed">#{group.seed}</span>}
+        <span className="bpod__name">{group.label} Regional</span>
+        <span className="bpod__expand">View bracket ›</span>
+      </div>
+      <div className="bpod__teams">
+        {group.teams.map((t) => (
+          <div key={t.seo}
+               className={`bpod__team ${t.seo === champion ? "bpod__team--win" : ""} ${out(t) ? "bpod__team--out" : ""}`}>
+            {t.rseed != null && <span className="bpod__rseed">{t.rseed}</span>}
+            {t.logo
+              ? <img className="bteam__logo" src={t.logo} alt=""
+                     onError={(e) => { e.target.style.visibility = "hidden"; }} />
+              : <span className="bteam__logo" />}
+            <span className="bpod__tname">{t.name}</span>
+            {t.seed != null && <span className="bpod__natseed">#{t.seed}</span>}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// A 4-team regional is a fixed 7-game double-elimination bracket. Game order from
+// the API is G1, G2, Winners Final, Elimination, Losers Final, Regional Final,
+// If-Necessary. [col, y%] places each; feeders wire the standard double-elim tree
+// (win = solid, loser-drop = dashed).
+const DE_LAYOUT = [
+  { col: 0, y: 14 }, { col: 0, y: 33 }, { col: 1, y: 23 },
+  { col: 0, y: 72 }, { col: 1, y: 64 }, { col: 2, y: 43 }, { col: 3, y: 43 },
+];
+const DE_LABELS = ["Game 1", "Game 2", "Winners Final", "Elimination",
+                   "Losers Final", "Regional Final", "If Necessary"];
+const DE_FEEDERS = {
+  2: [[0, "win"], [1, "win"]],
+  3: [[0, "lose"], [1, "lose"]],
+  4: [[3, "win"], [2, "lose"]],
+  5: [[2, "win"], [4, "win"]],
+  6: [[5, "win"]],
+};
+
+// A CWS half: a 4-team double-elim pod of super-regional winners (slots may be
+// TBD until the supers finish). Same look as a regional pod, clickable for its
+// full bracket.
+const CwsPod = ({ group, onClick }) => {
+  const losses = _eliminated(group);
+  const out = (t) => (losses[t.seo] || 0) >= 2;
+  const teams = group.teams || [];
+  const slots = [0, 1, 2, 3].map((i) => teams[i] || null);
+  return (
+    <div className="bpod bpod--click bpod--cws" onClick={onClick}>
+      <div className="bpod__head">
+        <span className="bpod__name">{group.label}</span>
+        <span className="bpod__expand">View bracket ›</span>
+      </div>
+      <div className="bpod__teams">
+        {slots.map((t, i) => (
+          <div key={t ? t.seo : i}
+               className={`bpod__team ${t && group.winner === t.seo ? "bpod__team--win" : ""} ${t && out(t) ? "bpod__team--out" : ""}`}>
+            {t && t.logo
+              ? <img className="bteam__logo" src={t.logo} alt=""
+                     onError={(e) => { e.target.style.visibility = "hidden"; }} />
+              : <span className="bteam__logo" />}
+            <span className="bpod__tname">{t ? t.name : "TBD"}</span>
+            {t && t.seed != null && <span className="bpod__natseed">#{t.seed}</span>}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const RegionalBracket = ({ group }) => {
+  const wrapRef = React.useRef(null);
+  const cardRefs = React.useRef({});
+  const [paths, setPaths] = React.useState([]);
+  const [dims, setDims] = React.useState({ w: 0, h: 0 });
+  const games = group.games || [];
+
+  const measure = React.useCallback(() => {
+    const wrap = wrapRef.current;
+    if (!wrap) return;
+    const base = wrap.getBoundingClientRect();
+    const segs = [];
+    for (const [tStr, feeders] of Object.entries(DE_FEEDERS)) {
+      const tEl = cardRefs.current[+tStr];
+      if (!tEl) continue;
+      const tr = tEl.getBoundingClientRect();
+      const tx = tr.left - base.left, ty = tr.top - base.top + tr.height / 2;
+      for (const [fi, kind] of feeders) {
+        const fEl = cardRefs.current[fi];
+        if (!fEl) continue;
+        const fr = fEl.getBoundingClientRect();
+        const fx = fr.right - base.left, fy = fr.top - base.top + fr.height / 2;
+        const midX = (fx + tx) / 2;
+        segs.push({ d: `M ${fx} ${fy} H ${midX} V ${ty} H ${tx}`, kind });
+      }
+    }
+    setDims({ w: wrap.scrollWidth, h: wrap.scrollHeight });
+    setPaths(segs);
+  }, [group]);
+
+  React.useLayoutEffect(() => {
+    measure();
+    const t = setTimeout(measure, 200);
+    window.addEventListener("resize", measure);
+    return () => { clearTimeout(t); window.removeEventListener("resize", measure); };
+  }, [measure]);
+
+  return (
+    <div className="rbracket" ref={wrapRef}>
+      <svg className="bconnect" width={dims.w} height={dims.h}>
+        {paths.map((p, i) =>
+          <path key={i} d={p.d} className={p.kind === "lose" ? "rconn--lose" : ""} />)}
+      </svg>
+      {games.map((g, i) => {
+        const pos = DE_LAYOUT[i];
+        if (!pos) return null;
+        return (
+          <div key={g.id || i} className="rcard"
+               style={{ left: pos.col * 25 + "%", top: pos.y + "%" }}
+               ref={(el) => { if (el) cardRefs.current[i] = el; }}>
+            <div className="rcard__label">{DE_LABELS[i]}</div>
+            <BGame g={g} />
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+const RegionalModal = ({ group, onClose }) => {
+  React.useEffect(() => {
+    const onKey = (e) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [onClose]);
+  return (
+    <div className="rmodal" onClick={onClose}>
+      <div className="rmodal__box" onClick={(e) => e.stopPropagation()}>
+        <div className="rmodal__head">
+          <div className="rmodal__title">
+            {group.seed != null && <span className="bpod__seed">#{group.seed}</span>}
+            <span>{group.label} Regional</span>
+          </div>
+          <button className="rmodal__close" onClick={onClose} aria-label="Close">✕</button>
+        </div>
+        <RegionalBracket group={group} />
+      </div>
+    </div>
+  );
+};
+
+// One super-regional unit: its two feeder regionals + the super game box, wired
+// with connector lines. `side` is "left" (pods left, super right) or "right".
+const SuperUnit = ({ pairing, side, onPod }) => {
+  const ref = React.useRef(null);
+  const podRefs = React.useRef([]);
+  const superRef = React.useRef(null);
+  const [paths, setPaths] = React.useState([]);
+  const [dims, setDims] = React.useState({ w: 0, h: 0 });
+
+  const measure = React.useCallback(() => {
+    const wrap = ref.current, sup = superRef.current;
+    if (!wrap || !sup) return;
+    const base = wrap.getBoundingClientRect();
+    const sr = sup.getBoundingClientRect();
+    const sy = sr.top - base.top + sr.height / 2;
+    const sx = (side === "left" ? sr.left : sr.right) - base.left;
+    const segs = [];
+    for (const pod of podRefs.current) {
+      if (!pod) continue;
+      const pr = pod.getBoundingClientRect();
+      const py = pr.top - base.top + pr.height / 2;
+      const px = (side === "left" ? pr.right : pr.left) - base.left;
+      const midX = (px + sx) / 2;
+      segs.push(`M ${px} ${py} H ${midX} V ${sy} H ${sx}`);
+    }
+    setDims({ w: wrap.scrollWidth, h: wrap.scrollHeight });
+    setPaths(segs);
+  }, [side, pairing]);
+
+  React.useLayoutEffect(() => {
+    measure();
+    const t = setTimeout(measure, 250);
+    const ro = new ResizeObserver(measure);
+    if (ref.current) ro.observe(ref.current);
+    window.addEventListener("resize", measure);
+    return () => {
+      clearTimeout(t); ro.disconnect();
+      window.removeEventListener("resize", measure);
+    };
+  }, [measure]);
+
+  const pods = (
+    <div className="sunit__pods">
+      {pairing.regionals.map((g, i) => (
+        <div className="sunit__pod" key={g.id}
+             ref={(el) => { podRefs.current[i] = el; }}>
+          <RegionalPod group={g} onClick={() => onPod(g)} />
+        </div>
+      ))}
+    </div>
+  );
+  const superBox = (
+    <div className="sunit__super" ref={superRef}>
+      <div className="sunit__super-label">Super Regional</div>
+      <BGame g={pairing.super} />
+    </div>
+  );
+
+  return (
+    <div className={`sunit sunit--${side}`} ref={ref}>
+      <svg className="bconnect" width={dims.w} height={dims.h}>
+        {paths.map((d, i) => <path key={i} d={d} />)}
+      </svg>
+      {side === "left" ? <>{pods}{superBox}</> : <>{superBox}{pods}</>}
+    </div>
+  );
+};
+
+const NcaaBracket = ({ data }) => {
+  const [sel, setSel] = React.useState(null);
+  const tree = data.tree || { left: [], right: [] };
+  const center = data.center;
+  return (
+    <div className="bracket-ncaa">
+      <div className="ncaa-tree">
+        <div className="ncaa-col">
+          {tree.left.map((p) => (
+            <SuperUnit key={p.id} pairing={p} side="left" onPod={setSel} />
+          ))}
+        </div>
+        {center && (
+          <div className="ncaa-center">
+            <div className="ncaa-center__label">College World Series</div>
+            <div className="ncaa-cws">
+              {["left", "right"].map((s) => center.halves[s] && (
+                <div className="ncaa-cws__half" key={s}>
+                  <div className="sunit__super-label">Omaha Bracket</div>
+                  <CwsPod group={center.halves[s]} onClick={() => setSel(center.halves[s])} />
+                </div>
+              ))}
+            </div>
+            <div className="ncaa-center__finals">
+              <div className="sunit__super-label">National Championship</div>
+              <BGame g={center.finals} />
+            </div>
+            <div className="ncaa-center__note muted">Best-of-3 · score = series wins</div>
+          </div>
+        )}
+        <div className="ncaa-col">
+          {tree.right.map((p) => (
+            <SuperUnit key={p.id} pairing={p} side="right" onPod={setSel} />
+          ))}
+        </div>
+      </div>
+      {sel && <RegionalModal group={sel} onClose={() => setSel(null)} />}
+    </div>
+  );
+};
+
+// ── Bracket view (SEC ⇄ NCAA toggle) ─────────────────────────────────────────
+const Bracket = ({ onGameClick }) => {
+  const [tab, setTab] = React.useState("sec");
+  const [data, setData] = React.useState({});
+  const [error, setError] = React.useState(null);
+
+  React.useEffect(() => {
+    if (data[tab]) return;
+    let live = true;
+    setError(null);
+    fetchBracket(tab)
+      .then((d) => { if (live) setData((s) => ({ ...s, [tab]: d })); })
+      .catch(() => { if (live) setError("Couldn't load the bracket."); });
+    return () => { live = false; };
+  }, [tab]);
+
+  const cur = data[tab];
+  return (
+    <div className="bracket">
+      <header className="bracket__header">
+        <Eyebrow>2026 Postseason</Eyebrow>
+        <h1 className="display">{tab === "sec" ? "SEC Tournament" : "NCAA Tournament"}</h1>
+        <div className="bracket__tabs">
+          <button className={`btab ${tab === "sec" ? "btab--on" : ""}`} onClick={() => setTab("sec")}>SEC</button>
+          <button className={`btab ${tab === "ncaa" ? "btab--on" : ""}`} onClick={() => setTab("ncaa")}>NCAA</button>
+        </div>
+      </header>
+
+      {error && <div className="bracket__msg">{error}</div>}
+      {!error && !cur && <div className="bracket__msg muted">Loading bracket…</div>}
+      {!error && cur && tab === "sec" && <SecBracket data={cur} onGameClick={onGameClick} />}
+      {!error && cur && tab === "ncaa" && <NcaaBracket data={cur} />}
+    </div>
+  );
+};
+
+window.Bracket = Bracket;
