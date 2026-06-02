@@ -1595,12 +1595,26 @@ a { color: inherit; text-decoration: none; }
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
 }
 .bpod { background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius); padding: 8px 9px; }
-.bpod__head { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+/* Fixed two-line header (school name on top, "Regional" beneath) so every pod is
+   the same height regardless of title length — keeps the super boxes vertically
+   aligned across the left and right columns, with no truncation. */
+.bpod__head {
+  display: flex; align-items: flex-start; gap: 6px; margin-bottom: 6px;
+  height: 34px; flex-wrap: nowrap; overflow: hidden;
+}
 .bpod__seed {
   font-family: var(--font-mono); font-size: 10px; color: #fff;
   background: var(--accent); border-radius: 3px; padding: 1px 5px; flex: none;
+  margin-top: 1px;
 }
-.bpod__name { font-weight: 600; font-size: 12px; }
+.bpod__name {
+  font-weight: 600; font-size: 12px; line-height: 1.25; min-width: 0;
+  display: flex; flex-direction: column;
+}
+.bpod__school { white-space: nowrap; }
+.bpod__regional { color: var(--muted); font-weight: 600; }
+/* CWS pod keeps its single-line title ("World Series"). */
+.bpod--cws .bpod__name { display: block; }
 .bpod__teams { display: flex; flex-direction: column; gap: 0; }
 .bpod__team { display: flex; align-items: center; gap: 6px; padding: 2px 3px; font-size: 12px; }
 .bpod__tname { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -1661,15 +1675,17 @@ a { color: inherit; text-decoration: none; }
 .bpod__team--out .bteam__logo { opacity: 0.5; }
 
 /* ─── NCAA bracket tree (regionals → supers, left & right) ─── */
-.ncaa-tree { display: flex; gap: 40px; align-items: flex-start; }
+.ncaa-tree { display: flex; gap: 20px; align-items: flex-start; }
 .ncaa-col { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 26px; }
-.sunit { position: relative; display: flex; align-items: center; gap: 30px; }
+.sunit { position: relative; display: flex; align-items: center; gap: 20px; }
 .sunit .bconnect { position: absolute; top: 0; left: 0; pointer-events: none; z-index: 0; }
 .sunit .bconnect path { fill: none; stroke: var(--line-2); stroke-width: 2; }
 .sunit__pods { display: flex; flex-direction: column; gap: 18px; flex: 1; min-width: 0; z-index: 1; }
 .sunit__pod { display: flex; }
 .sunit__pod > .bpod { flex: 1; }
-.sunit__super { flex: 0 0 200px; z-index: 1; }
+.sunit__super { flex: 0 0 168px; z-index: 1; }
+/* Keep the regional title on one line (e.g. "West Virginia Regional"). */
+.bpod__name { white-space: nowrap; }
 .sunit__super-label {
   font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--muted); margin-bottom: 4px; text-align: center;

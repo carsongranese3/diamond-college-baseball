@@ -176,7 +176,10 @@ const RegionalPod = ({ group, onClick }) => {
     <div className="bpod bpod--click" onClick={onClick}>
       <div className="bpod__head">
         {group.seed != null && <span className="bpod__seed">#{group.seed}</span>}
-        <span className="bpod__name">{group.label} Regional</span>
+        <span className="bpod__name">
+          <span className="bpod__school">{group.label}</span>
+          <span className="bpod__regional">Regional</span>
+        </span>
         <span className="bpod__expand">View bracket ›</span>
       </div>
       <div className="bpod__teams">
