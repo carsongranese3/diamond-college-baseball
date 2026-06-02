@@ -181,7 +181,6 @@
         <HeroHalf side="left" {...left} />
         <HeroHalf side="right" {...right} />
         <div className="cmp-vs">
-          <button className="cmp-vs__swap" onClick={onSwap} title="Swap sides">⇄</button>
           <div className="cmp-vs__text">VS</div>
         </div>
       </div>
@@ -281,6 +280,14 @@
     );
   }
 
+  // First name on top, last name(s) beneath.
+  function stackedName(name) {
+    const sp = (name || "").indexOf(" ");
+    return sp > 0
+      ? <React.Fragment>{name.slice(0, sp)}<br />{name.slice(sp + 1)}</React.Fragment>
+      : name;
+  }
+
   function PlayerPicker({ players, value, onChange, color }) {
     const [q, setQ] = useState("");
     const filtered = players.filter((p) => {
@@ -288,7 +295,7 @@
       return hay.includes(q.toLowerCase());
     }).slice(0, 60);
     return (
-      <Dropdown value={value ? value.name : null} sub={value ? `${value.pos} · ${value.teamName}` : null}
+      <Dropdown value={value ? stackedName(value.name) : null} sub={value ? `${value.pos} · ${value.teamName}` : null}
         color={color} placeholder="Select player">
         {(close) => (
           <React.Fragment>
@@ -299,7 +306,7 @@
                 <button key={p.teamId + "::" + p.name} className="cmp-picker__item"
                   onClick={() => { onChange(p); setQ(""); close(); }}>
                   <span className="cmp-picker__swatch" style={{ background: (window.TEAM_BY_ID[p.teamId] || {}).color }} />
-                  <span className="cmp-picker__iname">{p.name}</span>
+                  <span className="cmp-picker__iname">{stackedName(p.name)}</span>
                   <span className="cmp-picker__imeta">{p.pos} · {p.teamName}</span>
                 </button>
               ))}
@@ -487,7 +494,6 @@
           {mode === "teams" ? (
             <React.Fragment>
               <TeamPicker teams={teams} value={window.TEAM_BY_ID[aId]} onChange={(t) => setAId(t.id)} color={colorA} />
-              <button className="cmp-swap" onClick={swapTeams} title="Swap">⇄</button>
               <TeamPicker teams={teams} value={window.TEAM_BY_ID[bId]} onChange={(t) => setBId(t.id)} color={colorB} />
             </React.Fragment>
           ) : !players ? (
@@ -500,7 +506,6 @@
                 <TeamSelectMini teams={teams} value={window.TEAM_BY_ID[ptA]} onChange={(t) => setSideTeam("A", t)} color={colorA} />
                 <PlayerPicker players={players.filter((p) => p.teamId === ptA)} value={pa} onChange={setPa} color={colorA} />
               </div>
-              <button className="cmp-swap" onClick={swapPlayers} title="Swap">⇄</button>
               <div className="cmp-side">
                 <TeamSelectMini teams={teams} value={window.TEAM_BY_ID[ptB]} onChange={(t) => setSideTeam("B", t)} color={colorB} />
                 <PlayerPicker players={players.filter((p) => p.teamId === ptB)} value={pb} onChange={setPb} color={colorB} />

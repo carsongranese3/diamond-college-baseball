@@ -180,7 +180,7 @@ const RegionalPod = ({ group, onClick }) => {
           <span className="bpod__school">{group.label}</span>
           <span className="bpod__regional">Regional</span>
         </span>
-        <span className="bpod__expand">View bracket ›</span>
+        <span className="bpod__expand">View<br />bracket ›</span>
       </div>
       <div className="bpod__teams">
         {group.teams.map((t) => (
@@ -230,7 +230,7 @@ const CwsPod = ({ group, onClick }) => {
     <div className="bpod bpod--click bpod--cws" onClick={onClick}>
       <div className="bpod__head">
         <span className="bpod__name">{group.label}</span>
-        <span className="bpod__expand">View bracket ›</span>
+        <span className="bpod__expand">View<br />bracket ›</span>
       </div>
       <div className="bpod__teams">
         {slots.map((t, i) => (
@@ -347,8 +347,11 @@ const SuperUnit = ({ pairing, side, onPod }) => {
     const sy = sr.top - base.top + sr.height / 2;
     const sx = (side === "left" ? sr.left : sr.right) - base.left;
     const segs = [];
-    for (const pod of podRefs.current) {
-      if (!pod) continue;
+    for (const slot of podRefs.current) {
+      if (!slot) continue;
+      // Measure the actual pod box (.bpod), not its full-width wrapper — the pod
+      // is capped narrower, so the wrapper's edge would leave a gap to the line.
+      const pod = slot.querySelector(".bpod") || slot;
       const pr = pod.getBoundingClientRect();
       const py = pr.top - base.top + pr.height / 2;
       const px = (side === "left" ? pr.right : pr.left) - base.left;
@@ -382,9 +385,11 @@ const SuperUnit = ({ pairing, side, onPod }) => {
     </div>
   );
   const superBox = (
-    <div className="sunit__super" ref={superRef}>
+    <div className="sunit__super">
       <div className="sunit__super-label">Super Regional</div>
-      <BGame g={pairing.super} />
+      {/* ref on the box itself (not the labeled container) so connector lines
+          target the box's true center, not the label-shifted container center. */}
+      <div ref={superRef}><BGame g={pairing.super} /></div>
     </div>
   );
 
