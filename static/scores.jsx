@@ -80,7 +80,7 @@ const ScoreRow = ({ game, onClick }) => {
   );
 };
 
-const Scores = ({ onGameClick }) => {
+const Scores = ({ onGameClick, initialDate, onDateChange }) => {
   const byDate = React.useMemo(_scoreboardByDate, []);
   const dates = React.useMemo(() => Object.keys(byDate).sort(), [byDate]);
 
@@ -93,14 +93,23 @@ const Scores = ({ onGameClick }) => {
     return idx >= 0 ? idx : dates.length - 1;
   }, [dates]);
 
-  const [idx, setIdx] = React.useState(defaultIdx);
-  React.useEffect(() => { setIdx(defaultIdx); }, [defaultIdx]);
+  // If the URL names a date that has games, start there; else fall to the default.
+  const initialIdx = React.useMemo(() => {
+    if (initialDate && dates.includes(initialDate)) return dates.indexOf(initialDate);
+    return defaultIdx;
+  }, [initialDate, dates, defaultIdx]);
+
+  const [idx, setIdx] = React.useState(initialIdx);
+  React.useEffect(() => { setIdx(initialIdx); }, [initialIdx]);
+
+  const iso = dates[idx];
+  // Report the selected date up so the URL stays in sync. (Hook must run before
+  // any early return, so it's keyed on iso which is undefined when empty.)
+  React.useEffect(() => { if (onDateChange && iso) onDateChange(iso); }, [iso]);
 
   if (!dates.length) {
     return <div className="loading-block">No games found for the season yet.</div>;
   }
-
-  const iso = dates[idx];
   const games = byDate[iso] || [];
   const finals = games.filter((g) => g.final).length;
 

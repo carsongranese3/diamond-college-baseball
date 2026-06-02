@@ -1,27 +1,94 @@
 // Root app — manages view state (standings / team / game)
 
-// Map the main views to real URL paths so each has its own shareable link and
-// the browser back/forward buttons work. Detail views that carry passed-in
-// object state (game, player) aren't deep-linked — they return null and leave
-// the URL on the section they were opened from.
+// Map every view to a real URL so each has its own shareable, refreshable link
+// and the browser back/forward buttons work. Game/player views carry an in-app
+// `origin` for the Back button, but the URL only needs the bits to rebuild them.
+// Scores date <-> URL slug. ISO "2026-05-31" <-> "053126" (MMDDYY).
+function isoToMMDDYY(iso) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso || "");
+  return m ? m[2] + m[3] + m[1].slice(2) : null;
+}
+function mmddyyToIso(slug) {
+  const m = /^(\d{2})(\d{2})(\d{2})$/.exec(slug || "");
+  return m ? `20${m[3]}-${m[1]}-${m[2]}` : null;
+}
+
 function pathForView(view) {
   switch (view.name) {
     case "standings": return "/standings";
-    case "scores": return "/scores";
-    case "bracket": return "/postseason";
+    case "scores": {
+      const slug = isoToMMDDYY(view.scoresDate);
+      return slug ? "/scores/" + slug : "/scores";
+    }
+    case "bracket": return "/postseason/" + (view.bracketTab || "sec");
     case "compare": return "/compare";
-    case "team": return "/team/" + encodeURIComponent(view.teamId);
+    case "team":
+      // Every team tab gets its own segment, including schedule.
+      return "/team/" + encodeURIComponent(view.teamId) +
+             "/" + (view.teamTab || "schedule");
+    case "player":
+      // Drop spaces from the name in the URL (AidenRobbins). The backend matches
+      // names normalized (alphanumerics only), so the space-less form still works.
+      return "/player/" + encodeURIComponent(view.seo) +
+             "/" + encodeURIComponent((view.playerName || "").replace(/\s+/g, ""));
+    case "game":
+      // Clean /game/<id> — the host team is resolved from the id on load.
+      return "/game/" + encodeURIComponent((view.game && view.game.id) || "");
     default: return null;
   }
 }
 
+// Resolve a game id to {hostTeamId, game} by scanning every team's schedule.
+// An SEC-vs-SEC game appears under both teams; prefer the team hosting it (its
+// own page), else just the first match. Either resolves to the same saved game
+// server-side (matched by team + date + host runs), so the choice is cosmetic.
+function _resolveGameId(gameId) {
+  const sched = window.SCHEDULES || {};
+  let fallback = null;
+  for (const teamId in sched) {
+    for (const g of sched[teamId]) {
+      if (String(g.id) === String(gameId)) {
+        if (g.home) return { hostTeamId: teamId, game: g };
+        if (!fallback) fallback = { hostTeamId: teamId, game: g };
+      }
+    }
+  }
+  return fallback;
+}
+
 function viewForPath(pathname) {
   const p = (pathname || "/").replace(/\/+$/, "") || "/";
-  if (p === "/scores") return { name: "scores" };
-  if (p === "/postseason") return { name: "bracket" };
+  if (p === "/scores" || p.startsWith("/scores/")) {
+    const slug = p.slice("/scores".length).replace(/^\//, "");
+    return { name: "scores", scoresDate: mmddyyToIso(slug) || null };
+  }
+  if (p === "/postseason" || p.startsWith("/postseason/")) {
+    const seg = p.slice("/postseason".length).replace(/^\//, "");
+    return { name: "bracket", bracketTab: seg === "ncaa" ? "ncaa" : "sec" };
+  }
   if (p === "/compare") return { name: "compare" };
   if (p.startsWith("/team/")) {
-    return { name: "team", teamId: decodeURIComponent(p.slice("/team/".length)) };
+    const rest = p.slice("/team/".length).split("/");
+    const teamId = decodeURIComponent(rest[0]);
+    const teamTab = ["schedule", "roster", "stats"].includes(rest[1]) ? rest[1] : "schedule";
+    return { name: "team", teamId, teamTab };
+  }
+  if (p.startsWith("/player/")) {
+    const rest = p.slice("/player/".length).split("/");
+    if (rest.length >= 2) {
+      return { name: "player", seo: decodeURIComponent(rest[0]),
+               playerName: decodeURIComponent(rest.slice(1).join("/")) };
+    }
+  }
+  if (p.startsWith("/game/")) {
+    // Support both the clean /game/<id> and the legacy /game/<team>/<id>.
+    const rest = p.slice("/game/".length).split("/");
+    const gameId = decodeURIComponent(rest[rest.length - 1]);
+    const hit = _resolveGameId(gameId);
+    if (hit) return { name: "game", game: hit.game, hostTeamId: hit.hostTeamId };
+    // Id not found (e.g. a legacy team-prefixed link) — fall back to the team.
+    if (rest.length >= 2) return { name: "team", teamId: decodeURIComponent(rest[0]) };
+    return { name: "standings" };
   }
   return { name: "standings" };
 }
@@ -59,12 +126,12 @@ const App = () => {
     window.scrollTo({ top: 0, behavior: "auto" });
   }, [view]);
 
-  const goTeam = (teamId) => setView({ name: "team", teamId });
+  const goTeam = (teamId) => setView({ name: "team", teamId, teamTab: "schedule" });
   const goGame = (game, hostTeamId, origin) => setView({ name: "game", game, hostTeamId, origin });
   const goStandings = () => setView({ name: "standings" });
   const goScores = () => setView({ name: "scores" });
   const goCompare = () => setView({ name: "compare" });
-  const goBracket = () => setView({ name: "bracket" });
+  const goBracket = () => setView({ name: "bracket", bracketTab: "sec" });
   // origin describes where to return (a "team" or "game" view) so Back works.
   const goPlayer = (seo, playerName, origin) =>
     setView({ name: "player", seo, playerName, origin });
@@ -89,15 +156,26 @@ const App = () => {
       <main className="container">
         {view.name === "standings" && <Standings onTeamClick={goTeam} />}
         {view.name === "scores" && (
-          <Scores onGameClick={(g, hostTeamId) => goGame(g, hostTeamId, "scores")} />
+          <Scores
+            initialDate={view.scoresDate || null}
+            onDateChange={(iso) => setView((v) => v.name === "scores" ? { ...v, scoresDate: iso } : v)}
+            onGameClick={(g, hostTeamId) => goGame(g, hostTeamId, "scores")}
+          />
         )}
         {view.name === "bracket" && (
-          <Bracket onGameClick={(g, hostTeamId) => goGame(g, hostTeamId, "bracket")} />
+          <Bracket
+            initialTab={view.bracketTab || "sec"}
+            onTabChange={(t) => setView((v) => ({ ...v, bracketTab: t }))}
+            onGameClick={(g, hostTeamId) => goGame(g, hostTeamId, "bracket")}
+          />
         )}
         {view.name === "compare" && <Compare />}
         {view.name === "team" && (
           <TeamDetail
+            key={view.teamId}
             teamId={view.teamId}
+            initialTab={view.teamTab || "schedule"}
+            onTabChange={(t) => setView((v) => ({ ...v, teamTab: t }))}
             onBack={goStandings}
             onGameClick={(g, hostTeamId) => goGame(g, hostTeamId || view.teamId, "team")}
             onPlayerClick={(playerName) =>

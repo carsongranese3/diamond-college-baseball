@@ -1,11 +1,16 @@
 // Team detail view — continuous schedule + Team/Players stats toggle
 
-const TeamDetail = ({ teamId, onBack, onGameClick, onPlayerClick }) => {
+const TeamDetail = ({ teamId, initialTab, onTabChange, onBack, onGameClick, onPlayerClick }) => {
   const team = window.TEAM_BY_ID[teamId];
-  const [tab, setTab] = React.useState("schedule");
+  const [tab, setTabState] = React.useState(initialTab || "schedule");
   const [statMode, setStatMode] = React.useState("team");      // team | players
   const [playerView, setPlayerView] = React.useState("batting"); // batting | pitching
   const schedule = window.SCHEDULES[teamId] || [];
+
+  // Follow the URL when it changes (back/forward, or a new deep-link).
+  React.useEffect(() => { setTabState(initialTab || "schedule"); }, [initialTab, teamId]);
+  // Changing tabs updates the URL so each is its own shareable link.
+  const setTab = (t) => { setTabState(t); if (onTabChange) onTabChange(t); };
 
   // Team season stats + roster are an expensive per-team crawl, fetched lazily
   // the first time the Stats tab is opened.

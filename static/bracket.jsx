@@ -440,10 +440,14 @@ const NcaaBracket = ({ data }) => {
 };
 
 // ── Bracket view (SEC ⇄ NCAA toggle) ─────────────────────────────────────────
-const Bracket = ({ onGameClick }) => {
-  const [tab, setTab] = React.useState("sec");
+const Bracket = ({ onGameClick, initialTab, onTabChange }) => {
+  const [tab, setTabState] = React.useState(initialTab || "sec");
   const [data, setData] = React.useState({});
   const [error, setError] = React.useState(null);
+
+  // Follow the URL (back/forward, deep-link); changing tabs updates the URL.
+  React.useEffect(() => { setTabState(initialTab || "sec"); }, [initialTab]);
+  const setTab = (t) => { setTabState(t); if (onTabChange) onTabChange(t); };
 
   React.useEffect(() => {
     if (data[tab]) return;

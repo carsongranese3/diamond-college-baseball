@@ -409,7 +409,11 @@ def game(seo, name, iso, host_runs=None, opp_seo=None):
         box = data["box"]
         if _iso(box.get("date")) != iso:
             continue
-        host_side = "home" if box.get("home") else "away"
+        # Which line_score slot is THIS team — matched by name, since the saved
+        # box["home"] flag can disagree with the line_score's home/away slots
+        # for neutral-site games (the flag and the slots come from different
+        # fields and aren't always consistent).
+        host_side = _host_side(data, name)
         ls = box.get("line_score") or {}
         if want_runs is not None and to_int((ls.get(host_side) or {}).get("r")) != want_runs:
             continue  # doubleheader: disambiguate by the host team's run total
