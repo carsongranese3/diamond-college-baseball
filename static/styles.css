@@ -1735,11 +1735,14 @@ a { color: inherit; text-decoration: none; }
    specificity → later source wins; media queries add no specificity). */
 @media (max-width: 900px) {
   .bracket-sec, .bracket-ncaa {
-    overflow: auto; -webkit-overflow-scrolling: touch;
-    /* A touch of inset so the first/last cards aren't flush to the screen edge. */
-    padding-left: 2px; padding-right: 2px;
+    /* Horizontal pan only. overflow-y: hidden (not visible) so the container
+       never grows its own vertical scrollbar — otherwise a 1-2px overflow makes
+       a SECOND vertical bar next to the page's. Extra bottom space keeps the
+       absolutely-positioned cells from being clipped. */
+    overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch;
+    padding-left: 2px; padding-right: 2px; padding-bottom: 16px;
   }
-  .brounds { width: 1180px; }
+  .brounds { width: 1180px; min-height: 1076px; }
   .bracket-sec .bround { flex: 0 0 184px; }
   /* Match the desktop tree proportions so the regional pods stay normal-sized
      (~240px) rather than ballooning to fill the phone width. */
@@ -1786,4 +1789,12 @@ a { color: inherit; text-decoration: none; }
   .cmp-picker__value { flex: 1 1 100%; font-size: 19px; }
   .cmp-picker__sub { flex: 0 0 auto; }
   .cmp-picker__caret { position: absolute; right: 14px; top: 14px; margin-left: 0; }
+}
+
+/* ─── Mobile: box-score tables scroll horizontally ───
+   The batter/pitcher tables aren't in a scroll wrapper, so on a phone they'd be
+   clipped. Make their section scroll left/right and keep the table full width. */
+@media (max-width: 900px) {
+  .boxscore { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .boxscore .box-table { min-width: 460px; }
 }

@@ -365,9 +365,22 @@ def _side(name, seo, ls):
     }
 
 
-def _box_rows_bat(rows):
+def _is_totals_row(row, team_name):
+    """The box score ends with a team-totals row whose Name is the school name.
+    Detect it so it isn't shown as a 'player'. Matches the row's Name against the
+    team name (normalized); falls back to a no-jersey-#/no-position row only when
+    no team name was supplied."""
+    nm = _norm(row.get("Name"))
+    if team_name:
+        return bool(nm) and nm == _norm(_clean_opp(team_name))
+    return not (row.get("#") or "").strip() and not (row.get("P") or "").strip()
+
+
+def _box_rows_bat(rows, team_name=""):
     out = []
     for row in rows or []:
+        if _is_totals_row(row, team_name):
+            continue
         ab = to_int(row.get("AB"))
         out.append({
             "name": row.get("Name", ""), "pos": row.get("P", ""),
@@ -379,9 +392,11 @@ def _box_rows_bat(rows):
     return out
 
 
-def _box_rows_pit(rows):
+def _box_rows_pit(rows, team_name=""):
     out = []
     for row in rows or []:
+        if _is_totals_row(row, team_name):
+            continue
         outs = ip_to_outs(row.get("IP"))
         er = to_int(row.get("ER"))
         out.append({
@@ -436,10 +451,10 @@ def game(seo, name, iso, host_runs=None, opp_seo=None):
             "winner": "home" if home["r"] > away["r"] else (
                 "away" if away["r"] > home["r"] else None),
             "line": {"away": away, "home": home},
-            "batters": {"away": _box_rows_bat((players.get("away") or {}).get("batting")),
-                        "home": _box_rows_bat((players.get("home") or {}).get("batting"))},
-            "pitchers": {"away": _box_rows_pit((players.get("away") or {}).get("pitching")),
-                         "home": _box_rows_pit((players.get("home") or {}).get("pitching"))},
+            "batters": {"away": _box_rows_bat((players.get("away") or {}).get("batting"), away["name"]),
+                        "home": _box_rows_bat((players.get("home") or {}).get("batting"), home["name"])},
+            "pitchers": {"away": _box_rows_pit((players.get("away") or {}).get("pitching"), away["name"]),
+                         "home": _box_rows_pit((players.get("home") or {}).get("pitching"), home["name"])},
             "plays": data["plays"] or [],
             "notes": [],
             "_source": "local",
