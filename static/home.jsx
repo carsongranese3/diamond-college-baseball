@@ -71,8 +71,10 @@ function hpMarquee(limit) {
 
 /* ---------- shared presentational atoms ---------- */
 
-function HPDot({ color, size = 11 }) {
-  return <span className="tdot" style={{ width: size, height: size, background: color || "var(--faint)" }} />;
+// Team crest — the real logo (Monogram falls back to a colored initials chip
+// when a school has no logo, or its image fails to load).
+function HPLogo({ team, size = 22 }) {
+  return team ? <Monogram team={team} size={size} /> : null;
 }
 
 // Eyebrow with a leading rule, matching the design's SectionLabel.
@@ -105,7 +107,7 @@ function HPStandings({ n = 10, onTeam }) {
         <button key={t.id} className="bare-btn hp-standings__row" onClick={() => onTeam && onTeam(t.id)}>
           <span className="mono hp-faint">{String(i + 1).padStart(2, "0")}</span>
           <span className="hp-standings__team">
-            <HPDot color={t.color} />
+            <HPLogo team={t} size={24} />
             <span className="hp-standings__name">{t.name}</span>
             {t.rank && <span className="chip-rank">#{t.rank}</span>}
           </span>
@@ -123,9 +125,9 @@ function HPMatchCard({ card, post, onTeam }) {
   const { host, opp } = card;
   const oppId = opp && opp.id;
   const oppKnown = oppId && (window.TEAM_BY_ID || {})[oppId];
-  const Row = ({ id, name, color, rank, dim }) => (
+  const Row = ({ team, id, name, rank, dim }) => (
     <button className="bare-btn hp-card__row" disabled={!id} onClick={() => id && onTeam && onTeam(id)}>
-      <HPDot color={color} size={9} />
+      <HPLogo team={team} size={20} />
       <span className={"hp-card__name" + (dim ? " hp-ink2" : "")}>{name}</span>
       {rank && <span className="chip-rank">#{rank}</span>}
     </button>
@@ -136,11 +138,11 @@ function HPMatchCard({ card, post, onTeam }) {
         <span className="hp-eyebrow">{post ? "Super Regional" : (opp && opp.conf ? "SEC Series" : "Home")}</span>
         <span className="mono hp-faint">{card.date}{card.time ? " · " + card.time : ""}</span>
       </div>
-      <Row id={host.id} name={host.name} color={host.color} rank={host.rank} />
+      <Row team={host} id={host.id} name={host.name} rank={host.rank} />
       <Row
+        team={opp}
         id={oppKnown ? oppId : null}
         name={opp ? opp.name : "TBD"}
-        color={oppKnown ? oppKnown.color : "var(--faint)"}
         rank={opp && opp.rank}
         dim
       />

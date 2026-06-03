@@ -1,6 +1,6 @@
 // Team "Home" tab — season-aware landing for one team. Renders below the team
 // hero/tabs that TeamDetail already provides, so no second hero here. Reuses the
-// shared adapters/atoms from home.jsx (hpSecTeams, hpPhase, HPLabel, HPDot, ...).
+// shared adapters/atoms from home.jsx (hpSecTeams, hpPhase, HPLabel, HPLogo, ...).
 // Real data: this week + recent from the schedule, conference standing from
 // TEAMS, team leaders from the lazy /api/team crawl. Postseason-only extras
 // (national seed, road-to-Omaha path, eliminated narrative) are left for later.
@@ -32,7 +32,7 @@ function ThisWeek({ schedule, team, onTeam, post }) {
       <button className="bare-btn th-series__opp" disabled={!oppKnown}
         onClick={() => oppKnown && onTeam && onTeam(oppId)}>
         <span className="mono hp-muted">{first.home ? "VS" : "AT"}</span>
-        <HPDot color={oppKnown ? oppKnown.color : "var(--faint)"} size={12} />
+        <HPLogo team={first.opp} size={28} />
         <span className="th-series__oppname">{first.opp ? first.opp.name : "TBD"}</span>
         {first.opp && first.opp.rank && <span className="chip-rank">#{first.opp.rank}</span>}
       </button>
@@ -86,7 +86,7 @@ function ConfStrip({ teamId }) {
             style={me ? { borderLeftColor: t.color } : null}>
             <span className="mono hp-faint">{String(pos).padStart(2, "0")}</span>
             <span className="th-strip__team">
-              <HPDot color={t.color} size={9} />
+              <HPLogo team={t} size={22} />
               <span className={me ? "bold" : ""}>{t.name}</span>
             </span>
             <span className="mono hp-r">{t.confW}&ndash;{t.confL}</span>
