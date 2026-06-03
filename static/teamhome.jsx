@@ -236,6 +236,58 @@ function RecentList({ schedule, onGameClick }) {
   );
 }
 
+// SEC series recap — the team's conference weekend series and how each went.
+// Replaces "Recent" for eliminated teams (their conference-season recap), in
+// chronological order. Each row: series outcome (W/L/T) + record + opponent.
+function SecSeries({ schedule, onTeam }) {
+  const conf = schedule.filter((g) => g.result && g.opp && g.opp.conf && (g.phase || "regular") === "regular");
+  const series = groupRuns(conf);
+  if (!series.length) return <div className="hp-placeholder">No conference series.</div>;
+  return (
+    <div className="th-recent">
+      {series.map((run, i) => {
+        const w = run.filter((g) => g.result === "W").length;
+        const l = run.length - w;
+        const won = w > l, split = w === l;
+        const swept = run.length >= 3 && (w === 0 || l === 0);
+        const opp = run[0].opp;
+        const click = _known(opp);
+        return (
+          <button key={i} className="bare-btn th-recent__row" disabled={!click}
+            onClick={() => click && onTeam && onTeam(opp.id)}>
+            <span className={"chip " + (won ? "chip-w" : split ? "" : "chip-l")}>{won ? "W" : split ? "T" : "L"}</span>
+            <span className="mono th-recent__score">{w}&ndash;{l}</span>
+            <span className="th-recent__opp">{opp ? opp.name : ""}</span>
+            <span className="mono hp-faint th-recent__date">{swept ? "Swept" : (run[0].home ? "vs" : "at")}</span>
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+// Compact "how the season ended" for an eliminated team: the furthest round it
+// reached + its final game. Fills the gap under Conference Standing.
+function HowItEnded({ schedule }) {
+  const played = schedule.filter((g) => g.result);
+  if (!played.length) return null;
+  const last = played[played.length - 1];
+  const post = last.phase && last.phase !== "regular";
+  return (
+    <div className="th-ended">
+      <div className="th-ended__round" style={post ? null : { color: "var(--muted)" }}>
+        {post ? last.phase : "Regular Season"}
+      </div>
+      <div className="th-ended__game">
+        <span className={"chip " + (last.result === "W" ? "chip-w" : "chip-l")}>{last.result}</span>
+        <span className="mono th-ended__score">{last.score.us}&ndash;{last.score.them}</span>
+        <span className="th-ended__opp">{last.home ? "vs" : "at"} {last.opp ? last.opp.name : ""}</span>
+        <span className="mono hp-faint">{last.date}</span>
+      </div>
+    </div>
+  );
+}
+
 // Window of 5 standings rows centred on this team.
 function ConfStrip({ teamId }) {
   const teams = hpSecTeams();
@@ -292,6 +344,8 @@ const TeamHome = ({ teamId, onTeam, onGameClick }) => {
   const team = window.TEAM_BY_ID[teamId];
   const schedule = window.SCHEDULES[teamId] || [];
   const post = hpPhase() === "postseason";
+  // Eliminated / season over = no upcoming games -> the "This Week" section is dropped.
+  const hasUpcoming = schedule.some((g) => !g.result);
 
   // Team leaders need the per-team box-score crawl (memoized in bootstrap.js).
   const [teamData, setTeamData] = React.useState(null);
@@ -304,10 +358,12 @@ const TeamHome = ({ teamId, onTeam, onGameClick }) => {
 
   return (
     <div className="hp hp--team">
-      <section className="hp-hero">
-        <HPLabel color={post ? "var(--gold)" : null}>This Week</HPLabel>
-        <ThisWeek schedule={schedule} team={team} onTeam={onTeam} />
-      </section>
+      {hasUpcoming && (
+        <section className="hp-hero">
+          <HPLabel color={post ? "var(--gold)" : null}>This Week</HPLabel>
+          <ThisWeek schedule={schedule} team={team} onTeam={onTeam} />
+        </section>
+      )}
 
       <section className="hp-hero">
         <HPLabel>Team Leaders</HPLabel>
@@ -318,13 +374,21 @@ const TeamHome = ({ teamId, onTeam, onGameClick }) => {
 
       <section className="hp-split">
         <div>
-          <HPLabel>Recent</HPLabel>
-          <RecentList schedule={schedule} onGameClick={onGameClick} />
+          <HPLabel>{hasUpcoming ? "Recent" : "SEC Series"}</HPLabel>
+          {hasUpcoming
+            ? <RecentList schedule={schedule} onGameClick={onGameClick} />
+            : <SecSeries schedule={schedule} onTeam={onTeam} />}
         </div>
         <div className="hp-split__rule" />
         <div>
           <HPLabel>Conference Standing</HPLabel>
           <ConfStrip teamId={teamId} />
+          {!hasUpcoming && (
+            <div className="th-ended-wrap">
+              <HPLabel>How It Ended</HPLabel>
+              <HowItEnded schedule={schedule} />
+            </div>
+          )}
         </div>
       </section>
     </div>

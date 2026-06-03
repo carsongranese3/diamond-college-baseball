@@ -169,6 +169,49 @@ function HPSuperCard({ sr, onTeam }) {
   );
 }
 
+// Conference leaders — three categories (AVG / HR / ERA), each with the leader
+// (big) and two runners-up. Data from /api/conference-leaders.
+function HPConfLeaders({ data }) {
+  const teamObj = (p) => (window.TEAM_BY_ID || {})[p.team] || null;
+  return (
+    <div className="hp-cl">
+      {["avg", "hr", "era"].map((key) => {
+        const cat = data[key];
+        if (!cat || !cat.list || !cat.list.length) return null;
+        const top = cat.list[0];
+        return (
+          <div key={key} className="hp-cl__cat">
+            <div className="hp-cl__head">
+              <span className="hp-eyebrow">{cat.label}</span>
+              <span className="mono hp-faint">{cat.unit}</span>
+            </div>
+            <div className="hp-cl__leader">
+              <div>
+                <div className="hp-cl__meta">
+                  <HPLogo team={teamObj(top)} size={16} />
+                  <span className="mono">{top.abbr} &middot; {top.pos}</span>
+                </div>
+                <div className="hp-cl__name">{top.player}</div>
+              </div>
+              <div className="hp-cl__val">{top.value}</div>
+            </div>
+            <div className="hp-cl__rest">
+              {cat.list.slice(1, 3).map((p, i) => (
+                <div key={i} className="hp-cl__row">
+                  <span className="mono hp-faint">{i + 2}</span>
+                  <HPLogo team={teamObj(p)} size={14} />
+                  <span className="hp-cl__rname">{p.player}</span>
+                  <span className="mono hp-cl__rval">{p.value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 /* ---------- composed homepage ---------- */
 
 const Home = ({ onTeam, onNav }) => {
@@ -179,6 +222,12 @@ const Home = ({ onTeam, onNav }) => {
   const marquee = hpMarquee(8);
   const supers = window.SUPER_REGIONALS || [];
   const showSupers = post && supers.length > 0;
+  const [confLeaders, setConfLeaders] = React.useState(null);
+  React.useEffect(() => {
+    let live = true;
+    window.fetchConferenceLeaders().then((d) => live && setConfLeaders(d)).catch(() => {});
+    return () => { live = false; };
+  }, []);
   return (
     <div className="hp">
       {/* masthead */}
@@ -221,7 +270,9 @@ const Home = ({ onTeam, onNav }) => {
         <div className="hp-split__rule" />
         <div>
           <HPLabel>Conference Leaders</HPLabel>
-          <div className="hp-placeholder hp-placeholder--tall">Conference stat leaders are coming soon.</div>
+          {confLeaders
+            ? <HPConfLeaders data={confLeaders} />
+            : <div className="hp-placeholder hp-placeholder--tall">Loading conference leaders…</div>}
         </div>
       </section>
     </div>

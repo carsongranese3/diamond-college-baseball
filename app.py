@@ -59,6 +59,69 @@ def _super_regionals():
     return out
 
 
+def _ip_float(ip):
+    try:
+        return float(ip)
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def _conference_leaders():
+    """Top-3 conference leaders in AVG / HR / ERA, found by walking every team's
+    roster: pool the qualified players across all teams, then take the best three
+    (so one team can place multiple players, and a later team pushes weaker ones
+    out of the top three)."""
+    data = _memo("season", season.SEASON_AGGREGATE_TTL, season.build_season)
+    avg_pool, hr_pool, era_pool = [], [], []
+    for t in data["teams"]:
+        seo, name = t["id"], t["name"]
+        sched = data["schedules"].get(seo)
+        try:
+            stats = _memo(f"team:{seo}", 21600,
+                          lambda seo=seo, name=name, sched=sched:
+                          local_data.team_stats(seo, name)
+                          or (compute_team_stats(seo, sched) if sched else None))
+        except Exception:
+            stats = None
+        roster = (stats or {}).get("roster") or {}
+        for b in roster.get("batters", []):
+            try:
+                ab = int(b.get("ab") or 0)
+            except (TypeError, ValueError):
+                ab = 0
+            if ab >= 50 and b.get("avg"):
+                avg_pool.append((_ip_float(b["avg"]), t, b, b["avg"]))
+            try:
+                hr = int(b.get("hr") or 0)
+            except (TypeError, ValueError):
+                hr = 0
+            if hr > 0:
+                hr_pool.append((hr, t, b, str(hr)))
+        for p in roster.get("pitchers", []):
+            if _ip_float(p.get("ip")) >= 20 and p.get("era"):
+                era_pool.append((_ip_float(p["era"]), t, p, p["era"]))
+
+    def fmt(e):
+        _v, t, p, val = e
+        return {"player": p.get("name"), "team": t["id"], "abbr": t.get("mark"),
+                "pos": p.get("pos"), "value": val}
+
+    def top(pool, reverse):
+        return [fmt(e) for e in sorted(pool, key=lambda x: x[0], reverse=reverse)[:3]]
+
+    return {
+        "avg": {"label": "Batting Avg", "unit": "AVG", "list": top(avg_pool, True)},
+        "hr": {"label": "Home Runs", "unit": "HR", "list": top(hr_pool, True)},
+        "era": {"label": "Earned Run Avg", "unit": "ERA", "list": top(era_pool, False)},
+    }
+
+
+@app.route("/api/conference-leaders")
+def conference_leaders():
+    return jsonify(_memo("conference_leaders", season.SEASON_AGGREGATE_TTL,
+                         _conference_leaders))
+
+
 @app.route("/api/bootstrap")
 def bootstrap():
     data = _memo("season", season.SEASON_AGGREGATE_TTL, season.build_season)

@@ -35,6 +35,19 @@ window.fetchPlayer = function (seo, playerName) {
   return _playerCache[key];
 };
 
+// Conference stat leaders (top 3 in AVG/HR/ERA across every team). Aggregates
+// all teams' rosters server-side, so the first call is slow — memoized here and
+// on the backend.
+window.fetchConferenceLeaders = function () {
+  if (!window.__clCache) {
+    window.__clCache = fetch("/api/conference-leaders").then((r) => {
+      if (!r.ok) throw new Error("conference-leaders " + r.status);
+      return r.json();
+    });
+  }
+  return window.__clCache;
+};
+
 window.fetchTeam = function (seo) {
   if (!_teamCache[seo]) {
     _teamCache[seo] = fetch("/api/team/" + encodeURIComponent(seo)).then((r) => {

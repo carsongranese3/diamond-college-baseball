@@ -1875,6 +1875,19 @@ a { color: inherit; text-decoration: none; }
 .hp-standings__team { display: flex; align-items: center; gap: 10px; min-width: 0; }
 .hp-standings__name { font-weight: 700; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
+/* conference leaders (homepage right column) */
+.hp-cl { display: flex; flex-direction: column; gap: 26px; }
+.hp-cl__head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
+.hp-cl__leader { display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; margin-bottom: 12px; }
+.hp-cl__meta { display: flex; align-items: center; gap: 7px; margin-bottom: 5px; }
+.hp-cl__meta .mono { font-size: 11px; color: var(--muted); letter-spacing: .04em; }
+.hp-cl__name { font-weight: 700; font-size: 17px; line-height: 1.1; }
+.hp-cl__val { font-family: var(--font-serif); font-size: 38px; line-height: .85; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+.hp-cl__rest { border-top: 1px solid var(--line); padding-top: 8px; }
+.hp-cl__row { display: grid; grid-template-columns: 14px auto 1fr auto; align-items: center; gap: 8px; padding: 5px 0; }
+.hp-cl__rname { font-size: 13px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hp-cl__rval { font-size: 13px; color: var(--ink-2); }
+
 /* "coming soon" placeholders (modules with no real data source yet) */
 .hp-placeholder {
   border: 1px dashed var(--line-2); border-radius: var(--radius); padding: 22px;
@@ -1922,6 +1935,11 @@ a { color: inherit; text-decoration: none; }
 .th-recent__opp { font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .th-recent__head { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
 .th-strip__meta { margin-bottom: 14px; }
+.th-ended-wrap { margin-top: 28px; }
+.th-ended__round { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.th-ended__game { display: grid; grid-template-columns: auto 44px 1fr auto; align-items: center; gap: 12px; }
+.th-ended__score { font-weight: 600; }
+.th-ended__opp { font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .th-strip__row { display: grid; grid-template-columns: 30px 1fr 56px 46px; align-items: center; gap: 12px; padding: 10px; border-bottom: 1px solid var(--line); border-left: 2px solid transparent; }
 .th-strip__row--me { background: var(--paper); }
 .th-strip__team { display: flex; align-items: center; gap: 9px; min-width: 0; }
