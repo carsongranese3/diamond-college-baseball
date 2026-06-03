@@ -7,7 +7,8 @@ block and is summed from per-game `pitcherStats`.
 
 import ncaa
 from boxutil import (babip, find_team_entry, fmt2, fmt3, fmt_pct, ip_to_outs,
-                      outs_to_ip, per9, player_name, ratio, runs_created, to_int)
+                      outs_to_ip, per9, player_name, ratio, runs_created,
+                      team_leaders, to_int)
 
 
 def _pkey(p):
@@ -160,6 +161,7 @@ def compute_team_stats(seo, schedule):
 
     qualified = [b for b in batters if b["ab"] >= max(20, tab // 80)]
     avg_l = max(qualified, key=lambda r: float(r["avg"] or 0), default=None)
+    rbi_l = max(batters, key=lambda r: r["rbi"], default=None)
     hr_l = max(batters, key=lambda r: r["hr"], default=None)
     qp = [p for p in pitchers if p["_outs"] >= 60]
     # ERA leader: lowest ERA among pitchers with enough innings (60 outs = 20 IP).
@@ -168,23 +170,8 @@ def compute_team_stats(seo, schedule):
     k_l = (max(pitchers, key=lambda r: r["k"], default=None)
            if k_available else None)
 
-    leaders = []
-    if avg_l:
-        leaders.append({"name": avg_l["name"], "pos": avg_l["pos"],
-                         "line": f"{avg_l['avg']} / {avg_l['hr']} HR / {avg_l['rbi']} RBI",
-                         "note": "Batting avg"})
-    if hr_l:
-        leaders.append({"name": hr_l["name"], "pos": hr_l["pos"],
-                        "line": f"{hr_l['avg']} / {hr_l['hr']} HR / {hr_l['rbi']} RBI",
-                        "note": "Home runs"})
-    if era_l:
-        leaders.append({"name": era_l["name"], "pos": era_l["pos"],
-                        "line": f"{era_l['era']} ERA / {era_l['k']} K / {era_l['ip']} IP",
-                        "note": "ERA"})
-    if k_l and k_l["k"] > 0:
-        leaders.append({"name": k_l["name"], "pos": k_l["pos"],
-                        "line": f"{k_l['k']} K / {k_l['era']} ERA / {k_l['ip']} IP",
-                        "note": "Strikeouts"})
+    leaders = team_leaders(avg_l, rbi_l, hr_l, era_l,
+                           k_l if (k_l and k_l["k"] not in ("—", 0)) else None)
 
     for b in batters:
         b.pop("_tb", None)

@@ -1,14 +1,14 @@
 // Team detail view — continuous schedule + Team/Players stats toggle
 
-const TeamDetail = ({ teamId, initialTab, onTabChange, onBack, onGameClick, onPlayerClick }) => {
+const TeamDetail = ({ teamId, initialTab, onTabChange, onBack, onTeam, onGameClick, onPlayerClick }) => {
   const team = window.TEAM_BY_ID[teamId];
-  const [tab, setTabState] = React.useState(initialTab || "schedule");
+  const [tab, setTabState] = React.useState(initialTab || "home");
   const [statMode, setStatMode] = React.useState("team");      // team | players
   const [playerView, setPlayerView] = React.useState("batting"); // batting | pitching
   const schedule = window.SCHEDULES[teamId] || [];
 
   // Follow the URL when it changes (back/forward, or a new deep-link).
-  React.useEffect(() => { setTabState(initialTab || "schedule"); }, [initialTab, teamId]);
+  React.useEffect(() => { setTabState(initialTab || "home"); }, [initialTab, teamId]);
   // Changing tabs updates the URL so each is its own shareable link.
   const setTab = (t) => { setTabState(t); if (onTabChange) onTabChange(t); };
 
@@ -68,6 +68,12 @@ const TeamDetail = ({ teamId, initialTab, onTabChange, onBack, onGameClick, onPl
 
       <div className="tabs">
         <button
+          className={`tab ${tab === "home" ? "tab--active" : ""}`}
+          onClick={() => setTab("home")}
+        >
+          Home
+        </button>
+        <button
           className={`tab ${tab === "schedule" ? "tab--active" : ""}`}
           onClick={() => setTab("schedule")}
         >
@@ -100,6 +106,13 @@ const TeamDetail = ({ teamId, initialTab, onTabChange, onBack, onGameClick, onPl
         )}
       </div>
 
+      {tab === "home" && (
+        <TeamHome
+          teamId={teamId}
+          onTeam={onTeam}
+          onGameClick={(g) => onGameClick(g, team.id)}
+        />
+      )}
       {tab === "schedule" && (
         <ScheduleView
           schedule={schedule}
@@ -268,22 +281,6 @@ const TeamStatsView = ({ stats, team }) => {
           <StatCell label="IP"   value={stats.pitching.ip} />
           <StatCell label="OBA"  value={stats.pitching.oba} />
           <StatCell label="HR/9" value={(stats.pitching.hr_a * 9 / parseFloat(stats.pitching.ip)).toFixed(2)} />
-        </div>
-      </section>
-
-      <section className="stats-section">
-        <Eyebrow>Team leaders</Eyebrow>
-        <div className="leaders">
-          {stats.leaders.map((l, i) => (
-            <div key={i} className="leader">
-              <div className="leader__head">
-                <div className="leader__pos mono">{l.pos}</div>
-                <div className="leader__note">{l.note}</div>
-              </div>
-              <div className="leader__name">{l.name}</div>
-              <div className="leader__line mono">{l.line}</div>
-            </div>
-          ))}
         </div>
       </section>
 

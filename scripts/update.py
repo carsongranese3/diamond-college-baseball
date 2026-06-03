@@ -10,7 +10,7 @@ through the earlier games to fill any gaps.
 
 Only games stats.ncaa.org actually has a box score for are pulled (unplayed and
 TBA games have no contest page, so they're never attempted). Each missing game is
-saved exactly like pull_team_stats.py does:
+saved exactly like pull_game_stats.py does:
 
     2026/<Team>/schedule/<date>_<vs|at>_<opponent>/
         boxscore.json  player_stats.json  play_by_play.json
@@ -52,7 +52,7 @@ if os.path.exists(_DEV_PY) and not sys.executable.startswith(_DEV_DIR):
 print = functools.partial(print, flush=True)  # live progress in the terminal
 
 # The 16 SEC schools; each name doubles as its 2026/ folder label and the school
-# name passed to ncaa_stats (same convention as pull_team_stats.py).
+# name passed to ncaa_stats (same convention as pull_game_stats.py).
 SEC_TEAMS = [
     "Alabama", "Arkansas", "Auburn", "Florida", "Georgia", "Kentucky", "LSU",
     "Mississippi St.", "Missouri", "Oklahoma", "Ole Miss", "South Carolina",

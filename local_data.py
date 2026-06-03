@@ -2,7 +2,7 @@
 
 The website normally pulls from ncaa.com (via ncaa.py). This module lets it
 prefer the richer locally-saved data (real play-by-play, pitcher strikeouts,
-stolen bases) when a team/game has been pulled with pull_team_stats.py, and
+stolen bases) when a team/game has been pulled with pull_game_stats.py, and
 return None when it hasn't — so the caller can fall back to the API.
 
 Game detail and team stats are produced in the same shapes as gamedetail.py
@@ -16,7 +16,8 @@ import re
 
 import ncaa
 from boxutil import (babip, fip, fmt2, fmt3, fmt_pct, ip_to_outs, lob_pct,
-                     outs_to_ip, per9, ratio, runs_created, secondary_avg, to_int)
+                     outs_to_ip, per9, ratio, runs_created, secondary_avg,
+                     team_leaders, to_int)
 from colors import for_seo
 
 DATA_ROOT = os.path.join(os.path.dirname(__file__), "2026")
@@ -300,29 +301,15 @@ def team_stats(seo, name):
 
     avg_l = max((b for b in batters if b["ab"] >= max(20, tab // 80)),
                 key=lambda r: float(r["avg"] or 0), default=None)
+    rbi_l = max(batters, key=lambda r: r["rbi"], default=None)
     hr_l = max(batters, key=lambda r: r["hr"], default=None)
     # ERA leader: lowest ERA among pitchers with enough innings (60 outs = 20 IP).
     era_l = min((p for p in pitchers if p["_outs"] >= 60),
                 key=lambda r: float(r["era"] or 99), default=None)
     # Strikeout leader: most K, regardless of innings.
     k_l = max(pitchers, key=lambda r: r["k"], default=None)
-    leaders = []
-    if avg_l:
-        leaders.append({"name": avg_l["name"], "pos": avg_l["pos"],
-                        "line": f"{avg_l['avg']} / {avg_l['hr']} HR / {avg_l['rbi']} RBI",
-                        "note": "Batting avg"})
-    if hr_l:
-        leaders.append({"name": hr_l["name"], "pos": hr_l["pos"],
-                        "line": f"{hr_l['avg']} / {hr_l['hr']} HR / {hr_l['rbi']} RBI",
-                        "note": "Home runs"})
-    if era_l:
-        leaders.append({"name": era_l["name"], "pos": era_l["pos"],
-                        "line": f"{era_l['era']} ERA / {era_l['k']} K / {era_l['ip']} IP",
-                        "note": "ERA"})
-    if k_l and k_l["k"] > 0:
-        leaders.append({"name": k_l["name"], "pos": k_l["pos"],
-                        "line": f"{k_l['k']} K / {k_l['era']} ERA / {k_l['ip']} IP",
-                        "note": "Strikeouts"})
+    leaders = team_leaders(avg_l, rbi_l, hr_l, era_l,
+                           k_l if (k_l and k_l["k"] > 0) else None)
 
     for b in batters:
         b.pop("_tb", None)

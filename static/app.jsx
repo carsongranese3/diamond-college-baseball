@@ -15,6 +15,7 @@ function mmddyyToIso(slug) {
 
 function pathForView(view) {
   switch (view.name) {
+    case "home": return "/";
     case "standings": return "/standings";
     case "scores": {
       const slug = isoToMMDDYY(view.scoresDate);
@@ -25,7 +26,7 @@ function pathForView(view) {
     case "team":
       // Every team tab gets its own segment, including schedule.
       return "/team/" + encodeURIComponent(view.teamId) +
-             "/" + (view.teamTab || "schedule");
+             "/" + (view.teamTab || "home");
     case "player":
       // Drop spaces from the name in the URL (AidenRobbins). The backend matches
       // names normalized (alphanumerics only), so the space-less form still works.
@@ -58,6 +59,7 @@ function _resolveGameId(gameId) {
 
 function viewForPath(pathname) {
   const p = (pathname || "/").replace(/\/+$/, "") || "/";
+  if (p === "/" || p === "/home") return { name: "home" };
   if (p === "/scores" || p.startsWith("/scores/")) {
     const slug = p.slice("/scores".length).replace(/^\//, "");
     return { name: "scores", scoresDate: mmddyyToIso(slug) || null };
@@ -70,7 +72,7 @@ function viewForPath(pathname) {
   if (p.startsWith("/team/")) {
     const rest = p.slice("/team/".length).split("/");
     const teamId = decodeURIComponent(rest[0]);
-    const teamTab = ["schedule", "roster", "stats"].includes(rest[1]) ? rest[1] : "schedule";
+    const teamTab = ["home", "schedule", "roster", "stats"].includes(rest[1]) ? rest[1] : "home";
     return { name: "team", teamId, teamTab };
   }
   if (p.startsWith("/player/")) {
@@ -126,12 +128,20 @@ const App = () => {
     window.scrollTo({ top: 0, behavior: "auto" });
   }, [view]);
 
-  const goTeam = (teamId) => setView({ name: "team", teamId, teamTab: "schedule" });
+  const goHome = () => setView({ name: "home" });
+  const goTeam = (teamId) => setView({ name: "team", teamId, teamTab: "home" });
   const goGame = (game, hostTeamId, origin) => setView({ name: "game", game, hostTeamId, origin });
   const goStandings = () => setView({ name: "standings" });
   const goScores = () => setView({ name: "scores" });
   const goCompare = () => setView({ name: "compare" });
   const goBracket = () => setView({ name: "bracket", bracketTab: "sec" });
+  // Section keys the homepage can link to (e.g. "Full table" -> standings).
+  const goNav = (key) =>
+    key === "scores" ? goScores()
+    : key === "compare" ? goCompare()
+    : key === "postseason" || key === "bracket" ? goBracket()
+    : key === "standings" ? goStandings()
+    : goHome();
   // origin describes where to return (a "team" or "game" view) so Back works.
   const goPlayer = (seo, playerName, origin) =>
     setView({ name: "player", seo, playerName, origin });
@@ -144,16 +154,19 @@ const App = () => {
       view.origin.gameOrigin === "scores");
   const fromBracket =
     (view.name === "game" && view.origin === "bracket");
-  const section = view.name === "compare" ? "compare"
+  const section = view.name === "home" ? "home"
+    : view.name === "compare" ? "compare"
     : view.name === "bracket" || fromBracket ? "bracket"
     : view.name === "scores" || fromScores ? "scores"
-    : "standings";
+    : view.name === "standings" ? "standings"
+    : "";
 
   return (
     <div className="app">
-      <Topbar section={section} onHome={goStandings} onScores={goScores} onCompare={goCompare}
-              onBracket={goBracket} theme={theme} onToggleTheme={toggleTheme} />
+      <Topbar section={section} onHome={goHome} onStandings={goStandings} onScores={goScores}
+              onCompare={goCompare} onBracket={goBracket} theme={theme} onToggleTheme={toggleTheme} />
       <main className="container">
+        {view.name === "home" && <Home onTeam={goTeam} onNav={goNav} />}
         {view.name === "standings" && <Standings onTeamClick={goTeam} />}
         {view.name === "scores" && (
           <Scores
@@ -174,9 +187,10 @@ const App = () => {
           <TeamDetail
             key={view.teamId}
             teamId={view.teamId}
-            initialTab={view.teamTab || "schedule"}
+            initialTab={view.teamTab || "home"}
             onTabChange={(t) => setView((v) => ({ ...v, teamTab: t }))}
             onBack={goStandings}
+            onTeam={goTeam}
             onGameClick={(g, hostTeamId) => goGame(g, hostTeamId || view.teamId, "team")}
             onPlayerClick={(playerName) =>
               goPlayer(view.teamId, playerName, { view: "team", teamId: view.teamId })}
@@ -224,7 +238,7 @@ const App = () => {
   );
 };
 
-const Topbar = ({ section, onHome, onScores, onCompare, onBracket, theme, onToggleTheme }) => {
+const Topbar = ({ section, onHome, onStandings, onScores, onCompare, onBracket, theme, onToggleTheme }) => {
   const link = (active) => `topbar__link ${active ? "topbar__link--active" : "muted"}`;
   return (
     <header className="topbar">
@@ -233,7 +247,8 @@ const Topbar = ({ section, onHome, onScores, onCompare, onBracket, theme, onTogg
         <span className="topbar__title">DIAMOND<span className="topbar__title-thin">/SEC</span></span>
       </button>
       <nav className="topbar__nav">
-        <a className={link(section === "standings")} onClick={onHome}>Standings</a>
+        <a className={link(section === "home")} onClick={onHome}>Home</a>
+        <a className={link(section === "standings")} onClick={onStandings}>Standings</a>
         <a className={link(section === "scores")} onClick={onScores}>Scores</a>
         <a className={link(section === "bracket")} onClick={onBracket}>Postseason</a>
         <a className={link(section === "compare")} onClick={onCompare}>Compare</a>

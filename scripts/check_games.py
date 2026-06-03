@@ -1,12 +1,12 @@
 """Check each team's full schedule against what's been pulled locally.
 
 For every team, this fetches the complete season schedule from stats.ncaa.org
-(via ncaa_stats, the same source pull_team_stats.py uses) and compares it to the
+(via ncaa_stats, the same source pull_game_stats.py uses) and compares it to the
 game folders already saved under 2026/<Team>/schedule/. It writes a games.txt
 checklist into each team folder marking every game SAVED or MISSING, so you can see at a
 glance which games still need pulling.
 
-Game folders are matched the exact way pull_team_stats.py names them:
+Game folders are matched the exact way pull_game_stats.py names them:
     <iso>_<vs|at>_<slug(opponent)>      e.g. 2026-02-13_vs_uc-davis
 and a game counts as SAVED only when all three JSON files exist and are non-empty
 (boxscore.json, player_stats.json, play_by_play.json).
@@ -16,7 +16,7 @@ Run:
     .venv/bin/python scripts/check_games.py Texas      # one team
     .venv/bin/python scripts/check_games.py Texas LSU  # a few teams
 
-Like pull_team_stats.py, this drives the stealth browser (ncaa_stats), so it needs
+Like pull_game_stats.py, this drives the stealth browser (ncaa_stats), so it needs
 the full project environment (camoufox + Python 3.10+). Schedule pages already in
 cache_ncaa_stats/ are read from cache, so re-runs are fast.
 """
@@ -39,7 +39,7 @@ SEASON = 2026
 DATA_ROOT = os.path.join(_PROJECT_ROOT, str(SEASON))
 
 # The 16 SEC baseball schools — each name doubles as its 2026/ folder label,
-# exactly as in pull_team_stats.py.
+# exactly as in pull_game_stats.py.
 SEC_TEAMS = [
     "Alabama", "Arkansas", "Auburn", "Florida", "Georgia", "Kentucky", "LSU",
     "Mississippi St.", "Missouri", "Oklahoma", "Ole Miss", "South Carolina",
@@ -54,7 +54,7 @@ def _slug(text):
 
 
 def _game_dirname(game):
-    """The folder name pull_team_stats.py would save this game under."""
+    """The folder name pull_game_stats.py would save this game under."""
     vs = "vs" if game["home"] else "at"
     return f"{game['iso']}_{vs}_{_slug(game['opponent'])}"
 

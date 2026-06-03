@@ -13,14 +13,14 @@ Layout (mirrors pull_team.py):
         play_by_play.json    ordered plays with running score
 
 Run:
-    .venv/bin/python scripts/pull_team_stats.py            # uses CONFIG below
-    .venv/bin/python scripts/pull_team_stats.py Georgia Georgia
-    .venv/bin/python scripts/pull_team_stats.py Texas Texas 3   # 3rd arg = limit (testing)
-    .venv/bin/python scripts/pull_team_stats.py Texas Texas 0 2026-05-19 2026-05-24
+    .venv/bin/python scripts/pull_game_stats.py            # uses CONFIG below
+    .venv/bin/python scripts/pull_game_stats.py Georgia Georgia
+    .venv/bin/python scripts/pull_game_stats.py Texas Texas 3   # 3rd arg = limit (testing)
+    .venv/bin/python scripts/pull_game_stats.py Texas Texas 0 2026-05-19 2026-05-24
         # args 4 & 5 = start/end date (ISO, inclusive); 0 = no game-count limit.
         # Or just set START_DATE / END_DATE in CONFIG and run with no args.
-    .venv/bin/python scripts/pull_team_stats.py all          # every SEC team, whole season
-    .venv/bin/python scripts/pull_team_stats.py all 2026-05-19 2026-05-24   # SEC, date window
+    .venv/bin/python scripts/pull_game_stats.py all          # every SEC team, whole season
+    .venv/bin/python scripts/pull_game_stats.py all 2026-05-19 2026-05-24   # SEC, date window
 
 First run is slow: each game = 3 stealth-browser page loads, rate-limited.
 Pages are cached in cache_ncaa_stats/, so re-runs are fast. A full all-SEC pull is
@@ -39,6 +39,14 @@ import time
 # the project root for the game-folder output paths below.
 _PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, _PROJECT_ROOT)
+
+# The scraping stack (bs4, camoufox, collegebaseball, …) lives in .venv-dev, not
+# the Flask-only deploy .venv. If we were launched with a different interpreter
+# (e.g. the deploy .venv), re-exec under .venv-dev so the imports always work.
+_DEV_DIR = os.path.join(_PROJECT_ROOT, ".venv-dev")
+_DEV_PY = os.path.join(_DEV_DIR, "bin", "python")
+if os.path.exists(_DEV_PY) and not sys.executable.startswith(_DEV_DIR):
+    os.execv(_DEV_PY, [_DEV_PY, *sys.argv])
 
 # All output is flushed immediately so progress shows up live in the terminal.
 print = functools.partial(print, flush=True)

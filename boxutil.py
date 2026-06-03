@@ -88,6 +88,25 @@ def player_name(p):
     return last or first or "—"
 
 
+def team_leaders(avg_l, rbi_l, hr_l, era_l, k_l):
+    """Six fixed leader cards for the team Home tab, always in this order:
+    AVG, RBI, HR, ERA, K, Wins. A missing/unqualified category renders blank.
+    Wins isn't tracked in the box-score data yet, so it's left blank for now."""
+    def card(note, who, line):
+        if not who:
+            return {"note": note, "line": "—", "name": "", "pos": ""}
+        return {"note": note, "name": who["name"], "pos": who["pos"], "line": line(who)}
+
+    return [
+        card("Batting avg", avg_l, lambda r: f"{r['avg']} / {r['hr']} HR / {r['rbi']} RBI"),
+        card("RBI", rbi_l, lambda r: f"{r['rbi']} RBI / {r['hr']} HR / {r['avg']} AVG"),
+        card("Home runs", hr_l, lambda r: f"{r['hr']} HR / {r['rbi']} RBI / {r['avg']} AVG"),
+        card("ERA", era_l, lambda r: f"{r['era']} ERA / {r['k']} K / {r['ip']} IP"),
+        card("Strikeouts", k_l, lambda r: f"{r['k']} K / {r['era']} ERA / {r['ip']} IP"),
+        card("Wins", None, None),
+    ]
+
+
 def find_team_entry(box, seo):
     """Return (teamId, team_meta) for the side matching seo in a boxscore."""
     for t in box.get("teams", []):
