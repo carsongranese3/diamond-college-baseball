@@ -79,6 +79,7 @@ window.__bootstrapReady = fetch("/api/bootstrap")
     window.SCHEDULES = d.schedules;
     window.SEASON_UPDATED = d.updated;
     window.SEASON_PHASE = d.phase;   // { phase: "super_regionals", label: "Super Regionals" }
+    window.SUPER_REGIONALS = d.super_regionals || [];  // [{ id, top:{seo,name,logo,seed}, bottom:{...} }]
   })
   .catch((err) => {
     document.getElementById("root").innerHTML =

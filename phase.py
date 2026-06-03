@@ -76,6 +76,13 @@ def game_phase(opponent, iso=None):
     return "regular"
 
 
+def round_by_date(iso):
+    """Round label for an UPCOMING game from its date alone — the scoreboard gives
+    no event text for games not yet played, so the date is all we have. Returns
+    'regular' outside the postseason windows."""
+    return _GAME_LABEL.get(_phase_for_date(_parse_iso(iso)), "regular")
+
+
 def current_phase(today=None):
     """{'phase': key, 'label': display} for the site right now. `today` defaults
     to the real date, capped to the modeled season."""

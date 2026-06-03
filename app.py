@@ -42,6 +42,23 @@ def _memo(key, ttl, producer):
     return value
 
 
+def _super_regionals():
+    """The Super Regional matchups (each: two teams + their official national
+    seeds) from the NCAA bracket — for the homepage 'The Field' and team pages.
+    Empty list if the bracket isn't available."""
+    try:
+        tree = bracket.ncaa_bracket().get("tree") or {}
+    except Exception:
+        return []
+    out = []
+    for side in ("left", "right"):
+        for sup in tree.get(side, []):
+            s = sup.get("super") or {}
+            if s.get("top") or s.get("bottom"):
+                out.append({"id": sup.get("id"), "top": s.get("top"), "bottom": s.get("bottom")})
+    return out
+
+
 @app.route("/api/bootstrap")
 def bootstrap():
     data = _memo("season", season.SEASON_AGGREGATE_TTL, season.build_season)
@@ -54,11 +71,20 @@ def bootstrap():
     # onto copies so the memoized team objects keep their API values.
     records = local_data.regular_season_records(schedules)
     teams = [{**t, **records.get(t["id"], {})} for t in data["teams"]]
+    # Merge in upcoming (scheduled, not-yet-played) games from the scoreboard so the
+    # schedule / Scores / This-Week views can show what's next. Records above are
+    # computed from the played-only schedules first; upcoming games (result=None)
+    # wouldn't affect them anyway.
+    upcoming = _memo("upcoming", 1800, season.upcoming_schedules)
+    full = {seo: sorted(list(games) + upcoming.get(seo, []),
+                        key=lambda g: g.get("iso") or "")
+            for seo, games in schedules.items()}
     return jsonify({
         "teams": teams,
-        "schedules": schedules,
+        "schedules": full,
         "updated": data["updated"],
         "phase": phase.current_phase(),
+        "super_regionals": _memo("super_regionals", 1800, _super_regionals),
     })
 
 

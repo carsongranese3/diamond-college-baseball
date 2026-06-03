@@ -10,9 +10,11 @@ import datetime
 import re
 
 import ncaa
+import phase
 from colors import for_seo
 
 SEASON_START = datetime.date(2026, 2, 13)
+SEASON_END = datetime.date(2026, 6, 30)
 SEASON_AGGREGATE_TTL = 21600  # 6h
 
 
@@ -103,6 +105,70 @@ def _split_record(rec):
     if not m:
         return 0, 0
     return int(m.group(1)), int(m.group(2))
+
+
+def upcoming_schedules(end=SEASON_END):
+    """{seo: [game, ...]} of each SEC team's UPCOMING games (scheduled, not yet
+    final) from the ncaa.com scoreboard, for dates after today through `end`.
+
+    Same per-game shape as build_season's schedules — score/result are null and the
+    scheduled start time is kept. The round (phase) is resolved from the date, since
+    the scoreboard carries no event text for unplayed games. Merged into the saved
+    (played-only) schedules so the schedule/Scores/This-Week views can show what's
+    next.
+    """
+    rank_by = _rank_lookup()
+    today_iso = _today().isoformat()
+    out, seen = {}, set()
+    one = datetime.timedelta(days=1)
+    d = _today()
+    while d <= end:
+        try:
+            board = ncaa.scoreboard(d.year, d.month, d.day)
+        except (ncaa.NotFound, ncaa.APIError):
+            d += one
+            continue
+        for wrap in board.get("games", []):
+            g = wrap.get("game") or {}
+            home, away = g.get("home"), g.get("away")
+            if not home or not away or g.get("gameState") == "final":
+                continue
+            iso = _fmt_iso(g.get("startDate", ""))
+            if not iso or iso <= today_iso:           # only genuinely future games
+                continue
+            if not (_is_sec(home) or _is_sec(away)):
+                continue
+            gid = g.get("gameID")
+            for side, other in ((home, away), (away, home)):
+                if not _is_sec(side):
+                    continue
+                seo = side["names"]["seo"]
+                if (seo, gid) in seen:
+                    continue
+                seen.add((seo, gid))
+                oseo = other["names"]["seo"]
+                out.setdefault(seo, []).append({
+                    "id": gid,
+                    "date": _fmt_date(g.get("startDate", "")),
+                    "iso": iso,
+                    "opp": {
+                        "id": oseo,
+                        "name": other["names"]["short"] or oseo,
+                        "mark": (other["names"].get("char6") or oseo[:4]).upper(),
+                        "logo": ncaa.logo_url(oseo),
+                        "rank": rank_by.get(_norm(other["names"]["short"] or "")),
+                        "conf": _is_sec(other),
+                    },
+                    "home": side is home,
+                    "score": None,
+                    "result": None,
+                    "time": g.get("startTime"),
+                    "phase": phase.round_by_date(iso),
+                })
+        d += one
+    for seo in out:
+        out[seo].sort(key=lambda e: e["iso"])
+    return out
 
 
 def build_season(fresh=False):

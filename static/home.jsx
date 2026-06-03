@@ -145,6 +145,30 @@ function HPMatchCard({ card, post, onTeam }) {
   );
 }
 
+// One super-regional matchup card for "The Field" — two teams + official national
+// seeds (from the bracket). A TBD slot renders as a faint placeholder.
+function HPSuperCard({ sr, onTeam }) {
+  const Row = ({ t, dim }) => {
+    const id = t && t.seo;
+    const known = id && (window.TEAM_BY_ID || {})[id];
+    const teamObj = t ? { id, logo: t.logo, name: t.name, mark: (t.name || "").slice(0, 4).toUpperCase() } : null;
+    return (
+      <button className="bare-btn hp-card__row" disabled={!known} onClick={() => known && onTeam && onTeam(id)}>
+        <HPLogo team={teamObj} size={20} />
+        <span className={"hp-card__name" + (dim ? " hp-ink2" : "")}>{t ? t.name : "TBD"}</span>
+        {t && t.seed != null && <span className="chip-rank">#{t.seed}</span>}
+      </button>
+    );
+  };
+  return (
+    <div className="hp-card hp-card--post">
+      <div className="hp-card__top"><span className="hp-eyebrow">Super Regional</span></div>
+      <Row t={sr.top} />
+      <Row t={sr.bottom} dim />
+    </div>
+  );
+}
+
 /* ---------- composed homepage ---------- */
 
 const Home = ({ onTeam, onNav }) => {
@@ -153,6 +177,8 @@ const Home = ({ onTeam, onNav }) => {
   const eyebrow = sp.phase === "sec_tournament" ? "2026 SEC Tournament"
     : post ? "2026 NCAA Tournament" : "2026 SEC Season";
   const marquee = hpMarquee(8);
+  const supers = window.SUPER_REGIONALS || [];
+  const showSupers = post && supers.length > 0;
   return (
     <div className="hp">
       {/* masthead */}
@@ -170,14 +196,17 @@ const Home = ({ onTeam, onNav }) => {
       {/* hero: marquee grid */}
       <section className="hp-hero">
         <HPLabel color="var(--gold)">{post ? "The Field" : "Around the Conference"}</HPLabel>
-        {marquee.length ? (
+        {showSupers ? (
+          <div className="hp-grid">
+            {supers.map((sr) => <HPSuperCard key={sr.id} sr={sr} onTeam={onTeam} />)}
+          </div>
+        ) : marquee.length ? (
           <div className="hp-grid">
             {marquee.map((c) => <HPMatchCard key={c.gid} card={c} post={post} onTeam={onTeam} />)}
           </div>
         ) : (
           <div className="hp-placeholder">No upcoming games on the board.</div>
         )}
-        {post && <div className="th-note hp-faint">National seeds, host sites &amp; series format coming soon.</div>}
       </section>
 
       {/* lower split: standings + leaders */}
