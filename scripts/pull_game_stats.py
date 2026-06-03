@@ -61,8 +61,8 @@ ns.VERBOSE = True  # print each page fetch live so progress is always visible
 # ─── CONFIG ──────────────────────────────────────────────────────────────────
 SEASON = 2026
 ALL_SEC = False           # True = pull ALL 16 SEC teams (ignores TEAM_SCHOOL/LABEL)
-TEAM_SCHOOL = "Alabama"     # single team: school name (matched vs the NCAA table)
-TEAM_LABEL = "Alabama"      # single team: folder name under <SEASON>/
+TEAM_SCHOOL = "Vanderbilt"     # single team: school name (matched vs the NCAA table)
+TEAM_LABEL = "Vanderbilt"      # single team: folder name under <SEASON>/
 START_DATE = ""           # ISO "YYYY-MM-DD"; "" = no lower bound (season start)
 END_DATE = ""             # ISO "YYYY-MM-DD"; "" = no upper bound (season end)
 LIMIT = 0                 # 0 = whole season; >0 = first N games (for testing)
