@@ -15,6 +15,7 @@ import os
 import re
 
 import ncaa
+import phase
 from boxutil import (babip, fip, fmt2, fmt3, fmt_pct, ip_to_outs, lob_pct,
                      outs_to_ip, per9, ratio, runs_created, secondary_avg,
                      team_leaders, to_int)
@@ -58,25 +59,11 @@ def _clean_opp(name):
     return s.strip()
 
 
-def _phase(raw_opponent):
-    """Classify a game by the venue/event cruft stats.ncaa.org appends to the
-    opponent for neutral-site postseason games. Returns 'regular' or a postseason
-    label, so the schedule can group regular season vs SEC tournament vs NCAA play.
-    """
-    s = (raw_opponent or "").lower()
-    if "world series" in s:
-        return "College World Series"
-    if "super regional" in s:
-        return "NCAA Super Regional"
-    if "regional" in s:
-        return "NCAA Regional"
-    # The SEC championship event tag — NOT just the Hoover venue, since some
-    # regular-season games are also played there (e.g. 'Samford @Hoover, AL').
-    if "sec" in s and ("championship" in s or "tournament" in s):
-        return "SEC Tournament"
-    if "ncaa" in s:
-        return "NCAA Tournament"
-    return "regular"
+def _phase(raw_opponent, iso=None):
+    """The round label for a game (delegates to phase.game_phase): 'regular', or a
+    postseason round (SEC Tournament / NCAA Regional / Super Regional / CWS)
+    resolved from the event text stats.ncaa.org appends + the game's date."""
+    return phase.game_phase(raw_opponent, iso)
 
 
 def _iso(mmddyyyy):
@@ -299,8 +286,9 @@ def team_stats(seo, name):
     p_bb = sum(p["bb"] for p in pitchers)
     p_k = sum(p["k"] for p in pitchers)
 
-    avg_l = max((b for b in batters if b["ab"] >= max(20, tab // 80)),
-                key=lambda r: float(r["avg"] or 0), default=None)
+    _qual = [b for b in batters if b["ab"] >= max(20, tab // 80)]
+    avg_l = max(_qual, key=lambda r: float(r["avg"] or 0), default=None)
+    obp_l = max(_qual, key=lambda r: float(r["obp"] or 0), default=None)
     rbi_l = max(batters, key=lambda r: r["rbi"], default=None)
     hr_l = max(batters, key=lambda r: r["hr"], default=None)
     # ERA leader: lowest ERA among pitchers with enough innings (60 outs = 20 IP).
@@ -308,8 +296,9 @@ def team_stats(seo, name):
                 key=lambda r: float(r["era"] or 99), default=None)
     # Strikeout leader: most K, regardless of innings.
     k_l = max(pitchers, key=lambda r: r["k"], default=None)
-    leaders = team_leaders(avg_l, rbi_l, hr_l, era_l,
-                           k_l if (k_l and k_l["k"] > 0) else None)
+    # Saves aren't in the saved box-score data (per-pitcher "sv" is blank) -> None.
+    leaders = team_leaders(avg_l, obp_l, rbi_l, hr_l, era_l,
+                           k_l if (k_l and k_l["k"] > 0) else None, None)
 
     for b in batters:
         b.pop("_tb", None)
@@ -501,7 +490,7 @@ def schedules(teams):
                           if us is not None and them is not None else None),
                 "result": res if res in ("W", "L") else None,
                 "time": None,
-                "phase": _phase(box.get("opponent", "")),
+                "phase": _phase(box.get("opponent", ""), _iso(box.get("date"))),
             })
         games.sort(key=lambda g: g["iso"])
         out[seo] = games

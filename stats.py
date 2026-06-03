@@ -161,6 +161,7 @@ def compute_team_stats(seo, schedule):
 
     qualified = [b for b in batters if b["ab"] >= max(20, tab // 80)]
     avg_l = max(qualified, key=lambda r: float(r["avg"] or 0), default=None)
+    obp_l = max(qualified, key=lambda r: float(r["obp"] or 0), default=None)
     rbi_l = max(batters, key=lambda r: r["rbi"], default=None)
     hr_l = max(batters, key=lambda r: r["hr"], default=None)
     qp = [p for p in pitchers if p["_outs"] >= 60]
@@ -169,9 +170,12 @@ def compute_team_stats(seo, schedule):
     # Strikeout leader: most K (only when strikeout data is available).
     k_l = (max(pitchers, key=lambda r: r["k"], default=None)
            if k_available else None)
+    # Saves leader: most saves (the API tracks them; 0 saves = nobody -> blank).
+    sv_l = max(pitchers, key=lambda r: r["sv"], default=None)
 
-    leaders = team_leaders(avg_l, rbi_l, hr_l, era_l,
-                           k_l if (k_l and k_l["k"] not in ("—", 0)) else None)
+    leaders = team_leaders(avg_l, obp_l, rbi_l, hr_l, era_l,
+                           k_l if (k_l and k_l["k"] not in ("—", 0)) else None,
+                           sv_l if (sv_l and sv_l["sv"]) else None)
 
     for b in batters:
         b.pop("_tb", None)

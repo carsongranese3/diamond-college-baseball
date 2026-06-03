@@ -88,22 +88,26 @@ def player_name(p):
     return last or first or "—"
 
 
-def team_leaders(avg_l, rbi_l, hr_l, era_l, k_l):
-    """Six fixed leader cards for the team Home tab, always in this order:
-    AVG, RBI, HR, ERA, K, Wins. A missing/unqualified category renders blank.
-    Wins isn't tracked in the box-score data yet, so it's left blank for now."""
+def team_leaders(avg_l, obp_l, rbi_l, hr_l, era_l, k_l, sv_l):
+    """Eight fixed leader cards for the team Home tab, always in this order:
+    AVG, OBP, RBI, HR, ERA, K, Wins, Saves. A missing/unqualified category renders
+    blank. Wins (and saves in the local data) aren't in the box-score data, so they
+    render blank there."""
     def card(note, who, line):
         if not who:
             return {"note": note, "line": "—", "name": "", "pos": ""}
         return {"note": note, "name": who["name"], "pos": who["pos"], "line": line(who)}
 
+    # Each card shows only the stat it leads in (the category is in the label).
     return [
-        card("Batting avg", avg_l, lambda r: f"{r['avg']} / {r['hr']} HR / {r['rbi']} RBI"),
-        card("RBI", rbi_l, lambda r: f"{r['rbi']} RBI / {r['hr']} HR / {r['avg']} AVG"),
-        card("Home runs", hr_l, lambda r: f"{r['hr']} HR / {r['rbi']} RBI / {r['avg']} AVG"),
-        card("ERA", era_l, lambda r: f"{r['era']} ERA / {r['k']} K / {r['ip']} IP"),
-        card("Strikeouts", k_l, lambda r: f"{r['k']} K / {r['era']} ERA / {r['ip']} IP"),
+        card("Batting avg", avg_l, lambda r: f"{r['avg']}"),
+        card("On-base pct", obp_l, lambda r: f"{r['obp']}"),
+        card("RBI", rbi_l, lambda r: f"{r['rbi']} RBI"),
+        card("Home runs", hr_l, lambda r: f"{r['hr']} HR"),
+        card("ERA", era_l, lambda r: f"{r['era']} ERA"),
+        card("Strikeouts", k_l, lambda r: f"{r['k']} K"),
         card("Wins", None, None),
+        card("Saves", sv_l, lambda r: f"{r['sv']} SV"),
     ]
 
 

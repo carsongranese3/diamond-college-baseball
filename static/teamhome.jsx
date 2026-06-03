@@ -48,20 +48,29 @@ function ThisWeek({ schedule, team, onTeam, post }) {
   );
 }
 
-// Last few final results.
+// Recent results from the team's most recent round only (e.g. just the NCAA
+// Regional games), with that specific round's name shown above. Games run
+// oldest -> newest, so the most recent game sits at the bottom. Regular-season
+// teams fall back to their last few games with no round header.
 function RecentList({ schedule, onGameClick }) {
-  const recent = schedule.filter((g) => g.result).slice(-4).reverse();
-  if (!recent.length) return <div className="hp-placeholder">No results yet.</div>;
+  const played = schedule.filter((g) => g.result);
+  if (!played.length) return <div className="hp-placeholder">No results yet.</div>;
+  const round = played[played.length - 1].phase || "regular";
+  const inRound = played.filter((g) => (g.phase || "regular") === round);
+  const games = round === "regular" ? inRound.slice(-5) : inRound;
   return (
-    <div className="th-recent">
-      {recent.map((g) => (
-        <button key={g.id} className="bare-btn th-recent__row" onClick={() => onGameClick && onGameClick(g)}>
-          <span className={"chip " + (g.result === "W" ? "chip-w" : "chip-l")}>{g.result}</span>
-          <span className="mono th-recent__score">{g.score.us}&ndash;{g.score.them}</span>
-          <span className="th-recent__opp">{g.opp ? g.opp.name : ""}</span>
-          <span className="mono hp-faint th-recent__date">{g.date}</span>
-        </button>
-      ))}
+    <div>
+      {round !== "regular" && <div className="th-recent__head">{round}</div>}
+      <div className="th-recent">
+        {games.map((g) => (
+          <button key={g.id} className="bare-btn th-recent__row" onClick={() => onGameClick && onGameClick(g)}>
+            <span className={"chip " + (g.result === "W" ? "chip-w" : "chip-l")}>{g.result}</span>
+            <span className="mono th-recent__score">{g.score.us}&ndash;{g.score.them}</span>
+            <span className="th-recent__opp">{g.opp ? g.opp.name : ""}</span>
+            <span className="mono hp-faint th-recent__date">{g.date}</span>
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
@@ -140,6 +149,13 @@ const TeamHome = ({ teamId, onTeam, onGameClick }) => {
         {post && <div className="th-note hp-faint">Seeds, host site &amp; series format coming soon.</div>}
       </section>
 
+      <section className="hp-hero">
+        <HPLabel>Team Leaders</HPLabel>
+        {teamData
+          ? <TeamLeaders leaders={teamData.leaders} />
+          : <div className="hp-placeholder">Loading team leaders…</div>}
+      </section>
+
       <section className="hp-split">
         <div>
           <HPLabel>Recent</HPLabel>
@@ -150,13 +166,6 @@ const TeamHome = ({ teamId, onTeam, onGameClick }) => {
           <HPLabel>Conference Standing</HPLabel>
           <ConfStrip teamId={teamId} />
         </div>
-      </section>
-
-      <section className="hp-hero">
-        <HPLabel>Team Leaders</HPLabel>
-        {teamData
-          ? <TeamLeaders leaders={teamData.leaders} />
-          : <div className="hp-placeholder">Loading team leaders…</div>}
       </section>
     </div>
   );

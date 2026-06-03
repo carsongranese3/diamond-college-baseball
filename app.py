@@ -14,6 +14,7 @@ from flask import Flask, abort, jsonify, request, send_from_directory
 import bracket
 import local_data
 import ncaa
+import phase
 import season
 from gamedetail import build_game
 from stats import compute_team_stats
@@ -57,6 +58,7 @@ def bootstrap():
         "teams": teams,
         "schedules": schedules,
         "updated": data["updated"],
+        "phase": phase.current_phase(),
     })
 
 

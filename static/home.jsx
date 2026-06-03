@@ -35,17 +35,12 @@ function hpFmtDate(s) {
 
 // 'regular' | 'postseason' — derived from the schedules. Postseason once any
 // upcoming game is flagged non-regular, or once the season is fully played out.
+// Coarse regular/postseason flag, from the server-resolved season phase
+// (window.SEASON_PHASE, set by bootstrap.js). Used by the homepage and the team
+// "This Week" header.
 function hpPhase() {
-  const sch = window.SCHEDULES || {};
-  let anyUpcoming = false;
-  for (const id in sch) {
-    for (const g of sch[id]) {
-      if (g.result) continue;
-      anyUpcoming = true;
-      if (g.phase && g.phase !== "regular") return "postseason";
-    }
-  }
-  return anyUpcoming ? "regular" : "postseason";
+  const p = window.SEASON_PHASE && window.SEASON_PHASE.phase;
+  return p && p !== "regular" ? "postseason" : "regular";
 }
 
 // Marquee: each SEC team's next home game (dedupes SEC-vs-SEC under the host),
@@ -153,15 +148,18 @@ function HPMatchCard({ card, post, onTeam }) {
 /* ---------- composed homepage ---------- */
 
 const Home = ({ onTeam, onNav }) => {
-  const post = hpPhase() === "postseason";
+  const sp = window.SEASON_PHASE || { phase: "regular", label: "Regular Season" };
+  const post = sp.phase !== "regular";
+  const eyebrow = sp.phase === "sec_tournament" ? "2026 SEC Tournament"
+    : post ? "2026 NCAA Tournament" : "2026 SEC Season";
   const marquee = hpMarquee(8);
   return (
     <div className="hp">
       {/* masthead */}
       <div className="hp-masthead">
         <div>
-          <HPLabel>{post ? "2026 NCAA Tournament" : "2026 SEC Season"}</HPLabel>
-          <h1 className="hp-title">{post ? "Super Regionals" : "This Week in the SEC"}</h1>
+          <HPLabel>{eyebrow}</HPLabel>
+          <h1 className="hp-title">{post ? sp.label : "This Week in the SEC"}</h1>
         </div>
         <div className="hp-masthead__meta mono">
           <div>{post ? "Win or go home" : (window.TEAMS ? window.TEAMS.length + " teams" : "")}</div>

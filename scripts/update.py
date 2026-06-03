@@ -1,7 +1,7 @@
 """Fill in missing game data for a team by pulling it from stats.ncaa.org.
 
-For each team it looks at, this FIRST refreshes 2026/<Team>/schedule.txt from the
-live ncaa.com API (so the recorded game count always reflects reality, including
+For each team it looks at, this FIRST refreshes 2026/<Team>/schedule.json from the
+live ncaa.com API (so the played-game count always reflects reality, including
 games played today), THEN compares that count to how many game folders are
 actually saved under 2026/<Team>/schedule/. When they differ, it boots the
 stealth browser (ncaa_stats), works out which games have no saved folder, and
@@ -36,7 +36,7 @@ TEAM = "all"   # a team folder label (e.g. "Arkansas"), or "all" for every team
 SEASON = 2026
 
 # This file lives in scripts/; add the project root (for season/local_data) and
-# the scripts dir (to reuse build_schedule) to the import path.
+# the scripts dir (to reuse pull_schedule) to the import path.
 _PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, _PROJECT_ROOT)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -75,14 +75,17 @@ def _schedule_dir(label):
     return os.path.join(_team_root(label), "schedule")
 
 
-def _recorded_count(label):
-    """The number on the first line of 2026/<label>/schedule.txt, or None."""
-    path = os.path.join(_team_root(label), "schedule.txt")
+def _played_count(label):
+    """How many games in 2026/<label>/schedule.json have been played (result set),
+    or None if the file is missing/unreadable. Box scores only exist for played
+    games, so this is the count we compare against the saved folders."""
+    path = os.path.join(_team_root(label), "schedule.json")
     try:
         with open(path, encoding="utf-8") as fh:
-            return int(fh.readline().strip())
+            data = json.load(fh)
     except (OSError, ValueError):
         return None
+    return sum(1 for g in data.get("games", []) if g.get("played"))
 
 
 def _is_saved(game_dir):
@@ -222,45 +225,38 @@ def pull_missing(label):
 
 
 def refresh_schedules(labels):
-    """Regenerate 2026/<Team>/schedule.txt from the live ncaa.com API for each
-    targeted team, so the recorded game count reflects reality (incl. games
-    played today) BEFORE we compare it to the saved folders. One API season
-    build covers every team; we match each folder label to its API team by name.
-    Returns the set of labels that were refreshed."""
-    import build_schedule
-    import season
+    """Regenerate 2026/<Team>/schedule.json from the live ncaa.com API for each
+    targeted team, so the played-game count reflects reality (incl. games played
+    today) BEFORE we compare it to the saved folders. One season crawl covers
+    every team. Returns the set of labels that were refreshed."""
+    import pull_schedule
 
-    print("Refreshing schedule.txt from the ncaa.com API…")
-    data = season.build_season(fresh=True)
-    by_name = {t["name"]: t for t in data["teams"]}
+    print("Refreshing schedule.json from the ncaa.com API…")
+    results = pull_schedule.write_team_schedules(labels)
     refreshed = set()
+    for label, n, played in results:
+        print(f"  {label}: schedule.json -> {n} games ({played} played)")
+        refreshed.add(label)
     for label in labels:
-        team = by_name.get(label)
-        if not team:
-            print(f"  SKIP {label} (not in the API team list)")
-            continue
-        res = build_schedule.build_for_team(team, data["schedules"].get(team["id"], []))
-        if res:
-            _, n = res
-            print(f"  {label}: schedule.txt -> {n} games")
-            refreshed.add(label)
+        if label not in refreshed:
+            print(f"  SKIP {label} (not on the scoreboard / no 2026/ folder)")
     print()
     return refreshed
 
 
 def process(label):
-    """Compare recorded vs saved counts for one team; pull if they differ."""
-    recorded = _recorded_count(label)
-    if recorded is None:
-        print(f"  SKIP {label} (no schedule.txt — run build_schedule.py first)")
+    """Compare played-game count vs saved box-score folders; pull if they differ."""
+    played = _played_count(label)
+    if played is None:
+        print(f"  SKIP {label} (no schedule.json — run pull_schedule.py first)")
         return True
 
     saved = len(_saved_dirnames(_schedule_dir(label)))
-    if recorded == saved:
+    if played == saved:
         print(f"  {label}: in sync ({saved} games saved)")
         return True
 
-    print(f"  {label}: schedule lists {recorded}, {saved} saved — checking stats.ncaa.org…")
+    print(f"  {label}: schedule lists {played} played, {saved} saved — checking stats.ncaa.org…")
     return pull_missing(label)
 
 
@@ -274,7 +270,7 @@ def main():
                   + ", ".join(SEC_TEAMS))
             return
 
-    # 1) Refresh every targeted team's schedule.txt from the live API, then
+    # 1) Refresh every targeted team's schedule.json from the live API, then
     # 2) run the count check (now against fresh numbers) and pull what's missing.
     refresh_schedules(targets)
 

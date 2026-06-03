@@ -78,6 +78,7 @@ window.__bootstrapReady = fetch("/api/bootstrap")
     window.TEAM_BY_ID = Object.fromEntries(d.teams.map((t) => [t.id, t]));
     window.SCHEDULES = d.schedules;
     window.SEASON_UPDATED = d.updated;
+    window.SEASON_PHASE = d.phase;   // { phase: "super_regionals", label: "Super Regionals" }
   })
   .catch((err) => {
     document.getElementById("root").innerHTML =
