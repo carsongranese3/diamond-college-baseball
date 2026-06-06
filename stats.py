@@ -170,12 +170,14 @@ def compute_team_stats(seo, schedule):
     # Strikeout leader: most K (only when strikeout data is available).
     k_l = (max(pitchers, key=lambda r: r["k"], default=None)
            if k_available else None)
-    # Saves leader: most saves (the API tracks them; 0 saves = nobody -> blank).
+    # Saves / wins leaders (the API tracks them; 0 = nobody -> blank).
     sv_l = max(pitchers, key=lambda r: r["sv"], default=None)
+    w_l = max(pitchers, key=lambda r: r["w"], default=None)
 
     leaders = team_leaders(avg_l, obp_l, rbi_l, hr_l, era_l,
                            k_l if (k_l and k_l["k"] not in ("—", 0)) else None,
-                           sv_l if (sv_l and sv_l["sv"]) else None)
+                           sv_l if (sv_l and sv_l["sv"]) else None,
+                           w_l if (w_l and w_l["w"]) else None)
 
     for b in batters:
         b.pop("_tb", None)

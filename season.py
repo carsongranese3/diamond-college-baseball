@@ -9,6 +9,7 @@ the D1Baseball Top 25 supplies poll rank.
 import datetime
 import re
 
+import clock
 import ncaa
 import phase
 from colors import for_seo
@@ -28,9 +29,9 @@ def _norm(name):
 
 
 def _today():
-    t = datetime.date.today()
-    # Stay within the modeled 2026 season if the wall clock is later.
-    return min(t, datetime.date(2026, 6, 30))
+    # clock.today() is the real date, or the dev-clock override when one is set.
+    # Stay within the modeled 2026 season if it's later.
+    return min(clock.today(), datetime.date(2026, 6, 30))
 
 
 def _daterange(start, end):

@@ -397,6 +397,8 @@ def pull(school=TEAM_SCHOOL, label=TEAM_LABEL, season=SEASON, limit=LIMIT,
                 "contest_id": cid, "date": g["date"], "opponent": g["opponent"],
                 "home": g["home"], "result": g["result"],
                 "line_score": ns.contest_line_score(cid),
+                "decisions": ns.contest_decisions(cid),
+                "info": ns.contest_info(cid),
             })
             _write(os.path.join(game_dir, "player_stats.json"),
                    ns.contest_player_stats(cid))

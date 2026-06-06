@@ -13,6 +13,16 @@ function mmddyyToIso(slug) {
   return m ? `20${m[3]}-${m[1]}-${m[2]}` : null;
 }
 
+// Build a "?a=1&b=2" query string from a plain object, dropping empty values so
+// only the non-default options appear in the URL.
+function buildQuery(params) {
+  const q = Object.keys(params)
+    .filter((k) => params[k] != null && params[k] !== "")
+    .map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(params[k]))
+    .join("&");
+  return q ? "?" + q : "";
+}
+
 function pathForView(view) {
   switch (view.name) {
     case "home": return "/";
@@ -22,11 +32,32 @@ function pathForView(view) {
       return slug ? "/scores/" + slug : "/scores";
     }
     case "bracket": return "/postseason/" + (view.bracketTab || "sec");
-    case "compare": return "/compare";
-    case "team":
+    case "compare": {
+      // mode + the two selections (team ids, or "teamId:Name" player keys) +
+      // the active stat tab — all in the query so a matchup is shareable.
+      const mode = view.cmpMode === "players" ? "players" : "teams";
+      const params = {};
+      if (mode === "players") params.mode = "players";
+      if (view.cmpA) params.a = view.cmpA;
+      if (view.cmpB) params.b = view.cmpB;
+      if (mode === "teams" && view.cmpTab && view.cmpTab !== "standings") params.tab = view.cmpTab;
+      return "/compare" + buildQuery(params);
+    }
+    case "team": {
       // Every team tab gets its own segment, including schedule.
-      return "/team/" + encodeURIComponent(view.teamId) +
-             "/" + (view.teamTab || "home");
+      const tab = view.teamTab || "home";
+      const base = "/team/" + encodeURIComponent(view.teamId) + "/" + tab;
+      if (tab !== "stats") return base;
+      // Stats sub-options (Team/Players, Batting/Pitching, Basic/Advanced) ride
+      // in the query so each stat view is its own link. Only emit non-defaults.
+      const params = {};
+      if (view.statMode === "players") {
+        params.mode = "players";
+        if (view.statView === "pitching") params.view = "pitching";
+        if (view.statLevel === "advanced") params.level = "advanced";
+      }
+      return base + buildQuery(params);
+    }
     case "player":
       // Drop spaces from the name in the URL (AidenRobbins). The backend matches
       // names normalized (alphanumerics only), so the space-less form still works.
@@ -57,7 +88,8 @@ function _resolveGameId(gameId) {
   return fallback;
 }
 
-function viewForPath(pathname) {
+function viewForPath(pathname, search) {
+  const sp = new URLSearchParams(search || "");
   const p = (pathname || "/").replace(/\/+$/, "") || "/";
   if (p === "/" || p === "/home") return { name: "home" };
   if (p === "/scores" || p.startsWith("/scores/")) {
@@ -68,12 +100,26 @@ function viewForPath(pathname) {
     const seg = p.slice("/postseason".length).replace(/^\//, "");
     return { name: "bracket", bracketTab: seg === "ncaa" ? "ncaa" : "sec" };
   }
-  if (p === "/compare") return { name: "compare" };
+  if (p === "/compare") {
+    return {
+      name: "compare",
+      cmpMode: sp.get("mode") === "players" ? "players" : "teams",
+      cmpA: sp.get("a") || null,
+      cmpB: sp.get("b") || null,
+      cmpTab: sp.get("tab") || null,
+    };
+  }
   if (p.startsWith("/team/")) {
     const rest = p.slice("/team/".length).split("/");
     const teamId = decodeURIComponent(rest[0]);
     const teamTab = ["home", "schedule", "roster", "stats"].includes(rest[1]) ? rest[1] : "home";
-    return { name: "team", teamId, teamTab };
+    const v = { name: "team", teamId, teamTab };
+    if (teamTab === "stats") {
+      v.statMode = sp.get("mode") === "players" ? "players" : "team";
+      v.statView = sp.get("view") === "pitching" ? "pitching" : "batting";
+      v.statLevel = sp.get("level") === "advanced" ? "advanced" : "basic";
+    }
+    return v;
   }
   if (p.startsWith("/player/")) {
     const rest = p.slice("/player/".length).split("/");
@@ -96,18 +142,27 @@ function viewForPath(pathname) {
 }
 
 const App = () => {
-  const [view, setView] = React.useState(() => viewForPath(window.location.pathname));
+  const [view, setView] = React.useState(
+    () => viewForPath(window.location.pathname, window.location.search)
+  );
 
   // Keep the URL in sync with the view (push a history entry when the path
-  // changes), and restore the view when the user hits back/forward.
+  // changes), and restore the view when the user hits back/forward. The very
+  // first sync uses replaceState so default options filled in on load don't add
+  // a spurious history entry; later changes push so back/forward works.
+  const firstSync = React.useRef(true);
   React.useEffect(() => {
     const path = pathForView(view);
-    if (path && path !== window.location.pathname) {
-      window.history.pushState({}, "", path);
+    const current = window.location.pathname + window.location.search;
+    if (path && path !== current) {
+      if (firstSync.current) window.history.replaceState({}, "", path);
+      else window.history.pushState({}, "", path);
     }
+    firstSync.current = false;
   }, [view]);
   React.useEffect(() => {
-    const onPop = () => setView(viewForPath(window.location.pathname));
+    const onPop = () =>
+      setView(viewForPath(window.location.pathname, window.location.search));
     window.addEventListener("popstate", onPop);
     return () => window.removeEventListener("popstate", onPop);
   }, []);
@@ -182,13 +237,27 @@ const App = () => {
             onGameClick={(g, hostTeamId) => goGame(g, hostTeamId, "bracket")}
           />
         )}
-        {view.name === "compare" && <Compare />}
+        {view.name === "compare" && (
+          <Compare
+            initialMode={view.cmpMode || "teams"}
+            initialA={view.cmpA}
+            initialB={view.cmpB}
+            initialTab={view.cmpTab}
+            onChange={(patch) =>
+              setView((v) => v.name === "compare" ? { ...v, ...patch } : v)}
+          />
+        )}
         {view.name === "team" && (
           <TeamDetail
             key={view.teamId}
             teamId={view.teamId}
             initialTab={view.teamTab || "home"}
+            initialStatMode={view.statMode || "team"}
+            initialStatView={view.statView || "batting"}
+            initialStatLevel={view.statLevel || "basic"}
             onTabChange={(t) => setView((v) => ({ ...v, teamTab: t }))}
+            onStatChange={(patch) =>
+              setView((v) => v.name === "team" ? { ...v, ...patch } : v)}
             onBack={goStandings}
             onTeam={goTeam}
             onGameClick={(g, hostTeamId) => goGame(g, hostTeamId || view.teamId, "team")}
@@ -234,6 +303,31 @@ const App = () => {
       <footer className="footer">
         <span>An original editorial mockup — not affiliated with the SEC, NCAA, or any university.</span>
       </footer>
+      <DevClock />
+    </div>
+  );
+};
+
+// Test-only "time machine": set the effective date and the whole site behaves as
+// though it's that day (phase, played vs upcoming games, standings, This Week…).
+const DevClock = () => {
+  const clk = window.SEASON_CLOCK || {};
+  const [date, setDate] = React.useState(clk.date || clk.today || "");
+  const go = (qs) =>
+    fetch("/api/dev/clock?" + qs)
+      .then(() => window.location.reload())
+      .catch(() => window.location.reload());
+  return (
+    <div className={`devclock ${clk.test ? "devclock--active" : ""}`}>
+      <span className="devclock__label mono">{clk.test ? "TEST" : "LIVE"}</span>
+      <input type="date" className="devclock__input mono" value={date}
+             min="2026-02-13" max="2026-06-30"
+             onChange={(e) => setDate(e.target.value)} />
+      <button className="devclock__btn mono"
+              onClick={() => go("test=1&date=" + encodeURIComponent(date))}>Set</button>
+      {clk.test && (
+        <button className="devclock__btn devclock__btn--reset mono" onClick={() => go("test=0")}>Off</button>
+      )}
     </div>
   );
 };

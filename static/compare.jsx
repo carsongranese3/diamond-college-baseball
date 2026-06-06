@@ -120,6 +120,20 @@
     return rate(block[st.k]);
   };
 
+  // ── player <-> URL key helpers ───────────────────────────────────────────--
+  // A player is encoded in the URL as "teamId:NameNoSpaces"; matching back to a
+  // loaded roster entry is by normalized name (alphanumerics only), like the rest
+  // of the app, so the space-less URL form still resolves.
+  const pnorm = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const playerKey = (p) => p ? `${p.teamId}:${(p.name || "").replace(/\s+/g, "")}` : null;
+  const findPlayer = (players, key) => {
+    if (!key) return null;
+    const i = key.indexOf(":");
+    if (i < 0) return null;
+    const tid = key.slice(0, i), nm = pnorm(key.slice(i + 1));
+    return players.find((p) => p.teamId === tid && pnorm(p.name) === nm) || null;
+  };
+
   // ── bars ─────────────────────────────────────────────────────────────────--
   function StatRow({ label, valA, valB, dispA, dispB, dir, colorA, colorB }) {
     const w = decide(valA, valB, dir);
@@ -319,16 +333,15 @@
   }
 
   // ── team comparison ──────────────────────────────────────────────────────--
-  function TeamCompare({ aId, bId, onSwap }) {
+  function TeamCompare({ aId, bId, onSwap, tab, onTab }) {
     const a = window.TEAM_BY_ID[aId], b = window.TEAM_BY_ID[bId];
     const [sa, setSa] = useState(null), [sb, setSb] = useState(null);
     const [err, setErr] = useState(null);
-    const [tab, setTab] = useState("standings");
 
     useEffect(() => { setSa(null); window.fetchTeam(aId).then(setSa).catch((e) => setErr(e.message)); }, [aId]);
     useEffect(() => { setSb(null); window.fetchTeam(bId).then(setSb).catch((e) => setErr(e.message)); }, [bId]);
 
-    const group = TEAM_GROUPS.find((g) => g.id === tab);
+    const group = TEAM_GROUPS.find((g) => g.id === tab) || TEAM_GROUPS[0];
     const needStats = tab !== "standings";
     const ready = !needStats || (sa && sb);
 
@@ -350,7 +363,7 @@
           right={{ team: b, name: b.name, sub: `${b.ovrW}–${b.ovrL}${b.rank != null ? ` · #${b.rank}` : ""}` }}
           onSwap={onSwap}
         />
-        <StatTabs groups={TEAM_GROUPS} active={tab} onChange={setTab} colorA={a.color} colorB={b.color} />
+        <StatTabs groups={TEAM_GROUPS} active={tab} onChange={onTab} colorA={a.color} colorB={b.color} />
         <div className="cmp-sections">{body}</div>
       </React.Fragment>
     );
@@ -422,11 +435,20 @@
   }
 
   // ── root ─────────────────────────────────────────────────────────────────--
-  const Compare = () => {
+  // mode / selections / stat tab are driven by the URL (props) so every matchup
+  // is a shareable, refreshable link. Local state mirrors the props; user actions
+  // both update local state and report up (which rewrites the URL), and prop
+  // changes from back/forward flow back down through the sync effects.
+  const Compare = ({ initialMode, initialA, initialB, initialTab, onChange }) => {
     const teams = window.TEAMS;
-    const [mode, setMode] = useState("teams");
-    const [aId, setAId] = useState(teams[0].id);
-    const [bId, setBId] = useState(teams[1] ? teams[1].id : teams[0].id);
+    const validTeam = (id) => (id && window.TEAM_BY_ID[id]) ? id : null;
+    const defA = teams[0].id;
+    const defB = teams[1] ? teams[1].id : teams[0].id;
+
+    const [mode, setMode] = useState(initialMode === "players" ? "players" : "teams");
+    const [aId, setAId] = useState(validTeam(initialMode !== "players" ? initialA : null) || defA);
+    const [bId, setBId] = useState(validTeam(initialMode !== "players" ? initialB : null) || defB);
+    const [tab, setTab] = useState(initialTab || "standings");
 
     const [players, setPlayers] = useState(null);
     const [pErr, setPErr] = useState(null);
@@ -434,6 +456,23 @@
     const [pb, setPb] = useState(null);
     const [ptA, setPtA] = useState(null); // team filtering side A's player list
     const [ptB, setPtB] = useState(null);
+
+    // Report the current selection up to the router (which puts it in the URL).
+    const reportTeams = (na, nb, nt) =>
+      onChange && onChange({ cmpMode: "teams", cmpA: na, cmpB: nb,
+                             cmpTab: nt && nt !== "standings" ? nt : null });
+    const reportPlayers = (npa, npb) =>
+      onChange && onChange({ cmpMode: "players", cmpA: playerKey(npa),
+                             cmpB: playerKey(npb), cmpTab: null });
+
+    // Follow the URL on back/forward / deep-link (sync only; never reports).
+    useEffect(() => { setMode(initialMode === "players" ? "players" : "teams"); }, [initialMode]);
+    useEffect(() => {
+      if (initialMode === "players") return;
+      setAId(validTeam(initialA) || defA);
+      setBId(validTeam(initialB) || defB);
+    }, [initialA, initialB, initialMode]);
+    useEffect(() => { setTab(initialTab || "standings"); }, [initialTab]);
 
     // Lazily load every team's roster the first time Players mode is opened,
     // and flatten into one searchable list.
@@ -444,23 +483,51 @@
           (list) => list.map((p) => ({ ...p, teamId: t.id, teamName: t.name })),
           () => []
         )
-      )).then((lists) => {
-        const flat = [].concat(...lists);
-        setPlayers(flat);
-        // Seed with a batter from each of the two top teams so the default
-        // matchup has two distinct team colors (a same-team default makes the
-        // split bars hard to read).
-        const firstBatter = (tid) => flat.find((p) => p.teamId === tid && p.role !== "Pitcher");
-        const bats = flat.filter((p) => p.role !== "Pitcher");
-        const p1 = (teams[0] && firstBatter(teams[0].id)) || bats[0] || flat[0];
-        const p2 = (teams[1] && firstBatter(teams[1].id)) || bats.find((p) => p !== p1) || flat[1];
-        if (p1 && p2) { setPa(p1); setPb(p2); setPtA(p1.teamId); setPtB(p2.teamId); }
-      }).catch((e) => setPErr(e.message));
+      )).then((lists) => setPlayers([].concat(...lists)))
+        .catch((e) => setPErr(e.message));
     }, [mode, players, pErr]);
 
-    const swapTeams = () => { setAId(bId); setBId(aId); };
+    // Once rosters load, resolve the two players from the URL keys. With no keys
+    // (or unresolvable ones), seed a batter from each of the two top teams — two
+    // distinct colors read better — and publish them so the matchup is shareable.
+    useEffect(() => {
+      if (mode !== "players" || !players) return;
+      const ra = findPlayer(players, initialA);
+      const rb = findPlayer(players, initialB);
+      if (ra || rb) {
+        if (ra) { setPa(ra); setPtA(ra.teamId); }
+        if (rb) { setPb(rb); setPtB(rb.teamId); }
+        return;
+      }
+      if (pa && pb) return; // already chosen this session
+      const firstBatter = (tid) => players.find((p) => p.teamId === tid && p.role !== "Pitcher");
+      const bats = players.filter((p) => p.role !== "Pitcher");
+      const p1 = (teams[0] && firstBatter(teams[0].id)) || bats[0] || players[0];
+      const p2 = (teams[1] && firstBatter(teams[1].id)) || bats.find((p) => p !== p1) || players[1];
+      if (p1 && p2) {
+        setPa(p1); setPb(p2); setPtA(p1.teamId); setPtB(p2.teamId);
+        reportPlayers(p1, p2);
+      }
+    }, [players, initialA, initialB, mode]);
+
+    const selectMode = (m) => {
+      if (m === mode) return;
+      setMode(m);
+      if (m === "teams") reportTeams(aId, bId, tab);
+      else reportPlayers(pa, pb);
+    };
+
+    // teams handlers
+    const selectA = (t) => { setAId(t.id); reportTeams(t.id, bId, tab); };
+    const selectB = (t) => { setBId(t.id); reportTeams(aId, t.id, tab); };
+    const selectTab = (t) => { setTab(t); reportTeams(aId, bId, t); };
+    const swapTeams = () => { setAId(bId); setBId(aId); reportTeams(bId, aId, tab); };
+
+    // players handlers
+    const selectPa = (p) => { setPa(p); reportPlayers(p, pb); };
+    const selectPb = (p) => { setPb(p); reportPlayers(pa, p); };
     const swapPlayers = () => {
-      setPa(pb); setPb(pa); setPtA(ptB); setPtB(ptA);
+      setPa(pb); setPb(pa); setPtA(ptB); setPtB(ptA); reportPlayers(pb, pa);
     };
 
     // Switching a side's team auto-selects that team's first batter (else any
@@ -470,8 +537,9 @@
       return list.find((p) => p.role !== "Pitcher") || list[0] || null;
     };
     const setSideTeam = (side, t) => {
-      if (side === "A") { setPtA(t.id); setPa(firstOf(t.id)); }
-      else { setPtB(t.id); setPb(firstOf(t.id)); }
+      const np = firstOf(t.id);
+      if (side === "A") { setPtA(t.id); setPa(np); reportPlayers(np, pb); }
+      else { setPtB(t.id); setPb(np); reportPlayers(pa, np); }
     };
 
     const colorA = mode === "teams" ? window.TEAM_BY_ID[aId].color
@@ -485,16 +553,16 @@
           <Eyebrow>2026 Season · Head-to-Head</Eyebrow>
           <h1 className="display">Compare</h1>
           <div className="cmp-modes">
-            <button className={"cmp-mode" + (mode === "teams" ? " active" : "")} onClick={() => setMode("teams")}>Teams</button>
-            <button className={"cmp-mode" + (mode === "players" ? " active" : "")} onClick={() => setMode("players")}>Players</button>
+            <button className={"cmp-mode" + (mode === "teams" ? " active" : "")} onClick={() => selectMode("teams")}>Teams</button>
+            <button className={"cmp-mode" + (mode === "players" ? " active" : "")} onClick={() => selectMode("players")}>Players</button>
           </div>
         </header>
 
         <div className="cmp-pickers">
           {mode === "teams" ? (
             <React.Fragment>
-              <TeamPicker teams={teams} value={window.TEAM_BY_ID[aId]} onChange={(t) => setAId(t.id)} color={colorA} />
-              <TeamPicker teams={teams} value={window.TEAM_BY_ID[bId]} onChange={(t) => setBId(t.id)} color={colorB} />
+              <TeamPicker teams={teams} value={window.TEAM_BY_ID[aId]} onChange={selectA} color={colorA} />
+              <TeamPicker teams={teams} value={window.TEAM_BY_ID[bId]} onChange={selectB} color={colorB} />
             </React.Fragment>
           ) : !players ? (
             <div className="loading-block" style={{ gridColumn: "1 / -1" }}>
@@ -504,18 +572,18 @@
             <React.Fragment>
               <div className="cmp-side">
                 <TeamSelectMini teams={teams} value={window.TEAM_BY_ID[ptA]} onChange={(t) => setSideTeam("A", t)} color={colorA} />
-                <PlayerPicker players={players.filter((p) => p.teamId === ptA)} value={pa} onChange={setPa} color={colorA} />
+                <PlayerPicker players={players.filter((p) => p.teamId === ptA)} value={pa} onChange={selectPa} color={colorA} />
               </div>
               <div className="cmp-side">
                 <TeamSelectMini teams={teams} value={window.TEAM_BY_ID[ptB]} onChange={(t) => setSideTeam("B", t)} color={colorB} />
-                <PlayerPicker players={players.filter((p) => p.teamId === ptB)} value={pb} onChange={setPb} color={colorB} />
+                <PlayerPicker players={players.filter((p) => p.teamId === ptB)} value={pb} onChange={selectPb} color={colorB} />
               </div>
             </React.Fragment>
           )}
         </div>
 
         {mode === "teams" ? (
-          <TeamCompare aId={aId} bId={bId} onSwap={swapTeams} />
+          <TeamCompare aId={aId} bId={bId} onSwap={swapTeams} tab={tab} onTab={selectTab} />
         ) : pa && pb ? (
           <PlayerCompare a={pa} b={pb} onSwap={swapPlayers} />
         ) : null}

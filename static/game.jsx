@@ -101,6 +101,8 @@ const GameDetail = ({ game, hostTeamId, onBack, onTeamClick, onPlayerClick, back
         </div>
       </section>
 
+      <GameInfo detail={detail} />
+
       <div className="player-toggle">
         <button
           className={`player-toggle__btn ${statTeam === "away" ? "player-toggle__btn--active" : ""}`}
@@ -144,6 +146,29 @@ const GameDetail = ({ game, hostTeamId, onBack, onTeamClick, onPlayerClick, back
         </section>
       )}
     </div>
+  );
+};
+
+// Pitcher decisions (winning / losing / save), shown horizontally under the
+// line score. Name only — no record or stat line. Save is omitted when none.
+const GameInfo = ({ detail }) => {
+  const dec = detail.decisions || {};
+  const items = [["Win", "win"], ["Loss", "loss"], ["Save", "save"]]
+    .map(([label, k]) => [label, dec[k]])
+    .filter(([, d]) => d);
+  if (!items.length) return null;
+  return (
+    <section className="boxscore">
+      <Eyebrow>Decisions</Eyebrow>
+      <div className="ginfo">
+        {items.map(([label, d]) => (
+          <div className="ginfo__item" key={label}>
+            <span className="ginfo__key mono">{label}</span>
+            <span className="ginfo__pitcher">{d.name}</span>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 

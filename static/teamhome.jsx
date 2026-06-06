@@ -23,8 +23,8 @@ const _known = (o) => o && o.id && (window.TEAM_BY_ID || {})[o.id];
 // seeds). Returns { me, opp } where each is { seo, name, logo, seed } or null.
 function teamSuper(teamId) {
   for (const sr of (window.SUPER_REGIONALS || [])) {
-    if (sr.top && sr.top.seo === teamId) return { me: sr.top, opp: sr.bottom };
-    if (sr.bottom && sr.bottom.seo === teamId) return { me: sr.bottom, opp: sr.top };
+    if (sr.top && sr.top.seo === teamId) return { me: sr.top, opp: sr.bottom, city: sr.city };
+    if (sr.bottom && sr.bottom.seo === teamId) return { me: sr.bottom, opp: sr.top, city: sr.city };
   }
   return null;
 }
@@ -45,53 +45,149 @@ function SeriesTeam({ t, seed, accent, onTeam, me }) {
   );
 }
 
-// This Week — season-aware. Dispatches on the round of the team's next game.
-function ThisWeek({ schedule, team, onTeam }) {
-  const played = schedule.filter((g) => g.result);
-  const upcoming = schedule.filter((g) => !g.result);
-  if (!upcoming.length) {
-    return <div className="hp-placeholder">Season complete — no games on the schedule.</div>;
-  }
-  const round = upcoming[0].phase || "regular";
-  if (round === "NCAA Super Regional" || round === "College World Series")
-    return <WeekSeries team={team} upcoming={upcoming} onTeam={onTeam} round={round} />;
-  if (round === "NCAA Regional")
-    return <WeekRegional team={team} played={played} upcoming={upcoming} onTeam={onTeam} />;
-  if (round === "SEC Tournament")
-    return <WeekNextGame team={team} game={upcoming[0]} onTeam={onTeam} label="Next Game" />;
-  return <WeekRegular team={team} upcoming={upcoming} onTeam={onTeam} />;
+// Calendar-week key — the Monday of the ISO week containing `iso` — so games
+// group into Mon–Sun weeks.
+function weekKey(iso) {
+  const d = new Date(iso + "T00:00:00");
+  const dow = (d.getDay() + 6) % 7;            // 0 = Monday
+  d.setDate(d.getDate() - dow);
+  return d.toISOString().slice(0, 10);
 }
 
-// Super Regional / CWS — a best-of-3 (or series) matchup with seeds and games.
-function WeekSeries({ team, upcoming, onTeam, round }) {
+// Split the schedule into "this week" (the week of the next unplayed game — or the
+// last week once the season's over) and the week before it. This Week keeps every
+// game of its week (played ones show their result) and only rolls over once they
+// are ALL final; Recent is the previous week that has games.
+function weeklySplit(schedule) {
+  const games = schedule.filter((g) => g.iso);
+  if (!games.length) return { thisWeek: [], recent: [], round: "regular" };
+  const anchor = games.find((g) => !g.result) || games[games.length - 1];
+  const curWk = weekKey(anchor.iso);
+  const round = anchor.phase || "regular";
+  const weeks = [...new Set(games.map((g) => weekKey(g.iso)))].sort();
+  const i = weeks.indexOf(curWk);
+  const recentWk = i > 0 ? weeks[i - 1] : null;
+  return {
+    // current week, kept to the current round so a postseason week doesn't pull in
+    // a prior round's stray game
+    thisWeek: games.filter((g) => weekKey(g.iso) === curWk && (g.phase || "regular") === round),
+    recent: recentWk ? games.filter((g) => weekKey(g.iso) === recentWk) : [],
+    round,
+  };
+}
+
+// Did the team win its regional and move on? True once the schedule carries a
+// later round (Super Regional / CWS).
+function advancedPastRegional(schedule) {
+  return schedule.some((g) => g.phase === "NCAA Super Regional" || g.phase === "College World Series");
+}
+
+// A game's outcome cell: the W/L result + score once final, else the start time.
+function gameOutcome(g) {
+  if (!g.result) return <span className="mono hp-faint">{g.time || "TBD"}</span>;
+  return (
+    <span className={"chip " + (g.result === "W" ? "chip-w" : "chip-l")}>
+      {g.result} {g.score.us}&ndash;{g.score.them}
+    </span>
+  );
+}
+
+// A week's games as a list: each row is a final result (clickable to the box
+// score) or an upcoming slot with its start time.
+function WeekGames({ games, onGameClick }) {
+  return (
+    <div className="th-week">
+      {games.map((g) => {
+        const opp = g.opp, played = !!g.result;
+        return (
+          <button key={g.id} className="th-week__row" disabled={!played}
+            onClick={played ? () => onGameClick && onGameClick(g) : undefined}>
+            <span className="th-week__opp">
+              <span className="mono hp-muted th-week__va">{g.home ? "vs" : "at"}</span>
+              {opp && <HPLogo team={opp} size={20} />}
+              <span className="th-week__name">{opp ? opp.name : "TBD"}</span>
+              {opp && opp.rank ? <span className="chip-rank">#{opp.rank}</span> : null}
+            </span>
+            <span className="th-week__right">
+              <span className="mono hp-faint th-week__date">{g.date}</span>
+              {gameOutcome(g)}
+            </span>
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+// This Week — the current week's whole slate. Played games show their result and
+// the section only advances to next week once every game is final.
+function ThisWeek({ schedule, team, onTeam, onGameClick }) {
+  const { thisWeek, round } = weeklySplit(schedule);
+  if (!thisWeek.length) {
+    return <div className="hp-placeholder">Season complete — no games on the schedule.</div>;
+  }
+  if (round === "NCAA Super Regional" || round === "College World Series")
+    return <WeekSeries team={team} games={thisWeek} onTeam={onTeam} onGameClick={onGameClick} round={round} />;
+  if (round === "NCAA Regional")
+    return <WeekRegional team={team} games={thisWeek} onTeam={onTeam} onGameClick={onGameClick}
+      advanced={advancedPastRegional(schedule)} cols={4} />;
+  return <WeekGames games={thisWeek} onGameClick={onGameClick} />;
+}
+
+// Super Regional / CWS — matchup + seeds, with every game of the series kept;
+// played games show their result, upcoming ones their time.
+function WeekSeries({ team, games, onTeam, onGameClick, round }) {
   const isCWS = round === "College World Series";
+  const first = games[0] || {};
   // Official matchup + national seeds from the bracket; schedule supplies the dates.
   const sup = teamSuper(team.id);
-  const oppRaw = sup ? sup.opp : upcoming[0].opp;
+  const oppRaw = sup ? sup.opp : first.opp;
   const oppTeam = oppRaw ? { id: oppRaw.seo || oppRaw.id, name: oppRaw.name, logo: oppRaw.logo,
                              mark: (oppRaw.name || "").slice(0, 4).toUpperCase() } : null;
   const mySeed = sup && sup.me ? sup.me.seed : null;
   const oppSeed = sup && sup.opp ? sup.opp.seed : null;
-  const hostName = upcoming[0].home ? team.name : (oppTeam ? oppTeam.name : "");
-  const title = isCWS ? "College World Series" : `${hostName} Super Regional`;
+  const hostName = first.home ? team.name : (oppTeam ? oppTeam.name : "");
+  // Name the series for the host's CITY (Austin, not Texas); fall back to the
+  // host school name if the bracket didn't supply a city.
+  const hostCity = (sup && sup.city) || hostName;
+  const title = isCWS ? "College World Series" : `${hostCity} Super Regional`;
   const sub = isCWS ? "At Charles Schwab Field · Omaha"
                     : "Best-of-3 · Winner advances to the College World Series";
-  const games = upcoming.slice(0, 3);
-  const needGame3 = !isCWS && games.length < 3;
+  const slots = games.slice(0, 3);
+  const needGame3 = !isCWS && slots.length < 3;
+  // Clicking the games box opens the SAME super-regional detail modal the bracket
+  // uses — found by this team's seo in the NCAA bracket tree.
+  const [superModal, setSuperModal] = React.useState(null);
+  const openSeries = () => {
+    if (isCWS || !window.fetchBracket) return;
+    window.fetchBracket("ncaa")
+      .then((d) => { const p = window.findSuperPairing(d, team.id); if (p) setSuperModal(p); })
+      .catch(() => {});
+  };
+  const SM = window.SuperModal;
   return (
     <div className="th-post">
       <div className="th-post__title">{title}</div>
       <div className="th-post__sub mono">{sub}</div>
       <div className="th-post__teams">
-        <SeriesTeam t={team} seed={mySeed} accent={team.color} onTeam={onTeam} me />
-        <SeriesTeam t={oppTeam} seed={oppSeed} onTeam={onTeam} />
+        {(() => {
+          const meRow = <SeriesTeam t={team} seed={mySeed} accent={team.color} onTeam={onTeam} me />;
+          const oppRow = <SeriesTeam t={oppTeam} seed={oppSeed} onTeam={onTeam} />;
+          // Home team beneath the visitor (CWS is at a neutral site — no host).
+          const meHome = !isCWS && (sup && sup.me ? sup.me.home : first.home);
+          return meHome
+            ? <React.Fragment>{oppRow}{meRow}</React.Fragment>
+            : <React.Fragment>{meRow}{oppRow}</React.Fragment>;
+        })()}
       </div>
-      <div className="th-post__games" style={{ gridTemplateColumns: "repeat(3, 1fr)" }}>
-        {games.map((g, i) => (
-          <div key={g.id} className="th-pgame">
+      <div className={"th-post__games" + (isCWS ? "" : " th-post__games--click")}
+        style={{ gridTemplateColumns: "repeat(3, 1fr)" }}
+        onClick={isCWS ? undefined : openSeries} role={isCWS ? undefined : "button"}>
+        {slots.map((g, i) => (
+          <div key={g.id} className={"th-pgame" + (g.result ? " th-pgame--final" : "")}>
             <div className="mono th-pgame__g">Game {i + 1}</div>
             <div className="mono th-pgame__date">{g.date}</div>
-            <div className="mono hp-faint">{g.time || "TBD"}</div>
+            <div className="th-pgame__out">{gameOutcome(g)}</div>
           </div>
         ))}
         {needGame3 && (
@@ -102,136 +198,79 @@ function WeekSeries({ team, upcoming, onTeam, round }) {
           </div>
         )}
       </div>
+      {superModal && SM && <SM pairing={superModal} onClose={() => setSuperModal(null)} />}
     </div>
   );
 }
 
-// NCAA Regional — a 4-team double-elimination field. The other teams in the
-// regional are inferred from the distinct opponents across the team's regional
-// games (played + upcoming).
-function WeekRegional({ team, played, upcoming, onTeam }) {
-  const regGames = [...played, ...upcoming].filter((g) => g.phase === "NCAA Regional");
+// NCAA Regional — a 4-team double-elimination field. The other teams are inferred
+// from the distinct opponents across the team's regional games this week; every
+// game is kept and played games show their result.
+function WeekRegional({ team, games, onTeam, onGameClick, advanced, cols = 4 }) {
   const seen = new Set();
   const field = [];
-  for (const g of regGames) {
+  for (const g of games) {
     const o = g.opp;
     if (o && o.id && !seen.has(o.id)) { seen.add(o.id); field.push(o); }
   }
-  const next = upcoming.filter((g) => g.phase === "NCAA Regional").slice(0, 4);
+  // A regional is 4-team double-elimination — show 4 game slots at all times.
+  // Known games fill in (result or scheduled), the rest are TBD; once the team's
+  // regional is decided — they advanced (won) or were eliminated (2 losses) — the
+  // games they won't play are crossed out.
+  // The regional is "over" for this team only once they have no regional games
+  // left to play AND they've either advanced (won) or been eliminated (2 losses).
+  // While a game is still upcoming, the empty slots stay TBD (a 4th may be needed).
+  const upcoming = games.some((g) => !g.result);
+  const losses = games.filter((g) => g.result === "L").length;
+  const over = !upcoming && (advanced || losses >= 2);
+  const total = Math.max(4, games.length);
   return (
     <div className="th-post">
-      <div className="th-post__title">{team.name} Regional</div>
+      <div className="th-post__title">{(window.REGIONAL_CITY_BY_TEAM || {})[team.id] || team.name} Regional</div>
       <div className="th-post__sub mono">Double-elimination · Winner advances to a Super Regional</div>
       <div className="th-post__teams">
         <SeriesTeam t={team} accent={team.color} onTeam={onTeam} me />
         {field.map((o) => <SeriesTeam key={o.id} t={o} onTeam={onTeam} />)}
       </div>
-      {next.length > 0 && (
-        <div className="th-post__games" style={{ gridTemplateColumns: `repeat(${Math.min(next.length, 3)}, 1fr)` }}>
-          {next.map((g) => (
-            <div key={g.id} className="th-pgame">
-              <div className="mono th-pgame__g">{g.home ? "vs" : "at"} {g.opp ? g.opp.name : "TBD"}</div>
-              <div className="mono th-pgame__date">{g.date}</div>
-              <div className="mono hp-faint">{g.time || "TBD"}</div>
+      <div className="th-post__games" style={{ gridTemplateColumns: `repeat(${cols}, 1fr)` }}>
+        {Array.from({ length: total }, (_, i) => {
+          const g = games[i];
+          if (g) {
+            return (
+              <div key={g.id} className={"th-pgame" + (g.result ? " th-pgame--final" : "")}
+                onClick={g.result && onGameClick ? () => onGameClick(g) : undefined}
+                style={g.result && onGameClick ? { cursor: "pointer" } : undefined}>
+                <div className="mono th-pgame__g">{g.home ? "vs" : "at"} {g.opp ? g.opp.name : "TBD"}</div>
+                <div className="mono th-pgame__date">{g.date}</div>
+                <div className="th-pgame__out">{gameOutcome(g)}</div>
+              </div>
+            );
+          }
+          // Empty slot: TBD while the regional's live; crossed out once it's over.
+          return (
+            <div key={"slot" + i} className={"th-pgame th-pgame--empty" + (over ? " th-pgame--out" : "")}>
+              <div className="mono th-pgame__g">Game {i + 1}</div>
+              <div className="mono th-pgame__date">{over ? "—" : "TBD"}</div>
+              <div className="th-pgame__out mono hp-faint">{over ? "Did not play" : "TBD"}</div>
             </div>
-          ))}
-        </div>
-      )}
+          );
+        })}
+      </div>
     </div>
   );
 }
 
-// A single upcoming game (SEC Tournament's next game).
-function WeekNextGame({ team, game, onTeam, label }) {
-  const opp = game.opp;
-  const click = _known(opp);
-  return (
-    <div className="th-series" style={{ borderLeftColor: team.color }}>
-      <div className="th-series__head">
-        <span className="hp-eyebrow">{label || "Next Game"}</span>
-        <span className="mono hp-faint">{game.date}{game.time ? " · " + game.time : ""}</span>
-      </div>
-      <button className="bare-btn th-series__opp" disabled={!click}
-        onClick={() => click && onTeam && onTeam(opp.id)}>
-        <span className="mono hp-muted">{game.home ? "VS" : "AT"}</span>
-        <HPLogo team={opp} size={28} />
-        <span className="th-series__oppname">{opp ? opp.name : "TBD"}</span>
-        {opp && opp.rank && <span className="chip-rank">#{opp.rank}</span>}
-      </button>
-    </div>
-  );
-}
-
-// Regular season — a midweek game (if any) plus the weekend series.
-function WeekRegular({ team, upcoming, onTeam }) {
-  const runs = groupRuns(upcoming);
-  const weekend = runs.find((r) => r.length >= 2) || null;
-  if (!weekend) return <WeekNextGame team={team} game={upcoming[0]} onTeam={onTeam} label="Next Up" />;
-  const midweek = runs[0] && runs[0].length === 1 && runs[0] !== weekend ? runs[0][0] : null;
-  const opp = weekend[0].opp;
-  const click = _known(opp);
-  const seriesCard = (
-    <div className="th-series" style={{ borderLeftColor: team.color }}>
-      <div className="th-series__head">
-        <span className="th-tag th-tag--solid">Weekend Series</span>
-        <span className="mono hp-faint">{weekend.length} games</span>
-      </div>
-      <button className="bare-btn th-series__opp" disabled={!click}
-        onClick={() => click && onTeam && onTeam(opp.id)}>
-        <span className="mono hp-muted">{weekend[0].home ? "VS" : "AT"}</span>
-        <HPLogo team={opp} size={28} />
-        <span className="th-series__oppname">{opp ? opp.name : "TBD"}</span>
-        {opp && opp.rank && <span className="chip-rank">#{opp.rank}</span>}
-      </button>
-      <div className="th-series__games" style={{ gridTemplateColumns: `repeat(${weekend.length}, 1fr)` }}>
-        {weekend.map((g) => (
-          <div key={g.id} className="th-game">
-            <div className="mono th-game__date">{g.date}</div>
-            <div className="mono hp-faint">{g.time || "TBD"}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-  if (!midweek) return seriesCard;
-  return (
-    <div className="th-reg">
-      <div className="th-mid">
-        <span className="th-tag th-tag--outline">Midweek</span>
-        <div className="th-mid__opp">
-          <span className="mono hp-muted">{midweek.home ? "VS" : "AT"}</span>
-          <span className="th-mid__oppname">{midweek.opp ? midweek.opp.name : "TBD"}</span>
-        </div>
-        <div className="mono hp-faint">{midweek.date}{midweek.time ? " · " + midweek.time : ""}</div>
-      </div>
-      {seriesCard}
-    </div>
-  );
-}
-
-// Recent results from the team's most recent round only (e.g. just the NCAA
-// Regional games), with that specific round's name shown above. Games run
-// oldest -> newest, so the most recent game sits at the bottom. Regular-season
-// teams fall back to their last few games with no round header.
+// Recent — the week BEFORE "This Week" (the previous week that has games), so a
+// finished week's games linger here until the current week is over. Played games
+// link to their box score; a postseason round shows its name above.
 function RecentList({ schedule, onGameClick }) {
-  const played = schedule.filter((g) => g.result);
-  if (!played.length) return <div className="hp-placeholder">No results yet.</div>;
-  const round = played[played.length - 1].phase || "regular";
-  const inRound = played.filter((g) => (g.phase || "regular") === round);
-  const games = round === "regular" ? inRound.slice(-5) : inRound;
+  const { recent } = weeklySplit(schedule);
+  if (!recent.length) return <div className="hp-placeholder">No results yet.</div>;
+  const round = (recent.find((g) => g.result) || recent[0]).phase || "regular";
   return (
     <div>
       {round !== "regular" && <div className="th-recent__head">{round}</div>}
-      <div className="th-recent">
-        {games.map((g) => (
-          <button key={g.id} className="bare-btn th-recent__row" onClick={() => onGameClick && onGameClick(g)}>
-            <span className={"chip " + (g.result === "W" ? "chip-w" : "chip-l")}>{g.result}</span>
-            <span className="mono th-recent__score">{g.score.us}&ndash;{g.score.them}</span>
-            <span className="th-recent__opp">{g.opp ? g.opp.name : ""}</span>
-            <span className="mono hp-faint th-recent__date">{g.date}</span>
-          </button>
-        ))}
-      </div>
+      <WeekGames games={recent} onGameClick={onGameClick} />
     </div>
   );
 }
@@ -331,9 +370,11 @@ function TeamLeaders({ leaders }) {
       {leaders.map((l, i) => (
         <div key={i} className="th-leader">
           <div className="hp-eyebrow">{l.note || l.pos}</div>
-          <div className="th-leader__name">{l.name || l.line}</div>
-          {l.name && <div className="th-leader__line mono">{l.line}</div>}
-          {l.pos && <div className="mono hp-faint th-leader__pos">{l.pos}</div>}
+          <div className="th-leader__row">
+            <span className="th-leader__name">{l.name || l.line}</span>
+            {l.pos && <span className="th-leader__pos">{l.pos}</span>}
+            {l.name && <span className="th-leader__val">{l.line}</span>}
+          </div>
         </div>
       ))}
     </div>
@@ -361,16 +402,9 @@ const TeamHome = ({ teamId, onTeam, onGameClick }) => {
       {hasUpcoming && (
         <section className="hp-hero">
           <HPLabel color={post ? "var(--gold)" : null}>This Week</HPLabel>
-          <ThisWeek schedule={schedule} team={team} onTeam={onTeam} />
+          <ThisWeek schedule={schedule} team={team} onTeam={onTeam} onGameClick={onGameClick} />
         </section>
       )}
-
-      <section className="hp-hero">
-        <HPLabel>Team Leaders</HPLabel>
-        {teamData
-          ? <TeamLeaders leaders={teamData.leaders} />
-          : <div className="hp-placeholder">Loading team leaders…</div>}
-      </section>
 
       <section className="hp-split">
         <div>
@@ -390,6 +424,13 @@ const TeamHome = ({ teamId, onTeam, onGameClick }) => {
             </div>
           )}
         </div>
+      </section>
+
+      <section className="hp-hero">
+        <HPLabel>Team Leaders</HPLabel>
+        {teamData
+          ? <TeamLeaders leaders={teamData.leaders} />
+          : <div className="hp-placeholder">Loading team leaders…</div>}
       </section>
     </div>
   );

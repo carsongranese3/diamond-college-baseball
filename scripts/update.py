@@ -210,6 +210,8 @@ def pull_missing(label):
                 "contest_id": cid, "date": g["date"], "opponent": g["opponent"],
                 "home": g["home"], "result": g["result"],
                 "line_score": ns.contest_line_score(cid),
+                "decisions": ns.contest_decisions(cid),
+                "info": ns.contest_info(cid),
             })
             _write(os.path.join(game_dir, "player_stats.json"),
                    ns.contest_player_stats(cid))
@@ -274,8 +276,17 @@ def main():
     # 2) run the count check (now against fresh numbers) and pull what's missing.
     refresh_schedules(targets)
 
+    import build_stats  # rebuild each team's stats/ season totals after its pull
+
     for t in targets:
-        if not process(t):
+        ok = process(t)
+        # Always refresh stats/ for a team we ran, so the season totals reflect
+        # whatever's now saved (newly pulled games, backfilled decisions, etc.).
+        res = build_stats.build_for_team(t)
+        if res is not None:
+            b, p = res
+            print(f"     stats/ rebuilt: {b} batters, {p} pitchers")
+        if not ok:
             break  # stop on first failure
 
     if "ncaa_stats" in sys.modules:        # shut the browser down if we started it

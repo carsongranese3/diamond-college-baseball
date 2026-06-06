@@ -12,6 +12,7 @@ import time
 from flask import Flask, abort, jsonify, request, send_from_directory
 
 import bracket
+import clock
 import local_data
 import ncaa
 import phase
@@ -55,8 +56,20 @@ def _super_regionals():
         for sup in tree.get(side, []):
             s = sup.get("super") or {}
             if s.get("top") or s.get("bottom"):
-                out.append({"id": sup.get("id"), "top": s.get("top"), "bottom": s.get("bottom")})
+                # Host = higher seed of the two advancing teams (bracket.py computes
+                # this, accounting for upsets); names the Super by its city.
+                out.append({"id": sup.get("id"), "top": s.get("top"),
+                            "bottom": s.get("bottom"), "city": sup.get("host_city")})
     return out
+
+
+def _regional_cities():
+    """{team_seo: host_city} for every team in every NCAA regional, so any team's
+    regional can be named by its host city ("Austin Regional") from the homepage."""
+    try:
+        return bracket.ncaa_bracket().get("regional_cities") or {}
+    except Exception:
+        return {}
 
 
 def _ip_float(ip):
@@ -72,7 +85,7 @@ def _conference_leaders():
     (so one team can place multiple players, and a later team pushes weaker ones
     out of the top three)."""
     data = _memo("season", season.SEASON_AGGREGATE_TTL, season.build_season)
-    avg_pool, hr_pool, era_pool = [], [], []
+    avg_pool, rbi_pool, hr_pool, era_pool, k_pool, wins_pool = [], [], [], [], [], []
     for t in data["teams"]:
         seo, name = t["id"], t["name"]
         sched = data["schedules"].get(seo)
@@ -97,9 +110,27 @@ def _conference_leaders():
                 hr = 0
             if hr > 0:
                 hr_pool.append((hr, t, b, str(hr)))
+            try:
+                rbi = int(b.get("rbi") or 0)
+            except (TypeError, ValueError):
+                rbi = 0
+            if rbi > 0:
+                rbi_pool.append((rbi, t, b, str(rbi)))
         for p in roster.get("pitchers", []):
             if _ip_float(p.get("ip")) >= 20 and p.get("era"):
                 era_pool.append((_ip_float(p["era"]), t, p, p["era"]))
+            try:
+                k = int(p.get("k") or 0)
+            except (TypeError, ValueError):
+                k = 0
+            if k > 0:
+                k_pool.append((k, t, p, str(k)))
+            try:
+                w = int(p.get("w") or 0)
+            except (TypeError, ValueError):
+                w = 0
+            if w > 0:
+                wins_pool.append((w, t, p, str(w)))
 
     def fmt(e):
         _v, t, p, val = e
@@ -110,9 +141,14 @@ def _conference_leaders():
         return [fmt(e) for e in sorted(pool, key=lambda x: x[0], reverse=reverse)[:3]]
 
     return {
+        # batters
         "avg": {"label": "Batting Avg", "unit": "AVG", "list": top(avg_pool, True)},
+        "rbi": {"label": "RBI", "unit": "RBI", "list": top(rbi_pool, True)},
         "hr": {"label": "Home Runs", "unit": "HR", "list": top(hr_pool, True)},
+        # pitchers
         "era": {"label": "Earned Run Avg", "unit": "ERA", "list": top(era_pool, False)},
+        "k": {"label": "Strikeouts", "unit": "K", "list": top(k_pool, True)},
+        "wins": {"label": "Wins", "unit": "W", "list": top(wins_pool, True)},
     }
 
 
@@ -129,26 +165,47 @@ def bootstrap():
     # supplies the team list, rankings (rank/RPI/order), and logos.
     schedules = _memo("local_schedules", season.SEASON_AGGREGATE_TTL,
                       lambda: local_data.schedules(data["teams"]))
-    # Standings reflect the conference regular season only — overlay W/L records
-    # computed from regular-season games (postseason games are excluded). Overlay
-    # onto copies so the memoized team objects keep their API values.
-    records = local_data.regular_season_records(schedules)
+    asof = season._today().isoformat()
+    test = clock.is_test()
+    # Keyed by the effective date so test dates don't pollute the live cache.
+    upcoming = _memo("upcoming:" + asof, 1800, season.upcoming_schedules)
+    full = {}
+    for seo, played in schedules.items():
+        # The scoreboard sometimes lists a played game as 'pre' (ncaa.com lag), so
+        # only add upcoming games on dates we have NO box score for — no duplicates.
+        played_dates = {g["iso"] for g in played if g.get("iso")}
+        games = list(played) + [g for g in upcoming.get(seo, [])
+                                if g.get("iso") not in played_dates]
+        if test:
+            # Time machine: games after the test date read as not-yet-played, so the
+            # whole site reflects that day. With test off this loop is skipped.
+            games = [dict(g, result=None, score=None) if (g.get("iso") or "") > asof else g
+                     for g in games]
+        games.sort(key=lambda g: g.get("iso") or "")
+        full[seo] = games
+    # Standings/records skip result=None games, so in test mode this reflects only
+    # games up to the test date.
+    records = local_data.regular_season_records(full)
     teams = [{**t, **records.get(t["id"], {})} for t in data["teams"]]
-    # Merge in upcoming (scheduled, not-yet-played) games from the scoreboard so the
-    # schedule / Scores / This-Week views can show what's next. Records above are
-    # computed from the played-only schedules first; upcoming games (result=None)
-    # wouldn't affect them anyway.
-    upcoming = _memo("upcoming", 1800, season.upcoming_schedules)
-    full = {seo: sorted(list(games) + upcoming.get(seo, []),
-                        key=lambda g: g.get("iso") or "")
-            for seo, games in schedules.items()}
     return jsonify({
         "teams": teams,
         "schedules": full,
         "updated": data["updated"],
         "phase": phase.current_phase(),
         "super_regionals": _memo("super_regionals", 1800, _super_regionals),
+        "regional_cities": _memo("regional_cities", 1800, _regional_cities),
+        "clock": clock.state(),
     })
+
+
+@app.route("/api/dev/clock")
+def dev_clock():
+    """Test-only time machine. ?test=1&date=2026-05-15 turns it on for that date;
+    ?test=0 turns it off. No param just reports the current state."""
+    if "test" in request.args:
+        clock.configure(request.args.get("test") in ("1", "true", "on"),
+                        request.args.get("date"))
+    return jsonify(clock.state())
 
 
 @app.route("/api/team/<seo>")

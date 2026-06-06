@@ -12,6 +12,7 @@ the regular-season conference standings.
 """
 
 import ncaa
+from cities import city_for
 
 # sectionId // 100 -> tournament round.
 ROUND_TITLES = {1: "Regionals", 2: "Super Regionals",
@@ -31,6 +32,7 @@ def _bteam(t):
         "seed": t.get("seed"),
         "score": t.get("score"),
         "winner": bool(t.get("isWinner")),
+        "home": bool(t.get("isHome")),
         "logo": ncaa.logo_url(seo) if seo else "",
     }
 
@@ -81,6 +83,26 @@ def _super_box(games, regionals):
     state = "F" if (top and top["winner"]) or (bottom and bottom["winner"]) else (
         "I" if any(g["state"] == "I" for g in games) else "P")
     return {"top": top, "bottom": bottom, "state": state}
+
+
+def _super_host(games, sbox):
+    """(seo, name) of the Super Regional HOST — the higher national seed of the
+    two teams that actually advanced, which is the home team of the super's games.
+    A Super hosted by the #1 national seed shifts if that seed is upset in its
+    regional (e.g. UCLA out, West Virginia hosts). Priority:
+      1) the home team of game 1 (definitive once the matchup is set), then
+      2) the higher-seeded of the two advancing teams (for not-yet-played supers)."""
+    playable = [g for g in games if g.get("top") or g.get("bottom")]
+    if playable:
+        g1 = min(playable, key=lambda g: g.get("pos") or 0)
+        for s in (g1.get("top"), g1.get("bottom")):
+            if s and s.get("home") and s.get("seo"):
+                return s["seo"], s.get("name")
+    cands = [s for s in (sbox.get("top"), sbox.get("bottom")) if s and s.get("seo")]
+    if cands:
+        cands.sort(key=lambda s: (s.get("seed") is None, s.get("seed") or 999))
+        return cands[0]["seo"], cands[0].get("name")
+    return None, None
 
 
 def ncaa_bracket(year=2026):
@@ -137,9 +159,12 @@ def ncaa_bracket(year=2026):
             winner = alive[0]["seo"] if len(alive) == 1 else None
         host = next((t for t in teams if t["seed"] is not None),
                     teams[0] if teams else None)
+        # Regionals/Supers are named for the host's CITY (Austin, not Texas).
+        city = city_for(host["seo"], host["name"]) if host else "Region %s" % sid
         groups[sid] = {
             "id": sid, "teams": teams, "games": games, "winner": winner,
             "label": host["name"] if host else "Region %s" % sid,
+            "city": city,
             "seed": host["seed"] if host else None,
         }
 
@@ -168,7 +193,17 @@ def ncaa_bracket(year=2026):
         reg_groups = [groups[r] for r in regs]
         side = "left" if advances.get(sup_sid) == left_ws else "right"
         sbox = _super_box(sections.get(sup_sid, []), reg_groups)
-        tree[side].append({"id": sup_sid, "regionals": reg_groups, "super": sbox})
+        # Named for the HOST's city — the higher seed of the two advancing teams,
+        # which may not be either feeder regional's host if a top seed was upset.
+        host_seo, host_name = _super_host(sections.get(sup_sid, []), sbox)
+        host_city = (city_for(host_seo, host_name) if host_seo
+                     else (reg_groups[0]["city"] if reg_groups else None))
+        # Flag the host so the UI can place the home team beneath the visitor.
+        for s in (sbox.get("top"), sbox.get("bottom")):
+            if s and s.get("seo"):
+                s["home"] = (s["seo"] == host_seo)
+        tree[side].append({"id": sup_sid, "regionals": reg_groups, "super": sbox,
+                           "games": sections.get(sup_sid, []), "host_city": host_city})
         champ = next((s for s in (sbox["top"], sbox["bottom"])
                       if s and s.get("winner")), None)
         super_champ_by_side[side].append(champ)
@@ -222,8 +257,19 @@ def ncaa_bracket(year=2026):
         "finals": {"top": top, "bottom": bottom, "state": fstate},
     }
 
+    # team seo -> its regional's host city, for every team in every regional, so
+    # the site can name a team's regional by host city from any perspective.
+    regional_cities = {}
+    for sid, grp in groups.items():
+        if sid // 100 != 1:
+            continue
+        for t in grp["teams"]:
+            if t.get("seo"):
+                regional_cities[t["seo"]] = grp["city"]
+
     return {"title": ch.get("title", "NCAA Tournament"),
-            "rounds": out, "tree": tree, "center": center}
+            "rounds": out, "tree": tree, "center": center,
+            "regional_cities": regional_cities}
 
 
 # ── SEC: reconstruct the conference tournament from local games ──────────────

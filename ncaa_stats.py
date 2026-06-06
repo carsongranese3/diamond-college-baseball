@@ -384,6 +384,82 @@ def contest_line_score(cid):
             "home": sides[1] if len(sides) > 1 else None}
 
 
+_DECISION_LABELS = {"Winning Pitcher": "win", "Losing Pitcher": "loss", "Save": "save"}
+
+
+def contest_decisions(cid):
+    """Pitcher decisions for a contest from the box-score page's Game Leaders:
+    winning pitcher, losing pitcher, and save. Returns
+    {"win": d, "loss": d, "save": d} where each is None when absent (a game with
+    no save omits that row) and otherwise
+    {name, record, line, side, player_id}. `record` is W-L for win/loss and the
+    season save count for a save; `side` is "away"/"home"; `line` is the IP/H/R/K/BB
+    summary. Reuses the cached box-score page, so it costs no extra fetch."""
+    soup = BeautifulSoup(fetch_html(f"{NCAA_BASE}/contests/{cid}/box_score"), "lxml")
+    out = {"win": None, "loss": None, "save": None}
+    for tr in soup.find_all("tr"):
+        cells = tr.find_all(["td", "th"])
+        if len(cells) < 2:
+            continue
+        key = _DECISION_LABELS.get(cells[0].get_text(strip=True))
+        if not key or out[key]:
+            continue
+        # The pitcher sits in the away (cell[1]) or home (cell[2]) column; the
+        # other side's cell is blank.
+        for side, idx in (("away", 1), ("home", 2)):
+            if idx >= len(cells):
+                continue
+            text = cells[idx].get_text(" ", strip=True)
+            if not text:
+                continue
+            link = cells[idx].find("a")
+            name = link.get_text(strip=True) if link else text.split("(")[0].strip()
+            pid = None
+            if link and link.get("href"):
+                m = re.search(r"/players/(\d+)", link["href"])
+                pid = m.group(1) if m else None
+            rec = re.search(r"\(([^)]*)\)", text)
+            out[key] = {
+                "name": name,
+                "record": rec.group(1) if rec else None,
+                "line": text[rec.end():].strip(" ,") if rec else "",
+                "side": side,
+                "player_id": pid,
+            }
+            break
+    return out
+
+
+def contest_info(cid):
+    """Game info from the box-score page header (the grey lines under the line
+    score): date, start time, venue, location, and attendance. Returns
+    {date, time, venue, location, attendance}; any field is None when the page
+    doesn't carry it. Reuses the cached box-score page, so it costs no extra fetch."""
+    soup = BeautifulSoup(fetch_html(f"{NCAA_BASE}/contests/{cid}/box_score"), "lxml")
+    info = {"date": None, "time": None, "venue": None,
+            "location": None, "attendance": None}
+    for td in soup.find_all("td", class_="grey_text"):
+        text = td.get_text(" ", strip=True)
+        if not text:
+            continue
+        m = re.match(r"(\d{2}/\d{2}/\d{4})(?:\s+(.+))?$", text)
+        if m:
+            info["date"] = m.group(1)
+            info["time"] = (m.group(2) or "").strip() or None
+            continue
+        m = re.match(r"Attendance:\s*([\d,]+)", text)
+        if m:
+            info["attendance"] = m.group(1)
+            continue
+        # Venue line: "Venue Name (City, ST)". Require the "City, ST" shape so
+        # team-record grey lines (e.g. "Auburn Tigers 16-2, Conf 2-0") don't match.
+        if info["venue"] is None:
+            m = re.match(r"(.+?)\s*\(([^,)]+,\s*[A-Za-z.]{2,})\)\s*$", text)
+            if m:
+                info["venue"], info["location"] = m.group(1).strip(), m.group(2).strip()
+    return info
+
+
 def _classify(headers):
     h = set(headers)
     if "AB" in h and "RBI" in h:

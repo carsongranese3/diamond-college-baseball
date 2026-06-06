@@ -92,7 +92,9 @@ window.__bootstrapReady = fetch("/api/bootstrap")
     window.SCHEDULES = d.schedules;
     window.SEASON_UPDATED = d.updated;
     window.SEASON_PHASE = d.phase;   // { phase: "super_regionals", label: "Super Regionals" }
-    window.SUPER_REGIONALS = d.super_regionals || [];  // [{ id, top:{seo,name,logo,seed}, bottom:{...} }]
+    window.SUPER_REGIONALS = d.super_regionals || [];  // [{ id, top:{seo,name,logo,seed}, bottom:{...}, city }]
+    window.REGIONAL_CITY_BY_TEAM = d.regional_cities || {};  // { team_seo: host_city } — name a regional by host city
+    window.SEASON_CLOCK = d.clock || {};   // { override: "2026-05-15"|null, today: "2026-06-03" } — dev time machine
   })
   .catch((err) => {
     document.getElementById("root").innerHTML =

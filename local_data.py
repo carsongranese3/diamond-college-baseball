@@ -159,125 +159,82 @@ def _host_side(data, team_name):
     return "home" if box.get("home") else "away"
 
 
-# ── Team season stats (aggregated from the saved per-game files) ─────────────
+# ── Team season stats (built from the per-team stats/ season-total files) ────
 def team_stats(seo, name):
+    """Team season stats for the team page, built entirely from the team's
+    stats/ files (stats/batting.json + stats/pitching.json — basic counting
+    stats only; every rate/derived stat, plus W/L/SV, is computed here). Returns
+    None when those files don't exist yet, so the caller falls back to the live
+    API path. (Fielding isn't carried in the stats files yet, so it renders "—".)"""
     team_dir = _find_dir(seo, name)
     if not team_dir:
         return None
-
-    bat, pit, field = {}, {}, {"po": 0, "a": 0, "e": 0}
-    games_used = 0
-
-    for _dir, data in _iter_games(team_dir):
-        host_side = _host_side(data, name)
-        side = data["players"].get(host_side) or {}
-        if not (side.get("batting") or side.get("pitching")):
-            continue
-        games_used += 1
-
-        for row in side.get("batting", []):
-            key = (row.get("#"), row.get("Name"))
-            ab = to_int(row.get("AB"))
-            if ab == 0 and to_int(row.get("BB")) == 0:
-                continue
-            b = bat.setdefault(key, {
-                "name": row.get("Name", ""), "pos": row.get("P", ""),
-                "num": row.get("#", ""), "g": 0, "ab": 0, "r": 0, "h": 0,
-                "2b": 0, "3b": 0, "hr": 0, "rbi": 0, "bb": 0, "k": 0,
-                "hbp": 0, "sf": 0, "sb": 0, "cs": 0,
-            })
-            b["g"] += 1
-            b["ab"] += ab
-            b["r"] += to_int(row.get("R"))
-            b["h"] += to_int(row.get("H"))
-            b["2b"] += to_int(row.get("2B"))
-            b["3b"] += to_int(row.get("3B"))
-            b["hr"] += to_int(row.get("HR"))
-            b["rbi"] += to_int(row.get("RBI"))
-            b["bb"] += to_int(row.get("BB"))
-            b["k"] += to_int(row.get("K"))
-            b["hbp"] += to_int(row.get("HBP"))
-            b["sf"] += to_int(row.get("SF"))
-            b["sb"] += to_int(row.get("SB"))
-            b["cs"] += to_int(row.get("CS"))
-
-        for row in side.get("pitching", []):
-            outs = ip_to_outs(row.get("IP"))
-            if outs == 0:
-                continue
-            key = (row.get("#"), row.get("Name"))
-            p = pit.setdefault(key, {
-                "name": row.get("Name", ""), "pos": row.get("P", "P"),
-                "num": row.get("#", ""), "g": 0, "outs": 0, "h": 0, "r": 0,
-                "er": 0, "bb": 0, "k": 0, "hra": 0, "hbp": 0, "bf": 0,
-            })
-            p["g"] += 1
-            p["outs"] += outs
-            p["h"] += to_int(row.get("H"))
-            p["r"] += to_int(row.get("R"))
-            p["er"] += to_int(row.get("ER"))
-            p["bb"] += to_int(row.get("BB"))
-            p["k"] += to_int(row.get("SO"))
-            p["hra"] += to_int(row.get("HR-A"))
-            p["hbp"] += to_int(row.get("HB"))
-            p["bf"] += to_int(row.get("BF"))
-
-        for row in side.get("fielding", []):
-            field["po"] += to_int(row.get("PO"))
-            field["a"] += to_int(row.get("A"))
-            field["e"] += to_int(row.get("E"))
-
-    if games_used == 0:
-        return None
+    stats_dir = os.path.join(team_dir, "stats")
+    try:
+        with open(os.path.join(stats_dir, "batting.json"), encoding="utf-8") as fh:
+            bat_raw = json.load(fh).get("players") or []
+        with open(os.path.join(stats_dir, "pitching.json"), encoding="utf-8") as fh:
+            pit_raw = json.load(fh).get("players") or []
+    except (OSError, ValueError):
+        return None  # stats files not built yet -> caller falls back to the API path
 
     batters = []
-    for b in bat.values():
-        ab, h, bb, hbp, sf = b["ab"], b["h"], b["bb"], b["hbp"], b["sf"]
-        tb = h + b["2b"] + 2 * b["3b"] + 3 * b["hr"]
+    for b in bat_raw:
+        ab, h, bb = to_int(b.get("ab")), to_int(b.get("h")), to_int(b.get("bb"))
+        hbp, sf, tb = to_int(b.get("hbp")), to_int(b.get("sf")), to_int(b.get("tb"))
+        k, sb, cs, hr = to_int(b.get("so")), to_int(b.get("sb")), to_int(b.get("cs")), to_int(b.get("hr"))
+        pa = to_int(b.get("pa")) or (ab + bb + hbp + sf)
         avg = h / ab if ab else 0.0
         obp = (h + bb + hbp) / (ab + bb + hbp + sf) if (ab + bb + hbp + sf) else 0.0
         slg = tb / ab if ab else 0.0
-        pa = ab + bb + hbp + sf
         batters.append({
-            "name": b["name"], "pos": b["pos"], "num": b["num"], "g": b["g"],
-            "ab": ab, "pa": pa, "r": b["r"], "h": h,
-            "hr": b["hr"], "rbi": b["rbi"],
-            "bb": bb, "k": b["k"], "sb": b["sb"], "avg": fmt3(avg),
-            "obp": fmt3(obp), "slg": fmt3(slg), "ops": fmt3(obp + slg), "_tb": tb,
-            # Advanced (computed from raw totals; "—" when inputs are missing).
+            "name": b.get("name", ""), "pos": b.get("pos", ""), "num": b.get("num", ""),
+            "g": to_int(b.get("g")), "ab": ab, "pa": pa, "r": to_int(b.get("r")),
+            "h": h, "hr": hr, "rbi": to_int(b.get("rbi")), "bb": bb, "k": k, "sb": sb,
+            "avg": fmt3(avg), "obp": fmt3(obp), "slg": fmt3(slg), "ops": fmt3(obp + slg),
+            # Advanced — all built from the stored counting stats.
             "bbpct": fmt_pct(bb / pa) if pa else "—",
-            "kpct": fmt_pct(b["k"] / pa) if pa else "—",
-            "babip": babip(h, b["hr"], ab, b["k"], sf),
-            "secavg": secondary_avg(tb, h, bb, b["sb"], b["cs"], ab),
+            "kpct": fmt_pct(k / pa) if pa else "—",
+            "babip": babip(h, hr, ab, k, sf),
+            "secavg": secondary_avg(tb, h, bb, sb, cs, ab),
             "rc": runs_created(h, bb, tb, ab),
+            "_tb": tb, "_hbp": hbp,
         })
     batters.sort(key=lambda x: x["ab"], reverse=True)
 
     pitchers = []
-    for p in pit.values():
-        ipnum = p["outs"] / 3 if p["outs"] else 0.0
-        era = (p["er"] * 9 / ipnum) if ipnum else 0.0
-        whip = ((p["bb"] + p["h"]) / ipnum) if ipnum else 0.0
-        outs = p["outs"]
-        kbb_pct = ((p["k"] - p["bb"]) / p["bf"]) if p["bf"] else None
+    for p in pit_raw:
+        outs = to_int(p.get("outs"))
+        ipnum = outs / 3 if outs else 0.0
+        h, r, er = to_int(p.get("h")), to_int(p.get("r")), to_int(p.get("er"))
+        bb, k, bf = to_int(p.get("bb")), to_int(p.get("so")), to_int(p.get("bf"))
+        hra, hbp = to_int(p.get("hr_a")), to_int(p.get("hb"))
+        era = (er * 9 / ipnum) if ipnum else 0.0
+        whip = ((bb + h) / ipnum) if ipnum else 0.0
+        kbb_pct = ((k - bb) / bf) if bf else None
         pitchers.append({
-            "name": p["name"], "pos": p["pos"], "num": p["num"], "g": p["g"],
-            "gs": "", "w": "", "l": "", "sv": "", "ip": outs_to_ip(p["outs"]),
-            "h": p["h"], "r": p["r"], "er": p["er"], "bb": p["bb"], "k": p["k"],
-            "era": fmt2(era), "whip": fmt2(whip), "_outs": p["outs"],
-            # Advanced (computed from raw totals; "—" when inputs are missing).
-            "k9": per9(p["k"], outs), "bb9": per9(p["bb"], outs),
-            "hr9": per9(p["hra"], outs), "kbb": ratio(p["k"], p["bb"]),
-            "fip": fip(p["hra"], p["bb"], p["hbp"], p["k"], outs),
+            "name": p.get("name", ""), "pos": p.get("pos", "P"), "num": p.get("num", ""),
+            "g": to_int(p.get("g")), "gs": to_int(p.get("gs")),
+            # W / L / SV now come straight from the stats file.
+            "w": to_int(p.get("w")), "l": to_int(p.get("l")), "sv": to_int(p.get("s")),
+            "ip": p.get("ip") or outs_to_ip(outs),
+            "h": h, "r": r, "er": er, "bb": bb, "k": k,
+            "era": fmt2(era), "whip": fmt2(whip),
+            "k9": per9(k, outs), "bb9": per9(bb, outs), "hr9": per9(hra, outs),
+            "kbb": ratio(k, bb), "fip": fip(hra, bb, hbp, k, outs),
             "kbbpct": fmt_pct(kbb_pct) if kbb_pct is not None else "—",
-            "lobpct": lob_pct(p["h"], p["bb"], p["hbp"], p["r"], p["hra"]),
+            "lobpct": lob_pct(h, bb, hbp, r, hra),
+            "_outs": outs, "_hra": hra,
         })
     pitchers.sort(key=lambda x: x["_outs"], reverse=True)
+
+    if not batters and not pitchers:
+        return None
 
     tab = sum(b["ab"] for b in batters)
     th = sum(b["h"] for b in batters)
     tbb = sum(b["bb"] for b in batters)
-    thbp = sum(b["hbp"] if "hbp" in b else 0 for b in batters)
+    thbp = sum(b["_hbp"] for b in batters)
     ttb = sum(b["_tb"] for b in batters)
     p_outs = sum(p["_outs"] for p in pitchers)
     p_ipnum = p_outs / 3 if p_outs else 0.0
@@ -285,6 +242,8 @@ def team_stats(seo, name):
     p_h = sum(p["h"] for p in pitchers)
     p_bb = sum(p["bb"] for p in pitchers)
     p_k = sum(p["k"] for p in pitchers)
+    p_hra = sum(p["_hra"] for p in pitchers)
+    total_sv = sum(p["sv"] for p in pitchers)
 
     _qual = [b for b in batters if b["ab"] >= max(20, tab // 80)]
     avg_l = max(_qual, key=lambda r: float(r["avg"] or 0), default=None)
@@ -294,35 +253,35 @@ def team_stats(seo, name):
     # ERA leader: lowest ERA among pitchers with enough innings (60 outs = 20 IP).
     era_l = min((p for p in pitchers if p["_outs"] >= 60),
                 key=lambda r: float(r["era"] or 99), default=None)
-    # Strikeout leader: most K, regardless of innings.
     k_l = max(pitchers, key=lambda r: r["k"], default=None)
-    # Saves aren't in the saved box-score data (per-pitcher "sv" is blank) -> None.
+    # Wins and saves leaders are now available from the stats data.
+    sv_l = max((p for p in pitchers if p["sv"] > 0), key=lambda r: r["sv"], default=None)
+    w_l = max((p for p in pitchers if p["w"] > 0), key=lambda r: r["w"], default=None)
     leaders = team_leaders(avg_l, obp_l, rbi_l, hr_l, era_l,
-                           k_l if (k_l and k_l["k"] > 0) else None, None)
+                           k_l if (k_l and k_l["k"] > 0) else None, sv_l, w_l)
 
     for b in batters:
-        b.pop("_tb", None)
-        b.pop("hbp", None)
+        b.pop("_tb", None); b.pop("_hbp", None)
     for p in pitchers:
-        p.pop("_outs", None)
+        p.pop("_outs", None); p.pop("_hra", None)
 
-    po, a, e = field["po"], field["a"], field["e"]
-    fp = (po + a) / (po + a + e) if (po + a + e) else 0.0
+    games = max([b["g"] for b in batters] + [p["g"] for p in pitchers] + [0])
     b_avg = th / tab if tab else 0.0
     b_obp = (th + tbb + thbp) / (tab + tbb + thbp) if (tab + tbb + thbp) else 0.0
     b_slg = ttb / tab if tab else 0.0
 
     return {
-        "_games": games_used, "_source": "local",
+        "_games": games, "_source": "local-stats",
         "batting": {"avg": fmt3(b_avg), "obp": fmt3(b_obp), "slg": fmt3(b_slg),
                     "hr": sum(b["hr"] for b in batters),
                     "rbi": sum(b["rbi"] for b in batters), "sb": sum(b["sb"] for b in batters),
                     "runs": sum(b["r"] for b in batters), "h": th},
         "pitching": {"era": fmt2((p_er * 9 / p_ipnum) if p_ipnum else 0.0),
                      "whip": fmt2(((p_bb + p_h) / p_ipnum) if p_ipnum else 0.0),
-                     "k": p_k, "bb": p_bb, "sv": "—", "ip": outs_to_ip(p_outs),
-                     "hr_a": 0, "oba": "—"},
-        "fielding": {"pct": fmt3(fp), "e": e, "dp": "—", "fp": fmt3(fp)},
+                     "k": p_k, "bb": p_bb, "sv": total_sv, "ip": outs_to_ip(p_outs),
+                     "hr_a": p_hra, "oba": "—"},
+        # Fielding isn't part of the stats files yet -> placeholders.
+        "fielding": {"pct": "—", "e": "—", "dp": "—", "fp": "—"},
         "leaders": leaders,
         "roster": {"batters": batters, "pitchers": pitchers},
     }
@@ -384,6 +343,45 @@ def _box_rows_pit(rows, team_name=""):
     return out
 
 
+_DEC_LETTER = {"win": "W", "loss": "L", "save": "S"}
+
+
+def _match_pitcher(rows, dec_name):
+    """The pitcher row matching a decision's name — exact normalized full name,
+    then last-name fallback (the box rows and the decision use the same First Last
+    form, but the fallback guards small spelling differences)."""
+    target = _norm(dec_name)
+    if not target:
+        return None
+    for r in rows:
+        if _norm(r.get("name")) == target:
+            return r
+    last = _last(dec_name)
+    for r in rows:
+        if last and _last(r.get("name")) == last:
+            return r
+    return None
+
+
+def _last(full):
+    parts = (full or "").replace(",", " ").split()
+    return re.sub(r"[^a-z]", "", parts[-1].lower()) if parts else ""
+
+
+def _apply_decisions(pitchers, decisions):
+    """Stamp W / L / S onto the matching pitcher row's `dec`, using each decision's
+    side (away/home) and name. A pitcher with two decisions gets them joined."""
+    for key, dec in (decisions or {}).items():
+        if not dec:
+            continue
+        row = _match_pitcher(pitchers.get(dec.get("side")) or [], dec.get("name"))
+        if not row:
+            continue
+        letter = _DEC_LETTER.get(key, "")
+        cur = row.get("dec")
+        row["dec"] = letter if cur in (None, "", "—") else f"{cur},{letter}"
+
+
 def game(seo, name, iso, host_runs=None, opp_seo=None):
     """Game detail from the local folder matching (team, date[, host runs]).
 
@@ -421,16 +419,28 @@ def game(seo, name, iso, host_runs=None, opp_seo=None):
         away = _side(away_ls.get("name", opp_name), away_seo, away_ls)
         home = _side(home_ls.get("name", name), home_seo, home_ls)
         players = data["players"]
+        info = box.get("info") or {}
+        decisions = box.get("decisions") or {}
+        pitchers = {
+            "away": _box_rows_pit((players.get("away") or {}).get("pitching"), away["name"]),
+            "home": _box_rows_pit((players.get("home") or {}).get("pitching"), home["name"]),
+        }
+        _apply_decisions(pitchers, decisions)
         return {
-            "venue": "", "attendance": None, "weather": None, "duration": "Final",
+            "venue": info.get("venue") or "",
+            "location": info.get("location"),
+            "attendance": info.get("attendance"),
+            "gameDate": info.get("date"),
+            "time": info.get("time"),
+            "weather": None, "duration": "Final",
+            "info": info, "decisions": decisions,
             "homeTeam": home_seo, "awayTeam": away_seo,
             "winner": "home" if home["r"] > away["r"] else (
                 "away" if away["r"] > home["r"] else None),
             "line": {"away": away, "home": home},
             "batters": {"away": _box_rows_bat((players.get("away") or {}).get("batting"), away["name"]),
                         "home": _box_rows_bat((players.get("home") or {}).get("batting"), home["name"])},
-            "pitchers": {"away": _box_rows_pit((players.get("away") or {}).get("pitching"), away["name"]),
-                         "home": _box_rows_pit((players.get("home") or {}).get("pitching"), home["name"])},
+            "pitchers": pitchers,
             "plays": data["plays"] or [],
             "notes": [],
             "_source": "local",

@@ -14,6 +14,8 @@ Two entry points:
 
 import datetime
 
+import clock
+
 # Per-season phase windows — contiguous and chronological, so every date maps to
 # exactly one phase and the gaps between rounds fall forward into the next round
 # (e.g. the days between Regionals and Super Regionals read as "Super Regionals").
@@ -86,6 +88,6 @@ def round_by_date(iso):
 def current_phase(today=None):
     """{'phase': key, 'label': display} for the site right now. `today` defaults
     to the real date, capped to the modeled season."""
-    d = today or min(datetime.date.today(), _SEASON_END)
+    d = today or min(clock.today(), _SEASON_END)
     key = _phase_for_date(d)
     return {"phase": key, "label": _SITE_LABEL.get(key, "Regular Season")}

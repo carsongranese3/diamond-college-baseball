@@ -1,16 +1,24 @@
 // Team detail view — continuous schedule + Team/Players stats toggle
 
-const TeamDetail = ({ teamId, initialTab, onTabChange, onBack, onTeam, onGameClick, onPlayerClick }) => {
+const TeamDetail = ({ teamId, initialTab, initialStatMode, initialStatView, initialStatLevel,
+                      onTabChange, onStatChange, onBack, onTeam, onGameClick, onPlayerClick }) => {
   const team = window.TEAM_BY_ID[teamId];
   const [tab, setTabState] = React.useState(initialTab || "home");
-  const [statMode, setStatMode] = React.useState("team");      // team | players
-  const [playerView, setPlayerView] = React.useState("batting"); // batting | pitching
+  const [statMode, setStatModeState] = React.useState(initialStatMode || "team");      // team | players
+  const [playerView, setPlayerViewState] = React.useState(initialStatView || "batting"); // batting | pitching
+  const [statLevel, setStatLevelState] = React.useState(initialStatLevel || "basic");  // basic | advanced
   const schedule = window.SCHEDULES[teamId] || [];
 
   // Follow the URL when it changes (back/forward, or a new deep-link).
   React.useEffect(() => { setTabState(initialTab || "home"); }, [initialTab, teamId]);
-  // Changing tabs updates the URL so each is its own shareable link.
+  React.useEffect(() => { setStatModeState(initialStatMode || "team"); }, [initialStatMode]);
+  React.useEffect(() => { setPlayerViewState(initialStatView || "batting"); }, [initialStatView]);
+  React.useEffect(() => { setStatLevelState(initialStatLevel || "basic"); }, [initialStatLevel]);
+  // Changing a tab or stat option updates the URL so each is its own shareable link.
   const setTab = (t) => { setTabState(t); if (onTabChange) onTabChange(t); };
+  const setStatMode = (m) => { setStatModeState(m); if (onStatChange) onStatChange({ statMode: m }); };
+  const setPlayerView = (v) => { setPlayerViewState(v); if (onStatChange) onStatChange({ statView: v }); };
+  const setStatLevel = (l) => { setStatLevelState(l); if (onStatChange) onStatChange({ statLevel: l }); };
 
   // Team season stats + roster are an expensive per-team crawl, fetched lazily
   // the first time the Stats tab is opened.
@@ -136,6 +144,8 @@ const TeamDetail = ({ teamId, initialTab, onTabChange, onBack, onTeam, onGameCli
           roster={teamData.roster}
           playerView={playerView}
           setPlayerView={setPlayerView}
+          statLevel={statLevel}
+          setStatLevel={setStatLevel}
           onPlayerClick={onPlayerClick}
         />
       )}
@@ -356,10 +366,9 @@ const STAT_COLUMNS = {
   },
 };
 
-const PlayerStatsView = ({ roster, playerView, setPlayerView, onPlayerClick }) => {
+const PlayerStatsView = ({ roster, playerView, setPlayerView, statLevel, setStatLevel, onPlayerClick }) => {
   const [sortKey, setSortKey] = React.useState(null);
   const [sortDir, setSortDir] = React.useState("desc");
-  const [statLevel, setStatLevel] = React.useState("basic"); // basic | advanced
 
   const onSort = (key) => {
     if (sortKey === key) setSortDir(d => d === "desc" ? "asc" : "desc");

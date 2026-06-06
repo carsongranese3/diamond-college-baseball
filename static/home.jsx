@@ -43,25 +43,52 @@ function hpPhase() {
   return p && p !== "regular" ? "postseason" : "regular";
 }
 
-// Marquee: each SEC team's next home game (dedupes SEC-vs-SEC under the host),
-// ranked so the best matchups float to the top.
-function hpMarquee(limit) {
+// A weekend series = the first run of >=2 consecutive games vs the same opponent
+// in a team's upcoming schedule (so midweek single games are skipped).
+function _nextWeekendSeries(upcoming) {
+  let run = [];
+  for (const g of upcoming) {
+    if (run.length && run[0].opp && g.opp && run[0].opp.id === g.opp.id) run.push(g);
+    else { if (run.length >= 2) return run; run = [g]; }
+  }
+  return run.length >= 2 ? run : null;
+}
+
+function _isoAddDays(iso, n) {
+  const d = new Date(iso + "T00:00:00");
+  d.setDate(d.getDate() + n);
+  return d.toISOString().slice(0, 10);
+}
+
+// Regular-season marquee: the highest-seeded SEC weekend series of the coming
+// week. If no SEC-vs-SEC games fall that week, feature the 4 highest-ranked SEC
+// teams' weekend matchups instead. Always weekend series, never midweek games.
+function hpMarquee() {
   const sch = window.SCHEDULES || {};
   const byId = window.TEAM_BY_ID || {};
-  const cards = [];
-  for (const teamId in sch) {
-    const host = byId[teamId];
+  const series = [];
+  for (const seo in sch) {
+    const host = byId[seo];
     if (!host) continue;
-    const next = (sch[teamId] || []).find((g) => !g.result && g.home);
-    if (!next) continue;
-    cards.push({ host, opp: next.opp, date: next.date, time: next.time, phase: next.phase, gid: next.id });
+    const wk = _nextWeekendSeries((sch[seo] || []).filter((g) => !g.result));
+    if (wk) series.push({ host, opp: wk[0].opp, home: wk[0].home, iso: wk[0].iso,
+                          date: wk[0].date, time: wk[0].time, phase: wk[0].phase, gid: wk[0].id });
   }
-  cards.sort((a, b) => {
-    const ar = Math.min(a.host.rank || 99, (a.opp && a.opp.rank) || 99);
-    const br = Math.min(b.host.rank || 99, (b.opp && b.opp.rank) || 99);
-    return ar - br;
-  });
-  return limit ? cards.slice(0, limit) : cards;
+  if (!series.length) return [];
+  // "This week" = the soonest weekend (everything within ~4 days of the earliest).
+  const weekStart = series.map((s) => s.iso).filter(Boolean).sort()[0];
+  const weekEnd = _isoAddDays(weekStart, 4);
+  const week = series.filter((s) => s.iso && s.iso >= weekStart && s.iso <= weekEnd);
+  const card = (s) => ({ host: s.host, opp: s.opp, home: s.home, date: s.date, time: s.time, phase: s.phase, gid: s.gid });
+  // Non-ranked teams weigh 50, so matchups between two ranked teams rank highest.
+  const seed = (s) => (s.host.rank || 50) + ((s.opp && s.opp.rank) || 50);  // lower = higher-seeded
+  // The top 4 SEC games this week, no matter the round: SEC-vs-SEC matchups are
+  // deduped to the home side; everything else is each team's own weekend series.
+  return week
+    .filter((s) => !(s.opp && s.opp.conf && !s.home))   // drop the away half of SEC-vs-SEC dups
+    .sort((a, b) => seed(a) - seed(b))
+    .slice(0, 4)
+    .map(card);
 }
 
 /* ---------- shared presentational atoms ---------- */
@@ -127,20 +154,26 @@ function HPMatchCard({ card, post, onTeam }) {
       {rank && <span className="chip-rank">#{rank}</span>}
     </button>
   );
+  const hostRow = <Row team={host} id={host.id} name={host.name} rank={host.rank} />;
+  const oppRow = (
+    <Row
+      team={opp}
+      id={oppKnown ? oppId : null}
+      name={opp ? opp.name : "TBD"}
+      rank={opp && opp.rank}
+      dim
+    />
+  );
   return (
     <div className={"hp-card" + (post ? " hp-card--post" : "")}>
       <div className="hp-card__top">
-        <span className="hp-eyebrow">{post ? "Super Regional" : (opp && opp.conf ? "SEC Series" : "Home")}</span>
+        <span className="hp-eyebrow">{post ? "Super Regional" : (opp && opp.conf ? "SEC Series" : "Series")}</span>
         <span className="mono hp-faint">{card.date}{card.time ? " · " + card.time : ""}</span>
       </div>
-      <Row team={host} id={host.id} name={host.name} rank={host.rank} />
-      <Row
-        team={opp}
-        id={oppKnown ? oppId : null}
-        name={opp ? opp.name : "TBD"}
-        rank={opp && opp.rank}
-        dim
-      />
+      {/* Home team beneath the visitor. */}
+      {card.home
+        ? <React.Fragment>{oppRow}{hostRow}</React.Fragment>
+        : <React.Fragment>{hostRow}{oppRow}</React.Fragment>}
     </div>
   );
 }
@@ -160,11 +193,18 @@ function HPSuperCard({ sr, onTeam }) {
       </button>
     );
   };
+  // Home team (the host) beneath the visitor. The host carries home:true; fall
+  // back to the bracket's top/bottom order if neither is flagged (TBD matchups).
+  const hasHome = (sr.top && sr.top.home) || (sr.bottom && sr.bottom.home);
+  const homeIsTop = sr.top && sr.top.home;
+  const awayT = homeIsTop ? sr.bottom : sr.top;
+  const homeT = homeIsTop ? sr.top : sr.bottom;
   return (
     <div className="hp-card hp-card--post">
       <div className="hp-card__top"><span className="hp-eyebrow">Super Regional</span></div>
-      <Row t={sr.top} />
-      <Row t={sr.bottom} dim />
+      {hasHome
+        ? <React.Fragment><Row t={awayT} dim /><Row t={homeT} /></React.Fragment>
+        : <React.Fragment><Row t={sr.top} /><Row t={sr.bottom} dim /></React.Fragment>}
     </div>
   );
 }
@@ -172,42 +212,46 @@ function HPSuperCard({ sr, onTeam }) {
 // Conference leaders — three categories (AVG / HR / ERA), each with the leader
 // (big) and two runners-up. Data from /api/conference-leaders.
 function HPConfLeaders({ data }) {
+  const [view, setView] = React.useState("batting");
   const teamObj = (p) => (window.TEAM_BY_ID || {})[p.team] || null;
+  const cats = view === "pitching" ? ["era", "k", "wins"] : ["avg", "rbi", "hr"];
   return (
-    <div className="hp-cl">
-      {["avg", "hr", "era"].map((key) => {
-        const cat = data[key];
-        if (!cat || !cat.list || !cat.list.length) return null;
-        const top = cat.list[0];
-        return (
-          <div key={key} className="hp-cl__cat">
-            <div className="hp-cl__head">
-              <span className="hp-eyebrow">{cat.label}</span>
-              <span className="mono hp-faint">{cat.unit}</span>
-            </div>
-            <div className="hp-cl__leader">
-              <div>
-                <div className="hp-cl__meta">
-                  <HPLogo team={teamObj(top)} size={16} />
-                  <span className="mono">{top.abbr} &middot; {top.pos}</span>
+    <div>
+      <div className="hp-cl-head">
+        <HPLabel>Conference Leaders</HPLabel>
+        <div className="hp-cl-toggle">
+          {[["batting", "Batters"], ["pitching", "Pitchers"]].map(([v, lbl]) => (
+            <button key={v} className={"hp-cl-toggle__btn" + (view === v ? " hp-cl-toggle__btn--on" : "")}
+                    onClick={() => setView(v)}>{lbl}</button>
+          ))}
+        </div>
+      </div>
+      <div className="hp-cl">
+        {cats.map((key) => {
+          const cat = data[key];
+          if (!cat) return null;
+          return (
+            <div key={key} className="hp-cl__cat">
+              <div className="hp-cl__statname">{cat.label}</div>
+              {cat.list && cat.list.length ? (
+                <div className="hp-cl__list">
+                  {cat.list.slice(0, 3).map((p, i) => (
+                    <div key={i} className="hp-cl__row">
+                      <span className="mono hp-faint hp-cl__rank">{i + 1}</span>
+                      <HPLogo team={teamObj(p)} size={16} />
+                      <span className="hp-cl__rname">{p.player}</span>
+                      <span className="mono hp-faint hp-cl__rpos">{p.pos}</span>
+                      <span className="mono hp-cl__rval">{p.value}</span>
+                    </div>
+                  ))}
                 </div>
-                <div className="hp-cl__name">{top.player}</div>
-              </div>
-              <div className="hp-cl__val">{top.value}</div>
+              ) : (
+                <div className="hp-cl__empty mono hp-faint">—</div>
+              )}
             </div>
-            <div className="hp-cl__rest">
-              {cat.list.slice(1, 3).map((p, i) => (
-                <div key={i} className="hp-cl__row">
-                  <span className="mono hp-faint">{i + 2}</span>
-                  <HPLogo team={teamObj(p)} size={14} />
-                  <span className="hp-cl__rname">{p.player}</span>
-                  <span className="mono hp-cl__rval">{p.value}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 }
@@ -219,7 +263,7 @@ const Home = ({ onTeam, onNav }) => {
   const post = sp.phase !== "regular";
   const eyebrow = sp.phase === "sec_tournament" ? "2026 SEC Tournament"
     : post ? "2026 NCAA Tournament" : "2026 SEC Season";
-  const marquee = hpMarquee(8);
+  const marquee = hpMarquee();
   const supers = window.SUPER_REGIONALS || [];
   const showSupers = post && supers.length > 0;
   const [confLeaders, setConfLeaders] = React.useState(null);
@@ -269,10 +313,14 @@ const Home = ({ onTeam, onNav }) => {
         </div>
         <div className="hp-split__rule" />
         <div>
-          <HPLabel>Conference Leaders</HPLabel>
           {confLeaders
             ? <HPConfLeaders data={confLeaders} />
-            : <div className="hp-placeholder hp-placeholder--tall">Loading conference leaders…</div>}
+            : (
+              <>
+                <HPLabel>Conference Leaders</HPLabel>
+                <div className="hp-placeholder hp-placeholder--tall">Loading conference leaders…</div>
+              </>
+            )}
         </div>
       </section>
     </div>

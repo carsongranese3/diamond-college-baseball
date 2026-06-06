@@ -33,23 +33,23 @@ const BTeam = ({ t, win, lose }) => {
   );
 };
 
-const BGame = ({ g, onOpen }) => {
+const BGame = ({ g, onOpen, struck }) => {
   const topWin = g.top && (g.top.winner || (g.winner && g.top.seo === g.winner));
   const botWin = g.bottom && (g.bottom.winner || (g.winner && g.bottom.seo === g.winner));
   const decided = topWin || botWin;
   const topLose = decided && !topWin && g.top && g.top.name;
   const botLose = decided && !botWin && g.bottom && g.bottom.name;
   const live = g.state === "I" || g.state === "H";
-  const clickable = !!onOpen;
+  const clickable = !!onOpen && !struck;
   return (
     <div
-      className={`bgame ${clickable ? "bgame--click" : ""} ${live ? "bgame--live" : ""}`}
+      className={`bgame ${clickable ? "bgame--click" : ""} ${live ? "bgame--live" : ""} ${struck ? "bgame--struck" : ""}`}
       onClick={clickable ? () => onOpen(g) : undefined}
     >
       <BTeam t={g.top} win={topWin} lose={topLose} />
       <BTeam t={g.bottom} win={botWin} lose={botLose} />
       {live && <span className="bgame__tag bgame__tag--live">LIVE</span>}
-      {g.ifNecessary && !live && <span className="bgame__tag">if nec.</span>}
+      {g.ifNecessary && !live && <span className="bgame__tag">{struck ? "not needed" : "if nec."}</span>}
     </div>
   );
 };
@@ -177,7 +177,7 @@ const RegionalPod = ({ group, onClick }) => {
       <div className="bpod__head">
         {group.seed != null && <span className="bpod__seed">#{group.seed}</span>}
         <span className="bpod__name">
-          <span className="bpod__school">{group.label}</span>
+          <span className="bpod__school">{group.city || group.label}</span>
           <span className="bpod__regional">Regional</span>
         </span>
         <span className="bpod__expand">View<br />bracket ›</span>
@@ -255,6 +255,7 @@ const RegionalBracket = ({ group }) => {
   const [paths, setPaths] = React.useState([]);
   const [dims, setDims] = React.useState({ w: 0, h: 0 });
   const games = group.games || [];
+  const decided = !!group.winner;   // a decided regional/pod -> its if-nec game isn't needed
 
   const measure = React.useCallback(() => {
     const wrap = wrapRef.current;
@@ -300,7 +301,7 @@ const RegionalBracket = ({ group }) => {
                style={{ left: pos.col * 25 + "%", top: pos.y + "%" }}
                ref={(el) => { if (el) cardRefs.current[i] = el; }}>
             <div className="rcard__label">{DE_LABELS[i]}</div>
-            <BGame g={g} />
+            <BGame g={g} struck={g.ifNecessary && g.state === "P" && decided} />
           </div>
         );
       })}
@@ -320,7 +321,7 @@ const RegionalModal = ({ group, onClose }) => {
         <div className="rmodal__head">
           <div className="rmodal__title">
             {group.seed != null && <span className="bpod__seed">#{group.seed}</span>}
-            <span>{group.label} Regional</span>
+            <span>{group.city || group.label} Regional</span>
           </div>
           <button className="rmodal__close" onClick={onClose} aria-label="Close">✕</button>
         </div>
@@ -330,9 +331,52 @@ const RegionalModal = ({ group, onClose }) => {
   );
 };
 
+// Super-regional detail: the matchup + the best-of-3 games, game by game. Opened
+// by clicking a super-regional box (mirrors the regional modal).
+const SuperModal = ({ pairing, onClose }) => {
+  React.useEffect(() => {
+    const onKey = (e) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [onClose]);
+  // Host city = the higher seed of the two advancing teams (bracket.py's
+  // host_city), which can differ from the top feeder regional if a seed is upset.
+  const host0 = (pairing.regionals && pairing.regionals[0]) || null;
+  const host = pairing.host_city || (host0 && (host0.city || host0.label)) || "";
+  const sup = pairing.super || {};
+  const decided = !!((sup.top && sup.top.winner) || (sup.bottom && sup.bottom.winner));
+  const games = (pairing.games || []).slice().sort((a, b) => (a.pos || 0) - (b.pos || 0));
+  return (
+    <div className="rmodal" onClick={onClose}>
+      <div className="rmodal__box rmodal__box--super" onClick={(e) => e.stopPropagation()}>
+        <div className="rmodal__head">
+          <div className="rmodal__title"><span>{host ? host + " " : ""}Super Regional</span></div>
+          <button className="rmodal__close" onClick={onClose} aria-label="Close">✕</button>
+        </div>
+        <div className="smodal">
+          <BGame g={pairing.super} />
+          <div className="smodal__bestof mono">Best-of-3 · winner advances to the College World Series</div>
+          {games.length ? (
+            <div className="smodal__games">
+              {games.map((g, i) => (
+                <div key={g.id || i} className="smodal__game">
+                  <span className="smodal__glabel">Game {i + 1}</span>
+                  <BGame g={g} struck={g.ifNecessary && g.state === "P" && decided} />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="smodal__empty muted">Series hasn't started yet.</div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 // One super-regional unit: its two feeder regionals + the super game box, wired
 // with connector lines. `side` is "left" (pods left, super right) or "right".
-const SuperUnit = ({ pairing, side, onPod }) => {
+const SuperUnit = ({ pairing, side, onPod, onSuper }) => {
   const ref = React.useRef(null);
   const podRefs = React.useRef([]);
   const superRef = React.useRef(null);
@@ -384,12 +428,21 @@ const SuperUnit = ({ pairing, side, onPod }) => {
       ))}
     </div>
   );
+  const superClickable = !!(pairing.super && (pairing.super.top || pairing.super.bottom));
+  // Name it by host city once the matchup is set (both teams known); until then
+  // the host isn't decided, so leave the generic label.
+  const superDecided = !!(pairing.super && pairing.super.top && pairing.super.bottom);
+  const superLabel = (superDecided && pairing.host_city)
+    ? `${pairing.host_city} Super Regional` : "Super Regional";
   const superBox = (
     <div className="sunit__super">
-      <div className="sunit__super-label">Super Regional</div>
+      <div className="sunit__super-label">{superLabel}</div>
       {/* ref on the box itself (not the labeled container) so connector lines
           target the box's true center, not the label-shifted container center. */}
-      <div ref={superRef}><BGame g={pairing.super} /></div>
+      <div ref={superRef}>
+        <BGame g={pairing.super}
+               onOpen={superClickable && onSuper ? () => onSuper(pairing) : undefined} />
+      </div>
     </div>
   );
 
@@ -405,6 +458,7 @@ const SuperUnit = ({ pairing, side, onPod }) => {
 
 const NcaaBracket = ({ data }) => {
   const [sel, setSel] = React.useState(null);
+  const [selSuper, setSelSuper] = React.useState(null);
   const tree = data.tree || { left: [], right: [] };
   const center = data.center;
   return (
@@ -412,7 +466,7 @@ const NcaaBracket = ({ data }) => {
       <div className="ncaa-tree">
         <div className="ncaa-col">
           {tree.left.map((p) => (
-            <SuperUnit key={p.id} pairing={p} side="left" onPod={setSel} />
+            <SuperUnit key={p.id} pairing={p} side="left" onPod={setSel} onSuper={setSelSuper} />
           ))}
         </div>
         {center && (
@@ -435,11 +489,12 @@ const NcaaBracket = ({ data }) => {
         )}
         <div className="ncaa-col">
           {tree.right.map((p) => (
-            <SuperUnit key={p.id} pairing={p} side="right" onPod={setSel} />
+            <SuperUnit key={p.id} pairing={p} side="right" onPod={setSel} onSuper={setSelSuper} />
           ))}
         </div>
       </div>
       {sel && <RegionalModal group={sel} onClose={() => setSel(null)} />}
+      {selSuper && <SuperModal pairing={selSuper} onClose={() => setSelSuper(null)} />}
     </div>
   );
 };
@@ -485,3 +540,16 @@ const Bracket = ({ onGameClick, initialTab, onTabChange }) => {
 };
 
 window.Bracket = Bracket;
+// Reused by the team Home page's "This Week" super-regional card.
+window.SuperModal = SuperModal;
+window.fetchBracket = fetchBracket;
+window.findSuperPairing = function (data, teamId) {
+  const tree = (data && data.tree) || { left: [], right: [] };
+  for (const side of ["left", "right"]) {
+    for (const p of tree[side] || []) {
+      const s = p.super || {};
+      if ((s.top && s.top.seo === teamId) || (s.bottom && s.bottom.seo === teamId)) return p;
+    }
+  }
+  return null;
+};
