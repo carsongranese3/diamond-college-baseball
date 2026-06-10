@@ -139,8 +139,9 @@ function ThisWeek({ schedule, team, onTeam, onGameClick }) {
 function WeekSeries({ team, games, onTeam, onGameClick, round }) {
   const isCWS = round === "College World Series";
   const first = games[0] || {};
-  // Official matchup + national seeds from the bracket; schedule supplies the dates.
-  const sup = teamSuper(team.id);
+  // Super-regional matchup + national seeds come from the bracket feed; the CWS
+  // opponent comes from the scheduled game itself (teamSuper is super-regional only).
+  const sup = isCWS ? null : teamSuper(team.id);
   const oppRaw = sup ? sup.opp : first.opp;
   const oppTeam = oppRaw ? { id: oppRaw.seo || oppRaw.id, name: oppRaw.name, logo: oppRaw.logo,
                              mark: (oppRaw.name || "").slice(0, 4).toUpperCase() } : null;
@@ -310,19 +311,26 @@ function SecSeries({ schedule, onTeam }) {
 function HowItEnded({ schedule }) {
   const played = schedule.filter((g) => g.result);
   if (!played.length) return null;
-  const last = played[played.length - 1];
-  const post = last.phase && last.phase !== "regular";
+  // Show every game from the last round the team reached (e.g. all of their
+  // Regional games). A regular-season ending has no round, so fall back to the
+  // last handful of games.
+  const round = played[played.length - 1].phase || "regular";
+  const inRound = played.filter((g) => (g.phase || "regular") === round);
+  const games = round === "regular" ? inRound.slice(-5) : inRound;
+  const post = round !== "regular";
   return (
     <div className="th-ended">
       <div className="th-ended__round" style={post ? null : { color: "var(--muted)" }}>
-        {post ? last.phase : "Regular Season"}
+        {post ? round : "Regular Season"}
       </div>
-      <div className="th-ended__game">
-        <span className={"chip " + (last.result === "W" ? "chip-w" : "chip-l")}>{last.result}</span>
-        <span className="mono th-ended__score">{last.score.us}&ndash;{last.score.them}</span>
-        <span className="th-ended__opp">{last.home ? "vs" : "at"} {last.opp ? last.opp.name : ""}</span>
-        <span className="mono hp-faint">{last.date}</span>
-      </div>
+      {games.map((g) => (
+        <div key={g.id} className="th-ended__game">
+          <span className={"chip " + (g.result === "W" ? "chip-w" : "chip-l")}>{g.result}</span>
+          <span className="mono th-ended__score">{g.score.us}&ndash;{g.score.them}</span>
+          <span className="th-ended__opp">{g.home ? "vs" : "at"} {g.opp ? g.opp.name : ""}</span>
+          <span className="mono hp-faint">{g.date}</span>
+        </div>
+      ))}
     </div>
   );
 }
@@ -385,8 +393,12 @@ const TeamHome = ({ teamId, onTeam, onGameClick }) => {
   const team = window.TEAM_BY_ID[teamId];
   const schedule = window.SCHEDULES[teamId] || [];
   const post = hpPhase() === "postseason";
-  // Eliminated / season over = no upcoming games -> the "This Week" section is dropped.
   const hasUpcoming = schedule.some((g) => !g.result);
+  // A team that just WON its round but whose next matchup isn't on the schedule
+  // yet keeps the weekly layout (This Week = the round it won, Recent = the one
+  // before) — not the season-over recap — until those upcoming games appear.
+  const advanced = teamPostseasonStatus(schedule).advanced;
+  const showWeekly = hasUpcoming || advanced;
 
   // Team leaders need the per-team box-score crawl (memoized in bootstrap.js).
   const [teamData, setTeamData] = React.useState(null);
@@ -399,17 +411,17 @@ const TeamHome = ({ teamId, onTeam, onGameClick }) => {
 
   return (
     <div className="hp hp--team">
-      {hasUpcoming && (
+      {showWeekly && (
         <section className="hp-hero">
-          <HPLabel color={post ? "var(--gold)" : null}>This Week</HPLabel>
+          <HPLabel color={post ? "var(--gold)" : null}>{advanced && !hasUpcoming ? "Latest" : "This Week"}</HPLabel>
           <ThisWeek schedule={schedule} team={team} onTeam={onTeam} onGameClick={onGameClick} />
         </section>
       )}
 
       <section className="hp-split">
         <div>
-          <HPLabel>{hasUpcoming ? "Recent" : "SEC Series"}</HPLabel>
-          {hasUpcoming
+          <HPLabel>{showWeekly ? "Recent" : "SEC Series"}</HPLabel>
+          {showWeekly
             ? <RecentList schedule={schedule} onGameClick={onGameClick} />
             : <SecSeries schedule={schedule} onTeam={onTeam} />}
         </div>
@@ -417,7 +429,7 @@ const TeamHome = ({ teamId, onTeam, onGameClick }) => {
         <div>
           <HPLabel>Conference Standing</HPLabel>
           <ConfStrip teamId={teamId} />
-          {!hasUpcoming && (
+          {!showWeekly && (
             <div className="th-ended-wrap">
               <HPLabel>How It Ended</HPLabel>
               <HowItEnded schedule={schedule} />

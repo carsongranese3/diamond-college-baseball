@@ -172,6 +172,58 @@ def upcoming_schedules(end=SEASON_END):
     return out
 
 
+def bracket_upcoming(sec_seos):
+    """{seo: [game, ...]} of FUTURE postseason games the BRACKET has scheduled but
+    the scoreboard doesn't carry yet (e.g. College World Series matchups), per SEC
+    team. Both teams must be known. Same per-game shape as upcoming_schedules
+    (score/result null, scheduled time + phase kept, played=False)."""
+    try:
+        data = ncaa.bracket(SEASON_END.year)
+    except (ncaa.NotFound, ncaa.APIError):
+        return {}
+    ch = (data.get("championships") or [{}])[0]
+    rank_by = _rank_lookup()
+    today_iso = _today().isoformat()
+    out, seen = {}, set()
+    for g in ch.get("games") or []:
+        if g.get("gameState") == "F":           # finals come from box scores
+            continue
+        sides = [t for t in (g.get("teams") or []) if t.get("seoname")]
+        if len(sides) < 2:                       # opponent not determined yet
+            continue
+        iso = _fmt_iso(g.get("startDate", ""))
+        if not iso or iso <= today_iso:          # only genuinely future games
+            continue
+        gid = g.get("contestId")
+        for t, other in ((sides[0], sides[1]), (sides[1], sides[0])):
+            seo = t["seoname"]
+            if seo not in sec_seos or (seo, gid) in seen:
+                continue
+            seen.add((seo, gid))
+            oseo = other["seoname"]
+            oname = other.get("nameShort") or oseo
+            out.setdefault(seo, []).append({
+                "id": gid,
+                "date": _fmt_date(g.get("startDate", "")),
+                "iso": iso,
+                "opp": {
+                    "id": oseo, "name": oname,
+                    "mark": (("".join(w[0] for w in oname.split()) or oname)[:4]).upper(),
+                    "logo": ncaa.logo_url(oseo),
+                    "rank": rank_by.get(_norm(oname)),
+                    "conf": oseo in sec_seos,
+                },
+                "home": bool(t.get("isHome")),
+                "score": None, "result": None,
+                "time": g.get("startTime"),
+                "phase": phase.round_by_date(iso),
+                "played": False,
+            })
+    for seo in out:
+        out[seo].sort(key=lambda e: e["iso"])
+    return out
+
+
 def build_season(fresh=False):
     """Returns {teams: [...], schedules: {seo: [games]}, updated: iso}.
 

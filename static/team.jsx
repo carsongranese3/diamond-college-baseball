@@ -1,5 +1,47 @@
 // Team detail view — continuous schedule + Team/Players stats toggle
 
+// Postseason status from the schedule — whether the team advanced, was
+// eliminated, won it all, or missed the bracket. A team is "out" only when it
+// actually LOST its last round (≥2 losses in a double-elim/best-of-3, or lost the
+// CWS); winning the round means it advanced even if the next round's matchups
+// aren't on the schedule yet. (Counts round losses, not the last game's result,
+// so a double-elim run that ends W/L/L/W still reads as eliminated.)
+function teamPostseasonStatus(schedule) {
+  const ROUND_LABEL = {
+    "NCAA Regional": "Regionals", "NCAA Super Regional": "Super Regionals",
+    "College World Series": "College World Series", "SEC Tournament": "SEC Tournament",
+  };
+  // Only the NCAA bracket rounds advance by winning (regional -> super -> CWS).
+  // The SEC Tournament leads to the NCAAs by selection, not by winning, so it's
+  // not an "advance" round — a team whose season ends there is just out.
+  const NEXT_ROUND = {
+    "NCAA Regional": "Super Regional", "NCAA Super Regional": "College World Series",
+  };
+  const played = (schedule || []).filter((g) => g.result);
+  const seasonOver = played.length > 0 && !(schedule || []).some((g) => !g.result);
+  const lastGame = played.length ? played[played.length - 1] : null;
+  const lastRound = lastGame ? (lastGame.phase || "regular") : null;
+  const inPost = !!lastRound && lastRound !== "regular";
+  // Losses within the last round — a regional (double-elim) or super regional
+  // (best-of-3) ends in elimination at 2 losses, so a team that's done with fewer
+  // WON the round (robust to same-day games sorting either way).
+  const roundLosses = played.filter(
+    (g) => (g.phase || "regular") === lastRound && g.result === "L").length;
+  const wonCWS = lastRound === "College World Series" && !!lastGame && lastGame.result === "W";
+  const wonRound = lastRound === "College World Series" ? wonCWS : roundLosses < 2;
+  const nationalChamp = seasonOver && wonCWS;
+  // Advanced only out of a bracket round it actually won; everything else with the
+  // season over is eliminated (CWS losers, SEC-tourney exits, 2-loss rounds).
+  const advanced = seasonOver && inPost && wonRound && !nationalChamp && !!NEXT_ROUND[lastRound];
+  const eliminated = seasonOver && inPost && !advanced && !nationalChamp;
+  const missedPost = seasonOver && !inPost;
+  return {
+    seasonOver, lastRound, nationalChamp, advanced, eliminated, missedPost,
+    advancedText: advanced ? `Advanced · ${NEXT_ROUND[lastRound]}` : "",
+    outText: eliminated ? `Eliminated · ${ROUND_LABEL[lastRound] || "Postseason"}` : "Missed Postseason",
+  };
+}
+
 const TeamDetail = ({ teamId, initialTab, initialStatMode, initialStatView, initialStatLevel,
                       onTabChange, onStatChange, onBack, onTeam, onGameClick, onPlayerClick }) => {
   const team = window.TEAM_BY_ID[teamId];
@@ -38,12 +80,37 @@ const TeamDetail = ({ teamId, initialTab, initialStatMode, initialStatView, init
     return arr.findIndex(t => t.id === teamId) + 1;
   }, [teamId]);
 
+  // Season-status flags for the hero corner: conference champion (best conference
+  // record, once the regular season is done) and whether the team's been
+  // eliminated, in which round.
+  const champId = React.useMemo(() => {
+    const arr = [...(window.TEAMS || [])].sort((a, b) => {
+      const ap = a.confW / Math.max(a.confW + a.confL, 1);
+      const bp = b.confW / Math.max(b.confW + b.confL, 1);
+      return bp - ap || b.confW - a.confW;
+    });
+    return arr[0] ? arr[0].id : null;
+  }, []);
+  const regularOver = (window.SEASON_PHASE && window.SEASON_PHASE.phase) !== "regular";
+  const isConfChamp = regularOver && champId === teamId;
+
+  const { nationalChamp, advanced, eliminated, missedPost, advancedText, outText } =
+    teamPostseasonStatus(schedule);
+
   return (
     <div className="team-detail">
       <BackLink onClick={onBack}>Standings</BackLink>
 
       <header className="team-hero" style={{ "--team-color": team.color, "--team-ink": team.ink }}>
         <div className="team-hero__band" />
+        {(nationalChamp || isConfChamp || advanced || eliminated || missedPost) && (
+          <div className="team-hero__flags">
+            {nationalChamp && <span className="team-flag team-flag--natty">🏆 National Champions</span>}
+            {isConfChamp && <span className="team-flag team-flag--champ">★ SEC Champions</span>}
+            {advanced && <span className="team-flag team-flag--advanced">{advancedText}</span>}
+            {(eliminated || missedPost) && <span className="team-flag team-flag--out">{outText}</span>}
+          </div>
+        )}
         <div className="team-hero__inner">
           <Monogram team={team} size={88} />
           <div className="team-hero__text">

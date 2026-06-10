@@ -69,7 +69,7 @@ TEAM_LABEL = "Vanderbilt"      # single team: folder name under <SEASON>/
 START_DATE = ""           # ISO "YYYY-MM-DD"; "" = no lower bound (season start)
 END_DATE = ""             # ISO "YYYY-MM-DD"; "" = no upper bound (season end)
 LIMIT = 0                 # 0 = whole season; >0 = first N games (for testing)
-FORCE = True             # True = re-pull games even if already saved in <SEASON>/
+FORCE = False             # True = re-pull games even if already saved in <SEASON>/
 # ─────────────────────────────────────────────────────────────────────────────
 
 # The 16 SEC baseball schools (names verified against the collegebaseball lookup

@@ -169,6 +169,10 @@ def bootstrap():
     test = clock.is_test()
     # Keyed by the effective date so test dates don't pollute the live cache.
     upcoming = _memo("upcoming:" + asof, 1800, season.upcoming_schedules)
+    # Bracket-scheduled postseason games (e.g. CWS) the scoreboard doesn't carry yet.
+    sec_seos = {t["id"] for t in data["teams"]}
+    bracket_up = _memo("bracket_up:" + asof, 1800,
+                       lambda: season.bracket_upcoming(sec_seos))
     full = {}
     for seo, played in schedules.items():
         # The scoreboard sometimes lists a played game as 'pre' (ncaa.com lag), so
@@ -176,6 +180,9 @@ def bootstrap():
         played_dates = {g["iso"] for g in played if g.get("iso")}
         games = list(played) + [g for g in upcoming.get(seo, [])
                                 if g.get("iso") not in played_dates]
+        # Add bracket-scheduled games on any date not already present.
+        have_dates = {g.get("iso") for g in games}
+        games += [g for g in bracket_up.get(seo, []) if g.get("iso") not in have_dates]
         if test:
             # Time machine: games after the test date read as not-yet-played, so the
             # whole site reflects that day. With test off this loop is skipped.

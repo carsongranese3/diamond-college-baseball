@@ -289,6 +289,12 @@ def main():
         if not ok:
             break  # stop on first failure
 
+    # The refresh above ran BEFORE the pull, so re-write schedule.json now that the
+    # games are saved — this run's newly pulled games are then reflected as played.
+    # (The scoreboard fetches are cached from the first pass, so this is cheap.)
+    print("Updating schedule.json with the games pulled this run…")
+    refresh_schedules(targets)
+
     if "ncaa_stats" in sys.modules:        # shut the browser down if we started it
         try:
             sys.modules["ncaa_stats"].shutdown()

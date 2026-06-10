@@ -107,16 +107,43 @@ def _upcoming_schedule(end):
     return out
 
 
-def build_full_schedules(end=SEASON_END):
-    """({seo: [game,...]}, {seo: name}) — complete played games (from box scores)
-    plus upcoming games (from the scoreboard), per SEC team, sorted by date."""
-    teams = season.build_season()["teams"]
-    names = {t["id"]: t["name"] for t in teams}
-    played = _played_schedule(teams)
-    upcoming = _upcoming_schedule(end)
+def _recent_finals(scoreboard, played):
+    """{seo: [game,...]} of games the scoreboard reports as FINAL that we don't yet
+    have a saved box score for (matched by date) — e.g. just-played super-regional
+    games. Marked played=True with the scoreboard's score, so schedule.json stays
+    complete AND update.py's played-vs-saved count notices there are games to pull."""
     out = {}
-    for seo in set(played) | set(upcoming):
-        games = played.get(seo, []) + upcoming.get(seo, [])
+    for seo, games in scoreboard.items():
+        have_dates = {g.get("iso") for g in played.get(seo, [])}
+        for g in games:
+            if not g.get("result") or not g.get("iso") or g["iso"] in have_dates:
+                continue  # not final, or already covered by a saved box score
+            out.setdefault(seo, []).append(_game(
+                g.get("id"), g.get("date"), g.get("iso"), g.get("opp"),
+                g.get("home"), g.get("score"), g.get("result"), g.get("time"), True))
+    return out
+
+
+def build_full_schedules(end=SEASON_END):
+    """({seo: [game,...]}, {seo: name}) — every played game (saved box scores, plus
+    scoreboard finals not yet pulled) and every upcoming game (scoreboard, plus
+    bracket-scheduled postseason games), per SEC team."""
+    season_data = season.build_season()
+    teams = season_data["teams"]
+    names = {t["id"]: t["name"] for t in teams}
+    sec_seos = {t["id"] for t in teams}
+    played = _played_schedule(teams)                              # saved box scores
+    recent = _recent_finals(season_data.get("schedules") or {}, played)  # just-played, unpulled
+    upcoming = _upcoming_schedule(end)                            # scoreboard, not yet played
+    bracket_up = season.bracket_upcoming(sec_seos)               # bracket-scheduled (e.g. CWS)
+    out = {}
+    for seo in set(played) | set(recent) | set(upcoming) | set(bracket_up):
+        base = played.get(seo, []) + recent.get(seo, []) + upcoming.get(seo, [])
+        # Add bracket games the scoreboard sources didn't already cover (by date+opp).
+        have = {(g.get("iso"), (g.get("opp") or {}).get("id")) for g in base}
+        extra = [g for g in bracket_up.get(seo, [])
+                 if (g.get("iso"), (g.get("opp") or {}).get("id")) not in have]
+        games = base + extra
         games.sort(key=lambda e: e["iso"] or "")
         out[seo] = games
     return out, names
