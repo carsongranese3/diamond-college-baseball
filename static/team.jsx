@@ -42,6 +42,36 @@ function teamPostseasonStatus(schedule) {
   };
 }
 
+// Unified "what is this team right now" — a single status value for the team
+// hero. Finished teams report their terminal outcome (reusing the flags from
+// teamPostseasonStatus); teams still playing report the round they're currently
+// in. Returns { key, label }.
+function teamSeasonStatus(schedule) {
+  const ts = teamPostseasonStatus(schedule);
+  if (ts.nationalChamp) return { key: "national_champ", label: "National Champions" };
+  if (ts.advanced)      return { key: "advanced", label: ts.advancedText };
+  if (ts.eliminated)    return { key: "eliminated", label: ts.outText };
+  if (ts.missedPost)    return { key: "missed_post", label: ts.outText };
+  // Still playing — name the round of the next unplayed game (fall back to the
+  // last game's round, then "regular").
+  const ROUND = {
+    "SEC Tournament":      { key: "sec_tournament",  label: "In the SEC Tournament" },
+    "NCAA Regional":       { key: "regionals",       label: "In the Regionals" },
+    "NCAA Super Regional": { key: "super_regionals", label: "In the Super Regionals" },
+    "College World Series": { key: "cws",            label: "In the College World Series" },
+  };
+  const next = (schedule || []).find((g) => !g.result);
+  const played = (schedule || []).filter((g) => g.result);
+  const round = (next && next.phase)
+    || (played.length ? played[played.length - 1].phase : null) || "regular";
+  const status = ROUND[round] || { key: "regular", label: "Regular Season" };
+  // CWS games share their game-level label with the finals; promote to "Finals"
+  // when the site phase says so.
+  if (status.key === "cws" && (window.SEASON_PHASE || {}).phase === "cws_finals")
+    return { key: "cws_finals", label: "In the CWS Finals" };
+  return status;
+}
+
 const TeamDetail = ({ teamId, initialTab, initialStatMode, initialStatView, initialStatLevel,
                       onTabChange, onStatChange, onBack, onTeam, onGameClick, onPlayerClick }) => {
   const team = window.TEAM_BY_ID[teamId];
@@ -96,6 +126,12 @@ const TeamDetail = ({ teamId, initialTab, initialStatMode, initialStatView, init
 
   const { nationalChamp, advanced, eliminated, missedPost, advancedText, outText } =
     teamPostseasonStatus(schedule);
+  // In-progress postseason status (e.g. "In the Super Regionals") — shown only
+  // while the team is still alive in a bracket round; terminal states above own
+  // the hero otherwise.
+  const liveStatus = teamSeasonStatus(schedule);
+  const inPostseason = ["sec_tournament", "regionals", "super_regionals", "cws", "cws_finals"]
+    .includes(liveStatus.key);
 
   return (
     <div className="team-detail">
@@ -103,10 +139,11 @@ const TeamDetail = ({ teamId, initialTab, initialStatMode, initialStatView, init
 
       <header className="team-hero" style={{ "--team-color": team.color, "--team-ink": team.ink }}>
         <div className="team-hero__band" />
-        {(nationalChamp || isConfChamp || advanced || eliminated || missedPost) && (
+        {(nationalChamp || isConfChamp || advanced || eliminated || missedPost || inPostseason) && (
           <div className="team-hero__flags">
             {nationalChamp && <span className="team-flag team-flag--natty">🏆 National Champions</span>}
             {isConfChamp && <span className="team-flag team-flag--champ">★ SEC Champions</span>}
+            {inPostseason && <span className="team-flag team-flag--active">{liveStatus.label}</span>}
             {advanced && <span className="team-flag team-flag--advanced">{advancedText}</span>}
             {(eliminated || missedPost) && <span className="team-flag team-flag--out">{outText}</span>}
           </div>

@@ -126,7 +126,15 @@ function ThisWeek({ schedule, team, onTeam, onGameClick }) {
   if (!thisWeek.length) {
     return <div className="hp-placeholder">Season complete — no games on the schedule.</div>;
   }
-  if (round === "NCAA Super Regional" || round === "College World Series")
+  if (round === "College World Series") {
+    // The CWS is an 8-team double-elimination event (two 4-team brackets) — same
+    // shape as a Regional, so it gets the field layout. The Finals are a separate
+    // two-team best-of-3, so those keep the series look (site phase says which).
+    if ((window.SEASON_PHASE || {}).phase === "cws_finals")
+      return <WeekSeries team={team} games={thisWeek} onTeam={onTeam} onGameClick={onGameClick} round={round} />;
+    return <WeekCWS team={team} games={thisWeek} onTeam={onTeam} onGameClick={onGameClick} />;
+  }
+  if (round === "NCAA Super Regional")
     return <WeekSeries team={team} games={thisWeek} onTeam={onTeam} onGameClick={onGameClick} round={round} />;
   if (round === "NCAA Regional")
     return <WeekRegional team={team} games={thisWeek} onTeam={onTeam} onGameClick={onGameClick}
@@ -207,12 +215,17 @@ function WeekSeries({ team, games, onTeam, onGameClick, round }) {
 // NCAA Regional — a 4-team double-elimination field. The other teams are inferred
 // from the distinct opponents across the team's regional games this week; every
 // game is kept and played games show their result.
-function WeekRegional({ team, games, onTeam, onGameClick, advanced, cols = 4 }) {
-  const seen = new Set();
-  const field = [];
-  for (const g of games) {
-    const o = g.opp;
-    if (o && o.id && !seen.has(o.id)) { seen.add(o.id); field.push(o); }
+function WeekRegional({ team, games, onTeam, onGameClick, advanced, cols = 4, title, sub, field: fieldProp }) {
+  // The field is either supplied by the caller (the CWS sources it from the real
+  // bracket half) or inferred from the distinct opponents in the team's games.
+  let field = fieldProp;
+  if (!Array.isArray(field)) {
+    const seen = new Set();
+    field = [];
+    for (const g of games) {
+      const o = g.opp;
+      if (o && o.id && !seen.has(o.id)) { seen.add(o.id); field.push(o); }
+    }
   }
   // A regional is 4-team double-elimination — show 4 game slots at all times.
   // Known games fill in (result or scheduled), the rest are TBD; once the team's
@@ -227,8 +240,8 @@ function WeekRegional({ team, games, onTeam, onGameClick, advanced, cols = 4 }) 
   const total = Math.max(4, games.length);
   return (
     <div className="th-post">
-      <div className="th-post__title">{(window.REGIONAL_CITY_BY_TEAM || {})[team.id] || team.name} Regional</div>
-      <div className="th-post__sub mono">Double-elimination · Winner advances to a Super Regional</div>
+      <div className="th-post__title">{title || `${(window.REGIONAL_CITY_BY_TEAM || {})[team.id] || team.name} Regional`}</div>
+      <div className="th-post__sub mono">{sub || "Double-elimination · Winner advances to a Super Regional"}</div>
       <div className="th-post__teams">
         <SeriesTeam t={team} accent={team.color} onTeam={onTeam} me />
         {field.map((o) => <SeriesTeam key={o.id} t={o} onTeam={onTeam} />)}
@@ -258,6 +271,62 @@ function WeekRegional({ team, games, onTeam, onGameClick, advanced, cols = 4 }) 
         })}
       </div>
     </div>
+  );
+}
+
+// On-page opponents drawn from a team's own games (the fallback field while the
+// bracket loads, or if it's unavailable).
+function cwsFieldFromGames(games) {
+  const seen = new Set();
+  const out = [];
+  for (const g of games) {
+    const o = g.opp;
+    if (o && o.id && !seen.has(o.id) && (window.TEAM_BY_ID || {})[o.id]) {
+      seen.add(o.id);
+      out.push(window.TEAM_BY_ID[o.id]);
+    }
+  }
+  return out;
+}
+
+// College World Series — the team's Omaha bracket, shown with the same field
+// layout as a Regional. The field is the OTHER teams in this team's 4-team pod
+// that also have a page on the site (e.g. for Texas: Georgia, Alabama, Oklahoma —
+// not the non-SEC team in the pod). Sourced from the real NCAA bracket so pod-
+// mates the team hasn't played yet still appear; the game grid below still
+// reflects the team's actual games.
+function WeekCWS({ team, games, onTeam, onGameClick }) {
+  const [mates, setMates] = React.useState(null);
+  React.useEffect(() => {
+    let live = true;
+    if (window.fetchBracket && window.findCwsHalf) {
+      window.fetchBracket("ncaa").then((d) => {
+        if (!live) return;
+        const half = window.findCwsHalf(d, team.id);
+        const byId = window.TEAM_BY_ID || {};
+        const seen = new Set([team.id]);
+        const out = [];
+        for (const g of (half ? half.games || [] : [])) {
+          for (const s of [g.top, g.bottom]) {
+            if (s && s.seo && !seen.has(s.seo) && byId[s.seo]) {
+              seen.add(s.seo);
+              out.push(byId[s.seo]);
+            }
+          }
+        }
+        setMates(out);
+      }).catch(() => {});
+    }
+    return () => { live = false; };
+  }, [team.id]);
+  // Until the bracket resolves, fall back to the on-page opponents from this
+  // team's own games so the card isn't empty.
+  const field = Array.isArray(mates) ? mates : cwsFieldFromGames(games);
+  return (
+    <WeekRegional team={team} games={games} onTeam={onTeam} onGameClick={onGameClick}
+      advanced={false} cols={4} field={field}
+      title="College World Series"
+      sub="Omaha · Double-elimination · Winner advances to the Finals" />
   );
 }
 
@@ -392,7 +461,7 @@ function TeamLeaders({ leaders }) {
 const TeamHome = ({ teamId, onTeam, onGameClick }) => {
   const team = window.TEAM_BY_ID[teamId];
   const schedule = window.SCHEDULES[teamId] || [];
-  const post = hpPhase() === "postseason";
+  const post = hpPhase() === "postseason" && (window.SEASON_PHASE || {}).phase !== "offseason";
   const hasUpcoming = schedule.some((g) => !g.result);
   // A team that just WON its round but whose next matchup isn't on the schedule
   // yet keeps the weekly layout (This Week = the round it won, Recent = the one

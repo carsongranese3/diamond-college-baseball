@@ -406,6 +406,11 @@ a { color: inherit; text-decoration: none; }
   color: var(--muted);
   background: color-mix(in oklab, var(--muted) 15%, transparent);
 }
+.team-flag--active {
+  color: var(--team-ink, #fff);
+  background: var(--team-color, var(--accent));
+  border: 1px solid var(--team-color, var(--accent));
+}
 .team-hero__inner {
   display: flex;
   gap: 28px;

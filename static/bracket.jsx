@@ -553,3 +553,17 @@ window.findSuperPairing = function (data, teamId) {
   }
   return null;
 };
+// The Omaha (College World Series) half-bracket containing a team — one of the two
+// 4-team double-elim pods. Matched by the half's GAMES (the reliable pod signal),
+// not its `teams` list, which can be mis-assigned while supers are unsettled.
+window.findCwsHalf = function (data, teamId) {
+  const halves = (data && data.center && data.center.halves) || {};
+  for (const side of ["left", "right"]) {
+    const h = halves[side];
+    if (!h) continue;
+    if ((h.games || []).some((g) =>
+        (g.top && g.top.seo === teamId) || (g.bottom && g.bottom.seo === teamId)))
+      return h;
+  }
+  return null;
+};

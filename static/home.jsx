@@ -258,11 +258,27 @@ function HPConfLeaders({ data }) {
 
 /* ---------- composed homepage ---------- */
 
+// Masthead eyebrow copy per season phase (one entry for each of the 7 phases).
+const HP_EYEBROW = {
+  regular: "2026 SEC Season",
+  sec_tournament: "2026 SEC Tournament",
+  regionals: "2026 NCAA Regionals",
+  super_regionals: "2026 NCAA Super Regionals",
+  cws: "2026 College World Series",
+  cws_finals: "2026 CWS Finals",
+  offseason: "2026 Season — Final",
+};
+// Active postseason — every phase that is "win or go home" (excludes offseason).
+const HP_POST_PHASES = new Set([
+  "sec_tournament", "regionals", "super_regionals", "cws", "cws_finals",
+]);
+
 const Home = ({ onTeam, onNav }) => {
   const sp = window.SEASON_PHASE || { phase: "regular", label: "Regular Season" };
-  const post = sp.phase !== "regular";
-  const eyebrow = sp.phase === "sec_tournament" ? "2026 SEC Tournament"
-    : post ? "2026 NCAA Tournament" : "2026 SEC Season";
+  const post = HP_POST_PHASES.has(sp.phase);
+  const offseason = sp.phase === "offseason";
+  const final = post || offseason;               // season-done → "Final" standings
+  const eyebrow = HP_EYEBROW[sp.phase] || HP_EYEBROW.regular;
   const marquee = hpMarquee();
   const supers = window.SUPER_REGIONALS || [];
   const showSupers = post && supers.length > 0;
@@ -278,35 +294,42 @@ const Home = ({ onTeam, onNav }) => {
       <div className="hp-masthead">
         <div>
           <HPLabel>{eyebrow}</HPLabel>
-          <h1 className="hp-title">{post ? sp.label : "This Week in the SEC"}</h1>
+          <h1 className="hp-title">
+            {offseason ? "Final Standings" : post ? sp.label : "This Week in the SEC"}
+          </h1>
         </div>
         <div className="hp-masthead__meta mono">
-          <div>{post ? "Win or go home" : (window.TEAMS ? window.TEAMS.length + " teams" : "")}</div>
+          <div>{offseason ? "Season complete"
+            : post ? "Win or go home"
+            : (window.TEAMS ? window.TEAMS.length + " teams" : "")}</div>
           <div className="hp-faint">Updated {hpFmtDate(window.SEASON_UPDATED)}</div>
         </div>
       </div>
 
-      {/* hero: marquee grid */}
-      <section className="hp-hero">
-        <HPLabel color="var(--gold)">{post ? "The Field" : "Around the Conference"}</HPLabel>
-        {showSupers ? (
-          <div className="hp-grid">
-            {supers.map((sr) => <HPSuperCard key={sr.id} sr={sr} onTeam={onTeam} />)}
-          </div>
-        ) : marquee.length ? (
-          <div className="hp-grid">
-            {marquee.map((c) => <HPMatchCard key={c.gid} card={c} post={post} onTeam={onTeam} />)}
-          </div>
-        ) : (
-          <div className="hp-placeholder">No upcoming games on the board.</div>
-        )}
-      </section>
+      {/* hero: marquee grid — skipped in the offseason (lead straight into the
+          final standings below) */}
+      {!offseason && (
+        <section className="hp-hero">
+          <HPLabel color="var(--gold)">{post ? "The Field" : "Around the Conference"}</HPLabel>
+          {showSupers ? (
+            <div className="hp-grid">
+              {supers.map((sr) => <HPSuperCard key={sr.id} sr={sr} onTeam={onTeam} />)}
+            </div>
+          ) : marquee.length ? (
+            <div className="hp-grid">
+              {marquee.map((c) => <HPMatchCard key={c.gid} card={c} post={post} onTeam={onTeam} />)}
+            </div>
+          ) : (
+            <div className="hp-placeholder">No upcoming games on the board.</div>
+          )}
+        </section>
+      )}
 
       {/* lower split: standings + leaders */}
       <section className="hp-split">
         <div>
           <div className="hp-split__head">
-            <HPLabel>{post ? "Final SEC Standings" : "SEC Standings"}</HPLabel>
+            <HPLabel>{final ? "Final SEC Standings" : "SEC Standings"}</HPLabel>
             <button className="bare-btn hp-link" onClick={() => onNav && onNav("standings")}>Full table &rarr;</button>
           </div>
           <HPStandings n={10} onTeam={onTeam} />

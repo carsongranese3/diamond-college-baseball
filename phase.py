@@ -25,7 +25,8 @@ _WINDOWS = [
     ("sec_tournament",  datetime.date(2026, 5, 19), datetime.date(2026, 5, 25)),
     ("regionals",       datetime.date(2026, 5, 26), datetime.date(2026, 6,  2)),
     ("super_regionals", datetime.date(2026, 6,  3), datetime.date(2026, 6,  9)),
-    ("cws",             datetime.date(2026, 6, 10), datetime.date(2026, 6, 24)),
+    ("cws",             datetime.date(2026, 6, 10), datetime.date(2026, 6, 20)),
+    ("cws_finals",      datetime.date(2026, 6, 21), datetime.date(2026, 6, 24)),
 ]
 _SEASON_END = datetime.date(2026, 6, 30)
 
@@ -36,6 +37,7 @@ _SITE_LABEL = {
     "regionals": "NCAA Regionals",
     "super_regionals": "Super Regionals",
     "cws": "College World Series",
+    "cws_finals": "College World Series Finals",
     "offseason": "Offseason",
 }
 
@@ -46,6 +48,10 @@ _GAME_LABEL = {
     "regionals": "NCAA Regional",
     "super_regionals": "NCAA Super Regional",
     "cws": "College World Series",
+    # Finals games are still CWS games at the game level — keeping the same label
+    # lets them render through the existing CWS series UI. The "Finals" distinction
+    # lives only in the site-wide phase (_SITE_LABEL above).
+    "cws_finals": "College World Series",
 }
 
 
