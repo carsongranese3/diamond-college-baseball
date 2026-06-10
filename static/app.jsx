@@ -223,7 +223,8 @@ const App = () => {
       <main className="container">
         {view.name === "home" && (
           (window.SEASON_PHASE && window.SEASON_PHASE.phase === "regular")
-            ? <HomeRegular onTeam={goTeam} onNav={goNav} />
+            ? <HomeRegular onTeam={goTeam} onNav={goNav}
+                onGame={(g, hostId) => goGame(g, hostId, "home")} />
             : <Home onTeam={goTeam} onNav={goNav} />
         )}
         {view.name === "standings" && <Standings onTeamClick={goTeam} />}

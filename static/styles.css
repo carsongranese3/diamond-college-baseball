@@ -2197,6 +2197,10 @@ a { color: inherit; text-decoration: none; }
 .bbx-tk__st { font-family: var(--bbx-mono); font-size: 9px; letter-spacing: 0.1em;
   color: var(--bbx-faint); margin-top: 1px; white-space: nowrap; }
 .bbx-tk__st--up { color: var(--bbx-gold); }
+.bbx-tk { text-align: left; }
+.bbx-tk:disabled { cursor: default; }
+.bbx-tk--click { cursor: pointer; transition: background .12s; }
+.bbx-tk--click:hover { background: var(--bbx-panel2); }
 
 /* ── game of the day ── */
 .bbx-hero { display: grid; grid-template-columns: 1fr 1fr; border-radius: 8px; overflow: hidden;
@@ -2208,9 +2212,13 @@ a { color: inherit; text-decoration: none; }
 .bbx-hero__name { font-family: var(--bbx-cond); font-size: 54px; line-height: 0.92; margin-top: 10px; }
 .bbx-hero__rec { font-family: var(--bbx-mono); font-size: 12px; letter-spacing: 0.08em;
   color: rgba(255,255,255,0.85); margin-top: 6px; }
-.bbx-hero__crest { position: absolute; bottom: 14px; opacity: 0.9; }
-.bbx-hero__side--home .bbx-hero__crest { left: 20px; }
-.bbx-hero__side--away .bbx-hero__crest { right: 20px; }
+/* Logo medallion — a light disc so any team crest reads on its own colored side. */
+.bbx-hero__crest { position: absolute; bottom: 18px; width: 150px; height: 150px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.95); box-shadow: 0 6px 22px rgba(0,0,0,0.32); }
+.bbx-hero__crest .monogram--logo { padding: 4px; }
+.bbx-hero__side--home .bbx-hero__crest { left: 24px; }
+.bbx-hero__side--away .bbx-hero__crest { right: 24px; }
 .bbx-hero__score { position: absolute; top: 20px; font-family: var(--bbx-cond); font-size: 64px;
   color: rgba(255,255,255,0.96); }
 .bbx-hero__side--home .bbx-hero__score { right: 26px; }
@@ -2260,12 +2268,17 @@ a { color: inherit; text-decoration: none; }
 .bbx-hot { color: var(--bbx-hot); }
 .bbx-cold { color: var(--bbx-cold); }
 
-/* ── segmented toggle ── */
-.bbx-seg { display: inline-flex; gap: 4px; background: var(--bbx-panel2); border-radius: 999px; padding: 3px; }
-.bbx-seg__btn { font-family: var(--bbx-mono); font-size: 11px; letter-spacing: 0.1em; font-weight: 600;
-  padding: 7px 15px; border-radius: 999px; color: var(--bbx-faint); transition: all .15s; }
-.bbx-seg--sm .bbx-seg__btn { padding: 4px 10px; font-size: 10px; }
-.bbx-seg__btn--on { background: #1f6bff; color: #fff; }
+/* ── segmented toggle ── (selectors scoped under .bbx-seg so they beat the
+   broad `.bbx button` reset and the selected pill is unmistakable) ── */
+.bbx-seg { display: inline-flex; gap: 4px; background: var(--bbx-panel2);
+  border: 1px solid var(--bbx-line); border-radius: 999px; padding: 3px; }
+.bbx-seg .bbx-seg__btn { font-family: var(--bbx-mono); font-size: 11px; letter-spacing: 0.1em;
+  font-weight: 600; padding: 7px 16px; border-radius: 999px; color: var(--bbx-faint);
+  transition: all .15s; }
+.bbx-seg--sm .bbx-seg__btn { padding: 5px 13px; font-size: 10px; }
+.bbx-seg .bbx-seg__btn:hover { color: var(--bbx-ink); }
+.bbx-seg .bbx-seg__btn--on { background: #1f6bff; color: #fff; font-weight: 700;
+  box-shadow: 0 2px 8px rgba(31,107,255,0.5); }
 
 /* ── conference leaders ── */
 .bbx-leadgrid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }

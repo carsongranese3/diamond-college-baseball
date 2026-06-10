@@ -37,12 +37,13 @@ function bbxTickerGames() {
     const home = g.home ? me : oppT, away = g.home ? oppT : me;
     const hs = g.home ? meScore : oppScore, as = g.home ? oppScore : meScore;
     rows.push({ id: g.id, home, away, hs, as, final: !!g.result,
-                status: g.result ? "FINAL" : (g.time || "TBD") });
+                status: g.result ? "FINAL" : (g.time || "TBD"),
+                game: g, hostId: seo });
   }
   return rows.slice(0, 9);
 }
 
-function BbxTicker() {
+function BbxTicker({ onGame }) {
   const rows = bbxTickerGames();
   const Row = ({ t, score, lead }) => (
     <div className={"bbx-tk__line" + (lead ? " bbx-tk__line--lead" : "")}>
@@ -56,12 +57,16 @@ function BbxTicker() {
       <div className="bbx-ticker__rail">
         {rows.length ? rows.map((g) => {
           const homeLead = g.hs != null && g.as != null && g.hs >= g.as;
+          // Only finals have a box score to open.
+          const clickable = g.final && !!onGame;
           return (
-            <div key={g.id} className="bbx-tk">
+            <button key={g.id} className={"bbx-tk" + (clickable ? " bbx-tk--click" : "")}
+                    disabled={!clickable}
+                    onClick={clickable ? () => onGame(g.game, g.hostId) : undefined}>
               <Row t={g.away} score={g.as} lead={!homeLead && g.as != null} />
               <Row t={g.home} score={g.hs} lead={homeLead && g.hs != null} />
               <span className={"bbx-tk__st" + (g.final ? "" : " bbx-tk__st--up")}>{g.status}</span>
-            </div>
+            </button>
           );
         }) : <div className="bbx-tk bbx-faint" style={{ padding: "10px 16px" }}>No games on the board.</div>}
       </div>
@@ -79,7 +84,7 @@ function BbxHeroSide({ team, side, score, tag }) {
       <div className="bbx-hero__tag">{tag}</div>
       <div className="bbx-hero__name">{(team && (team.name || "").toUpperCase()) || "TBD"}</div>
       <div className="bbx-hero__rec">{bbxRec(team)}</div>
-      <div className="bbx-hero__crest"><HPLogo team={team} size={150} /></div>
+      <div className="bbx-hero__crest"><HPLogo team={team} size={116} /></div>
       <div className="bbx-hero__score">{score != null ? score : ""}</div>
     </div>
   );
@@ -93,14 +98,10 @@ function BbxGameOfDay({ onTeam }) {
   const opp = (card.opp && byId[card.opp.id]) || card.opp || null;
   const homeTeam = card.home ? host : opp, awayTeam = card.home ? opp : host;
   const phaseLabel = (card.phase && card.phase !== "regular") ? card.phase : "SEC MATCHUP";
-  const info = [["FIRST PITCH", card.time || "TBD"],
-                ["MATCHUP", `${bbxAbbr(awayTeam)} @ ${bbxAbbr(homeTeam)}`],
-                ["DATE", card.date || "—"],
-                ["SERIES", phaseLabel.toUpperCase()]];
   return (
     <div className="bbx-section">
       <div className="bbx-eyebrow-row">
-        <span className="bbx-eyebrow bbx-gold">★ GAME OF THE DAY</span>
+        <span className="bbx-eyebrow bbx-gold">★ SERIES OF THE WEEK</span>
         <span className="bbx-rule" />
         <span className="bbx-eyebrow bbx-faint">{phaseLabel.toUpperCase()}</span>
       </div>
@@ -108,14 +109,6 @@ function BbxGameOfDay({ onTeam }) {
         <BbxHeroSide team={homeTeam} side="home" tag="HOME" />
         <BbxHeroSide team={awayTeam} side="away" tag="AWAY" />
         <div className="bbx-hero__vs"><span className="bbx-hero__vstxt">VS</span></div>
-      </div>
-      <div className="bbx-hero__info">
-        {info.map(([k, v], i) => (
-          <div key={i} className="bbx-hero__cell">
-            <div className="bbx-hero__cellk">{k}</div>
-            <div className="bbx-hero__cellv">{v}</div>
-          </div>
-        ))}
       </div>
     </div>
   );
@@ -193,11 +186,14 @@ function BbxHotCold({ onTeam }) {
   const rows = [...hot, ...cold];
   return (
     <div className="bbx-panel bbx-pad2">
-      <div className="bbx-eyebrow bbx-mb">🔥 HOT / COLD</div>
+      <div className="bbx-eyebrow bbx-mb">🔥 HOT / COLD ❄️</div>
       {rows.map(({ t, s }, i) => (
         <button key={t.id} className={"bbx-row" + (i < rows.length - 1 ? " bbx-row--div" : "")}
                 onClick={() => onTeam && onTeam(t.id)}>
-          <span className="bbx-row__team"><HPLogo team={t} size={22} />{t.name}</span>
+          <span className="bbx-row__team">
+            <HPLogo team={t} size={22} />{t.name}
+            <span className="bbx-row__emoji">{s.t === "W" ? "🔥" : "❄️"}</span>
+          </span>
           <span className="bbx-row__r">
             <span className={"bbx-streak " + (s.t === "W" ? "bbx-hot" : "bbx-cold")}>{s.t}{s.n}</span>
             <span className={s.t === "W" ? "bbx-hot" : "bbx-cold"}>{s.t === "W" ? "▲" : "▼"}</span>
@@ -302,9 +298,9 @@ function BbxLeaders({ onTeam }) {
 }
 
 /* ---------- composed regular-season homepage ---------- */
-const HomeRegular = ({ onTeam, onNav }) => (
+const HomeRegular = ({ onTeam, onNav, onGame }) => (
   <div className="bbx">
-    <BbxTicker />
+    <BbxTicker onGame={onGame} />
     <BbxGameOfDay onTeam={onTeam} />
     <div className="bbx-cols">
       <BbxPlayerOfWeek onTeam={onTeam} />
