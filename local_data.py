@@ -562,6 +562,49 @@ def weekly_records(teams):
     return out
 
 
+def week_player_lines(teams, start_iso, end_iso):
+    """Aggregate each team's OWN players' batting & pitching counting stats across
+    that team's games dated in [start_iso, end_iso] (inclusive). Returns
+    {seo: {"name", "batting": {player: counts}, "pitching": {player: counts}}}.
+    Only the team's side of each game is counted, so a game isn't double-counted
+    from both teams' folders. Used to pick a Player of the Week from a single week.
+    """
+    BAT = (("AB", "ab"), ("H", "h"), ("BB", "bb"), ("HBP", "hbp"), ("TB", "tb"),
+           ("HR", "hr"), ("RBI", "rbi"), ("R", "r"), ("K", "k"))
+    PIT = (("H", "h"), ("R", "r"), ("ER", "er"), ("BB", "bb"), ("SO", "k"),
+           ("HR-A", "hr"), ("HB", "hbp"))
+    out = {}
+    for t in teams:
+        seo, name = t["id"], t["name"]
+        team_dir = _find_dir(seo, name)
+        if not team_dir:
+            continue
+        bat, pit = {}, {}
+        for _dir, data in _iter_games(team_dir):
+            iso = _iso((data.get("box") or {}).get("date"))
+            if not iso or iso < start_iso or iso > end_iso:
+                continue
+            rows = (data.get("players") or {}).get(_host_side(data, name)) or {}
+            for r in rows.get("batting") or []:
+                pname = (r.get("Name") or "").strip()
+                if not pname:
+                    continue
+                acc = bat.setdefault(pname, {"pos": r.get("P", ""),
+                                             **{d: 0 for _s, d in BAT}})
+                for src, dst in BAT:
+                    acc[dst] += to_int(r.get(src))
+            for r in rows.get("pitching") or []:
+                pname = (r.get("Name") or "").strip()
+                if not pname:
+                    continue
+                acc = pit.setdefault(pname, {"outs": 0, **{d: 0 for _s, d in PIT}})
+                acc["outs"] += ip_to_outs(r.get("IP"))
+                for src, dst in PIT:
+                    acc[dst] += to_int(r.get(src))
+        out[seo] = {"name": name, "batting": bat, "pitching": pit}
+    return out
+
+
 # ── Per-player career (per-season totals + game-by-game log) ─────────────────
 def _bat_game_line(row):
     ab, h = to_int(row.get("AB")), to_int(row.get("H"))

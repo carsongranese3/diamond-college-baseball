@@ -58,6 +58,16 @@ window.fetchRankingsHistory = function () {
   return window.__rankHistCache;
 };
 
+window.fetchPlayerOfWeek = function () {
+  if (!window.__potwCache) {
+    window.__potwCache = fetch("/api/player-of-week").then((r) => {
+      if (!r.ok) throw new Error("player-of-week " + r.status);
+      return r.json();
+    });
+  }
+  return window.__potwCache;
+};
+
 window.fetchTeam = function (seo) {
   if (!_teamCache[seo]) {
     _teamCache[seo] = fetch("/api/team/" + encodeURIComponent(seo)).then((r) => {

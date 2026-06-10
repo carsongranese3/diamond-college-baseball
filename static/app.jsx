@@ -221,7 +221,11 @@ const App = () => {
       <Topbar section={section} onHome={goHome} onStandings={goStandings} onScores={goScores}
               onCompare={goCompare} onBracket={goBracket} theme={theme} onToggleTheme={toggleTheme} />
       <main className="container">
-        {view.name === "home" && <Home onTeam={goTeam} onNav={goNav} />}
+        {view.name === "home" && (
+          (window.SEASON_PHASE && window.SEASON_PHASE.phase === "regular")
+            ? <HomeRegular onTeam={goTeam} onNav={goNav} />
+            : <Home onTeam={goTeam} onNav={goNav} />
+        )}
         {view.name === "standings" && <Standings onTeamClick={goTeam} />}
         {view.name === "scores" && (
           <Scores

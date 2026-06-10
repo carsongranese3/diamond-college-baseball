@@ -6,11 +6,13 @@ Endpoints:
   GET /api/game/<id>      single-game box score + line score
 """
 
+import datetime
 import threading
 import time
 
 from flask import Flask, abort, jsonify, request, send_from_directory
 
+import boxutil
 import bracket
 import clock
 import local_data
@@ -85,7 +87,8 @@ def _conference_leaders():
     (so one team can place multiple players, and a later team pushes weaker ones
     out of the top three)."""
     data = _memo("season", season.SEASON_AGGREGATE_TTL, season.build_season)
-    avg_pool, rbi_pool, hr_pool, era_pool, k_pool, wins_pool = [], [], [], [], [], []
+    avg_pool, rbi_pool, hr_pool, ops_pool = [], [], [], []
+    era_pool, k_pool, wins_pool, whip_pool, fip_pool = [], [], [], [], []
     for t in data["teams"]:
         seo, name = t["id"], t["name"]
         sched = data["schedules"].get(seo)
@@ -104,6 +107,9 @@ def _conference_leaders():
                 ab = 0
             if ab >= 50 and b.get("avg"):
                 avg_pool.append((_ip_float(b["avg"]), t, b, b["avg"]))
+            # OPS — computable advanced stat (replaces wRC+ from the mockup).
+            if ab >= 50 and b.get("ops"):
+                ops_pool.append((_ip_float(b["ops"]), t, b, b["ops"]))
             try:
                 hr = int(b.get("hr") or 0)
             except (TypeError, ValueError):
@@ -117,8 +123,14 @@ def _conference_leaders():
             if rbi > 0:
                 rbi_pool.append((rbi, t, b, str(rbi)))
         for p in roster.get("pitchers", []):
-            if _ip_float(p.get("ip")) >= 20 and p.get("era"):
+            qual = _ip_float(p.get("ip")) >= 20
+            if qual and p.get("era"):
                 era_pool.append((_ip_float(p["era"]), t, p, p["era"]))
+            # WHIP + FIP — computable advanced pitching stats (lower is better).
+            if qual and p.get("whip"):
+                whip_pool.append((_ip_float(p["whip"]), t, p, p["whip"]))
+            if qual and p.get("fip"):
+                fip_pool.append((_ip_float(p["fip"]), t, p, p["fip"]))
             try:
                 k = int(p.get("k") or 0)
             except (TypeError, ValueError):
@@ -145,9 +157,12 @@ def _conference_leaders():
         "avg": {"label": "Batting Avg", "unit": "AVG", "list": top(avg_pool, True)},
         "rbi": {"label": "RBI", "unit": "RBI", "list": top(rbi_pool, True)},
         "hr": {"label": "Home Runs", "unit": "HR", "list": top(hr_pool, True)},
+        "ops": {"label": "OPS", "unit": "ADV", "list": top(ops_pool, True)},
         # pitchers
         "era": {"label": "Earned Run Avg", "unit": "ERA", "list": top(era_pool, False)},
         "k": {"label": "Strikeouts", "unit": "K", "list": top(k_pool, True)},
+        "whip": {"label": "WHIP", "unit": "", "list": top(whip_pool, False)},
+        "fip": {"label": "FIP", "unit": "ADV", "list": top(fip_pool, False)},
         "wins": {"label": "Wins", "unit": "W", "list": top(wins_pool, True)},
     }
 
@@ -190,6 +205,82 @@ def _rankings_history():
 def rankings_history():
     return jsonify(_memo("rankings_history", season.SEASON_AGGREGATE_TTL,
                          _rankings_history))
+
+
+def _player_of_week():
+    """Best batter + best pitcher over the PREVIOUS Mon-Sun week, by a simple weekly
+    formula. Batter score = on-base (incl. HBP) + slugging; pitcher score (game-score
+    style) = outs - 2*runs - hits - walks. Each winner carries their team and a
+    SEASON stat line (basic + computable advanced) for display. Returns
+    {window, batter|None, pitcher|None}."""
+    data = _memo("season", season.SEASON_AGGREGATE_TTL, season.build_season)
+    teams = data["teams"]
+    team_by = {t["id"]: t for t in teams}
+    today = clock.today()
+    this_mon = today - datetime.timedelta(days=today.weekday())
+    start = this_mon - datetime.timedelta(days=7)
+    end = this_mon - datetime.timedelta(days=1)
+    lines = local_data.week_player_lines(teams, start.isoformat(), end.isoformat())
+
+    best_bat = best_pit = None  # (score, seo, name, weekly_counts)
+    for seo, d in lines.items():
+        for pname, c in d["batting"].items():
+            ab, pa = c["ab"], c["ab"] + c["bb"] + c["hbp"]
+            if pa < 6:                       # volume guard: ≥6 plate appearances
+                continue
+            score = (c["h"] + c["bb"] + c["hbp"]) / pa + (c["tb"] / ab if ab else 0)
+            if best_bat is None or score > best_bat[0]:
+                best_bat = (score, seo, pname, c)
+        for pname, c in d["pitching"].items():
+            if c["outs"] < 9:                # ≥3 IP
+                continue
+            score = c["outs"] - 2 * c["r"] - c["h"] - c["bb"]
+            if best_pit is None or score > best_pit[0]:
+                best_pit = (score, seo, pname, c)
+
+    # Display the PREVIOUS WEEK's line — the stats that earned the honor — computed
+    # straight from that week's counting totals (not season stats).
+    batter = pitcher = None
+    if best_bat:
+        _s, seo, pname, c = best_bat
+        t, ab = team_by.get(seo, {}), c["ab"]
+        denom = ab + c["bb"] + c["hbp"]
+        avg = c["h"] / ab if ab else 0.0
+        obp = (c["h"] + c["bb"] + c["hbp"]) / denom if denom else 0.0
+        slg = c["tb"] / ab if ab else 0.0
+        batter = {
+            "player": pname, "team": seo, "abbr": t.get("mark"), "teamName": t.get("name"),
+            "pos": c.get("pos") or "",
+            "basic": [{"label": "AVG", "value": boxutil.fmt3(avg)},
+                      {"label": "HR", "value": str(c["hr"])},
+                      {"label": "RBI", "value": str(c["rbi"])}],
+            "adv": [{"label": "OPS", "value": boxutil.fmt3(obp + slg)},
+                    {"label": "ISO", "value": boxutil.fmt3(slg - avg)},
+                    {"label": "OBP", "value": boxutil.fmt3(obp)}],
+        }
+    if best_pit:
+        _s, seo, pname, c = best_pit
+        t, outs = team_by.get(seo, {}), c["outs"]
+        era = c["er"] * 27 / outs if outs else 0.0
+        whip = (c["h"] + c["bb"]) * 3 / outs if outs else 0.0
+        pitcher = {
+            "player": pname, "team": seo, "abbr": t.get("mark"), "teamName": t.get("name"),
+            "pos": "P",
+            "basic": [{"label": "ERA", "value": boxutil.fmt2(era)},
+                      {"label": "K", "value": str(c["k"])},
+                      {"label": "IP", "value": boxutil.outs_to_ip(outs)}],
+            "adv": [{"label": "FIP", "value": boxutil.fip(c["hr"], c["bb"], c["hbp"], c["k"], outs)},
+                    {"label": "WHIP", "value": boxutil.fmt2(whip)},
+                    {"label": "K/9", "value": boxutil.per9(c["k"], outs)}],
+        }
+    return {"window": {"start": start.isoformat(), "end": end.isoformat()},
+            "batter": batter, "pitcher": pitcher}
+
+
+@app.route("/api/player-of-week")
+def player_of_week():
+    # Keyed by the effective date so the time machine picks the right prior week.
+    return jsonify(_memo("potw:" + clock.today().isoformat(), 1800, _player_of_week))
 
 
 @app.route("/api/bootstrap")
