@@ -45,6 +45,43 @@ def _memo(key, ttl, producer):
     return value
 
 
+_ROUND_RANK = {"regular": 0, "SEC Tournament": 1, "NCAA Regional": 2,
+               "NCAA Super Regional": 3, "College World Series": 4}
+_ROUND_PHASE = {"regular": "regular", "SEC Tournament": "sec_tournament",
+                "NCAA Regional": "regionals", "NCAA Super Regional": "super_regionals",
+                "College World Series": "cws"}
+
+
+def _live_phase(full):
+    """Site phase that advances to the next round the day AFTER the current round's
+    games end (rather than on a fixed calendar boundary): the round of today's
+    games if any, else the round of the soonest upcoming game. Falls back to the
+    date-based phase when nothing is scheduled (offseason). CWS-vs-Finals is
+    disambiguated by the date window since both carry the same game-level round."""
+    datebased = phase.current_phase()
+    today = clock.today().isoformat()
+    rounds_today, next_iso, next_round = set(), None, None
+    for games in full.values():
+        for g in games:
+            iso, rd = g.get("iso"), g.get("phase") or "regular"
+            if not iso:
+                continue
+            if iso == today:
+                rounds_today.add(rd)
+            elif iso > today and (next_iso is None or iso < next_iso):
+                next_iso, next_round = iso, rd
+    if rounds_today:
+        rd = max(rounds_today, key=lambda r: _ROUND_RANK.get(r, -1))
+    elif next_round:
+        rd = next_round
+    else:
+        return datebased
+    key = _ROUND_PHASE.get(rd, "regular")
+    if key == "cws" and datebased["phase"] == "cws_finals":
+        key = "cws_finals"
+    return {"phase": key, "label": phase._SITE_LABEL.get(key, datebased["label"])}
+
+
 def _super_regionals():
     """The Super Regional matchups (each: two teams + their official national
     seeds) from the NCAA bracket — for the homepage 'The Field' and team pages.
@@ -323,7 +360,7 @@ def bootstrap():
         "teams": teams,
         "schedules": full,
         "updated": data["updated"],
-        "phase": phase.current_phase(),
+        "phase": _live_phase(full),
         "super_regionals": _memo("super_regionals", 1800, _super_regionals),
         "regional_cities": _memo("regional_cities", 1800, _regional_cities),
         "clock": clock.state(),

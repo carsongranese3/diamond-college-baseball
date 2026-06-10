@@ -221,12 +221,15 @@ const App = () => {
       <Topbar section={section} onHome={goHome} onStandings={goStandings} onScores={goScores}
               onCompare={goCompare} onBracket={goBracket} theme={theme} onToggleTheme={toggleTheme} />
       <main className="container">
-        {view.name === "home" && (
-          (window.SEASON_PHASE && window.SEASON_PHASE.phase === "regular")
-            ? <HomeRegular onTeam={goTeam} onNav={goNav}
-                onGame={(g, hostId) => goGame(g, hostId, "home")} />
-            : <Home onTeam={goTeam} onNav={goNav} />
-        )}
+        {view.name === "home" && (() => {
+          const ph = (window.SEASON_PHASE && window.SEASON_PHASE.phase) || "regular";
+          const onGame = (g, hostId) => goGame(g, hostId, "home");
+          if (ph === "regular")
+            return <HomeRegular onTeam={goTeam} onNav={goNav} onGame={onGame} />;
+          if (["sec_tournament", "regionals", "super_regionals", "cws", "cws_finals"].includes(ph))
+            return <HomeStage phase={ph} onTeam={goTeam} onGame={onGame} />;
+          return <Home onTeam={goTeam} onNav={goNav} />;   // offseason
+        })()}
         {view.name === "standings" && <Standings onTeamClick={goTeam} />}
         {view.name === "scores" && (
           <Scores
