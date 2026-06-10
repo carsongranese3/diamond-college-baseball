@@ -33,6 +33,25 @@ const BTeam = ({ t, win, lose }) => {
   );
 };
 
+// "06/05/2026" -> "2026-06-05" (the bracket feed's date format -> iso).
+function bIso(d) {
+  const m = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(d || "");
+  return m ? `${m[3]}-${m[1]}-${m[2]}` : (d || "");
+}
+// Open a bracket game's box score. Prefers an SEC team as host so the richer saved
+// data is used; /api/game falls back to the NCAA API when no game is saved.
+function openBracketGame(onGameClick, g) {
+  if (!onGameClick || !g || !g.id || !g.top || !g.bottom) return;
+  const byId = window.TEAM_BY_ID || {};
+  let host = g.top, other = g.bottom;
+  if (!byId[g.top.seo] && byId[g.bottom.seo]) { host = g.bottom; other = g.top; }
+  onGameClick({
+    id: g.id, iso: bIso(g.date),
+    score: { us: host.score, them: other.score },
+    opp: { id: other.seo, name: other.name },
+  }, host.seo);
+}
+
 const BGame = ({ g, onOpen, struck }) => {
   const topWin = g.top && (g.top.winner || (g.winner && g.top.seo === g.winner));
   const botWin = g.bottom && (g.bottom.winner || (g.winner && g.bottom.seo === g.winner));
@@ -249,7 +268,7 @@ const CwsPod = ({ group, onClick }) => {
   );
 };
 
-const RegionalBracket = ({ group }) => {
+const RegionalBracket = ({ group, onGameClick }) => {
   const wrapRef = React.useRef(null);
   const cardRefs = React.useRef({});
   const [paths, setPaths] = React.useState([]);
@@ -301,7 +320,8 @@ const RegionalBracket = ({ group }) => {
                style={{ left: pos.col * 25 + "%", top: pos.y + "%" }}
                ref={(el) => { if (el) cardRefs.current[i] = el; }}>
             <div className="rcard__label">{DE_LABELS[i]}</div>
-            <BGame g={g} struck={g.ifNecessary && g.state === "P" && decided} />
+            <BGame g={g} struck={g.ifNecessary && g.state === "P" && decided}
+                   onOpen={onGameClick ? (gm) => openBracketGame(onGameClick, gm) : undefined} />
           </div>
         );
       })}
@@ -309,7 +329,7 @@ const RegionalBracket = ({ group }) => {
   );
 };
 
-const RegionalModal = ({ group, onClose }) => {
+const RegionalModal = ({ group, onClose, onGameClick }) => {
   React.useEffect(() => {
     const onKey = (e) => { if (e.key === "Escape") onClose(); };
     window.addEventListener("keydown", onKey);
@@ -325,7 +345,7 @@ const RegionalModal = ({ group, onClose }) => {
           </div>
           <button className="rmodal__close" onClick={onClose} aria-label="Close">✕</button>
         </div>
-        <RegionalBracket group={group} />
+        <RegionalBracket group={group} onGameClick={onGameClick} />
       </div>
     </div>
   );
@@ -333,7 +353,7 @@ const RegionalModal = ({ group, onClose }) => {
 
 // Super-regional detail: the matchup + the best-of-3 games, game by game. Opened
 // by clicking a super-regional box (mirrors the regional modal).
-const SuperModal = ({ pairing, onClose }) => {
+const SuperModal = ({ pairing, onClose, onGameClick }) => {
   React.useEffect(() => {
     const onKey = (e) => { if (e.key === "Escape") onClose(); };
     window.addEventListener("keydown", onKey);
@@ -361,7 +381,8 @@ const SuperModal = ({ pairing, onClose }) => {
               {games.map((g, i) => (
                 <div key={g.id || i} className="smodal__game">
                   <span className="smodal__glabel">Game {i + 1}</span>
-                  <BGame g={g} struck={g.ifNecessary && g.state === "P" && decided} />
+                  <BGame g={g} struck={g.ifNecessary && g.state === "P" && decided}
+                         onOpen={onGameClick ? (gm) => openBracketGame(onGameClick, gm) : undefined} />
                 </div>
               ))}
             </div>
@@ -456,7 +477,7 @@ const SuperUnit = ({ pairing, side, onPod, onSuper }) => {
   );
 };
 
-const NcaaBracket = ({ data }) => {
+const NcaaBracket = ({ data, onGameClick }) => {
   const [sel, setSel] = React.useState(null);
   const [selSuper, setSelSuper] = React.useState(null);
   const tree = data.tree || { left: [], right: [] };
@@ -493,8 +514,8 @@ const NcaaBracket = ({ data }) => {
           ))}
         </div>
       </div>
-      {sel && <RegionalModal group={sel} onClose={() => setSel(null)} />}
-      {selSuper && <SuperModal pairing={selSuper} onClose={() => setSelSuper(null)} />}
+      {sel && <RegionalModal group={sel} onClose={() => setSel(null)} onGameClick={onGameClick} />}
+      {selSuper && <SuperModal pairing={selSuper} onClose={() => setSelSuper(null)} onGameClick={onGameClick} />}
     </div>
   );
 };
@@ -534,7 +555,7 @@ const Bracket = ({ onGameClick, initialTab, onTabChange }) => {
       {error && <div className="bracket__msg">{error}</div>}
       {!error && !cur && <div className="bracket__msg muted">Loading bracket…</div>}
       {!error && cur && tab === "sec" && <SecBracket data={cur} onGameClick={onGameClick} />}
-      {!error && cur && tab === "ncaa" && <NcaaBracket data={cur} />}
+      {!error && cur && tab === "ncaa" && <NcaaBracket data={cur} onGameClick={onGameClick} />}
     </div>
   );
 };

@@ -177,21 +177,45 @@ def ncaa_bracket(year=2026):
         out.append({"number": r, "title": ROUND_TITLES.get(r, "Round %d" % r),
                     "groups": sorted(rounds[r], key=lambda x: x["id"])})
 
-    # Super-regional tree: each super pairs the two regionals feeding it; the two
-    # world-series halves split the supers left/right (lower WS section = left).
+    # Super-regional tree + CWS halves, placed by the FIXED NCAA bracket structure
+    # using each super's national SEED LINE (the top feeder regional's seed). The
+    # feed's advance links can be missing for a super whose game isn't decided yet
+    # (the #5 line had none), which used to dump that super onto the wrong side — so
+    # we place by seed line, which is always known. Standard order, top→bottom:
+    # bracket 1 (left) = 1,8,4,5; bracket 2 (right) = 2,7,3,6.
+    LEFT_LINES, RIGHT_LINES = [1, 8, 4, 5], [2, 7, 3, 6]
     supers = {}
     for sid in groups:
         if sid // 100 == 1 and sid in advances:
             supers.setdefault(advances[sid], []).append(sid)
+
+    def _seed_line(sup_sid):
+        seeds = [groups[r]["seed"] for r in supers[sup_sid] if groups[r].get("seed")]
+        return min(seeds) if seeds else 99
+
+    side_of, order_of = {}, {}
+    for sup_sid in supers:
+        line = _seed_line(sup_sid)
+        if line in LEFT_LINES:
+            side_of[sup_sid], order_of[sup_sid] = "left", LEFT_LINES.index(line)
+        elif line in RIGHT_LINES:
+            side_of[sup_sid], order_of[sup_sid] = "right", RIGHT_LINES.index(line)
+        else:                       # off-structure bracket: keep it stable, don't crash
+            side_of[sup_sid], order_of[sup_sid] = "right", 99
+
+    # WS section id per half — the half holding seed line #1 is the left bracket.
     ws_targets = sorted({advances[s] for s in supers if s in advances})
-    left_ws = ws_targets[0] if ws_targets else None
+    line1 = next((s for s in supers if _seed_line(s) == 1), None)
+    left_ws = (advances.get(line1) if line1 and advances.get(line1)
+               else (ws_targets[0] if ws_targets else None))
+    right_ws = next((w for w in ws_targets if w != left_ws), None)
 
     tree = {"left": [], "right": []}
     super_champ_by_side = {"left": [], "right": []}
-    for sup_sid in sorted(supers):
+    for sup_sid in sorted(supers, key=lambda s: (side_of[s] == "right", order_of[s], s)):
         regs = sorted(supers[sup_sid], key=lambda r: groups[r]["seed"] or 99)
         reg_groups = [groups[r] for r in regs]
-        side = "left" if advances.get(sup_sid) == left_ws else "right"
+        side = side_of[sup_sid]
         sbox = _super_box(sections.get(sup_sid, []), reg_groups)
         # Named for the HOST's city — the higher seed of the two advancing teams,
         # which may not be either feeder regional's host if a top seed was upset.
@@ -245,7 +269,6 @@ def ncaa_bracket(year=2026):
                 "teams": teams, "games": sections.get(ws_sid, []),
                 "winner": win["seo"] if win else None}
 
-    right_ws = ws_targets[1] if len(ws_targets) > 1 else None
     top = _half_champion(left_ws) if left_ws else None
     bottom = _half_champion(right_ws) if right_ws else None
     fstate = "F" if (top and top["winner"]) or (bottom and bottom["winner"]) else "P"
