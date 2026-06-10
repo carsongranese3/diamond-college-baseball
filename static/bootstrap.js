@@ -48,6 +48,16 @@ window.fetchConferenceLeaders = function () {
   return window.__clCache;
 };
 
+window.fetchRankingsHistory = function () {
+  if (!window.__rankHistCache) {
+    window.__rankHistCache = fetch("/api/rankings/history").then((r) => {
+      if (!r.ok) throw new Error("rankings-history " + r.status);
+      return r.json();
+    });
+  }
+  return window.__rankHistCache;
+};
+
 window.fetchTeam = function (seo) {
   if (!_teamCache[seo]) {
     _teamCache[seo] = fetch("/api/team/" + encodeURIComponent(seo)).then((r) => {

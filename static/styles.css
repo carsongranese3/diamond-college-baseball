@@ -342,6 +342,51 @@ a { color: inherit; text-decoration: none; }
   font-style: italic;
 }
 
+/* ─── Standings: table/graph toggle + rankings-over-time graph ─── */
+.standings__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.standings__controls .segmented { margin-bottom: 0; }
+.standings__graphnote { font-size: 12px; }
+
+.rank-graph {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  padding: 14px 10px 6px;
+  margin-bottom: 20px;
+}
+.rank-graph__svg { width: 100%; height: auto; display: block; }
+.rg-grid { stroke: var(--line); stroke-width: 1; opacity: 0.5; }
+.rg-grid--major { opacity: 0.9; }
+.rg-axis {
+  fill: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+.rg-axis--title { letter-spacing: 0.04em; }
+.rg-line {
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  opacity: 0.9;
+  transition: stroke-width 100ms, opacity 100ms;
+}
+.rg-line:hover { stroke-width: 4.5; opacity: 1; }
+.rg-badge { cursor: pointer; }
+.rg-badge__bg { fill: var(--paper); stroke: var(--line); stroke-width: 1; }
+.rg-badge__mark {
+  fill: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+}
+
 /* ─── Team Detail ─── */
 .back-link {
   display: inline-flex;

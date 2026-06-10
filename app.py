@@ -158,6 +158,40 @@ def conference_leaders():
                          _conference_leaders))
 
 
+def _rankings_history():
+    """Each team's SEC standings position week by week, from the precomputed
+    weekly records (scripts/build_records.py). For every week, teams are ranked by
+    conference win pct (tiebreak conf wins, then name) — the same ordering the
+    Standings table uses — and assigned 1..N. Returns
+    {weeks: [{n, start, end}], teams: {seo: [{n, rank, confW, confL, ovrW, ovrL}]}}."""
+    data = _memo("season", season.SEASON_AGGREGATE_TTL, season.build_season)
+    teams = data["teams"]
+    weekly = local_data.weekly_records(teams)
+    name_by = {t["id"]: t["name"] for t in teams}
+    by_team = {seo: {w["n"]: w for w in rows} for seo, rows in weekly.items()}
+    week_ns = sorted({w["n"] for rows in weekly.values() for w in rows})
+    series = {seo: [] for seo in weekly}
+    weeks_meta = []
+    for n in week_ns:
+        present = [(seo, by_team[seo][n]) for seo in weekly if n in by_team[seo]]
+        present.sort(key=lambda it: (
+            -(it[1]["confW"] / max(it[1]["confW"] + it[1]["confL"], 1)),
+            -it[1]["confW"], name_by.get(it[0], it[0])))
+        for rank, (seo, w) in enumerate(present, 1):
+            series[seo].append({"n": n, "rank": rank,
+                                "confW": w["confW"], "confL": w["confL"],
+                                "ovrW": w["ovrW"], "ovrL": w["ovrL"]})
+        first = present[0][1] if present else {}
+        weeks_meta.append({"n": n, "start": first.get("start"), "end": first.get("end")})
+    return {"weeks": weeks_meta, "teams": series}
+
+
+@app.route("/api/rankings/history")
+def rankings_history():
+    return jsonify(_memo("rankings_history", season.SEASON_AGGREGATE_TTL,
+                         _rankings_history))
+
+
 @app.route("/api/bootstrap")
 def bootstrap():
     data = _memo("season", season.SEASON_AGGREGATE_TTL, season.build_season)

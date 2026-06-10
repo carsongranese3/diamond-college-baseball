@@ -540,6 +540,28 @@ def regular_season_records(schedules):
     return out
 
 
+def weekly_records(teams):
+    """{seo: [week rows]} read from each team's records.json (precomputed by
+    scripts/build_records.py). Each row is a cumulative weekly snapshot:
+    {n, start, end, ovrW, ovrL, confW, confL}. Teams without a records.json are
+    omitted. The team's folder is located the same way as everywhere else, via
+    _find_dir, so the keys are seos that match the API team list."""
+    out = {}
+    for t in teams:
+        team_dir = _find_dir(t["id"], t["name"])
+        if not team_dir:
+            continue
+        path = os.path.join(team_dir, "records.json")
+        if not os.path.isfile(path):
+            continue
+        try:
+            with open(path, encoding="utf-8") as fh:
+                out[t["id"]] = json.load(fh).get("weeks") or []
+        except (OSError, ValueError):
+            continue
+    return out
+
+
 # ── Per-player career (per-season totals + game-by-game log) ─────────────────
 def _bat_game_line(row):
     ab, h = to_int(row.get("AB")), to_int(row.get("H"))
