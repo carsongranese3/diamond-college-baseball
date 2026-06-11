@@ -57,7 +57,7 @@ def _played_schedule(teams):
     return out
 
 
-def _upcoming_schedule(end):
+def _upcoming_schedule(end, conf="sec"):
     """{seo: [game,...]} of UPCOMING games (strictly after today, not final) from
     the ncaa.com scoreboard, normalized to the schedule.json game shape
     (played=False, score/result=null). The 'after today' filter avoids picking up
@@ -81,11 +81,11 @@ def _upcoming_schedule(end):
             iso = season._fmt_iso(g.get("startDate", ""))
             if not iso or iso <= today_iso:          # only genuinely future games
                 continue
-            if not (season._is_sec(home) or season._is_sec(away)):
+            if not (season._in_conf(home, conf) or season._in_conf(away, conf)):
                 continue
             gid = g.get("gameID")
             for side, other in ((home, away), (away, home)):
-                if not season._is_sec(side):
+                if not season._in_conf(side, conf):
                     continue
                 seo = side["names"]["seo"]
                 if (seo, gid) in seen:
@@ -100,7 +100,7 @@ def _upcoming_schedule(end):
                         "mark": (other["names"].get("char6") or oseo[:4]).upper(),
                         "logo": ncaa.logo_url(oseo),
                         "rank": rank_by.get(season._norm(other["names"].get("short") or "")),
-                        "conf": season._is_sec(other),
+                        "conf": season._in_conf(other, conf),
                     },
                     side is home, None, None, g.get("startTime"), False))
         d += one
@@ -124,18 +124,18 @@ def _recent_finals(scoreboard, played):
     return out
 
 
-def build_full_schedules(end=SEASON_END):
+def build_full_schedules(end=SEASON_END, conf="sec"):
     """({seo: [game,...]}, {seo: name}) — every played game (saved box scores, plus
     scoreboard finals not yet pulled) and every upcoming game (scoreboard, plus
-    bracket-scheduled postseason games), per SEC team."""
-    season_data = season.build_season()
+    bracket-scheduled postseason games), per team in `conf`."""
+    season_data = season.build_season(conf=conf)
     teams = season_data["teams"]
     names = {t["id"]: t["name"] for t in teams}
-    sec_seos = {t["id"] for t in teams}
+    conf_seos = {t["id"] for t in teams}
     played = _played_schedule(teams)                              # saved box scores
     recent = _recent_finals(season_data.get("schedules") or {}, played)  # just-played, unpulled
-    upcoming = _upcoming_schedule(end)                            # scoreboard, not yet played
-    bracket_up = season.bracket_upcoming(sec_seos)               # bracket-scheduled (e.g. CWS)
+    upcoming = _upcoming_schedule(end, conf)                      # scoreboard, not yet played
+    bracket_up = season.bracket_upcoming(conf_seos)              # bracket-scheduled (e.g. CWS)
     out = {}
     for seo in set(played) | set(recent) | set(upcoming) | set(bracket_up):
         base = played.get(seo, []) + recent.get(seo, []) + upcoming.get(seo, [])
@@ -163,12 +163,13 @@ def write_schedule(team_dir, label, games):
     return dest, len(games)
 
 
-def write_team_schedules(labels=None, end=SEASON_END):
+def write_team_schedules(labels=None, end=SEASON_END, conf="sec"):
     """Build schedules once and write schedule.json into each team folder.
-    labels=None writes every SEC team found; otherwise only those whose folder
-    label matches (case/format-insensitive). Returns [(label, n_games, n_played)]."""
+    labels=None writes every team in `conf` that has a folder; otherwise only those
+    whose folder label matches (case/format-insensitive). Returns
+    [(label, n_games, n_played)]."""
     want = {season._norm(x) for x in labels} if labels is not None else None
-    sched, names = build_full_schedules(end)
+    sched, names = build_full_schedules(end, conf=conf)
     out = []
     for seo, games in sched.items():
         team_dir = ld._find_dir(seo, names.get(seo, seo))

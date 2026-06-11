@@ -26,6 +26,7 @@ import hashlib
 import json
 import os
 import queue
+import random
 import re
 import threading
 import time
@@ -43,6 +44,8 @@ CHALLENGE_WAIT_MS = 2500  # extra wait before each challenge-clearing reload
 MIN_REAL_PAGE = 2000    # a real stats.ncaa.org page is tens of KB; shorter = challenge
 POLITE_DELAY = 4.0      # seconds between navigations (rate-limit; kept conservative
                         # to avoid tripping Akamai's bot protection — ~0.25 req/s)
+POLITE_JITTER = 2.5     # extra random 0..JITTER s per navigation, so the request
+                        # cadence isn't a fixed metronome (a real giveaway of a bot)
 NAV_TIMEOUT = 60000     # ms
 VERBOSE = False         # when True, print each page fetch live (pullers set this)
 
@@ -96,7 +99,9 @@ def _browser_loop():
                     q = _result_map.get(req_id)
                 if q is not None:
                     q.put(result)
-                time.sleep(POLITE_DELAY)
+                # Jittered delay so the inter-request cadence looks human, not like
+                # a fixed-interval bot.
+                time.sleep(POLITE_DELAY + random.uniform(0, POLITE_JITTER))
     except Exception as exc:  # browser failed to launch
         _worker_err[0] = f"{type(exc).__name__}: {exc}"
         _ready.set()
@@ -129,6 +134,34 @@ def _ensure_worker():
 def shutdown():
     if _worker and _worker.is_alive():
         _url_queue.put((-1, None))
+
+
+def restart():
+    """Close the current browser, wait for it to fully exit, and drop it so the NEXT
+    fetch_html() boots a brand-new Camoufox instance.
+
+    Why this aids stealth: each Camoufox launch (no persistent user_data_dir here)
+    gets a freshly randomized fingerprint AND an empty cookie jar, so the new
+    session re-clears Akamai from scratch and looks like a different device. Rotating
+    mid-pull turns one suspiciously long, unbroken session into several short,
+    unrelated-looking ones — which is what defeats session-length / fingerprint /
+    cookie-age heuristics. It does NOT change the source IP, so it won't by itself
+    beat a pure IP-rate block (POLITE_DELAY handles request rate)."""
+    global _worker
+    with _worker_lock:
+        w = _worker
+    if w and w.is_alive():
+        _url_queue.put((-1, None))   # sentinel: worker exits its `with Camoufox`
+        w.join(timeout=60)           # wait for the browser process to actually close
+    with _worker_lock:
+        _worker = None
+        _ready.clear()
+    # Drain anything left on the queue so the fresh worker starts clean.
+    try:
+        while True:
+            _url_queue.get_nowait()
+    except queue.Empty:
+        pass
 
 
 atexit.register(shutdown)

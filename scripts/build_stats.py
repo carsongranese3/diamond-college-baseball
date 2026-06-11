@@ -56,8 +56,8 @@ def _norm(s):
 
 
 def build_for_team(label):
-    team_dir = os.path.join(ld.DATA_ROOT, label)
-    if not os.path.isdir(team_dir):
+    team_dir = ld._find_dir(label, label)  # resolves flat or <Conference>/<Team>
+    if not team_dir:
         return None
 
     # name -> accumulator. Keep display name / number / position from the rows.
@@ -153,10 +153,7 @@ def build_for_team(label):
 
 
 def main():
-    targets = sys.argv[1:] or sorted(
-        d for d in os.listdir(ld.DATA_ROOT)
-        if os.path.isdir(os.path.join(ld.DATA_ROOT, d))
-    )
+    targets = sys.argv[1:] or [label for label, _ in ld.team_dirs()]
     for label in targets:
         res = build_for_team(label)
         if res is None:

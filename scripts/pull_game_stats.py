@@ -58,6 +58,7 @@ print("Loading libraries and booting the stealth browser… "
       "(first output can take 30–60s, this is normal — not frozen)")
 
 import ncaa_stats as ns
+import local_data as ld
 
 ns.VERBOSE = True  # print each page fetch live so progress is always visible
 
@@ -357,7 +358,11 @@ def _ensure_detailed(game_dir, rebuild):
 
 def pull(school=TEAM_SCHOOL, label=TEAM_LABEL, season=SEASON, limit=LIMIT,
          force=FORCE, start_date=START_DATE, end_date=END_DATE, shutdown=True):
-    out_root = os.path.join(_PROJECT_ROOT, str(season), label)
+    # Write into the team's existing folder, which may sit under a conference
+    # (e.g. 2026/SEC/<label>/); fall back to a flat path for a brand-new team.
+    season_root = os.path.join(_PROJECT_ROOT, str(season))
+    out_root = ld._find_dir(label, label, season_root) \
+        or os.path.join(season_root, label)
     os.makedirs(out_root, exist_ok=True)
 
     print(f"Looking up {school} and its {season} schedule on stats.ncaa.org…")

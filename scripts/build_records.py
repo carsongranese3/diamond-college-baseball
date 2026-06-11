@@ -47,8 +47,8 @@ def _played_regular(games):
     return out
 
 
-def _team_games(label):
-    path = os.path.join(ld.DATA_ROOT, label, "schedule.json")
+def _team_games(team_dir):
+    path = os.path.join(team_dir, "schedule.json")
     if not os.path.isfile(path):
         return None
     with open(path, encoding="utf-8") as fh:
@@ -95,15 +95,44 @@ def team_weeks(games, calendar):
     return rows
 
 
+def calendar_for_all():
+    """The shared week calendar built from EVERY team under DATA_ROOT — the same
+    basis main() uses, so records written incrementally (e.g. by update.py) line up
+    with a full `build_records.py` run."""
+    all_games = {}
+    for label, team_dir in ld.team_dirs():
+        g = _team_games(team_dir)
+        if g is not None:
+            all_games[label] = g
+    return build_week_calendar(all_games)
+
+
+def write_for_team(team_dir, label, calendar, stamp=None):
+    """Write team_dir/records.json from its schedule.json against `calendar`.
+    Returns the number of week rows, or None if the team has no schedule.json."""
+    games = _team_games(team_dir)
+    if games is None:
+        return None
+    rows = team_weeks(games, calendar)
+    stamp = stamp or datetime.datetime.now().strftime("%Y-%m-%dT%H:%M")
+    with open(os.path.join(team_dir, "records.json"), "w", encoding="utf-8") as fh:
+        json.dump({"team": label, "season": SEASON, "generated": stamp,
+                   "weeks": rows}, fh, indent=2)
+        fh.write("\n")
+    return len(rows)
+
+
 def main():
-    everyone = sorted(d for d in os.listdir(ld.DATA_ROOT)
-                      if os.path.isdir(os.path.join(ld.DATA_ROOT, d)))
-    targets = sys.argv[1:] or everyone
+    # team_dirs() descends the <year>/<Conference>/<Team>/ layout (and still
+    # handles a flat one), so enumeration doesn't assume teams sit at the root.
+    pairs = ld.team_dirs()                       # [(label, dir)]
+    dir_by = dict(pairs)
+    targets = sys.argv[1:] or [label for label, _ in pairs]
     # The calendar is built from EVERY team (even when rebuilding one) so weeks
     # stay aligned across the whole conference.
     all_games = {}
-    for label in everyone:
-        g = _team_games(label)
+    for label, team_dir in pairs:
+        g = _team_games(team_dir)
         if g is not None:
             all_games[label] = g
     calendar = build_week_calendar(all_games)
@@ -113,17 +142,18 @@ def main():
     stamp = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M")
     for label in targets:
         games = all_games.get(label)
-        if games is None:
+        team_dir = dir_by.get(label)
+        if games is None or team_dir is None:
             print(f"  {label}: no schedule.json, skipped", flush=True)
             continue
         rows = team_weeks(games, calendar)
-        path = os.path.join(ld.DATA_ROOT, label, "records.json")
+        path = os.path.join(team_dir, "records.json")
         with open(path, "w", encoding="utf-8") as fh:
             json.dump({"team": label, "season": SEASON, "generated": stamp,
                        "weeks": rows}, fh, indent=2)
             fh.write("\n")
         last = rows[-1] if rows else {}
-        print(f"  {label}: {len(rows)} weeks -> {SEASON}/{label}/records.json "
+        print(f"  {label}: {len(rows)} weeks -> {os.path.relpath(path)} "
               f"(final conf {last.get('confW')}-{last.get('confL')})", flush=True)
 
 

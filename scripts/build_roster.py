@@ -24,8 +24,8 @@ import local_data as ld
 
 
 def build_for_team(team_label):
-    team_dir = os.path.join(ld.DATA_ROOT, team_label)
-    if not os.path.isdir(team_dir):
+    team_dir = ld._find_dir(team_label, team_label)  # flat or <Conference>/<Team>
+    if not team_dir:
         return None, 0
 
     # name -> {num, pos, g_bat, g_pit}
@@ -98,10 +98,7 @@ def build_for_team(team_label):
 
 
 def main():
-    targets = sys.argv[1:] or sorted(
-        d for d in os.listdir(ld.DATA_ROOT)
-        if os.path.isdir(os.path.join(ld.DATA_ROOT, d))
-    )
+    targets = sys.argv[1:] or [label for label, _ in ld.team_dirs()]
     for t in targets:
         path, n = build_for_team(t)
         if path is None:

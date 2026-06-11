@@ -84,19 +84,61 @@ def _fmt_date(mmddyyyy):
         return mmddyyyy or ""
 
 
+def _is_team_dir(path):
+    """A team folder holds the per-team data files; a conference folder holds team
+    folders. Used to tell the two layout levels apart so both <year>/<Team>/ and
+    <year>/<Conference>/<Team>/ resolve."""
+    return (os.path.exists(os.path.join(path, "schedule.json"))
+            or os.path.isdir(os.path.join(path, "schedule"))
+            or os.path.isdir(os.path.join(path, "stats")))
+
+
 def _find_dir(seo, name, root=None):
-    """Locate <root>/<Label>/ for a team by matching its seo or display name.
-    Defaults to the current-season root (DATA_ROOT)."""
+    """Locate a team's folder by matching its seo or display name, under either the
+    flat <root>/<Team>/ layout or the conference-nested <root>/<Conference>/<Team>/
+    one. Defaults to the current-season root (DATA_ROOT)."""
     root = root or DATA_ROOT
     if not os.path.isdir(root):
         return None
     targets = {_norm(seo), _norm(name)}
     targets.discard("")
+    if not targets:
+        return None
     for d in os.listdir(root):
         full = os.path.join(root, d)
-        if os.path.isdir(full) and _norm(d) in targets:
-            return full
+        if not os.path.isdir(full):
+            continue
+        if _norm(d) in targets:
+            return full                       # flat: <root>/<Team>
+        if not _is_team_dir(full):            # conference folder — look one level in
+            for sub in os.listdir(full):
+                subfull = os.path.join(full, sub)
+                if os.path.isdir(subfull) and _norm(sub) in targets:
+                    return subfull            # nested: <root>/<Conf>/<Team>
     return None
+
+
+def team_dirs(root=None):
+    """[(label, path)] for every team folder under root, descending one conference
+    level for the <root>/<Conference>/<Team>/ layout (and still handling a flat
+    <root>/<Team>/ one). `label` is the team folder name. Used by the build scripts
+    to enumerate teams without assuming a flat layout."""
+    root = root or DATA_ROOT
+    if not os.path.isdir(root):
+        return []
+    out = []
+    for d in sorted(os.listdir(root)):
+        full = os.path.join(root, d)
+        if not os.path.isdir(full):
+            continue
+        if _is_team_dir(full):
+            out.append((d, full))
+        else:                                 # conference folder
+            for sub in sorted(os.listdir(full)):
+                subfull = os.path.join(full, sub)
+                if os.path.isdir(subfull) and _is_team_dir(subfull):
+                    out.append((sub, subfull))
+    return out
 
 
 def _year_roots():

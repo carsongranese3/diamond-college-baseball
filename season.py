@@ -59,8 +59,12 @@ def _fmt_iso(mmddyyyy):
         return ""
 
 
+def _in_conf(side, conf):
+    return any(c.get("conferenceSeo") == conf for c in side.get("conferences") or [])
+
+
 def _is_sec(side):
-    return any(c.get("conferenceSeo") == "sec" for c in side.get("conferences") or [])
+    return _in_conf(side, "sec")
 
 
 def _rank_lookup():
@@ -224,7 +228,7 @@ def bracket_upcoming(sec_seos):
     return out
 
 
-def build_season(fresh=False):
+def build_season(fresh=False, conf="sec"):
     """Returns {teams: [...], schedules: {seo: [games]}, updated: iso}.
 
     Cached in ./cache/season.json via the underlying scoreboard cache; this
@@ -271,7 +275,7 @@ def build_season(fresh=False):
             home, away = g.get("home"), g.get("away")
             if not home or not away:
                 continue
-            home_sec, away_sec = _is_sec(home), _is_sec(away)
+            home_sec, away_sec = _in_conf(home, conf), _in_conf(away, conf)
             if not (home_sec or away_sec):
                 continue
 
@@ -287,7 +291,7 @@ def build_season(fresh=False):
                 if not side_is_sec:
                     continue
                 ensure_team(side)
-                ensure_team(other) if _is_sec(other) else None
+                ensure_team(other) if _in_conf(other, conf) else None
                 seo = side["names"]["seo"]
 
                 def _int(s):
@@ -312,7 +316,7 @@ def build_season(fresh=False):
                         "mark": (other["names"].get("char6") or other["names"]["seo"][:4]).upper(),
                         "logo": ncaa.logo_url(other["names"]["seo"]),
                         "rank": rank_by.get(_norm(other["names"]["short"] or "")),
-                        "conf": _is_sec(other),
+                        "conf": _in_conf(other, conf),
                     },
                     "home": side is home,
                     "score": {"us": us, "them": them} if us is not None and them is not None else None,
