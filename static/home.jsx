@@ -6,9 +6,14 @@
 
 /* ---------- shared adapters (also used by the team Home tab) ---------- */
 
-// SEC teams sorted by conference win pct (matches the Standings default order).
-function hpSecTeams() {
-  const arr = [...(window.TEAMS || [])];
+// A league's teams sorted by conference win pct (matches the Standings default
+// order). Defaults to the currently-selected league (window.CURRENT_LEAGUE) so the
+// many call sites that don't thread a league through still scope correctly; pass an
+// explicit league to override (e.g. a team's own conference on its Home tab).
+function hpSecTeams(league) {
+  league = league || window.CURRENT_LEAGUE;
+  const base = window.leagueTeams ? window.leagueTeams(league) : (window.TEAMS || []);
+  const arr = [...base];
   arr.sort((a, b) => {
     const ap = a.confW / Math.max(a.confW + a.confL, 1);
     const bp = b.confW / Math.max(b.confW + b.confL, 1);
@@ -60,32 +65,75 @@ function _isoAddDays(iso, n) {
   return d.toISOString().slice(0, 10);
 }
 
-// Regular-season marquee: the highest-seeded SEC weekend series of the coming
-// week. If no SEC-vs-SEC games fall that week, feature the 4 highest-ranked SEC
-// teams' weekend matchups instead. Always weekend series, never midweek games.
-function hpMarquee() {
+// The Tuesday→Monday week containing `iso`, as {start, end} ISO dates. Weeks run
+// Tue–Mon (not Mon–Sun) so a Monday makeup game stays grouped with the weekend it
+// follows rather than opening a new week.
+function _weekBounds(iso) {
+  const d = new Date(iso + "T00:00:00");
+  const back = (d.getDay() + 5) % 7;        // days since this week's Tuesday (Tue→0)
+  const start = new Date(d); start.setDate(d.getDate() - back);
+  const end = new Date(start); end.setDate(start.getDate() + 6);
+  return { start: start.toISOString().slice(0, 10), end: end.toISOString().slice(0, 10) };
+}
+
+// Regular-season marquee: the featured weekend series of the CURRENT week, plus the
+// next-best series that week. A "week" runs Tuesday→Monday and the selection is
+// anchored to it, so the highlighted series is stable for the whole week — it must
+// NOT switch as that weekend's Fri/Sat/Sun games are played out. On a bye week or
+// before the effective date is known, it falls back to the soonest upcoming weekend
+// so the slate still fills. Always weekend series, never midweek games.
+function hpMarquee(league) {
   const sch = window.SCHEDULES || {};
   const byId = window.TEAM_BY_ID || {};
-  const series = [];
+  const inLeague = new Set(
+    (window.leagueTeams ? window.leagueTeams(league || window.CURRENT_LEAGUE)
+                        : (window.TEAMS || [])).map((t) => t.id));
+  const today = (window.SEASON_CLOCK || {}).today || "";
+  const wk = today ? _weekBounds(today) : null;
+  const mk = (host, run) => ({ host, opp: run[0].opp, home: run[0].home, iso: run[0].iso,
+                               date: run[0].date, time: run[0].time, phase: run[0].phase, gid: run[0].id });
+
+  const series = [];     // weekend series falling inside the current Tue–Mon week
+  const fallback = [];   // each team's soonest upcoming weekend (used on an off-week)
   for (const seo in sch) {
+    if (!inLeague.has(seo)) continue;
     const host = byId[seo];
     if (!host) continue;
-    const wk = _nextWeekendSeries((sch[seo] || []).filter((g) => !g.result));
-    if (wk) series.push({ host, opp: wk[0].opp, home: wk[0].home, iso: wk[0].iso,
-                          date: wk[0].date, time: wk[0].time, phase: wk[0].phase, gid: wk[0].id });
+    const games = sch[seo] || [];
+    if (wk) {
+      // Played + unplayed alike — the week's series is fixed regardless of how far
+      // the weekend has progressed, which is what keeps it from switching mid-week.
+      const run = _nextWeekendSeries(games.filter((g) => g.iso && g.iso >= wk.start && g.iso <= wk.end));
+      if (run) series.push(mk(host, run));
+    }
+    // Upcoming = unplayed AND strictly after the effective date — a result-less
+    // game dated in the past (postponed / data gap) must not count as "next".
+    const up = _nextWeekendSeries(games.filter((g) => !g.result && (!today || (g.iso || "") > today)));
+    if (up) fallback.push(mk(host, up));
   }
-  if (!series.length) return [];
-  // "This week" = the soonest weekend (everything within ~4 days of the earliest).
-  const weekStart = series.map((s) => s.iso).filter(Boolean).sort()[0];
-  const weekEnd = _isoAddDays(weekStart, 4);
-  const week = series.filter((s) => s.iso && s.iso >= weekStart && s.iso <= weekEnd);
-  const card = (s) => ({ host: s.host, opp: s.opp, home: s.home, date: s.date, time: s.time, phase: s.phase, gid: s.gid });
+
+  let week = series;
+  if (!week.length) {
+    // No effective date, or a genuine bye week — fall back to the soonest weekend.
+    const start = fallback.map((s) => s.iso).filter(Boolean).sort()[0];
+    week = start ? fallback.filter((s) => s.iso && s.iso >= start && s.iso <= _isoAddDays(start, 4)) : [];
+  }
+  if (!week.length) return [];
+
+  const card = (s) => ({ host: s.host, opp: s.opp, home: s.home, iso: s.iso, date: s.date, time: s.time, phase: s.phase, gid: s.gid });
   // Non-ranked teams weigh 50, so matchups between two ranked teams rank highest.
   const seed = (s) => (s.host.rank || 50) + ((s.opp && s.opp.rank) || 50);  // lower = higher-seeded
-  // The top 4 SEC games this week, no matter the round: SEC-vs-SEC matchups are
-  // deduped to the home side; everything else is each team's own weekend series.
+  // The top 4 series this week. A same-conference matchup is deduped to its home
+  // side; a cross-conference series (shows up from both teams) is deduped by id.
+  const seenGid = new Set();
   return week
-    .filter((s) => !(s.opp && s.opp.conf && !s.home))   // drop the away half of SEC-vs-SEC dups
+    .filter((s) => !(s.opp && s.opp.conf && !s.home))   // within-conf: keep the home side
+    .filter((s) => {                                     // cross-conf: one card per game
+      if (s.gid == null) return true;
+      if (seenGid.has(s.gid)) return false;
+      seenGid.add(s.gid);
+      return true;
+    })
     .sort((a, b) => seed(a) - seed(b))
     .slice(0, 4)
     .map(card);
@@ -116,8 +164,8 @@ function HPStreak({ streak }) {
 }
 
 // Compact top-N standings table (reused on the homepage).
-function HPStandings({ n = 10, onTeam }) {
-  const rows = hpSecTeams().slice(0, n);
+function HPStandings({ n = 10, onTeam, league }) {
+  const rows = hpSecTeams(league).slice(0, n);
   return (
     <div className="hp-standings">
       <div className="hp-standings__head">
@@ -273,21 +321,23 @@ const HP_POST_PHASES = new Set([
   "sec_tournament", "regionals", "super_regionals", "cws", "cws_finals",
 ]);
 
-const Home = ({ onTeam, onNav }) => {
+const Home = ({ onTeam, onNav, league }) => {
   const sp = window.SEASON_PHASE || { phase: "regular", label: "Regular Season" };
   const post = HP_POST_PHASES.has(sp.phase);
   const offseason = sp.phase === "offseason";
   const final = post || offseason;               // season-done → "Final" standings
-  const eyebrow = HP_EYEBROW[sp.phase] || HP_EYEBROW.regular;
-  const marquee = hpMarquee();
+  const lw = league || "NCAA";
+  const eyebrow = (HP_EYEBROW[sp.phase] || HP_EYEBROW.regular).replace(/\bSEC\b/, lw);
+  const marquee = hpMarquee(league);
   const supers = window.SUPER_REGIONALS || [];
   const showSupers = post && supers.length > 0;
   const [confLeaders, setConfLeaders] = React.useState(null);
   React.useEffect(() => {
     let live = true;
-    window.fetchConferenceLeaders().then((d) => live && setConfLeaders(d)).catch(() => {});
+    setConfLeaders(null);
+    window.fetchConferenceLeaders(league).then((d) => live && setConfLeaders(d)).catch(() => {});
     return () => { live = false; };
-  }, []);
+  }, [league]);
   return (
     <div className="hp">
       {/* masthead */}
@@ -301,7 +351,7 @@ const Home = ({ onTeam, onNav }) => {
         <div className="hp-masthead__meta mono">
           <div>{offseason ? "Season complete"
             : post ? "Win or go home"
-            : (window.TEAMS ? window.TEAMS.length + " teams" : "")}</div>
+            : (window.leagueTeams ? window.leagueTeams(league).length + " teams" : "")}</div>
           <div className="hp-faint">Updated {hpFmtDate(window.SEASON_UPDATED)}</div>
         </div>
       </div>
@@ -329,10 +379,10 @@ const Home = ({ onTeam, onNav }) => {
       <section className="hp-split">
         <div>
           <div className="hp-split__head">
-            <HPLabel>{final ? "Final SEC Standings" : "SEC Standings"}</HPLabel>
+            <HPLabel>{final ? `Final ${lw} Standings` : `${lw} Standings`}</HPLabel>
             <button className="bare-btn hp-link" onClick={() => onNav && onNav("standings")}>Full table &rarr;</button>
           </div>
-          <HPStandings n={10} onTeam={onTeam} />
+          <HPStandings n={10} onTeam={onTeam} league={league} />
         </div>
         <div className="hp-split__rule" />
         <div>

@@ -98,7 +98,7 @@ function viewForPath(pathname, search) {
   }
   if (p === "/postseason" || p.startsWith("/postseason/")) {
     const seg = p.slice("/postseason".length).replace(/^\//, "");
-    return { name: "bracket", bracketTab: seg === "ncaa" ? "ncaa" : "sec" };
+    return { name: "bracket", bracketTab: seg || "sec" };   // seg = "ncaa" | conference slug
   }
   if (p === "/compare") {
     return {
@@ -178,6 +178,22 @@ const App = () => {
   }, [theme]);
   const toggleTheme = () => setTheme((t) => (t === "dark" ? "light" : "dark"));
 
+  // League (NCAA / SEC / ACC) — scopes Home, Standings and Scores to a conference.
+  // Lives in the top bar, persisted in localStorage. window.CURRENT_LEAGUE mirrors
+  // it so the shared hpSecTeams()/leagueTeams() helpers can read the default.
+  const [league, setLeague] = React.useState(() => {
+    try {
+      const saved = localStorage.getItem("league");
+      if (saved && (window.LEAGUES || []).includes(saved)) return saved;
+    } catch (e) {}
+    const ls = window.LEAGUES || ["NCAA"];
+    return ls.includes("SEC") ? "SEC" : ls[0];
+  });
+  window.CURRENT_LEAGUE = league;
+  React.useEffect(() => {
+    try { localStorage.setItem("league", league); } catch (e) {}
+  }, [league]);
+
   // simple scroll-to-top on view change
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: "auto" });
@@ -219,20 +235,22 @@ const App = () => {
   return (
     <div className="app">
       <Topbar section={section} onHome={goHome} onStandings={goStandings} onScores={goScores}
-              onCompare={goCompare} onBracket={goBracket} theme={theme} onToggleTheme={toggleTheme} />
+              onCompare={goCompare} onBracket={goBracket} theme={theme} onToggleTheme={toggleTheme}
+              league={league} leagues={window.LEAGUES || []} onLeague={setLeague} />
       <main className="container">
         {view.name === "home" && (() => {
           const ph = (window.SEASON_PHASE && window.SEASON_PHASE.phase) || "regular";
           const onGame = (g, hostId) => goGame(g, hostId, "home");
           if (ph === "regular")
-            return <HomeRegular onTeam={goTeam} onNav={goNav} onGame={onGame} />;
+            return <HomeRegular league={league} onTeam={goTeam} onNav={goNav} onGame={onGame} />;
           if (["sec_tournament", "regionals", "super_regionals", "cws", "cws_finals"].includes(ph))
-            return <HomeStage phase={ph} onTeam={goTeam} onGame={onGame} />;
-          return <Home onTeam={goTeam} onNav={goNav} />;   // offseason
+            return <HomeStage league={league} phase={ph} onTeam={goTeam} onGame={onGame} />;
+          return <Home league={league} onTeam={goTeam} onNav={goNav} />;   // offseason
         })()}
-        {view.name === "standings" && <Standings onTeamClick={goTeam} />}
+        {view.name === "standings" && <Standings league={league} onTeamClick={goTeam} />}
         {view.name === "scores" && (
           <Scores
+            league={league}
             initialDate={view.scoresDate || null}
             onDateChange={(iso) => setView((v) => v.name === "scores" ? { ...v, scoresDate: iso } : v)}
             onGameClick={(g, hostTeamId) => goGame(g, hostTeamId, "scores")}
@@ -340,13 +358,14 @@ const DevClock = () => {
   );
 };
 
-const Topbar = ({ section, onHome, onStandings, onScores, onCompare, onBracket, theme, onToggleTheme }) => {
+const Topbar = ({ section, onHome, onStandings, onScores, onCompare, onBracket,
+                 theme, onToggleTheme, league, leagues, onLeague }) => {
   const link = (active) => `topbar__link ${active ? "topbar__link--active" : "muted"}`;
   return (
     <header className="topbar">
       <button className="topbar__brand" onClick={onHome}>
         <span className="topbar__mark">◆</span>
-        <span className="topbar__title">DIAMOND<span className="topbar__title-thin">/SEC</span></span>
+        <span className="topbar__title">DIAMOND<span className="topbar__title-thin">/{league || "NCAA"}</span></span>
       </button>
       <nav className="topbar__nav">
         <a className={link(section === "home")} onClick={onHome}>Home</a>
@@ -356,7 +375,17 @@ const Topbar = ({ section, onHome, onStandings, onScores, onCompare, onBracket, 
         <a className={link(section === "compare")} onClick={onCompare}>Compare</a>
       </nav>
       <div className="topbar__right">
-        <div className="topbar__date mono">2026 SEASON · NCAA.COM</div>
+        {(leagues || []).length > 1 && (
+          <div className="segmented topbar__league" role="group" aria-label="League">
+            {leagues.map((lg) => (
+              <button
+                key={lg}
+                className={`segmented__btn ${league === lg ? "segmented__btn--active" : ""}`}
+                onClick={() => onLeague(lg)}
+              >{lg}</button>
+            ))}
+          </div>
+        )}
         <button
           className="topbar__theme"
           onClick={onToggleTheme}

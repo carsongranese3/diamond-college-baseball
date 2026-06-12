@@ -11,6 +11,18 @@ function fetchBracket(which) {
   return _bracketCache[which];
 }
 
+// Any conference's tournament bracket, keyed + cached per league (label or seo).
+const _confBracketCache = {};
+function fetchConfBracket(league) {
+  const key = league || window.CURRENT_LEAGUE || "sec";
+  if (!_confBracketCache[key]) {
+    _confBracketCache[key] = fetch("/api/bracket/conf/" + encodeURIComponent(key))
+      .then((r) => { if (!r.ok) throw new Error("conf bracket " + r.status); return r.json(); });
+  }
+  return _confBracketCache[key];
+}
+window.fetchConfBracket = fetchConfBracket;
+
 // One team row inside a game card. `t` is {seed, name, seo, score, logo} or null.
 const BTeam = ({ t, win, lose }) => {
   if (!t || !t.name) {
@@ -520,42 +532,60 @@ const NcaaBracket = ({ data, onGameClick }) => {
   );
 };
 
-// ── Bracket view (SEC ⇄ NCAA toggle) ─────────────────────────────────────────
+// ── Bracket view (a tab per conference + NCAA) ───────────────────────────────
+// Slug for a tab/URL: each conference by its lowercased-hyphenated label, plus the
+// fixed "ncaa" tab. Conference tabs come straight from window.LEAGUES (data-driven),
+// so adding a conference's data adds its tab automatically.
+function _bracketTabs() {
+  const leagues = window.LEAGUES || ["NCAA"];
+  const slug = (s) => s.toLowerCase().replace(/\s+/g, "-");
+  const confs = leagues.filter((l) => l !== "NCAA")
+    .map((l) => ({ key: slug(l), label: l, league: l, ncaa: false }));
+  return confs.concat([{ key: "ncaa", label: "NCAA", league: "ncaa", ncaa: true }]);
+}
+
 const Bracket = ({ onGameClick, initialTab, onTabChange }) => {
-  const [tab, setTabState] = React.useState(initialTab || "sec");
+  const tabs = _bracketTabs();
+  const fallback = (tabs[0] && tabs[0].key) || "ncaa";
+  const [tab, setTabState] = React.useState(initialTab || fallback);
   const [data, setData] = React.useState({});
   const [error, setError] = React.useState(null);
 
   // Follow the URL (back/forward, deep-link); changing tabs updates the URL.
-  React.useEffect(() => { setTabState(initialTab || "sec"); }, [initialTab]);
+  React.useEffect(() => { setTabState(initialTab || fallback); }, [initialTab]);
   const setTab = (t) => { setTabState(t); if (onTabChange) onTabChange(t); };
 
+  const meta = tabs.find((t) => t.key === tab) || { key: tab, label: tab, league: tab, ncaa: tab === "ncaa" };
   React.useEffect(() => {
     if (data[tab]) return;
     let live = true;
     setError(null);
-    fetchBracket(tab)
+    const load = meta.ncaa ? fetchBracket("ncaa") : fetchConfBracket(meta.league);
+    load
       .then((d) => { if (live) setData((s) => ({ ...s, [tab]: d })); })
       .catch(() => { if (live) setError("Couldn't load the bracket."); });
     return () => { live = false; };
   }, [tab]);
 
   const cur = data[tab];
+  const title = meta.ncaa ? "NCAA Tournament" : ((cur && cur.title) || (meta.label + " Tournament"));
   return (
     <div className="bracket">
       <header className="bracket__header">
         <Eyebrow>2026 Postseason</Eyebrow>
-        <h1 className="display">{tab === "sec" ? "SEC Tournament" : "NCAA Tournament"}</h1>
+        <h1 className="display">{title}</h1>
         <div className="bracket__tabs">
-          <button className={`btab ${tab === "sec" ? "btab--on" : ""}`} onClick={() => setTab("sec")}>SEC</button>
-          <button className={`btab ${tab === "ncaa" ? "btab--on" : ""}`} onClick={() => setTab("ncaa")}>NCAA</button>
+          {tabs.map((t) => (
+            <button key={t.key} className={`btab ${tab === t.key ? "btab--on" : ""}`}
+                    onClick={() => setTab(t.key)}>{t.label}</button>
+          ))}
         </div>
       </header>
 
       {error && <div className="bracket__msg">{error}</div>}
       {!error && !cur && <div className="bracket__msg muted">Loading bracket…</div>}
-      {!error && cur && tab === "sec" && <SecBracket data={cur} onGameClick={onGameClick} />}
-      {!error && cur && tab === "ncaa" && <NcaaBracket data={cur} onGameClick={onGameClick} />}
+      {!error && cur && !meta.ncaa && <SecBracket data={cur} onGameClick={onGameClick} />}
+      {!error && cur && meta.ncaa && <NcaaBracket data={cur} onGameClick={onGameClick} />}
     </div>
   );
 };

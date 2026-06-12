@@ -38,7 +38,7 @@ import time
 
 # ─── CONFIG ──────────────────────────────────────────────────────────────────
 CONFERENCE = "ACC"   # which conference folder under 2026/ to update
-TEAM = "North Carolina"         # a team folder label (e.g. "Arkansas"), or "all" for the whole
+TEAM = "Wake Forest"         # a team folder label (e.g. "Arkansas"), or "all" for the whole
                      # conference
 BULK_EVERY = 0       # bulk mode: rotate (restart) the stealth browser every N games
                      # pulled (0 = off) for a fresh fingerprint/session — stealthier

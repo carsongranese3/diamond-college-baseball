@@ -491,19 +491,34 @@ def game(seo, name, iso, host_runs=None, opp_seo=None):
 
 
 # ── Per-team schedules (built entirely from the saved games) ─────────────────
+# Loose box-score opponent names that don't normalize to a team's seo or display
+# name. `_norm(loose name) -> canonical seo`. e.g. box scores call Miami (FL) just
+# "Miami", but its seo is "miami-fl". Applied conference-scoped (see schedules()),
+# so the alias only resolves when the canonical team is in that conference.
+_OPP_ALIASES = {"miami": "miami-fl"}
+
+
 def schedules(teams):
     """{seo: [games]} built from the local 2026/ folders, in the same shape
     season.build_season produces — so the Scores view and team schedule lists
     render unchanged. `teams` (the API-built list) supplies opponent seo/rank/logo
     for conference opponents; rankings and logos still come from the API.
     """
-    # Normalized seo/name -> team, so a game's opponent can be matched to an
-    # SEC team (for its real logo slug, rank, and the "SEC Conference" label).
-    lookup = {}
+    # Normalized seo/name -> team, so a game's opponent can be matched to a
+    # conference team (for its real logo slug, rank, and the conference flag).
+    lookup, by_seo = {}, {}
     for t in teams:
+        by_seo[_norm(t["id"])] = t
         for key in (_norm(t["id"]), _norm(t["name"])):
             if key:
                 lookup[key] = t
+    # Loose-name aliases -> the canonical team, but only when that team is in this
+    # conference's list — so Miami counts as a conference opponent for the ACC yet
+    # stays non-conference for a non-ACC schedule.
+    for _loose, _canon in _OPP_ALIASES.items():
+        _t = by_seo.get(_norm(_canon))
+        if _t:
+            lookup.setdefault(_loose, _t)
 
     out = {}
     for t in teams:
@@ -518,7 +533,11 @@ def schedules(teams):
             ls = box.get("line_score") or {}
             opp_name = _clean_opp(box.get("opponent", ""))
             opp_t = lookup.get(_norm(opp_name))
-            opp_id = opp_t["id"] if opp_t else _slug(opp_name)
+            # Canonical seo via alias even when the opponent isn't in THIS conference,
+            # so an out-of-conference Miami still resolves to its real team/logo
+            # globally (conf stays False — see below — since it's not a league game).
+            opp_id = (opp_t["id"] if opp_t else
+                      _OPP_ALIASES.get(_norm(opp_name)) or _slug(opp_name))
             host = _host_side(data, name)
             other = "away" if host == "home" else "home"
             us = to_int((ls.get(host) or {}).get("r"), None)

@@ -35,38 +35,44 @@ window.fetchPlayer = function (seo, playerName) {
   return _playerCache[key];
 };
 
-// Conference stat leaders (top 3 in AVG/HR/ERA across every team). Aggregates
-// all teams' rosters server-side, so the first call is slow — memoized here and
-// on the backend.
-window.fetchConferenceLeaders = function () {
-  if (!window.__clCache) {
-    window.__clCache = fetch("/api/conference-leaders").then((r) => {
-      if (!r.ok) throw new Error("conference-leaders " + r.status);
+// A league label ("NCAA" / "SEC" / "ACC") -> the backend's ?league= value.
+function _leagueSeo(league) {
+  return (league || window.CURRENT_LEAGUE || "SEC").toLowerCase().replace(/\s+/g, "-");
+}
+
+// Memoize the per-league aggregation fetches, keyed by league (so switching
+// leagues fetches once per league and caches).
+function _memoFetch(cacheName, urlBase, errLabel) {
+  return function (league) {
+    const seo = _leagueSeo(league);
+    const cache = (window[cacheName] = window[cacheName] || {});
+    if (!cache[seo]) {
+      cache[seo] = fetch(urlBase + "?league=" + encodeURIComponent(seo)).then((r) => {
+        if (!r.ok) throw new Error(errLabel + " " + r.status);
+        return r.json();
+      });
+    }
+    return cache[seo];
+  };
+}
+
+// Official D1 Top 25 poll (for the NCAA standings view). League-independent.
+window.fetchTop25 = function () {
+  if (!window.__top25Cache) {
+    window.__top25Cache = fetch("/api/rankings/top25").then((r) => {
+      if (!r.ok) throw new Error("top25 " + r.status);
       return r.json();
     });
   }
-  return window.__clCache;
+  return window.__top25Cache;
 };
 
-window.fetchRankingsHistory = function () {
-  if (!window.__rankHistCache) {
-    window.__rankHistCache = fetch("/api/rankings/history").then((r) => {
-      if (!r.ok) throw new Error("rankings-history " + r.status);
-      return r.json();
-    });
-  }
-  return window.__rankHistCache;
-};
-
-window.fetchPlayerOfWeek = function () {
-  if (!window.__potwCache) {
-    window.__potwCache = fetch("/api/player-of-week").then((r) => {
-      if (!r.ok) throw new Error("player-of-week " + r.status);
-      return r.json();
-    });
-  }
-  return window.__potwCache;
-};
+// Conference stat leaders (top 3 in AVG/HR/ERA across the league's teams).
+window.fetchConferenceLeaders = _memoFetch("__clCache", "/api/conference-leaders", "conference-leaders");
+window.fetchRankingsHistory = _memoFetch("__rankHistCache", "/api/rankings/history", "rankings-history");
+window.fetchPlayerOfWeek = _memoFetch("__potwCache", "/api/player-of-week", "player-of-week");
+// Players to watch — top batters + pitchers (one per team) by the player-of-week formula.
+window.fetchPlayersToWatch = _memoFetch("__ptwCache", "/api/players-to-watch", "players-to-watch");
 
 window.fetchTeam = function (seo) {
   if (!_teamCache[seo]) {
@@ -110,6 +116,15 @@ window.__bootstrapReady = fetch("/api/bootstrap")
     window.TEAMS = d.teams;
     window.TEAM_BY_ID = Object.fromEntries(d.teams.map((t) => [t.id, t]));
     window.SCHEDULES = d.schedules;
+    // Leagues for the top-bar selector: "NCAA" (all teams) + each conference that
+    // has data, sorted. window.leagueTeams(league) returns the scoped team list;
+    // TEAMS/TEAM_BY_ID/SCHEDULES stay COMPLETE so cross-conference lookups work.
+    const _confs = Array.from(new Set(d.teams.map((t) => t.conference).filter(Boolean))).sort();
+    window.LEAGUES = ["NCAA"].concat(_confs);
+    window.leagueTeams = function (league) {
+      if (!league || league === "NCAA") return window.TEAMS;
+      return window.TEAMS.filter((t) => t.conference === league);
+    };
     window.SEASON_UPDATED = d.updated;
     window.SEASON_PHASE = d.phase;   // { phase: "super_regionals", label: "Super Regionals" }
     window.SUPER_REGIONALS = d.super_regionals || [];  // [{ id, top:{seo,name,logo,seed}, bottom:{...}, city }]

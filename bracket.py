@@ -295,13 +295,31 @@ def ncaa_bracket(year=2026):
             "regional_cities": regional_cities}
 
 
-# ── SEC: reconstruct the conference tournament from local games ──────────────
+# ── Conference tournaments: reconstruct any conference's bracket from local games
 def _conf_pct(rec):
     w, l = rec.get("confW", 0), rec.get("confL", 0)
     return w / (w + l) if (w + l) else 0.0
 
 
-def sec_bracket(teams, schedules, records):
+def conf_tourney_phase(schedules):
+    """The conference-tournament phase string present in these schedules (e.g.
+    "ACC Tournament" / "SEC Tournament"), or None if no tournament is scheduled.
+    Conference-tournament labels all end in "Tournament"; NCAA rounds don't
+    ("NCAA Regional"/"NCAA Super Regional"), so this cleanly selects the conf
+    tourney without naming any specific conference."""
+    for games in schedules.values():
+        for g in games:
+            p = g.get("phase") or ""
+            if p.endswith("Tournament") and p != "NCAA Tournament":
+                return p
+    return None
+
+
+def conf_bracket(teams, schedules, records, phase_label, title=None):
+    """Reconstruct a conference tournament bracket from the locally-saved games
+    whose phase == phase_label (e.g. "SEC Tournament"), seeded by regular-season
+    conference standings. Conference-agnostic — pass the phase string and an
+    optional display title (defaults to "2026 <phase_label>")."""
     by_seo = {t["id"]: t for t in teams}
 
     # Seed the 16 teams by regular-season conference record (1 = best).
@@ -321,11 +339,11 @@ def sec_bracket(teams, schedules, records):
             "logo": (t["logo"] if t else ncaa.logo_url(seo)),
         }
 
-    # Dedup the tournament games (each appears once per SEC team).
+    # Dedup the tournament games (each appears once per conference team).
     seen = {}
     for seo, games in schedules.items():
         for g in games:
-            if g.get("phase") != "SEC Tournament":
+            if g.get("phase") != phase_label:
                 continue
             gid = g.get("id")
             if gid in seen:
@@ -400,10 +418,15 @@ def sec_bracket(teams, schedules, records):
     rounds = []
     for r in sorted(cells_by_round):
         cells = sorted(cells_by_round[r], key=lambda c: c["y"])
-        title = ("Championship" if r == maxr else
-                 "Semifinals" if r == maxr - 1 else "Round %d" % r)
-        rounds.append({"number": r, "title": title, "cells": cells})
+        rtitle = ("Championship" if r == maxr else
+                  "Semifinals" if r == maxr - 1 else "Round %d" % r)
+        rounds.append({"number": r, "title": rtitle, "cells": cells})
 
     seeds = [{"seed": seed_of[t["id"]], "name": t["name"], "seo": t["id"],
               "mark": t["mark"], "logo": t["logo"]} for t in seeded]
-    return {"title": "2026 SEC Tournament", "seeds": seeds, "rounds": rounds}
+    return {"title": title or ("2026 " + phase_label), "seeds": seeds, "rounds": rounds}
+
+
+def sec_bracket(teams, schedules, records):
+    """Back-compat alias — the SEC tournament via the generic conf_bracket."""
+    return conf_bracket(teams, schedules, records, "SEC Tournament", "2026 SEC Tournament")

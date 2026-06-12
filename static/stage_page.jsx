@@ -33,7 +33,31 @@ const STAGE_META = {
     hideTicker: true,
   },
 };
-const ROUND_ORDER = ["SEC Tournament", "NCAA Regional", "NCAA Super Regional", "College World Series"];
+// Per-conference tournament facts for the stage masthead. The site phase is the
+// generic "sec_tournament"; the league selector picks which conference to show.
+const CONF_TOURNEY = {
+  "SEC":     { title: "SEC TOURNAMENT",     meta: [["LOCATION", "Hoover, AL"], ["VENUE", "Hoover Metropolitan Stadium"], ["FORMAT", "Double Elimination"]] },
+  "ACC":     { title: "ACC TOURNAMENT",     meta: [["LOCATION", "Charlotte, NC"], ["VENUE", "Truist Field"], ["FORMAT", "Pool Play → Single Elim"]] },
+  "Big Ten": { title: "BIG TEN TOURNAMENT", meta: [["LOCATION", "Omaha, NE"], ["VENUE", "Charles Schwab Field"], ["FORMAT", "Double Elimination"]] },
+  "Big 12":  { title: "BIG 12 TOURNAMENT",  meta: [["LOCATION", "Arlington, TX"], ["VENUE", "Globe Life Field"], ["FORMAT", "Double Elimination"]] },
+  "NCAA":    { title: "CONFERENCE TOURNAMENTS", meta: [["WEEK", "Championship Week"], ["FORMAT", "Conference Tournaments"]] },
+};
+
+// Postseason progression for "has this team advanced PAST round X?". A conference
+// tournament (any league — all labels end in "Tournament") is round 0; NCAA follows.
+const ROUND_ORDER = ["NCAA Regional", "NCAA Super Regional", "College World Series"];
+function stgIsConfTourney(phase) { return /Tournament$/.test(phase || ""); }
+function stgRoundIndex(phase) {
+  if (stgIsConfTourney(phase)) return 0;
+  const i = ROUND_ORDER.indexOf(phase);
+  return i >= 0 ? i + 1 : -1;
+}
+// Whether a game's round matches a stage's round — every conference tournament is
+// treated as one round (the team list is already scoped to a single league).
+function stgInRound(gphase, round) {
+  if (stgIsConfTourney(round)) return stgIsConfTourney(gphase);
+  return (gphase || "regular") === round;
+}
 
 /* ---------- real-data helpers ---------- */
 function stgToday() { return (window.SEASON_CLOCK || {}).today || window.SEASON_UPDATED; }
@@ -70,11 +94,13 @@ function stgDay() {
 // Only counts games with a result, so in the time machine a future round that's
 // still on the schedule (result cleared) doesn't read as "advanced".
 function stgAdvancedPast(sched, round) {
-  const i = ROUND_ORDER.indexOf(round);
-  return (sched || []).some((g) => g.result && ROUND_ORDER.indexOf(g.phase) > i);
+  const i = stgRoundIndex(round);
+  return (sched || []).some((g) => g.result && stgRoundIndex(g.phase) > i);
 }
-// Status tag for a team in the current round, from its W/L there + whether it moved on.
-function stgStatus(phase, wins, losses, advanced) {
+// Status tag for a team in the current round, from its W/L there + whether it moved
+// on. `upcoming` = it still has an unplayed game in the round; `lastWin` = its most
+// recent played game was a win.
+function stgStatus(phase, wins, losses, advanced, upcoming, lastWin) {
   const champ = phase === "cws_finals";
   if (phase === "super_regionals" || champ) {
     if (advanced) return { tag: "ADVANCED", kind: "good" };
@@ -84,18 +110,32 @@ function stgStatus(phase, wins, losses, advanced) {
     if (losses > wins) return { tag: `TRAILS ${wins}–${losses}`, kind: "warn" };
     return { tag: wins + losses ? `TIED ${wins}–${losses}` : "GAME 1", kind: "warn" };
   }
+  if (phase === "sec_tournament") {
+    // Conference tournament: data-driven elimination — a team whose run is over (it
+    // has played, has no remaining games, and hasn't advanced) is ELIMINATED if its
+    // last game was a loss, or CHAMPION if it won out. Works for any bracket format
+    // (single/double elim, pool play), not just a fixed 2-loss rule.
+    if (advanced) return { tag: "ADVANCED", kind: "good" };
+    if (wins + losses === 0) return { tag: "UPCOMING", kind: "warn" };
+    if (upcoming) return { tag: "ALIVE", kind: "good" };
+    return lastWin ? { tag: "CHAMPION", kind: "good" } : { tag: "ELIMINATED", kind: "bad" };
+  }
   if (advanced) return { tag: "ADVANCED", kind: "good" };
   if (losses >= 2) return { tag: "ELIMINATED", kind: "bad" };
   if (wins + losses === 0) return { tag: "UPCOMING", kind: "warn" };
   return { tag: "ALIVE", kind: "good" };
 }
 
-// A team's display seed for the phase: SEC standing for the conference tournament,
-// national rank otherwise.
-function stgSeedOf(phase, team) {
+// A team's display seed for the phase. In a single-conference conference-tournament
+// view it's the conference standing (1..N by conf record); in the NCAA-wide view and
+// every NCAA round it's the national Top 25 rank.
+function stgSeedOf(phase, team, league) {
   if (phase === "sec_tournament") {
-    const i = hpSecTeams().findIndex((t) => t.id === (team && team.id));
-    return i >= 0 ? i + 1 : "—";
+    const lg = league || window.CURRENT_LEAGUE;
+    if (lg !== "NCAA") {
+      const i = hpSecTeams(lg).findIndex((t) => t.id === (team && team.id));
+      return i >= 0 ? i + 1 : "—";
+    }
   }
   return (team && team.rank) || "—";
 }
@@ -110,31 +150,40 @@ function stgSeedMap(data) {
   return map;
 }
 
-// SEC teams in the current round, with seed + record + status tag. `seedMap` (when
-// supplied) gives official national seeds; the SEC tournament uses standing order.
-function stgField(phase, seedMap) {
+// Teams (in the selected league) in the current round, with seed + record + status
+// tag. `seedMap` (when supplied) gives official national seeds for the NCAA rounds.
+// The conference tournament shows ONLY the NCAA Top 25, ordered by national rank.
+function stgField(phase, seedMap, league) {
   const round = STAGE_META[phase].round;
-  const teams = hpSecTeams();
+  const lg = league || window.CURRENT_LEAGUE;
+  const teams = hpSecTeams(lg);
+  const confTourney = phase === "sec_tournament";
+  const ncaaView = lg === "NCAA";
   const out = [];
   teams.forEach((t, idx) => {
+    // NCAA-wide conference-tournament view: the Top 25 only, ranked nationally. A
+    // single conference keeps its own standings (every team in the round, 1..N).
+    if (confTourney && ncaaView && t.rank == null) return;
     const sched = (window.SCHEDULES || {})[t.id] || [];
-    const inRound = sched.filter((g) => (g.phase || "regular") === round);
+    const inRound = sched.filter((g) => stgInRound(g.phase, round));
     if (!inRound.length) return;                       // not part of this round
     const played = inRound.filter((g) => g.result);
     const wins = played.filter((g) => g.result === "W").length;
     const losses = played.filter((g) => g.result === "L").length;
+    const upcoming = inRound.some((g) => !g.result);   // a round game still to play
+    const lastWin = played.length > 0 && played[played.length - 1].result === "W";
     const adv = stgAdvancedPast(sched, round);
-    const st = stgStatus(phase, wins, losses, adv);
-    // Seed: SEC standing for the conf tournament, official national seed (from the
-    // bracket) for the NCAA rounds; unseeded teams show "—".
-    const seed = phase === "sec_tournament" ? idx + 1
+    const st = stgStatus(phase, wins, losses, adv, upcoming, lastWin);
+    // Seed: conf tournament → national rank in the NCAA view, conference standing in
+    // a single-conference view; NCAA rounds → official national seed from the bracket.
+    const seed = confTourney ? (ncaaView ? t.rank : idx + 1)
                : (seedMap && seedMap[t.id] != null ? seedMap[t.id] : "—");
     const lastOpp = (played[played.length - 1] || inRound[inRound.length - 1] || {}).opp;
     out.push({ team: t, seed, rec: stgRec(t), tag: st.tag, kind: st.kind,
                sub: lastOpp ? `vs ${lastOpp.name}` : "" });
   });
-  // Always seeded order (seeded ascending, unseeded last) — eliminated teams keep
-  // their seed position instead of sinking to the bottom.
+  // Seeded order (seeded ascending, unseeded last) — eliminated teams keep their
+  // seed position instead of sinking to the bottom.
   return out.sort((a, b) => (typeof a.seed === "number" ? a.seed : 999)
                           - (typeof b.seed === "number" ? b.seed : 999));
 }
@@ -147,7 +196,7 @@ function stgRoundDay(round) {
   const dates = new Set();
   const sch = window.SCHEDULES || {};
   for (const seo in sch) for (const g of sch[seo] || [])
-    if (g.iso && (g.phase || "regular") === round) dates.add(g.iso);
+    if (g.iso && stgInRound(g.phase, round)) dates.add(g.iso);
   const arr = [...dates].sort();
   if (arr.indexOf(today) >= 0) return today;
   const up = arr.find((d) => d > today);
@@ -168,41 +217,83 @@ function stgScheduleFrom(rows) {
 }
 
 // Featured matchup = the marquee game among `rows` (two best teams by rank).
-function stgFeatured(phase, rows, day) {
+function stgFeatured(phase, rows, day, league) {
   if (!rows.length) return null;
   const seed = (g) => ((g.home && g.home.rank) || 50) + ((g.away && g.away.rank) || 50);
   const best = rows.slice().sort((x, y) => seed(x) - seed(y))[0];
+  // Score reads away–home to match the hero layout (away on the left, home right).
   const center = best.final
-    ? { top: "FINAL", big: `${best.hs}–${best.as}`, bot: "" }
+    ? { top: "FINAL", big: `${best.as}–${best.hs}`, bot: "" }
     : { top: "FIRST PITCH", big: best.time || "TBD", bot: "" };
   return {
     tag: STAGE_META[phase].featuredTag,
     round: STAGE_META[phase].title,
     game: best.g, hostId: best.hostId,
-    a: { team: best.home, seed: stgSeedOf(phase, best.home), label: "HOME", rec: stgRec(best.home) },
-    b: { team: best.away, seed: stgSeedOf(phase, best.away), label: "AWAY", rec: stgRec(best.away) },
+    a: { team: best.home, seed: stgSeedOf(phase, best.home, league), label: "HOME", rec: stgRec(best.home) },
+    b: { team: best.away, seed: stgSeedOf(phase, best.away, league), label: "AWAY", rec: stgRec(best.away) },
     center,
     strip: [["DATE", best.g.date || day], ["MATCHUP", `${stgAbbr(best.away)} @ ${stgAbbr(best.home)}`],
             ["ROUND", STAGE_META[phase].title], ["STATUS", best.final ? "Final" : "Upcoming"]],
   };
 }
 
-// Players to watch — four DISTINCT real conference leaders (a player who leads two
-// categories only takes one card; the next category fills with someone new).
-function stgPlayers(leaders) {
-  if (!leaders) return [];
+// Players to watch — a BATTERS ⇄ PITCHERS tabbed panel. Each tab is the league's top
+// players over the previous week by the SAME formula as Player of the Week, one per
+// team (so four cards = four different teams); a team can have a batter and a pitcher.
+function StagePlayersToWatch({ league, onTeam }) {
+  const [data, setData] = React.useState(null);
+  const [side, setSide] = React.useState("batters");
+  React.useEffect(() => {
+    let live = true;
+    setData(null);
+    window.fetchPlayersToWatch(league).then((d) => live && setData(d)).catch(() => {});
+    return () => { live = false; };
+  }, [league]);
+  // Nothing to show (e.g. preseason) — drop the section entirely.
+  if (data && !(data.batters || []).length && !(data.pitchers || []).length) return null;
   const byId = window.TEAM_BY_ID || {};
-  const cats = [["avg", "AVG"], ["hr", "HR"], ["rbi", "RBI"], ["era", "ERA"], ["k", "K"], ["whip", "WHIP"]];
-  const seen = new Set(), out = [];
-  for (const [key, lbl] of cats) {
-    if (out.length >= 4) break;
-    const top = ((leaders[key] || {}).list || []).find((r) => !seen.has(r.player));
-    if (!top) continue;
-    seen.add(top.player);
-    out.push({ team: byId[top.team], pos: top.pos, name: top.player,
-               line: [[top.value, lbl]], note: `SEC leader · ${(leaders[key] || {}).label || lbl}` });
-  }
-  return out;
+  const list = data ? (data[side] || []) : [];
+  return (
+    <div className="bbx-section">
+      <div className="bbx-eyebrow-row">
+        <span className="bbx-eyebrow bbx-gold">◆ PLAYERS TO WATCH</span>
+        <span className="bbx-rule" />
+        <div className="bbx-seg">
+          {[["batters", "BATTERS"], ["pitchers", "PITCHERS"]].map(([s, l]) => (
+            <button key={s} className={"bbx-seg__btn" + (side === s ? " bbx-seg__btn--on" : "")}
+                    onClick={() => setSide(s)}>{l}</button>
+          ))}
+        </div>
+      </div>
+      {!data ? <div className="bbx-faint bbx-pad">Loading…</div>
+       : !list.length ? <div className="bbx-faint bbx-pad">No qualifying {side} last week.</div>
+       : (
+        <div className="stg-players">
+          {list.map((p, i) => {
+            const team = byId[p.team];
+            return (
+              <button key={i} className="stg-pcard stg-pcard--btn"
+                      onClick={() => team && onTeam && onTeam(p.team)}>
+                <div className="stg-pcard__photo">
+                  <span>PLAYER CUTOUT</span>
+                  <div className="stg-pcard__logo"><HPLogo team={team} size={26} /></div>
+                </div>
+                <div className="stg-pcard__body">
+                  <div className="mono stg-faint stg-pcard__pos">{(p.abbr || stgAbbr(team))} · {p.pos}</div>
+                  <div className="stg-pcard__name">{(p.player || "").toUpperCase()}</div>
+                  <div className="stg-pcard__line">
+                    {p.basic.map((s, j) => (
+                      <div key={j}><div className="stg-pcard__n">{s.value}</div><div className="mono stg-pcard__l">{s.label}</div></div>
+                    ))}
+                  </div>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+       )}
+    </div>
+  );
 }
 
 /* ---------- CWS: sourced from the NCAA bracket (no CWS box scores exist yet) ---------- */
@@ -263,7 +354,7 @@ function stgCwsFeatured(data) {
     tag: STAGE_META.cws.featuredTag, round: STAGE_META.cws.title, game: null,
     a: { team: g.a.team, seed: (g.a.team && g.a.team.rank) || "—", label: "BRACKET", rec: stgRec(g.a.team) },
     b: { team: g.b.team, seed: (g.b.team && g.b.team.rank) || "—", label: "BRACKET", rec: stgRec(g.b.team) },
-    center: g.done ? { top: "FINAL", big: `${g.sa}–${g.sb}`, bot: "" } : { top: "OMAHA", big: "VS", bot: "" },
+    center: g.done ? { top: "FINAL", big: `${g.sb}–${g.sa}`, bot: "" } : { top: "OMAHA", big: "VS", bot: "" },
     strip: [["VENUE", "Charles Schwab Field"], ["CITY", "Omaha, NE"],
             ["FORMAT", "Double Elimination"], ["NEXT", "Bracket Finals"]],
   };
@@ -465,8 +556,10 @@ function StageHero({ f, onGame }) {
         <span className="bbx-eyebrow bbx-faint">{f.round}</span>
       </div>
       <div className={"bbx-hero stg-hero" + (click ? " stg-hero--click" : "")} onClick={click || undefined}>
-        <Side s={f.a} side="home" />
-        <Side s={f.b} side="away" />
+        {/* Away (f.b) on the left, home (f.a) on the right. `side` selects the
+            mirror styling (left- vs right-hugging), not the team's home/away role. */}
+        <Side s={f.b} side="home" />
+        <Side s={f.a} side="away" />
         <div className="stg-hero__chip">
           <span className="stg-hero__chiptop">{f.center.top}</span>
           <span className="stg-hero__chipbig">{f.center.big}</span>
@@ -510,12 +603,16 @@ function StageCompare({ c }) {
 }
 
 function StagePage({ cfg, onTeam, onGame }) {
+  // "Live" only when a game is actually in progress — started (has a score) but not
+  // final yet. An upcoming game that simply hasn't been played is NOT live, so the
+  // strip shows quietly ("SCORES") instead of the red LIVE banner.
+  const tickerLive = (cfg.ticker || []).some((g) => !g.final && (g.sa != null || g.sb != null));
   return (
     <div className="bbx stg">
       {/* ticker */}
       {!cfg.hideTicker && cfg.ticker && (
-        <div className="bbx-ticker">
-          <div className="bbx-ticker__label"><span className="bbx-pulse" />SCORES</div>
+        <div className={"bbx-ticker" + (tickerLive ? "" : " bbx-ticker--idle")}>
+          <div className="bbx-ticker__label"><span className="bbx-pulse" />{tickerLive ? "LIVE" : "SCORES"}</div>
           <div className="bbx-ticker__rail">
             {cfg.ticker.length ? cfg.ticker.map((g, i) => {
               const homeLead = g.sb != null && g.sa != null && g.sb >= g.sa;
@@ -608,7 +705,7 @@ function StagePage({ cfg, onTeam, onGame }) {
         {cfg.compare ? <StageCompare c={cfg.compare} /> : (
           <div className="bbx-panel">
             <div className="bbx-eyebrow stg-panel__head">{cfg.fieldTitle}</div>
-            <div className="stg-field">
+            <div className={"stg-field" + (cfg.fieldScroll ? " stg-field--scroll" : "")}>
               {(cfg.field || []).map((t, i) => (
                 <button key={i} className="stg-field__row" onClick={() => t.team && onTeam && onTeam(t.team.id)}>
                   <span className="stg-field__seed">{t.seed}</span>
@@ -627,56 +724,26 @@ function StagePage({ cfg, onTeam, onGame }) {
         </div>
       </div>
 
-      {/* players to watch */}
-      {cfg.players && cfg.players.length > 0 && (
-        <div className="bbx-section">
-          <div className="bbx-eyebrow-row">
-            <span className="bbx-eyebrow bbx-gold">◆ PLAYERS TO WATCH</span>
-            <span className="bbx-rule" />
-          </div>
-          <div className="stg-players">
-            {cfg.players.map((p, i) => (
-              <div key={i} className="stg-pcard">
-                <div className="stg-pcard__photo">
-                  <span>PLAYER CUTOUT</span>
-                  <div className="stg-pcard__logo"><HPLogo team={p.team} size={26} /></div>
-                  {p.badge && <span className="stg-pcard__badge">{p.badge}</span>}
-                </div>
-                <div className="stg-pcard__body">
-                  <div className="mono stg-faint stg-pcard__pos">{stgAbbr(p.team)} · {p.pos}</div>
-                  <div className="stg-pcard__name">{(p.name || "").toUpperCase()}</div>
-                  <div className="stg-pcard__line">
-                    {p.line.map(([n, l], j) => (
-                      <div key={j}><div className="stg-pcard__n">{n}</div><div className="mono stg-pcard__l">{l}</div></div>
-                    ))}
-                  </div>
-                  {p.note && <div className="stg-pcard__note">{p.note}</div>}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+      {/* players to watch — BATTERS ⇄ PITCHERS, by the player-of-week formula */}
+      {cfg.league && <StagePlayersToWatch league={cfg.league} onTeam={onTeam} />}
     </div>
   );
 }
 
 /* ---------- compose: build a phase's cfg from real data ---------- */
-const HomeStage = ({ phase, onTeam, onGame }) => {
+const HomeStage = ({ phase, onTeam, onGame, league }) => {
   const m = STAGE_META[phase];
   const isCws = phase === "cws" || phase === "cws_finals";
   const needsBracket = isCws || phase === "regionals";
-  const [leaders, setLeaders] = React.useState(null);
   const [bracket, setBracket] = React.useState(null);
   React.useEffect(() => {
     let live = true;
-    window.fetchConferenceLeaders().then((d) => live && setLeaders(d)).catch(() => {});
     if (needsBracket && window.fetchBracket)
       window.fetchBracket("ncaa").then((d) => live && setBracket(d)).catch(() => {});
     return () => { live = false; };
-  }, [phase]);
+  }, [phase, league]);
 
-  let ticker, featured, schedule, field, compare, tracker, stakes;
+  let ticker, featured, schedule, field, compare, tracker, stakes, scheduleTitle = m.scheduleTitle;
   if (isCws) {
     // The CWS hasn't been played in the data, so source everything from the bracket.
     const games = bracket ? stgCwsGames(bracket) : [];
@@ -706,34 +773,63 @@ const HomeStage = ({ phase, onTeam, onGame }) => {
       })) : [];
     }
   } else {
-    // Strictly TODAY's games of this round — no previewing future rounds. Empty
-    // when nothing is played today (the UI shows "No games today").
+    // This league's games for the round, scoped so the ACC view shows ACC, not SEC.
     const round = m.round;
-    const today = stgToday();
-    const rows = stgGamesOn(today).filter((r) => (r.phase || "regular") === round);
-    ticker = rows.slice(0, 9).map((r) => ({
+    const inLeague = new Set(
+      (window.leagueTeams ? window.leagueTeams(league) : (window.TEAMS || [])).map((t) => t.id));
+    const rowsOn = (d) => stgGamesOn(d)
+      .filter((r) => stgInRound(r.phase, round) && inLeague.has(r.hostId));
+    // Show today's games; but BETWEEN ROUNDS (e.g. 5/18 — the regular season is over
+    // yet the conference tournament hasn't started) fall back to the soonest upcoming
+    // day with this league's games (the first tournament day) instead of "No games".
+    const now = stgToday();
+    const todayRows = rowsOn(now);     // strictly today — drives the top ticker only
+    let day = now;
+    if (!todayRows.length) {
+      const dates = new Set();
+      const sch = window.SCHEDULES || {};
+      for (const seo in sch) {
+        if (!inLeague.has(seo)) continue;
+        for (const g of sch[seo] || []) if (g.iso && stgInRound(g.phase, round)) dates.add(g.iso);
+      }
+      const arr = [...dates].sort();
+      day = arr.find((d) => d > now) || (arr.length ? arr[arr.length - 1] : now);
+    }
+    if (day > now) scheduleTitle = "UPCOMING GAMES";   // previewing a future day
+    const rows = rowsOn(day);          // schedule + headliner (may be a future day)
+    // Top ticker shows ONLY games scheduled for the actual today; blank otherwise —
+    // it does not preview the upcoming day the way the schedule/headliner do.
+    ticker = todayRows.slice(0, 9).map((r) => ({
       a: r.away, b: r.home, sa: r.as, sb: r.hs, final: r.final,
       st: r.final ? "FINAL" : (r.time || "TBD"), game: r.g, hostId: r.hostId,
     }));
     schedule = stgScheduleFrom(rows);
-    field = stgField(phase, bracket ? stgSeedMap(bracket) : null);
+    field = stgField(phase, bracket ? stgSeedMap(bracket) : null, league);
     compare = null;
     if (phase === "regionals") {
-      stakes = stgStakes(today);                 // today's games only; null if none
+      stakes = stgStakes(day);                   // that day's games only; null if none
       featured = null;
     } else {
-      featured = rows.length ? stgFeatured(phase, rows, today) : null;
+      featured = rows.length ? stgFeatured(phase, rows, day, league) : null;
     }
   }
 
+  // During the conference-tournament phase, the masthead reflects the selected
+  // league (ACC TOURNAMENT + its venue, etc.), not always the SEC's.
+  const ct = phase === "sec_tournament" ? (CONF_TOURNEY[league] || CONF_TOURNEY.SEC) : null;
+  if (ct && featured) featured.round = ct.title;
   const cfg = {
-    hideTicker: m.hideTicker || (isCws && (!ticker || !ticker.length)),
+    hideTicker: m.hideTicker || !ticker || !ticker.length,   // blank when no games today
     ticker,
     kicker: `POSTSEASON · STAGE ${m.stage} OF 5 · ${m.dates}`,
-    title: m.title, meta: m.meta,
-    featured, tracker, stakes, scheduleTitle: m.scheduleTitle, schedule,
-    fieldTitle: m.fieldTitle, field, compare,
-    players: stgPlayers(leaders),
+    title: ct ? ct.title : m.title,
+    meta: ct ? ct.meta : m.meta,
+    featured, tracker, stakes, scheduleTitle, schedule,
+    fieldTitle: (m.fieldTitle || "").replace(/\bSEC\b/, league === "NCAA" ? "NCAA" : (league || "SEC")),
+    fieldScroll: phase === "sec_tournament",   // cap the conference-tournament field at ~10 rows
+
+    field, compare,
+    league: league || window.CURRENT_LEAGUE,
   };
   return <StagePage cfg={cfg} onTeam={onTeam} onGame={onGame} />;
 };

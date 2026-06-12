@@ -4,16 +4,17 @@
 // from /api/rankings/history (built from the precomputed per-team records.json).
 // Rank on the Y-axis (1 at top), week of conference play on the X-axis; one line
 // per team in its color, with the team logo at the line's end.
-function RankGraph({ onTeamClick }) {
+function RankGraph({ onTeamClick, league }) {
   const [data, setData] = React.useState(null);
   const [err, setErr] = React.useState(null);
   React.useEffect(() => {
     let live = true;
-    window.fetchRankingsHistory()
+    setData(null); setErr(null);
+    window.fetchRankingsHistory(league)
       .then((d) => { if (live) setData(d); })
       .catch((e) => { if (live) setErr(e.message); });
     return () => { live = false; };
-  }, []);
+  }, [league]);
   if (err) return <div className="hp-placeholder hp-placeholder--tall">Couldn't load the rankings graph.</div>;
   if (!data) return <div className="hp-placeholder hp-placeholder--tall">Loading rankings graph…</div>;
 
@@ -78,12 +79,66 @@ function RankGraph({ onTeamClick }) {
   );
 }
 
-const Standings = ({ onTeamClick }) => {
+// NCAA view: the official Division I Top 25 poll (from /api/rankings/top25).
+// Teams we have data for are clickable with their real crest; others show a
+// name + best-effort logo (Monogram falls back to initials if it 404s).
+function Top25Table({ onTeamClick }) {
+  const [data, setData] = React.useState(null);
+  const [err, setErr] = React.useState(null);
+  React.useEffect(() => {
+    let live = true;
+    window.fetchTop25()
+      .then((d) => { if (live) setData(d); })
+      .catch((e) => { if (live) setErr(e.message); });
+    return () => { live = false; };
+  }, []);
+  if (err) return <div className="loading-block">Couldn't load the Top 25.</div>;
+  if (!data) return <div className="loading-block">Loading Top 25…</div>;
+  return (
+    <div className="table-wrap">
+      <table className="stand-table">
+        <thead>
+          <tr>
+            <th className="th th--left">Rank</th>
+            <th className="th th--left">Team</th>
+            <th className="th th--right">Record</th>
+            <th className="th th--right">Prev</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((t) => {
+            const teamObj = { id: t.seo, logo: t.logo, name: t.name,
+                              mark: (t.name || "").slice(0, 4).toUpperCase() };
+            return (
+              <tr key={t.rank} className={"row" + (t.known ? "" : " row--static")}
+                  onClick={() => t.known && onTeamClick && onTeamClick(t.seo)}>
+                <td className="td td--pos">{String(t.rank).padStart(2, "0")}</td>
+                <td className="td td--team">
+                  <div className="team-cell">
+                    <Monogram team={teamObj} size={36} />
+                    <div className="team-cell__text">
+                      <div className="team-cell__name">{t.name}</div>
+                      <div className="team-cell__city">{t.conference || ""}</div>
+                    </div>
+                  </div>
+                </td>
+                <td className="td td--right mono">{t.record}</td>
+                <td className="td td--right mono muted">{t.prev || "—"}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+const Standings = ({ onTeamClick, league }) => {
   const [sortBy, setSortBy] = React.useState("conf");
   const [view, setView] = React.useState("table");   // table | graph
 
   const sorted = React.useMemo(() => {
-    const arr = [...window.TEAMS];
+    const arr = [...window.leagueTeams(league)];
     if (sortBy === "conf") {
       arr.sort((a, b) => {
         const aPct = a.confW / Math.max(a.confW + a.confL, 1);
@@ -98,7 +153,7 @@ const Standings = ({ onTeamClick }) => {
       arr.sort((a, b) => a.rpi - b.rpi);
     }
     return arr;
-  }, [sortBy]);
+  }, [sortBy, league]);
 
   const headerCell = (key, label, align = "right") => (
     <th
@@ -110,13 +165,36 @@ const Standings = ({ onTeamClick }) => {
     </th>
   );
 
+  // NCAA = the official Top 25 poll, not a conference table.
+  if (league === "NCAA") {
+    return (
+      <div className="standings">
+        <header className="standings__header">
+          <Eyebrow>2026 Season · Live from ncaa.com</Eyebrow>
+          <h1 className="display">NCAA Baseball</h1>
+          <div className="standings__sub">
+            <span>Division I Top 25</span>
+            <span className="dot">·</span>
+            <span>Official poll</span>
+            <span className="dot">·</span>
+            <span className="muted">Tap a ranked team for its schedule &amp; stats</span>
+          </div>
+        </header>
+        <Top25Table onTeamClick={onTeamClick} />
+        <footer className="standings__footer">
+          <span>Data shown is illustrative — 2026 season mockup.</span>
+        </footer>
+      </div>
+    );
+  }
+
   return (
     <div className="standings">
       <header className="standings__header">
         <Eyebrow>2026 Season · Live from ncaa.com</Eyebrow>
-        <h1 className="display">SEC Baseball</h1>
+        <h1 className="display">{league || "NCAA"} Baseball</h1>
         <div className="standings__sub">
-          <span>Conference Standings</span>
+          <span>{league === "NCAA" ? "All Teams" : "Conference Standings"}</span>
           <span className="dot">·</span>
           <span>Updated {window.SEASON_UPDATED ? new Date(window.SEASON_UPDATED).toLocaleDateString() : "—"}</span>
           <span className="dot">·</span>
@@ -148,11 +226,11 @@ const Standings = ({ onTeamClick }) => {
           </div>
         )}
         {view === "graph" && (
-          <span className="standings__graphnote muted">SEC standings position by week · line ends at the team logo</span>
+          <span className="standings__graphnote muted">{league || "NCAA"} standings position by week · line ends at the team logo</span>
         )}
       </div>
 
-      {view === "graph" && <RankGraph onTeamClick={onTeamClick} />}
+      {view === "graph" && <RankGraph onTeamClick={onTeamClick} league={league} />}
 
       <div className="table-wrap" style={view === "graph" ? { display: "none" } : null}>
         <table className="stand-table">

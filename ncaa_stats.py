@@ -178,8 +178,18 @@ class BlockedError(Exception):
 
 
 def _looks_blocked(html):
-    head = html[:600].lower()
-    return "access denied" in head or "you don't have permission" in head
+    # Check a wider slice than the first 600 chars: the Akamai bot-manager
+    # interstitial ("akamai_validation.html" / "request_quota_reached.html" /
+    # "bm-verify=" / triggerInterstitialChallenge) is a short page (~2KB) that
+    # passes the min-length guard, so it must be caught here or it gets cached and
+    # poisons every later run (parses to zero data).
+    head = html[:4000].lower()
+    return ("access denied" in head
+            or "you don't have permission" in head
+            or "akamai_validation.html" in head
+            or "request_quota_reached.html" in head
+            or "bm-verify=" in head
+            or "triggerinterstitialchallenge" in head)
 
 
 def fetch_html(url, use_cache=True):

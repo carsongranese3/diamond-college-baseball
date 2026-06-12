@@ -41,6 +41,19 @@ _SITE_LABEL = {
     "offseason": "Offseason",
 }
 
+# Conference-tournament round labels, matched against the box-score event text
+# (e.g. "(2026 ACC Baseball Championship)"). Every one ends in "Tournament", which
+# the site phase + stage page use to recognize "a conference tournament game".
+_CONF_TOURNEYS = (
+    ("acc", "ACC Tournament"),
+    ("big ten", "Big Ten Tournament"),
+    ("big-ten", "Big Ten Tournament"),
+    ("big 12", "Big 12 Tournament"),
+    ("big-12", "Big 12 Tournament"),
+    ("big twelve", "Big 12 Tournament"),
+    ("sec", "SEC Tournament"),
+)
+
 # Per-game round labels (shown under a single game). NCAA games that fall outside
 # every postseason window degrade to the generic label.
 _GAME_LABEL = {
@@ -77,10 +90,18 @@ def game_phase(opponent, iso=None):
     opponent plus the game's date. Returns 'regular' for a regular-season game (so
     callers can still test `phase != 'regular'`), else the postseason round."""
     s = (opponent or "").lower()
-    if "sec" in s and ("championship" in s or "tournament" in s):
-        return _GAME_LABEL["sec_tournament"]
+    # NCAA postseason first (regionals / supers / CWS) — its event text always names
+    # the NCAA, and would otherwise also match the conference "championship" check.
     if "ncaa" in s or "world series" in s or "regional" in s:
         return _GAME_LABEL.get(_phase_for_date(_parse_iso(iso)), "NCAA Tournament")
+    # Any conference tournament/championship — SEC, ACC, Big Ten, Big 12, … — named
+    # by its conference so the per-game tag reads correctly. All end in "Tournament",
+    # which the regular -> conference-tournament transition keys on for every league.
+    if "championship" in s or "tournament" in s:
+        for kw, label in _CONF_TOURNEYS:
+            if kw in s:
+                return label
+        return "Conference Tournament"
     return "regular"
 
 

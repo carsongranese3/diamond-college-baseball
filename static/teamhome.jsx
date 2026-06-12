@@ -406,7 +406,10 @@ function HowItEnded({ schedule }) {
 
 // Window of 5 standings rows centred on this team.
 function ConfStrip({ teamId }) {
-  const teams = hpSecTeams();
+  // The strip follows the TEAM's own conference, not the global league selector.
+  const meTeam = (window.TEAM_BY_ID || {})[teamId];
+  const conf = (meTeam && meTeam.conference) || window.CURRENT_LEAGUE;
+  const teams = hpSecTeams(conf);
   const idx = teams.findIndex((t) => t.id === teamId);
   const total = teams.length;
   const win = 5;
@@ -415,7 +418,7 @@ function ConfStrip({ teamId }) {
   const slice = teams.slice(start, start + win);
   return (
     <div className="th-strip">
-      <div className="th-strip__meta mono hp-ink2">#{idx + 1} of {total} in the SEC</div>
+      <div className="th-strip__meta mono hp-ink2">#{idx + 1} of {total} in the {conf || "conference"}</div>
       {slice.map((t, i) => {
         const me = t.id === teamId;
         const pos = start + i + 1;

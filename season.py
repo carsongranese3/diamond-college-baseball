@@ -112,8 +112,8 @@ def _split_record(rec):
     return int(m.group(1)), int(m.group(2))
 
 
-def upcoming_schedules(end=SEASON_END):
-    """{seo: [game, ...]} of each SEC team's UPCOMING games (scheduled, not yet
+def upcoming_schedules(end=SEASON_END, conf="sec"):
+    """{seo: [game, ...]} of each `conf` team's UPCOMING games (scheduled, not yet
     final) from the ncaa.com scoreboard, for dates after today through `end`.
 
     Same per-game shape as build_season's schedules — score/result are null and the
@@ -141,11 +141,11 @@ def upcoming_schedules(end=SEASON_END):
             iso = _fmt_iso(g.get("startDate", ""))
             if not iso or iso <= today_iso:           # only genuinely future games
                 continue
-            if not (_is_sec(home) or _is_sec(away)):
+            if not (_in_conf(home, conf) or _in_conf(away, conf)):
                 continue
             gid = g.get("gameID")
             for side, other in ((home, away), (away, home)):
-                if not _is_sec(side):
+                if not _in_conf(side, conf):
                     continue
                 seo = side["names"]["seo"]
                 if (seo, gid) in seen:
@@ -162,7 +162,7 @@ def upcoming_schedules(end=SEASON_END):
                         "mark": (other["names"].get("char6") or oseo[:4]).upper(),
                         "logo": ncaa.logo_url(oseo),
                         "rank": rank_by.get(_norm(other["names"]["short"] or "")),
-                        "conf": _is_sec(other),
+                        "conf": _in_conf(other, conf),
                     },
                     "home": side is home,
                     "score": None,

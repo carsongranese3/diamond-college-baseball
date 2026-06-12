@@ -10,15 +10,24 @@ function bbxAbbr(t) {
 function bbxRec(t) {
   return t && t.ovrW != null ? `${t.ovrW}–${t.ovrL}` : "";
 }
+function _isoDaysApart(a, b) {
+  if (!a || !b) return 999;
+  return Math.round((new Date(a + "T00:00:00") - new Date(b + "T00:00:00")) / 86400000);
+}
 
 /* ---------- live scores ticker ---------- */
 // Games on the effective "today" (dev clock), deduped across home/away schedules;
 // falls back to the most recent played date when today's slate is empty.
-function bbxTickerGames() {
+function bbxTickerGames(league) {
   const sch = window.SCHEDULES || {};
   const byId = window.TEAM_BY_ID || {};
+  const inLeague = new Set(
+    (window.leagueTeams ? window.leagueTeams(league) : (window.TEAMS || [])).map((t) => t.id));
   const all = [];
-  for (const seo in sch) for (const g of sch[seo] || []) if (g.iso) all.push([seo, g]);
+  for (const seo in sch) {
+    if (!inLeague.has(seo)) continue;
+    for (const g of sch[seo] || []) if (g.iso) all.push([seo, g]);
+  }
   const onDay = (d) => all.filter(([, g]) => g.iso === d);
   let day = (window.SEASON_CLOCK || {}).today || window.SEASON_UPDATED;
   if (!onDay(day).length) {
@@ -40,11 +49,16 @@ function bbxTickerGames() {
                 status: g.result ? "FINAL" : (g.time || "TBD"),
                 game: g, hostId: seo });
   }
-  return rows.slice(0, 9);
+  return { day, rows: rows.slice(0, 9) };
 }
 
-function BbxTicker({ onGame }) {
-  const rows = bbxTickerGames();
+function BbxTicker({ onGame, league }) {
+  const { day, rows } = bbxTickerGames(league);
+  // "Live" = we're showing the effective today's slate AND at least one game isn't
+  // final yet. When everything's final (or we've fallen back to a past date's
+  // finals), the strip goes quiet instead of flashing the red LIVE banner.
+  const today = (window.SEASON_CLOCK || {}).today || window.SEASON_UPDATED;
+  const live = day === today && rows.some((g) => !g.final);
   const Row = ({ t, score, lead }) => (
     <div className={"bbx-tk__line" + (lead ? " bbx-tk__line--lead" : "")}>
       <span className="bbx-tk__team"><HPLogo team={t} size={15} />{bbxAbbr(t)}</span>
@@ -52,8 +66,8 @@ function BbxTicker({ onGame }) {
     </div>
   );
   return (
-    <div className="bbx-ticker">
-      <div className="bbx-ticker__label"><span className="bbx-pulse" />SCORES</div>
+    <div className={"bbx-ticker" + (live ? "" : " bbx-ticker--idle")}>
+      <div className="bbx-ticker__label"><span className="bbx-pulse" />{live ? "LIVE" : "SCORES"}</div>
       <div className="bbx-ticker__rail">
         {rows.length ? rows.map((g) => {
           const homeLead = g.hs != null && g.as != null && g.hs >= g.as;
@@ -90,14 +104,21 @@ function BbxHeroSide({ team, side, score, tag }) {
   );
 }
 
-function BbxGameOfDay({ onTeam }) {
-  const card = (typeof hpMarquee === "function" ? hpMarquee() : [])[0];
+function BbxGameOfDay({ onTeam, league }) {
+  const card = (typeof hpMarquee === "function" ? hpMarquee(league) : [])[0];
   if (!card) return null;
   const byId = window.TEAM_BY_ID || {};
   const host = card.host;
-  const opp = (card.opp && byId[card.opp.id]) || card.opp || null;
+  const oppId = card.opp && card.opp.id;
+  const opp = (oppId && byId[oppId]) || card.opp || null;
   const homeTeam = card.home ? host : opp, awayTeam = card.home ? opp : host;
-  const phaseLabel = (card.phase && card.phase !== "regular") ? card.phase : "SEC MATCHUP";
+  const phaseLabel = (card.phase && card.phase !== "regular") ? card.phase : ((league || "NCAA") + " MATCHUP");
+  // The full weekend series (played + upcoming) between host and opp — every game
+  // within ~3 days of the featured game, so a played game shows its score and an
+  // unplayed one shows its date. Typically a 3-game Fri–Sun series.
+  const series = (window.SCHEDULES[host.id] || [])
+    .filter((g) => g.opp && g.opp.id === oppId && Math.abs(_isoDaysApart(g.iso, card.iso)) <= 3)
+    .sort((a, b) => (a.iso || "").localeCompare(b.iso || ""));
   return (
     <div className="bbx-section">
       <div className="bbx-eyebrow-row">
@@ -106,9 +127,28 @@ function BbxGameOfDay({ onTeam }) {
         <span className="bbx-eyebrow bbx-faint">{phaseLabel.toUpperCase()}</span>
       </div>
       <div className="bbx-hero">
-        <BbxHeroSide team={homeTeam} side="home" tag="HOME" />
-        <BbxHeroSide team={awayTeam} side="away" tag="AWAY" />
-        <div className="bbx-hero__vs"><span className="bbx-hero__vstxt">VS</span></div>
+        {/* Away on the left, home on the right. `side` selects the mirror styling
+            (left- vs right-hugging crest/score), not the team's home/away role. */}
+        <BbxHeroSide team={awayTeam} side="home" tag="AWAY" />
+        <BbxHeroSide team={homeTeam} side="away" tag="HOME" />
+        {series.length ? (
+          <div className="bbx-hero__series">
+            {series.map((g, i) => {
+              const played = !!(g.result && g.score);
+              const hs = g.home ? g.score && g.score.us : g.score && g.score.them;
+              const as = g.home ? g.score && g.score.them : g.score && g.score.us;
+              return (
+                <div key={i} className={"bbx-gamebox" + (played ? " bbx-gamebox--final" : "")}>
+                  <div className="bbx-gamebox__g">GAME {i + 1}</div>
+                  {/* Away–home to match the hero layout (away left, home right). */}
+                  <div className="bbx-gamebox__v">{played ? `${as}–${hs}` : (g.date || g.time || "TBD")}</div>
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="bbx-hero__vs"><span className="bbx-hero__vstxt">VS</span></div>
+        )}
       </div>
     </div>
   );
@@ -120,14 +160,15 @@ function bbxWeekLabel(w) {
   const f = (iso) => new Date(iso + "T00:00:00").toLocaleDateString(undefined, { month: "short", day: "numeric" });
   return `WEEK OF ${f(w.start)} – ${f(w.end)}`;
 }
-function BbxPlayerOfWeek({ onTeam }) {
+function BbxPlayerOfWeek({ onTeam, league }) {
   const [data, setData] = React.useState(null);
   const [side, setSide] = React.useState("batter");
   React.useEffect(() => {
     let live = true;
-    window.fetchPlayerOfWeek().then((d) => live && setData(d)).catch(() => {});
+    setData(null);
+    window.fetchPlayerOfWeek(league).then((d) => live && setData(d)).catch(() => {});
     return () => { live = false; };
-  }, []);
+  }, [league]);
   const p = data && data[side];
   const team = p && (window.TEAM_BY_ID || {})[p.team];
   return (
@@ -178,8 +219,8 @@ function BbxPlayerOfWeek({ onTeam }) {
 }
 
 /* ---------- hot / cold ---------- */
-function BbxHotCold({ onTeam }) {
-  const teams = hpSecTeams();
+function BbxHotCold({ onTeam, league }) {
+  const teams = hpSecTeams(league);
   const withStreak = teams.map((t) => ({ t, s: hpStreak(t.streak) })).filter((x) => x.s);
   const hot = withStreak.filter((x) => x.s.t === "W").sort((a, b) => b.s.n - a.s.n).slice(0, 3);
   const cold = withStreak.filter((x) => x.s.t === "L").sort((a, b) => b.s.n - a.s.n).slice(0, 3);
@@ -204,21 +245,57 @@ function BbxHotCold({ onTeam }) {
   );
 }
 
-/* ---------- SEC standings mini ---------- */
-function BbxStandingsMini({ onTeam, onNav }) {
-  const teams = hpSecTeams().slice(0, 6);
+/* ---------- standings mini ---------- */
+// NCAA shows the official Top 25; a conference shows its standings by record. Both
+// show ~6 rows at a time in a scroll area (.bbx-scroll6) so the rest stays reachable.
+function BbxTop25Mini({ onTeam }) {
+  const [data, setData] = React.useState(null);
+  React.useEffect(() => {
+    let live = true;
+    window.fetchTop25().then((d) => live && setData(d)).catch(() => {});
+    return () => { live = false; };
+  }, []);
+  const rows = data || [];
   return (
     <div className="bbx-panel bbx-pad2">
-      <div className="bbx-eyebrow bbx-mb">SEC STANDINGS</div>
-      {teams.map((t, i) => (
-        <button key={t.id} className={"bbx-row" + (i < teams.length - 1 ? " bbx-row--div" : "")}
-                onClick={() => onTeam && onTeam(t.id)}>
-          <span className="bbx-rank">{i + 1}</span>
-          <HPLogo team={t} size={20} />
-          <span className="bbx-row__name">{t.name}</span>
-          <span className="bbx-row__rec">{t.confW}–{t.confL}</span>
-        </button>
-      ))}
+      <div className="bbx-eyebrow bbx-mb">NCAA TOP 25</div>
+      {!data ? <div className="bbx-faint bbx-pad">Loading…</div>
+       : (
+        <div className="bbx-scroll6">
+          {rows.map((t, i) => (
+            <button key={t.rank}
+                    className={"bbx-row" + (i < rows.length - 1 ? " bbx-row--div" : "") + (t.known ? "" : " bbx-row--static")}
+                    onClick={() => t.known && onTeam && onTeam(t.seo)}>
+              <span className="bbx-rank">{t.rank}</span>
+              <HPLogo team={{ id: t.seo, logo: t.logo, name: t.name,
+                              mark: (t.name || "").slice(0, 4).toUpperCase() }} size={20} />
+              <span className="bbx-row__name">{t.name}</span>
+              <span className="bbx-row__rec">{t.record}</span>
+            </button>
+          ))}
+        </div>
+       )}
+    </div>
+  );
+}
+
+function BbxStandingsMini({ onTeam, onNav, league }) {
+  if (league === "NCAA") return <BbxTop25Mini onTeam={onTeam} />;
+  const teams = hpSecTeams(league);
+  return (
+    <div className="bbx-panel bbx-pad2">
+      <div className="bbx-eyebrow bbx-mb">{(league || "NCAA")} STANDINGS</div>
+      <div className="bbx-scroll6">
+        {teams.map((t, i) => (
+          <button key={t.id} className={"bbx-row" + (i < teams.length - 1 ? " bbx-row--div" : "")}
+                  onClick={() => onTeam && onTeam(t.id)}>
+            <span className="bbx-rank">{i + 1}</span>
+            <HPLogo team={t} size={20} />
+            <span className="bbx-row__name">{t.name}</span>
+            <span className="bbx-row__rec">{t.confW}–{t.confL}</span>
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
@@ -228,14 +305,15 @@ const BBX_LEADER_CATS = {
   bat: [["avg", false], ["hr", false], ["rbi", false], ["ops", true]],
   pit: [["era", false], ["k", false], ["whip", false], ["fip", true]],
 };
-function BbxLeaders({ onTeam }) {
+function BbxLeaders({ onTeam, league }) {
   const [data, setData] = React.useState(null);
   const [side, setSide] = React.useState("bat");
   React.useEffect(() => {
     let live = true;
-    window.fetchConferenceLeaders().then((d) => live && setData(d)).catch(() => {});
+    setData(null);
+    window.fetchConferenceLeaders(league).then((d) => live && setData(d)).catch(() => {});
     return () => { live = false; };
-  }, []);
+  }, [league]);
   const byId = window.TEAM_BY_ID || {};
   const cats = BBX_LEADER_CATS[side];
   return (
@@ -298,16 +376,16 @@ function BbxLeaders({ onTeam }) {
 }
 
 /* ---------- composed regular-season homepage ---------- */
-const HomeRegular = ({ onTeam, onNav, onGame }) => (
+const HomeRegular = ({ onTeam, onNav, onGame, league }) => (
   <div className="bbx">
-    <BbxTicker onGame={onGame} />
-    <BbxGameOfDay onTeam={onTeam} />
+    <BbxTicker onGame={onGame} league={league} />
+    <BbxGameOfDay onTeam={onTeam} league={league} />
     <div className="bbx-cols">
-      <BbxPlayerOfWeek onTeam={onTeam} />
-      <BbxHotCold onTeam={onTeam} />
-      <BbxStandingsMini onTeam={onTeam} onNav={onNav} />
+      <BbxPlayerOfWeek onTeam={onTeam} league={league} />
+      <BbxHotCold onTeam={onTeam} league={league} />
+      <BbxStandingsMini onTeam={onTeam} onNav={onNav} league={league} />
     </div>
-    <BbxLeaders onTeam={onTeam} />
+    <BbxLeaders onTeam={onTeam} league={league} />
   </div>
 );
 window.HomeRegular = HomeRegular;

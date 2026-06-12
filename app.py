@@ -7,6 +7,7 @@ Endpoints:
 """
 
 import datetime
+import os
 import threading
 import time
 
@@ -24,7 +25,8 @@ from stats import compute_team_stats
 
 
 def _team_name(seo):
-    data = _memo("season", season.SEASON_AGGREGATE_TTL, season.build_season)
+    # Resolve across every conference (an ACC team isn't in the SEC build).
+    data = _season_for_league("ncaa")
     return next((t["name"] for t in data["teams"] if t["id"] == seo), seo)
 
 app = Flask(__name__, static_folder="static", static_url_path="/static")
@@ -45,11 +47,89 @@ def _memo(key, ttl, producer):
     return value
 
 
-_ROUND_RANK = {"regular": 0, "SEC Tournament": 1, "NCAA Regional": 2,
-               "NCAA Super Regional": 3, "College World Series": 4}
-_ROUND_PHASE = {"regular": "regular", "SEC Tournament": "sec_tournament",
+# ── Conferences / leagues ────────────────────────────────────────────────────
+# "League" in the API is either a conference (its scoreboard seo: sec/acc/…) or
+# "ncaa" meaning every conference that has a 2026/<Conf>/ data folder.
+
+def _available_confs():
+    """[(label, seo)] for each conference folder under the 2026/ data root, e.g.
+    [("ACC", "acc"), ("SEC", "sec")]."""
+    root = local_data.DATA_ROOT
+    out = []
+    if os.path.isdir(root):
+        for d in sorted(os.listdir(root)):
+            full = os.path.join(root, d)
+            if os.path.isdir(full) and not local_data._is_team_dir(full):
+                out.append((d, d.lower().replace(" ", "-")))
+    return out
+
+
+def _confs_for_league(league):
+    """The (label, seo) conferences a league spans: all of them for 'ncaa', else
+    the single one whose seo or label matches."""
+    confs = _available_confs()
+    lg = (league or "sec").lower()
+    if lg in ("ncaa", "all", ""):
+        return confs
+    return [c for c in confs if c[1] == lg or c[0].lower() == lg]
+
+
+def _season_for_league(league):
+    """{teams (each tagged with its 'conference'), schedules, updated} merged across
+    the league's conferences. Lightweight (scoreboard-built); memoized per league."""
+    def build():
+        teams, schedules = [], {}
+        for label, seo in _confs_for_league(league):
+            d = _memo(f"season:conf:{seo}", season.SEASON_AGGREGATE_TTL,
+                      lambda seo=seo: season.build_season(conf=seo))
+            teams += [{**t, "conference": label} for t in d["teams"]]
+            schedules.update(d["schedules"])
+        return {"teams": teams, "schedules": schedules,
+                "updated": datetime.datetime.now().isoformat(timespec="minutes")}
+    return _memo(f"season:{league}", season.SEASON_AGGREGATE_TTL, build)
+
+
+def _conf_full(label, seo, asof, test):
+    """(teams-with-records, full-schedules) for one conference — played games from
+    saved box scores, plus upcoming (scoreboard) and bracket-scheduled games, with
+    each team tagged by conference. The per-conference half of /api/bootstrap."""
+    data = _memo(f"season:conf:{seo}", season.SEASON_AGGREGATE_TTL,
+                 lambda seo=seo: season.build_season(conf=seo))
+    schedules = _memo(f"local_schedules:{seo}", season.SEASON_AGGREGATE_TTL,
+                      lambda seo=seo, data=data: local_data.schedules(data["teams"]))
+    upcoming = _memo(f"upcoming:{seo}:{asof}", 1800,
+                     lambda seo=seo: season.upcoming_schedules(conf=seo))
+    conf_seos = {t["id"] for t in data["teams"]}
+    bracket_up = _memo(f"bracket_up:{seo}:{asof}", 1800,
+                       lambda conf_seos=conf_seos: season.bracket_upcoming(conf_seos))
+    full = {}
+    for tseo, played in schedules.items():
+        played_dates = {g["iso"] for g in played if g.get("iso")}
+        games = list(played) + [g for g in upcoming.get(tseo, [])
+                                if g.get("iso") not in played_dates]
+        have_dates = {g.get("iso") for g in games}
+        games += [g for g in bracket_up.get(tseo, []) if g.get("iso") not in have_dates]
+        if test:
+            games = [dict(g, result=None, score=None) if (g.get("iso") or "") > asof else g
+                     for g in games]
+        games.sort(key=lambda g: g.get("iso") or "")
+        full[tseo] = games
+    records = local_data.regular_season_records(full)
+    teams = [{**t, "conference": label, **records.get(t["id"], {})}
+             for t in data["teams"]]
+    return teams, full
+
+
+# Every conference tournament (SEC/ACC/Big Ten/Big 12/…) shares one rank + phase key.
+_CONF_TOURNEYS = ("SEC Tournament", "ACC Tournament", "Big Ten Tournament",
+                  "Big 12 Tournament", "Conference Tournament")
+_ROUND_RANK = {"regular": 0, "NCAA Regional": 2,
+               "NCAA Super Regional": 3, "College World Series": 4,
+               **{r: 1 for r in _CONF_TOURNEYS}}
+_ROUND_PHASE = {"regular": "regular",
                 "NCAA Regional": "regionals", "NCAA Super Regional": "super_regionals",
-                "College World Series": "cws"}
+                "College World Series": "cws",
+                **{r: "sec_tournament" for r in _CONF_TOURNEYS}}
 
 
 def _live_phase(full):
@@ -57,19 +137,30 @@ def _live_phase(full):
     games end (rather than on a fixed calendar boundary): the round of today's
     games if any, else the round of the soonest upcoming game. Falls back to the
     date-based phase when nothing is scheduled (offseason). CWS-vs-Finals is
-    disambiguated by the date window since both carry the same game-level round."""
+    disambiguated by the date window since both carry the same game-level round.
+
+    The regular -> conference-tournament jump is data-driven: the site stays in the
+    Regular Season until the LAST regular-season game on any team's schedule has
+    been played (i.e. every team has finished), then moves on — so a late/makeup
+    regular game keeps the site in-season even past the nominal calendar window."""
     datebased = phase.current_phase()
     today = clock.today().isoformat()
-    rounds_today, next_iso, next_round = set(), None, None
+    rounds_today, next_iso, next_round, last_regular = set(), None, None, ""
     for games in full.values():
         for g in games:
             iso, rd = g.get("iso"), g.get("phase") or "regular"
             if not iso:
                 continue
+            if rd == "regular" and iso > last_regular:
+                last_regular = iso
             if iso == today:
                 rounds_today.add(rd)
             elif iso > today and (next_iso is None or iso < next_iso):
                 next_iso, next_round = iso, rd
+    # Hold the Regular Season until every team's final regular game has been played
+    # (today is on or before the last regular-season date); only then advance.
+    if last_regular and today <= last_regular:
+        return {"phase": "regular", "label": phase._SITE_LABEL["regular"]}
     if rounds_today:
         rd = max(rounds_today, key=lambda r: _ROUND_RANK.get(r, -1))
     elif next_round:
@@ -118,12 +209,12 @@ def _ip_float(ip):
         return 0.0
 
 
-def _conference_leaders():
-    """Top-3 conference leaders in AVG / HR / ERA, found by walking every team's
+def _conference_leaders(league="sec"):
+    """Top-3 leaders in AVG / HR / ERA for a league, found by walking every team's
     roster: pool the qualified players across all teams, then take the best three
     (so one team can place multiple players, and a later team pushes weaker ones
     out of the top three)."""
-    data = _memo("season", season.SEASON_AGGREGATE_TTL, season.build_season)
+    data = _season_for_league(league)
     avg_pool, rbi_pool, hr_pool, ops_pool = [], [], [], []
     era_pool, k_pool, wins_pool, whip_pool, fip_pool = [], [], [], [], []
     for t in data["teams"]:
@@ -206,17 +297,18 @@ def _conference_leaders():
 
 @app.route("/api/conference-leaders")
 def conference_leaders():
-    return jsonify(_memo("conference_leaders", season.SEASON_AGGREGATE_TTL,
-                         _conference_leaders))
+    league = request.args.get("league", "sec")
+    return jsonify(_memo(f"conference_leaders:{league}", season.SEASON_AGGREGATE_TTL,
+                         lambda: _conference_leaders(league)))
 
 
-def _rankings_history():
-    """Each team's SEC standings position week by week, from the precomputed
-    weekly records (scripts/build_records.py). For every week, teams are ranked by
-    conference win pct (tiebreak conf wins, then name) — the same ordering the
-    Standings table uses — and assigned 1..N. Returns
+def _rankings_history(league="sec"):
+    """Each team's standings position week by week within its league, from the
+    precomputed weekly records (scripts/build_records.py). For every week, teams are
+    ranked by conference win pct (tiebreak conf wins, then name) — the same ordering
+    the Standings table uses — and assigned 1..N. Returns
     {weeks: [{n, start, end}], teams: {seo: [{n, rank, confW, confL, ovrW, ovrL}]}}."""
-    data = _memo("season", season.SEASON_AGGREGATE_TTL, season.build_season)
+    data = _season_for_league(league)
     teams = data["teams"]
     weekly = local_data.weekly_records(teams)
     name_by = {t["id"]: t["name"] for t in teams}
@@ -240,126 +332,221 @@ def _rankings_history():
 
 @app.route("/api/rankings/history")
 def rankings_history():
-    return jsonify(_memo("rankings_history", season.SEASON_AGGREGATE_TTL,
-                         _rankings_history))
+    league = request.args.get("league", "sec")
+    return jsonify(_memo(f"rankings_history:{league}", season.SEASON_AGGREGATE_TTL,
+                         lambda: _rankings_history(league)))
 
 
-def _player_of_week():
-    """Best batter + best pitcher over the PREVIOUS Mon-Sun week, by a simple weekly
-    formula. Batter score = on-base (incl. HBP) + slugging; pitcher score (game-score
-    style) = outs - 2*runs - hits - walks. Each winner carries their team and a
-    SEASON stat line (basic + computable advanced) for display. Returns
-    {window, batter|None, pitcher|None}."""
-    data = _memo("season", season.SEASON_AGGREGATE_TTL, season.build_season)
+def _slug(name):
+    """A best-effort ncaa.com logo slug from a team name (Georgia Tech -> georgia-tech)."""
+    s = "".join(c if c.isalnum() else "-" for c in (name or "").lower())
+    while "--" in s:
+        s = s.replace("--", "-")
+    return s.strip("-")
+
+
+def _top25():
+    """The official D1 Top 25 poll as [{rank, name, record, prev, seo, logo,
+    conference, known}]. Teams we have data for get their real seo/logo/conference
+    (and are clickable); others get a slugged logo + name only. Powers the NCAA
+    standings view."""
+    try:
+        rows = ncaa.top25().get("data", [])
+    except (ncaa.NotFound, ncaa.APIError):
+        return []
+    by_norm = {season._norm(t["name"]): t
+               for t in _season_for_league("ncaa")["teams"]}
+    out = []
+    for r in rows:
+        name = r.get("TEAM") or r.get("School") or ""
+        try:
+            rank = int(r.get("RANK") or r.get("Rank"))
+        except (TypeError, ValueError):
+            continue
+        t = by_norm.get(season._norm(name))
+        seo = t["id"] if t else _slug(name)
+        out.append({
+            "rank": rank,
+            "name": t["name"] if t else name,
+            "record": r.get("OVERALL RECORD") or r.get("Record") or "",
+            "prev": str(r.get("PREVIOUS RANK") or "").strip(),
+            "seo": seo,
+            "logo": t["logo"] if t else (ncaa.logo_url(seo) if seo else ""),
+            "conference": t.get("conference") if t else None,
+            "known": t is not None,
+        })
+    out.sort(key=lambda x: x["rank"])
+    return out[:25]
+
+
+@app.route("/api/rankings/top25")
+def rankings_top25():
+    return jsonify(_memo("top25", season.SEASON_AGGREGATE_TTL, _top25))
+
+
+def _prev_week_window():
+    """The previous COMPLETED Tue–Mon week as (start, end) dates. Weeks run Tue–Mon
+    (a Monday game belongs to the weekend it follows), so this is the week before the
+    one containing today."""
+    today = clock.today()
+    this_tue = today - datetime.timedelta(days=(today.weekday() - 1) % 7)
+    return this_tue - datetime.timedelta(days=7), this_tue - datetime.timedelta(days=1)
+
+
+# Player-of-week scoring formulas, shared by Player of the Week and Players to Watch.
+# Batter = on-base (incl. HBP) + slugging; pitcher = game-score style. Each returns
+# None below the volume guard so unqualified lines are skipped.
+def _batter_week_score(c):
+    ab, pa = c["ab"], c["ab"] + c["bb"] + c["hbp"]
+    if pa < 6:                               # ≥6 plate appearances
+        return None
+    return (c["h"] + c["bb"] + c["hbp"]) / pa + (c["tb"] / ab if ab else 0)
+
+
+def _pitcher_week_score(c):
+    if c["outs"] < 9:                        # ≥3 IP
+        return None
+    return c["outs"] - 2 * c["r"] - c["h"] - c["bb"]
+
+
+def _batter_week_card(seo, pname, c, team_by):
+    """A batter display card from that week's counting totals."""
+    t, ab = team_by.get(seo, {}), c["ab"]
+    denom = ab + c["bb"] + c["hbp"]
+    avg = c["h"] / ab if ab else 0.0
+    obp = (c["h"] + c["bb"] + c["hbp"]) / denom if denom else 0.0
+    slg = c["tb"] / ab if ab else 0.0
+    return {
+        "player": pname, "team": seo, "abbr": t.get("mark"), "teamName": t.get("name"),
+        "pos": c.get("pos") or "",
+        "basic": [{"label": "AVG", "value": boxutil.fmt3(avg)},
+                  {"label": "HR", "value": str(c["hr"])},
+                  {"label": "RBI", "value": str(c["rbi"])}],
+        "adv": [{"label": "OPS", "value": boxutil.fmt3(obp + slg)},
+                {"label": "ISO", "value": boxutil.fmt3(slg - avg)},
+                {"label": "OBP", "value": boxutil.fmt3(obp)}],
+    }
+
+
+def _pitcher_week_card(seo, pname, c, team_by):
+    """A pitcher display card from that week's counting totals."""
+    t, outs = team_by.get(seo, {}), c["outs"]
+    era = c["er"] * 27 / outs if outs else 0.0
+    whip = (c["h"] + c["bb"]) * 3 / outs if outs else 0.0
+    return {
+        "player": pname, "team": seo, "abbr": t.get("mark"), "teamName": t.get("name"),
+        "pos": "P",
+        "basic": [{"label": "ERA", "value": boxutil.fmt2(era)},
+                  {"label": "K", "value": str(c["k"])},
+                  {"label": "IP", "value": boxutil.outs_to_ip(outs)}],
+        "adv": [{"label": "FIP", "value": boxutil.fip(c["hr"], c["bb"], c["hbp"], c["k"], outs)},
+                {"label": "WHIP", "value": boxutil.fmt2(whip)},
+                {"label": "K/9", "value": boxutil.per9(c["k"], outs)}],
+    }
+
+
+def _player_of_week(league="sec"):
+    """Best batter + best pitcher over the PREVIOUS Tue-Mon week in a league, by the
+    weekly formulas above. Each winner carries their team and that week's stat line.
+    Returns {window, batter|None, pitcher|None}."""
+    data = _season_for_league(league)
     teams = data["teams"]
     team_by = {t["id"]: t for t in teams}
-    today = clock.today()
-    this_mon = today - datetime.timedelta(days=today.weekday())
-    start = this_mon - datetime.timedelta(days=7)
-    end = this_mon - datetime.timedelta(days=1)
+    start, end = _prev_week_window()
     lines = local_data.week_player_lines(teams, start.isoformat(), end.isoformat())
 
     best_bat = best_pit = None  # (score, seo, name, weekly_counts)
     for seo, d in lines.items():
         for pname, c in d["batting"].items():
-            ab, pa = c["ab"], c["ab"] + c["bb"] + c["hbp"]
-            if pa < 6:                       # volume guard: ≥6 plate appearances
-                continue
-            score = (c["h"] + c["bb"] + c["hbp"]) / pa + (c["tb"] / ab if ab else 0)
-            if best_bat is None or score > best_bat[0]:
-                best_bat = (score, seo, pname, c)
+            s = _batter_week_score(c)
+            if s is not None and (best_bat is None or s > best_bat[0]):
+                best_bat = (s, seo, pname, c)
         for pname, c in d["pitching"].items():
-            if c["outs"] < 9:                # ≥3 IP
-                continue
-            score = c["outs"] - 2 * c["r"] - c["h"] - c["bb"]
-            if best_pit is None or score > best_pit[0]:
-                best_pit = (score, seo, pname, c)
+            s = _pitcher_week_score(c)
+            if s is not None and (best_pit is None or s > best_pit[0]):
+                best_pit = (s, seo, pname, c)
 
-    # Display the PREVIOUS WEEK's line — the stats that earned the honor — computed
-    # straight from that week's counting totals (not season stats).
-    batter = pitcher = None
-    if best_bat:
-        _s, seo, pname, c = best_bat
-        t, ab = team_by.get(seo, {}), c["ab"]
-        denom = ab + c["bb"] + c["hbp"]
-        avg = c["h"] / ab if ab else 0.0
-        obp = (c["h"] + c["bb"] + c["hbp"]) / denom if denom else 0.0
-        slg = c["tb"] / ab if ab else 0.0
-        batter = {
-            "player": pname, "team": seo, "abbr": t.get("mark"), "teamName": t.get("name"),
-            "pos": c.get("pos") or "",
-            "basic": [{"label": "AVG", "value": boxutil.fmt3(avg)},
-                      {"label": "HR", "value": str(c["hr"])},
-                      {"label": "RBI", "value": str(c["rbi"])}],
-            "adv": [{"label": "OPS", "value": boxutil.fmt3(obp + slg)},
-                    {"label": "ISO", "value": boxutil.fmt3(slg - avg)},
-                    {"label": "OBP", "value": boxutil.fmt3(obp)}],
-        }
-    if best_pit:
-        _s, seo, pname, c = best_pit
-        t, outs = team_by.get(seo, {}), c["outs"]
-        era = c["er"] * 27 / outs if outs else 0.0
-        whip = (c["h"] + c["bb"]) * 3 / outs if outs else 0.0
-        pitcher = {
-            "player": pname, "team": seo, "abbr": t.get("mark"), "teamName": t.get("name"),
-            "pos": "P",
-            "basic": [{"label": "ERA", "value": boxutil.fmt2(era)},
-                      {"label": "K", "value": str(c["k"])},
-                      {"label": "IP", "value": boxutil.outs_to_ip(outs)}],
-            "adv": [{"label": "FIP", "value": boxutil.fip(c["hr"], c["bb"], c["hbp"], c["k"], outs)},
-                    {"label": "WHIP", "value": boxutil.fmt2(whip)},
-                    {"label": "K/9", "value": boxutil.per9(c["k"], outs)}],
-        }
+    batter = _batter_week_card(*best_bat[1:], team_by) if best_bat else None
+    pitcher = _pitcher_week_card(*best_pit[1:], team_by) if best_pit else None
     return {"window": {"start": start.isoformat(), "end": end.isoformat()},
             "batter": batter, "pitcher": pitcher}
 
 
+def _players_to_watch(league="sec", n=4):
+    """Top-N batters + top-N pitchers OVER THE FULL SEASON (to date) by the same
+    formula as Player of the Week, at most ONE per team within each list (so the four
+    batter cards are four different teams; a team may appear once among batters and
+    once among pitchers). Volume qualifiers scale with each team's games played so a
+    small-sample line (e.g. a 4-for-6 bench bat) doesn't surface. {batters, pitchers}."""
+    data = _season_for_league(league)
+    teams = data["teams"]
+    schedules = data.get("schedules") or {}
+    team_by = {t["id"]: t for t in teams}
+    today = clock.today().isoformat()
+    lines = local_data.week_player_lines(teams, "2026-01-01", today)   # season to date
+
+    bats, pits = [], []          # each team's single best (score, seo, name, counts)
+    for seo, d in lines.items():
+        gp = sum(1 for g in (schedules.get(seo) or []) if g.get("result"))
+        bat_min = max(6, 2 * gp)     # ≥2 PA per team game (qualified-ish hitter)
+        pit_min = max(9, gp)         # ≥~1 IP per 3 team games
+        tb = tp = None
+        for pname, c in d["batting"].items():
+            if c["ab"] + c["bb"] + c["hbp"] < bat_min:
+                continue
+            s = _batter_week_score(c)
+            if s is not None and (tb is None or s > tb[0]):
+                tb = (s, seo, pname, c)
+        for pname, c in d["pitching"].items():
+            if c["outs"] < pit_min:
+                continue
+            s = _pitcher_week_score(c)
+            if s is not None and (tp is None or s > tp[0]):
+                tp = (s, seo, pname, c)
+        if tb:
+            bats.append(tb)
+        if tp:
+            pits.append(tp)
+    bats.sort(key=lambda x: x[0], reverse=True)
+    pits.sort(key=lambda x: x[0], reverse=True)
+    return {
+        "batters": [_batter_week_card(seo, p, c, team_by) for _s, seo, p, c in bats[:n]],
+        "pitchers": [_pitcher_week_card(seo, p, c, team_by) for _s, seo, p, c in pits[:n]],
+    }
+
+
 @app.route("/api/player-of-week")
 def player_of_week():
+    league = request.args.get("league", "sec")
     # Keyed by the effective date so the time machine picks the right prior week.
-    return jsonify(_memo("potw:" + clock.today().isoformat(), 1800, _player_of_week))
+    return jsonify(_memo(f"potw:{clock.today().isoformat()}:{league}", 1800,
+                         lambda: _player_of_week(league)))
+
+
+@app.route("/api/players-to-watch")
+def players_to_watch():
+    league = request.args.get("league", "sec")
+    return jsonify(_memo(f"ptw:{clock.today().isoformat()}:{league}", 1800,
+                         lambda: _players_to_watch(league)))
 
 
 @app.route("/api/bootstrap")
 def bootstrap():
-    data = _memo("season", season.SEASON_AGGREGATE_TTL, season.build_season)
-    # Schedules/scores come solely from the local 2026/ folders; the API still
-    # supplies the team list, rankings (rank/RPI/order), and logos.
-    schedules = _memo("local_schedules", season.SEASON_AGGREGATE_TTL,
-                      lambda: local_data.schedules(data["teams"]))
+    # Build EVERY conference that has a 2026/<Conf>/ folder and merge — the team list
+    # carries a `conference` tag and the frontend filters by the chosen league.
+    # Schedules/scores come from the local 2026/ folders; the API supplies the team
+    # list, rankings (rank/RPI/order), and logos.
     asof = season._today().isoformat()
     test = clock.is_test()
-    # Keyed by the effective date so test dates don't pollute the live cache.
-    upcoming = _memo("upcoming:" + asof, 1800, season.upcoming_schedules)
-    # Bracket-scheduled postseason games (e.g. CWS) the scoreboard doesn't carry yet.
-    sec_seos = {t["id"] for t in data["teams"]}
-    bracket_up = _memo("bracket_up:" + asof, 1800,
-                       lambda: season.bracket_upcoming(sec_seos))
-    full = {}
-    for seo, played in schedules.items():
-        # The scoreboard sometimes lists a played game as 'pre' (ncaa.com lag), so
-        # only add upcoming games on dates we have NO box score for — no duplicates.
-        played_dates = {g["iso"] for g in played if g.get("iso")}
-        games = list(played) + [g for g in upcoming.get(seo, [])
-                                if g.get("iso") not in played_dates]
-        # Add bracket-scheduled games on any date not already present.
-        have_dates = {g.get("iso") for g in games}
-        games += [g for g in bracket_up.get(seo, []) if g.get("iso") not in have_dates]
-        if test:
-            # Time machine: games after the test date read as not-yet-played, so the
-            # whole site reflects that day. With test off this loop is skipped.
-            games = [dict(g, result=None, score=None) if (g.get("iso") or "") > asof else g
-                     for g in games]
-        games.sort(key=lambda g: g.get("iso") or "")
-        full[seo] = games
-    # Standings/records skip result=None games, so in test mode this reflects only
-    # games up to the test date.
-    records = local_data.regular_season_records(full)
-    teams = [{**t, **records.get(t["id"], {})} for t in data["teams"]]
+    all_teams, full = [], {}
+    for label, seo in _available_confs():
+        teams, conf_full = _conf_full(label, seo, asof, test)
+        all_teams += teams
+        full.update(conf_full)
     return jsonify({
-        "teams": teams,
+        "teams": all_teams,
         "schedules": full,
-        "updated": data["updated"],
+        "updated": datetime.datetime.now().isoformat(timespec="minutes"),
         "phase": _live_phase(full),
         "super_regionals": _memo("super_regionals", 1800, _super_regionals),
         "regional_cities": _memo("regional_cities", 1800, _regional_cities),
@@ -379,7 +566,8 @@ def dev_clock():
 
 @app.route("/api/team/<seo>")
 def team(seo):
-    data = _memo("season", season.SEASON_AGGREGATE_TTL, season.build_season)
+    # Look across every conference so ACC/Big-Ten/… team pages resolve, not just SEC.
+    data = _season_for_league("ncaa")
     sched = data["schedules"].get(seo)
     if sched is None:
         abort(404)
@@ -449,11 +637,26 @@ def bracket_ncaa():
 
 @app.route("/api/bracket/sec")
 def bracket_sec():
-    data = _memo("season", season.SEASON_AGGREGATE_TTL, season.build_season)
-    schedules = _memo("local_schedules", season.SEASON_AGGREGATE_TTL,
+    data = _season_for_league("sec")
+    schedules = _memo("local_schedules:sec", season.SEASON_AGGREGATE_TTL,
                       lambda: local_data.schedules(data["teams"]))
     records = local_data.regular_season_records(schedules)
     return jsonify(bracket.sec_bracket(data["teams"], schedules, records))
+
+
+@app.route("/api/bracket/conf/<league>")
+def bracket_conf(league):
+    """Any conference's tournament bracket, reconstructed from its local games.
+    `league` is the conference label or seo (e.g. "SEC" / "acc"). Empty rounds
+    when that conference hasn't scheduled its tournament yet."""
+    data = _season_for_league(league)
+    schedules = _memo(f"local_schedules:{league.lower()}", season.SEASON_AGGREGATE_TTL,
+                      lambda: local_data.schedules(data["teams"]))
+    phase_label = bracket.conf_tourney_phase(schedules)
+    if not phase_label:
+        return jsonify({"title": "", "seeds": [], "rounds": []})
+    records = local_data.regular_season_records(schedules)
+    return jsonify(bracket.conf_bracket(data["teams"], schedules, records, phase_label))
 
 
 @app.route("/")

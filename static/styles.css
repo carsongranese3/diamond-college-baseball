@@ -27,9 +27,9 @@
 /* Dark mode — warm darks to keep the almanac feel; just overrides the palette
    vars, since the whole UI is built on them. Toggled via [data-theme] on <html>. */
 :root[data-theme="dark"] {
-  --bg: #15171a;
+  --bg: #0A0E16;                      /* near-black page base (matches the .bbx home) */
   --bg-2: #1d2024;
-  --paper: #202529;
+  --paper: #202529;                  /* cards + the header stay this lighter charcoal */
   --ink: #ece7db;
   --ink-2: #c4c9ce;
   --muted: #8b949d;
@@ -555,6 +555,12 @@ a { color: inherit; text-decoration: none; }
 .player-statsbar .segmented { margin-bottom: 6px; flex: none; }
 .segmented--sm { padding: 2px; }
 .segmented--sm .segmented__btn { padding: 4px 12px; font-size: 11px; }
+/* League selector in the top bar — compact, no bottom margin. */
+.topbar__league { margin-bottom: 0; }
+.topbar__league .segmented__btn { padding: 4px 11px; font-size: 11px; }
+/* Top-25 rows for teams we have no data for aren't clickable. */
+.stand-table .row--static { cursor: default; }
+.bbx-row--static { cursor: default; }
 
 /* Player batting/pitching toggle */
 .player-toggle {
@@ -2185,6 +2191,9 @@ a { color: inherit; text-decoration: none; }
   font-size: 11px; font-weight: 600; letter-spacing: 0.14em; }
 .bbx-pulse { width: 7px; height: 7px; border-radius: 50%; background: #fff; animation: bbxpulse 1.6s infinite; }
 @keyframes bbxpulse { 0% { box-shadow: 0 0 0 0 rgba(255,255,255,.5);} 70%{ box-shadow:0 0 0 6px rgba(255,255,255,0);} 100%{ box-shadow:0 0 0 0 rgba(255,255,255,0);} }
+/* Idle: no live game — a quiet scores strip instead of the vibrant red LIVE banner. */
+.bbx-ticker--idle .bbx-ticker__label { background: var(--bbx-panel2); color: var(--bbx-faint); }
+.bbx-ticker--idle .bbx-pulse { background: var(--bbx-faint); animation: none; box-shadow: none; }
 .bbx-ticker__rail { display: flex; overflow-x: auto; flex: 1; }
 .bbx-tk { display: flex; flex-direction: column; gap: 3px; padding: 9px 16px;
   border-right: 1px solid var(--bbx-line); min-width: 124px; }
@@ -2227,6 +2236,14 @@ a { color: inherit; text-decoration: none; }
   width: 86px; height: 86px; border-radius: 50%; background: var(--bbx-bg);
   border: 2px solid var(--bbx-gold); display: flex; align-items: center; justify-content: center; }
 .bbx-hero__vstxt { font-family: var(--bbx-cond); font-size: 28px; color: var(--bbx-gold); }
+/* Regular-season "Series of the Week": one box per game (date if unplayed, score if final). */
+.bbx-hero__series { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+  display: flex; flex-direction: column; gap: 7px; z-index: 2; }
+.bbx-gamebox { background: var(--bbx-bg); border: 1.5px solid var(--bbx-gold); border-radius: 6px;
+  padding: 6px 16px; min-width: 108px; text-align: center; }
+.bbx-gamebox__g { font-family: var(--bbx-mono); font-size: 9px; letter-spacing: 0.14em; color: var(--bbx-faint); }
+.bbx-gamebox__v { font-family: var(--bbx-cond); font-size: 22px; color: var(--bbx-gold); line-height: 1.05; margin-top: 2px; }
+.bbx-gamebox--final .bbx-gamebox__v { color: #fff; }
 .bbx-hero__info { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px;
   background: var(--bbx-line); border: 1px solid var(--bbx-line); border-top: none;
   border-radius: 0 0 8px 8px; overflow: hidden; }
@@ -2264,6 +2281,11 @@ a { color: inherit; text-decoration: none; }
 .bbx-row__r { display: flex; align-items: center; gap: 8px; }
 .bbx-row__rec { font-family: var(--bbx-mono); font-size: 12px; color: var(--bbx-ink2); white-space: nowrap; }
 .bbx-rank { font-family: var(--bbx-cond); font-size: 16px; color: var(--bbx-faint); width: 16px; }
+/* Standings / Top 25 mini: show ~6 rows (42px each), scroll for the rest. */
+.bbx-scroll6 { max-height: 252px; overflow-y: auto; overflow-x: hidden; }
+.bbx-scroll6::-webkit-scrollbar { width: 6px; }
+.bbx-scroll6::-webkit-scrollbar-thumb { background: var(--bbx-line); border-radius: 3px; }
+.bbx-scroll6::-webkit-scrollbar-track { background: transparent; }
 .bbx-streak { font-family: var(--bbx-mono); font-size: 12px; font-weight: 600; }
 .bbx-hot { color: var(--bbx-hot); }
 .bbx-cold { color: var(--bbx-cold); }
@@ -2361,6 +2383,8 @@ a { color: inherit; text-decoration: none; }
 .stg-pill--up { background: color-mix(in srgb, var(--bbx-gold) 16%, transparent); color: var(--bbx-gold); }
 
 .stg-field { padding: 6px 16px 12px; }
+/* Cap the field at ~10 teams (rows are ~52px); scroll for the rest. */
+.stg-field--scroll { max-height: 526px; overflow-y: auto; }
 .stg-field__row { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left;
   padding: 8px 0; border-bottom: 1px solid var(--bbx-line); }
 .stg-field__row:last-child { border-bottom: none; }
@@ -2390,6 +2414,9 @@ a { color: inherit; text-decoration: none; }
 /* players to watch */
 .stg-players { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
 .stg-pcard { background: var(--bbx-panel); border: 1px solid var(--bbx-line); border-radius: 8px; overflow: hidden; }
+/* Card rendered as a button (clicks through to the team) — reset + align like the div. */
+.stg-pcard--btn { width: 100%; text-align: left; padding: 0; font: inherit; color: inherit; cursor: pointer; }
+.stg-pcard--btn:hover { border-color: var(--bbx-faint); }
 .stg-pcard__photo { position: relative; height: 150px;
   background: repeating-linear-gradient(135deg, var(--bbx-panel2) 0 11px, transparent 11px 22px);
   display: flex; align-items: center; justify-content: center;

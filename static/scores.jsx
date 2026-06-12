@@ -10,11 +10,15 @@ const _fmtLong = (iso) =>
 const _fmtShort = (iso) =>
   _parseIso(iso).toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" });
 
-// Flatten window.SCHEDULES (one entry per SEC team) into neutral home/away game
-// cards grouped by date. SEC-vs-SEC games appear under both teams, so dedupe by id.
-function _scoreboardByDate() {
+// Flatten window.SCHEDULES into neutral home/away game cards grouped by date,
+// scoped to the chosen league. A game appears under both teams' schedules, so we
+// only walk the league's teams (and dedupe by id) — that keeps a cross-conference
+// game when EITHER side is in the league, without double-listing it.
+function _scoreboardByDate(league) {
+  const inLeague = new Set(window.leagueTeams(league).map((t) => t.id));
   const byId = {};
   for (const [seo, games] of Object.entries(window.SCHEDULES || {})) {
+    if (!inLeague.has(seo)) continue;
     const me = window.TEAM_BY_ID[seo];
     if (!me) continue;
     for (const g of games) {
@@ -80,8 +84,8 @@ const ScoreRow = ({ game, onClick }) => {
   );
 };
 
-const Scores = ({ onGameClick, initialDate, onDateChange }) => {
-  const byDate = React.useMemo(_scoreboardByDate, []);
+const Scores = ({ onGameClick, initialDate, onDateChange, league }) => {
+  const byDate = React.useMemo(() => _scoreboardByDate(league), [league]);
   const dates = React.useMemo(() => Object.keys(byDate).sort(), [byDate]);
 
   // Default to today if it has games, else the most recent past date with games.
