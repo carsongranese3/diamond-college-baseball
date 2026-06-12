@@ -217,6 +217,12 @@ const App = () => {
   const goPlayer = (seo, playerName, origin) =>
     setView({ name: "player", seo, playerName, origin });
 
+  // Box-score popup (regional board) — overlays the current view so you keep your
+  // place on the board instead of navigating to the full-page game view.
+  const [gameModal, setGameModal] = React.useState(null);   // { game, hostTeamId } | null
+  const openGameModal = (game, hostTeamId) => setGameModal({ game, hostTeamId });
+  const closeGameModal = () => setGameModal(null);
+
   // Which top-nav section the current view belongs to (detail views inherit the
   // section they were opened from, so the right tab stays highlighted).
   const fromScores =
@@ -244,7 +250,7 @@ const App = () => {
           if (ph === "regular")
             return <HomeRegular league={league} onTeam={goTeam} onNav={goNav} onGame={onGame} />;
           if (["sec_tournament", "regionals", "super_regionals", "cws", "cws_finals"].includes(ph))
-            return <HomeStage league={league} phase={ph} onTeam={goTeam} onGame={onGame} />;
+            return <HomeStage league={league} phase={ph} onTeam={goTeam} onGame={onGame} onGameModal={openGameModal} />;
           return <Home league={league} onTeam={goTeam} onNav={goNav} />;   // offseason
         })()}
         {view.name === "standings" && <Standings league={league} onTeamClick={goTeam} />}
@@ -326,6 +332,24 @@ const App = () => {
           />
         )}
       </main>
+      {gameModal && (
+        <div className="game-modal__scrim" onClick={closeGameModal}>
+          <div className="game-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="game-modal__x" onClick={closeGameModal} aria-label="Close">×</button>
+            <GameDetail
+              game={gameModal.game}
+              hostTeamId={gameModal.hostTeamId}
+              onBack={closeGameModal}
+              backLabel="Close"
+              onTeamClick={(id) => { closeGameModal(); goTeam(id); }}
+              onPlayerClick={(sideSeo, playerName) => {
+                closeGameModal();
+                goPlayer(sideSeo, playerName, { view: "home" });
+              }}
+            />
+          </div>
+        </div>
+      )}
       <footer className="footer">
         <span>An original editorial mockup — not affiliated with the SEC, NCAA, or any university.</span>
       </footer>

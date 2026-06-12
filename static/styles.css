@@ -2470,40 +2470,76 @@ a { color: inherit; text-decoration: none; }
 .stg-stk__status { font-size: 9px; letter-spacing: 0.1em; color: var(--bbx-faint); margin-top: 6px; padding-top: 8px; border-top: 1px solid var(--bbx-line); }
 @media (max-width: 900px) { .stg-stk { grid-template-columns: repeat(2, 1fr); } }
 
+/* Color key under the header — decodes the per-side tint of each bar. */
+.stg-rb__key { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 2px 0 10px;
+  font-family: var(--bbx-mono); font-size: 9.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bbx-ink2); }
+.stg-rb__keyitem { display: inline-flex; align-items: center; gap: 6px; }
+.stg-rb__keyitem i { width: 9px; height: 9px; border-radius: 2px; flex: none; }
+
 /* "Today at the regionals" status board — one bar per regional: teams flank a
-   centered score; color edge = the game's stage (winners' bracket = blue). */
+   centered score. Each side is tinted by that team's stake today (--rb-lc / --rb-rc):
+   blue = winners' bracket, green = win to Supers, red = win or go home. Same-stake
+   games read as one solid tint; the regional final reads green↔red. */
 .stg-rb { display: grid; grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); gap: 6px 16px; }
 /* Two-class selectors so they beat the `.bbx button { background:none; border:none }` reset. */
-.stg-rb .stg-rb__row { display: grid; grid-template-columns: 86px minmax(0, 1fr) auto minmax(0, 1fr) 108px;
+/* No trailing gutter column — the name columns get that width back so full team names
+   fit; the very longest names wrap to a 2nd line (see .stg-rb__nm) rather than truncate. */
+.stg-rb .stg-rb__row { display: grid; grid-template-columns: 78px minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center; gap: 10px; width: 100%; padding: 7px 13px;
-  border: 1px solid var(--bbx-line); border-left-width: 3px; border-radius: 5px; background: var(--bbx-panel); }
-/* Non-elimination (winners'-bracket) game: just blue, both sides. */
-.stg-rb .stg-rb__row--blue { border-left-color: var(--bbx-blue);
-  background: linear-gradient(90deg, color-mix(in srgb, var(--bbx-blue) 14%, var(--bbx-panel)), var(--bbx-panel) 38%, var(--bbx-panel) 62%, color-mix(in srgb, var(--bbx-blue) 14%, var(--bbx-panel))); }
-/* Decisive game (elimination / regional final): two-tone — winner's side blue, the
-   eliminated side red, meeting at the centered score; sides swap with the result. */
-.stg-rb .stg-rb__row--awin, .stg-rb .stg-rb__row--bwin { border-right-width: 3px; }
-.stg-rb .stg-rb__row--awin { border-left-color: var(--bbx-blue); border-right-color: var(--bbx-cold);
-  background: linear-gradient(90deg, color-mix(in srgb, var(--bbx-blue) 15%, var(--bbx-panel)), var(--bbx-panel) 40%, var(--bbx-panel) 60%, color-mix(in srgb, var(--bbx-cold) 15%, var(--bbx-panel))); }
-.stg-rb .stg-rb__row--bwin { border-left-color: var(--bbx-cold); border-right-color: var(--bbx-blue);
-  background: linear-gradient(90deg, color-mix(in srgb, var(--bbx-cold) 15%, var(--bbx-panel)), var(--bbx-panel) 40%, var(--bbx-panel) 60%, color-mix(in srgb, var(--bbx-blue) 15%, var(--bbx-panel))); }
+  border: 1px solid var(--bbx-line); border-left: 3px solid var(--rb-lc); border-right: 3px solid var(--rb-rc);
+  border-radius: 5px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--rb-lc) 15%, var(--bbx-panel)),
+    var(--bbx-panel) 40%, var(--bbx-panel) 60%, color-mix(in srgb, var(--rb-rc) 15%, var(--bbx-panel))); }
+/* Clickable bar (played games) opens the box score. */
+.stg-rb .stg-rb__row--click { cursor: pointer; transition: filter 0.12s ease; }
+.stg-rb .stg-rb__row--click:hover { filter: brightness(1.16); }
+/* Game 7 / winner-take-all (both teams advance): green on both edges fading to the
+   dark center — same green→black style as the other bars, just green on both sides. */
+.stg-rb .stg-rb__row--g7 { background: linear-gradient(90deg,
+    color-mix(in srgb, var(--bbx-hot) 20%, var(--bbx-panel)),
+    var(--bbx-panel) 42%, var(--bbx-panel) 58%,
+    color-mix(in srgb, var(--bbx-hot) 20%, var(--bbx-panel))); }
 .stg-rb__site { font-family: var(--bbx-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--bbx-ink2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  color: var(--bbx-ink2); line-height: 1.15; overflow: hidden;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }   /* full host city, wraps to 2 lines */
 .stg-rb .stg-rb__tm { display: flex; align-items: center; gap: 7px; min-width: 0; }
 .stg-rb__tm--l { justify-content: flex-end; }                 /* left team hugs the centered score */
 .stg-rb__tm--r { justify-content: flex-start; }
 .stg-rb__tm--lose { opacity: 0.5; }
-.stg-rb .stg-rb__tm:hover .stg-rb__nm { color: var(--bbx-blue); }
-.stg-rb__nm { font-size: 12.5px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* Full team name guaranteed: wraps to a 2nd line instead of truncating. Left team's
+   text hugs the score (right-aligned), right team's hugs it from the left. */
+.stg-rb__nm { font-size: 12.5px; font-weight: 600; line-height: 1.15; overflow: hidden;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.stg-rb__tm--l .stg-rb__nm { text-align: right; }
+.stg-rb__tm--r .stg-rb__nm { text-align: left; }
 .stg-rb__score { display: flex; align-items: baseline; justify-content: center; gap: 5px;
-  font-family: var(--bbx-cond); font-size: 19px; white-space: nowrap; }
-.stg-rb__s { color: var(--bbx-ink2); font-weight: 600; }       /* numbers white (muted = loser) */
-.stg-rb__s--w { color: var(--bbx-ink); font-weight: 800; }     /* winner highlighted: bright + bold */
-.stg-rb__dash { color: var(--bbx-faint); font-size: 14px; }
+  font-family: var(--bbx-cond); white-space: nowrap; }
+.stg-rb__s { color: var(--bbx-faint); font-weight: 600; font-size: 17px; }   /* loser: dim + small */
+.stg-rb__s--w { color: var(--bbx-ink); font-weight: 800; font-size: 24px; }  /* winner: bright, bold, bigger */
+/* The winner numeral (heavy Anton) pops too hard at full ink — soften it in both
+   themes so it reads as emphasized, not as a heavy block: a medium ink on the pale
+   light bars, a muted white on the dark bars. */
+:root[data-theme="light"] .bbx .stg-rb__s--w,
+:root:not([data-theme="dark"]) .bbx .stg-rb__s--w { color: rgba(20, 24, 31, 0.68); font-size: 21px; }
+:root[data-theme="dark"] .bbx .stg-rb__s--w { color: rgba(255, 255, 255, 0.80); font-size: 21px; }
+.stg-rb__dash { color: var(--bbx-faint); font-size: 13px; }
 .stg-rb__vs { font-family: var(--bbx-mono); font-size: 11px; color: var(--bbx-faint); letter-spacing: 0.08em; }
-.stg-rb__lbl { font-family: var(--bbx-mono); font-size: 8.5px; letter-spacing: 0.05em; text-transform: uppercase;
-  text-align: right; white-space: nowrap; color: var(--bbx-ink2); }
 @media (max-width: 1040px) { .stg-rb { grid-template-columns: 1fr; } }
+
+/* Box-score popup — overlays the regional board so you keep your place. Wraps the
+   existing full-page GameDetail in a scrim + dismissable panel. GameDetail uses the
+   global theme vars (--bg/--paper/--line), not the .bbx-scoped ones, so the modal
+   chrome must too — it renders outside .bbx. */
+.game-modal__scrim { position: fixed; inset: 0; z-index: 200; background: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
+  display: flex; align-items: flex-start; justify-content: center; padding: 40px 16px; overflow-y: auto; }
+.game-modal { position: relative; width: min(920px, 100%);
+  background: var(--bg); border: 1px solid var(--line-2); border-radius: 12px;
+  padding: 22px 24px 28px; box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55); }
+.game-modal__x { position: absolute; top: 12px; right: 12px; z-index: 1;
+  width: 30px; height: 30px; border-radius: 6px; font-size: 19px; line-height: 1;
+  color: var(--muted); background: var(--paper); border: 1px solid var(--line); cursor: pointer; }
+.game-modal__x:hover { color: var(--ink); background: var(--line); }
 
 /* Schedule/field split: the schedule column scrolls so its height always equals
    the right (field/compare) column. The schedule cell contributes no intrinsic

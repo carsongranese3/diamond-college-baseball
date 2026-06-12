@@ -432,8 +432,6 @@ function stgStakes(today) {
   const byId = window.TEAM_BY_ID || {};
   const seen = new Set();
   const out = [];
-  const lossesBeforeToday = (sched) => sched.filter(
-    (g) => (g.phase || "regular") === "NCAA Regional" && g.iso < today && g.result === "L").length;
   for (const t of hpSecTeams()) {
     const sched = (window.SCHEDULES || {})[t.id] || [];
     const reg = sched.filter((g) => (g.phase || "regular") === "NCAA Regional");
@@ -441,15 +439,39 @@ function stgStakes(today) {
     if (!game || seen.has(game.id)) continue;
     seen.add(game.id);
     const opp = (game.opp && byId[game.opp.id]) || game.opp || null;
-    const myLoss = lossesBeforeToday(reg);
-    const myWin = reg.filter((g) => g.iso < today && g.result === "W").length;
-    const oppLoss = opp && byId[opp.id] ? lossesBeforeToday((window.SCHEDULES || {})[opp.id] || []) : null;
-    let stake, kind;
-    if (myWin >= 2) { stake = "REGIONAL FINAL · win to Supers"; kind = "good"; }      // cleared the bracket
-    else if (myLoss >= 1) { stake = "WIN OR GO HOME"; kind = "bad"; }                 // one loss from out
-    else { stake = "WINNERS' BRACKET"; kind = "warn"; }
+    const prior = reg.filter((g) => g.iso < today);     // this team's regional games before today, in order
+    const myLoss = prior.filter((g) => g.result === "L").length;
+    const myWin = prior.filter((g) => g.result === "W").length;
+    // Game 7 ("if necessary" final): the same two teams play back-to-back, so today
+    // is a rematch of the most recent prior regional day. Check every opponent from
+    // that day (regionals run doubleheaders, and same-day games aren't ordered), so
+    // the test is symmetric — both teams classify the game identically. The >=1-loss
+    // guard rejects the false positive where a still-unbeaten champ's regional final
+    // is a rematch of the winners'-bracket final.
+    const maxPriorIso = prior.reduce((m, g) => (g.iso > m ? g.iso : m), "");
+    const lastDayOpps = prior.filter((g) => g.iso === maxPriorIso).map((g) => g.opp && g.opp.id);
+    // Both game-7 participants always carry >=2 wins (you can't reach the if-necessary
+    // final with fewer) — that guard rejects a WB-final loser who simply replays the
+    // same team in the elimination bracket the next day.
+    const isGame7 = myLoss >= 1 && myWin >= 2 && game.opp && lastDayOpps.indexOf(game.opp.id) >= 0;
+    // Per-side stake, inferred from this team's W-L in the regional — opponent
+    // schedules aren't loaded, but a 4-team double-elim constrains the pairing:
+    //   winners' bracket (blue) = both unbeaten          → win stays alive, no one out
+    //   elimination     (red)   = a loss ends the season → ordinary elim game, both with a loss
+    //   advance         (green) = a win reaches Supers    → the unbeaten champ in the final, OR
+    //                                                       BOTH teams in the winner-take-all game 7
+    // Win count tells the regional-final survivor (>=2 wins, 1 loss) apart from an
+    // ordinary elimination game (<=1 win); the rematch test tells game 7 apart.
+    let aState, bState, stake, kind;
+    if (isGame7) { aState = "advance"; bState = "advance"; stake = "WINNER TO SUPERS"; kind = "good"; }
+    else if (myLoss === 0 && myWin >= 2) { aState = "advance"; bState = "elim"; stake = "REGIONAL FINAL · win to Supers"; kind = "good"; }
+    else if (myLoss >= 1 && myWin >= 2) { aState = "elim"; bState = "advance"; stake = "REGIONAL FINAL · win or go home"; kind = "bad"; }
+    else if (myLoss >= 1) { aState = "elim"; bState = "elim"; stake = "WIN OR GO HOME"; kind = "bad"; }
+    else { aState = "winners"; bState = "winners"; stake = "WINNERS' BRACKET"; kind = "warn"; }
     out.push({ a: t, b: opp, sa: game.score && game.score.us, sb: game.score && game.score.them,
-               done: !!game.result, live: false, aElim: myLoss >= 1, bElim: oppLoss != null && oppLoss >= 1,
+               done: !!game.result, live: false, aState, bState,
+               aElim: aState === "elim", bElim: bState === "elim",
+               game, hostId: t.id,                       // raw game + host so the bar opens the box score
                city: (window.REGIONAL_CITY_BY_TEAM || {})[t.id] || "", stake, kind });
   }
   const rank = { good: 0, bad: 1, warn: 2 };
@@ -491,13 +513,13 @@ function StageStakes({ stakes, onTeam }) {
 }
 
 // "Today at the regionals" status board — a thin bar per regional: the two teams
-// flank a centered score, with a game-level label (the loser is dimmed, the
-// winner's score lit). Color edge = the game's stage. Reuses the stgStakes() data.
-function StageRegionalBoard({ data, onTeam }) {
+// flank a centered score. Each SIDE is tinted by that team's stake today, so a
+// regional final reads green→red (one team can win to Supers, the other can lose
+// to home); winners'-bracket games are blue/blue and elimination games red/red.
+// A color key under the header decodes it. Reuses the stgStakes() data.
+const STAKE_COLOR = { winners: "var(--bbx-blue)", advance: "var(--bbx-hot)", elim: "var(--bbx-cold)" };
+function StageRegionalBoard({ data, onTeam, onGame }) {
   if (!data || !(data.games || []).length) return null;
-  // Game-level label (describes the matchup, not one team).
-  const label = (s) => s.indexOf("Supers") >= 0 ? "REGIONAL FINAL"
-                     : s.indexOf("GO HOME") >= 0 ? "ELIMINATION" : "WINNERS' BRACKET";
   return (
     <div className="bbx-section">
       <div className="bbx-eyebrow-row">
@@ -505,23 +527,35 @@ function StageRegionalBoard({ data, onTeam }) {
         <span className="bbx-rule" />
         <span className="bbx-eyebrow bbx-faint">REGIONALS</span>
       </div>
+      <div className="stg-rb__key">
+        <span className="stg-rb__keyitem"><i style={{ background: STAKE_COLOR.winners }} />Winners' bracket</span>
+        <span className="stg-rb__keyitem"><i style={{ background: STAKE_COLOR.advance }} />Win to Supers</span>
+        <span className="stg-rb__keyitem"><i style={{ background: STAKE_COLOR.elim }} />Win or go home</span>
+      </div>
       <div className="stg-rb">
         {data.games.map((g, i) => {
           const aWin = g.done && g.sa != null && g.sb != null && g.sa >= g.sb;
           const bWin = g.done && g.sa != null && g.sb != null && g.sb > g.sa;
-          const click = (t) => () => t && t.id && onTeam && onTeam(t.id);
-          // Two-tone (winner blue / loser red) only on a DECISIVE game — one team is
-          // eliminated and the other advances (elimination game or regional final).
-          // A non-elimination winners'-bracket game is just blue.
-          const decisive = g.kind === "bad" || g.kind === "good";
-          const mod = !g.done ? "" : decisive ? (aWin ? " stg-rb__row--awin" : " stg-rb__row--bwin") : " stg-rb__row--blue";
+          // The whole bar opens the box score (played games only). Teams are not
+          // separately clickable here — the bar is the single click target.
+          const gameClick = g.game && onGame && g.game.result ? () => onGame(g.game, g.hostId) : null;
+          // Each side tinted by its own stake — the bar is a gradient from the left
+          // team's color to the right team's, so same-stake games read as one solid
+          // tint and the regional final reads two-tone (green advance ↔ red elim).
+          // Game 7 (both teams advance) gets a fuller, uniform green wash so the
+          // winner-take-all final reads unmistakably green rather than dark-edged.
+          const g7 = g.aState === "advance" && g.bState === "advance";
+          const style = { "--rb-lc": STAKE_COLOR[g.aState] || "var(--bbx-line)",
+                          "--rb-rc": STAKE_COLOR[g.bState] || "var(--bbx-line)" };
           return (
-            <div key={i} className={"stg-rb__row" + mod}>
+            <div key={i} className={"stg-rb__row" + (g7 ? " stg-rb__row--g7" : "") + (gameClick ? " stg-rb__row--click" : "")}
+                 style={style} onClick={gameClick || undefined}
+                 role={gameClick ? "button" : undefined} tabIndex={gameClick ? 0 : undefined}>
               <span className="stg-rb__site">{g.city || "—"}</span>
-              <button className="stg-rb__tm stg-rb__tm--l" onClick={click(g.a)}>
+              <span className="stg-rb__tm stg-rb__tm--l">
                 <span className="stg-rb__nm">{(g.a && g.a.name) || "TBD"}</span>
                 <HPLogo team={g.a} size={18} />
-              </button>
+              </span>
               <span className="stg-rb__score">
                 {g.done
                   ? (<><span className={"stg-rb__s" + (aWin ? " stg-rb__s--w" : "")}>{g.sa}</span>
@@ -529,11 +563,10 @@ function StageRegionalBoard({ data, onTeam }) {
                        <span className={"stg-rb__s" + (bWin ? " stg-rb__s--w" : "")}>{g.sb}</span></>)
                   : <span className="stg-rb__vs">{g.live ? "LIVE" : "vs"}</span>}
               </span>
-              <button className="stg-rb__tm stg-rb__tm--r" onClick={click(g.b)}>
+              <span className="stg-rb__tm stg-rb__tm--r">
                 <HPLogo team={g.b} size={18} />
                 <span className="stg-rb__nm">{(g.b && g.b.name) || "TBD"}</span>
-              </button>
-              <span className="stg-rb__lbl">{label(g.stake)}</span>
+              </span>
             </div>
           );
         })}
@@ -654,7 +687,7 @@ function StageCompare({ c }) {
   );
 }
 
-function StagePage({ cfg, onTeam, onGame }) {
+function StagePage({ cfg, onTeam, onGame, onGameModal }) {
   // "Live" only when a game is actually in progress — started (has a score) but not
   // final yet. An upcoming game that simply hasn't been played is NOT live, so the
   // strip shows quietly ("SCORES") instead of the red LIVE banner.
@@ -745,7 +778,7 @@ function StagePage({ cfg, onTeam, onGame }) {
           regionals" field on the right. Other stages keep the schedule + field. */}
       {cfg.dayGrid ? (
         <div className="stg-split">
-          <div className="stg-split__cell stg-rb-cell"><StageRegionalBoard data={cfg.dayGrid} onTeam={onTeam} /></div>
+          <div className="stg-split__cell stg-rb-cell"><StageRegionalBoard data={cfg.dayGrid} onTeam={onTeam} onGame={onGameModal} /></div>
           <div className="stg-split__cell">{fieldPanel}</div>
         </div>
       ) : (
@@ -795,7 +828,7 @@ function StagePage({ cfg, onTeam, onGame }) {
 }
 
 /* ---------- compose: build a phase's cfg from real data ---------- */
-const HomeStage = ({ phase, onTeam, onGame, league }) => {
+const HomeStage = ({ phase, onTeam, onGame, onGameModal, league }) => {
   const m = STAGE_META[phase];
   const isCws = phase === "cws" || phase === "cws_finals";
   const needsBracket = isCws || phase === "regionals";
@@ -897,7 +930,7 @@ const HomeStage = ({ phase, onTeam, onGame, league }) => {
     field, compare,
     league: league || window.CURRENT_LEAGUE,
   };
-  return <StagePage cfg={cfg} onTeam={onTeam} onGame={onGame} />;
+  return <StagePage cfg={cfg} onTeam={onTeam} onGame={onGame} onGameModal={onGameModal} />;
 };
 
 window.StagePage = StagePage;
