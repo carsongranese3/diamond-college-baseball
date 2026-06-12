@@ -139,3 +139,94 @@ window.__bootstrapReady = fetch("/api/bootstrap")
       ". Is the Flask server running?</div>";
     throw err;
   });
+
+// ── Regionals board scroll arrows ───────────────────────────────────────────
+// Only the "What's at stake today" board (.stg-rb) uses arrows — every other
+// scroll panel shows a scrollbar instead (pure CSS). The board gets a bouncing
+// chevron at the edge that has more content: down (more below) and/or up (more
+// above), horizontally centered on the score column. Each is a body-level fixed
+// overlay the controller positions, so it survives React re-renders and never
+// disturbs the board's flex/absolute layout. Click an arrow to page that way.
+(function () {
+  var SELECTOR = ".stg-rb";
+  var EPS = 2;        // px tolerance so a fully-scrolled edge reads as "no more"
+  var boxes = [];
+
+  function makeCue(el, dir) {
+    var cue = document.createElement("button");
+    cue.type = "button";
+    cue.className = "bbx-scrollcue" + (dir === "up" ? " bbx-scrollcue--up" : "");
+    cue.setAttribute("aria-label", dir === "up" ? "Scroll up" : "Scroll for more");
+    cue.innerHTML = '<span class="bbx-scrollcue__chev"></span>';
+    cue.addEventListener("click", function () {
+      el.scrollBy({ top: (dir === "up" ? -1 : 1) * Math.round(el.clientHeight * 0.82), behavior: "smooth" });
+    });
+    document.body.appendChild(cue);
+    return cue;
+  }
+  function ensureCues(el) {
+    if (!el.__cueDown) el.__cueDown = makeCue(el, "down");
+    if (!el.__cueUp) el.__cueUp = makeCue(el, "up");
+  }
+  function scoreCenterX(el, r) {
+    var s = el.querySelector(".stg-rb__score");   // center the arrow on the score column
+    if (s) { var sr = s.getBoundingClientRect(); return Math.round(sr.left + sr.width / 2); }
+    return Math.round(r.left + r.width / 2);
+  }
+  function place(cue, on, x, y) {
+    if (!on) { cue.classList.remove("is-on"); return; }
+    cue.style.left = x + "px";
+    cue.style.top = y + "px";
+    cue.classList.add("is-on");
+  }
+  function update(el) {
+    ensureCues(el);
+    var more = el.scrollHeight - el.clientHeight;
+    var up = false, down = false;
+    if (more > EPS) { up = el.scrollTop > EPS; down = el.scrollTop < more - EPS; }
+    var r = el.getBoundingClientRect();
+    var onScreen = r.width > 0 && r.bottom > 48 && r.top < window.innerHeight - 8;
+    var x = scoreCenterX(el, r);
+    place(el.__cueDown, down && onScreen, x, Math.round(Math.min(r.bottom, window.innerHeight) - 16));
+    place(el.__cueUp, up && onScreen, x, Math.round(Math.max(r.top, 0) + 16));
+  }
+  function scan() {
+    var els = document.querySelectorAll(SELECTOR);
+    for (var i = 0; i < els.length; i++) {
+      var el = els[i];
+      if (!el.__scrollCue) {
+        el.__scrollCue = true;
+        boxes.push(el);
+        (function (node) {
+          node.addEventListener("scroll", function () { update(node); }, { passive: true });
+          if (window.ResizeObserver) new ResizeObserver(function () { update(node); }).observe(node);
+        })(el);
+      }
+      update(el);
+    }
+    // Drop + clean up boards that have left the DOM.
+    boxes = boxes.filter(function (el) {
+      if (document.contains(el)) return true;
+      if (el.__cueDown) el.__cueDown.remove();
+      if (el.__cueUp) el.__cueUp.remove();
+      el.__cueDown = el.__cueUp = null;
+      return false;
+    });
+  }
+  var queued = false;
+  function scheduleScan() {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(function () { queued = false; scan(); });
+  }
+  function reposition() {
+    for (var i = 0; i < boxes.length; i++) update(boxes[i]);
+  }
+  if (window.MutationObserver) {
+    new MutationObserver(scheduleScan).observe(document.documentElement, { childList: true, subtree: true });
+  }
+  window.addEventListener("resize", scheduleScan, { passive: true });
+  window.addEventListener("scroll", reposition, { passive: true });   // page scroll moves the board
+  document.addEventListener("DOMContentLoaded", scheduleScan);
+  scheduleScan();
+})();
