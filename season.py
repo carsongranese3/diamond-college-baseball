@@ -212,7 +212,7 @@ def bracket_upcoming(sec_seos):
                 "iso": iso,
                 "opp": {
                     "id": oseo, "name": oname,
-                    "mark": (("".join(w[0] for w in oname.split()) or oname)[:4]).upper(),
+                    "mark": (re.sub(r"[^A-Z0-9]", "", "".join(w[:1] for w in oname.split()).upper()) or oname.upper())[:4],
                     "logo": ncaa.logo_url(oseo),
                     "rank": rank_by.get(_norm(oname)),
                     "conf": oseo in sec_seos,

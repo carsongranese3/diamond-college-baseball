@@ -490,6 +490,58 @@ function StageStakes({ stakes, onTeam }) {
   );
 }
 
+// "Today at the regionals" status board — a thin bar per regional: the two teams
+// flank a centered score, with a game-level label (the loser is dimmed, the
+// winner's score lit). Color edge = the game's stage. Reuses the stgStakes() data.
+function StageRegionalBoard({ data, onTeam }) {
+  if (!data || !(data.games || []).length) return null;
+  // Game-level label (describes the matchup, not one team).
+  const label = (s) => s.indexOf("Supers") >= 0 ? "REGIONAL FINAL"
+                     : s.indexOf("GO HOME") >= 0 ? "ELIMINATION" : "WINNERS' BRACKET";
+  return (
+    <div className="bbx-section">
+      <div className="bbx-eyebrow-row">
+        <span className="bbx-eyebrow bbx-gold">★ {data.title}</span>
+        <span className="bbx-rule" />
+        <span className="bbx-eyebrow bbx-faint">REGIONALS</span>
+      </div>
+      <div className="stg-rb">
+        {data.games.map((g, i) => {
+          const aWin = g.done && g.sa != null && g.sb != null && g.sa >= g.sb;
+          const bWin = g.done && g.sa != null && g.sb != null && g.sb > g.sa;
+          const click = (t) => () => t && t.id && onTeam && onTeam(t.id);
+          // Two-tone (winner blue / loser red) only on a DECISIVE game — one team is
+          // eliminated and the other advances (elimination game or regional final).
+          // A non-elimination winners'-bracket game is just blue.
+          const decisive = g.kind === "bad" || g.kind === "good";
+          const mod = !g.done ? "" : decisive ? (aWin ? " stg-rb__row--awin" : " stg-rb__row--bwin") : " stg-rb__row--blue";
+          return (
+            <div key={i} className={"stg-rb__row" + mod}>
+              <span className="stg-rb__site">{g.city || "—"}</span>
+              <button className="stg-rb__tm stg-rb__tm--l" onClick={click(g.a)}>
+                <span className="stg-rb__nm">{(g.a && g.a.name) || "TBD"}</span>
+                <HPLogo team={g.a} size={18} />
+              </button>
+              <span className="stg-rb__score">
+                {g.done
+                  ? (<><span className={"stg-rb__s" + (aWin ? " stg-rb__s--w" : "")}>{g.sa}</span>
+                       <span className="stg-rb__dash">–</span>
+                       <span className={"stg-rb__s" + (bWin ? " stg-rb__s--w" : "")}>{g.sb}</span></>)
+                  : <span className="stg-rb__vs">{g.live ? "LIVE" : "vs"}</span>}
+              </span>
+              <button className="stg-rb__tm stg-rb__tm--r" onClick={click(g.b)}>
+                <HPLogo team={g.b} size={18} />
+                <span className="stg-rb__nm">{(g.b && g.b.name) || "TBD"}</span>
+              </button>
+              <span className="stg-rb__lbl">{label(g.stake)}</span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 function StageTracker({ tracker, onTeam }) {
   return (
     <div className="bbx-section">
@@ -607,6 +659,28 @@ function StagePage({ cfg, onTeam, onGame }) {
   // final yet. An upcoming game that simply hasn't been played is NOT live, so the
   // strip shows quietly ("SCORES") instead of the red LIVE banner.
   const tickerLive = (cfg.ticker || []).some((g) => !g.final && (g.sa != null || g.sb != null));
+  // The right-hand panel (field standings, or a head-to-head compare). Pulled out so
+  // it can sit in the split OR span full width (regionals, where the day grid above
+  // replaces the schedule).
+  const fieldPanel = cfg.compare ? <StageCompare c={cfg.compare} /> : (
+    <div className="bbx-panel">
+      <div className="bbx-eyebrow stg-panel__head">{cfg.fieldTitle}</div>
+      <div className={"stg-field" + (cfg.fieldScroll ? " stg-field--scroll" : "")}>
+        {(cfg.field || []).map((t, i) => (
+          <button key={i} className="stg-field__row" onClick={() => t.team && onTeam && onTeam(t.team.id)}>
+            <span className="stg-field__seed">{t.seed}</span>
+            <HPLogo team={t.team} size={20} />
+            <div className="stg-field__txt">
+              <div className="stg-field__nm">{(t.team && t.team.name) || "—"}</div>
+              {t.sub && <div className="mono stg-faint stg-field__sub">{t.sub}</div>}
+            </div>
+            <span className="mono stg-faint stg-field__rec">{t.rec}</span>
+            <span className={"stg-tag stg-tag--" + (t.kind || "good")}>{t.tag}</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
   return (
     <div className="bbx stg">
       {/* ticker */}
@@ -650,8 +724,10 @@ function StagePage({ cfg, onTeam, onGame }) {
         </div>
       </div>
 
-      {/* today's featured matchup / stakes board — or "no games today" */}
-      {cfg.stakes ? <StageStakes stakes={cfg.stakes} onTeam={onTeam} />
+      {/* featured matchup / stakes board — or "no games". (Regionals render their
+          heat-bar board in the split below, alongside the field, so skip it here.) */}
+      {cfg.dayGrid ? null
+        : cfg.stakes ? <StageStakes stakes={cfg.stakes} onTeam={onTeam} />
         : cfg.tracker ? <StageTracker tracker={cfg.tracker} onTeam={onTeam} />
         : cfg.featured ? <StageHero f={cfg.featured} onGame={onGame} />
         : (
@@ -665,7 +741,14 @@ function StagePage({ cfg, onTeam, onGame }) {
           </div>
         )}
 
-      {/* schedule + field/compare — schedule scrolls so its height matches the right */}
+      {/* Regionals: heat-bar board (the day's games) on the left, the "in the
+          regionals" field on the right. Other stages keep the schedule + field. */}
+      {cfg.dayGrid ? (
+        <div className="stg-split">
+          <div className="stg-split__cell stg-rb-cell"><StageRegionalBoard data={cfg.dayGrid} onTeam={onTeam} /></div>
+          <div className="stg-split__cell">{fieldPanel}</div>
+        </div>
+      ) : (
       <div className="stg-split">
         <div className="stg-split__cell stg-split__cell--sched">
         <div className="bbx-panel stg-schedpanel">
@@ -701,28 +784,9 @@ function StagePage({ cfg, onTeam, onGame }) {
         </div>
         </div>
 
-        <div className="stg-split__cell">
-        {cfg.compare ? <StageCompare c={cfg.compare} /> : (
-          <div className="bbx-panel">
-            <div className="bbx-eyebrow stg-panel__head">{cfg.fieldTitle}</div>
-            <div className={"stg-field" + (cfg.fieldScroll ? " stg-field--scroll" : "")}>
-              {(cfg.field || []).map((t, i) => (
-                <button key={i} className="stg-field__row" onClick={() => t.team && onTeam && onTeam(t.team.id)}>
-                  <span className="stg-field__seed">{t.seed}</span>
-                  <HPLogo team={t.team} size={20} />
-                  <div className="stg-field__txt">
-                    <div className="stg-field__nm">{(t.team && t.team.name) || "—"}</div>
-                    {t.sub && <div className="mono stg-faint stg-field__sub">{t.sub}</div>}
-                  </div>
-                  <span className="mono stg-faint stg-field__rec">{t.rec}</span>
-                  <span className={"stg-tag stg-tag--" + (t.kind || "good")}>{t.tag}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-        </div>
+        <div className="stg-split__cell">{fieldPanel}</div>
       </div>
+      )}
 
       {/* players to watch — BATTERS ⇄ PITCHERS, by the player-of-week formula */}
       {cfg.league && <StagePlayersToWatch league={cfg.league} onTeam={onTeam} />}
@@ -743,7 +807,7 @@ const HomeStage = ({ phase, onTeam, onGame, league }) => {
     return () => { live = false; };
   }, [phase, league]);
 
-  let ticker, featured, schedule, field, compare, tracker, stakes, scheduleTitle = m.scheduleTitle;
+  let ticker, featured, schedule, field, compare, tracker, stakes, dayGrid, scheduleTitle = m.scheduleTitle;
   if (isCws) {
     // The CWS hasn't been played in the data, so source everything from the bracket.
     const games = bracket ? stgCwsGames(bracket) : [];
@@ -807,7 +871,9 @@ const HomeStage = ({ phase, onTeam, onGame, league }) => {
     field = stgField(phase, bracket ? stgSeedMap(bracket) : null, league);
     compare = null;
     if (phase === "regionals") {
-      stakes = stgStakes(day);                   // that day's games only; null if none
+      // Condensed per-regional grid (replaces the stakes board AND the duplicate
+      // Today's Games list); reuses stgStakes' grouped data.
+      dayGrid = stgStakes(day);                  // that day's games only; null if none
       featured = null;
     } else {
       featured = rows.length ? stgFeatured(phase, rows, day, league) : null;
@@ -824,9 +890,9 @@ const HomeStage = ({ phase, onTeam, onGame, league }) => {
     kicker: `POSTSEASON · STAGE ${m.stage} OF 5 · ${m.dates}`,
     title: ct ? ct.title : m.title,
     meta: ct ? ct.meta : m.meta,
-    featured, tracker, stakes, scheduleTitle, schedule,
+    featured, tracker, stakes, dayGrid, scheduleTitle, schedule,
     fieldTitle: (m.fieldTitle || "").replace(/\bSEC\b/, league === "NCAA" ? "NCAA" : (league || "SEC")),
-    fieldScroll: phase === "sec_tournament",   // cap the conference-tournament field at ~10 rows
+    fieldScroll: phase === "sec_tournament" || phase === "regionals",   // cap the field at ~10 rows
 
     field, compare,
     league: league || window.CURRENT_LEAGUE,

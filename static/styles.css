@@ -2142,6 +2142,7 @@ a { color: inherit; text-decoration: none; }
   --bbx-faint: rgba(255,255,255,0.42);
   --bbx-red: #E50914;
   --bbx-gold: #FFC400;
+  --bbx-blue: #5AA2FF;
   --bbx-hot: #36D399;
   --bbx-cold: #F87272;
   --bbx-cond: "Anton", "Archivo", sans-serif;
@@ -2164,6 +2165,7 @@ a { color: inherit; text-decoration: none; }
   --bbx-ink2: rgba(20,24,31,0.66);
   --bbx-faint: rgba(20,24,31,0.42);
   --bbx-gold: #B07900;
+  --bbx-blue: #1565D8;
   --bbx-hot: #14794a;
   --bbx-cold: #C0362C;
 }
@@ -2468,6 +2470,41 @@ a { color: inherit; text-decoration: none; }
 .stg-stk__status { font-size: 9px; letter-spacing: 0.1em; color: var(--bbx-faint); margin-top: 6px; padding-top: 8px; border-top: 1px solid var(--bbx-line); }
 @media (max-width: 900px) { .stg-stk { grid-template-columns: repeat(2, 1fr); } }
 
+/* "Today at the regionals" status board — one bar per regional: teams flank a
+   centered score; color edge = the game's stage (winners' bracket = blue). */
+.stg-rb { display: grid; grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); gap: 6px 16px; }
+/* Two-class selectors so they beat the `.bbx button { background:none; border:none }` reset. */
+.stg-rb .stg-rb__row { display: grid; grid-template-columns: 86px minmax(0, 1fr) auto minmax(0, 1fr) 108px;
+  align-items: center; gap: 10px; width: 100%; padding: 7px 13px;
+  border: 1px solid var(--bbx-line); border-left-width: 3px; border-radius: 5px; background: var(--bbx-panel); }
+/* Non-elimination (winners'-bracket) game: just blue, both sides. */
+.stg-rb .stg-rb__row--blue { border-left-color: var(--bbx-blue);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--bbx-blue) 14%, var(--bbx-panel)), var(--bbx-panel) 38%, var(--bbx-panel) 62%, color-mix(in srgb, var(--bbx-blue) 14%, var(--bbx-panel))); }
+/* Decisive game (elimination / regional final): two-tone — winner's side blue, the
+   eliminated side red, meeting at the centered score; sides swap with the result. */
+.stg-rb .stg-rb__row--awin, .stg-rb .stg-rb__row--bwin { border-right-width: 3px; }
+.stg-rb .stg-rb__row--awin { border-left-color: var(--bbx-blue); border-right-color: var(--bbx-cold);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--bbx-blue) 15%, var(--bbx-panel)), var(--bbx-panel) 40%, var(--bbx-panel) 60%, color-mix(in srgb, var(--bbx-cold) 15%, var(--bbx-panel))); }
+.stg-rb .stg-rb__row--bwin { border-left-color: var(--bbx-cold); border-right-color: var(--bbx-blue);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--bbx-cold) 15%, var(--bbx-panel)), var(--bbx-panel) 40%, var(--bbx-panel) 60%, color-mix(in srgb, var(--bbx-blue) 15%, var(--bbx-panel))); }
+.stg-rb__site { font-family: var(--bbx-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--bbx-ink2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.stg-rb .stg-rb__tm { display: flex; align-items: center; gap: 7px; min-width: 0; }
+.stg-rb__tm--l { justify-content: flex-end; }                 /* left team hugs the centered score */
+.stg-rb__tm--r { justify-content: flex-start; }
+.stg-rb__tm--lose { opacity: 0.5; }
+.stg-rb .stg-rb__tm:hover .stg-rb__nm { color: var(--bbx-blue); }
+.stg-rb__nm { font-size: 12.5px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.stg-rb__score { display: flex; align-items: baseline; justify-content: center; gap: 5px;
+  font-family: var(--bbx-cond); font-size: 19px; white-space: nowrap; }
+.stg-rb__s { color: var(--bbx-ink2); font-weight: 600; }       /* numbers white (muted = loser) */
+.stg-rb__s--w { color: var(--bbx-ink); font-weight: 800; }     /* winner highlighted: bright + bold */
+.stg-rb__dash { color: var(--bbx-faint); font-size: 14px; }
+.stg-rb__vs { font-family: var(--bbx-mono); font-size: 11px; color: var(--bbx-faint); letter-spacing: 0.08em; }
+.stg-rb__lbl { font-family: var(--bbx-mono); font-size: 8.5px; letter-spacing: 0.05em; text-transform: uppercase;
+  text-align: right; white-space: nowrap; color: var(--bbx-ink2); }
+@media (max-width: 1040px) { .stg-rb { grid-template-columns: 1fr; } }
+
 /* Schedule/field split: the schedule column scrolls so its height always equals
    the right (field/compare) column. The schedule cell contributes no intrinsic
    height (absolute fill), so the grid row is sized by the right column. */
@@ -2480,6 +2517,17 @@ a { color: inherit; text-decoration: none; }
   .stg-split__cell--sched { position: static; }
   .stg-split__cell--sched .stg-schedpanel { position: static; }
   .stg-schedpanel .stg-sched { overflow-y: visible; }
+}
+/* Regionals: the heat-bar board (left cell) scrolls so its height matches the right
+   field column — same absolute-fill pattern as the schedule cell above. */
+.stg-rb-cell { position: relative; }
+.stg-rb-cell > .bbx-section { position: absolute; inset: 0; margin: 0; display: flex; flex-direction: column; }
+.stg-rb-cell > .bbx-section > .bbx-eyebrow-row { flex: none; }
+.stg-rb-cell .stg-rb { flex: 1; min-height: 0; overflow-y: auto; align-content: start; }
+@media (max-width: 900px) {
+  .stg-rb-cell { position: static; }
+  .stg-rb-cell > .bbx-section { position: static; }
+  .stg-rb-cell .stg-rb { overflow-y: visible; }
 }
 
 /* "No games today" placeholder in the stage top slot */

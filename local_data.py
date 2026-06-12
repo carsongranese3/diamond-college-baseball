@@ -551,7 +551,7 @@ def schedules(teams):
                     "id": opp_id,
                     "name": opp_t["name"] if opp_t else opp_name,
                     "mark": (opp_t["mark"] if opp_t else
-                             (("".join(w[0] for w in opp_name.split()) or opp_name)[:4]).upper()),
+                             (re.sub(r"[^A-Z0-9]", "", "".join(w[:1] for w in opp_name.split()).upper()) or opp_name.upper())[:4]),
                     "logo": ncaa.logo_url(opp_id),
                     "rank": opp_t["rank"] if opp_t else None,
                     "conf": opp_t is not None,
