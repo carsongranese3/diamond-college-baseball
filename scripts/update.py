@@ -352,7 +352,11 @@ def refresh_schedules(labels, conf_seo, conf_dir):
         os.makedirs(os.path.join(conf_dir, label), exist_ok=True)
 
     print("Refreshing schedule.json from the ncaa.com API…")
-    results = pull_schedule.write_team_schedules(labels, conf=conf_seo)
+    # fresh=True forces a re-pull of recent daily scoreboards (which are otherwise
+    # cached indefinitely), so games that finished since the board was last cached
+    # register as finals here — that's what makes the played-vs-saved check below
+    # notice there are new games to pull.
+    results = pull_schedule.write_team_schedules(labels, conf=conf_seo, fresh=True)
     refreshed = set()
     for label, n, played in results:
         print(f"  {label}: schedule.json -> {n} games ({played} played)")

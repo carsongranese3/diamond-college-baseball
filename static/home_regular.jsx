@@ -73,13 +73,16 @@ function BbxTicker({ onGame, league }) {
           const homeLead = g.hs != null && g.as != null && g.hs >= g.as;
           // Only finals have a box score to open.
           const clickable = g.final && !!onGame;
+          // A game with no result and no scheduled time, on today's live slate, is
+          // underway — show LIVE (red) instead of the placeholder TBD.
+          const liveNow = live && !g.final && g.status === "TBD";
           return (
             <button key={g.id} className={"bbx-tk" + (clickable ? " bbx-tk--click" : "")}
                     disabled={!clickable}
                     onClick={clickable ? () => onGame(g.game, g.hostId) : undefined}>
               <Row t={g.away} score={g.as} lead={!homeLead && g.as != null} />
               <Row t={g.home} score={g.hs} lead={homeLead && g.hs != null} />
-              <span className={"bbx-tk__st" + (g.final ? "" : " bbx-tk__st--up")}>{g.status}</span>
+              <span className={"bbx-tk__st" + (liveNow ? " bbx-tk__st--live" : g.final ? "" : " bbx-tk__st--up")}>{liveNow ? "LIVE" : g.status}</span>
             </button>
           );
         }) : <div className="bbx-tk bbx-faint" style={{ padding: "10px 16px" }}>No games on the board.</div>}

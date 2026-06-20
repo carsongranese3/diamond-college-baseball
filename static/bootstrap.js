@@ -114,7 +114,10 @@ window.__bootstrapReady = fetch("/api/bootstrap")
   })
   .then((d) => {
     window.TEAMS = d.teams;
-    window.TEAM_BY_ID = Object.fromEntries(d.teams.map((t) => [t.id, t]));
+    // Postseason-only teams (the non-conference NCAA-tournament field) resolve for
+    // name/logo lookups but are NOT in TEAMS, so standings/scores stay conference-scoped.
+    window.TEAM_BY_ID = Object.fromEntries(
+      d.teams.concat(d.postseason_teams || []).map((t) => [t.id, t]));
     window.SCHEDULES = d.schedules;
     // Leagues for the top-bar selector: "NCAA" (all teams) + each conference that
     // has data, sorted. window.leagueTeams(league) returns the scoped team list;

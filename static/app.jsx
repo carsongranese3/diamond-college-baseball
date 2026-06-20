@@ -354,6 +354,62 @@ const App = () => {
         <span>An original editorial mockup — not affiliated with the SEC, NCAA, or any university.</span>
       </footer>
       <DevClock />
+      <UpdateButton />
+    </div>
+  );
+};
+
+// Dev-only "Update" button (bottom-left): runs scripts/update.py on the server to
+// pull fresh game data for every conference with data (SEC + ACC today — see the
+// backend's UPDATE_CONFERENCES), regardless of the league tab in view, then reloads
+// so the new data shows. The update runs in the background; we poll until it
+// finishes. If the page is reloaded mid-run, we pick the run back up on mount.
+const UpdateButton = () => {
+  const [running, setRunning] = React.useState(false);
+  // Only reload once we've SEEN the run go true→false, so a stale/early "not
+  // running" reading can never refresh the page before the update is actually done.
+  const sawRunning = React.useRef(false);
+  const poll = React.useCallback(() => {
+    fetch("/api/dev/update")
+      .then((r) => r.json())
+      .then((s) => {
+        if (s.running) {                       // still working — keep waiting
+          sawRunning.current = true;
+          setRunning(true);
+          setTimeout(poll, 2000);
+        } else if (sawRunning.current) {       // it ran and is now finished — refresh
+          window.location.reload();
+        } else {                               // nothing in flight — don't refresh
+          setRunning(false);
+        }
+      })
+      .catch(() => setTimeout(poll, 4000));     // network blip — never reload on error
+  }, []);
+  // Resume waiting if an update is already in flight when this mounts.
+  React.useEffect(() => {
+    fetch("/api/dev/update")
+      .then((r) => r.json())
+      .then((s) => { if (s.running) { sawRunning.current = true; setRunning(true); poll(); } })
+      .catch(() => {});
+  }, [poll]);
+  const start = () => {
+    if (running) return;
+    setRunning(true);
+    sawRunning.current = false;
+    fetch("/api/dev/update", { method: "POST" })
+      .then((r) => r.json())
+      .then((s) => {                           // server registers the run before replying
+        if (s.running) sawRunning.current = true;
+        setTimeout(poll, 2000);
+      })
+      .catch(() => setRunning(false));
+  };
+  return (
+    <div className="devupd">
+      <button className={"devupd__btn mono" + (running ? " devupd__btn--busy" : "")}
+              disabled={running} onClick={start}>
+        {running ? "Updating…" : "Update"}
+      </button>
     </div>
   );
 };

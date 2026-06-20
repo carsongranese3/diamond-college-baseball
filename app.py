@@ -8,6 +8,8 @@ Endpoints:
 
 import datetime
 import os
+import subprocess
+import sys
 import threading
 import time
 
@@ -45,6 +47,52 @@ def _memo(key, ttl, producer):
     with _mem_lock:
         _mem[key] = (now, value)
     return value
+
+
+# ── Dev "Update" — run scripts/update.py to pull fresh data ───────────────────
+# A single-user dev tool (like the time machine): the bottom-left Update button
+# kicks this off, polls it, then reloads. update.py boots the stealth browser and
+# can run for minutes, so it runs in a background thread; the frontend polls
+# /api/dev/update for {running} and reloads when it flips false.
+
+# Which conferences the Update button pulls. None = every conference that already
+# has a data folder under 2026/ (currently SEC + ACC). To also pull conferences
+# update.py knows but that aren't onboarded yet, list them explicitly -- e.g.
+#   UPDATE_CONFERENCES = ["SEC", "ACC", "Big Ten", "Big 12"]
+# (labels must match update.py's CONFERENCE_TEAMS keys / 2026/ folder names).
+UPDATE_CONFERENCES = None
+
+_update_lock = threading.Lock()
+_update = {"running": False, "ok": None, "log": ""}
+
+
+def _update_conferences():
+    """The conference folder-labels one Update run pulls (one update.py pass each)."""
+    if UPDATE_CONFERENCES:
+        return list(UPDATE_CONFERENCES)
+    return [label for label, _seo in _available_confs()]
+
+
+def _run_update(conf_labels):
+    """Run scripts/update.py once per conference (team='all'), capture its output,
+    then drop the memo cache so the next bootstrap reflects the freshly pulled data.
+    Launched with the current interpreter — update.py re-execs itself into .venv-dev
+    (where the scraping stack lives) when needed."""
+    script = os.path.join(os.path.dirname(__file__), "scripts", "update.py")
+    chunks, ok = [], True
+    for label in conf_labels:
+        try:
+            proc = subprocess.run([sys.executable, script, label, "all"],
+                                  capture_output=True, text=True, timeout=3600)
+            chunks.append(proc.stdout + proc.stderr)
+            ok = ok and proc.returncode == 0
+        except Exception as e:                       # timeout, missing interpreter, …
+            chunks.append(f"{label}: {type(e).__name__}: {e}")
+            ok = False
+    with _mem_lock:
+        _mem.clear()
+    with _update_lock:
+        _update.update(running=False, ok=ok, log="\n".join(chunks))
 
 
 # ── Conferences / leagues ────────────────────────────────────────────────────
@@ -543,8 +591,29 @@ def bootstrap():
         teams, conf_full = _conf_full(label, seo, asof, test)
         all_teams += teams
         full.update(conf_full)
+
+    # Fill the full NCAA-tournament field from the bracket — the local 2026/ box
+    # scores only cover SEC/ACC, so the rest of the 64-team field (incl. all-non-
+    # conference matchups) comes from the API here. Box-score games for tracked
+    # teams win: a bracket game is added only when that team has no game that day
+    # vs that opponent. Pending games are stripped in test mode like the rest.
+    post = _memo("postseason_fill", 1800, season.postseason_schedules)
+    known = {t["id"] for t in all_teams}
+    for seo, games in post["games"].items():
+        existing = full.get(seo, [])
+        have = {(g.get("iso"), (g.get("opp") or {}).get("id")) for g in existing}
+        add = [g for g in games if (g.get("iso"), (g.get("opp") or {}).get("id")) not in have]
+        if test:
+            add = [dict(g, result=None, score=None) if (g.get("iso") or "") > asof else g for g in add]
+        if add:
+            full[seo] = sorted(existing + add, key=lambda g: g.get("iso") or "")
+    # Stubs for teams not in any tracked conference — sent separately so the boards
+    # can resolve their names/logos without putting them in standings/scores.
+    post_teams = [stub for seo, stub in post["teams"].items() if seo not in known]
+
     return jsonify({
         "teams": all_teams,
+        "postseason_teams": post_teams,
         "schedules": full,
         "updated": datetime.datetime.now().isoformat(timespec="minutes"),
         "phase": _live_phase(full),
@@ -562,6 +631,22 @@ def dev_clock():
         clock.configure(request.args.get("test") in ("1", "true", "on"),
                         request.args.get("date"))
     return jsonify(clock.state())
+
+
+@app.route("/api/dev/update", methods=["GET", "POST"])
+def dev_update():
+    """Dev-only data refresh. POST starts scripts/update.py in the background for
+    every conference in UPDATE_CONFERENCES (all teams); GET reports {running, ok}.
+    The button reloads the page once running flips false so the new data shows."""
+    if request.method == "POST":
+        with _update_lock:
+            if not _update["running"]:
+                labels = _update_conferences()
+                _update.update(running=True, ok=None, log="")
+                threading.Thread(target=_run_update, args=(labels,),
+                                 daemon=True).start()
+    with _update_lock:
+        return jsonify({k: _update[k] for k in ("running", "ok")})
 
 
 @app.route("/api/team/<seo>")

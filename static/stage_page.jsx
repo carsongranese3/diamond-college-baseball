@@ -427,17 +427,45 @@ function stgRegionalTracker(data, today) {
 // "What's at stake today" — one card per SEC team playing a regional game today,
 // classified from that team's record in the regional coming in. Built from real
 // (deduped) team schedules, not the bracket slot list (which carries projections).
+// Every team with a game in `round` on `today`, scoped to the current league and
+// deduped per matchup — so each game appears once even when one side is a filled-in
+// non-conference team whose bracket game id differs from the tracked side's. In NCAA
+// view this is the full national field; in a conference view, only that conference's.
+function stgRoundMatchups(round, today) {
+  const S = window.SCHEDULES || {};
+  const cur = window.CURRENT_LEAGUE;
+  const isNCAA = !cur || cur === "NCAA";
+  const leagueSet = isNCAA ? null
+    : new Set((window.leagueTeams ? window.leagueTeams(cur) : (window.TEAMS || [])).map((t) => t.id));
+  // Normalize seos in the matchup key — local box scores and the bracket sometimes
+  // spell the same team differently (e.g. "st-john-s-ny" vs "st-johns-ny"), which
+  // would otherwise show the game twice (once from each side).
+  const norm = (s) => (s || "?").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const seen = new Set();
+  const rows = [];
+  for (const seo in S) {
+    const reg = (S[seo] || []).filter((g) => (g.phase || "regular") === round);
+    // EVERY game this team plays today — a team can play twice in a day (regional
+    // doubleheaders), so we don't stop at the first.
+    for (const game of reg) {
+      if (game.iso !== today) continue;
+      const oppId = game.opp && game.opp.id;
+      if (!isNCAA && !(leagueSet.has(seo) || (oppId && leagueSet.has(oppId)))) continue;
+      const key = [norm(seo), norm(oppId)].sort().join("|") + "|" + today;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      rows.push({ seo, game, reg });
+    }
+  }
+  return rows;
+}
+
 function stgStakes(today) {
   if (!today) return null;
   const byId = window.TEAM_BY_ID || {};
-  const seen = new Set();
   const out = [];
-  for (const t of hpSecTeams()) {
-    const sched = (window.SCHEDULES || {})[t.id] || [];
-    const reg = sched.filter((g) => (g.phase || "regular") === "NCAA Regional");
-    const game = reg.find((g) => g.iso === today);
-    if (!game || seen.has(game.id)) continue;
-    seen.add(game.id);
+  for (const { seo, game, reg } of stgRoundMatchups("NCAA Regional", today)) {
+    const t = byId[seo] || { id: seo };
     const opp = (game.opp && byId[game.opp.id]) || game.opp || null;
     const prior = reg.filter((g) => g.iso < today);     // this team's regional games before today, in order
     const myLoss = prior.filter((g) => g.result === "L").length;
@@ -471,12 +499,57 @@ function stgStakes(today) {
     out.push({ a: t, b: opp, sa: game.score && game.score.us, sb: game.score && game.score.them,
                done: !!game.result, live: false, aState, bState,
                aElim: aState === "elim", bElim: bState === "elim",
-               game, hostId: t.id,                       // raw game + host so the bar opens the box score
-               city: (window.REGIONAL_CITY_BY_TEAM || {})[t.id] || "", stake, kind });
+               game, hostId: seo,                        // raw game + host so the bar opens the box score
+               city: (window.REGIONAL_CITY_BY_TEAM || {})[seo] || "", stake, kind });
   }
   const rank = { good: 0, bad: 1, warn: 2 };
   out.sort((x, y) => rank[x.kind] - rank[y.kind]);
-  return out.length ? { title: "WHAT'S AT STAKE TODAY", games: out } : null;
+  return out.length ? { title: "WHAT'S AT STAKE TODAY", eyebrow: "REGIONALS", games: out, keys: [
+    { state: "winners", label: "Winners' bracket" },
+    { state: "advance", label: "Win to Supers" },
+    { state: "elim", label: "Win or go home" },
+  ] } : null;
+}
+
+// "What's at stake today" for Super Regionals — one bar per best-of-3 series with
+// today's game. Same color model as regionals, mapped to the series state:
+//   game 1 (series 0-0)  -> blue  (no one can clinch or be eliminated yet)
+//   game 2 (a team leads) -> green (leader can win to Omaha) / red (trailer faces sweep)
+//   game 3 (1-1, decider)  -> both green (winner to Omaha)
+function stgSupers(today) {
+  if (!today) return null;
+  const byId = window.TEAM_BY_ID || {};
+  // Series host city, keyed by either team (from the bracket's super-regional list).
+  const cityByTeam = {};
+  for (const sr of (window.SUPER_REGIONALS || [])) {
+    if (!sr.city) continue;
+    if (sr.top) cityByTeam[sr.top.seo] = sr.city;
+    if (sr.bottom) cityByTeam[sr.bottom.seo] = sr.city;
+  }
+  const out = [];
+  for (const { seo, game, reg: sup } of stgRoundMatchups("NCAA Super Regional", today)) {
+    const t = byId[seo] || { id: seo };
+    const opp = (game.opp && byId[game.opp.id]) || game.opp || null;
+    const prior = sup.filter((g) => g.iso < today);
+    const myWin = prior.filter((g) => g.result === "W").length;
+    const myLoss = prior.filter((g) => g.result === "L").length;
+    let aState, bState, stake, kind;
+    if (myWin >= 1 && myLoss >= 1) { aState = "advance"; bState = "advance"; stake = "GAME 3 · winner to Omaha"; kind = "good"; }
+    else if (myWin >= 1) { aState = "advance"; bState = "elim"; stake = "SERIES · win to Omaha"; kind = "good"; }
+    else if (myLoss >= 1) { aState = "elim"; bState = "advance"; stake = "SERIES · win or go home"; kind = "bad"; }
+    else { aState = "winners"; bState = "winners"; stake = "GAME 1"; kind = "warn"; }
+    out.push({ a: t, b: opp, sa: game.score && game.score.us, sb: game.score && game.score.them,
+               done: !!game.result, live: false, aState, bState,
+               aElim: aState === "elim", bElim: bState === "elim",
+               game, hostId: seo, city: cityByTeam[seo] || "", stake, kind });
+  }
+  const rank = { good: 0, bad: 1, warn: 2 };
+  out.sort((x, y) => rank[x.kind] - rank[y.kind]);
+  return out.length ? { title: "WHAT'S AT STAKE TODAY", eyebrow: "SUPER REGIONALS", games: out, keys: [
+    { state: "winners", label: "Game 1" },
+    { state: "advance", label: "Win to Omaha" },
+    { state: "elim", label: "Win or go home" },
+  ] } : null;
 }
 
 function StageStakes({ stakes, onTeam }) {
@@ -520,17 +593,22 @@ function StageStakes({ stakes, onTeam }) {
 const STAKE_COLOR = { winners: "var(--bbx-blue)", advance: "var(--bbx-hot)", elim: "var(--bbx-cold)" };
 function StageRegionalBoard({ data, onTeam, onGame }) {
   if (!data || !(data.games || []).length) return null;
+  const keys = data.keys || [
+    { state: "winners", label: "Winners' bracket" },
+    { state: "advance", label: "Win to Supers" },
+    { state: "elim", label: "Win or go home" },
+  ];
   return (
     <div className="bbx-section">
       <div className="bbx-eyebrow-row">
         <span className="bbx-eyebrow bbx-gold">★ {data.title}</span>
         <span className="bbx-rule" />
-        <span className="bbx-eyebrow bbx-faint">REGIONALS</span>
+        <span className="bbx-eyebrow bbx-faint">{data.eyebrow || "REGIONALS"}</span>
       </div>
       <div className="stg-rb__key">
-        <span className="stg-rb__keyitem"><i style={{ background: STAKE_COLOR.winners }} />Winners' bracket</span>
-        <span className="stg-rb__keyitem"><i style={{ background: STAKE_COLOR.advance }} />Win to Supers</span>
-        <span className="stg-rb__keyitem"><i style={{ background: STAKE_COLOR.elim }} />Win or go home</span>
+        {keys.map((k, i) => (
+          <span key={i} className="stg-rb__keyitem"><i style={{ background: STAKE_COLOR[k.state] }} />{k.label}</span>
+        ))}
       </div>
       <div className="stg-rb">
         {data.games.map((g, i) => {
@@ -724,6 +802,10 @@ function StagePage({ cfg, onTeam, onGame, onGameModal }) {
             {cfg.ticker.length ? cfg.ticker.map((g, i) => {
               const homeLead = g.sb != null && g.sa != null && g.sb >= g.sa;
               const click = g.game && onGame && g.game.result ? () => onGame(g.game, g.hostId) : null;
+              // Live = the bracket marks it in-progress, or (for schedule-sourced rows
+              // with no live flag) a non-final game with no scheduled time. Show LIVE
+              // (red) instead of the placeholder TBD.
+              const liveNow = !g.final && (g.live === true || (g.live === undefined && g.st === "TBD"));
               const Row = ({ t, sc, lead }) => (
                 <div className={"bbx-tk__line" + (lead ? " bbx-tk__line--lead" : "")}>
                   <span className="bbx-tk__team"><HPLogo team={t} size={15} />{stgAbbr(t)}</span>
@@ -735,7 +817,7 @@ function StagePage({ cfg, onTeam, onGame, onGameModal }) {
                         disabled={!click} onClick={click || undefined}>
                   <Row t={g.a} sc={g.sa} lead={!homeLead && g.sa != null} />
                   <Row t={g.b} sc={g.sb} lead={homeLead && g.sb != null} />
-                  <span className={"bbx-tk__st" + (g.final ? "" : " bbx-tk__st--up")}>{g.st}</span>
+                  <span className={"bbx-tk__st" + (liveNow ? " bbx-tk__st--live" : g.final ? "" : " bbx-tk__st--up")}>{liveNow ? "LIVE" : g.st}</span>
                 </button>
               );
             }) : <div className="bbx-tk bbx-faint" style={{ padding: "10px 16px" }}>No games today.</div>}
@@ -845,7 +927,7 @@ const HomeStage = ({ phase, onTeam, onGame, onGameModal, league }) => {
     // The CWS hasn't been played in the data, so source everything from the bracket.
     const games = bracket ? stgCwsGames(bracket) : [];
     ticker = games.slice(0, 9).map((g) => ({ a: g.a.team, b: g.b.team, sa: g.sa, sb: g.sb,
-                                             final: g.done, st: g.done ? "FINAL" : "TBD", game: null }));
+                                             final: g.done, live: g.live, st: g.done ? "FINAL" : "TBD", game: null }));
     schedule = games;
     if (phase === "cws") {
       featured = bracket ? stgCwsFeatured(bracket) : null;
@@ -908,6 +990,10 @@ const HomeStage = ({ phase, onTeam, onGame, onGameModal, league }) => {
       // Today's Games list); reuses stgStakes' grouped data.
       dayGrid = stgStakes(day);                  // that day's games only; null if none
       featured = null;
+    } else if (phase === "super_regionals") {
+      // Same board, mapped to best-of-3 series stakes (win to Omaha / win or go home).
+      dayGrid = stgSupers(day);
+      featured = null;
     } else {
       featured = rows.length ? stgFeatured(phase, rows, day, league) : null;
     }
@@ -925,7 +1011,7 @@ const HomeStage = ({ phase, onTeam, onGame, onGameModal, league }) => {
     meta: ct ? ct.meta : m.meta,
     featured, tracker, stakes, dayGrid, scheduleTitle, schedule,
     fieldTitle: (m.fieldTitle || "").replace(/\bSEC\b/, league === "NCAA" ? "NCAA" : (league || "SEC")),
-    fieldScroll: phase === "sec_tournament" || phase === "regionals",   // cap the field at ~10 rows
+    fieldScroll: phase === "sec_tournament" || phase === "regionals" || phase === "super_regionals",   // cap the field at ~10 rows
 
     field, compare,
     league: league || window.CURRENT_LEAGUE,

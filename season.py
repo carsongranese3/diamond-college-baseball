@@ -228,6 +228,78 @@ def bracket_upcoming(sec_seos):
     return out
 
 
+_POSTSEASON_ROUNDS = {"NCAA Regional", "NCAA Super Regional", "College World Series"}
+
+
+def _mark_for(name, seo):
+    """Short 4-char mark from a team name (e.g. 'West Virginia' -> 'WV')."""
+    abbr = re.sub(r"[^A-Z0-9]", "", "".join(w[:1] for w in (name or "").split()).upper())
+    return (abbr or (name or seo or "").upper())[:4]
+
+
+def postseason_schedules():
+    """Every NCAA-tournament game (Regionals, Super Regionals, CWS) from the bracket,
+    INCLUDING matchups between teams not in any tracked conference — the local 2026/
+    box scores only cover SEC/ACC, so the rest of the 64-team field is filled here.
+
+    Returns {"games": {seo: [game, ...]}, "teams": {seo: stub}} — per-game entries in
+    build_season's shape (played carry score/result, pending are null), plus a minimal
+    team stub (id/name/logo/mark) for every team that appears so opponents and
+    non-conference sides resolve on the frontend. Box-score games for tracked teams
+    still win when these are merged (dedupe by date + opponent)."""
+    try:
+        data = ncaa.bracket(SEASON_END.year)
+    except (ncaa.NotFound, ncaa.APIError):
+        return {"games": {}, "teams": {}}
+    rank_by = _rank_lookup()
+    games = (data.get("championships") or [{}])[0].get("games") or []
+    out, stubs = {}, {}
+    for g in games:
+        sides = [t for t in (g.get("teams") or []) if t.get("seoname")]
+        if len(sides) < 2:                       # opponent not determined yet
+            continue
+        iso = _fmt_iso(g.get("startDate", ""))
+        rnd = phase.round_by_date(iso) if iso else None
+        if rnd not in _POSTSEASON_ROUNDS:        # only the NCAA tournament rounds
+            continue
+        final = g.get("gameState") == "F"
+        gid = str(g.get("contestId"))
+        for t, other in ((sides[0], sides[1]), (sides[1], sides[0])):
+            seo, oseo = t["seoname"], other["seoname"]
+            oname = other.get("nameShort") or oseo
+            us, them = t.get("score"), other.get("score")
+            result = None
+            if final:
+                if t.get("isWinner") is not None:
+                    result = "W" if t.get("isWinner") else "L"
+                elif us is not None and them is not None:
+                    result = "W" if us >= them else "L"
+            out.setdefault(seo, []).append({
+                "id": gid,
+                "date": _fmt_date(g.get("startDate", "")),
+                "iso": iso,
+                "opp": {
+                    "id": oseo, "name": oname, "mark": _mark_for(oname, oseo),
+                    "logo": ncaa.logo_url(oseo), "rank": rank_by.get(_norm(oname)), "conf": False,
+                },
+                "home": bool(t.get("isHome")),
+                "score": ({"us": us, "them": them} if (final and us is not None and them is not None) else None),
+                "result": result,
+                "time": g.get("startTime"),
+                "phase": rnd,
+            })
+            if seo not in stubs:
+                tname = t.get("nameShort") or seo
+                stubs[seo] = {
+                    "id": seo, "name": tname, "mark": _mark_for(tname, seo),
+                    "logo": ncaa.logo_url(seo), "rank": t.get("seed"),
+                    "conference": None, "postseason": True,
+                }
+    for seo in out:
+        out[seo].sort(key=lambda e: e["iso"])
+    return {"games": out, "teams": stubs}
+
+
 def build_season(fresh=False, conf="sec"):
     """Returns {teams: [...], schedules: {seo: [games]}, updated: iso}.
 
