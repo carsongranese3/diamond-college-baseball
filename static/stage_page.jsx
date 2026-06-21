@@ -353,9 +353,9 @@ function stgFinalsCompare(data) {
     rows: [
       aT.ovrW != null && bT.ovrW != null ? { label: "OVERALL", a: `${aT.ovrW}–${aT.ovrL}`, b: `${bT.ovrW}–${bT.ovrL}`,
         aWins: (aT.ovrW / Math.max(aT.ovrW + aT.ovrL, 1)) >= (bT.ovrW / Math.max(bT.ovrW + bT.ovrL, 1)) } : null,
-      aT.confW != null && bT.confW != null ? { label: "SEC RECORD", a: `${aT.confW}–${aT.confL}`, b: `${bT.confW}–${bT.confL}`,
+      aT.confW != null && bT.confW != null ? { label: "CONF RECORD", a: `${aT.confW}–${aT.confL}`, b: `${bT.confW}–${bT.confL}`,
         aWins: (aT.confW / Math.max(aT.confW + aT.confL, 1)) >= (bT.confW / Math.max(bT.confW + bT.confL, 1)) } : null,
-      { label: "NAT'L RANK", a: aT.rank ? `#${aT.rank}` : "—", b: bT.rank ? `#${bT.rank}` : "—", aWins: num(aT.rank) <= num(bT.rank) },
+      { label: "NAT'L RANK", a: aT.rank ? `#${aT.rank}` : "NR", b: bT.rank ? `#${bT.rank}` : "NR", aWins: num(aT.rank) <= num(bT.rank) },
       aT.rpi != null && bT.rpi != null ? { label: "RPI", a: `#${aT.rpi}`, b: `#${bT.rpi}`, aWins: num(aT.rpi) <= num(bT.rpi) } : null,
     ].filter(Boolean),
   };
@@ -405,7 +405,9 @@ function stgFinalsSeries(compare, today) {
       game: g, hostId: A.id, status: "", done, live: false,
       a: { team: A, rec: stgRec(A) }, b: { team: B, rec: stgRec(B) },
       sa, sb,
-      when: done ? `${sa}–${sb}` : (isToday && g.time ? stg12h(g.time) : (g.date || g.iso)),
+      // Done games already show the score on each team row; the right-hand slot
+      // reads "Final" (in gold) instead of repeating the score.
+      when: done ? "Final" : (isToday && g.time ? stg12h(g.time) : (g.date || g.iso)),
       series: `Game ${n}`,
     });
   }
@@ -921,7 +923,7 @@ function StagePage({ cfg, onTeam, onGame, onGameModal }) {
                     <Team s={g.b} sc={g.sb} win={winB} dim={g.done && !winB} />
                   </div>
                   <div className="stg-sched__right">
-                    <div className="stg-sched__when">{g.when}</div>
+                    <div className={"stg-sched__when" + (g.done && noStatus ? " bbx-gold" : "")}>{g.when}</div>
                     {g.series && <div className="mono bbx-gold stg-sched__series">◆ {g.series}</div>}
                   </div>
                 </button>
