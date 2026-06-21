@@ -60,12 +60,16 @@ def build_for_team(team_label):
                 if not name or name == team_label:
                     continue  # the "totals" row repeats the team name; skip it
                 e = by_name.setdefault(
-                    name, {"num": "", "pos": "", "g_bat": 0, "g_pit": 0})
+                    name, {"num": "", "pos_counts": {}, "g_bat": 0, "g_pit": 0})
                 e["g_bat" if kind == "batting" else "g_pit"] += 1
                 if not e["num"]:
                     e["num"] = r.get("#", "")
-                if not e["pos"]:
-                    e["pos"] = r.get("P", default_pos)
+                # Tally this game's position so we can keep the most-played one.
+                # Batting rows with no position aren't counted; pitching rows
+                # fall back to "P".
+                pos = (r.get("P") or "").strip().upper() or default_pos
+                if pos:
+                    e["pos_counts"][pos] = e["pos_counts"].get(pos, 0) + 1
 
     rows = []
     for name, e in by_name.items():
@@ -75,7 +79,8 @@ def build_for_team(team_label):
             role = "Batter"
         else:
             role = "Pitcher"
-        rows.append((e["num"], name, e["pos"], role, max(e["g_bat"], e["g_pit"])))
+        rows.append((e["num"], name, ld.most_played_position(e["pos_counts"]),
+                     role, max(e["g_bat"], e["g_pit"])))
 
     # Sort by jersey number (numeric); missing/non-numeric numbers go to the end.
     def _key(r):

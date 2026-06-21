@@ -62,6 +62,10 @@ def build_for_team(label):
 
     # name -> accumulator. Keep display name / number / position from the rows.
     bat, pit, meta = {}, {}, {}
+    # name -> {position: games} so a player's stored pos is the one played most.
+    # Tracked separately per table so a two-way player's batting position doesn't
+    # leak into their pitching row (they share `meta`).
+    bat_pos, pit_pos = {}, {}
 
     # Read boxscore.json + player_stats.json per game DIRECTLY (not via
     # _iter_games, which also needs play_by_play.json and would skip a game whose
@@ -93,6 +97,10 @@ def build_for_team(label):
                 continue  # didn't actually come to the plate
             acc = bat.setdefault(_norm(name), _blank(_BAT_COUNTS.values()) | {"g": 0, "pa": 0})
             meta.setdefault(_norm(name), {"name": name, "num": row.get("#", ""), "pos": row.get("P", "")})
+            pv = (row.get("P") or "").strip().upper()
+            if pv:
+                pc = bat_pos.setdefault(_norm(name), {})
+                pc[pv] = pc.get(pv, 0) + 1
             acc["g"] += 1
             acc["pa"] += ab + bb + hbp + sf + sh
             for src, dst in _BAT_COUNTS.items():
@@ -109,6 +117,9 @@ def build_for_team(label):
                 continue
             acc = pit.setdefault(_norm(name), _blank(_PIT_COUNTS.values()) | {"g": 0, "gs": 0, "outs": 0, "w": 0, "l": 0, "s": 0})
             meta.setdefault(_norm(name), {"name": name, "num": row.get("#", ""), "pos": row.get("P", "P")})
+            pc = pit_pos.setdefault(_norm(name), {})
+            pv = (row.get("P") or "").strip().upper() or "P"
+            pc[pv] = pc.get(pv, 0) + 1
             acc["g"] += 1
             if i == 0:
                 acc["gs"] += 1  # first pitcher listed = the game's starter
@@ -125,20 +136,23 @@ def build_for_team(label):
             if target is not None:
                 target[letter] += 1
 
-    def rows_out(acc, num_sort):
+    def rows_out(acc, num_sort, pos_counts=None):
         out = []
         for nkey, a in acc.items():
             m = meta.get(nkey, {})
-            row = {"num": m.get("num", ""), "name": m.get("name", ""), "pos": m.get("pos", "")}
+            pos = m.get("pos", "")
+            if pos_counts is not None and pos_counts.get(nkey):
+                pos = ld.most_played_position(pos_counts[nkey])
+            row = {"num": m.get("num", ""), "name": m.get("name", ""), "pos": pos}
             row.update(a)
             out.append(row)
         out.sort(key=lambda r: (-r.get(num_sort, 0), r["name"]))
         return out
 
-    bat_rows = rows_out(bat, "pa")
+    bat_rows = rows_out(bat, "pa", bat_pos)
     for r in bat_rows:  # singles aren't a box-score column; derive from the hits
         r["1b"] = r["h"] - r["2b"] - r["3b"] - r["hr"]
-    pit_rows = rows_out(pit, "outs")
+    pit_rows = rows_out(pit, "outs", pit_pos)
     for r in pit_rows:
         r["ip"] = outs_to_ip(r["outs"])  # convenience; `outs` is the canonical count
 

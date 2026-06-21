@@ -273,7 +273,7 @@ def postseason_schedules():
                 if t.get("isWinner") is not None:
                     result = "W" if t.get("isWinner") else "L"
                 elif us is not None and them is not None:
-                    result = "W" if us >= them else "L"
+                    result = "W" if us > them else "L"
             out.setdefault(seo, []).append({
                 "id": gid,
                 "date": _fmt_date(g.get("startDate", "")),

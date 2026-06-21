@@ -27,6 +27,7 @@ function pathForView(view) {
   switch (view.name) {
     case "home": return "/";
     case "standings": return "/standings";
+    case "stats": return "/stats";
     case "scores": {
       const slug = isoToMMDDYY(view.scoresDate);
       return slug ? "/scores/" + slug : "/scores";
@@ -92,6 +93,7 @@ function viewForPath(pathname, search) {
   const sp = new URLSearchParams(search || "");
   const p = (pathname || "/").replace(/\/+$/, "") || "/";
   if (p === "/" || p === "/home") return { name: "home" };
+  if (p === "/stats") return { name: "stats" };
   if (p === "/scores" || p.startsWith("/scores/")) {
     const slug = p.slice("/scores".length).replace(/^\//, "");
     return { name: "scores", scoresDate: mmddyyToIso(slug) || null };
@@ -203,6 +205,7 @@ const App = () => {
   const goTeam = (teamId) => setView({ name: "team", teamId, teamTab: "home" });
   const goGame = (game, hostTeamId, origin) => setView({ name: "game", game, hostTeamId, origin });
   const goStandings = () => setView({ name: "standings" });
+  const goStats = () => setView({ name: "stats" });
   const goScores = () => setView({ name: "scores" });
   const goCompare = () => setView({ name: "compare" });
   const goBracket = () => setView({ name: "bracket", bracketTab: "sec" });
@@ -212,6 +215,7 @@ const App = () => {
     : key === "compare" ? goCompare()
     : key === "postseason" || key === "bracket" ? goBracket()
     : key === "standings" ? goStandings()
+    : key === "stats" ? goStats()
     : goHome();
   // origin describes where to return (a "team" or "game" view) so Back works.
   const goPlayer = (seo, playerName, origin) =>
@@ -236,12 +240,14 @@ const App = () => {
     : view.name === "bracket" || fromBracket ? "bracket"
     : view.name === "scores" || fromScores ? "scores"
     : view.name === "standings" ? "standings"
+    : view.name === "stats" ? "stats"
     : "";
 
   return (
     <div className="app">
       <Topbar section={section} onHome={goHome} onStandings={goStandings} onScores={goScores}
-              onCompare={goCompare} onBracket={goBracket} theme={theme} onToggleTheme={toggleTheme}
+              onStats={goStats} onCompare={goCompare} onBracket={goBracket}
+              theme={theme} onToggleTheme={toggleTheme}
               league={league} leagues={window.LEAGUES || []} onLeague={setLeague} />
       <main className="container">
         {view.name === "home" && (() => {
@@ -254,6 +260,7 @@ const App = () => {
           return <Home league={league} onTeam={goTeam} onNav={goNav} />;   // offseason
         })()}
         {view.name === "standings" && <Standings league={league} onTeamClick={goTeam} />}
+        {view.name === "stats" && <Stats league={league} onTeamClick={goTeam} />}
         {view.name === "scores" && (
           <Scores
             league={league}
@@ -438,7 +445,7 @@ const DevClock = () => {
   );
 };
 
-const Topbar = ({ section, onHome, onStandings, onScores, onCompare, onBracket,
+const Topbar = ({ section, onHome, onStandings, onScores, onStats, onCompare, onBracket,
                  theme, onToggleTheme, league, leagues, onLeague }) => {
   const link = (active) => `topbar__link ${active ? "topbar__link--active" : "muted"}`;
   return (
@@ -451,6 +458,7 @@ const Topbar = ({ section, onHome, onStandings, onScores, onCompare, onBracket,
         <a className={link(section === "home")} onClick={onHome}>Home</a>
         <a className={link(section === "standings")} onClick={onStandings}>Standings</a>
         <a className={link(section === "scores")} onClick={onScores}>Scores</a>
+        <a className={link(section === "stats")} onClick={onStats}>Stats</a>
         <a className={link(section === "bracket")} onClick={onBracket}>Postseason</a>
         <a className={link(section === "compare")} onClick={onCompare}>Compare</a>
       </nav>

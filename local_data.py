@@ -38,6 +38,40 @@ def _norm(s):
     return re.sub(r"[^a-z0-9]", "", (s or "").lower())
 
 
+# Box-score "P" codes that are lineup roles, not fielding positions. We ignore
+# these when a player has any real fielding position so the displayed spot is
+# where they actually played (not where they happened to pinch-hit/run).
+_PSEUDO_POS = {"PH", "PR", "OUT", "DP"}
+
+
+def primary_position(code):
+    """Reduce one game's raw 'P'-column code to a single position token.
+    Splits compound codes ('PR/CF', '2B/3B', '/DH') and prefers a real fielding
+    position over a pinch role within that game. Returns '' for an empty code."""
+    toks = [t.strip().upper() for t in (code or "").split("/") if t.strip()]
+    for t in toks:
+        if t not in _PSEUDO_POS:
+            return t
+    return toks[0] if toks else ""
+
+
+def most_played_position(counts, default=""):
+    """Given {raw_code: games}, return the position a player played the most.
+    Normalizes compound codes and drops pinch roles (PH/PR/...) whenever the
+    player has at least one real fielding position. Ties resolve to the most
+    games, then to the position seen first (insertion order of `counts`)."""
+    agg = {}
+    for code, n in counts.items():
+        pos = primary_position(code)
+        if pos:
+            agg[pos] = agg.get(pos, 0) + n
+    if not agg:
+        return default
+    real = {p: n for p, n in agg.items() if p not in _PSEUDO_POS}
+    pool = real or agg
+    return max(pool, key=lambda k: pool[k])
+
+
 def _slug(s):
     return re.sub(r"[^a-z0-9]+", "-", (s or "").lower()).strip("-") or "opp"
 

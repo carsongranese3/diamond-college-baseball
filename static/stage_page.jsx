@@ -526,7 +526,10 @@ function stgStakes(today) {
                done: !!game.result, live: false, aState, bState,
                aElim: aState === "elim", bElim: bState === "elim",
                game, hostId: seo,                        // raw game + host so the bar opens the box score
-               city: (window.REGIONAL_CITY_BY_TEAM || {})[seo] || "", stake, kind });
+               // City is keyed by the host; `seo` may be the visitor, so fall back to
+               // the opponent's entry (the regional is named for one of the two).
+               city: (window.REGIONAL_CITY_BY_TEAM || {})[seo]
+                     || (window.REGIONAL_CITY_BY_TEAM || {})[game.opp && game.opp.id] || "", stake, kind });
   }
   const rank = { good: 0, bad: 1, warn: 2 };
   out.sort((x, y) => rank[x.kind] - rank[y.kind]);
@@ -567,7 +570,8 @@ function stgSupers(today) {
     out.push({ a: t, b: opp, sa: game.score && game.score.us, sb: game.score && game.score.them,
                done: !!game.result, live: false, aState, bState,
                aElim: aState === "elim", bElim: bState === "elim",
-               game, hostId: seo, city: cityByTeam[seo] || "", stake, kind });
+               game, hostId: seo,
+               city: cityByTeam[seo] || cityByTeam[game.opp && game.opp.id] || "", stake, kind });
   }
   const rank = { good: 0, bad: 1, warn: 2 };
   out.sort((x, y) => rank[x.kind] - rank[y.kind]);

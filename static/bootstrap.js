@@ -73,6 +73,8 @@ window.fetchRankingsHistory = _memoFetch("__rankHistCache", "/api/rankings/histo
 window.fetchPlayerOfWeek = _memoFetch("__potwCache", "/api/player-of-week", "player-of-week");
 // Players to watch — top batters + pitchers (one per team) by the player-of-week formula.
 window.fetchPlayersToWatch = _memoFetch("__ptwCache", "/api/players-to-watch", "players-to-watch");
+// Stat leaders — pooled, league-wide qualified batters + pitchers for the Stats page.
+window.fetchStatLeaders = _memoFetch("__slCache", "/api/stat-leaders", "stat-leaders");
 
 window.fetchTeam = function (seo) {
   if (!_teamCache[seo]) {

@@ -372,6 +372,74 @@ def conference_leaders():
     return _league_json("conference_leaders", season.SEASON_AGGREGATE_TTL, _conference_leaders)
 
 
+def _stat_leaders(league="sec"):
+    """Pooled, league-wide player-stats leaderboard for the Stats page. Walks every
+    team's roster (sharing the team:{seo} cache with _conference_leaders) and flattens
+    the qualified batters and pitchers into two flat lists of player cards. The
+    frontend does all the sorting / column / leader-hero logic, so rate stats stay as
+    their pre-formatted display strings and only the identity + raw stat fields ship."""
+    data = _season_for_league(league)
+    batters, pitchers = [], []
+    for t in data["teams"]:
+        seo, name = t["id"], t["name"]
+        sched = data["schedules"].get(seo)
+        try:
+            stats = _memo(f"team:{seo}", 21600,
+                          lambda seo=seo, name=name, sched=sched:
+                          local_data.team_stats(seo, name)
+                          or (compute_team_stats(seo, sched) if sched else None))
+        except Exception:
+            stats = None
+        roster = (stats or {}).get("roster") or {}
+        ident = {"team": t["name"], "seo": t["id"], "abbr": t.get("mark"),
+                 "color": t.get("color"), "logo": t.get("logo")}
+        for b in roster.get("batters", []):
+            try:
+                ab = int(b.get("ab") or 0)
+            except (TypeError, ValueError):
+                ab = 0
+            if ab < 50:                        # qualified batters only
+                continue
+            batters.append({**ident, "name": b.get("name"), "num": b.get("num"),
+                            "pos": b.get("pos"), "type": "B",
+                            # counting stats
+                            "ab": ab, "pa": int(b.get("pa") or 0),
+                            "r": int(b.get("r") or 0), "h": int(b.get("h") or 0),
+                            "hr": int(b.get("hr") or 0), "rbi": int(b.get("rbi") or 0),
+                            "bb": int(b.get("bb") or 0), "k": int(b.get("k") or 0),
+                            "sb": int(b.get("sb") or 0),
+                            # rate / advanced (pre-formatted display strings)
+                            "avg": b.get("avg"), "obp": b.get("obp"),
+                            "slg": b.get("slg"), "ops": b.get("ops"),
+                            "babip": b.get("babip"), "bbpct": b.get("bbpct"),
+                            "kpct": b.get("kpct"), "secavg": b.get("secavg"),
+                            "rc": b.get("rc")})
+        for p in roster.get("pitchers", []):
+            if _ip_float(p.get("ip")) < 20:     # qualified pitchers only
+                continue
+            pitchers.append({**ident, "name": p.get("name"), "num": p.get("num"),
+                             "pos": p.get("pos"), "type": "P",
+                             # counting stats
+                             "gs": int(p.get("gs") or 0), "w": int(p.get("w") or 0),
+                             "l": int(p.get("l") or 0), "sv": int(p.get("sv") or 0),
+                             "ip": p.get("ip"),
+                             "h": int(p.get("h") or 0), "r": int(p.get("r") or 0),
+                             "er": int(p.get("er") or 0), "bb": int(p.get("bb") or 0),
+                             "k": int(p.get("k") or 0),
+                             # rate / advanced (pre-formatted display strings)
+                             "era": p.get("era"), "whip": p.get("whip"),
+                             "k9": p.get("k9"), "bb9": p.get("bb9"), "hr9": p.get("hr9"),
+                             "kbb": p.get("kbb"), "fip": p.get("fip"),
+                             "kbbpct": p.get("kbbpct"), "lobpct": p.get("lobpct")})
+    return {"batters": batters, "pitchers": pitchers,
+            "teams": len(data["teams"]), "updated": data["updated"]}
+
+
+@app.route("/api/stat-leaders")
+def stat_leaders():
+    return _league_json("stat_leaders", season.SEASON_AGGREGATE_TTL, _stat_leaders)
+
+
 def _rankings_history(league="sec"):
     """Each team's standings position week by week within its league, from the
     precomputed weekly records (scripts/build_records.py). For every week, teams are
@@ -624,13 +692,17 @@ def _bootstrap_payload():
             all_teams += teams
             full.update(conf_full)
         # Fill the full NCAA-tournament field from the bracket (non-SEC/ACC matchups);
-        # box-score games for tracked teams win (dedupe by date + opponent).
+        # box-score games for tracked teams win (dedupe by date + opponent). The
+        # opponent seo is normalized (alphanumerics only) because box scores and the
+        # bracket sometimes spell it differently (e.g. "st-john-s-ny" vs "st-johns-ny"),
+        # which an exact match would miss — letting the same game show up twice.
+        nrm = lambda s: "".join(c for c in (s or "").lower() if c.isalnum())
         post = _memo("postseason_fill", 1800, season.postseason_schedules)
         known = {t["id"] for t in all_teams}
         for seo, games in post["games"].items():
             existing = full.get(seo, [])
-            have = {(g.get("iso"), (g.get("opp") or {}).get("id")) for g in existing}
-            add = [g for g in games if (g.get("iso"), (g.get("opp") or {}).get("id")) not in have]
+            have = {(g.get("iso"), nrm((g.get("opp") or {}).get("id"))) for g in existing}
+            add = [g for g in games if (g.get("iso"), nrm((g.get("opp") or {}).get("id"))) not in have]
             if test:
                 add = [dict(g, result=None, score=None) if (g.get("iso") or "") > asof else g for g in add]
             if add:
