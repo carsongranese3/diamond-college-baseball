@@ -124,15 +124,16 @@ def _recent_finals(scoreboard, played):
     return out
 
 
-def build_full_schedules(end=SEASON_END, conf="sec", fresh=False):
+def build_full_schedules(end=SEASON_END, conf="sec", fresh=False, fresh_days=2):
     """({seo: [game,...]}, {seo: name}) — every played game (saved box scores, plus
     scoreboard finals not yet pulled) and every upcoming game (scoreboard, plus
     bracket-scheduled postseason games), per team in `conf`.
 
-    fresh=True re-fetches recent daily scoreboards (bypassing the indefinite cache)
-    so games that finished since the board was last cached show up as finals — which
-    is what lets update.py notice there are new games to pull."""
-    season_data = season.build_season(conf=conf, fresh=fresh)
+    fresh=True re-fetches the last `fresh_days` of daily scoreboards (bypassing the
+    indefinite cache) so games that finished — or boards that were cached empty —
+    since the board was last cached show up as finals. That's what lets update.py
+    notice there are new games to pull (a wide window matters in the postseason)."""
+    season_data = season.build_season(conf=conf, fresh=fresh, fresh_days=fresh_days)
     teams = season_data["teams"]
     names = {t["id"]: t["name"] for t in teams}
     conf_seos = {t["id"] for t in teams}
@@ -167,14 +168,14 @@ def write_schedule(team_dir, label, games):
     return dest, len(games)
 
 
-def write_team_schedules(labels=None, end=SEASON_END, conf="sec", fresh=False):
+def write_team_schedules(labels=None, end=SEASON_END, conf="sec", fresh=False, fresh_days=2):
     """Build schedules once and write schedule.json into each team folder.
     labels=None writes every team in `conf` that has a folder; otherwise only those
-    whose folder label matches (case/format-insensitive). fresh=True re-pulls recent
-    scoreboards so just-finished games are picked up. Returns
+    whose folder label matches (case/format-insensitive). fresh=True re-pulls the
+    last `fresh_days` of scoreboards so just-finished games are picked up. Returns
     [(label, n_games, n_played)]."""
     want = {season._norm(x) for x in labels} if labels is not None else None
-    sched, names = build_full_schedules(end, conf=conf, fresh=fresh)
+    sched, names = build_full_schedules(end, conf=conf, fresh=fresh, fresh_days=fresh_days)
     out = []
     for seo, games in sched.items():
         team_dir = ld._find_dir(seo, names.get(seo, seo))

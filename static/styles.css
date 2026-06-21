@@ -2418,6 +2418,7 @@ a { color: inherit; text-decoration: none; }
 .stg-sched__row { display: grid; grid-template-columns: 78px 1fr auto; align-items: center; gap: 14px;
   width: 100%; text-align: left; padding: 14px 0; border-bottom: 1px solid var(--bbx-line); }
 .stg-sched__row:last-child { border-bottom: none; }
+.stg-sched__row--nostatus { grid-template-columns: 1fr auto; }   /* no left status pill */
 .stg-sched__row--click { cursor: pointer; }
 .stg-sched__row--click:hover { background: var(--bbx-panel2); }
 .stg-sched__teams { display: flex; flex-direction: column; gap: 7px; }

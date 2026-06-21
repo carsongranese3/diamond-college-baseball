@@ -300,11 +300,16 @@ def postseason_schedules():
     return {"games": out, "teams": stubs}
 
 
-def build_season(fresh=False, conf="sec"):
+def build_season(fresh=False, conf="sec", fresh_days=2):
     """Returns {teams: [...], schedules: {seo: [games]}, updated: iso}.
 
     Cached in ./cache/season.json via the underlying scoreboard cache; this
     function itself recomputes from cached daily scoreboards (cheap).
+
+    fresh=True re-fetches the daily scoreboards within the last `fresh_days` days
+    (bypassing the indefinite cache). A wide window matters in the postseason: a
+    team can go several days between games, and a board cached empty (e.g. fetched
+    before that day's games were posted) would otherwise stay empty forever.
     """
     today = _today()
     rank_by = _rank_lookup()
@@ -337,7 +342,7 @@ def build_season(fresh=False, conf="sec"):
         return teams[seo]
 
     for d in _daterange(SEASON_START, today):
-        is_recent = (today - d).days <= 2
+        is_recent = (today - d).days <= fresh_days
         try:
             board = ncaa.scoreboard(d.year, d.month, d.day, fresh=is_recent and fresh)
         except (ncaa.NotFound, ncaa.APIError):

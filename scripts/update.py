@@ -47,6 +47,11 @@ BULK_EVERY = 0       # bulk mode: rotate (restart) the stealth browser every N g
 
 BULK_COOLDOWN = (20, 45)   # randomized seconds to pause when rotating the browser
 
+# How many of the most recent daily scoreboards to re-fetch fresh when refreshing
+# schedules (bypassing the indefinite scoreboard cache). Wide enough to span the
+# whole postseason so a board cached empty days ago still gets corrected.
+REFRESH_DAYS = 30
+
 SEASON = 2026
 
 # This file lives in scripts/; add the project root (for season/local_data) and
@@ -282,7 +287,13 @@ def pull_missing(label):
         print(f"     no stats.ncaa.org id for {label!r} — skipping")
         return True
 
-    games = ns.team_schedule(school_id, SEASON)          # played games only
+    try:
+        games = ns.team_schedule(school_id, SEASON)      # played games only
+    except Exception as e:                                # Akamai block, network, …
+        print(f"     couldn't read {label}'s schedule from stats.ncaa.org "
+              f"({type(e).__name__}: {e})")
+        print("     ⛔ Stopping the run (re-run once the block/issue clears).")
+        return False
     sched_dir = _schedule_dir(label)
     os.makedirs(sched_dir, exist_ok=True)
 
@@ -352,11 +363,14 @@ def refresh_schedules(labels, conf_seo, conf_dir):
         os.makedirs(os.path.join(conf_dir, label), exist_ok=True)
 
     print("Refreshing schedule.json from the ncaa.com API…")
-    # fresh=True forces a re-pull of recent daily scoreboards (which are otherwise
-    # cached indefinitely), so games that finished since the board was last cached
-    # register as finals here — that's what makes the played-vs-saved check below
-    # notice there are new games to pull.
-    results = pull_schedule.write_team_schedules(labels, conf=conf_seo, fresh=True)
+    # fresh=True forces a re-pull of the last REFRESH_DAYS daily scoreboards (which
+    # are otherwise cached indefinitely), so games that finished — or boards cached
+    # empty before that day's games were posted — register as finals here. That's
+    # what makes the played-vs-saved check below notice new games to pull. The window
+    # is wide enough to cover the whole postseason, where a team can go several days
+    # between games and an older board may still be stale.
+    results = pull_schedule.write_team_schedules(labels, conf=conf_seo,
+                                                 fresh=True, fresh_days=REFRESH_DAYS)
     refreshed = set()
     for label, n, played in results:
         print(f"  {label}: schedule.json -> {n} games ({played} played)")

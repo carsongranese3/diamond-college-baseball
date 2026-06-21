@@ -180,6 +180,19 @@ _ROUND_PHASE = {"regular": "regular",
                 **{r: "sec_tournament" for r in _CONF_TOURNEYS}}
 
 
+def _cws_finals_started():
+    """True once the effective date has reached the CWS Finals' first scheduled game
+    (the finals start date comes from the bracket, so it's data-driven — not a fixed
+    calendar guess — yet still respects the dev time machine via clock.today()). Until
+    then the site stays on the CWS bracket screen, so the two stages stay distinct."""
+    try:
+        center = _memo("bracket_ncaa", 1800, bracket.ncaa_bracket).get("center") or {}
+    except Exception:
+        return False
+    start = (center.get("finals") or {}).get("startDate")
+    return bool(start and clock.today().isoformat() >= start)
+
+
 def _live_phase(full):
     """Site phase that advances to the next round the day AFTER the current round's
     games end (rather than on a fixed calendar boundary): the round of today's
@@ -216,7 +229,10 @@ def _live_phase(full):
     else:
         return datebased
     key = _ROUND_PHASE.get(rd, "regular")
-    if key == "cws" and datebased["phase"] == "cws_finals":
+    # CWS and its Finals share the same game-level round, so disambiguate: switch to
+    # the Finals once the bracket says the matchup is set (data-driven, the day the
+    # finals begin), falling back to the calendar window if the bracket isn't ready.
+    if key == "cws" and (_cws_finals_started() or datebased["phase"] == "cws_finals"):
         key = "cws_finals"
     return {"phase": key, "label": phase._SITE_LABEL.get(key, datebased["label"])}
 
@@ -520,41 +536,123 @@ def _player_of_week(league="sec"):
             "batter": batter, "pitcher": pitcher}
 
 
+def _round_field(phase_key, schedules):
+    """seos of the teams in the CURRENT postseason round's field — everyone who
+    entered the round (so a team eliminated mid-round still counts, but one knocked
+    out an earlier round does not). A team is "in" the round if it has a game inside
+    the round's date window; the CWS Finals field is the two bracket finalists.
+    Returns None to mean "no filter" — the regular season (every team is in)."""
+    if phase_key in ("regular", "offseason"):
+        return None
+    if phase_key == "cws_finals":
+        try:
+            finals = (_memo("bracket_ncaa", 1800, bracket.ncaa_bracket)
+                      .get("center") or {}).get("finals") or {}
+        except Exception:
+            return None
+        seos = {(finals.get("top") or {}).get("seo"),
+                (finals.get("bottom") or {}).get("seo")} - {None}
+        return seos or None
+    win = next((w for w in phase._WINDOWS if w[0] == phase_key), None)
+    if not win:
+        return None
+    lo, hi = win[1].isoformat(), win[2].isoformat()
+    field = {seo for seo, gs in schedules.items()
+             if any(lo <= (g.get("iso") or "") <= hi for g in gs)}
+    return field or None
+
+
+def _bootstrap_payload():
+    """(all_teams, full, post_teams): the merged team list, full per-team schedules
+    (with per-game phase), and non-conference postseason stubs. Shared by /api/bootstrap
+    and the site-phase computation so the homepage and every phase-dependent endpoint
+    are built from the exact same data. Memoized per effective date + test flag."""
+    asof = season._today().isoformat()
+    test = clock.is_test()
+
+    def build():
+        all_teams, full = [], {}
+        for label, seo in _available_confs():
+            teams, conf_full = _conf_full(label, seo, asof, test)
+            all_teams += teams
+            full.update(conf_full)
+        # Fill the full NCAA-tournament field from the bracket (non-SEC/ACC matchups);
+        # box-score games for tracked teams win (dedupe by date + opponent).
+        post = _memo("postseason_fill", 1800, season.postseason_schedules)
+        known = {t["id"] for t in all_teams}
+        for seo, games in post["games"].items():
+            existing = full.get(seo, [])
+            have = {(g.get("iso"), (g.get("opp") or {}).get("id")) for g in existing}
+            add = [g for g in games if (g.get("iso"), (g.get("opp") or {}).get("id")) not in have]
+            if test:
+                add = [dict(g, result=None, score=None) if (g.get("iso") or "") > asof else g for g in add]
+            if add:
+                full[seo] = sorted(existing + add, key=lambda g: g.get("iso") or "")
+        post_teams = [stub for seo, stub in post["teams"].items() if seo not in known]
+        return all_teams, full, post_teams
+
+    return _memo(f"bootstrap_payload:{asof}:{test}", 1800, build)
+
+
+def _site_phase():
+    """The one site-wide live phase, as /api/bootstrap reports it — so phase-dependent
+    endpoints (e.g. Players to Watch) never drift from the homepage at round boundaries,
+    where the data-driven phase advances a day before the calendar window does."""
+    return _live_phase(_bootstrap_payload()[1])
+
+
 def _players_to_watch(league="sec", n=4):
     """Top-N batters + top-N pitchers OVER THE FULL SEASON (to date) by the same
     formula as Player of the Week, at most ONE per team within each list (so the four
     batter cards are four different teams; a team may appear once among batters and
     once among pitchers). Volume qualifiers scale with each team's games played so a
-    small-sample line (e.g. a 4-for-6 bench bat) doesn't surface. {batters, pitchers}."""
-    data = _season_for_league(league)
+    small-sample line (e.g. a 4-for-6 bench bat) doesn't surface.
+
+    Postseason: limited to teams in the current round's field. The CWS Finals is the
+    exception to the one-per-team rule — with only two teams left it shows each one's
+    top TWO batters and TWO pitchers, so the panel stays full. {batters, pitchers}."""
+    # In the postseason, only feature players whose team is in the current round
+    # (its field at the start) — eliminated teams drop off as the rounds advance. Use
+    # the SAME site phase the homepage shows, so the two never disagree at a boundary.
+    ph = _site_phase()["phase"]
+    # The CWS Finals is a national event between two (often cross-conference)
+    # finalists, so pull from the whole NCAA pool regardless of the selected league —
+    # otherwise a conference view (e.g. SEC) would drop the other finalist.
+    pool = "ncaa" if ph == "cws_finals" else league
+    data = _season_for_league(pool)
     teams = data["teams"]
     schedules = data.get("schedules") or {}
     team_by = {t["id"]: t for t in teams}
     today = clock.today().isoformat()
     lines = local_data.week_player_lines(teams, "2026-01-01", today)   # season to date
 
-    bats, pits = [], []          # each team's single best (score, seo, name, counts)
+    field = _round_field(ph, schedules)
+    per_team = 2 if ph == "cws_finals" else 1    # finals: 2 per remaining team, else 1
+
+    bats, pits = [], []          # each team's best (score, seo, name, counts)
     for seo, d in lines.items():
+        if field is not None and seo not in field:
+            continue
         gp = sum(1 for g in (schedules.get(seo) or []) if g.get("result"))
         bat_min = max(6, 2 * gp)     # ≥2 PA per team game (qualified-ish hitter)
         pit_min = max(9, gp)         # ≥~1 IP per 3 team games
-        tb = tp = None
+        cb, cp = [], []
         for pname, c in d["batting"].items():
             if c["ab"] + c["bb"] + c["hbp"] < bat_min:
                 continue
             s = _batter_week_score(c)
-            if s is not None and (tb is None or s > tb[0]):
-                tb = (s, seo, pname, c)
+            if s is not None:
+                cb.append((s, seo, pname, c))
         for pname, c in d["pitching"].items():
             if c["outs"] < pit_min:
                 continue
             s = _pitcher_week_score(c)
-            if s is not None and (tp is None or s > tp[0]):
-                tp = (s, seo, pname, c)
-        if tb:
-            bats.append(tb)
-        if tp:
-            pits.append(tp)
+            if s is not None:
+                cp.append((s, seo, pname, c))
+        cb.sort(key=lambda x: x[0], reverse=True)
+        cp.sort(key=lambda x: x[0], reverse=True)
+        bats.extend(cb[:per_team])   # top `per_team` from this team
+        pits.extend(cp[:per_team])
     bats.sort(key=lambda x: x[0], reverse=True)
     pits.sort(key=lambda x: x[0], reverse=True)
     return {
@@ -580,37 +678,10 @@ def players_to_watch():
 
 @app.route("/api/bootstrap")
 def bootstrap():
-    # Build EVERY conference that has a 2026/<Conf>/ folder and merge — the team list
-    # carries a `conference` tag and the frontend filters by the chosen league.
-    # Schedules/scores come from the local 2026/ folders; the API supplies the team
-    # list, rankings (rank/RPI/order), and logos.
-    asof = season._today().isoformat()
-    test = clock.is_test()
-    all_teams, full = [], {}
-    for label, seo in _available_confs():
-        teams, conf_full = _conf_full(label, seo, asof, test)
-        all_teams += teams
-        full.update(conf_full)
-
-    # Fill the full NCAA-tournament field from the bracket — the local 2026/ box
-    # scores only cover SEC/ACC, so the rest of the 64-team field (incl. all-non-
-    # conference matchups) comes from the API here. Box-score games for tracked
-    # teams win: a bracket game is added only when that team has no game that day
-    # vs that opponent. Pending games are stripped in test mode like the rest.
-    post = _memo("postseason_fill", 1800, season.postseason_schedules)
-    known = {t["id"] for t in all_teams}
-    for seo, games in post["games"].items():
-        existing = full.get(seo, [])
-        have = {(g.get("iso"), (g.get("opp") or {}).get("id")) for g in existing}
-        add = [g for g in games if (g.get("iso"), (g.get("opp") or {}).get("id")) not in have]
-        if test:
-            add = [dict(g, result=None, score=None) if (g.get("iso") or "") > asof else g for g in add]
-        if add:
-            full[seo] = sorted(existing + add, key=lambda g: g.get("iso") or "")
-    # Stubs for teams not in any tracked conference — sent separately so the boards
-    # can resolve their names/logos without putting them in standings/scores.
-    post_teams = [stub for seo, stub in post["teams"].items() if seo not in known]
-
+    # The team list (tagged by conference), full per-team schedules, and the NCAA
+    # postseason field are all assembled by _bootstrap_payload (shared with the
+    # site-phase computation so the homepage and phase-dependent endpoints agree).
+    all_teams, full, post_teams = _bootstrap_payload()
     return jsonify({
         "teams": all_teams,
         "postseason_teams": post_teams,

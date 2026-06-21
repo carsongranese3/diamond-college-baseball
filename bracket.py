@@ -272,12 +272,28 @@ def ncaa_bracket(year=2026):
     top = _half_champion(left_ws) if left_ws else None
     bottom = _half_champion(right_ws) if right_ws else None
     fstate = "F" if (top and top["winner"]) or (bottom and bottom["winner"]) else "P"
+
+    # First (scheduled) date of the best-of-3 finals, as ISO — the day the CWS Finals
+    # begin. The site uses this to switch from the CWS screen to the Finals screen on
+    # the right calendar day (respecting the dev time machine), not just whenever the
+    # live bracket happens to have the matchup. None until the finals are scheduled.
+    def _iso(d):                                   # "06/20/2026" -> "2026-06-20"
+        try:
+            mo, da, yr = (d or "").split("/")
+            return f"{yr}-{mo}-{da}"
+        except ValueError:
+            return None
+    finals_isos = sorted(i for i in (_iso(g.get("date"))
+                                     for g in (sections.get(finals_sid, []) if finals_sid else []))
+                         if i)
+    finals_start = finals_isos[0] if finals_isos else None
+
     center = {
         "halves": {
             "left": _cws_half(left_ws, "left") if left_ws else None,
             "right": _cws_half(right_ws, "right") if right_ws else None,
         },
-        "finals": {"top": top, "bottom": bottom, "state": fstate},
+        "finals": {"top": top, "bottom": bottom, "state": fstate, "startDate": finals_start},
     }
 
     # team seo -> its regional's host city, for every team in every regional, so

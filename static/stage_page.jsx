@@ -325,40 +325,6 @@ function stgCwsField(data) {
   });
   return out;
 }
-// CWS games (both halves + finals) shaped for the schedule list.
-function stgCwsGames(data) {
-  const c = (data && data.center) || {};
-  const halves = c.halves || {};
-  const games = [];
-  ["left", "right"].forEach((side) => (halves[side] && halves[side].games || []).forEach((g) => games.push(g)));
-  (c.finals && (c.finals.games || (c.finals.top || c.finals.bottom ? [c.finals] : [])) || []).forEach((g) => games.push(g));
-  return games
-    .filter((g) => g.top && g.bottom && g.top.seo && g.bottom.seo)
-    .map((g) => {
-      const a = stgBracketTeam(g.top), b = stgBracketTeam(g.bottom);
-      const done = g.state === "F";
-      return { game: null, status: done ? "FINAL" : "TBD", done, live: g.state === "I",
-               a: { team: a, rec: "" }, b: { team: b, rec: "" },
-               sa: g.top.score, sb: g.bottom.score, when: done ? "Final" : "TBD" };
-    });
-}
-function stgCwsFeatured(data) {
-  const games = stgCwsGames(data);
-  if (!games.length) return null;
-  const byId = window.TEAM_BY_ID || {};
-  const isSec = (g) => (g.a.team && byId[g.a.team.id]) || (g.b.team && byId[g.b.team.id]);
-  // Prefer a finished SEC game, then any SEC game, then anything.
-  const g = games.find((x) => x.done && isSec(x)) || games.find(isSec)
-            || games.find((x) => x.done) || games[0];
-  return {
-    tag: STAGE_META.cws.featuredTag, round: STAGE_META.cws.title, game: null,
-    a: { team: g.a.team, seed: (g.a.team && g.a.team.rank) || "—", label: "BRACKET", rec: stgRec(g.a.team) },
-    b: { team: g.b.team, seed: (g.b.team && g.b.team.rank) || "—", label: "BRACKET", rec: stgRec(g.b.team) },
-    center: g.done ? { top: "FINAL", big: `${g.sb}–${g.sa}`, bot: "" } : { top: "OMAHA", big: "VS", bot: "" },
-    strip: [["VENUE", "Charles Schwab Field"], ["CITY", "Omaha, NE"],
-            ["FORMAT", "Double Elimination"], ["NEXT", "Bracket Finals"]],
-  };
-}
 // Finals head-to-head from the two CWS finalists (bracket half champions).
 function stgFinalsCompare(data) {
   const halves = (data && data.center && data.center.halves) || {};
@@ -388,6 +354,57 @@ function stgFinalsCompare(data) {
       aT.rpi != null && bT.rpi != null ? { label: "RPI", a: `#${aT.rpi}`, b: `#${bT.rpi}`, aWins: num(aT.rpi) <= num(bT.rpi) } : null,
     ].filter(Boolean),
   };
+}
+
+// "15:00" -> "3:00 PM"; passes through anything it can't parse.
+function stg12h(t) {
+  const m = /^(\d{1,2}):(\d{2})/.exec(t || "");
+  if (!m) return t || "TBD";
+  const ap = +m[1] >= 12 ? "PM" : "AM";
+  return `${(+m[1] % 12) || 12}:${m[2]} ${ap}`;
+}
+
+// The best-of-3 CWS Finals as three rows (for the CHAMPIONSHIP SERIES panel). Each
+// game shows its final score once played, its start time (12-hour) on game day, or
+// its date beforehand. Game 3 stays TBD until the series is 1–1 (a decider is needed).
+function stgFinalsSeries(compare, today) {
+  if (!compare) return [];
+  const A = compare.a, B = compare.b;
+  const games = ((window.SCHEDULES || {})[A.id] || [])
+    .filter((g) => g.opp && g.opp.id === B.id && (g.phase || "") === "College World Series")
+    .sort((x, y) => (x.iso || "").localeCompare(y.iso || ""));
+  let wa = 0, wb = 0;
+  for (const g of games) { if (g.result === "W") wa++; else if (g.result === "L") wb++; }
+  const decided = wa >= 2 || wb >= 2;
+  const need3 = wa === 1 && wb === 1;               // series is 1–1 -> game 3 happens
+  // The two finalists are known for the whole series, so every row — including a
+  // not-yet-needed game 3 — shows A vs B. status is left blank: no left pill, the
+  // right-hand "when" (score / time / date / "If necessary") carries the state.
+  const rows = [];
+  for (let n = 1; n <= 3; n++) {
+    const g = games[n - 1];
+    if (!g) {
+      rows.push({
+        game: null, status: "", done: false, live: false,
+        a: { team: A, rec: stgRec(A) }, b: { team: B, rec: stgRec(B) },
+        sa: null, sb: null,
+        when: n === 3 ? (decided ? "Not needed" : need3 ? "TBD" : "If necessary") : "TBD",
+        series: `Game ${n}`,
+      });
+      continue;
+    }
+    const done = !!g.result;
+    const sa = g.score && g.score.us, sb = g.score && g.score.them;
+    const isToday = g.iso === today;
+    rows.push({
+      game: g, hostId: A.id, status: "", done, live: false,
+      a: { team: A, rec: stgRec(A) }, b: { team: B, rec: stgRec(B) },
+      sa, sb,
+      when: done ? `${sa}–${sb}` : (isToday && g.time ? stg12h(g.time) : (g.date || g.iso)),
+      series: `Game ${n}`,
+    });
+  }
+  return rows;
 }
 
 /* ---------- Regionals: a tracker board of every SEC regional ---------- */
@@ -880,10 +897,12 @@ function StagePage({ cfg, onTeam, onGame, onGameModal }) {
                   {(g.done || g.live) && <span className={"stg-sched__sc" + (dim ? " stg-faint" : "")}>{sc}</span>}
                 </div>
               );
+              const noStatus = !g.status && !g.live;   // e.g. the CHAMPIONSHIP SERIES rows
               return (
-                <button key={i} className={"stg-sched__row" + (click ? " stg-sched__row--click" : "")}
+                <button key={i} className={"stg-sched__row" + (click ? " stg-sched__row--click" : "")
+                                + (noStatus ? " stg-sched__row--nostatus" : "")}
                         disabled={!click} onClick={click || undefined}>
-                  <div className="stg-sched__status"><StatusPill s={g.status} live={g.live} /></div>
+                  {!noStatus && <div className="stg-sched__status"><StatusPill s={g.status} live={g.live} /></div>}
                   <div className="stg-sched__teams">
                     <Team s={g.a} sc={g.sa} win={winA} dim={g.done && !winA} />
                     <Team s={g.b} sc={g.sb} win={winB} dim={g.done && !winB} />
@@ -924,13 +943,47 @@ const HomeStage = ({ phase, onTeam, onGame, onGameModal, league }) => {
 
   let ticker, featured, schedule, field, compare, tracker, stakes, dayGrid, scheduleTitle = m.scheduleTitle;
   if (isCws) {
-    // The CWS hasn't been played in the data, so source everything from the bracket.
-    const games = bracket ? stgCwsGames(bracket) : [];
-    ticker = games.slice(0, 9).map((g) => ({ a: g.a.team, b: g.b.team, sa: g.sa, sb: g.sb,
-                                             final: g.done, live: g.live, st: g.done ? "FINAL" : "TBD", game: null }));
-    schedule = games;
+    // Today's Omaha games come from the real (dated) schedules so the board changes
+    // day to day — not the whole bracket at once. The bracket still supplies the
+    // field, the headliner, and the finalists. CWS + Finals share one game-level
+    // round, and the slate is national (not league-scoped).
+    const round = "College World Series";
+    // The same Omaha game shows up under both teams' schedules, and the two sides can
+    // carry different ids (saved box score vs bracket vs scoreboard), so dedupe by the
+    // unordered matchup — keeping the entry with the most complete score. (Safe here:
+    // the CWS has no same-day doubleheaders that would legitimately repeat a matchup.)
+    const nrm = (s) => (s || "?").toLowerCase().replace(/[^a-z0-9]/g, "");
+    const cwsOn = (d) => {
+      const best = new Map();
+      for (const r of stgGamesOn(d).filter((x) => stgInRound(x.phase, round))) {
+        const key = [nrm(r.hostId), nrm(r.g && r.g.opp && r.g.opp.id)].sort().join("|");
+        const score = (x) => (x.hs != null && x.as != null ? 1 : 0);
+        const prev = best.get(key);
+        if (!prev || score(r) > score(prev)) best.set(key, r);
+      }
+      return [...best.values()];
+    };
+    const now = stgToday();
+    const todayRows = cwsOn(now);                  // strictly today -> top ticker
+    let day = now, rows = todayRows;
+    if (!rows.length) {                            // off-day: preview the next Omaha day
+      const dates = new Set(), sch = window.SCHEDULES || {};
+      for (const seo in sch) for (const g of sch[seo] || [])
+        if (g.iso && stgInRound(g.phase, round)) dates.add(g.iso);
+      const arr = [...dates].sort();
+      day = arr.find((d) => d > now) || (arr.length ? arr[arr.length - 1] : now);
+      rows = cwsOn(day);
+    }
+    if (day > now) scheduleTitle = "UPCOMING GAMES";
+    ticker = todayRows.slice(0, 9).map((r) => ({
+      a: r.away, b: r.home, sa: r.as, sb: r.hs, final: r.final,
+      st: r.final ? "FINAL" : (r.time || "TBD"), game: r.g, hostId: r.hostId,
+    }));
+    schedule = stgScheduleFrom(rows);
     if (phase === "cws") {
-      featured = bracket ? stgCwsFeatured(bracket) : null;
+      // Game of the Day = the marquee matchup among TODAY'S games (best by rank) —
+      // not an arbitrary finished game pulled from the whole bracket.
+      featured = rows.length ? stgFeatured(phase, rows, day, league) : null;
       field = bracket ? stgCwsField(bracket) : [];
       compare = null;
     } else {                                       // cws_finals
@@ -944,12 +997,10 @@ const HomeStage = ({ phase, onTeam, onGame, onGameModal, league }) => {
         strip: [["VENUE", "Charles Schwab Field"], ["CITY", "Omaha, NE"],
                 ["FORMAT", "Best-of-3"], ["TITLE", "National Championship"]],
       } : null;
-      // The championship series (best-of-3) between the two finalists.
-      schedule = compare ? [1, 2, 3].map((n) => ({
-        game: null, status: n < 3 ? "TBD" : "IF NEC", done: false, live: false,
-        a: { team: compare.a, rec: stgRec(compare.a) }, b: { team: compare.b, rec: stgRec(compare.b) },
-        sa: null, sb: null, when: `Game ${n}`, series: n === 3 ? "If necessary" : "Charles Schwab Field",
-      })) : [];
+      // The CHAMPIONSHIP SERIES panel lists all three best-of-3 games (date / time /
+      // final score), not just today's — so override the day-filtered schedule.
+      schedule = stgFinalsSeries(compare, now);
+      scheduleTitle = m.scheduleTitle;             // keep "CHAMPIONSHIP SERIES"
     }
   } else {
     // This league's games for the round, scoped so the ACC view shows ACC, not SEC.
