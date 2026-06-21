@@ -1,9 +1,9 @@
 {
   "contest_id": "6582282",
   "date": "05/31/2026",
-  "batting_team": "Texas A&M",
-  "pitching_team": "Southern California",
-  "note": "Broken-down from the saved play_by_play.json, which contains the Texas A&M at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "Texas A&M",
+  "home_team": "Southern California",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
       "inning": "Top 1",
@@ -116,9 +116,9 @@
       "description": "PARTIDA flied out to rf (0-0)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Andrew Johnson",
-      "batter": "Covarrubias",
+      "inning": "Bottom 1",
+      "pitcher": "Ethan Darden",
+      "batter": "Abbrie Covarrubias",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "K",
@@ -143,9 +143,9 @@
       "description": "Covarrubias grounded out to ss (0-1 K)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Andrew Johnson",
-      "batter": "Lopez, Ad. singled through the right side (1-1 KB).",
+      "inning": "Bottom 1",
+      "pitcher": "Ethan Darden",
+      "batter": "Adrian Lopez",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "KB",
@@ -159,7 +159,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lopez, Ad. singled through the right side (1-1 KB).",
+        "1B": "Adrian Lopez",
         "2B": null,
         "3B": null
       },
@@ -170,9 +170,9 @@
       "description": "Lopez, Ad. singled through the right side (1-1 KB)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Andrew Johnson",
-      "batter": "Lopez, Au. doubled to right center (0-1 S)",
+      "inning": "Bottom 1",
+      "pitcher": "Ethan Darden",
+      "batter": "Adrian Lopez",
       "outcome": "Double",
       "count": "0-1",
       "pitches": "S",
@@ -181,13 +181,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Lopez, Ad. singled through the right side (1-1 KB).",
+        "1B": "Adrian Lopez",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Lopez, Ad. singled through the right side (1-1 KB).",
-        "2B": "Lopez, Au. doubled to right center (0-1 S)",
+        "1B": "Adrian Lopez",
+        "2B": "Adrian Lopez",
         "3B": null
       },
       "score": {
@@ -197,9 +197,9 @@
       "description": "Lopez, Au. doubled to right center (0-1 S) Lopez, Ad. advanced to third."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Andrew Johnson",
-      "batter": "Takeuchi",
+      "inning": "Bottom 1",
+      "pitcher": "Ethan Darden",
+      "batter": "Kevin Takeuchi",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
@@ -208,13 +208,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Lopez, Ad. singled through the right side (1-1 KB).",
-        "2B": "Lopez, Au. doubled to right center (0-1 S)",
+        "1B": "Adrian Lopez",
+        "2B": "Adrian Lopez",
         "3B": null
       },
       "runners_after": {
-        "1B": "Takeuchi",
-        "2B": "Lopez, Au. doubled to right center (0-1 S)",
+        "1B": "Kevin Takeuchi",
+        "2B": "Adrian Lopez",
         "3B": null
       },
       "score": {
@@ -224,9 +224,9 @@
       "description": "Takeuchi singled up the middle, advanced to second on the throw, 2 RBI (0-0) Lopez, Au. scored Lopez, Ad. scored."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Andrew Johnson",
-      "batter": "Cadena",
+      "inning": "Bottom 1",
+      "pitcher": "Ethan Darden",
+      "batter": "Isaac Cadena",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBBKKB",
@@ -235,13 +235,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Takeuchi",
-        "2B": "Lopez, Au. doubled to right center (0-1 S)",
+        "1B": "Kevin Takeuchi",
+        "2B": "Adrian Lopez",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cadena",
-        "2B": "Lopez, Au. doubled to right center (0-1 S)",
+        "1B": "Isaac Cadena",
+        "2B": "Adrian Lopez",
         "3B": null
       },
       "score": {
@@ -251,8 +251,8 @@
       "description": "Cadena walked (3-2 BBBKKB)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Andrew Johnson",
+      "inning": "Bottom 1",
+      "pitcher": "Ethan Darden",
       "batter": "Basseer",
       "outcome": "Groundout",
       "count": "0-0",
@@ -262,13 +262,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cadena",
-        "2B": "Lopez, Au. doubled to right center (0-1 S)",
+        "1B": "Isaac Cadena",
+        "2B": "Adrian Lopez",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Cadena",
+        "2B": "Isaac Cadena",
         "3B": null
       },
       "score": {
@@ -278,26 +278,26 @@
       "description": "Basseer grounded out to 2b (0-0) Cadena advanced to second Takeuchi advanced to third."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Andrew Johnson",
-      "batter": "Lamb",
+      "inning": "Bottom 1",
+      "pitcher": "Ethan Darden",
+      "batter": "Andrew Lamb",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Cadena"
+        "Isaac Cadena"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Cadena",
+        "2B": "Isaac Cadena",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Lamb",
+        "2B": "Andrew Lamb",
         "3B": null
       },
       "score": {
@@ -307,9 +307,9 @@
       "description": "Lamb doubled down the lf line, 2 RBI (0-0) Cadena scored Takeuchi scored."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "LYONS",
-      "batter": "Carpentier",
+      "inning": "Bottom 1",
+      "pitcher": "Gavin Lyons",
+      "batter": "Dean Carpentier",
       "outcome": "Foul out",
       "count": "0-0",
       "pitches": "",
@@ -319,12 +319,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Lamb",
+        "2B": "Andrew Lamb",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Lamb",
+        "2B": "Andrew Lamb",
         "3B": null
       },
       "score": {
@@ -334,8 +334,8 @@
       "description": "Carpentier fouled out to rf (0-0)."
     },
     {
-      "inning": "Top 3",
-      "pitcher": "LYONS",
+      "inning": "Top 2",
+      "pitcher": "Andrew Johnson",
       "batter": "Jake Duer",
       "outcome": "Groundout",
       "count": "1-2",
@@ -361,8 +361,8 @@
       "description": "DUER grounded out to (1-2 KBFF)."
     },
     {
-      "inning": "Top 3",
-      "pitcher": "LYONS",
+      "inning": "Top 2",
+      "pitcher": "Andrew Johnson",
       "batter": "Bear Harrison",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -388,8 +388,8 @@
       "description": "HARRISON hit by pitch (2-2 KFBB)."
     },
     {
-      "inning": "Top 3",
-      "pitcher": "LYONS",
+      "inning": "Top 2",
+      "pitcher": "Andrew Johnson",
       "batter": "Ben Royo",
       "outcome": "Single",
       "count": "3-2",
@@ -415,8 +415,8 @@
       "description": "ROYO singled through the left side (3-2 KBBBK) HARRISON advanced to second."
     },
     {
-      "inning": "Top 3",
-      "pitcher": "LYONS",
+      "inning": "Top 2",
+      "pitcher": "Andrew Johnson",
       "batter": "KIEL",
       "outcome": "Fielder's choice",
       "count": "3-2",
@@ -442,8 +442,8 @@
       "description": "KIEL II reached on a fielder's choice (3-2 BFFBB) ROYO out at second ss to 2b HARRISON advanced to third."
     },
     {
-      "inning": "Top 3",
-      "pitcher": "LYONS",
+      "inning": "Top 2",
+      "pitcher": "Andrew Johnson",
       "batter": "Boston Kellner",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -469,9 +469,9 @@
       "description": "KELLNER struck out swinging (0-2 FKFS)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "LYONS",
-      "batter": "Urbon",
+      "inning": "Bottom 2",
+      "pitcher": "Gavin Lyons",
+      "batter": "Walter Urbon",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
@@ -485,7 +485,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Urbon",
+        "1B": "Walter Urbon",
         "2B": null,
         "3B": null
       },
@@ -496,9 +496,9 @@
       "description": "Urbon singled to second base (1-0 B)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "LYONS",
-      "batter": "Covarrubias",
+      "inning": "Bottom 2",
+      "pitcher": "Gavin Lyons",
+      "batter": "Abbrie Covarrubias",
       "outcome": "Flyout",
       "count": "2-2",
       "pitches": "FBKFFFB",
@@ -507,12 +507,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Urbon",
+        "1B": "Walter Urbon",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Urbon",
+        "1B": "Walter Urbon",
         "2B": null,
         "3B": null
       },
@@ -523,9 +523,9 @@
       "description": "Covarrubias flied out to cf (2-2 FBKFFFB)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "LYONS",
-      "batter": "Lopez, Ad. struck out looking (0-2 FFK).",
+      "inning": "Bottom 2",
+      "pitcher": "Gavin Lyons",
+      "batter": "Adrian Lopez",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
       "pitches": "FFK",
@@ -534,12 +534,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Urbon",
+        "1B": "Walter Urbon",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Urbon",
+        "1B": "Walter Urbon",
         "2B": null,
         "3B": null
       },
@@ -550,9 +550,9 @@
       "description": "Lopez, Ad. struck out looking (0-2 FFK)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "LYONS",
-      "batter": "Lopez, Au. walked (3-2 SBBBFFFB)",
+      "inning": "Bottom 2",
+      "pitcher": "Gavin Lyons",
+      "batter": "Adrian Lopez",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "SBBBFFFB",
@@ -561,13 +561,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Urbon",
+        "1B": "Walter Urbon",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Lopez, Au. walked (3-2 SBBBFFFB)",
-        "2B": "Urbon",
+        "1B": "Adrian Lopez",
+        "2B": "Walter Urbon",
         "3B": null
       },
       "score": {
@@ -577,9 +577,9 @@
       "description": "Lopez, Au. walked (3-2 SBBBFFFB) Urbon advanced to second."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "LYONS",
-      "batter": "Takeuchi",
+      "inning": "Bottom 2",
+      "pitcher": "Gavin Lyons",
+      "batter": "Kevin Takeuchi",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
@@ -588,13 +588,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Lopez, Au. walked (3-2 SBBBFFFB)",
-        "2B": "Urbon",
+        "1B": "Adrian Lopez",
+        "2B": "Walter Urbon",
         "3B": null
       },
       "runners_after": {
-        "1B": "Lopez, Au. walked (3-2 SBBBFFFB)",
-        "2B": "Urbon",
+        "1B": "Adrian Lopez",
+        "2B": "Walter Urbon",
         "3B": null
       },
       "score": {
@@ -604,8 +604,8 @@
       "description": "Takeuchi grounded out to (0-0)."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "LYONS",
+      "inning": "Top 3",
+      "pitcher": "Andrew Johnson",
       "batter": "Gavin Grahovac",
       "outcome": "Single",
       "count": "0-2",
@@ -631,8 +631,8 @@
       "description": "GRAHOVAC singled to right field (0-2 KF)."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "LYONS",
+      "inning": "Top 3",
+      "pitcher": "Andrew Johnson",
       "batter": "Caden Sorrell",
       "outcome": "Flyout",
       "count": "0-2",
@@ -658,8 +658,8 @@
       "description": "SORRELL flied out to cf (0-2 KSF)."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "LYONS",
+      "inning": "Top 3",
+      "pitcher": "Andrew Johnson",
       "batter": "Chris Hacopian",
       "outcome": "Grounded into double play",
       "count": "0-0",
@@ -685,9 +685,9 @@
       "description": "HACOPIAN grounded into double play to 2b to 1b (0-0) GRAHOVAC out on the play."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "LYONS",
-      "batter": "Cadena",
+      "inning": "Bottom 3",
+      "pitcher": "Gavin Lyons",
+      "batter": "Isaac Cadena",
       "outcome": "Double",
       "count": "3-1",
       "pitches": "BBKB",
@@ -702,7 +702,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Cadena",
+        "2B": "Isaac Cadena",
         "3B": null
       },
       "score": {
@@ -712,8 +712,8 @@
       "description": "Cadena doubled down the rf line (3-1 BBKB)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "LYONS",
+      "inning": "Bottom 3",
+      "pitcher": "Gavin Lyons",
       "batter": "Basseer",
       "outcome": "Single",
       "count": "1-0",
@@ -724,13 +724,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": null,
-        "2B": "Cadena",
+        "2B": "Isaac Cadena",
         "3B": null
       },
       "runners_after": {
         "1B": "Basseer",
         "2B": null,
-        "3B": "Cadena"
+        "3B": "Isaac Cadena"
       },
       "score": {
         "away": 1,
@@ -739,24 +739,24 @@
       "description": "Basseer singled to second base (1-0 B) Cadena advanced to third."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "POWELL",
-      "batter": "Lamb",
+      "inning": "Bottom 3",
+      "pitcher": "Cooper Powell",
+      "batter": "Andrew Lamb",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "KBBSB",
       "rbi": true,
       "runs_scored": [
         "Basseer",
-        "Cadena",
-        "Lamb"
+        "Isaac Cadena",
+        "Andrew Lamb"
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Basseer",
         "2B": null,
-        "3B": "Cadena"
+        "3B": "Isaac Cadena"
       },
       "runners_after": {
         "1B": null,
@@ -770,9 +770,9 @@
       "description": "Lamb homered to right center, 3 RBI (3-2 KBBSB) Basseer scored Cadena scored."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "POWELL",
-      "batter": "Carpentier",
+      "inning": "Bottom 3",
+      "pitcher": "Cooper Powell",
+      "batter": "Dean Carpentier",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
@@ -797,9 +797,9 @@
       "description": "Carpentier flied out to cf (0-0)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "POWELL",
-      "batter": "Urbon",
+      "inning": "Bottom 3",
+      "pitcher": "Cooper Powell",
+      "batter": "Walter Urbon",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
       "pitches": "KBFK",
@@ -824,9 +824,9 @@
       "description": "Urbon struck out looking (1-2 KBFK)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "POWELL",
-      "batter": "Covarrubias",
+      "inning": "Bottom 3",
+      "pitcher": "Cooper Powell",
+      "batter": "Abbrie Covarrubias",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
       "pitches": "SSK",
@@ -851,8 +851,8 @@
       "description": "Covarrubias struck out looking (0-2 SSK)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "POWELL",
+      "inning": "Top 4",
+      "pitcher": "Andrew Johnson",
       "batter": "Nico Partida",
       "outcome": "Flyout",
       "count": "2-2",
@@ -878,8 +878,8 @@
       "description": "PARTIDA flied out to cf (2-2 FKBB)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "POWELL",
+      "inning": "Top 4",
+      "pitcher": "Andrew Johnson",
       "batter": "Jake Duer",
       "outcome": "Flyout",
       "count": "0-0",
@@ -905,8 +905,8 @@
       "description": "DUER flied out to cf (0-0)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "POWELL",
+      "inning": "Top 4",
+      "pitcher": "Andrew Johnson",
       "batter": "Bear Harrison",
       "outcome": "Walk",
       "count": "3-2",
@@ -932,8 +932,8 @@
       "description": "HARRISON walked (3-2 KKBBBFFFB)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "POWELL",
+      "inning": "Top 4",
+      "pitcher": "Andrew Johnson",
       "batter": "Ben Royo",
       "outcome": "Single",
       "count": "1-1",
@@ -959,8 +959,8 @@
       "description": "ROYO singled to left field (1-1 SB) HARRISON advanced to second."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "POWELL",
+      "inning": "Top 4",
+      "pitcher": "Andrew Johnson",
       "batter": "KIEL",
       "outcome": "Flyout",
       "count": "0-0",
@@ -986,9 +986,9 @@
       "description": "KIEL II flied out to cf to left center (0-0)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "POWELL",
-      "batter": "Lopez, Ad. reached on a fielding error by ss (0-0).",
+      "inning": "Bottom 4",
+      "pitcher": "Cooper Powell",
+      "batter": "Adrian Lopez",
       "outcome": "Reached on error",
       "count": "0-0",
       "pitches": "",
@@ -1002,7 +1002,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lopez, Ad. reached on a fielding error by ss (0-0).",
+        "1B": "Adrian Lopez",
         "2B": null,
         "3B": null
       },
@@ -1013,25 +1013,25 @@
       "description": "Lopez, Ad. reached on a fielding error by ss (0-0)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "POWELL",
-      "batter": "Lopez, Au. homered to left center, 2 RBI (1-0 B)",
+      "inning": "Bottom 4",
+      "pitcher": "Cooper Powell",
+      "batter": "Adrian Lopez",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Lopez, Au. homered to left center, 2 RBI (1-0 B)"
+        "Adrian Lopez"
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Lopez, Ad. reached on a fielding error by ss (0-0).",
+        "1B": "Adrian Lopez",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Lopez, Ad. reached on a fielding error by ss (0-0).",
+        "1B": "Adrian Lopez",
         "2B": null,
         "3B": null
       },
@@ -1042,9 +1042,9 @@
       "description": "Lopez, Au. homered to left center, 2 RBI (1-0 B) Lopez, Ad. scored, unearned."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "POWELL",
-      "batter": "Takeuchi",
+      "inning": "Bottom 4",
+      "pitcher": "Cooper Powell",
+      "batter": "Kevin Takeuchi",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "BKFFFS",
@@ -1053,12 +1053,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Lopez, Ad. reached on a fielding error by ss (0-0).",
+        "1B": "Adrian Lopez",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Lopez, Ad. reached on a fielding error by ss (0-0).",
+        "1B": "Adrian Lopez",
         "2B": null,
         "3B": null
       },
@@ -1069,9 +1069,9 @@
       "description": "Takeuchi struck out swinging (1-2 BKFFFS)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "POWELL",
-      "batter": "Cadena",
+      "inning": "Bottom 4",
+      "pitcher": "Cooper Powell",
+      "batter": "Isaac Cadena",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "KBKBS",
@@ -1080,12 +1080,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Lopez, Ad. reached on a fielding error by ss (0-0).",
+        "1B": "Adrian Lopez",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Lopez, Ad. reached on a fielding error by ss (0-0).",
+        "1B": "Adrian Lopez",
         "2B": null,
         "3B": null
       },
@@ -1096,8 +1096,8 @@
       "description": "Cadena struck out swinging (2-2 KBKBS)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "POWELL",
+      "inning": "Bottom 4",
+      "pitcher": "Cooper Powell",
       "batter": "Basseer",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1107,12 +1107,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Lopez, Ad. reached on a fielding error by ss (0-0).",
+        "1B": "Adrian Lopez",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Lopez, Ad. reached on a fielding error by ss (0-0).",
+        "1B": "Adrian Lopez",
         "2B": null,
         "3B": null
       },
@@ -1123,8 +1123,8 @@
       "description": "Basseer flied out to cf (0-0)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "POWELL",
+      "inning": "Top 5",
+      "pitcher": "Andrew Johnson",
       "batter": "Boston Kellner",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1150,8 +1150,8 @@
       "description": "KELLNER struck out swinging (2-2 BKFBS)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "POWELL",
+      "inning": "Top 5",
+      "pitcher": "Andrew Johnson",
       "batter": "Gavin Grahovac",
       "outcome": "Home run",
       "count": "0-1",
@@ -1179,8 +1179,8 @@
       "description": "GRAHOVAC homered to left field, RBI (0-1 F)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "POWELL",
+      "inning": "Top 5",
+      "pitcher": "Andrew Johnson",
       "batter": "Caden Sorrell",
       "outcome": "Single",
       "count": "3-2",
@@ -1206,8 +1206,8 @@
       "description": "SORRELL singled through the right side (3-2 KBBBKF)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "POWELL",
+      "inning": "Top 5",
+      "pitcher": "Andrew Johnson",
       "batter": "Chris Hacopian",
       "outcome": "Flyout",
       "count": "3-1",
@@ -1233,8 +1233,8 @@
       "description": "HACOPIAN flied out to rf to right center (3-1 BKBB)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "POWELL",
+      "inning": "Top 5",
+      "pitcher": "Andrew Johnson",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1260,8 +1260,8 @@
       "description": "SORRELL stole second, advanced to third on a throwing error by c."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "POWELL",
+      "inning": "Top 5",
+      "pitcher": "Andrew Johnson",
       "batter": "Nico Partida",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1287,9 +1287,9 @@
       "description": "PARTIDA struck out swinging (2-2 KBBFFS)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "VINCENT",
-      "batter": "Lamb",
+      "inning": "Bottom 5",
+      "pitcher": "Hunter Vincent",
+      "batter": "Andrew Lamb",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "SBK",
@@ -1303,7 +1303,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lamb",
+        "1B": "Andrew Lamb",
         "2B": null,
         "3B": null
       },
@@ -1314,9 +1314,9 @@
       "description": "Lamb singled up the middle (1-2 SBK)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "VINCENT",
-      "batter": "Carpentier",
+      "inning": "Bottom 5",
+      "pitcher": "Hunter Vincent",
+      "batter": "Dean Carpentier",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
@@ -1325,13 +1325,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Lamb",
+        "1B": "Andrew Lamb",
         "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Lamb",
+        "2B": "Andrew Lamb",
         "3B": null
       },
       "score": {
@@ -1341,9 +1341,9 @@
       "description": "Carpentier grounded out to p, SAC, bunt (0-0) Lamb advanced to second."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "VINCENT",
-      "batter": "Urbon",
+      "inning": "Bottom 5",
+      "pitcher": "Hunter Vincent",
+      "batter": "Walter Urbon",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "FB",
@@ -1353,13 +1353,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Lamb",
+        "2B": "Andrew Lamb",
         "3B": null
       },
       "runners_after": {
         "1B": null,
         "2B": null,
-        "3B": "Lamb"
+        "3B": "Andrew Lamb"
       },
       "score": {
         "away": 2,
@@ -1368,9 +1368,9 @@
       "description": "Urbon grounded out to p (1-1 FB) Lamb advanced to third."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "VINCENT",
-      "batter": "Covarrubias",
+      "inning": "Bottom 5",
+      "pitcher": "Hunter Vincent",
+      "batter": "Abbrie Covarrubias",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "F",
@@ -1381,12 +1381,12 @@
       "runners_before": {
         "1B": null,
         "2B": null,
-        "3B": "Lamb"
+        "3B": "Andrew Lamb"
       },
       "runners_after": {
         "1B": null,
         "2B": null,
-        "3B": "Lamb"
+        "3B": "Andrew Lamb"
       },
       "score": {
         "away": 2,
@@ -1395,8 +1395,8 @@
       "description": "Covarrubias grounded out to (0-1 F)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "VINCENT",
+      "inning": "Top 6",
+      "pitcher": "Andrew Johnson",
       "batter": "Jake Duer",
       "outcome": "Single",
       "count": "1-1",
@@ -1422,8 +1422,8 @@
       "description": "DUER singled through the left side (1-1 BF)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "VINCENT",
+      "inning": "Top 6",
+      "pitcher": "Andrew Johnson",
       "batter": "Bear Harrison",
       "outcome": "Pop out",
       "count": "1-2",
@@ -1449,8 +1449,8 @@
       "description": "HARRISON popped up to ss (1-2 KKB)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "VINCENT",
+      "inning": "Top 6",
+      "pitcher": "Andrew Johnson",
       "batter": "Ben Royo",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1476,8 +1476,8 @@
       "description": "ROYO flied out to cf to left center (1-1 FB)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "VINCENT",
+      "inning": "Top 6",
+      "pitcher": "Andrew Johnson",
       "batter": "KIEL",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1503,9 +1503,9 @@
       "description": "KIEL II flied out to rf to right center (2-1 KBB)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "VINCENT",
-      "batter": "Lopez, Ad. walked (3-2 BBBKFB).",
+      "inning": "Bottom 6",
+      "pitcher": "Hunter Vincent",
+      "batter": "Adrian Lopez",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBBKFB",
@@ -1519,7 +1519,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lopez, Ad. walked (3-2 BBBKFB).",
+        "1B": "Adrian Lopez",
         "2B": null,
         "3B": null
       },
@@ -1530,9 +1530,9 @@
       "description": "Lopez, Ad. walked (3-2 BBBKFB)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "VINCENT",
-      "batter": "Lopez, Au. struck out swinging (3-2 BSFBBFS).",
+      "inning": "Bottom 6",
+      "pitcher": "Hunter Vincent",
+      "batter": "Adrian Lopez",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
       "pitches": "BSFBBFS",
@@ -1541,12 +1541,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Lopez, Ad. walked (3-2 BBBKFB).",
+        "1B": "Adrian Lopez",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Lopez, Ad. walked (3-2 BBBKFB).",
+        "1B": "Adrian Lopez",
         "2B": null,
         "3B": null
       },
@@ -1557,9 +1557,9 @@
       "description": "Lopez, Au. struck out swinging (3-2 BSFBBFS)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "VINCENT",
-      "batter": "Takeuchi",
+      "inning": "Bottom 6",
+      "pitcher": "Hunter Vincent",
+      "batter": "Kevin Takeuchi",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "FSFS",
@@ -1568,12 +1568,12 @@
       "outs_before": 1,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Lopez, Ad. walked (3-2 BBBKFB).",
+        "1B": "Adrian Lopez",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Lopez, Ad. walked (3-2 BBBKFB).",
+        "1B": "Adrian Lopez",
         "2B": null,
         "3B": null
       },
@@ -1584,8 +1584,8 @@
       "description": "Takeuchi struck out swinging (0-2 FSFS) Lopez, Ad. out at second c to 2b, caught stealing."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "VINCENT",
+      "inning": "Top 7",
+      "pitcher": "Andrew Johnson",
       "batter": "Boston Kellner",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1611,8 +1611,8 @@
       "description": "KELLNER struck out looking (2-2 BKBFK)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "VINCENT",
+      "inning": "Top 7",
+      "pitcher": "Andrew Johnson",
       "batter": "Gavin Grahovac",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1638,8 +1638,8 @@
       "description": "GRAHOVAC grounded out to (0-0)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "VINCENT",
+      "inning": "Top 7",
+      "pitcher": "Andrew Johnson",
       "batter": "Caden Sorrell",
       "outcome": "Pop out",
       "count": "1-2",
@@ -1665,9 +1665,9 @@
       "description": "SORRELL popped up to (1-2 BSK)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "VINCENT",
-      "batter": "Cadena",
+      "inning": "Bottom 7",
+      "pitcher": "Hunter Vincent",
+      "batter": "Isaac Cadena",
       "outcome": "Foul out",
       "count": "1-0",
       "pitches": "B",
@@ -1692,8 +1692,8 @@
       "description": "Cadena fouled out to (1-0 B)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "VINCENT",
+      "inning": "Bottom 7",
+      "pitcher": "Hunter Vincent",
       "batter": "Basseer",
       "outcome": "Walk",
       "count": "3-0",
@@ -1719,9 +1719,9 @@
       "description": "Basseer walked (3-0 BBBB)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "VINCENT",
-      "batter": "Lamb",
+      "inning": "Bottom 7",
+      "pitcher": "Hunter Vincent",
+      "batter": "Andrew Lamb",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBKBB",
@@ -1735,7 +1735,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lamb",
+        "1B": "Andrew Lamb",
         "2B": "Basseer",
         "3B": null
       },
@@ -1746,9 +1746,9 @@
       "description": "Lamb walked (3-1 BBKBB) Basseer advanced to second."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "VARGAS",
-      "batter": "Carpentier",
+      "inning": "Bottom 7",
+      "pitcher": "Juan Vargas",
+      "batter": "Dean Carpentier",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
@@ -1757,12 +1757,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Lamb",
+        "1B": "Andrew Lamb",
         "2B": "Basseer",
         "3B": null
       },
       "runners_after": {
-        "1B": "Carpentier",
+        "1B": "Dean Carpentier",
         "2B": null,
         "3B": "Basseer"
       },
@@ -1773,9 +1773,9 @@
       "description": "Carpentier singled to center field (0-0) Woodson advanced to second Basseer advanced to third."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "VARGAS",
-      "batter": "Urbon",
+      "inning": "Bottom 7",
+      "pitcher": "Juan Vargas",
+      "batter": "Walter Urbon",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BFB",
@@ -1786,13 +1786,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Carpentier",
+        "1B": "Dean Carpentier",
         "2B": null,
         "3B": "Basseer"
       },
       "runners_after": {
-        "1B": "Urbon",
-        "2B": "Carpentier",
+        "1B": "Walter Urbon",
+        "2B": "Dean Carpentier",
         "3B": null
       },
       "score": {
@@ -1802,9 +1802,9 @@
       "description": "Urbon singled to left field, 2 RBI (2-1 BFB) Carpentier advanced to second Woodson scored Basseer scored."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "VARGAS",
-      "batter": "Covarrubias",
+      "inning": "Bottom 7",
+      "pitcher": "Juan Vargas",
+      "batter": "Abbrie Covarrubias",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
       "pitches": "SSBBK",
@@ -1813,13 +1813,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Urbon",
-        "2B": "Carpentier",
+        "1B": "Walter Urbon",
+        "2B": "Dean Carpentier",
         "3B": null
       },
       "runners_after": {
-        "1B": "Urbon",
-        "2B": "Carpentier",
+        "1B": "Walter Urbon",
+        "2B": "Dean Carpentier",
         "3B": null
       },
       "score": {
@@ -1829,9 +1829,9 @@
       "description": "Covarrubias struck out looking (2-2 SSBBK)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "VARGAS",
-      "batter": "Lopez, Ad. struck out swinging (2-2 FBSFBS).",
+      "inning": "Bottom 7",
+      "pitcher": "Juan Vargas",
+      "batter": "Adrian Lopez",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "FBSFBS",
@@ -1840,13 +1840,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Urbon",
-        "2B": "Carpentier",
+        "1B": "Walter Urbon",
+        "2B": "Dean Carpentier",
         "3B": null
       },
       "runners_after": {
-        "1B": "Urbon",
-        "2B": "Carpentier",
+        "1B": "Walter Urbon",
+        "2B": "Dean Carpentier",
         "3B": null
       },
       "score": {
@@ -1856,8 +1856,8 @@
       "description": "Lopez, Ad. struck out swinging (2-2 FBSFBS)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "VARGAS",
+      "inning": "Top 8",
+      "pitcher": "Andrew Johnson",
       "batter": "Chris Hacopian",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1883,8 +1883,8 @@
       "description": "HACOPIAN flied out to cf (1-2 BKS)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "VARGAS",
+      "inning": "Top 8",
+      "pitcher": "Andrew Johnson",
       "batter": "Nico Partida",
       "outcome": "Single",
       "count": "0-1",
@@ -1910,8 +1910,8 @@
       "description": "PARTIDA singled to right field (0-1 K)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "VARGAS",
+      "inning": "Top 8",
+      "pitcher": "Andrew Johnson",
       "batter": "Jake Duer",
       "outcome": "Triple",
       "count": "2-1",
@@ -1939,7 +1939,7 @@
       "description": "DUER tripled to right center, RBI (2-1 BFB) PARTIDA scored."
     },
     {
-      "inning": "Top 15",
+      "inning": "Top 8",
       "pitcher": "Rohan Kasanagottu",
       "batter": "Bear Harrison",
       "outcome": "Hit by pitch",
@@ -1966,7 +1966,7 @@
       "description": "HARRISON hit by pitch (2-2 KKBB)."
     },
     {
-      "inning": "Top 15",
+      "inning": "Top 8",
       "pitcher": "Rohan Kasanagottu",
       "batter": "Ben Royo",
       "outcome": "Grounded into double play",
@@ -1993,9 +1993,9 @@
       "description": "ROYO grounded into double play to 2b to 1b (2-2 BKFB) HARRISON out on the play."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Rohan Kasanagottu",
-      "batter": "Lopez, Au. singled to right center (1-2 KSB).",
+      "inning": "Bottom 8",
+      "pitcher": "Juan Vargas",
+      "batter": "Adrian Lopez",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "KSB",
@@ -2009,7 +2009,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lopez, Au. singled to right center (1-2 KSB).",
+        "1B": "Adrian Lopez",
         "2B": null,
         "3B": null
       },
@@ -2020,9 +2020,9 @@
       "description": "Lopez, Au. singled to right center (1-2 KSB)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Rohan Kasanagottu",
-      "batter": "Takeuchi",
+      "inning": "Bottom 8",
+      "pitcher": "Juan Vargas",
+      "batter": "Kevin Takeuchi",
       "outcome": "Single",
       "count": "3-1",
       "pitches": "BBBK",
@@ -2031,12 +2031,12 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Lopez, Au. singled to right center (1-2 KSB).",
+        "1B": "Adrian Lopez",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Takeuchi",
+        "1B": "Kevin Takeuchi",
         "2B": null,
         "3B": null
       },
@@ -2047,9 +2047,9 @@
       "description": "Takeuchi singled through the left side (3-1 BBBK) Lopez, Au. advanced to second."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Rohan Kasanagottu",
-      "batter": "Cadena",
+      "inning": "Bottom 8",
+      "pitcher": "Juan Vargas",
+      "batter": "Isaac Cadena",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KFFS",
@@ -2058,12 +2058,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Takeuchi",
+        "1B": "Kevin Takeuchi",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Takeuchi",
+        "1B": "Kevin Takeuchi",
         "2B": null,
         "3B": null
       },
@@ -2074,20 +2074,20 @@
       "description": "Cadena struck out swinging (0-2 KFFS)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Rohan Kasanagottu",
+      "inning": "Bottom 8",
+      "pitcher": "Juan Vargas",
       "batter": "Basseer",
       "outcome": "Double",
       "count": "2-1",
       "pitches": "BBS",
       "rbi": true,
       "runs_scored": [
-        "Takeuchi"
+        "Kevin Takeuchi"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Takeuchi",
+        "1B": "Kevin Takeuchi",
         "2B": null,
         "3B": null
       },
@@ -2103,8 +2103,8 @@
       "description": "Basseer doubled to right center, 2 RBI (2-1 BBS) Takeuchi scored Lopez, Au. scored."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Rohan Kasanagottu",
+      "inning": "Bottom 8",
+      "pitcher": "Juan Vargas",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2130,9 +2130,9 @@
       "description": "Basseer advanced to third on a wild pitch."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Rohan Kasanagottu",
-      "batter": "Riske",
+      "inning": "Bottom 8",
+      "pitcher": "Juan Vargas",
+      "batter": "Maddox Riske",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BSB",
@@ -2148,7 +2148,7 @@
         "3B": "Basseer"
       },
       "runners_after": {
-        "1B": "Riske",
+        "1B": "Maddox Riske",
         "2B": null,
         "3B": null
       },
@@ -2159,9 +2159,9 @@
       "description": "Riske singled to left field, RBI (2-1 BSB) Basseer scored."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Rohan Kasanagottu",
-      "batter": "Carpentier",
+      "inning": "Bottom 8",
+      "pitcher": "Juan Vargas",
+      "batter": "Dean Carpentier",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
@@ -2170,13 +2170,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Riske",
+        "1B": "Maddox Riske",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Carpentier",
-        "2B": "Riske",
+        "1B": "Dean Carpentier",
+        "2B": "Maddox Riske",
         "3B": null
       },
       "score": {
@@ -2186,9 +2186,9 @@
       "description": "Carpentier singled to left center (0-0) Riske advanced to second."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "CUNNINGHAM",
-      "batter": "Urbon",
+      "inning": "Bottom 8",
+      "pitcher": "Grant Cunningham",
+      "batter": "Walter Urbon",
       "outcome": "Fielder's choice",
       "count": "0-2",
       "pitches": "SK",
@@ -2197,14 +2197,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Carpentier",
-        "2B": "Riske",
+        "1B": "Dean Carpentier",
+        "2B": "Maddox Riske",
         "3B": null
       },
       "runners_after": {
-        "1B": "Urbon",
+        "1B": "Walter Urbon",
         "2B": null,
-        "3B": "Riske"
+        "3B": "Maddox Riske"
       },
       "score": {
         "away": 3,
@@ -2213,9 +2213,9 @@
       "description": "Urbon reached on a fielder's choice (0-2 SK) Carpentier out at second 2b to ss Riske advanced to third."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "CUNNINGHAM",
-      "batter": "Covarrubias",
+      "inning": "Bottom 8",
+      "pitcher": "Grant Cunningham",
+      "batter": "Abbrie Covarrubias",
       "outcome": "Fielder's choice",
       "count": "1-2",
       "pitches": "BFFF",
@@ -2224,14 +2224,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Urbon",
+        "1B": "Walter Urbon",
         "2B": null,
-        "3B": "Riske"
+        "3B": "Maddox Riske"
       },
       "runners_after": {
-        "1B": "Covarrubias",
+        "1B": "Abbrie Covarrubias",
         "2B": null,
-        "3B": "Riske"
+        "3B": "Maddox Riske"
       },
       "score": {
         "away": 3,
@@ -2240,8 +2240,8 @@
       "description": "Covarrubias reached on a fielder's choice (1-2 BFFF) Urbon out at second 2b unassisted."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "CUNNINGHAM",
+      "inning": "Top 9",
+      "pitcher": "Rohan Kasanagottu",
       "batter": "KIEL",
       "outcome": "\u2014",
       "count": "1-0",
@@ -2267,8 +2267,8 @@
       "description": "KIEL II out at first 1b to p (1-0 B)."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "CUNNINGHAM",
+      "inning": "Top 9",
+      "pitcher": "Rohan Kasanagottu",
       "batter": "Travis Chestnut",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2294,8 +2294,8 @@
       "description": "CHESTNUT struck out looking (2-2 BKKBFK)."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "CUNNINGHAM",
+      "inning": "Top 9",
+      "pitcher": "Rohan Kasanagottu",
       "batter": "Blake Binderup",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",

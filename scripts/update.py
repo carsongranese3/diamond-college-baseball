@@ -37,12 +37,14 @@ import sys
 import time
 
 # ─── CONFIG ──────────────────────────────────────────────────────────────────
-CONFERENCE = "ACC"   # which conference folder under 2026/ to update
-TEAM = "Wake Forest"         # a team folder label (e.g. "Arkansas"), or "all" for the whole
+CONFERENCE = "all"   # which conference folder under 2026/ to update
+TEAM = "all"         # a team folder label (e.g. "Arkansas"), or "all" for the whole
                      # conference
 BULK_EVERY = 0       # bulk mode: rotate (restart) the stealth browser every N games
                      # pulled (0 = off) for a fresh fingerprint/session — stealthier
                      # over a long run. CLI overrides: update.py [CONF] [TEAM] [--bulk[=N]]
+FORCE = False        # True = re-pull every game from stats.ncaa.org even if it's
+                     # already saved (overwrites the saved files). CLI: --force
 # ─────────────────────────────────────────────────────────────────────────────
 
 BULK_COOLDOWN = (20, 45)   # randomized seconds to pause when rotating the browser
@@ -142,6 +144,18 @@ def conference_teams(conference):
     if conference in CONFERENCE_TEAMS:
         return list(CONFERENCE_TEAMS[conference])
     return [label for label, _ in ld.team_dirs(_conf_root(conference))]
+
+
+def _all_conferences():
+    """Every conference folder under 2026/ (e.g. ['ACC', 'SEC']) — the onboarded
+    set CONFERENCE='all' iterates over. A folder is a conference if it isn't itself
+    a team folder (mirrors how the app discovers conferences)."""
+    root = _season_root()
+    if not os.path.isdir(root):
+        return []
+    return [d for d in sorted(os.listdir(root))
+            if os.path.isdir(os.path.join(root, d))
+            and not ld._is_team_dir(os.path.join(root, d))]
 
 _FILES = ("boxscore.json", "player_stats.json", "play_by_play.json")
 _browser_announced = False
@@ -254,6 +268,7 @@ def _write(path, obj):
 
 # ── Bulk mode: periodically rotate the stealth browser ───────────────────────
 _BULK_EVERY = 0      # games between browser rotations (0 = off); set in main()
+_FORCE = False       # re-pull games even if already saved (set in main())
 _games_pulled = 0    # running count of games pulled this run, across all teams
 
 
@@ -282,6 +297,9 @@ def pull_missing(label):
     """Pull every game stats.ncaa.org has that isn't saved yet. Returns False to
     stop the whole run (a game failed), True to keep going to the next team."""
     ns = _load_ns()
+    # Derives play_by_play_detailed.json from the 3 saved files (no extra fetch);
+    # never raises, so a parse hiccup can't fail the pull.
+    from pull_game_stats import _ensure_detailed
     school_id = ns.get_school_id(label)
     if school_id is None:
         print(f"     no stats.ncaa.org id for {label!r} — skipping")
@@ -302,8 +320,12 @@ def pull_missing(label):
         print(f"     migrated {migrated} doubleheader folder(s) to the new naming")
 
     dirnames = _dirnames(games)                           # contest_id -> folder name
-    missing = [g for g in games
-               if not _is_saved(os.path.join(sched_dir, dirnames[g["contest_id"]]))]
+    if _FORCE:                                            # re-pull everything
+        missing = list(games)
+        print(f"     force mode: re-pulling all {len(games)} played game(s)")
+    else:
+        missing = [g for g in games
+                   if not _is_saved(os.path.join(sched_dir, dirnames[g["contest_id"]]))]
     if not missing:
         print(f"     stats.ncaa.org has {len(games)} played games — all already saved")
         return True
@@ -337,6 +359,7 @@ def pull_missing(label):
                    ns.contest_player_stats(cid))
             _write(os.path.join(game_dir, "play_by_play.json"),
                    ns.contest_play_by_play(cid))
+            _ensure_detailed(game_dir, rebuild=True)   # + play_by_play_detailed.json
             print(f"       [{i}/{len(order)}] {name}/")
         except Exception as e:
             print(f"       [{i}/{len(order)}] {name}/  FAILED: {type(e).__name__}: {e}")
@@ -398,22 +421,11 @@ def process(label):
     return pull_missing(label)
 
 
-def main():
-    global _ACTIVE_CONFERENCE, _BULK_EVERY
-    raw = sys.argv[1:]
-    pos = [a for a in raw if not a.startswith("-")]
-    flags = [a for a in raw if a.startswith("-")]
-    conf_name = pos[0] if len(pos) >= 1 else CONFERENCE
-    team = pos[1] if len(pos) >= 2 else TEAM
-    _BULK_EVERY = BULK_EVERY
-    for f in flags:
-        if f == "--bulk":
-            _BULK_EVERY = 50
-        elif f.startswith("--bulk="):
-            try:
-                _BULK_EVERY = max(0, int(f.split("=", 1)[1]))
-            except ValueError:
-                print(f"  (ignoring bad --bulk value {f!r})")
+def run_for_conference(conf_name, team, build_stats, build_records, build_roster):
+    """Refresh schedules, pull missing games, and rebuild the derived files for one
+    conference's teams. Prints a note and returns early (without aborting the wider
+    run) if the conference has no teams or the requested team isn't in it."""
+    global _ACTIVE_CONFERENCE
     conference = _resolve_conference(conf_name)
     _ACTIVE_CONFERENCE = conference
 
@@ -445,8 +457,6 @@ def main():
     conf_dir = _conf_root(conference)
     print(f"Updating {conference} ({conf_seo}) — "
           f"{'all teams' if team.lower() == 'all' else targets[0]}")
-    if _BULK_EVERY:
-        print(f"bulk mode: rotating the stealth browser every {_BULK_EVERY} games")
     print()
 
     # 1) Refresh every targeted team's schedule.json from the live API, then
@@ -456,11 +466,9 @@ def main():
     # Per team we rebuild stats/, records.json and roster.txt after its pull. The
     # records week calendar is shared across every team, so build it once now (each
     # target's schedule.json was just refreshed above).
-    import build_stats
-    import build_records
-    import build_roster
     records_calendar = build_records.calendar_for_all()
 
+    failed = False
     for t in targets:
         ok = process(t)
         # Always refresh the derived files for a team we ran, so they reflect
@@ -479,6 +487,7 @@ def main():
         if rpath:
             print(f"     roster.txt: {rplayers} players")
         if not ok:
+            failed = True
             break  # stop on first failure
 
     # The refresh above ran BEFORE the pull, so re-write schedule.json now that the
@@ -486,6 +495,54 @@ def main():
     # (The scoreboard fetches are cached from the first pass, so this is cheap.)
     print("Updating schedule.json with the games pulled this run…")
     refresh_schedules(targets, conf_seo, conf_dir)
+    return not failed
+
+
+def main():
+    global _BULK_EVERY, _FORCE
+    raw = sys.argv[1:]
+    pos = [a for a in raw if not a.startswith("-")]
+    flags = [a for a in raw if a.startswith("-")]
+    conf_name = pos[0] if len(pos) >= 1 else CONFERENCE
+    team = pos[1] if len(pos) >= 2 else TEAM
+    _BULK_EVERY = BULK_EVERY
+    _FORCE = FORCE
+    for f in flags:
+        if f == "--bulk":
+            _BULK_EVERY = 50
+        elif f.startswith("--bulk="):
+            try:
+                _BULK_EVERY = max(0, int(f.split("=", 1)[1]))
+            except ValueError:
+                print(f"  (ignoring bad --bulk value {f!r})")
+        elif f == "--force":
+            _FORCE = True
+
+    # CONFERENCE = "all" (or `update.py all`) walks every conference folder under 2026/.
+    if conf_name.lower() == "all":
+        conferences = _all_conferences()
+        if not conferences:
+            print("  No conference folders found under 2026/.")
+            return
+        print(f"Updating ALL conferences: {', '.join(conferences)}")
+    else:
+        conferences = [conf_name]
+    if _BULK_EVERY:
+        print(f"bulk mode: rotating the stealth browser every {_BULK_EVERY} games")
+    if _FORCE:
+        print("force mode: re-pulling every game (overwrites saved data)")
+    print()
+
+    import build_stats
+    import build_records
+    import build_roster
+
+    for i, cn in enumerate(conferences):
+        if len(conferences) > 1:
+            print(f"===== [{i + 1}/{len(conferences)}] {cn} =====")
+        ok = run_for_conference(cn, team, build_stats, build_records, build_roster)
+        if ok is False:
+            break  # a game failed to pull — stop the whole run (don't worsen a ban)
 
     if "ncaa_stats" in sys.modules:        # shut the browser down if we started it
         try:

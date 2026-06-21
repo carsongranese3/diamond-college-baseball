@@ -1,9 +1,9 @@
 {
   "contest_id": "6494041",
   "date": "05/07/2026",
-  "batting_team": "Auburn",
-  "pitching_team": "Mississippi St.",
-  "note": "Broken-down from the saved play_by_play.json, which contains the Auburn at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "Auburn",
+  "home_team": "Mississippi St.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
       "inning": "Top 1",
@@ -87,9 +87,9 @@
       "description": "Fralick, C. struck out looking (2-2 KBBKK)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Tomas Valincius",
-      "batter": "Frei",
+      "inning": "Bottom 1",
+      "pitcher": "Jake Marciano",
+      "batter": "Gehrig Frei",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
       "pitches": "KKBK",
@@ -114,9 +114,9 @@
       "description": "Frei struck out looking (1-2 KKBK)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Tomas Valincius",
-      "batter": "Reese",
+      "inning": "Bottom 1",
+      "pitcher": "Jake Marciano",
+      "batter": "Ace Reese",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "FSS",
@@ -141,9 +141,9 @@
       "description": "Reese struck out swinging (0-2 FSS)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Tomas Valincius",
-      "batter": "Bevis",
+      "inning": "Bottom 1",
+      "pitcher": "Jake Marciano",
+      "batter": "Blake Bevis",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "KKF",
@@ -157,7 +157,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bevis",
+        "1B": "Blake Bevis",
         "2B": null,
         "3B": null
       },
@@ -168,9 +168,9 @@
       "description": "Bevis singled to shortstop (0-2 KKF)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Tomas Valincius",
-      "batter": "Sullivan",
+      "inning": "Bottom 1",
+      "pitcher": "Jake Marciano",
+      "batter": "Noah Sullivan",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BSFB",
@@ -179,14 +179,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Bevis",
+        "1B": "Blake Bevis",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Sullivan",
+        "1B": "Noah Sullivan",
         "2B": null,
-        "3B": "Bevis"
+        "3B": "Blake Bevis"
       },
       "score": {
         "away": 0,
@@ -195,9 +195,9 @@
       "description": "Sullivan singled to left field (2-2 BSFB) Bevis advanced to third."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Tomas Valincius",
-      "batter": "Parker",
+      "inning": "Bottom 1",
+      "pitcher": "Jake Marciano",
+      "batter": "Jacob Parker",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
@@ -206,14 +206,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Sullivan",
+        "1B": "Noah Sullivan",
         "2B": null,
-        "3B": "Bevis"
+        "3B": "Blake Bevis"
       },
       "runners_after": {
-        "1B": "Parker",
-        "2B": "Sullivan",
-        "3B": "Bevis"
+        "1B": "Jacob Parker",
+        "2B": "Noah Sullivan",
+        "3B": "Blake Bevis"
       },
       "score": {
         "away": 0,
@@ -222,25 +222,25 @@
       "description": "Parker walked (3-0 BBBB) Sullivan advanced to second."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Tomas Valincius",
-      "batter": "Chance",
+      "inning": "Bottom 1",
+      "pitcher": "Jake Marciano",
+      "batter": "Bryce Chance",
       "outcome": "Home run",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Parker",
-        "Sullivan",
-        "Bevis",
-        "Chance"
+        "Jacob Parker",
+        "Noah Sullivan",
+        "Blake Bevis",
+        "Bryce Chance"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Parker",
-        "2B": "Sullivan",
-        "3B": "Bevis"
+        "1B": "Jacob Parker",
+        "2B": "Noah Sullivan",
+        "3B": "Blake Bevis"
       },
       "runners_after": {
         "1B": null,
@@ -254,9 +254,9 @@
       "description": "Chance homered to left field, 4 RBI (0-1 K) Parker scored Sullivan scored Bevis scored."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Tomas Valincius",
-      "batter": "Valincius, V singled through the left side (1-2 SFB).",
+      "inning": "Bottom 1",
+      "pitcher": "Jake Marciano",
+      "batter": "Vytas Valincius",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "SFB",
@@ -270,7 +270,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Valincius, V singled through the left side (1-2 SFB).",
+        "1B": "Vytas Valincius",
         "2B": null,
         "3B": null
       },
@@ -281,9 +281,9 @@
       "description": "Valincius, V singled through the left side (1-2 SFB)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Tomas Valincius",
-      "batter": "Milewski",
+      "inning": "Bottom 1",
+      "pitcher": "Jake Marciano",
+      "batter": "Kevin Milewski",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
       "pitches": "BFSBK",
@@ -292,12 +292,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Valincius, V singled through the left side (1-2 SFB).",
+        "1B": "Vytas Valincius",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Valincius, V singled through the left side (1-2 SFB).",
+        "1B": "Vytas Valincius",
         "2B": null,
         "3B": null
       },
@@ -308,7 +308,7 @@
       "description": "Milewski struck out looking (2-2 BFSBK)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Tomas Valincius",
       "batter": "Chris Rembert",
       "outcome": "Strikeout (swinging)",
@@ -335,7 +335,7 @@
       "description": "Rembert, C. struck out swinging (0-2 FKS)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Tomas Valincius",
       "batter": "Ethin Bingaman",
       "outcome": "Strikeout (swinging)",
@@ -362,7 +362,7 @@
       "description": "Bingaman, E. struck out swinging (3-2 KFBFBFFBFS)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Tomas Valincius",
       "batter": "Bub Terrell",
       "outcome": "Groundout",
@@ -389,9 +389,9 @@
       "description": "Terrell, B. grounded out to ss (0-0)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Tomas Valincius",
-      "batter": "Woodson",
+      "inning": "Bottom 2",
+      "pitcher": "Jake Marciano",
+      "batter": "Ryder Woodson",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "SSFF",
@@ -405,7 +405,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Woodson",
+        "1B": "Ryder Woodson",
         "2B": null,
         "3B": null
       },
@@ -416,9 +416,9 @@
       "description": "Woodson singled up the middle (0-2 SSFF)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Tomas Valincius",
-      "batter": "Frei",
+      "inning": "Bottom 2",
+      "pitcher": "Jake Marciano",
+      "batter": "Gehrig Frei",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "SF",
@@ -427,13 +427,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Woodson",
+        "1B": "Ryder Woodson",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Frei",
-        "2B": "Woodson",
+        "1B": "Gehrig Frei",
+        "2B": "Ryder Woodson",
         "3B": null
       },
       "score": {
@@ -443,9 +443,9 @@
       "description": "Frei singled to pitcher (0-2 SF) Woodson advanced to second."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Tomas Valincius",
-      "batter": "Reese",
+      "inning": "Bottom 2",
+      "pitcher": "Jake Marciano",
+      "batter": "Ace Reese",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KKBS",
@@ -454,13 +454,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Frei",
-        "2B": "Woodson",
+        "1B": "Gehrig Frei",
+        "2B": "Ryder Woodson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Frei",
-        "2B": "Woodson",
+        "1B": "Gehrig Frei",
+        "2B": "Ryder Woodson",
         "3B": null
       },
       "score": {
@@ -470,9 +470,9 @@
       "description": "Reese struck out swinging (1-2 KKBS)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Tomas Valincius",
-      "batter": "Bevis",
+      "inning": "Bottom 2",
+      "pitcher": "Jake Marciano",
+      "batter": "Blake Bevis",
       "outcome": "Grounded into double play",
       "count": "0-0",
       "pitches": "",
@@ -481,12 +481,12 @@
       "outs_before": 1,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Frei",
-        "2B": "Woodson",
+        "1B": "Gehrig Frei",
+        "2B": "Ryder Woodson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Frei",
+        "1B": "Gehrig Frei",
         "2B": null,
         "3B": null
       },
@@ -497,7 +497,7 @@
       "description": "Bevis grounded into double play to 1b (0-0) Woodson out on the play."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Tomas Valincius",
       "batter": "Mason McCraine",
       "outcome": "Strikeout (swinging)",
@@ -524,7 +524,7 @@
       "description": "McCraine, B. struck out swinging (3-2 KBKBFBS)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Tomas Valincius",
       "batter": "Eddie Madrigal",
       "outcome": "Strikeout (swinging)",
@@ -551,7 +551,7 @@
       "description": "Madrigal, E. struck out swinging (0-2 FFS)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Tomas Valincius",
       "batter": "Bristol Carter",
       "outcome": "Groundout",
@@ -578,9 +578,9 @@
       "description": "Carter, B. grounded out to (1-1 BK)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Cormier",
-      "batter": "Sullivan",
+      "inning": "Bottom 3",
+      "pitcher": "LJ Cormier",
+      "batter": "Noah Sullivan",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BBK",
@@ -594,7 +594,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Sullivan",
+        "1B": "Noah Sullivan",
         "2B": null,
         "3B": null
       },
@@ -605,9 +605,9 @@
       "description": "Sullivan singled to left field (2-1 BBK)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Cormier",
-      "batter": "Parker",
+      "inning": "Bottom 3",
+      "pitcher": "LJ Cormier",
+      "batter": "Jacob Parker",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "BBKSS",
@@ -616,12 +616,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Sullivan",
+        "1B": "Noah Sullivan",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Sullivan",
+        "1B": "Noah Sullivan",
         "2B": null,
         "3B": null
       },
@@ -632,9 +632,9 @@
       "description": "Parker struck out swinging (2-2 BBKSS) Sullivan stole second."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Cormier",
-      "batter": "Chance",
+      "inning": "Bottom 3",
+      "pitcher": "LJ Cormier",
+      "batter": "Bryce Chance",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "FBKFFS",
@@ -643,12 +643,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Sullivan",
+        "1B": "Noah Sullivan",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Sullivan",
+        "1B": "Noah Sullivan",
         "2B": null,
         "3B": null
       },
@@ -659,25 +659,25 @@
       "description": "Chance struck out swinging (1-2 FBKFFS)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Cormier",
-      "batter": "Valincius, V singled through the left side, RBI (1-2 BSSFF)",
+      "inning": "Bottom 3",
+      "pitcher": "LJ Cormier",
+      "batter": "Vytas Valincius",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "BSSFF",
       "rbi": true,
       "runs_scored": [
-        "Sullivan"
+        "Noah Sullivan"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Sullivan",
+        "1B": "Noah Sullivan",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Valincius, V singled through the left side, RBI (1-2 BSSFF)",
+        "1B": "Vytas Valincius",
         "2B": null,
         "3B": null
       },
@@ -688,9 +688,9 @@
       "description": "Valincius, V singled through the left side, RBI (1-2 BSSFF) Sullivan scored."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Cormier",
-      "batter": "Milewski",
+      "inning": "Bottom 3",
+      "pitcher": "LJ Cormier",
+      "batter": "Kevin Milewski",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "BFKBFS",
@@ -699,12 +699,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Valincius, V singled through the left side, RBI (1-2 BSSFF)",
+        "1B": "Vytas Valincius",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Valincius, V singled through the left side, RBI (1-2 BSSFF)",
+        "1B": "Vytas Valincius",
         "2B": null,
         "3B": null
       },
@@ -715,8 +715,8 @@
       "description": "Milewski struck out swinging (2-2 BFKBFS)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Cormier",
+      "inning": "Top 4",
+      "pitcher": "Tomas Valincius",
       "batter": "Mason McCraine",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -742,8 +742,8 @@
       "description": "McCraine, M. struck out looking (2-2 KBBFK)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Cormier",
+      "inning": "Top 4",
+      "pitcher": "Tomas Valincius",
       "batter": "Eric Guevara",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -769,8 +769,8 @@
       "description": "Guevara, E. struck out swinging (3-2 BKBSBS)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Cormier",
+      "inning": "Top 4",
+      "pitcher": "Tomas Valincius",
       "batter": "Chase Fralick",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -796,9 +796,9 @@
       "description": "Fralick, C. struck out swinging (1-2 FSBS)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Cormier",
-      "batter": "Woodson",
+      "inning": "Bottom 4",
+      "pitcher": "LJ Cormier",
+      "batter": "Ryder Woodson",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "BFSFBFS",
@@ -823,9 +823,9 @@
       "description": "Woodson struck out swinging (2-2 BFSFBFS)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Cormier",
-      "batter": "Frei",
+      "inning": "Bottom 4",
+      "pitcher": "LJ Cormier",
+      "batter": "Gehrig Frei",
       "outcome": "Pop out",
       "count": "0-0",
       "pitches": "",
@@ -850,9 +850,9 @@
       "description": "Frei popped up to lf (0-0)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Cormier",
-      "batter": "Reese",
+      "inning": "Bottom 4",
+      "pitcher": "LJ Cormier",
+      "batter": "Ace Reese",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "SSFFS",
@@ -877,8 +877,8 @@
       "description": "Reese struck out swinging (0-2 SSFFS)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "Cormier",
+      "inning": "Top 5",
+      "pitcher": "Tomas Valincius",
       "batter": "Chris Rembert",
       "outcome": "Groundout",
       "count": "0-0",
@@ -904,8 +904,8 @@
       "description": "Rembert, C. grounded out to 2b (0-0)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "Cormier",
+      "inning": "Top 5",
+      "pitcher": "Tomas Valincius",
       "batter": "Ethin Bingaman",
       "outcome": "Single",
       "count": "1-0",
@@ -931,8 +931,8 @@
       "description": "Bingaman, E. singled up the middle (1-0 B)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "Cormier",
+      "inning": "Top 5",
+      "pitcher": "Tomas Valincius",
       "batter": "Bub Terrell",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -958,8 +958,8 @@
       "description": "Terrell, B. struck out swinging (2-2 BBFFS) Bingaman, E. stole second."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "Cormier",
+      "inning": "Top 5",
+      "pitcher": "Tomas Valincius",
       "batter": "Mason McCraine",
       "outcome": "Single",
       "count": "0-1",
@@ -985,8 +985,8 @@
       "description": "McCraine, B. singled through the left side, advanced to second on the throw, RBI (0-1 S) Bingaman, E. scored."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "Cormier",
+      "inning": "Top 5",
+      "pitcher": "Tomas Valincius",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1012,8 +1012,8 @@
       "description": "McCraine, B. advanced to third on a throwing error by p, failed pickoff attempt."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "Cormier",
+      "inning": "Top 5",
+      "pitcher": "Tomas Valincius",
       "batter": "Eddie Madrigal",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1039,9 +1039,9 @@
       "description": "Madrigal, E. grounded out to p (1-2 BFK)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Cormier",
-      "batter": "Bevis",
+      "inning": "Bottom 5",
+      "pitcher": "LJ Cormier",
+      "batter": "Blake Bevis",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "F",
@@ -1066,9 +1066,9 @@
       "description": "Bevis grounded out to (0-1 F)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Cormier",
-      "batter": "Sullivan",
+      "inning": "Bottom 5",
+      "pitcher": "LJ Cormier",
+      "batter": "Noah Sullivan",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "BBFBKF",
@@ -1082,7 +1082,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Sullivan",
+        "1B": "Noah Sullivan",
         "2B": null,
         "3B": null
       },
@@ -1093,9 +1093,9 @@
       "description": "Sullivan singled to right field (3-2 BBFBKF)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Cormier",
-      "batter": "Parker",
+      "inning": "Bottom 5",
+      "pitcher": "LJ Cormier",
+      "batter": "Jacob Parker",
       "outcome": "Pop out",
       "count": "2-2",
       "pitches": "SBBS",
@@ -1104,12 +1104,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Sullivan",
+        "1B": "Noah Sullivan",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Sullivan",
+        "1B": "Noah Sullivan",
         "2B": null,
         "3B": null
       },
@@ -1120,26 +1120,26 @@
       "description": "Parker popped up to ss (2-2 SBBS)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Cormier",
-      "batter": "Chance",
+      "inning": "Bottom 5",
+      "pitcher": "LJ Cormier",
+      "batter": "Bryce Chance",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Sullivan"
+        "Noah Sullivan"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Sullivan",
+        "1B": "Noah Sullivan",
         "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Chance",
+        "2B": "Bryce Chance",
         "3B": null
       },
       "score": {
@@ -1149,9 +1149,9 @@
       "description": "Chance doubled to left center, RBI (0-0) Sullivan scored."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Cormier",
-      "batter": "Valincius, V flied out to cf (0-0).",
+      "inning": "Bottom 5",
+      "pitcher": "LJ Cormier",
+      "batter": "Vytas Valincius",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
@@ -1161,12 +1161,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Chance",
+        "2B": "Bryce Chance",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Chance",
+        "2B": "Bryce Chance",
         "3B": null
       },
       "score": {
@@ -1176,8 +1176,8 @@
       "description": "Valincius, V flied out to cf (0-0)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Cormier",
+      "inning": "Top 6",
+      "pitcher": "Tomas Valincius",
       "batter": "Bristol Carter",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1203,8 +1203,8 @@
       "description": "Carter, B. grounded out to (3-2 BBKFBF)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Cormier",
+      "inning": "Top 6",
+      "pitcher": "Tomas Valincius",
       "batter": "Mason McCraine",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1230,8 +1230,8 @@
       "description": "McCraine, M. struck out looking (2-2 KSBBK)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Cormier",
+      "inning": "Top 6",
+      "pitcher": "Tomas Valincius",
       "batter": "Eric Guevara",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1257,9 +1257,9 @@
       "description": "Guevara, E. struck out swinging (2-2 FBSBS)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Cormier",
-      "batter": "Milewski",
+      "inning": "Bottom 6",
+      "pitcher": "LJ Cormier",
+      "batter": "Kevin Milewski",
       "outcome": "Flyout",
       "count": "3-2",
       "pitches": "BKFBBF",
@@ -1284,9 +1284,9 @@
       "description": "Milewski flied out to cf to left center (3-2 BKFBBF)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Cormier",
-      "batter": "Woodson",
+      "inning": "Bottom 6",
+      "pitcher": "LJ Cormier",
+      "batter": "Ryder Woodson",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBSKBB",
@@ -1300,7 +1300,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Woodson",
+        "1B": "Ryder Woodson",
         "2B": null,
         "3B": null
       },
@@ -1311,21 +1311,21 @@
       "description": "Woodson walked (3-2 BBSKBB)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Harden",
-      "batter": "Frei",
+      "inning": "Bottom 6",
+      "pitcher": "Ethan Harden",
+      "batter": "Gehrig Frei",
       "outcome": "Home run",
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
       "runs_scored": [
-        "Woodson",
-        "Frei"
+        "Ryder Woodson",
+        "Gehrig Frei"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Woodson",
+        "1B": "Ryder Woodson",
         "2B": null,
         "3B": null
       },
@@ -1341,9 +1341,9 @@
       "description": "Frei homered down the rf line, 2 RBI (1-1 BF) Woodson scored."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Harden",
-      "batter": "Reese",
+      "inning": "Bottom 6",
+      "pitcher": "Ethan Harden",
+      "batter": "Ace Reese",
       "outcome": "Lineout",
       "count": "0-1",
       "pitches": "F",
@@ -1368,9 +1368,9 @@
       "description": "Reese lined out to rf (0-1 F)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Harden",
-      "batter": "Bevis",
+      "inning": "Bottom 6",
+      "pitcher": "Ethan Harden",
+      "batter": "Blake Bevis",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
@@ -1384,7 +1384,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bevis",
+        "1B": "Blake Bevis",
         "2B": null,
         "3B": null
       },
@@ -1395,9 +1395,9 @@
       "description": "Bevis singled to right center (1-0 B)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Harden",
-      "batter": "Sullivan",
+      "inning": "Bottom 6",
+      "pitcher": "Ethan Harden",
+      "batter": "Noah Sullivan",
       "outcome": "Fielder's choice",
       "count": "0-1",
       "pitches": "K",
@@ -1406,12 +1406,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Bevis",
+        "1B": "Blake Bevis",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Sullivan",
+        "1B": "Noah Sullivan",
         "2B": null,
         "3B": null
       },
@@ -1422,8 +1422,8 @@
       "description": "Sullivan reached on a fielder's choice to shortstop (0-1 K) Bevis out at second ss to 2b."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Harden",
+      "inning": "Top 7",
+      "pitcher": "Tomas Valincius",
       "batter": "Chase Fralick",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1449,8 +1449,8 @@
       "description": "Fralick, C. struck out looking (3-2 BBFFBK)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Harden",
+      "inning": "Top 7",
+      "pitcher": "Tomas Valincius",
       "batter": "Chris Rembert",
       "outcome": "Single",
       "count": "2-1",
@@ -1476,8 +1476,8 @@
       "description": "Rembert, C. singled through the left side (2-1 BKB)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Harden",
+      "inning": "Top 7",
+      "pitcher": "Tomas Valincius",
       "batter": "Ethin Bingaman",
       "outcome": "Lineout",
       "count": "3-2",
@@ -1503,8 +1503,8 @@
       "description": "Bingaman, E. lined out to 2b (3-2 BBSKFB)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Harden",
+      "inning": "Top 7",
+      "pitcher": "Tomas Valincius",
       "batter": "Bub Terrell",
       "outcome": "Home run",
       "count": "1-2",
@@ -1532,7 +1532,7 @@
       "description": "Terrell, B. homered to left field, 2 RBI (1-2 SBSFF) Rembert, C. scored."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 7",
       "pitcher": "Jack Bauer",
       "batter": "Mason McCraine",
       "outcome": "Flyout",
@@ -1559,15 +1559,15 @@
       "description": "McCraine, B. flied out to rf (0-0)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Chatterton",
-      "batter": "Parker",
+      "inning": "Bottom 7",
+      "pitcher": "Christian Chatterton",
+      "batter": "Jacob Parker",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Parker"
+        "Jacob Parker"
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1588,9 +1588,9 @@
       "description": "Parker homered to right field, RBI (0-0)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Chatterton",
-      "batter": "Chance",
+      "inning": "Bottom 7",
+      "pitcher": "Christian Chatterton",
+      "batter": "Bryce Chance",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
@@ -1604,7 +1604,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Chance",
+        "1B": "Bryce Chance",
         "2B": null,
         "3B": null
       },
@@ -1615,9 +1615,9 @@
       "description": "Chance singled down the line, bunt (0-0)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Chatterton",
-      "batter": "Valincius, V singled to left field (0-1 K)",
+      "inning": "Bottom 7",
+      "pitcher": "Christian Chatterton",
+      "batter": "Vytas Valincius",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
@@ -1626,13 +1626,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Chance",
+        "1B": "Bryce Chance",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Valincius, V singled to left field (0-1 K)",
-        "2B": "Chance",
+        "1B": "Vytas Valincius",
+        "2B": "Bryce Chance",
         "3B": null
       },
       "score": {
@@ -1642,9 +1642,9 @@
       "description": "Valincius, V singled to left field (0-1 K) Chance advanced to second."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Chatterton",
-      "batter": "Milewski",
+      "inning": "Bottom 7",
+      "pitcher": "Christian Chatterton",
+      "batter": "Kevin Milewski",
       "outcome": "Groundout",
       "count": "2-0",
       "pitches": "BB",
@@ -1653,14 +1653,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Valincius, V singled to left field (0-1 K)",
-        "2B": "Chance",
+        "1B": "Vytas Valincius",
+        "2B": "Bryce Chance",
         "3B": null
       },
       "runners_after": {
-        "1B": "Valincius, V singled to left field (0-1 K)",
+        "1B": "Vytas Valincius",
         "2B": null,
-        "3B": "Chance"
+        "3B": "Bryce Chance"
       },
       "score": {
         "away": 3,
@@ -1669,25 +1669,25 @@
       "description": "Milewski grounded out to c, SAC, bunt (2-0 BB) Valincius, V advanced to second Chance advanced to third."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Chatterton",
-      "batter": "Woodson",
+      "inning": "Bottom 7",
+      "pitcher": "Christian Chatterton",
+      "batter": "Ryder Woodson",
       "outcome": "Flyout",
       "count": "1-2",
       "pitches": "SBK",
       "rbi": true,
       "runs_scored": [
-        "Chance"
+        "Bryce Chance"
       ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Valincius, V singled to left field (0-1 K)",
+        "1B": "Vytas Valincius",
         "2B": null,
-        "3B": "Chance"
+        "3B": "Bryce Chance"
       },
       "runners_after": {
-        "1B": "Valincius, V singled to left field (0-1 K)",
+        "1B": "Vytas Valincius",
         "2B": null,
         "3B": null
       },
@@ -1698,9 +1698,9 @@
       "description": "Woodson flied out to rf, SF, RBI (1-2 SBK) Valincius, V advanced to third Chance scored."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Chancellor",
-      "batter": "Frei",
+      "inning": "Bottom 7",
+      "pitcher": "Abe Chancellor",
+      "batter": "Gehrig Frei",
       "outcome": "Lineout",
       "count": "0-1",
       "pitches": "F",
@@ -1709,12 +1709,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Valincius, V singled to left field (0-1 K)",
+        "1B": "Vytas Valincius",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Valincius, V singled to left field (0-1 K)",
+        "1B": "Vytas Valincius",
         "2B": null,
         "3B": null
       },
@@ -1725,8 +1725,8 @@
       "description": "Frei lined out to rf (0-1 F)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Chancellor",
+      "inning": "Top 8",
+      "pitcher": "Jack Bauer",
       "batter": "Todd Clay",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1752,8 +1752,8 @@
       "description": "Clay, T. grounded out to 2b (0-1 K)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Chancellor",
+      "inning": "Top 8",
+      "pitcher": "Jack Bauer",
       "batter": "Caiden Combs",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1779,8 +1779,8 @@
       "description": "Combs, C. struck out swinging (1-2 KBFS)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Chancellor",
+      "inning": "Top 8",
+      "pitcher": "Jack Bauer",
       "batter": "Mason McCraine",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1806,9 +1806,9 @@
       "description": "McCraine, M. grounded out to (1-0 B)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Chancellor",
-      "batter": "Todd Clay",
+      "inning": "Bottom 8",
+      "pitcher": "Abe Chancellor",
+      "batter": "Clay, T. to dh.",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
@@ -1833,9 +1833,9 @@
       "description": "Clay, T. to dh."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Chancellor",
-      "batter": "Cade Belyeu",
+      "inning": "Bottom 8",
+      "pitcher": "Abe Chancellor",
+      "batter": "Belyeu, C. to cf for Combs, C..",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
@@ -1860,9 +1860,9 @@
       "description": "Belyeu, C. to cf for Combs, C.."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Chancellor",
-      "batter": "Reese",
+      "inning": "Bottom 8",
+      "pitcher": "Abe Chancellor",
+      "batter": "Ace Reese",
       "outcome": "Single",
       "count": "3-1",
       "pitches": "BBFB",
@@ -1876,7 +1876,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Reese",
+        "1B": "Ace Reese",
         "2B": null,
         "3B": null
       },
@@ -1887,9 +1887,9 @@
       "description": "Reese singled to right field (3-1 BBFB)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Chancellor",
-      "batter": "Stallman",
+      "inning": "Bottom 8",
+      "pitcher": "Abe Chancellor",
+      "batter": "Reed Stallman",
       "outcome": "Flyout",
       "count": "2-2",
       "pitches": "KBFB",
@@ -1898,12 +1898,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Reese",
+        "1B": "Ace Reese",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Reese",
+        "1B": "Ace Reese",
         "2B": null,
         "3B": null
       },
@@ -1914,9 +1914,9 @@
       "description": "Stallman flied out to cf to right center (2-2 KBFB)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Chancellor",
-      "batter": "Sullivan",
+      "inning": "Bottom 8",
+      "pitcher": "Abe Chancellor",
+      "batter": "Noah Sullivan",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KBKS",
@@ -1925,12 +1925,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Reese",
+        "1B": "Ace Reese",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Reese",
+        "1B": "Ace Reese",
         "2B": null,
         "3B": null
       },
@@ -1941,9 +1941,9 @@
       "description": "Sullivan struck out swinging (1-2 KBKS)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Chancellor",
-      "batter": "Parker",
+      "inning": "Bottom 8",
+      "pitcher": "Abe Chancellor",
+      "batter": "Jacob Parker",
       "outcome": "Hit by pitch",
       "count": "2-2",
       "pitches": "KKBBF",
@@ -1952,13 +1952,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Reese",
+        "1B": "Ace Reese",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Parker",
-        "2B": "Reese",
+        "1B": "Jacob Parker",
+        "2B": "Ace Reese",
         "3B": null
       },
       "score": {
@@ -1968,9 +1968,9 @@
       "description": "Parker hit by pitch (2-2 KKBBF) Reese advanced to second."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Chancellor",
-      "batter": "Chance",
+      "inning": "Bottom 8",
+      "pitcher": "Abe Chancellor",
+      "batter": "Bryce Chance",
       "outcome": "Fielder's choice",
       "count": "1-2",
       "pitches": "FFB",
@@ -1979,13 +1979,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Parker",
-        "2B": "Reese",
+        "1B": "Jacob Parker",
+        "2B": "Ace Reese",
         "3B": null
       },
       "runners_after": {
-        "1B": "Chance",
-        "2B": "Parker",
+        "1B": "Bryce Chance",
+        "2B": "Jacob Parker",
         "3B": null
       },
       "score": {
@@ -1995,8 +1995,8 @@
       "description": "Chance reached on a fielder's choice to third base (1-2 FFB) Parker advanced to second Reese out at third unassisted."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Chancellor",
+      "inning": "Top 9",
+      "pitcher": "Jack Bauer",
       "batter": "Eric Guevara",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2022,8 +2022,8 @@
       "description": "Guevara, E. grounded out to 2b (0-0)."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Chancellor",
+      "inning": "Top 9",
+      "pitcher": "Jack Bauer",
       "batter": "Chase Fralick",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2049,8 +2049,8 @@
       "description": "Fralick, C. struck out swinging (1-2 KBFS)."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Chancellor",
+      "inning": "Top 9",
+      "pitcher": "Jack Bauer",
       "batter": "Chris Rembert",
       "outcome": "Flyout",
       "count": "0-2",

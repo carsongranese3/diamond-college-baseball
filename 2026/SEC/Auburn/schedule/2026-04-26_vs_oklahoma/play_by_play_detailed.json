@@ -1,9 +1,9 @@
 {
   "contest_id": "6494035",
   "date": "04/26/2026",
-  "batting_team": "Oklahoma",
-  "pitching_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json, which contains the Oklahoma at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "Oklahoma",
+  "home_team": "Auburn",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
       "inning": "Top 1",
@@ -195,9 +195,9 @@
       "description": "Harris, D. struck out swinging (0-2 FFS)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Alex Petrovic",
-      "batter": "McCraine, M. struck out swinging (1-2 KKBS).",
+      "inning": "Bottom 1",
+      "pitcher": "Cord Rager",
+      "batter": "Mason McCraine",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KKBS",
@@ -222,9 +222,9 @@
       "description": "McCraine, M. struck out swinging (1-2 KKBS)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Alex Petrovic",
-      "batter": "Guevara, E. doubled up the middle (1-2 BFS).",
+      "inning": "Bottom 1",
+      "pitcher": "Cord Rager",
+      "batter": "Eric Guevara",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "BFS",
@@ -239,7 +239,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Guevara, E. doubled up the middle (1-2 BFS).",
+        "2B": "Eric Guevara",
         "3B": null
       },
       "score": {
@@ -249,9 +249,9 @@
       "description": "Guevara, E. doubled up the middle (1-2 BFS)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Alex Petrovic",
-      "batter": "Fralick, C. struck out looking (3-2 BBKBSK).",
+      "inning": "Bottom 1",
+      "pitcher": "Cord Rager",
+      "batter": "Chase Fralick",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
       "pitches": "BBKBSK",
@@ -261,12 +261,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Guevara, E. doubled up the middle (1-2 BFS).",
+        "2B": "Eric Guevara",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Guevara, E. doubled up the middle (1-2 BFS).",
+        "2B": "Eric Guevara",
         "3B": null
       },
       "score": {
@@ -276,9 +276,9 @@
       "description": "Fralick, C. struck out looking (3-2 BBKBSK)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Alex Petrovic",
-      "batter": "Rembert, C. walked (3-2 FKBBBFB).",
+      "inning": "Bottom 1",
+      "pitcher": "Cord Rager",
+      "batter": "Chris Rembert",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "FKBBBFB",
@@ -288,12 +288,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Guevara, E. doubled up the middle (1-2 BFS).",
+        "2B": "Eric Guevara",
         "3B": null
       },
       "runners_after": {
-        "1B": "Rembert, C. walked (3-2 FKBBBFB).",
-        "2B": "Guevara, E. doubled up the middle (1-2 BFS).",
+        "1B": "Chris Rembert",
+        "2B": "Eric Guevara",
         "3B": null
       },
       "score": {
@@ -303,9 +303,9 @@
       "description": "Rembert, C. walked (3-2 FKBBBFB)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Alex Petrovic",
-      "batter": "Bingaman, E. grounded out to 1b unassisted (0-0).",
+      "inning": "Bottom 1",
+      "pitcher": "Cord Rager",
+      "batter": "Ethin Bingaman",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
@@ -314,13 +314,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Rembert, C. walked (3-2 FKBBBFB).",
-        "2B": "Guevara, E. doubled up the middle (1-2 BFS).",
+        "1B": "Chris Rembert",
+        "2B": "Eric Guevara",
         "3B": null
       },
       "runners_after": {
-        "1B": "Rembert, C. walked (3-2 FKBBBFB).",
-        "2B": "Guevara, E. doubled up the middle (1-2 BFS).",
+        "1B": "Chris Rembert",
+        "2B": "Eric Guevara",
         "3B": null
       },
       "score": {
@@ -330,7 +330,7 @@
       "description": "Bingaman, E. grounded out to 1b unassisted (0-0)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Alex Petrovic",
       "batter": "Kyle Branch",
       "outcome": "Groundout",
@@ -357,7 +357,7 @@
       "description": "Branch, K. grounded out to ss (1-2 FFBF)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Alex Petrovic",
       "batter": "Dayton Tockey",
       "outcome": "Double",
@@ -384,7 +384,7 @@
       "description": "Tockey, D. doubled down the rf line (3-2 KBBKB)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Alex Petrovic",
       "batter": "Jason Walk",
       "outcome": "Walk",
@@ -411,7 +411,7 @@
       "description": "Walk, J. walked (3-1 BSBBB)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Alex Petrovic",
       "batter": "Trey Gambill",
       "outcome": "Strikeout (swinging)",
@@ -438,7 +438,7 @@
       "description": "Gambill, T. struck out swinging (3-2 FBBSBS)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Alex Petrovic",
       "batter": "Dayton Tockey",
       "outcome": "\u2014",
@@ -465,24 +465,24 @@
       "description": "Tockey, D. out at second c to 2b, picked off."
     },
     {
-      "inning": "Top 3",
-      "pitcher": "Alex Petrovic",
-      "batter": "Connor Larkin",
+      "inning": "Bottom 2",
+      "pitcher": "Cord Rager",
+      "batter": "Larkin, C. to 1b for Tockey, D..",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Jason Walk",
-        "2B": "Dayton Tockey",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jason Walk",
-        "2B": "Dayton Tockey",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -492,26 +492,26 @@
       "description": "Larkin, C. to 1b for Tockey, D.."
     },
     {
-      "inning": "Top 3",
-      "pitcher": "Alex Petrovic",
-      "batter": "Terrell, B. homered to center field, RBI (0-0).",
+      "inning": "Bottom 2",
+      "pitcher": "Cord Rager",
+      "batter": "Bub Terrell",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Terrell, B. homered to center field, RBI (0-0)."
+        "Bub Terrell"
       ],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Jason Walk",
-        "2B": "Dayton Tockey",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jason Walk",
-        "2B": "Dayton Tockey",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -521,24 +521,24 @@
       "description": "Terrell, B. homered to center field, RBI (0-0)."
     },
     {
-      "inning": "Top 3",
-      "pitcher": "Alex Petrovic",
-      "batter": "McCraine, B. grounded out to 2b (0-0).",
+      "inning": "Bottom 2",
+      "pitcher": "Cord Rager",
+      "batter": "Mason McCraine",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Jason Walk",
-        "2B": "Dayton Tockey",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jason Walk",
-        "2B": "Dayton Tockey",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -548,16 +548,16 @@
       "description": "McCraine, B. grounded out to 2b (0-0)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Alex Petrovic",
-      "batter": "Madrigal, E. struck out looking (1-2 KSBK).",
+      "inning": "Bottom 2",
+      "pitcher": "Cord Rager",
+      "batter": "Eddie Madrigal",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
       "pitches": "KSBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -575,16 +575,16 @@
       "description": "Madrigal, E. struck out looking (1-2 KSBK)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Alex Petrovic",
-      "batter": "Carter, B. grounded out to (0-1 K).",
+      "inning": "Bottom 2",
+      "pitcher": "Cord Rager",
+      "batter": "Bristol Carter",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -602,7 +602,7 @@
       "description": "Carter, B. grounded out to (0-1 K)."
     },
     {
-      "inning": "Top 4",
+      "inning": "Top 3",
       "pitcher": "Alex Petrovic",
       "batter": "Deiten Lachance",
       "outcome": "Pop out",
@@ -610,8 +610,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -629,7 +629,7 @@
       "description": "LaChance, D. popped up to 2b (0-0)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Alex Petrovic",
       "batter": "Jaxon Willits",
       "outcome": "Pop out",
@@ -637,8 +637,8 @@
       "pitches": "BKF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -656,7 +656,7 @@
       "description": "Willits, J. popped up to ss (1-2 BKF)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Alex Petrovic",
       "batter": "Camden Johnson",
       "outcome": "Strikeout (swinging)",
@@ -664,8 +664,8 @@
       "pitches": "BSFBFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -683,16 +683,16 @@
       "description": "Johnson, C struck out swinging (2-2 BSFBFS)."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "Alex Petrovic",
-      "batter": "McCraine, M. struck out swinging (0-2 KSS).",
+      "inning": "Bottom 3",
+      "pitcher": "Cord Rager",
+      "batter": "Mason McCraine",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -710,23 +710,23 @@
       "description": "McCraine, M. struck out swinging (0-2 KSS)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Alex Petrovic",
-      "batter": "Guevara, E. singled through the left side (1-2 SFB).",
+      "inning": "Bottom 3",
+      "pitcher": "Cord Rager",
+      "batter": "Eric Guevara",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "SFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Guevara, E. singled through the left side (1-2 SFB).",
+        "1B": "Eric Guevara",
         "2B": null,
         "3B": null
       },
@@ -737,25 +737,25 @@
       "description": "Guevara, E. singled through the left side (1-2 SFB)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Alex Petrovic",
-      "batter": "Fralick, C. homered to right field, 2 RBI (0-0); Guevara, E. scored.",
+      "inning": "Bottom 3",
+      "pitcher": "Cord Rager",
+      "batter": "Chase Fralick",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Fralick, C. homered to right field, 2 RBI (0-0); Guevara, E. scored."
+        "Chase Fralick"
       ],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Guevara, E. singled through the left side (1-2 SFB).",
+        "1B": "Eric Guevara",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Guevara, E. singled through the left side (1-2 SFB).",
+        "1B": "Eric Guevara",
         "2B": null,
         "3B": null
       },
@@ -766,23 +766,23 @@
       "description": "Fralick, C. homered to right field, 2 RBI (0-0); Guevara, E. scored."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Alex Petrovic",
-      "batter": "Rembert, C. grounded out to (1-0 B).",
+      "inning": "Bottom 3",
+      "pitcher": "Cord Rager",
+      "batter": "Chris Rembert",
       "outcome": "Groundout",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Guevara, E. singled through the left side (1-2 SFB).",
+        "1B": "Eric Guevara",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Guevara, E. singled through the left side (1-2 SFB).",
+        "1B": "Eric Guevara",
         "2B": null,
         "3B": null
       },
@@ -793,25 +793,25 @@
       "description": "Rembert, C. grounded out to (1-0 B)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Alex Petrovic",
-      "batter": "Bingaman, E. homered to left field, RBI (2-2 BFBF).",
+      "inning": "Bottom 3",
+      "pitcher": "Cord Rager",
+      "batter": "Ethin Bingaman",
       "outcome": "Home run",
       "count": "2-2",
       "pitches": "BFBF",
       "rbi": true,
       "runs_scored": [
-        "Bingaman, E. homered to left field, RBI (2-2 BFBF)."
+        "Ethin Bingaman"
       ],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Guevara, E. singled through the left side (1-2 SFB).",
+        "1B": "Eric Guevara",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Guevara, E. singled through the left side (1-2 SFB).",
+        "1B": "Eric Guevara",
         "2B": null,
         "3B": null
       },
@@ -822,24 +822,24 @@
       "description": "Bingaman, E. homered to left field, RBI (2-2 BFBF)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Alex Petrovic",
-      "batter": "Terrell, B. doubled to right center (3-2 FBFFFBFBF).",
+      "inning": "Bottom 3",
+      "pitcher": "Cord Rager",
+      "batter": "Bub Terrell",
       "outcome": "Double",
       "count": "3-2",
       "pitches": "FBFFFBFBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Guevara, E. singled through the left side (1-2 SFB).",
+        "1B": "Eric Guevara",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Guevara, E. singled through the left side (1-2 SFB).",
-        "2B": "Terrell, B. doubled to right center (3-2 FBFFFBFBF).",
+        "1B": "Eric Guevara",
+        "2B": "Bub Terrell",
         "3B": null
       },
       "score": {
@@ -849,24 +849,24 @@
       "description": "Terrell, B. doubled to right center (3-2 FBFFFBFBF)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Alex Petrovic",
+      "inning": "Bottom 3",
+      "pitcher": "Cord Rager",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Guevara, E. singled through the left side (1-2 SFB).",
-        "2B": "Terrell, B. doubled to right center (3-2 FBFFFBFBF).",
+        "1B": "Eric Guevara",
+        "2B": "Bub Terrell",
         "3B": null
       },
       "runners_after": {
-        "1B": "Guevara, E. singled through the left side (1-2 SFB).",
-        "2B": "Terrell, B. doubled to right center (3-2 FBFFFBFBF).",
+        "1B": "Eric Guevara",
+        "2B": "Bub Terrell",
         "3B": null
       },
       "score": {
@@ -876,24 +876,24 @@
       "description": "Terrell, B. advanced to third on a wild pitch."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Alex Petrovic",
-      "batter": "McCraine, B. walked (3-1 BBBKB).",
+      "inning": "Bottom 3",
+      "pitcher": "Cord Rager",
+      "batter": "Mason McCraine",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBBKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Guevara, E. singled through the left side (1-2 SFB).",
-        "2B": "Terrell, B. doubled to right center (3-2 FBFFFBFBF).",
+        "1B": "Eric Guevara",
+        "2B": "Bub Terrell",
         "3B": null
       },
       "runners_after": {
-        "1B": "McCraine, B. walked (3-1 BBBKB).",
-        "2B": "Terrell, B. doubled to right center (3-2 FBFFFBFBF).",
+        "1B": "Mason McCraine",
+        "2B": "Bub Terrell",
         "3B": null
       },
       "score": {
@@ -903,24 +903,24 @@
       "description": "McCraine, B. walked (3-1 BBBKB)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Alex Petrovic",
-      "batter": "Madrigal, E. flied out to cf (1-1 BS).",
+      "inning": "Bottom 3",
+      "pitcher": "Cord Rager",
+      "batter": "Eddie Madrigal",
       "outcome": "Flyout",
       "count": "1-1",
       "pitches": "BS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "McCraine, B. walked (3-1 BBBKB).",
-        "2B": "Terrell, B. doubled to right center (3-2 FBFFFBFBF).",
+        "1B": "Mason McCraine",
+        "2B": "Bub Terrell",
         "3B": null
       },
       "runners_after": {
-        "1B": "McCraine, B. walked (3-1 BBBKB).",
-        "2B": "Terrell, B. doubled to right center (3-2 FBFFFBFBF).",
+        "1B": "Mason McCraine",
+        "2B": "Bub Terrell",
         "3B": null
       },
       "score": {
@@ -930,7 +930,7 @@
       "description": "Madrigal, E. flied out to cf (1-1 BS)."
     },
     {
-      "inning": "Top 6",
+      "inning": "Top 4",
       "pitcher": "Alex Petrovic",
       "batter": "Brendan Brock",
       "outcome": "Walk",
@@ -938,16 +938,16 @@
       "pitches": "BBKBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "McCraine, B. walked (3-1 BBBKB).",
-        "2B": "Terrell, B. doubled to right center (3-2 FBFFFBFBF).",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Brendan Brock",
-        "2B": "Terrell, B. doubled to right center (3-2 FBFFFBFBF).",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -957,7 +957,7 @@
       "description": "Brock, B. walked (3-1 BBKBB)."
     },
     {
-      "inning": "Top 6",
+      "inning": "Top 4",
       "pitcher": "Alex Petrovic",
       "batter": "Dasan Harris",
       "outcome": "Flyout",
@@ -965,16 +965,16 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Brendan Brock",
-        "2B": "Terrell, B. doubled to right center (3-2 FBFFFBFBF).",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Brendan Brock",
-        "2B": "Terrell, B. doubled to right center (3-2 FBFFFBFBF).",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -984,7 +984,7 @@
       "description": "Harris, D. flied out to cf (0-0)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Alex Petrovic",
       "batter": "Kyle Branch",
       "outcome": "Lineout",
@@ -992,15 +992,15 @@
       "pitches": "KK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Brendan Brock",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Brendan Brock",
         "2B": null,
         "3B": null
       },
@@ -1011,7 +1011,7 @@
       "description": "Branch, K. lined out to ss (0-2 KK)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Alex Petrovic",
       "batter": null,
       "outcome": "Caught stealing",
@@ -1019,15 +1019,15 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
+        "1B": "Brendan Brock",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Brendan Brock",
         "2B": null,
         "3B": null
       },
@@ -1038,23 +1038,23 @@
       "description": "Brock, B. out at second c to ss, caught stealing."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Bodin",
-      "batter": "Carter, B. walked (3-0 BBBB).",
+      "inning": "Bottom 4",
+      "pitcher": "Jason Bodin",
+      "batter": "Bristol Carter",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Carter, B. walked (3-0 BBBB).",
+        "1B": "Bristol Carter",
         "2B": null,
         "3B": null
       },
@@ -1065,23 +1065,23 @@
       "description": "Carter, B. walked (3-0 BBBB)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Bodin",
+      "inning": "Bottom 4",
+      "pitcher": "Jason Bodin",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Carter, B. walked (3-0 BBBB).",
+        "1B": "Bristol Carter",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Carter, B. walked (3-0 BBBB).",
+        "1B": "Bristol Carter",
         "2B": null,
         "3B": null
       },
@@ -1092,23 +1092,23 @@
       "description": "Carter, B. advanced to second on an error by p, failed pickoff attempt."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Bodin",
-      "batter": "McCraine, M. grounded out to 2b (2-1 BBK); Carter, B. advanced to third.",
+      "inning": "Bottom 4",
+      "pitcher": "Jason Bodin",
+      "batter": "Mason McCraine",
       "outcome": "Groundout",
       "count": "2-1",
       "pitches": "BBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Carter, B. walked (3-0 BBBB).",
+        "1B": "Bristol Carter",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Carter, B. walked (3-0 BBBB).",
+        "1B": "Bristol Carter",
         "2B": null,
         "3B": null
       },
@@ -1119,24 +1119,24 @@
       "description": "McCraine, M. grounded out to 2b (2-1 BBK); Carter, B. advanced to third."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Bodin",
-      "batter": "Guevara, E. doubled to left center, RBI (1-2 KBF); Carter, B. scored.",
+      "inning": "Bottom 4",
+      "pitcher": "Jason Bodin",
+      "batter": "Eric Guevara",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "KBF",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": null,
+        "1B": "Bristol Carter",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
-        "2B": "Guevara, E. doubled to left center, RBI (1-2 KBF); Carter, B. scored.",
+        "1B": "Bristol Carter",
+        "2B": "Eric Guevara",
         "3B": null
       },
       "score": {
@@ -1146,24 +1146,24 @@
       "description": "Guevara, E. doubled to left center, RBI (1-2 KBF); Carter, B. scored."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Bodin",
-      "batter": "Fralick, C. walked (3-2 KBFBBFFFB).",
+      "inning": "Bottom 4",
+      "pitcher": "Jason Bodin",
+      "batter": "Chase Fralick",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "KBFBBFFFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": null,
-        "2B": "Guevara, E. doubled to left center, RBI (1-2 KBF); Carter, B. scored.",
+        "1B": "Bristol Carter",
+        "2B": "Eric Guevara",
         "3B": null
       },
       "runners_after": {
-        "1B": "Fralick, C. walked (3-2 KBFBBFFFB).",
-        "2B": "Guevara, E. doubled to left center, RBI (1-2 KBF); Carter, B. scored.",
+        "1B": "Chase Fralick",
+        "2B": "Eric Guevara",
         "3B": null
       },
       "score": {
@@ -1173,24 +1173,24 @@
       "description": "Fralick, C. walked (3-2 KBFBBFFFB)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Bodin",
-      "batter": "Rembert, C. reached on a fielder's choice to first base (2-1 KBB); Fralick, C. out at second 1b to ss; Guevara, E. advanced to third.",
+      "inning": "Bottom 4",
+      "pitcher": "Jason Bodin",
+      "batter": "Chris Rembert",
       "outcome": "Fielder's choice",
       "count": "2-1",
       "pitches": "KBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Fralick, C. walked (3-2 KBFBBFFFB).",
-        "2B": "Guevara, E. doubled to left center, RBI (1-2 KBF); Carter, B. scored.",
+        "1B": "Chase Fralick",
+        "2B": "Eric Guevara",
         "3B": null
       },
       "runners_after": {
-        "1B": "Rembert, C. reached on a fielder's choice to first base (2-1 KBB); Fralick, C. out at second 1b to ss; Guevara, E. advanced to third.",
-        "2B": "Guevara, E. doubled to left center, RBI (1-2 KBF); Carter, B. scored.",
+        "1B": "Chris Rembert",
+        "2B": "Eric Guevara",
         "3B": null
       },
       "score": {
@@ -1200,26 +1200,26 @@
       "description": "Rembert, C. reached on a fielder's choice to first base (2-1 KBB); Fralick, C. out at second 1b to ss; Guevara, E. advanced to third."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Bodin",
-      "batter": "Bingaman, E. homered to right center, 3 RBI (1-0 B); Rembert, C. scored; Guevara, E. scored.",
+      "inning": "Bottom 4",
+      "pitcher": "Jason Bodin",
+      "batter": "Ethin Bingaman",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Bingaman, E. homered to right center, 3 RBI (1-0 B); Rembert, C. scored; Guevara, E. scored."
+        "Ethin Bingaman"
       ],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Rembert, C. reached on a fielder's choice to first base (2-1 KBB); Fralick, C. out at second 1b to ss; Guevara, E. advanced to third.",
-        "2B": "Guevara, E. doubled to left center, RBI (1-2 KBF); Carter, B. scored.",
+        "1B": "Chris Rembert",
+        "2B": "Eric Guevara",
         "3B": null
       },
       "runners_after": {
-        "1B": "Rembert, C. reached on a fielder's choice to first base (2-1 KBB); Fralick, C. out at second 1b to ss; Guevara, E. advanced to third.",
-        "2B": "Guevara, E. doubled to left center, RBI (1-2 KBF); Carter, B. scored.",
+        "1B": "Chris Rembert",
+        "2B": "Eric Guevara",
         "3B": null
       },
       "score": {
@@ -1229,24 +1229,24 @@
       "description": "Bingaman, E. homered to right center, 3 RBI (1-0 B); Rembert, C. scored; Guevara, E. scored."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Jones",
-      "batter": "Terrell, B. popped up to 2b (1-1 FB).",
+      "inning": "Bottom 4",
+      "pitcher": "Gavyn Jones",
+      "batter": "Bub Terrell",
       "outcome": "Pop out",
       "count": "1-1",
       "pitches": "FB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Rembert, C. reached on a fielder's choice to first base (2-1 KBB); Fralick, C. out at second 1b to ss; Guevara, E. advanced to third.",
-        "2B": "Guevara, E. doubled to left center, RBI (1-2 KBF); Carter, B. scored.",
+        "1B": "Chris Rembert",
+        "2B": "Eric Guevara",
         "3B": null
       },
       "runners_after": {
-        "1B": "Rembert, C. reached on a fielder's choice to first base (2-1 KBB); Fralick, C. out at second 1b to ss; Guevara, E. advanced to third.",
-        "2B": "Guevara, E. doubled to left center, RBI (1-2 KBF); Carter, B. scored.",
+        "1B": "Chris Rembert",
+        "2B": "Eric Guevara",
         "3B": null
       },
       "score": {
@@ -1256,24 +1256,24 @@
       "description": "Terrell, B. popped up to 2b (1-1 FB)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Jones",
+      "inning": "Top 5",
+      "pitcher": "Alex Petrovic",
       "batter": "Connor Larkin",
       "outcome": "Lineout",
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Rembert, C. reached on a fielder's choice to first base (2-1 KBB); Fralick, C. out at second 1b to ss; Guevara, E. advanced to third.",
-        "2B": "Guevara, E. doubled to left center, RBI (1-2 KBF); Carter, B. scored.",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Rembert, C. reached on a fielder's choice to first base (2-1 KBB); Fralick, C. out at second 1b to ss; Guevara, E. advanced to third.",
-        "2B": "Guevara, E. doubled to left center, RBI (1-2 KBF); Carter, B. scored.",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1283,24 +1283,24 @@
       "description": "Larkin, C. lined out to 2b (3-1 BBBK)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Jones",
+      "inning": "Top 5",
+      "pitcher": "Alex Petrovic",
       "batter": "Jason Walk",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Rembert, C. reached on a fielder's choice to first base (2-1 KBB); Fralick, C. out at second 1b to ss; Guevara, E. advanced to third.",
-        "2B": "Guevara, E. doubled to left center, RBI (1-2 KBF); Carter, B. scored.",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Rembert, C. reached on a fielder's choice to first base (2-1 KBB); Fralick, C. out at second 1b to ss; Guevara, E. advanced to third.",
-        "2B": "Guevara, E. doubled to left center, RBI (1-2 KBF); Carter, B. scored.",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1310,16 +1310,16 @@
       "description": "Walk, J. flied out to lf (0-0)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "Jones",
+      "inning": "Top 5",
+      "pitcher": "Alex Petrovic",
       "batter": "Trey Gambill",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "BFF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1337,16 +1337,16 @@
       "description": "Gambill, T. grounded out to 2b (1-2 BFF)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "Jones",
-      "batter": "McCraine, B. struck out swinging, out at first c to 1b (2-2 BFKBS).",
+      "inning": "Bottom 5",
+      "pitcher": "Gavyn Jones",
+      "batter": "Mason McCraine",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "BFKBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1364,16 +1364,16 @@
       "description": "McCraine, B. struck out swinging, out at first c to 1b (2-2 BFKBS)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "Jones",
-      "batter": "Madrigal, E. struck out swinging (2-2 KFBFBS).",
+      "inning": "Bottom 5",
+      "pitcher": "Gavyn Jones",
+      "batter": "Eddie Madrigal",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "KFBFBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1391,16 +1391,16 @@
       "description": "Madrigal, E. struck out swinging (2-2 KFBFBS)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Jones",
-      "batter": "Carter, B. grounded out to ss (1-1 FB).",
+      "inning": "Bottom 5",
+      "pitcher": "Gavyn Jones",
+      "batter": "Bristol Carter",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "FB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1418,16 +1418,16 @@
       "description": "Carter, B. grounded out to ss (1-1 FB)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Jones",
+      "inning": "Top 6",
+      "pitcher": "Alex Petrovic",
       "batter": "Deiten Lachance",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "F",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1445,16 +1445,16 @@
       "description": "LaChance, D. grounded out to p (0-1 F)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Jones",
+      "inning": "Top 6",
+      "pitcher": "Alex Petrovic",
       "batter": "Jaxon Willits",
       "outcome": "Reached on error",
       "count": "1-2",
       "pitches": "FBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1472,16 +1472,16 @@
       "description": "Willits, J. reached on an error by ss (1-2 FBK)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Jones",
+      "inning": "Top 6",
+      "pitcher": "Alex Petrovic",
       "batter": "Camden Johnson",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "F",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Jaxon Willits",
         "2B": null,
@@ -1499,16 +1499,16 @@
       "description": "Johnson, C singled through the right side (0-1 F); Willits, J. advanced to second."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Jones",
+      "inning": "Top 6",
+      "pitcher": "Alex Petrovic",
       "batter": "Brendan Brock",
       "outcome": "Groundout",
       "count": "2-1",
       "pitches": "FBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Camden Johnson",
         "2B": null,
@@ -1526,23 +1526,23 @@
       "description": "Brock, B. grounded out to p (2-1 FBB); Johnson, C advanced to second; Willits, J. advanced to third."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Jones",
+      "inning": "Top 6",
+      "pitcher": "Alex Petrovic",
       "batter": "Nolan Stevens",
       "outcome": "Flyout",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
+        "1B": "Camden Johnson",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Camden Johnson",
         "2B": null,
         "3B": null
       },
@@ -1553,16 +1553,16 @@
       "description": "Stevens, N. flied out to cf to right center (0-1 K)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Jones",
-      "batter": "Nolan Stevens",
+      "inning": "Bottom 6",
+      "pitcher": "Gavyn Jones",
+      "batter": "Stevens, N. to rf.",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1580,23 +1580,23 @@
       "description": "Stevens, N. to rf."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Jones",
-      "batter": "McCraine, M. singled to pitcher (1-0 B).",
+      "inning": "Bottom 6",
+      "pitcher": "Gavyn Jones",
+      "batter": "Mason McCraine",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "McCraine, M. singled to pitcher (1-0 B).",
+        "1B": "Mason McCraine",
         "2B": null,
         "3B": null
       },
@@ -1607,25 +1607,25 @@
       "description": "McCraine, M. singled to pitcher (1-0 B)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Jones",
-      "batter": "Guevara, E. homered to right field, 2 RBI (1-0 B); McCraine, M. scored.",
+      "inning": "Bottom 6",
+      "pitcher": "Gavyn Jones",
+      "batter": "Eric Guevara",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Guevara, E. homered to right field, 2 RBI (1-0 B); McCraine, M. scored."
+        "Eric Guevara"
       ],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "McCraine, M. singled to pitcher (1-0 B).",
+        "1B": "Mason McCraine",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "McCraine, M. singled to pitcher (1-0 B).",
+        "1B": "Mason McCraine",
         "2B": null,
         "3B": null
       },
@@ -1636,23 +1636,23 @@
       "description": "Guevara, E. homered to right field, 2 RBI (1-0 B); McCraine, M. scored."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Jones",
-      "batter": "Fralick, C. grounded out to ss (1-2 BKF).",
+      "inning": "Bottom 6",
+      "pitcher": "Gavyn Jones",
+      "batter": "Chase Fralick",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "BKF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "McCraine, M. singled to pitcher (1-0 B).",
+        "1B": "Mason McCraine",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "McCraine, M. singled to pitcher (1-0 B).",
+        "1B": "Mason McCraine",
         "2B": null,
         "3B": null
       },
@@ -1663,23 +1663,23 @@
       "description": "Fralick, C. grounded out to ss (1-2 BKF)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Wesloski",
-      "batter": "Rembert, C. flied out to rf (2-2 BKBF).",
+      "inning": "Bottom 6",
+      "pitcher": "Nick Wesloski",
+      "batter": "Chris Rembert",
       "outcome": "Flyout",
       "count": "2-2",
       "pitches": "BKBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "McCraine, M. singled to pitcher (1-0 B).",
+        "1B": "Mason McCraine",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "McCraine, M. singled to pitcher (1-0 B).",
+        "1B": "Mason McCraine",
         "2B": null,
         "3B": null
       },
@@ -1690,23 +1690,23 @@
       "description": "Rembert, C. flied out to rf (2-2 BKBF)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Wesloski",
-      "batter": "Bingaman, E. grounded out to ss (2-2 FBSBF).",
+      "inning": "Bottom 6",
+      "pitcher": "Nick Wesloski",
+      "batter": "Ethin Bingaman",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "FBSBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
+        "1B": "Mason McCraine",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Mason McCraine",
         "2B": null,
         "3B": null
       },
@@ -1717,7 +1717,7 @@
       "description": "Bingaman, E. grounded out to ss (2-2 FBSBF)."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "Garrett Brewer",
       "batter": "Kyle Branch",
       "outcome": "Single",
@@ -1725,8 +1725,8 @@
       "pitches": "KFBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1744,7 +1744,7 @@
       "description": "Branch, K. singled down the rf line (1-2 KFBF)."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "Garrett Brewer",
       "batter": "Connor Larkin",
       "outcome": "Double",
@@ -1752,8 +1752,8 @@
       "pitches": "BK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Kyle Branch",
         "2B": null,
@@ -1771,7 +1771,7 @@
       "description": "Larkin, C. doubled to left field (1-1 BK); Branch, K. advanced to third."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "Garrett Brewer",
       "batter": "Jason Walk",
       "outcome": "Walk",
@@ -1779,8 +1779,8 @@
       "pitches": "SBBBFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Kyle Branch",
         "2B": "Connor Larkin",
@@ -1798,7 +1798,7 @@
       "description": "Walk, J. walked (3-2 SBBBFB)."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "Ryan Hetzler",
       "batter": "Trey Gambill",
       "outcome": "Flyout",
@@ -1806,8 +1806,8 @@
       "pitches": "KB",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Jason Walk",
         "2B": "Connor Larkin",
@@ -1825,7 +1825,7 @@
       "description": "Gambill, T. flied out to cf, SF, RBI (1-1 KB); Branch, K. scored."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "Ryan Hetzler",
       "batter": "Deiten Lachance",
       "outcome": "Pop out",
@@ -1833,8 +1833,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Jason Walk",
         "2B": "Connor Larkin",
@@ -1852,7 +1852,7 @@
       "description": "LaChance, D. popped up to 2b down the rf line (0-0)."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 7",
       "pitcher": "Ryan Hetzler",
       "batter": "Jaxon Willits",
       "outcome": "Flyout",
@@ -1860,16 +1860,16 @@
       "pitches": "BBFSBFF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
-        "2B": null,
+        "1B": "Jason Walk",
+        "2B": "Connor Larkin",
         "3B": null
       },
       "runners_after": {
-        "1B": null,
-        "2B": null,
+        "1B": "Jason Walk",
+        "2B": "Connor Larkin",
         "3B": null
       },
       "score": {
@@ -1879,16 +1879,16 @@
       "description": "Willits, J. flied out to lf down the lf line (3-2 BBFSBFF)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Cleveland",
-      "batter": "Terrell, B. grounded out to 2b (1-2 FKBFFF).",
+      "inning": "Bottom 7",
+      "pitcher": "Jackson Cleveland",
+      "batter": "Bub Terrell",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "FKBFFF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1906,16 +1906,16 @@
       "description": "Terrell, B. grounded out to 2b (1-2 FKBFFF)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Cleveland",
-      "batter": "McCraine, B. flied out to lf (2-2 KFFFFBB).",
+      "inning": "Bottom 7",
+      "pitcher": "Jackson Cleveland",
+      "batter": "Mason McCraine",
       "outcome": "Flyout",
       "count": "2-2",
       "pitches": "KFFFFBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1933,23 +1933,23 @@
       "description": "McCraine, B. flied out to lf (2-2 KFFFFBB)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Cleveland",
-      "batter": "Steele, L. walked (3-2 BBSSBB).",
+      "inning": "Bottom 7",
+      "pitcher": "Jackson Cleveland",
+      "batter": "Lucas Steele",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBSSBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Steele, L. walked (3-2 BBSSBB).",
+        "1B": "Lucas Steele",
         "2B": null,
         "3B": null
       },
@@ -1960,23 +1960,23 @@
       "description": "Steele, L. walked (3-2 BBSSBB)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Cleveland",
-      "batter": "Carter, B. grounded out to ss (0-0).",
+      "inning": "Bottom 7",
+      "pitcher": "Jackson Cleveland",
+      "batter": "Bristol Carter",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "Steele, L. walked (3-2 BBSSBB).",
+        "1B": "Lucas Steele",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Steele, L. walked (3-2 BBSSBB).",
+        "1B": "Lucas Steele",
         "2B": null,
         "3B": null
       },
@@ -1987,23 +1987,23 @@
       "description": "Carter, B. grounded out to ss (0-0)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Cleveland",
+      "inning": "Top 8",
+      "pitcher": "Ryan Hetzler",
       "batter": "Camden Johnson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "BFKS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Steele, L. walked (3-2 BBSSBB).",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Steele, L. walked (3-2 BBSSBB).",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2014,23 +2014,23 @@
       "description": "Johnson, C struck out swinging, out at first c to 1b (1-2 BFKS)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Cleveland",
+      "inning": "Top 8",
+      "pitcher": "Ryan Hetzler",
       "batter": "Brendan Brock",
       "outcome": "Flyout",
       "count": "0-2",
       "pitches": "KF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Steele, L. walked (3-2 BBSSBB).",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Steele, L. walked (3-2 BBSSBB).",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2041,8 +2041,8 @@
       "description": "Brock, B. flied out to rf (0-2 KF)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Cleveland",
+      "inning": "Top 8",
+      "pitcher": "Ryan Hetzler",
       "batter": "Nolan Stevens",
       "outcome": "Home run",
       "count": "2-2",
@@ -2051,8 +2051,8 @@
       "runs_scored": [
         "Nolan Stevens"
       ],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2070,16 +2070,16 @@
       "description": "Stevens, N. homered to left center, RBI (2-2 FBFFB)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Cleveland",
+      "inning": "Top 8",
+      "pitcher": "Ryan Hetzler",
       "batter": "Kyle Branch",
       "outcome": "Pop out",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2097,16 +2097,16 @@
       "description": "Branch, K. popped up to 2b (0-0)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Cleveland",
-      "batter": "McCraine, M. doubled down the rf line (2-2 BKBF).",
+      "inning": "Bottom 8",
+      "pitcher": "Jackson Cleveland",
+      "batter": "Mason McCraine",
       "outcome": "Double",
       "count": "2-2",
       "pitches": "BKBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2114,7 +2114,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "McCraine, M. doubled down the rf line (2-2 BKBF).",
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -2124,24 +2124,24 @@
       "description": "McCraine, M. doubled down the rf line (2-2 BKBF)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Cleveland",
-      "batter": "Guevara, E. hit by pitch (1-0 B).",
+      "inning": "Bottom 8",
+      "pitcher": "Jackson Cleveland",
+      "batter": "Eric Guevara",
       "outcome": "Hit by pitch",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
-        "2B": "McCraine, M. doubled down the rf line (2-2 BKBF).",
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
-        "1B": "Guevara, E. hit by pitch (1-0 B).",
-        "2B": "McCraine, M. doubled down the rf line (2-2 BKBF).",
+        "1B": "Eric Guevara",
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -2151,24 +2151,24 @@
       "description": "Guevara, E. hit by pitch (1-0 B)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Cleveland",
-      "batter": "Fralick, C. singled to right field (2-2 KFFBFB); Guevara, E. advanced to second; McCraine, M. advanced to third.",
+      "inning": "Bottom 8",
+      "pitcher": "Jackson Cleveland",
+      "batter": "Chase Fralick",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "KFFBFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Guevara, E. hit by pitch (1-0 B).",
-        "2B": "McCraine, M. doubled down the rf line (2-2 BKBF).",
+        "1B": "Eric Guevara",
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
-        "1B": "Fralick, C. singled to right field (2-2 KFFBFB); Guevara, E. advanced to second; McCraine, M. advanced to third.",
-        "2B": "McCraine, M. doubled down the rf line (2-2 BKBF).",
+        "1B": "Chase Fralick",
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -2178,24 +2178,24 @@
       "description": "Fralick, C. singled to right field (2-2 KFFBFB); Guevara, E. advanced to second; McCraine, M. advanced to third."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Cleveland",
-      "batter": "Rembert, C. reached on a fielder's choice to shortstop, RBI (2-2 KBKB); Fralick, C. out at second ss to 2b; Guevara, E. advanced to third; McCraine, M. scored.",
+      "inning": "Bottom 8",
+      "pitcher": "Jackson Cleveland",
+      "batter": "Chris Rembert",
       "outcome": "Fielder's choice",
       "count": "2-2",
       "pitches": "KBKB",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Fralick, C. singled to right field (2-2 KFFBFB); Guevara, E. advanced to second; McCraine, M. advanced to third.",
-        "2B": "McCraine, M. doubled down the rf line (2-2 BKBF).",
+        "1B": "Chase Fralick",
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
-        "1B": "Rembert, C. reached on a fielder's choice to shortstop, RBI (2-2 KBKB); Fralick, C. out at second ss to 2b; Guevara, E. advanced to third; McCraine, M. scored.",
-        "2B": "McCraine, M. doubled down the rf line (2-2 BKBF).",
+        "1B": "Chris Rembert",
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -2205,26 +2205,26 @@
       "description": "Rembert, C. reached on a fielder's choice to shortstop, RBI (2-2 KBKB); Fralick, C. out at second ss to 2b; Guevara, E. advanced to third; McCraine, M. scored."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Cleveland",
-      "batter": "Bingaman, E. homered to left center, 3 RBI (0-2 FK); Rembert, C. scored; Guevara, E. scored.",
+      "inning": "Bottom 8",
+      "pitcher": "Jackson Cleveland",
+      "batter": "Ethin Bingaman",
       "outcome": "Home run",
       "count": "0-2",
       "pitches": "FK",
       "rbi": true,
       "runs_scored": [
-        "Bingaman, E. homered to left center, 3 RBI (0-2 FK); Rembert, C. scored; Guevara, E. scored."
+        "Ethin Bingaman"
       ],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Rembert, C. reached on a fielder's choice to shortstop, RBI (2-2 KBKB); Fralick, C. out at second ss to 2b; Guevara, E. advanced to third; McCraine, M. scored.",
-        "2B": "McCraine, M. doubled down the rf line (2-2 BKBF).",
+        "1B": "Chris Rembert",
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
-        "1B": "Rembert, C. reached on a fielder's choice to shortstop, RBI (2-2 KBKB); Fralick, C. out at second ss to 2b; Guevara, E. advanced to third; McCraine, M. scored.",
-        "2B": "McCraine, M. doubled down the rf line (2-2 BKBF).",
+        "1B": "Chris Rembert",
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {

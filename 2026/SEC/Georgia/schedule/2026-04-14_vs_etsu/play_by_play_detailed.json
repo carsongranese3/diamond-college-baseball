@@ -1,14 +1,14 @@
 {
   "contest_id": "6536616",
   "date": "04/14/2026",
-  "batting_team": "Georgia",
-  "pitching_team": "ETSU",
-  "note": "Broken-down from the saved play_by_play.json, which contains the Georgia at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "ETSU",
+  "home_team": "Georgia",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
-      "inning": "Bottom 1",
-      "pitcher": "Derek McCarley",
-      "batter": "N.",
+      "inning": "Top 1",
+      "pitcher": "Kenny Ishikawa",
+      "batter": "Nate Conner",
       "outcome": "Foul out",
       "count": "1-2",
       "pitches": "KFBF",
@@ -33,9 +33,9 @@
       "description": "N. Conner fouled out to 1b (1-2 KFBF)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Derek McCarley",
-      "batter": "H.",
+      "inning": "Top 1",
+      "pitcher": "Kenny Ishikawa",
+      "batter": "Henry Ferguson",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "KB",
@@ -49,7 +49,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "H.",
+        "1B": "Henry Ferguson",
         "2B": null,
         "3B": null
       },
@@ -60,8 +60,8 @@
       "description": "H. Ferguson singled to center field (1-1 KB)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Derek McCarley",
+      "inning": "Top 1",
+      "pitcher": "Kenny Ishikawa",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -71,13 +71,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "H.",
+        "1B": "Henry Ferguson",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "H.",
-        "2B": null,
+        "1B": null,
+        "2B": "Henry Ferguson",
         "3B": null
       },
       "score": {
@@ -87,9 +87,9 @@
       "description": "H. Ferguson advanced to second on a wild pitch."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Derek McCarley",
-      "batter": "T.",
+      "inning": "Top 1",
+      "pitcher": "Kenny Ishikawa",
+      "batter": "Tristan Curless",
       "outcome": "Groundout",
       "count": "3-2",
       "pitches": "BBKFBF",
@@ -98,13 +98,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "H.",
-        "2B": null,
+        "1B": null,
+        "2B": "Henry Ferguson",
         "3B": null
       },
       "runners_after": {
-        "1B": "H.",
-        "2B": null,
+        "1B": null,
+        "2B": "Henry Ferguson",
         "3B": null
       },
       "score": {
@@ -114,23 +114,25 @@
       "description": "T. Curless grounded out to ss (3-2 BBKFBF): H. Ferguson advanced to third."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Derek McCarley",
+      "inning": "Top 1",
+      "pitcher": "Kenny Ishikawa",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Henry Ferguson"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "H.",
-        "2B": null,
+        "1B": null,
+        "2B": "Henry Ferguson",
         "3B": null
       },
       "runners_after": {
-        "1B": "H.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -141,9 +143,9 @@
       "description": "H. Ferguson scored on a passed ball, unearned."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Derek McCarley",
-      "batter": "J.",
+      "inning": "Top 1",
+      "pitcher": "Kenny Ishikawa",
+      "batter": "Jamie Palmese",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "FBKF",
@@ -152,12 +154,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "H.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "H.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -168,7 +170,7 @@
       "description": "J. Palmese grounded out to ss (1-2 FBKF)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Derek McCarley",
       "batter": "Tre Phelps",
       "outcome": "Hit by pitch",
@@ -195,7 +197,7 @@
       "description": "Phelps hit by pitch (2-2 KBFB)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Derek McCarley",
       "batter": null,
       "outcome": "Baserunning",
@@ -222,7 +224,7 @@
       "description": "Jackson out at first to ss to 1b (0-0): Phelps advanced to second."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Derek McCarley",
       "batter": "Rylan Lujo",
       "outcome": "Hit by pitch",
@@ -249,7 +251,7 @@
       "description": "Lujo hit by pitch (0-0)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Derek McCarley",
       "batter": "Ryan Black",
       "outcome": "Single",
@@ -276,7 +278,7 @@
       "description": "Black singled to right field, RBI (0-0): Lujo advanced to third: Phelps scored."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Derek McCarley",
       "batter": null,
       "outcome": "Wild pitch",
@@ -303,7 +305,7 @@
       "description": "Black advanced to second on a wild pitch."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Derek McCarley",
       "batter": "Henry Allen",
       "outcome": "Walk",
@@ -330,7 +332,7 @@
       "description": "Allen, He. walked (3-0 BBBB)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Derek McCarley",
       "batter": "Bryce Calloway",
       "outcome": "Single",
@@ -357,7 +359,7 @@
       "description": "Calloway singled to right field, 2 RBI (0-0): Allen, He. advanced to second: Black scored: Lujo scored."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Derek McCarley",
       "batter": "Jack Arcamone",
       "outcome": "Single",
@@ -384,7 +386,7 @@
       "description": "Arcamone singled to left field, RBI (0-1 K): Calloway advanced to second: Allen, He. scored."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Derek McCarley",
       "batter": "Kolby Branch",
       "outcome": "Strikeout (swinging)",
@@ -411,7 +413,7 @@
       "description": "Branch struck out swinging (2-2 FBBKFFS)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Derek McCarley",
       "batter": "Ryan Wynn",
       "outcome": "Double",
@@ -438,7 +440,7 @@
       "description": "Wynn doubled to left field, RBI (2-0 BB): Arcamone advanced to third: Calloway scored."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "S.",
       "batter": "Tre Phelps",
       "outcome": "Groundout",
@@ -465,9 +467,9 @@
       "description": "Phelps grounded out to ss (0-0)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "S.",
-      "batter": "T.",
+      "inning": "Top 2",
+      "pitcher": "Kenny Ishikawa",
+      "batter": "Tyler Fetterman",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "KBBKBB",
@@ -481,7 +483,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
+        "1B": "Tyler Fetterman",
         "2B": null,
         "3B": null
       },
@@ -492,9 +494,9 @@
       "description": "T. Fetterman walked (3-2 KBBKBB)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "S.",
-      "batter": "G.",
+      "inning": "Top 2",
+      "pitcher": "Kenny Ishikawa",
+      "batter": "Gabe Juarez",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBFBB",
@@ -503,12 +505,12 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "T.",
+        "1B": "Tyler Fetterman",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "G.",
+        "1B": "Gabe Juarez",
         "2B": null,
         "3B": null
       },
@@ -519,8 +521,8 @@
       "description": "G. Juarez walked (3-1 BBFBB): T. Fetterman advanced to second."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "S.",
+      "inning": "Top 2",
+      "pitcher": "Kenny Ishikawa",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -530,12 +532,12 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "G.",
+        "1B": "Gabe Juarez",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "G.",
+        "1B": "Gabe Juarez",
         "2B": null,
         "3B": null
       },
@@ -546,9 +548,9 @@
       "description": "T. Fetterman advanced to third on a wild pitch."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "S.",
-      "batter": "A.",
+      "inning": "Top 2",
+      "pitcher": "Kenny Ishikawa",
+      "batter": "Axel Melendez",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "BKKS",
@@ -557,12 +559,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "G.",
+        "1B": "Gabe Juarez",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "G.",
+        "1B": "Gabe Juarez",
         "2B": null,
         "3B": null
       },
@@ -573,9 +575,9 @@
       "description": "A. Melendez struck out swinging (1-2 BKKS)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "S.",
-      "batter": "I.",
+      "inning": "Top 2",
+      "pitcher": "Kenny Ishikawa",
+      "batter": "Ian Guanzon",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
@@ -584,12 +586,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "G.",
+        "1B": "Gabe Juarez",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "I.",
+        "1B": "Ian Guanzon",
         "2B": null,
         "3B": null
       },
@@ -600,9 +602,9 @@
       "description": "I. Guanzon singled, advanced to second, RBI (0-0): G. Juarez advanced to second, advanced to third on an error by ss: T. Fetterman scored."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "S.",
-      "batter": "L.",
+      "inning": "Top 2",
+      "pitcher": "Kenny Ishikawa",
+      "batter": "Luke Matlock",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "FF",
@@ -611,12 +613,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "I.",
+        "1B": "Ian Guanzon",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": "Luke Matlock",
         "2B": null,
         "3B": null
       },
@@ -627,9 +629,9 @@
       "description": "L. Matlock singled to third base, RBI (0-2 FF): I. Guanzon no advance: G. Juarez scored."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "S.",
-      "batter": "N.",
+      "inning": "Top 2",
+      "pitcher": "Kenny Ishikawa",
+      "batter": "Nate Conner",
       "outcome": "Flyout",
       "count": "2-0",
       "pitches": "BB",
@@ -638,12 +640,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "L.",
+        "1B": "Luke Matlock",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": "Luke Matlock",
         "2B": null,
         "3B": null
       },
@@ -654,9 +656,9 @@
       "description": "N. Conner flied out to rf (2-0 BB): I. Guanzon advanced to third."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Farley",
-      "batter": "H.",
+      "inning": "Top 2",
+      "pitcher": "Paul Farley",
+      "batter": "Henry Ferguson",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "FB",
@@ -665,12 +667,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "L.",
+        "1B": "Luke Matlock",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": "Luke Matlock",
         "2B": null,
         "3B": null
       },
@@ -681,8 +683,8 @@
       "description": "H. Ferguson grounded out to (1-1 FB)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Farley",
+      "inning": "Bottom 2",
+      "pitcher": "S.",
       "batter": "Daniel Jackson",
       "outcome": "Single",
       "count": "2-2",
@@ -708,8 +710,8 @@
       "description": "Jackson singled to right field (2-2 BBFKF)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Farley",
+      "inning": "Bottom 2",
+      "pitcher": "S.",
       "batter": "Rylan Lujo",
       "outcome": "Pop out",
       "count": "0-0",
@@ -735,8 +737,8 @@
       "description": "Lujo popped up to lf (0-0)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Farley",
+      "inning": "Bottom 2",
+      "pitcher": "S.",
       "batter": "Ryan Black",
       "outcome": "Flyout",
       "count": "0-0",
@@ -762,8 +764,8 @@
       "description": "Black flied out to cf (0-0)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Farley",
+      "inning": "Bottom 2",
+      "pitcher": "S.",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -789,8 +791,8 @@
       "description": "Jackson stole second."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Farley",
+      "inning": "Bottom 2",
+      "pitcher": "S.",
       "batter": "Henry Allen",
       "outcome": "Hit by pitch",
       "count": "2-0",
@@ -816,8 +818,8 @@
       "description": "Allen, He. hit by pitch (2-0 BB)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Farley",
+      "inning": "Bottom 2",
+      "pitcher": "S.",
       "batter": "Bryce Calloway",
       "outcome": "Double",
       "count": "0-0",
@@ -843,8 +845,8 @@
       "description": "Calloway doubled to left field, ground-rule, RBI (0-0): Allen, He. advanced to third: Jackson scored."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Farley",
+      "inning": "Bottom 2",
+      "pitcher": "S.",
       "batter": "Jack Arcamone",
       "outcome": "Groundout",
       "count": "2-1",
@@ -870,9 +872,9 @@
       "description": "Arcamone grounded out to 2b (2-1 BSB)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Farley",
-      "batter": "T.",
+      "inning": "Top 3",
+      "pitcher": "Paul Farley",
+      "batter": "Tristan Curless",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
@@ -886,7 +888,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
+        "1B": "Tristan Curless",
         "2B": null,
         "3B": null
       },
@@ -897,9 +899,9 @@
       "description": "T. Curless singled to right field (0-0)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Farley",
-      "batter": "T.",
+      "inning": "Top 3",
+      "pitcher": "Paul Farley",
+      "batter": "Tristan Curless",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
@@ -908,12 +910,12 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "T.",
+        "1B": "Tristan Curless",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
+        "1B": "Tristan Curless",
         "2B": null,
         "3B": null
       },
@@ -924,9 +926,9 @@
       "description": "T. Curless out at first p to 1b, picked off."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Farley",
-      "batter": "J.",
+      "inning": "Top 3",
+      "pitcher": "Paul Farley",
+      "batter": "Jamie Palmese",
       "outcome": "Groundout",
       "count": "2-0",
       "pitches": "BB",
@@ -935,12 +937,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "T.",
+        "1B": "Tristan Curless",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
+        "1B": "Tristan Curless",
         "2B": null,
         "3B": null
       },
@@ -951,9 +953,9 @@
       "description": "J. Palmese grounded out to 2b (2-0 BB)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Farley",
-      "batter": "T.",
+      "inning": "Top 3",
+      "pitcher": "Paul Farley",
+      "batter": "Tyler Fetterman",
       "outcome": "Flyout",
       "count": "2-0",
       "pitches": "BB",
@@ -962,12 +964,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "T.",
+        "1B": "Tristan Curless",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
+        "1B": "Tristan Curless",
         "2B": null,
         "3B": null
       },
@@ -978,7 +980,7 @@
       "description": "T. Fetterman flied out to cf (2-0 BB)."
     },
     {
-      "inning": "Bottom 5",
+      "inning": "Bottom 3",
       "pitcher": "C.",
       "batter": "Kolby Branch",
       "outcome": "Single",
@@ -986,10 +988,10 @@
       "pitches": "FB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "T.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1005,7 +1007,7 @@
       "description": "Branch singled to center field (1-1 FB)."
     },
     {
-      "inning": "Bottom 5",
+      "inning": "Bottom 3",
       "pitcher": "C.",
       "batter": "Ryan Wynn",
       "outcome": "Single",
@@ -1013,8 +1015,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Kolby Branch",
         "2B": null,
@@ -1032,7 +1034,7 @@
       "description": "Wynn singled to center field (0-0): Branch advanced to second."
     },
     {
-      "inning": "Bottom 5",
+      "inning": "Bottom 3",
       "pitcher": "C.",
       "batter": "Tre Phelps",
       "outcome": "Hit by pitch",
@@ -1040,8 +1042,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Ryan Wynn",
         "2B": null,
@@ -1059,7 +1061,7 @@
       "description": "Phelps hit by pitch (0-0): Wynn advanced to second: Branch advanced to third."
     },
     {
-      "inning": "Bottom 5",
+      "inning": "Bottom 3",
       "pitcher": "C.",
       "batter": "Daniel Jackson",
       "outcome": "Flyout",
@@ -1067,8 +1069,8 @@
       "pitches": "KFBBFF",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Tre Phelps",
         "2B": null,
@@ -1086,7 +1088,7 @@
       "description": "Jackson flied out to lf, SF, RBI (2-2 KFBBFF): Branch scored."
     },
     {
-      "inning": "Bottom 6",
+      "inning": "Bottom 3",
       "pitcher": "C.",
       "batter": "Rylan Lujo",
       "outcome": "Fielder's choice",
@@ -1094,10 +1096,10 @@
       "pitches": "BBBKS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": null,
+        "1B": "Tre Phelps",
         "2B": null,
         "3B": null
       },
@@ -1113,7 +1115,7 @@
       "description": "Lujo reached on a fielder's choice (3-2 BBBKS): Phelps out at second to 2b: Wynn advanced to third."
     },
     {
-      "inning": "Bottom 6",
+      "inning": "Bottom 3",
       "pitcher": "C.",
       "batter": "Ryan Black",
       "outcome": "Fielder's choice",
@@ -1121,8 +1123,8 @@
       "pitches": "BBKF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Rylan Lujo",
         "2B": null,
@@ -1140,9 +1142,9 @@
       "description": "Black reached on a fielder's choice (2-2 BBKF): Lujo out at second to ss."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "C.",
-      "batter": "G.",
+      "inning": "Top 4",
+      "pitcher": "Paul Farley",
+      "batter": "Gabe Juarez",
       "outcome": "Pop out",
       "count": "0-0",
       "pitches": "",
@@ -1151,12 +1153,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Ryan Black",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Ryan Black",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1167,9 +1169,9 @@
       "description": "G. Juarez popped up to rf (0-0)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "C.",
-      "batter": "A.",
+      "inning": "Top 4",
+      "pitcher": "Paul Farley",
+      "batter": "Axel Melendez",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
       "pitches": "KBFBBFFFFS",
@@ -1178,12 +1180,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ryan Black",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Ryan Black",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1194,9 +1196,9 @@
       "description": "A. Melendez struck out swinging (3-2 KBFBBFFFFS)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "C.",
-      "batter": "I.",
+      "inning": "Top 4",
+      "pitcher": "Paul Farley",
+      "batter": "Ian Guanzon",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
@@ -1205,12 +1207,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ryan Black",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "I.",
+        "1B": "Ian Guanzon",
         "2B": null,
         "3B": null
       },
@@ -1221,9 +1223,9 @@
       "description": "I. Guanzon walked (3-0 BBBB)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "C.",
-      "batter": "L.",
+      "inning": "Top 4",
+      "pitcher": "Paul Farley",
+      "batter": "Luke Matlock",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
       "pitches": "BSFBK",
@@ -1232,12 +1234,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "I.",
+        "1B": "Ian Guanzon",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "I.",
+        "1B": "Ian Guanzon",
         "2B": null,
         "3B": null
       },
@@ -1248,7 +1250,7 @@
       "description": "L. Matlock struck out looking (2-2 BSFBK)."
     },
     {
-      "inning": "Bottom 7",
+      "inning": "Bottom 4",
       "pitcher": "C.",
       "batter": "Henry Allen",
       "outcome": "Strikeout (swinging)",
@@ -1275,7 +1277,7 @@
       "description": "Allen, He. struck out swinging (3-2 BFBKFBFS)."
     },
     {
-      "inning": "Bottom 7",
+      "inning": "Bottom 4",
       "pitcher": "C.",
       "batter": "Bryce Calloway",
       "outcome": "Strikeout (looking)",
@@ -1302,7 +1304,7 @@
       "description": "Calloway struck out looking (2-2 BKSBK)."
     },
     {
-      "inning": "Bottom 7",
+      "inning": "Bottom 4",
       "pitcher": "C.",
       "batter": "Jack Arcamone",
       "outcome": "Reached on error",
@@ -1329,7 +1331,7 @@
       "description": "Arcamone reached on an error by 1b (2-1 SBB)."
     },
     {
-      "inning": "Bottom 7",
+      "inning": "Bottom 4",
       "pitcher": "C.",
       "batter": "Kolby Branch",
       "outcome": "Strikeout (swinging)",
@@ -1356,9 +1358,9 @@
       "description": "Branch struck out swinging (1-2 BFFS)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Brennan",
-      "batter": "N.",
+      "inning": "Top 5",
+      "pitcher": "Teddy Brennan",
+      "batter": "Nate Conner",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
@@ -1373,7 +1375,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "N.",
+        "2B": "Nate Conner",
         "3B": null
       },
       "score": {
@@ -1383,9 +1385,9 @@
       "description": "N. Conner doubled to right field (0-0)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Brennan",
-      "batter": "H.",
+      "inning": "Top 5",
+      "pitcher": "Teddy Brennan",
+      "batter": "Henry Ferguson",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBFBB",
@@ -1395,12 +1397,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": null,
-        "2B": "N.",
+        "2B": "Nate Conner",
         "3B": null
       },
       "runners_after": {
-        "1B": "H.",
-        "2B": "N.",
+        "1B": "Henry Ferguson",
+        "2B": "Nate Conner",
         "3B": null
       },
       "score": {
@@ -1410,26 +1412,26 @@
       "description": "H. Ferguson walked (3-1 BBFBB)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Brennan",
-      "batter": "T.",
+      "inning": "Top 5",
+      "pitcher": "Teddy Brennan",
+      "batter": "Tristan Curless",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "T."
+        "Tristan Curless"
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "H.",
-        "2B": "N.",
+        "1B": "Henry Ferguson",
+        "2B": "Nate Conner",
         "3B": null
       },
       "runners_after": {
-        "1B": "H.",
-        "2B": "N.",
+        "1B": "Henry Ferguson",
+        "2B": "Nate Conner",
         "3B": null
       },
       "score": {
@@ -1439,9 +1441,9 @@
       "description": "T. Curless homered to center field, 3 RBI (0-0): H. Ferguson scored: N. Conner scored."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Brennan",
-      "batter": "J.",
+      "inning": "Top 5",
+      "pitcher": "Teddy Brennan",
+      "batter": "Jamie Palmese",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "BSFS",
@@ -1450,13 +1452,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "H.",
-        "2B": "N.",
+        "1B": "Henry Ferguson",
+        "2B": "Nate Conner",
         "3B": null
       },
       "runners_after": {
-        "1B": "H.",
-        "2B": "N.",
+        "1B": "Henry Ferguson",
+        "2B": "Nate Conner",
         "3B": null
       },
       "score": {
@@ -1466,9 +1468,9 @@
       "description": "J. Palmese struck out swinging (1-2 BSFS)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Brennan",
-      "batter": "T.",
+      "inning": "Top 5",
+      "pitcher": "Teddy Brennan",
+      "batter": "Tyler Fetterman",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BKKFBFBB",
@@ -1477,13 +1479,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "H.",
-        "2B": "N.",
+        "1B": "Henry Ferguson",
+        "2B": "Nate Conner",
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
-        "2B": "N.",
+        "1B": "Tyler Fetterman",
+        "2B": "Nate Conner",
         "3B": null
       },
       "score": {
@@ -1493,9 +1495,9 @@
       "description": "T. Fetterman walked (3-2 BKKFBFBB)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Ellisen",
-      "batter": "G.",
+      "inning": "Top 5",
+      "pitcher": "Thomas Ellisen",
+      "batter": "Gabe Juarez",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
@@ -1504,13 +1506,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "T.",
-        "2B": "N.",
+        "1B": "Tyler Fetterman",
+        "2B": "Nate Conner",
         "3B": null
       },
       "runners_after": {
-        "1B": "G.",
-        "2B": "N.",
+        "1B": "Gabe Juarez",
+        "2B": "Nate Conner",
         "3B": null
       },
       "score": {
@@ -1520,9 +1522,9 @@
       "description": "G. Juarez singled to center field (1-0 B): T. Fetterman advanced to second."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Ellisen",
-      "batter": "A.",
+      "inning": "Top 5",
+      "pitcher": "Thomas Ellisen",
+      "batter": "Axel Melendez",
       "outcome": "Fielder's choice",
       "count": "0-2",
       "pitches": "KS",
@@ -1531,13 +1533,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "G.",
-        "2B": "N.",
+        "1B": "Gabe Juarez",
+        "2B": "Nate Conner",
         "3B": null
       },
       "runners_after": {
-        "1B": "A.",
-        "2B": "N.",
+        "1B": "Axel Melendez",
+        "2B": "Nate Conner",
         "3B": null
       },
       "score": {
@@ -1547,9 +1549,9 @@
       "description": "A. Melendez reached on a fielder's choice (0-2 KS): G. Juarez out at second ss to 2b: T. Fetterman advanced to third."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Ellisen",
-      "batter": "I.",
+      "inning": "Top 5",
+      "pitcher": "Thomas Ellisen",
+      "batter": "Ian Guanzon",
       "outcome": "Fielder's choice",
       "count": "0-0",
       "pitches": "",
@@ -1558,13 +1560,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "A.",
-        "2B": "N.",
+        "1B": "Axel Melendez",
+        "2B": "Nate Conner",
         "3B": null
       },
       "runners_after": {
-        "1B": "I.",
-        "2B": "N.",
+        "1B": "Ian Guanzon",
+        "2B": "Nate Conner",
         "3B": null
       },
       "score": {
@@ -1574,7 +1576,7 @@
       "description": "I. Guanzon reached on a fielder's choice (0-0): A. Melendez out at second ss to 2b."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 5",
       "pitcher": "L.",
       "batter": "Ryan Wynn",
       "outcome": "Hit by pitch",
@@ -1582,16 +1584,16 @@
       "pitches": "FB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "I.",
-        "2B": "N.",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Ryan Wynn",
-        "2B": "N.",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1601,7 +1603,7 @@
       "description": "Wynn hit by pitch (1-1 FB)."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 5",
       "pitcher": "L.",
       "batter": "Tre Phelps",
       "outcome": "Strikeout (swinging)",
@@ -1609,16 +1611,16 @@
       "pitches": "KFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Ryan Wynn",
-        "2B": "N.",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Ryan Wynn",
-        "2B": "N.",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1628,7 +1630,7 @@
       "description": "Phelps struck out swinging (0-2 KFS)."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 5",
       "pitcher": "L.",
       "batter": "Daniel Jackson",
       "outcome": "Walk",
@@ -1636,16 +1638,16 @@
       "pitches": "BKBBFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Ryan Wynn",
-        "2B": "N.",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Daniel Jackson",
-        "2B": "N.",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1655,7 +1657,7 @@
       "description": "Jackson walked (3-2 BKBBFB): Wynn advanced to second."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 5",
       "pitcher": "L.",
       "batter": "Rylan Lujo",
       "outcome": "Flyout",
@@ -1663,16 +1665,16 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Daniel Jackson",
-        "2B": "N.",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Daniel Jackson",
-        "2B": "N.",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1682,7 +1684,7 @@
       "description": "Lujo flied out to rf (0-0): Wynn advanced to third."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "T.",
       "batter": "Ryan Black",
       "outcome": "Single",
@@ -1690,10 +1692,10 @@
       "pitches": "KKFBF",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Daniel Jackson",
         "2B": null,
         "3B": null
       },
@@ -1709,7 +1711,7 @@
       "description": "Black singled to shortstop, RBI (1-2 KKFBF): Jackson advanced to second: Wynn scored."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "T.",
       "batter": "Henry Allen",
       "outcome": "Home run",
@@ -1719,8 +1721,8 @@
       "runs_scored": [
         "Henry Allen"
       ],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Ryan Black",
         "2B": null,
@@ -1738,7 +1740,7 @@
       "description": "Allen, He. homered to left field, 3 RBI (2-0 BB): Black scored: Jackson scored."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "T.",
       "batter": "Bryce Calloway",
       "outcome": "Groundout",
@@ -1746,8 +1748,8 @@
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Ryan Black",
         "2B": null,
@@ -1765,149 +1767,12 @@
       "description": "Calloway grounded out to 2b through the left side (0-1 K)."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "T.",
-      "batter": "L.",
+      "inning": "Top 6",
+      "pitcher": "Thomas Ellisen",
+      "batter": "Luke Matlock",
       "outcome": "Pop out",
       "count": "1-0",
       "pitches": "B",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "Ryan Black",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Ryan Black",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 6,
-        "home": 11
-      },
-      "description": "L. Matlock popped up to 2b (1-0 B)."
-    },
-    {
-      "inning": "Bottom 9",
-      "pitcher": "T.",
-      "batter": "N.",
-      "outcome": "Walk",
-      "count": "3-2",
-      "pitches": "BBBKKB",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "Ryan Black",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "N.",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 6,
-        "home": 11
-      },
-      "description": "N. Conner walked (3-2 BBBKKB)."
-    },
-    {
-      "inning": "Bottom 9",
-      "pitcher": "T.",
-      "batter": "H.",
-      "outcome": "Single",
-      "count": "1-0",
-      "pitches": "B",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "N.",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "H.",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 6,
-        "home": 11
-      },
-      "description": "H. Ferguson singled to shortstop (1-0 B): N. Conner advanced to second."
-    },
-    {
-      "inning": "Bottom 9",
-      "pitcher": "T.",
-      "batter": "T.",
-      "outcome": "Home run",
-      "count": "1-0",
-      "pitches": "B",
-      "rbi": true,
-      "runs_scored": [
-        "T."
-      ],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "H.",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "H.",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 9,
-        "home": 11
-      },
-      "description": "T. Curless homered to left field, 3 RBI (1-0 B): H. Ferguson scored: N. Conner scored."
-    },
-    {
-      "inning": "Bottom 9",
-      "pitcher": "T.",
-      "batter": "J.",
-      "outcome": "Strikeout (swinging)",
-      "count": "0-2",
-      "pitches": "FFS",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
-      "runners_before": {
-        "1B": "H.",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "H.",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 9,
-        "home": 11
-      },
-      "description": "J. Palmese struck out swinging (0-2 FFS)."
-    },
-    {
-      "inning": "Bottom 10",
-      "pitcher": "T.",
-      "batter": "T.",
-      "outcome": "Groundout",
-      "count": "0-0",
-      "pitches": "",
       "rbi": false,
       "runs_scored": [],
       "outs_before": 0,
@@ -1923,13 +1788,150 @@
         "3B": null
       },
       "score": {
+        "away": 6,
+        "home": 11
+      },
+      "description": "L. Matlock popped up to 2b (1-0 B)."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Thomas Ellisen",
+      "batter": "Nate Conner",
+      "outcome": "Walk",
+      "count": "3-2",
+      "pitches": "BBBKKB",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Nate Conner",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 11
+      },
+      "description": "N. Conner walked (3-2 BBBKKB)."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Thomas Ellisen",
+      "batter": "Henry Ferguson",
+      "outcome": "Single",
+      "count": "1-0",
+      "pitches": "B",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Nate Conner",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Henry Ferguson",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 11
+      },
+      "description": "H. Ferguson singled to shortstop (1-0 B): N. Conner advanced to second."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Thomas Ellisen",
+      "batter": "Tristan Curless",
+      "outcome": "Home run",
+      "count": "1-0",
+      "pitches": "B",
+      "rbi": true,
+      "runs_scored": [
+        "Tristan Curless"
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Henry Ferguson",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Henry Ferguson",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 9,
+        "home": 11
+      },
+      "description": "T. Curless homered to left field, 3 RBI (1-0 B): H. Ferguson scored: N. Conner scored."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Thomas Ellisen",
+      "batter": "Jamie Palmese",
+      "outcome": "Strikeout (swinging)",
+      "count": "0-2",
+      "pitches": "FFS",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Henry Ferguson",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Henry Ferguson",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 9,
+        "home": 11
+      },
+      "description": "J. Palmese struck out swinging (0-2 FFS)."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Thomas Ellisen",
+      "batter": "Tyler Fetterman",
+      "outcome": "Groundout",
+      "count": "0-0",
+      "pitches": "",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 3,
+      "runners_before": {
+        "1B": "Henry Ferguson",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Henry Ferguson",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
         "away": 9,
         "home": 11
       },
       "description": "T. Fetterman grounded out to ss (0-0)."
     },
     {
-      "inning": "Bottom 10",
+      "inning": "Bottom 6",
       "pitcher": "T.",
       "batter": "Jack Arcamone",
       "outcome": "Strikeout (swinging)",
@@ -1937,8 +1939,8 @@
       "pitches": "SFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1956,7 +1958,7 @@
       "description": "Arcamone struck out swinging (0-2 SFS)."
     },
     {
-      "inning": "Bottom 10",
+      "inning": "Bottom 6",
       "pitcher": "T.",
       "batter": "Kolby Branch",
       "outcome": "Strikeout (swinging)",
@@ -1964,8 +1966,8 @@
       "pitches": "KSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1983,7 +1985,7 @@
       "description": "Branch struck out swinging (0-2 KSS)."
     },
     {
-      "inning": "Bottom 11",
+      "inning": "Bottom 6",
       "pitcher": "T.",
       "batter": "Ryan Wynn",
       "outcome": "Groundout",
@@ -1991,8 +1993,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2010,16 +2012,16 @@
       "description": "Wynn grounded out to ss (0-0)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Kosowick",
-      "batter": "G.",
+      "inning": "Top 7",
+      "pitcher": "Mason Kosowick",
+      "batter": "Gabe Juarez",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2037,23 +2039,23 @@
       "description": "G. Juarez flied out to rf (0-0)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Kosowick",
-      "batter": "A.",
+      "inning": "Top 7",
+      "pitcher": "Mason Kosowick",
+      "batter": "Axel Melendez",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BFBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "A.",
+        "1B": "Axel Melendez",
         "2B": null,
         "3B": null
       },
@@ -2064,24 +2066,24 @@
       "description": "A. Melendez walked (3-1 BFBBB)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Kosowick",
+      "inning": "Top 7",
+      "pitcher": "Mason Kosowick",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "A.",
+        "1B": "Axel Melendez",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "A.",
-        "2B": null,
+        "1B": null,
+        "2B": "Axel Melendez",
         "3B": null
       },
       "score": {
@@ -2091,24 +2093,24 @@
       "description": "A. Melendez advanced to second on a wild pitch."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Kosowick",
-      "batter": "I.",
+      "inning": "Top 7",
+      "pitcher": "Mason Kosowick",
+      "batter": "Ian Guanzon",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
       "pitches": "BKKBBFK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "A.",
-        "2B": null,
+        "1B": null,
+        "2B": "Axel Melendez",
         "3B": null
       },
       "runners_after": {
-        "1B": "A.",
-        "2B": null,
+        "1B": null,
+        "2B": "Axel Melendez",
         "3B": null
       },
       "score": {
@@ -2118,24 +2120,24 @@
       "description": "I. Guanzon struck out looking (3-2 BKKBBFK)."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "Kosowick",
-      "batter": "L.",
+      "inning": "Top 7",
+      "pitcher": "Mason Kosowick",
+      "batter": "Luke Matlock",
       "outcome": "Hit by pitch",
       "count": "1-2",
       "pitches": "BKS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": null,
+        "2B": "Axel Melendez",
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
-        "2B": null,
+        "1B": "Luke Matlock",
+        "2B": "Axel Melendez",
         "3B": null
       },
       "score": {
@@ -2145,24 +2147,24 @@
       "description": "L. Matlock hit by pitch (1-2 BKS)."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "Kosowick",
-      "batter": "N.",
+      "inning": "Top 7",
+      "pitcher": "Mason Kosowick",
+      "batter": "Nate Conner",
       "outcome": "Pop out",
       "count": "1-2",
       "pitches": "BKF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "L.",
-        "2B": null,
+        "1B": "Luke Matlock",
+        "2B": "Axel Melendez",
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
-        "2B": null,
+        "1B": "Luke Matlock",
+        "2B": "Axel Melendez",
         "3B": null
       },
       "score": {
@@ -2172,8 +2174,8 @@
       "description": "N. Conner popped up to ss (1-2 BKF)."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "Kosowick",
+      "inning": "Bottom 7",
+      "pitcher": "T.",
       "batter": "Michael O'Shaughnessy",
       "outcome": "Home run",
       "count": "0-1",
@@ -2182,15 +2184,15 @@
       "runs_scored": [
         "Michael O'Shaughnessy"
       ],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "L.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2201,23 +2203,23 @@
       "description": "OShaughnessy homered to right center, RBI (0-1 K)."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "Kosowick",
+      "inning": "Bottom 7",
+      "pitcher": "T.",
       "batter": "Daniel Jackson",
       "outcome": "Flyout",
       "count": "3-1",
       "pitches": "BBKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "L.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2228,23 +2230,23 @@
       "description": "Jackson flied out to cf (3-1 BBKB)."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "Kosowick",
+      "inning": "Bottom 7",
+      "pitcher": "T.",
       "batter": "Rylan Lujo",
       "outcome": "Flyout",
       "count": "2-1",
       "pitches": "BFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "L.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2255,16 +2257,16 @@
       "description": "Lujo flied out to lf (2-1 BFB)."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Kosowick",
+      "inning": "Bottom 7",
+      "pitcher": "T.",
       "batter": "Ryan Black",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBFKFBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2282,16 +2284,16 @@
       "description": "Black walked (3-2 BBFKFBB)."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Kosowick",
+      "inning": "Bottom 7",
+      "pitcher": "T.",
       "batter": "Henry Allen",
       "outcome": "Hit by pitch",
       "count": "1-1",
       "pitches": "BF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Ryan Black",
         "2B": null,
@@ -2309,7 +2311,7 @@
       "description": "Allen, He. hit by pitch (1-1 BF): Black advanced to second."
     },
     {
-      "inning": "Bottom 13",
+      "inning": "Bottom 7",
       "pitcher": "R.",
       "batter": null,
       "outcome": "Wild pitch",
@@ -2317,8 +2319,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Henry Allen",
         "2B": null,
@@ -2336,7 +2338,7 @@
       "description": "Allen, He. advanced to second: Black advanced to third on a wild pitch."
     },
     {
-      "inning": "Bottom 13",
+      "inning": "Bottom 7",
       "pitcher": "R.",
       "batter": "Bryce Calloway",
       "outcome": "Flyout",
@@ -2344,8 +2346,8 @@
       "pitches": "BBKK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Henry Allen",
         "2B": null,
@@ -2363,23 +2365,23 @@
       "description": "Calloway flied out to lf (2-2 BBKK)."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Stratton Scott",
-      "batter": "H.",
+      "inning": "Top 8",
+      "pitcher": "Matt Scott",
+      "batter": "Henry Ferguson",
       "outcome": "Flyout",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Henry Allen",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Henry Allen",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2390,23 +2392,23 @@
       "description": "H. Ferguson flied out to cf (1-0 B)."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Stratton Scott",
-      "batter": "T.",
+      "inning": "Top 8",
+      "pitcher": "Matt Scott",
+      "batter": "Tristan Curless",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
       "pitches": "BSBFBFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Henry Allen",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Henry Allen",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2417,16 +2419,16 @@
       "description": "T. Curless struck out swinging (3-2 BSBFBFS)."
     },
     {
-      "inning": "Bottom 14",
-      "pitcher": "Stratton Scott",
-      "batter": "J.",
+      "inning": "Top 8",
+      "pitcher": "Matt Scott",
+      "batter": "Jamie Palmese",
       "outcome": "Pop out",
       "count": "2-1",
       "pitches": "BFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2444,16 +2446,16 @@
       "description": "J. Palmese popped up to cf (2-1 BFB)."
     },
     {
-      "inning": "Bottom 14",
-      "pitcher": "Stratton Scott",
+      "inning": "Bottom 8",
+      "pitcher": "R.",
       "batter": "Jack Arcamone",
       "outcome": "Flyout",
       "count": "1-2",
       "pitches": "KFBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2471,7 +2473,7 @@
       "description": "Arcamone flied out to cf (1-2 KFBF)."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 8",
       "pitcher": "J.",
       "batter": "Kolby Branch",
       "outcome": "Double",
@@ -2479,8 +2481,8 @@
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2498,12 +2500,39 @@
       "description": "Branch doubled to left field (1-0 B)."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 8",
       "pitcher": "J.",
       "batter": "Ryan Wynn",
       "outcome": "Groundout",
       "count": "0-2",
       "pitches": "SF",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": "Kolby Branch",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Kolby Branch",
+        "3B": null
+      },
+      "score": {
+        "away": 9,
+        "home": 12
+      },
+      "description": "Wynn grounded out to ss (0-2 SF)."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "J.",
+      "batter": "Michael O'Shaughnessy",
+      "outcome": "Lineout",
+      "count": "0-1",
+      "pitches": "S",
       "rbi": false,
       "runs_scored": [],
       "outs_before": 2,
@@ -2522,48 +2551,21 @@
         "away": 9,
         "home": 12
       },
-      "description": "Wynn grounded out to ss (0-2 SF)."
-    },
-    {
-      "inning": "Bottom 15",
-      "pitcher": "J.",
-      "batter": "Michael O'Shaughnessy",
-      "outcome": "Lineout",
-      "count": "0-1",
-      "pitches": "S",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
-      "runners_before": {
-        "1B": null,
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": null,
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 9,
-        "home": 12
-      },
       "description": "OShaughnessy lined out to 1b (0-1 S)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "J.",
-      "batter": "T.",
+      "inning": "Top 9",
+      "pitcher": "Matt Scott",
+      "batter": "Tyler Fetterman",
       "outcome": "Home run",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "T."
+        "Tyler Fetterman"
       ],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2581,12 +2583,39 @@
       "description": "T. Fetterman homered to right field, RBI (2-0 BB)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "J.",
-      "batter": "G.",
+      "inning": "Top 9",
+      "pitcher": "Matt Scott",
+      "batter": "Gabe Juarez",
       "outcome": "Flyout",
       "count": "1-0",
       "pitches": "B",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 10,
+        "home": 12
+      },
+      "description": "G. Juarez flied out to rf (1-0 B)."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "Matt Scott",
+      "batter": "Axel Melendez",
+      "outcome": "Flyout",
+      "count": "2-1",
+      "pitches": "BBF",
       "rbi": false,
       "runs_scored": [],
       "outs_before": 1,
@@ -2605,46 +2634,19 @@
         "away": 10,
         "home": 12
       },
-      "description": "G. Juarez flied out to rf (1-0 B)."
-    },
-    {
-      "inning": "Bottom 15",
-      "pitcher": "J.",
-      "batter": "A.",
-      "outcome": "Flyout",
-      "count": "2-1",
-      "pitches": "BBF",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
-      "runners_before": {
-        "1B": null,
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": null,
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 10,
-        "home": 12
-      },
       "description": "A. Melendez flied out to cf (2-1 BBF)."
     },
     {
-      "inning": "Bottom 16",
-      "pitcher": "J.",
-      "batter": "I.",
+      "inning": "Top 9",
+      "pitcher": "Matt Scott",
+      "batter": "Ian Guanzon",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "FBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,

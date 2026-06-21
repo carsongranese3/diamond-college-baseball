@@ -1,9 +1,9 @@
 {
   "contest_id": "6497390",
   "date": "04/21/2026",
-  "batting_team": "Jacksonville",
-  "pitching_team": "Florida",
-  "note": "Broken-down from the saved play_by_play.json, which contains the Jacksonville at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "Jacksonville",
+  "home_team": "Florida",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
       "inning": "Top 1",
@@ -87,15 +87,15 @@
       "description": "Bermudez grounded out to ss (1-2 BSK)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Cooper Walls",
-      "batter": "K.",
+      "inning": "Bottom 1",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Kyle Jones",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "K."
+        "Kyle Jones"
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -116,9 +116,9 @@
       "description": "K. Jones homered to left field, RBI (0-0)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Cooper Walls",
-      "batter": "Lawson",
+      "inning": "Bottom 1",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Brendan Lawson",
       "outcome": "Reached on error",
       "count": "2-2",
       "pitches": "KBSB",
@@ -132,7 +132,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lawson",
+        "1B": "Brendan Lawson",
         "2B": null,
         "3B": null
       },
@@ -143,9 +143,9 @@
       "description": "Lawson reached on an error by 2b (2-2 KBSB)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Cooper Walls",
-      "batter": "Surowiec",
+      "inning": "Bottom 1",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Ethan Surowiec",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
       "pitches": "SKBK",
@@ -154,12 +154,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Lawson",
+        "1B": "Brendan Lawson",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Lawson",
+        "1B": "Brendan Lawson",
         "2B": null,
         "3B": null
       },
@@ -170,9 +170,9 @@
       "description": "Surowiec struck out looking (1-2 SKBK)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Cooper Walls",
-      "batter": "Cyr",
+      "inning": "Bottom 1",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Blake Cyr",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "FB",
@@ -181,13 +181,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Lawson",
+        "1B": "Brendan Lawson",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Cyr",
-        "2B": "Lawson",
+        "1B": "Blake Cyr",
+        "2B": "Brendan Lawson",
         "3B": null
       },
       "score": {
@@ -197,26 +197,26 @@
       "description": "Cyr singled to left field (1-1 FB) Lawson advanced to second."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Cooper Walls",
-      "batter": "Bowen",
+      "inning": "Bottom 1",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Karson Bowen",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Lawson"
+        "Brendan Lawson"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Cyr",
-        "2B": "Lawson",
+        "1B": "Blake Cyr",
+        "2B": "Brendan Lawson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bowen",
-        "2B": "Cyr",
+        "1B": "Karson Bowen",
+        "2B": "Blake Cyr",
         "3B": null
       },
       "score": {
@@ -226,9 +226,9 @@
       "description": "Bowen singled up the middle, RBI (0-1 K) Cyr advanced to second Lawson scored, unearned."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Cooper Walls",
-      "batter": "Kurland",
+      "inning": "Bottom 1",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Cade Kurland",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BKFBBB",
@@ -237,14 +237,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bowen",
-        "2B": "Cyr",
+        "1B": "Karson Bowen",
+        "2B": "Blake Cyr",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kurland",
-        "2B": "Bowen",
-        "3B": "Cyr"
+        "1B": "Cade Kurland",
+        "2B": "Karson Bowen",
+        "3B": "Blake Cyr"
       },
       "score": {
         "away": 0,
@@ -253,27 +253,27 @@
       "description": "Kurland walked (3-2 BKFBBB) Bowen advanced to second Cyr advanced to third."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Cooper Walls",
-      "batter": "Schwarz",
+      "inning": "Bottom 1",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Colton Schwarz",
       "outcome": "Fielder's choice",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Cyr"
+        "Blake Cyr"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Kurland",
-        "2B": "Bowen",
-        "3B": "Cyr"
+        "1B": "Cade Kurland",
+        "2B": "Karson Bowen",
+        "3B": "Blake Cyr"
       },
       "runners_after": {
-        "1B": "Schwarz",
-        "2B": "Kurland",
-        "3B": "Bowen"
+        "1B": "Colton Schwarz",
+        "2B": "Cade Kurland",
+        "3B": "Karson Bowen"
       },
       "score": {
         "away": 0,
@@ -282,9 +282,9 @@
       "description": "Schwarz reached on a fielder's choice up the middle, RBI (1-0 B) Kurland advanced to second on an error by ss Bowen advanced to third Cyr scored, unearned."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Cooper Walls",
-      "batter": "Stanford",
+      "inning": "Bottom 1",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Cole Stanford",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
       "pitches": "SSBK",
@@ -293,14 +293,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Schwarz",
-        "2B": "Kurland",
-        "3B": "Bowen"
+        "1B": "Colton Schwarz",
+        "2B": "Cade Kurland",
+        "3B": "Karson Bowen"
       },
       "runners_after": {
-        "1B": "Schwarz",
-        "2B": "Kurland",
-        "3B": "Bowen"
+        "1B": "Colton Schwarz",
+        "2B": "Cade Kurland",
+        "3B": "Karson Bowen"
       },
       "score": {
         "away": 0,
@@ -309,9 +309,9 @@
       "description": "Stanford struck out looking (1-2 SSBK)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Cooper Walls",
-      "batter": "H.",
+      "inning": "Bottom 1",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Hayden Yost",
       "outcome": "Flyout",
       "count": "1-2",
       "pitches": "FKB",
@@ -320,14 +320,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Schwarz",
-        "2B": "Kurland",
-        "3B": "Bowen"
+        "1B": "Colton Schwarz",
+        "2B": "Cade Kurland",
+        "3B": "Karson Bowen"
       },
       "runners_after": {
-        "1B": "Schwarz",
-        "2B": "Kurland",
-        "3B": "Bowen"
+        "1B": "Colton Schwarz",
+        "2B": "Cade Kurland",
+        "3B": "Karson Bowen"
       },
       "score": {
         "away": 0,
@@ -336,7 +336,7 @@
       "description": "H. Yost flied out to cf (1-2 FKB)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Cooper Walls",
       "batter": "Sam Grunberg",
       "outcome": "Strikeout (swinging)",
@@ -363,7 +363,7 @@
       "description": "Grunberg struck out swinging (2-2 KFBBS)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Cooper Walls",
       "batter": "Abdriel Delgado",
       "outcome": "Groundout",
@@ -390,7 +390,7 @@
       "description": "Delgado grounded out to (0-2 FF)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Cooper Walls",
       "batter": "Logan Baratta",
       "outcome": "Walk",
@@ -417,7 +417,7 @@
       "description": "Baratta walked (3-1 BKBBB)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Cooper Walls",
       "batter": "Griffin Pomper",
       "outcome": "Strikeout (swinging)",
@@ -444,9 +444,9 @@
       "description": "Pomper struck out swinging (1-2 KSBS)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Cooper Walls",
-      "batter": "K.",
+      "inning": "Bottom 2",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Kyle Jones",
       "outcome": "Lineout",
       "count": "0-2",
       "pitches": "FF",
@@ -471,9 +471,9 @@
       "description": "K. Jones lined out to cf (0-2 FF)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Cooper Walls",
-      "batter": "Lawson",
+      "inning": "Bottom 2",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Brendan Lawson",
       "outcome": "Groundout",
       "count": "2-1",
       "pitches": "BBK",
@@ -498,9 +498,9 @@
       "description": "Lawson grounded out to ss up the middle (2-1 BBK)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Cooper Walls",
-      "batter": "Surowiec",
+      "inning": "Bottom 2",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Ethan Surowiec",
       "outcome": "Foul out",
       "count": "0-0",
       "pitches": "",
@@ -525,7 +525,7 @@
       "description": "Surowiec fouled out to 1b (0-0)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Cooper Walls",
       "batter": "Blake Edmonds",
       "outcome": "Single",
@@ -552,7 +552,7 @@
       "description": "Edmonds singled to center field (0-1 K)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Cooper Walls",
       "batter": "Cade Walter",
       "outcome": "Strikeout (swinging)",
@@ -579,7 +579,7 @@
       "description": "Walter struck out swinging (1-2 KBKS)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Cooper Walls",
       "batter": "Sammy Mummau",
       "outcome": "Single",
@@ -606,7 +606,7 @@
       "description": "Mummau singled through the left side (1-1 KB) Edmonds advanced to third."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Cooper Walls",
       "batter": "Roger Vergara",
       "outcome": "Flyout",
@@ -635,7 +635,7 @@
       "description": "Vergara flied out to cf, SF, RBI (2-1 BBK) Edmonds scored."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Cooper Walls",
       "batter": null,
       "outcome": "Wild pitch",
@@ -662,7 +662,7 @@
       "description": "Mummau advanced to second on a wild pitch."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Cooper Walls",
       "batter": "Derek Bermudez",
       "outcome": "Double",
@@ -691,7 +691,7 @@
       "description": "Bermudez doubled down the lf line, RBI (3-2 KFFBBB) Mummau scored."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Cooper Walls",
       "batter": "Sam Grunberg",
       "outcome": "Single",
@@ -720,7 +720,7 @@
       "description": "Grunberg singled to left field, advanced to second on the throw, RBI (1-1 BF) Bermudez scored."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Cooper Walls",
       "batter": "Abdriel Delgado",
       "outcome": "Lineout",
@@ -747,9 +747,9 @@
       "description": "Delgado lined out to lf (0-1 F)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Cooper Walls",
-      "batter": "Cyr",
+      "inning": "Bottom 3",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Blake Cyr",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BK",
@@ -763,7 +763,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cyr",
+        "1B": "Blake Cyr",
         "2B": null,
         "3B": null
       },
@@ -774,8 +774,8 @@
       "description": "Cyr singled to left field (1-1 BK)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Cooper Walls",
+      "inning": "Bottom 3",
+      "pitcher": "Benjamin Baker-Livingston",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -785,7 +785,7 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Cyr",
+        "1B": "Blake Cyr",
         "2B": null,
         "3B": null
       },
@@ -801,9 +801,9 @@
       "description": "Cyr out at second c to 2b, caught stealing."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Cooper Walls",
-      "batter": "Bowen",
+      "inning": "Bottom 3",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Karson Bowen",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BKFBFBB",
@@ -817,7 +817,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bowen",
+        "1B": "Karson Bowen",
         "2B": null,
         "3B": null
       },
@@ -828,9 +828,9 @@
       "description": "Bowen walked (3-2 BKFBFBB)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Cooper Walls",
-      "batter": "Kurland",
+      "inning": "Bottom 3",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Cade Kurland",
       "outcome": "Flyout",
       "count": "2-1",
       "pitches": "KBB",
@@ -839,12 +839,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Bowen",
+        "1B": "Karson Bowen",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Bowen",
+        "1B": "Karson Bowen",
         "2B": null,
         "3B": null
       },
@@ -855,9 +855,9 @@
       "description": "Kurland flied out to rf (2-1 KBB)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Cooper Walls",
-      "batter": "Schwarz",
+      "inning": "Bottom 3",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Colton Schwarz",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BF",
@@ -866,14 +866,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Bowen",
+        "1B": "Karson Bowen",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Schwarz",
+        "1B": "Colton Schwarz",
         "2B": null,
-        "3B": "Bowen"
+        "3B": "Karson Bowen"
       },
       "score": {
         "away": 3,
@@ -882,9 +882,9 @@
       "description": "Schwarz singled to center field (1-1 BF) Bowen advanced to third."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Cooper Walls",
-      "batter": "Stanford",
+      "inning": "Bottom 3",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Cole Stanford",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "BS",
@@ -893,14 +893,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Schwarz",
+        "1B": "Colton Schwarz",
         "2B": null,
-        "3B": "Bowen"
+        "3B": "Karson Bowen"
       },
       "runners_after": {
-        "1B": "Schwarz",
+        "1B": "Colton Schwarz",
         "2B": null,
-        "3B": "Bowen"
+        "3B": "Karson Bowen"
       },
       "score": {
         "away": 3,
@@ -909,7 +909,7 @@
       "description": "Stanford grounded out to p (1-1 BS)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Caden McDonald",
       "batter": "Logan Baratta",
       "outcome": "Lineout",
@@ -936,7 +936,7 @@
       "description": "Baratta lined out to rf (2-0 BB)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Caden McDonald",
       "batter": "Griffin Pomper",
       "outcome": "Strikeout (swinging)",
@@ -963,7 +963,7 @@
       "description": "Pomper struck out swinging (1-2 SFFFBFS)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Caden McDonald",
       "batter": "Blake Edmonds",
       "outcome": "Single",
@@ -990,7 +990,7 @@
       "description": "Edmonds singled to shortstop (1-2 BKF)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Caden McDonald",
       "batter": "Cade Walter",
       "outcome": "Groundout",
@@ -1017,9 +1017,9 @@
       "description": "Walter grounded out to 1b unassisted (0-2 SF)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Caden McDonald",
-      "batter": "H.",
+      "inning": "Bottom 4",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Hayden Yost",
       "outcome": "Flyout",
       "count": "3-2",
       "pitches": "KBBFFB",
@@ -1044,9 +1044,9 @@
       "description": "H. Yost flied out to lf to left center (3-2 KBBFFB)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Caden McDonald",
-      "batter": "K.",
+      "inning": "Bottom 4",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Kyle Jones",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KFS",
@@ -1071,9 +1071,9 @@
       "description": "K. Jones struck out swinging (0-2 KFS)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Caden McDonald",
-      "batter": "Lawson",
+      "inning": "Bottom 4",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Brendan Lawson",
       "outcome": "\u2014",
       "count": "3-2",
       "pitches": "KKBFBB",
@@ -1098,7 +1098,7 @@
       "description": "Lawson out at first 1b to p (3-2 KKBFBB)."
     },
     {
-      "inning": "Top 8",
+      "inning": "Top 5",
       "pitcher": "Caden McDonald",
       "batter": "Sammy Mummau",
       "outcome": "Flyout",
@@ -1106,8 +1106,8 @@
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1125,7 +1125,7 @@
       "description": "Mummau flied out to rf (2-0 BB)."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Caden McDonald",
       "batter": "Roger Vergara",
       "outcome": "Single",
@@ -1133,8 +1133,8 @@
       "pitches": "KF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1152,7 +1152,7 @@
       "description": "Vergara singled to left field (0-2 KF)."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Caden McDonald",
       "batter": "Derek Bermudez",
       "outcome": "Groundout",
@@ -1160,8 +1160,8 @@
       "pitches": "KK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Roger Vergara",
         "2B": null,
@@ -1179,7 +1179,7 @@
       "description": "Bermudez grounded out to ss (0-2 KK) Vergara advanced to second."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Caden McDonald",
       "batter": "Sam Grunberg",
       "outcome": "Groundout",
@@ -1187,8 +1187,8 @@
       "pitches": "FS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": "Roger Vergara",
@@ -1206,24 +1206,24 @@
       "description": "Grunberg grounded out to ss (0-2 FS)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "Caden McDonald",
-      "batter": "Surowiec",
+      "inning": "Bottom 5",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Ethan Surowiec",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Roger Vergara",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Roger Vergara",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1233,16 +1233,16 @@
       "description": "Surowiec grounded out to ss (0-0)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Caden McDonald",
-      "batter": "Cyr",
+      "inning": "Bottom 5",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Blake Cyr",
       "outcome": "Flyout",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1260,16 +1260,16 @@
       "description": "Cyr flied out to cf to right center (1-0 B)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Caden McDonald",
-      "batter": "Bowen",
+      "inning": "Bottom 5",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Karson Bowen",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1287,7 +1287,7 @@
       "description": "Bowen grounded out to (0-1 K)."
     },
     {
-      "inning": "Top 10",
+      "inning": "Top 6",
       "pitcher": "Caden McDonald",
       "batter": "Abdriel Delgado",
       "outcome": "Groundout",
@@ -1295,8 +1295,8 @@
       "pitches": "BKF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1314,7 +1314,7 @@
       "description": "Delgado grounded out to 2b (1-2 BKF)."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "Caden McDonald",
       "batter": "Logan Baratta",
       "outcome": "Single",
@@ -1322,8 +1322,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1341,7 +1341,7 @@
       "description": "Baratta singled to left field (0-0)."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "Caden McDonald",
       "batter": null,
       "outcome": "Caught stealing",
@@ -1349,8 +1349,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Logan Baratta",
         "2B": null,
@@ -1368,7 +1368,7 @@
       "description": "Baratta out at second c to ss, caught stealing."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "Caden McDonald",
       "batter": "Griffin Pomper",
       "outcome": "Groundout",
@@ -1376,8 +1376,8 @@
       "pitches": "SS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1395,23 +1395,23 @@
       "description": "Pomper grounded out to 2b (0-2 SS)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Caden McDonald",
-      "batter": "Kurland",
+      "inning": "Bottom 6",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Cade Kurland",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Kurland",
+        "1B": "Cade Kurland",
         "2B": null,
         "3B": null
       },
@@ -1422,24 +1422,24 @@
       "description": "Kurland singled to center field (0-0)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Caden McDonald",
-      "batter": "Schwarz",
+      "inning": "Bottom 6",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Colton Schwarz",
       "outcome": "Groundout",
       "count": "3-2",
       "pitches": "BBKBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Kurland",
+        "1B": "Cade Kurland",
         "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Kurland",
+        "2B": "Cade Kurland",
         "3B": null
       },
       "score": {
@@ -1449,24 +1449,24 @@
       "description": "Schwarz grounded out to ss (3-2 BBKBK) Kurland advanced to second."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Caden McDonald",
-      "batter": "Stanford",
+      "inning": "Bottom 6",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Cole Stanford",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "F",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": null,
+        "2B": "Cade Kurland",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": null,
+        "2B": "Cade Kurland",
         "3B": null
       },
       "score": {
@@ -1476,24 +1476,24 @@
       "description": "Stanford grounded out to (0-1 F)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Caden McDonald",
-      "batter": "H.",
+      "inning": "Bottom 6",
+      "pitcher": "Benjamin Baker-Livingston",
+      "batter": "Hayden Yost",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": null,
+        "2B": "Cade Kurland",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": null,
+        "2B": "Cade Kurland",
         "3B": null
       },
       "score": {
@@ -1503,7 +1503,7 @@
       "description": "H. Yost grounded out to 2b (0-0)."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "Caden McDonald",
       "batter": "Blake Edmonds",
       "outcome": "Single",
@@ -1511,8 +1511,8 @@
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1530,7 +1530,7 @@
       "description": "Edmonds singled to center field (0-1 K)."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "Caden McDonald",
       "batter": "Cade Walter",
       "outcome": "Groundout",
@@ -1538,8 +1538,8 @@
       "pitches": "F",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Blake Edmonds",
         "2B": null,
@@ -1557,19 +1557,21 @@
       "description": "Walter grounded out to p, bunt, SAC (0-1 F) Edmonds advanced to second."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 7",
       "pitcher": "Caden McDonald",
       "batter": "Sammy Mummau",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "runs_scored": [
+        "Blake Edmonds"
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": null,
+        "2B": "Blake Edmonds",
         "3B": null
       },
       "runners_after": {
@@ -1584,7 +1586,7 @@
       "description": "Mummau doubled down the lf line, RBI (1-0 B) Edmonds scored."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 7",
       "pitcher": "Eli Blair",
       "batter": null,
       "outcome": "Stolen base",
@@ -1592,8 +1594,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": "Sammy Mummau",
@@ -1611,7 +1613,7 @@
       "description": "Mummau stole third."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 7",
       "pitcher": "Eli Blair",
       "batter": "Roger Vergara",
       "outcome": "Flyout",
@@ -1621,8 +1623,8 @@
       "runs_scored": [
         "Sammy Mummau"
       ],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": "Sammy Mummau",
@@ -1640,7 +1642,7 @@
       "description": "Vergara flied out to cf, SF, RBI (0-2 KS) Mummau scored."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 7",
       "pitcher": "Eli Blair",
       "batter": "Derek Bermudez",
       "outcome": "Flyout",
@@ -1648,8 +1650,8 @@
       "pitches": "FKBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1667,16 +1669,16 @@
       "description": "Bermudez flied out to lf (2-2 FKBB)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Scott",
-      "batter": "K.",
+      "inning": "Bottom 7",
+      "pitcher": "Brodie Scott",
+      "batter": "Kyle Jones",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "BK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1694,16 +1696,16 @@
       "description": "K. Jones grounded out to p (1-1 BK)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Scott",
-      "batter": "Lawson",
+      "inning": "Bottom 7",
+      "pitcher": "Brodie Scott",
+      "batter": "Brendan Lawson",
       "outcome": "Groundout",
       "count": "2-1",
       "pitches": "BFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1721,16 +1723,16 @@
       "description": "Lawson grounded out to ss up the middle (2-1 BFB)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Scott",
-      "batter": "Surowiec",
+      "inning": "Bottom 7",
+      "pitcher": "Brodie Scott",
+      "batter": "Ethan Surowiec",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "FFBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1748,7 +1750,7 @@
       "description": "Surowiec struck out swinging (1-2 FFBS)."
     },
     {
-      "inning": "Top 14",
+      "inning": "Top 8",
       "pitcher": "Ricky Reeth",
       "batter": "Sam Grunberg",
       "outcome": "Walk",
@@ -1756,8 +1758,8 @@
       "pitches": "FBBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1775,7 +1777,7 @@
       "description": "Grunberg walked (3-1 FBBBB)."
     },
     {
-      "inning": "Top 14",
+      "inning": "Top 8",
       "pitcher": "Ricky Reeth",
       "batter": "Abdriel Delgado",
       "outcome": "Fielder's choice",
@@ -1783,8 +1785,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Sam Grunberg",
         "2B": null,
@@ -1802,7 +1804,7 @@
       "description": "Delgado reached on a fielder's choice, SAC, bunt (0-0) Grunberg advanced to second, advanced to third on a throwing error by ."
     },
     {
-      "inning": "Top 14",
+      "inning": "Top 8",
       "pitcher": "Ricky Reeth",
       "batter": "Logan Baratta",
       "outcome": "Flyout",
@@ -1812,8 +1814,8 @@
       "runs_scored": [
         "Sam Grunberg"
       ],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Abdriel Delgado",
         "2B": null,
@@ -1831,7 +1833,7 @@
       "description": "Baratta flied out to lf, SF, RBI (0-0) Grunberg scored, unearned."
     },
     {
-      "inning": "Top 15",
+      "inning": "Top 8",
       "pitcher": "Ricky Reeth",
       "batter": "Griffin Pomper",
       "outcome": "Fielder's choice",
@@ -1839,10 +1841,10 @@
       "pitches": "F",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": null,
+        "1B": "Abdriel Delgado",
         "2B": null,
         "3B": null
       },
@@ -1858,7 +1860,7 @@
       "description": "Pomper reached on a fielder's choice (0-1 F) Ogbourne advanced to second on a throwing error by ss."
     },
     {
-      "inning": "Top 15",
+      "inning": "Top 8",
       "pitcher": "Ricky Reeth",
       "batter": "Blake Edmonds",
       "outcome": "Double",
@@ -1866,8 +1868,8 @@
       "pitches": "SB",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Griffin Pomper",
         "2B": null,
@@ -1885,7 +1887,7 @@
       "description": "Edmonds doubled down the rf line, RBI (1-1 SB) Pomper advanced to third Ogbourne scored, unearned."
     },
     {
-      "inning": "Top 15",
+      "inning": "Top 8",
       "pitcher": "Ricky Reeth",
       "batter": "Cade Walter",
       "outcome": "Strikeout (looking)",
@@ -1893,8 +1895,8 @@
       "pitches": "KFK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": "Blake Edmonds",
@@ -1912,7 +1914,7 @@
       "description": "Walter struck out looking (0-2 KFK)."
     },
     {
-      "inning": "Top 15",
+      "inning": "Top 8",
       "pitcher": "Ricky Reeth",
       "batter": "Sammy Mummau",
       "outcome": "Groundout",
@@ -1920,8 +1922,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": "Blake Edmonds",
@@ -1939,27 +1941,27 @@
       "description": "Mummau grounded out to (0-0)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Ricky Reeth",
-      "batter": "Cyr",
+      "inning": "Bottom 8",
+      "pitcher": "Brodie Scott",
+      "batter": "Blake Cyr",
       "outcome": "Home run",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Cyr"
+        "Blake Cyr"
       ],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
-        "2B": "Blake Edmonds",
-        "3B": "Griffin Pomper"
+        "2B": null,
+        "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Blake Edmonds",
-        "3B": "Griffin Pomper"
+        "2B": null,
+        "3B": null
       },
       "score": {
         "away": 7,
@@ -1968,25 +1970,25 @@
       "description": "Cyr homered to left field, RBI (0-1 K)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Ricky Reeth",
-      "batter": "Bowen",
+      "inning": "Bottom 8",
+      "pitcher": "Brodie Scott",
+      "batter": "Karson Bowen",
       "outcome": "Double",
       "count": "3-2",
       "pitches": "BKKFBFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
-        "2B": "Blake Edmonds",
-        "3B": "Griffin Pomper"
+        "2B": null,
+        "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Bowen",
-        "3B": "Griffin Pomper"
+        "2B": "Karson Bowen",
+        "3B": null
       },
       "score": {
         "away": 7,
@@ -1995,25 +1997,25 @@
       "description": "Bowen doubled to left center (3-2 BKKFBFB)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Ricky Reeth",
-      "batter": "Kurland",
+      "inning": "Bottom 8",
+      "pitcher": "Brodie Scott",
+      "batter": "Cade Kurland",
       "outcome": "Flyout",
       "count": "2-2",
       "pitches": "KBFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Bowen",
-        "3B": "Griffin Pomper"
+        "2B": "Karson Bowen",
+        "3B": null
       },
       "runners_after": {
         "1B": null,
         "2B": null,
-        "3B": "Bowen"
+        "3B": "Karson Bowen"
       },
       "score": {
         "away": 7,
@@ -2022,20 +2024,22 @@
       "description": "Kurland flied out to cf to right center (2-2 KBFB) Bowen advanced to third."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Ricky Reeth",
-      "batter": "Schwarz",
+      "inning": "Bottom 8",
+      "pitcher": "Brodie Scott",
+      "batter": "Colton Schwarz",
       "outcome": "Lineout",
       "count": "3-1",
       "pitches": "BKBB",
       "rbi": true,
-      "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "runs_scored": [
+        "Karson Bowen"
+      ],
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Karson Bowen"
       },
       "runners_after": {
         "1B": null,
@@ -2049,23 +2053,23 @@
       "description": "Schwarz lined out to rf, SF, RBI (3-1 BKBB) Bowen scored."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Ricky Reeth",
-      "batter": "Stanford",
+      "inning": "Bottom 8",
+      "pitcher": "Brodie Scott",
+      "batter": "Cole Stanford",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Stanford",
+        "1B": "Cole Stanford",
         "2B": null,
         "3B": null
       },
@@ -2076,23 +2080,23 @@
       "description": "Stanford walked (3-0 BBBB)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Phillips",
-      "batter": "H.",
+      "inning": "Bottom 8",
+      "pitcher": "Ayden Phillips",
+      "batter": "Hayden Yost",
       "outcome": "Flyout",
       "count": "0-2",
       "pitches": "KS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "Stanford",
+        "1B": "Cole Stanford",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Stanford",
+        "1B": "Cole Stanford",
         "2B": null,
         "3B": null
       },
@@ -2103,23 +2107,23 @@
       "description": "H. Yost flied out to lf (0-2 KS)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Phillips",
+      "inning": "Top 9",
+      "pitcher": "Ricky Reeth",
       "batter": "Roger Vergara",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Stanford",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Stanford",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2130,16 +2134,16 @@
       "description": "Vergara grounded out to 2b (0-1 K)."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Phillips",
+      "inning": "Top 9",
+      "pitcher": "Ricky Reeth",
       "batter": "Derek Bermudez",
       "outcome": "Single",
       "count": "2-0",
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2157,16 +2161,16 @@
       "description": "Bermudez singled down the line (2-0 BB)."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Phillips",
+      "inning": "Top 9",
+      "pitcher": "Ricky Reeth",
       "batter": "Sam Grunberg",
       "outcome": "Lineout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Derek Bermudez",
         "2B": null,
@@ -2184,16 +2188,16 @@
       "description": "Grunberg lined out to lf (0-0)."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Phillips",
+      "inning": "Top 9",
+      "pitcher": "Ricky Reeth",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Derek Bermudez",
         "2B": null,
@@ -2211,16 +2215,16 @@
       "description": "Bermudez out at second p to 1b to 2b to p, caught stealing."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Waters",
-      "batter": "K.",
+      "inning": "Bottom 9",
+      "pitcher": "Payton Waters",
+      "batter": "Kyle Jones",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "BKSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2238,23 +2242,23 @@
       "description": "K. Jones struck out swinging (1-2 BKSS)."
     },
     {
-      "inning": "Top 18",
-      "pitcher": "Waters",
-      "batter": "Lawson",
+      "inning": "Bottom 9",
+      "pitcher": "Payton Waters",
+      "batter": "Brendan Lawson",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "FKFFBBBFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Lawson",
+        "1B": "Brendan Lawson",
         "2B": null,
         "3B": null
       },
@@ -2265,23 +2269,23 @@
       "description": "Lawson walked (3-2 FKFFBBBFB)."
     },
     {
-      "inning": "Top 18",
-      "pitcher": "Waters",
-      "batter": "Surowiec",
+      "inning": "Bottom 9",
+      "pitcher": "Payton Waters",
+      "batter": "Ethan Surowiec",
       "outcome": "Fielder's choice",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Lawson",
+        "1B": "Brendan Lawson",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Surowiec",
+        "1B": "Ethan Surowiec",
         "2B": null,
         "3B": null
       },
@@ -2292,23 +2296,23 @@
       "description": "Surowiec reached on a fielder's choice (0-1 K) Lawson out at second ss to 2b."
     },
     {
-      "inning": "Top 18",
-      "pitcher": "Waters",
-      "batter": "Cyr",
+      "inning": "Bottom 9",
+      "pitcher": "Payton Waters",
+      "batter": "Blake Cyr",
       "outcome": "Fielder's choice",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "Surowiec",
+        "1B": "Ethan Surowiec",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Cyr",
+        "1B": "Blake Cyr",
         "2B": null,
         "3B": null
       },

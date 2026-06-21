@@ -1,9 +1,9 @@
 {
   "contest_id": "6507466",
   "date": "03/24/2026",
-  "batting_team": "USC Upstate",
-  "pitching_team": "Tennessee",
-  "note": "Broken-down from the saved play_by_play.json, which contains the USC Upstate at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "USC Upstate",
+  "home_team": "Tennessee",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
       "inning": "Top 1",
@@ -168,9 +168,9 @@
       "description": "ARMSEY, J. struck out swinging (3-2 BKBKBFS)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Brady Frederick",
-      "batter": "GRIMMER, B. grounded out to 2b (0-1 K).",
+      "inning": "Bottom 1",
+      "pitcher": "Nathan Hook",
+      "batter": "Blake Grimmer",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "K",
@@ -195,9 +195,9 @@
       "description": "GRIMMER, B. grounded out to 2b (0-1 K)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Brady Frederick",
-      "batter": "BROWN, B. singled up the middle (1-2 FSB).",
+      "inning": "Bottom 1",
+      "pitcher": "Nathan Hook",
+      "batter": "Blaine Brown",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "FSB",
@@ -211,7 +211,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "BROWN, B. singled up the middle (1-2 FSB).",
+        "1B": "Blaine Brown",
         "2B": null,
         "3B": null
       },
@@ -222,9 +222,9 @@
       "description": "BROWN, B. singled up the middle (1-2 FSB)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Brady Frederick",
-      "batter": "CHAPMAN, R. flied out to cf (1-1 FB).",
+      "inning": "Bottom 1",
+      "pitcher": "Nathan Hook",
+      "batter": "Reese Chapman",
       "outcome": "Flyout",
       "count": "1-1",
       "pitches": "FB",
@@ -233,12 +233,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "BROWN, B. singled up the middle (1-2 FSB).",
+        "1B": "Blaine Brown",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "BROWN, B. singled up the middle (1-2 FSB).",
+        "1B": "Blaine Brown",
         "2B": null,
         "3B": null
       },
@@ -249,9 +249,9 @@
       "description": "CHAPMAN, R. flied out to cf (1-1 FB)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Brady Frederick",
-      "batter": "LAWLESS, S. walked (3-2 FFFBBFBB)",
+      "inning": "Bottom 1",
+      "pitcher": "Nathan Hook",
+      "batter": "Stone Lawless",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "FFFBBFBB",
@@ -260,12 +260,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "BROWN, B. singled up the middle (1-2 FSB).",
+        "1B": "Blaine Brown",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "LAWLESS, S. walked (3-2 FFFBBFBB)",
+        "1B": "Stone Lawless",
         "2B": null,
         "3B": null
       },
@@ -276,9 +276,9 @@
       "description": "LAWLESS, S. walked (3-2 FFFBBFBB) BROWN, B. advanced to second."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Brady Frederick",
-      "batter": "WRIGHT, G. reached on a fielder's choice to shortstop (2-2 BKBK)",
+      "inning": "Bottom 1",
+      "pitcher": "Nathan Hook",
+      "batter": "Garrett Wright",
       "outcome": "Fielder's choice",
       "count": "2-2",
       "pitches": "BKBK",
@@ -287,12 +287,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "LAWLESS, S. walked (3-2 FFFBBFBB)",
+        "1B": "Stone Lawless",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "WRIGHT, G. reached on a fielder's choice to shortstop (2-2 BKBK)",
+        "1B": "Garrett Wright",
         "2B": null,
         "3B": null
       },
@@ -303,7 +303,7 @@
       "description": "WRIGHT, G. reached on a fielder's choice to shortstop (2-2 BKBK) LAWLESS, S. out at second ss to 2b."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Brady Frederick",
       "batter": "Trey Bentley",
       "outcome": "Strikeout (looking)",
@@ -330,7 +330,7 @@
       "description": "BENTLEY, T. struck out looking (3-2 KFBBBFFK)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Brady Frederick",
       "batter": "Kenan Bowman",
       "outcome": "Strikeout (swinging)",
@@ -357,7 +357,7 @@
       "description": "BOWMAN, K. struck out swinging (2-2 KBFBS)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Brady Frederick",
       "batter": "Gage Griggs",
       "outcome": "Walk",
@@ -384,7 +384,7 @@
       "description": "GRIGGS, G. walked (3-0 BBBB)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Brady Frederick",
       "batter": null,
       "outcome": "Caught stealing",
@@ -411,9 +411,9 @@
       "description": "GRIGGS, G. out at second c to ss, caught stealing."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Brady Frederick",
-      "batter": "MARIN, M. struck out swinging (1-2 KBFFS).",
+      "inning": "Bottom 2",
+      "pitcher": "Nathan Hook",
+      "batter": "Manny Marin",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KBFFS",
@@ -438,9 +438,9 @@
       "description": "MARIN, M. struck out swinging (1-2 KBFFS)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Brady Frederick",
-      "batter": "GRINDLINGER",
+      "inning": "Bottom 2",
+      "pitcher": "Nathan Hook",
+      "batter": "Trent Grindlinger",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "BSFF",
@@ -465,9 +465,9 @@
       "description": "GRINDLINGER grounded out to (1-2 BSFF)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Brady Frederick",
-      "batter": "CLARK, L. walked (3-1 BBFBB).",
+      "inning": "Bottom 2",
+      "pitcher": "Nathan Hook",
+      "batter": "Levi Clark",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBFBB",
@@ -481,7 +481,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "CLARK, L. walked (3-1 BBFBB).",
+        "1B": "Levi Clark",
         "2B": null,
         "3B": null
       },
@@ -492,9 +492,9 @@
       "description": "CLARK, L. walked (3-1 BBFBB)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Brady Frederick",
-      "batter": "ANTIGUA, A. flied out to rf (1-0 B).",
+      "inning": "Bottom 2",
+      "pitcher": "Nathan Hook",
+      "batter": "Ariel Antigua",
       "outcome": "Flyout",
       "count": "1-0",
       "pitches": "B",
@@ -503,12 +503,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "CLARK, L. walked (3-1 BBFBB).",
+        "1B": "Levi Clark",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "CLARK, L. walked (3-1 BBFBB).",
+        "1B": "Levi Clark",
         "2B": null,
         "3B": null
       },
@@ -519,7 +519,7 @@
       "description": "ANTIGUA, A. flied out to rf (1-0 B)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Brady Frederick",
       "batter": "Henry Zenor",
       "outcome": "Groundout",
@@ -546,7 +546,7 @@
       "description": "ZENOR, H. grounded out to 1b unassisted (1-2 KBK)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Brady Frederick",
       "batter": "Tyler Lang",
       "outcome": "\u2014",
@@ -573,7 +573,7 @@
       "description": "LANG, T. out at first 2b to p (1-2 KBFFF)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Brady Frederick",
       "batter": "Johnny Sweeney",
       "outcome": "Double",
@@ -600,7 +600,7 @@
       "description": "SWEENEY, J. doubled to right field (0-0)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Brady Frederick",
       "batter": "Maloy Heaghney",
       "outcome": "Strikeout (swinging)",
@@ -627,24 +627,24 @@
       "description": "HEAGHNEY, M. struck out swinging (0-2 KFS)."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "GIBSON",
-      "batter": "GRIMMER, B. flied out to cf (0-1 S).",
+      "inning": "Bottom 3",
+      "pitcher": "Jack Gibson",
+      "batter": "Blake Grimmer",
       "outcome": "Flyout",
       "count": "0-1",
       "pitches": "S",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Johnny Sweeney",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Johnny Sweeney",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -654,16 +654,16 @@
       "description": "GRIMMER, B. flied out to cf (0-1 S)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "GIBSON",
-      "batter": "BROWN, B. struck out swinging (0-2 FFS).",
+      "inning": "Bottom 3",
+      "pitcher": "Jack Gibson",
+      "batter": "Blaine Brown",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "FFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -681,23 +681,23 @@
       "description": "BROWN, B. struck out swinging (0-2 FFS)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "GIBSON",
-      "batter": "CHAPMAN, R. singled to right field (0-0).",
+      "inning": "Bottom 3",
+      "pitcher": "Jack Gibson",
+      "batter": "Reese Chapman",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "CHAPMAN, R. singled to right field (0-0).",
+        "1B": "Reese Chapman",
         "2B": null,
         "3B": null
       },
@@ -708,23 +708,23 @@
       "description": "CHAPMAN, R. singled to right field (0-0)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "GIBSON",
-      "batter": "LAWLESS, S. singled to left center, advanced to second on the throw (0-0)",
+      "inning": "Bottom 3",
+      "pitcher": "Jack Gibson",
+      "batter": "Stone Lawless",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "CHAPMAN, R. singled to right field (0-0).",
+        "1B": "Reese Chapman",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "LAWLESS, S. singled to left center, advanced to second on the throw (0-0)",
+        "1B": "Stone Lawless",
         "2B": null,
         "3B": null
       },
@@ -735,23 +735,23 @@
       "description": "LAWLESS, S. singled to left center, advanced to second on the throw (0-0) CHAPMAN, R. advanced to third."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "GIBSON",
-      "batter": "WRIGHT, G. reached on a fielder's choice to shortstop (2-2 BKSFB)",
+      "inning": "Bottom 3",
+      "pitcher": "Jack Gibson",
+      "batter": "Garrett Wright",
       "outcome": "Fielder's choice",
       "count": "2-2",
       "pitches": "BKSFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "LAWLESS, S. singled to left center, advanced to second on the throw (0-0)",
+        "1B": "Stone Lawless",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "WRIGHT, G. reached on a fielder's choice to shortstop (2-2 BKSFB)",
+        "1B": "Garrett Wright",
         "2B": null,
         "3B": null
       },
@@ -762,7 +762,7 @@
       "description": "WRIGHT, G. reached on a fielder's choice to shortstop (2-2 BKSFB) LAWLESS, S. out at third ss to ."
     },
     {
-      "inning": "Top 6",
+      "inning": "Top 4",
       "pitcher": "Nic Abraham",
       "batter": "Preston Lucas",
       "outcome": "Groundout",
@@ -770,15 +770,15 @@
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "WRIGHT, G. reached on a fielder's choice to shortstop (2-2 BKSFB)",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "WRIGHT, G. reached on a fielder's choice to shortstop (2-2 BKSFB)",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -789,7 +789,7 @@
       "description": "LUCAS, P. grounded out to 2b (2-0 BB)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Nic Abraham",
       "batter": "Jake Armsey",
       "outcome": "Single",
@@ -797,8 +797,8 @@
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -816,7 +816,7 @@
       "description": "ARMSEY, J. singled to right field (0-1 K)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Nic Abraham",
       "batter": "Trey Bentley",
       "outcome": "Groundout",
@@ -824,8 +824,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Jake Armsey",
         "2B": null,
@@ -843,7 +843,7 @@
       "description": "BENTLEY, T. grounded out to ss (0-0) ARMSEY, J. advanced to second."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Nic Abraham",
       "batter": "Kenan Bowman",
       "outcome": "Strikeout (swinging)",
@@ -851,8 +851,8 @@
       "pitches": "FBBFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Jake Armsey",
         "2B": null,
@@ -870,23 +870,23 @@
       "description": "BOWMAN, K. struck out swinging (2-2 FBBFS)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Nic Abraham",
-      "batter": "MARIN, M. singled to left field (1-2 FBF).",
+      "inning": "Bottom 4",
+      "pitcher": "Jack Gibson",
+      "batter": "Manny Marin",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "FBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Jake Armsey",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "MARIN, M. singled to left field (1-2 FBF).",
+        "1B": "Manny Marin",
         "2B": null,
         "3B": null
       },
@@ -897,23 +897,23 @@
       "description": "MARIN, M. singled to left field (1-2 FBF)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Nic Abraham",
-      "batter": "GRINDLINGER",
+      "inning": "Bottom 4",
+      "pitcher": "Jack Gibson",
+      "batter": "Trent Grindlinger",
       "outcome": "Grounded into double play",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "MARIN, M. singled to left field (1-2 FBF).",
+        "1B": "Manny Marin",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "MARIN, M. singled to left field (1-2 FBF).",
+        "1B": "Manny Marin",
         "2B": null,
         "3B": null
       },
@@ -924,23 +924,23 @@
       "description": "GRINDLINGER grounded into double play ss to 2b to 1b (0-1 K) MARIN, M. out on the play."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Nic Abraham",
-      "batter": "CLARK, L. lined out to (0-0).",
+      "inning": "Bottom 4",
+      "pitcher": "Jack Gibson",
+      "batter": "Levi Clark",
       "outcome": "Lineout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
+        "1B": "Manny Marin",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Manny Marin",
         "2B": null,
         "3B": null
       },
@@ -951,7 +951,7 @@
       "description": "CLARK, L. lined out to (0-0)."
     },
     {
-      "inning": "Top 8",
+      "inning": "Top 5",
       "pitcher": "Nic Abraham",
       "batter": "Gage Griggs",
       "outcome": "Groundout",
@@ -959,8 +959,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -978,7 +978,7 @@
       "description": "GRIGGS, G. grounded out to ss (0-0)."
     },
     {
-      "inning": "Top 8",
+      "inning": "Top 5",
       "pitcher": "Nic Abraham",
       "batter": "Henry Zenor",
       "outcome": "Groundout",
@@ -986,8 +986,8 @@
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1005,7 +1005,7 @@
       "description": "ZENOR, H. grounded out to 2b (2-0 BB)."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Nic Abraham",
       "batter": "Tyler Lang",
       "outcome": "Strikeout (looking)",
@@ -1013,8 +1013,8 @@
       "pitches": "FBBFK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1032,16 +1032,16 @@
       "description": "LANG, T. struck out looking (2-2 FBBFK)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "HEMMERLING",
-      "batter": "ANTIGUA, A. struck out swinging (1-2 BFKFS).",
+      "inning": "Bottom 5",
+      "pitcher": "Reece Hemmerling",
+      "batter": "Ariel Antigua",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "BFKFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1059,16 +1059,16 @@
       "description": "ANTIGUA, A. struck out swinging (1-2 BFKFS)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "HEMMERLING",
-      "batter": "GRIMMER, B. flied out to lf (0-2 KFFFF).",
+      "inning": "Bottom 5",
+      "pitcher": "Reece Hemmerling",
+      "batter": "Blake Grimmer",
       "outcome": "Flyout",
       "count": "0-2",
       "pitches": "KFFFF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1086,16 +1086,16 @@
       "description": "GRIMMER, B. flied out to lf (0-2 KFFFF)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "HEMMERLING",
-      "batter": "BROWN, B. struck out swinging (2-2 KSBBS).",
+      "inning": "Bottom 5",
+      "pitcher": "Reece Hemmerling",
+      "batter": "Blaine Brown",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "KSBBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1113,16 +1113,16 @@
       "description": "BROWN, B. struck out swinging (2-2 KSBBS)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "HEMMERLING",
+      "inning": "Top 6",
+      "pitcher": "Nic Abraham",
       "batter": "Johnny Sweeney",
       "outcome": "Flyout",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1140,16 +1140,16 @@
       "description": "SWEENEY, J. flied out to lf (1-0 B)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "HEMMERLING",
+      "inning": "Top 6",
+      "pitcher": "Nic Abraham",
       "batter": "Maloy Heaghney",
       "outcome": "Flyout",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1167,16 +1167,16 @@
       "description": "HEAGHNEY, M. flied out to rf (0-1 K)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "HEMMERLING",
+      "inning": "Top 6",
+      "pitcher": "Nic Abraham",
       "batter": "Preston Lucas",
       "outcome": "Flyout",
       "count": "0-2",
       "pitches": "FK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1194,16 +1194,16 @@
       "description": "LUCAS, P. flied out to rf (0-2 FK)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "HEMMERLING",
-      "batter": "CHAPMAN, R. grounded out to 2b (0-1 K).",
+      "inning": "Bottom 6",
+      "pitcher": "Reece Hemmerling",
+      "batter": "Reese Chapman",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1221,16 +1221,16 @@
       "description": "CHAPMAN, R. grounded out to 2b (0-1 K)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "HEMMERLING",
-      "batter": "LAWLESS, S. lined out to (0-1 K).",
+      "inning": "Bottom 6",
+      "pitcher": "Reece Hemmerling",
+      "batter": "Stone Lawless",
       "outcome": "Lineout",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1248,16 +1248,16 @@
       "description": "LAWLESS, S. lined out to (0-1 K)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "HEMMERLING",
-      "batter": "WRIGHT, G. grounded out to 2b (3-2 KBBBK).",
+      "inning": "Bottom 6",
+      "pitcher": "Reece Hemmerling",
+      "batter": "Garrett Wright",
       "outcome": "Groundout",
       "count": "3-2",
       "pitches": "KBBBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1275,16 +1275,16 @@
       "description": "WRIGHT, G. grounded out to 2b (3-2 KBBBK)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "HEMMERLING",
+      "inning": "Top 7",
+      "pitcher": "Nic Abraham",
       "batter": "Jake Armsey",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "FS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1302,16 +1302,16 @@
       "description": "ARMSEY, J. singled to left field (0-2 FS)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "HEMMERLING",
+      "inning": "Top 7",
+      "pitcher": "Nic Abraham",
       "batter": "Trey Bentley",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "BFSBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Jake Armsey",
         "2B": null,
@@ -1329,16 +1329,16 @@
       "description": "BENTLEY, T. singled up the middle (3-2 BFSBB) ARMSEY, J. advanced to second."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "HEMMERLING",
+      "inning": "Top 7",
+      "pitcher": "Nic Abraham",
       "batter": "Kenan Bowman",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Trey Bentley",
         "2B": null,
@@ -1356,7 +1356,7 @@
       "description": "BOWMAN, K. struck out swinging, bunt (0-2 KFS)."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "Bo Rhudy",
       "batter": "Gage Griggs",
       "outcome": "Strikeout (swinging)",
@@ -1364,8 +1364,8 @@
       "pitches": "SBSBBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Trey Bentley",
         "2B": null,
@@ -1383,7 +1383,7 @@
       "description": "GRIGGS, G. struck out swinging (3-2 SBSBBS)."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 7",
       "pitcher": "Bo Rhudy",
       "batter": "Henry Zenor",
       "outcome": "Lineout",
@@ -1391,15 +1391,15 @@
       "pitches": "FF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
+        "1B": "Trey Bentley",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Trey Bentley",
         "2B": null,
         "3B": null
       },
@@ -1410,16 +1410,16 @@
       "description": "ZENOR, H. lined out to 2b (0-2 FF)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "EICHENBERGER",
-      "batter": "MARIN, M. flied out to rf (0-1 S).",
+      "inning": "Bottom 7",
+      "pitcher": "Max Eichenberger",
+      "batter": "Manny Marin",
       "outcome": "Flyout",
       "count": "0-1",
       "pitches": "S",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1437,23 +1437,23 @@
       "description": "MARIN, M. flied out to rf (0-1 S)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "EICHENBERGER",
-      "batter": "GRINDLINGER",
+      "inning": "Bottom 7",
+      "pitcher": "Max Eichenberger",
+      "batter": "Trent Grindlinger",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "GRINDLINGER",
+        "1B": "Trent Grindlinger",
         "2B": null,
         "3B": null
       },
@@ -1464,24 +1464,24 @@
       "description": "GRINDLINGER walked (3-0 BBBB)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "EICHENBERGER",
+      "inning": "Bottom 7",
+      "pitcher": "Max Eichenberger",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "GRINDLINGER",
+        "1B": "Trent Grindlinger",
         "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "GRINDLINGER",
+        "2B": "Trent Grindlinger",
         "3B": null
       },
       "score": {
@@ -1491,24 +1491,24 @@
       "description": "GRINDLINGER advanced to second on a wild pitch."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "EICHENBERGER",
-      "batter": "CLARK, L. reached on a fielder's choice to shortstop (2-0 BB).",
+      "inning": "Bottom 7",
+      "pitcher": "Max Eichenberger",
+      "batter": "Levi Clark",
       "outcome": "Fielder's choice",
       "count": "2-0",
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "GRINDLINGER",
+        "2B": "Trent Grindlinger",
         "3B": null
       },
       "runners_after": {
-        "1B": "CLARK, L. reached on a fielder's choice to shortstop (2-0 BB).",
-        "2B": "GRINDLINGER",
+        "1B": "Levi Clark",
+        "2B": "Trent Grindlinger",
         "3B": null
       },
       "score": {
@@ -1518,24 +1518,24 @@
       "description": "CLARK, L. reached on a fielder's choice to shortstop (2-0 BB)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "KUMMER",
-      "batter": "MYATT, T. singled to right field (2-2 BKBF)",
+      "inning": "Bottom 7",
+      "pitcher": "Andrew Kummer",
+      "batter": "Tyler Myatt",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BKBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "CLARK, L. reached on a fielder's choice to shortstop (2-0 BB).",
-        "2B": "GRINDLINGER",
+        "1B": "Levi Clark",
+        "2B": "Trent Grindlinger",
         "3B": null
       },
       "runners_after": {
-        "1B": "MYATT, T. singled to right field (2-2 BKBF)",
-        "2B": "GRINDLINGER",
+        "1B": "Tyler Myatt",
+        "2B": "Trent Grindlinger",
         "3B": null
       },
       "score": {
@@ -1545,24 +1545,24 @@
       "description": "MYATT, T. singled to right field (2-2 BKBF) CLARK, L. advanced to second ABERNATHY, J advanced to third."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "KUMMER",
-      "batter": "GRIMMER, B. struck out swinging (0-2 KSS).",
+      "inning": "Bottom 7",
+      "pitcher": "Andrew Kummer",
+      "batter": "Blake Grimmer",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "MYATT, T. singled to right field (2-2 BKBF)",
-        "2B": "GRINDLINGER",
+        "1B": "Tyler Myatt",
+        "2B": "Trent Grindlinger",
         "3B": null
       },
       "runners_after": {
-        "1B": "MYATT, T. singled to right field (2-2 BKBF)",
-        "2B": "GRINDLINGER",
+        "1B": "Tyler Myatt",
+        "2B": "Trent Grindlinger",
         "3B": null
       },
       "score": {
@@ -1572,24 +1572,24 @@
       "description": "GRIMMER, B. struck out swinging (0-2 KSS)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "KUMMER",
-      "batter": "BROWN, B. singled to right center, 2 RBI (3-1 FBBB)",
+      "inning": "Bottom 7",
+      "pitcher": "Andrew Kummer",
+      "batter": "Blaine Brown",
       "outcome": "Single",
       "count": "3-1",
       "pitches": "FBBB",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
-        "2B": null,
+        "1B": "Tyler Myatt",
+        "2B": "Trent Grindlinger",
         "3B": null
       },
       "runners_after": {
-        "1B": "BROWN, B. singled to right center, 2 RBI (3-1 FBBB)",
-        "2B": null,
+        "1B": "Blaine Brown",
+        "2B": "Trent Grindlinger",
         "3B": null
       },
       "score": {
@@ -1599,24 +1599,24 @@
       "description": "BROWN, B. singled to right center, 2 RBI (3-1 FBBB) MYATT, T. advanced to third CLARK, L. scored ABERNATHY, J scored."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "KUMMER",
+      "inning": "Bottom 7",
+      "pitcher": "Andrew Kummer",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "BROWN, B. singled to right center, 2 RBI (3-1 FBBB)",
-        "2B": null,
+        "1B": "Blaine Brown",
+        "2B": "Trent Grindlinger",
         "3B": null
       },
       "runners_after": {
-        "1B": "BROWN, B. singled to right center, 2 RBI (3-1 FBBB)",
-        "2B": null,
+        "1B": "Blaine Brown",
+        "2B": "Trent Grindlinger",
         "3B": null
       },
       "score": {
@@ -1626,24 +1626,24 @@
       "description": "BROWN, B. stole second."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "KUMMER",
-      "batter": "CHAPMAN, R. flied out to cf (2-0 BB).",
+      "inning": "Bottom 7",
+      "pitcher": "Andrew Kummer",
+      "batter": "Reese Chapman",
       "outcome": "Flyout",
       "count": "2-0",
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "BROWN, B. singled to right center, 2 RBI (3-1 FBBB)",
-        "2B": null,
+        "1B": "Blaine Brown",
+        "2B": "Trent Grindlinger",
         "3B": null
       },
       "runners_after": {
-        "1B": "BROWN, B. singled to right center, 2 RBI (3-1 FBBB)",
-        "2B": null,
+        "1B": "Blaine Brown",
+        "2B": "Trent Grindlinger",
         "3B": null
       },
       "score": {
@@ -1653,23 +1653,23 @@
       "description": "CHAPMAN, R. flied out to cf (2-0 BB)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "KUMMER",
+      "inning": "Top 8",
+      "pitcher": "Bo Rhudy",
       "batter": "GRIMMER, B. to 1b.",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "BROWN, B. singled to right center, 2 RBI (3-1 FBBB)",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "BROWN, B. singled to right center, 2 RBI (3-1 FBBB)",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1680,23 +1680,23 @@
       "description": "GRIMMER, B. to 1b."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "KUMMER",
+      "inning": "Top 8",
+      "pitcher": "Bo Rhudy",
       "batter": "ABERNATHY, J to 2b.",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "BROWN, B. singled to right center, 2 RBI (3-1 FBBB)",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "BROWN, B. singled to right center, 2 RBI (3-1 FBBB)",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1707,23 +1707,23 @@
       "description": "ABERNATHY, J to 2b."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "KUMMER",
+      "inning": "Top 8",
+      "pitcher": "Bo Rhudy",
       "batter": "CLARK, L. to c.",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "BROWN, B. singled to right center, 2 RBI (3-1 FBBB)",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "BROWN, B. singled to right center, 2 RBI (3-1 FBBB)",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1734,23 +1734,23 @@
       "description": "CLARK, L. to c."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "KUMMER",
+      "inning": "Top 8",
+      "pitcher": "Bo Rhudy",
       "batter": "NEWSTROM, C. to for MYATT, T..",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "BROWN, B. singled to right center, 2 RBI (3-1 FBBB)",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "BROWN, B. singled to right center, 2 RBI (3-1 FBBB)",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1761,23 +1761,23 @@
       "description": "NEWSTROM, C. to for MYATT, T.."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "KUMMER",
+      "inning": "Top 8",
+      "pitcher": "Bo Rhudy",
       "batter": "Tyler Lang",
       "outcome": "Flyout",
       "count": "1-2",
       "pitches": "KFFBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "BROWN, B. singled to right center, 2 RBI (3-1 FBBB)",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "BROWN, B. singled to right center, 2 RBI (3-1 FBBB)",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1788,23 +1788,23 @@
       "description": "LANG, T. flied out to lf (1-2 KFFBF)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "KUMMER",
+      "inning": "Top 8",
+      "pitcher": "Bo Rhudy",
       "batter": "Johnny Sweeney",
       "outcome": "Flyout",
       "count": "0-2",
       "pitches": "KSF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "BROWN, B. singled to right center, 2 RBI (3-1 FBBB)",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "BROWN, B. singled to right center, 2 RBI (3-1 FBBB)",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1815,16 +1815,16 @@
       "description": "SWEENEY, J. flied out to cf (0-2 KSF)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "KUMMER",
+      "inning": "Top 8",
+      "pitcher": "Bo Rhudy",
       "batter": "Maloy Heaghney",
       "outcome": "Flyout",
       "count": "3-2",
       "pitches": "BBSSB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1842,16 +1842,16 @@
       "description": "HEAGHNEY, M. flied out to rf (3-2 BBSSB)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "MACKEY",
-      "batter": "LAWLESS, S. grounded out to 2b (0-0).",
+      "inning": "Bottom 8",
+      "pitcher": "Cayden Mackey",
+      "batter": "Stone Lawless",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1869,16 +1869,16 @@
       "description": "LAWLESS, S. grounded out to 2b (0-0)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "MACKEY",
-      "batter": "WRIGHT, G. flied out to cf (0-2 KS).",
+      "inning": "Bottom 8",
+      "pitcher": "Cayden Mackey",
+      "batter": "Garrett Wright",
       "outcome": "Flyout",
       "count": "0-2",
       "pitches": "KS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1896,16 +1896,16 @@
       "description": "WRIGHT, G. flied out to cf (0-2 KS)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "MACKEY",
-      "batter": "MARIN, M. fouled out to 1b (1-0 B).",
+      "inning": "Bottom 8",
+      "pitcher": "Cayden Mackey",
+      "batter": "Manny Marin",
       "outcome": "Foul out",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1923,16 +1923,16 @@
       "description": "MARIN, M. fouled out to 1b (1-0 B)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "MACKEY",
+      "inning": "Top 9",
+      "pitcher": "Bo Rhudy",
       "batter": "Preston Lucas",
       "outcome": "Double",
       "count": "0-2",
       "pitches": "KF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1950,16 +1950,16 @@
       "description": "LUCAS, P. doubled to left field (0-2 KF)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "MACKEY",
+      "inning": "Top 9",
+      "pitcher": "Bo Rhudy",
       "batter": "Jake Armsey",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": "Preston Lucas",
@@ -1977,16 +1977,16 @@
       "description": "ARMSEY, J. struck out swinging (0-2 KSS)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "MACKEY",
+      "inning": "Top 9",
+      "pitcher": "Bo Rhudy",
       "batter": "Trey Bentley",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": "Preston Lucas",
@@ -2004,16 +2004,16 @@
       "description": "BENTLEY, T. doubled to right field, RBI (1-0 B) LUCAS, P. scored."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "MACKEY",
+      "inning": "Top 9",
+      "pitcher": "Bo Rhudy",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": "Trey Bentley",
@@ -2031,16 +2031,16 @@
       "description": "BENTLEY, T. advanced to third on a passed ball."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "MACKEY",
+      "inning": "Top 9",
+      "pitcher": "Bo Rhudy",
       "batter": "Clayton Campidilli",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBBKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": "Trey Bentley",
@@ -2058,7 +2058,7 @@
       "description": "CAMPIDILLI walked (3-1 BBBKB)."
     },
     {
-      "inning": "Top 16",
+      "inning": "Top 9",
       "pitcher": "Brayden Krenzel",
       "batter": "Gage Griggs",
       "outcome": "Pop out",
@@ -2066,8 +2066,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Clayton Campidilli",
         "2B": "Trey Bentley",
@@ -2085,7 +2085,7 @@
       "description": "GRIGGS, G. popped up to 1b, bunt (0-0)."
     },
     {
-      "inning": "Top 17",
+      "inning": "Top 9",
       "pitcher": "Brayden Krenzel",
       "batter": null,
       "outcome": "Stolen base",
@@ -2093,16 +2093,16 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
-        "2B": null,
+        "1B": "Clayton Campidilli",
+        "2B": "Trey Bentley",
         "3B": null
       },
       "runners_after": {
-        "1B": null,
-        "2B": null,
+        "1B": "Clayton Campidilli",
+        "2B": "Trey Bentley",
         "3B": null
       },
       "score": {
@@ -2112,7 +2112,7 @@
       "description": "RITZER, A. stole second."
     },
     {
-      "inning": "Top 17",
+      "inning": "Top 9",
       "pitcher": "Brayden Krenzel",
       "batter": "Henry Zenor",
       "outcome": "Strikeout (swinging)",
@@ -2120,16 +2120,16 @@
       "pitches": "BKSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
-        "2B": null,
+        "1B": "Clayton Campidilli",
+        "2B": "Trey Bentley",
         "3B": null
       },
       "runners_after": {
-        "1B": null,
-        "2B": null,
+        "1B": "Clayton Campidilli",
+        "2B": "Trey Bentley",
         "3B": null
       },
       "score": {
@@ -2139,16 +2139,16 @@
       "description": "ZENOR, H. struck out swinging (1-2 BKSS)."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Brayden Krenzel",
-      "batter": "Brady Small",
+      "inning": "Bottom 9",
+      "pitcher": "Cayden Mackey",
+      "batter": "SMALL, B. to rf for RITZER, A..",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2166,16 +2166,16 @@
       "description": "SMALL, B. to rf for RITZER, A.."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Brayden Krenzel",
-      "batter": "ABERNATHY, J grounded out to , bunt (0-0).",
+      "inning": "Bottom 9",
+      "pitcher": "Cayden Mackey",
+      "batter": "Jay Abernathy",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2193,23 +2193,23 @@
       "description": "ABERNATHY, J grounded out to , bunt (0-0)."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Brayden Krenzel",
-      "batter": "CLARK, L. walked (3-2 KBBBFFFFFB).",
+      "inning": "Bottom 9",
+      "pitcher": "Cayden Mackey",
+      "batter": "Levi Clark",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "KBBBFFFFFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "CLARK, L. walked (3-2 KBBBFFFFFB).",
+        "1B": "Levi Clark",
         "2B": null,
         "3B": null
       },
@@ -2220,23 +2220,23 @@
       "description": "CLARK, L. walked (3-2 KBBBFFFFFB)."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Brayden Krenzel",
-      "batter": "NEWSTROM, C. reached on a fielder's choice to third base (2-1 BBF)",
+      "inning": "Bottom 9",
+      "pitcher": "Cayden Mackey",
+      "batter": "Chris Newstrom",
       "outcome": "Fielder's choice",
       "count": "2-1",
       "pitches": "BBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "CLARK, L. walked (3-2 KBBBFFFFFB).",
+        "1B": "Levi Clark",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "NEWSTROM, C. reached on a fielder's choice to third base (2-1 BBF)",
+        "1B": "Chris Newstrom",
         "2B": null,
         "3B": null
       },
@@ -2247,25 +2247,25 @@
       "description": "NEWSTROM, C. reached on a fielder's choice to third base (2-1 BBF) CLARK, L. out at second to 2b."
     },
     {
-      "inning": "Top 18",
-      "pitcher": "Brayden Krenzel",
-      "batter": "GRIMMER, B. homered to right center, 2 RBI (0-0)",
+      "inning": "Bottom 9",
+      "pitcher": "Cayden Mackey",
+      "batter": "Blake Grimmer",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "GRIMMER, B. homered to right center, 2 RBI (0-0)"
+        "Blake Grimmer"
       ],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Chris Newstrom",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Chris Newstrom",
         "2B": null,
         "3B": null
       },

@@ -1,9 +1,9 @@
 {
   "contest_id": "6545205",
   "date": "02/27/2026",
-  "batting_team": "UC Irvine",
-  "pitching_team": "Vanderbilt",
-  "note": "Broken-down from the saved play_by_play.json, which contains the UC Irvine at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "UC Irvine",
+  "home_team": "Vanderbilt",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
       "inning": "Top 1",
@@ -87,9 +87,9 @@
       "description": "Reyes, Al. flied out to rf (1-2 KFB)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Connor Fennell",
-      "batter": "L.",
+      "inning": "Bottom 1",
+      "pitcher": "Trevor Hansen",
+      "batter": "Logan Johnstone",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBBKB",
@@ -103,7 +103,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": "Logan Johnstone",
         "2B": null,
         "3B": null
       },
@@ -114,8 +114,8 @@
       "description": "L. Johnstone walked (3-1 BBBKB)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Connor Fennell",
+      "inning": "Bottom 1",
+      "pitcher": "Trevor Hansen",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -125,12 +125,12 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "L.",
+        "1B": "Logan Johnstone",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": "Logan Johnstone",
         "2B": null,
         "3B": null
       },
@@ -141,9 +141,9 @@
       "description": "L. Johnstone stole second."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Connor Fennell",
-      "batter": "Johnston",
+      "inning": "Bottom 1",
+      "pitcher": "Trevor Hansen",
+      "batter": "Brodie Johnston",
       "outcome": "Foul out",
       "count": "2-2",
       "pitches": "FSBBF",
@@ -152,12 +152,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "L.",
+        "1B": "Logan Johnstone",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": "Logan Johnstone",
         "2B": null,
         "3B": null
       },
@@ -168,8 +168,8 @@
       "description": "Johnston fouled out to c (2-2 FSBBF)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Connor Fennell",
+      "inning": "Bottom 1",
+      "pitcher": "Trevor Hansen",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -179,14 +179,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "L.",
+        "1B": "Logan Johnstone",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Logan Johnstone"
       },
       "score": {
         "away": 0,
@@ -195,23 +195,25 @@
       "description": "L. Johnstone advanced to third on a wild pitch."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Connor Fennell",
-      "batter": "Mancini",
+      "inning": "Bottom 1",
+      "pitcher": "Trevor Hansen",
+      "batter": "Mike Mancini",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Logan Johnstone"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "L.",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Logan Johnstone"
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -222,9 +224,9 @@
       "description": "Mancini grounded out to ss, RBI (1-1 BF) L. Johnstone scored."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Connor Fennell",
-      "batter": "Holcomb",
+      "inning": "Bottom 1",
+      "pitcher": "Trevor Hansen",
+      "batter": "Braden Holcomb",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "BKKB",
@@ -233,12 +235,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "L.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -249,7 +251,7 @@
       "description": "Holcomb grounded out to ss (2-2 BKKB)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Connor Fennell",
       "batter": "Auggie Gutierrez",
       "outcome": "Flyout",
@@ -276,7 +278,7 @@
       "description": "Gutierrez, A flied out to cf to right center (3-2 BBKFB)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Connor Fennell",
       "batter": "Rowan Felsch",
       "outcome": "Single",
@@ -303,7 +305,7 @@
       "description": "Felsch, R. singled through the right side (3-1 BBBK)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Connor Fennell",
       "batter": "Farmer, T. doubled to right center (1-0 B)",
       "outcome": "Double",
@@ -330,7 +332,7 @@
       "description": "Farmer, T. doubled to right center (1-0 B) Felsch, R. advanced to third."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Connor Fennell",
       "batter": "Dylan Hillman",
       "outcome": "Strikeout (swinging)",
@@ -357,7 +359,7 @@
       "description": "Hillman, Dy. struck out swinging (1-2 KSBS)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Connor Fennell",
       "batter": "Noah Alvarez",
       "outcome": "Single",
@@ -384,7 +386,7 @@
       "description": "Alvarez, No. singled to right center, 2 RBI (3-2 BBKBKF) Farmer, T. scored Felsch, R. scored."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Connor Fennell",
       "batter": "Efren Ortega",
       "outcome": "Reached on error",
@@ -411,7 +413,7 @@
       "description": "Ortega, Ef. reached on a fielding error by (3-2 KBFFBB) Alvarez, No. advanced to second."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Connor Fennell",
       "batter": "Frankie Carney",
       "outcome": "Groundout",
@@ -438,9 +440,9 @@
       "description": "Carney, F. grounded out to (1-0 B)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Connor Fennell",
-      "batter": "Whitcomb",
+      "inning": "Bottom 2",
+      "pitcher": "Trevor Hansen",
+      "batter": "Mack Whitcomb",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
@@ -454,7 +456,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Whitcomb",
+        "1B": "Mack Whitcomb",
         "2B": null,
         "3B": null
       },
@@ -465,9 +467,9 @@
       "description": "Whitcomb singled up the middle (1-0 B)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Connor Fennell",
-      "batter": "Waite",
+      "inning": "Bottom 2",
+      "pitcher": "Trevor Hansen",
+      "batter": "Ryker Waite",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
@@ -476,14 +478,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Whitcomb",
+        "1B": "Mack Whitcomb",
         "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Waite",
-        "3B": "Whitcomb"
+        "2B": "Ryker Waite",
+        "3B": "Mack Whitcomb"
       },
       "score": {
         "away": 2,
@@ -492,27 +494,27 @@
       "description": "Waite doubled to right field (0-0) Whitcomb advanced to third."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Connor Fennell",
-      "batter": "Maldonado",
+      "inning": "Bottom 2",
+      "pitcher": "Trevor Hansen",
+      "batter": "Chris Maldonado",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
       "runs_scored": [
-        "Whitcomb"
+        "Mack Whitcomb"
       ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Waite",
-        "3B": "Whitcomb"
+        "2B": "Ryker Waite",
+        "3B": "Mack Whitcomb"
       },
       "runners_after": {
         "1B": null,
         "2B": null,
-        "3B": "Waite"
+        "3B": "Ryker Waite"
       },
       "score": {
         "away": 2,
@@ -521,9 +523,9 @@
       "description": "Maldonado grounded out to 2b, RBI (0-1 S) Waite advanced to third Whitcomb scored."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Connor Fennell",
-      "batter": "Reynolds",
+      "inning": "Bottom 2",
+      "pitcher": "Trevor Hansen",
+      "batter": "Korbin Reynolds",
       "outcome": "Hit by pitch",
       "count": "0-0",
       "pitches": "",
@@ -534,12 +536,12 @@
       "runners_before": {
         "1B": null,
         "2B": null,
-        "3B": "Waite"
+        "3B": "Ryker Waite"
       },
       "runners_after": {
-        "1B": "Reynolds",
+        "1B": "Korbin Reynolds",
         "2B": null,
-        "3B": "Waite"
+        "3B": "Ryker Waite"
       },
       "score": {
         "away": 2,
@@ -548,25 +550,25 @@
       "description": "Reynolds hit by pitch (0-0)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Connor Fennell",
-      "batter": "C.",
+      "inning": "Bottom 2",
+      "pitcher": "Trevor Hansen",
+      "batter": "Logan Johnstone",
       "outcome": "Flyout",
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
       "runs_scored": [
-        "Waite"
+        "Ryker Waite"
       ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Reynolds",
+        "1B": "Korbin Reynolds",
         "2B": null,
-        "3B": "Waite"
+        "3B": "Ryker Waite"
       },
       "runners_after": {
-        "1B": "Reynolds",
+        "1B": "Korbin Reynolds",
         "2B": null,
         "3B": null
       },
@@ -577,9 +579,9 @@
       "description": "C. Johnstone flied out to rf, SF, RBI (1-1 KB) Waite scored."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Connor Fennell",
-      "batter": "L.",
+      "inning": "Bottom 2",
+      "pitcher": "Trevor Hansen",
+      "batter": "Logan Johnstone",
       "outcome": "Flyout",
       "count": "2-2",
       "pitches": "KFFFBB",
@@ -588,12 +590,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Reynolds",
+        "1B": "Korbin Reynolds",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Reynolds",
+        "1B": "Korbin Reynolds",
         "2B": null,
         "3B": null
       },
@@ -604,7 +606,7 @@
       "description": "L. Johnstone flied out to rf (2-2 KFFFBB)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Connor Fennell",
       "batter": "Zach Fjelstad",
       "outcome": "Lineout",
@@ -631,7 +633,7 @@
       "description": "Fjelstad, Z. lined out to 2b (0-0)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Connor Fennell",
       "batter": "Alonso Reyes",
       "outcome": "Walk",
@@ -658,7 +660,7 @@
       "description": "Reyes, Al. walked (3-2 BBKBFFB)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Connor Fennell",
       "batter": "Auggie Gutierrez",
       "outcome": "Strikeout (looking)",
@@ -685,7 +687,7 @@
       "description": "Gutierrez, A struck out looking (0-2 KKK)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Connor Fennell",
       "batter": "Rowan Felsch",
       "outcome": "Groundout",
@@ -712,9 +714,9 @@
       "description": "Felsch, R. grounded out to 2b (1-2 FBK)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Connor Fennell",
-      "batter": "Johnston",
+      "inning": "Bottom 3",
+      "pitcher": "Trevor Hansen",
+      "batter": "Brodie Johnston",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "SSS",
@@ -739,9 +741,9 @@
       "description": "Johnston struck out swinging (0-2 SSS)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Connor Fennell",
-      "batter": "Mancini",
+      "inning": "Bottom 3",
+      "pitcher": "Trevor Hansen",
+      "batter": "Mike Mancini",
       "outcome": "Groundout",
       "count": "3-1",
       "pitches": "BBFB",
@@ -766,9 +768,9 @@
       "description": "Mancini grounded out to 2b (3-1 BBFB)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Connor Fennell",
-      "batter": "Holcomb",
+      "inning": "Bottom 3",
+      "pitcher": "Trevor Hansen",
+      "batter": "Braden Holcomb",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "KB",
@@ -782,7 +784,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Holcomb",
+        "1B": "Braden Holcomb",
         "2B": null,
         "3B": null
       },
@@ -793,9 +795,9 @@
       "description": "Holcomb singled to left center (1-1 KB)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Connor Fennell",
-      "batter": "Whitcomb",
+      "inning": "Bottom 3",
+      "pitcher": "Trevor Hansen",
+      "batter": "Mack Whitcomb",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BKSBBFFB",
@@ -804,13 +806,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Holcomb",
+        "1B": "Braden Holcomb",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Whitcomb",
-        "2B": "Holcomb",
+        "1B": "Mack Whitcomb",
+        "2B": "Braden Holcomb",
         "3B": null
       },
       "score": {
@@ -820,9 +822,9 @@
       "description": "Whitcomb walked (3-2 BKSBBFFB) Holcomb advanced to second."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Connor Fennell",
-      "batter": "Waite",
+      "inning": "Bottom 3",
+      "pitcher": "Trevor Hansen",
+      "batter": "Ryker Waite",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "KBBKFFS",
@@ -831,13 +833,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Whitcomb",
-        "2B": "Holcomb",
+        "1B": "Mack Whitcomb",
+        "2B": "Braden Holcomb",
         "3B": null
       },
       "runners_after": {
-        "1B": "Whitcomb",
-        "2B": "Holcomb",
+        "1B": "Mack Whitcomb",
+        "2B": "Braden Holcomb",
         "3B": null
       },
       "score": {
@@ -847,7 +849,7 @@
       "description": "Waite struck out swinging (2-2 KBBKFFS)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Connor Fennell",
       "batter": "Farmer, T. struck out swinging (3-2 BSFBBFS).",
       "outcome": "Strikeout (swinging)",
@@ -874,7 +876,7 @@
       "description": "Farmer, T. struck out swinging (3-2 BSFBBFS)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Connor Fennell",
       "batter": "Dylan Hillman",
       "outcome": "Walk",
@@ -901,7 +903,7 @@
       "description": "Hillman, Dy. walked (3-2 BKSBFBFB)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Connor Fennell",
       "batter": "Noah Alvarez",
       "outcome": "Flyout",
@@ -928,7 +930,7 @@
       "description": "Alvarez, No. flied out to cf (1-2 KBKF)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Connor Fennell",
       "batter": "Efren Ortega",
       "outcome": "Flyout",
@@ -955,9 +957,9 @@
       "description": "Ortega, Ef. flied out to lf to left center (0-0)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Connor Fennell",
-      "batter": "Maldonado",
+      "inning": "Bottom 4",
+      "pitcher": "Trevor Hansen",
+      "batter": "Chris Maldonado",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "BFBBF",
@@ -971,7 +973,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Maldonado",
+        "1B": "Chris Maldonado",
         "2B": null,
         "3B": null
       },
@@ -982,9 +984,9 @@
       "description": "Maldonado singled to left center (3-2 BFBBF)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Connor Fennell",
-      "batter": "Reynolds",
+      "inning": "Bottom 4",
+      "pitcher": "Trevor Hansen",
+      "batter": "Korbin Reynolds",
       "outcome": "Single",
       "count": "2-0",
       "pitches": "BB",
@@ -993,14 +995,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Maldonado",
+        "1B": "Chris Maldonado",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Reynolds",
+        "1B": "Korbin Reynolds",
         "2B": null,
-        "3B": "Maldonado"
+        "3B": "Chris Maldonado"
       },
       "score": {
         "away": 2,
@@ -1009,8 +1011,8 @@
       "description": "Reynolds singled to right center (2-0 BB) Maldonado advanced to third."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Connor Fennell",
+      "inning": "Bottom 4",
+      "pitcher": "Trevor Hansen",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1020,14 +1022,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Reynolds",
+        "1B": "Korbin Reynolds",
         "2B": null,
-        "3B": "Maldonado"
+        "3B": "Chris Maldonado"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Reynolds",
-        "3B": "Maldonado"
+        "2B": "Korbin Reynolds",
+        "3B": "Chris Maldonado"
       },
       "score": {
         "away": 2,
@@ -1036,9 +1038,9 @@
       "description": "Reynolds advanced to second on a wild pitch."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Connor Fennell",
-      "batter": "C.",
+      "inning": "Bottom 4",
+      "pitcher": "Trevor Hansen",
+      "batter": "Logan Johnstone",
       "outcome": "Foul out",
       "count": "2-0",
       "pitches": "BB",
@@ -1048,13 +1050,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Reynolds",
-        "3B": "Maldonado"
+        "2B": "Korbin Reynolds",
+        "3B": "Chris Maldonado"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Reynolds",
-        "3B": "Maldonado"
+        "2B": "Korbin Reynolds",
+        "3B": "Chris Maldonado"
       },
       "score": {
         "away": 2,
@@ -1063,9 +1065,9 @@
       "description": "C. Johnstone fouled out to ss (2-0 BB)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Connor Fennell",
-      "batter": "L.",
+      "inning": "Bottom 4",
+      "pitcher": "Trevor Hansen",
+      "batter": "Logan Johnstone",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
       "pitches": "BBBKFK",
@@ -1075,13 +1077,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Reynolds",
-        "3B": "Maldonado"
+        "2B": "Korbin Reynolds",
+        "3B": "Chris Maldonado"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Reynolds",
-        "3B": "Maldonado"
+        "2B": "Korbin Reynolds",
+        "3B": "Chris Maldonado"
       },
       "score": {
         "away": 2,
@@ -1090,9 +1092,9 @@
       "description": "L. Johnstone struck out looking (3-2 BBBKFK)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Connor Fennell",
-      "batter": "Johnston",
+      "inning": "Bottom 4",
+      "pitcher": "Trevor Hansen",
+      "batter": "Brodie Johnston",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "KBBBB",
@@ -1102,13 +1104,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Reynolds",
-        "3B": "Maldonado"
+        "2B": "Korbin Reynolds",
+        "3B": "Chris Maldonado"
       },
       "runners_after": {
-        "1B": "Johnston",
-        "2B": "Reynolds",
-        "3B": "Maldonado"
+        "1B": "Brodie Johnston",
+        "2B": "Korbin Reynolds",
+        "3B": "Chris Maldonado"
       },
       "score": {
         "away": 2,
@@ -1117,9 +1119,9 @@
       "description": "Johnston walked (3-1 KBBBB)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Connor Fennell",
-      "batter": "Mancini",
+      "inning": "Bottom 4",
+      "pitcher": "Trevor Hansen",
+      "batter": "Mike Mancini",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "KKB",
@@ -1128,14 +1130,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Johnston",
-        "2B": "Reynolds",
-        "3B": "Maldonado"
+        "1B": "Brodie Johnston",
+        "2B": "Korbin Reynolds",
+        "3B": "Chris Maldonado"
       },
       "runners_after": {
-        "1B": "Johnston",
-        "2B": "Reynolds",
-        "3B": "Maldonado"
+        "1B": "Brodie Johnston",
+        "2B": "Korbin Reynolds",
+        "3B": "Chris Maldonado"
       },
       "score": {
         "away": 2,
@@ -1144,7 +1146,7 @@
       "description": "Mancini grounded out to (1-2 KKB)."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Connor Fennell",
       "batter": "Frankie Carney",
       "outcome": "Hit by pitch",
@@ -1171,7 +1173,7 @@
       "description": "Carney, F. hit by pitch (3-2 BBKBF)."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Connor Fennell",
       "batter": "Zach Fjelstad",
       "outcome": "Flyout",
@@ -1198,7 +1200,7 @@
       "description": "Fjelstad, Z. flied out to cf (1-2 KSFFB)."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Connor Fennell",
       "batter": null,
       "outcome": "Stolen base",
@@ -1225,7 +1227,7 @@
       "description": "Carney, F. stole second."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Connor Fennell",
       "batter": "Alonso Reyes",
       "outcome": "Single",
@@ -1252,7 +1254,7 @@
       "description": "Reyes, Al. singled down the rf line, RBI (2-2 BBKFF) Carney, F. scored."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Connor Fennell",
       "batter": null,
       "outcome": "Baserunning",
@@ -1279,7 +1281,7 @@
       "description": "Reyes, Al. advanced to second on a balk."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Connor Fennell",
       "batter": "Auggie Gutierrez",
       "outcome": "Strikeout (looking)",
@@ -1306,7 +1308,7 @@
       "description": "Gutierrez, A struck out looking (2-2 SBBSFK)."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Connor Fennell",
       "batter": "Rowan Felsch",
       "outcome": "Groundout",
@@ -1333,9 +1335,9 @@
       "description": "Felsch, R. grounded out to 2b (0-0)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Connor Fennell",
-      "batter": "Holcomb",
+      "inning": "Bottom 5",
+      "pitcher": "Trevor Hansen",
+      "batter": "Braden Holcomb",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "SBBSFS",
@@ -1360,9 +1362,9 @@
       "description": "Holcomb struck out swinging (2-2 SBBSFS)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Connor Fennell",
-      "batter": "Whitcomb",
+      "inning": "Bottom 5",
+      "pitcher": "Trevor Hansen",
+      "batter": "Mack Whitcomb",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
       "pitches": "BKFBK",
@@ -1387,9 +1389,9 @@
       "description": "Whitcomb struck out looking (2-2 BKFBK)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Connor Fennell",
-      "batter": "Waite",
+      "inning": "Bottom 5",
+      "pitcher": "Trevor Hansen",
+      "batter": "Ryker Waite",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
@@ -1414,7 +1416,7 @@
       "description": "Waite grounded out to 1b unassisted (0-0)."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "England Bryan",
       "batter": "Farmer, T. walked (3-2 BKBBFB).",
       "outcome": "Walk",
@@ -1441,7 +1443,7 @@
       "description": "Farmer, T. walked (3-2 BKBBFB)."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "England Bryan",
       "batter": "Dylan Hillman",
       "outcome": "Single",
@@ -1468,7 +1470,7 @@
       "description": "Hillman, Dy. singled to right center (1-2 KFBF) Farmer, T. advanced to second."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "England Bryan",
       "batter": null,
       "outcome": "Wild pitch",
@@ -1495,7 +1497,7 @@
       "description": "Hillman, Dy. advanced to second on a wild pitch Farmer, T. advanced to third on a wild pitch."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "England Bryan",
       "batter": null,
       "outcome": "Wild pitch",
@@ -1522,7 +1524,7 @@
       "description": "Hillman, Dy. advanced to third on a wild pitch Farmer, T. scored on a wild pitch."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "England Bryan",
       "batter": "Noah Alvarez",
       "outcome": "Groundout",
@@ -1549,7 +1551,7 @@
       "description": "Alvarez, No. grounded out to 2b (3-1 BSBB)."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "England Bryan",
       "batter": "Efren Ortega",
       "outcome": "Groundout",
@@ -1576,7 +1578,7 @@
       "description": "Ortega, Ef. grounded out to p, RBI (1-2 KKBF) Hillman, Dy. scored."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "England Bryan",
       "batter": "Frankie Carney",
       "outcome": "Walk",
@@ -1603,7 +1605,7 @@
       "description": "Carney, F. walked (3-2 KKFBFFBBFB)."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "England Bryan",
       "batter": "Zach Fjelstad",
       "outcome": "Single",
@@ -1630,7 +1632,7 @@
       "description": "Fjelstad, Z. singled to right field (1-0 B) Carney, F. advanced to third."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "Jacob Faulkner",
       "batter": "Alonso Reyes",
       "outcome": "Hit by pitch",
@@ -1657,7 +1659,7 @@
       "description": "Reyes, Al. hit by pitch (0-0) Fjelstad, Z. advanced to second."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "Jacob Faulkner",
       "batter": "Auggie Gutierrez",
       "outcome": "Walk",
@@ -1684,7 +1686,7 @@
       "description": "Gutierrez, A walked, RBI (3-1 BBKBB) Reyes, Al. advanced to second Fjelstad, Z. advanced to third Carney, F. scored."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "Jacob Faulkner",
       "batter": "Rowan Felsch",
       "outcome": "Hit by pitch",
@@ -1711,7 +1713,7 @@
       "description": "Felsch, R. hit by pitch, RBI (0-0) Gutierrez, A advanced to second Reyes, Al. advanced to third Fjelstad, Z. scored."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "Brennan Seiber",
       "batter": "Farmer, T. lined out to ss (1-0 B).",
       "outcome": "Lineout",
@@ -1738,9 +1740,9 @@
       "description": "Farmer, T. lined out to ss (1-0 B)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Brooks",
-      "batter": "Maldonado",
+      "inning": "Bottom 6",
+      "pitcher": "Ryder Brooks",
+      "batter": "Chris Maldonado",
       "outcome": "Flyout",
       "count": "1-0",
       "pitches": "B",
@@ -1765,9 +1767,9 @@
       "description": "Maldonado flied out to cf (1-0 B)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Brooks",
-      "batter": "Reynolds",
+      "inning": "Bottom 6",
+      "pitcher": "Ryder Brooks",
+      "batter": "Korbin Reynolds",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
       "pitches": "BKKBBK",
@@ -1792,9 +1794,9 @@
       "description": "Reynolds struck out looking (3-2 BKKBBK)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Brooks",
-      "batter": "Rigdon",
+      "inning": "Bottom 6",
+      "pitcher": "Ryder Brooks",
+      "batter": "Rustan Rigdon",
       "outcome": "Groundout",
       "count": "3-1",
       "pitches": "BBBK",
@@ -1819,8 +1821,8 @@
       "description": "Rigdon grounded out to ss (3-1 BBBK)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Brooks",
+      "inning": "Top 7",
+      "pitcher": "Brennan Seiber",
       "batter": "Dylan Hillman",
       "outcome": "Walk",
       "count": "3-0",
@@ -1846,8 +1848,8 @@
       "description": "Hillman, Dy. walked (3-0 BBBB)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Brooks",
+      "inning": "Top 7",
+      "pitcher": "Brennan Seiber",
       "batter": "Noah Alvarez",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1873,8 +1875,8 @@
       "description": "Alvarez, No. grounded out to 2b (2-2 BKKB) Hillman, Dy. advanced to second."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Brooks",
+      "inning": "Top 7",
+      "pitcher": "Brennan Seiber",
       "batter": "Efren Ortega",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1900,8 +1902,8 @@
       "description": "Ortega, Ef. flied out to rf (2-1 BKB)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Brooks",
+      "inning": "Top 7",
+      "pitcher": "Brennan Seiber",
       "batter": "Frankie Carney",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1927,9 +1929,9 @@
       "description": "Carney, F. struck out swinging (2-2 BBSKFS)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Brooks",
-      "batter": "L.",
+      "inning": "Bottom 7",
+      "pitcher": "Ryder Brooks",
+      "batter": "Logan Johnstone",
       "outcome": "Single",
       "count": "3-1",
       "pitches": "BBFB",
@@ -1943,7 +1945,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": "Logan Johnstone",
         "2B": null,
         "3B": null
       },
@@ -1954,9 +1956,9 @@
       "description": "L. Johnstone singled up the middle (3-1 BBFB)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Brooks",
-      "batter": "Johnston",
+      "inning": "Bottom 7",
+      "pitcher": "Ryder Brooks",
+      "batter": "Brodie Johnston",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
@@ -1965,13 +1967,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "L.",
+        "1B": "Logan Johnstone",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Johnston",
-        "2B": null,
+        "1B": "Brodie Johnston",
+        "2B": "Logan Johnstone",
         "3B": null
       },
       "score": {
@@ -1981,9 +1983,9 @@
       "description": "Johnston singled through the right side (0-1 K) L. Johnstone advanced to second."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Brooks",
-      "batter": "Mancini",
+      "inning": "Bottom 7",
+      "pitcher": "Ryder Brooks",
+      "batter": "Mike Mancini",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
       "pitches": "BKBFK",
@@ -1992,13 +1994,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Johnston",
-        "2B": null,
+        "1B": "Brodie Johnston",
+        "2B": "Logan Johnstone",
         "3B": null
       },
       "runners_after": {
-        "1B": "Johnston",
-        "2B": null,
+        "1B": "Brodie Johnston",
+        "2B": "Logan Johnstone",
         "3B": null
       },
       "score": {
@@ -2008,9 +2010,9 @@
       "description": "Mancini struck out looking (2-2 BKBFK)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Brooks",
-      "batter": "Holcomb",
+      "inning": "Bottom 7",
+      "pitcher": "Ryder Brooks",
+      "batter": "Braden Holcomb",
       "outcome": "Grounded into double play",
       "count": "0-0",
       "pitches": "",
@@ -2019,12 +2021,12 @@
       "outs_before": 1,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Johnston",
-        "2B": null,
+        "1B": "Brodie Johnston",
+        "2B": "Logan Johnstone",
         "3B": null
       },
       "runners_after": {
-        "1B": "Johnston",
+        "1B": "Brodie Johnston",
         "2B": null,
         "3B": null
       },
@@ -2035,8 +2037,8 @@
       "description": "Holcomb grounded into double play to 1b (0-0) L. Johnstone out on the play."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Brooks",
+      "inning": "Top 8",
+      "pitcher": "Brennan Seiber",
       "batter": "Zach Fjelstad",
       "outcome": "Single",
       "count": "2-2",
@@ -2062,8 +2064,8 @@
       "description": "Fjelstad, Z. singled up the middle (2-2 BKBSFFFF)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Brooks",
+      "inning": "Top 8",
+      "pitcher": "Brennan Seiber",
       "batter": "Alonso Reyes",
       "outcome": "Grounded into double play",
       "count": "0-0",
@@ -2089,8 +2091,8 @@
       "description": "Reyes, Al. grounded into double play 1b to ss to p (0-0) Fjelstad, Z. out on the play."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Brooks",
+      "inning": "Top 8",
+      "pitcher": "Brennan Seiber",
       "batter": "James Castagnola",
       "outcome": "Single",
       "count": "3-2",
@@ -2116,8 +2118,8 @@
       "description": "Castagnola singled down the rf line (3-2 BBKBF)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Brooks",
+      "inning": "Top 8",
+      "pitcher": "Brennan Seiber",
       "batter": "Rowan Felsch",
       "outcome": "Single",
       "count": "0-0",
@@ -2143,8 +2145,8 @@
       "description": "Felsch, R. singled to right field (0-0) Castagnola advanced to third."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Brooks",
+      "inning": "Top 8",
+      "pitcher": "Brennan Seiber",
       "batter": "Farmer, T. grounded out to ss (0-0).",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2170,9 +2172,9 @@
       "description": "Farmer, T. grounded out to ss (0-0)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Brooks",
-      "batter": "Whitcomb",
+      "inning": "Bottom 8",
+      "pitcher": "Ryder Brooks",
+      "batter": "Mack Whitcomb",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BFBBSB",
@@ -2186,7 +2188,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Whitcomb",
+        "1B": "Mack Whitcomb",
         "2B": null,
         "3B": null
       },
@@ -2197,9 +2199,9 @@
       "description": "Whitcomb walked (3-2 BFBBSB)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Brooks",
-      "batter": "Waite",
+      "inning": "Bottom 8",
+      "pitcher": "Ryder Brooks",
+      "batter": "Ryker Waite",
       "outcome": "Flyout",
       "count": "3-1",
       "pitches": "BKBB",
@@ -2208,12 +2210,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Whitcomb",
+        "1B": "Mack Whitcomb",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Whitcomb",
+        "1B": "Mack Whitcomb",
         "2B": null,
         "3B": null
       },
@@ -2224,8 +2226,8 @@
       "description": "Waite flied out to cf (3-1 BKBB)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Brooks",
+      "inning": "Bottom 8",
+      "pitcher": "Ryder Brooks",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2235,13 +2237,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Whitcomb",
+        "1B": "Mack Whitcomb",
         "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Whitcomb",
+        "2B": "Mack Whitcomb",
         "3B": null
       },
       "score": {
@@ -2251,9 +2253,9 @@
       "description": "Whitcomb advanced to second on a balk."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Brooks",
-      "batter": "Maldonado",
+      "inning": "Bottom 8",
+      "pitcher": "Ryder Brooks",
+      "batter": "Chris Maldonado",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "KKB",
@@ -2263,13 +2265,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Whitcomb",
+        "2B": "Mack Whitcomb",
         "3B": null
       },
       "runners_after": {
         "1B": null,
         "2B": null,
-        "3B": "Whitcomb"
+        "3B": "Mack Whitcomb"
       },
       "score": {
         "away": 7,
@@ -2278,9 +2280,9 @@
       "description": "Maldonado grounded out to ss (1-2 KKB) Whitcomb advanced to third."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Brooks",
-      "batter": "Reynolds",
+      "inning": "Bottom 8",
+      "pitcher": "Ryder Brooks",
+      "batter": "Korbin Reynolds",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "SFS",
@@ -2291,12 +2293,12 @@
       "runners_before": {
         "1B": null,
         "2B": null,
-        "3B": "Whitcomb"
+        "3B": "Mack Whitcomb"
       },
       "runners_after": {
         "1B": null,
         "2B": null,
-        "3B": "Whitcomb"
+        "3B": "Mack Whitcomb"
       },
       "score": {
         "away": 7,
@@ -2305,8 +2307,8 @@
       "description": "Reynolds struck out swinging (0-2 SFS)."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Brooks",
+      "inning": "Top 9",
+      "pitcher": "Brennan Seiber",
       "batter": "Dylan Hillman",
       "outcome": "Single",
       "count": "1-0",
@@ -2332,8 +2334,8 @@
       "description": "Hillman, Dy. singled to right field (1-0 B)."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Brooks",
+      "inning": "Top 9",
+      "pitcher": "Brennan Seiber",
       "batter": "Noah Alvarez",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2359,8 +2361,8 @@
       "description": "Alvarez, No. grounded out to p, SAC, bunt (1-1 FB) Smith, Kai advanced to second."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Brooks",
+      "inning": "Top 9",
+      "pitcher": "Brennan Seiber",
       "batter": "Efren Ortega",
       "outcome": "Hit by pitch",
       "count": "2-0",
@@ -2386,8 +2388,8 @@
       "description": "Ortega, Ef. hit by pitch (2-0 BB)."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Brooks",
+      "inning": "Top 9",
+      "pitcher": "Brennan Seiber",
       "batter": "Frankie Carney",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2413,8 +2415,8 @@
       "description": "Carney, F. grounded out to p (0-0) Ortega, Ef. advanced to second Smith, Kai advanced to third."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Brooks",
+      "inning": "Top 9",
+      "pitcher": "Brennan Seiber",
       "batter": "Zach Fjelstad",
       "outcome": "Double",
       "count": "0-0",
@@ -2440,8 +2442,8 @@
       "description": "Fjelstad, Z. doubled down the lf line, 2 RBI (0-0) Ortega, Ef. scored Smith, Kai scored."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Brooks",
+      "inning": "Top 9",
+      "pitcher": "Brennan Seiber",
       "batter": "Alonso Reyes",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -2467,8 +2469,8 @@
       "description": "Reyes, Al. hit by pitch (0-0)."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Brooks",
+      "inning": "Top 9",
+      "pitcher": "Brennan Seiber",
       "batter": "James Castagnola",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -2494,8 +2496,8 @@
       "description": "Castagnola hit by pitch (1-0 B) Reyes, Al. advanced to second Fjelstad, Z. advanced to third."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Brooks",
+      "inning": "Top 9",
+      "pitcher": "Brennan Seiber",
       "batter": "Rowan Felsch",
       "outcome": "\u2014",
       "count": "0-0",
@@ -2521,24 +2523,24 @@
       "description": "Felsch, R. out at first 1b to p (0-0)."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Brooks",
-      "batter": "Rigdon",
+      "inning": "Bottom 9",
+      "pitcher": "Ryder Brooks",
+      "batter": "Rustan Rigdon",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "BFBSB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "James Castagnola",
-        "2B": "Zach Fjelstad",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Rigdon",
-        "2B": "Zach Fjelstad",
+        "1B": "Rustan Rigdon",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -2548,24 +2550,24 @@
       "description": "Rigdon singled to second base (3-2 BFBSB)."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Brooks",
-      "batter": "L.",
+      "inning": "Bottom 9",
+      "pitcher": "Ryder Brooks",
+      "batter": "Logan Johnstone",
       "outcome": "Flyout",
       "count": "2-2",
       "pitches": "BKBKFF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Rigdon",
-        "2B": "Zach Fjelstad",
+        "1B": "Rustan Rigdon",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Rigdon",
-        "2B": "Zach Fjelstad",
+        "1B": "Rustan Rigdon",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -2575,25 +2577,25 @@
       "description": "L. Johnstone flied out to lf (2-2 BKBKFF)."
     },
     {
-      "inning": "Top 18",
-      "pitcher": "Rodgers",
-      "batter": "Johnston",
+      "inning": "Bottom 9",
+      "pitcher": "Peyton Rodgers",
+      "batter": "Brodie Johnston",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": null,
+        "1B": "Rustan Rigdon",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Johnston",
+        "1B": "Brodie Johnston",
         "2B": null,
-        "3B": null
+        "3B": "Rustan Rigdon"
       },
       "score": {
         "away": 9,
@@ -2602,24 +2604,26 @@
       "description": "Johnston singled to right center (0-0) Rigdon advanced to third."
     },
     {
-      "inning": "Top 18",
-      "pitcher": "Rodgers",
+      "inning": "Bottom 9",
+      "pitcher": "Peyton Rodgers",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "runs_scored": [
+        "Rustan Rigdon"
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Johnston",
+        "1B": "Brodie Johnston",
         "2B": null,
-        "3B": null
+        "3B": "Rustan Rigdon"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Johnston",
+        "2B": "Brodie Johnston",
         "3B": null
       },
       "score": {
@@ -2629,24 +2633,24 @@
       "description": "Johnston advanced to second on a wild pitch Rigdon scored on a wild pitch."
     },
     {
-      "inning": "Top 18",
-      "pitcher": "Rodgers",
-      "batter": "Mancini",
+      "inning": "Bottom 9",
+      "pitcher": "Peyton Rodgers",
+      "batter": "Mike Mancini",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BKBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Johnston",
+        "2B": "Brodie Johnston",
         "3B": null
       },
       "runners_after": {
-        "1B": "Mancini",
-        "2B": "Johnston",
+        "1B": "Mike Mancini",
+        "2B": "Brodie Johnston",
         "3B": null
       },
       "score": {
@@ -2656,24 +2660,24 @@
       "description": "Mancini walked (3-1 BKBBB)."
     },
     {
-      "inning": "Top 18",
-      "pitcher": "Rodgers",
-      "batter": "Holcomb",
+      "inning": "Bottom 9",
+      "pitcher": "Peyton Rodgers",
+      "batter": "Braden Holcomb",
       "outcome": "Flyout",
       "count": "2-2",
       "pitches": "BBKSFF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Mancini",
-        "2B": "Johnston",
+        "1B": "Mike Mancini",
+        "2B": "Brodie Johnston",
         "3B": null
       },
       "runners_after": {
-        "1B": "Mancini",
-        "2B": "Johnston",
+        "1B": "Mike Mancini",
+        "2B": "Brodie Johnston",
         "3B": null
       },
       "score": {
@@ -2683,24 +2687,24 @@
       "description": "Holcomb flied out to cf (2-2 BBKSFF)."
     },
     {
-      "inning": "Top 18",
-      "pitcher": "Rodgers",
-      "batter": "Goodin",
+      "inning": "Bottom 9",
+      "pitcher": "Peyton Rodgers",
+      "batter": "Tommy Goodin",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "S",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "Mancini",
-        "2B": "Johnston",
+        "1B": "Mike Mancini",
+        "2B": "Brodie Johnston",
         "3B": null
       },
       "runners_after": {
-        "1B": "Mancini",
-        "2B": "Johnston",
+        "1B": "Mike Mancini",
+        "2B": "Brodie Johnston",
         "3B": null
       },
       "score": {

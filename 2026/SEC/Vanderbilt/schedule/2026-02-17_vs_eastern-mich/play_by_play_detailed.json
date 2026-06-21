@@ -1,9 +1,9 @@
 {
   "contest_id": "6501371",
   "date": "02/17/2026",
-  "batting_team": "Eastern Mich.",
-  "pitching_team": "Vanderbilt",
-  "note": "Broken-down from the saved play_by_play.json, which contains the Eastern Mich. at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "Eastern Mich.",
+  "home_team": "Vanderbilt",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
       "inning": "Top 1",
@@ -87,92 +87,11 @@
       "description": "KRILL grounded into double play ss to 2b to 1b (0-0); JELLISON out on the play."
     },
     {
-      "inning": "Top 1",
-      "pitcher": "Tyler Baird",
-      "batter": "L.",
+      "inning": "Bottom 1",
+      "pitcher": "Ethan Davis",
+      "batter": "Logan Johnstone",
       "outcome": "Walk",
       "count": "3-2",
-      "pitches": "",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "Bruce Jellison",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "L.",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 0,
-        "home": 0
-      },
-      "description": "L. Johnstone walked (3-2)."
-    },
-    {
-      "inning": "Top 1",
-      "pitcher": "Tyler Baird",
-      "batter": "Barczi",
-      "outcome": "Hit by pitch",
-      "count": "1-2",
-      "pitches": "",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "L.",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Barczi",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 0,
-        "home": 0
-      },
-      "description": "Barczi hit by pitch (1-2); L. Johnstone advanced to second."
-    },
-    {
-      "inning": "Top 1",
-      "pitcher": "Tyler Baird",
-      "batter": "Johnston",
-      "outcome": "Lineout",
-      "count": "2-2",
-      "pitches": "",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
-      "runners_before": {
-        "1B": "Barczi",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Barczi",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 0,
-        "home": 0
-      },
-      "description": "Johnston lined out to lf (2-2)."
-    },
-    {
-      "inning": "Top 2",
-      "pitcher": "Tyler Baird",
-      "batter": "Goodin",
-      "outcome": "Fielder's choice",
-      "count": "2-2",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
@@ -184,7 +103,88 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Goodin",
+        "1B": "Logan Johnstone",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 0
+      },
+      "description": "L. Johnstone walked (3-2)."
+    },
+    {
+      "inning": "Bottom 1",
+      "pitcher": "Ethan Davis",
+      "batter": "Colin Barczi",
+      "outcome": "Hit by pitch",
+      "count": "1-2",
+      "pitches": "",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Logan Johnstone",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Colin Barczi",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 0
+      },
+      "description": "Barczi hit by pitch (1-2); L. Johnstone advanced to second."
+    },
+    {
+      "inning": "Bottom 1",
+      "pitcher": "Ethan Davis",
+      "batter": "Brodie Johnston",
+      "outcome": "Lineout",
+      "count": "2-2",
+      "pitches": "",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Colin Barczi",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Colin Barczi",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 0
+      },
+      "description": "Johnston lined out to lf (2-2)."
+    },
+    {
+      "inning": "Bottom 1",
+      "pitcher": "Ethan Davis",
+      "batter": "Tommy Goodin",
+      "outcome": "Fielder's choice",
+      "count": "2-2",
+      "pitches": "",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Colin Barczi",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Tommy Goodin",
         "2B": null,
         "3B": null
       },
@@ -195,25 +195,25 @@
       "description": "Goodin reached on a fielder's choice to first base (2-2); Barczi out at second 1b to ss; L. Johnstone advanced to third."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Tyler Baird",
-      "batter": "Holcomb",
+      "inning": "Bottom 1",
+      "pitcher": "Ethan Davis",
+      "batter": "Braden Holcomb",
       "outcome": "Home run",
       "count": "2-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Holcomb"
+        "Braden Holcomb"
       ],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Goodin",
+        "1B": "Tommy Goodin",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Goodin",
+        "1B": "Tommy Goodin",
         "2B": null,
         "3B": null
       },
@@ -224,23 +224,23 @@
       "description": "Holcomb homered to right center, 3 RBI (2-0); Goodin scored; L. Johnstone scored."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Tyler Baird",
-      "batter": "Rigdon",
+      "inning": "Bottom 1",
+      "pitcher": "Ethan Davis",
+      "batter": "Rustan Rigdon",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Goodin",
+        "1B": "Tommy Goodin",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Rigdon",
+        "1B": "Rustan Rigdon",
         "2B": null,
         "3B": null
       },
@@ -251,18 +251,18 @@
       "description": "Rigdon singled up the middle (1-0)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Tyler Baird",
+      "inning": "Bottom 1",
+      "pitcher": "Ethan Davis",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Rigdon",
+        "1B": "Rustan Rigdon",
         "2B": null,
         "3B": null
       },
@@ -286,8 +286,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -313,8 +313,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -332,7 +332,7 @@
       "description": "CRANE struck out swinging (2-2)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Tyler Baird",
       "batter": "Nathan Borchardt",
       "outcome": "Lineout",
@@ -340,8 +340,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -359,119 +359,11 @@
       "description": "BORCHARDT lined out to cf (0-0)."
     },
     {
-      "inning": "Top 3",
-      "pitcher": "KENNEDY",
-      "batter": "Waite",
+      "inning": "Bottom 2",
+      "pitcher": "Gregory Kennedy",
+      "batter": "Ryker Waite",
       "outcome": "Single",
       "count": "2-0",
-      "pitches": "",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
-      "runners_before": {
-        "1B": null,
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Waite",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 0,
-        "home": 3
-      },
-      "description": "Waite singled to left center (2-0)."
-    },
-    {
-      "inning": "Top 3",
-      "pitcher": "KENNEDY",
-      "batter": "Reynolds",
-      "outcome": "Flyout",
-      "count": "0-1",
-      "pitches": "",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "Waite",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Waite",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 0,
-        "home": 3
-      },
-      "description": "Reynolds flied out to rf down the rf line (0-1)."
-    },
-    {
-      "inning": "Top 3",
-      "pitcher": "KENNEDY",
-      "batter": "C.",
-      "outcome": "Single",
-      "count": "1-2",
-      "pitches": "",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "Waite",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "C.",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 0,
-        "home": 3
-      },
-      "description": "C. Johnstone singled up the middle, advanced to second on the throw (1-2); Waite advanced to third."
-    },
-    {
-      "inning": "Top 3",
-      "pitcher": "KENNEDY",
-      "batter": "L.",
-      "outcome": "Groundout",
-      "count": "3-2",
-      "pitches": "",
-      "rbi": true,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
-      "runners_before": {
-        "1B": "C.",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "C.",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 0,
-        "home": 4
-      },
-      "description": "L. Johnstone grounded out to 1b unassisted, RBI (3-2); C. Johnstone advanced to third; Waite scored."
-    },
-    {
-      "inning": "Top 4",
-      "pitcher": "KENNEDY",
-      "batter": "Barczi",
-      "outcome": "Hit by pitch",
-      "count": "1-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
@@ -483,7 +375,115 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Barczi",
+        "1B": "Ryker Waite",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 3
+      },
+      "description": "Waite singled to left center (2-0)."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Gregory Kennedy",
+      "batter": "Korbin Reynolds",
+      "outcome": "Flyout",
+      "count": "0-1",
+      "pitches": "",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Ryker Waite",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ryker Waite",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 3
+      },
+      "description": "Reynolds flied out to rf down the rf line (0-1)."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Gregory Kennedy",
+      "batter": "Logan Johnstone",
+      "outcome": "Single",
+      "count": "1-2",
+      "pitches": "",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Ryker Waite",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Logan Johnstone",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 3
+      },
+      "description": "C. Johnstone singled up the middle, advanced to second on the throw (1-2); Waite advanced to third."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Gregory Kennedy",
+      "batter": "Logan Johnstone",
+      "outcome": "Groundout",
+      "count": "3-2",
+      "pitches": "",
+      "rbi": true,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Logan Johnstone",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Logan Johnstone",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 4
+      },
+      "description": "L. Johnstone grounded out to 1b unassisted, RBI (3-2); C. Johnstone advanced to third; Waite scored."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Gregory Kennedy",
+      "batter": "Colin Barczi",
+      "outcome": "Hit by pitch",
+      "count": "1-0",
+      "pitches": "",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Logan Johnstone",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Colin Barczi",
         "2B": null,
         "3B": null
       },
@@ -494,23 +494,23 @@
       "description": "Barczi hit by pitch (1-0)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "KENNEDY",
-      "batter": "Johnston",
+      "inning": "Bottom 2",
+      "pitcher": "Gregory Kennedy",
+      "batter": "Brodie Johnston",
       "outcome": "Lineout",
       "count": "0-2",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "Barczi",
+        "1B": "Colin Barczi",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Barczi",
+        "1B": "Colin Barczi",
         "2B": null,
         "3B": null
       },
@@ -521,23 +521,23 @@
       "description": "Johnston lined out to cf (0-2)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "KENNEDY",
+      "inning": "Top 3",
+      "pitcher": "Tyler Baird",
       "batter": "Keegan Knupp",
       "outcome": "Pop out",
       "count": "0-1",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Barczi",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Barczi",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -548,23 +548,23 @@
       "description": "KNUPP popped up to 2b (0-1)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "KENNEDY",
+      "inning": "Top 3",
+      "pitcher": "Tyler Baird",
       "batter": "Drew Jones",
       "outcome": "Groundout",
       "count": "0-2",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Barczi",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Barczi",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -575,16 +575,16 @@
       "description": "JONES, D grounded out to (0-2)."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "KENNEDY",
+      "inning": "Top 3",
+      "pitcher": "Tyler Baird",
       "batter": "TJ Williams",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -602,23 +602,23 @@
       "description": "WILLIAMS, TJ grounded out to p (2-2)."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "KENNEDY",
-      "batter": "Goodin",
+      "inning": "Bottom 3",
+      "pitcher": "Gregory Kennedy",
+      "batter": "Tommy Goodin",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Goodin",
+        "1B": "Tommy Goodin",
         "2B": null,
         "3B": null
       },
@@ -629,23 +629,23 @@
       "description": "Goodin singled to center field, advanced to second on a fielding error by cf (0-0)."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "KENNEDY",
-      "batter": "Holcomb",
+      "inning": "Bottom 3",
+      "pitcher": "Gregory Kennedy",
+      "batter": "Braden Holcomb",
       "outcome": "Groundout",
       "count": "3-2",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Goodin",
+        "1B": "Tommy Goodin",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Goodin",
+        "1B": "Tommy Goodin",
         "2B": null,
         "3B": null
       },
@@ -656,23 +656,23 @@
       "description": "Holcomb grounded out to ss (3-2); Goodin advanced to third."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "KENNEDY",
-      "batter": "Rigdon",
+      "inning": "Bottom 3",
+      "pitcher": "Gregory Kennedy",
+      "batter": "Rustan Rigdon",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Goodin",
+        "1B": "Tommy Goodin",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Rigdon",
+        "1B": "Rustan Rigdon",
         "2B": null,
         "3B": null
       },
@@ -683,24 +683,24 @@
       "description": "Rigdon walked (3-1)."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "KENNEDY",
-      "batter": "Waite",
+      "inning": "Bottom 3",
+      "pitcher": "Gregory Kennedy",
+      "batter": "Ryker Waite",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Rigdon",
+        "1B": "Rustan Rigdon",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Rigdon",
-        "2B": "Waite",
+        "1B": "Rustan Rigdon",
+        "2B": "Ryker Waite",
         "3B": null
       },
       "score": {
@@ -710,24 +710,24 @@
       "description": "Waite doubled to left field, RBI (1-2); Rigdon advanced to third; Goodin scored."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "KENNEDY",
-      "batter": "Reynolds",
+      "inning": "Bottom 3",
+      "pitcher": "Gregory Kennedy",
+      "batter": "Korbin Reynolds",
       "outcome": "Flyout",
       "count": "2-2",
       "pitches": "",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Rigdon",
-        "2B": "Waite",
+        "1B": "Rustan Rigdon",
+        "2B": "Ryker Waite",
         "3B": null
       },
       "runners_after": {
-        "1B": "Rigdon",
-        "2B": "Waite",
+        "1B": "Rustan Rigdon",
+        "2B": "Ryker Waite",
         "3B": null
       },
       "score": {
@@ -737,24 +737,24 @@
       "description": "Reynolds flied out to rf down the rf line, SF, RBI (2-2); Waite advanced to third; Rigdon scored."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "KENNEDY",
-      "batter": "C.",
+      "inning": "Bottom 3",
+      "pitcher": "Gregory Kennedy",
+      "batter": "Logan Johnstone",
       "outcome": "Lineout",
       "count": "1-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
-        "2B": null,
+        "1B": "Rustan Rigdon",
+        "2B": "Ryker Waite",
         "3B": null
       },
       "runners_after": {
-        "1B": null,
-        "2B": null,
+        "1B": "Rustan Rigdon",
+        "2B": "Ryker Waite",
         "3B": null
       },
       "score": {
@@ -764,16 +764,16 @@
       "description": "C. Johnstone lined out to cf (1-0)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "KENNEDY",
+      "inning": "Top 4",
+      "pitcher": "Tyler Baird",
       "batter": "Devan Zirwas",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -791,16 +791,16 @@
       "description": "ZIRWAS struck out swinging (0-2)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "KENNEDY",
+      "inning": "Top 4",
+      "pitcher": "Tyler Baird",
       "batter": "Bruce Jellison",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -818,16 +818,16 @@
       "description": "JELLISON grounded out to ss (1-2)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "KENNEDY",
+      "inning": "Top 4",
+      "pitcher": "Tyler Baird",
       "batter": "Kevin Krill",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -845,16 +845,16 @@
       "description": "KRILL struck out swinging, reached first on a wild pitch (2-2)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "KENNEDY",
+      "inning": "Top 4",
+      "pitcher": "Tyler Baird",
       "batter": "Ty Stecko",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 3,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -872,16 +872,16 @@
       "description": "STECKO singled to left field (3-2); KRILL advanced to second."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "KENNEDY",
+      "inning": "Top 4",
+      "pitcher": "Tyler Baird",
       "batter": "Tristan Crane",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 3,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Ty Stecko",
         "2B": null,
@@ -899,16 +899,16 @@
       "description": "CRANE singled up the middle, RBI (1-2); STECKO advanced to second; KRILL scored."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "KENNEDY",
+      "inning": "Top 4",
+      "pitcher": "Tyler Baird",
       "batter": "Nathan Borchardt",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 3,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Tristan Crane",
         "2B": null,
@@ -926,7 +926,7 @@
       "description": "BORCHARDT singled down the rf line, RBI (3-2); CRANE advanced to third; STECKO scored."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Luke Guth",
       "batter": "Keegan Knupp",
       "outcome": "Groundout",
@@ -934,8 +934,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 3,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Nathan Borchardt",
         "2B": null,
@@ -953,23 +953,23 @@
       "description": "KNUPP grounded out to ss (2-2)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Bottom 4",
       "pitcher": "HENSON",
-      "batter": "L.",
+      "batter": "Logan Johnstone",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Nathan Borchardt",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": "Logan Johnstone",
         "2B": null,
         "3B": null
       },
@@ -980,23 +980,23 @@
       "description": "L. Johnstone walked (3-2)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Bottom 4",
       "pitcher": "HENSON",
-      "batter": "Barczi",
+      "batter": "Colin Barczi",
       "outcome": "Fielder's choice",
       "count": "1-1",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "L.",
+        "1B": "Logan Johnstone",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Barczi",
+        "1B": "Colin Barczi",
         "2B": null,
         "3B": null
       },
@@ -1007,23 +1007,23 @@
       "description": "Barczi reached on a fielder's choice up the middle (1-1); L. Johnstone out at second 2b to ss."
     },
     {
-      "inning": "Top 7",
+      "inning": "Bottom 4",
       "pitcher": "HENSON",
-      "batter": "Johnston",
+      "batter": "Brodie Johnston",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Barczi",
+        "1B": "Colin Barczi",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Johnston",
+        "1B": "Brodie Johnston",
         "2B": null,
         "3B": null
       },
@@ -1034,25 +1034,25 @@
       "description": "Johnston singled to left field (0-0); Barczi advanced to second."
     },
     {
-      "inning": "Top 7",
+      "inning": "Bottom 4",
       "pitcher": "HENSON",
-      "batter": "Goodin",
+      "batter": "Tommy Goodin",
       "outcome": "Home run",
       "count": "1-1",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Goodin"
+        "Tommy Goodin"
       ],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Johnston",
+        "1B": "Brodie Johnston",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Johnston",
+        "1B": "Brodie Johnston",
         "2B": null,
         "3B": null
       },
@@ -1063,23 +1063,23 @@
       "description": "Goodin homered down the rf line, 3 RBI (1-1); Johnston scored; Barczi scored."
     },
     {
-      "inning": "Top 7",
+      "inning": "Bottom 4",
       "pitcher": "HENSON",
-      "batter": "Holcomb",
+      "batter": "Braden Holcomb",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Johnston",
+        "1B": "Brodie Johnston",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Johnston",
+        "1B": "Brodie Johnston",
         "2B": null,
         "3B": null
       },
@@ -1090,23 +1090,23 @@
       "description": "Holcomb struck out looking (3-2)."
     },
     {
-      "inning": "Top 8",
+      "inning": "Bottom 4",
       "pitcher": "HENSON",
-      "batter": "Rigdon",
+      "batter": "Rustan Rigdon",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Brodie Johnston",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Brodie Johnston",
         "2B": null,
         "3B": null
       },
@@ -1117,16 +1117,16 @@
       "description": "Rigdon struck out swinging (1-2)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "HENSON",
+      "inning": "Top 5",
+      "pitcher": "Luke Guth",
       "batter": "Drew Jones",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1144,16 +1144,16 @@
       "description": "JONES, D singled to left field (0-1)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "HENSON",
+      "inning": "Top 5",
+      "pitcher": "Luke Guth",
       "batter": "TJ Williams",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Drew Jones",
         "2B": null,
@@ -1171,11 +1171,38 @@
       "description": "WILLIAMS, TJ singled to left field (1-0); JONES, D advanced to second."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "HENSON",
+      "inning": "Top 5",
+      "pitcher": "Luke Guth",
       "batter": "Devan Zirwas",
       "outcome": "Grounded into double play",
       "count": "1-1",
+      "pitches": "",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "TJ Williams",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "TJ Williams",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 9
+      },
+      "description": "ZIRWAS grounded into double play 2b to ss to 1b (1-1); WILLIAMS, TJ out on the play; JONES, D advanced to third."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Luke Guth",
+      "batter": "Bruce Jellison",
+      "outcome": "Strikeout (looking)",
+      "count": "2-2",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
@@ -1195,39 +1222,12 @@
         "away": 2,
         "home": 9
       },
-      "description": "ZIRWAS grounded into double play 2b to ss to 1b (1-1); WILLIAMS, TJ out on the play; JONES, D advanced to third."
-    },
-    {
-      "inning": "Top 8",
-      "pitcher": "HENSON",
-      "batter": "Bruce Jellison",
-      "outcome": "Strikeout (looking)",
-      "count": "2-2",
-      "pitches": "",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
-      "runners_before": {
-        "1B": "TJ Williams",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "TJ Williams",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 2,
-        "home": 9
-      },
       "description": "JELLISON struck out looking (2-2)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "SLABY",
-      "batter": "Waite",
+      "inning": "Bottom 5",
+      "pitcher": "Henry Slaby",
+      "batter": "Ryker Waite",
       "outcome": "Groundout",
       "count": "3-2",
       "pitches": "",
@@ -1252,9 +1252,9 @@
       "description": "Waite grounded out to p (3-2)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "SLABY",
-      "batter": "Reynolds",
+      "inning": "Bottom 5",
+      "pitcher": "Henry Slaby",
+      "batter": "Korbin Reynolds",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "",
@@ -1279,9 +1279,9 @@
       "description": "Reynolds grounded out to (0-1)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "SLABY",
-      "batter": "C.",
+      "inning": "Bottom 5",
+      "pitcher": "Henry Slaby",
+      "batter": "Logan Johnstone",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "",
@@ -1295,7 +1295,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "C.",
+        "1B": "Logan Johnstone",
         "2B": null,
         "3B": null
       },
@@ -1306,9 +1306,9 @@
       "description": "C. Johnstone singled to center field (0-1)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "SLABY",
-      "batter": "L.",
+      "inning": "Bottom 5",
+      "pitcher": "Henry Slaby",
+      "batter": "Logan Johnstone",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "",
@@ -1317,12 +1317,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "C.",
+        "1B": "Logan Johnstone",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": "Logan Johnstone",
         "2B": null,
         "3B": null
       },
@@ -1333,8 +1333,8 @@
       "description": "L. Johnstone walked (3-0); C. Johnstone advanced to second."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "SLABY",
+      "inning": "Bottom 5",
+      "pitcher": "Henry Slaby",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1344,14 +1344,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "L.",
+        "1B": "Logan Johnstone",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Logan Johnstone"
       },
       "score": {
         "away": 2,
@@ -1360,9 +1360,9 @@
       "description": "C. Johnstone advanced to third on a wild pitch."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "SLABY",
-      "batter": "Barczi",
+      "inning": "Bottom 5",
+      "pitcher": "Henry Slaby",
+      "batter": "Colin Barczi",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
       "pitches": "",
@@ -1371,14 +1371,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "L.",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Logan Johnstone"
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Logan Johnstone"
       },
       "score": {
         "away": 2,
@@ -1387,7 +1387,7 @@
       "description": "Barczi struck out swinging (3-2)."
     },
     {
-      "inning": "Top 10",
+      "inning": "Top 6",
       "pitcher": "Jacob Faulkner",
       "batter": "Kevin Krill",
       "outcome": "Hit by pitch",
@@ -1414,7 +1414,7 @@
       "description": "KRILL hit by pitch (2-1)."
     },
     {
-      "inning": "Top 10",
+      "inning": "Top 6",
       "pitcher": "Jacob Faulkner",
       "batter": "Ty Stecko",
       "outcome": "Flyout",
@@ -1441,7 +1441,7 @@
       "description": "STECKO flied out to cf (0-0)."
     },
     {
-      "inning": "Top 10",
+      "inning": "Top 6",
       "pitcher": "Jacob Faulkner",
       "batter": "Tristan Crane",
       "outcome": "Strikeout (swinging)",
@@ -1468,7 +1468,7 @@
       "description": "CRANE struck out swinging (1-2)."
     },
     {
-      "inning": "Top 10",
+      "inning": "Top 6",
       "pitcher": "Jacob Faulkner",
       "batter": "Nathan Borchardt",
       "outcome": "Strikeout (swinging)",
@@ -1495,15 +1495,15 @@
       "description": "BORCHARDT struck out swinging (2-2)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Jacob Faulkner",
-      "batter": "Johnston",
+      "inning": "Bottom 6",
+      "pitcher": "Henry Slaby",
+      "batter": "Brodie Johnston",
       "outcome": "Home run",
       "count": "2-1",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Johnston"
+        "Brodie Johnston"
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1524,9 +1524,9 @@
       "description": "Johnston homered to right center, RBI (2-1)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Jacob Faulkner",
-      "batter": "Goodin",
+      "inning": "Bottom 6",
+      "pitcher": "Henry Slaby",
+      "batter": "Tommy Goodin",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "",
@@ -1551,9 +1551,9 @@
       "description": "Goodin struck out swinging (0-2)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Jacob Faulkner",
-      "batter": "Holcomb",
+      "inning": "Bottom 6",
+      "pitcher": "Henry Slaby",
+      "batter": "Braden Holcomb",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "",
@@ -1567,7 +1567,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Holcomb",
+        "1B": "Braden Holcomb",
         "2B": null,
         "3B": null
       },
@@ -1578,9 +1578,9 @@
       "description": "Holcomb singled to third base (1-1)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Jacob Faulkner",
-      "batter": "Rigdon",
+      "inning": "Bottom 6",
+      "pitcher": "Henry Slaby",
+      "batter": "Rustan Rigdon",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "",
@@ -1589,12 +1589,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Holcomb",
+        "1B": "Braden Holcomb",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Rigdon",
+        "1B": "Rustan Rigdon",
         "2B": null,
         "3B": null
       },
@@ -1605,8 +1605,8 @@
       "description": "Rigdon singled to left field (0-2); Holcomb advanced to second."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Jacob Faulkner",
+      "inning": "Bottom 6",
+      "pitcher": "Henry Slaby",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1616,14 +1616,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Rigdon",
+        "1B": "Rustan Rigdon",
         "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
         "2B": null,
-        "3B": "Rigdon"
+        "3B": "Rustan Rigdon"
       },
       "score": {
         "away": 2,
@@ -1632,9 +1632,9 @@
       "description": "Rigdon advanced to second; Holcomb advanced to third on a wild pitch."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Jacob Faulkner",
-      "batter": "Waite",
+      "inning": "Bottom 6",
+      "pitcher": "Henry Slaby",
+      "batter": "Ryker Waite",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "",
@@ -1645,12 +1645,12 @@
       "runners_before": {
         "1B": null,
         "2B": null,
-        "3B": "Rigdon"
+        "3B": "Rustan Rigdon"
       },
       "runners_after": {
-        "1B": "Waite",
+        "1B": "Ryker Waite",
         "2B": null,
-        "3B": "Rigdon"
+        "3B": "Rustan Rigdon"
       },
       "score": {
         "away": 2,
@@ -1659,9 +1659,9 @@
       "description": "Waite walked (3-2)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "NORRIS",
-      "batter": "Reynolds",
+      "inning": "Bottom 6",
+      "pitcher": "Aidan Norris",
+      "batter": "Korbin Reynolds",
       "outcome": "Lineout",
       "count": "0-0",
       "pitches": "",
@@ -1670,14 +1670,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Waite",
+        "1B": "Ryker Waite",
         "2B": null,
-        "3B": "Rigdon"
+        "3B": "Rustan Rigdon"
       },
       "runners_after": {
-        "1B": "Waite",
+        "1B": "Ryker Waite",
         "2B": null,
-        "3B": "Rigdon"
+        "3B": "Rustan Rigdon"
       },
       "score": {
         "away": 2,
@@ -1686,9 +1686,9 @@
       "description": "Reynolds lined out to rf, SF, RBI (0-0); Rigdon advanced to third; Holcomb scored."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "NORRIS",
-      "batter": "C.",
+      "inning": "Bottom 6",
+      "pitcher": "Aidan Norris",
+      "batter": "Logan Johnstone",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
@@ -1697,14 +1697,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Waite",
+        "1B": "Ryker Waite",
         "2B": null,
-        "3B": "Rigdon"
+        "3B": "Rustan Rigdon"
       },
       "runners_after": {
-        "1B": "Waite",
+        "1B": "Ryker Waite",
         "2B": null,
-        "3B": "Rigdon"
+        "3B": "Rustan Rigdon"
       },
       "score": {
         "away": 2,
@@ -1713,8 +1713,8 @@
       "description": "C. Johnstone flied out to cf (0-0)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "NORRIS",
+      "inning": "Top 7",
+      "pitcher": "Jacob Faulkner",
       "batter": "Keegan Knupp",
       "outcome": "Lineout",
       "count": "1-1",
@@ -1740,8 +1740,8 @@
       "description": "KNUPP lined out to ss (1-1)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "NORRIS",
+      "inning": "Top 7",
+      "pitcher": "Jacob Faulkner",
       "batter": "Drew Jones",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1767,7 +1767,7 @@
       "description": "JONES, D struck out swinging (0-2)."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "Jakob Schulz",
       "batter": "TJ Williams",
       "outcome": "Strikeout (looking)",
@@ -1794,9 +1794,9 @@
       "description": "WILLIAMS, TJ struck out looking (1-2)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Jakob Schulz",
-      "batter": "L.",
+      "inning": "Bottom 7",
+      "pitcher": "Aidan Norris",
+      "batter": "Logan Johnstone",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "",
@@ -1810,7 +1810,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": "Logan Johnstone",
         "2B": null,
         "3B": null
       },
@@ -1821,9 +1821,9 @@
       "description": "L. Johnstone walked (3-0)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Jakob Schulz",
-      "batter": "Barczi",
+      "inning": "Bottom 7",
+      "pitcher": "Aidan Norris",
+      "batter": "Colin Barczi",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "",
@@ -1832,12 +1832,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "L.",
+        "1B": "Logan Johnstone",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": "Logan Johnstone",
         "2B": null,
         "3B": null
       },
@@ -1848,25 +1848,25 @@
       "description": "Barczi struck out swinging (0-2)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Jakob Schulz",
-      "batter": "Johnston",
+      "inning": "Bottom 7",
+      "pitcher": "Aidan Norris",
+      "batter": "Brodie Johnston",
       "outcome": "Home run",
       "count": "3-1",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Johnston"
+        "Brodie Johnston"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "L.",
+        "1B": "Logan Johnstone",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": "Logan Johnstone",
         "2B": null,
         "3B": null
       },

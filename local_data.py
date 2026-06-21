@@ -258,6 +258,7 @@ def team_stats(seo, name):
     for b in bat_raw:
         ab, h, bb = to_int(b.get("ab")), to_int(b.get("h")), to_int(b.get("bb"))
         hbp, sf, tb = to_int(b.get("hbp")), to_int(b.get("sf")), to_int(b.get("tb"))
+        sh = to_int(b.get("sh"))
         k, sb, cs, hr = to_int(b.get("so")), to_int(b.get("sb")), to_int(b.get("cs")), to_int(b.get("hr"))
         pa = to_int(b.get("pa")) or (ab + bb + hbp + sf)
         avg = h / ab if ab else 0.0
@@ -268,6 +269,16 @@ def team_stats(seo, name):
             "g": to_int(b.get("g")), "ab": ab, "pa": pa, "r": to_int(b.get("r")),
             "h": h, "hr": hr, "rbi": to_int(b.get("rbi")), "bb": bb, "k": k, "sb": sb,
             "avg": fmt3(avg), "obp": fmt3(obp), "slg": fmt3(slg), "ops": fmt3(obp + slg),
+            # Full counting line (so the team-page column picker can show any of them).
+            "1b": to_int(b.get("1b")), "2b": to_int(b.get("2b")), "3b": to_int(b.get("3b")),
+            "tb": tb, "ibb": to_int(b.get("ibb")), "hbp": hbp, "sf": sf, "sh": sh, "cs": cs,
+            # Batted-ball types + PA outcomes from the play-by-play.
+            "gb": to_int(b.get("gb")), "fb": to_int(b.get("fb")),
+            "ld": to_int(b.get("ld")), "pu": to_int(b.get("pu")),
+            "ks": to_int(b.get("ks")), "kl": to_int(b.get("kl")),
+            "roe": to_int(b.get("roe")), "fc": to_int(b.get("fc")),
+            "ci": to_int(b.get("ci")), "po": to_int(b.get("po")),
+            "outs": (ab - h) + sf + sh,    # outs made at the plate
             # Advanced — all built from the stored counting stats.
             "bbpct": fmt_pct(bb / pa) if pa else "—",
             "kpct": fmt_pct(k / pa) if pa else "—",

@@ -1,14 +1,14 @@
 {
   "contest_id": "6536544",
   "date": "02/27/2026",
-  "batting_team": "Georgia",
-  "pitching_team": "Oakland",
-  "note": "Broken-down from the saved play_by_play.json, which contains the Georgia at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "Oakland",
+  "home_team": "Georgia",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
-      "inning": "Bottom 1",
-      "pitcher": "Jordan Dahlof",
-      "batter": "Schuck",
+      "inning": "Top 1",
+      "pitcher": "Joey Volchko",
+      "batter": "Aidan Schuck",
       "outcome": "Foul out",
       "count": "1-2",
       "pitches": "BFK",
@@ -33,9 +33,9 @@
       "description": "Schuck fouled out to rf (1-2 BFK)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Jordan Dahlof",
-      "batter": "Revere",
+      "inning": "Top 1",
+      "pitcher": "Joey Volchko",
+      "batter": "Kyle Revere",
       "outcome": "Flyout",
       "count": "0-2",
       "pitches": "FF",
@@ -60,9 +60,9 @@
       "description": "Revere flied out to cf (0-2 FF)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Jordan Dahlof",
-      "batter": "Konopiots",
+      "inning": "Top 1",
+      "pitcher": "Joey Volchko",
+      "batter": "Tony Konopiots",
       "outcome": "Groundout",
       "count": "0-2",
       "pitches": "KS",
@@ -87,7 +87,7 @@
       "description": "Konopiots grounded out to 1b unassisted (0-2 KS)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Jordan Dahlof",
       "batter": "Ryan Black",
       "outcome": "Home run",
@@ -116,7 +116,7 @@
       "description": "Black homered to right field, RBI (3-1 FBBB)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Jordan Dahlof",
       "batter": "Tre Phelps",
       "outcome": "Single",
@@ -143,7 +143,7 @@
       "description": "Phelps singled to left field (0-1 K)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Jordan Dahlof",
       "batter": "Daniel Jackson",
       "outcome": "Walk",
@@ -170,7 +170,7 @@
       "description": "Jackson walked (3-2 KBSBBB): Phelps advanced to second."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Jordan Dahlof",
       "batter": "Michael O'Shaughnessy",
       "outcome": "Flyout",
@@ -197,7 +197,7 @@
       "description": "OShaughnessy flied out to lf (1-1 BK)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Jordan Dahlof",
       "batter": "Henry Allen",
       "outcome": "Grounded into double play",
@@ -224,23 +224,23 @@
       "description": "Allen, He. grounded into double play to 1b (3-0 BBB): Jackson advanced to second: Phelps out on the play."
     },
     {
-      "inning": "Bottom 2",
-      "pitcher": "Jordan Dahlof",
-      "batter": "Day",
+      "inning": "Top 2",
+      "pitcher": "Joey Volchko",
+      "batter": "Lucas Day",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Daniel Jackson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -251,16 +251,16 @@
       "description": "Day struck out swinging (0-2 KSS)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Jordan Dahlof",
-      "batter": "Clark",
+      "inning": "Top 2",
+      "pitcher": "Joey Volchko",
+      "batter": "Ben Clark",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
       "pitches": "BFSK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -278,16 +278,16 @@
       "description": "Clark struck out looking (1-2 BFSK)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Jordan Dahlof",
-      "batter": "Lux",
+      "inning": "Top 2",
+      "pitcher": "Joey Volchko",
+      "batter": "Jack Lux",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -305,7 +305,7 @@
       "description": "Lux grounded out to 1b unassisted (0-0)."
     },
     {
-      "inning": "Bottom 3",
+      "inning": "Bottom 2",
       "pitcher": "Jordan Dahlof",
       "batter": "Brennan Hudson",
       "outcome": "Foul out",
@@ -313,8 +313,8 @@
       "pitches": "FBFFBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -332,7 +332,7 @@
       "description": "Hudson fouled out to lf (3-2 FBFFBB)."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Jordan Dahlof",
       "batter": "Kolby Branch",
       "outcome": "Pop out",
@@ -340,8 +340,8 @@
       "pitches": "KBBFF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -359,7 +359,7 @@
       "description": "Branch popped up to ss (2-2 KBBFF)."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Jordan Dahlof",
       "batter": "Jordy Oriach",
       "outcome": "Pop out",
@@ -367,8 +367,8 @@
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -386,147 +386,12 @@
       "description": "Oriach popped up to ss (0-1 K)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Jordan Dahlof",
-      "batter": "Hain",
+      "inning": "Top 3",
+      "pitcher": "Joey Volchko",
+      "batter": "Carter Hain",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "BFFBB",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": null,
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Hain",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 0,
-        "home": 1
-      },
-      "description": "Hain singled to right field (3-2 BFFBB)."
-    },
-    {
-      "inning": "Bottom 4",
-      "pitcher": "Jordan Dahlof",
-      "batter": "Orr",
-      "outcome": "Single",
-      "count": "2-2",
-      "pitches": "BBKS",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "Hain",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Orr",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 0,
-        "home": 1
-      },
-      "description": "Orr singled to first base (2-2 BBKS): Hain advanced to second."
-    },
-    {
-      "inning": "Bottom 4",
-      "pitcher": "Jordan Dahlof",
-      "batter": "Patton",
-      "outcome": "Single",
-      "count": "2-1",
-      "pitches": "KBB",
-      "rbi": true,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "Orr",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Patton",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 1,
-        "home": 1
-      },
-      "description": "Patton singled to third base, RBI (2-1 KBB): Orr advanced to third: Hain scored."
-    },
-    {
-      "inning": "Bottom 4",
-      "pitcher": "Jordan Dahlof",
-      "batter": "Schuck",
-      "outcome": "Single",
-      "count": "1-1",
-      "pitches": "BF",
-      "rbi": true,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "Patton",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Schuck",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 2,
-        "home": 1
-      },
-      "description": "Schuck singled to left field, RBI (1-1 BF): Patton advanced to second: Orr scored."
-    },
-    {
-      "inning": "Bottom 4",
-      "pitcher": "Jordan Dahlof",
-      "batter": "Revere",
-      "outcome": "Strikeout (swinging)",
-      "count": "2-2",
-      "pitches": "BKSBS",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
-      "runners_before": {
-        "1B": "Schuck",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Schuck",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 2,
-        "home": 1
-      },
-      "description": "Revere struck out swinging (2-2 BKSBS)."
-    },
-    {
-      "inning": "Bottom 5",
-      "pitcher": "Jordan Dahlof",
-      "batter": null,
-      "outcome": "Stolen base",
-      "count": null,
-      "pitches": null,
       "rbi": false,
       "runs_scored": [],
       "outs_before": 0,
@@ -537,7 +402,142 @@
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Carter Hain",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "Hain singled to right field (3-2 BFFBB)."
+    },
+    {
+      "inning": "Top 3",
+      "pitcher": "Joey Volchko",
+      "batter": "Aidan Orr",
+      "outcome": "Single",
+      "count": "2-2",
+      "pitches": "BBKS",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Carter Hain",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Aidan Orr",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "Orr singled to first base (2-2 BBKS): Hain advanced to second."
+    },
+    {
+      "inning": "Top 3",
+      "pitcher": "Joey Volchko",
+      "batter": "Sam Patton",
+      "outcome": "Single",
+      "count": "2-1",
+      "pitches": "KBB",
+      "rbi": true,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Aidan Orr",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Sam Patton",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 1
+      },
+      "description": "Patton singled to third base, RBI (2-1 KBB): Orr advanced to third: Hain scored."
+    },
+    {
+      "inning": "Top 3",
+      "pitcher": "Joey Volchko",
+      "batter": "Aidan Schuck",
+      "outcome": "Single",
+      "count": "1-1",
+      "pitches": "BF",
+      "rbi": true,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Sam Patton",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Aidan Schuck",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 1
+      },
+      "description": "Schuck singled to left field, RBI (1-1 BF): Patton advanced to second: Orr scored."
+    },
+    {
+      "inning": "Top 3",
+      "pitcher": "Joey Volchko",
+      "batter": "Kyle Revere",
+      "outcome": "Strikeout (swinging)",
+      "count": "2-2",
+      "pitches": "BKSBS",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Aidan Schuck",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Aidan Schuck",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 1
+      },
+      "description": "Revere struck out swinging (2-2 BKSBS)."
+    },
+    {
+      "inning": "Top 3",
+      "pitcher": "Joey Volchko",
+      "batter": null,
+      "outcome": "Stolen base",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Aidan Schuck",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Aidan Schuck",
         "2B": null,
         "3B": null
       },
@@ -548,23 +548,23 @@
       "description": "Schuck stole second: Patton stole third."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Jordan Dahlof",
-      "batter": "Konopiots",
+      "inning": "Top 3",
+      "pitcher": "Joey Volchko",
+      "batter": "Tony Konopiots",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "SSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Aidan Schuck",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Aidan Schuck",
         "2B": null,
         "3B": null
       },
@@ -575,23 +575,23 @@
       "description": "Konopiots struck out swinging (0-2 SSS)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Jordan Dahlof",
-      "batter": "Day",
+      "inning": "Top 3",
+      "pitcher": "Joey Volchko",
+      "batter": "Lucas Day",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
+        "1B": "Aidan Schuck",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Aidan Schuck",
         "2B": null,
         "3B": null
       },
@@ -602,7 +602,7 @@
       "description": "Day grounded out to 2b (0-0)."
     },
     {
-      "inning": "Bottom 5",
+      "inning": "Bottom 3",
       "pitcher": "Jordan Dahlof",
       "batter": "Cole Johnson",
       "outcome": "Flyout",
@@ -610,8 +610,8 @@
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -629,7 +629,7 @@
       "description": "Johnson, Col flied out to cf (1-0 B)."
     },
     {
-      "inning": "Bottom 6",
+      "inning": "Bottom 3",
       "pitcher": "Jordan Dahlof",
       "batter": "Ryan Black",
       "outcome": "Walk",
@@ -637,8 +637,8 @@
       "pitches": "BBFFBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -656,7 +656,7 @@
       "description": "Black walked (3-2 BBFFBB)."
     },
     {
-      "inning": "Bottom 6",
+      "inning": "Bottom 3",
       "pitcher": "Jordan Dahlof",
       "batter": "Tre Phelps",
       "outcome": "Single",
@@ -664,8 +664,8 @@
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Ryan Black",
         "2B": null,
@@ -683,7 +683,7 @@
       "description": "Phelps singled to left field (1-0 B): Black advanced to third."
     },
     {
-      "inning": "Bottom 6",
+      "inning": "Bottom 3",
       "pitcher": "Jordan Dahlof",
       "batter": "Daniel Jackson",
       "outcome": "Fielder's choice",
@@ -691,8 +691,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Tre Phelps",
         "2B": null,
@@ -710,7 +710,7 @@
       "description": "Jackson reached on a fielder's choice, RBI (0-0): Phelps out at second ss to 2b: Black scored."
     },
     {
-      "inning": "Bottom 6",
+      "inning": "Bottom 3",
       "pitcher": "Jordan Dahlof",
       "batter": null,
       "outcome": "Stolen base",
@@ -718,8 +718,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Daniel Jackson",
         "2B": null,
@@ -737,7 +737,7 @@
       "description": "Jackson stole second."
     },
     {
-      "inning": "Bottom 6",
+      "inning": "Bottom 3",
       "pitcher": "Jordan Dahlof",
       "batter": "Michael O'Shaughnessy",
       "outcome": "Strikeout (swinging)",
@@ -745,8 +745,8 @@
       "pitches": "KBSBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Daniel Jackson",
         "2B": null,
@@ -764,23 +764,23 @@
       "description": "OShaughnessy struck out swinging (2-2 KBSBS)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Jordan Dahlof",
-      "batter": "Clark",
+      "inning": "Top 4",
+      "pitcher": "Joey Volchko",
+      "batter": "Ben Clark",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KBSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Daniel Jackson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -791,23 +791,23 @@
       "description": "Clark struck out swinging (1-2 KBSS)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Jordan Dahlof",
-      "batter": "Lux",
+      "inning": "Top 4",
+      "pitcher": "Joey Volchko",
+      "batter": "Jack Lux",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Daniel Jackson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -818,16 +818,16 @@
       "description": "Lux grounded out to ss (0-0)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Jordan Dahlof",
-      "batter": "Hain",
+      "inning": "Top 4",
+      "pitcher": "Joey Volchko",
+      "batter": "Carter Hain",
       "outcome": "Groundout",
       "count": "0-2",
       "pitches": "FK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -845,7 +845,7 @@
       "description": "Hain grounded out to c (0-2 FK)."
     },
     {
-      "inning": "Bottom 7",
+      "inning": "Bottom 4",
       "pitcher": "Jordan Dahlof",
       "batter": "Henry Allen",
       "outcome": "Single",
@@ -853,8 +853,8 @@
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -872,7 +872,7 @@
       "description": "Allen, He. singled to left field (0-1 K)."
     },
     {
-      "inning": "Bottom 7",
+      "inning": "Bottom 4",
       "pitcher": "Jordan Dahlof",
       "batter": "Brennan Hudson",
       "outcome": "Single",
@@ -880,8 +880,8 @@
       "pitches": "KBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Henry Allen",
         "2B": null,
@@ -899,7 +899,7 @@
       "description": "Hudson singled to right field (2-1 KBB): Allen, He. advanced to third."
     },
     {
-      "inning": "Bottom 7",
+      "inning": "Bottom 4",
       "pitcher": "Jordan Dahlof",
       "batter": "Kolby Branch",
       "outcome": "Single",
@@ -907,8 +907,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Brennan Hudson",
         "2B": null,
@@ -926,7 +926,7 @@
       "description": "Branch singled to center field, advanced to second on the throw, RBI (0-0): Hudson advanced to third: Allen, He. scored."
     },
     {
-      "inning": "Bottom 7",
+      "inning": "Bottom 4",
       "pitcher": "Jordan Dahlof",
       "batter": "Jordy Oriach",
       "outcome": "Single",
@@ -934,8 +934,8 @@
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Kolby Branch",
         "2B": null,
@@ -953,7 +953,7 @@
       "description": "Oriach singled to right field, RBI (2-0 BB): Branch advanced to third: Hudson scored."
     },
     {
-      "inning": "Bottom 7",
+      "inning": "Bottom 4",
       "pitcher": "Jaxson Easterlin",
       "batter": "Cole Johnson",
       "outcome": "Foul out",
@@ -961,8 +961,8 @@
       "pitches": "KB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Jordy Oriach",
         "2B": null,
@@ -980,7 +980,7 @@
       "description": "Johnson, Col fouled out to (1-1 KB)."
     },
     {
-      "inning": "Bottom 7",
+      "inning": "Bottom 4",
       "pitcher": "Jaxson Easterlin",
       "batter": "Ryan Black",
       "outcome": "Flyout",
@@ -988,8 +988,8 @@
       "pitches": "KB",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Jordy Oriach",
         "2B": null,
@@ -1007,7 +1007,7 @@
       "description": "Black flied out to lf, SF, RBI (1-1 KB): Branch scored."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 4",
       "pitcher": "Jaxson Easterlin",
       "batter": "Tre Phelps",
       "outcome": "Fielder's choice",
@@ -1015,10 +1015,10 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Jordy Oriach",
         "2B": null,
         "3B": null
       },
@@ -1034,9 +1034,9 @@
       "description": "Phelps reached on a fielder's choice (0-0): Oriach out at second ss to 2b."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Jaxson Easterlin",
-      "batter": "Orr",
+      "inning": "Top 5",
+      "pitcher": "Joey Volchko",
+      "batter": "Aidan Orr",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "FKBFB",
@@ -1045,12 +1045,12 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Tre Phelps",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Orr",
+        "1B": "Aidan Orr",
         "2B": null,
         "3B": null
       },
@@ -1061,8 +1061,8 @@
       "description": "Orr singled to right field (2-2 FKBFB)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Jaxson Easterlin",
+      "inning": "Top 5",
+      "pitcher": "Joey Volchko",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1072,7 +1072,7 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Orr",
+        "1B": "Aidan Orr",
         "2B": null,
         "3B": null
       },
@@ -1088,9 +1088,9 @@
       "description": "Orr out at second c to ss, caught stealing."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Jaxson Easterlin",
-      "batter": "Patton",
+      "inning": "Top 5",
+      "pitcher": "Joey Volchko",
+      "batter": "Sam Patton",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BBSS",
@@ -1104,7 +1104,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Patton",
+        "1B": "Sam Patton",
         "2B": null,
         "3B": null
       },
@@ -1115,9 +1115,9 @@
       "description": "Patton singled to left field (2-2 BBSS)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Jaxson Easterlin",
-      "batter": "Schuck",
+      "inning": "Top 5",
+      "pitcher": "Joey Volchko",
+      "batter": "Aidan Schuck",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
@@ -1126,13 +1126,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Patton",
+        "1B": "Sam Patton",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Patton",
-        "2B": "Schuck",
+        "1B": "Sam Patton",
+        "2B": "Aidan Schuck",
         "3B": null
       },
       "score": {
@@ -1142,8 +1142,8 @@
       "description": "Schuck doubled to left center, RBI (0-0): Patton scored."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Jaxson Easterlin",
+      "inning": "Top 5",
+      "pitcher": "Joey Volchko",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1153,12 +1153,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Patton",
-        "2B": "Schuck",
+        "1B": "Sam Patton",
+        "2B": "Aidan Schuck",
         "3B": null
       },
       "runners_after": {
-        "1B": "Patton",
+        "1B": "Sam Patton",
         "2B": null,
         "3B": null
       },
@@ -1169,9 +1169,9 @@
       "description": "Schuck out at third c to , caught stealing."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Jaxson Easterlin",
-      "batter": "Revere",
+      "inning": "Top 5",
+      "pitcher": "Joey Volchko",
+      "batter": "Kyle Revere",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BBK",
@@ -1180,12 +1180,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Patton",
+        "1B": "Sam Patton",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Revere",
+        "1B": "Kyle Revere",
         "2B": null,
         "3B": null
       },
@@ -1196,9 +1196,9 @@
       "description": "Revere singled to shortstop (2-1 BBK)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Jaxson Easterlin",
-      "batter": "Konopiots",
+      "inning": "Top 5",
+      "pitcher": "Joey Volchko",
+      "batter": "Tony Konopiots",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
@@ -1207,12 +1207,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Revere",
+        "1B": "Kyle Revere",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Konopiots",
+        "1B": "Tony Konopiots",
         "2B": null,
         "3B": null
       },
@@ -1223,9 +1223,9 @@
       "description": "Konopiots walked (3-0 BBBB): Revere advanced to second."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Jaxson Easterlin",
-      "batter": "Day",
+      "inning": "Top 5",
+      "pitcher": "Joey Volchko",
+      "batter": "Lucas Day",
       "outcome": "Flyout",
       "count": "2-2",
       "pitches": "BFBF",
@@ -1234,12 +1234,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Konopiots",
+        "1B": "Tony Konopiots",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Konopiots",
+        "1B": "Tony Konopiots",
         "2B": null,
         "3B": null
       },
@@ -1250,7 +1250,7 @@
       "description": "Day flied out to cf (2-2 BFBF)."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "Jaxson Easterlin",
       "batter": "Daniel Jackson",
       "outcome": "Home run",
@@ -1279,7 +1279,7 @@
       "description": "Jackson homered to left field, RBI (0-0)."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "Jaxson Easterlin",
       "batter": "Michael O'Shaughnessy",
       "outcome": "Single",
@@ -1306,7 +1306,7 @@
       "description": "OShaughnessy singled to right field (1-0 B)."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "Jaxson Easterlin",
       "batter": "Henry Allen",
       "outcome": "Walk",
@@ -1333,7 +1333,7 @@
       "description": "Allen, He. walked (3-0 BBBB): OShaughnessy advanced to second."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "Jaxson Easterlin",
       "batter": "Brennan Hudson",
       "outcome": "Home run",
@@ -1362,7 +1362,7 @@
       "description": "Hudson homered to right field, 3 RBI (3-1 BBSB): Allen, He. scored: OShaughnessy scored."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "Ryan Donley",
       "batter": "Kolby Branch",
       "outcome": "Home run",
@@ -1391,7 +1391,7 @@
       "description": "Branch homered to left field, RBI (0-0)."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "Ryan Donley",
       "batter": "Jordy Oriach",
       "outcome": "Hit by pitch",
@@ -1418,7 +1418,7 @@
       "description": "Oriach hit by pitch (0-1 K)."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "Ryan Donley",
       "batter": "Cole Johnson",
       "outcome": "Pop out",
@@ -1445,7 +1445,7 @@
       "description": "Johnson, Col popped up to ss (0-1 F)."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "Ryan Donley",
       "batter": "Ryan Black",
       "outcome": "Lineout",
@@ -1472,7 +1472,7 @@
       "description": "Black lined out to (0-2 KK)."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "Ryan Donley",
       "batter": "Tre Phelps",
       "outcome": "Single",
@@ -1499,7 +1499,7 @@
       "description": "Phelps singled to right field (2-2 KBFB): Oriach advanced to second."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "Ryan Donley",
       "batter": "Daniel Jackson",
       "outcome": "Home run",
@@ -1528,7 +1528,7 @@
       "description": "Jackson homered to right field, 3 RBI (0-1 K): Phelps scored: Oriach scored."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "Ryan Donley",
       "batter": "Michael O'Shaughnessy",
       "outcome": "Strikeout (swinging)",
@@ -1555,9 +1555,9 @@
       "description": "OShaughnessy struck out swinging (1-2 KBFS)."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "Wiltrakis",
-      "batter": "Clark",
+      "inning": "Top 6",
+      "pitcher": "Luke Wiltrakis",
+      "batter": "Ben Clark",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BSBBKB",
@@ -1571,7 +1571,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Clark",
+        "1B": "Ben Clark",
         "2B": null,
         "3B": null
       },
@@ -1582,9 +1582,9 @@
       "description": "Clark walked (3-2 BSBBKB)."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "Wiltrakis",
-      "batter": "Lux",
+      "inning": "Top 6",
+      "pitcher": "Luke Wiltrakis",
+      "batter": "Jack Lux",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "KBKBBB",
@@ -1593,12 +1593,12 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Clark",
+        "1B": "Ben Clark",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Lux",
+        "1B": "Jack Lux",
         "2B": null,
         "3B": null
       },
@@ -1609,9 +1609,9 @@
       "description": "Lux walked (3-2 KBKBBB): Clark advanced to second."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "Wiltrakis",
-      "batter": "Hain",
+      "inning": "Top 6",
+      "pitcher": "Luke Wiltrakis",
+      "batter": "Carter Hain",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBFKBB",
@@ -1620,12 +1620,12 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Lux",
+        "1B": "Jack Lux",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Hain",
+        "1B": "Carter Hain",
         "2B": null,
         "3B": null
       },
@@ -1636,9 +1636,9 @@
       "description": "Hain walked (3-2 BBFKBB): Lux advanced to second: Clark advanced to third."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "Spivey",
-      "batter": "Orr",
+      "inning": "Top 6",
+      "pitcher": "Logan Spivey",
+      "batter": "Aidan Orr",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBFBB",
@@ -1647,12 +1647,12 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Hain",
+        "1B": "Carter Hain",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Orr",
+        "1B": "Aidan Orr",
         "2B": null,
         "3B": null
       },
@@ -1663,9 +1663,9 @@
       "description": "Orr walked, RBI (3-1 BBFBB): Hain advanced to second: Lux advanced to third: Clark scored."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "Spivey",
-      "batter": "Patton",
+      "inning": "Top 6",
+      "pitcher": "Logan Spivey",
+      "batter": "Sam Patton",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
       "pitches": "BBKFK",
@@ -1674,12 +1674,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Orr",
+        "1B": "Aidan Orr",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Orr",
+        "1B": "Aidan Orr",
         "2B": null,
         "3B": null
       },
@@ -1690,9 +1690,9 @@
       "description": "Patton struck out looking (2-2 BBKFK)."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "Spivey",
-      "batter": "Schuck",
+      "inning": "Top 6",
+      "pitcher": "Logan Spivey",
+      "batter": "Aidan Schuck",
       "outcome": "Hit by pitch",
       "count": "3-1",
       "pitches": "BBBK",
@@ -1701,12 +1701,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Orr",
+        "1B": "Aidan Orr",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Schuck",
+        "1B": "Aidan Schuck",
         "2B": null,
         "3B": null
       },
@@ -1717,9 +1717,9 @@
       "description": "Schuck hit by pitch, RBI (3-1 BBBK): Orr advanced to second: Hain advanced to third: Lux scored."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "Jameson",
-      "batter": "Revere",
+      "inning": "Top 6",
+      "pitcher": "Caleb Jameson",
+      "batter": "Kyle Revere",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "BKSBS",
@@ -1728,12 +1728,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Schuck",
+        "1B": "Aidan Schuck",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Schuck",
+        "1B": "Aidan Schuck",
         "2B": null,
         "3B": null
       },
@@ -1744,9 +1744,9 @@
       "description": "Revere struck out swinging (2-2 BKSBS)."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "Jameson",
-      "batter": "Konopiots",
+      "inning": "Top 6",
+      "pitcher": "Caleb Jameson",
+      "batter": "Tony Konopiots",
       "outcome": "Pop out",
       "count": "0-0",
       "pitches": "",
@@ -1755,12 +1755,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Schuck",
+        "1B": "Aidan Schuck",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Schuck",
+        "1B": "Aidan Schuck",
         "2B": null,
         "3B": null
       },
@@ -1771,7 +1771,7 @@
       "description": "Konopiots popped up to 1b (0-0)."
     },
     {
-      "inning": "Bottom 11",
+      "inning": "Bottom 6",
       "pitcher": "Luke Riggs",
       "batter": "Henry Allen",
       "outcome": "Groundout",
@@ -1798,7 +1798,7 @@
       "description": "Allen, He. grounded out to 2b (0-0)."
     },
     {
-      "inning": "Bottom 11",
+      "inning": "Bottom 6",
       "pitcher": "Luke Riggs",
       "batter": "Brennan Hudson",
       "outcome": "Flyout",
@@ -1825,7 +1825,7 @@
       "description": "Hudson flied out to cf (0-1 K)."
     },
     {
-      "inning": "Bottom 11",
+      "inning": "Bottom 6",
       "pitcher": "Luke Riggs",
       "batter": "Kolby Branch",
       "outcome": "Strikeout (swinging)",
@@ -1852,9 +1852,9 @@
       "description": "Branch struck out swinging (0-2 KKS)."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "Morici",
-      "batter": "Day",
+      "inning": "Top 7",
+      "pitcher": "Lucas Morici",
+      "batter": "Lucas Day",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BKKBBB",
@@ -1868,7 +1868,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Day",
+        "1B": "Lucas Day",
         "2B": null,
         "3B": null
       },
@@ -1879,9 +1879,9 @@
       "description": "Day walked (3-2 BKKBBB)."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "Morici",
-      "batter": "Clark",
+      "inning": "Top 7",
+      "pitcher": "Lucas Morici",
+      "batter": "Ben Clark",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
@@ -1890,12 +1890,12 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Day",
+        "1B": "Lucas Day",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Clark",
+        "1B": "Ben Clark",
         "2B": null,
         "3B": null
       },
@@ -1906,9 +1906,9 @@
       "description": "Clark walked (3-0 BBBB): Griffith advanced to second."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "Morici",
-      "batter": "Lux",
+      "inning": "Top 7",
+      "pitcher": "Lucas Morici",
+      "batter": "Jack Lux",
       "outcome": "Grounded into double play",
       "count": "0-2",
       "pitches": "SS",
@@ -1917,12 +1917,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Clark",
+        "1B": "Ben Clark",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Clark",
+        "1B": "Ben Clark",
         "2B": null,
         "3B": null
       },
@@ -1933,9 +1933,9 @@
       "description": "Lux grounded into double play 2b to ss to 1b (0-2 SS): Clark out on the play: Griffith advanced to third."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "Morici",
-      "batter": "Hain",
+      "inning": "Top 7",
+      "pitcher": "Lucas Morici",
+      "batter": "Carter Hain",
       "outcome": "Hit by pitch",
       "count": "1-1",
       "pitches": "SB",
@@ -1944,12 +1944,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Clark",
+        "1B": "Ben Clark",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Hain",
+        "1B": "Carter Hain",
         "2B": null,
         "3B": null
       },
@@ -1960,20 +1960,20 @@
       "description": "Hain hit by pitch (1-1 SB)."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "Morici",
+      "inning": "Top 7",
+      "pitcher": "Lucas Morici",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [
-        "Hain"
+        "Carter Hain"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Hain",
+        "1B": "Carter Hain",
         "2B": null,
         "3B": null
       },
@@ -1989,7 +1989,7 @@
       "description": "Hain out at first c to ss to 1b, caught stealing: Griffith scored on the throw."
     },
     {
-      "inning": "Bottom 12",
+      "inning": "Bottom 7",
       "pitcher": "Josh Korson",
       "batter": "Scott Newman",
       "outcome": "Walk",
@@ -1997,8 +1997,8 @@
       "pitches": "BBSBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2016,7 +2016,7 @@
       "description": "Newman walked (3-1 BBSBB)."
     },
     {
-      "inning": "Bottom 12",
+      "inning": "Bottom 7",
       "pitcher": "Josh Korson",
       "batter": null,
       "outcome": "Wild pitch",
@@ -2024,8 +2024,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Scott Newman",
         "2B": null,
@@ -2043,12 +2043,39 @@
       "description": "Newman advanced to second on a wild pitch."
     },
     {
-      "inning": "Bottom 12",
+      "inning": "Bottom 7",
       "pitcher": "Josh Korson",
       "batter": "Cole Johnson",
       "outcome": "Groundout",
       "count": "1-0",
       "pitches": "B",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": "Scott Newman",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Scott Newman",
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 13
+      },
+      "description": "Johnson, Col grounded out to 1b unassisted (1-0 B): Newman advanced to third."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Josh Korson",
+      "batter": "Ryan Black",
+      "outcome": "Pop out",
+      "count": "1-1",
+      "pitches": "BK",
       "rbi": false,
       "runs_scored": [],
       "outs_before": 1,
@@ -2067,37 +2094,10 @@
         "away": 6,
         "home": 13
       },
-      "description": "Johnson, Col grounded out to 1b unassisted (1-0 B): Newman advanced to third."
-    },
-    {
-      "inning": "Bottom 12",
-      "pitcher": "Josh Korson",
-      "batter": "Ryan Black",
-      "outcome": "Pop out",
-      "count": "1-1",
-      "pitches": "BK",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
-      "runners_before": {
-        "1B": null,
-        "2B": "Scott Newman",
-        "3B": null
-      },
-      "runners_after": {
-        "1B": null,
-        "2B": "Scott Newman",
-        "3B": null
-      },
-      "score": {
-        "away": 6,
-        "home": 13
-      },
       "description": "Black popped up to 2b (1-1 BK)."
     },
     {
-      "inning": "Bottom 13",
+      "inning": "Bottom 7",
       "pitcher": "Josh Korson",
       "batter": "Ryan Wynn",
       "outcome": "Single",
@@ -2105,16 +2105,16 @@
       "pitches": "KSBBB",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": null,
+        "2B": "Scott Newman",
         "3B": null
       },
       "runners_after": {
         "1B": "Ryan Wynn",
-        "2B": null,
+        "2B": "Scott Newman",
         "3B": null
       },
       "score": {
@@ -2124,7 +2124,7 @@
       "description": "Wynn singled to right field, RBI (3-2 KSBBB): Newman scored."
     },
     {
-      "inning": "Bottom 13",
+      "inning": "Bottom 7",
       "pitcher": "Blake Sehlke",
       "batter": null,
       "outcome": "Stolen base",
@@ -2132,16 +2132,16 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Ryan Wynn",
-        "2B": null,
+        "2B": "Scott Newman",
         "3B": null
       },
       "runners_after": {
         "1B": "Ryan Wynn",
-        "2B": null,
+        "2B": "Scott Newman",
         "3B": null
       },
       "score": {
@@ -2151,7 +2151,7 @@
       "description": "Wynn stole second."
     },
     {
-      "inning": "Bottom 13",
+      "inning": "Bottom 7",
       "pitcher": "Blake Sehlke",
       "batter": "Daniel Jackson",
       "outcome": "Single",
@@ -2159,16 +2159,16 @@
       "pitches": "FBFBB",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Ryan Wynn",
-        "2B": null,
+        "2B": "Scott Newman",
         "3B": null
       },
       "runners_after": {
         "1B": "Daniel Jackson",
-        "2B": null,
+        "2B": "Scott Newman",
         "3B": null
       },
       "score": {
@@ -2178,7 +2178,7 @@
       "description": "Jackson singled to center field, RBI (3-2 FBFBB): Wynn scored."
     },
     {
-      "inning": "Bottom 13",
+      "inning": "Bottom 7",
       "pitcher": "Blake Sehlke",
       "batter": "Michael O'Shaughnessy",
       "outcome": "Single",
@@ -2186,16 +2186,16 @@
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Daniel Jackson",
-        "2B": null,
+        "2B": "Scott Newman",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael O'Shaughnessy",
-        "2B": null,
+        "2B": "Scott Newman",
         "3B": null
       },
       "score": {
@@ -2205,7 +2205,7 @@
       "description": "OShaughnessy singled to right field (1-0 B): Peeples advanced to third."
     },
     {
-      "inning": "Bottom 13",
+      "inning": "Bottom 7",
       "pitcher": "Blake Sehlke",
       "batter": "Henry Allen",
       "outcome": "Single",
@@ -2213,16 +2213,16 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Michael O'Shaughnessy",
-        "2B": null,
+        "2B": "Scott Newman",
         "3B": null
       },
       "runners_after": {
         "1B": "Henry Allen",
-        "2B": null,
+        "2B": "Scott Newman",
         "3B": null
       },
       "score": {

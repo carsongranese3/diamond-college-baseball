@@ -1,14 +1,14 @@
 {
   "contest_id": "6502628",
   "date": "02/13/2026",
-  "batting_team": "UNC Greensboro",
-  "pitching_team": "Kentucky",
-  "note": "Broken-down from the saved play_by_play.json, which contains the UNC Greensboro at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "Kentucky",
+  "home_team": "UNC Greensboro",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
-      "inning": "Bottom 1",
-      "pitcher": "Jaxon Jelkin",
-      "batter": "L.",
+      "inning": "Top 1",
+      "pitcher": "Noah Chapman",
+      "batter": "Luke Lawrence",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "BKBFFF",
@@ -33,9 +33,9 @@
       "description": "L. Lawrence grounded out to 1b unassisted (2-2 BKBFFF)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Jaxon Jelkin",
-      "batter": "J.",
+      "inning": "Top 1",
+      "pitcher": "Noah Chapman",
+      "batter": "Jayce Tharnish",
       "outcome": "Triple",
       "count": "3-2",
       "pitches": "BBKSFFB",
@@ -51,7 +51,7 @@
       "runners_after": {
         "1B": null,
         "2B": null,
-        "3B": "J."
+        "3B": "Jayce Tharnish"
       },
       "score": {
         "away": 0,
@@ -60,25 +60,27 @@
       "description": "J. Tharnish tripled to right center (3-2 BBKSFFB)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Jaxon Jelkin",
-      "batter": "T.",
+      "inning": "Top 1",
+      "pitcher": "Noah Chapman",
+      "batter": "Tyler Bell",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "BKFBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jayce Tharnish"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
-        "3B": "J."
+        "3B": "Jayce Tharnish"
       },
       "runners_after": {
         "1B": null,
         "2B": null,
-        "3B": "J."
+        "3B": null
       },
       "score": {
         "away": 1,
@@ -87,9 +89,9 @@
       "description": "T. Bell grounded out to ss, RBI (2-2 BKFBF) J. Tharnish scored."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Jaxon Jelkin",
-      "batter": "R.",
+      "inning": "Top 1",
+      "pitcher": "Noah Chapman",
+      "batter": "Ryan Schwartz",
       "outcome": "Groundout",
       "count": "2-0",
       "pitches": "BB",
@@ -100,12 +102,12 @@
       "runners_before": {
         "1B": null,
         "2B": null,
-        "3B": "J."
+        "3B": null
       },
       "runners_after": {
         "1B": null,
         "2B": null,
-        "3B": "J."
+        "3B": null
       },
       "score": {
         "away": 1,
@@ -114,7 +116,7 @@
       "description": "R. Schwartz grounded out to 2b (2-0 BB)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Jaxon Jelkin",
       "batter": "Jake Barbour",
       "outcome": "Strikeout (looking)",
@@ -141,7 +143,7 @@
       "description": "Barbour struck out looking (0-2 KKK)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Jaxon Jelkin",
       "batter": "Jacob Dilley",
       "outcome": "Strikeout (swinging)",
@@ -168,7 +170,7 @@
       "description": "Dilley struck out swinging (0-2 KFS)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Jaxon Jelkin",
       "batter": "Parker Wight",
       "outcome": "Reached on error",
@@ -195,7 +197,7 @@
       "description": "Wight reached on an error by (1-0 B)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Jaxon Jelkin",
       "batter": "Muller",
       "outcome": "Strikeout (looking)",
@@ -222,9 +224,9 @@
       "description": "Muller struck out looking (3-2 BKFBBK)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Jaxon Jelkin",
-      "batter": "T.",
+      "inning": "Top 2",
+      "pitcher": "Noah Chapman",
+      "batter": "Tyler Cerny",
       "outcome": "Hit by pitch",
       "count": "0-0",
       "pitches": "",
@@ -238,7 +240,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
+        "1B": "Tyler Cerny",
         "2B": null,
         "3B": null
       },
@@ -249,9 +251,9 @@
       "description": "T. Cerny hit by pitch (0-0)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Jaxon Jelkin",
-      "batter": "H.",
+      "inning": "Top 2",
+      "pitcher": "Noah Chapman",
+      "batter": "Hudson Brown",
       "outcome": "Double",
       "count": "1-1",
       "pitches": "KB",
@@ -260,14 +262,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "T.",
+        "1B": "Tyler Cerny",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
-        "2B": "H.",
-        "3B": null
+        "1B": null,
+        "2B": "Hudson Brown",
+        "3B": "Tyler Cerny"
       },
       "score": {
         "away": 1,
@@ -276,25 +278,27 @@
       "description": "H. Brown doubled to left field (1-1 KB) T. Cerny advanced to third."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Jaxon Jelkin",
-      "batter": "E.",
+      "inning": "Top 2",
+      "pitcher": "Noah Chapman",
+      "batter": "Ethan Hindle",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Tyler Cerny"
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "T.",
-        "2B": "H.",
-        "3B": null
+        "1B": null,
+        "2B": "Hudson Brown",
+        "3B": "Tyler Cerny"
       },
       "runners_after": {
-        "1B": "T.",
-        "2B": "H.",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Hudson Brown"
       },
       "score": {
         "away": 2,
@@ -303,25 +307,27 @@
       "description": "E. Hindle grounded out to 2b, RBI (0-0) H. Brown advanced to third T. Cerny scored."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Jaxon Jelkin",
-      "batter": "O.",
+      "inning": "Top 2",
+      "pitcher": "Noah Chapman",
+      "batter": "Owen Jenkins",
       "outcome": "Triple",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Hudson Brown"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "T.",
-        "2B": "H.",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Hudson Brown"
       },
       "runners_after": {
-        "1B": "T.",
-        "2B": "H.",
-        "3B": "O."
+        "1B": null,
+        "2B": null,
+        "3B": "Owen Jenkins"
       },
       "score": {
         "away": 3,
@@ -330,9 +336,9 @@
       "description": "O. Jenkins tripled to left center, RBI (1-0 B) H. Brown scored."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Jaxon Jelkin",
-      "batter": "S.",
+      "inning": "Top 2",
+      "pitcher": "Noah Chapman",
+      "batter": "Scott Campbell",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
       "pitches": "FFBFBFK",
@@ -341,14 +347,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "T.",
-        "2B": "H.",
-        "3B": "O."
+        "1B": null,
+        "2B": null,
+        "3B": "Owen Jenkins"
       },
       "runners_after": {
-        "1B": "T.",
-        "2B": "H.",
-        "3B": "O."
+        "1B": null,
+        "2B": null,
+        "3B": "Owen Jenkins"
       },
       "score": {
         "away": 3,
@@ -357,9 +363,9 @@
       "description": "S. Campbell struck out looking (2-2 FFBFBFK)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Jaxon Jelkin",
-      "batter": "L.",
+      "inning": "Top 2",
+      "pitcher": "Noah Chapman",
+      "batter": "Luke Lawrence",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "F",
@@ -368,14 +374,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "T.",
-        "2B": "H.",
-        "3B": "O."
+        "1B": null,
+        "2B": null,
+        "3B": "Owen Jenkins"
       },
       "runners_after": {
-        "1B": "T.",
-        "2B": "H.",
-        "3B": "O."
+        "1B": null,
+        "2B": null,
+        "3B": "Owen Jenkins"
       },
       "score": {
         "away": 3,
@@ -384,7 +390,7 @@
       "description": "L. Lawrence grounded out to 2b (0-1 F)."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Jaxon Jelkin",
       "batter": "Brody Gardner",
       "outcome": "Strikeout (swinging)",
@@ -411,7 +417,7 @@
       "description": "Gardner struck out swinging (0-2 KFS)."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Jaxon Jelkin",
       "batter": "Luke Jenkins",
       "outcome": "Strikeout (swinging)",
@@ -438,9 +444,9 @@
       "description": "Jenkins struck out swinging (3-2 BKBFBS)."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Jaxon Jelkin",
-      "batter": "L.",
+      "batter": "Luke Holland",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "SKBBS",
@@ -465,9 +471,9 @@
       "description": "L. Holland struck out swinging (2-2 SKBBS)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Jaxon Jelkin",
-      "batter": "J.",
+      "inning": "Top 3",
+      "pitcher": "Noah Chapman",
+      "batter": "Jayce Tharnish",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BF",
@@ -481,7 +487,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "Jayce Tharnish",
         "2B": null,
         "3B": null
       },
@@ -492,9 +498,9 @@
       "description": "J. Tharnish singled to right field (1-1 BF)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Jaxon Jelkin",
-      "batter": "T.",
+      "inning": "Top 3",
+      "pitcher": "Noah Chapman",
+      "batter": "Tyler Bell",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BBKF",
@@ -503,13 +509,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "J.",
+        "1B": "Jayce Tharnish",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
-        "2B": null,
+        "1B": "Tyler Bell",
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "score": {
@@ -519,9 +525,9 @@
       "description": "T. Bell singled to center field (2-2 BBKF) J. Tharnish advanced to second."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Jaxon Jelkin",
-      "batter": "R.",
+      "inning": "Top 3",
+      "pitcher": "Noah Chapman",
+      "batter": "Ryan Schwartz",
       "outcome": "Hit by pitch",
       "count": "2-2",
       "pitches": "KBFFFB",
@@ -530,14 +536,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "T.",
-        "2B": null,
+        "1B": "Tyler Bell",
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "runners_after": {
-        "1B": "R.",
-        "2B": null,
-        "3B": null
+        "1B": "Ryan Schwartz",
+        "2B": "Tyler Bell",
+        "3B": "Jayce Tharnish"
       },
       "score": {
         "away": 3,
@@ -546,25 +552,27 @@
       "description": "R. Schwartz hit by pitch (2-2 KBFFFB) T. Bell advanced to second J. Tharnish advanced to third."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Jaxon Jelkin",
-      "batter": "T.",
+      "inning": "Top 3",
+      "pitcher": "Noah Chapman",
+      "batter": "Tyler Cerny",
       "outcome": "Hit by pitch",
       "count": "2-2",
       "pitches": "BBFS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jayce Tharnish"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "R.",
-        "2B": null,
-        "3B": null
+        "1B": "Ryan Schwartz",
+        "2B": "Tyler Bell",
+        "3B": "Jayce Tharnish"
       },
       "runners_after": {
-        "1B": "T.",
-        "2B": null,
-        "3B": null
+        "1B": "Tyler Cerny",
+        "2B": "Ryan Schwartz",
+        "3B": "Tyler Bell"
       },
       "score": {
         "away": 4,
@@ -573,25 +581,27 @@
       "description": "T. Cerny hit by pitch, RBI (2-2 BBFS) R. Schwartz advanced to second T. Bell advanced to third J. Tharnish scored."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Jaxon Jelkin",
-      "batter": "H.",
+      "inning": "Top 3",
+      "pitcher": "Noah Chapman",
+      "batter": "Hudson Brown",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "KBFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Tyler Bell"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "T.",
-        "2B": null,
-        "3B": null
+        "1B": "Tyler Cerny",
+        "2B": "Ryan Schwartz",
+        "3B": "Tyler Bell"
       },
       "runners_after": {
-        "1B": "H.",
-        "2B": null,
-        "3B": null
+        "1B": "Hudson Brown",
+        "2B": "Tyler Cerny",
+        "3B": "Ryan Schwartz"
       },
       "score": {
         "away": 5,
@@ -600,24 +610,26 @@
       "description": "H. Brown singled to center field, RBI (3-2 KBFBB) T. Cerny advanced to second R. Schwartz advanced to third T. Bell scored."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Colucci",
-      "batter": "E.",
+      "inning": "Top 3",
+      "pitcher": "Jake Colucci",
+      "batter": "Ethan Hindle",
       "outcome": "Flyout",
       "count": "1-2",
       "pitches": "FSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ryan Schwartz"
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "H.",
-        "2B": null,
-        "3B": null
+        "1B": "Hudson Brown",
+        "2B": "Tyler Cerny",
+        "3B": "Ryan Schwartz"
       },
       "runners_after": {
-        "1B": "H.",
-        "2B": null,
+        "1B": "Hudson Brown",
+        "2B": "Tyler Cerny",
         "3B": null
       },
       "score": {
@@ -627,9 +639,9 @@
       "description": "E. Hindle flied out to lf, SF, RBI (1-2 FSB) R. Schwartz scored."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Colucci",
-      "batter": "O.",
+      "inning": "Top 3",
+      "pitcher": "Jake Colucci",
+      "batter": "Owen Jenkins",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "KKB",
@@ -638,14 +650,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "H.",
-        "2B": null,
+        "1B": "Hudson Brown",
+        "2B": "Tyler Cerny",
         "3B": null
       },
       "runners_after": {
-        "1B": "O.",
-        "2B": null,
-        "3B": null
+        "1B": "Owen Jenkins",
+        "2B": "Hudson Brown",
+        "3B": "Tyler Cerny"
       },
       "score": {
         "away": 6,
@@ -654,25 +666,27 @@
       "description": "O. Jenkins singled to second base (1-2 KKB) H. Brown advanced to second T. Cerny advanced to third."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Colucci",
-      "batter": "S.",
+      "inning": "Top 3",
+      "pitcher": "Jake Colucci",
+      "batter": "Scott Campbell",
       "outcome": "Hit by pitch",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Tyler Cerny"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "O.",
-        "2B": null,
-        "3B": null
+        "1B": "Owen Jenkins",
+        "2B": "Hudson Brown",
+        "3B": "Tyler Cerny"
       },
       "runners_after": {
-        "1B": "S.",
-        "2B": null,
-        "3B": null
+        "1B": "Scott Campbell",
+        "2B": "Owen Jenkins",
+        "3B": "Hudson Brown"
       },
       "score": {
         "away": 7,
@@ -681,25 +695,28 @@
       "description": "S. Campbell hit by pitch, RBI (0-0) O. Jenkins advanced to second H. Brown advanced to third T. Cerny scored."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Colucci",
-      "batter": "L.",
+      "inning": "Top 3",
+      "pitcher": "Jake Colucci",
+      "batter": "Luke Lawrence",
       "outcome": "Home run",
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
       "runs_scored": [
-        "L."
+        "Scott Campbell",
+        "Owen Jenkins",
+        "Hudson Brown",
+        "Luke Lawrence"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "S.",
-        "2B": null,
-        "3B": null
+        "1B": "Scott Campbell",
+        "2B": "Owen Jenkins",
+        "3B": "Hudson Brown"
       },
       "runners_after": {
-        "1B": "S.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -710,9 +727,9 @@
       "description": "L. Lawrence homered, 4 RBI (1-1 BF) S. Campbell scored O. Jenkins scored H. Brown scored."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Colucci",
-      "batter": "J.",
+      "inning": "Top 3",
+      "pitcher": "Jake Colucci",
+      "batter": "Jayce Tharnish",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "BSK",
@@ -721,12 +738,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "S.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "Jayce Tharnish",
         "2B": null,
         "3B": null
       },
@@ -737,9 +754,9 @@
       "description": "J. Tharnish singled (1-2 BSK)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Colucci",
-      "batter": "T.",
+      "inning": "Top 3",
+      "pitcher": "Jake Colucci",
+      "batter": "Tyler Bell",
       "outcome": "Flyout",
       "count": "1-1",
       "pitches": "KB",
@@ -748,12 +765,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "J.",
+        "1B": "Jayce Tharnish",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "Jayce Tharnish",
         "2B": null,
         "3B": null
       },
@@ -764,8 +781,8 @@
       "description": "T. Bell flied out to lf (1-1 KB)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Colucci",
+      "inning": "Top 3",
+      "pitcher": "Jake Colucci",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -775,12 +792,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "J.",
+        "1B": "Jayce Tharnish",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "Jayce Tharnish",
         "2B": null,
         "3B": null
       },
@@ -791,9 +808,9 @@
       "description": "J. Tharnish stole second."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Colucci",
-      "batter": "R.",
+      "inning": "Top 3",
+      "pitcher": "Jake Colucci",
+      "batter": "Ryan Schwartz",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBBKKB",
@@ -802,12 +819,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "J.",
+        "1B": "Jayce Tharnish",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "R.",
+        "1B": "Ryan Schwartz",
         "2B": null,
         "3B": null
       },
@@ -818,9 +835,9 @@
       "description": "R. Schwartz walked (3-2 BBBKKB)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Colucci",
-      "batter": "T.",
+      "inning": "Top 3",
+      "pitcher": "Jake Colucci",
+      "batter": "Tyler Cerny",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "K",
@@ -829,12 +846,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "R.",
+        "1B": "Ryan Schwartz",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "R.",
+        "1B": "Ryan Schwartz",
         "2B": null,
         "3B": null
       },
@@ -845,8 +862,8 @@
       "description": "T. Cerny grounded out to 2b (0-1 K)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Colucci",
+      "inning": "Bottom 3",
+      "pitcher": "Jaxon Jelkin",
       "batter": "Jacob Budzik",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -872,8 +889,8 @@
       "description": "Budzik struck out swinging (1-2 SBKS)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Colucci",
+      "inning": "Bottom 3",
+      "pitcher": "Jaxon Jelkin",
       "batter": "Brantley Truitt",
       "outcome": "Groundout",
       "count": "1-2",
@@ -899,8 +916,8 @@
       "description": "Truitt grounded out to ss (1-2 SKB)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Colucci",
+      "inning": "Bottom 3",
+      "pitcher": "Jaxon Jelkin",
       "batter": "Jake Barbour",
       "outcome": "Double",
       "count": "2-1",
@@ -926,8 +943,8 @@
       "description": "Barbour doubled down the rf line (2-1 KBB)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Colucci",
+      "inning": "Bottom 3",
+      "pitcher": "Jaxon Jelkin",
       "batter": "Jacob Dilley",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -953,9 +970,9 @@
       "description": "Dilley struck out swinging (2-2 FBBSFS)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Nobles",
-      "batter": "H.",
+      "inning": "Top 4",
+      "pitcher": "Ethan Nobles",
+      "batter": "Hudson Brown",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
       "pitches": "KSBFK",
@@ -980,9 +997,9 @@
       "description": "H. Brown struck out looking (1-2 KSBFK)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Nobles",
-      "batter": "E.",
+      "inning": "Top 4",
+      "pitcher": "Ethan Nobles",
+      "batter": "Ethan Hindle",
       "outcome": "Flyout",
       "count": "1-1",
       "pitches": "BF",
@@ -1007,9 +1024,9 @@
       "description": "E. Hindle flied out to cf (1-1 BF)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Nobles",
-      "batter": "O.",
+      "inning": "Top 4",
+      "pitcher": "Ethan Nobles",
+      "batter": "Owen Jenkins",
       "outcome": "Pop out",
       "count": "0-2",
       "pitches": "FS",
@@ -1034,8 +1051,8 @@
       "description": "O. Jenkins popped up to c (0-2 FS)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Nobles",
+      "inning": "Bottom 4",
+      "pitcher": "Jaxon Jelkin",
       "batter": "Parker Wight",
       "outcome": "Single",
       "count": "0-0",
@@ -1061,8 +1078,8 @@
       "description": "Wight singled to center field (0-0)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Nobles",
+      "inning": "Bottom 4",
+      "pitcher": "Jaxon Jelkin",
       "batter": "Muller",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1088,8 +1105,8 @@
       "description": "Muller struck out looking (1-2 FFBK)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Nobles",
+      "inning": "Bottom 4",
+      "pitcher": "Jaxon Jelkin",
       "batter": "Parker Wight",
       "outcome": "\u2014",
       "count": null,
@@ -1115,8 +1132,8 @@
       "description": "Wight picked off, out at first c to 1b."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Nobles",
+      "inning": "Bottom 4",
+      "pitcher": "Jaxon Jelkin",
       "batter": "Brody Gardner",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1142,23 +1159,23 @@
       "description": "Gardner struck out swinging (2-2 KBFBS)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Nobles",
-      "batter": "S.",
+      "inning": "Top 5",
+      "pitcher": "Ethan Nobles",
+      "batter": "Scott Campbell",
       "outcome": "Hit by pitch",
       "count": "2-1",
       "pitches": "BFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Parker Wight",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "S.",
+        "1B": "Scott Campbell",
         "2B": null,
         "3B": null
       },
@@ -1169,23 +1186,23 @@
       "description": "S. Campbell hit by pitch (2-1 BFB)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Nobles",
+      "inning": "Top 5",
+      "pitcher": "Ethan Nobles",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "S.",
+        "1B": "Scott Campbell",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "S.",
+        "1B": "Scott Campbell",
         "2B": null,
         "3B": null
       },
@@ -1196,25 +1213,25 @@
       "description": "S. Campbell stole second."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Nobles",
-      "batter": "L.",
+      "inning": "Top 5",
+      "pitcher": "Ethan Nobles",
+      "batter": "Luke Lawrence",
       "outcome": "Groundout",
       "count": "2-1",
       "pitches": "BBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "S.",
+        "1B": "Scott Campbell",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "S.",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Scott Campbell"
       },
       "score": {
         "away": 11,
@@ -1223,23 +1240,23 @@
       "description": "L. Lawrence grounded out to 2b (2-1 BBF) S. Campbell advanced to third."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Nobles",
-      "batter": "J.",
+      "inning": "Top 5",
+      "pitcher": "Ethan Nobles",
+      "batter": "Jayce Tharnish",
       "outcome": "Fielder's choice",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Scott Campbell"
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "Jayce Tharnish",
         "2B": null,
         "3B": null
       },
@@ -1250,23 +1267,23 @@
       "description": "J. Tharnish reached on a fielder's choice (0-0) S. Campbell out at home 1b to c."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Nobles",
+      "inning": "Top 5",
+      "pitcher": "Ethan Nobles",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "J.",
+        "1B": "Jayce Tharnish",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "Jayce Tharnish",
         "2B": null,
         "3B": null
       },
@@ -1277,23 +1294,23 @@
       "description": "J. Tharnish stole second."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Nobles",
-      "batter": "T.",
+      "inning": "Top 5",
+      "pitcher": "Ethan Nobles",
+      "batter": "Tyler Bell",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "J.",
+        "1B": "Jayce Tharnish",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
+        "1B": "Tyler Bell",
         "2B": null,
         "3B": null
       },
@@ -1304,24 +1321,24 @@
       "description": "T. Bell walked (3-0 BBBB) J. Tharnish stole third."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Nobles",
-      "batter": "R.",
+      "inning": "Top 5",
+      "pitcher": "Ethan Nobles",
+      "batter": "Ryan Schwartz",
       "outcome": "Hit by pitch",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "T.",
+        "1B": "Tyler Bell",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "R.",
-        "2B": null,
+        "1B": "Ryan Schwartz",
+        "2B": "Tyler Bell",
         "3B": null
       },
       "score": {
@@ -1331,24 +1348,24 @@
       "description": "R. Schwartz hit by pitch (0-0) T. Bell advanced to second."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Nobles",
-      "batter": "T.",
+      "inning": "Top 5",
+      "pitcher": "Ethan Nobles",
+      "batter": "Tyler Cerny",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "S",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "R.",
-        "2B": null,
+        "1B": "Ryan Schwartz",
+        "2B": "Tyler Bell",
         "3B": null
       },
       "runners_after": {
-        "1B": "R.",
-        "2B": null,
+        "1B": "Ryan Schwartz",
+        "2B": "Tyler Bell",
         "3B": null
       },
       "score": {
@@ -1358,7 +1375,7 @@
       "description": "T. Cerny grounded out to (0-1 S)."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "C.",
       "batter": "Luke Jenkins",
       "outcome": "Strikeout (swinging)",
@@ -1366,15 +1383,15 @@
       "pitches": "KKS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "R.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "R.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1385,16 +1402,16 @@
       "description": "Jenkins struck out swinging (0-2 KKS)."
     },
     {
-      "inning": "Bottom 10",
+      "inning": "Bottom 5",
       "pitcher": "C.",
-      "batter": "L.",
+      "batter": "Luke Holland",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KKBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1412,7 +1429,7 @@
       "description": "L. Holland struck out swinging, out at first c to 1b (1-2 KKBS)."
     },
     {
-      "inning": "Bottom 10",
+      "inning": "Bottom 5",
       "pitcher": "C.",
       "batter": "Jacob Budzik",
       "outcome": "Strikeout (swinging)",
@@ -1420,8 +1437,8 @@
       "pitches": "KBSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1439,16 +1456,16 @@
       "description": "Budzik struck out swinging (1-2 KBSS)."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "C.",
-      "batter": "H.",
+      "inning": "Top 6",
+      "pitcher": "Ethan Nobles",
+      "batter": "Hudson Brown",
       "outcome": "Groundout",
       "count": "3-2",
       "pitches": "KBKFBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1466,23 +1483,23 @@
       "description": "H. Brown grounded out to 1b unassisted (3-2 KBKFBB)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "C.",
-      "batter": "E.",
+      "inning": "Top 6",
+      "pitcher": "Ethan Nobles",
+      "batter": "Ethan Hindle",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "FBBBKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "E.",
+        "1B": "Ethan Hindle",
         "2B": null,
         "3B": null
       },
@@ -1493,24 +1510,24 @@
       "description": "E. Hindle walked (3-2 FBBBKB)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "C.",
-      "batter": "O.",
+      "inning": "Top 6",
+      "pitcher": "Ethan Nobles",
+      "batter": "Owen Jenkins",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "FK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "E.",
+        "1B": "Ethan Hindle",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "O.",
-        "2B": null,
+        "1B": "Owen Jenkins",
+        "2B": "Ethan Hindle",
         "3B": null
       },
       "score": {
@@ -1520,25 +1537,25 @@
       "description": "O. Jenkins singled through the left side (0-2 FK) E. Hindle advanced to second."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "C.",
+      "inning": "Top 6",
+      "pitcher": "Ethan Nobles",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "O.",
-        "2B": null,
+        "1B": "Owen Jenkins",
+        "2B": "Ethan Hindle",
         "3B": null
       },
       "runners_after": {
-        "1B": "O.",
+        "1B": "Owen Jenkins",
         "2B": null,
-        "3B": null
+        "3B": "Ethan Hindle"
       },
       "score": {
         "away": 11,
@@ -1547,25 +1564,27 @@
       "description": "E. Hindle advanced to third on the throw advanced to third on an error by p."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "C.",
-      "batter": "S.",
+      "inning": "Top 6",
+      "pitcher": "Ethan Nobles",
+      "batter": "Scott Campbell",
       "outcome": "Single",
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "runs_scored": [
+        "Ethan Hindle"
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "O.",
+        "1B": "Owen Jenkins",
         "2B": null,
-        "3B": null
+        "3B": "Ethan Hindle"
       },
       "runners_after": {
-        "1B": "S.",
+        "1B": "Scott Campbell",
         "2B": null,
-        "3B": null
+        "3B": "Owen Jenkins"
       },
       "score": {
         "away": 12,
@@ -1574,25 +1593,25 @@
       "description": "S. Campbell singled to right field, RBI O. Jenkins advanced to third E. Hindle scored."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "C.",
-      "batter": "L.",
+      "inning": "Top 6",
+      "pitcher": "Ethan Nobles",
+      "batter": "Luke Lawrence",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "S.",
+        "1B": "Scott Campbell",
         "2B": null,
-        "3B": null
+        "3B": "Owen Jenkins"
       },
       "runners_after": {
-        "1B": "S.",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Owen Jenkins"
       },
       "score": {
         "away": 12,
@@ -1601,7 +1620,7 @@
       "description": "L. Lawrence hit into double play ss to 2b to 1b S. Campbell out on the play."
     },
     {
-      "inning": "Bottom 11",
+      "inning": "Bottom 6",
       "pitcher": "C.",
       "batter": "Brantley Truitt",
       "outcome": "Strikeout (looking)",
@@ -1609,15 +1628,15 @@
       "pitches": "BKKK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "S.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "S.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1628,7 +1647,7 @@
       "description": "Truitt struck out looking (1-2 BKKK)."
     },
     {
-      "inning": "Bottom 11",
+      "inning": "Bottom 6",
       "pitcher": "C.",
       "batter": "Jake Barbour",
       "outcome": "Strikeout (swinging)",
@@ -1636,15 +1655,15 @@
       "pitches": "BSBFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "S.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "S.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1655,7 +1674,7 @@
       "description": "Barbour struck out swinging (2-2 BSBFS)."
     },
     {
-      "inning": "Bottom 12",
+      "inning": "Bottom 6",
       "pitcher": "C.",
       "batter": "Jacob Dilley",
       "outcome": "Flyout",
@@ -1663,8 +1682,8 @@
       "pitches": "SF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1682,16 +1701,16 @@
       "description": "Dilley flied out to lf (0-2 SF)."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "C.",
-      "batter": "J.",
+      "inning": "Top 7",
+      "pitcher": "Ethan Nobles",
+      "batter": "Jayce Tharnish",
       "outcome": "Groundout",
       "count": "0-2",
       "pitches": "FF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1709,16 +1728,16 @@
       "description": "J. Tharnish grounded out to ss (0-2 FF)."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "C.",
-      "batter": "T.",
+      "inning": "Top 7",
+      "pitcher": "Ethan Nobles",
+      "batter": "Tyler Bell",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "F",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1736,23 +1755,23 @@
       "description": "T. Bell grounded out to 1b unassisted (0-1 F)."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "C.",
-      "batter": "R.",
+      "inning": "Top 7",
+      "pitcher": "Ethan Nobles",
+      "batter": "Ryan Schwartz",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "S",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "R.",
+        "1B": "Ryan Schwartz",
         "2B": null,
         "3B": null
       },
@@ -1763,24 +1782,24 @@
       "description": "R. Schwartz singled to left field (0-1 S)."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "C.",
-      "batter": "T.",
+      "inning": "Top 7",
+      "pitcher": "Ethan Nobles",
+      "batter": "Tyler Cerny",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "KF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "R.",
+        "1B": "Ryan Schwartz",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
-        "2B": null,
+        "1B": "Tyler Cerny",
+        "2B": "Ryan Schwartz",
         "3B": null
       },
       "score": {
@@ -1790,24 +1809,24 @@
       "description": "T. Cerny singled to left field (0-2 KF) R. Schwartz advanced to second."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "C.",
+      "inning": "Top 7",
+      "pitcher": "Ethan Nobles",
       "batter": "B Van Cleave struck out looking (3-2 FBFBBK).",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
       "pitches": "FBFBBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "T.",
-        "2B": null,
+        "1B": "Tyler Cerny",
+        "2B": "Ryan Schwartz",
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
-        "2B": null,
+        "1B": "Tyler Cerny",
+        "2B": "Ryan Schwartz",
         "3B": null
       },
       "score": {
@@ -1817,7 +1836,7 @@
       "description": "B Van Cleave struck out looking (3-2 FBFBBK)."
     },
     {
-      "inning": "Bottom 13",
+      "inning": "Bottom 7",
       "pitcher": "C.",
       "batter": "B Van Cleave to 1b.",
       "outcome": "\u2014",
@@ -1825,15 +1844,15 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "T.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1844,7 +1863,7 @@
       "description": "B Van Cleave to 1b."
     },
     {
-      "inning": "Bottom 13",
+      "inning": "Bottom 7",
       "pitcher": "C.",
       "batter": "Parker Wight",
       "outcome": "Single",
@@ -1852,10 +1871,10 @@
       "pitches": "KK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "T.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1871,16 +1890,16 @@
       "description": "Wight singled (0-2 KK)."
     },
     {
-      "inning": "Bottom 13",
+      "inning": "Bottom 7",
       "pitcher": "C.",
-      "batter": "L.",
+      "batter": "L. Lawrence",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Parker Wight",
         "2B": null,
@@ -1898,16 +1917,16 @@
       "description": "L. Lawrence to dh."
     },
     {
-      "inning": "Bottom 13",
+      "inning": "Bottom 7",
       "pitcher": "C.",
-      "batter": "C.",
+      "batter": "C. Cloud",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Parker Wight",
         "2B": null,
@@ -1925,16 +1944,16 @@
       "description": "C. Cloud to ss for T. Bell."
     },
     {
-      "inning": "Bottom 13",
+      "inning": "Bottom 7",
       "pitcher": "C.",
-      "batter": "E.",
+      "batter": "E. Hindle",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Parker Wight",
         "2B": null,
@@ -1952,7 +1971,7 @@
       "description": "E. Hindle to 2b."
     },
     {
-      "inning": "Bottom 13",
+      "inning": "Bottom 7",
       "pitcher": "C.",
       "batter": "Muller",
       "outcome": "Strikeout (swinging)",
@@ -1960,8 +1979,8 @@
       "pitches": "BKKBFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Parker Wight",
         "2B": null,
@@ -1979,7 +1998,7 @@
       "description": "Muller struck out swinging (2-2 BKKBFS)."
     },
     {
-      "inning": "Bottom 13",
+      "inning": "Bottom 7",
       "pitcher": "C.",
       "batter": "Brody Gardner",
       "outcome": "Groundout",
@@ -1987,8 +2006,8 @@
       "pitches": "BBKKFF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Parker Wight",
         "2B": null,
@@ -2006,7 +2025,7 @@
       "description": "Gardner grounded out to p (2-2 BBKKFF) Wight advanced to second."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 7",
       "pitcher": "C.",
       "batter": "Luke Jenkins",
       "outcome": "\u2014",
@@ -2014,16 +2033,16 @@
       "pitches": "KB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": null,
+        "2B": "Parker Wight",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": null,
+        "2B": "Parker Wight",
         "3B": null
       },
       "score": {
@@ -2033,9 +2052,9 @@
       "description": "Jenkins out at first 1b to p (1-1 KB)."
     },
     {
-      "inning": "Bottom 14",
-      "pitcher": "Winfield",
-      "batter": "E.",
+      "inning": "Top 8",
+      "pitcher": "Nolan Winfield",
+      "batter": "Ethan Hindle",
       "outcome": "Triple",
       "count": "2-0",
       "pitches": "BB",
@@ -2051,7 +2070,7 @@
       "runners_after": {
         "1B": null,
         "2B": null,
-        "3B": "E."
+        "3B": "Ethan Hindle"
       },
       "score": {
         "away": 12,
@@ -2060,25 +2079,27 @@
       "description": "E. Hindle tripled down the lf line (2-0 BB)."
     },
     {
-      "inning": "Bottom 14",
-      "pitcher": "Winfield",
-      "batter": "O.",
+      "inning": "Top 8",
+      "pitcher": "Nolan Winfield",
+      "batter": "Owen Jenkins",
       "outcome": "Fielder's choice",
       "count": "2-2",
       "pitches": "KKBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ethan Hindle"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
-        "3B": "E."
+        "3B": "Ethan Hindle"
       },
       "runners_after": {
-        "1B": "O.",
+        "1B": "Owen Jenkins",
         "2B": null,
-        "3B": "E."
+        "3B": null
       },
       "score": {
         "away": 13,
@@ -2087,9 +2108,9 @@
       "description": "O. Jenkins reached on a fielder's choice, RBI (2-2 KKBFB) E. Hindle scored."
     },
     {
-      "inning": "Bottom 14",
-      "pitcher": "Winfield",
-      "batter": "S.",
+      "inning": "Top 8",
+      "pitcher": "Nolan Winfield",
+      "batter": "Scott Campbell",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
@@ -2098,14 +2119,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "O.",
+        "1B": "Owen Jenkins",
         "2B": null,
-        "3B": "E."
+        "3B": null
       },
       "runners_after": {
-        "1B": "O.",
+        "1B": null,
         "2B": null,
-        "3B": "E."
+        "3B": null
       },
       "score": {
         "away": 13,
@@ -2114,9 +2135,9 @@
       "description": "S. Campbell hit into double play 2b to ss to 1b O. Jenkins out on the play."
     },
     {
-      "inning": "Bottom 14",
-      "pitcher": "Winfield",
-      "batter": "C.",
+      "inning": "Top 8",
+      "pitcher": "Nolan Winfield",
+      "batter": "Caeden Cloud",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
@@ -2125,14 +2146,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "O.",
+        "1B": null,
         "2B": null,
-        "3B": "E."
+        "3B": null
       },
       "runners_after": {
-        "1B": "O.",
+        "1B": null,
         "2B": null,
-        "3B": "E."
+        "3B": null
       },
       "score": {
         "away": 13,
@@ -2141,9 +2162,9 @@
       "description": "C. Cloud to ss for L. Lawrence."
     },
     {
-      "inning": "Bottom 14",
-      "pitcher": "Winfield",
-      "batter": "T.",
+      "inning": "Top 8",
+      "pitcher": "Nolan Winfield",
+      "batter": "Tyler Bell",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
@@ -2152,14 +2173,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "O.",
+        "1B": null,
         "2B": null,
-        "3B": "E."
+        "3B": null
       },
       "runners_after": {
-        "1B": "O.",
+        "1B": null,
         "2B": null,
-        "3B": "E."
+        "3B": null
       },
       "score": {
         "away": 13,
@@ -2168,9 +2189,9 @@
       "description": "T. Bell to dh for C. Cloud."
     },
     {
-      "inning": "Bottom 14",
-      "pitcher": "Winfield",
-      "batter": "C.",
+      "inning": "Top 8",
+      "pitcher": "Nolan Winfield",
+      "batter": "Caeden Cloud",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
       "pitches": "FFBBFBS",
@@ -2179,14 +2200,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "O.",
+        "1B": null,
         "2B": null,
-        "3B": "E."
+        "3B": null
       },
       "runners_after": {
-        "1B": "O.",
+        "1B": null,
         "2B": null,
-        "3B": "E."
+        "3B": null
       },
       "score": {
         "away": 13,
@@ -2195,25 +2216,25 @@
       "description": "C. Cloud struck out swinging (3-2 FFBBFBS)."
     },
     {
-      "inning": "Bottom 14",
-      "pitcher": "Winfield",
-      "batter": "L.",
+      "inning": "Bottom 8",
+      "pitcher": "C.",
+      "batter": "Luke Holland",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
       "pitches": "FBKK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "O.",
+        "1B": null,
         "2B": null,
-        "3B": "E."
+        "3B": null
       },
       "runners_after": {
-        "1B": "O.",
+        "1B": null,
         "2B": null,
-        "3B": "E."
+        "3B": null
       },
       "score": {
         "away": 13,
@@ -2222,16 +2243,16 @@
       "description": "L. Holland struck out looking (1-2 FBKK)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Winfield",
+      "inning": "Bottom 8",
+      "pitcher": "C.",
       "batter": "Jacob Budzik",
       "outcome": "Triple",
       "count": "3-2",
       "pitches": "FFBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2249,16 +2270,16 @@
       "description": "Budzik tripled (3-2 FFBBB)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Winfield",
+      "inning": "Bottom 8",
+      "pitcher": "C.",
       "batter": "Brantley Truitt",
       "outcome": "Pop out",
       "count": "1-2",
       "pitches": "KBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2276,8 +2297,8 @@
       "description": "Truitt popped up to (1-2 KBF)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Winfield",
+      "inning": "Bottom 8",
+      "pitcher": "C.",
       "batter": "Jake Barbour",
       "outcome": "Single",
       "count": "1-1",
@@ -2286,8 +2307,8 @@
       "runs_scored": [
         "Jacob Budzik"
       ],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2305,7 +2326,7 @@
       "description": "Barbour singled to right field, RBI (1-1 BK) Budzik scored."
     },
     {
-      "inning": "Bottom 15",
+      "inning": "Bottom 8",
       "pitcher": "T.",
       "batter": "Jacob Dilley",
       "outcome": "Single",
@@ -2313,8 +2334,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Jake Barbour",
         "2B": null,
@@ -2332,7 +2353,7 @@
       "description": "Dilley singled to right field Barbour advanced to second."
     },
     {
-      "inning": "Bottom 15",
+      "inning": "Bottom 8",
       "pitcher": "T.",
       "batter": "Parker Wight",
       "outcome": "Strikeout (swinging)",
@@ -2340,8 +2361,8 @@
       "pitches": "BKKS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Jacob Dilley",
         "2B": "Jake Barbour",
@@ -2359,24 +2380,24 @@
       "description": "Wight struck out swinging (1-2 BKKS)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "T.",
-      "batter": "W.",
+      "inning": "Top 9",
+      "pitcher": "Nolan Winfield",
+      "batter": "Will Marcy",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Jacob Dilley",
-        "2B": "Jake Barbour",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jacob Dilley",
-        "2B": "Jake Barbour",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -2386,24 +2407,24 @@
       "description": "W. Marcy to cf for J. Tharnish."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "T.",
-      "batter": "W.",
+      "inning": "Top 9",
+      "pitcher": "Nolan Winfield",
+      "batter": "Will Marcy",
       "outcome": "\u2014",
       "count": "1-1",
       "pitches": "KB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Jacob Dilley",
-        "2B": "Jake Barbour",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jacob Dilley",
-        "2B": "Jake Barbour",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -2413,24 +2434,24 @@
       "description": "W. Marcy out at first 1b to p (1-1 KB)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "T.",
-      "batter": "T.",
+      "inning": "Top 9",
+      "pitcher": "Nolan Winfield",
+      "batter": "T. Hunter",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Jacob Dilley",
-        "2B": "Jake Barbour",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jacob Dilley",
-        "2B": "Jake Barbour",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -2440,24 +2461,24 @@
       "description": "T. Hunter to dh for T. Bell."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "T.",
+      "inning": "Top 9",
+      "pitcher": "Nolan Winfield",
       "batter": "/ to p for T. Hunter.",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Jacob Dilley",
-        "2B": "Jake Barbour",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jacob Dilley",
-        "2B": "Jake Barbour",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -2467,24 +2488,24 @@
       "description": "/ to p for T. Hunter."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "T.",
-      "batter": "T.",
+      "inning": "Top 9",
+      "pitcher": "Nolan Winfield",
+      "batter": "T. Hunter",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
       "pitches": "BKKK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Jacob Dilley",
-        "2B": "Jake Barbour",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jacob Dilley",
-        "2B": "Jake Barbour",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -2494,16 +2515,16 @@
       "description": "T. Hunter struck out looking (1-2 BKKK)."
     },
     {
-      "inning": "Bottom 16",
-      "pitcher": "T.",
-      "batter": "T.",
+      "inning": "Top 9",
+      "pitcher": "Nolan Winfield",
+      "batter": "Tagger Tyson",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KKS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2521,16 +2542,16 @@
       "description": "T. Tyson struck out swinging, out at first c to 1b (0-2 KKS)."
     },
     {
-      "inning": "Bottom 16",
+      "inning": "Bottom 9",
       "pitcher": "T.",
-      "batter": "T.",
+      "batter": "T. Hunter",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2548,16 +2569,16 @@
       "description": "T. Hunter to p."
     },
     {
-      "inning": "Bottom 16",
+      "inning": "Bottom 9",
       "pitcher": "T.",
-      "batter": "T.",
+      "batter": "T. Tyson",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2575,7 +2596,7 @@
       "description": "T. Tyson to rf."
     },
     {
-      "inning": "Bottom 16",
+      "inning": "Bottom 9",
       "pitcher": "T.",
       "batter": "/ to dh.",
       "outcome": "\u2014",
@@ -2583,8 +2604,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2602,7 +2623,7 @@
       "description": "/ to dh."
     },
     {
-      "inning": "Bottom 16",
+      "inning": "Bottom 9",
       "pitcher": "T.",
       "batter": "Muller",
       "outcome": "Strikeout (swinging)",
@@ -2610,8 +2631,8 @@
       "pitches": "KFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2629,7 +2650,7 @@
       "description": "Muller struck out swinging (0-2 KFS)."
     },
     {
-      "inning": "Bottom 16",
+      "inning": "Bottom 9",
       "pitcher": "T.",
       "batter": "JJ Parsons",
       "outcome": "Home run",
@@ -2639,8 +2660,8 @@
       "runs_scored": [
         "JJ Parsons"
       ],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2658,7 +2679,7 @@
       "description": "Parsons homered, RBI (2-0 BB)."
     },
     {
-      "inning": "Bottom 16",
+      "inning": "Bottom 9",
       "pitcher": "T.",
       "batter": "Landon Polk",
       "outcome": "Lineout",
@@ -2666,8 +2687,8 @@
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2685,7 +2706,7 @@
       "description": "Polk lined out to lf (1-0 B)."
     },
     {
-      "inning": "Bottom 17",
+      "inning": "Bottom 9",
       "pitcher": "T.",
       "batter": "Anthony Ruocco",
       "outcome": "Strikeout (swinging)",
@@ -2693,8 +2714,8 @@
       "pitches": "KBKBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,

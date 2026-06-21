@@ -1,9 +1,9 @@
 {
   "contest_id": "6581753",
   "date": "05/19/2026",
-  "batting_team": "Missouri",
-  "pitching_team": "Ole Miss",
-  "note": "Broken-down from the saved play_by_play.json, which contains the Missouri at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "Missouri",
+  "home_team": "Ole Miss",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
       "inning": "Top 1",
@@ -114,97 +114,16 @@
       "description": "Ward fouled out to (0-0)."
     },
     {
-      "inning": "Top 1",
-      "pitcher": "Wil Libbert",
-      "batter": "D.",
+      "inning": "Bottom 1",
+      "pitcher": "Josh McDevitt",
+      "batter": "Dom Decker",
       "outcome": "Home run",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "D."
+        "Dom Decker"
       ],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "Kam Durnin",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Kam Durnin",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 0,
-        "home": 1
-      },
-      "description": "D. Decker homered down the lf line, RBI (2-0 BB)."
-    },
-    {
-      "inning": "Top 1",
-      "pitcher": "Wil Libbert",
-      "batter": "T.",
-      "outcome": "Hit by pitch",
-      "count": "1-2",
-      "pitches": "BFFF",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "Kam Durnin",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "T.",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 0,
-        "home": 1
-      },
-      "description": "T. Bissetta hit by pitch (1-2 BFFF)."
-    },
-    {
-      "inning": "Top 1",
-      "pitcher": "Wil Libbert",
-      "batter": "J.",
-      "outcome": "Fielder's choice",
-      "count": "0-1",
-      "pitches": "F",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
-      "runners_before": {
-        "1B": "T.",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "J.",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 0,
-        "home": 1
-      },
-      "description": "J. Utermark reached on a fielder's choice to third base (0-1 F) T. Bissetta out at second to 2b."
-    },
-    {
-      "inning": "Top 2",
-      "pitcher": "Wil Libbert",
-      "batter": null,
-      "outcome": "Stolen base",
-      "count": null,
-      "pitches": null,
-      "rbi": false,
-      "runs_scored": [],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -221,26 +140,107 @@
         "away": 0,
         "home": 1
       },
-      "description": "J. Utermark stole second."
+      "description": "D. Decker homered down the lf line, RBI (2-0 BB)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Wil Libbert",
-      "batter": "W.",
-      "outcome": "Strikeout (swinging)",
+      "inning": "Bottom 1",
+      "pitcher": "Josh McDevitt",
+      "batter": "Tristan Bissetta",
+      "outcome": "Hit by pitch",
       "count": "1-2",
-      "pitches": "SBFS",
+      "pitches": "BFFF",
       "rbi": false,
       "runs_scored": [],
       "outs_before": 0,
-      "outs_after": 1,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Tristan Bissetta",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "T. Bissetta hit by pitch (1-2 BFFF)."
+    },
+    {
+      "inning": "Bottom 1",
+      "pitcher": "Josh McDevitt",
+      "batter": "Judd Utermark",
+      "outcome": "Fielder's choice",
+      "count": "0-1",
+      "pitches": "F",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Tristan Bissetta",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Judd Utermark",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "J. Utermark reached on a fielder's choice to third base (0-1 F) T. Bissetta out at second to 2b."
+    },
+    {
+      "inning": "Bottom 1",
+      "pitcher": "Josh McDevitt",
+      "batter": null,
+      "outcome": "Stolen base",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Judd Utermark",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Judd Utermark",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "J. Utermark stole second."
+    },
+    {
+      "inning": "Bottom 1",
+      "pitcher": "Josh McDevitt",
+      "batter": "Will Furniss",
+      "outcome": "Strikeout (swinging)",
+      "count": "1-2",
+      "pitches": "SBFS",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Judd Utermark",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Judd Utermark",
         "2B": null,
         "3B": null
       },
@@ -251,23 +251,23 @@
       "description": "W. Furniss struck out swinging (1-2 SBFS)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Wil Libbert",
-      "batter": "H.",
+      "inning": "Bottom 1",
+      "pitcher": "Josh McDevitt",
+      "batter": "Hayden Federico",
       "outcome": "Groundout",
       "count": "0-2",
       "pitches": "FF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
+        "1B": "Judd Utermark",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Judd Utermark",
         "2B": null,
         "3B": null
       },
@@ -286,8 +286,8 @@
       "pitches": "SBBBFF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -313,8 +313,8 @@
       "pitches": "SFBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Mateo Serna",
         "2B": null,
@@ -332,7 +332,7 @@
       "description": "Jordan struck out swinging (1-2 SFBS)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Wil Libbert",
       "batter": "Kaden Peer",
       "outcome": "Strikeout (swinging)",
@@ -340,15 +340,15 @@
       "pitches": "SFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Mateo Serna",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Mateo Serna",
         "2B": null,
         "3B": null
       },
@@ -359,7 +359,7 @@
       "description": "Peer struck out swinging (0-2 SFS)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Wil Libbert",
       "batter": "Jamal George",
       "outcome": "Single",
@@ -367,16 +367,16 @@
       "pitches": "KB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Mateo Serna",
         "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Jamal George",
-        "2B": null,
+        "2B": "Mateo Serna",
         "3B": null
       },
       "score": {
@@ -386,7 +386,7 @@
       "description": "George singled through the left side (1-1 KB) Serna advanced to second."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Wil Libbert",
       "batter": "Chris Patterson",
       "outcome": "Strikeout (swinging)",
@@ -394,16 +394,16 @@
       "pitches": "BFSBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Jamal George",
-        "2B": null,
+        "2B": "Mateo Serna",
         "3B": null
       },
       "runners_after": {
         "1B": "Jamal George",
-        "2B": null,
+        "2B": "Mateo Serna",
         "3B": null
       },
       "score": {
@@ -413,23 +413,23 @@
       "description": "Patterson struck out swinging (2-2 BFSBS)."
     },
     {
-      "inning": "Top 3",
-      "pitcher": "Wil Libbert",
-      "batter": "O.",
+      "inning": "Bottom 2",
+      "pitcher": "Josh McDevitt",
+      "batter": "Owen Paino",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "BBFKFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Jamal George",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jamal George",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -440,18 +440,18 @@
       "description": "O. Paino struck out swinging (2-2 BBFKFS)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Wil Libbert",
-      "batter": "A.",
+      "inning": "Bottom 2",
+      "pitcher": "Josh McDevitt",
+      "batter": "Austin Fawley",
       "outcome": "Home run",
       "count": "2-2",
       "pitches": "FBBF",
       "rbi": true,
       "runs_scored": [
-        "A."
+        "Austin Fawley"
       ],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -469,16 +469,16 @@
       "description": "A. Fawley homered to right field, RBI (2-2 FBBF)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Wil Libbert",
-      "batter": "D.",
+      "inning": "Bottom 2",
+      "pitcher": "Josh McDevitt",
+      "batter": "Daniel Pacella",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "FFFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -496,16 +496,16 @@
       "description": "D. Pacella struck out swinging (0-2 FFFS)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Wil Libbert",
-      "batter": "B.",
+      "inning": "Bottom 2",
+      "pitcher": "Josh McDevitt",
+      "batter": "Brayden Randle",
       "outcome": "Lineout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -523,7 +523,7 @@
       "description": "B. Randle lined out to 1b (0-0)."
     },
     {
-      "inning": "Top 4",
+      "inning": "Top 3",
       "pitcher": "Wil Libbert",
       "batter": "Pierre Seals",
       "outcome": "Single",
@@ -531,8 +531,8 @@
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -550,7 +550,7 @@
       "description": "Seals singled through the left side (1-0 B)."
     },
     {
-      "inning": "Top 4",
+      "inning": "Top 3",
       "pitcher": "Wil Libbert",
       "batter": "Jase Woita",
       "outcome": "Flyout",
@@ -558,8 +558,8 @@
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Pierre Seals",
         "2B": null,
@@ -577,7 +577,7 @@
       "description": "Woita flied out to rf (2-0 BB)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Wil Libbert",
       "batter": null,
       "outcome": "Stolen base",
@@ -585,15 +585,15 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": null,
+        "1B": "Pierre Seals",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Pierre Seals",
         "2B": null,
         "3B": null
       },
@@ -604,7 +604,7 @@
       "description": "Seals stole second."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Wil Libbert",
       "batter": "Kam Durnin",
       "outcome": "Home run",
@@ -612,12 +612,13 @@
       "pitches": "BK",
       "rbi": true,
       "runs_scored": [
+        "Pierre Seals",
         "Kam Durnin"
       ],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": null,
+        "1B": "Pierre Seals",
         "2B": null,
         "3B": null
       },
@@ -633,7 +634,7 @@
       "description": "Durnin homered to left center, 2 RBI (1-1 BK) Seals scored."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Wil Libbert",
       "batter": "Blaize Ward",
       "outcome": "Lineout",
@@ -641,8 +642,8 @@
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -660,7 +661,7 @@
       "description": "Ward lined out to ss (0-1 K)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Wil Libbert",
       "batter": "Mateo Serna",
       "outcome": "Flyout",
@@ -668,8 +669,8 @@
       "pitches": "FBKBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -687,16 +688,16 @@
       "description": "Serna flied out to rf (2-2 FBKBF)."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "Wil Libbert",
-      "batter": "D.",
+      "inning": "Bottom 3",
+      "pitcher": "Josh McDevitt",
+      "batter": "Dom Decker",
       "outcome": "Flyout",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -714,16 +715,16 @@
       "description": "D. Decker flied out to lf (0-1 K)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Wil Libbert",
+      "inning": "Bottom 3",
+      "pitcher": "Josh McDevitt",
       "batter": "MIZ",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -741,16 +742,16 @@
       "description": "MIZ ABS challenge 0-0 pitch: Overturned, ball 1 to strike 1."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Wil Libbert",
-      "batter": "T.",
+      "inning": "Bottom 3",
+      "pitcher": "Josh McDevitt",
+      "batter": "Tristan Bissetta",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -768,23 +769,23 @@
       "description": "T. Bissetta flied out to cf (0-0)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Wil Libbert",
-      "batter": "J.",
+      "inning": "Bottom 3",
+      "pitcher": "Josh McDevitt",
+      "batter": "Judd Utermark",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BKBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "Judd Utermark",
         "2B": null,
         "3B": null
       },
@@ -795,23 +796,23 @@
       "description": "J. Utermark walked (3-1 BKBBB)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Wil Libbert",
-      "batter": "W.",
+      "inning": "Bottom 3",
+      "pitcher": "Josh McDevitt",
+      "batter": "Will Furniss",
       "outcome": "Flyout",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "J.",
+        "1B": "Judd Utermark",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "Judd Utermark",
         "2B": null,
         "3B": null
       },
@@ -822,7 +823,7 @@
       "description": "W. Furniss flied out to cf (1-0 B)."
     },
     {
-      "inning": "Top 6",
+      "inning": "Top 4",
       "pitcher": "Wil Libbert",
       "batter": "Donovan Jordan",
       "outcome": "Flyout",
@@ -830,15 +831,15 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "J.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -849,7 +850,7 @@
       "description": "Jordan flied out to cf (0-0)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Wil Libbert",
       "batter": "Kaden Peer",
       "outcome": "Walk",
@@ -857,8 +858,8 @@
       "pitches": "BSBKBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -876,7 +877,7 @@
       "description": "Peer walked (3-2 BSBKBB)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Wil Libbert",
       "batter": "Jamal George",
       "outcome": "Groundout",
@@ -884,8 +885,8 @@
       "pitches": "FF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Kaden Peer",
         "2B": null,
@@ -903,7 +904,7 @@
       "description": "George grounded out to p (0-2 FF) Peer advanced to second."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Wil Libbert",
       "batter": "Chris Patterson",
       "outcome": "Walk",
@@ -911,8 +912,8 @@
       "pitches": "BSKBFBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": "Kaden Peer",
@@ -930,7 +931,7 @@
       "description": "Patterson walked (3-2 BSKBFBB)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Wil Libbert",
       "batter": "Pierre Seals",
       "outcome": "\u2014",
@@ -938,8 +939,8 @@
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Chris Patterson",
         "2B": "Kaden Peer",
@@ -957,24 +958,24 @@
       "description": "Seals out at first 1b to p (1-0 B)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Wil Libbert",
-      "batter": "H.",
+      "inning": "Bottom 4",
+      "pitcher": "Josh McDevitt",
+      "batter": "Hayden Federico",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "BSBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Chris Patterson",
-        "2B": "Kaden Peer",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Patterson",
-        "2B": "Kaden Peer",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -984,24 +985,24 @@
       "description": "H. Federico grounded out to (2-2 BSBS)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Wil Libbert",
-      "batter": "O.",
+      "inning": "Bottom 4",
+      "pitcher": "Josh McDevitt",
+      "batter": "Owen Paino",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "BFSBFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Chris Patterson",
-        "2B": "Kaden Peer",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Patterson",
-        "2B": "Kaden Peer",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1011,16 +1012,16 @@
       "description": "O. Paino struck out swinging (2-2 BFSBFS)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Wil Libbert",
-      "batter": "A.",
+      "inning": "Bottom 4",
+      "pitcher": "Josh McDevitt",
+      "batter": "Austin Fawley",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1038,7 +1039,7 @@
       "description": "A. Fawley struck out swinging (0-2 KSS)."
     },
     {
-      "inning": "Top 8",
+      "inning": "Top 5",
       "pitcher": "J.",
       "batter": "Jase Woita",
       "outcome": "Lineout",
@@ -1046,8 +1047,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1065,7 +1066,7 @@
       "description": "Woita lined out to ss (0-0)."
     },
     {
-      "inning": "Top 8",
+      "inning": "Top 5",
       "pitcher": "J.",
       "batter": "Kam Durnin",
       "outcome": "Walk",
@@ -1073,8 +1074,8 @@
       "pitches": "BBKBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1092,7 +1093,7 @@
       "description": "Durnin walked (3-1 BBKBB)."
     },
     {
-      "inning": "Top 8",
+      "inning": "Top 5",
       "pitcher": "J.",
       "batter": null,
       "outcome": "Stolen base",
@@ -1100,8 +1101,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Kam Durnin",
         "2B": null,
@@ -1119,7 +1120,7 @@
       "description": "Durnin stole second."
     },
     {
-      "inning": "Top 8",
+      "inning": "Top 5",
       "pitcher": "J.",
       "batter": "Blaize Ward",
       "outcome": "Walk",
@@ -1127,8 +1128,8 @@
       "pitches": "BBKBFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Kam Durnin",
         "2B": null,
@@ -1146,7 +1147,7 @@
       "description": "Ward walked (3-2 BBKBFB)."
     },
     {
-      "inning": "Top 8",
+      "inning": "Top 5",
       "pitcher": "J.",
       "batter": "Mateo Serna",
       "outcome": "Single",
@@ -1154,8 +1155,8 @@
       "pitches": "BS",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Blaize Ward",
         "2B": null,
@@ -1173,7 +1174,7 @@
       "description": "Serna singled down the rf line, RBI (1-1 BS) Ward advanced to second Durnin scored."
     },
     {
-      "inning": "Top 8",
+      "inning": "Top 5",
       "pitcher": "J.",
       "batter": "Donovan Jordan",
       "outcome": "Walk",
@@ -1181,8 +1182,8 @@
       "pitches": "BFSBBFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Mateo Serna",
         "2B": "Blaize Ward",
@@ -1200,7 +1201,7 @@
       "description": "Jordan walked (3-2 BFSBBFB) Serna advanced to second Ward advanced to third."
     },
     {
-      "inning": "Top 8",
+      "inning": "Top 5",
       "pitcher": "L.",
       "batter": "Kaden Peer",
       "outcome": "Home run",
@@ -1213,8 +1214,8 @@
         "Blaize Ward",
         "Kaden Peer"
       ],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Donovan Jordan",
         "2B": "Mateo Serna",
@@ -1232,7 +1233,7 @@
       "description": "Peer homered to left center, 4 RBI (1-2 KBK) Jordan scored Serna scored Ward scored."
     },
     {
-      "inning": "Top 8",
+      "inning": "Top 5",
       "pitcher": "L.",
       "batter": "Jamal George",
       "outcome": "Strikeout (looking)",
@@ -1240,8 +1241,8 @@
       "pitches": "FBFK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1259,7 +1260,7 @@
       "description": "George struck out looking (1-2 FBFK)."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "L.",
       "batter": "Chris Patterson",
       "outcome": "Flyout",
@@ -1267,8 +1268,8 @@
       "pitches": "BS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1286,16 +1287,16 @@
       "description": "Patterson flied out to rf (1-1 BS)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "L.",
-      "batter": "D.",
+      "inning": "Bottom 5",
+      "pitcher": "Josh McDevitt",
+      "batter": "Daniel Pacella",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1313,23 +1314,23 @@
       "description": "D. Pacella flied out to rf (0-0)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "L.",
-      "batter": "B.",
+      "inning": "Bottom 5",
+      "pitcher": "Josh McDevitt",
+      "batter": "Brayden Randle",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": "Brayden Randle",
         "2B": null,
         "3B": null
       },
@@ -1340,23 +1341,23 @@
       "description": "B. Randle singled to right center (0-1 K)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "L.",
-      "batter": "D.",
+      "inning": "Bottom 5",
+      "pitcher": "Josh McDevitt",
+      "batter": "Dom Decker",
       "outcome": "Flyout",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "B.",
+        "1B": "Brayden Randle",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": "Brayden Randle",
         "2B": null,
         "3B": null
       },
@@ -1367,24 +1368,26 @@
       "description": "D. Decker flied out to rf (1-0 B)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "L.",
-      "batter": "T.",
+      "inning": "Bottom 5",
+      "pitcher": "Josh McDevitt",
+      "batter": "Tristan Bissetta",
       "outcome": "Double",
       "count": "2-2",
       "pitches": "BKFFB",
       "rbi": true,
-      "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "runs_scored": [
+        "Brayden Randle"
+      ],
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Brayden Randle",
         "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "T.",
+        "2B": "Tristan Bissetta",
         "3B": null
       },
       "score": {
@@ -1394,25 +1397,25 @@
       "description": "T. Bissetta doubled to left center, RBI (2-2 BKFFB) B. Randle scored."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "L.",
-      "batter": "J.",
+      "inning": "Bottom 5",
+      "pitcher": "Josh McDevitt",
+      "batter": "Judd Utermark",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "T.",
+        "2B": "Tristan Bissetta",
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
-        "2B": "T.",
-        "3B": null
+        "1B": "Judd Utermark",
+        "2B": null,
+        "3B": "Tristan Bissetta"
       },
       "score": {
         "away": 7,
@@ -1421,25 +1424,25 @@
       "description": "J. Utermark singled down the line (0-0) T. Bissetta advanced to third."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "L.",
+      "inning": "Bottom 5",
+      "pitcher": "Josh McDevitt",
       "batter": "MIZ",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "J.",
-        "2B": "T.",
-        "3B": null
+        "1B": "Judd Utermark",
+        "2B": null,
+        "3B": "Tristan Bissetta"
       },
       "runners_after": {
-        "1B": "J.",
-        "2B": "T.",
-        "3B": null
+        "1B": "Judd Utermark",
+        "2B": null,
+        "3B": "Tristan Bissetta"
       },
       "score": {
         "away": 7,
@@ -1448,25 +1451,25 @@
       "description": "MIZ ABS challenge 1-0 pitch: Overturned, ball 2 to strike 1."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "L.",
-      "batter": "W.",
+      "inning": "Bottom 5",
+      "pitcher": "Josh McDevitt",
+      "batter": "Will Furniss",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BKBBKFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "J.",
-        "2B": "T.",
-        "3B": null
+        "1B": "Judd Utermark",
+        "2B": null,
+        "3B": "Tristan Bissetta"
       },
       "runners_after": {
-        "1B": "W.",
-        "2B": "T.",
-        "3B": null
+        "1B": "Will Furniss",
+        "2B": "Judd Utermark",
+        "3B": "Tristan Bissetta"
       },
       "score": {
         "away": 7,
@@ -1475,25 +1478,28 @@
       "description": "W. Furniss walked (3-2 BKBBKFB) J. Utermark advanced to second."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "L.",
-      "batter": "H.",
+      "inning": "Bottom 5",
+      "pitcher": "Josh McDevitt",
+      "batter": "Hayden Federico",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "runs_scored": [
+        "Judd Utermark",
+        "Tristan Bissetta"
+      ],
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "W.",
-        "2B": "T.",
-        "3B": null
+        "1B": "Will Furniss",
+        "2B": "Judd Utermark",
+        "3B": "Tristan Bissetta"
       },
       "runners_after": {
-        "1B": "H.",
-        "2B": "T.",
-        "3B": null
+        "1B": "Hayden Federico",
+        "2B": null,
+        "3B": "Will Furniss"
       },
       "score": {
         "away": 7,
@@ -1502,25 +1508,27 @@
       "description": "H. Federico singled to right center, 2 RBI (0-0) W. Furniss advanced to third J. Utermark scored T. Bissetta scored."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "L.",
-      "batter": "O.",
+      "inning": "Bottom 5",
+      "pitcher": "Josh McDevitt",
+      "batter": "Owen Paino",
       "outcome": "Double",
       "count": "0-2",
       "pitches": "KS",
       "rbi": true,
-      "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "runs_scored": [
+        "Will Furniss"
+      ],
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "H.",
-        "2B": "T.",
-        "3B": null
+        "1B": "Hayden Federico",
+        "2B": null,
+        "3B": "Will Furniss"
       },
       "runners_after": {
-        "1B": "H.",
-        "2B": "O.",
-        "3B": null
+        "1B": null,
+        "2B": "Owen Paino",
+        "3B": "Hayden Federico"
       },
       "score": {
         "away": 7,
@@ -1529,25 +1537,25 @@
       "description": "O. Paino doubled to right center, ground-rule, RBI (0-2 KS) H. Federico advanced to third W. Furniss scored."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "L.",
+      "inning": "Bottom 5",
+      "pitcher": "Josh McDevitt",
       "batter": "MIZ",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "H.",
-        "2B": "O.",
-        "3B": null
+        "1B": null,
+        "2B": "Owen Paino",
+        "3B": "Hayden Federico"
       },
       "runners_after": {
-        "1B": "H.",
-        "2B": "O.",
-        "3B": null
+        "1B": null,
+        "2B": "Owen Paino",
+        "3B": "Hayden Federico"
       },
       "score": {
         "away": 7,
@@ -1556,25 +1564,25 @@
       "description": "MIZ ABS challenge 0-0 pitch: Overturned, ball 1 to strike 1."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "L.",
+      "inning": "Bottom 5",
+      "pitcher": "Josh McDevitt",
       "batter": "MIZ",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "H.",
-        "2B": "O.",
-        "3B": null
+        "1B": null,
+        "2B": "Owen Paino",
+        "3B": "Hayden Federico"
       },
       "runners_after": {
-        "1B": "H.",
-        "2B": "O.",
-        "3B": null
+        "1B": null,
+        "2B": "Owen Paino",
+        "3B": "Hayden Federico"
       },
       "score": {
         "away": 7,
@@ -1583,25 +1591,25 @@
       "description": "MIZ ABS challenge 2-2 pitch: overturned, ball 3 to strike 3."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "L.",
-      "batter": "A.",
+      "inning": "Bottom 5",
+      "pitcher": "Josh McDevitt",
+      "batter": "Austin Fawley",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
       "pitches": "FSFBBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "H.",
-        "2B": "O.",
-        "3B": null
+        "1B": null,
+        "2B": "Owen Paino",
+        "3B": "Hayden Federico"
       },
       "runners_after": {
-        "1B": "H.",
-        "2B": "O.",
-        "3B": null
+        "1B": null,
+        "2B": "Owen Paino",
+        "3B": "Hayden Federico"
       },
       "score": {
         "away": 7,
@@ -1610,122 +1618,12 @@
       "description": "A. Fawley struck out looking (2-2 FSFBBK)."
     },
     {
-      "inning": "Top 10",
+      "inning": "Top 6",
       "pitcher": "L.",
       "batter": "Pierre Seals",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KBFS",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "H.",
-        "2B": "O.",
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "H.",
-        "2B": "O.",
-        "3B": null
-      },
-      "score": {
-        "away": 7,
-        "home": 6
-      },
-      "description": "Seals struck out swinging (1-2 KBFS)."
-    },
-    {
-      "inning": "Top 10",
-      "pitcher": "L.",
-      "batter": "Jase Woita",
-      "outcome": "Home run",
-      "count": "1-2",
-      "pitches": "FBS",
-      "rbi": true,
-      "runs_scored": [
-        "Jase Woita"
-      ],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "H.",
-        "2B": "O.",
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "H.",
-        "2B": "O.",
-        "3B": null
-      },
-      "score": {
-        "away": 8,
-        "home": 6
-      },
-      "description": "Woita homered to left field, RBI (1-2 FBS)."
-    },
-    {
-      "inning": "Top 10",
-      "pitcher": "L.",
-      "batter": "Kam Durnin",
-      "outcome": "Walk",
-      "count": "3-0",
-      "pitches": "BBBB",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "H.",
-        "2B": "O.",
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Kam Durnin",
-        "2B": "O.",
-        "3B": null
-      },
-      "score": {
-        "away": 8,
-        "home": 6
-      },
-      "description": "Durnin walked (3-0 BBBB)."
-    },
-    {
-      "inning": "Top 10",
-      "pitcher": "L.",
-      "batter": "Blaize Ward",
-      "outcome": "Flyout",
-      "count": "0-0",
-      "pitches": "",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
-      "runners_before": {
-        "1B": "Kam Durnin",
-        "2B": "O.",
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Kam Durnin",
-        "2B": "O.",
-        "3B": null
-      },
-      "score": {
-        "away": 8,
-        "home": 6
-      },
-      "description": "Ward flied out to lf (0-0)."
-    },
-    {
-      "inning": "Top 11",
-      "pitcher": "L.",
-      "batter": "Mateo Serna",
-      "outcome": "Strikeout (looking)",
-      "count": "2-2",
-      "pitches": "FBBSFK",
       "rbi": false,
       "runs_scored": [],
       "outs_before": 0,
@@ -1737,6 +1635,116 @@
       },
       "runners_after": {
         "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 6
+      },
+      "description": "Seals struck out swinging (1-2 KBFS)."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "L.",
+      "batter": "Jase Woita",
+      "outcome": "Home run",
+      "count": "1-2",
+      "pitches": "FBS",
+      "rbi": true,
+      "runs_scored": [
+        "Jase Woita"
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 8,
+        "home": 6
+      },
+      "description": "Woita homered to left field, RBI (1-2 FBS)."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "L.",
+      "batter": "Kam Durnin",
+      "outcome": "Walk",
+      "count": "3-0",
+      "pitches": "BBBB",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Kam Durnin",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 8,
+        "home": 6
+      },
+      "description": "Durnin walked (3-0 BBBB)."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "L.",
+      "batter": "Blaize Ward",
+      "outcome": "Flyout",
+      "count": "0-0",
+      "pitches": "",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Kam Durnin",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Kam Durnin",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 8,
+        "home": 6
+      },
+      "description": "Ward flied out to lf (0-0)."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "L.",
+      "batter": "Mateo Serna",
+      "outcome": "Strikeout (looking)",
+      "count": "2-2",
+      "pitches": "FBBSFK",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 3,
+      "runners_before": {
+        "1B": "Kam Durnin",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Kam Durnin",
         "2B": null,
         "3B": null
       },
@@ -1747,16 +1755,16 @@
       "description": "Serna struck out looking (2-2 FBBSFK)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "L.",
-      "batter": "D.",
+      "inning": "Bottom 6",
+      "pitcher": "Josh McDevitt",
+      "batter": "Daniel Pacella",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "BBFFFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1774,16 +1782,16 @@
       "description": "D. Pacella struck out swinging (2-2 BBFFFS)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "L.",
-      "batter": "B.",
+      "inning": "Bottom 6",
+      "pitcher": "Josh McDevitt",
+      "batter": "Brayden Randle",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
       "pitches": "FFBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1801,16 +1809,16 @@
       "description": "B. Randle struck out looking (1-2 FFBK)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "L.",
+      "inning": "Bottom 6",
+      "pitcher": "Josh McDevitt",
       "batter": "MIZ",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1828,16 +1836,16 @@
       "description": "MIZ ABS challenge 1-2 pitch: overturned, ball 2 to strike 3."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "L.",
-      "batter": "D.",
+      "inning": "Bottom 6",
+      "pitcher": "Josh McDevitt",
+      "batter": "Dom Decker",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1845,7 +1853,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "D.",
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -1855,24 +1863,24 @@
       "description": "D. Decker doubled to right center (1-0 B)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Villarreal",
-      "batter": "T.",
+      "inning": "Bottom 6",
+      "pitcher": "Juan Villarreal",
+      "batter": "Tristan Bissetta",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "BKFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "D.",
+        "2B": "Dom Decker",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "D.",
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -1882,93 +1890,12 @@
       "description": "T. Bissetta struck out swinging (1-2 BKFS)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Villarreal",
+      "inning": "Top 7",
+      "pitcher": "L.",
       "batter": "Donovan Jordan",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
-      "runners_before": {
-        "1B": null,
-        "2B": "D.",
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Donovan Jordan",
-        "2B": "D.",
-        "3B": null
-      },
-      "score": {
-        "away": 8,
-        "home": 6
-      },
-      "description": "Jordan singled to left field (0-0)."
-    },
-    {
-      "inning": "Top 12",
-      "pitcher": "Villarreal",
-      "batter": "Kaden Peer",
-      "outcome": "Pop out",
-      "count": "0-0",
-      "pitches": "",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "Donovan Jordan",
-        "2B": "D.",
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Donovan Jordan",
-        "2B": "D.",
-        "3B": null
-      },
-      "score": {
-        "away": 8,
-        "home": 6
-      },
-      "description": "Peer popped up to 1b, bunt (0-0)."
-    },
-    {
-      "inning": "Top 12",
-      "pitcher": "Villarreal",
-      "batter": "Jamal George",
-      "outcome": "Strikeout (looking)",
-      "count": "1-2",
-      "pitches": "KBFFFK",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
-      "runners_before": {
-        "1B": "Donovan Jordan",
-        "2B": "D.",
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Donovan Jordan",
-        "2B": "D.",
-        "3B": null
-      },
-      "score": {
-        "away": 8,
-        "home": 6
-      },
-      "description": "George struck out looking (1-2 KBFFFK)."
-    },
-    {
-      "inning": "Top 13",
-      "pitcher": "Villarreal",
-      "batter": "Chris Patterson",
-      "outcome": "Single",
-      "count": "3-2",
-      "pitches": "BBBKSF",
       "rbi": false,
       "runs_scored": [],
       "outs_before": 0,
@@ -1979,8 +1906,89 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Patterson",
+        "1B": "Donovan Jordan",
         "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 8,
+        "home": 6
+      },
+      "description": "Jordan singled to left field (0-0)."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "L.",
+      "batter": "Kaden Peer",
+      "outcome": "Pop out",
+      "count": "0-0",
+      "pitches": "",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Donovan Jordan",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Donovan Jordan",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 8,
+        "home": 6
+      },
+      "description": "Peer popped up to 1b, bunt (0-0)."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "L.",
+      "batter": "Jamal George",
+      "outcome": "Strikeout (looking)",
+      "count": "1-2",
+      "pitches": "KBFFFK",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Donovan Jordan",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Donovan Jordan",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 8,
+        "home": 6
+      },
+      "description": "George struck out looking (1-2 KBFFFK)."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "L.",
+      "batter": "Chris Patterson",
+      "outcome": "Single",
+      "count": "3-2",
+      "pitches": "BBBKSF",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Donovan Jordan",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Chris Patterson",
+        "2B": "Donovan Jordan",
         "3B": null
       },
       "score": {
@@ -1990,24 +1998,24 @@
       "description": "Patterson singled to shortstop (3-2 BBBKSF) Jordan advanced to second."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Villarreal",
+      "inning": "Top 7",
+      "pitcher": "L.",
       "batter": "Pierre Seals",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
       "pitches": "SFBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Chris Patterson",
-        "2B": null,
+        "2B": "Donovan Jordan",
         "3B": null
       },
       "runners_after": {
         "1B": "Chris Patterson",
-        "2B": null,
+        "2B": "Donovan Jordan",
         "3B": null
       },
       "score": {
@@ -2017,23 +2025,23 @@
       "description": "Seals struck out looking (1-2 SFBK)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Villarreal",
-      "batter": "J.",
+      "inning": "Bottom 7",
+      "pitcher": "Juan Villarreal",
+      "batter": "Judd Utermark",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BKBFBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Chris Patterson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "Judd Utermark",
         "2B": null,
         "3B": null
       },
@@ -2044,23 +2052,23 @@
       "description": "J. Utermark walked (3-2 BKBFBB)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Villarreal",
-      "batter": "W.",
+      "inning": "Bottom 7",
+      "pitcher": "Juan Villarreal",
+      "batter": "Will Furniss",
       "outcome": "Flyout",
       "count": "2-1",
       "pitches": "KBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "J.",
+        "1B": "Judd Utermark",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "Judd Utermark",
         "2B": null,
         "3B": null
       },
@@ -2071,23 +2079,23 @@
       "description": "W. Furniss flied out to cf (2-1 KBB)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Villarreal",
+      "inning": "Bottom 7",
+      "pitcher": "Juan Villarreal",
       "batter": "MIZ",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "J.",
+        "1B": "Judd Utermark",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "Judd Utermark",
         "2B": null,
         "3B": null
       },
@@ -2098,25 +2106,26 @@
       "description": "MIZ ABS challenge 0-0 pitch: overturned, ball 1 to strike 1."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Villarreal",
-      "batter": "H.",
+      "inning": "Bottom 7",
+      "pitcher": "Juan Villarreal",
+      "batter": "Hayden Federico",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "H."
+        "Judd Utermark",
+        "Hayden Federico"
       ],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "J.",
+        "1B": "Judd Utermark",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2127,23 +2136,23 @@
       "description": "H. Federico homered to left field, 2 RBI (1-0 B) J. Utermark scored."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Villarreal",
-      "batter": "O.",
+      "inning": "Bottom 7",
+      "pitcher": "Juan Villarreal",
+      "batter": "Owen Paino",
       "outcome": "Hit by pitch",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "J.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "O.",
+        "1B": "Owen Paino",
         "2B": null,
         "3B": null
       },
@@ -2154,23 +2163,23 @@
       "description": "O. Paino hit by pitch (0-0)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Skidmore",
-      "batter": "A.",
+      "inning": "Bottom 7",
+      "pitcher": "Eli Skidmore",
+      "batter": "Austin Fawley",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KKS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "O.",
+        "1B": "Owen Paino",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "O.",
+        "1B": "Owen Paino",
         "2B": null,
         "3B": null
       },
@@ -2181,23 +2190,23 @@
       "description": "A. Fawley struck out swinging (0-2 KKS)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Skidmore",
+      "inning": "Bottom 7",
+      "pitcher": "Eli Skidmore",
       "batter": "MIZ",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Owen Paino",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Owen Paino",
         "2B": null,
         "3B": null
       },
@@ -2208,24 +2217,24 @@
       "description": "MIZ ABS challenge 0-0 pitch: overturned, ball 1 to strike 1."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Skidmore",
-      "batter": "D.",
+      "inning": "Bottom 7",
+      "pitcher": "Eli Skidmore",
+      "batter": "Daniel Pacella",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBBKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Owen Paino",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "D.",
-        "2B": null,
+        "1B": "Daniel Pacella",
+        "2B": "Owen Paino",
         "3B": null
       },
       "score": {
@@ -2235,24 +2244,24 @@
       "description": "D. Pacella walked (3-1 BBBKB) O. Paino advanced to second."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Skidmore",
-      "batter": "B.",
+      "inning": "Bottom 7",
+      "pitcher": "Eli Skidmore",
+      "batter": "Brayden Randle",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "D.",
-        "2B": null,
+        "1B": "Daniel Pacella",
+        "2B": "Owen Paino",
         "3B": null
       },
       "runners_after": {
-        "1B": "D.",
-        "2B": null,
+        "1B": "Daniel Pacella",
+        "2B": "Owen Paino",
         "3B": null
       },
       "score": {
@@ -2262,23 +2271,23 @@
       "description": "B. Randle flied out to rf (0-0)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Skidmore",
+      "inning": "Top 8",
+      "pitcher": "L.",
       "batter": "Jase Woita",
       "outcome": "Flyout",
       "count": "2-1",
       "pitches": "BKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "D.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "D.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2289,18 +2298,18 @@
       "description": "Woita flied out to cf (2-1 BKB)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Skidmore",
+      "inning": "Top 8",
+      "pitcher": "L.",
       "batter": "Kam Durnin",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "FBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "D.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2316,8 +2325,8 @@
       "description": "Durnin singled to center field (2-1 FBB)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Skidmore",
+      "inning": "Top 8",
+      "pitcher": "L.",
       "batter": "Blaize Ward",
       "outcome": "Single",
       "count": "1-2",
@@ -2326,8 +2335,8 @@
       "runs_scored": [
         "Kam Durnin"
       ],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Kam Durnin",
         "2B": null,
@@ -2345,7 +2354,7 @@
       "description": "Ward singled through the right side, advanced to second on a fielding error by rf (1-2 BFFF) Durnin advanced to third, scored on the error."
     },
     {
-      "inning": "Top 14",
+      "inning": "Top 8",
       "pitcher": "W.",
       "batter": "Mateo Serna",
       "outcome": "Single",
@@ -2353,8 +2362,8 @@
       "pitches": "KBS",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Blaize Ward",
         "2B": null,
@@ -2372,7 +2381,7 @@
       "description": "Serna singled to right field, RBI (1-2 KBS) Frost scored."
     },
     {
-      "inning": "Top 14",
+      "inning": "Top 8",
       "pitcher": "W.",
       "batter": "Donovan Jordan",
       "outcome": "Single",
@@ -2380,8 +2389,8 @@
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Mateo Serna",
         "2B": null,
@@ -2399,7 +2408,7 @@
       "description": "Jordan singled to right field (2-0 BB) Serna advanced to second."
     },
     {
-      "inning": "Top 14",
+      "inning": "Top 8",
       "pitcher": "W.",
       "batter": "Kaden Peer",
       "outcome": "Strikeout (swinging)",
@@ -2407,8 +2416,8 @@
       "pitches": "FBSBFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Donovan Jordan",
         "2B": "Mateo Serna",
@@ -2426,7 +2435,7 @@
       "description": "Peer struck out swinging (2-2 FBSBFS)."
     },
     {
-      "inning": "Top 15",
+      "inning": "Top 8",
       "pitcher": "W.",
       "batter": "Jamal George",
       "outcome": "Flyout",
@@ -2434,16 +2443,16 @@
       "pitches": "BBSB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
-        "2B": null,
+        "1B": "Donovan Jordan",
+        "2B": "Mateo Serna",
         "3B": null
       },
       "runners_after": {
-        "1B": null,
-        "2B": null,
+        "1B": "Donovan Jordan",
+        "2B": "Mateo Serna",
         "3B": null
       },
       "score": {
@@ -2453,16 +2462,16 @@
       "description": "George flied out to rf (3-1 BBSB)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "W.",
-      "batter": "D.",
+      "inning": "Bottom 8",
+      "pitcher": "Eli Skidmore",
+      "batter": "Dom Decker",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "BKBFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2480,16 +2489,16 @@
       "description": "D. Decker struck out swinging (2-2 BKBFS)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "W.",
-      "batter": "T.",
+      "inning": "Bottom 8",
+      "pitcher": "Eli Skidmore",
+      "batter": "Tristan Bissetta",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "SSBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2507,16 +2516,16 @@
       "description": "T. Bissetta struck out swinging (1-2 SSBS)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "W.",
-      "batter": "J.",
+      "inning": "Bottom 8",
+      "pitcher": "Eli Skidmore",
+      "batter": "Judd Utermark",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
       "pitches": "SKBBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2534,7 +2543,7 @@
       "description": "J. Utermark struck out looking (2-2 SKBBK)."
     },
     {
-      "inning": "Top 16",
+      "inning": "Top 9",
       "pitcher": "O.",
       "batter": "Chris Patterson",
       "outcome": "Flyout",
@@ -2542,8 +2551,8 @@
       "pitches": "KBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2561,7 +2570,7 @@
       "description": "Patterson flied out to lf (1-2 KBF)."
     },
     {
-      "inning": "Top 16",
+      "inning": "Top 9",
       "pitcher": "O.",
       "batter": "Pierre Seals",
       "outcome": "Strikeout (looking)",
@@ -2569,8 +2578,8 @@
       "pitches": "KFK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2588,7 +2597,7 @@
       "description": "Seals struck out looking (0-2 KFK)."
     },
     {
-      "inning": "Top 17",
+      "inning": "Top 9",
       "pitcher": "O.",
       "batter": "Jase Woita",
       "outcome": "Single",
@@ -2596,8 +2605,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2615,7 +2624,7 @@
       "description": "Woita singled up the middle (0-0)."
     },
     {
-      "inning": "Top 17",
+      "inning": "Top 9",
       "pitcher": "O.",
       "batter": "Kam Durnin",
       "outcome": "Fielder's choice",
@@ -2623,8 +2632,8 @@
       "pitches": "BBSF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Jase Woita",
         "2B": null,
@@ -2642,23 +2651,23 @@
       "description": "Durnin reached on a fielder's choice to shortstop (2-2 BBSF) Woita out at second ss to 2b."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "O.",
-      "batter": "W.",
+      "inning": "Bottom 9",
+      "pitcher": "Eli Skidmore",
+      "batter": "Will Furniss",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Kam Durnin",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Kam Durnin",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2669,23 +2678,23 @@
       "description": "W. Furniss grounded out to (0-1 K)."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "O.",
-      "batter": "H.",
+      "inning": "Bottom 9",
+      "pitcher": "Eli Skidmore",
+      "batter": "Hayden Federico",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "KBKFBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Kam Durnin",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Kam Durnin",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2696,23 +2705,23 @@
       "description": "H. Federico struck out swinging (2-2 KBKFBS)."
     },
     {
-      "inning": "Top 18",
-      "pitcher": "O.",
-      "batter": "O.",
+      "inning": "Bottom 9",
+      "pitcher": "Eli Skidmore",
+      "batter": "Owen Paino",
       "outcome": "Hit by pitch",
       "count": "1-1",
       "pitches": "BF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "O.",
+        "1B": "Owen Paino",
         "2B": null,
         "3B": null
       },
@@ -2723,23 +2732,23 @@
       "description": "O. Paino hit by pitch (1-1 BF)."
     },
     {
-      "inning": "Top 18",
-      "pitcher": "O.",
-      "batter": "A.",
+      "inning": "Bottom 9",
+      "pitcher": "Eli Skidmore",
+      "batter": "Austin Fawley",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "S",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "O.",
+        "1B": "Owen Paino",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "O.",
+        "1B": "Owen Paino",
         "2B": null,
         "3B": null
       },

@@ -1,14 +1,14 @@
 {
   "contest_id": "6497148",
   "date": "03/03/2026",
-  "batting_team": "Florida",
-  "pitching_team": "Fla. Atlantic",
-  "note": "Broken-down from the saved play_by_play.json, which contains the Florida at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "Fla. Atlantic",
+  "home_team": "Florida",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
-      "inning": "Bottom 1",
-      "pitcher": "Kide Adetuyi",
-      "batter": "M.",
+      "inning": "Top 1",
+      "pitcher": "Cooper Walls",
+      "batter": "Marshall Lipsey",
       "outcome": "Flyout",
       "count": "2-2",
       "pitches": "FFBB",
@@ -33,9 +33,9 @@
       "description": "M. Lipsey flied out to lf (2-2 FFBB)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Kide Adetuyi",
-      "batter": "N.",
+      "inning": "Top 1",
+      "pitcher": "Cooper Walls",
+      "batter": "Nicholas Romano",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KKBS",
@@ -60,9 +60,9 @@
       "description": "N. Romano struck out swinging (1-2 KKBS)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Kide Adetuyi",
-      "batter": "M.",
+      "inning": "Top 1",
+      "pitcher": "Cooper Walls",
+      "batter": "Michael Perazza",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
@@ -87,9 +87,9 @@
       "description": "M. Perazza grounded out to 2b (0-0)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Kide Adetuyi",
-      "batter": "K.",
+      "batter": "Kyle Jones",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BK",
@@ -103,7 +103,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "K.",
+        "1B": "Kyle Jones",
         "2B": null,
         "3B": null
       },
@@ -114,7 +114,7 @@
       "description": "K. Jones singled to center field (1-1 BK)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Kide Adetuyi",
       "batter": "Brendan Lawson",
       "outcome": "Strikeout (swinging)",
@@ -125,12 +125,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "K.",
+        "1B": "Kyle Jones",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "K.",
+        "1B": "Kyle Jones",
         "2B": null,
         "3B": null
       },
@@ -141,7 +141,7 @@
       "description": "Lawson struck out swinging (3-2 KFBBFBS) K. Jones stole second."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Kide Adetuyi",
       "batter": "Ethan Surowiec",
       "outcome": "Groundout",
@@ -152,14 +152,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "K.",
+        "1B": "Kyle Jones",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "K.",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Kyle Jones"
       },
       "score": {
         "away": 0,
@@ -168,20 +168,22 @@
       "description": "Surowiec grounded out to 2b up the middle (2-1 BBK) K. Jones advanced to third."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Kide Adetuyi",
       "batter": "Karson Bowen",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BBFK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kyle Jones"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "K.",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Kyle Jones"
       },
       "runners_after": {
         "1B": "Karson Bowen",
@@ -195,7 +197,7 @@
       "description": "Bowen singled up the middle, RBI (2-2 BBFK) K. Jones scored."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Kide Adetuyi",
       "batter": "Cash Strayer",
       "outcome": "Fielder's choice",
@@ -222,9 +224,9 @@
       "description": "Strayer reached on a fielder's choice up the middle (2-2 KBBK) Bowen out at second ss unassisted."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Kide Adetuyi",
-      "batter": "B.",
+      "inning": "Top 2",
+      "pitcher": "Cooper Walls",
+      "batter": "Brando Leroux",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "KB",
@@ -249,9 +251,9 @@
       "description": "B. Leroux grounded out to 2b (1-1 KB)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Kide Adetuyi",
-      "batter": "B.",
+      "inning": "Top 2",
+      "pitcher": "Cooper Walls",
+      "batter": "Brett Patten",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BKFB",
@@ -265,7 +267,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": "Brett Patten",
         "2B": null,
         "3B": null
       },
@@ -276,9 +278,9 @@
       "description": "B. Patten singled through the right side (2-2 BKFB)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Kide Adetuyi",
-      "batter": "J.",
+      "inning": "Top 2",
+      "pitcher": "Cooper Walls",
+      "batter": "John Martinez",
       "outcome": "Flyout",
       "count": "1-1",
       "pitches": "KB",
@@ -287,12 +289,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "B.",
+        "1B": "Brett Patten",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": "Brett Patten",
         "2B": null,
         "3B": null
       },
@@ -303,9 +305,9 @@
       "description": "J. Martinez flied out to lf to left center (1-1 KB)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Kide Adetuyi",
-      "batter": "E.",
+      "inning": "Top 2",
+      "pitcher": "Cooper Walls",
+      "batter": "Eli Small",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
@@ -314,12 +316,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "B.",
+        "1B": "Brett Patten",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": "Brett Patten",
         "2B": null,
         "3B": null
       },
@@ -330,7 +332,7 @@
       "description": "E. Small grounded out to 1b unassisted (0-0)."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Kide Adetuyi",
       "batter": "Blake Cyr",
       "outcome": "Groundout",
@@ -357,7 +359,7 @@
       "description": "Cyr grounded out to 2b (3-2 KKBBB)."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Kide Adetuyi",
       "batter": "Cole Stanford",
       "outcome": "Single",
@@ -384,7 +386,7 @@
       "description": "Stanford singled through the right side (2-1 BKB)."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Kide Adetuyi",
       "batter": "Colton Schwarz",
       "outcome": "Strikeout (looking)",
@@ -411,7 +413,7 @@
       "description": "Schwarz struck out looking (1-2 KKBK)."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Kide Adetuyi",
       "batter": "Ashton Wilson",
       "outcome": "Strikeout (swinging)",
@@ -438,9 +440,9 @@
       "description": "Wilson struck out swinging (1-2 KBSS)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Sandefer",
-      "batter": "I.",
+      "inning": "Top 3",
+      "pitcher": "Russell Sandefer",
+      "batter": "Ian Collier",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "KSBFBB",
@@ -454,7 +456,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "I.",
+        "1B": "Ian Collier",
         "2B": null,
         "3B": null
       },
@@ -465,9 +467,9 @@
       "description": "I. Collier singled up the middle (3-2 KSBFBB)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Sandefer",
-      "batter": "K.",
+      "inning": "Top 3",
+      "pitcher": "Russell Sandefer",
+      "batter": "Kyle Boylston",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "S",
@@ -476,13 +478,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "I.",
+        "1B": "Ian Collier",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "K.",
-        "2B": null,
+        "1B": "Kyle Boylston",
+        "2B": "Ian Collier",
         "3B": null
       },
       "score": {
@@ -492,9 +494,9 @@
       "description": "K. Boylston singled to center field (0-1 S) I. Collier advanced to second."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Sandefer",
-      "batter": "M.",
+      "inning": "Top 3",
+      "pitcher": "Russell Sandefer",
+      "batter": "Marshall Lipsey",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
@@ -503,14 +505,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "K.",
-        "2B": null,
+        "1B": "Kyle Boylston",
+        "2B": "Ian Collier",
         "3B": null
       },
       "runners_after": {
-        "1B": "K.",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Kyle Boylston",
+        "3B": "Ian Collier"
       },
       "score": {
         "away": 0,
@@ -519,9 +521,9 @@
       "description": "M. Lipsey grounded out to p, bunt, SAC (0-0) K. Boylston advanced to second I. Collier advanced to third."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Sandefer",
-      "batter": "N.",
+      "inning": "Top 3",
+      "pitcher": "Russell Sandefer",
+      "batter": "Nicholas Romano",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
       "pitches": "FKBFBBK",
@@ -530,14 +532,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "K.",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Kyle Boylston",
+        "3B": "Ian Collier"
       },
       "runners_after": {
-        "1B": "K.",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Kyle Boylston",
+        "3B": "Ian Collier"
       },
       "score": {
         "away": 0,
@@ -546,9 +548,9 @@
       "description": "N. Romano struck out looking (3-2 FKBFBBK)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Sandefer",
-      "batter": "M.",
+      "inning": "Top 3",
+      "pitcher": "Russell Sandefer",
+      "batter": "Michael Perazza",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
       "pitches": "SSBK",
@@ -557,14 +559,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "K.",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Kyle Boylston",
+        "3B": "Ian Collier"
       },
       "runners_after": {
-        "1B": "K.",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Kyle Boylston",
+        "3B": "Ian Collier"
       },
       "score": {
         "away": 0,
@@ -573,9 +575,9 @@
       "description": "M. Perazza struck out looking (1-2 SSBK)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Sandefer",
-      "batter": "K.",
+      "inning": "Bottom 3",
+      "pitcher": "Kide Adetuyi",
+      "batter": "Kyle Jones",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "KS",
@@ -589,7 +591,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "K.",
+        "1B": "Kyle Jones",
         "2B": null,
         "3B": null
       },
@@ -600,8 +602,8 @@
       "description": "K. Jones singled to second base, out at second c to ss (0-2 KS)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Sandefer",
+      "inning": "Bottom 3",
+      "pitcher": "Kide Adetuyi",
       "batter": "Brendan Lawson",
       "outcome": "Home run",
       "count": "3-2",
@@ -613,12 +615,12 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "K.",
+        "1B": "Kyle Jones",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "K.",
+        "1B": "Kyle Jones",
         "2B": null,
         "3B": null
       },
@@ -629,8 +631,8 @@
       "description": "Lawson homered to center field, RBI (3-2 BBBKK)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Sandefer",
+      "inning": "Bottom 3",
+      "pitcher": "Kide Adetuyi",
       "batter": "Ethan Surowiec",
       "outcome": "Lineout",
       "count": "0-2",
@@ -640,12 +642,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "K.",
+        "1B": "Kyle Jones",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "K.",
+        "1B": "Kyle Jones",
         "2B": null,
         "3B": null
       },
@@ -656,8 +658,8 @@
       "description": "Surowiec lined out to lf (0-2 FK)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Sandefer",
+      "inning": "Bottom 3",
+      "pitcher": "Kide Adetuyi",
       "batter": "Karson Bowen",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -667,12 +669,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "K.",
+        "1B": "Kyle Jones",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "K.",
+        "1B": "Kyle Jones",
         "2B": null,
         "3B": null
       },
@@ -683,23 +685,23 @@
       "description": "Bowen struck out swinging (3-2 KBBBKS)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Sandefer",
-      "batter": "B.",
+      "inning": "Top 4",
+      "pitcher": "Russell Sandefer",
+      "batter": "Brando Leroux",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "BSF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "K.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "K.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -710,23 +712,23 @@
       "description": "B. Leroux grounded out to 2b up the middle (1-2 BSF)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Sandefer",
-      "batter": "B.",
+      "inning": "Top 4",
+      "pitcher": "Russell Sandefer",
+      "batter": "Brett Patten",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBKBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": "Brett Patten",
         "2B": null,
         "3B": null
       },
@@ -737,23 +739,23 @@
       "description": "B. Patten walked (3-1 BBKBB)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Sandefer",
-      "batter": "J.",
+      "inning": "Top 4",
+      "pitcher": "Russell Sandefer",
+      "batter": "John Martinez",
       "outcome": "Lineout",
       "count": "1-2",
       "pitches": "KFBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "B.",
+        "1B": "Brett Patten",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": "Brett Patten",
         "2B": null,
         "3B": null
       },
@@ -764,23 +766,23 @@
       "description": "J. Martinez lined out to lf to left center (1-2 KFBF)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Sandefer",
+      "inning": "Top 4",
+      "pitcher": "Russell Sandefer",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "B.",
+        "1B": "Brett Patten",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": "Brett Patten",
         "2B": null,
         "3B": null
       },
@@ -791,23 +793,23 @@
       "description": "B. Patten stole second."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Sandefer",
-      "batter": "E.",
+      "inning": "Top 4",
+      "pitcher": "Russell Sandefer",
+      "batter": "Eli Small",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
       "pitches": "FSBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "B.",
+        "1B": "Brett Patten",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": "Brett Patten",
         "2B": null,
         "3B": null
       },
@@ -818,23 +820,23 @@
       "description": "E. Small struck out looking (1-2 FSBK)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Sandefer",
+      "inning": "Bottom 4",
+      "pitcher": "Kide Adetuyi",
       "batter": "Cash Strayer",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "BSSBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "B.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -845,16 +847,16 @@
       "description": "Strayer struck out swinging (2-2 BSSBS)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Sandefer",
+      "inning": "Bottom 4",
+      "pitcher": "Kide Adetuyi",
       "batter": "Blake Cyr",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -872,16 +874,16 @@
       "description": "Cyr singled down the line (1-0 B)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Sandefer",
+      "inning": "Bottom 4",
+      "pitcher": "Kide Adetuyi",
       "batter": "Cole Stanford",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "KBBBKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Blake Cyr",
         "2B": null,
@@ -899,16 +901,16 @@
       "description": "Stanford walked (3-2 KBBBKB) Cyr advanced to second."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Sandefer",
+      "inning": "Bottom 4",
+      "pitcher": "Kide Adetuyi",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Cole Stanford",
         "2B": "Blake Cyr",
@@ -926,8 +928,8 @@
       "description": "Stanford stole second, advanced to third Cyr stole third, scored on a throwing error by c."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Sandefer",
+      "inning": "Bottom 4",
+      "pitcher": "Kide Adetuyi",
       "batter": "Colton Schwarz",
       "outcome": "Groundout",
       "count": "1-0",
@@ -936,8 +938,8 @@
       "runs_scored": [
         "Cole Stanford"
       ],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Cole Stanford",
         "2B": "Blake Cyr",
@@ -955,16 +957,16 @@
       "description": "Schwarz grounded out to 2b up the middle, RBI (1-0 B) Stanford scored, unearned."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Sandefer",
+      "inning": "Bottom 4",
+      "pitcher": "Kide Adetuyi",
       "batter": "Ashton Wilson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "BKSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": "Blake Cyr",
@@ -982,24 +984,24 @@
       "description": "Wilson struck out swinging (1-2 BKSS)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Sandford",
-      "batter": "I.",
+      "inning": "Top 5",
+      "pitcher": "Schuyler Sandford",
+      "batter": "Ian Collier",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "KBBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Blake Cyr",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Blake Cyr",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1009,23 +1011,23 @@
       "description": "I. Collier grounded out to ss (2-2 KBBS)."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Sandford",
-      "batter": "K.",
+      "inning": "Top 5",
+      "pitcher": "Schuyler Sandford",
+      "batter": "Kyle Boylston",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBBKFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "K.",
+        "1B": "Kyle Boylston",
         "2B": null,
         "3B": null
       },
@@ -1036,23 +1038,23 @@
       "description": "K. Boylston walked (3-2 BBBKFB)."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Sandford",
-      "batter": "M.",
+      "inning": "Top 5",
+      "pitcher": "Schuyler Sandford",
+      "batter": "Marshall Lipsey",
       "outcome": "Flyout",
       "count": "1-1",
       "pitches": "BK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "K.",
+        "1B": "Kyle Boylston",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "K.",
+        "1B": "Kyle Boylston",
         "2B": null,
         "3B": null
       },
@@ -1063,23 +1065,23 @@
       "description": "M. Lipsey flied out to lf (1-1 BK)."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Sandford",
-      "batter": "N.",
+      "inning": "Top 5",
+      "pitcher": "Schuyler Sandford",
+      "batter": "Nicholas Romano",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "K.",
+        "1B": "Kyle Boylston",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "K.",
+        "1B": "Kyle Boylston",
         "2B": null,
         "3B": null
       },
@@ -1090,23 +1092,23 @@
       "description": "N. Romano grounded out to (0-0)."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "Z.",
-      "batter": "K.",
+      "batter": "Kyle Jones",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
       "pitches": "BFFBFBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "K.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "K.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1117,7 +1119,7 @@
       "description": "K. Jones struck out swinging (3-2 BFFBFBS)."
     },
     {
-      "inning": "Bottom 10",
+      "inning": "Bottom 5",
       "pitcher": "Z.",
       "batter": "Brendan Lawson",
       "outcome": "Strikeout (swinging)",
@@ -1125,8 +1127,8 @@
       "pitches": "BBKKBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1144,7 +1146,7 @@
       "description": "Lawson struck out swinging (3-2 BBKKBS)."
     },
     {
-      "inning": "Bottom 10",
+      "inning": "Bottom 5",
       "pitcher": "Z.",
       "batter": "Ethan Surowiec",
       "outcome": "Strikeout (swinging)",
@@ -1152,8 +1154,8 @@
       "pitches": "FFFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1171,16 +1173,16 @@
       "description": "Surowiec struck out swinging (0-2 FFFS)."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "Z.",
-      "batter": "M.",
+      "inning": "Top 6",
+      "pitcher": "Schuyler Sandford",
+      "batter": "Michael Perazza",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "BFFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1198,16 +1200,16 @@
       "description": "M. Perazza struck out swinging, out at first c to 1b (1-2 BFFS)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Z.",
-      "batter": "B.",
+      "inning": "Top 6",
+      "pitcher": "Schuyler Sandford",
+      "batter": "Brando Leroux",
       "outcome": "Flyout",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1225,16 +1227,16 @@
       "description": "B. Leroux flied out to rf to right center (1-0 B)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Z.",
-      "batter": "B.",
+      "inning": "Top 6",
+      "pitcher": "Schuyler Sandford",
+      "batter": "Brett Patten",
       "outcome": "Double",
       "count": "3-2",
       "pitches": "BBSKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1242,7 +1244,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "B.",
+        "2B": "Brett Patten",
         "3B": null
       },
       "score": {
@@ -1252,24 +1254,24 @@
       "description": "B. Patten doubled to left center (3-2 BBSKB)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Z.",
-      "batter": "J.",
+      "inning": "Top 6",
+      "pitcher": "Schuyler Sandford",
+      "batter": "John Martinez",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "B.",
+        "2B": "Brett Patten",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "B.",
+        "2B": "Brett Patten",
         "3B": null
       },
       "score": {
@@ -1279,7 +1281,7 @@
       "description": "J. Martinez struck out swinging (0-2 KFS)."
     },
     {
-      "inning": "Bottom 11",
+      "inning": "Bottom 6",
       "pitcher": "Z.",
       "batter": "Karson Bowen",
       "outcome": "Groundout",
@@ -1287,16 +1289,16 @@
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "B.",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "B.",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1306,7 +1308,7 @@
       "description": "Bowen grounded out to ss (1-0 B)."
     },
     {
-      "inning": "Bottom 12",
+      "inning": "Bottom 6",
       "pitcher": "Z.",
       "batter": "Cash Strayer",
       "outcome": "Single",
@@ -1314,8 +1316,8 @@
       "pitches": "KB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1333,7 +1335,7 @@
       "description": "Strayer singled through the right side (1-1 KB)."
     },
     {
-      "inning": "Bottom 12",
+      "inning": "Bottom 6",
       "pitcher": "Z.",
       "batter": "Blake Cyr",
       "outcome": "Hit by pitch",
@@ -1341,8 +1343,8 @@
       "pitches": "BKFF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Cash Strayer",
         "2B": null,
@@ -1360,7 +1362,7 @@
       "description": "Cyr hit by pitch (1-2 BKFF) Strayer advanced to second."
     },
     {
-      "inning": "Bottom 12",
+      "inning": "Bottom 6",
       "pitcher": "Z.",
       "batter": "Cole Stanford",
       "outcome": "Pop out",
@@ -1368,8 +1370,8 @@
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Blake Cyr",
         "2B": "Cash Strayer",
@@ -1387,7 +1389,7 @@
       "description": "Stanford popped up to ss (0-1 K)."
     },
     {
-      "inning": "Bottom 12",
+      "inning": "Bottom 6",
       "pitcher": "Z.",
       "batter": "Colton Schwarz",
       "outcome": "Groundout",
@@ -1395,8 +1397,8 @@
       "pitches": "F",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Blake Cyr",
         "2B": "Cash Strayer",
@@ -1414,24 +1416,24 @@
       "description": "Schwarz grounded out to p (0-1 F)."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "Z.",
-      "batter": "E.",
+      "inning": "Top 7",
+      "pitcher": "Schuyler Sandford",
+      "batter": "Eli Small",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KSBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Blake Cyr",
-        "2B": "Cash Strayer",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Blake Cyr",
-        "2B": "Cash Strayer",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1441,16 +1443,16 @@
       "description": "E. Small struck out swinging (1-2 KSBS)."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Z.",
-      "batter": "I.",
+      "inning": "Top 7",
+      "pitcher": "Schuyler Sandford",
+      "batter": "Ian Collier",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
       "pitches": "SFK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1468,16 +1470,16 @@
       "description": "I. Collier struck out looking (0-2 SFK)."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Z.",
-      "batter": "K.",
+      "inning": "Top 7",
+      "pitcher": "Schuyler Sandford",
+      "batter": "Kyle Boylston",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "BKFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1495,7 +1497,7 @@
       "description": "K. Boylston struck out swinging (1-2 BKFS)."
     },
     {
-      "inning": "Bottom 13",
+      "inning": "Bottom 7",
       "pitcher": "K.",
       "batter": "Ashton Wilson",
       "outcome": "Lineout",
@@ -1503,8 +1505,8 @@
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1522,16 +1524,16 @@
       "description": "Wilson lined out to cf (2-0 BB)."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 7",
       "pitcher": "K.",
-      "batter": "K.",
+      "batter": "Kyle Jones",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "BFBKS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1549,7 +1551,7 @@
       "description": "K. Jones struck out swinging (2-2 BFBKS)."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 7",
       "pitcher": "K.",
       "batter": "Brendan Lawson",
       "outcome": "Hit by pitch",
@@ -1557,8 +1559,8 @@
       "pitches": "KK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1576,7 +1578,7 @@
       "description": "Lawson hit by pitch (0-2 KK)."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 7",
       "pitcher": "K.",
       "batter": "Ethan Surowiec",
       "outcome": "Single",
@@ -1584,8 +1586,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Brendan Lawson",
         "2B": null,
@@ -1603,7 +1605,7 @@
       "description": "Surowiec singled to left field (0-0) Lawson advanced to second."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 7",
       "pitcher": "K.",
       "batter": "Karson Bowen",
       "outcome": "Walk",
@@ -1611,8 +1613,8 @@
       "pitches": "BBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Ethan Surowiec",
         "2B": "Brendan Lawson",
@@ -1630,7 +1632,7 @@
       "description": "Bowen walked (3-0 BBBB) Surowiec advanced to second Lawson advanced to third."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 7",
       "pitcher": "K.",
       "batter": "Cash Strayer",
       "outcome": "Lineout",
@@ -1638,8 +1640,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Karson Bowen",
         "2B": "Ethan Surowiec",
@@ -1657,25 +1659,25 @@
       "description": "Strayer lined out to cf (0-0)."
     },
     {
-      "inning": "Bottom 14",
-      "pitcher": "Barberi",
-      "batter": "M.",
+      "inning": "Top 8",
+      "pitcher": "Jackson Barberi",
+      "batter": "Marshall Lipsey",
       "outcome": "Flyout",
       "count": "3-2",
       "pitches": "FBBFBFF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Karson Bowen",
-        "2B": "Ethan Surowiec",
-        "3B": "Brendan Lawson"
+        "1B": null,
+        "2B": null,
+        "3B": null
       },
       "runners_after": {
-        "1B": "Karson Bowen",
-        "2B": "Ethan Surowiec",
-        "3B": "Brendan Lawson"
+        "1B": null,
+        "2B": null,
+        "3B": null
       },
       "score": {
         "away": 0,
@@ -1684,16 +1686,16 @@
       "description": "M. Lipsey flied out to lf (3-2 FBBFBFF)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Barberi",
-      "batter": "N.",
+      "inning": "Top 8",
+      "pitcher": "Jackson Barberi",
+      "batter": "Nicholas Romano",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1711,16 +1713,16 @@
       "description": "N. Romano struck out swinging (0-2 KFS)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Barberi",
-      "batter": "M.",
+      "inning": "Top 8",
+      "pitcher": "Jackson Barberi",
+      "batter": "Michael Perazza",
       "outcome": "Flyout",
       "count": "0-2",
       "pitches": "FKF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1738,16 +1740,16 @@
       "description": "M. Perazza flied out to lf (0-2 FKF)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Barberi",
+      "inning": "Bottom 8",
+      "pitcher": "K.",
       "batter": "Blake Cyr",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "BSFFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1765,16 +1767,16 @@
       "description": "Cyr struck out swinging (1-2 BSFFS)."
     },
     {
-      "inning": "Bottom 16",
-      "pitcher": "Barberi",
+      "inning": "Bottom 8",
+      "pitcher": "K.",
       "batter": "Cole Stanford",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBBFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1792,7 +1794,7 @@
       "description": "Stanford walked (3-1 BBBFB)."
     },
     {
-      "inning": "Bottom 16",
+      "inning": "Bottom 8",
       "pitcher": "B.",
       "batter": "Colton Schwarz",
       "outcome": "Single",
@@ -1800,8 +1802,8 @@
       "pitches": "BBKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Cole Stanford",
         "2B": null,
@@ -1819,16 +1821,16 @@
       "description": "Schwarz singled to right center (3-1 BBKB) Stanford advanced to second."
     },
     {
-      "inning": "Bottom 16",
+      "inning": "Bottom 8",
       "pitcher": "B.",
-      "batter": "H.",
+      "batter": "Hayden Yost",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KFBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Colton Schwarz",
         "2B": "Cole Stanford",
@@ -1846,23 +1848,23 @@
       "description": "H. Yost struck out swinging (1-2 KFBS)."
     },
     {
-      "inning": "Bottom 16",
+      "inning": "Bottom 8",
       "pitcher": "B.",
-      "batter": "K.",
+      "batter": "Kyle Jones",
       "outcome": "Fielder's choice",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Colton Schwarz",
         "2B": "Cole Stanford",
         "3B": null
       },
       "runners_after": {
-        "1B": "K.",
+        "1B": "Kyle Jones",
         "2B": "Colton Schwarz",
         "3B": null
       },
@@ -1873,24 +1875,24 @@
       "description": "K. Jones reached on a fielder's choice to shortstop (0-0) Schwarz advanced to second Stanford out at third ss to ."
     },
     {
-      "inning": "Bottom 16",
-      "pitcher": "B.",
-      "batter": "B.",
+      "inning": "Top 9",
+      "pitcher": "Jackson Barberi",
+      "batter": "Brando Leroux",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
       "pitches": "KBSBFFBFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "K.",
-        "2B": "Colton Schwarz",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "K.",
-        "2B": "Colton Schwarz",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1900,23 +1902,23 @@
       "description": "B. Leroux struck out swinging (3-2 KBSBFFBFS)."
     },
     {
-      "inning": "Bottom 17",
-      "pitcher": "B.",
-      "batter": "B.",
+      "inning": "Top 9",
+      "pitcher": "Jackson Barberi",
+      "batter": "Brett Patten",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": "Brett Patten",
         "2B": null,
         "3B": null
       },
@@ -1927,23 +1929,23 @@
       "description": "B. Patten walked (3-0 BBBB)."
     },
     {
-      "inning": "Bottom 17",
-      "pitcher": "B.",
-      "batter": "P.",
+      "inning": "Top 9",
+      "pitcher": "Jackson Barberi",
+      "batter": "Patrick Ward",
       "outcome": "Grounded into double play",
       "count": "1-1",
       "pitches": "KB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "B.",
+        "1B": "Brett Patten",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": null,
         "2B": null,
         "3B": null
       },

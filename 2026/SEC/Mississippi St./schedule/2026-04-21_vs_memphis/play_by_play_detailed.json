@@ -1,14 +1,14 @@
 {
   "contest_id": "6494177",
   "date": "04/21/2026",
-  "batting_team": "Mississippi St.",
-  "pitching_team": "Memphis",
-  "note": "Broken-down from the saved play_by_play.json, which contains the Mississippi St. at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "Memphis",
+  "home_team": "Mississippi St.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
-      "inning": "Bottom 1",
-      "pitcher": "Seth Impson",
-      "batter": "Rodriguez",
+      "inning": "Top 1",
+      "pitcher": "Tyler Pitzer",
+      "batter": "Freddy Rodriguez",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KKFBS",
@@ -33,9 +33,9 @@
       "description": "Rodriguez struck out swinging (1-2 KKFBS)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Seth Impson",
-      "batter": "Hernandez",
+      "inning": "Top 1",
+      "pitcher": "Tyler Pitzer",
+      "batter": "Javon Hernandez",
       "outcome": "Double",
       "count": "3-1",
       "pitches": "BBFB",
@@ -50,7 +50,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Hernandez",
+        "2B": "Javon Hernandez",
         "3B": null
       },
       "score": {
@@ -60,25 +60,25 @@
       "description": "Hernandez doubled to right center (3-1 BBFB)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Seth Impson",
-      "batter": "Smith",
+      "inning": "Top 1",
+      "pitcher": "Tyler Pitzer",
+      "batter": "Marcus Smith",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
       "runs_scored": [
-        "Hernandez"
+        "Javon Hernandez"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Hernandez",
+        "2B": "Javon Hernandez",
         "3B": null
       },
       "runners_after": {
-        "1B": "Smith",
+        "1B": "Marcus Smith",
         "2B": null,
         "3B": null
       },
@@ -89,9 +89,9 @@
       "description": "Smith IV singled to center field, RBI (0-1 S) Hernandez scored."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Seth Impson",
-      "batter": "Cox",
+      "inning": "Top 1",
+      "pitcher": "Tyler Pitzer",
+      "batter": "Shane Cox",
       "outcome": "Pop out",
       "count": "0-1",
       "pitches": "K",
@@ -100,12 +100,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Smith",
+        "1B": "Marcus Smith",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Smith",
+        "1B": "Marcus Smith",
         "2B": null,
         "3B": null
       },
@@ -116,9 +116,9 @@
       "description": "Cox popped up to 1b (0-1 K)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Seth Impson",
-      "batter": "Pitts",
+      "inning": "Top 1",
+      "pitcher": "Tyler Pitzer",
+      "batter": "Jack Pitts",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
@@ -127,12 +127,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Smith",
+        "1B": "Marcus Smith",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Pitts",
+        "1B": "Jack Pitts",
         "2B": null,
         "3B": null
       },
@@ -143,9 +143,9 @@
       "description": "Pitts singled to left field (0-0) Smith IV advanced to second."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Seth Impson",
-      "batter": "Gupton",
+      "inning": "Top 1",
+      "pitcher": "Tyler Pitzer",
+      "batter": "Michael Gupton",
       "outcome": "Fielder's choice",
       "count": "0-0",
       "pitches": "",
@@ -154,12 +154,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Pitts",
+        "1B": "Jack Pitts",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Gupton",
+        "1B": "Michael Gupton",
         "2B": null,
         "3B": null
       },
@@ -170,7 +170,7 @@
       "description": "Gupton reached on a fielder's choice to shortstop (0-0) Pitts out at second ss to 2b."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Seth Impson",
       "batter": "Gehrig Frei",
       "outcome": "Groundout",
@@ -197,7 +197,7 @@
       "description": "Frei grounded out to 2b (0-0)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Seth Impson",
       "batter": "Ace Reese",
       "outcome": "Walk",
@@ -224,7 +224,7 @@
       "description": "Reese walked (3-0 BBBB)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Seth Impson",
       "batter": "Noah Sullivan",
       "outcome": "Lineout",
@@ -251,7 +251,7 @@
       "description": "Sullivan lined out to cf (1-1 BK)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Seth Impson",
       "batter": "Reed Stallman",
       "outcome": "Fielder's choice",
@@ -278,9 +278,9 @@
       "description": "Stallman reached on a fielder's choice to shortstop (1-0 B) Reese out at second ss unassisted."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Seth Impson",
-      "batter": "Harrington",
+      "inning": "Top 2",
+      "pitcher": "Tyler Pitzer",
+      "batter": "Tyler Harrington",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
@@ -294,7 +294,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Harrington",
+        "1B": "Tyler Harrington",
         "2B": null,
         "3B": null
       },
@@ -305,9 +305,9 @@
       "description": "Harrington singled up the middle (0-0)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Seth Impson",
-      "batter": "Cassidy",
+      "inning": "Top 2",
+      "pitcher": "Tyler Pitzer",
+      "batter": "Trae Cassidy",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
@@ -316,12 +316,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Harrington",
+        "1B": "Tyler Harrington",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Harrington",
+        "1B": "Tyler Harrington",
         "2B": null,
         "3B": null
       },
@@ -332,8 +332,8 @@
       "description": "Cassidy flied out to cf to right center (0-0)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Seth Impson",
+      "inning": "Top 2",
+      "pitcher": "Tyler Pitzer",
       "batter": "SmithM",
       "outcome": "Single",
       "count": "3-1",
@@ -343,13 +343,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Harrington",
+        "1B": "Tyler Harrington",
         "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "SmithM",
-        "2B": "Harrington",
+        "2B": "Tyler Harrington",
         "3B": null
       },
       "score": {
@@ -359,9 +359,9 @@
       "description": "SmithM singled through the left side (3-1 BBSB) Harrington advanced to second."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Gleason",
-      "batter": "Rodriguez",
+      "inning": "Top 2",
+      "pitcher": "Jack Gleason",
+      "batter": "Freddy Rodriguez",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "F",
@@ -371,13 +371,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "SmithM",
-        "2B": "Harrington",
+        "2B": "Tyler Harrington",
         "3B": null
       },
       "runners_after": {
-        "1B": "Rodriguez",
+        "1B": "Freddy Rodriguez",
         "2B": "SmithM",
-        "3B": "Harrington"
+        "3B": "Tyler Harrington"
       },
       "score": {
         "away": 1,
@@ -386,9 +386,9 @@
       "description": "Rodriguez singled down the line, bunt (0-1 F) SmithM advanced to second Harrington advanced to third."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Gleason",
-      "batter": "Hernandez",
+      "inning": "Top 2",
+      "pitcher": "Jack Gleason",
+      "batter": "Javon Hernandez",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KFS",
@@ -397,14 +397,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Rodriguez",
+        "1B": "Freddy Rodriguez",
         "2B": "SmithM",
-        "3B": "Harrington"
+        "3B": "Tyler Harrington"
       },
       "runners_after": {
-        "1B": "Rodriguez",
+        "1B": "Freddy Rodriguez",
         "2B": "SmithM",
-        "3B": "Harrington"
+        "3B": "Tyler Harrington"
       },
       "score": {
         "away": 1,
@@ -413,9 +413,9 @@
       "description": "Hernandez struck out swinging (0-2 KFS)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Gleason",
-      "batter": "Smith",
+      "inning": "Top 2",
+      "pitcher": "Jack Gleason",
+      "batter": "Marcus Smith",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "BKFBS",
@@ -424,14 +424,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Rodriguez",
+        "1B": "Freddy Rodriguez",
         "2B": "SmithM",
-        "3B": "Harrington"
+        "3B": "Tyler Harrington"
       },
       "runners_after": {
-        "1B": "Rodriguez",
+        "1B": "Freddy Rodriguez",
         "2B": "SmithM",
-        "3B": "Harrington"
+        "3B": "Tyler Harrington"
       },
       "score": {
         "away": 1,
@@ -440,8 +440,8 @@
       "description": "Smith IV struck out swinging (2-2 BKFBS)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Gleason",
+      "inning": "Bottom 2",
+      "pitcher": "Seth Impson",
       "batter": "Blake Bevis",
       "outcome": "Double",
       "count": "2-0",
@@ -467,8 +467,8 @@
       "description": "Bevis doubled down the rf line (2-0 BB)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Gleason",
+      "inning": "Bottom 2",
+      "pitcher": "Seth Impson",
       "batter": "Jacob Parker",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -494,8 +494,8 @@
       "description": "Parker struck out swinging (3-2 SBBSBS)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Gleason",
+      "inning": "Bottom 2",
+      "pitcher": "Seth Impson",
       "batter": "Ryder Woodson",
       "outcome": "Flyout",
       "count": "0-1",
@@ -521,8 +521,8 @@
       "description": "Woodson flied out to rf down the rf line (0-1 K)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Gleason",
+      "inning": "Bottom 2",
+      "pitcher": "Seth Impson",
       "batter": "Kevin Milewski",
       "outcome": "Groundout",
       "count": "1-1",
@@ -548,9 +548,9 @@
       "description": "Milewski grounded out to 2b (1-1 KB)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Gleason",
-      "batter": "Cox",
+      "inning": "Top 3",
+      "pitcher": "Jack Gleason",
+      "batter": "Shane Cox",
       "outcome": "Pop out",
       "count": "0-0",
       "pitches": "",
@@ -575,9 +575,9 @@
       "description": "Cox popped up to 1b (0-0)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Gleason",
-      "batter": "Pitts",
+      "inning": "Top 3",
+      "pitcher": "Jack Gleason",
+      "batter": "Jack Pitts",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
       "pitches": "KBKK",
@@ -602,9 +602,9 @@
       "description": "Pitts struck out looking (1-2 KBKK)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Gleason",
-      "batter": "Gupton",
+      "inning": "Top 3",
+      "pitcher": "Jack Gleason",
+      "batter": "Michael Gupton",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
       "pitches": "SFBBBFS",
@@ -629,7 +629,7 @@
       "description": "Gupton struck out swinging (3-2 SFBBBFS)."
     },
     {
-      "inning": "Bottom 6",
+      "inning": "Bottom 3",
       "pitcher": "SmithC",
       "batter": "Bryce Chance",
       "outcome": "Groundout",
@@ -656,7 +656,7 @@
       "description": "Chance grounded out to ss (2-2 KBFB)."
     },
     {
-      "inning": "Bottom 6",
+      "inning": "Bottom 3",
       "pitcher": "SmithC",
       "batter": "Gehrig Frei",
       "outcome": "Flyout",
@@ -683,7 +683,7 @@
       "description": "Frei flied out to lf (0-0)."
     },
     {
-      "inning": "Bottom 6",
+      "inning": "Bottom 3",
       "pitcher": "SmithC",
       "batter": "Ace Reese",
       "outcome": "Flyout",
@@ -710,9 +710,9 @@
       "description": "Reese flied out to lf (2-2 SBFB)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Bauer",
-      "batter": "Harrington",
+      "inning": "Top 4",
+      "pitcher": "Jack Bauer",
+      "batter": "Tyler Harrington",
       "outcome": "Groundout",
       "count": "3-2",
       "pitches": "BBBKF",
@@ -737,9 +737,9 @@
       "description": "Harrington grounded out to ss (3-2 BBBKF)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Bauer",
-      "batter": "Cassidy",
+      "inning": "Top 4",
+      "pitcher": "Jack Bauer",
+      "batter": "Trae Cassidy",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
       "pitches": "BKKK",
@@ -764,8 +764,8 @@
       "description": "Cassidy struck out looking (1-2 BKKK)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Bauer",
+      "inning": "Top 4",
+      "pitcher": "Jack Bauer",
       "batter": "SmithM",
       "outcome": "Groundout",
       "count": "0-0",
@@ -791,8 +791,8 @@
       "description": "SmithM grounded out to 2b (0-0)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Bauer",
+      "inning": "Bottom 4",
+      "pitcher": "SmithC",
       "batter": "Noah Sullivan",
       "outcome": "Groundout",
       "count": "0-0",
@@ -818,8 +818,8 @@
       "description": "Sullivan grounded out to 2b (0-0)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Bauer",
+      "inning": "Bottom 4",
+      "pitcher": "SmithC",
       "batter": "Reed Stallman",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -845,8 +845,8 @@
       "description": "Stallman hit by pitch (1-2 KFBF)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Bauer",
+      "inning": "Bottom 4",
+      "pitcher": "SmithC",
       "batter": "Blake Bevis",
       "outcome": "Single",
       "count": "0-1",
@@ -872,8 +872,8 @@
       "description": "Bevis singled to right field, advanced to second on a fielding error by rf (0-1 K) Stallman advanced to third."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Bauer",
+      "inning": "Bottom 4",
+      "pitcher": "SmithC",
       "batter": "Jacob Parker",
       "outcome": "Single",
       "count": "1-1",
@@ -901,8 +901,8 @@
       "description": "Parker singled to center field, RBI (1-1 BS) Bevis advanced to third Stallman scored."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Bauer",
+      "inning": "Bottom 4",
+      "pitcher": "SmithC",
       "batter": "Ryder Woodson",
       "outcome": "Groundout",
       "count": "0-0",
@@ -930,8 +930,8 @@
       "description": "Woodson grounded out to , RBI (0-0) Parker advanced to second Bevis scored, unearned."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Bauer",
+      "inning": "Bottom 4",
+      "pitcher": "SmithC",
       "batter": "Kevin Milewski",
       "outcome": "Groundout",
       "count": "2-1",
@@ -957,9 +957,9 @@
       "description": "Milewski grounded out to (2-1 BBS)."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Bauer",
-      "batter": "Rodriguez",
+      "inning": "Top 5",
+      "pitcher": "Jack Bauer",
+      "batter": "Freddy Rodriguez",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "KFBFB",
@@ -984,15 +984,15 @@
       "description": "Rodriguez grounded out to 2b (2-2 KFBFB)."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Bauer",
-      "batter": "Hernandez",
+      "inning": "Top 5",
+      "pitcher": "Jack Bauer",
+      "batter": "Javon Hernandez",
       "outcome": "Home run",
       "count": "1-1",
       "pitches": "BS",
       "rbi": true,
       "runs_scored": [
-        "Hernandez"
+        "Javon Hernandez"
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1013,9 +1013,9 @@
       "description": "Hernandez homered to left field, RBI (1-1 BS)."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Bauer",
-      "batter": "Smith",
+      "inning": "Top 5",
+      "pitcher": "Jack Bauer",
+      "batter": "Marcus Smith",
       "outcome": "Groundout",
       "count": "1-0",
       "pitches": "B",
@@ -1040,9 +1040,9 @@
       "description": "Smith IV grounded out to 2b (1-0 B)."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Bauer",
-      "batter": "Cox",
+      "inning": "Top 5",
+      "pitcher": "Jack Bauer",
+      "batter": "Shane Cox",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "KSBFB",
@@ -1067,8 +1067,8 @@
       "description": "Cox grounded out to ss (2-2 KSBFB)."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "Bauer",
+      "inning": "Bottom 5",
+      "pitcher": "SmithC",
       "batter": "Bryce Chance",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1094,8 +1094,8 @@
       "description": "Chance struck out looking (2-2 KKBBFK)."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "Bauer",
+      "inning": "Bottom 5",
+      "pitcher": "SmithC",
       "batter": "Gehrig Frei",
       "outcome": "Lineout",
       "count": "1-0",
@@ -1121,8 +1121,8 @@
       "description": "Frei lined out to (1-0 B)."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "Bauer",
+      "inning": "Bottom 5",
+      "pitcher": "SmithC",
       "batter": "Ace Reese",
       "outcome": "Lineout",
       "count": "0-0",
@@ -1148,9 +1148,9 @@
       "description": "Reese lined out to lf (0-0)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Miller",
-      "batter": "Pitts",
+      "inning": "Top 6",
+      "pitcher": "Maddox Miller",
+      "batter": "Jack Pitts",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBBKB",
@@ -1164,7 +1164,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Pitts",
+        "1B": "Jack Pitts",
         "2B": null,
         "3B": null
       },
@@ -1175,9 +1175,9 @@
       "description": "Pitts walked (3-1 BBBKB)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Miller",
-      "batter": "Gupton",
+      "inning": "Top 6",
+      "pitcher": "Maddox Miller",
+      "batter": "Michael Gupton",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KSS",
@@ -1186,13 +1186,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Pitts",
+        "1B": "Jack Pitts",
         "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Pitts",
+        "2B": "Jack Pitts",
         "3B": null
       },
       "score": {
@@ -1202,9 +1202,9 @@
       "description": "Gupton struck out swinging (0-2 KSS) Pitts advanced to second on a wild pitch."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Miller",
-      "batter": "Harrington",
+      "inning": "Top 6",
+      "pitcher": "Maddox Miller",
+      "batter": "Tyler Harrington",
       "outcome": "Fielder's choice",
       "count": "0-2",
       "pitches": "SK",
@@ -1214,11 +1214,11 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Pitts",
+        "2B": "Jack Pitts",
         "3B": null
       },
       "runners_after": {
-        "1B": "Harrington",
+        "1B": "Tyler Harrington",
         "2B": null,
         "3B": null
       },
@@ -1229,9 +1229,9 @@
       "description": "Harrington reached on a fielder's choice to pitcher (0-2 SK) Pitts out at third p to ."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Miller",
-      "batter": "Cassidy",
+      "inning": "Top 6",
+      "pitcher": "Maddox Miller",
+      "batter": "Trae Cassidy",
       "outcome": "Single",
       "count": "2-0",
       "pitches": "BB",
@@ -1240,13 +1240,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Harrington",
+        "1B": "Tyler Harrington",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Cassidy",
-        "2B": "Harrington",
+        "1B": "Trae Cassidy",
+        "2B": "Tyler Harrington",
         "3B": null
       },
       "score": {
@@ -1256,8 +1256,8 @@
       "description": "Cassidy singled to center field (2-0 BB) Harrington advanced to second."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Miller",
+      "inning": "Top 6",
+      "pitcher": "Maddox Miller",
       "batter": "SmithM",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1267,13 +1267,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Cassidy",
-        "2B": "Harrington",
+        "1B": "Trae Cassidy",
+        "2B": "Tyler Harrington",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cassidy",
-        "2B": "Harrington",
+        "1B": "Trae Cassidy",
+        "2B": "Tyler Harrington",
         "3B": null
       },
       "score": {
@@ -1283,7 +1283,7 @@
       "description": "SmithM struck out swinging (1-2 SSBS)."
     },
     {
-      "inning": "Bottom 12",
+      "inning": "Bottom 6",
       "pitcher": "Isaac Lucas",
       "batter": "Noah Sullivan",
       "outcome": "Foul out",
@@ -1310,7 +1310,7 @@
       "description": "Sullivan fouled out to c (0-0)."
     },
     {
-      "inning": "Bottom 12",
+      "inning": "Bottom 6",
       "pitcher": "Isaac Lucas",
       "batter": "Reed Stallman",
       "outcome": "Strikeout (swinging)",
@@ -1337,7 +1337,7 @@
       "description": "Stallman struck out swinging (2-2 BBKKS)."
     },
     {
-      "inning": "Bottom 12",
+      "inning": "Bottom 6",
       "pitcher": "Isaac Lucas",
       "batter": "Blake Bevis",
       "outcome": "Double",
@@ -1364,7 +1364,7 @@
       "description": "Bevis doubled down the lf line (0-1 K)."
     },
     {
-      "inning": "Bottom 12",
+      "inning": "Bottom 6",
       "pitcher": "Isaac Lucas",
       "batter": "Vytas Valincius",
       "outcome": "Single",
@@ -1393,7 +1393,7 @@
       "description": "Valincius, V singled to right field, RBI (2-1 BFB) Bevis scored."
     },
     {
-      "inning": "Bottom 12",
+      "inning": "Bottom 6",
       "pitcher": "Isaac Lucas",
       "batter": "Ryder Woodson",
       "outcome": "Strikeout (swinging)",
@@ -1420,9 +1420,9 @@
       "description": "Woodson struck out swinging (1-2 KBSS)."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Isaac Lucas",
-      "batter": "Vytas Valincius",
+      "inning": "Top 7",
+      "pitcher": "Maddox Miller",
+      "batter": "Valincius, V to rf.",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
@@ -1447,9 +1447,9 @@
       "description": "Valincius, V to rf."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Isaac Lucas",
-      "batter": "Rodriguez",
+      "inning": "Top 7",
+      "pitcher": "Maddox Miller",
+      "batter": "Freddy Rodriguez",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "BKKFS",
@@ -1474,9 +1474,9 @@
       "description": "Rodriguez struck out swinging (1-2 BKKFS)."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Isaac Lucas",
-      "batter": "Hernandez",
+      "inning": "Top 7",
+      "pitcher": "Maddox Miller",
+      "batter": "Javon Hernandez",
       "outcome": "Flyout",
       "count": "1-2",
       "pitches": "KFB",
@@ -1501,9 +1501,9 @@
       "description": "Hernandez flied out to rf (1-2 KFB)."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Isaac Lucas",
-      "batter": "Smith",
+      "inning": "Top 7",
+      "pitcher": "Maddox Miller",
+      "batter": "Marcus Smith",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "BSKS",
@@ -1528,7 +1528,7 @@
       "description": "Smith IV struck out swinging (1-2 BSKS)."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 7",
       "pitcher": "Brayden Sanders",
       "batter": "Kevin Milewski",
       "outcome": "Groundout",
@@ -1555,7 +1555,7 @@
       "description": "Milewski grounded out to 2b (3-2 BBBKK)."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 7",
       "pitcher": "Brayden Sanders",
       "batter": "Bryce Chance",
       "outcome": "Lineout",
@@ -1582,7 +1582,7 @@
       "description": "Chance lined out to cf (3-2 BKKFFBFFB)."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 7",
       "pitcher": "Brayden Sanders",
       "batter": "Gehrig Frei",
       "outcome": "Double",
@@ -1609,7 +1609,7 @@
       "description": "Frei doubled down the rf line (2-0 BB)."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 7",
       "pitcher": "Brayden Sanders",
       "batter": "Ace Reese",
       "outcome": "Strikeout (swinging)",
@@ -1636,9 +1636,9 @@
       "description": "Reese struck out swinging (3-2 BKBKFBS)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Burns",
-      "batter": "Cox",
+      "inning": "Top 8",
+      "pitcher": "Dane Burns",
+      "batter": "Shane Cox",
       "outcome": "Flyout",
       "count": "1-1",
       "pitches": "BK",
@@ -1663,9 +1663,9 @@
       "description": "Cox flied out to rf (1-1 BK)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Burns",
-      "batter": "Pitts",
+      "inning": "Top 8",
+      "pitcher": "Dane Burns",
+      "batter": "Jack Pitts",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BKB",
@@ -1679,7 +1679,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Pitts",
+        "1B": "Jack Pitts",
         "2B": null,
         "3B": null
       },
@@ -1690,9 +1690,9 @@
       "description": "Pitts singled up the middle (2-1 BKB)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Burns",
-      "batter": "Gupton",
+      "inning": "Top 8",
+      "pitcher": "Dane Burns",
+      "batter": "Michael Gupton",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "K",
@@ -1701,13 +1701,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Pitts",
+        "1B": "Jack Pitts",
         "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Pitts",
+        "2B": "Jack Pitts",
         "3B": null
       },
       "score": {
@@ -1717,9 +1717,9 @@
       "description": "Gupton grounded out to (0-1 K) Pitts advanced to second."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Burns",
-      "batter": "Harrington",
+      "inning": "Top 8",
+      "pitcher": "Dane Burns",
+      "batter": "Tyler Harrington",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "SKS",
@@ -1729,12 +1729,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Pitts",
+        "2B": "Jack Pitts",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Pitts",
+        "2B": "Jack Pitts",
         "3B": null
       },
       "score": {
@@ -1744,7 +1744,7 @@
       "description": "Harrington struck out swinging (0-2 SKS)."
     },
     {
-      "inning": "Bottom 16",
+      "inning": "Bottom 8",
       "pitcher": "Nolan McCracken",
       "batter": "Noah Sullivan",
       "outcome": "Reached on error",
@@ -1771,7 +1771,7 @@
       "description": "Sullivan reached on a dropped fly by lf, advanced to second on the error (1-2 FSFB)."
     },
     {
-      "inning": "Bottom 16",
+      "inning": "Bottom 8",
       "pitcher": "Nolan McCracken",
       "batter": "Reed Stallman",
       "outcome": "Walk",
@@ -1798,7 +1798,7 @@
       "description": "Stallman walked (3-2 BBSBSB)."
     },
     {
-      "inning": "Bottom 16",
+      "inning": "Bottom 8",
       "pitcher": "Nolan McCracken",
       "batter": "Blake Bevis",
       "outcome": "Lineout",
@@ -1825,7 +1825,7 @@
       "description": "Bevis lined out to cf (2-1 BFB) Sanders advanced to third."
     },
     {
-      "inning": "Bottom 16",
+      "inning": "Bottom 8",
       "pitcher": "Nolan McCracken",
       "batter": "Vytas Valincius",
       "outcome": "Home run",
@@ -1855,7 +1855,7 @@
       "description": "Valincius, V homered to left field, 3 RBI (0-0) Stallman scored Sanders scored, unearned."
     },
     {
-      "inning": "Bottom 16",
+      "inning": "Bottom 8",
       "pitcher": "Nolan McCracken",
       "batter": "Ryder Woodson",
       "outcome": "Strikeout (swinging)",
@@ -1882,7 +1882,7 @@
       "description": "Woodson struck out swinging (0-2 SSS)."
     },
     {
-      "inning": "Bottom 16",
+      "inning": "Bottom 8",
       "pitcher": "Nolan McCracken",
       "batter": "Kevin Milewski",
       "outcome": "Walk",
@@ -1909,7 +1909,7 @@
       "description": "Milewski walked (3-2 SKBFBBB)."
     },
     {
-      "inning": "Bottom 16",
+      "inning": "Bottom 8",
       "pitcher": "Nolan McCracken",
       "batter": "Bryce Chance",
       "outcome": "Single",
@@ -1936,7 +1936,7 @@
       "description": "Chance singled to shortstop (2-2 BFBFF) Milewski advanced to second."
     },
     {
-      "inning": "Bottom 16",
+      "inning": "Bottom 8",
       "pitcher": "Nolan McCracken",
       "batter": null,
       "outcome": "Baserunning",
@@ -1963,7 +1963,7 @@
       "description": "Chance advanced to second Milewski advanced to third on a wild pitch."
     },
     {
-      "inning": "Bottom 16",
+      "inning": "Bottom 8",
       "pitcher": "Nolan McCracken",
       "batter": "Gehrig Frei",
       "outcome": "Flyout",
@@ -1990,9 +1990,9 @@
       "description": "Frei flied out to lf (2-1 BKB)."
     },
     {
-      "inning": "Bottom 17",
-      "pitcher": "Nolan McCracken",
-      "batter": "Cassidy",
+      "inning": "Top 9",
+      "pitcher": "Dane Burns",
+      "batter": "Trae Cassidy",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
       "pitches": "FBFBK",
@@ -2017,8 +2017,8 @@
       "description": "Cassidy struck out looking (2-2 FBFBK)."
     },
     {
-      "inning": "Bottom 17",
-      "pitcher": "Nolan McCracken",
+      "inning": "Top 9",
+      "pitcher": "Dane Burns",
       "batter": "SmithM",
       "outcome": "Single",
       "count": "0-0",
@@ -2044,9 +2044,9 @@
       "description": "SmithM singled down the rf line (0-0)."
     },
     {
-      "inning": "Bottom 17",
-      "pitcher": "Nolan McCracken",
-      "batter": "Boyd",
+      "inning": "Top 9",
+      "pitcher": "Dane Burns",
+      "batter": "Gabe Boyd",
       "outcome": "Hit by pitch",
       "count": "2-2",
       "pitches": "BKBK",
@@ -2060,7 +2060,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Boyd",
+        "1B": "Gabe Boyd",
         "2B": "SmithM",
         "3B": null
       },
@@ -2071,9 +2071,9 @@
       "description": "Boyd hit by pitch (2-2 BKBK) SmithM advanced to second."
     },
     {
-      "inning": "Bottom 17",
-      "pitcher": "Nolan McCracken",
-      "batter": "Hernandez",
+      "inning": "Top 9",
+      "pitcher": "Dane Burns",
+      "batter": "Javon Hernandez",
       "outcome": "Fielder's choice",
       "count": "2-1",
       "pitches": "BBK",
@@ -2082,13 +2082,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Boyd",
+        "1B": "Gabe Boyd",
         "2B": "SmithM",
         "3B": null
       },
       "runners_after": {
-        "1B": "Hernandez",
-        "2B": "Boyd",
+        "1B": "Javon Hernandez",
+        "2B": "Gabe Boyd",
         "3B": "SmithM"
       },
       "score": {
@@ -2098,9 +2098,9 @@
       "description": "Hernandez reached on a fielder's choice to shortstop (2-1 BBK) Boyd advanced to second on a muffed throw by 2b, assist by ss SmithM advanced to third."
     },
     {
-      "inning": "Bottom 17",
-      "pitcher": "Webb",
-      "batter": "Smith",
+      "inning": "Top 9",
+      "pitcher": "Maddox Webb",
+      "batter": "Marcus Smith",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KSS",
@@ -2109,13 +2109,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Hernandez",
-        "2B": "Boyd",
+        "1B": "Javon Hernandez",
+        "2B": "Gabe Boyd",
         "3B": "SmithM"
       },
       "runners_after": {
-        "1B": "Hernandez",
-        "2B": "Boyd",
+        "1B": "Javon Hernandez",
+        "2B": "Gabe Boyd",
         "3B": "SmithM"
       },
       "score": {
@@ -2125,9 +2125,9 @@
       "description": "Smith IV struck out swinging (0-2 KSS)."
     },
     {
-      "inning": "Bottom 17",
-      "pitcher": "Webb",
-      "batter": "Cox",
+      "inning": "Top 9",
+      "pitcher": "Maddox Webb",
+      "batter": "Shane Cox",
       "outcome": "Lineout",
       "count": "0-0",
       "pitches": "",
@@ -2136,13 +2136,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Hernandez",
-        "2B": "Boyd",
+        "1B": "Javon Hernandez",
+        "2B": "Gabe Boyd",
         "3B": "SmithM"
       },
       "runners_after": {
-        "1B": "Hernandez",
-        "2B": "Boyd",
+        "1B": "Javon Hernandez",
+        "2B": "Gabe Boyd",
         "3B": "SmithM"
       },
       "score": {

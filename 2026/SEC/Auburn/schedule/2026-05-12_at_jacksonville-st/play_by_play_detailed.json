@@ -1,9 +1,9 @@
 {
   "contest_id": "6492314",
   "date": "05/12/2026",
-  "batting_team": "Auburn",
-  "pitching_team": "Jacksonville St.",
-  "note": "Broken-down from the saved play_by_play.json, which contains the Auburn at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "Auburn",
+  "home_team": "Jacksonville St.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
       "inning": "Top 1",
@@ -87,9 +87,9 @@
       "description": "Terrell, B. popped up to ss."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Ryan Geraghty",
-      "batter": "J.",
+      "inning": "Bottom 1",
+      "pitcher": "Griffin Graves",
+      "batter": "Jaxon Pate",
       "outcome": "Walk",
       "count": null,
       "pitches": null,
@@ -103,7 +103,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "Jaxon Pate",
         "2B": null,
         "3B": null
       },
@@ -114,9 +114,9 @@
       "description": "J. Pate walked."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Ryan Geraghty",
-      "batter": "C.",
+      "inning": "Bottom 1",
+      "pitcher": "Griffin Graves",
+      "batter": "Caleb Johnson",
       "outcome": "Strikeout (swinging)",
       "count": null,
       "pitches": null,
@@ -125,12 +125,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "J.",
+        "1B": "Jaxon Pate",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "Jaxon Pate",
         "2B": null,
         "3B": null
       },
@@ -141,9 +141,9 @@
       "description": "C. Johnson struck out swinging."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Ryan Geraghty",
-      "batter": "T.",
+      "inning": "Bottom 1",
+      "pitcher": "Griffin Graves",
+      "batter": "Trey King",
       "outcome": "Strikeout (swinging)",
       "count": null,
       "pitches": null,
@@ -152,12 +152,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "J.",
+        "1B": "Jaxon Pate",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "Jaxon Pate",
         "2B": null,
         "3B": null
       },
@@ -168,9 +168,9 @@
       "description": "T. King struck out swinging."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Ryan Geraghty",
-      "batter": "G.",
+      "inning": "Bottom 1",
+      "pitcher": "Griffin Graves",
+      "batter": "Grayson Ashe",
       "outcome": "Single",
       "count": null,
       "pitches": null,
@@ -179,13 +179,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "J.",
+        "1B": "Jaxon Pate",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "G.",
-        "2B": null,
+        "1B": "Grayson Ashe",
+        "2B": "Jaxon Pate",
         "3B": null
       },
       "score": {
@@ -195,24 +195,26 @@
       "description": "G. Ashe singled to right field J. Pate advanced to second."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Ryan Geraghty",
-      "batter": "B.",
+      "inning": "Bottom 1",
+      "pitcher": "Griffin Graves",
+      "batter": "Brady Thomas",
       "outcome": "Single",
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jaxon Pate"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "G.",
-        "2B": null,
+        "1B": "Grayson Ashe",
+        "2B": "Jaxon Pate",
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
-        "2B": null,
+        "1B": "Brady Thomas",
+        "2B": "Grayson Ashe",
         "3B": null
       },
       "score": {
@@ -222,9 +224,9 @@
       "description": "B. Thomas singled through the left side, RBI G. Ashe advanced to second J. Pate scored."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Ryan Geraghty",
-      "batter": "C.",
+      "inning": "Bottom 1",
+      "pitcher": "Griffin Graves",
+      "batter": "Cooper Blauser",
       "outcome": "Fielder's choice",
       "count": null,
       "pitches": null,
@@ -233,13 +235,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "B.",
-        "2B": null,
+        "1B": "Brady Thomas",
+        "2B": "Grayson Ashe",
         "3B": null
       },
       "runners_after": {
-        "1B": "C.",
-        "2B": null,
+        "1B": "Cooper Blauser",
+        "2B": "Brady Thomas",
         "3B": null
       },
       "score": {
@@ -249,7 +251,7 @@
       "description": "C. Blauser reached on a fielder's choice to third base B. Thomas advanced to second G. Ashe out at third unassisted."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Ryan Geraghty",
       "batter": "Chris Rembert",
       "outcome": "Single",
@@ -276,7 +278,7 @@
       "description": "Rembert, C. singled up the middle."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Ryan Geraghty",
       "batter": "Ethin Bingaman",
       "outcome": "Fielder's choice",
@@ -303,7 +305,7 @@
       "description": "Bingaman, E. reached on a fielder's choice to third base Rembert, C. out at second to 2b."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Ryan Geraghty",
       "batter": "Eddie Madrigal",
       "outcome": "Foul out",
@@ -330,7 +332,7 @@
       "description": "Madrigal, E. fouled out to lf."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Ryan Geraghty",
       "batter": null,
       "outcome": "Baserunning",
@@ -357,7 +359,7 @@
       "description": "Bingaman, E. advanced to second on a balk."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Ryan Geraghty",
       "batter": "Mason McCraine",
       "outcome": "Walk",
@@ -384,7 +386,7 @@
       "description": "McCraine, B. walked."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Ryan Geraghty",
       "batter": null,
       "outcome": "Baserunning",
@@ -411,7 +413,7 @@
       "description": "McCraine, B. advanced to second Bingaman, E. advanced to third on a wild pitch."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Ryan Geraghty",
       "batter": "Lucas Steele",
       "outcome": "Strikeout (looking)",
@@ -438,9 +440,9 @@
       "description": "Steele, L. struck out looking."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Ryan Geraghty",
-      "batter": "T.",
+      "inning": "Bottom 2",
+      "pitcher": "Griffin Graves",
+      "batter": "Trey Majette",
       "outcome": "Groundout",
       "count": null,
       "pitches": null,
@@ -465,9 +467,9 @@
       "description": "T. Majette grounded out to ."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Ryan Geraghty",
-      "batter": "O.",
+      "inning": "Bottom 2",
+      "pitcher": "Griffin Graves",
+      "batter": "O. Pena",
       "outcome": "Groundout",
       "count": null,
       "pitches": null,
@@ -492,9 +494,9 @@
       "description": "O. Pena grounded out to ss."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Ryan Geraghty",
-      "batter": "L.",
+      "inning": "Bottom 2",
+      "pitcher": "Griffin Graves",
+      "batter": "Luke Williams",
       "outcome": "Strikeout (swinging)",
       "count": null,
       "pitches": null,
@@ -519,7 +521,7 @@
       "description": "L. Williams struck out swinging."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Ryan Geraghty",
       "batter": "Bristol Carter",
       "outcome": "Groundout",
@@ -546,7 +548,7 @@
       "description": "Carter, B. grounded out to , bunt."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Ryan Geraghty",
       "batter": "Mason McCraine",
       "outcome": "\u2014",
@@ -573,7 +575,7 @@
       "description": "McCraine, M. out at first 1b to p."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Ryan Geraghty",
       "batter": "Eric Guevara",
       "outcome": "Strikeout (swinging)",
@@ -600,16 +602,16 @@
       "description": "Guevara, E. struck out swinging."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "Ryan Geraghty",
-      "batter": "J.",
+      "inning": "Bottom 3",
+      "pitcher": "Griffin Graves",
+      "batter": "Jaxon Pate",
       "outcome": "Groundout",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -627,16 +629,16 @@
       "description": "J. Pate grounded out to ss."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Ryan Geraghty",
-      "batter": "C.",
+      "inning": "Bottom 3",
+      "pitcher": "Griffin Graves",
+      "batter": "Caleb Johnson",
       "outcome": "Pop out",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -654,16 +656,16 @@
       "description": "C. Johnson popped up to 1b."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Ryan Geraghty",
-      "batter": "T.",
+      "inning": "Bottom 3",
+      "pitcher": "Griffin Graves",
+      "batter": "Trey King",
       "outcome": "Lineout",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -681,7 +683,7 @@
       "description": "T. King lined out to p."
     },
     {
-      "inning": "Top 6",
+      "inning": "Top 4",
       "pitcher": "Ryan Geraghty",
       "batter": "Bub Terrell",
       "outcome": "Strikeout (swinging)",
@@ -689,8 +691,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -708,7 +710,7 @@
       "description": "Terrell, B. struck out swinging."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Ryan Geraghty",
       "batter": "Chris Rembert",
       "outcome": "Single",
@@ -716,8 +718,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -735,7 +737,7 @@
       "description": "Rembert, C. singled to left field."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Ryan Geraghty",
       "batter": "Ethin Bingaman",
       "outcome": "Flyout",
@@ -743,8 +745,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Chris Rembert",
         "2B": null,
@@ -762,7 +764,7 @@
       "description": "Bingaman, E. flied out to rf down the rf line."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Ryan Geraghty",
       "batter": "Eddie Madrigal",
       "outcome": "Groundout",
@@ -770,8 +772,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Chris Rembert",
         "2B": null,
@@ -789,23 +791,23 @@
       "description": "Madrigal, E. grounded out to 2b."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Ryan Geraghty",
-      "batter": "G.",
+      "inning": "Bottom 4",
+      "pitcher": "Griffin Graves",
+      "batter": "Grayson Ashe",
       "outcome": "Walk",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Chris Rembert",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "G.",
+        "1B": "Grayson Ashe",
         "2B": null,
         "3B": null
       },
@@ -816,24 +818,24 @@
       "description": "G. Ashe walked."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Ryan Geraghty",
-      "batter": "B.",
+      "inning": "Bottom 4",
+      "pitcher": "Griffin Graves",
+      "batter": "Brady Thomas",
       "outcome": "Single",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "G.",
+        "1B": "Grayson Ashe",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
-        "2B": null,
+        "1B": "Brady Thomas",
+        "2B": "Grayson Ashe",
         "3B": null
       },
       "score": {
@@ -843,25 +845,25 @@
       "description": "B. Thomas singled up the middle G. Ashe advanced to second."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Ryan Geraghty",
-      "batter": "C.",
+      "inning": "Bottom 4",
+      "pitcher": "Griffin Graves",
+      "batter": "Cooper Blauser",
       "outcome": "Hit by pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "B.",
-        "2B": null,
+        "1B": "Brady Thomas",
+        "2B": "Grayson Ashe",
         "3B": null
       },
       "runners_after": {
-        "1B": "C.",
-        "2B": null,
-        "3B": null
+        "1B": "Cooper Blauser",
+        "2B": "Brady Thomas",
+        "3B": "Grayson Ashe"
       },
       "score": {
         "away": 0,
@@ -870,25 +872,27 @@
       "description": "C. Blauser hit by pitch B. Thomas advanced to second G. Ashe advanced to third."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Ryan Geraghty",
-      "batter": "T.",
+      "inning": "Bottom 4",
+      "pitcher": "Griffin Graves",
+      "batter": "Trey Majette",
       "outcome": "Flyout",
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "runs_scored": [
+        "Grayson Ashe"
+      ],
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "C.",
-        "2B": null,
-        "3B": null
+        "1B": "Cooper Blauser",
+        "2B": "Brady Thomas",
+        "3B": "Grayson Ashe"
       },
       "runners_after": {
-        "1B": "C.",
+        "1B": "Cooper Blauser",
         "2B": null,
-        "3B": null
+        "3B": "Brady Thomas"
       },
       "score": {
         "away": 0,
@@ -897,25 +901,27 @@
       "description": "T. Majette flied out to rf, SF, RBI B. Thomas advanced to third G. Ashe scored."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Ryan Geraghty",
-      "batter": "O.",
+      "inning": "Bottom 4",
+      "pitcher": "Griffin Graves",
+      "batter": "O. Pena",
       "outcome": "Fielder's choice",
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "runs_scored": [
+        "Brady Thomas"
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": null,
+        "1B": "Cooper Blauser",
         "2B": null,
-        "3B": null
+        "3B": "Brady Thomas"
       },
       "runners_after": {
-        "1B": "O.",
+        "1B": "O. Pena",
         "2B": null,
-        "3B": null
+        "3B": "Cooper Blauser"
       },
       "score": {
         "away": 0,
@@ -924,25 +930,25 @@
       "description": "O. Pena reached on a fielder's choice, SAC, bunt, RBI C. Blauser advanced to third B. Thomas scored."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Chancellor",
+      "inning": "Bottom 4",
+      "pitcher": "Abe Chancellor",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "O.",
+        "1B": "O. Pena",
         "2B": null,
-        "3B": null
+        "3B": "Cooper Blauser"
       },
       "runners_after": {
-        "1B": "O.",
+        "1B": "O. Pena",
         "2B": null,
-        "3B": null
+        "3B": "Cooper Blauser"
       },
       "score": {
         "away": 0,
@@ -951,25 +957,25 @@
       "description": "O. Pena stole second."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Chancellor",
-      "batter": "L.",
+      "inning": "Bottom 4",
+      "pitcher": "Abe Chancellor",
+      "batter": "Luke Williams",
       "outcome": "Hit by pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "O.",
+        "1B": "O. Pena",
         "2B": null,
-        "3B": null
+        "3B": "Cooper Blauser"
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": "Luke Williams",
         "2B": null,
-        "3B": null
+        "3B": "Cooper Blauser"
       },
       "score": {
         "away": 0,
@@ -978,24 +984,26 @@
       "description": "L. Williams hit by pitch."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Chancellor",
-      "batter": "J.",
+      "inning": "Bottom 4",
+      "pitcher": "Abe Chancellor",
+      "batter": "Jaxon Pate",
       "outcome": "Walk",
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "runs_scored": [
+        "Cooper Blauser"
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "L.",
+        "1B": "Luke Williams",
         "2B": null,
-        "3B": null
+        "3B": "Cooper Blauser"
       },
       "runners_after": {
-        "1B": "J.",
-        "2B": null,
+        "1B": "Jaxon Pate",
+        "2B": "Luke Williams",
         "3B": null
       },
       "score": {
@@ -1005,24 +1013,24 @@
       "description": "J. Pate walked, RBI L. Williams advanced to second O. Pena advanced to third C. Blauser scored."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Chancellor",
-      "batter": "C.",
+      "inning": "Bottom 4",
+      "pitcher": "Abe Chancellor",
+      "batter": "Caleb Johnson",
       "outcome": "Grounded into double play",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "J.",
-        "2B": null,
+        "1B": "Jaxon Pate",
+        "2B": "Luke Williams",
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Williams",
         "3B": null
       },
       "score": {
@@ -1032,23 +1040,23 @@
       "description": "C. Johnson grounded into double play ss to 2b to 1b J. Pate out on the play."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Chancellor",
+      "inning": "Top 5",
+      "pitcher": "Ryan Geraghty",
       "batter": "Mason McCraine",
       "outcome": "Flyout",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "J.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1059,16 +1067,16 @@
       "description": "McCraine, B. flied out to rf."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "Chancellor",
+      "inning": "Top 5",
+      "pitcher": "Ryan Geraghty",
       "batter": "Lucas Steele",
       "outcome": "Flyout",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1086,16 +1094,16 @@
       "description": "Steele, L. flied out to cf."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "Chancellor",
+      "inning": "Top 5",
+      "pitcher": "Ryan Geraghty",
       "batter": "Bristol Carter",
       "outcome": "Lineout",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1113,16 +1121,16 @@
       "description": "Carter, B. lined out to 2b."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "Chancellor",
-      "batter": "T.",
+      "inning": "Bottom 5",
+      "pitcher": "Abe Chancellor",
+      "batter": "Trey King",
       "outcome": "Strikeout (looking)",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1140,23 +1148,23 @@
       "description": "T. King struck out looking."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Chancellor",
-      "batter": "G.",
+      "inning": "Bottom 5",
+      "pitcher": "Abe Chancellor",
+      "batter": "Grayson Ashe",
       "outcome": "Single",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "G.",
+        "1B": "Grayson Ashe",
         "2B": null,
         "3B": null
       },
@@ -1167,24 +1175,24 @@
       "description": "G. Ashe singled to center field."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Chancellor",
+      "inning": "Bottom 5",
+      "pitcher": "Abe Chancellor",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "G.",
+        "1B": "Grayson Ashe",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "G.",
-        "2B": null,
+        "1B": null,
+        "2B": "Grayson Ashe",
         "3B": null
       },
       "score": {
@@ -1194,24 +1202,24 @@
       "description": "G. Ashe advanced to second on a wild pitch."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Chancellor",
-      "batter": "B.",
+      "inning": "Bottom 5",
+      "pitcher": "Abe Chancellor",
+      "batter": "Brady Thomas",
       "outcome": "Strikeout (looking)",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "G.",
-        "2B": null,
+        "1B": null,
+        "2B": "Grayson Ashe",
         "3B": null
       },
       "runners_after": {
-        "1B": "G.",
-        "2B": null,
+        "1B": null,
+        "2B": "Grayson Ashe",
         "3B": null
       },
       "score": {
@@ -1221,25 +1229,25 @@
       "description": "B. Thomas struck out looking."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Kulik",
-      "batter": "C.",
+      "inning": "Bottom 5",
+      "pitcher": "Marcel Kulik",
+      "batter": "Cooper Blauser",
       "outcome": "Single",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "G.",
-        "2B": null,
+        "1B": null,
+        "2B": "Grayson Ashe",
         "3B": null
       },
       "runners_after": {
-        "1B": "C.",
+        "1B": "Cooper Blauser",
         "2B": null,
-        "3B": null
+        "3B": "Grayson Ashe"
       },
       "score": {
         "away": 0,
@@ -1248,25 +1256,25 @@
       "description": "C. Blauser singled through the left side G. Ashe advanced to third."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Kulik",
-      "batter": "T.",
+      "inning": "Bottom 5",
+      "pitcher": "Marcel Kulik",
+      "batter": "Trey Majette",
       "outcome": "Flyout",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "C.",
+        "1B": "Cooper Blauser",
         "2B": null,
-        "3B": null
+        "3B": "Grayson Ashe"
       },
       "runners_after": {
-        "1B": "C.",
+        "1B": "Cooper Blauser",
         "2B": null,
-        "3B": null
+        "3B": "Grayson Ashe"
       },
       "score": {
         "away": 0,
@@ -1275,23 +1283,23 @@
       "description": "T. Majette flied out to cf."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Kulik",
+      "inning": "Top 6",
+      "pitcher": "Ryan Geraghty",
       "batter": "Mason McCraine",
       "outcome": "Groundout",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "C.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "C.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1302,16 +1310,16 @@
       "description": "McCraine, M. grounded out to 2b."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Kulik",
+      "inning": "Top 6",
+      "pitcher": "Ryan Geraghty",
       "batter": "Eric Guevara",
       "outcome": "Groundout",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1329,16 +1337,16 @@
       "description": "Guevara, E. grounded out to 2b."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Kulik",
+      "inning": "Top 6",
+      "pitcher": "Ryan Geraghty",
       "batter": "Bub Terrell",
       "outcome": "Single",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1356,7 +1364,7 @@
       "description": "Terrell, B. singled to left field."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "J.",
       "batter": "Chris Rembert",
       "outcome": "Groundout",
@@ -1364,8 +1372,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Bub Terrell",
         "2B": null,
@@ -1383,37 +1391,10 @@
       "description": "Rembert, C. grounded out to ."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "J.",
-      "batter": "O.",
+      "inning": "Bottom 6",
+      "pitcher": "Marcel Kulik",
+      "batter": "O. Pena",
       "outcome": "Groundout",
-      "count": null,
-      "pitches": null,
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
-      "runners_before": {
-        "1B": "Bub Terrell",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Bub Terrell",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 0,
-        "home": 4
-      },
-      "description": "O. Pena grounded out to ."
-    },
-    {
-      "inning": "Top 12",
-      "pitcher": "J.",
-      "batter": "L.",
-      "outcome": "Strikeout (swinging)",
       "count": null,
       "pitches": null,
       "rbi": false,
@@ -1434,12 +1415,12 @@
         "away": 0,
         "home": 4
       },
-      "description": "L. Williams struck out swinging."
+      "description": "O. Pena grounded out to ."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "J.",
-      "batter": "J.",
+      "inning": "Bottom 6",
+      "pitcher": "Marcel Kulik",
+      "batter": "Luke Williams",
       "outcome": "Strikeout (swinging)",
       "count": null,
       "pitches": null,
@@ -1447,6 +1428,33 @@
       "runs_scored": [],
       "outs_before": 1,
       "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 4
+      },
+      "description": "L. Williams struck out swinging."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Marcel Kulik",
+      "batter": "Jaxon Pate",
+      "outcome": "Strikeout (swinging)",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1464,7 +1472,7 @@
       "description": "J. Pate struck out swinging."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "J.",
       "batter": "Ethin Bingaman",
       "outcome": "Single",
@@ -1472,8 +1480,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1491,7 +1499,7 @@
       "description": "Bingaman, E. singled to right center."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "J.",
       "batter": "Eddie Madrigal",
       "outcome": "Single",
@@ -1499,8 +1507,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Ethin Bingaman",
         "2B": null,
@@ -1518,7 +1526,7 @@
       "description": "Madrigal, E. singled to center field Bingaman, E. advanced to second."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "J.",
       "batter": null,
       "outcome": "Baserunning",
@@ -1526,8 +1534,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Eddie Madrigal",
         "2B": null,
@@ -1545,7 +1553,7 @@
       "description": "Thompson, T. advanced to second Bingaman, E. advanced to third on a wild pitch."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "J.",
       "batter": "Mason McCraine",
       "outcome": "Single",
@@ -1553,8 +1561,8 @@
       "pitches": null,
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Eddie Madrigal",
         "2B": null,
@@ -1572,7 +1580,7 @@
       "description": "McCraine, B. singled to pitcher, RBI Thompson, T. advanced to third Bingaman, E. scored."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "J.",
       "batter": null,
       "outcome": "Stolen base",
@@ -1580,8 +1588,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Mason McCraine",
         "2B": null,
@@ -1599,7 +1607,7 @@
       "description": "McCraine, B. stole second."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "J.",
       "batter": "Lucas Steele",
       "outcome": "Strikeout (looking)",
@@ -1607,8 +1615,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Mason McCraine",
         "2B": null,
@@ -1626,7 +1634,7 @@
       "description": "Steele, L. struck out looking."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 7",
       "pitcher": "J.",
       "batter": "Bristol Carter",
       "outcome": "Strikeout (swinging)",
@@ -1634,15 +1642,15 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Mason McCraine",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Mason McCraine",
         "2B": null,
         "3B": null
       },
@@ -1653,7 +1661,7 @@
       "description": "Carter, B. struck out swinging."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 7",
       "pitcher": "J.",
       "batter": "Mason McCraine",
       "outcome": "Groundout",
@@ -1661,15 +1669,15 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
+        "1B": "Mason McCraine",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Mason McCraine",
         "2B": null,
         "3B": null
       },
@@ -1680,16 +1688,16 @@
       "description": "McCraine, M. grounded out to 2b."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "J.",
-      "batter": "C.",
+      "inning": "Bottom 7",
+      "pitcher": "Marcel Kulik",
+      "batter": "Caleb Johnson",
       "outcome": "Flyout",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1707,23 +1715,23 @@
       "description": "C. Johnson flied out to cf."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "J.",
-      "batter": "T.",
+      "inning": "Bottom 7",
+      "pitcher": "Marcel Kulik",
+      "batter": "Trey King",
       "outcome": "Single",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
+        "1B": "Trey King",
         "2B": null,
         "3B": null
       },
@@ -1734,23 +1742,23 @@
       "description": "T. King singled to right field, advanced to second on a fielding error by rf."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "J.",
-      "batter": "G.",
+      "inning": "Bottom 7",
+      "pitcher": "Marcel Kulik",
+      "batter": "Grayson Ashe",
       "outcome": "Strikeout (swinging)",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "T.",
+        "1B": "Trey King",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
+        "1B": "Trey King",
         "2B": null,
         "3B": null
       },
@@ -1761,23 +1769,23 @@
       "description": "G. Ashe struck out swinging."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "J.",
-      "batter": "B.",
+      "inning": "Bottom 7",
+      "pitcher": "Marcel Kulik",
+      "batter": "Brady Thomas",
       "outcome": "Walk",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "T.",
+        "1B": "Trey King",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": "Brady Thomas",
         "2B": null,
         "3B": null
       },
@@ -1788,24 +1796,24 @@
       "description": "B. Thomas walked."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "J.",
-      "batter": "C.",
+      "inning": "Bottom 7",
+      "pitcher": "Marcel Kulik",
+      "batter": "Cooper Blauser",
       "outcome": "Fielder's choice",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "B.",
+        "1B": "Brady Thomas",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "C.",
-        "2B": null,
+        "1B": "Cooper Blauser",
+        "2B": "Brady Thomas",
         "3B": null
       },
       "score": {
@@ -1815,7 +1823,7 @@
       "description": "C. Blauser reached on a fielder's choice to third base B. Thomas advanced to second T. King out at third unassisted."
     },
     {
-      "inning": "Top 14",
+      "inning": "Top 8",
       "pitcher": "J.",
       "batter": "Eric Guevara",
       "outcome": "Hit by pitch",
@@ -1823,10 +1831,10 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "C.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1842,7 +1850,7 @@
       "description": "Guevara, E. hit by pitch."
     },
     {
-      "inning": "Top 14",
+      "inning": "Top 8",
       "pitcher": "J.",
       "batter": "Bub Terrell",
       "outcome": "Walk",
@@ -1850,8 +1858,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Eric Guevara",
         "2B": null,
@@ -1869,7 +1877,7 @@
       "description": "Terrell, B. walked Guevara, E. advanced to second."
     },
     {
-      "inning": "Top 14",
+      "inning": "Top 8",
       "pitcher": "C.",
       "batter": "Chris Rembert",
       "outcome": "Flyout",
@@ -1877,8 +1885,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Bub Terrell",
         "2B": null,
@@ -1896,7 +1904,7 @@
       "description": "Rembert, C. flied out to rf Guevara, E. advanced to third."
     },
     {
-      "inning": "Top 15",
+      "inning": "Top 8",
       "pitcher": "C.",
       "batter": "Ethin Bingaman",
       "outcome": "Grounded into double play",
@@ -1904,15 +1912,15 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
+        "1B": "Bub Terrell",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Bub Terrell",
         "2B": null,
         "3B": null
       },
@@ -1923,16 +1931,16 @@
       "description": "Bingaman, E. grounded into double play 2b to ss to 1b Terrell, B. out on the play."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Brewer",
-      "batter": "T.",
+      "inning": "Bottom 8",
+      "pitcher": "Garrett Brewer",
+      "batter": "Trey Majette",
       "outcome": "Groundout",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1950,37 +1958,10 @@
       "description": "T. Majette grounded out to ."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Brewer",
-      "batter": "O.",
+      "inning": "Bottom 8",
+      "pitcher": "Garrett Brewer",
+      "batter": "O. Pena",
       "outcome": "Groundout",
-      "count": null,
-      "pitches": null,
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
-      "runners_before": {
-        "1B": null,
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": null,
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 1,
-        "home": 4
-      },
-      "description": "O. Pena grounded out to p."
-    },
-    {
-      "inning": "Top 16",
-      "pitcher": "Brewer",
-      "batter": "L.",
-      "outcome": "Strikeout (swinging)",
       "count": null,
       "pitches": null,
       "rbi": false,
@@ -2001,12 +1982,12 @@
         "away": 1,
         "home": 4
       },
-      "description": "L. Williams struck out swinging."
+      "description": "O. Pena grounded out to p."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Brewer",
-      "batter": "Todd Clay",
+      "inning": "Bottom 8",
+      "pitcher": "Garrett Brewer",
+      "batter": "Luke Williams",
       "outcome": "Strikeout (swinging)",
       "count": null,
       "pitches": null,
@@ -2028,13 +2009,13 @@
         "away": 1,
         "home": 4
       },
-      "description": "Clay, T. struck out swinging."
+      "description": "L. Williams struck out swinging."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Brewer",
-      "batter": "Mason McCraine",
-      "outcome": "Flyout",
+      "inning": "Top 9",
+      "pitcher": "C.",
+      "batter": "Todd Clay",
+      "outcome": "Strikeout (swinging)",
       "count": null,
       "pitches": null,
       "rbi": false,
@@ -2055,19 +2036,46 @@
         "away": 1,
         "home": 4
       },
-      "description": "McCraine, B. flied out to rf."
+      "description": "Clay, T. struck out swinging."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Brewer",
-      "batter": "Lucas Steele",
-      "outcome": "Strikeout (swinging)",
+      "inning": "Top 9",
+      "pitcher": "C.",
+      "batter": "Mason McCraine",
+      "outcome": "Flyout",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
       "outs_before": 1,
       "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 4
+      },
+      "description": "McCraine, B. flied out to rf."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "C.",
+      "batter": "Lucas Steele",
+      "outcome": "Strikeout (swinging)",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,

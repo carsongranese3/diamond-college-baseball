@@ -1,9 +1,9 @@
 {
   "contest_id": "6582321",
   "date": "05/30/2026",
-  "batting_team": "Texas",
-  "pitching_team": "Tarleton St.",
-  "note": "Broken-down from the saved play_by_play.json, which contains the Texas at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "Texas",
+  "home_team": "Tarleton St.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
       "inning": "Top 1",
@@ -170,9 +170,9 @@
       "description": "Borba struck out swinging (0-2 KSS)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Ethan Wendel",
-      "batter": "Tatom, J. singled to left field, out at second lf to 2b (1-2 KBS).",
+      "inning": "Bottom 1",
+      "pitcher": "Dylan Volantis",
+      "batter": "Jake Tatom",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "KBS",
@@ -186,7 +186,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tatom, J. singled to left field, out at second lf to 2b (1-2 KBS).",
+        "1B": "Jake Tatom",
         "2B": null,
         "3B": null
       },
@@ -197,9 +197,9 @@
       "description": "Tatom, J. singled to left field, out at second lf to 2b (1-2 KBS)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Ethan Wendel",
-      "batter": "McCloud, S. struck out swinging, out at first c to 1b (1-2 KSFFBS).",
+      "inning": "Bottom 1",
+      "pitcher": "Dylan Volantis",
+      "batter": "Slade McCloud",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KSFFBS",
@@ -208,12 +208,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tatom, J. singled to left field, out at second lf to 2b (1-2 KBS).",
+        "1B": "Jake Tatom",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Tatom, J. singled to left field, out at second lf to 2b (1-2 KBS).",
+        "1B": "Jake Tatom",
         "2B": null,
         "3B": null
       },
@@ -224,9 +224,9 @@
       "description": "McCloud, S. struck out swinging, out at first c to 1b (1-2 KSFFBS)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Ethan Wendel",
-      "batter": "Heinrich, R. flied out to rf (1-2 KSB).",
+      "inning": "Bottom 1",
+      "pitcher": "Dylan Volantis",
+      "batter": "Rayner Heinrich",
       "outcome": "Flyout",
       "count": "1-2",
       "pitches": "KSB",
@@ -235,12 +235,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Tatom, J. singled to left field, out at second lf to 2b (1-2 KBS).",
+        "1B": "Jake Tatom",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Tatom, J. singled to left field, out at second lf to 2b (1-2 KBS).",
+        "1B": "Jake Tatom",
         "2B": null,
         "3B": null
       },
@@ -259,10 +259,10 @@
       "pitches": "BBKBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Tatom, J. singled to left field, out at second lf to 2b (1-2 KBS).",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -286,8 +286,8 @@
       "pitches": "BBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Ashton Larson",
         "2B": null,
@@ -305,7 +305,7 @@
       "description": "Mendoza flied out to cf (2-1 BBK)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Ethan Wendel",
       "batter": "Dariyan Pendergrass",
       "outcome": "Single",
@@ -313,16 +313,16 @@
       "pitches": "FBFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": null,
+        "1B": "Ashton Larson",
         "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Dariyan Pendergrass",
-        "2B": null,
+        "2B": "Ashton Larson",
         "3B": null
       },
       "score": {
@@ -332,7 +332,7 @@
       "description": "Pendergrass singled through the left side (2-2 FBFB) Larson advanced to second."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Ethan Wendel",
       "batter": "Aiden Robbins",
       "outcome": "Home run",
@@ -341,13 +341,14 @@
       "rbi": true,
       "runs_scored": [
         "Dariyan Pendergrass",
+        "Ashton Larson",
         "Aiden Robbins"
       ],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Dariyan Pendergrass",
-        "2B": null,
+        "2B": "Ashton Larson",
         "3B": null
       },
       "runners_after": {
@@ -362,7 +363,7 @@
       "description": "Robbins homered to left center, 3 RBI (0-1 K) Pendergrass scored Larson scored."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Ethan Wendel",
       "batter": "Carson Tinney",
       "outcome": "Home run",
@@ -372,8 +373,8 @@
       "runs_scored": [
         "Carson Tinney"
       ],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -391,7 +392,7 @@
       "description": "Tinney homered to center field, RBI (1-0 B)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Ethan Wendel",
       "batter": "Pack",
       "outcome": "Home run",
@@ -401,8 +402,8 @@
       "runs_scored": [
         "Pack"
       ],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -420,7 +421,7 @@
       "description": "Pack Jr. homered to left center, RBI (0-1 F)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Ethan Wendel",
       "batter": "Temo Becerra",
       "outcome": "Strikeout (looking)",
@@ -428,8 +429,8 @@
       "pitches": "KBSFK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -447,7 +448,7 @@
       "description": "Becerra struck out looking (1-2 KBSFK)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Ethan Wendel",
       "batter": "Adrian Rodriguez",
       "outcome": "Walk",
@@ -455,8 +456,8 @@
       "pitches": "BBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -474,7 +475,7 @@
       "description": "Rodriguez walked (3-0 BBBB)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Ethan Wendel",
       "batter": "Casey Borba",
       "outcome": "Strikeout (swinging)",
@@ -482,8 +483,8 @@
       "pitches": "SSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Adrian Rodriguez",
         "2B": null,
@@ -501,23 +502,23 @@
       "description": "Borba struck out swinging (0-2 SSS)."
     },
     {
-      "inning": "Top 3",
-      "pitcher": "Ethan Wendel",
-      "batter": "Lorch, C. grounded out to p (0-1 K).",
+      "inning": "Bottom 2",
+      "pitcher": "Dylan Volantis",
+      "batter": "Carson Lorch",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Adrian Rodriguez",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Adrian Rodriguez",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -528,23 +529,23 @@
       "description": "Lorch, C. grounded out to p (0-1 K)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Ethan Wendel",
-      "batter": "McCloud, C. singled to right field (2-0 BB).",
+      "inning": "Bottom 2",
+      "pitcher": "Dylan Volantis",
+      "batter": "Slade McCloud",
       "outcome": "Single",
       "count": "2-0",
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "McCloud, C. singled to right field (2-0 BB).",
+        "1B": "Slade McCloud",
         "2B": null,
         "3B": null
       },
@@ -555,23 +556,23 @@
       "description": "McCloud, C. singled to right field (2-0 BB)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Ethan Wendel",
-      "batter": "Shirey, I. struck out swinging (3-2 BKBSBFS).",
+      "inning": "Bottom 2",
+      "pitcher": "Dylan Volantis",
+      "batter": "Ike Shirey",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
       "pitches": "BKBSBFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "McCloud, C. singled to right field (2-0 BB).",
+        "1B": "Slade McCloud",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "McCloud, C. singled to right field (2-0 BB).",
+        "1B": "Slade McCloud",
         "2B": null,
         "3B": null
       },
@@ -582,23 +583,23 @@
       "description": "Shirey, I. struck out swinging (3-2 BKBSBFS)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Ethan Wendel",
-      "batter": "Guerra, S. struck out swinging (0-2 FKS).",
+      "inning": "Bottom 2",
+      "pitcher": "Dylan Volantis",
+      "batter": "Sergio Guerra",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "FKS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "McCloud, C. singled to right field (2-0 BB).",
+        "1B": "Slade McCloud",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "McCloud, C. singled to right field (2-0 BB).",
+        "1B": "Slade McCloud",
         "2B": null,
         "3B": null
       },
@@ -609,7 +610,7 @@
       "description": "Guerra, S. struck out swinging (0-2 FKS)."
     },
     {
-      "inning": "Top 4",
+      "inning": "Top 3",
       "pitcher": "Ashton Bassett",
       "batter": "Ashton Larson",
       "outcome": "Flyout",
@@ -617,15 +618,15 @@
       "pitches": "KKBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "McCloud, C. singled to right field (2-0 BB).",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "McCloud, C. singled to right field (2-0 BB).",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -636,7 +637,7 @@
       "description": "Larson flied out to lf (2-2 KKBB)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Ashton Bassett",
       "batter": "Ethan Mendoza",
       "outcome": "Home run",
@@ -646,8 +647,8 @@
       "runs_scored": [
         "Ethan Mendoza"
       ],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -665,7 +666,7 @@
       "description": "Mendoza homered to right field, RBI (0-1 F)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Ashton Bassett",
       "batter": "Dariyan Pendergrass",
       "outcome": "Flyout",
@@ -673,8 +674,8 @@
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -692,7 +693,7 @@
       "description": "Pendergrass flied out to lf (1-0 B)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Ashton Bassett",
       "batter": "Aiden Robbins",
       "outcome": "Single",
@@ -700,8 +701,8 @@
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -719,7 +720,7 @@
       "description": "Robbins singled up the middle (0-1 K)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Ashton Bassett",
       "batter": "Carson Tinney",
       "outcome": "Walk",
@@ -727,8 +728,8 @@
       "pitches": "BBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Aiden Robbins",
         "2B": null,
@@ -746,7 +747,7 @@
       "description": "Tinney walked (3-0 BBBB) Robbins advanced to second."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Ashton Bassett",
       "batter": "Pack",
       "outcome": "Walk",
@@ -754,8 +755,8 @@
       "pitches": "BBBKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Carson Tinney",
         "2B": "Aiden Robbins",
@@ -773,7 +774,7 @@
       "description": "Pack Jr. walked (3-1 BBBKB) Tinney advanced to second Robbins advanced to third."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Ashton Bassett",
       "batter": "Temo Becerra",
       "outcome": "Strikeout (swinging)",
@@ -781,8 +782,8 @@
       "pitches": "KBFBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Pack",
         "2B": "Carson Tinney",
@@ -800,25 +801,25 @@
       "description": "Becerra struck out swinging (2-2 KBFBS)."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "Ashton Bassett",
-      "batter": "Smeenk, R. grounded out to ss (1-1 BK).",
+      "inning": "Bottom 3",
+      "pitcher": "Dylan Volantis",
+      "batter": "Raphael Smeenk",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "BK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Pack",
-        "2B": "Carson Tinney",
-        "3B": "Aiden Robbins"
+        "1B": null,
+        "2B": null,
+        "3B": null
       },
       "runners_after": {
-        "1B": "Pack",
-        "2B": "Carson Tinney",
-        "3B": "Aiden Robbins"
+        "1B": null,
+        "2B": null,
+        "3B": null
       },
       "score": {
         "away": 7,
@@ -827,16 +828,16 @@
       "description": "Smeenk, R. grounded out to ss (1-1 BK)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Ashton Bassett",
-      "batter": "Johnson, K. struck out looking (3-2 BBBKKK).",
+      "inning": "Bottom 3",
+      "pitcher": "Dylan Volantis",
+      "batter": "Kendyl Johnson",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
       "pitches": "BBBKKK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -854,16 +855,16 @@
       "description": "Johnson, K. struck out looking (3-2 BBBKKK)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Ashton Bassett",
-      "batter": "Tatom, J. struck out looking (2-2 BKBKK).",
+      "inning": "Bottom 3",
+      "pitcher": "Dylan Volantis",
+      "batter": "Jake Tatom",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
       "pitches": "BKBKK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -881,7 +882,7 @@
       "description": "Tatom, J. struck out looking (2-2 BKBKK)."
     },
     {
-      "inning": "Top 6",
+      "inning": "Top 4",
       "pitcher": "Ashton Bassett",
       "batter": "Adrian Rodriguez",
       "outcome": "Walk",
@@ -889,8 +890,8 @@
       "pitches": "BBKKFFBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -908,7 +909,7 @@
       "description": "Rodriguez walked (3-2 BBKKFFBB)."
     },
     {
-      "inning": "Top 6",
+      "inning": "Top 4",
       "pitcher": "Ashton Bassett",
       "batter": "Casey Borba",
       "outcome": "Strikeout (swinging)",
@@ -916,8 +917,8 @@
       "pitches": "FBFFFBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Adrian Rodriguez",
         "2B": null,
@@ -935,7 +936,7 @@
       "description": "Borba struck out swinging (2-2 FBFFFBS)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Ashton Bassett",
       "batter": null,
       "outcome": "Baserunning",
@@ -943,15 +944,15 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": null,
+        "1B": "Adrian Rodriguez",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Adrian Rodriguez",
         "2B": null,
         "3B": null
       },
@@ -962,7 +963,7 @@
       "description": "Rodriguez failed pickoff attempt, advanced to second on a throwing error by p."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Ashton Bassett",
       "batter": "Ashton Larson",
       "outcome": "Walk",
@@ -970,10 +971,10 @@
       "pitches": "BBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": null,
+        "1B": "Adrian Rodriguez",
         "2B": null,
         "3B": null
       },
@@ -989,7 +990,7 @@
       "description": "Larson walked (3-0 BBBB) Rodriguez stole third."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Ashton Bassett",
       "batter": null,
       "outcome": "Stolen base",
@@ -997,8 +998,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Ashton Larson",
         "2B": null,
@@ -1016,7 +1017,7 @@
       "description": "Larson stole second, advanced to third on a throwing error by c Rodriguez scored on the throw."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Ashton Bassett",
       "batter": "Ethan Mendoza",
       "outcome": "Walk",
@@ -1024,8 +1025,8 @@
       "pitches": "BKBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Ashton Larson",
         "2B": null,
@@ -1043,7 +1044,7 @@
       "description": "Mendoza walked (3-1 BKBBB)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Ashton Bassett",
       "batter": "Dariyan Pendergrass",
       "outcome": "Walk",
@@ -1051,8 +1052,8 @@
       "pitches": "BBKBKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Ethan Mendoza",
         "2B": null,
@@ -1070,7 +1071,7 @@
       "description": "Pendergrass walked (3-2 BBKBKB) Mendoza advanced to second."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Andrew Hardin",
       "batter": "Aiden Robbins",
       "outcome": "Walk",
@@ -1078,8 +1079,8 @@
       "pitches": "BBBB",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Dariyan Pendergrass",
         "2B": "Ethan Mendoza",
@@ -1097,7 +1098,7 @@
       "description": "Robbins walked, RBI (3-0 BBBB) Pendergrass advanced to second Mendoza advanced to third Larson scored."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Andrew Hardin",
       "batter": "Carson Tinney",
       "outcome": "Walk",
@@ -1107,8 +1108,8 @@
       "runs_scored": [
         "Ethan Mendoza"
       ],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Aiden Robbins",
         "2B": "Dariyan Pendergrass",
@@ -1126,7 +1127,7 @@
       "description": "Tinney walked, RBI (3-2 KKBBFBB) Robbins advanced to second Pendergrass advanced to third Mendoza scored."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Andrew Hardin",
       "batter": "Pack",
       "outcome": "Walk",
@@ -1136,8 +1137,8 @@
       "runs_scored": [
         "Dariyan Pendergrass"
       ],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Carson Tinney",
         "2B": "Aiden Robbins",
@@ -1155,7 +1156,7 @@
       "description": "Pack Jr. walked, RBI (3-1 BKBBB) Tinney advanced to second Robbins advanced to third Pendergrass scored."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Andrew Hardin",
       "batter": null,
       "outcome": "Wild pitch",
@@ -1165,8 +1166,8 @@
       "runs_scored": [
         "Aiden Robbins"
       ],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Pack",
         "2B": "Carson Tinney",
@@ -1184,7 +1185,7 @@
       "description": "Pack Jr. advanced to second on a wild pitch Tinney advanced to third on a wild pitch Robbins scored on a wild pitch."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Andrew Hardin",
       "batter": "Temo Becerra",
       "outcome": "Walk",
@@ -1192,8 +1193,8 @@
       "pitches": "BBBKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Pack",
         "2B": null,
@@ -1211,7 +1212,7 @@
       "description": "Becerra walked (3-1 BBBKB)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Conner Doucet",
       "batter": "Adrian Rodriguez",
       "outcome": "Foul out",
@@ -1219,8 +1220,8 @@
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Temo Becerra",
         "2B": null,
@@ -1238,7 +1239,7 @@
       "description": "Rodriguez fouled out to lf (0-1 K)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Conner Doucet",
       "batter": "Casey Borba",
       "outcome": "Flyout",
@@ -1246,8 +1247,8 @@
       "pitches": "SBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Temo Becerra",
         "2B": null,
@@ -1265,25 +1266,25 @@
       "description": "Borba flied out to lf (1-2 SBF)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Conner Doucet",
-      "batter": "McCloud, S. grounded out to 2b (0-1 F).",
+      "inning": "Bottom 4",
+      "pitcher": "Dylan Volantis",
+      "batter": "Slade McCloud",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "F",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Temo Becerra",
+        "1B": null,
         "2B": null,
-        "3B": "Carson Tinney"
+        "3B": null
       },
       "runners_after": {
-        "1B": "Temo Becerra",
+        "1B": null,
         "2B": null,
-        "3B": "Carson Tinney"
+        "3B": null
       },
       "score": {
         "away": 12,
@@ -1292,23 +1293,23 @@
       "description": "McCloud, S. grounded out to 2b (0-1 F)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Conner Doucet",
-      "batter": "Heinrich, R. singled to second base (0-0).",
+      "inning": "Bottom 4",
+      "pitcher": "Dylan Volantis",
+      "batter": "Rayner Heinrich",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Heinrich, R. singled to second base (0-0).",
+        "1B": "Rayner Heinrich",
         "2B": null,
         "3B": null
       },
@@ -1319,23 +1320,23 @@
       "description": "Heinrich, R. singled to second base (0-0)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Conner Doucet",
-      "batter": "Lorch, C. walked (3-2 BBFBKB)",
+      "inning": "Bottom 4",
+      "pitcher": "Dylan Volantis",
+      "batter": "Carson Lorch",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBFBKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Heinrich, R. singled to second base (0-0).",
+        "1B": "Rayner Heinrich",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Lorch, C. walked (3-2 BBFBKB)",
+        "1B": "Carson Lorch",
         "2B": null,
         "3B": null
       },
@@ -1346,23 +1347,23 @@
       "description": "Lorch, C. walked (3-2 BBFBKB) Heinrich, R. advanced to second."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Conner Doucet",
-      "batter": "McCloud, C. struck out swinging (1-2 KBSS).",
+      "inning": "Bottom 4",
+      "pitcher": "Dylan Volantis",
+      "batter": "Slade McCloud",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KBSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Lorch, C. walked (3-2 BBFBKB)",
+        "1B": "Carson Lorch",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Lorch, C. walked (3-2 BBFBKB)",
+        "1B": "Carson Lorch",
         "2B": null,
         "3B": null
       },
@@ -1373,23 +1374,23 @@
       "description": "McCloud, C. struck out swinging (1-2 KBSS)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Conner Doucet",
-      "batter": "Shirey, I. struck out swinging (0-2 SKS).",
+      "inning": "Bottom 4",
+      "pitcher": "Dylan Volantis",
+      "batter": "Ike Shirey",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "SKS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "Lorch, C. walked (3-2 BBFBKB)",
+        "1B": "Carson Lorch",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Lorch, C. walked (3-2 BBFBKB)",
+        "1B": "Carson Lorch",
         "2B": null,
         "3B": null
       },
@@ -1400,7 +1401,7 @@
       "description": "Shirey, I. struck out swinging (0-2 SKS)."
     },
     {
-      "inning": "Top 8",
+      "inning": "Top 5",
       "pitcher": "Conner Doucet",
       "batter": "Ashton Larson",
       "outcome": "Walk",
@@ -1408,10 +1409,10 @@
       "pitches": "BKBFBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Lorch, C. walked (3-2 BBFBKB)",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1427,7 +1428,7 @@
       "description": "Larson walked (3-2 BKBFBB)."
     },
     {
-      "inning": "Top 8",
+      "inning": "Top 5",
       "pitcher": "Conner Doucet",
       "batter": "Ethan Mendoza",
       "outcome": "Groundout",
@@ -1435,8 +1436,8 @@
       "pitches": "KFFFFBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Ashton Larson",
         "2B": null,
@@ -1454,7 +1455,7 @@
       "description": "Mendoza grounded out to 2b (2-2 KFFFFBB) Larson advanced to second."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Conner Doucet",
       "batter": "Dariyan Pendergrass",
       "outcome": "Walk",
@@ -1462,16 +1463,16 @@
       "pitches": "BFBFBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": null,
+        "2B": "Ashton Larson",
         "3B": null
       },
       "runners_after": {
         "1B": "Dariyan Pendergrass",
-        "2B": null,
+        "2B": "Ashton Larson",
         "3B": null
       },
       "score": {
@@ -1481,7 +1482,7 @@
       "description": "Pendergrass walked (3-2 BFBFBB)."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Conner Doucet",
       "batter": "Aiden Robbins",
       "outcome": "Grounded into double play",
@@ -1489,17 +1490,17 @@
       "pitches": "KBBFF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Dariyan Pendergrass",
-        "2B": null,
+        "2B": "Ashton Larson",
         "3B": null
       },
       "runners_after": {
         "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Ashton Larson"
       },
       "score": {
         "away": 12,
@@ -1508,16 +1509,16 @@
       "description": "Robbins grounded into double play to 2b to 1b (2-2 KBBFF) Pendergrass out on the play Larson advanced to third."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "Conner Doucet",
-      "batter": "Guerra, S. grounded out to ss (2-2 KSBB).",
+      "inning": "Bottom 5",
+      "pitcher": "Dylan Volantis",
+      "batter": "Sergio Guerra",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "KSBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1535,16 +1536,16 @@
       "description": "Guerra, S. grounded out to ss (2-2 KSBB)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Conner Doucet",
-      "batter": "Smeenk, R. grounded out to (2-0 BB).",
+      "inning": "Bottom 5",
+      "pitcher": "Dylan Volantis",
+      "batter": "Raphael Smeenk",
       "outcome": "Groundout",
       "count": "2-0",
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1562,16 +1563,16 @@
       "description": "Smeenk, R. grounded out to (2-0 BB)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Conner Doucet",
-      "batter": "Johnson, K. grounded out to 2b (0-1 K).",
+      "inning": "Bottom 5",
+      "pitcher": "Dylan Volantis",
+      "batter": "Kendyl Johnson",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1589,7 +1590,7 @@
       "description": "Johnson, K. grounded out to 2b (0-1 K)."
     },
     {
-      "inning": "Top 10",
+      "inning": "Top 6",
       "pitcher": "Corbin Walter",
       "batter": "Carson Tinney",
       "outcome": "Double",
@@ -1597,8 +1598,8 @@
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1616,7 +1617,7 @@
       "description": "Tinney doubled to right field (2-0 BB)."
     },
     {
-      "inning": "Top 10",
+      "inning": "Top 6",
       "pitcher": "Corbin Walter",
       "batter": "Pack",
       "outcome": "Groundout",
@@ -1624,8 +1625,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": "Carson Tinney",
@@ -1643,20 +1644,22 @@
       "description": "Pack Jr. grounded out to (0-0) Tinney advanced to third."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "Corbin Walter",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "runs_scored": [
+        "Carson Tinney"
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Carson Tinney"
       },
       "runners_after": {
         "1B": null,
@@ -1670,7 +1673,7 @@
       "description": "Tinney scored on a wild pitch."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "Corbin Walter",
       "batter": "Temo Becerra",
       "outcome": "Walk",
@@ -1678,8 +1681,8 @@
       "pitches": "BBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1697,7 +1700,7 @@
       "description": "Becerra walked (3-0 BBBB)."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "Corbin Walter",
       "batter": "Adrian Rodriguez",
       "outcome": "Double",
@@ -1705,8 +1708,8 @@
       "pitches": "BKFBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Temo Becerra",
         "2B": null,
@@ -1724,7 +1727,7 @@
       "description": "Rodriguez doubled down the rf line (2-2 BKFBF) Becerra advanced to third."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "Corbin Walter",
       "batter": "Casey Borba",
       "outcome": "Flyout",
@@ -1734,8 +1737,8 @@
       "runs_scored": [
         "Temo Becerra"
       ],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": "Adrian Rodriguez",
@@ -1753,7 +1756,7 @@
       "description": "Borba flied out to rf, SF, RBI (1-2 SSFB) Rodriguez advanced to third Becerra scored."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "Corbin Walter",
       "batter": "Ashton Larson",
       "outcome": "Single",
@@ -1763,8 +1766,8 @@
       "runs_scored": [
         "Adrian Rodriguez"
       ],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1782,7 +1785,7 @@
       "description": "Larson singled to center field, RBI (2-0 BB) Rodriguez scored."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "Corbin Walter",
       "batter": "Ethan Mendoza",
       "outcome": "\u2014",
@@ -1790,8 +1793,8 @@
       "pitches": "S",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Ashton Larson",
         "2B": null,
@@ -1809,23 +1812,23 @@
       "description": "Mendoza out at first p to 1b (0-1 S)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Corbin Walter",
-      "batter": "Tatom, J. flied out to cf (3-2 FBBKFFB).",
+      "inning": "Bottom 6",
+      "pitcher": "Dylan Volantis",
+      "batter": "Jake Tatom",
       "outcome": "Flyout",
       "count": "3-2",
       "pitches": "FBBKFFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Ashton Larson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Ashton Larson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1836,23 +1839,23 @@
       "description": "Tatom, J. flied out to cf (3-2 FBBKFFB)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Corbin Walter",
-      "batter": "McCloud, S. grounded out to 1b unassisted (1-2 SKB).",
+      "inning": "Bottom 6",
+      "pitcher": "Dylan Volantis",
+      "batter": "Slade McCloud",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "SKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Ashton Larson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Ashton Larson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1863,16 +1866,16 @@
       "description": "McCloud, S. grounded out to 1b unassisted (1-2 SKB)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Corbin Walter",
-      "batter": "Heinrich, R. grounded out to 2b (0-1 K).",
+      "inning": "Bottom 6",
+      "pitcher": "Dylan Volantis",
+      "batter": "Rayner Heinrich",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1890,7 +1893,7 @@
       "description": "Heinrich, R. grounded out to 2b (0-1 K)."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "Jack Lovin",
       "batter": "Dariyan Pendergrass",
       "outcome": "Groundout",
@@ -1898,8 +1901,8 @@
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1917,7 +1920,7 @@
       "description": "Pendergrass grounded out to ss (0-1 K)."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "Jack Lovin",
       "batter": "Aiden Robbins",
       "outcome": "Reached on error",
@@ -1925,8 +1928,8 @@
       "pitches": "KBFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1944,7 +1947,7 @@
       "description": "Robbins reached on a throwing error by (2-2 KBFB)."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "Jack Lovin",
       "batter": "Carson Tinney",
       "outcome": "Walk",
@@ -1952,8 +1955,8 @@
       "pitches": "BBKBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Aiden Robbins",
         "2B": null,
@@ -1971,7 +1974,7 @@
       "description": "Tinney walked (3-1 BBKBB) Robbins advanced to second."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "Jack Lovin",
       "batter": "Duplantier J",
       "outcome": "Fielder's choice",
@@ -1979,8 +1982,8 @@
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Carson Tinney",
         "2B": "Aiden Robbins",
@@ -1998,7 +2001,7 @@
       "description": "Duplantier J reached on a fielder's choice (0-1 K) Tinney out at second ss to 2b Robbins advanced to third."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 7",
       "pitcher": "Jack Lovin",
       "batter": "Temo Becerra",
       "outcome": "Groundout",
@@ -2006,17 +2009,17 @@
       "pitches": "BKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
+        "1B": "Duplantier J",
         "2B": null,
-        "3B": null
+        "3B": "Aiden Robbins"
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Duplantier J",
         "2B": null,
-        "3B": null
+        "3B": "Aiden Robbins"
       },
       "score": {
         "away": 15,
@@ -2025,16 +2028,16 @@
       "description": "Becerra grounded out to p (2-1 BKB)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Jack Lovin",
-      "batter": "Lorch, C. grounded out to 2b (1-1 SB).",
+      "inning": "Bottom 7",
+      "pitcher": "Dylan Volantis",
+      "batter": "Carson Lorch",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "SB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2052,23 +2055,23 @@
       "description": "Lorch, C. grounded out to 2b (1-1 SB)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Jack Lovin",
-      "batter": "McCloud, C. hit by pitch (1-2 BFF).",
+      "inning": "Bottom 7",
+      "pitcher": "Dylan Volantis",
+      "batter": "Slade McCloud",
       "outcome": "Hit by pitch",
       "count": "1-2",
       "pitches": "BFF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "McCloud, C. hit by pitch (1-2 BFF).",
+        "1B": "Slade McCloud",
         "2B": null,
         "3B": null
       },
@@ -2079,23 +2082,23 @@
       "description": "McCloud, C. hit by pitch (1-2 BFF)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Jack Lovin",
-      "batter": "Shirey, I. flied out to rf (1-1 BK).",
+      "inning": "Bottom 7",
+      "pitcher": "Dylan Volantis",
+      "batter": "Ike Shirey",
       "outcome": "Flyout",
       "count": "1-1",
       "pitches": "BK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "McCloud, C. hit by pitch (1-2 BFF).",
+        "1B": "Slade McCloud",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "McCloud, C. hit by pitch (1-2 BFF).",
+        "1B": "Slade McCloud",
         "2B": null,
         "3B": null
       },
@@ -2106,23 +2109,23 @@
       "description": "Shirey, I. flied out to rf (1-1 BK)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Hamilton",
-      "batter": "Guerra, S. singled to center field (0-0)",
+      "inning": "Bottom 7",
+      "pitcher": "Hudson Hamilton",
+      "batter": "Sergio Guerra",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Slade McCloud",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Guerra, S. singled to center field (0-0)",
+        "1B": "Sergio Guerra",
         "2B": null,
         "3B": null
       },
@@ -2133,24 +2136,24 @@
       "description": "Guerra, S. singled to center field (0-0) McCloud, C. advanced to second."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Hamilton",
-      "batter": "Smeenk, R. doubled to right center, 2 RBI (1-1 KB)",
+      "inning": "Bottom 7",
+      "pitcher": "Hudson Hamilton",
+      "batter": "Raphael Smeenk",
       "outcome": "Double",
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Guerra, S. singled to center field (0-0)",
+        "1B": "Sergio Guerra",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Guerra, S. singled to center field (0-0)",
-        "2B": "Smeenk, R. doubled to right center, 2 RBI (1-1 KB)",
+        "1B": "Sergio Guerra",
+        "2B": "Raphael Smeenk",
         "3B": null
       },
       "score": {
@@ -2160,24 +2163,24 @@
       "description": "Smeenk, R. doubled to right center, 2 RBI (1-1 KB) Guerra, S. scored McCloud, C. scored."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Hamilton",
-      "batter": "Johnson, K. walked (3-1 BSBBB).",
+      "inning": "Bottom 7",
+      "pitcher": "Hudson Hamilton",
+      "batter": "Kendyl Johnson",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BSBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Guerra, S. singled to center field (0-0)",
-        "2B": "Smeenk, R. doubled to right center, 2 RBI (1-1 KB)",
+        "1B": "Sergio Guerra",
+        "2B": "Raphael Smeenk",
         "3B": null
       },
       "runners_after": {
-        "1B": "Johnson, K. walked (3-1 BSBBB).",
-        "2B": "Smeenk, R. doubled to right center, 2 RBI (1-1 KB)",
+        "1B": "Kendyl Johnson",
+        "2B": "Raphael Smeenk",
         "3B": null
       },
       "score": {
@@ -2187,24 +2190,24 @@
       "description": "Johnson, K. walked (3-1 BSBBB)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Hamilton",
-      "batter": "Tatom, J. grounded out to 2b (3-1 KBBB).",
+      "inning": "Bottom 7",
+      "pitcher": "Hudson Hamilton",
+      "batter": "Jake Tatom",
       "outcome": "Groundout",
       "count": "3-1",
       "pitches": "KBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "Johnson, K. walked (3-1 BSBBB).",
-        "2B": "Smeenk, R. doubled to right center, 2 RBI (1-1 KB)",
+        "1B": "Kendyl Johnson",
+        "2B": "Raphael Smeenk",
         "3B": null
       },
       "runners_after": {
-        "1B": "Johnson, K. walked (3-1 BSBBB).",
-        "2B": "Smeenk, R. doubled to right center, 2 RBI (1-1 KB)",
+        "1B": "Kendyl Johnson",
+        "2B": "Raphael Smeenk",
         "3B": null
       },
       "score": {
@@ -2214,24 +2217,24 @@
       "description": "Tatom, J. grounded out to 2b (3-1 KBBB)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Hamilton",
+      "inning": "Top 8",
+      "pitcher": "Jack Lovin",
       "batter": "Kirk, M. to c for Guerra, S..",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Johnson, K. walked (3-1 BSBBB).",
-        "2B": "Smeenk, R. doubled to right center, 2 RBI (1-1 KB)",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Johnson, K. walked (3-1 BSBBB).",
-        "2B": "Smeenk, R. doubled to right center, 2 RBI (1-1 KB)",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -2241,8 +2244,8 @@
       "description": "Kirk, M. to c for Guerra, S.."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Hamilton",
+      "inning": "Top 8",
+      "pitcher": "Jack Lovin",
       "batter": "Adrian Rodriguez",
       "outcome": "Home run",
       "count": "3-2",
@@ -2251,16 +2254,16 @@
       "runs_scored": [
         "Adrian Rodriguez"
       ],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Johnson, K. walked (3-1 BSBBB).",
-        "2B": "Smeenk, R. doubled to right center, 2 RBI (1-1 KB)",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Johnson, K. walked (3-1 BSBBB).",
-        "2B": "Smeenk, R. doubled to right center, 2 RBI (1-1 KB)",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -2270,24 +2273,24 @@
       "description": "Rodriguez homered to right field, RBI (3-2 FBKBBFF)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Hamilton",
+      "inning": "Top 8",
+      "pitcher": "Jack Lovin",
       "batter": "Casey Borba",
       "outcome": "Pop out",
       "count": "3-2",
       "pitches": "BSBFBFF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Johnson, K. walked (3-1 BSBBB).",
-        "2B": "Smeenk, R. doubled to right center, 2 RBI (1-1 KB)",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Johnson, K. walked (3-1 BSBBB).",
-        "2B": "Smeenk, R. doubled to right center, 2 RBI (1-1 KB)",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -2297,24 +2300,24 @@
       "description": "Borba popped up to 2b (3-2 BSBFBFF)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Hamilton",
+      "inning": "Top 8",
+      "pitcher": "Jack Lovin",
       "batter": "Ashton Larson",
       "outcome": "Groundout",
       "count": "0-2",
       "pitches": "FK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Johnson, K. walked (3-1 BSBBB).",
-        "2B": "Smeenk, R. doubled to right center, 2 RBI (1-1 KB)",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Johnson, K. walked (3-1 BSBBB).",
-        "2B": "Smeenk, R. doubled to right center, 2 RBI (1-1 KB)",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -2324,16 +2327,16 @@
       "description": "Larson grounded out to 1b unassisted (0-2 FK)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Hamilton",
+      "inning": "Top 8",
+      "pitcher": "Jack Lovin",
       "batter": "Ethan Mendoza",
       "outcome": "Flyout",
       "count": "1-2",
       "pitches": "KKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2351,16 +2354,16 @@
       "description": "Mendoza flied out to lf (1-2 KKB)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Winter",
-      "batter": "McCloud, S. struck out looking (3-2 BBBKFK).",
+      "inning": "Bottom 8",
+      "pitcher": "Michael Winter",
+      "batter": "Slade McCloud",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
       "pitches": "BBBKFK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2378,23 +2381,23 @@
       "description": "McCloud, S. struck out looking (3-2 BBBKFK)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Winter",
-      "batter": "Heinrich, R. singled up the middle (0-2 KS).",
+      "inning": "Bottom 8",
+      "pitcher": "Michael Winter",
+      "batter": "Rayner Heinrich",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "KS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Heinrich, R. singled up the middle (0-2 KS).",
+        "1B": "Rayner Heinrich",
         "2B": null,
         "3B": null
       },
@@ -2405,23 +2408,23 @@
       "description": "Heinrich, R. singled up the middle (0-2 KS)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Winter",
-      "batter": "Ricard, C. grounded into double play ss to 2b to 1b (0-0)",
+      "inning": "Bottom 8",
+      "pitcher": "Michael Winter",
+      "batter": "Chris Ricard",
       "outcome": "Grounded into double play",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
+      "outs_before": 1,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Heinrich, R. singled up the middle (0-2 KS).",
+        "1B": "Rayner Heinrich",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Heinrich, R. singled up the middle (0-2 KS).",
+        "1B": "Rayner Heinrich",
         "2B": null,
         "3B": null
       },
@@ -2432,7 +2435,7 @@
       "description": "Ricard, C. grounded into double play ss to 2b to 1b (0-0) Heinrich, R. out on the play."
     },
     {
-      "inning": "Top 16",
+      "inning": "Top 9",
       "pitcher": "Carter Coffin",
       "batter": "Dariyan Pendergrass",
       "outcome": "Strikeout (swinging)",
@@ -2459,7 +2462,7 @@
       "description": "Pendergrass struck out swinging (3-2 KFFBBBS)."
     },
     {
-      "inning": "Top 16",
+      "inning": "Top 9",
       "pitcher": "Carter Coffin",
       "batter": "Blake Peterson",
       "outcome": "Lineout",
@@ -2486,7 +2489,7 @@
       "description": "Peterson lined out to ss (2-2 BFBS)."
     },
     {
-      "inning": "Top 16",
+      "inning": "Top 9",
       "pitcher": "Carter Coffin",
       "batter": "Andrew Ermis",
       "outcome": "Single",
@@ -2513,7 +2516,7 @@
       "description": "Ermis singled up the middle (2-2 BKBF)."
     },
     {
-      "inning": "Top 16",
+      "inning": "Top 9",
       "pitcher": "Carter Coffin",
       "batter": "Duplantier J",
       "outcome": "Flyout",
@@ -2540,9 +2543,9 @@
       "description": "Duplantier J flied out to cf (1-1 KB)."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Carter Coffin",
-      "batter": "Guthmiller, grounded out to (0-0).",
+      "inning": "Bottom 9",
+      "pitcher": "Michael Winter",
+      "batter": "Matt Guthmiller",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
@@ -2567,9 +2570,9 @@
       "description": "Guthmiller, grounded out to (0-0)."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Carter Coffin",
-      "batter": "Shirey, I. grounded out to (1-2 BSF).",
+      "inning": "Bottom 9",
+      "pitcher": "Michael Winter",
+      "batter": "Ike Shirey",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "BSF",
@@ -2594,9 +2597,9 @@
       "description": "Shirey, I. grounded out to (1-2 BSF)."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "McCreery",
-      "batter": "Kirk, M. struck out swinging, out at first c to 1b (1-2 KBKS).",
+      "inning": "Bottom 9",
+      "pitcher": "Connor McCreery",
+      "batter": "Mason Kirk",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KBKS",

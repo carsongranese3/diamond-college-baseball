@@ -1,14 +1,14 @@
 {
   "contest_id": "6499631",
   "date": "04/19/2026",
-  "batting_team": "LSU",
-  "pitching_team": "Texas A&M",
-  "note": "Broken-down from the saved play_by_play.json, which contains the LSU at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "Texas A&M",
+  "home_team": "LSU",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
-      "inning": "Bottom 1",
-      "pitcher": "Weston Moss",
-      "batter": "GRAHOVAC",
+      "inning": "Top 1",
+      "pitcher": "Zac Cowan",
+      "batter": "Gavin Grahovac",
       "outcome": "Groundout",
       "count": "0-2",
       "pitches": "SFF",
@@ -33,15 +33,15 @@
       "description": "GRAHOVAC grounded out to ss (0-2 SFF)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Weston Moss",
-      "batter": "SORRELL",
+      "inning": "Top 1",
+      "pitcher": "Zac Cowan",
+      "batter": "Caden Sorrell",
       "outcome": "Home run",
       "count": "2-2",
       "pitches": "BBFF",
       "rbi": true,
       "runs_scored": [
-        "SORRELL"
+        "Caden Sorrell"
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -62,9 +62,9 @@
       "description": "SORRELL homered to right field, RBI (2-2 BBFF)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Weston Moss",
-      "batter": "HACOPIAN",
+      "inning": "Top 1",
+      "pitcher": "Zac Cowan",
+      "batter": "Chris Hacopian",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BKBSBFB",
@@ -78,7 +78,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "HACOPIAN",
+        "1B": "Chris Hacopian",
         "2B": null,
         "3B": null
       },
@@ -89,9 +89,9 @@
       "description": "HACOPIAN walked (3-2 BKBSBFB)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Weston Moss",
-      "batter": "DUER",
+      "inning": "Top 1",
+      "pitcher": "Zac Cowan",
+      "batter": "Jake Duer",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KKS",
@@ -100,12 +100,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "HACOPIAN",
+        "1B": "Chris Hacopian",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "HACOPIAN",
+        "1B": "Chris Hacopian",
         "2B": null,
         "3B": null
       },
@@ -116,9 +116,9 @@
       "description": "DUER struck out swinging (0-2 KKS)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Weston Moss",
-      "batter": "PARTIDA",
+      "inning": "Top 1",
+      "pitcher": "Zac Cowan",
+      "batter": "Nico Partida",
       "outcome": "Fielder's choice",
       "count": "2-2",
       "pitches": "KKBFB",
@@ -127,12 +127,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "HACOPIAN",
+        "1B": "Chris Hacopian",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "PARTIDA",
+        "1B": "Nico Partida",
         "2B": null,
         "3B": null
       },
@@ -151,15 +151,15 @@
       "pitches": "KBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "PARTIDA",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "PARTIDA",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -170,7 +170,7 @@
       "description": "Milam lined out to lf (1-2 KBF)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Weston Moss",
       "batter": "Cade Arrambide",
       "outcome": "Strikeout (looking)",
@@ -178,8 +178,8 @@
       "pitches": "FSBBBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -197,7 +197,7 @@
       "description": "Arrambide struck out looking (3-2 FSBBBK)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Weston Moss",
       "batter": "Derek Curiel",
       "outcome": "Groundout",
@@ -205,8 +205,8 @@
       "pitches": "SKBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -224,16 +224,16 @@
       "description": "Curiel grounded out to p (1-2 SKBF)."
     },
     {
-      "inning": "Bottom 2",
-      "pitcher": "Weston Moss",
+      "inning": "Top 2",
+      "pitcher": "Zac Cowan",
       "batter": "KIEL",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBFFBFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -251,16 +251,16 @@
       "description": "KIEL II walked (3-2 BBFFBFB)."
     },
     {
-      "inning": "Bottom 2",
-      "pitcher": "Weston Moss",
-      "batter": "WILSON",
+      "inning": "Top 2",
+      "pitcher": "Zac Cowan",
+      "batter": "Jorian Wilson",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "SBBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "KIEL",
         "2B": null,
@@ -278,23 +278,23 @@
       "description": "WILSON grounded out to ss (2-2 SBBF); KIEL II advanced to second."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Weston Moss",
+      "inning": "Top 2",
+      "pitcher": "Zac Cowan",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": null,
+        "1B": "KIEL",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "KIEL",
         "2B": null,
         "3B": null
       },
@@ -305,23 +305,23 @@
       "description": "KIEL II advanced to third on a wild pitch."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Weston Moss",
-      "batter": "HARRISON",
+      "inning": "Top 2",
+      "pitcher": "Zac Cowan",
+      "batter": "Bear Harrison",
       "outcome": "Flyout",
       "count": "2-2",
       "pitches": "BSFB",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "KIEL",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "KIEL",
         "2B": null,
         "3B": null
       },
@@ -332,23 +332,23 @@
       "description": "HARRISON flied out to lf, SF, RBI (2-2 BSFB); KIEL II scored."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Weston Moss",
-      "batter": "KELLNER",
+      "inning": "Top 2",
+      "pitcher": "Zac Cowan",
+      "batter": "Boston Kellner",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
+        "1B": "KIEL",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "KIEL",
         "2B": null,
         "3B": null
       },
@@ -359,7 +359,7 @@
       "description": "KELLNER flied out to lf (0-0)."
     },
     {
-      "inning": "Bottom 3",
+      "inning": "Bottom 2",
       "pitcher": "Weston Moss",
       "batter": "Jake Brown",
       "outcome": "Lineout",
@@ -367,8 +367,8 @@
       "pitches": "BF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -386,7 +386,7 @@
       "description": "Brown lined out to (1-1 BF)."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Weston Moss",
       "batter": "Serna",
       "outcome": "Walk",
@@ -394,8 +394,8 @@
       "pitches": "BBKBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -413,7 +413,7 @@
       "description": "Serna Jr. walked (3-1 BBKBB)."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Weston Moss",
       "batter": "John Pearson",
       "outcome": "\u2014",
@@ -421,8 +421,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Serna",
         "2B": null,
@@ -440,9 +440,9 @@
       "description": "Pearson lined into double play 2b to 1b (0-0); Serna Jr. out on the play."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Weston Moss",
-      "batter": "GRAHOVAC",
+      "inning": "Top 3",
+      "pitcher": "Zac Cowan",
+      "batter": "Gavin Grahovac",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
@@ -451,12 +451,12 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Serna",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "GRAHOVAC",
+        "1B": "Gavin Grahovac",
         "2B": null,
         "3B": null
       },
@@ -467,9 +467,9 @@
       "description": "GRAHOVAC singled to left field (0-1 K)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Weston Moss",
-      "batter": "SORRELL",
+      "inning": "Top 3",
+      "pitcher": "Zac Cowan",
+      "batter": "Caden Sorrell",
       "outcome": "Flyout",
       "count": "1-1",
       "pitches": "KB",
@@ -478,12 +478,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "GRAHOVAC",
+        "1B": "Gavin Grahovac",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "GRAHOVAC",
+        "1B": "Gavin Grahovac",
         "2B": null,
         "3B": null
       },
@@ -494,25 +494,25 @@
       "description": "SORRELL flied out to rf (1-1 KB)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Weston Moss",
-      "batter": "HACOPIAN",
+      "inning": "Top 3",
+      "pitcher": "Zac Cowan",
+      "batter": "Chris Hacopian",
       "outcome": "Home run",
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
       "runs_scored": [
-        "HACOPIAN"
+        "Chris Hacopian"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "GRAHOVAC",
+        "1B": "Gavin Grahovac",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "GRAHOVAC",
+        "1B": "Gavin Grahovac",
         "2B": null,
         "3B": null
       },
@@ -523,9 +523,9 @@
       "description": "HACOPIAN homered to left field, 2 RBI (1-1 KB); GRAHOVAC scored."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Weston Moss",
-      "batter": "DUER",
+      "inning": "Top 3",
+      "pitcher": "Zac Cowan",
+      "batter": "Jake Duer",
       "outcome": "\u2014",
       "count": "1-0",
       "pitches": "B",
@@ -534,12 +534,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "GRAHOVAC",
+        "1B": "Gavin Grahovac",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "GRAHOVAC",
+        "1B": "Gavin Grahovac",
         "2B": null,
         "3B": null
       },
@@ -550,9 +550,9 @@
       "description": "DUER out at first 1b to p (1-0 B)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Weston Moss",
-      "batter": "PARTIDA",
+      "inning": "Top 3",
+      "pitcher": "Zac Cowan",
+      "batter": "Nico Partida",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "KBKFBBB",
@@ -561,12 +561,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "GRAHOVAC",
+        "1B": "Gavin Grahovac",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "PARTIDA",
+        "1B": "Nico Partida",
         "2B": null,
         "3B": null
       },
@@ -577,8 +577,8 @@
       "description": "PARTIDA walked (3-2 KBKFBBB)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Sheerin",
+      "inning": "Top 3",
+      "pitcher": "Deven Sheerin",
       "batter": "KIEL",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -588,12 +588,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "PARTIDA",
+        "1B": "Nico Partida",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "PARTIDA",
+        "1B": "Nico Partida",
         "2B": null,
         "3B": null
       },
@@ -604,23 +604,23 @@
       "description": "KIEL II struck out looking (2-2 FBKBK)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Sheerin",
+      "inning": "Bottom 3",
+      "pitcher": "Weston Moss",
       "batter": "Yamin",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "FBKS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "PARTIDA",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "PARTIDA",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -631,16 +631,16 @@
       "description": "Yamin IV struck out swinging (1-2 FBKS)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Sheerin",
+      "inning": "Bottom 3",
+      "pitcher": "Weston Moss",
       "batter": "Brayden Simpson",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
       "pitches": "KSBFK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -658,16 +658,16 @@
       "description": "Simpson struck out looking (1-2 KSBFK)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Sheerin",
+      "inning": "Bottom 3",
+      "pitcher": "Weston Moss",
       "batter": "Chris Stanfield",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "KBSBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -685,16 +685,16 @@
       "description": "Stanfield walked (3-2 KBSBBB)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Sheerin",
+      "inning": "Bottom 3",
+      "pitcher": "Weston Moss",
       "batter": "Steven Milam",
       "outcome": "Pop out",
       "count": "3-2",
       "pitches": "BBFFFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Chris Stanfield",
         "2B": null,
@@ -712,23 +712,23 @@
       "description": "Milam popped up to p (3-2 BBFFFB)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Sheerin",
-      "batter": "WILSON",
+      "inning": "Top 4",
+      "pitcher": "Deven Sheerin",
+      "batter": "Jorian Wilson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "FBSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Chris Stanfield",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Stanfield",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -739,23 +739,23 @@
       "description": "WILSON struck out swinging (1-2 FBSS)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Sheerin",
-      "batter": "HARRISON",
+      "inning": "Top 4",
+      "pitcher": "Deven Sheerin",
+      "batter": "Bear Harrison",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "KS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "HARRISON",
+        "1B": "Bear Harrison",
         "2B": null,
         "3B": null
       },
@@ -766,23 +766,23 @@
       "description": "HARRISON singled to third base (0-2 KS)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Sheerin",
-      "batter": "KELLNER",
+      "inning": "Top 4",
+      "pitcher": "Deven Sheerin",
+      "batter": "Boston Kellner",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "HARRISON",
+        "1B": "Bear Harrison",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "KELLNER",
+        "1B": "Boston Kellner",
         "2B": null,
         "3B": null
       },
@@ -793,23 +793,23 @@
       "description": "KELLNER singled to right center (0-0); HARRISON advanced to third."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Sheerin",
-      "batter": "GRAHOVAC",
+      "inning": "Top 4",
+      "pitcher": "Deven Sheerin",
+      "batter": "Gavin Grahovac",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "KBSF",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "KELLNER",
+        "1B": "Boston Kellner",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "GRAHOVAC",
+        "1B": "Gavin Grahovac",
         "2B": null,
         "3B": null
       },
@@ -820,23 +820,23 @@
       "description": "GRAHOVAC singled through the left side, RBI (1-2 KBSF); KELLNER advanced to second; HARRISON scored."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Sheerin",
-      "batter": "SORRELL",
+      "inning": "Top 4",
+      "pitcher": "Deven Sheerin",
+      "batter": "Caden Sorrell",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
       "pitches": "SBBBSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "GRAHOVAC",
+        "1B": "Gavin Grahovac",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "GRAHOVAC",
+        "1B": "Gavin Grahovac",
         "2B": null,
         "3B": null
       },
@@ -847,23 +847,23 @@
       "description": "SORRELL struck out swinging (3-2 SBBBSS)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Sheerin",
-      "batter": "HACOPIAN",
+      "inning": "Top 4",
+      "pitcher": "Deven Sheerin",
+      "batter": "Chris Hacopian",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "FBFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "GRAHOVAC",
+        "1B": "Gavin Grahovac",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "GRAHOVAC",
+        "1B": "Gavin Grahovac",
         "2B": null,
         "3B": null
       },
@@ -874,23 +874,23 @@
       "description": "HACOPIAN struck out swinging (1-2 FBFS)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Sheerin",
+      "inning": "Bottom 4",
+      "pitcher": "Weston Moss",
       "batter": "Cade Arrambide",
       "outcome": "Flyout",
       "count": "0-2",
       "pitches": "KK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "GRAHOVAC",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "GRAHOVAC",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -901,16 +901,16 @@
       "description": "Arrambide flied out to rf (0-2 KK)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Sheerin",
+      "inning": "Bottom 4",
+      "pitcher": "Weston Moss",
       "batter": "Derek Curiel",
       "outcome": "Flyout",
       "count": "3-2",
       "pitches": "BBKFBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -928,16 +928,16 @@
       "description": "Curiel flied out to rf (3-2 BBKFBF)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Sheerin",
+      "inning": "Bottom 4",
+      "pitcher": "Weston Moss",
       "batter": "Jake Brown",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -955,16 +955,16 @@
       "description": "Brown singled down the lf line (1-1 BF)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Sheerin",
+      "inning": "Bottom 4",
+      "pitcher": "Weston Moss",
       "batter": "Serna",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
       "pitches": "BBKBKFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Jake Brown",
         "2B": null,
@@ -982,23 +982,23 @@
       "description": "Serna Jr. struck out swinging (3-2 BBKBKFS)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Sheerin",
-      "batter": "DUER",
+      "inning": "Top 5",
+      "pitcher": "Deven Sheerin",
+      "batter": "Jake Duer",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
       "pitches": "KSFFK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Jake Brown",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Brown",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1009,16 +1009,16 @@
       "description": "DUER struck out looking (0-2 KSFFK)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Sheerin",
-      "batter": "PARTIDA",
+      "inning": "Top 5",
+      "pitcher": "Deven Sheerin",
+      "batter": "Nico Partida",
       "outcome": "Groundout",
       "count": "3-2",
       "pitches": "BKFBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1036,16 +1036,16 @@
       "description": "PARTIDA grounded out to ss (3-2 BKFBB)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Sheerin",
+      "inning": "Top 5",
+      "pitcher": "Deven Sheerin",
       "batter": "KIEL",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
       "pitches": "KFK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1063,16 +1063,16 @@
       "description": "KIEL II struck out looking (0-2 KFK)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Sheerin",
+      "inning": "Bottom 5",
+      "pitcher": "Weston Moss",
       "batter": "John Pearson",
       "outcome": "Single",
       "count": "2-0",
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1090,16 +1090,16 @@
       "description": "Pearson singled to left field (2-0 BB)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Sheerin",
+      "inning": "Bottom 5",
+      "pitcher": "Weston Moss",
       "batter": "Yamin",
       "outcome": "Single",
       "count": "2-0",
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "John Pearson",
         "2B": null,
@@ -1117,16 +1117,16 @@
       "description": "Yamin IV singled through the right side (2-0 BB); Pearson advanced to second."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Sheerin",
+      "inning": "Bottom 5",
+      "pitcher": "Weston Moss",
       "batter": "Brayden Simpson",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
       "pitches": "KKBBBFFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Yamin",
         "2B": null,
@@ -1144,7 +1144,7 @@
       "description": "Simpson struck out swinging (3-2 KKBBBFFS)."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "Gavin Lyons",
       "batter": "Chris Stanfield",
       "outcome": "Strikeout (looking)",
@@ -1152,15 +1152,15 @@
       "pitches": "KKK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Yamin",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Yamin",
         "2B": null,
         "3B": null
       },
@@ -1171,7 +1171,7 @@
       "description": "Stanfield struck out looking (0-2 KKK)."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "Gavin Lyons",
       "batter": "Steven Milam",
       "outcome": "Flyout",
@@ -1179,15 +1179,15 @@
       "pitches": "FK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
+        "1B": "Yamin",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Yamin",
         "2B": null,
         "3B": null
       },
@@ -1198,16 +1198,16 @@
       "description": "Milam flied out to lf (0-2 FK)."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Gavin Lyons",
-      "batter": "WILSON",
+      "inning": "Top 6",
+      "pitcher": "Deven Sheerin",
+      "batter": "Jorian Wilson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "SBSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1225,16 +1225,16 @@
       "description": "WILSON struck out swinging (1-2 SBSS)."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "Gavin Lyons",
-      "batter": "HARRISON",
+      "inning": "Top 6",
+      "pitcher": "Deven Sheerin",
+      "batter": "Bear Harrison",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "BKKS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1252,16 +1252,16 @@
       "description": "HARRISON struck out swinging (1-2 BKKS)."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "Gavin Lyons",
-      "batter": "KELLNER",
+      "inning": "Top 6",
+      "pitcher": "Deven Sheerin",
+      "batter": "Boston Kellner",
       "outcome": "\u2014",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1279,7 +1279,7 @@
       "description": "KELLNER out at first 1b to p (0-1 K)."
     },
     {
-      "inning": "Bottom 10",
+      "inning": "Bottom 6",
       "pitcher": "Gavin Lyons",
       "batter": "Cade Arrambide",
       "outcome": "Groundout",
@@ -1287,8 +1287,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1306,7 +1306,7 @@
       "description": "Arrambide grounded out to ss (0-0)."
     },
     {
-      "inning": "Bottom 10",
+      "inning": "Bottom 6",
       "pitcher": "Gavin Lyons",
       "batter": "Derek Curiel",
       "outcome": "Walk",
@@ -1314,8 +1314,8 @@
       "pitches": "KBFBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1333,7 +1333,7 @@
       "description": "Curiel walked (3-2 KBFBBB)."
     },
     {
-      "inning": "Bottom 10",
+      "inning": "Bottom 6",
       "pitcher": "Gavin Lyons",
       "batter": "Jake Brown",
       "outcome": "Flyout",
@@ -1341,8 +1341,8 @@
       "pitches": "F",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Derek Curiel",
         "2B": null,
@@ -1360,7 +1360,7 @@
       "description": "Brown flied out to lf (0-1 F)."
     },
     {
-      "inning": "Bottom 11",
+      "inning": "Bottom 6",
       "pitcher": "Gavin Lyons",
       "batter": "Serna",
       "outcome": "Hit by pitch",
@@ -1368,10 +1368,10 @@
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Derek Curiel",
         "2B": null,
         "3B": null
       },
@@ -1387,7 +1387,7 @@
       "description": "Serna Jr. hit by pitch (1-0 B); Curiel advanced to second."
     },
     {
-      "inning": "Bottom 11",
+      "inning": "Bottom 6",
       "pitcher": "Gavin Lyons",
       "batter": "John Pearson",
       "outcome": "Fielder's choice",
@@ -1395,8 +1395,8 @@
       "pitches": "KBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Serna",
         "2B": null,
@@ -1414,9 +1414,9 @@
       "description": "Pearson reached on a fielder's choice (2-1 KBB); Serna Jr. advanced to second; Curiel out at third unassisted."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Gavin Lyons",
-      "batter": "GRAHOVAC",
+      "inning": "Top 7",
+      "pitcher": "Deven Sheerin",
+      "batter": "Gavin Grahovac",
       "outcome": "Flyout",
       "count": "0-1",
       "pitches": "S",
@@ -1425,12 +1425,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "John Pearson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "John Pearson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1441,9 +1441,9 @@
       "description": "GRAHOVAC flied out to lf (0-1 S)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Gavin Lyons",
-      "batter": "SORRELL",
+      "inning": "Top 7",
+      "pitcher": "Deven Sheerin",
+      "batter": "Caden Sorrell",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KFS",
@@ -1452,12 +1452,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "John Pearson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "John Pearson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1468,9 +1468,9 @@
       "description": "SORRELL struck out swinging (0-2 KFS)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Gavin Lyons",
-      "batter": "HACOPIAN",
+      "inning": "Top 7",
+      "pitcher": "Deven Sheerin",
+      "batter": "Chris Hacopian",
       "outcome": "Pop out",
       "count": "1-2",
       "pitches": "KKB",
@@ -1479,12 +1479,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "John Pearson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "John Pearson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1495,7 +1495,7 @@
       "description": "HACOPIAN popped up to 2b (1-2 KKB)."
     },
     {
-      "inning": "Bottom 12",
+      "inning": "Bottom 7",
       "pitcher": "Gavin Lyons",
       "batter": "Yamin",
       "outcome": "Strikeout (looking)",
@@ -1522,7 +1522,7 @@
       "description": "Yamin IV struck out looking (0-2 KKK)."
     },
     {
-      "inning": "Bottom 12",
+      "inning": "Bottom 7",
       "pitcher": "Gavin Lyons",
       "batter": "Tanner Reaves",
       "outcome": "Walk",
@@ -1549,7 +1549,7 @@
       "description": "Reaves walked (3-2 FBFFFBFBB)."
     },
     {
-      "inning": "Bottom 12",
+      "inning": "Bottom 7",
       "pitcher": "Gavin Lyons",
       "batter": "Chris Stanfield",
       "outcome": "Groundout",
@@ -1576,7 +1576,7 @@
       "description": "Stanfield grounded out to 2b (1-2 FKB); Reaves advanced to second."
     },
     {
-      "inning": "Bottom 12",
+      "inning": "Bottom 7",
       "pitcher": "Gavin Lyons",
       "batter": "Steven Milam",
       "outcome": "Flyout",
@@ -1603,9 +1603,9 @@
       "description": "Milam flied out to cf (0-1 F)."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Garcia",
-      "batter": "DUER",
+      "inning": "Top 8",
+      "pitcher": "Santiago Garcia",
+      "batter": "Jake Duer",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "KBBBKB",
@@ -1619,7 +1619,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "DUER",
+        "1B": "Jake Duer",
         "2B": null,
         "3B": null
       },
@@ -1630,9 +1630,9 @@
       "description": "DUER walked (3-2 KBBBKB)."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Garcia",
-      "batter": "PARTIDA",
+      "inning": "Top 8",
+      "pitcher": "Santiago Garcia",
+      "batter": "Nico Partida",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "SSS",
@@ -1641,12 +1641,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "DUER",
+        "1B": "Jake Duer",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "DUER",
+        "1B": "Jake Duer",
         "2B": null,
         "3B": null
       },
@@ -1657,8 +1657,8 @@
       "description": "PARTIDA struck out swinging (0-2 SSS)."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Garcia",
+      "inning": "Top 8",
+      "pitcher": "Santiago Garcia",
       "batter": "KIEL",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1668,12 +1668,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "DUER",
+        "1B": "Jake Duer",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "DUER",
+        "1B": "Jake Duer",
         "2B": null,
         "3B": null
       },
@@ -1684,9 +1684,9 @@
       "description": "KIEL II flied out to cf (0-2 KS)."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Garcia",
-      "batter": "WILSON",
+      "inning": "Top 8",
+      "pitcher": "Santiago Garcia",
+      "batter": "Jorian Wilson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "BKKS",
@@ -1695,12 +1695,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "DUER",
+        "1B": "Jake Duer",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "DUER",
+        "1B": "Jake Duer",
         "2B": null,
         "3B": null
       },
@@ -1711,7 +1711,7 @@
       "description": "WILSON struck out swinging (1-2 BKKS)."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 8",
       "pitcher": "Clayton Freshcorn",
       "batter": "Cade Arrambide",
       "outcome": "Home run",
@@ -1740,7 +1740,7 @@
       "description": "Arrambide homered to left center, RBI (0-0)."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 8",
       "pitcher": "Clayton Freshcorn",
       "batter": "Derek Curiel",
       "outcome": "Single",
@@ -1767,7 +1767,7 @@
       "description": "Curiel singled through the left side (1-2 BFFF)."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 8",
       "pitcher": "Clayton Freshcorn",
       "batter": "Jake Brown",
       "outcome": "Strikeout (swinging)",
@@ -1794,7 +1794,7 @@
       "description": "Brown struck out swinging (0-2 KFS)."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 8",
       "pitcher": "Clayton Freshcorn",
       "batter": "Serna",
       "outcome": "Single",
@@ -1821,7 +1821,7 @@
       "description": "Serna Jr. singled through the right side (0-0); Curiel advanced to third."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 8",
       "pitcher": "Clayton Freshcorn",
       "batter": "John Pearson",
       "outcome": "Strikeout (swinging)",
@@ -1848,7 +1848,7 @@
       "description": "Pearson struck out swinging (0-2 KFS)."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 8",
       "pitcher": "Clayton Freshcorn",
       "batter": null,
       "outcome": "Passed ball",
@@ -1875,7 +1875,7 @@
       "description": "Serna Jr. advanced to second on a passed ball; Curiel scored on a passed ball, unearned."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 8",
       "pitcher": "Clayton Freshcorn",
       "batter": "Yamin",
       "outcome": "Strikeout (swinging)",
@@ -1902,9 +1902,9 @@
       "description": "Yamin IV struck out swinging (1-2 SSBS)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Guidry",
-      "batter": "HARRISON",
+      "inning": "Top 9",
+      "pitcher": "Gavin Guidry",
+      "batter": "Bear Harrison",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "BBFSS",
@@ -1929,9 +1929,9 @@
       "description": "HARRISON struck out swinging (2-2 BBFSS)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Guidry",
-      "batter": "KELLNER",
+      "inning": "Top 9",
+      "pitcher": "Gavin Guidry",
+      "batter": "Boston Kellner",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
       "pitches": "KSBK",
@@ -1956,9 +1956,9 @@
       "description": "KELLNER struck out looking (1-2 KSBK)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Guidry",
-      "batter": "GRAHOVAC",
+      "inning": "Top 9",
+      "pitcher": "Gavin Guidry",
+      "batter": "Gavin Grahovac",
       "outcome": "Reached on error",
       "count": "1-2",
       "pitches": "BFF",
@@ -1972,7 +1972,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "GRAHOVAC",
+        "1B": "Gavin Grahovac",
         "2B": null,
         "3B": null
       },
@@ -1983,8 +1983,8 @@
       "description": "GRAHOVAC reached on a throwing error by 2b (1-2 BFF)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Guidry",
+      "inning": "Top 9",
+      "pitcher": "Gavin Guidry",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1994,12 +1994,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "GRAHOVAC",
+        "1B": "Gavin Grahovac",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "GRAHOVAC",
+        "1B": "Gavin Grahovac",
         "2B": null,
         "3B": null
       },
@@ -2010,9 +2010,9 @@
       "description": "GRAHOVAC stole second."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Guidry",
-      "batter": "SORRELL",
+      "inning": "Top 9",
+      "pitcher": "Gavin Guidry",
+      "batter": "Caden Sorrell",
       "outcome": "Walk",
       "count": null,
       "pitches": null,
@@ -2021,12 +2021,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "GRAHOVAC",
+        "1B": "Gavin Grahovac",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "SORRELL",
+        "1B": "Caden Sorrell",
         "2B": null,
         "3B": null
       },
@@ -2037,9 +2037,9 @@
       "description": "SORRELL intentionally walked."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Guidry",
-      "batter": "HACOPIAN",
+      "inning": "Top 9",
+      "pitcher": "Gavin Guidry",
+      "batter": "Chris Hacopian",
       "outcome": "Flyout",
       "count": "3-2",
       "pitches": "BBBKFF",
@@ -2048,12 +2048,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "SORRELL",
+        "1B": "Caden Sorrell",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "SORRELL",
+        "1B": "Caden Sorrell",
         "2B": null,
         "3B": null
       },
@@ -2064,8 +2064,8 @@
       "description": "HACOPIAN flied out to cf (3-2 BBBKFF)."
     },
     {
-      "inning": "Bottom 16",
-      "pitcher": "Guidry",
+      "inning": "Bottom 9",
+      "pitcher": "Clayton Freshcorn",
       "batter": "Tanner Reaves",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2091,8 +2091,8 @@
       "description": "Reaves grounded out to ss (0-1 F)."
     },
     {
-      "inning": "Bottom 16",
-      "pitcher": "Guidry",
+      "inning": "Bottom 9",
+      "pitcher": "Clayton Freshcorn",
       "batter": "Mason Braun",
       "outcome": "Flyout",
       "count": "2-2",
@@ -2118,8 +2118,8 @@
       "description": "Braun flied out to cf (2-2 FBKB)."
     },
     {
-      "inning": "Bottom 16",
-      "pitcher": "Guidry",
+      "inning": "Bottom 9",
+      "pitcher": "Clayton Freshcorn",
       "batter": "Steven Milam",
       "outcome": "Single",
       "count": "0-0",
@@ -2145,8 +2145,8 @@
       "description": "Milam singled to center field (0-0)."
     },
     {
-      "inning": "Bottom 16",
-      "pitcher": "Guidry",
+      "inning": "Bottom 9",
+      "pitcher": "Clayton Freshcorn",
       "batter": "Cade Arrambide",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",

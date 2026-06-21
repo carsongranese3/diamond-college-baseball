@@ -1,9 +1,9 @@
 {
   "contest_id": "6538673",
   "date": "02/13/2026",
-  "batting_team": "Tennessee Tech",
-  "pitching_team": "Texas A&M",
-  "note": "Broken-down from the saved play_by_play.json, which contains the Tennessee Tech at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "Tennessee Tech",
+  "home_team": "Texas A&M",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
       "inning": "Top 1",
@@ -87,9 +87,9 @@
       "description": "Crowell, Nas grounded out to 2b (2-2 FFBB)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Shane Sdao",
-      "batter": "GRAHOVAC",
+      "inning": "Bottom 1",
+      "pitcher": "Jaxson Pease",
+      "batter": "Gavin Grahovac",
       "outcome": "Double",
       "count": "1-1",
       "pitches": "KB",
@@ -104,7 +104,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "GRAHOVAC",
+        "2B": "Gavin Grahovac",
         "3B": null
       },
       "score": {
@@ -114,9 +114,9 @@
       "description": "GRAHOVAC doubled down the lf line (1-1 KB)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Shane Sdao",
-      "batter": "SORRELL",
+      "inning": "Bottom 1",
+      "pitcher": "Jaxson Pease",
+      "batter": "Caden Sorrell",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "FB",
@@ -126,13 +126,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "GRAHOVAC",
+        "2B": "Gavin Grahovac",
         "3B": null
       },
       "runners_after": {
         "1B": null,
         "2B": null,
-        "3B": "GRAHOVAC"
+        "3B": "Gavin Grahovac"
       },
       "score": {
         "away": 0,
@@ -141,25 +141,25 @@
       "description": "SORRELL grounded out to 2b (1-1 FB) GRAHOVAC advanced to third."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Shane Sdao",
-      "batter": "HACOPIAN",
+      "inning": "Bottom 1",
+      "pitcher": "Jaxson Pease",
+      "batter": "Chris Hacopian",
       "outcome": "Single",
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": true,
       "runs_scored": [
-        "GRAHOVAC"
+        "Gavin Grahovac"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
-        "3B": "GRAHOVAC"
+        "3B": "Gavin Grahovac"
       },
       "runners_after": {
-        "1B": "HACOPIAN",
+        "1B": "Chris Hacopian",
         "2B": null,
         "3B": null
       },
@@ -170,9 +170,9 @@
       "description": "HACOPIAN singled up the middle, RBI (3-1 BBBK) GRAHOVAC scored."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Shane Sdao",
-      "batter": "JORDAN",
+      "inning": "Bottom 1",
+      "pitcher": "Jaxson Pease",
+      "batter": "Wesley Jordan",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
@@ -181,14 +181,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "HACOPIAN",
+        "1B": "Chris Hacopian",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "JORDAN",
+        "1B": "Wesley Jordan",
         "2B": null,
-        "3B": "HACOPIAN"
+        "3B": "Chris Hacopian"
       },
       "score": {
         "away": 0,
@@ -197,9 +197,9 @@
       "description": "JORDAN singled to center field (0-1 K) HACOPIAN advanced to third."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Shane Sdao",
-      "batter": "DUER",
+      "inning": "Bottom 1",
+      "pitcher": "Jaxson Pease",
+      "batter": "Jake Duer",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BFBKBFFB",
@@ -208,14 +208,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "JORDAN",
+        "1B": "Wesley Jordan",
         "2B": null,
-        "3B": "HACOPIAN"
+        "3B": "Chris Hacopian"
       },
       "runners_after": {
-        "1B": "DUER",
-        "2B": "JORDAN",
-        "3B": "HACOPIAN"
+        "1B": "Jake Duer",
+        "2B": "Wesley Jordan",
+        "3B": "Chris Hacopian"
       },
       "score": {
         "away": 0,
@@ -224,9 +224,9 @@
       "description": "DUER walked (3-2 BFBKBFFB) JORDAN advanced to second."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Shane Sdao",
-      "batter": "PARTIDA",
+      "inning": "Bottom 1",
+      "pitcher": "Jaxson Pease",
+      "batter": "Nico Partida",
       "outcome": "Grounded into double play",
       "count": "1-0",
       "pitches": "B",
@@ -235,14 +235,14 @@
       "outs_before": 1,
       "outs_after": 3,
       "runners_before": {
-        "1B": "DUER",
-        "2B": "JORDAN",
-        "3B": "HACOPIAN"
+        "1B": "Jake Duer",
+        "2B": "Wesley Jordan",
+        "3B": "Chris Hacopian"
       },
       "runners_after": {
         "1B": null,
-        "2B": "JORDAN",
-        "3B": "HACOPIAN"
+        "2B": "Wesley Jordan",
+        "3B": "Chris Hacopian"
       },
       "score": {
         "away": 0,
@@ -251,7 +251,7 @@
       "description": "PARTIDA grounded into double play ss to 2b to 1b (1-0 B) DUER out on the play."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Shane Sdao",
       "batter": "Jorsixt Jimenez",
       "outcome": "Strikeout (swinging)",
@@ -278,7 +278,7 @@
       "description": "Jimenez, Jor struck out swinging (2-2 BSFFFFBS)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Shane Sdao",
       "batter": "Connor Crowson",
       "outcome": "Strikeout (swinging)",
@@ -305,7 +305,7 @@
       "description": "Crowson, Con struck out swinging (0-2 KKFS)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Shane Sdao",
       "batter": "Manny Garza",
       "outcome": "Lineout",
@@ -332,8 +332,8 @@
       "description": "Garza, Manny lined out to (0-1 K)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Shane Sdao",
+      "inning": "Bottom 2",
+      "pitcher": "Jaxson Pease",
       "batter": "KIEL",
       "outcome": "Double",
       "count": "1-2",
@@ -359,9 +359,9 @@
       "description": "KIEL II doubled to left field (1-2 KKFB)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Shane Sdao",
-      "batter": "HARRISON",
+      "inning": "Bottom 2",
+      "pitcher": "Jaxson Pease",
+      "batter": "Bear Harrison",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
       "pitches": "BKBKK",
@@ -386,9 +386,9 @@
       "description": "HARRISON struck out looking (2-2 BKBKK)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Shane Sdao",
-      "batter": "KELLNER",
+      "inning": "Bottom 2",
+      "pitcher": "Jaxson Pease",
+      "batter": "Boston Kellner",
       "outcome": "Double",
       "count": "2-2",
       "pitches": "BBKK",
@@ -403,7 +403,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "KELLNER",
+        "2B": "Boston Kellner",
         "3B": null
       },
       "score": {
@@ -413,9 +413,9 @@
       "description": "KELLNER doubled to left center, RBI (2-2 BBKK) KIEL II scored."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Shane Sdao",
-      "batter": "GRAHOVAC",
+      "inning": "Bottom 2",
+      "pitcher": "Jaxson Pease",
+      "batter": "Gavin Grahovac",
       "outcome": "Flyout",
       "count": "0-1",
       "pitches": "K",
@@ -425,12 +425,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "KELLNER",
+        "2B": "Boston Kellner",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "KELLNER",
+        "2B": "Boston Kellner",
         "3B": null
       },
       "score": {
@@ -440,25 +440,25 @@
       "description": "GRAHOVAC flied out to cf (0-1 K)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Shane Sdao",
-      "batter": "SORRELL",
+      "inning": "Bottom 2",
+      "pitcher": "Jaxson Pease",
+      "batter": "Caden Sorrell",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "KELLNER"
+        "Boston Kellner"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "KELLNER",
+        "2B": "Boston Kellner",
         "3B": null
       },
       "runners_after": {
-        "1B": "SORRELL",
+        "1B": "Caden Sorrell",
         "2B": null,
         "3B": null
       },
@@ -469,8 +469,8 @@
       "description": "SORRELL singled to right center, RBI (1-0 B) KELLNER scored."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Shane Sdao",
+      "inning": "Bottom 2",
+      "pitcher": "Jaxson Pease",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -480,12 +480,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "SORRELL",
+        "1B": "Caden Sorrell",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "SORRELL",
+        "1B": "Caden Sorrell",
         "2B": null,
         "3B": null
       },
@@ -496,25 +496,25 @@
       "description": "SORRELL stole second, advanced to third on a throwing error by c."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Shane Sdao",
-      "batter": "HACOPIAN",
+      "inning": "Bottom 2",
+      "pitcher": "Jaxson Pease",
+      "batter": "Chris Hacopian",
       "outcome": "Single",
       "count": "3-1",
       "pitches": "BBFB",
       "rbi": true,
       "runs_scored": [
-        "SORRELL"
+        "Caden Sorrell"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "SORRELL",
+        "1B": "Caden Sorrell",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "HACOPIAN",
+        "1B": "Chris Hacopian",
         "2B": null,
         "3B": null
       },
@@ -525,9 +525,9 @@
       "description": "HACOPIAN singled through the left side, RBI (3-1 BBFB) SORRELL scored."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Holpuch",
-      "batter": "JORDAN",
+      "inning": "Bottom 2",
+      "pitcher": "Garrett Holpuch",
+      "batter": "Wesley Jordan",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
@@ -536,14 +536,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "HACOPIAN",
+        "1B": "Chris Hacopian",
         "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "JORDAN",
-        "3B": "HACOPIAN"
+        "2B": "Wesley Jordan",
+        "3B": "Chris Hacopian"
       },
       "score": {
         "away": 0,
@@ -552,9 +552,9 @@
       "description": "JORDAN doubled to left field (0-0) HACOPIAN advanced to third."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Holpuch",
-      "batter": "DUER",
+      "inning": "Bottom 2",
+      "pitcher": "Garrett Holpuch",
+      "batter": "Jake Duer",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "FSB",
@@ -564,13 +564,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "JORDAN",
-        "3B": "HACOPIAN"
+        "2B": "Wesley Jordan",
+        "3B": "Chris Hacopian"
       },
       "runners_after": {
         "1B": null,
-        "2B": "JORDAN",
-        "3B": "HACOPIAN"
+        "2B": "Wesley Jordan",
+        "3B": "Chris Hacopian"
       },
       "score": {
         "away": 0,
@@ -579,8 +579,8 @@
       "description": "DUER grounded out to (1-2 FSB)."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "Holpuch",
+      "inning": "Top 3",
+      "pitcher": "Shane Sdao",
       "batter": "Landon Smelser",
       "outcome": "Single",
       "count": "1-1",
@@ -606,8 +606,8 @@
       "description": "Smelser, Lan singled up the middle (1-1 KB)."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "Holpuch",
+      "inning": "Top 3",
+      "pitcher": "Shane Sdao",
       "batter": "Manny Garza",
       "outcome": "Single",
       "count": "1-2",
@@ -633,8 +633,8 @@
       "description": "Garza, Eddie singled to right center (1-2 BKS) Smelser, Lan advanced to second."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "Holpuch",
+      "inning": "Top 3",
+      "pitcher": "Shane Sdao",
       "batter": "Luke Bragga",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -660,8 +660,8 @@
       "description": "Bragga, Luke struck out looking (2-2 BFKFBK)."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "Holpuch",
+      "inning": "Top 3",
+      "pitcher": "Shane Sdao",
       "batter": "Jackson Rooker",
       "outcome": "Groundout",
       "count": "1-0",
@@ -687,8 +687,8 @@
       "description": "Rooker, Jack grounded out to 2b (1-0 B) Garza, Eddie advanced to second Smelser, Lan advanced to third."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "Holpuch",
+      "inning": "Top 3",
+      "pitcher": "Shane Sdao",
       "batter": "Owen Lee",
       "outcome": "Home run",
       "count": "0-1",
@@ -716,8 +716,8 @@
       "description": "Lee, Owen homered to right field, 3 RBI (0-1 K) Garza, Eddie scored Smelser, Lan scored."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "Holpuch",
+      "inning": "Top 3",
+      "pitcher": "Shane Sdao",
       "batter": "Nash Crowell",
       "outcome": "Flyout",
       "count": "0-2",
@@ -743,9 +743,9 @@
       "description": "Crowell, Nas flied out to cf (0-2 KF)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Holpuch",
-      "batter": "PARTIDA",
+      "inning": "Bottom 3",
+      "pitcher": "Garrett Holpuch",
+      "batter": "Nico Partida",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "SK",
@@ -759,7 +759,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "PARTIDA",
+        "1B": "Nico Partida",
         "2B": null,
         "3B": null
       },
@@ -770,8 +770,8 @@
       "description": "PARTIDA singled up the middle (0-2 SK)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Holpuch",
+      "inning": "Bottom 3",
+      "pitcher": "Garrett Holpuch",
       "batter": "KIEL",
       "outcome": "Double",
       "count": "1-1",
@@ -781,14 +781,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "PARTIDA",
+        "1B": "Nico Partida",
         "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
         "2B": "KIEL",
-        "3B": "PARTIDA"
+        "3B": "Nico Partida"
       },
       "score": {
         "away": 3,
@@ -797,9 +797,9 @@
       "description": "KIEL II doubled to left center (1-1 BK) PARTIDA advanced to third."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Holpuch",
-      "batter": "HARRISON",
+      "inning": "Bottom 3",
+      "pitcher": "Garrett Holpuch",
+      "batter": "Bear Harrison",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "FBBSS",
@@ -810,12 +810,12 @@
       "runners_before": {
         "1B": null,
         "2B": "KIEL",
-        "3B": "PARTIDA"
+        "3B": "Nico Partida"
       },
       "runners_after": {
         "1B": null,
         "2B": "KIEL",
-        "3B": "PARTIDA"
+        "3B": "Nico Partida"
       },
       "score": {
         "away": 3,
@@ -824,9 +824,9 @@
       "description": "HARRISON struck out swinging, grounded out to c unassisted (2-2 FBBSS)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Holpuch",
-      "batter": "KELLNER",
+      "inning": "Bottom 3",
+      "pitcher": "Garrett Holpuch",
+      "batter": "Boston Kellner",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
@@ -837,12 +837,12 @@
       "runners_before": {
         "1B": null,
         "2B": "KIEL",
-        "3B": "PARTIDA"
+        "3B": "Nico Partida"
       },
       "runners_after": {
-        "1B": "KELLNER",
+        "1B": "Boston Kellner",
         "2B": "KIEL",
-        "3B": "PARTIDA"
+        "3B": "Nico Partida"
       },
       "score": {
         "away": 3,
@@ -851,9 +851,9 @@
       "description": "KELLNER walked (3-0 BBBB)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Holpuch",
-      "batter": "GRAHOVAC",
+      "inning": "Bottom 3",
+      "pitcher": "Garrett Holpuch",
+      "batter": "Gavin Grahovac",
       "outcome": "Flyout",
       "count": "0-1",
       "pitches": "K",
@@ -862,14 +862,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "KELLNER",
+        "1B": "Boston Kellner",
         "2B": "KIEL",
-        "3B": "PARTIDA"
+        "3B": "Nico Partida"
       },
       "runners_after": {
-        "1B": "KELLNER",
+        "1B": "Boston Kellner",
         "2B": "KIEL",
-        "3B": "PARTIDA"
+        "3B": "Nico Partida"
       },
       "score": {
         "away": 3,
@@ -878,26 +878,26 @@
       "description": "GRAHOVAC flied out to cf to left center (0-1 K)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Holpuch",
+      "inning": "Bottom 3",
+      "pitcher": "Garrett Holpuch",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [
-        "PARTIDA"
+        "Nico Partida"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "KELLNER",
+        "1B": "Boston Kellner",
         "2B": "KIEL",
-        "3B": "PARTIDA"
+        "3B": "Nico Partida"
       },
       "runners_after": {
         "1B": null,
-        "2B": "KELLNER",
+        "2B": "Boston Kellner",
         "3B": null
       },
       "score": {
@@ -907,9 +907,9 @@
       "description": "KELLNER advanced to second on a wild pitch KIEL II advanced to third on a wild pitch PARTIDA scored on a wild pitch."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Holpuch",
-      "batter": "SORRELL",
+      "inning": "Bottom 3",
+      "pitcher": "Garrett Holpuch",
+      "batter": "Caden Sorrell",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "BFFFS",
@@ -919,12 +919,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "KELLNER",
+        "2B": "Boston Kellner",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "KELLNER",
+        "2B": "Boston Kellner",
         "3B": null
       },
       "score": {
@@ -934,8 +934,8 @@
       "description": "SORRELL struck out swinging (1-2 BFFFS)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Holpuch",
+      "inning": "Top 4",
+      "pitcher": "Shane Sdao",
       "batter": "Jorsixt Jimenez",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -961,8 +961,8 @@
       "description": "Jimenez, Jor struck out swinging (0-2 FFK)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Holpuch",
+      "inning": "Top 4",
+      "pitcher": "Shane Sdao",
       "batter": "Connor Crowson",
       "outcome": "Groundout",
       "count": "2-1",
@@ -988,8 +988,8 @@
       "description": "Crowson, Con grounded out to (2-1 BSB)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Holpuch",
+      "inning": "Top 4",
+      "pitcher": "Shane Sdao",
       "batter": "Manny Garza",
       "outcome": "Pop out",
       "count": "2-1",
@@ -1015,9 +1015,9 @@
       "description": "Garza, Manny popped up to ss (2-1 BFB)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Holpuch",
-      "batter": "HACOPIAN",
+      "inning": "Bottom 4",
+      "pitcher": "Garrett Holpuch",
+      "batter": "Chris Hacopian",
       "outcome": "Flyout",
       "count": "1-0",
       "pitches": "B",
@@ -1042,9 +1042,9 @@
       "description": "HACOPIAN flied out to rf (1-0 B)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Holpuch",
-      "batter": "JORDAN",
+      "inning": "Bottom 4",
+      "pitcher": "Garrett Holpuch",
+      "batter": "Wesley Jordan",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "BSFBFS",
@@ -1069,9 +1069,9 @@
       "description": "JORDAN struck out swinging (2-2 BSFBFS)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Holpuch",
-      "batter": "DUER",
+      "inning": "Bottom 4",
+      "pitcher": "Garrett Holpuch",
+      "batter": "Jake Duer",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "FSB",
@@ -1086,7 +1086,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "DUER",
+        "2B": "Jake Duer",
         "3B": null
       },
       "score": {
@@ -1096,9 +1096,9 @@
       "description": "DUER doubled to right center (1-2 FSB)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Holpuch",
-      "batter": "PARTIDA",
+      "inning": "Bottom 4",
+      "pitcher": "Garrett Holpuch",
+      "batter": "Nico Partida",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
@@ -1108,12 +1108,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "DUER",
+        "2B": "Jake Duer",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "DUER",
+        "2B": "Jake Duer",
         "3B": null
       },
       "score": {
@@ -1123,8 +1123,8 @@
       "description": "PARTIDA grounded out to (0-0)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "Holpuch",
+      "inning": "Top 5",
+      "pitcher": "Shane Sdao",
       "batter": "Landon Smelser",
       "outcome": "Lineout",
       "count": "2-2",
@@ -1150,8 +1150,8 @@
       "description": "Smelser, Lan lined out to lf (2-2 BBKF)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "Holpuch",
+      "inning": "Top 5",
+      "pitcher": "Shane Sdao",
       "batter": "Manny Garza",
       "outcome": "Double",
       "count": "0-0",
@@ -1177,8 +1177,8 @@
       "description": "Garza, Eddie doubled to left center (0-0)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "Holpuch",
+      "inning": "Top 5",
+      "pitcher": "Shane Sdao",
       "batter": "Luke Bragga",
       "outcome": "Single",
       "count": "0-0",
@@ -1204,8 +1204,8 @@
       "description": "Bragga, Luke singled through the left side (0-0) Garza, Eddie advanced to third."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "Holpuch",
+      "inning": "Top 5",
+      "pitcher": "Shane Sdao",
       "batter": "Jackson Rooker",
       "outcome": "Fielder's choice",
       "count": "2-0",
@@ -1231,8 +1231,8 @@
       "description": "Rooker, Jack reached on a fielder's choice, RBI (2-0 BB) Bragga, Luke out at second ss to 2b Garza, Eddie scored."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "Holpuch",
+      "inning": "Top 5",
+      "pitcher": "Shane Sdao",
       "batter": "Owen Lee",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1258,8 +1258,8 @@
       "description": "Lee, Owen grounded out to 1b unassisted (0-2 KS)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Holpuch",
+      "inning": "Bottom 5",
+      "pitcher": "Garrett Holpuch",
       "batter": "KIEL",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1285,9 +1285,9 @@
       "description": "KIEL II struck out looking (3-2 BBBKKK)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Holpuch",
-      "batter": "HARRISON",
+      "inning": "Bottom 5",
+      "pitcher": "Garrett Holpuch",
+      "batter": "Bear Harrison",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBKBKB",
@@ -1301,7 +1301,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "HARRISON",
+        "1B": "Bear Harrison",
         "2B": null,
         "3B": null
       },
@@ -1312,9 +1312,9 @@
       "description": "HARRISON walked (3-2 BBKBKB)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Holpuch",
-      "batter": "KELLNER",
+      "inning": "Bottom 5",
+      "pitcher": "Garrett Holpuch",
+      "batter": "Boston Kellner",
       "outcome": "Flyout",
       "count": "1-2",
       "pitches": "KSB",
@@ -1323,12 +1323,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "HARRISON",
+        "1B": "Bear Harrison",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "HARRISON",
+        "1B": "Bear Harrison",
         "2B": null,
         "3B": null
       },
@@ -1339,8 +1339,8 @@
       "description": "KELLNER flied out to rf (1-2 KSB)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Holpuch",
+      "inning": "Bottom 5",
+      "pitcher": "Garrett Holpuch",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1350,13 +1350,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "HARRISON",
+        "1B": "Bear Harrison",
         "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "HARRISON",
+        "2B": "Bear Harrison",
         "3B": null
       },
       "score": {
@@ -1366,9 +1366,9 @@
       "description": "HARRISON advanced to second on a wild pitch."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Holpuch",
-      "batter": "GRAHOVAC",
+      "inning": "Bottom 5",
+      "pitcher": "Garrett Holpuch",
+      "batter": "Gavin Grahovac",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "SBSBS",
@@ -1378,12 +1378,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "HARRISON",
+        "2B": "Bear Harrison",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "HARRISON",
+        "2B": "Bear Harrison",
         "3B": null
       },
       "score": {
@@ -1393,8 +1393,8 @@
       "description": "GRAHOVAC struck out swinging (2-2 SBSBS)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Holpuch",
+      "inning": "Top 6",
+      "pitcher": "Shane Sdao",
       "batter": "Nash Crowell",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1420,8 +1420,8 @@
       "description": "Crowell, Nas struck out swinging (3-2 FSBBBFS)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Holpuch",
+      "inning": "Top 6",
+      "pitcher": "Shane Sdao",
       "batter": "Jorsixt Jimenez",
       "outcome": "Single",
       "count": "0-1",
@@ -1447,8 +1447,8 @@
       "description": "Jimenez, Jor singled to center field (0-1 S)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Holpuch",
+      "inning": "Top 6",
+      "pitcher": "Shane Sdao",
       "batter": "Connor Crowson",
       "outcome": "Single",
       "count": "0-2",
@@ -1474,7 +1474,7 @@
       "description": "Crowson, Con singled to left field (0-2 FK) Jimenez, Jor advanced to second."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "Ethan Darden",
       "batter": "Manny Garza",
       "outcome": "Grounded into double play",
@@ -1501,15 +1501,15 @@
       "description": "Garza, Manny grounded into double play to 2b to 1b (0-2 KF) Crowson, Con out on the play."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Ethan Darden",
-      "batter": "SORRELL",
+      "inning": "Bottom 6",
+      "pitcher": "Garrett Holpuch",
+      "batter": "Caden Sorrell",
       "outcome": "Home run",
       "count": "0-2",
       "pitches": "KF",
       "rbi": true,
       "runs_scored": [
-        "SORRELL"
+        "Caden Sorrell"
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1530,9 +1530,9 @@
       "description": "SORRELL homered to center field, RBI (0-2 KF)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Ethan Darden",
-      "batter": "HACOPIAN",
+      "inning": "Bottom 6",
+      "pitcher": "Garrett Holpuch",
+      "batter": "Chris Hacopian",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BKB",
@@ -1546,7 +1546,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "HACOPIAN",
+        "1B": "Chris Hacopian",
         "2B": null,
         "3B": null
       },
@@ -1557,9 +1557,9 @@
       "description": "HACOPIAN singled to center field (2-1 BKB)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Summar",
-      "batter": "JORDAN",
+      "inning": "Bottom 6",
+      "pitcher": "Micah Summar",
+      "batter": "Wesley Jordan",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBSBB",
@@ -1568,13 +1568,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "HACOPIAN",
+        "1B": "Chris Hacopian",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "JORDAN",
-        "2B": "HACOPIAN",
+        "1B": "Wesley Jordan",
+        "2B": "Chris Hacopian",
         "3B": null
       },
       "score": {
@@ -1584,9 +1584,9 @@
       "description": "JORDAN walked (3-1 BBSBB) HACOPIAN advanced to second."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Summar",
-      "batter": "DUER",
+      "inning": "Bottom 6",
+      "pitcher": "Micah Summar",
+      "batter": "Jake Duer",
       "outcome": "Lineout",
       "count": "0-0",
       "pitches": "",
@@ -1595,13 +1595,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "JORDAN",
-        "2B": "HACOPIAN",
+        "1B": "Wesley Jordan",
+        "2B": "Chris Hacopian",
         "3B": null
       },
       "runners_after": {
-        "1B": "JORDAN",
-        "2B": "HACOPIAN",
+        "1B": "Wesley Jordan",
+        "2B": "Chris Hacopian",
         "3B": null
       },
       "score": {
@@ -1611,9 +1611,9 @@
       "description": "DUER lined out to ss (0-0)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Summar",
-      "batter": "PARTIDA",
+      "inning": "Bottom 6",
+      "pitcher": "Micah Summar",
+      "batter": "Nico Partida",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "KBSFBBB",
@@ -1622,14 +1622,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "JORDAN",
-        "2B": "HACOPIAN",
+        "1B": "Wesley Jordan",
+        "2B": "Chris Hacopian",
         "3B": null
       },
       "runners_after": {
-        "1B": "PARTIDA",
-        "2B": "JORDAN",
-        "3B": "HACOPIAN"
+        "1B": "Nico Partida",
+        "2B": "Wesley Jordan",
+        "3B": "Chris Hacopian"
       },
       "score": {
         "away": 4,
@@ -1638,27 +1638,27 @@
       "description": "PARTIDA walked (3-2 KBSFBBB) JORDAN advanced to second HACOPIAN advanced to third."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Summar",
+      "inning": "Bottom 6",
+      "pitcher": "Micah Summar",
       "batter": "KIEL",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "HACOPIAN"
+        "Chris Hacopian"
       ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "PARTIDA",
-        "2B": "JORDAN",
-        "3B": "HACOPIAN"
+        "1B": "Nico Partida",
+        "2B": "Wesley Jordan",
+        "3B": "Chris Hacopian"
       },
       "runners_after": {
         "1B": null,
-        "2B": "PARTIDA",
-        "3B": "JORDAN"
+        "2B": "Nico Partida",
+        "3B": "Wesley Jordan"
       },
       "score": {
         "away": 4,
@@ -1667,9 +1667,9 @@
       "description": "KIEL II grounded out to , RBI (0-1 K) PARTIDA advanced to second JORDAN advanced to third HACOPIAN scored."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Summar",
-      "batter": "HARRISON",
+      "inning": "Bottom 6",
+      "pitcher": "Micah Summar",
+      "batter": "Bear Harrison",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
       "pitches": "KKBBK",
@@ -1679,13 +1679,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "PARTIDA",
-        "3B": "JORDAN"
+        "2B": "Nico Partida",
+        "3B": "Wesley Jordan"
       },
       "runners_after": {
         "1B": null,
-        "2B": "PARTIDA",
-        "3B": "JORDAN"
+        "2B": "Nico Partida",
+        "3B": "Wesley Jordan"
       },
       "score": {
         "away": 4,
@@ -1694,8 +1694,8 @@
       "description": "HARRISON struck out looking (2-2 KKBBK)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Summar",
+      "inning": "Top 7",
+      "pitcher": "Ethan Darden",
       "batter": "Landon Smelser",
       "outcome": "Walk",
       "count": "3-2",
@@ -1721,8 +1721,8 @@
       "description": "Smelser, Lan walked (3-2 SBFBFFBFB)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Summar",
+      "inning": "Top 7",
+      "pitcher": "Ethan Darden",
       "batter": "Manny Garza",
       "outcome": "Grounded into double play",
       "count": "0-0",
@@ -1748,8 +1748,8 @@
       "description": "Garza, Eddie grounded into double play ss to 2b to 1b (0-0) Smelser, Lan out on the play."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Summar",
+      "inning": "Top 7",
+      "pitcher": "Ethan Darden",
       "batter": "Luke Bragga",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1775,9 +1775,9 @@
       "description": "Bragga, Luke flied out to cf (2-1 BBK)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Summar",
-      "batter": "KELLNER",
+      "inning": "Bottom 7",
+      "pitcher": "Micah Summar",
+      "batter": "Boston Kellner",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "BKF",
@@ -1792,7 +1792,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "KELLNER",
+        "2B": "Boston Kellner",
         "3B": null
       },
       "score": {
@@ -1802,8 +1802,8 @@
       "description": "KELLNER doubled (1-2 BKF)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Summar",
+      "inning": "Bottom 7",
+      "pitcher": "Micah Summar",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1814,13 +1814,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": null,
-        "2B": "KELLNER",
+        "2B": "Boston Kellner",
         "3B": null
       },
       "runners_after": {
         "1B": null,
         "2B": null,
-        "3B": "KELLNER"
+        "3B": "Boston Kellner"
       },
       "score": {
         "away": 4,
@@ -1829,9 +1829,9 @@
       "description": "KELLNER advanced to third on a wild pitch."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Summar",
-      "batter": "GRAHOVAC",
+      "inning": "Bottom 7",
+      "pitcher": "Micah Summar",
+      "batter": "Gavin Grahovac",
       "outcome": "Hit by pitch",
       "count": "2-2",
       "pitches": "BFBF",
@@ -1842,12 +1842,12 @@
       "runners_before": {
         "1B": null,
         "2B": null,
-        "3B": "KELLNER"
+        "3B": "Boston Kellner"
       },
       "runners_after": {
-        "1B": "GRAHOVAC",
+        "1B": "Gavin Grahovac",
         "2B": null,
-        "3B": "KELLNER"
+        "3B": "Boston Kellner"
       },
       "score": {
         "away": 4,
@@ -1856,24 +1856,24 @@
       "description": "GRAHOVAC hit by pitch (2-2 BFBF)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Summar",
-      "batter": "SORRELL",
+      "inning": "Bottom 7",
+      "pitcher": "Micah Summar",
+      "batter": "Caden Sorrell",
       "outcome": "Home run",
       "count": "3-1",
       "pitches": "BSBB",
       "rbi": true,
       "runs_scored": [
-        "GRAHOVAC",
-        "KELLNER",
-        "SORRELL"
+        "Gavin Grahovac",
+        "Boston Kellner",
+        "Caden Sorrell"
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "GRAHOVAC",
+        "1B": "Gavin Grahovac",
         "2B": null,
-        "3B": "KELLNER"
+        "3B": "Boston Kellner"
       },
       "runners_after": {
         "1B": null,
@@ -1887,9 +1887,9 @@
       "description": "SORRELL homered to right field, 3 RBI (3-1 BSBB) GRAHOVAC scored KELLNER scored."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Dillard",
-      "batter": "HACOPIAN",
+      "inning": "Bottom 7",
+      "pitcher": "Jayden Dillard",
+      "batter": "Chris Hacopian",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBKBB",
@@ -1903,7 +1903,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "HACOPIAN",
+        "1B": "Chris Hacopian",
         "2B": null,
         "3B": null
       },
@@ -1914,9 +1914,9 @@
       "description": "HACOPIAN walked (3-1 BBKBB)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Dillard",
-      "batter": "JORDAN",
+      "inning": "Bottom 7",
+      "pitcher": "Jayden Dillard",
+      "batter": "Wesley Jordan",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBKBB",
@@ -1925,13 +1925,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "HACOPIAN",
+        "1B": "Chris Hacopian",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "JORDAN",
-        "2B": "HACOPIAN",
+        "1B": "Wesley Jordan",
+        "2B": "Chris Hacopian",
         "3B": null
       },
       "score": {
@@ -1941,27 +1941,27 @@
       "description": "JORDAN walked (3-1 BBKBB) HACOPIAN advanced to second."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Dillard",
-      "batter": "DUER",
+      "inning": "Bottom 7",
+      "pitcher": "Jayden Dillard",
+      "batter": "Jake Duer",
       "outcome": "Single",
       "count": "3-1",
       "pitches": "BBKB",
       "rbi": true,
       "runs_scored": [
-        "HACOPIAN"
+        "Chris Hacopian"
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "JORDAN",
-        "2B": "HACOPIAN",
+        "1B": "Wesley Jordan",
+        "2B": "Chris Hacopian",
         "3B": null
       },
       "runners_after": {
-        "1B": "DUER",
+        "1B": "Jake Duer",
         "2B": null,
-        "3B": "JORDAN"
+        "3B": "Wesley Jordan"
       },
       "score": {
         "away": 4,
@@ -1970,25 +1970,25 @@
       "description": "DUER singled through the right side, RBI (3-1 BBKB) JORDAN advanced to third HACOPIAN scored."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Dillard",
-      "batter": "PARTIDA",
+      "inning": "Bottom 7",
+      "pitcher": "Jayden Dillard",
+      "batter": "Nico Partida",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "JORDAN"
+        "Wesley Jordan"
       ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "DUER",
+        "1B": "Jake Duer",
         "2B": null,
-        "3B": "JORDAN"
+        "3B": "Wesley Jordan"
       },
       "runners_after": {
-        "1B": "DUER",
+        "1B": "Jake Duer",
         "2B": null,
         "3B": null
       },
@@ -1999,8 +1999,8 @@
       "description": "PARTIDA flied out to lf, SF, RBI (0-0) JORDAN scored."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Dillard",
+      "inning": "Bottom 7",
+      "pitcher": "Jayden Dillard",
       "batter": "KIEL",
       "outcome": "Single",
       "count": "0-1",
@@ -2010,7 +2010,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "DUER",
+        "1B": "Jake Duer",
         "2B": null,
         "3B": null
       },
@@ -2026,9 +2026,9 @@
       "description": "KIEL II singled to right center (0-1 K) WILSON advanced to second."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Dillard",
-      "batter": "HARRISON",
+      "inning": "Bottom 7",
+      "pitcher": "Jayden Dillard",
+      "batter": "Bear Harrison",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KFBS",
@@ -2053,9 +2053,9 @@
       "description": "HARRISON struck out swinging (1-2 KFBS)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Dillard",
-      "batter": "KELLNER",
+      "inning": "Bottom 7",
+      "pitcher": "Jayden Dillard",
+      "batter": "Boston Kellner",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
@@ -2069,7 +2069,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "KELLNER",
+        "1B": "Boston Kellner",
         "2B": null,
         "3B": null
       },
@@ -2080,9 +2080,9 @@
       "description": "KELLNER walked (3-0 BBBB) KIEL II advanced to second WILSON advanced to third."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Dillard",
-      "batter": "GRAHOVAC",
+      "inning": "Bottom 7",
+      "pitcher": "Jayden Dillard",
+      "batter": "Gavin Grahovac",
       "outcome": "Pop out",
       "count": "0-0",
       "pitches": "",
@@ -2091,12 +2091,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "KELLNER",
+        "1B": "Boston Kellner",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "KELLNER",
+        "1B": "Boston Kellner",
         "2B": null,
         "3B": null
       },
@@ -2107,7 +2107,7 @@
       "description": "GRAHOVAC popped up to 1b (0-0)."
     },
     {
-      "inning": "Top 15",
+      "inning": "Top 8",
       "pitcher": "Cole Hubert",
       "batter": "KIEL",
       "outcome": "\u2014",
@@ -2134,7 +2134,7 @@
       "description": "KIEL II to lf."
     },
     {
-      "inning": "Top 15",
+      "inning": "Top 8",
       "pitcher": "Cole Hubert",
       "batter": "Jackson Rooker",
       "outcome": "Groundout",
@@ -2161,7 +2161,7 @@
       "description": "Rooker, Jack grounded out to (2-2 SBKBF)."
     },
     {
-      "inning": "Top 15",
+      "inning": "Top 8",
       "pitcher": "Cole Hubert",
       "batter": "Owen Lee",
       "outcome": "Hit by pitch",
@@ -2188,7 +2188,7 @@
       "description": "Lee, Owen hit by pitch (2-1 BSB)."
     },
     {
-      "inning": "Top 15",
+      "inning": "Top 8",
       "pitcher": "Cole Hubert",
       "batter": "Aaron Moffitt",
       "outcome": "\u2014",
@@ -2215,7 +2215,7 @@
       "description": "Moffitt, Aar to 1b for Crowell, Nas."
     },
     {
-      "inning": "Top 15",
+      "inning": "Top 8",
       "pitcher": "Cole Hubert",
       "batter": "Aaron Moffitt",
       "outcome": "Strikeout (swinging)",
@@ -2242,7 +2242,7 @@
       "description": "Moffitt, Aar struck out swinging (1-2 KBFS)."
     },
     {
-      "inning": "Top 15",
+      "inning": "Top 8",
       "pitcher": "Cole Hubert",
       "batter": "Jorsixt Jimenez",
       "outcome": "Home run",
@@ -2271,7 +2271,7 @@
       "description": "Jimenez, Jor homered to left field, 2 RBI (0-0) Lee, Owen scored."
     },
     {
-      "inning": "Top 15",
+      "inning": "Top 8",
       "pitcher": "Cole Hubert",
       "batter": "Cade Fuller",
       "outcome": "\u2014",
@@ -2298,7 +2298,7 @@
       "description": "Fuller, Cade to for Crowson, Con."
     },
     {
-      "inning": "Top 15",
+      "inning": "Top 8",
       "pitcher": "Cole Hubert",
       "batter": "Cade Fuller",
       "outcome": "Strikeout (swinging)",
@@ -2325,9 +2325,9 @@
       "description": "Fuller, Cade struck out swinging (0-2 KFS)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Cole Hubert",
-      "batter": "Ty Denton",
+      "inning": "Bottom 8",
+      "pitcher": "Jayden Dillard",
+      "batter": "Denton, Ty to c for Garza, Manny.",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
@@ -2352,9 +2352,9 @@
       "description": "Denton, Ty to c for Garza, Manny."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Cole Hubert",
-      "batter": "SORRELL",
+      "inning": "Bottom 8",
+      "pitcher": "Jayden Dillard",
+      "batter": "Caden Sorrell",
       "outcome": "Groundout",
       "count": "3-2",
       "pitches": "BKBBSFF",
@@ -2379,9 +2379,9 @@
       "description": "SORRELL grounded out to 2b (3-2 BKBBSFF)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Cole Hubert",
-      "batter": "HACOPIAN",
+      "inning": "Bottom 8",
+      "pitcher": "Jayden Dillard",
+      "batter": "Chris Hacopian",
       "outcome": "Pop out",
       "count": "1-1",
       "pitches": "BK",
@@ -2406,9 +2406,9 @@
       "description": "HACOPIAN popped up to (1-1 BK)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Cole Hubert",
-      "batter": "JORDAN",
+      "inning": "Bottom 8",
+      "pitcher": "Jayden Dillard",
+      "batter": "Wesley Jordan",
       "outcome": "Hit by pitch",
       "count": "1-1",
       "pitches": "FB",
@@ -2422,7 +2422,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "JORDAN",
+        "1B": "Wesley Jordan",
         "2B": null,
         "3B": null
       },
@@ -2433,8 +2433,8 @@
       "description": "JORDAN hit by pitch (1-1 FB)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Cole Hubert",
+      "inning": "Bottom 8",
+      "pitcher": "Jayden Dillard",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2444,12 +2444,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "JORDAN",
+        "1B": "Wesley Jordan",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "JORDAN",
+        "1B": "Wesley Jordan",
         "2B": null,
         "3B": null
       },
@@ -2460,9 +2460,9 @@
       "description": "JORDAN stole second."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Cole Hubert",
-      "batter": "WILSON",
+      "inning": "Bottom 8",
+      "pitcher": "Jayden Dillard",
+      "batter": "Jorian Wilson",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
@@ -2471,12 +2471,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "JORDAN",
+        "1B": "Wesley Jordan",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "WILSON",
+        "1B": "Jorian Wilson",
         "2B": null,
         "3B": null
       },
@@ -2487,21 +2487,21 @@
       "description": "WILSON walked (3-0 BBBB)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Cole Hubert",
-      "batter": "PARTIDA",
+      "inning": "Bottom 8",
+      "pitcher": "Jayden Dillard",
+      "batter": "Nico Partida",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "WILSON",
-        "PARTIDA"
+        "Jorian Wilson",
+        "Nico Partida"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "WILSON",
+        "1B": "Jorian Wilson",
         "2B": null,
         "3B": null
       },
@@ -2517,8 +2517,8 @@
       "description": "PARTIDA homered to left field, 3 RBI (0-0) WILSON scored JORDAN scored."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Cole Hubert",
+      "inning": "Bottom 8",
+      "pitcher": "Jayden Dillard",
       "batter": "KIEL",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2544,7 +2544,7 @@
       "description": "KIEL II grounded out to p (0-0)."
     },
     {
-      "inning": "Top 17",
+      "inning": "Top 9",
       "pitcher": "Cole Hubert",
       "batter": "Ty Denton",
       "outcome": "Flyout",
@@ -2571,7 +2571,7 @@
       "description": "Denton, Ty flied out to cf (0-1 F)."
     },
     {
-      "inning": "Top 17",
+      "inning": "Top 9",
       "pitcher": "Cole Hubert",
       "batter": "Landon Smelser",
       "outcome": "Groundout",
@@ -2598,7 +2598,7 @@
       "description": "Smelser, Lan grounded out to 2b (1-0 B)."
     },
     {
-      "inning": "Top 17",
+      "inning": "Top 9",
       "pitcher": "Cole Hubert",
       "batter": "Manny Garza",
       "outcome": "Single",
@@ -2625,7 +2625,7 @@
       "description": "Garza, Eddie singled up the middle (1-1 BK)."
     },
     {
-      "inning": "Top 17",
+      "inning": "Top 9",
       "pitcher": "Cole Hubert",
       "batter": "Luke Bragga",
       "outcome": "Flyout",

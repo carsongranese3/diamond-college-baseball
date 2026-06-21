@@ -1,13 +1,13 @@
 {
   "contest_id": "6494058",
   "date": "03/17/2026",
-  "batting_team": "Mississippi St.",
-  "pitching_team": "Jackson St.",
-  "note": "Broken-down from the saved play_by_play.json, which contains the Mississippi St. at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "Jackson St.",
+  "home_team": "Mississippi St.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
-      "inning": "Bottom 1",
-      "pitcher": "Joe Williams",
+      "inning": "Top 1",
+      "pitcher": "Maddox Miller",
       "batter": "Tate",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -33,9 +33,9 @@
       "description": "Tate Jr., Ro struck out swinging (1-2 SFFBS)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Joe Williams",
-      "batter": "Reed, Tyree singled through the left side (3-2 KBBFB).",
+      "inning": "Top 1",
+      "pitcher": "Maddox Miller",
+      "batter": "Tyree Reed",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "KBBFB",
@@ -49,7 +49,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Reed, Tyree singled through the left side (3-2 KBBFB).",
+        "1B": "Tyree Reed",
         "2B": null,
         "3B": null
       },
@@ -60,9 +60,9 @@
       "description": "Reed, Tyree singled through the left side (3-2 KBBFB)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Joe Williams",
-      "batter": "Cabral, Pier grounded into double play ss to 2b to 1b (0-1 S)",
+      "inning": "Top 1",
+      "pitcher": "Maddox Miller",
+      "batter": "Pierre Cabral",
       "outcome": "Grounded into double play",
       "count": "0-1",
       "pitches": "S",
@@ -71,12 +71,12 @@
       "outs_before": 1,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Reed, Tyree singled through the left side (3-2 KBBFB).",
+        "1B": "Tyree Reed",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Reed, Tyree singled through the left side (3-2 KBBFB).",
+        "1B": "Tyree Reed",
         "2B": null,
         "3B": null
       },
@@ -87,7 +87,7 @@
       "description": "Cabral, Pier grounded into double play ss to 2b to 1b (0-1 S) Reed, Tyree out on the play."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Joe Williams",
       "batter": "Aidan Teel",
       "outcome": "Walk",
@@ -114,7 +114,7 @@
       "description": "Teel walked (3-2 KBFBBFB)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Joe Williams",
       "batter": "Bryce Chance",
       "outcome": "Walk",
@@ -141,7 +141,7 @@
       "description": "Chance walked (3-0 BBBB) Teel advanced to second."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Joe Williams",
       "batter": "Ace Reese",
       "outcome": "Walk",
@@ -168,7 +168,7 @@
       "description": "Reese walked (3-1 BBSBB) Chance advanced to second Teel advanced to third."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Joe Williams",
       "batter": "Noah Sullivan",
       "outcome": "Flyout",
@@ -197,7 +197,7 @@
       "description": "Sullivan flied out to cf, SF, RBI (1-0 B) Chance advanced to third Teel scored."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Joe Williams",
       "batter": "Reed Stallman",
       "outcome": "Flyout",
@@ -226,7 +226,7 @@
       "description": "Stallman flied out to cf, SF, RBI (0-2 FK) Chance scored."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Joe Williams",
       "batter": "Gehrig Frei",
       "outcome": "Walk",
@@ -253,7 +253,7 @@
       "description": "Frei walked (3-1 BBKBB) Reese advanced to second."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Joe Williams",
       "batter": "Ryder Woodson",
       "outcome": "Flyout",
@@ -280,8 +280,8 @@
       "description": "Woodson flied out to cf (1-0 B)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Joe Williams",
+      "inning": "Top 2",
+      "pitcher": "Maddox Miller",
       "batter": "Lemus",
       "outcome": "Walk",
       "count": "3-0",
@@ -307,9 +307,9 @@
       "description": "Lemus Hudson walked (3-0 BBBB)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Joe Williams",
-      "batter": "Boines, Payt flied out to cf (0-1 K).",
+      "inning": "Top 2",
+      "pitcher": "Maddox Miller",
+      "batter": "Payton Boines",
       "outcome": "Flyout",
       "count": "0-1",
       "pitches": "K",
@@ -334,9 +334,9 @@
       "description": "Boines, Payt flied out to cf (0-1 K)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Joe Williams",
-      "batter": "Torres, Hede struck out looking (3-2 KBFBBK).",
+      "inning": "Top 2",
+      "pitcher": "Maddox Miller",
+      "batter": "Hederick Torres",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
       "pitches": "KBFBBK",
@@ -361,9 +361,9 @@
       "description": "Torres, Hede struck out looking (3-2 KBFBBK)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Joe Williams",
-      "batter": "Perez, Wilbe struck out swinging (2-2 BKKBS).",
+      "inning": "Top 2",
+      "pitcher": "Maddox Miller",
+      "batter": "Wilbert Perez",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "BKKBS",
@@ -388,7 +388,7 @@
       "description": "Perez, Wilbe struck out swinging (2-2 BKKBS)."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Joe Williams",
       "batter": "Jacob Parker",
       "outcome": "Single",
@@ -415,7 +415,7 @@
       "description": "Parker singled up the middle (2-2 KBBFF)."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Joe Williams",
       "batter": "Kevin Milewski",
       "outcome": "Reached on error",
@@ -442,7 +442,7 @@
       "description": "Milewski reached on a fielding error by (2-2 FBFB) Parker advanced to second."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Joe Williams",
       "batter": "Aidan Teel",
       "outcome": "Single",
@@ -471,7 +471,7 @@
       "description": "Teel singled through the right side, RBI (3-1 BBFB) Milewski advanced to second Parker scored."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Joe Williams",
       "batter": null,
       "outcome": "Baserunning",
@@ -498,7 +498,7 @@
       "description": "Teel advanced to second Milewski advanced to third on a wild pitch."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Joe Williams",
       "batter": "Bryce Chance",
       "outcome": "Groundout",
@@ -525,7 +525,7 @@
       "description": "Chance grounded out to (3-2 BBKFB)."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Manuel Toro",
       "batter": "Ace Reese",
       "outcome": "Walk",
@@ -552,7 +552,7 @@
       "description": "Reese walked (3-2 BBBSFFB)."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Manuel Toro",
       "batter": "Noah Sullivan",
       "outcome": "Reached on error",
@@ -581,7 +581,7 @@
       "description": "Sullivan reached on a fielding error by cf, SF, RBI (1-1 BK) Reese advanced to second Teel advanced to third Milewski scored, unearned."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Manuel Toro",
       "batter": "Reed Stallman",
       "outcome": "Single",
@@ -610,7 +610,7 @@
       "description": "Stallman singled, out at second rf to ss, 2 RBI (1-0 B) Sullivan advanced to third Wyers scored Teel scored."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Manuel Toro",
       "batter": "Gehrig Frei",
       "outcome": "Flyout",
@@ -637,25 +637,25 @@
       "description": "Frei flied out to cf (1-0 B)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Manuel Toro",
-      "batter": "Drew Wyers",
+      "inning": "Top 3",
+      "pitcher": "Maddox Miller",
+      "batter": "Wyers",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Reed Stallman",
-        "2B": "Ace Reese",
-        "3B": "Noah Sullivan"
+        "1B": null,
+        "2B": null,
+        "3B": null
       },
       "runners_after": {
-        "1B": "Reed Stallman",
-        "2B": "Ace Reese",
-        "3B": "Noah Sullivan"
+        "1B": null,
+        "2B": null,
+        "3B": null
       },
       "score": {
         "away": 0,
@@ -664,25 +664,25 @@
       "description": "Wyers to ."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Rhodes",
-      "batter": "Winfield, Pa struck out swinging (1-2 KSBFFS).",
+      "inning": "Top 3",
+      "pitcher": "Parker Rhodes",
+      "batter": "Parker Winfield",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KSBFFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Reed Stallman",
-        "2B": "Ace Reese",
-        "3B": "Noah Sullivan"
+        "1B": null,
+        "2B": null,
+        "3B": null
       },
       "runners_after": {
-        "1B": "Reed Stallman",
-        "2B": "Ace Reese",
-        "3B": "Noah Sullivan"
+        "1B": null,
+        "2B": null,
+        "3B": null
       },
       "score": {
         "away": 0,
@@ -691,16 +691,16 @@
       "description": "Winfield, Pa struck out swinging (1-2 KSBFFS)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Rhodes",
-      "batter": "Patty, Tysho grounded out to 2b (0-1 F).",
+      "inning": "Top 3",
+      "pitcher": "Parker Rhodes",
+      "batter": "Tyshon Patty",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "F",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -718,16 +718,16 @@
       "description": "Patty, Tysho grounded out to 2b (0-1 F)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Rhodes",
+      "inning": "Top 3",
+      "pitcher": "Parker Rhodes",
       "batter": "Tate",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -745,16 +745,16 @@
       "description": "Tate Jr., Ro grounded out to (0-1 K)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Rhodes",
+      "inning": "Bottom 3",
+      "pitcher": "Manuel Toro",
       "batter": "Ryder Woodson",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
       "pitches": "FKBBBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -772,16 +772,16 @@
       "description": "Woodson struck out swinging (3-2 FKBBBS)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Rhodes",
+      "inning": "Bottom 3",
+      "pitcher": "Manuel Toro",
       "batter": "Jacob Parker",
       "outcome": "Double",
       "count": "3-2",
       "pitches": "BBKBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -799,16 +799,16 @@
       "description": "Parker doubled to right field (3-2 BBKBF)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Rhodes",
+      "inning": "Bottom 3",
+      "pitcher": "Manuel Toro",
       "batter": "Kevin Milewski",
       "outcome": "Flyout",
       "count": "1-1",
       "pitches": "BF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": "Jacob Parker",
@@ -826,16 +826,16 @@
       "description": "Milewski flied out to cf (1-1 BF) Parker advanced to third."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Rhodes",
+      "inning": "Bottom 3",
+      "pitcher": "Manuel Toro",
       "batter": "Aidan Teel",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -853,16 +853,16 @@
       "description": "Teel walked (3-0 BBBB)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Rhodes",
+      "inning": "Bottom 3",
+      "pitcher": "Manuel Toro",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Aidan Teel",
         "2B": null,
@@ -880,8 +880,8 @@
       "description": "Teel stole second."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Rhodes",
+      "inning": "Bottom 3",
+      "pitcher": "Manuel Toro",
       "batter": "Bryce Chance",
       "outcome": "Reached on error",
       "count": "0-2",
@@ -890,8 +890,8 @@
       "runs_scored": [
         "Jacob Parker"
       ],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Aidan Teel",
         "2B": null,
@@ -909,16 +909,16 @@
       "description": "Chance reached on a fielding error by (0-2 KF) Parker scored, unearned."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Rhodes",
+      "inning": "Bottom 3",
+      "pitcher": "Manuel Toro",
       "batter": "Drew Wyers",
       "outcome": "Pop out",
       "count": "1-2",
       "pitches": "BKF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Bryce Chance",
         "2B": null,
@@ -936,23 +936,23 @@
       "description": "Wyers popped up to ss (1-2 BKF)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Rhodes",
-      "batter": "Reed, Tyree flied out to lf down the lf line (1-1 KB).",
+      "inning": "Top 4",
+      "pitcher": "Parker Rhodes",
+      "batter": "Tyree Reed",
       "outcome": "Flyout",
       "count": "1-1",
       "pitches": "KB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Bryce Chance",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Bryce Chance",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -963,16 +963,16 @@
       "description": "Reed, Tyree flied out to lf down the lf line (1-1 KB)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Rhodes",
-      "batter": "Cabral, Pier grounded out to ss (0-2 SK).",
+      "inning": "Top 4",
+      "pitcher": "Parker Rhodes",
+      "batter": "Pierre Cabral",
       "outcome": "Groundout",
       "count": "0-2",
       "pitches": "SK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -990,16 +990,16 @@
       "description": "Cabral, Pier grounded out to ss (0-2 SK)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Rhodes",
+      "inning": "Top 4",
+      "pitcher": "Parker Rhodes",
       "batter": "Lemus",
       "outcome": "Hit by pitch",
       "count": "3-2",
       "pitches": "FBBSB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1017,16 +1017,16 @@
       "description": "Lemus Hudson hit by pitch (3-2 FBBSB)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Rhodes",
-      "batter": "Boines, Payt flied out to lf to left center (0-0).",
+      "inning": "Top 4",
+      "pitcher": "Parker Rhodes",
+      "batter": "Payton Boines",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Lemus",
         "2B": null,
@@ -1044,7 +1044,7 @@
       "description": "Boines, Payt flied out to lf to left center (0-0)."
     },
     {
-      "inning": "Bottom 7",
+      "inning": "Bottom 4",
       "pitcher": "Shemar Harris",
       "batter": "Noah Sullivan",
       "outcome": "Hit by pitch",
@@ -1052,10 +1052,10 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Lemus",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1071,7 +1071,7 @@
       "description": "Sullivan hit by pitch (0-0)."
     },
     {
-      "inning": "Bottom 7",
+      "inning": "Bottom 4",
       "pitcher": "Shemar Harris",
       "batter": null,
       "outcome": "Stolen base",
@@ -1079,8 +1079,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Noah Sullivan",
         "2B": null,
@@ -1098,7 +1098,7 @@
       "description": "Sullivan stole second."
     },
     {
-      "inning": "Bottom 7",
+      "inning": "Bottom 4",
       "pitcher": "Shemar Harris",
       "batter": "Reed Stallman",
       "outcome": "Flyout",
@@ -1106,8 +1106,8 @@
       "pitches": "SBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Noah Sullivan",
         "2B": null,
@@ -1125,20 +1125,22 @@
       "description": "Stallman flied out to cf (2-1 SBB) Sullivan advanced to third."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 4",
       "pitcher": "Shemar Harris",
       "batter": "Gehrig Frei",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "runs_scored": [
+        "Noah Sullivan"
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Noah Sullivan"
       },
       "runners_after": {
         "1B": "Gehrig Frei",
@@ -1152,7 +1154,7 @@
       "description": "Frei singled up the middle, RBI (0-0) Sullivan scored."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 4",
       "pitcher": "Shemar Harris",
       "batter": null,
       "outcome": "Stolen base",
@@ -1160,8 +1162,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Gehrig Frei",
         "2B": null,
@@ -1179,7 +1181,7 @@
       "description": "Frei stole second, advanced to third on a throwing error by c."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 4",
       "pitcher": "Shemar Harris",
       "batter": "Ryder Woodson",
       "outcome": "Foul out",
@@ -1187,8 +1189,8 @@
       "pitches": "BK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Gehrig Frei",
         "2B": null,
@@ -1206,7 +1208,7 @@
       "description": "Woodson fouled out to c (1-1 BK)."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 4",
       "pitcher": "Shemar Harris",
       "batter": "Jacob Parker",
       "outcome": "Single",
@@ -1216,8 +1218,8 @@
       "runs_scored": [
         "Gehrig Frei"
       ],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Gehrig Frei",
         "2B": null,
@@ -1235,7 +1237,7 @@
       "description": "Parker singled up the middle, RBI (1-1 SB) Frei scored."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 4",
       "pitcher": "Shemar Harris",
       "batter": null,
       "outcome": "Stolen base",
@@ -1243,8 +1245,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Jacob Parker",
         "2B": null,
@@ -1262,7 +1264,7 @@
       "description": "Parker stole second."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 4",
       "pitcher": "Shemar Harris",
       "batter": "Kevin Milewski",
       "outcome": "Reached on error",
@@ -1272,8 +1274,8 @@
       "runs_scored": [
         "Jacob Parker"
       ],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Jacob Parker",
         "2B": null,
@@ -1291,7 +1293,7 @@
       "description": "Milewski reached on a throwing error by (1-2 FBK) Parker advanced to third, scored on the error, unearned."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 4",
       "pitcher": "Corey Richardson",
       "batter": "Aidan Teel",
       "outcome": "Double",
@@ -1299,8 +1301,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Kevin Milewski",
         "2B": null,
@@ -1318,7 +1320,7 @@
       "description": "Teel doubled to right center (0-0) Milewski advanced to third."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 4",
       "pitcher": "Corey Richardson",
       "batter": "Bryce Chance",
       "outcome": "Double",
@@ -1329,8 +1331,8 @@
         "Aidan Teel",
         "Kevin Milewski"
       ],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": "Aidan Teel",
@@ -1348,7 +1350,7 @@
       "description": "Chance doubled to left center, 2 RBI (1-0 B) Teel scored, team unearned Milewski scored, unearned."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 4",
       "pitcher": "Corey Richardson",
       "batter": "Drew Wyers",
       "outcome": "Walk",
@@ -1356,8 +1358,8 @@
       "pitches": "BKBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": "Bryce Chance",
@@ -1375,7 +1377,7 @@
       "description": "Wyers walked (3-1 BKBBB) Chance advanced to third on a wild pitch."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 4",
       "pitcher": "Corey Richardson",
       "batter": "Noah Sullivan",
       "outcome": "Strikeout (swinging)",
@@ -1383,8 +1385,8 @@
       "pitches": "KFBBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Drew Wyers",
         "2B": null,
@@ -1402,25 +1404,25 @@
       "description": "Sullivan struck out swinging (2-2 KFBBS)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Foster",
-      "batter": "Torres, Hede walked (3-2 BFFBBFB).",
+      "inning": "Top 5",
+      "pitcher": "Charlie Foster",
+      "batter": "Hederick Torres",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BFFBBFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Drew Wyers",
+        "1B": null,
         "2B": null,
-        "3B": "Bryce Chance"
+        "3B": null
       },
       "runners_after": {
-        "1B": "Torres, Hede walked (3-2 BFFBBFB).",
+        "1B": "Hederick Torres",
         "2B": null,
-        "3B": "Bryce Chance"
+        "3B": null
       },
       "score": {
         "away": 0,
@@ -1429,25 +1431,25 @@
       "description": "Torres, Hede walked (3-2 BFFBBFB)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Foster",
-      "batter": "Perez, Wilbe walked (3-2 BKSBBB)",
+      "inning": "Top 5",
+      "pitcher": "Charlie Foster",
+      "batter": "Wilbert Perez",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BKSBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Torres, Hede walked (3-2 BFFBBFB).",
+        "1B": "Hederick Torres",
         "2B": null,
-        "3B": "Bryce Chance"
+        "3B": null
       },
       "runners_after": {
-        "1B": "Perez, Wilbe walked (3-2 BKSBBB)",
+        "1B": "Wilbert Perez",
         "2B": null,
-        "3B": "Bryce Chance"
+        "3B": null
       },
       "score": {
         "away": 0,
@@ -1456,25 +1458,25 @@
       "description": "Perez, Wilbe walked (3-2 BKSBBB) Torres, Hede advanced to second."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Foster",
-      "batter": "Winfield, Pa walked (3-2 BBBKSB)",
+      "inning": "Top 5",
+      "pitcher": "Charlie Foster",
+      "batter": "Parker Winfield",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBBKSB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Perez, Wilbe walked (3-2 BKSBBB)",
+        "1B": "Wilbert Perez",
         "2B": null,
-        "3B": "Bryce Chance"
+        "3B": null
       },
       "runners_after": {
-        "1B": "Winfield, Pa walked (3-2 BBBKSB)",
+        "1B": "Parker Winfield",
         "2B": null,
-        "3B": "Bryce Chance"
+        "3B": null
       },
       "score": {
         "away": 0,
@@ -1483,25 +1485,25 @@
       "description": "Winfield, Pa walked (3-2 BBBKSB) Perez, Wilbe advanced to second Torres, Hede advanced to third."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Foster",
-      "batter": "Patty, Tysho fouled out to 1b (0-1 K).",
+      "inning": "Top 5",
+      "pitcher": "Charlie Foster",
+      "batter": "Tyshon Patty",
       "outcome": "Foul out",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Winfield, Pa walked (3-2 BBBKSB)",
+        "1B": "Parker Winfield",
         "2B": null,
-        "3B": "Bryce Chance"
+        "3B": null
       },
       "runners_after": {
-        "1B": "Winfield, Pa walked (3-2 BBBKSB)",
+        "1B": "Parker Winfield",
         "2B": null,
-        "3B": "Bryce Chance"
+        "3B": null
       },
       "score": {
         "away": 0,
@@ -1510,18 +1512,18 @@
       "description": "Patty, Tysho fouled out to 1b (0-1 K)."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Foster",
+      "inning": "Top 5",
+      "pitcher": "Charlie Foster",
       "batter": "Tate",
       "outcome": "Fielder's choice",
       "count": "0-2",
       "pitches": "SS",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Parker Winfield",
         "2B": null,
         "3B": null
       },
@@ -1537,16 +1539,16 @@
       "description": "Tate Jr., Ro reached on a fielder's choice to shortstop, RBI (0-2 SS) Winfield, Pa out at second ss to 2b Perez, Wilbe advanced to third Torres, Hede scored."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Foster",
-      "batter": "Reed, Tyree flied out to lf (1-0 B).",
+      "inning": "Top 5",
+      "pitcher": "Charlie Foster",
+      "batter": "Tyree Reed",
       "outcome": "Flyout",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Tate",
         "2B": null,
@@ -1564,7 +1566,7 @@
       "description": "Reed, Tyree flied out to lf (1-0 B)."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "Trae Burton",
       "batter": "Blake Bevis",
       "outcome": "Double",
@@ -1572,15 +1574,15 @@
       "pitches": "KBFBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Tate",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Tate",
+        "1B": null,
         "2B": "Blake Bevis",
         "3B": null
       },
@@ -1591,7 +1593,7 @@
       "description": "Bevis doubled to left center (3-2 KBFBB)."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "Trae Burton",
       "batter": "Gehrig Frei",
       "outcome": "Single",
@@ -1599,10 +1601,10 @@
       "pitches": "KB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Tate",
+        "1B": null,
         "2B": "Blake Bevis",
         "3B": null
       },
@@ -1618,7 +1620,7 @@
       "description": "Frei singled to center field (1-1 KB) Bevis advanced to third."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "Trae Burton",
       "batter": null,
       "outcome": "Baserunning",
@@ -1628,8 +1630,8 @@
       "runs_scored": [
         "Blake Bevis"
       ],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Gehrig Frei",
         "2B": null,
@@ -1647,7 +1649,7 @@
       "description": "Frei advanced to second Bevis scored on a wild pitch."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "Trae Burton",
       "batter": "Gatlin Sanders",
       "outcome": "Walk",
@@ -1655,8 +1657,8 @@
       "pitches": "BKBKBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": "Gehrig Frei",
@@ -1674,7 +1676,7 @@
       "description": "Sanders walked (3-2 BKBKBB)."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "Trae Burton",
       "batter": "Jacob Parker",
       "outcome": "Flyout",
@@ -1682,8 +1684,8 @@
       "pitches": "SBKFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Gatlin Sanders",
         "2B": "Gehrig Frei",
@@ -1701,24 +1703,26 @@
       "description": "Parker flied out to cf (2-2 SBKFB)."
     },
     {
-      "inning": "Bottom 10",
+      "inning": "Bottom 5",
       "pitcher": "Trae Burton",
       "batter": "Kevin Milewski",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "SSB",
       "rbi": true,
-      "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "runs_scored": [
+        "Gehrig Frei"
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": null,
-        "2B": null,
+        "1B": "Gatlin Sanders",
+        "2B": "Gehrig Frei",
         "3B": null
       },
       "runners_after": {
         "1B": "Kevin Milewski",
-        "2B": null,
+        "2B": "Gatlin Sanders",
         "3B": null
       },
       "score": {
@@ -1728,7 +1732,7 @@
       "description": "Milewski singled through the left side, RBI (1-2 SSB) Sanders advanced to second Frei scored."
     },
     {
-      "inning": "Bottom 10",
+      "inning": "Bottom 5",
       "pitcher": "Trae Burton",
       "batter": "James Nunnallee",
       "outcome": "\u2014",
@@ -1736,17 +1740,17 @@
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Kevin Milewski",
-        "2B": null,
+        "2B": "Gatlin Sanders",
         "3B": null
       },
       "runners_after": {
         "1B": null,
         "2B": "Kevin Milewski",
-        "3B": null
+        "3B": "Gatlin Sanders"
       },
       "score": {
         "away": 1,
@@ -1755,7 +1759,7 @@
       "description": "Nunnallee out at first 1b to p (2-0 BB) Milewski advanced to second Sanders advanced to third."
     },
     {
-      "inning": "Bottom 10",
+      "inning": "Bottom 5",
       "pitcher": "Trae Burton",
       "batter": "Peter Mershon",
       "outcome": "Hit by pitch",
@@ -1763,17 +1767,17 @@
       "pitches": "SB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": "Kevin Milewski",
-        "3B": null
+        "3B": "Gatlin Sanders"
       },
       "runners_after": {
         "1B": "Peter Mershon",
         "2B": "Kevin Milewski",
-        "3B": null
+        "3B": "Gatlin Sanders"
       },
       "score": {
         "away": 1,
@@ -1782,7 +1786,7 @@
       "description": "Mershon hit by pitch (1-1 SB)."
     },
     {
-      "inning": "Bottom 10",
+      "inning": "Bottom 5",
       "pitcher": "Trae Burton",
       "batter": "Drew Wyers",
       "outcome": "Double",
@@ -1791,14 +1795,15 @@
       "rbi": true,
       "runs_scored": [
         "Peter Mershon",
-        "Kevin Milewski"
+        "Kevin Milewski",
+        "Gatlin Sanders"
       ],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Peter Mershon",
         "2B": "Kevin Milewski",
-        "3B": null
+        "3B": "Gatlin Sanders"
       },
       "runners_after": {
         "1B": null,
@@ -1812,7 +1817,7 @@
       "description": "Wyers doubled to right center, 3 RBI (0-1 S) Mershon scored Milewski scored Sanders scored."
     },
     {
-      "inning": "Bottom 10",
+      "inning": "Bottom 5",
       "pitcher": "Talmagde Davis",
       "batter": "Jackson Owen",
       "outcome": "\u2014",
@@ -1820,8 +1825,8 @@
       "pitches": "KS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": "Drew Wyers",
@@ -1839,9 +1844,9 @@
       "description": "Owen out at first 1b to p (0-2 KS)."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "Pitzer",
-      "batter": "Cabral, Pier reached on a throwing error by (0-1 K).",
+      "inning": "Top 6",
+      "pitcher": "Tyler Pitzer",
+      "batter": "Pierre Cabral",
       "outcome": "Reached on error",
       "count": "0-1",
       "pitches": "K",
@@ -1851,12 +1856,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": null,
-        "2B": "Drew Wyers",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Cabral, Pier reached on a throwing error by (0-1 K).",
-        "2B": "Drew Wyers",
+        "1B": "Pierre Cabral",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1866,8 +1871,8 @@
       "description": "Cabral, Pier reached on a throwing error by (0-1 K)."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "Pitzer",
+      "inning": "Top 6",
+      "pitcher": "Tyler Pitzer",
       "batter": "Lemus",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1877,13 +1882,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Cabral, Pier reached on a throwing error by (0-1 K).",
-        "2B": "Drew Wyers",
+        "1B": "Pierre Cabral",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Cabral, Pier reached on a throwing error by (0-1 K).",
-        "2B": "Drew Wyers",
+        "1B": "Pierre Cabral",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1893,9 +1898,9 @@
       "description": "Lemus Hudson flied out to lf (1-2 FBS)."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "Pitzer",
-      "batter": "Boines, Payt flied out to lf (2-2 BKKB).",
+      "inning": "Top 6",
+      "pitcher": "Tyler Pitzer",
+      "batter": "Payton Boines",
       "outcome": "Flyout",
       "count": "2-2",
       "pitches": "BKKB",
@@ -1904,13 +1909,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cabral, Pier reached on a throwing error by (0-1 K).",
-        "2B": "Drew Wyers",
+        "1B": "Pierre Cabral",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Cabral, Pier reached on a throwing error by (0-1 K).",
-        "2B": "Drew Wyers",
+        "1B": "Pierre Cabral",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1920,9 +1925,9 @@
       "description": "Boines, Payt flied out to lf (2-2 BKKB)."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "Pitzer",
-      "batter": "Torres, Hede flied out to cf (2-1 KBB).",
+      "inning": "Top 6",
+      "pitcher": "Tyler Pitzer",
+      "batter": "Hederick Torres",
       "outcome": "Flyout",
       "count": "2-1",
       "pitches": "KBB",
@@ -1931,13 +1936,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Cabral, Pier reached on a throwing error by (0-1 K).",
-        "2B": "Drew Wyers",
+        "1B": "Pierre Cabral",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Cabral, Pier reached on a throwing error by (0-1 K).",
-        "2B": "Drew Wyers",
+        "1B": "Pierre Cabral",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1947,8 +1952,8 @@
       "description": "Torres, Hede flied out to cf (2-1 KBB)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Pitzer",
+      "inning": "Bottom 6",
+      "pitcher": "Talmagde Davis",
       "batter": "Blake Bevis",
       "outcome": "Foul out",
       "count": "0-0",
@@ -1974,8 +1979,8 @@
       "description": "Bevis fouled out to 1b (0-0)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Pitzer",
+      "inning": "Bottom 6",
+      "pitcher": "Talmagde Davis",
       "batter": "Gehrig Frei",
       "outcome": "Groundout",
       "count": "2-1",
@@ -2001,8 +2006,8 @@
       "description": "Frei grounded out to (2-1 BBS)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Pitzer",
+      "inning": "Bottom 6",
+      "pitcher": "Talmagde Davis",
       "batter": "Gatlin Sanders",
       "outcome": "Lineout",
       "count": "0-1",
@@ -2028,9 +2033,9 @@
       "description": "Sanders lined out to rf (0-1 K)."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "Sweeney",
-      "batter": "Perez, Wilbe grounded out to 2b (2-2 KBKB).",
+      "inning": "Top 7",
+      "pitcher": "Brendan Sweeney",
+      "batter": "Wilbert Perez",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "KBKB",
@@ -2055,9 +2060,9 @@
       "description": "Perez, Wilbe grounded out to 2b (2-2 KBKB)."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "Sweeney",
-      "batter": "Winfield, Pa struck out swinging (1-2 KFFFBS).",
+      "inning": "Top 7",
+      "pitcher": "Brendan Sweeney",
+      "batter": "Parker Winfield",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KFFFBS",
@@ -2082,9 +2087,9 @@
       "description": "Winfield, Pa struck out swinging (1-2 KFFFBS)."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "Sweeney",
-      "batter": "Patty, Tysho grounded out to ss (0-1 K).",
+      "inning": "Top 7",
+      "pitcher": "Brendan Sweeney",
+      "batter": "Tyshon Patty",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "K",

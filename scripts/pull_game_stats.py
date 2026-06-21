@@ -162,8 +162,11 @@ def _split_subs(text):
 
 
 def _batter(primary):
-    """The batter (first name token) and the remaining outcome phrase."""
-    m = re.match(r"([A-Z][A-Za-z'\-\.]+(?:\s[A-Z][a-z]?)?)\s+(.*)", primary)
+    """The batter name and the remaining outcome phrase. Handles both PBP name
+    styles: bare last name ('Harvey homered') and initial-prefixed ('D. Decker
+    doubled') — the optional leading 'X. ' keeps the last name attached so the
+    roster lookup (_last) still resolves it."""
+    m = re.match(r"((?:[A-Z]\.\s*)?[A-Z][A-Za-z'\-\.]+(?:\s[A-Z][a-z]?)?)\s+(.*)", primary)
     return (m.group(1).strip(), m.group(2)) if m else (primary, "")
 
 
@@ -191,27 +194,30 @@ def build_detailed(game_dir):
     players = json.load(open(os.path.join(game_dir, "player_stats.json")))
     box = json.load(open(os.path.join(game_dir, "boxscore.json")))
 
-    # Which side is batting in this PBP? Match play-leading names to each roster.
-    lead = [_batter(_split_subs(p["text"])[0])[0] for p in pbp]
-    lead_keys = {_last(n) for n in lead}
+    # The play-by-play interleaves both teams; each play carries the batting `side`
+    # ("away" = Top of the inning, "home" = Bottom). Build a batter/pitcher name map
+    # for each side and switch per play, so the detailed PBP captures BOTH teams.
     bat_map = {s: _name_map((players.get(s) or {}).get("batting"),
                             (players.get(s) or {}).get("team"))
                for s in ("away", "home")}
-    bat_side = max(("away", "home"), key=lambda s: len(lead_keys & set(bat_map[s])))
-    pit_side = "home" if bat_side == "away" else "away"
-    batters = bat_map[bat_side]
-    pitchers = _name_map((players.get(pit_side) or {}).get("pitching"),
-                         (players.get(pit_side) or {}).get("team"))
+    pit_map = {s: _name_map((players.get(s) or {}).get("pitching"),
+                            (players.get(s) or {}).get("team"))
+               for s in ("away", "home")}
+    _OPP = {"away": "home", "home": "away"}
 
-    pit_team = (players.get(pit_side) or {}).get("team")
-    pit_rows = [r for r in (players.get(pit_side) or {}).get("pitching", [])
-                if r.get("Name") != pit_team]
-    cur_pitcher = pit_rows[0]["Name"] if pit_rows else ""
+    def _starter(side):
+        team = (players.get(side) or {}).get("team")
+        rows = [r for r in (players.get(side) or {}).get("pitching", [])
+                if r.get("Name") != team]
+        return rows[0]["Name"] if rows else ""
+    # Current pitcher per pitching side (updated on in-text pitching changes).
+    cur_pitcher = {"away": _starter("away"), "home": _starter("home")}
 
-    half = "Top" if bat_side == "away" else "Bottom"
+    # Per-half-inning state, reset whenever the batting side flips (= new half).
+    prev_side = None
+    inning_counts = {"away": 0, "home": 0}
     bases = {"1B": None, "2B": None, "3B": None}
     outs = 0
-    inning = 1
     plays = []
 
     def base_snapshot():
@@ -222,15 +228,29 @@ def build_detailed(game_dir):
         return {"away": int(m.group(1)), "home": int(m.group(2))} if m else None
 
     for p in pbp:
+        side = p.get("side")
+        if side not in ("away", "home"):
+            continue
+        if side != prev_side:                # new half-inning
+            outs = 0
+            bases = {"1B": None, "2B": None, "3B": None}
+            inning_counts[side] += 1
+            prev_side = side
+        half = "Top" if side == "away" else "Bottom"
+        inning = inning_counts[side]
+        batters = bat_map[side]
+        pit_side = _OPP[side]
+        pitchers = pit_map[pit_side]
+
         text = p["text"].strip()
         subs = _split_subs(text)
         primary = subs[0]
         low = primary.lower()
 
-        # Pitching change: "Grubbs to p for Riojas."
+        # Pitching change: "Grubbs to p for Riojas." (updates the fielding side).
         m = re.match(r"([A-Z][A-Za-z'\-\.]+).* to p for ", primary)
         if m and " to p for " in primary:
-            cur_pitcher = pitchers.get(_last(m.group(1)), m.group(1))
+            cur_pitcher[pit_side] = pitchers.get(_last(m.group(1)), m.group(1))
             continue
         # Other substitutions ("X to lf", "X to ss for Y") — skip (not a PA).
         if re.match(r"[A-Z][A-Za-z'\-\.]+(?:\s[A-Z])?\s+to\s+\w+", primary) \
@@ -307,7 +327,7 @@ def build_detailed(game_dir):
 
         plays.append({
             "inning": f"{half} {inning}",
-            "pitcher": cur_pitcher,
+            "pitcher": cur_pitcher[pit_side],
             "batter": batter_name,
             "outcome": outcome or "—",
             "count": pitch_data["count"] if pitch_data else None,
@@ -322,20 +342,17 @@ def build_detailed(game_dir):
             "description": re.sub(r"\s*3[ab]\s*", " ", text).strip(),
         })
 
-        if outs >= 3:                    # half-inning over: reset
-            outs = 0
-            bases = {"1B": None, "2B": None, "3B": None}
-            inning += 1
+        # Half-innings reset on the side flip (see top of loop), not by counting
+        # outs — so a half that ends on a walk-off or <3 outs is handled too.
 
     out = {
         "contest_id": box.get("contest_id"),
         "date": box.get("date"),
-        "batting_team": (players.get(bat_side) or {}).get("team"),
-        "pitching_team": (players.get(pit_side) or {}).get("team"),
-        "note": ("Broken-down from the saved play_by_play.json, which contains "
-                 f"the {(players.get(bat_side) or {}).get('team')} at-bats only. "
-                 "Innings inferred by counting outs; pitcher tracked via in-text "
-                 "pitching changes."),
+        "away_team": (players.get("away") or {}).get("team"),
+        "home_team": (players.get("home") or {}).get("team"),
+        "note": ("Broken-down from the saved play_by_play.json (both teams' at-bats). "
+                 "Top = away batting, Bottom = home batting; outs/bases tracked per "
+                 "half-inning, pitcher tracked via in-text pitching changes."),
         "plays": plays,
     }
     with open(os.path.join(game_dir, _DETAILED), "w", encoding="utf-8") as fh:

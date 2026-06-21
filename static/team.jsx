@@ -470,13 +470,49 @@ const STAT_COLUMNS = {
   },
 };
 
+// The raw counting batting stats carried in batting.json — the set for the Display
+// Stats chip bar — plus the batted-ball types (GB/FB/LD/PU) and OUTS. (The table
+// itself still shows the STAT_COLUMNS basic/advanced subsets, which include the
+// derived rate stats.)
+const BATTING_ALL_CHIPS = [
+  { k: "g", label: "G" }, { k: "pa", label: "PA" }, { k: "ab", label: "AB" },
+  { k: "r", label: "R" }, { k: "h", label: "H" }, { k: "1b", label: "1B" },
+  { k: "2b", label: "2B" }, { k: "3b", label: "3B" }, { k: "hr", label: "HR" },
+  { k: "tb", label: "TB" }, { k: "rbi", label: "RBI" }, { k: "bb", label: "BB" },
+  { k: "ibb", label: "IBB" },
+  { k: "k", label: "SO" }, { k: "ks", label: "K" }, { k: "kl", label: "ꓘ" },
+  { k: "hbp", label: "HBP" },
+  { k: "sf", label: "SF" }, { k: "sh", label: "SH" }, { k: "sb", label: "SB" },
+  { k: "cs", label: "CS" }, { k: "po", label: "PO" }, { k: "gb", label: "GB" }, { k: "fb", label: "FB" },
+  { k: "ld", label: "LD" }, { k: "pu", label: "PU" }, { k: "outs", label: "OUTS" },
+  { k: "roe", label: "ROE" }, { k: "fc", label: "FC" }, { k: "ci", label: "CI" },
+];
+
+const BAT_CHIP_BY_KEY = Object.fromEntries(BATTING_ALL_CHIPS.map((c) => [c.k, c]));
+// Default Batting · Basic columns (the classic counting line) — a subset of the chips.
+const BAT_BASIC_DEFAULT = ["g", "ab", "pa", "r", "h", "hr", "rbi", "bb", "k", "sb"];
+const BAT_COLS_MAX = 10;   // most stat columns shown at once on Batting · Basic
+
 const PlayerStatsView = ({ roster, playerView, setPlayerView, statLevel, setStatLevel, onPlayerClick }) => {
   const [sortKey, setSortKey] = React.useState(null);
   const [sortDir, setSortDir] = React.useState("desc");
+  // Which stat columns the Batting · Basic chip selector shows (max BAT_COLS_MAX).
+  const [batCols, setBatCols] = React.useState(BAT_BASIC_DEFAULT);
 
   const onSort = (key) => {
     if (sortKey === key) setSortDir(d => d === "desc" ? "asc" : "desc");
     else { setSortKey(key); setSortDir("desc"); }
+  };
+
+  // Toggle a chip's column on/off, capped at BAT_COLS_MAX. Removing the sorted
+  // column clears the sort so the arrow doesn't point at a hidden column.
+  const toggleStat = (key) => {
+    setBatCols((prev) => {
+      if (prev.includes(key)) return prev.filter((k) => k !== key);
+      if (prev.length >= BAT_COLS_MAX) return prev;   // at the cap — no-op
+      return [...prev, key];
+    });
+    if (sortKey === key) setSortKey(null);
   };
 
   const sortRows = (rows) => {
@@ -490,7 +526,11 @@ const PlayerStatsView = ({ roster, playerView, setPlayerView, statLevel, setStat
     });
   };
 
-  const cols = STAT_COLUMNS[playerView][statLevel];
+  // Batting · Basic columns come from the chip selector; everything else is fixed.
+  const customBatting = playerView === "batting" && statLevel === "basic";
+  const cols = customBatting
+    ? batCols.map((k) => BAT_CHIP_BY_KEY[k]).filter(Boolean)
+    : STAT_COLUMNS[playerView][statLevel];
   const rows = playerView === "batting" ? roster.batters : roster.pitchers;
   const idLabel = playerView === "batting" ? "Batter" : "Pitcher";
   const posLabel = playerView === "batting" ? "Pos" : "Role";
@@ -521,6 +561,31 @@ const PlayerStatsView = ({ roster, playerView, setPlayerView, statLevel, setStat
           >Advanced</button>
         </div>
       </div>
+
+      {/* Display Stats chip selector (Batting · Basic) — toggles table columns, max 10. */}
+      {customBatting && (
+        <div className="pstat-display">
+          <div className="pstat-display__top">
+            <div className="pstat-display__label">Display Stats · click to add or remove columns</div>
+            <div className="pstat-display__count">{batCols.length}/{BAT_COLS_MAX} SELECTED</div>
+          </div>
+          <div className="pstat-chips">
+            {BATTING_ALL_CHIPS.map((c) => {
+              const on = batCols.includes(c.k);
+              const disabled = !on && batCols.length >= BAT_COLS_MAX;
+              return (
+                <button
+                  key={c.k}
+                  type="button"
+                  className={`pstat-chip ${on ? "is-on" : ""} ${disabled ? "is-disabled" : ""}`}
+                  onClick={() => !disabled && toggleStat(c.k)}
+                  disabled={disabled}
+                >{c.label}</button>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       <div className="boxscore__wrap">
         <table className="box-table player-table">

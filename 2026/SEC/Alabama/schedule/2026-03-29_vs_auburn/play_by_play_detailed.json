@@ -1,9 +1,9 @@
 {
   "contest_id": "6494008",
   "date": "03/29/2026",
-  "batting_team": "Auburn",
-  "pitching_team": "Alabama",
-  "note": "Broken-down from the saved play_by_play.json, which contains the Auburn at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "Auburn",
+  "home_team": "Alabama",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
       "inning": "Top 1",
@@ -141,39 +141,12 @@
       "description": "Madrigal, E. lined into double play 1b to ss (0-1 S) Fralick, C. out on the play."
     },
     {
-      "inning": "Top 1",
-      "pitcher": "Myles Upchurch",
-      "batter": "Fowler",
+      "inning": "Bottom 1",
+      "pitcher": "Alex Petrovic",
+      "batter": "Bryce Fowler",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
       "pitches": "BBKFBK",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
-      "runners_before": {
-        "1B": "Eric Guevara",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Eric Guevara",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 1,
-        "home": 0
-      },
-      "description": "Fowler struck out looking (3-2 BBKFBK)."
-    },
-    {
-      "inning": "Top 2",
-      "pitcher": "Myles Upchurch",
-      "batter": "Lebron",
-      "outcome": "Groundout",
-      "count": "1-0",
-      "pitches": "B",
       "rbi": false,
       "runs_scored": [],
       "outs_before": 0,
@@ -192,19 +165,46 @@
         "away": 1,
         "home": 0
       },
+      "description": "Fowler struck out looking (3-2 BBKFBK)."
+    },
+    {
+      "inning": "Bottom 1",
+      "pitcher": "Alex Petrovic",
+      "batter": "Justin Lebron",
+      "outcome": "Groundout",
+      "count": "1-0",
+      "pitches": "B",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 0
+      },
       "description": "Lebron grounded out to (1-0 B)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Myles Upchurch",
-      "batter": "Neal",
+      "inning": "Bottom 1",
+      "pitcher": "Alex Petrovic",
+      "batter": "Brady Neal",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "SBKS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -230,8 +230,8 @@
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -249,7 +249,7 @@
       "description": "Steele, L. popped up to ss (2-0 BB)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Myles Upchurch",
       "batter": "Mason McCraine",
       "outcome": "Strikeout (swinging)",
@@ -257,8 +257,8 @@
       "pitches": "SSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -276,7 +276,7 @@
       "description": "McCraine, M. struck out swinging (0-2 SSS)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Myles Upchurch",
       "batter": "Mason McCraine",
       "outcome": "Walk",
@@ -284,8 +284,8 @@
       "pitches": "BKBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -303,7 +303,7 @@
       "description": "McCraine, B. walked (3-1 BKBBB)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Myles Upchurch",
       "batter": null,
       "outcome": "Stolen base",
@@ -311,8 +311,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Mason McCraine",
         "2B": null,
@@ -330,7 +330,7 @@
       "description": "McCraine, B. stole second."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Myles Upchurch",
       "batter": "Cade Belyeu",
       "outcome": "Foul out",
@@ -338,8 +338,8 @@
       "pitches": "BS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Mason McCraine",
         "2B": null,
@@ -357,23 +357,23 @@
       "description": "Belyeu, C. fouled out to (1-1 BS)."
     },
     {
-      "inning": "Top 3",
-      "pitcher": "Myles Upchurch",
-      "batter": "Torres",
+      "inning": "Bottom 2",
+      "pitcher": "Alex Petrovic",
+      "batter": "Jason Torres",
       "outcome": "Hit by pitch",
       "count": "1-2",
       "pitches": "KSBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Mason McCraine",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Torres",
+        "1B": "Jason Torres",
         "2B": null,
         "3B": null
       },
@@ -384,23 +384,23 @@
       "description": "Torres hit by pitch (1-2 KSBF)."
     },
     {
-      "inning": "Top 3",
-      "pitcher": "Myles Upchurch",
-      "batter": "Lemm",
+      "inning": "Bottom 2",
+      "pitcher": "Alex Petrovic",
+      "batter": "John Lemm",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
       "pitches": "FKBBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Torres",
+        "1B": "Jason Torres",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Torres",
+        "1B": "Jason Torres",
         "2B": null,
         "3B": null
       },
@@ -411,23 +411,23 @@
       "description": "Lemm struck out looking (2-2 FKBBK)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Myles Upchurch",
-      "batter": "Plattner",
+      "inning": "Bottom 2",
+      "pitcher": "Alex Petrovic",
+      "batter": "Will Plattner",
       "outcome": "Lineout",
       "count": "0-2",
       "pitches": "KKF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Jason Torres",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Jason Torres",
         "2B": null,
         "3B": null
       },
@@ -438,23 +438,23 @@
       "description": "Plattner lined out to ss (0-2 KKF)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Myles Upchurch",
-      "batter": "Osterhouse",
+      "inning": "Bottom 2",
+      "pitcher": "Alex Petrovic",
+      "batter": "Justin Osterhouse",
       "outcome": "Lineout",
       "count": "0-2",
       "pitches": "SF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
+        "1B": "Jason Torres",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Jason Torres",
         "2B": null,
         "3B": null
       },
@@ -465,7 +465,7 @@
       "description": "Osterhouse lined out to 1b (0-2 SF)."
     },
     {
-      "inning": "Top 4",
+      "inning": "Top 3",
       "pitcher": "Myles Upchurch",
       "batter": "Bristol Carter",
       "outcome": "Strikeout (swinging)",
@@ -473,8 +473,8 @@
       "pitches": "KFBFFBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -492,7 +492,7 @@
       "description": "Carter, B. struck out swinging (2-2 KFBFFBS)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Myles Upchurch",
       "batter": "Chris Rembert",
       "outcome": "Groundout",
@@ -500,8 +500,8 @@
       "pitches": "KF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -519,7 +519,7 @@
       "description": "Rembert, C. grounded out to (0-2 KF)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Myles Upchurch",
       "batter": "Chase Fralick",
       "outcome": "Walk",
@@ -527,8 +527,8 @@
       "pitches": "BBBKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -546,7 +546,7 @@
       "description": "Fralick, C. walked (3-1 BBBKB)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Myles Upchurch",
       "batter": "Eric Guevara",
       "outcome": "Walk",
@@ -554,8 +554,8 @@
       "pitches": "BBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Chase Fralick",
         "2B": null,
@@ -573,7 +573,7 @@
       "description": "Guevara, E. walked (3-0 BBBB) Fralick, C. advanced to second."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Myles Upchurch",
       "batter": "Eddie Madrigal",
       "outcome": "Strikeout (looking)",
@@ -581,8 +581,8 @@
       "pitches": "KKBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Eric Guevara",
         "2B": null,
@@ -600,24 +600,24 @@
       "description": "Madrigal, E. struck out looking (1-2 KKBK)."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "Myles Upchurch",
-      "batter": "Vaughn",
+      "inning": "Bottom 3",
+      "pitcher": "Alex Petrovic",
+      "batter": "Luke Vaughn",
       "outcome": "Double",
       "count": "2-2",
       "pitches": "KSBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Eric Guevara",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Eric Guevara",
-        "2B": "Vaughn",
+        "1B": null,
+        "2B": "Luke Vaughn",
         "3B": null
       },
       "score": {
@@ -627,25 +627,25 @@
       "description": "Vaughn doubled to catcher (2-2 KSBB)."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "Myles Upchurch",
-      "batter": "Holt",
+      "inning": "Bottom 3",
+      "pitcher": "Alex Petrovic",
+      "batter": "Brennan Holt",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "KKFBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Eric Guevara",
-        "2B": "Vaughn",
+        "1B": null,
+        "2B": "Luke Vaughn",
         "3B": null
       },
       "runners_after": {
-        "1B": "Eric Guevara",
+        "1B": null,
         "2B": null,
-        "3B": "Vaughn"
+        "3B": "Luke Vaughn"
       },
       "score": {
         "away": 1,
@@ -654,25 +654,25 @@
       "description": "Holt grounded out to 2b (1-2 KKFBF) Vaughn advanced to third."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Myles Upchurch",
-      "batter": "Fowler",
+      "inning": "Bottom 3",
+      "pitcher": "Alex Petrovic",
+      "batter": "Bryce Fowler",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Luke Vaughn"
       },
       "runners_after": {
         "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Luke Vaughn"
       },
       "score": {
         "away": 1,
@@ -681,23 +681,25 @@
       "description": "Fowler struck out swinging (0-2 KSS)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Myles Upchurch",
-      "batter": "Lebron",
+      "inning": "Bottom 3",
+      "pitcher": "Alex Petrovic",
+      "batter": "Justin Lebron",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "FFBBFF",
       "rbi": true,
-      "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "runs_scored": [
+        "Luke Vaughn"
+      ],
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Luke Vaughn"
       },
       "runners_after": {
-        "1B": "Lebron",
+        "1B": "Justin Lebron",
         "2B": null,
         "3B": null
       },
@@ -708,23 +710,23 @@
       "description": "Lebron singled to left field, RBI (2-2 FFBBFF) Vaughn scored."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Myles Upchurch",
-      "batter": "Neal",
+      "inning": "Bottom 3",
+      "pitcher": "Alex Petrovic",
+      "batter": "Brady Neal",
       "outcome": "Flyout",
       "count": "2-1",
       "pitches": "BFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "Lebron",
+        "1B": "Justin Lebron",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Lebron",
+        "1B": "Justin Lebron",
         "2B": null,
         "3B": null
       },
@@ -735,7 +737,7 @@
       "description": "Neal flied out to lf (2-1 BFB)."
     },
     {
-      "inning": "Top 6",
+      "inning": "Top 4",
       "pitcher": "Myles Upchurch",
       "batter": "Lucas Steele",
       "outcome": "Flyout",
@@ -743,15 +745,15 @@
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Lebron",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Lebron",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -762,7 +764,7 @@
       "description": "Steele, L. flied out to lf (0-1 K)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Myles Upchurch",
       "batter": "Mason McCraine",
       "outcome": "Strikeout (looking)",
@@ -770,8 +772,8 @@
       "pitches": "SBFK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -789,7 +791,7 @@
       "description": "McCraine, M. struck out looking (1-2 SBFK)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Myles Upchurch",
       "batter": "Mason McCraine",
       "outcome": "Flyout",
@@ -797,8 +799,8 @@
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -816,16 +818,16 @@
       "description": "McCraine, B. flied out to rf (2-0 BB)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Myles Upchurch",
-      "batter": "Torres",
+      "inning": "Bottom 4",
+      "pitcher": "Alex Petrovic",
+      "batter": "Jason Torres",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
       "pitches": "FSBBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -843,12 +845,93 @@
       "description": "Torres struck out looking (2-2 FSBBK)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Myles Upchurch",
-      "batter": "Lemm",
+      "inning": "Bottom 4",
+      "pitcher": "Alex Petrovic",
+      "batter": "John Lemm",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "John Lemm",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 1
+      },
+      "description": "Lemm doubled to left field, ground-rule (1-0 B)."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Alex Petrovic",
+      "batter": "Will Plattner",
+      "outcome": "Groundout",
+      "count": "1-2",
+      "pitches": "KBK",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": "John Lemm",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "John Lemm",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 1
+      },
+      "description": "Plattner grounded out to (1-2 KBK)."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Alex Petrovic",
+      "batter": "Justin Osterhouse",
+      "outcome": "Groundout",
+      "count": "2-2",
+      "pitches": "BSSB",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 3,
+      "runners_before": {
+        "1B": null,
+        "2B": "John Lemm",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "John Lemm",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 1
+      },
+      "description": "Osterhouse grounded out to (2-2 BSSB)."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Myles Upchurch",
+      "batter": "Cade Belyeu",
+      "outcome": "Hit by pitch",
+      "count": "0-2",
+      "pitches": "SS",
       "rbi": false,
       "runs_scored": [],
       "outs_before": 0,
@@ -859,89 +942,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": null,
-        "2B": "Lemm",
-        "3B": null
-      },
-      "score": {
-        "away": 1,
-        "home": 1
-      },
-      "description": "Lemm doubled to left field, ground-rule (1-0 B)."
-    },
-    {
-      "inning": "Top 8",
-      "pitcher": "Myles Upchurch",
-      "batter": "Plattner",
-      "outcome": "Groundout",
-      "count": "1-2",
-      "pitches": "KBK",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
-      "runners_before": {
-        "1B": null,
-        "2B": "Lemm",
-        "3B": null
-      },
-      "runners_after": {
-        "1B": null,
-        "2B": "Lemm",
-        "3B": null
-      },
-      "score": {
-        "away": 1,
-        "home": 1
-      },
-      "description": "Plattner grounded out to (1-2 KBK)."
-    },
-    {
-      "inning": "Top 8",
-      "pitcher": "Myles Upchurch",
-      "batter": "Osterhouse",
-      "outcome": "Groundout",
-      "count": "2-2",
-      "pitches": "BSSB",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": null,
-        "2B": "Lemm",
-        "3B": null
-      },
-      "runners_after": {
-        "1B": null,
-        "2B": "Lemm",
-        "3B": null
-      },
-      "score": {
-        "away": 1,
-        "home": 1
-      },
-      "description": "Osterhouse grounded out to (2-2 BSSB)."
-    },
-    {
-      "inning": "Top 8",
-      "pitcher": "Myles Upchurch",
-      "batter": "Cade Belyeu",
-      "outcome": "Hit by pitch",
-      "count": "0-2",
-      "pitches": "SS",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": null,
-        "2B": "Lemm",
-        "3B": null
-      },
-      "runners_after": {
         "1B": "Cade Belyeu",
-        "2B": "Lemm",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -951,7 +953,7 @@
       "description": "Belyeu, C. hit by pitch (0-2 SS)."
     },
     {
-      "inning": "Top 8",
+      "inning": "Top 5",
       "pitcher": "Myles Upchurch",
       "batter": "Bristol Carter",
       "outcome": "Groundout",
@@ -959,16 +961,16 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Cade Belyeu",
-        "2B": "Lemm",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Cade Belyeu",
-        "2B": "Lemm",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -978,7 +980,7 @@
       "description": "Carter, B. grounded out to p, SAC, bunt (0-0) Belyeu, C. advanced to second."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Myles Upchurch",
       "batter": "Chris Rembert",
       "outcome": "Walk",
@@ -986,10 +988,10 @@
       "pitches": "BBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": null,
+        "1B": "Cade Belyeu",
         "2B": null,
         "3B": null
       },
@@ -1005,7 +1007,7 @@
       "description": "Rembert, C. walked (3-0 BBBB)."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Ashton Crowther",
       "batter": "Chase Fralick",
       "outcome": "Groundout",
@@ -1013,8 +1015,8 @@
       "pitches": "KFBBFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Chris Rembert",
         "2B": null,
@@ -1032,7 +1034,7 @@
       "description": "Fralick, C. grounded out to 1b unassisted (3-2 KFBBFB) Rembert, C. advanced to second Belyeu, C. advanced to third."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Ashton Crowther",
       "batter": "Eric Guevara",
       "outcome": "Lineout",
@@ -1040,8 +1042,8 @@
       "pitches": "KSBFFF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Chris Rembert",
         "2B": null,
@@ -1059,23 +1061,23 @@
       "description": "Guevara, E. lined out to rf (1-2 KSBFFF)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "Ashton Crowther",
-      "batter": "Vaughn",
+      "inning": "Bottom 5",
+      "pitcher": "Alex Petrovic",
+      "batter": "Luke Vaughn",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "F",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Chris Rembert",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Rembert",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1086,16 +1088,16 @@
       "description": "Vaughn grounded out to ss (0-1 F)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Ashton Crowther",
-      "batter": "Holt",
+      "inning": "Bottom 5",
+      "pitcher": "Alex Petrovic",
+      "batter": "Brennan Holt",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "BSFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1113,23 +1115,23 @@
       "description": "Holt struck out swinging (1-2 BSFS)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Ashton Crowther",
-      "batter": "Fowler",
+      "inning": "Bottom 5",
+      "pitcher": "Alex Petrovic",
+      "batter": "Bryce Fowler",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "KBKBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Fowler",
+        "1B": "Bryce Fowler",
         "2B": null,
         "3B": null
       },
@@ -1140,23 +1142,23 @@
       "description": "Fowler walked (3-2 KBKBBB)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Ashton Crowther",
-      "batter": "Lebron",
+      "inning": "Bottom 5",
+      "pitcher": "Alex Petrovic",
+      "batter": "Justin Lebron",
       "outcome": "Flyout",
       "count": "1-2",
       "pitches": "BFKFF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "Fowler",
+        "1B": "Bryce Fowler",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Fowler",
+        "1B": "Bryce Fowler",
         "2B": null,
         "3B": null
       },
@@ -1167,7 +1169,7 @@
       "description": "Lebron flied out to rf (1-2 BFKFF)."
     },
     {
-      "inning": "Top 10",
+      "inning": "Top 6",
       "pitcher": "Ashton Crowther",
       "batter": "Eddie Madrigal",
       "outcome": "Single",
@@ -1175,10 +1177,10 @@
       "pitches": "KBFFBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Fowler",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1194,7 +1196,7 @@
       "description": "Madrigal, E. singled to right field (3-2 KBFFBB)."
     },
     {
-      "inning": "Top 10",
+      "inning": "Top 6",
       "pitcher": "Ashton Crowther",
       "batter": "Lucas Steele",
       "outcome": "Strikeout (swinging)",
@@ -1202,8 +1204,8 @@
       "pitches": "KBKBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Eddie Madrigal",
         "2B": null,
@@ -1221,7 +1223,7 @@
       "description": "Steele, L. struck out swinging (2-2 KBKBS)."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "Ashton Crowther",
       "batter": "Ethin Bingaman",
       "outcome": "Fielder's choice",
@@ -1229,10 +1231,10 @@
       "pitches": "KBFFFBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Eddie Madrigal",
         "2B": null,
         "3B": null
       },
@@ -1248,7 +1250,7 @@
       "description": "Bingaman, E. reached on a fielder's choice to third base (2-2 KBFFFBF) Madrigal, E. out at second to 2b."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "Ashton Crowther",
       "batter": "Mason McCraine",
       "outcome": "Lineout",
@@ -1256,8 +1258,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Ethin Bingaman",
         "2B": null,
@@ -1275,23 +1277,23 @@
       "description": "McCraine, B. lined out to 2b (0-0)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Ashton Crowther",
-      "batter": "Ethin Bingaman",
+      "inning": "Bottom 6",
+      "pitcher": "Alex Petrovic",
+      "batter": "Bingaman, E. to rf.",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Ethin Bingaman",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethin Bingaman",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1302,23 +1304,23 @@
       "description": "Bingaman, E. to rf."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Cormier",
-      "batter": "Neal",
+      "inning": "Bottom 6",
+      "pitcher": "LJ Cormier",
+      "batter": "Brady Neal",
       "outcome": "Flyout",
       "count": "2-2",
       "pitches": "BBKS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Ethin Bingaman",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethin Bingaman",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1329,16 +1331,16 @@
       "description": "Neal flied out to lf (2-2 BBKS)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Cormier",
-      "batter": "Torres",
+      "inning": "Bottom 6",
+      "pitcher": "LJ Cormier",
+      "batter": "Jason Torres",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1356,16 +1358,16 @@
       "description": "Torres flied out to cf (0-0)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Cormier",
-      "batter": "Lemm",
+      "inning": "Bottom 6",
+      "pitcher": "LJ Cormier",
+      "batter": "John Lemm",
       "outcome": "Groundout",
       "count": "3-2",
       "pitches": "KBBBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1383,16 +1385,16 @@
       "description": "Lemm grounded out to 1b unassisted (3-2 KBBBK)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Cormier",
+      "inning": "Top 7",
+      "pitcher": "Ashton Crowther",
       "batter": "Cade Belyeu",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
       "pitches": "BFBFK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1410,16 +1412,16 @@
       "description": "Belyeu, C. struck out looking (2-2 BFBFK)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Cormier",
+      "inning": "Top 7",
+      "pitcher": "Ashton Crowther",
       "batter": "Bristol Carter",
       "outcome": "Lineout",
       "count": "0-1",
       "pitches": "S",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1437,16 +1439,16 @@
       "description": "Carter, B. lined out to cf (0-1 S)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Cormier",
+      "inning": "Top 7",
+      "pitcher": "Ashton Crowther",
       "batter": "Chris Rembert",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1464,23 +1466,23 @@
       "description": "Rembert, C. grounded out to (0-0)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Cormier",
-      "batter": "Plattner",
+      "inning": "Bottom 7",
+      "pitcher": "LJ Cormier",
+      "batter": "Will Plattner",
       "outcome": "Hit by pitch",
       "count": "0-2",
       "pitches": "SS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Plattner",
+        "1B": "Will Plattner",
         "2B": null,
         "3B": null
       },
@@ -1491,23 +1493,23 @@
       "description": "Plattner hit by pitch (0-2 SS)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Cormier",
-      "batter": "Osterhouse",
+      "inning": "Bottom 7",
+      "pitcher": "LJ Cormier",
+      "batter": "Justin Osterhouse",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "FBSFFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Plattner",
+        "1B": "Will Plattner",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Plattner",
+        "1B": "Will Plattner",
         "2B": null,
         "3B": null
       },
@@ -1518,23 +1520,23 @@
       "description": "Osterhouse struck out swinging (1-2 FBSFFS)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Cormier",
-      "batter": "Vaughn",
+      "inning": "Bottom 7",
+      "pitcher": "LJ Cormier",
+      "batter": "Luke Vaughn",
       "outcome": "Flyout",
       "count": "2-2",
       "pitches": "FFFBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Will Plattner",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Will Plattner",
         "2B": null,
         "3B": null
       },
@@ -1545,23 +1547,23 @@
       "description": "Vaughn flied out to lf (2-2 FFFBB)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Cormier",
-      "batter": "Holt",
+      "inning": "Bottom 7",
+      "pitcher": "LJ Cormier",
+      "batter": "Brennan Holt",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
+        "1B": "Will Plattner",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Will Plattner",
         "2B": null,
         "3B": null
       },
@@ -1572,7 +1574,7 @@
       "description": "Holt grounded out to 1b unassisted (0-1 K)."
     },
     {
-      "inning": "Top 14",
+      "inning": "Top 8",
       "pitcher": "Matthew Heiberger",
       "batter": "Chase Fralick",
       "outcome": "Pop out",
@@ -1580,8 +1582,8 @@
       "pitches": "FB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1599,7 +1601,7 @@
       "description": "Fralick, C. popped up to ss (1-1 FB)."
     },
     {
-      "inning": "Top 15",
+      "inning": "Top 8",
       "pitcher": "Matthew Heiberger",
       "batter": "Eric Guevara",
       "outcome": "Hit by pitch",
@@ -1607,8 +1609,8 @@
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1626,7 +1628,7 @@
       "description": "Guevara, E. hit by pitch (0-1 K)."
     },
     {
-      "inning": "Top 15",
+      "inning": "Top 8",
       "pitcher": "Matthew Heiberger",
       "batter": "Eddie Madrigal",
       "outcome": "Hit by pitch",
@@ -1634,8 +1636,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Eric Guevara",
         "2B": null,
@@ -1653,7 +1655,7 @@
       "description": "Madrigal, E. hit by pitch (0-0) Guevara, E. advanced to second."
     },
     {
-      "inning": "Top 15",
+      "inning": "Top 8",
       "pitcher": "Matthew Heiberger",
       "batter": "Lucas Steele",
       "outcome": "Grounded into double play",
@@ -1661,8 +1663,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Eddie Madrigal",
         "2B": null,
@@ -1680,23 +1682,23 @@
       "description": "Steele, L. grounded into double play 2b to 1b (0-0) Madrigal, E. out on the play."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Brewer",
-      "batter": "Fowler",
+      "inning": "Bottom 8",
+      "pitcher": "Garrett Brewer",
+      "batter": "Bryce Fowler",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBBKFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Eddie Madrigal",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Fowler",
+        "1B": "Bryce Fowler",
         "2B": null,
         "3B": null
       },
@@ -1707,23 +1709,23 @@
       "description": "Fowler walked (3-2 BBBKFB)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Brewer",
-      "batter": "Lebron",
+      "inning": "Bottom 8",
+      "pitcher": "Garrett Brewer",
+      "batter": "Justin Lebron",
       "outcome": "Fielder's choice",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Fowler",
+        "1B": "Bryce Fowler",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Lebron",
+        "1B": "Justin Lebron",
         "2B": null,
         "3B": null
       },
@@ -1734,23 +1736,23 @@
       "description": "Lebron reached on a fielder's choice to shortstop (0-0) Fowler out at second ss to 2b."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Brewer",
+      "inning": "Bottom 8",
+      "pitcher": "Garrett Brewer",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": null,
+        "1B": "Justin Lebron",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Justin Lebron",
         "2B": null,
         "3B": null
       },
@@ -1761,25 +1763,25 @@
       "description": "Lebron stole second."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Brewer",
-      "batter": "Neal",
+      "inning": "Bottom 8",
+      "pitcher": "Garrett Brewer",
+      "batter": "Brady Neal",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": null,
+        "1B": "Justin Lebron",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Neal",
+        "1B": "Brady Neal",
         "2B": null,
-        "3B": null
+        "3B": "Justin Lebron"
       },
       "score": {
         "away": 1,
@@ -1788,24 +1790,26 @@
       "description": "Neal walked (3-0 BBBB) Lebron advanced to third on a wild pitch."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Brewer",
+      "inning": "Bottom 8",
+      "pitcher": "Garrett Brewer",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "runs_scored": [
+        "Justin Lebron"
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Neal",
+        "1B": "Brady Neal",
         "2B": null,
-        "3B": null
+        "3B": "Justin Lebron"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Neal",
+        "2B": "Brady Neal",
         "3B": null
       },
       "score": {
@@ -1815,24 +1819,24 @@
       "description": "Neal advanced to second Lebron scored on a wild pitch."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Brewer",
-      "batter": "Torres",
+      "inning": "Bottom 8",
+      "pitcher": "Garrett Brewer",
+      "batter": "Jason Torres",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBBKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Neal",
+        "2B": "Brady Neal",
         "3B": null
       },
       "runners_after": {
-        "1B": "Torres",
-        "2B": "Neal",
+        "1B": "Jason Torres",
+        "2B": "Brady Neal",
         "3B": null
       },
       "score": {
@@ -1842,24 +1846,24 @@
       "description": "Torres walked (3-1 BBBKB)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Johnston",
-      "batter": "Lemm",
+      "inning": "Bottom 8",
+      "pitcher": "Jett Johnston",
+      "batter": "John Lemm",
       "outcome": "Lineout",
       "count": "3-0",
       "pitches": "BBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Torres",
-        "2B": "Neal",
+        "1B": "Jason Torres",
+        "2B": "Brady Neal",
         "3B": null
       },
       "runners_after": {
-        "1B": "Torres",
-        "2B": "Neal",
+        "1B": "Jason Torres",
+        "2B": "Brady Neal",
         "3B": null
       },
       "score": {
@@ -1869,26 +1873,26 @@
       "description": "Lemm lined out to (3-0 BBB)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Johnston",
-      "batter": "Plattner",
+      "inning": "Bottom 8",
+      "pitcher": "Jett Johnston",
+      "batter": "Will Plattner",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Neal"
+        "Brady Neal"
       ],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Torres",
-        "2B": "Neal",
+        "1B": "Jason Torres",
+        "2B": "Brady Neal",
         "3B": null
       },
       "runners_after": {
-        "1B": "Plattner",
-        "2B": "Torres",
+        "1B": "Will Plattner",
+        "2B": "Jason Torres",
         "3B": null
       },
       "score": {
@@ -1898,24 +1902,24 @@
       "description": "Plattner singled to center field, RBI (0-0) Torres advanced to second Neal scored."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Johnston",
-      "batter": "Osterhouse",
+      "inning": "Bottom 8",
+      "pitcher": "Jett Johnston",
+      "batter": "Justin Osterhouse",
       "outcome": "Groundout",
       "count": "0-2",
       "pitches": "SF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "Plattner",
-        "2B": "Torres",
+        "1B": "Will Plattner",
+        "2B": "Jason Torres",
         "3B": null
       },
       "runners_after": {
-        "1B": "Plattner",
-        "2B": "Torres",
+        "1B": "Will Plattner",
+        "2B": "Jason Torres",
         "3B": null
       },
       "score": {
@@ -1925,7 +1929,7 @@
       "description": "Osterhouse grounded out to 2b (0-2 SF)."
     },
     {
-      "inning": "Top 16",
+      "inning": "Top 9",
       "pitcher": "Hagan Banks",
       "batter": "Logan Gregorio",
       "outcome": "Strikeout (swinging)",
@@ -1933,16 +1937,16 @@
       "pitches": "KFBBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Plattner",
-        "2B": "Torres",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Plattner",
-        "2B": "Torres",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1952,7 +1956,7 @@
       "description": "Gregorio, L. struck out swinging (2-2 KFBBS)."
     },
     {
-      "inning": "Top 17",
+      "inning": "Top 9",
       "pitcher": "Hagan Banks",
       "batter": "Mason McCraine",
       "outcome": "Flyout",
@@ -1960,8 +1964,8 @@
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1979,7 +1983,7 @@
       "description": "McCraine, B. flied out to lf (0-1 K)."
     },
     {
-      "inning": "Top 17",
+      "inning": "Top 9",
       "pitcher": "Hagan Banks",
       "batter": "Taylor Belza",
       "outcome": "Strikeout (looking)",
@@ -1987,8 +1991,8 @@
       "pitches": "KBBFFK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,

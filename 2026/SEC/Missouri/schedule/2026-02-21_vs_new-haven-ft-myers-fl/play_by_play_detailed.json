@@ -1,9 +1,9 @@
 {
   "contest_id": "6497180",
   "date": "02/21/2026",
-  "batting_team": "New Haven",
-  "pitching_team": "Missouri",
-  "note": "Broken-down from the saved play_by_play.json, which contains the New Haven at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "New Haven",
+  "home_team": "Missouri",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
       "inning": "Top 1",
@@ -87,9 +87,9 @@
       "description": "Callahan,Shaun struck out looking (0-2 FKK)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Josh McDevitt",
-      "batter": "Macon,Tyler struck out looking (2-2 BBFFK).",
+      "inning": "Bottom 1",
+      "pitcher": "Vincent Fusco",
+      "batter": "Tyler Macon",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
       "pitches": "BBFFK",
@@ -114,9 +114,9 @@
       "description": "Macon,Tyler struck out looking (2-2 BBFFK)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Josh McDevitt",
-      "batter": "Seals,Pierre singled up the middle (0-0).",
+      "inning": "Bottom 1",
+      "pitcher": "Vincent Fusco",
+      "batter": "Pierre Seals",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
@@ -130,7 +130,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Seals,Pierre singled up the middle (0-0).",
+        "1B": "Pierre Seals",
         "2B": null,
         "3B": null
       },
@@ -141,9 +141,9 @@
       "description": "Seals,Pierre singled up the middle (0-0)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Josh McDevitt",
-      "batter": "Parker,Sam singled to right field (1-1 FB)",
+      "inning": "Bottom 1",
+      "pitcher": "Vincent Fusco",
+      "batter": "Sam Parker",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "FB",
@@ -152,12 +152,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Seals,Pierre singled up the middle (0-0).",
+        "1B": "Pierre Seals",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Parker,Sam singled to right field (1-1 FB)",
+        "1B": "Sam Parker",
         "2B": null,
         "3B": null
       },
@@ -168,9 +168,9 @@
       "description": "Parker,Sam singled to right field (1-1 FB) Seals,Pierre advanced from first base to third base."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Josh McDevitt",
-      "batter": "George,Jamal walked (3-1 BKBBB)",
+      "inning": "Bottom 1",
+      "pitcher": "Vincent Fusco",
+      "batter": "Jamal George",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BKBBB",
@@ -179,12 +179,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Parker,Sam singled to right field (1-1 FB)",
+        "1B": "Sam Parker",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "George,Jamal walked (3-1 BKBBB)",
+        "1B": "Jamal George",
         "2B": null,
         "3B": null
       },
@@ -195,9 +195,9 @@
       "description": "George,Jamal walked (3-1 BKBBB) Parker,Sam advanced to second base."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Josh McDevitt",
-      "batter": "Patterson,Chris struck out swinging (3-2 KBBBKS).",
+      "inning": "Bottom 1",
+      "pitcher": "Vincent Fusco",
+      "batter": "Chris Patterson",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
       "pitches": "KBBBKS",
@@ -206,12 +206,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "George,Jamal walked (3-1 BKBBB)",
+        "1B": "Jamal George",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "George,Jamal walked (3-1 BKBBB)",
+        "1B": "Jamal George",
         "2B": null,
         "3B": null
       },
@@ -222,9 +222,9 @@
       "description": "Patterson,Chris struck out swinging (3-2 KBBBKS)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Josh McDevitt",
-      "batter": "Serna,Mateo reached on a fielder's choice hit to short (1-0 B)",
+      "inning": "Bottom 1",
+      "pitcher": "Vincent Fusco",
+      "batter": "Mateo Serna",
       "outcome": "Fielder's choice",
       "count": "1-0",
       "pitches": "B",
@@ -233,12 +233,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "George,Jamal walked (3-1 BKBBB)",
+        "1B": "Jamal George",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Serna,Mateo reached on a fielder's choice hit to short (1-0 B)",
+        "1B": "Mateo Serna",
         "2B": null,
         "3B": null
       },
@@ -249,7 +249,7 @@
       "description": "Serna,Mateo reached on a fielder's choice hit to short (1-0 B) George,Jamal out at second base, ss to 2b."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Josh McDevitt",
       "batter": "Matt McIntire",
       "outcome": "Single",
@@ -276,7 +276,7 @@
       "description": "McIntire,Matthew singled to shallow center field (1-1 FB)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Josh McDevitt",
       "batter": "Bobby Herzman",
       "outcome": "Walk",
@@ -303,7 +303,7 @@
       "description": "Herzman,Bobby walked (3-2 BBBKKB) McIntire,Matthew advanced to second base."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Josh McDevitt",
       "batter": "Joe Frazzetta",
       "outcome": "Strikeout (swinging)",
@@ -330,7 +330,7 @@
       "description": "Frazzetta,Joseph struck out swinging (1-2 KBFS)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Josh McDevitt",
       "batter": "Nick Ungania",
       "outcome": "Strikeout (swinging)",
@@ -357,7 +357,7 @@
       "description": "Ungania,Nick struck out swinging (2-2 BKBSS)."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "Josh McDevitt",
       "batter": "Aedan Forde",
       "outcome": "Flyout",
@@ -384,9 +384,9 @@
       "description": "Forde,Aedan flied out to shallow right field putout by rf (3-2 BBBKF)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Josh McDevitt",
-      "batter": "Maisonet,Eric struck out swinging (2-2 KBKBS).",
+      "inning": "Bottom 2",
+      "pitcher": "Vincent Fusco",
+      "batter": "Eric Maisonet",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "KBKBS",
@@ -411,9 +411,9 @@
       "description": "Maisonet,Eric struck out swinging (2-2 KBKBS)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Josh McDevitt",
-      "batter": "Humbert,Leo singled to shallow left field (3-2 KBBSB).",
+      "inning": "Bottom 2",
+      "pitcher": "Vincent Fusco",
+      "batter": "Leo Humbert",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "KBBSB",
@@ -427,7 +427,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Humbert,Leo singled to shallow left field (3-2 KBBSB).",
+        "1B": "Leo Humbert",
         "2B": null,
         "3B": null
       },
@@ -438,9 +438,9 @@
       "description": "Humbert,Leo singled to shallow left field (3-2 KBBSB)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Josh McDevitt",
-      "batter": "Frost,Isaiah singled down the left field line (1-1 FB)",
+      "inning": "Bottom 2",
+      "pitcher": "Vincent Fusco",
+      "batter": "Isaiah Frost",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "FB",
@@ -449,12 +449,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Humbert,Leo singled to shallow left field (3-2 KBBSB).",
+        "1B": "Leo Humbert",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Frost,Isaiah singled down the left field line (1-1 FB)",
+        "1B": "Isaiah Frost",
         "2B": null,
         "3B": null
       },
@@ -465,9 +465,9 @@
       "description": "Frost,Isaiah singled down the left field line (1-1 FB) Humbert,Leo advanced from first base to third base Frost,Isaiah advanced to second base."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Josh McDevitt",
-      "batter": "Macon,Tyler singled through the left side of the infield, 2RBI (1-1 KB)",
+      "inning": "Bottom 2",
+      "pitcher": "Vincent Fusco",
+      "batter": "Tyler Macon",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "KB",
@@ -476,12 +476,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Frost,Isaiah singled down the left field line (1-1 FB)",
+        "1B": "Isaiah Frost",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Macon,Tyler singled through the left side of the infield, 2RBI (1-1 KB)",
+        "1B": "Tyler Macon",
         "2B": null,
         "3B": null
       },
@@ -492,9 +492,9 @@
       "description": "Macon,Tyler singled through the left side of the infield, 2RBI (1-1 KB) Humbert,Leo scored Frost,Isaiah scored from second base Macon,Tyler advanced to second base."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "Josh McDevitt",
-      "batter": "Seals,Pierre grounded into double play to second base, 2b to 1b to c (0-2 KF)",
+      "inning": "Bottom 2",
+      "pitcher": "Vincent Fusco",
+      "batter": "Pierre Seals",
       "outcome": "Grounded into double play",
       "count": "0-2",
       "pitches": "KF",
@@ -503,12 +503,12 @@
       "outs_before": 1,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Macon,Tyler singled through the left side of the infield, 2RBI (1-1 KB)",
+        "1B": "Tyler Macon",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Macon,Tyler singled through the left side of the infield, 2RBI (1-1 KB)",
+        "1B": "Tyler Macon",
         "2B": null,
         "3B": null
       },
@@ -519,7 +519,7 @@
       "description": "Seals,Pierre grounded into double play to second base, 2b to 1b to c (0-2 KF) Macon,Tyler out at HP on the play, 2b to 1b, in a double play."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Josh McDevitt",
       "batter": "Mike Christian",
       "outcome": "Groundout",
@@ -546,7 +546,7 @@
       "description": "Christian,Michael grounded out to short, ss to 1b (2-1 FBB)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Josh McDevitt",
       "batter": "Jake Russo",
       "outcome": "Flyout",
@@ -573,7 +573,7 @@
       "description": "Russo,Jake flied out to right center putout by rf (0-0)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "Josh McDevitt",
       "batter": "Cam McGugan",
       "outcome": "Pop out",
@@ -600,9 +600,9 @@
       "description": "McGugan,Cam popped up to second base (3-2 BBFFB)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Josh McDevitt",
-      "batter": "Parker,Sam doubled down the left field line (3-0 BBB).",
+      "inning": "Bottom 3",
+      "pitcher": "Vincent Fusco",
+      "batter": "Sam Parker",
       "outcome": "Double",
       "count": "3-0",
       "pitches": "BBB",
@@ -617,7 +617,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Parker,Sam doubled down the left field line (3-0 BBB).",
+        "2B": "Sam Parker",
         "3B": null
       },
       "score": {
@@ -627,9 +627,9 @@
       "description": "Parker,Sam doubled down the left field line (3-0 BBB)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Josh McDevitt",
-      "batter": "George,Jamal grounded out to second base, 2b to 1b (1-2 FBS)",
+      "inning": "Bottom 3",
+      "pitcher": "Vincent Fusco",
+      "batter": "Jamal George",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "FBS",
@@ -639,12 +639,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Parker,Sam doubled down the left field line (3-0 BBB).",
+        "2B": "Sam Parker",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Parker,Sam doubled down the left field line (3-0 BBB).",
+        "2B": "Sam Parker",
         "3B": null
       },
       "score": {
@@ -654,9 +654,9 @@
       "description": "George,Jamal grounded out to second base, 2b to 1b (1-2 FBS) Parker,Sam advanced to third base."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Josh McDevitt",
-      "batter": "Patterson,Chris reached on an error by Christian,Michael (E4) (3-0 BBB)",
+      "inning": "Bottom 3",
+      "pitcher": "Vincent Fusco",
+      "batter": "Chris Patterson",
       "outcome": "Reached on error",
       "count": "3-0",
       "pitches": "BBB",
@@ -666,12 +666,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Parker,Sam doubled down the left field line (3-0 BBB).",
+        "2B": "Sam Parker",
         "3B": null
       },
       "runners_after": {
-        "1B": "Patterson,Chris reached on an error by Christian,Michael (E4) (3-0 BBB)",
-        "2B": "Parker,Sam doubled down the left field line (3-0 BBB).",
+        "1B": "Chris Patterson",
+        "2B": "Sam Parker",
         "3B": null
       },
       "score": {
@@ -681,9 +681,9 @@
       "description": "Patterson,Chris reached on an error by Christian,Michael (E4) (3-0 BBB) Parker,Sam scored."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Josh McDevitt",
-      "batter": "Serna,Mateo singled down the right field line (1-1 BF)",
+      "inning": "Bottom 3",
+      "pitcher": "Vincent Fusco",
+      "batter": "Mateo Serna",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BF",
@@ -692,13 +692,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Patterson,Chris reached on an error by Christian,Michael (E4) (3-0 BBB)",
-        "2B": "Parker,Sam doubled down the left field line (3-0 BBB).",
+        "1B": "Chris Patterson",
+        "2B": "Sam Parker",
         "3B": null
       },
       "runners_after": {
-        "1B": "Serna,Mateo singled down the right field line (1-1 BF)",
-        "2B": "Parker,Sam doubled down the left field line (3-0 BBB).",
+        "1B": "Mateo Serna",
+        "2B": "Sam Parker",
         "3B": null
       },
       "score": {
@@ -708,8 +708,8 @@
       "description": "Serna,Mateo singled down the right field line (1-1 BF) Patterson,Chris advanced to second base."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Josh McDevitt",
+      "inning": "Bottom 3",
+      "pitcher": "Vincent Fusco",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -719,13 +719,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Serna,Mateo singled down the right field line (1-1 BF)",
-        "2B": "Parker,Sam doubled down the left field line (3-0 BBB).",
+        "1B": "Mateo Serna",
+        "2B": "Sam Parker",
         "3B": null
       },
       "runners_after": {
-        "1B": "Serna,Mateo singled down the right field line (1-1 BF)",
-        "2B": "Parker,Sam doubled down the left field line (3-0 BBB).",
+        "1B": "Mateo Serna",
+        "2B": "Sam Parker",
         "3B": null
       },
       "score": {
@@ -735,9 +735,9 @@
       "description": "Serna,Mateo advanced to second base on a wild pitch Patterson,Chris advanced to third base on a wild pitch."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Josh McDevitt",
-      "batter": "Maisonet,Eric hit by pitch (3-2 BKBFBFB).",
+      "inning": "Bottom 3",
+      "pitcher": "Vincent Fusco",
+      "batter": "Eric Maisonet",
       "outcome": "Hit by pitch",
       "count": "3-2",
       "pitches": "BKBFBFB",
@@ -746,13 +746,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Serna,Mateo singled down the right field line (1-1 BF)",
-        "2B": "Parker,Sam doubled down the left field line (3-0 BBB).",
+        "1B": "Mateo Serna",
+        "2B": "Sam Parker",
         "3B": null
       },
       "runners_after": {
-        "1B": "Maisonet,Eric hit by pitch (3-2 BKBFBFB).",
-        "2B": "Parker,Sam doubled down the left field line (3-0 BBB).",
+        "1B": "Eric Maisonet",
+        "2B": "Sam Parker",
         "3B": null
       },
       "score": {
@@ -762,9 +762,9 @@
       "description": "Maisonet,Eric hit by pitch (3-2 BKBFBFB)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Josh McDevitt",
-      "batter": "Humbert,Leo doubled down the left field line, 2RBI (0-1 K)",
+      "inning": "Bottom 3",
+      "pitcher": "Vincent Fusco",
+      "batter": "Leo Humbert",
       "outcome": "Double",
       "count": "0-1",
       "pitches": "K",
@@ -773,13 +773,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Maisonet,Eric hit by pitch (3-2 BKBFBFB).",
-        "2B": "Parker,Sam doubled down the left field line (3-0 BBB).",
+        "1B": "Eric Maisonet",
+        "2B": "Sam Parker",
         "3B": null
       },
       "runners_after": {
-        "1B": "Maisonet,Eric hit by pitch (3-2 BKBFBFB).",
-        "2B": "Humbert,Leo doubled down the left field line, 2RBI (0-1 K)",
+        "1B": "Eric Maisonet",
+        "2B": "Leo Humbert",
         "3B": null
       },
       "score": {
@@ -789,9 +789,9 @@
       "description": "Humbert,Leo doubled down the left field line, 2RBI (0-1 K) Patterson,Chris scored, unearned Serna,Mateo scored from second base Maisonet,Eric advanced from first base to third base."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Josh McDevitt",
-      "batter": "Frost,Isaiah singled to shallow right field, 2RBI (0-0)",
+      "inning": "Bottom 3",
+      "pitcher": "Vincent Fusco",
+      "batter": "Isaiah Frost",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
@@ -800,13 +800,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Maisonet,Eric hit by pitch (3-2 BKBFBFB).",
-        "2B": "Humbert,Leo doubled down the left field line, 2RBI (0-1 K)",
+        "1B": "Eric Maisonet",
+        "2B": "Leo Humbert",
         "3B": null
       },
       "runners_after": {
-        "1B": "Frost,Isaiah singled to shallow right field, 2RBI (0-0)",
-        "2B": "Humbert,Leo doubled down the left field line, 2RBI (0-1 K)",
+        "1B": "Isaiah Frost",
+        "2B": "Leo Humbert",
         "3B": null
       },
       "score": {
@@ -816,9 +816,9 @@
       "description": "Frost,Isaiah singled to shallow right field, 2RBI (0-0) Maisonet,Eric scored Humbert,Leo scored from second base."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Josh McDevitt",
-      "batter": "Macon,Tyler singled to third base, bunt (0-1 K)",
+      "inning": "Bottom 3",
+      "pitcher": "Vincent Fusco",
+      "batter": "Tyler Macon",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
@@ -827,13 +827,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Frost,Isaiah singled to shallow right field, 2RBI (0-0)",
-        "2B": "Humbert,Leo doubled down the left field line, 2RBI (0-1 K)",
+        "1B": "Isaiah Frost",
+        "2B": "Leo Humbert",
         "3B": null
       },
       "runners_after": {
-        "1B": "Macon,Tyler singled to third base, bunt (0-1 K)",
-        "2B": "Humbert,Leo doubled down the left field line, 2RBI (0-1 K)",
+        "1B": "Tyler Macon",
+        "2B": "Leo Humbert",
         "3B": null
       },
       "score": {
@@ -843,9 +843,9 @@
       "description": "Macon,Tyler singled to third base, bunt (0-1 K) Frost,Isaiah advanced to second base."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Josh McDevitt",
-      "batter": "Seals,Pierre flied out to lf (1-2 BFK).",
+      "inning": "Bottom 3",
+      "pitcher": "Vincent Fusco",
+      "batter": "Pierre Seals",
       "outcome": "Flyout",
       "count": "1-2",
       "pitches": "BFK",
@@ -854,13 +854,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Macon,Tyler singled to third base, bunt (0-1 K)",
-        "2B": "Humbert,Leo doubled down the left field line, 2RBI (0-1 K)",
+        "1B": "Tyler Macon",
+        "2B": "Leo Humbert",
         "3B": null
       },
       "runners_after": {
-        "1B": "Macon,Tyler singled to third base, bunt (0-1 K)",
-        "2B": "Humbert,Leo doubled down the left field line, 2RBI (0-1 K)",
+        "1B": "Tyler Macon",
+        "2B": "Leo Humbert",
         "3B": null
       },
       "score": {
@@ -870,9 +870,9 @@
       "description": "Seals,Pierre flied out to lf (1-2 BFK)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Josh McDevitt",
-      "batter": "Parker,Sam hit by pitch (2-2 BSFFBB)",
+      "inning": "Bottom 3",
+      "pitcher": "Vincent Fusco",
+      "batter": "Sam Parker",
       "outcome": "Hit by pitch",
       "count": "2-2",
       "pitches": "BSFFBB",
@@ -881,13 +881,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Macon,Tyler singled to third base, bunt (0-1 K)",
-        "2B": "Humbert,Leo doubled down the left field line, 2RBI (0-1 K)",
+        "1B": "Tyler Macon",
+        "2B": "Leo Humbert",
         "3B": null
       },
       "runners_after": {
-        "1B": "Parker,Sam hit by pitch (2-2 BSFFBB)",
-        "2B": "Humbert,Leo doubled down the left field line, 2RBI (0-1 K)",
+        "1B": "Sam Parker",
+        "2B": "Leo Humbert",
         "3B": null
       },
       "score": {
@@ -897,9 +897,9 @@
       "description": "Parker,Sam hit by pitch (2-2 BSFFBB) Frost,Isaiah advanced to third base Macon,Tyler advanced to second base."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Josh McDevitt",
-      "batter": "George,Jamal walked, RBI (3-1 BBKBB)",
+      "inning": "Bottom 3",
+      "pitcher": "Vincent Fusco",
+      "batter": "Jamal George",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBKBB",
@@ -908,13 +908,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Parker,Sam hit by pitch (2-2 BSFFBB)",
-        "2B": "Humbert,Leo doubled down the left field line, 2RBI (0-1 K)",
+        "1B": "Sam Parker",
+        "2B": "Leo Humbert",
         "3B": null
       },
       "runners_after": {
-        "1B": "George,Jamal walked, RBI (3-1 BBKBB)",
-        "2B": "Humbert,Leo doubled down the left field line, 2RBI (0-1 K)",
+        "1B": "Jamal George",
+        "2B": "Leo Humbert",
         "3B": null
       },
       "score": {
@@ -924,9 +924,9 @@
       "description": "George,Jamal walked, RBI (3-1 BBKBB) Frost,Isaiah scored Macon,Tyler advanced to third base Parker,Sam advanced to second base."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "Josh McDevitt",
-      "batter": "Knutson,Keegan grounded out to short, ss to 1b (2-2 KBBK).",
+      "inning": "Bottom 3",
+      "pitcher": "Vincent Fusco",
+      "batter": "Keegan Knutson",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "KBBK",
@@ -935,13 +935,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "George,Jamal walked, RBI (3-1 BBKBB)",
-        "2B": "Humbert,Leo doubled down the left field line, 2RBI (0-1 K)",
+        "1B": "Jamal George",
+        "2B": "Leo Humbert",
         "3B": null
       },
       "runners_after": {
-        "1B": "George,Jamal walked, RBI (3-1 BBKBB)",
-        "2B": "Humbert,Leo doubled down the left field line, 2RBI (0-1 K)",
+        "1B": "Jamal George",
+        "2B": "Leo Humbert",
         "3B": null
       },
       "score": {
@@ -951,7 +951,7 @@
       "description": "Knutson,Keegan grounded out to short, ss to 1b (2-2 KBBK)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Josh McDevitt",
       "batter": "Shaun Callahan",
       "outcome": "Groundout",
@@ -978,7 +978,7 @@
       "description": "Callahan,Shaun grounded out to second base, 2b to 1b (0-1 K)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Josh McDevitt",
       "batter": "Matt McIntire",
       "outcome": "Walk",
@@ -1005,7 +1005,7 @@
       "description": "McIntire,Matthew walked (3-1 BBBKB)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Josh McDevitt",
       "batter": "Bobby Herzman",
       "outcome": "Home run",
@@ -1034,7 +1034,7 @@
       "description": "Herzman,Bobby homered to right field (425 ft), 1st of season, 2RBI (1-0 B) McIntire,Matthew scored from first base."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Josh McDevitt",
       "batter": "Joe Frazzetta",
       "outcome": "Foul out",
@@ -1061,7 +1061,7 @@
       "description": "Frazzetta,Joseph fouled out in first base side foul territory putout by 1b (2-2 KBSB)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Josh McDevitt",
       "batter": "Nick Ungania",
       "outcome": "Flyout",
@@ -1088,9 +1088,9 @@
       "description": "Ungania,Nick flied out to left center putout by lf (1-1 BK)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Josh McDevitt",
-      "batter": "Serna,Mateo lined out up the middle putout by 2b (1-2 BKK).",
+      "inning": "Bottom 4",
+      "pitcher": "Vincent Fusco",
+      "batter": "Mateo Serna",
       "outcome": "Lineout",
       "count": "1-2",
       "pitches": "BKK",
@@ -1115,9 +1115,9 @@
       "description": "Serna,Mateo lined out up the middle putout by 2b (1-2 BKK)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Josh McDevitt",
-      "batter": "Maisonet,Eric hit by pitch (0-1 FB).",
+      "inning": "Bottom 4",
+      "pitcher": "Vincent Fusco",
+      "batter": "Eric Maisonet",
       "outcome": "Hit by pitch",
       "count": "0-1",
       "pitches": "FB",
@@ -1131,7 +1131,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Maisonet,Eric hit by pitch (0-1 FB).",
+        "1B": "Eric Maisonet",
         "2B": null,
         "3B": null
       },
@@ -1142,9 +1142,9 @@
       "description": "Maisonet,Eric hit by pitch (0-1 FB)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Josh McDevitt",
-      "batter": "Humbert,Leo hit by pitch (0-1 KB)",
+      "inning": "Bottom 4",
+      "pitcher": "Vincent Fusco",
+      "batter": "Leo Humbert",
       "outcome": "Hit by pitch",
       "count": "0-1",
       "pitches": "KB",
@@ -1153,12 +1153,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Maisonet,Eric hit by pitch (0-1 FB).",
+        "1B": "Eric Maisonet",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Humbert,Leo hit by pitch (0-1 KB)",
+        "1B": "Leo Humbert",
         "2B": null,
         "3B": null
       },
@@ -1169,9 +1169,9 @@
       "description": "Humbert,Leo hit by pitch (0-1 KB) Maisonet,Eric advanced to second base."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Josh McDevitt",
-      "batter": "Frost,Isaiah walked (3-1 BBBKB)",
+      "inning": "Bottom 4",
+      "pitcher": "Vincent Fusco",
+      "batter": "Isaiah Frost",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBBKB",
@@ -1180,12 +1180,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Humbert,Leo hit by pitch (0-1 KB)",
+        "1B": "Leo Humbert",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Frost,Isaiah walked (3-1 BBBKB)",
+        "1B": "Isaiah Frost",
         "2B": null,
         "3B": null
       },
@@ -1196,9 +1196,9 @@
       "description": "Frost,Isaiah walked (3-1 BBBKB) Maisonet,Eric advanced to third base Humbert,Leo advanced to second base."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Josh McDevitt",
-      "batter": "Macon,Tyler hit by pitch, RBI (0-1 KB)",
+      "inning": "Bottom 4",
+      "pitcher": "Vincent Fusco",
+      "batter": "Tyler Macon",
       "outcome": "Hit by pitch",
       "count": "0-1",
       "pitches": "KB",
@@ -1207,12 +1207,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Frost,Isaiah walked (3-1 BBBKB)",
+        "1B": "Isaiah Frost",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Macon,Tyler hit by pitch, RBI (0-1 KB)",
+        "1B": "Tyler Macon",
         "2B": null,
         "3B": null
       },
@@ -1223,9 +1223,9 @@
       "description": "Macon,Tyler hit by pitch, RBI (0-1 KB) Maisonet,Eric scored Humbert,Leo advanced to third base Frost,Isaiah advanced to second base."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Josh McDevitt",
-      "batter": "Seals,Pierre reached on a fielder's choice hit to second base, RBI (1-1 BF)",
+      "inning": "Bottom 4",
+      "pitcher": "Vincent Fusco",
+      "batter": "Pierre Seals",
       "outcome": "Fielder's choice",
       "count": "1-1",
       "pitches": "BF",
@@ -1234,12 +1234,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Macon,Tyler hit by pitch, RBI (0-1 KB)",
+        "1B": "Tyler Macon",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Seals,Pierre reached on a fielder's choice hit to second base, RBI (1-1 BF)",
+        "1B": "Pierre Seals",
         "2B": null,
         "3B": null
       },
@@ -1250,8 +1250,8 @@
       "description": "Seals,Pierre reached on a fielder's choice hit to second base, RBI (1-1 BF) Humbert,Leo scored, unearned Frost,Isaiah advanced from second base, scored on a throwing error by Christian,Michael (E4) Macon,Tyler out at second base, 2b unassisted."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Josh McDevitt",
+      "inning": "Bottom 4",
+      "pitcher": "Vincent Fusco",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1261,12 +1261,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Seals,Pierre reached on a fielder's choice hit to second base, RBI (1-1 BF)",
+        "1B": "Pierre Seals",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Seals,Pierre reached on a fielder's choice hit to second base, RBI (1-1 BF)",
+        "1B": "Pierre Seals",
         "2B": null,
         "3B": null
       },
@@ -1277,9 +1277,9 @@
       "description": "Seals,Pierre stole second base."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Josh McDevitt",
-      "batter": "Parker,Sam walked (3-1 BKBBB)",
+      "inning": "Bottom 4",
+      "pitcher": "Vincent Fusco",
+      "batter": "Sam Parker",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BKBBB",
@@ -1288,12 +1288,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Seals,Pierre reached on a fielder's choice hit to second base, RBI (1-1 BF)",
+        "1B": "Pierre Seals",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Parker,Sam walked (3-1 BKBBB)",
+        "1B": "Sam Parker",
         "2B": null,
         "3B": null
       },
@@ -1304,9 +1304,9 @@
       "description": "Parker,Sam walked (3-1 BKBBB) Seals,Pierre advanced to third base on a wild pitch."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Josh McDevitt",
-      "batter": "George,Jamal flied out to cf (0-0).",
+      "inning": "Bottom 4",
+      "pitcher": "Vincent Fusco",
+      "batter": "Jamal George",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
@@ -1315,12 +1315,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Parker,Sam walked (3-1 BKBBB)",
+        "1B": "Sam Parker",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Parker,Sam walked (3-1 BKBBB)",
+        "1B": "Sam Parker",
         "2B": null,
         "3B": null
       },
@@ -1331,7 +1331,7 @@
       "description": "George,Jamal flied out to cf (0-0)."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Josh McDevitt",
       "batter": "Aedan Forde",
       "outcome": "Walk",
@@ -1358,7 +1358,7 @@
       "description": "Forde,Aedan walked (3-2 KBBFBB)."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Josh McDevitt",
       "batter": "Mike Christian",
       "outcome": "Foul out",
@@ -1385,7 +1385,7 @@
       "description": "Christian,Michael fouled out in first base side foul territory putout by 1b (1-2 KKFB)."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Josh McDevitt",
       "batter": "Jake Russo",
       "outcome": "Strikeout (swinging)",
@@ -1412,7 +1412,7 @@
       "description": "Russo,Jake struck out swinging (1-2 FKFBS)."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Josh McDevitt",
       "batter": "Cam McGugan",
       "outcome": "Strikeout (looking)",
@@ -1439,9 +1439,9 @@
       "description": "McGugan,Cam struck out looking (0-2 KKK)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Josh McDevitt",
-      "batter": "Knutson,Keegan singled to short (0-0).",
+      "inning": "Bottom 5",
+      "pitcher": "Vincent Fusco",
+      "batter": "Keegan Knutson",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
@@ -1455,7 +1455,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Knutson,Keegan singled to short (0-0).",
+        "1B": "Keegan Knutson",
         "2B": null,
         "3B": null
       },
@@ -1466,9 +1466,9 @@
       "description": "Knutson,Keegan singled to short (0-0)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Josh McDevitt",
-      "batter": "Serna,Mateo doubled to deep center field, RBI (3-2 FBFBBFFFF)",
+      "inning": "Bottom 5",
+      "pitcher": "Vincent Fusco",
+      "batter": "Mateo Serna",
       "outcome": "Double",
       "count": "3-2",
       "pitches": "FBFBBFFFF",
@@ -1477,13 +1477,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Knutson,Keegan singled to short (0-0).",
+        "1B": "Keegan Knutson",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Knutson,Keegan singled to short (0-0).",
-        "2B": "Serna,Mateo doubled to deep center field, RBI (3-2 FBFBBFFFF)",
+        "1B": "Keegan Knutson",
+        "2B": "Mateo Serna",
         "3B": null
       },
       "score": {
@@ -1493,9 +1493,9 @@
       "description": "Serna,Mateo doubled to deep center field, RBI (3-2 FBFBBFFFF) Knutson,Keegan scored from first base."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Josh McDevitt",
-      "batter": "Maisonet,Eric singled to shallow left field (1-2 BSFFF)",
+      "inning": "Bottom 5",
+      "pitcher": "Vincent Fusco",
+      "batter": "Eric Maisonet",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "BSFFF",
@@ -1504,13 +1504,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Knutson,Keegan singled to short (0-0).",
-        "2B": "Serna,Mateo doubled to deep center field, RBI (3-2 FBFBBFFFF)",
+        "1B": "Keegan Knutson",
+        "2B": "Mateo Serna",
         "3B": null
       },
       "runners_after": {
-        "1B": "Maisonet,Eric singled to shallow left field (1-2 BSFFF)",
-        "2B": "Serna,Mateo doubled to deep center field, RBI (3-2 FBFBBFFFF)",
+        "1B": "Eric Maisonet",
+        "2B": "Mateo Serna",
         "3B": null
       },
       "score": {
@@ -1520,9 +1520,9 @@
       "description": "Maisonet,Eric singled to shallow left field (1-2 BSFFF) Serna,Mateo advanced to third base."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Josh McDevitt",
-      "batter": "Humbert,Leo struck out swinging (0-2 KKFS).",
+      "inning": "Bottom 5",
+      "pitcher": "Vincent Fusco",
+      "batter": "Leo Humbert",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KKFS",
@@ -1531,13 +1531,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Maisonet,Eric singled to shallow left field (1-2 BSFFF)",
-        "2B": "Serna,Mateo doubled to deep center field, RBI (3-2 FBFBBFFFF)",
+        "1B": "Eric Maisonet",
+        "2B": "Mateo Serna",
         "3B": null
       },
       "runners_after": {
-        "1B": "Maisonet,Eric singled to shallow left field (1-2 BSFFF)",
-        "2B": "Serna,Mateo doubled to deep center field, RBI (3-2 FBFBBFFFF)",
+        "1B": "Eric Maisonet",
+        "2B": "Mateo Serna",
         "3B": null
       },
       "score": {
@@ -1547,9 +1547,9 @@
       "description": "Humbert,Leo struck out swinging (0-2 KKFS)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Josh McDevitt",
-      "batter": "Frost,Isaiah walked (3-0 BBBB)",
+      "inning": "Bottom 5",
+      "pitcher": "Vincent Fusco",
+      "batter": "Isaiah Frost",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
@@ -1558,13 +1558,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Maisonet,Eric singled to shallow left field (1-2 BSFFF)",
-        "2B": "Serna,Mateo doubled to deep center field, RBI (3-2 FBFBBFFFF)",
+        "1B": "Eric Maisonet",
+        "2B": "Mateo Serna",
         "3B": null
       },
       "runners_after": {
-        "1B": "Frost,Isaiah walked (3-0 BBBB)",
-        "2B": "Serna,Mateo doubled to deep center field, RBI (3-2 FBFBBFFFF)",
+        "1B": "Isaiah Frost",
+        "2B": "Mateo Serna",
         "3B": null
       },
       "score": {
@@ -1574,9 +1574,9 @@
       "description": "Frost,Isaiah walked (3-0 BBBB) Maisonet,Eric advanced to second base."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Josh McDevitt",
-      "batter": "Macon,Tyler sacrifice fly to cf, RBI (3-2 SBBKB)",
+      "inning": "Bottom 5",
+      "pitcher": "Vincent Fusco",
+      "batter": "Tyler Macon",
       "outcome": "\u2014",
       "count": "3-2",
       "pitches": "SBBKB",
@@ -1585,13 +1585,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Frost,Isaiah walked (3-0 BBBB)",
-        "2B": "Serna,Mateo doubled to deep center field, RBI (3-2 FBFBBFFFF)",
+        "1B": "Isaiah Frost",
+        "2B": "Mateo Serna",
         "3B": null
       },
       "runners_after": {
-        "1B": "Frost,Isaiah walked (3-0 BBBB)",
-        "2B": "Serna,Mateo doubled to deep center field, RBI (3-2 FBFBBFFFF)",
+        "1B": "Isaiah Frost",
+        "2B": "Mateo Serna",
         "3B": null
       },
       "score": {
@@ -1601,9 +1601,9 @@
       "description": "Macon,Tyler sacrifice fly to cf, RBI (3-2 SBBKB) Serna,Mateo scored."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "Josh McDevitt",
-      "batter": "Seals,Pierre struck out looking (1-2 SFFBK).",
+      "inning": "Bottom 5",
+      "pitcher": "Vincent Fusco",
+      "batter": "Pierre Seals",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
       "pitches": "SFFBK",
@@ -1612,13 +1612,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Frost,Isaiah walked (3-0 BBBB)",
-        "2B": "Serna,Mateo doubled to deep center field, RBI (3-2 FBFBBFFFF)",
+        "1B": "Isaiah Frost",
+        "2B": "Mateo Serna",
         "3B": null
       },
       "runners_after": {
-        "1B": "Frost,Isaiah walked (3-0 BBBB)",
-        "2B": "Serna,Mateo doubled to deep center field, RBI (3-2 FBFBBFFFF)",
+        "1B": "Isaiah Frost",
+        "2B": "Mateo Serna",
         "3B": null
       },
       "score": {
@@ -1628,7 +1628,7 @@
       "description": "Seals,Pierre struck out looking (1-2 SFFBK)."
     },
     {
-      "inning": "Top 10",
+      "inning": "Top 6",
       "pitcher": "Josh McDevitt",
       "batter": "Shaun Callahan",
       "outcome": "Walk",
@@ -1636,16 +1636,16 @@
       "pitches": "KBKBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Frost,Isaiah walked (3-0 BBBB)",
-        "2B": "Serna,Mateo doubled to deep center field, RBI (3-2 FBFBBFFFF)",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Shaun Callahan",
-        "2B": "Serna,Mateo doubled to deep center field, RBI (3-2 FBFBBFFFF)",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1655,7 +1655,7 @@
       "description": "Callahan,Shaun walked (3-2 KBKBBB)."
     },
     {
-      "inning": "Top 10",
+      "inning": "Top 6",
       "pitcher": "Josh McDevitt",
       "batter": "Matt McIntire",
       "outcome": "Hit by pitch",
@@ -1663,16 +1663,16 @@
       "pitches": "KBFBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Shaun Callahan",
-        "2B": "Serna,Mateo doubled to deep center field, RBI (3-2 FBFBBFFFF)",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Matt McIntire",
-        "2B": "Serna,Mateo doubled to deep center field, RBI (3-2 FBFBBFFFF)",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1682,7 +1682,7 @@
       "description": "McIntire,Matthew hit by pitch (3-2 KBFBBB) Callahan,Shaun advanced to second base."
     },
     {
-      "inning": "Top 10",
+      "inning": "Top 6",
       "pitcher": "Josh McDevitt",
       "batter": "Bobby Herzman",
       "outcome": "Strikeout (swinging)",
@@ -1690,16 +1690,16 @@
       "pitches": "KBBFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Matt McIntire",
-        "2B": "Serna,Mateo doubled to deep center field, RBI (3-2 FBFBBFFFF)",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Matt McIntire",
-        "2B": "Serna,Mateo doubled to deep center field, RBI (3-2 FBFBBFFFF)",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1709,7 +1709,7 @@
       "description": "Herzman,Bobby struck out swinging (2-2 KBBFS)."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "Josh McDevitt",
       "batter": "Clark Beattie",
       "outcome": "Fielder's choice",
@@ -1717,10 +1717,10 @@
       "pitches": "F",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Matt McIntire",
         "2B": null,
         "3B": null
       },
@@ -1736,7 +1736,7 @@
       "description": "Beattie,Clark reached on a fielder's choice hit to short (0-1 F) Callahan,Shaun advanced from second base, scored on a throwing error by George,Jamal (E4), unearned McIntire,Matthew out at second base, ss to 2b."
     },
     {
-      "inning": "Top 11",
+      "inning": "Top 6",
       "pitcher": "Josh McDevitt",
       "batter": "Nick Ungania",
       "outcome": "Groundout",
@@ -1744,8 +1744,8 @@
       "pitches": "BBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Clark Beattie",
         "2B": null,
@@ -1763,23 +1763,23 @@
       "description": "Ungania,Nick grounded out to second base, 2b to 1b (2-1 BBK)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Josh McDevitt",
-      "batter": "Parker,Sam hit by pitch (0-0 B).",
+      "inning": "Bottom 6",
+      "pitcher": "Vincent Fusco",
+      "batter": "Sam Parker",
       "outcome": "Hit by pitch",
       "count": "0-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Clark Beattie",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Parker,Sam hit by pitch (0-0 B).",
+        "1B": "Sam Parker",
         "2B": null,
         "3B": null
       },
@@ -1790,23 +1790,23 @@
       "description": "Parker,Sam hit by pitch (0-0 B)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Josh McDevitt",
-      "batter": "George,Jamal walked (3-1 BBKBB)",
+      "inning": "Bottom 6",
+      "pitcher": "Vincent Fusco",
+      "batter": "Jamal George",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBKBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Parker,Sam hit by pitch (0-0 B).",
+        "1B": "Sam Parker",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "George,Jamal walked (3-1 BBKBB)",
+        "1B": "Jamal George",
         "2B": null,
         "3B": null
       },
@@ -1817,23 +1817,23 @@
       "description": "George,Jamal walked (3-1 BBKBB) Parker,Sam advanced to second base."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Josh McDevitt",
-      "batter": "Knutson,Keegan walked (3-2 BBBKKB)",
+      "inning": "Bottom 6",
+      "pitcher": "Vincent Fusco",
+      "batter": "Keegan Knutson",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBBKKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "George,Jamal walked (3-1 BBKBB)",
+        "1B": "Jamal George",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Knutson,Keegan walked (3-2 BBBKKB)",
+        "1B": "Keegan Knutson",
         "2B": null,
         "3B": null
       },
@@ -1844,24 +1844,24 @@
       "description": "Knutson,Keegan walked (3-2 BBBKKB) Parker,Sam advanced to third base George,Jamal advanced to second base."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Josh McDevitt",
-      "batter": "Campos,Juliomar doubled to left center, 3RBI (3-2 KBFBBF)",
+      "inning": "Bottom 6",
+      "pitcher": "Vincent Fusco",
+      "batter": "Juliomar Campos",
       "outcome": "Double",
       "count": "3-2",
       "pitches": "KBFBBF",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Knutson,Keegan walked (3-2 BBBKKB)",
+        "1B": "Keegan Knutson",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Knutson,Keegan walked (3-2 BBBKKB)",
-        "2B": "Campos,Juliomar doubled to left center, 3RBI (3-2 KBFBBF)",
+        "1B": "Keegan Knutson",
+        "2B": "Juliomar Campos",
         "3B": null
       },
       "score": {
@@ -1871,24 +1871,24 @@
       "description": "Campos,Juliomar doubled to left center, 3RBI (3-2 KBFBBF) Parker,Sam scored George,Jamal scored from second base Knutson,Keegan scored from first base."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Josh McDevitt",
+      "inning": "Bottom 6",
+      "pitcher": "Vincent Fusco",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Knutson,Keegan walked (3-2 BBBKKB)",
-        "2B": "Campos,Juliomar doubled to left center, 3RBI (3-2 KBFBBF)",
+        "1B": "Keegan Knutson",
+        "2B": "Juliomar Campos",
         "3B": null
       },
       "runners_after": {
-        "1B": "Knutson,Keegan walked (3-2 BBBKKB)",
-        "2B": "Campos,Juliomar doubled to left center, 3RBI (3-2 KBFBBF)",
+        "1B": "Keegan Knutson",
+        "2B": "Juliomar Campos",
         "3B": null
       },
       "score": {
@@ -1898,24 +1898,24 @@
       "description": "Campos,Juliomar advanced to third base on a wild pitch."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Josh McDevitt",
-      "batter": "Maisonet,Eric singled through the right side of the infield, RBI (3-1 BFBB)",
+      "inning": "Bottom 6",
+      "pitcher": "Vincent Fusco",
+      "batter": "Eric Maisonet",
       "outcome": "Single",
       "count": "3-1",
       "pitches": "BFBB",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Knutson,Keegan walked (3-2 BBBKKB)",
-        "2B": "Campos,Juliomar doubled to left center, 3RBI (3-2 KBFBBF)",
+        "1B": "Keegan Knutson",
+        "2B": "Juliomar Campos",
         "3B": null
       },
       "runners_after": {
-        "1B": "Maisonet,Eric singled through the right side of the infield, RBI (3-1 BFBB)",
-        "2B": "Campos,Juliomar doubled to left center, 3RBI (3-2 KBFBBF)",
+        "1B": "Eric Maisonet",
+        "2B": "Juliomar Campos",
         "3B": null
       },
       "score": {
@@ -1925,24 +1925,24 @@
       "description": "Maisonet,Eric singled through the right side of the infield, RBI (3-1 BFBB) Campos,Juliomar scored."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "Josh McDevitt",
-      "batter": "Humbert,Leo flied out to left center putout by cf (3-2 KKBBB).",
+      "inning": "Bottom 6",
+      "pitcher": "Vincent Fusco",
+      "batter": "Leo Humbert",
       "outcome": "Flyout",
       "count": "3-2",
       "pitches": "KKBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Maisonet,Eric singled through the right side of the infield, RBI (3-1 BFBB)",
-        "2B": "Campos,Juliomar doubled to left center, 3RBI (3-2 KBFBBF)",
+        "1B": "Eric Maisonet",
+        "2B": "Juliomar Campos",
         "3B": null
       },
       "runners_after": {
-        "1B": "Maisonet,Eric singled through the right side of the infield, RBI (3-1 BFBB)",
-        "2B": "Campos,Juliomar doubled to left center, 3RBI (3-2 KBFBBF)",
+        "1B": "Eric Maisonet",
+        "2B": "Juliomar Campos",
         "3B": null
       },
       "score": {
@@ -1952,24 +1952,24 @@
       "description": "Humbert,Leo flied out to left center putout by cf (3-2 KKBBB)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Josh McDevitt",
-      "batter": "Frost,Isaiah struck out swinging (0-2 SKS).",
+      "inning": "Bottom 6",
+      "pitcher": "Vincent Fusco",
+      "batter": "Isaiah Frost",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "SKS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
-        "2B": null,
+        "1B": "Eric Maisonet",
+        "2B": "Juliomar Campos",
         "3B": null
       },
       "runners_after": {
-        "1B": null,
-        "2B": null,
+        "1B": "Eric Maisonet",
+        "2B": "Juliomar Campos",
         "3B": null
       },
       "score": {
@@ -1979,24 +1979,24 @@
       "description": "Frost,Isaiah struck out swinging (0-2 SKS)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Josh McDevitt",
-      "batter": "Macon,Tyler flied out to lf (3-2 KBKBB).",
+      "inning": "Bottom 6",
+      "pitcher": "Vincent Fusco",
+      "batter": "Tyler Macon",
       "outcome": "Flyout",
       "count": "3-2",
       "pitches": "KBKBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
-        "2B": null,
+        "1B": "Eric Maisonet",
+        "2B": "Juliomar Campos",
         "3B": null
       },
       "runners_after": {
-        "1B": null,
-        "2B": null,
+        "1B": "Eric Maisonet",
+        "2B": "Juliomar Campos",
         "3B": null
       },
       "score": {
@@ -2006,7 +2006,7 @@
       "description": "Macon,Tyler flied out to lf (3-2 KBKBB)."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "Josh McDevitt",
       "batter": "Ej Ettinger",
       "outcome": "Strikeout (swinging)",
@@ -2014,8 +2014,8 @@
       "pitches": "BBFKBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2033,7 +2033,7 @@
       "description": "Ettinger,EJ struck out swinging (3-2 BBFKBS)."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 7",
       "pitcher": "Josh McDevitt",
       "batter": "Mike Christian",
       "outcome": "Walk",
@@ -2041,8 +2041,8 @@
       "pitches": "SKBBFBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2060,7 +2060,7 @@
       "description": "Christian,Michael walked (3-2 SKBBFBB)."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 7",
       "pitcher": "Josh McDevitt",
       "batter": "Casey Cerruto",
       "outcome": "Walk",
@@ -2068,8 +2068,8 @@
       "pitches": "KBBBSB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Mike Christian",
         "2B": null,
@@ -2087,7 +2087,7 @@
       "description": "Cerruto,Casey walked (3-2 KBBBSB) Christian,Michael advanced to second base."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 7",
       "pitcher": "Josh McDevitt",
       "batter": "Cam McGugan",
       "outcome": "Walk",
@@ -2095,8 +2095,8 @@
       "pitches": "SBBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Casey Cerruto",
         "2B": null,
@@ -2114,7 +2114,7 @@
       "description": "McGugan,Cam walked (3-1 SBBBB) Christian,Michael advanced to third base Cerruto,Casey advanced to second base."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 7",
       "pitcher": "Josh McDevitt",
       "batter": null,
       "outcome": "Wild pitch",
@@ -2122,8 +2122,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Cam McGugan",
         "2B": null,
@@ -2141,7 +2141,7 @@
       "description": "McGugan,Cam advanced to second base on a wild pitch Cerruto,Casey advanced to third base on a wild pitch Christian,Michael scored on a wild pitch."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 7",
       "pitcher": "Josh McDevitt",
       "batter": "Shaun Callahan",
       "outcome": "Groundout",
@@ -2149,8 +2149,8 @@
       "pitches": "BSSFB",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Cam McGugan",
         "2B": null,
@@ -2168,7 +2168,7 @@
       "description": "Callahan,Shaun grounded out to short, ss to 1b, RBI (2-2 BSSFB) Cerruto,Casey scored McGugan,Cam advanced to third base."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 7",
       "pitcher": "Josh McDevitt",
       "batter": "Matt McIntire",
       "outcome": "Strikeout (swinging)",
@@ -2176,8 +2176,8 @@
       "pitches": "KBSBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Cam McGugan",
         "2B": null,

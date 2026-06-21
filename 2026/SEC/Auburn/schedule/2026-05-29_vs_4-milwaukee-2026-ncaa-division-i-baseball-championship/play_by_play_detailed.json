@@ -1,9 +1,9 @@
 {
   "contest_id": "6582289",
   "date": "05/29/2026",
-  "batting_team": "Milwaukee",
-  "pitching_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json, which contains the Milwaukee at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "Milwaukee",
+  "home_team": "Auburn",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
       "inning": "Top 1",
@@ -224,39 +224,12 @@
       "description": "HADLEY out at first p to 1b, picked off."
     },
     {
-      "inning": "Top 1",
-      "pitcher": "Jake Marciano",
-      "batter": "McCraine, M. struck out swinging (1-2 KFBS).",
+      "inning": "Bottom 1",
+      "pitcher": "Gavin Theis",
+      "batter": "Mason McCraine",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KFBS",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
-      "runners_before": {
-        "1B": "HADLEY",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "HADLEY",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 4,
-        "home": 0
-      },
-      "description": "McCraine, M. struck out swinging (1-2 KFBS)."
-    },
-    {
-      "inning": "Top 2",
-      "pitcher": "Jake Marciano",
-      "batter": "Guevara, E. flied out to cf (2-0 BB).",
-      "outcome": "Flyout",
-      "count": "2-0",
-      "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
       "outs_before": 0,
@@ -275,19 +248,46 @@
         "away": 4,
         "home": 0
       },
+      "description": "McCraine, M. struck out swinging (1-2 KFBS)."
+    },
+    {
+      "inning": "Bottom 1",
+      "pitcher": "Gavin Theis",
+      "batter": "Eric Guevara",
+      "outcome": "Flyout",
+      "count": "2-0",
+      "pitches": "BB",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 0
+      },
       "description": "Guevara, E. flied out to cf (2-0 BB)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Jake Marciano",
-      "batter": "Fralick, C. fouled out to c (2-2 KBBFF).",
+      "inning": "Bottom 1",
+      "pitcher": "Gavin Theis",
+      "batter": "Chase Fralick",
       "outcome": "Foul out",
       "count": "2-2",
       "pitches": "KBBFF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -313,8 +313,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -340,8 +340,8 @@
       "pitches": "KFFBBB",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": "Joey Spence",
@@ -367,8 +367,8 @@
       "pitches": "S",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": "Christian Holmes",
@@ -394,8 +394,8 @@
       "pitches": "FBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Grant Ross",
         "2B": "Christian Holmes",
@@ -413,7 +413,7 @@
       "description": "MARION grounded into double play 2b to ss to 1b (2-1 FBB); ROSS out on the play; HOLMES scored."
     },
     {
-      "inning": "Top 3",
+      "inning": "Top 2",
       "pitcher": "LJ Cormier",
       "batter": "Dylan O'Connell",
       "outcome": "Strikeout (swinging)",
@@ -421,16 +421,16 @@
       "pitches": "KBBSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
-        "2B": null,
+        "1B": "Grant Ross",
+        "2B": "Christian Holmes",
         "3B": null
       },
       "runners_after": {
-        "1B": null,
-        "2B": null,
+        "1B": "Grant Ross",
+        "2B": "Christian Holmes",
         "3B": null
       },
       "score": {
@@ -440,16 +440,16 @@
       "description": "O'CONNELL struck out swinging (2-2 KBBSS)."
     },
     {
-      "inning": "Top 3",
-      "pitcher": "LJ Cormier",
-      "batter": "Rembert, C. grounded out to (1-0 B).",
+      "inning": "Bottom 2",
+      "pitcher": "Gavin Theis",
+      "batter": "Chris Rembert",
       "outcome": "Groundout",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -467,16 +467,16 @@
       "description": "Rembert, C. grounded out to (1-0 B)."
     },
     {
-      "inning": "Top 3",
-      "pitcher": "LJ Cormier",
-      "batter": "Terrell, B. struck out swinging, out at first c to 1b (1-2 KFFBS).",
+      "inning": "Bottom 2",
+      "pitcher": "Gavin Theis",
+      "batter": "Bub Terrell",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KFFBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -494,16 +494,16 @@
       "description": "Terrell, B. struck out swinging, out at first c to 1b (1-2 KFFBS)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "LJ Cormier",
-      "batter": "Bingaman, E. grounded out to 2b (0-0).",
+      "inning": "Bottom 2",
+      "pitcher": "Gavin Theis",
+      "batter": "Ethin Bingaman",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -521,7 +521,7 @@
       "description": "Bingaman, E. grounded out to 2b (0-0)."
     },
     {
-      "inning": "Top 4",
+      "inning": "Top 3",
       "pitcher": "LJ Cormier",
       "batter": "Dominic Kibler",
       "outcome": "Flyout",
@@ -529,8 +529,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -548,7 +548,7 @@
       "description": "KIBLER flied out to lf (0-0)."
     },
     {
-      "inning": "Top 4",
+      "inning": "Top 3",
       "pitcher": "LJ Cormier",
       "batter": "Bradyn Horn",
       "outcome": "Foul out",
@@ -556,8 +556,8 @@
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -575,7 +575,7 @@
       "description": "HORN fouled out to (2-0 BB)."
     },
     {
-      "inning": "Top 5",
+      "inning": "Top 3",
       "pitcher": "LJ Cormier",
       "batter": "HADLEY",
       "outcome": "Strikeout (looking)",
@@ -583,8 +583,8 @@
       "pitches": "KBSK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -602,120 +602,12 @@
       "description": "HADLEY struck out looking (1-2 KBSK)."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "LJ Cormier",
-      "batter": "Belyeu, C. hit by pitch (3-1 BBBK).",
+      "inning": "Bottom 3",
+      "pitcher": "Gavin Theis",
+      "batter": "Cade Belyeu",
       "outcome": "Hit by pitch",
       "count": "3-1",
       "pitches": "BBBK",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
-      "runners_before": {
-        "1B": null,
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Belyeu, C. hit by pitch (3-1 BBBK).",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 6,
-        "home": 0
-      },
-      "description": "Belyeu, C. hit by pitch (3-1 BBBK)."
-    },
-    {
-      "inning": "Top 5",
-      "pitcher": "LJ Cormier",
-      "batter": "McCraine, B. flied out to rf (1-0 B).",
-      "outcome": "Flyout",
-      "count": "1-0",
-      "pitches": "B",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "Belyeu, C. hit by pitch (3-1 BBBK).",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Belyeu, C. hit by pitch (3-1 BBBK).",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 6,
-        "home": 0
-      },
-      "description": "McCraine, B. flied out to rf (1-0 B)."
-    },
-    {
-      "inning": "Top 5",
-      "pitcher": "LJ Cormier",
-      "batter": "Belza, T. singled up the middle (2-2 BFKB); Belyeu, C. advanced to second.",
-      "outcome": "Single",
-      "count": "2-2",
-      "pitches": "BFKB",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "Belyeu, C. hit by pitch (3-1 BBBK).",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Belza, T. singled up the middle (2-2 BFKB); Belyeu, C. advanced to second.",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 6,
-        "home": 0
-      },
-      "description": "Belza, T. singled up the middle (2-2 BFKB); Belyeu, C. advanced to second."
-    },
-    {
-      "inning": "Top 5",
-      "pitcher": "LJ Cormier",
-      "batter": "McCraine, M. flied out to cf (0-0).",
-      "outcome": "Flyout",
-      "count": "0-0",
-      "pitches": "",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
-      "runners_before": {
-        "1B": "Belza, T. singled up the middle (2-2 BFKB); Belyeu, C. advanced to second.",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Belza, T. singled up the middle (2-2 BFKB); Belyeu, C. advanced to second.",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 6,
-        "home": 0
-      },
-      "description": "McCraine, M. flied out to cf (0-0)."
-    },
-    {
-      "inning": "Top 6",
-      "pitcher": "LJ Cormier",
-      "batter": null,
-      "outcome": "Wild pitch",
-      "count": null,
-      "pitches": null,
       "rbi": false,
       "runs_scored": [],
       "outs_before": 0,
@@ -726,7 +618,115 @@
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Cade Belyeu",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 0
+      },
+      "description": "Belyeu, C. hit by pitch (3-1 BBBK)."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Gavin Theis",
+      "batter": "Mason McCraine",
+      "outcome": "Flyout",
+      "count": "1-0",
+      "pitches": "B",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Cade Belyeu",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Cade Belyeu",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 0
+      },
+      "description": "McCraine, B. flied out to rf (1-0 B)."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Gavin Theis",
+      "batter": "Taylor Belza",
+      "outcome": "Single",
+      "count": "2-2",
+      "pitches": "BFKB",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Cade Belyeu",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Taylor Belza",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 0
+      },
+      "description": "Belza, T. singled up the middle (2-2 BFKB); Belyeu, C. advanced to second."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Gavin Theis",
+      "batter": "Mason McCraine",
+      "outcome": "Flyout",
+      "count": "0-0",
+      "pitches": "",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Taylor Belza",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Taylor Belza",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 0
+      },
+      "description": "McCraine, M. flied out to cf (0-0)."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Gavin Theis",
+      "batter": null,
+      "outcome": "Wild pitch",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Taylor Belza",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Taylor Belza",
         "2B": null,
         "3B": null
       },
@@ -737,23 +737,23 @@
       "description": "Belyeu, C. advanced to third on a wild pitch."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "LJ Cormier",
-      "batter": "Guevara, E. grounded out to ss (1-1 KB).",
+      "inning": "Bottom 3",
+      "pitcher": "Gavin Theis",
+      "batter": "Eric Guevara",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "KB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
+        "1B": "Taylor Belza",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Taylor Belza",
         "2B": null,
         "3B": null
       },
@@ -764,7 +764,7 @@
       "description": "Guevara, E. grounded out to ss (1-1 KB)."
     },
     {
-      "inning": "Top 6",
+      "inning": "Top 4",
       "pitcher": "LJ Cormier",
       "batter": "Connor Bozak",
       "outcome": "Hit by pitch",
@@ -772,8 +772,8 @@
       "pitches": "BKBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -791,7 +791,7 @@
       "description": "BOZAK hit by pitch (2-2 BKBF)."
     },
     {
-      "inning": "Top 6",
+      "inning": "Top 4",
       "pitcher": "LJ Cormier",
       "batter": "Joey Spence",
       "outcome": "Single",
@@ -799,8 +799,8 @@
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Connor Bozak",
         "2B": null,
@@ -818,7 +818,7 @@
       "description": "SPENCE singled down the line, bunt (1-0 B); BOZAK advanced to second."
     },
     {
-      "inning": "Top 6",
+      "inning": "Top 4",
       "pitcher": "LJ Cormier",
       "batter": null,
       "outcome": "Baserunning",
@@ -826,8 +826,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Joey Spence",
         "2B": null,
@@ -845,7 +845,7 @@
       "description": "HOLMES out at first to 2b, SAC (0-0); SPENCE advanced to second; BOZAK advanced to third."
     },
     {
-      "inning": "Top 6",
+      "inning": "Top 4",
       "pitcher": "LJ Cormier",
       "batter": "Grant Ross",
       "outcome": "Single",
@@ -853,8 +853,8 @@
       "pitches": "BFB",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Joey Spence",
         "2B": null,
@@ -872,7 +872,7 @@
       "description": "ROSS singled through the left side, RBI (2-1 BFB); SPENCE advanced to third; BOZAK scored."
     },
     {
-      "inning": "Top 6",
+      "inning": "Top 4",
       "pitcher": "LJ Cormier",
       "batter": "Charlie Marion",
       "outcome": "Home run",
@@ -882,8 +882,8 @@
       "runs_scored": [
         "Charlie Marion"
       ],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Grant Ross",
         "2B": null,
@@ -901,7 +901,7 @@
       "description": "MARION homered to center field, 3 RBI (0-0); ROSS scored; SPENCE scored."
     },
     {
-      "inning": "Top 6",
+      "inning": "Top 4",
       "pitcher": "LJ Cormier",
       "batter": "Dylan O'Connell",
       "outcome": "Single",
@@ -909,8 +909,8 @@
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Grant Ross",
         "2B": null,
@@ -928,7 +928,7 @@
       "description": "O'CONNELL singled to shortstop (1-0 B)."
     },
     {
-      "inning": "Top 6",
+      "inning": "Top 4",
       "pitcher": "LJ Cormier",
       "batter": "Dominic Kibler",
       "outcome": "Flyout",
@@ -936,8 +936,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Dylan O'Connell",
         "2B": null,
@@ -955,7 +955,7 @@
       "description": "KIBLER flied out to rf (0-0)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Abe Chancellor",
       "batter": null,
       "outcome": "Stolen base",
@@ -963,15 +963,15 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Dylan O'Connell",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Dylan O'Connell",
         "2B": null,
         "3B": null
       },
@@ -982,7 +982,7 @@
       "description": "O'CONNELL stole second."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Abe Chancellor",
       "batter": "Bradyn Horn",
       "outcome": "\u2014",
@@ -990,15 +990,15 @@
       "pitches": "BKBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Dylan O'Connell",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Dylan O'Connell",
         "2B": null,
         "3B": null
       },
@@ -1009,9 +1009,9 @@
       "description": "HORN out at first 1b to p (2-2 BKBK)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Abe Chancellor",
-      "batter": "Fralick, C. flied out to rf (2-0 BB).",
+      "inning": "Bottom 4",
+      "pitcher": "Gavin Theis",
+      "batter": "Chase Fralick",
       "outcome": "Flyout",
       "count": "2-0",
       "pitches": "BB",
@@ -1036,9 +1036,9 @@
       "description": "Fralick, C. flied out to rf (2-0 BB)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Abe Chancellor",
-      "batter": "Rembert, C. singled to right field (2-1 BSB).",
+      "inning": "Bottom 4",
+      "pitcher": "Gavin Theis",
+      "batter": "Chris Rembert",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BSB",
@@ -1052,7 +1052,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Rembert, C. singled to right field (2-1 BSB).",
+        "1B": "Chris Rembert",
         "2B": null,
         "3B": null
       },
@@ -1063,8 +1063,8 @@
       "description": "Rembert, C. singled to right field (2-1 BSB)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Abe Chancellor",
+      "inning": "Bottom 4",
+      "pitcher": "Gavin Theis",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -1074,12 +1074,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Rembert, C. singled to right field (2-1 BSB).",
+        "1B": "Chris Rembert",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Rembert, C. singled to right field (2-1 BSB).",
+        "1B": "Chris Rembert",
         "2B": null,
         "3B": null
       },
@@ -1090,9 +1090,9 @@
       "description": "Rembert, C. advanced to second on a passed ball."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Abe Chancellor",
-      "batter": "Terrell, B. singled to right field (3-2 FBBFB); Rembert, C. advanced to third.",
+      "inning": "Bottom 4",
+      "pitcher": "Gavin Theis",
+      "batter": "Bub Terrell",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "FBBFB",
@@ -1101,12 +1101,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Rembert, C. singled to right field (2-1 BSB).",
+        "1B": "Chris Rembert",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Terrell, B. singled to right field (3-2 FBBFB); Rembert, C. advanced to third.",
+        "1B": "Bub Terrell",
         "2B": null,
         "3B": null
       },
@@ -1117,25 +1117,25 @@
       "description": "Terrell, B. singled to right field (3-2 FBBFB); Rembert, C. advanced to third."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Abe Chancellor",
-      "batter": "Bingaman, E. homered to left field, 3 RBI (3-2 KKBFBFBF); Terrell, B. scored; Rembert, C. scored.",
+      "inning": "Bottom 4",
+      "pitcher": "Gavin Theis",
+      "batter": "Ethin Bingaman",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "KKBFBFBF",
       "rbi": true,
       "runs_scored": [
-        "Bingaman, E. homered to left field, 3 RBI (3-2 KKBFBFBF); Terrell, B. scored; Rembert, C. scored."
+        "Ethin Bingaman"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Terrell, B. singled to right field (3-2 FBBFB); Rembert, C. advanced to third.",
+        "1B": "Bub Terrell",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Terrell, B. singled to right field (3-2 FBBFB); Rembert, C. advanced to third.",
+        "1B": "Bub Terrell",
         "2B": null,
         "3B": null
       },
@@ -1146,9 +1146,9 @@
       "description": "Bingaman, E. homered to left field, 3 RBI (3-2 KKBFBFBF); Terrell, B. scored; Rembert, C. scored."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Abe Chancellor",
-      "batter": "Belyeu, C. grounded out to 2b (0-0).",
+      "inning": "Bottom 4",
+      "pitcher": "Gavin Theis",
+      "batter": "Cade Belyeu",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
@@ -1157,12 +1157,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Terrell, B. singled to right field (3-2 FBBFB); Rembert, C. advanced to third.",
+        "1B": "Bub Terrell",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Terrell, B. singled to right field (3-2 FBBFB); Rembert, C. advanced to third.",
+        "1B": "Bub Terrell",
         "2B": null,
         "3B": null
       },
@@ -1173,9 +1173,9 @@
       "description": "Belyeu, C. grounded out to 2b (0-0)."
     },
     {
-      "inning": "Top 7",
-      "pitcher": "Abe Chancellor",
-      "batter": "McCraine, B. popped up to (3-2 BFFBBFF).",
+      "inning": "Bottom 4",
+      "pitcher": "Gavin Theis",
+      "batter": "Mason McCraine",
       "outcome": "Pop out",
       "count": "3-2",
       "pitches": "BFFBBFF",
@@ -1184,12 +1184,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Terrell, B. singled to right field (3-2 FBBFB); Rembert, C. advanced to third.",
+        "1B": "Bub Terrell",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Terrell, B. singled to right field (3-2 FBBFB); Rembert, C. advanced to third.",
+        "1B": "Bub Terrell",
         "2B": null,
         "3B": null
       },
@@ -1200,7 +1200,7 @@
       "description": "McCraine, B. popped up to (3-2 BFFBBFF)."
     },
     {
-      "inning": "Top 8",
+      "inning": "Top 5",
       "pitcher": "Abe Chancellor",
       "batter": "HADLEY",
       "outcome": "Triple",
@@ -1227,7 +1227,7 @@
       "description": "HADLEY tripled down the rf line (3-1 FBBB)."
     },
     {
-      "inning": "Top 8",
+      "inning": "Top 5",
       "pitcher": "Abe Chancellor",
       "batter": "Connor Bozak",
       "outcome": "Strikeout (swinging)",
@@ -1254,7 +1254,7 @@
       "description": "BOZAK struck out swinging (2-2 KBBFS)."
     },
     {
-      "inning": "Top 8",
+      "inning": "Top 5",
       "pitcher": "Abe Chancellor",
       "batter": "Joey Spence",
       "outcome": "Double",
@@ -1281,7 +1281,7 @@
       "description": "SPENCE doubled to right center, RBI (3-0 BBB); HADLEY scored."
     },
     {
-      "inning": "Top 8",
+      "inning": "Top 5",
       "pitcher": "Marcel Kulik",
       "batter": "Christian Holmes",
       "outcome": "Fielder's choice",
@@ -1308,7 +1308,7 @@
       "description": "HOLMES reached on a fielder's choice to shortstop (1-0 B); SPENCE out at third ss to ."
     },
     {
-      "inning": "Top 8",
+      "inning": "Top 5",
       "pitcher": "Marcel Kulik",
       "batter": null,
       "outcome": "Caught stealing",
@@ -1335,25 +1335,25 @@
       "description": "HOLMES out at second c to 2b, caught stealing."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "PETERSON",
-      "batter": "Belza, T. singled through the right side (2-1 FBB).",
+      "inning": "Bottom 5",
+      "pitcher": "Riley Peterson",
+      "batter": "Taylor Belza",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "FBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
-        "2B": "Joey Spence",
-        "3B": "HADLEY"
+        "2B": null,
+        "3B": null
       },
       "runners_after": {
-        "1B": "Belza, T. singled through the right side (2-1 FBB).",
-        "2B": "Joey Spence",
-        "3B": "HADLEY"
+        "1B": "Taylor Belza",
+        "2B": null,
+        "3B": null
       },
       "score": {
         "away": 11,
@@ -1362,25 +1362,25 @@
       "description": "Belza, T. singled through the right side (2-1 FBB)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "PETERSON",
+      "inning": "Bottom 5",
+      "pitcher": "Riley Peterson",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Belza, T. singled through the right side (2-1 FBB).",
-        "2B": "Joey Spence",
-        "3B": "HADLEY"
+        "1B": "Taylor Belza",
+        "2B": null,
+        "3B": null
       },
       "runners_after": {
-        "1B": "Belza, T. singled through the right side (2-1 FBB).",
-        "2B": "Joey Spence",
-        "3B": "HADLEY"
+        "1B": "Taylor Belza",
+        "2B": null,
+        "3B": null
       },
       "score": {
         "away": 11,
@@ -1389,25 +1389,25 @@
       "description": "Belza, T. advanced to second on a passed ball."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "PETERSON",
-      "batter": "McCraine, M. grounded out to 1b unassisted (2-2 KBSFB); Belza, T. advanced to third.",
+      "inning": "Bottom 5",
+      "pitcher": "Riley Peterson",
+      "batter": "Mason McCraine",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "KBSFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Belza, T. singled through the right side (2-1 FBB).",
-        "2B": "Joey Spence",
-        "3B": "HADLEY"
+        "1B": "Taylor Belza",
+        "2B": null,
+        "3B": null
       },
       "runners_after": {
-        "1B": "Belza, T. singled through the right side (2-1 FBB).",
-        "2B": "Joey Spence",
-        "3B": "HADLEY"
+        "1B": "Taylor Belza",
+        "2B": null,
+        "3B": null
       },
       "score": {
         "away": 11,
@@ -1416,23 +1416,23 @@
       "description": "McCraine, M. grounded out to 1b unassisted (2-2 KBSFB); Belza, T. advanced to third."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "PETERSON",
-      "batter": "Guevara, E. grounded out to 2b, RBI (1-1 FB); Belza, T. scored.",
+      "inning": "Bottom 5",
+      "pitcher": "Riley Peterson",
+      "batter": "Eric Guevara",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Taylor Belza",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Taylor Belza",
         "2B": null,
         "3B": null
       },
@@ -1443,25 +1443,25 @@
       "description": "Guevara, E. grounded out to 2b, RBI (1-1 FB); Belza, T. scored."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "PETERSON",
-      "batter": "Fralick, C. homered to right field, RBI (1-0 B).",
+      "inning": "Bottom 5",
+      "pitcher": "Riley Peterson",
+      "batter": "Chase Fralick",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Fralick, C. homered to right field, RBI (1-0 B)."
+        "Chase Fralick"
       ],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Taylor Belza",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Taylor Belza",
         "2B": null,
         "3B": null
       },
@@ -1472,23 +1472,23 @@
       "description": "Fralick, C. homered to right field, RBI (1-0 B)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "PETERSON",
-      "batter": "Rembert, C. flied out to cf (0-0).",
+      "inning": "Bottom 5",
+      "pitcher": "Riley Peterson",
+      "batter": "Chris Rembert",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
+        "1B": "Taylor Belza",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Taylor Belza",
         "2B": null,
         "3B": null
       },
@@ -1499,16 +1499,16 @@
       "description": "Rembert, C. flied out to cf (0-0)."
     },
     {
-      "inning": "Top 9",
-      "pitcher": "PETERSON",
+      "inning": "Top 6",
+      "pitcher": "Marcel Kulik",
       "batter": "Grant Ross",
       "outcome": "Groundout",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1526,16 +1526,16 @@
       "description": "ROSS grounded out to (1-0 B)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "PETERSON",
+      "inning": "Top 6",
+      "pitcher": "Marcel Kulik",
       "batter": "Charlie Marion",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "BS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1553,16 +1553,16 @@
       "description": "MARION grounded out to 1b unassisted (1-1 BS)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "PETERSON",
+      "inning": "Top 6",
+      "pitcher": "Marcel Kulik",
       "batter": "Dylan O'Connell",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KFFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1580,16 +1580,16 @@
       "description": "O'CONNELL struck out swinging (0-2 KFFS)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "PETERSON",
-      "batter": "Terrell, B. flied out to cf (1-2 KKB).",
+      "inning": "Bottom 6",
+      "pitcher": "Riley Peterson",
+      "batter": "Bub Terrell",
       "outcome": "Flyout",
       "count": "1-2",
       "pitches": "KKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1607,16 +1607,16 @@
       "description": "Terrell, B. flied out to cf (1-2 KKB)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "PETERSON",
-      "batter": "Bingaman, E. struck out swinging (2-2 BSFBFFFS).",
+      "inning": "Bottom 6",
+      "pitcher": "Riley Peterson",
+      "batter": "Ethin Bingaman",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "BSFBFFFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1634,16 +1634,16 @@
       "description": "Bingaman, E. struck out swinging (2-2 BSFBFFFS)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "PETERSON",
-      "batter": "Belyeu, C. grounded out to ss (0-0).",
+      "inning": "Bottom 6",
+      "pitcher": "Riley Peterson",
+      "batter": "Cade Belyeu",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1661,16 +1661,16 @@
       "description": "Belyeu, C. grounded out to ss (0-0)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "PETERSON",
+      "inning": "Top 7",
+      "pitcher": "Marcel Kulik",
       "batter": "Dominic Kibler",
       "outcome": "Hit by pitch",
       "count": "2-2",
       "pitches": "BKBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1688,16 +1688,16 @@
       "description": "KIBLER hit by pitch (2-2 BKBK)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "PETERSON",
+      "inning": "Top 7",
+      "pitcher": "Marcel Kulik",
       "batter": "Bradyn Horn",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "F",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Dominic Kibler",
         "2B": null,
@@ -1715,23 +1715,23 @@
       "description": "HORN grounded out to p, SAC (0-1 F); KIBLER advanced to second."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "PETERSON",
+      "inning": "Top 7",
+      "pitcher": "Marcel Kulik",
       "batter": "HADLEY",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "BSK",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": null,
+        "1B": "Dominic Kibler",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Dominic Kibler",
         "2B": "HADLEY",
         "3B": null
       },
@@ -1742,7 +1742,7 @@
       "description": "HADLEY doubled down the lf line, RBI (1-2 BSK); KIBLER scored."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "Jett Johnston",
       "batter": "Connor Bozak",
       "outcome": "Strikeout (looking)",
@@ -1750,15 +1750,15 @@
       "pitches": "BSKK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Dominic Kibler",
         "2B": "HADLEY",
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Dominic Kibler",
         "2B": "HADLEY",
         "3B": null
       },
@@ -1769,7 +1769,7 @@
       "description": "BOZAK struck out looking (1-2 BSKK)."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "Jett Johnston",
       "batter": "Joey Spence",
       "outcome": "Pop out",
@@ -1777,15 +1777,15 @@
       "pitches": "SSB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
+        "1B": "Dominic Kibler",
         "2B": "HADLEY",
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Dominic Kibler",
         "2B": "HADLEY",
         "3B": null
       },
@@ -1796,24 +1796,24 @@
       "description": "SPENCE popped up to 2b down the rf line (1-2 SSB)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "Jett Johnston",
-      "batter": "McCraine, B. flied out to cf (0-1 K).",
+      "inning": "Bottom 7",
+      "pitcher": "Riley Peterson",
+      "batter": "Mason McCraine",
       "outcome": "Flyout",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "HADLEY",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "HADLEY",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1823,16 +1823,16 @@
       "description": "McCraine, B. flied out to cf (0-1 K)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Jett Johnston",
-      "batter": "Belza, T. flied out to lf (1-2 SBF).",
+      "inning": "Bottom 7",
+      "pitcher": "Riley Peterson",
+      "batter": "Taylor Belza",
       "outcome": "Flyout",
       "count": "1-2",
       "pitches": "SBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1850,16 +1850,16 @@
       "description": "Belza, T. flied out to lf (1-2 SBF)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Jett Johnston",
-      "batter": "McCraine, M. doubled to right field (1-0 B).",
+      "inning": "Bottom 7",
+      "pitcher": "Riley Peterson",
+      "batter": "Mason McCraine",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1867,7 +1867,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "McCraine, M. doubled to right field (1-0 B).",
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -1877,26 +1877,26 @@
       "description": "McCraine, M. doubled to right field (1-0 B)."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Jett Johnston",
-      "batter": "Guevara, E. homered to left center, 2 RBI (1-1 KB); McCraine, M. scored.",
+      "inning": "Bottom 7",
+      "pitcher": "Riley Peterson",
+      "batter": "Eric Guevara",
       "outcome": "Home run",
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
       "runs_scored": [
-        "Guevara, E. homered to left center, 2 RBI (1-1 KB); McCraine, M. scored."
+        "Eric Guevara"
       ],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "McCraine, M. doubled to right field (1-0 B).",
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "McCraine, M. doubled to right field (1-0 B).",
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -1906,24 +1906,24 @@
       "description": "Guevara, E. homered to left center, 2 RBI (1-1 KB); McCraine, M. scored."
     },
     {
-      "inning": "Top 13",
-      "pitcher": "Jett Johnston",
-      "batter": "Fralick, C. struck out looking (0-2 KSK).",
+      "inning": "Bottom 7",
+      "pitcher": "Riley Peterson",
+      "batter": "Chase Fralick",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
       "pitches": "KSK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "McCraine, M. doubled to right field (1-0 B).",
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "McCraine, M. doubled to right field (1-0 B).",
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -1933,7 +1933,7 @@
       "description": "Fralick, C. struck out looking (0-2 KSK)."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 8",
       "pitcher": "Jett Johnston",
       "batter": "Christian Holmes",
       "outcome": "Pop out",
@@ -1941,16 +1941,16 @@
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "McCraine, M. doubled to right field (1-0 B).",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "McCraine, M. doubled to right field (1-0 B).",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1960,7 +1960,7 @@
       "description": "HOLMES popped up to 2b to right center (0-1 K)."
     },
     {
-      "inning": "Top 14",
+      "inning": "Top 8",
       "pitcher": "Jett Johnston",
       "batter": "Grant Ross",
       "outcome": "Single",
@@ -1968,8 +1968,8 @@
       "pitches": "SBBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1987,7 +1987,7 @@
       "description": "ROSS singled up the middle (2-2 SBBK)."
     },
     {
-      "inning": "Top 14",
+      "inning": "Top 8",
       "pitcher": "Jett Johnston",
       "batter": "Charlie Marion",
       "outcome": "Strikeout (swinging)",
@@ -1995,8 +1995,8 @@
       "pitches": "KFBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Grant Ross",
         "2B": null,
@@ -2014,7 +2014,7 @@
       "description": "MARION struck out swinging (1-2 KFBS)."
     },
     {
-      "inning": "Top 14",
+      "inning": "Top 8",
       "pitcher": "Jett Johnston",
       "batter": "Dylan O'Connell",
       "outcome": "Walk",
@@ -2022,8 +2022,8 @@
       "pitches": "BBBKFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Grant Ross",
         "2B": null,
@@ -2041,7 +2041,7 @@
       "description": "O'CONNELL walked (3-2 BBBKFB); ROSS advanced to second."
     },
     {
-      "inning": "Top 14",
+      "inning": "Top 8",
       "pitcher": "Jett Johnston",
       "batter": null,
       "outcome": "Wild pitch",
@@ -2049,8 +2049,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Dylan O'Connell",
         "2B": null,
@@ -2068,7 +2068,7 @@
       "description": "O'CONNELL advanced to second on a wild pitch; ROSS advanced to third."
     },
     {
-      "inning": "Top 14",
+      "inning": "Top 8",
       "pitcher": "Jett Johnston",
       "batter": "Dominic Kibler",
       "outcome": "Walk",
@@ -2076,8 +2076,8 @@
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2095,7 +2095,7 @@
       "description": "KIBLER intentionally walked (1-0 B)."
     },
     {
-      "inning": "Top 14",
+      "inning": "Top 8",
       "pitcher": "Jett Johnston",
       "batter": "Bradyn Horn",
       "outcome": "Strikeout (looking)",
@@ -2103,8 +2103,8 @@
       "pitches": "FBSK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Dominic Kibler",
         "2B": null,
@@ -2122,25 +2122,25 @@
       "description": "HORN struck out looking (1-2 FBSK)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "Jett Johnston",
-      "batter": "Rembert, C. grounded out to 1b unassisted (0-2 FF).",
+      "inning": "Bottom 8",
+      "pitcher": "Riley Peterson",
+      "batter": "Chris Rembert",
       "outcome": "Groundout",
       "count": "0-2",
       "pitches": "FF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Dominic Kibler",
+        "1B": null,
         "2B": null,
-        "3B": "Dylan O'Connell"
+        "3B": null
       },
       "runners_after": {
-        "1B": "Dominic Kibler",
+        "1B": null,
         "2B": null,
-        "3B": "Dylan O'Connell"
+        "3B": null
       },
       "score": {
         "away": 12,
@@ -2149,16 +2149,16 @@
       "description": "Rembert, C. grounded out to 1b unassisted (0-2 FF)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Jett Johnston",
-      "batter": "Terrell, B. struck out swinging, out at first c to 1b (1-2 BKKS).",
+      "inning": "Bottom 8",
+      "pitcher": "Riley Peterson",
+      "batter": "Bub Terrell",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "BKKS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2176,16 +2176,16 @@
       "description": "Terrell, B. struck out swinging, out at first c to 1b (1-2 BKKS)."
     },
     {
-      "inning": "Top 15",
-      "pitcher": "Jett Johnston",
-      "batter": "Bingaman, E. grounded out to (0-0).",
+      "inning": "Bottom 8",
+      "pitcher": "Riley Peterson",
+      "batter": "Ethin Bingaman",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2203,7 +2203,7 @@
       "description": "Bingaman, E. grounded out to (0-0)."
     },
     {
-      "inning": "Top 15",
+      "inning": "Top 9",
       "pitcher": "Ethan Harden",
       "batter": "HADLEY",
       "outcome": "Strikeout (looking)",
@@ -2211,8 +2211,8 @@
       "pitches": "BBKSK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2230,7 +2230,7 @@
       "description": "HADLEY struck out looking (2-2 BBKSK)."
     },
     {
-      "inning": "Top 16",
+      "inning": "Top 9",
       "pitcher": "Ethan Harden",
       "batter": "Connor Bozak",
       "outcome": "Walk",
@@ -2238,8 +2238,8 @@
       "pitches": "BKBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2257,7 +2257,7 @@
       "description": "BOZAK walked (3-1 BKBBB)."
     },
     {
-      "inning": "Top 16",
+      "inning": "Top 9",
       "pitcher": "Ethan Harden",
       "batter": "Joey Spence",
       "outcome": "Strikeout (swinging)",
@@ -2265,8 +2265,8 @@
       "pitches": "FFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Connor Bozak",
         "2B": null,
@@ -2284,7 +2284,7 @@
       "description": "SPENCE struck out swinging (0-2 FFS)."
     },
     {
-      "inning": "Top 16",
+      "inning": "Top 9",
       "pitcher": "Ethan Harden",
       "batter": "Christian Holmes",
       "outcome": "Walk",
@@ -2292,8 +2292,8 @@
       "pitches": "FBBFBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Connor Bozak",
         "2B": null,
@@ -2311,7 +2311,7 @@
       "description": "HOLMES walked (3-2 FBBFBB); BOZAK advanced to second."
     },
     {
-      "inning": "Top 16",
+      "inning": "Top 9",
       "pitcher": "Christian Chatterton",
       "batter": null,
       "outcome": "Passed ball",
@@ -2319,8 +2319,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Christian Holmes",
         "2B": null,
@@ -2338,7 +2338,7 @@
       "description": "HOLMES advanced to second on a passed ball; BOZAK advanced to third."
     },
     {
-      "inning": "Top 16",
+      "inning": "Top 9",
       "pitcher": "Christian Chatterton",
       "batter": "Grant Ross",
       "outcome": "Walk",
@@ -2346,8 +2346,8 @@
       "pitches": "BBBKKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2365,7 +2365,7 @@
       "description": "ROSS walked (3-2 BBBKKB)."
     },
     {
-      "inning": "Top 16",
+      "inning": "Top 9",
       "pitcher": "Christian Chatterton",
       "batter": "Charlie Marion",
       "outcome": "Walk",
@@ -2373,8 +2373,8 @@
       "pitches": "BBBB",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Grant Ross",
         "2B": null,
@@ -2392,7 +2392,7 @@
       "description": "MARION walked, RBI (3-0 BBBB); ROSS advanced to second; HOLMES advanced to third; BOZAK scored."
     },
     {
-      "inning": "Top 16",
+      "inning": "Top 9",
       "pitcher": "Christian Chatterton",
       "batter": "de Jong, J. to p for Chatterton,C.",
       "outcome": "\u2014",
@@ -2400,8 +2400,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Charlie Marion",
         "2B": null,
@@ -2419,7 +2419,7 @@
       "description": "de Jong, J. to p for Chatterton,C."
     },
     {
-      "inning": "Top 16",
+      "inning": "Top 9",
       "pitcher": "Christian Chatterton",
       "batter": "Dylan O'Connell",
       "outcome": "Strikeout (swinging)",
@@ -2427,8 +2427,8 @@
       "pitches": "BFBKBFFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Charlie Marion",
         "2B": null,
@@ -2446,93 +2446,12 @@
       "description": "O'CONNELL struck out swinging (3-2 BFBKBFFS)."
     },
     {
-      "inning": "Top 16",
-      "pitcher": "Christian Chatterton",
-      "batter": "Belyeu, C. singled to third base, bunt, advanced to second on a throwing error by (0-0).",
+      "inning": "Bottom 9",
+      "pitcher": "Riley Peterson",
+      "batter": "Cade Belyeu",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "Charlie Marion",
-        "2B": null,
-        "3B": "Christian Holmes"
-      },
-      "runners_after": {
-        "1B": "Belyeu, C. singled to third base, bunt, advanced to second on a throwing error by (0-0).",
-        "2B": null,
-        "3B": "Christian Holmes"
-      },
-      "score": {
-        "away": 13,
-        "home": 7
-      },
-      "description": "Belyeu, C. singled to third base, bunt, advanced to second on a throwing error by (0-0)."
-    },
-    {
-      "inning": "Top 16",
-      "pitcher": "Christian Chatterton",
-      "batter": null,
-      "outcome": "Passed ball",
-      "count": null,
-      "pitches": null,
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "Belyeu, C. singled to third base, bunt, advanced to second on a throwing error by (0-0).",
-        "2B": null,
-        "3B": "Christian Holmes"
-      },
-      "runners_after": {
-        "1B": "Belyeu, C. singled to third base, bunt, advanced to second on a throwing error by (0-0).",
-        "2B": null,
-        "3B": "Christian Holmes"
-      },
-      "score": {
-        "away": 13,
-        "home": 7
-      },
-      "description": "Belyeu, C. advanced to third on a passed ball."
-    },
-    {
-      "inning": "Top 16",
-      "pitcher": "Christian Chatterton",
-      "batter": "McCraine, B. struck out looking (3-2 BKFBBK).",
-      "outcome": "Strikeout (looking)",
-      "count": "3-2",
-      "pitches": "BKFBBK",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
-      "runners_before": {
-        "1B": "Belyeu, C. singled to third base, bunt, advanced to second on a throwing error by (0-0).",
-        "2B": null,
-        "3B": "Christian Holmes"
-      },
-      "runners_after": {
-        "1B": "Belyeu, C. singled to third base, bunt, advanced to second on a throwing error by (0-0).",
-        "2B": null,
-        "3B": "Christian Holmes"
-      },
-      "score": {
-        "away": 13,
-        "home": 7
-      },
-      "description": "McCraine, B. struck out looking (3-2 BKFBBK)."
-    },
-    {
-      "inning": "Top 17",
-      "pitcher": "Christian Chatterton",
-      "batter": "Belza, T. hit by pitch (2-1 BKB).",
-      "outcome": "Hit by pitch",
-      "count": "2-1",
-      "pitches": "BKB",
       "rbi": false,
       "runs_scored": [],
       "outs_before": 0,
@@ -2543,7 +2462,88 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Belza, T. hit by pitch (2-1 BKB).",
+        "1B": "Cade Belyeu",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 13,
+        "home": 7
+      },
+      "description": "Belyeu, C. singled to third base, bunt, advanced to second on a throwing error by (0-0)."
+    },
+    {
+      "inning": "Bottom 9",
+      "pitcher": "Riley Peterson",
+      "batter": null,
+      "outcome": "Passed ball",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Cade Belyeu",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Cade Belyeu",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 13,
+        "home": 7
+      },
+      "description": "Belyeu, C. advanced to third on a passed ball."
+    },
+    {
+      "inning": "Bottom 9",
+      "pitcher": "Riley Peterson",
+      "batter": "Mason McCraine",
+      "outcome": "Strikeout (looking)",
+      "count": "3-2",
+      "pitches": "BKFBBK",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Cade Belyeu",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Cade Belyeu",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 13,
+        "home": 7
+      },
+      "description": "McCraine, B. struck out looking (3-2 BKFBBK)."
+    },
+    {
+      "inning": "Bottom 9",
+      "pitcher": "Riley Peterson",
+      "batter": "Taylor Belza",
+      "outcome": "Hit by pitch",
+      "count": "2-1",
+      "pitches": "BKB",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Cade Belyeu",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Taylor Belza",
         "2B": null,
         "3B": null
       },
@@ -2554,23 +2554,23 @@
       "description": "Belza, T. hit by pitch (2-1 BKB)."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Christian Chatterton",
-      "batter": "McCraine, M. hit by pitch (2-2 BKBK); Belza, T. advanced to second.",
+      "inning": "Bottom 9",
+      "pitcher": "Riley Peterson",
+      "batter": "Mason McCraine",
       "outcome": "Hit by pitch",
       "count": "2-2",
       "pitches": "BKBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Belza, T. hit by pitch (2-1 BKB).",
+        "1B": "Taylor Belza",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "McCraine, M. hit by pitch (2-2 BKBK); Belza, T. advanced to second.",
+        "1B": "Mason McCraine",
         "2B": null,
         "3B": null
       },
@@ -2581,23 +2581,23 @@
       "description": "McCraine, M. hit by pitch (2-2 BKBK); Belza, T. advanced to second."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Christian Chatterton",
-      "batter": "Guevara, E. flied out to cf, SF, RBI (1-2 KSFBFF); Belyeu, C. scored.",
+      "inning": "Bottom 9",
+      "pitcher": "Riley Peterson",
+      "batter": "Eric Guevara",
       "outcome": "Flyout",
       "count": "1-2",
       "pitches": "KSFBFF",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "McCraine, M. hit by pitch (2-2 BKBK); Belza, T. advanced to second.",
+        "1B": "Mason McCraine",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "McCraine, M. hit by pitch (2-2 BKBK); Belza, T. advanced to second.",
+        "1B": "Mason McCraine",
         "2B": null,
         "3B": null
       },
@@ -2608,23 +2608,23 @@
       "description": "Guevara, E. flied out to cf, SF, RBI (1-2 KSFBFF); Belyeu, C. scored."
     },
     {
-      "inning": "Top 17",
-      "pitcher": "Christian Chatterton",
-      "batter": "Fralick, C. flied out to cf (1-2 KBS).",
+      "inning": "Bottom 9",
+      "pitcher": "Riley Peterson",
+      "batter": "Chase Fralick",
       "outcome": "Flyout",
       "count": "1-2",
       "pitches": "KBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "McCraine, M. hit by pitch (2-2 BKBK); Belza, T. advanced to second.",
+        "1B": "Mason McCraine",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "McCraine, M. hit by pitch (2-2 BKBK); Belza, T. advanced to second.",
+        "1B": "Mason McCraine",
         "2B": null,
         "3B": null
       },

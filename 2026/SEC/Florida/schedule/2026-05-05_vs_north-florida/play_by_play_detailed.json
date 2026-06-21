@@ -1,9 +1,9 @@
 {
   "contest_id": "6497455",
   "date": "05/05/2026",
-  "batting_team": "North Florida",
-  "pitching_team": "Florida",
-  "note": "Broken-down from the saved play_by_play.json, which contains the North Florida at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "North Florida",
+  "home_team": "Florida",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
       "inning": "Top 1",
@@ -141,9 +141,9 @@
       "description": "HOSEY, B. lined out to ss (1-2 KBF)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Cooper Walls",
-      "batter": "K.",
+      "inning": "Bottom 1",
+      "pitcher": "Tommy Groom",
+      "batter": "Kyle Jones",
       "outcome": "Double",
       "count": "3-2",
       "pitches": "KBSBBF",
@@ -158,7 +158,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "K.",
+        "2B": "Kyle Jones",
         "3B": null
       },
       "score": {
@@ -168,9 +168,9 @@
       "description": "K. Jones doubled to left center (3-2 KBSBBF)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Cooper Walls",
-      "batter": "Lawson",
+      "inning": "Bottom 1",
+      "pitcher": "Tommy Groom",
+      "batter": "Brendan Lawson",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBBKB",
@@ -180,12 +180,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": null,
-        "2B": "K.",
+        "2B": "Kyle Jones",
         "3B": null
       },
       "runners_after": {
-        "1B": "Lawson",
-        "2B": "K.",
+        "1B": "Brendan Lawson",
+        "2B": "Kyle Jones",
         "3B": null
       },
       "score": {
@@ -195,9 +195,9 @@
       "description": "Lawson walked (3-1 BBBKB)."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Cooper Walls",
-      "batter": "Cyr",
+      "inning": "Bottom 1",
+      "pitcher": "Tommy Groom",
+      "batter": "Blake Cyr",
       "outcome": "Hit by pitch",
       "count": "1-2",
       "pitches": "KBK",
@@ -206,14 +206,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Lawson",
-        "2B": "K.",
+        "1B": "Brendan Lawson",
+        "2B": "Kyle Jones",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cyr",
-        "2B": "Lawson",
-        "3B": null
+        "1B": "Blake Cyr",
+        "2B": "Brendan Lawson",
+        "3B": "Kyle Jones"
       },
       "score": {
         "away": 0,
@@ -222,25 +222,27 @@
       "description": "Cyr hit by pitch (1-2 KBK) Lawson advanced to second K. Jones advanced to third."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "Cooper Walls",
-      "batter": "Surowiec",
+      "inning": "Bottom 1",
+      "pitcher": "Tommy Groom",
+      "batter": "Ethan Surowiec",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBSBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kyle Jones"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Cyr",
-        "2B": "Lawson",
-        "3B": null
+        "1B": "Blake Cyr",
+        "2B": "Brendan Lawson",
+        "3B": "Kyle Jones"
       },
       "runners_after": {
-        "1B": "Surowiec",
-        "2B": "Cyr",
-        "3B": "Lawson"
+        "1B": "Ethan Surowiec",
+        "2B": "Blake Cyr",
+        "3B": "Brendan Lawson"
       },
       "score": {
         "away": 0,
@@ -249,27 +251,27 @@
       "description": "Surowiec walked, RBI (3-1 BBSBB) Cyr advanced to second Lawson advanced to third K. Jones scored."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "STEWART",
-      "batter": "McDonald",
+      "inning": "Bottom 1",
+      "pitcher": "Jeremiah Stewart",
+      "batter": "Caden McDonald",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BKFB",
       "rbi": true,
       "runs_scored": [
-        "Cyr",
-        "Lawson"
+        "Blake Cyr",
+        "Brendan Lawson"
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Surowiec",
-        "2B": "Cyr",
-        "3B": "Lawson"
+        "1B": "Ethan Surowiec",
+        "2B": "Blake Cyr",
+        "3B": "Brendan Lawson"
       },
       "runners_after": {
-        "1B": "McDonald",
-        "2B": "Surowiec",
+        "1B": "Caden McDonald",
+        "2B": "Ethan Surowiec",
         "3B": null
       },
       "score": {
@@ -279,9 +281,9 @@
       "description": "McDonald singled up the middle, 2 RBI (2-2 BKFB) Surowiec advanced to second Cyr scored Lawson scored."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "STEWART",
-      "batter": "Stripling",
+      "inning": "Bottom 1",
+      "pitcher": "Jeremiah Stewart",
+      "batter": "Landon Stripling",
       "outcome": "Grounded into double play",
       "count": "1-0",
       "pitches": "B",
@@ -290,14 +292,14 @@
       "outs_before": 0,
       "outs_after": 2,
       "runners_before": {
-        "1B": "McDonald",
-        "2B": "Surowiec",
+        "1B": "Caden McDonald",
+        "2B": "Ethan Surowiec",
         "3B": null
       },
       "runners_after": {
         "1B": null,
         "2B": null,
-        "3B": "Surowiec"
+        "3B": "Ethan Surowiec"
       },
       "score": {
         "away": 0,
@@ -306,25 +308,25 @@
       "description": "Stripling grounded into double play 2b to ss to 1b (1-0 B) McDonald out on the play Surowiec advanced to third."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "STEWART",
-      "batter": "Kurland",
+      "inning": "Bottom 1",
+      "pitcher": "Jeremiah Stewart",
+      "batter": "Cade Kurland",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Surowiec"
+        "Ethan Surowiec"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
-        "3B": "Surowiec"
+        "3B": "Ethan Surowiec"
       },
       "runners_after": {
-        "1B": "Kurland",
+        "1B": "Cade Kurland",
         "2B": null,
         "3B": null
       },
@@ -335,9 +337,9 @@
       "description": "Kurland singled to right center, RBI (0-1 K) Surowiec scored."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "STEWART",
-      "batter": "Stanford",
+      "inning": "Bottom 1",
+      "pitcher": "Jeremiah Stewart",
+      "batter": "Cole Stanford",
       "outcome": "Reached on error",
       "count": "1-0",
       "pitches": "B",
@@ -346,14 +348,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kurland",
+        "1B": "Cade Kurland",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Stanford",
+        "1B": "Cole Stanford",
         "2B": null,
-        "3B": "Kurland"
+        "3B": "Cade Kurland"
       },
       "score": {
         "away": 0,
@@ -362,9 +364,9 @@
       "description": "Stanford reached on an error by ss (1-0 B) Kurland advanced to third."
     },
     {
-      "inning": "Top 2",
-      "pitcher": "STEWART",
-      "batter": "H.",
+      "inning": "Bottom 1",
+      "pitcher": "Jeremiah Stewart",
+      "batter": "Hayden Yost",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
@@ -373,14 +375,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Stanford",
+        "1B": "Cole Stanford",
         "2B": null,
-        "3B": "Kurland"
+        "3B": "Cade Kurland"
       },
       "runners_after": {
-        "1B": "Stanford",
+        "1B": "Cole Stanford",
         "2B": null,
-        "3B": "Kurland"
+        "3B": "Cade Kurland"
       },
       "score": {
         "away": 0,
@@ -389,8 +391,8 @@
       "description": "H. Yost flied out to cf (0-0)."
     },
     {
-      "inning": "Top 3",
-      "pitcher": "STEWART",
+      "inning": "Top 2",
+      "pitcher": "Cooper Walls",
       "batter": "Jackson Toberman",
       "outcome": "Groundout",
       "count": "0-1",
@@ -416,8 +418,8 @@
       "description": "TOBERMAN, J. grounded out to ss (0-1 S)."
     },
     {
-      "inning": "Top 3",
-      "pitcher": "STEWART",
+      "inning": "Top 2",
+      "pitcher": "Cooper Walls",
       "batter": "Carter White",
       "outcome": "Single",
       "count": "0-2",
@@ -443,8 +445,8 @@
       "description": "WHITE, C. singled to right center (0-2 FK)."
     },
     {
-      "inning": "Top 3",
-      "pitcher": "STEWART",
+      "inning": "Top 2",
+      "pitcher": "Cooper Walls",
       "batter": "Sean Benjamin",
       "outcome": "Grounded into double play",
       "count": "1-1",
@@ -470,9 +472,9 @@
       "description": "BENJAMIN, S. grounded into double play ss to 2b to 1b (1-1 BK) WHITE, C. out on the play."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "STEWART",
-      "batter": "K.",
+      "inning": "Bottom 2",
+      "pitcher": "Jeremiah Stewart",
+      "batter": "Kyle Jones",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "BKKB",
@@ -497,9 +499,9 @@
       "description": "K. Jones grounded out to (2-2 BKKB)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "STEWART",
-      "batter": "Lawson",
+      "inning": "Bottom 2",
+      "pitcher": "Jeremiah Stewart",
+      "batter": "Brendan Lawson",
       "outcome": "Flyout",
       "count": "2-1",
       "pitches": "BBK",
@@ -524,9 +526,9 @@
       "description": "Lawson flied out to lf (2-1 BBK)."
     },
     {
-      "inning": "Top 4",
-      "pitcher": "STEWART",
-      "batter": "Cyr",
+      "inning": "Bottom 2",
+      "pitcher": "Jeremiah Stewart",
+      "batter": "Blake Cyr",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "KB",
@@ -551,8 +553,8 @@
       "description": "Cyr grounded out to ss (1-1 KB)."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "STEWART",
+      "inning": "Top 3",
+      "pitcher": "Cooper Walls",
       "batter": "Jackson Schrafft",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -578,8 +580,8 @@
       "description": "SCHRAFFT, J. struck out swinging (2-2 KBKBS)."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "STEWART",
+      "inning": "Top 3",
+      "pitcher": "Cooper Walls",
       "batter": "Drew Buchanan",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -605,8 +607,8 @@
       "description": "BUCHANAN, D. struck out swinging (1-2 KSBS)."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "STEWART",
+      "inning": "Top 3",
+      "pitcher": "Cooper Walls",
       "batter": "Mitchell Collins",
       "outcome": "Single",
       "count": "2-1",
@@ -632,8 +634,8 @@
       "description": "COLLINS, M. singled to pitcher (2-1 BBK)."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "STEWART",
+      "inning": "Top 3",
+      "pitcher": "Cooper Walls",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -659,8 +661,8 @@
       "description": "COLLINS, M. stole second."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "STEWART",
+      "inning": "Top 3",
+      "pitcher": "Cooper Walls",
       "batter": "Matthew Farner",
       "outcome": "Walk",
       "count": "3-2",
@@ -686,8 +688,8 @@
       "description": "FARNER, M. walked (3-2 BFSBBB) COLLINS, M. advanced to third on a wild pitch."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "STEWART",
+      "inning": "Top 3",
+      "pitcher": "Cooper Walls",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -713,8 +715,8 @@
       "description": "FARNER, M. stole second."
     },
     {
-      "inning": "Top 5",
-      "pitcher": "STEWART",
+      "inning": "Top 3",
+      "pitcher": "Cooper Walls",
       "batter": "Gialdri Gomez",
       "outcome": "Pop out",
       "count": "3-2",
@@ -740,9 +742,9 @@
       "description": "GOMEZ, G. popped up to ss (3-2 BKBSBF)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "STEWART",
-      "batter": "Surowiec",
+      "inning": "Bottom 3",
+      "pitcher": "Jeremiah Stewart",
+      "batter": "Ethan Surowiec",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "FBFB",
@@ -767,9 +769,9 @@
       "description": "Surowiec grounded out to p (2-2 FBFB)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "STEWART",
-      "batter": "McDonald",
+      "inning": "Bottom 3",
+      "pitcher": "Jeremiah Stewart",
+      "batter": "Caden McDonald",
       "outcome": "Flyout",
       "count": "2-2",
       "pitches": "KKBB",
@@ -794,9 +796,9 @@
       "description": "McDonald flied out to cf (2-2 KKBB)."
     },
     {
-      "inning": "Top 6",
-      "pitcher": "STEWART",
-      "batter": "Stripling",
+      "inning": "Bottom 3",
+      "pitcher": "Jeremiah Stewart",
+      "batter": "Landon Stripling",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
       "pitches": "BFBFBK",
@@ -821,7 +823,7 @@
       "description": "Stripling struck out looking (3-2 BFBFBK)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Billy Barlow",
       "batter": "Boone Hosey",
       "outcome": "Groundout",
@@ -848,7 +850,7 @@
       "description": "HOSEY, B. grounded out to (0-1 K)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Billy Barlow",
       "batter": "Jackson Toberman",
       "outcome": "Strikeout (swinging)",
@@ -875,7 +877,7 @@
       "description": "TOBERMAN, J. struck out swinging (0-2 KFS)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Billy Barlow",
       "batter": "Carter White",
       "outcome": "Reached on error",
@@ -902,7 +904,7 @@
       "description": "WHITE, C. reached on an error by 1b (0-1 K)."
     },
     {
-      "inning": "Top 7",
+      "inning": "Top 4",
       "pitcher": "Billy Barlow",
       "batter": "Sean Benjamin",
       "outcome": "Flyout",
@@ -929,9 +931,9 @@
       "description": "BENJAMIN, S. flied out to cf (0-0)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Billy Barlow",
-      "batter": "Kurland",
+      "inning": "Bottom 4",
+      "pitcher": "Jeremiah Stewart",
+      "batter": "Cade Kurland",
       "outcome": "Hit by pitch",
       "count": "0-1",
       "pitches": "F",
@@ -945,7 +947,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kurland",
+        "1B": "Cade Kurland",
         "2B": null,
         "3B": null
       },
@@ -956,9 +958,9 @@
       "description": "Kurland hit by pitch (0-1 F)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Billy Barlow",
-      "batter": "Stanford",
+      "inning": "Bottom 4",
+      "pitcher": "Jeremiah Stewart",
+      "batter": "Cole Stanford",
       "outcome": "Fielder's choice",
       "count": "0-0",
       "pitches": "",
@@ -967,13 +969,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Kurland",
+        "1B": "Cade Kurland",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Stanford",
-        "2B": "Kurland",
+        "1B": "Cole Stanford",
+        "2B": "Cade Kurland",
         "3B": null
       },
       "score": {
@@ -983,9 +985,9 @@
       "description": "Stanford reached on a fielder's choice (0-0) Kurland advanced to second on an error by ss."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Billy Barlow",
-      "batter": "H.",
+      "inning": "Bottom 4",
+      "pitcher": "Jeremiah Stewart",
+      "batter": "Hayden Yost",
       "outcome": "Fielder's choice",
       "count": "3-2",
       "pitches": "FBBBKFF",
@@ -994,14 +996,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Stanford",
-        "2B": "Kurland",
+        "1B": "Cole Stanford",
+        "2B": "Cade Kurland",
         "3B": null
       },
       "runners_after": {
-        "1B": "H.",
+        "1B": "Hayden Yost",
         "2B": null,
-        "3B": "Kurland"
+        "3B": "Cade Kurland"
       },
       "score": {
         "away": 0,
@@ -1010,26 +1012,26 @@
       "description": "H. Yost reached on a fielder's choice (3-2 FBBBKFF) Stanford out at second 2b to ss Kurland advanced to third."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Billy Barlow",
-      "batter": "K.",
+      "inning": "Bottom 4",
+      "pitcher": "Jeremiah Stewart",
+      "batter": "Kyle Jones",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Kurland"
+        "Cade Kurland"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "H.",
+        "1B": "Hayden Yost",
         "2B": null,
-        "3B": "Kurland"
+        "3B": "Cade Kurland"
       },
       "runners_after": {
-        "1B": "K.",
-        "2B": null,
+        "1B": "Kyle Jones",
+        "2B": "Hayden Yost",
         "3B": null
       },
       "score": {
@@ -1039,9 +1041,9 @@
       "description": "K. Jones singled to center field, RBI (0-0) H. Yost advanced to second Kurland scored, unearned."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Billy Barlow",
-      "batter": "Lawson",
+      "inning": "Bottom 4",
+      "pitcher": "Jeremiah Stewart",
+      "batter": "Brendan Lawson",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
@@ -1050,13 +1052,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "K.",
-        "2B": null,
+        "1B": "Kyle Jones",
+        "2B": "Hayden Yost",
         "3B": null
       },
       "runners_after": {
-        "1B": "K.",
-        "2B": null,
+        "1B": "Kyle Jones",
+        "2B": "Hayden Yost",
         "3B": null
       },
       "score": {
@@ -1066,24 +1068,26 @@
       "description": "Lawson flied out to cf (0-0)."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Billy Barlow",
-      "batter": "Cyr",
+      "inning": "Bottom 4",
+      "pitcher": "Jeremiah Stewart",
+      "batter": "Blake Cyr",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Hayden Yost"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "K.",
-        "2B": null,
+        "1B": "Kyle Jones",
+        "2B": "Hayden Yost",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cyr",
-        "2B": null,
+        "1B": "Blake Cyr",
+        "2B": "Kyle Jones",
         "3B": null
       },
       "score": {
@@ -1093,9 +1097,9 @@
       "description": "Cyr singled to left field, RBI (1-0 B) K. Jones advanced to second H. Yost scored, unearned."
     },
     {
-      "inning": "Top 8",
-      "pitcher": "Billy Barlow",
-      "batter": "Surowiec",
+      "inning": "Bottom 4",
+      "pitcher": "Jeremiah Stewart",
+      "batter": "Ethan Surowiec",
       "outcome": "Pop out",
       "count": "0-0",
       "pitches": "",
@@ -1104,13 +1108,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Cyr",
-        "2B": null,
+        "1B": "Blake Cyr",
+        "2B": "Kyle Jones",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cyr",
-        "2B": null,
+        "1B": "Blake Cyr",
+        "2B": "Kyle Jones",
         "3B": null
       },
       "score": {
@@ -1120,7 +1124,7 @@
       "description": "Surowiec popped up to (0-0)."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Billy Barlow",
       "batter": "Jackson Schrafft",
       "outcome": "Lineout",
@@ -1147,7 +1151,7 @@
       "description": "SCHRAFFT, J. lined out to cf (0-0)."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Billy Barlow",
       "batter": "Drew Buchanan",
       "outcome": "Hit by pitch",
@@ -1174,7 +1178,7 @@
       "description": "BUCHANAN, D. hit by pitch (3-0 BBB)."
     },
     {
-      "inning": "Top 9",
+      "inning": "Top 5",
       "pitcher": "Billy Barlow",
       "batter": "Mitchell Collins",
       "outcome": "Grounded into double play",
@@ -1201,9 +1205,9 @@
       "description": "COLLINS, M. grounded into double play 2b to ss to 1b (1-2 KKFBF) BUCHANAN, D. out on the play."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "KOZERA",
-      "batter": "McDonald",
+      "inning": "Bottom 5",
+      "pitcher": "Tyler Kozera",
+      "batter": "Caden McDonald",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "BK",
@@ -1228,15 +1232,15 @@
       "description": "McDonald grounded out to (1-1 BK)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "KOZERA",
-      "batter": "Stripling",
+      "inning": "Bottom 5",
+      "pitcher": "Tyler Kozera",
+      "batter": "Landon Stripling",
       "outcome": "Home run",
       "count": "0-2",
       "pitches": "KF",
       "rbi": true,
       "runs_scored": [
-        "Stripling"
+        "Landon Stripling"
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1257,9 +1261,9 @@
       "description": "Stripling homered to right field, RBI (0-2 KF)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "KOZERA",
-      "batter": "Kurland",
+      "inning": "Bottom 5",
+      "pitcher": "Tyler Kozera",
+      "batter": "Cade Kurland",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
@@ -1284,9 +1288,9 @@
       "description": "Kurland out at first 1b to p."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "KOZERA",
-      "batter": "Stanford",
+      "inning": "Bottom 5",
+      "pitcher": "Tyler Kozera",
+      "batter": "Cole Stanford",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BKB",
@@ -1300,7 +1304,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Stanford",
+        "1B": "Cole Stanford",
         "2B": null,
         "3B": null
       },
@@ -1311,9 +1315,9 @@
       "description": "Stanford singled to center field (2-1 BKB)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "KOZERA",
-      "batter": "H.",
+      "inning": "Bottom 5",
+      "pitcher": "Tyler Kozera",
+      "batter": "Hayden Yost",
       "outcome": "Hit by pitch",
       "count": "1-1",
       "pitches": "BK",
@@ -1322,13 +1326,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Stanford",
+        "1B": "Cole Stanford",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "H.",
-        "2B": "Stanford",
+        "1B": "Hayden Yost",
+        "2B": "Cole Stanford",
         "3B": null
       },
       "score": {
@@ -1338,9 +1342,9 @@
       "description": "H. Yost hit by pitch (1-1 BK) Stanford advanced to second."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "KOZERA",
-      "batter": "K.",
+      "inning": "Bottom 5",
+      "pitcher": "Tyler Kozera",
+      "batter": "Kyle Jones",
       "outcome": "Flyout",
       "count": "2-2",
       "pitches": "BBKFF",
@@ -1349,13 +1353,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "H.",
-        "2B": "Stanford",
+        "1B": "Hayden Yost",
+        "2B": "Cole Stanford",
         "3B": null
       },
       "runners_after": {
-        "1B": "H.",
-        "2B": "Stanford",
+        "1B": "Hayden Yost",
+        "2B": "Cole Stanford",
         "3B": null
       },
       "score": {
@@ -1365,24 +1369,24 @@
       "description": "K. Jones flied out to rf to right center (2-2 BBKFF)."
     },
     {
-      "inning": "Top 10",
-      "pitcher": "KOZERA",
+      "inning": "Top 6",
+      "pitcher": "Billy Barlow",
       "batter": "Matthew Farner",
       "outcome": "Flyout",
       "count": "1-1",
       "pitches": "BK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "H.",
-        "2B": "Stanford",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "H.",
-        "2B": "Stanford",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1392,16 +1396,16 @@
       "description": "FARNER, M. flied out to rf (1-1 BK)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "KOZERA",
+      "inning": "Top 6",
+      "pitcher": "Billy Barlow",
       "batter": "Gialdri Gomez",
       "outcome": "Double",
       "count": "2-0",
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1419,16 +1423,16 @@
       "description": "GOMEZ, G. doubled to left field (2-0 BB)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "KOZERA",
+      "inning": "Top 6",
+      "pitcher": "Billy Barlow",
       "batter": "Boone Hosey",
       "outcome": "Groundout",
       "count": "3-2",
       "pitches": "KBBBKF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": "Gialdri Gomez",
@@ -1446,16 +1450,16 @@
       "description": "HOSEY, B. grounded out to 2b up the middle (3-2 KBBBKF) GOMEZ, G. advanced to third."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "KOZERA",
+      "inning": "Top 6",
+      "pitcher": "Billy Barlow",
       "batter": "Jackson Toberman",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
       "pitches": "KFBBBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": "Gialdri Gomez",
@@ -1473,24 +1477,24 @@
       "description": "TOBERMAN, J. struck out looking (3-2 KFBBBK)."
     },
     {
-      "inning": "Top 11",
-      "pitcher": "KOZERA",
-      "batter": "Lawson",
+      "inning": "Bottom 6",
+      "pitcher": "Tyler Kozera",
+      "batter": "Brendan Lawson",
       "outcome": "Flyout",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Gialdri Gomez",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Gialdri Gomez",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1500,16 +1504,16 @@
       "description": "Lawson flied out to lf (1-0 B)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "KOZERA",
-      "batter": "Cyr",
+      "inning": "Bottom 6",
+      "pitcher": "Tyler Kozera",
+      "batter": "Blake Cyr",
       "outcome": "Double",
       "count": "2-1",
       "pitches": "BBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1517,7 +1521,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Cyr",
+        "2B": "Blake Cyr",
         "3B": null
       },
       "score": {
@@ -1527,25 +1531,25 @@
       "description": "Cyr doubled to left field (2-1 BBK)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "KOZERA",
-      "batter": "Surowiec",
+      "inning": "Bottom 6",
+      "pitcher": "Tyler Kozera",
+      "batter": "Ethan Surowiec",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Cyr"
+        "Blake Cyr"
       ],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Cyr",
+        "2B": "Blake Cyr",
         "3B": null
       },
       "runners_after": {
-        "1B": "Surowiec",
+        "1B": "Ethan Surowiec",
         "2B": null,
         "3B": null
       },
@@ -1556,23 +1560,23 @@
       "description": "Surowiec singled to left field, RBI (0-0) Cyr scored."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "DIMINO",
-      "batter": "McDonald",
+      "inning": "Bottom 6",
+      "pitcher": "Joseph Dimino",
+      "batter": "Caden McDonald",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "KKBBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Surowiec",
+        "1B": "Ethan Surowiec",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Surowiec",
+        "1B": "Ethan Surowiec",
         "2B": null,
         "3B": null
       },
@@ -1583,26 +1587,26 @@
       "description": "McDonald struck out swinging (2-2 KKBBS)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "DIMINO",
-      "batter": "Stripling",
+      "inning": "Bottom 6",
+      "pitcher": "Joseph Dimino",
+      "batter": "Landon Stripling",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Surowiec"
+        "Ethan Surowiec"
       ],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Surowiec",
+        "1B": "Ethan Surowiec",
         "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Stripling",
+        "2B": "Landon Stripling",
         "3B": null
       },
       "score": {
@@ -1612,25 +1616,25 @@
       "description": "Stripling doubled to left center, RBI (0-0) Surowiec scored."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "DIMINO",
+      "inning": "Bottom 6",
+      "pitcher": "Joseph Dimino",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Stripling",
+        "2B": "Landon Stripling",
         "3B": null
       },
       "runners_after": {
         "1B": null,
         "2B": null,
-        "3B": "Stripling"
+        "3B": "Landon Stripling"
       },
       "score": {
         "away": 0,
@@ -1639,25 +1643,25 @@
       "description": "Stripling advanced to third on a wild pitch."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "DIMINO",
-      "batter": "Kurland",
+      "inning": "Bottom 6",
+      "pitcher": "Joseph Dimino",
+      "batter": "Cade Kurland",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BSKBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
-        "3B": "Stripling"
+        "3B": "Landon Stripling"
       },
       "runners_after": {
-        "1B": "Kurland",
+        "1B": "Cade Kurland",
         "2B": null,
-        "3B": "Stripling"
+        "3B": "Landon Stripling"
       },
       "score": {
         "away": 0,
@@ -1666,25 +1670,25 @@
       "description": "Kurland walked (3-2 BSKBBB)."
     },
     {
-      "inning": "Top 12",
-      "pitcher": "DIMINO",
-      "batter": "Stanford",
+      "inning": "Bottom 6",
+      "pitcher": "Joseph Dimino",
+      "batter": "Cole Stanford",
       "outcome": "Flyout",
       "count": "3-1",
       "pitches": "KBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "Kurland",
+        "1B": "Cade Kurland",
         "2B": null,
-        "3B": "Stripling"
+        "3B": "Landon Stripling"
       },
       "runners_after": {
-        "1B": "Kurland",
+        "1B": "Cade Kurland",
         "2B": null,
-        "3B": "Stripling"
+        "3B": "Landon Stripling"
       },
       "score": {
         "away": 0,
@@ -1693,7 +1697,7 @@
       "description": "Stanford flied out to rf (3-1 KBBB)."
     },
     {
-      "inning": "Top 12",
+      "inning": "Top 7",
       "pitcher": "Christian Rodriguez",
       "batter": "Carter White",
       "outcome": "Strikeout (swinging)",
@@ -1701,17 +1705,17 @@
       "pitches": "BKSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Kurland",
+        "1B": null,
         "2B": null,
-        "3B": "Stripling"
+        "3B": null
       },
       "runners_after": {
-        "1B": "Kurland",
+        "1B": null,
         "2B": null,
-        "3B": "Stripling"
+        "3B": null
       },
       "score": {
         "away": 0,
@@ -1720,7 +1724,7 @@
       "description": "WHITE, C. struck out swinging (1-2 BKSS)."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 7",
       "pitcher": "Christian Rodriguez",
       "batter": "Sean Benjamin",
       "outcome": "Walk",
@@ -1728,8 +1732,8 @@
       "pitches": "BFBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1747,7 +1751,7 @@
       "description": "BENJAMIN, S. walked (3-1 BFBBB)."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 7",
       "pitcher": "Christian Rodriguez",
       "batter": "Jackson Schrafft",
       "outcome": "Hit by pitch",
@@ -1755,8 +1759,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Sean Benjamin",
         "2B": null,
@@ -1774,7 +1778,7 @@
       "description": "SCHRAFFT, J. hit by pitch (0-0) BENJAMIN, S. advanced to second."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 7",
       "pitcher": "Christian Rodriguez",
       "batter": "Santiago Ordonez",
       "outcome": "Walk",
@@ -1782,8 +1786,8 @@
       "pitches": "BBBKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Jackson Schrafft",
         "2B": null,
@@ -1801,40 +1805,13 @@
       "description": "ORDONEZ, S. walked (3-1 BBBKB) SCHRAFFT, J. advanced to second BENJAMIN, S. advanced to third."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 7",
       "pitcher": "Ricky Reeth",
       "batter": "Mitchell Collins",
       "outcome": "Lineout",
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
-      "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
-      "runners_before": {
-        "1B": "Santiago Ordonez",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Santiago Ordonez",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 1,
-        "home": 9
-      },
-      "description": "COLLINS, M. lined out to lf to left center, SF, RBI (1-1 FB) BENJAMIN, S. scored."
-    },
-    {
-      "inning": "Top 13",
-      "pitcher": "Ricky Reeth",
-      "batter": "Matthew Farner",
-      "outcome": "Strikeout (looking)",
-      "count": "3-2",
-      "pitches": "BSBKBK",
-      "rbi": false,
       "runs_scored": [],
       "outs_before": 1,
       "outs_after": 2,
@@ -1852,148 +1829,40 @@
         "away": 1,
         "home": 9
       },
-      "description": "FARNER, M. struck out looking (3-2 BSBKBK)."
+      "description": "COLLINS, M. lined out to lf to left center, SF, RBI (1-1 FB) BENJAMIN, S. scored."
     },
     {
-      "inning": "Top 13",
+      "inning": "Top 7",
       "pitcher": "Ricky Reeth",
-      "batter": "Jonathan Acosta",
-      "outcome": "\u2014",
-      "count": null,
-      "pitches": null,
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "Santiago Ordonez",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Santiago Ordonez",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 1,
-        "home": 9
-      },
-      "description": "ACOSTA, J. to for ORDONEZ, S.."
-    },
-    {
-      "inning": "Top 13",
-      "pitcher": "Ricky Reeth",
-      "batter": "H.",
-      "outcome": "Hit by pitch",
-      "count": "0-0",
-      "pitches": "",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "Santiago Ordonez",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "H.",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 1,
-        "home": 9
-      },
-      "description": "H. Yost hit by pitch (0-0)."
-    },
-    {
-      "inning": "Top 13",
-      "pitcher": "Ricky Reeth",
-      "batter": "K.",
-      "outcome": "Walk",
+      "batter": "Matthew Farner",
+      "outcome": "Strikeout (looking)",
       "count": "3-2",
-      "pitches": "KBBSFBB",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "H.",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "K.",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 1,
-        "home": 9
-      },
-      "description": "K. Jones walked (3-2 KBBSFBB) H. Yost advanced to second."
-    },
-    {
-      "inning": "Top 13",
-      "pitcher": "STARLING",
-      "batter": "Lawson",
-      "outcome": "Walk",
-      "count": "3-1",
-      "pitches": "BBBKB",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "K.",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Lawson",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 1,
-        "home": 9
-      },
-      "description": "Lawson walked (3-1 BBBKB) K. Jones advanced to second H. Yost advanced to third."
-    },
-    {
-      "inning": "Top 13",
-      "pitcher": "STARLING",
-      "batter": "Cyr",
-      "outcome": "Grounded into double play",
-      "count": "0-0",
-      "pitches": "",
+      "pitches": "BSBKBK",
       "rbi": false,
       "runs_scored": [],
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Lawson",
+        "1B": "Santiago Ordonez",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Santiago Ordonez",
         "2B": null,
         "3B": null
       },
       "score": {
         "away": 1,
-        "home": 10
+        "home": 9
       },
-      "description": "Cyr grounded into double play ss to 2b to 1b (0-0) Lawson out on the play K. Jones advanced to third H. Yost scored."
+      "description": "FARNER, M. struck out looking (3-2 BSBKBK)."
     },
     {
-      "inning": "Top 14",
-      "pitcher": "STARLING",
-      "batter": null,
-      "outcome": "Wild pitch",
+      "inning": "Bottom 7",
+      "pitcher": "Joseph Dimino",
+      "batter": "ACOSTA, J. to for ORDONEZ, S..",
+      "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
@@ -2004,6 +1873,145 @@
         "1B": null,
         "2B": null,
         "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 9
+      },
+      "description": "ACOSTA, J. to for ORDONEZ, S.."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Joseph Dimino",
+      "batter": "Hayden Yost",
+      "outcome": "Hit by pitch",
+      "count": "0-0",
+      "pitches": "",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Hayden Yost",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 9
+      },
+      "description": "H. Yost hit by pitch (0-0)."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Joseph Dimino",
+      "batter": "Kyle Jones",
+      "outcome": "Walk",
+      "count": "3-2",
+      "pitches": "KBBSFBB",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Hayden Yost",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Kyle Jones",
+        "2B": "Hayden Yost",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 9
+      },
+      "description": "K. Jones walked (3-2 KBBSFBB) H. Yost advanced to second."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Zane Starling",
+      "batter": "Brendan Lawson",
+      "outcome": "Walk",
+      "count": "3-1",
+      "pitches": "BBBKB",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Kyle Jones",
+        "2B": "Hayden Yost",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Brendan Lawson",
+        "2B": "Kyle Jones",
+        "3B": "Hayden Yost"
+      },
+      "score": {
+        "away": 1,
+        "home": 9
+      },
+      "description": "Lawson walked (3-1 BBBKB) K. Jones advanced to second H. Yost advanced to third."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Zane Starling",
+      "batter": "Blake Cyr",
+      "outcome": "Grounded into double play",
+      "count": "0-0",
+      "pitches": "",
+      "rbi": false,
+      "runs_scored": [
+        "Hayden Yost"
+      ],
+      "outs_before": 0,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Brendan Lawson",
+        "2B": "Kyle Jones",
+        "3B": "Hayden Yost"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": "Kyle Jones"
+      },
+      "score": {
+        "away": 1,
+        "home": 10
+      },
+      "description": "Cyr grounded into double play ss to 2b to 1b (0-0) Lawson out on the play K. Jones advanced to third H. Yost scored."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Zane Starling",
+      "batter": null,
+      "outcome": "Wild pitch",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [
+        "Kyle Jones"
+      ],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": "Kyle Jones"
       },
       "runners_after": {
         "1B": null,

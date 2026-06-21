@@ -1,14 +1,14 @@
 {
   "contest_id": "6501761",
   "date": "03/18/2026",
-  "batting_team": "Arkansas",
-  "pitching_team": "Northern Colo.",
-  "note": "Broken-down from the saved play_by_play.json, which contains the Arkansas at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "Northern Colo.",
+  "home_team": "Arkansas",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
-      "inning": "Bottom 1",
-      "pitcher": "Logan Moser",
-      "batter": "B.",
+      "inning": "Top 1",
+      "pitcher": "Peyton Lee",
+      "batter": "Brandon Sanchez",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
       "pitches": "BBKFK",
@@ -33,9 +33,9 @@
       "description": "B. Sanchez struck out looking (2-2 BBKFK)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Logan Moser",
-      "batter": "J.",
+      "inning": "Top 1",
+      "pitcher": "Peyton Lee",
+      "batter": "Jaden Stone",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BFBBB",
@@ -49,7 +49,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "Jaden Stone",
         "2B": null,
         "3B": null
       },
@@ -60,9 +60,9 @@
       "description": "J. Stone walked (3-1 BFBBB)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Logan Moser",
-      "batter": "Bullard",
+      "inning": "Top 1",
+      "pitcher": "Peyton Lee",
+      "batter": "Jake Bullard",
       "outcome": "Grounded into double play",
       "count": "2-2",
       "pitches": "KBFFB",
@@ -71,12 +71,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "J.",
+        "1B": "Jaden Stone",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "Jaden Stone",
         "2B": null,
         "3B": null
       },
@@ -95,10 +95,10 @@
       "pitches": "BBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "J.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -122,8 +122,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Damian Ruiz",
         "2B": null,
@@ -149,8 +149,8 @@
       "pitches": "BKBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Damian Ruiz",
         "2B": null,
@@ -176,8 +176,8 @@
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Camden Kozeal",
         "2B": null,
@@ -195,7 +195,7 @@
       "description": "Aloy grounded into double play to 1b (0-1 K); Kozeal advanced to second; Ruiz out on the play."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Logan Moser",
       "batter": "Zack Stewart",
       "outcome": "Single",
@@ -203,10 +203,10 @@
       "pitches": "BBKBF",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": null,
+        "1B": "Camden Kozeal",
         "2B": null,
         "3B": null
       },
@@ -222,7 +222,7 @@
       "description": "Stewart singled to left field, RBI (3-2 BBKBF); Kozeal scored."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Logan Moser",
       "batter": null,
       "outcome": "Wild pitch",
@@ -230,8 +230,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Zack Stewart",
         "2B": null,
@@ -249,7 +249,7 @@
       "description": "Stewart advanced to second on a wild pitch."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Logan Moser",
       "batter": "Carter Rutenbar",
       "outcome": "Single",
@@ -257,8 +257,8 @@
       "pitches": "BBKKB",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": "Zack Stewart",
@@ -276,7 +276,7 @@
       "description": "Rutenbar singled to right field, RBI (3-2 BBKKB); Stewart scored."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Logan Moser",
       "batter": "TJ Pompey",
       "outcome": "Reached on error",
@@ -284,8 +284,8 @@
       "pitches": "BFSF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Carter Rutenbar",
         "2B": "Zack Stewart",
@@ -303,7 +303,7 @@
       "description": "Pompey reached on a fielding error by (1-2 BFSF); Rutenbar advanced to second."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Logan Moser",
       "batter": "Reese Robinett",
       "outcome": "Fielder's choice",
@@ -311,8 +311,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "TJ Pompey",
         "2B": "Zack Stewart",
@@ -330,9 +330,9 @@
       "description": "Robinett reached on a fielder's choice (0-0); Pompey advanced to second; Rutenbar out at third unassisted."
     },
     {
-      "inning": "Bottom 2",
-      "pitcher": "Logan Moser",
-      "batter": "Bryant",
+      "inning": "Top 2",
+      "pitcher": "Peyton Lee",
+      "batter": "Easton Bryant",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "FSS",
@@ -341,13 +341,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Reese Robinett",
-        "2B": "Zack Stewart",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Reese Robinett",
-        "2B": "Zack Stewart",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -357,9 +357,9 @@
       "description": "Bryant struck out swinging (0-2 FSS)."
     },
     {
-      "inning": "Bottom 2",
-      "pitcher": "Logan Moser",
-      "batter": "Pruski",
+      "inning": "Top 2",
+      "pitcher": "Peyton Lee",
+      "batter": "Logan Pruski",
       "outcome": "Lineout",
       "count": "1-1",
       "pitches": "BK",
@@ -368,13 +368,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Reese Robinett",
-        "2B": "Zack Stewart",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Reese Robinett",
-        "2B": "Zack Stewart",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -384,9 +384,9 @@
       "description": "Pruski lined out to rf (1-1 BK)."
     },
     {
-      "inning": "Bottom 2",
-      "pitcher": "Logan Moser",
-      "batter": "Mooser",
+      "inning": "Top 2",
+      "pitcher": "Peyton Lee",
+      "batter": "Ethan Mooser",
       "outcome": "Foul out",
       "count": "0-0",
       "pitches": "",
@@ -395,13 +395,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Reese Robinett",
-        "2B": "Zack Stewart",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Reese Robinett",
-        "2B": "Zack Stewart",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -411,7 +411,7 @@
       "description": "Mooser fouled out to (0-0)."
     },
     {
-      "inning": "Bottom 3",
+      "inning": "Bottom 2",
       "pitcher": "Logan Moser",
       "batter": "Carson Brumbaugh",
       "outcome": "Strikeout (swinging)",
@@ -438,7 +438,7 @@
       "description": "Brumbaugh struck out swinging (1-2 BSFS)."
     },
     {
-      "inning": "Bottom 3",
+      "inning": "Bottom 2",
       "pitcher": "Logan Moser",
       "batter": "Christian Turner",
       "outcome": "Strikeout (swinging)",
@@ -465,7 +465,7 @@
       "description": "Turner struck out swinging (3-2 BFFBBS)."
     },
     {
-      "inning": "Bottom 3",
+      "inning": "Bottom 2",
       "pitcher": "Logan Moser",
       "batter": "Damian Ruiz",
       "outcome": "Single",
@@ -492,7 +492,7 @@
       "description": "Ruiz singled to shortstop (0-1 K)."
     },
     {
-      "inning": "Bottom 3",
+      "inning": "Bottom 2",
       "pitcher": "Logan Moser",
       "batter": "Camden Kozeal",
       "outcome": "Lineout",
@@ -519,9 +519,9 @@
       "description": "Kozeal lined out to cf (0-0)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Logan Moser",
-      "batter": "Kenny",
+      "inning": "Top 3",
+      "pitcher": "Peyton Lee",
+      "batter": "Brien Kenny",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "KBKB",
@@ -546,9 +546,9 @@
       "description": "Kenny grounded out to ss (2-2 KBKB)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Logan Moser",
-      "batter": "Griffin",
+      "inning": "Top 3",
+      "pitcher": "Peyton Lee",
+      "batter": "Mason Griffin",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
@@ -573,9 +573,9 @@
       "description": "Griffin grounded out to 2b (0-0)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Logan Moser",
-      "batter": "Pease",
+      "inning": "Top 3",
+      "pitcher": "Peyton Lee",
+      "batter": "Sam Pease",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
       "pitches": "KKBBK",
@@ -600,7 +600,7 @@
       "description": "Pease struck out looking (2-2 KKBBK)."
     },
     {
-      "inning": "Bottom 5",
+      "inning": "Bottom 3",
       "pitcher": "Logan Moser",
       "batter": "Kuhio Aloy",
       "outcome": "Flyout",
@@ -627,7 +627,7 @@
       "description": "Aloy flied out to cf (1-1 KB)."
     },
     {
-      "inning": "Bottom 5",
+      "inning": "Bottom 3",
       "pitcher": "Logan Moser",
       "batter": "Zack Stewart",
       "outcome": "Single",
@@ -654,7 +654,7 @@
       "description": "Stewart singled to center field (2-2 SBBF)."
     },
     {
-      "inning": "Bottom 5",
+      "inning": "Bottom 3",
       "pitcher": "Logan Moser",
       "batter": "Carter Rutenbar",
       "outcome": "Walk",
@@ -681,7 +681,7 @@
       "description": "Rutenbar walked (3-1 BBBKB); Stewart advanced to second."
     },
     {
-      "inning": "Bottom 5",
+      "inning": "Bottom 3",
       "pitcher": "Logan Moser",
       "batter": "TJ Pompey",
       "outcome": "Walk",
@@ -708,7 +708,7 @@
       "description": "Pompey walked (3-2 BBBKSB); Rutenbar advanced to second; Stewart advanced to third."
     },
     {
-      "inning": "Bottom 5",
+      "inning": "Bottom 3",
       "pitcher": "L.",
       "batter": "Reese Robinett",
       "outcome": "Walk",
@@ -735,7 +735,7 @@
       "description": "Robinett walked, RBI (3-0 BBBB); Pompey advanced to second; Rutenbar advanced to third; Stewart scored."
     },
     {
-      "inning": "Bottom 5",
+      "inning": "Bottom 3",
       "pitcher": "L.",
       "batter": "Carson Brumbaugh",
       "outcome": "Grounded into double play",
@@ -762,23 +762,23 @@
       "description": "Brumbaugh grounded into double play ss to 1b (0-1 K); Robinett out on the play."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "L.",
-      "batter": "B.",
+      "inning": "Top 4",
+      "pitcher": "Peyton Lee",
+      "batter": "Brandon Sanchez",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "KBFFBBFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Reese Robinett",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": "Brandon Sanchez",
         "2B": null,
         "3B": null
       },
@@ -789,23 +789,23 @@
       "description": "B. Sanchez walked (3-2 KBFFBBFB)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "L.",
-      "batter": "J.",
+      "inning": "Top 4",
+      "pitcher": "Peyton Lee",
+      "batter": "Jaden Stone",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KFBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "B.",
+        "1B": "Brandon Sanchez",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": "Brandon Sanchez",
         "2B": null,
         "3B": null
       },
@@ -816,23 +816,23 @@
       "description": "J. Stone struck out swinging (1-2 KFBS)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "L.",
-      "batter": "Bullard",
+      "inning": "Top 4",
+      "pitcher": "Peyton Lee",
+      "batter": "Jake Bullard",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "BKBKFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Brandon Sanchez",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Brandon Sanchez",
         "2B": null,
         "3B": null
       },
@@ -843,23 +843,23 @@
       "description": "Bullard struck out swinging (2-2 BKBKFS)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "L.",
-      "batter": "Bryant",
+      "inning": "Top 4",
+      "pitcher": "Peyton Lee",
+      "batter": "Easton Bryant",
       "outcome": "Pop out",
       "count": "2-1",
       "pitches": "BSB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
+        "1B": "Brandon Sanchez",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Brandon Sanchez",
         "2B": null,
         "3B": null
       },
@@ -870,7 +870,7 @@
       "description": "Bryant popped up to ss (2-1 BSB)."
     },
     {
-      "inning": "Bottom 6",
+      "inning": "Bottom 4",
       "pitcher": "L.",
       "batter": "Christian Turner",
       "outcome": "Lineout",
@@ -878,8 +878,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -897,7 +897,7 @@
       "description": "Turner lined out to lf (0-0)."
     },
     {
-      "inning": "Bottom 7",
+      "inning": "Bottom 4",
       "pitcher": "L.",
       "batter": "Damian Ruiz",
       "outcome": "Walk",
@@ -905,8 +905,8 @@
       "pitches": "BBBKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -924,7 +924,7 @@
       "description": "Ruiz walked (3-1 BBBKB)."
     },
     {
-      "inning": "Bottom 7",
+      "inning": "Bottom 4",
       "pitcher": "L.",
       "batter": "Camden Kozeal",
       "outcome": "Single",
@@ -932,8 +932,8 @@
       "pitches": "KB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Damian Ruiz",
         "2B": null,
@@ -951,7 +951,7 @@
       "description": "Kozeal singled to right field (1-1 KB); Ruiz advanced to third."
     },
     {
-      "inning": "Bottom 7",
+      "inning": "Bottom 4",
       "pitcher": "Mason Bright",
       "batter": null,
       "outcome": "Stolen base",
@@ -959,8 +959,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Camden Kozeal",
         "2B": null,
@@ -978,7 +978,7 @@
       "description": "Kozeal stole second."
     },
     {
-      "inning": "Bottom 7",
+      "inning": "Bottom 4",
       "pitcher": "Mason Bright",
       "batter": "Kuhio Aloy",
       "outcome": "Single",
@@ -986,8 +986,8 @@
       "pitches": "BBKFB",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Camden Kozeal",
         "2B": null,
@@ -1005,7 +1005,7 @@
       "description": "Aloy singled to left field, 2 RBI (3-2 BBKFB); Kozeal scored; Ruiz scored."
     },
     {
-      "inning": "Bottom 7",
+      "inning": "Bottom 4",
       "pitcher": "Mason Bright",
       "batter": null,
       "outcome": "Stolen base",
@@ -1013,8 +1013,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Kuhio Aloy",
         "2B": null,
@@ -1032,7 +1032,7 @@
       "description": "Aloy stole second."
     },
     {
-      "inning": "Bottom 7",
+      "inning": "Bottom 4",
       "pitcher": "Mason Bright",
       "batter": "Zack Stewart",
       "outcome": "Walk",
@@ -1040,8 +1040,8 @@
       "pitches": "BKBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Kuhio Aloy",
         "2B": null,
@@ -1059,7 +1059,7 @@
       "description": "Stewart walked (3-1 BKBBB)."
     },
     {
-      "inning": "Bottom 7",
+      "inning": "Bottom 4",
       "pitcher": "Mason Bright",
       "batter": "Carter Rutenbar",
       "outcome": "\u2014",
@@ -1067,8 +1067,8 @@
       "pitches": "FBBFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Zack Stewart",
         "2B": null,
@@ -1086,9 +1086,9 @@
       "description": "Rutenbar flied into double play lf to ss to 1b (3-2 FBBFB); Stewart out on the play."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Mason Bright",
-      "batter": "Pruski",
+      "inning": "Top 5",
+      "pitcher": "Peyton Lee",
+      "batter": "Logan Pruski",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "BKK",
@@ -1097,12 +1097,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Zack Stewart",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Zack Stewart",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1113,9 +1113,9 @@
       "description": "Pruski grounded out to (1-2 BKK)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Mason Bright",
-      "batter": "Mooser",
+      "inning": "Top 5",
+      "pitcher": "Peyton Lee",
+      "batter": "Ethan Mooser",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
@@ -1124,12 +1124,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Zack Stewart",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Mooser",
+        "1B": "Ethan Mooser",
         "2B": null,
         "3B": null
       },
@@ -1140,9 +1140,9 @@
       "description": "Mooser singled to right field (0-1 K)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Mason Bright",
-      "batter": "Kenny",
+      "inning": "Top 5",
+      "pitcher": "Peyton Lee",
+      "batter": "Brien Kenny",
       "outcome": "Flyout",
       "count": "0-1",
       "pitches": "F",
@@ -1151,12 +1151,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Mooser",
+        "1B": "Ethan Mooser",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Mooser",
+        "1B": "Ethan Mooser",
         "2B": null,
         "3B": null
       },
@@ -1167,9 +1167,9 @@
       "description": "Kenny flied out to lf (0-1 F)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Mason Bright",
-      "batter": "Griffin",
+      "inning": "Top 5",
+      "pitcher": "Peyton Lee",
+      "batter": "Mason Griffin",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "FBBBB",
@@ -1178,12 +1178,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Mooser",
+        "1B": "Ethan Mooser",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Griffin",
+        "1B": "Mason Griffin",
         "2B": null,
         "3B": null
       },
@@ -1194,9 +1194,9 @@
       "description": "Griffin walked (3-1 FBBBB); Mooser advanced to second."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Mason Bright",
-      "batter": "Pease",
+      "inning": "Top 5",
+      "pitcher": "Peyton Lee",
+      "batter": "Sam Pease",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "KKBBFS",
@@ -1205,12 +1205,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Griffin",
+        "1B": "Mason Griffin",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Griffin",
+        "1B": "Mason Griffin",
         "2B": null,
         "3B": null
       },
@@ -1221,7 +1221,7 @@
       "description": "Pease struck out swinging (2-2 KKBBFS)."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 5",
       "pitcher": "Mason Bright",
       "batter": "TJ Pompey",
       "outcome": "Strikeout (swinging)",
@@ -1248,7 +1248,7 @@
       "description": "Pompey struck out swinging (3-2 BBFBFFS)."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 5",
       "pitcher": "Mason Bright",
       "batter": "Reese Robinett",
       "outcome": "Hit by pitch",
@@ -1275,7 +1275,7 @@
       "description": "Robinett hit by pitch (1-2 KBF)."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 5",
       "pitcher": "Mason Bright",
       "batter": "Carson Brumbaugh",
       "outcome": "Lineout",
@@ -1302,7 +1302,7 @@
       "description": "Brumbaugh lined out to cf (0-0)."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 5",
       "pitcher": "Mason Bright",
       "batter": null,
       "outcome": "Stolen base",
@@ -1329,7 +1329,7 @@
       "description": "Robinett stole second."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 5",
       "pitcher": "Mason Bright",
       "batter": "Christian Turner",
       "outcome": "Triple",
@@ -1356,7 +1356,7 @@
       "description": "Turner tripled down the lf line, RBI (3-2 BBFSB); Robinett scored."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 5",
       "pitcher": "Mason Bright",
       "batter": "Damian Ruiz",
       "outcome": "Pop out",
@@ -1383,9 +1383,9 @@
       "description": "Ruiz popped up to 2b (1-0 B)."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "McGuire",
-      "batter": "B.",
+      "inning": "Top 6",
+      "pitcher": "Tate McGuire",
+      "batter": "Brandon Sanchez",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BFBBB",
@@ -1399,7 +1399,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": "Brandon Sanchez",
         "2B": null,
         "3B": null
       },
@@ -1410,9 +1410,9 @@
       "description": "B. Sanchez walked (3-1 BFBBB)."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "McGuire",
-      "batter": "J.",
+      "inning": "Top 6",
+      "pitcher": "Tate McGuire",
+      "batter": "Jaden Stone",
       "outcome": "Pop out",
       "count": "0-1",
       "pitches": "K",
@@ -1421,12 +1421,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "B.",
+        "1B": "Brandon Sanchez",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": "Brandon Sanchez",
         "2B": null,
         "3B": null
       },
@@ -1437,9 +1437,9 @@
       "description": "J. Stone popped up to (0-1 K)."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "McGuire",
-      "batter": "Bullard",
+      "inning": "Top 6",
+      "pitcher": "Tate McGuire",
+      "batter": "Jake Bullard",
       "outcome": "Grounded into double play",
       "count": "1-1",
       "pitches": "KB",
@@ -1448,12 +1448,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "B.",
+        "1B": "Brandon Sanchez",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": "Brandon Sanchez",
         "2B": null,
         "3B": null
       },
@@ -1464,7 +1464,7 @@
       "description": "Bullard grounded into double play to 2b to 1b (1-1 KB); B. Sanchez out on the play."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 6",
       "pitcher": "Brady Hudson",
       "batter": "Camden Kozeal",
       "outcome": "Single",
@@ -1472,10 +1472,10 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "B.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1491,7 +1491,7 @@
       "description": "Kozeal singled to pitcher, bunt (0-0)."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 6",
       "pitcher": "Brady Hudson",
       "batter": "Kuhio Aloy",
       "outcome": "Single",
@@ -1499,8 +1499,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Camden Kozeal",
         "2B": null,
@@ -1518,7 +1518,7 @@
       "description": "Aloy singled to right field (0-0); Kozeal advanced to third."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 6",
       "pitcher": "Brady Hudson",
       "batter": null,
       "outcome": "Wild pitch",
@@ -1528,8 +1528,8 @@
       "runs_scored": [
         "Kuhio Aloy"
       ],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Kuhio Aloy",
         "2B": null,
@@ -1547,7 +1547,7 @@
       "description": "Aloy advanced to second on a wild pitch; Kozeal scored on a wild pitch."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 6",
       "pitcher": "Brady Hudson",
       "batter": "Zack Stewart",
       "outcome": "Lineout",
@@ -1555,8 +1555,8 @@
       "pitches": "KBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1574,7 +1574,7 @@
       "description": "Stewart lined out to lf (2-1 KBB); Aloy advanced to third."
     },
     {
-      "inning": "Bottom 10",
+      "inning": "Bottom 6",
       "pitcher": "Brady Hudson",
       "batter": "Carter Rutenbar",
       "outcome": "Fielder's choice",
@@ -1582,8 +1582,8 @@
       "pitches": "KBBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1601,7 +1601,7 @@
       "description": "Rutenbar reached on a fielder's choice (2-2 KBBF); Aloy out at home p to c."
     },
     {
-      "inning": "Bottom 10",
+      "inning": "Bottom 6",
       "pitcher": "Brady Hudson",
       "batter": "TJ Pompey",
       "outcome": "Flyout",
@@ -1609,8 +1609,8 @@
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Carter Rutenbar",
         "2B": null,
@@ -1628,23 +1628,23 @@
       "description": "Pompey flied out to rf (2-0 BB)."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "Dossett",
-      "batter": "Bryant",
+      "inning": "Top 7",
+      "pitcher": "Cooper Dossett",
+      "batter": "Easton Bryant",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "S",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Carter Rutenbar",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Carter Rutenbar",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1655,23 +1655,23 @@
       "description": "Bryant grounded out to 2b (0-1 S)."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "Dossett",
-      "batter": "Pruski",
+      "inning": "Top 7",
+      "pitcher": "Cooper Dossett",
+      "batter": "Logan Pruski",
       "outcome": "Lineout",
       "count": "3-2",
       "pitches": "SBBFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "Carter Rutenbar",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Carter Rutenbar",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1682,16 +1682,16 @@
       "description": "Pruski lined out to 2b (3-2 SBBFB)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Dossett",
-      "batter": "Mooser",
+      "inning": "Top 7",
+      "pitcher": "Cooper Dossett",
+      "batter": "Ethan Mooser",
       "outcome": "Groundout",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1709,7 +1709,7 @@
       "description": "Mooser grounded out to ss (1-0 B)."
     },
     {
-      "inning": "Bottom 11",
+      "inning": "Bottom 7",
       "pitcher": "Cade Kunz",
       "batter": "Reese Robinett",
       "outcome": "Walk",
@@ -1717,8 +1717,8 @@
       "pitches": "BFBSBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1736,7 +1736,7 @@
       "description": "Robinett walked (3-2 BFBSBB)."
     },
     {
-      "inning": "Bottom 11",
+      "inning": "Bottom 7",
       "pitcher": "Cade Kunz",
       "batter": "Carson Brumbaugh",
       "outcome": "Groundout",
@@ -1744,8 +1744,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Reese Robinett",
         "2B": null,
@@ -1763,7 +1763,7 @@
       "description": "Brumbaugh grounded out to 2b (0-0); Robinett advanced to second."
     },
     {
-      "inning": "Bottom 11",
+      "inning": "Bottom 7",
       "pitcher": "Cade Kunz",
       "batter": "Christian Turner",
       "outcome": "Walk",
@@ -1771,8 +1771,8 @@
       "pitches": "BBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Reese Robinett",
         "2B": null,
@@ -1790,7 +1790,7 @@
       "description": "Turner walked (3-0 BBBB)."
     },
     {
-      "inning": "Bottom 11",
+      "inning": "Bottom 7",
       "pitcher": "Cade Kunz",
       "batter": "Damian Ruiz",
       "outcome": "Double",
@@ -1798,8 +1798,8 @@
       "pitches": "KKBFFB",
       "rbi": true,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Christian Turner",
         "2B": null,
@@ -1817,7 +1817,7 @@
       "description": "Ruiz doubled down the rf line, 2 RBI (2-2 KKBFFB); Turner scored; Robinett scored."
     },
     {
-      "inning": "Bottom 11",
+      "inning": "Bottom 7",
       "pitcher": "Logan Borboa",
       "batter": "Alexander Peck",
       "outcome": "Lineout",
@@ -1825,8 +1825,8 @@
       "pitches": "BBBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Christian Turner",
         "2B": "Damian Ruiz",
@@ -1844,7 +1844,7 @@
       "description": "Peck lined out to rf (3-1 BBBK)."
     },
     {
-      "inning": "Bottom 12",
+      "inning": "Bottom 7",
       "pitcher": "Logan Borboa",
       "batter": "Kuhio Aloy",
       "outcome": "Flyout",
@@ -1852,16 +1852,16 @@
       "pitches": "BS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
-        "2B": null,
+        "1B": "Christian Turner",
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "runners_after": {
-        "1B": null,
-        "2B": null,
+        "1B": "Christian Turner",
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "score": {
@@ -1871,203 +1871,12 @@
       "description": "Aloy flied out to lf (1-1 BS)."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "Lorenzini",
-      "batter": "Kenny",
+      "inning": "Top 8",
+      "pitcher": "Joey Lorenzini",
+      "batter": "Brien Kenny",
       "outcome": "Single",
       "count": "3-1",
       "pitches": "KBBB",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
-      "runners_before": {
-        "1B": null,
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Kenny",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 0,
-        "home": 9
-      },
-      "description": "Kenny singled to left field (3-1 KBBB)."
-    },
-    {
-      "inning": "Bottom 12",
-      "pitcher": "Lorenzini",
-      "batter": "Kieffer",
-      "outcome": "Hit by pitch",
-      "count": "0-0",
-      "pitches": "",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
-      "runners_before": {
-        "1B": "Kenny",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Kieffer",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 0,
-        "home": 9
-      },
-      "description": "Kieffer hit by pitch (0-0); Kenny advanced to second."
-    },
-    {
-      "inning": "Bottom 12",
-      "pitcher": "Lorenzini",
-      "batter": null,
-      "outcome": "Baserunning",
-      "count": null,
-      "pitches": null,
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
-      "runners_before": {
-        "1B": "Kieffer",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": null,
-        "2B": null,
-        "3B": "Kieffer"
-      },
-      "score": {
-        "away": 0,
-        "home": 9
-      },
-      "description": "Kieffer advanced to second on a balk; Kenny advanced to third on a balk."
-    },
-    {
-      "inning": "Bottom 12",
-      "pitcher": "Lorenzini",
-      "batter": "Pease",
-      "outcome": "Single",
-      "count": "2-2",
-      "pitches": "KFBB",
-      "rbi": true,
-      "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
-      "runners_before": {
-        "1B": null,
-        "2B": null,
-        "3B": "Kieffer"
-      },
-      "runners_after": {
-        "1B": "Pease",
-        "2B": null,
-        "3B": "Kieffer"
-      },
-      "score": {
-        "away": 2,
-        "home": 9
-      },
-      "description": "Pease singled to center field, 2 RBI (2-2 KFBB); Kieffer scored; Kenny scored."
-    },
-    {
-      "inning": "Bottom 12",
-      "pitcher": "Lorenzini",
-      "batter": "B.",
-      "outcome": "Home run",
-      "count": "0-1",
-      "pitches": "K",
-      "rbi": true,
-      "runs_scored": [
-        "B."
-      ],
-      "outs_before": 1,
-      "outs_after": 1,
-      "runners_before": {
-        "1B": "Pease",
-        "2B": null,
-        "3B": "Kieffer"
-      },
-      "runners_after": {
-        "1B": "Pease",
-        "2B": null,
-        "3B": "Kieffer"
-      },
-      "score": {
-        "away": 4,
-        "home": 9
-      },
-      "description": "B. Sanchez homered to left field, 2 RBI (0-1 K); Pease scored."
-    },
-    {
-      "inning": "Bottom 12",
-      "pitcher": "Cornelison",
-      "batter": "J.",
-      "outcome": "Groundout",
-      "count": "3-2",
-      "pitches": "BBSKB",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "Pease",
-        "2B": null,
-        "3B": "Kieffer"
-      },
-      "runners_after": {
-        "1B": "Pease",
-        "2B": null,
-        "3B": "Kieffer"
-      },
-      "score": {
-        "away": 4,
-        "home": 9
-      },
-      "description": "J. Stone grounded out to ss (3-2 BBSKB)."
-    },
-    {
-      "inning": "Bottom 12",
-      "pitcher": "Cornelison",
-      "batter": "Bullard",
-      "outcome": "Pop out",
-      "count": "1-0",
-      "pitches": "B",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
-      "runners_before": {
-        "1B": "Pease",
-        "2B": null,
-        "3B": "Kieffer"
-      },
-      "runners_after": {
-        "1B": "Pease",
-        "2B": null,
-        "3B": "Kieffer"
-      },
-      "score": {
-        "away": 4,
-        "home": 9
-      },
-      "description": "Bullard popped up to 2b (1-0 B)."
-    },
-    {
-      "inning": "Bottom 13",
-      "pitcher": "Cornelison",
-      "batter": "Bryant",
-      "outcome": "Single",
-      "count": "1-1",
-      "pitches": "KB",
       "rbi": false,
       "runs_scored": [],
       "outs_before": 0,
@@ -2078,9 +1887,200 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bryant",
+        "1B": "Brien Kenny",
         "2B": null,
         "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 9
+      },
+      "description": "Kenny singled to left field (3-1 KBBB)."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Joey Lorenzini",
+      "batter": "Wilson Kieffer",
+      "outcome": "Hit by pitch",
+      "count": "0-0",
+      "pitches": "",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Brien Kenny",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Wilson Kieffer",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 9
+      },
+      "description": "Kieffer hit by pitch (0-0); Kenny advanced to second."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Joey Lorenzini",
+      "batter": null,
+      "outcome": "Baserunning",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Wilson Kieffer",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": "Wilson Kieffer"
+      },
+      "score": {
+        "away": 0,
+        "home": 9
+      },
+      "description": "Kieffer advanced to second on a balk; Kenny advanced to third on a balk."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Joey Lorenzini",
+      "batter": "Sam Pease",
+      "outcome": "Single",
+      "count": "2-2",
+      "pitches": "KFBB",
+      "rbi": true,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": "Wilson Kieffer"
+      },
+      "runners_after": {
+        "1B": "Sam Pease",
+        "2B": null,
+        "3B": "Wilson Kieffer"
+      },
+      "score": {
+        "away": 2,
+        "home": 9
+      },
+      "description": "Pease singled to center field, 2 RBI (2-2 KFBB); Kieffer scored; Kenny scored."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Joey Lorenzini",
+      "batter": "Brandon Sanchez",
+      "outcome": "Home run",
+      "count": "0-1",
+      "pitches": "K",
+      "rbi": true,
+      "runs_scored": [
+        "Brandon Sanchez"
+      ],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Sam Pease",
+        "2B": null,
+        "3B": "Wilson Kieffer"
+      },
+      "runners_after": {
+        "1B": "Sam Pease",
+        "2B": null,
+        "3B": "Wilson Kieffer"
+      },
+      "score": {
+        "away": 4,
+        "home": 9
+      },
+      "description": "B. Sanchez homered to left field, 2 RBI (0-1 K); Pease scored."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Luke Cornelison",
+      "batter": "Jaden Stone",
+      "outcome": "Groundout",
+      "count": "3-2",
+      "pitches": "BBSKB",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Sam Pease",
+        "2B": null,
+        "3B": "Wilson Kieffer"
+      },
+      "runners_after": {
+        "1B": "Sam Pease",
+        "2B": null,
+        "3B": "Wilson Kieffer"
+      },
+      "score": {
+        "away": 4,
+        "home": 9
+      },
+      "description": "J. Stone grounded out to ss (3-2 BBSKB)."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Luke Cornelison",
+      "batter": "Jake Bullard",
+      "outcome": "Pop out",
+      "count": "1-0",
+      "pitches": "B",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Sam Pease",
+        "2B": null,
+        "3B": "Wilson Kieffer"
+      },
+      "runners_after": {
+        "1B": "Sam Pease",
+        "2B": null,
+        "3B": "Wilson Kieffer"
+      },
+      "score": {
+        "away": 4,
+        "home": 9
+      },
+      "description": "Bullard popped up to 2b (1-0 B)."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Luke Cornelison",
+      "batter": "Easton Bryant",
+      "outcome": "Single",
+      "count": "1-1",
+      "pitches": "KB",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Sam Pease",
+        "2B": null,
+        "3B": "Wilson Kieffer"
+      },
+      "runners_after": {
+        "1B": "Easton Bryant",
+        "2B": null,
+        "3B": "Wilson Kieffer"
       },
       "score": {
         "away": 4,
@@ -2089,25 +2089,25 @@
       "description": "Bryant singled to right field (1-1 KB)."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Cornelison",
-      "batter": "Pruski",
+      "inning": "Top 8",
+      "pitcher": "Luke Cornelison",
+      "batter": "Logan Pruski",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "FBKBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "Bryant",
+        "1B": "Easton Bryant",
         "2B": null,
-        "3B": null
+        "3B": "Wilson Kieffer"
       },
       "runners_after": {
-        "1B": "Bryant",
+        "1B": "Easton Bryant",
         "2B": null,
-        "3B": null
+        "3B": "Wilson Kieffer"
       },
       "score": {
         "away": 4,
@@ -2116,23 +2116,23 @@
       "description": "Pruski grounded out to ss (2-2 FBKBF)."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Cornelison",
-      "batter": "J.",
+      "inning": "Bottom 8",
+      "pitcher": "Logan Borboa",
+      "batter": "J. Stone",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Bryant",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Bryant",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2143,23 +2143,23 @@
       "description": "J. Stone to cf."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Cornelison",
-      "batter": "E.",
+      "inning": "Bottom 8",
+      "pitcher": "Logan Borboa",
+      "batter": "E. Sanchez",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Bryant",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Bryant",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2170,120 +2170,12 @@
       "description": "E. Sanchez to lf for Kieffer."
     },
     {
-      "inning": "Bottom 13",
+      "inning": "Bottom 8",
       "pitcher": "Tate Smith",
       "batter": "Zack Stewart",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
       "pitches": "SBBKFBS",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "Bryant",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Bryant",
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 4,
-        "home": 9
-      },
-      "description": "Stewart struck out swinging (3-2 SBBKFBS)."
-    },
-    {
-      "inning": "Bottom 13",
-      "pitcher": "Tate Smith",
-      "batter": "Carter Rutenbar",
-      "outcome": "Double",
-      "count": "1-2",
-      "pitches": "KBS",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "Bryant",
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Bryant",
-        "2B": "Carter Rutenbar",
-        "3B": null
-      },
-      "score": {
-        "away": 4,
-        "home": 9
-      },
-      "description": "Rutenbar doubled down the rf line (1-2 KBS)."
-    },
-    {
-      "inning": "Bottom 13",
-      "pitcher": "Tate Smith",
-      "batter": null,
-      "outcome": "Wild pitch",
-      "count": null,
-      "pitches": null,
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
-      "runners_before": {
-        "1B": "Bryant",
-        "2B": "Carter Rutenbar",
-        "3B": null
-      },
-      "runners_after": {
-        "1B": "Bryant",
-        "2B": null,
-        "3B": "Carter Rutenbar"
-      },
-      "score": {
-        "away": 4,
-        "home": 9
-      },
-      "description": "Rutenbar advanced to third on a wild pitch."
-    },
-    {
-      "inning": "Bottom 13",
-      "pitcher": "Tate Smith",
-      "batter": "TJ Pompey",
-      "outcome": "Strikeout (swinging)",
-      "count": "3-2",
-      "pitches": "KBFBBS",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
-      "runners_before": {
-        "1B": "Bryant",
-        "2B": null,
-        "3B": "Carter Rutenbar"
-      },
-      "runners_after": {
-        "1B": "Bryant",
-        "2B": null,
-        "3B": "Carter Rutenbar"
-      },
-      "score": {
-        "away": 4,
-        "home": 9
-      },
-      "description": "Pompey struck out swinging (3-2 KBFBBS)."
-    },
-    {
-      "inning": "Bottom 14",
-      "pitcher": "Mac Hibben",
-      "batter": "Reese Robinett",
-      "outcome": "Groundout",
-      "count": "1-0",
-      "pitches": "B",
       "rbi": false,
       "runs_scored": [],
       "outs_before": 0,
@@ -2302,19 +2194,127 @@
         "away": 4,
         "home": 9
       },
+      "description": "Stewart struck out swinging (3-2 SBBKFBS)."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Tate Smith",
+      "batter": "Carter Rutenbar",
+      "outcome": "Double",
+      "count": "1-2",
+      "pitches": "KBS",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Carter Rutenbar",
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 9
+      },
+      "description": "Rutenbar doubled down the rf line (1-2 KBS)."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Tate Smith",
+      "batter": null,
+      "outcome": "Wild pitch",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": "Carter Rutenbar",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": "Carter Rutenbar"
+      },
+      "score": {
+        "away": 4,
+        "home": 9
+      },
+      "description": "Rutenbar advanced to third on a wild pitch."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Tate Smith",
+      "batter": "TJ Pompey",
+      "outcome": "Strikeout (swinging)",
+      "count": "3-2",
+      "pitches": "KBFBBS",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": "Carter Rutenbar"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": "Carter Rutenbar"
+      },
+      "score": {
+        "away": 4,
+        "home": 9
+      },
+      "description": "Pompey struck out swinging (3-2 KBFBBS)."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Mac Hibben",
+      "batter": "Reese Robinett",
+      "outcome": "Groundout",
+      "count": "1-0",
+      "pitches": "B",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 3,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": "Carter Rutenbar"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": "Carter Rutenbar"
+      },
+      "score": {
+        "away": 4,
+        "home": 9
+      },
       "description": "Robinett grounded out to 1b unassisted (1-0 B)."
     },
     {
-      "inning": "Bottom 14",
-      "pitcher": "Mac Hibben",
-      "batter": "Mooser",
+      "inning": "Top 9",
+      "pitcher": "Luke Cornelison",
+      "batter": "Ethan Mooser",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KKBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2332,16 +2332,16 @@
       "description": "Mooser struck out swinging (1-2 KKBS)."
     },
     {
-      "inning": "Bottom 14",
-      "pitcher": "Mac Hibben",
-      "batter": "Kenny",
+      "inning": "Top 9",
+      "pitcher": "Luke Cornelison",
+      "batter": "Brien Kenny",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "KBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2359,16 +2359,16 @@
       "description": "Kenny grounded out to (1-2 KBK)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Mac Hibben",
-      "batter": "E.",
+      "inning": "Top 9",
+      "pitcher": "Luke Cornelison",
+      "batter": "Brandon Sanchez",
       "outcome": "Groundout",
       "count": "3-2",
       "pitches": "BKFBFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,

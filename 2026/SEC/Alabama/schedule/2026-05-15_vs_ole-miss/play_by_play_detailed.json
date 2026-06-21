@@ -1,14 +1,14 @@
 {
   "contest_id": "6505290",
   "date": "05/15/2026",
-  "batting_team": "Alabama",
-  "pitching_team": "Ole Miss",
-  "note": "Broken-down from the saved play_by_play.json, which contains the Alabama at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "Ole Miss",
+  "home_team": "Alabama",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
-      "inning": "Bottom 1",
-      "pitcher": "Taylor Rabe",
-      "batter": "D.",
+      "inning": "Top 1",
+      "pitcher": "Zane Adams",
+      "batter": "Dom Decker",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "SB",
@@ -33,9 +33,9 @@
       "description": "D. Decker grounded out to 2b (1-1 SB)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Taylor Rabe",
-      "batter": "J.",
+      "inning": "Top 1",
+      "pitcher": "Zane Adams",
+      "batter": "Judd Utermark",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
@@ -49,7 +49,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "Judd Utermark",
         "2B": null,
         "3B": null
       },
@@ -60,9 +60,9 @@
       "description": "J. Utermark singled through the left side (1-0 B)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Taylor Rabe",
-      "batter": "T.",
+      "inning": "Top 1",
+      "pitcher": "Zane Adams",
+      "batter": "Tristan Bissetta",
       "outcome": "Double",
       "count": "2-0",
       "pitches": "BB",
@@ -71,14 +71,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "J.",
+        "1B": "Judd Utermark",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
-        "2B": "T.",
-        "3B": null
+        "1B": null,
+        "2B": "Tristan Bissetta",
+        "3B": "Judd Utermark"
       },
       "score": {
         "away": 0,
@@ -87,25 +87,27 @@
       "description": "T. Bissetta doubled to right field (2-0 BB) J. Utermark advanced to third."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Taylor Rabe",
-      "batter": "W.",
+      "inning": "Top 1",
+      "pitcher": "Zane Adams",
+      "batter": "Will Furniss",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Judd Utermark"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "J.",
-        "2B": "T.",
-        "3B": null
+        "1B": null,
+        "2B": "Tristan Bissetta",
+        "3B": "Judd Utermark"
       },
       "runners_after": {
-        "1B": "J.",
-        "2B": "T.",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Tristan Bissetta"
       },
       "score": {
         "away": 1,
@@ -114,9 +116,9 @@
       "description": "W. Furniss grounded out to 2b, RBI (0-0) T. Bissetta advanced to third J. Utermark scored."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Taylor Rabe",
-      "batter": "H.",
+      "inning": "Top 1",
+      "pitcher": "Zane Adams",
+      "batter": "Hayden Federico",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
       "pitches": "FFBBBS",
@@ -125,14 +127,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "J.",
-        "2B": "T.",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Tristan Bissetta"
       },
       "runners_after": {
-        "1B": "J.",
-        "2B": "T.",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Tristan Bissetta"
       },
       "score": {
         "away": 1,
@@ -141,7 +143,7 @@
       "description": "H. Federico struck out swinging (3-2 FFBBBS)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Taylor Rabe",
       "batter": "Bryce Fowler",
       "outcome": "Strikeout (swinging)",
@@ -168,7 +170,7 @@
       "description": "Fowler struck out swinging (2-2 SBSFBFS)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Taylor Rabe",
       "batter": "Justin Lebron",
       "outcome": "Strikeout (swinging)",
@@ -195,7 +197,7 @@
       "description": "Lebron struck out swinging (1-2 BFFS)."
     },
     {
-      "inning": "Bottom 2",
+      "inning": "Bottom 1",
       "pitcher": "Taylor Rabe",
       "batter": "Brady Neal",
       "outcome": "Strikeout (swinging)",
@@ -222,9 +224,9 @@
       "description": "Neal struck out swinging (2-2 FSBBS)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Taylor Rabe",
-      "batter": "C.",
+      "inning": "Top 2",
+      "pitcher": "Zane Adams",
+      "batter": "Collin Reuter",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "BKKS",
@@ -249,9 +251,9 @@
       "description": "C. Reuter struck out swinging (1-2 BKKS)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Taylor Rabe",
-      "batter": "A.",
+      "inning": "Top 2",
+      "pitcher": "Zane Adams",
+      "batter": "Austin Fawley",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
@@ -276,9 +278,9 @@
       "description": "A. Fawley grounded out to ss (0-0)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Taylor Rabe",
-      "batter": "O.",
+      "inning": "Top 2",
+      "pitcher": "Zane Adams",
+      "batter": "Owen Paino",
       "outcome": "Flyout",
       "count": "3-2",
       "pitches": "KKFBFBFB",
@@ -303,7 +305,7 @@
       "description": "O. Paino flied out to lf (3-2 KKFBFBFB)."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Taylor Rabe",
       "batter": "Eric Hines",
       "outcome": "Strikeout (looking)",
@@ -330,7 +332,7 @@
       "description": "Hines struck out looking (2-2 KBSFBK)."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Taylor Rabe",
       "batter": "John Lemm",
       "outcome": "Strikeout (swinging)",
@@ -357,7 +359,7 @@
       "description": "Lemm struck out swinging (0-2 SSS)."
     },
     {
-      "inning": "Bottom 4",
+      "inning": "Bottom 2",
       "pitcher": "Taylor Rabe",
       "batter": "Jason Torres",
       "outcome": "Strikeout (swinging)",
@@ -384,9 +386,9 @@
       "description": "Torres struck out swinging (0-2 KSS)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Taylor Rabe",
-      "batter": "T.",
+      "inning": "Top 3",
+      "pitcher": "Zane Adams",
+      "batter": "Topher Jones",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "KBBBB",
@@ -400,7 +402,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
+        "1B": "Topher Jones",
         "2B": null,
         "3B": null
       },
@@ -411,9 +413,9 @@
       "description": "T. Jones walked (3-1 KBBBB)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Taylor Rabe",
-      "batter": "D.",
+      "inning": "Top 3",
+      "pitcher": "Zane Adams",
+      "batter": "Dom Decker",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "KBBFS",
@@ -422,12 +424,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "T.",
+        "1B": "Topher Jones",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
+        "1B": "Topher Jones",
         "2B": null,
         "3B": null
       },
@@ -438,9 +440,9 @@
       "description": "D. Decker struck out swinging (2-2 KBBFS)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Taylor Rabe",
-      "batter": "T.",
+      "inning": "Top 3",
+      "pitcher": "Zane Adams",
+      "batter": "Topher Jones",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
@@ -449,12 +451,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "T.",
+        "1B": "Topher Jones",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
+        "1B": "Topher Jones",
         "2B": null,
         "3B": null
       },
@@ -465,9 +467,9 @@
       "description": "T. Jones out at second c to 2b."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Taylor Rabe",
-      "batter": "J.",
+      "inning": "Top 3",
+      "pitcher": "Zane Adams",
+      "batter": "Judd Utermark",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "SBBSBB",
@@ -476,12 +478,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "T.",
+        "1B": "Topher Jones",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "Judd Utermark",
         "2B": null,
         "3B": null
       },
@@ -492,9 +494,9 @@
       "description": "J. Utermark walked (3-2 SBBSBB)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Taylor Rabe",
-      "batter": "T.",
+      "inning": "Top 3",
+      "pitcher": "Zane Adams",
+      "batter": "Tristan Bissetta",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
@@ -503,12 +505,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "J.",
+        "1B": "Judd Utermark",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "Judd Utermark",
         "2B": null,
         "3B": null
       },
@@ -519,7 +521,7 @@
       "description": "T. Bissetta flied out to cf (0-0)."
     },
     {
-      "inning": "Bottom 5",
+      "inning": "Bottom 3",
       "pitcher": "Taylor Rabe",
       "batter": "Brennan Holt",
       "outcome": "Lineout",
@@ -527,15 +529,15 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "J.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -546,7 +548,7 @@
       "description": "Holt lined out to rf (0-0)."
     },
     {
-      "inning": "Bottom 6",
+      "inning": "Bottom 3",
       "pitcher": "Taylor Rabe",
       "batter": "Luke Vaughn",
       "outcome": "Lineout",
@@ -554,8 +556,8 @@
       "pitches": "KB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -573,7 +575,7 @@
       "description": "Vaughn lined out to p (1-1 KB)."
     },
     {
-      "inning": "Bottom 6",
+      "inning": "Bottom 3",
       "pitcher": "Taylor Rabe",
       "batter": "Peyton Steele",
       "outcome": "Strikeout (looking)",
@@ -581,8 +583,8 @@
       "pitches": "BKKK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -600,16 +602,16 @@
       "description": "Steele struck out looking (1-2 BKKK)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Taylor Rabe",
-      "batter": "W.",
+      "inning": "Top 4",
+      "pitcher": "Zane Adams",
+      "batter": "Will Furniss",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "KSBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -627,23 +629,23 @@
       "description": "W. Furniss grounded out to (2-2 KSBB)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Taylor Rabe",
-      "batter": "H.",
+      "inning": "Top 4",
+      "pitcher": "Zane Adams",
+      "batter": "Hayden Federico",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "H.",
+        "1B": "Hayden Federico",
         "2B": null,
         "3B": null
       },
@@ -654,23 +656,23 @@
       "description": "H. Federico singled to right field (2-1 BKB)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Taylor Rabe",
-      "batter": "C.",
+      "inning": "Top 4",
+      "pitcher": "Zane Adams",
+      "batter": "Collin Reuter",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "BSBKS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "H.",
+        "1B": "Hayden Federico",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "H.",
+        "1B": "Hayden Federico",
         "2B": null,
         "3B": null
       },
@@ -681,23 +683,23 @@
       "description": "C. Reuter struck out swinging (2-2 BSBKS)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Taylor Rabe",
-      "batter": "A.",
+      "inning": "Top 4",
+      "pitcher": "Zane Adams",
+      "batter": "Austin Fawley",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "BFFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "H.",
+        "1B": "Hayden Federico",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "H.",
+        "1B": "Hayden Federico",
         "2B": null,
         "3B": null
       },
@@ -708,7 +710,7 @@
       "description": "A. Fawley struck out swinging (1-2 BFFS)."
     },
     {
-      "inning": "Bottom 7",
+      "inning": "Bottom 4",
       "pitcher": "Taylor Rabe",
       "batter": "Bryce Fowler",
       "outcome": "Strikeout (swinging)",
@@ -716,15 +718,15 @@
       "pitches": "BSKBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "H.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "H.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -735,7 +737,7 @@
       "description": "Fowler struck out swinging (2-2 BSKBS)."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 4",
       "pitcher": "Taylor Rabe",
       "batter": "Justin Lebron",
       "outcome": "Strikeout (swinging)",
@@ -743,8 +745,8 @@
       "pitches": "SKBFFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -762,7 +764,7 @@
       "description": "Lebron struck out swinging (1-2 SKBFFS)."
     },
     {
-      "inning": "Bottom 8",
+      "inning": "Bottom 4",
       "pitcher": "Taylor Rabe",
       "batter": "Brady Neal",
       "outcome": "Groundout",
@@ -770,8 +772,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -789,18 +791,18 @@
       "description": "Neal grounded out to 2b (0-0)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Taylor Rabe",
-      "batter": "O.",
+      "inning": "Top 5",
+      "pitcher": "Zane Adams",
+      "batter": "Owen Paino",
       "outcome": "Home run",
       "count": "2-1",
       "pitches": "BFB",
       "rbi": true,
       "runs_scored": [
-        "O."
+        "Owen Paino"
       ],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -818,16 +820,16 @@
       "description": "O. Paino homered to right field, RBI (2-1 BFB)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Taylor Rabe",
-      "batter": "T.",
+      "inning": "Top 5",
+      "pitcher": "Zane Adams",
+      "batter": "Topher Jones",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "SBBSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -845,23 +847,23 @@
       "description": "T. Jones struck out swinging (2-2 SBBSS)."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Taylor Rabe",
-      "batter": "D.",
+      "inning": "Top 5",
+      "pitcher": "Zane Adams",
+      "batter": "Dom Decker",
       "outcome": "Single",
       "count": "2-0",
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "D.",
+        "1B": "Dom Decker",
         "2B": null,
         "3B": null
       },
@@ -872,23 +874,23 @@
       "description": "D. Decker singled through the right side (2-0 BB)."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Taylor Rabe",
-      "batter": "J.",
+      "inning": "Top 5",
+      "pitcher": "Zane Adams",
+      "batter": "Judd Utermark",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "BSBFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "D.",
+        "1B": "Dom Decker",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "D.",
+        "1B": "Dom Decker",
         "2B": null,
         "3B": null
       },
@@ -899,24 +901,24 @@
       "description": "J. Utermark struck out swinging (2-2 BSBFS)."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Taylor Rabe",
-      "batter": "T.",
+      "inning": "Top 5",
+      "pitcher": "Zane Adams",
+      "batter": "Tristan Bissetta",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBBKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "D.",
+        "1B": "Dom Decker",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
-        "2B": null,
+        "1B": "Tristan Bissetta",
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -926,25 +928,27 @@
       "description": "T. Bissetta walked (3-1 BBBKB) D. Decker advanced to second."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Taylor Rabe",
-      "batter": "W.",
+      "inning": "Top 5",
+      "pitcher": "Zane Adams",
+      "batter": "Will Furniss",
       "outcome": "Home run",
       "count": "1-1",
       "pitches": "BS",
       "rbi": true,
       "runs_scored": [
-        "W."
+        "Tristan Bissetta",
+        "Dom Decker",
+        "Will Furniss"
       ],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "T.",
-        "2B": null,
+        "1B": "Tristan Bissetta",
+        "2B": "Dom Decker",
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -955,23 +959,23 @@
       "description": "W. Furniss homered to right center, 3 RBI (1-1 BS) T. Bissetta scored D. Decker scored."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Taylor Rabe",
-      "batter": "H.",
+      "inning": "Top 5",
+      "pitcher": "Zane Adams",
+      "batter": "Hayden Federico",
       "outcome": "Pop out",
       "count": "2-2",
       "pitches": "FBSB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "T.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -982,7 +986,7 @@
       "description": "H. Federico popped up to ss (2-2 FBSB)."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "Taylor Rabe",
       "batter": "Eric Hines",
       "outcome": "Strikeout (swinging)",
@@ -990,15 +994,15 @@
       "pitches": "FBFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "T.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "T.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1009,7 +1013,7 @@
       "description": "Hines struck out swinging (1-2 FBFS)."
     },
     {
-      "inning": "Bottom 10",
+      "inning": "Bottom 5",
       "pitcher": "Taylor Rabe",
       "batter": "John Lemm",
       "outcome": "Groundout",
@@ -1017,8 +1021,8 @@
       "pitches": "SK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1036,7 +1040,7 @@
       "description": "Lemm grounded out to p (0-2 SK)."
     },
     {
-      "inning": "Bottom 10",
+      "inning": "Bottom 5",
       "pitcher": "Taylor Rabe",
       "batter": "Jason Torres",
       "outcome": "Walk",
@@ -1044,8 +1048,8 @@
       "pitches": "SBBBFFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1063,7 +1067,7 @@
       "description": "Torres walked (3-2 SBBBFFB)."
     },
     {
-      "inning": "Bottom 10",
+      "inning": "Bottom 5",
       "pitcher": "Taylor Rabe",
       "batter": "Brennan Holt",
       "outcome": "Strikeout (swinging)",
@@ -1071,8 +1075,8 @@
       "pitches": "SBBBFFFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Jason Torres",
         "2B": null,
@@ -1090,23 +1094,23 @@
       "description": "Holt struck out swinging (3-2 SBBBFFFS)."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "Mitchell",
-      "batter": "C.",
+      "inning": "Top 6",
+      "pitcher": "Sam Mitchell",
+      "batter": "Collin Reuter",
       "outcome": "Groundout",
       "count": "0-2",
       "pitches": "KS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Jason Torres",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jason Torres",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1117,23 +1121,23 @@
       "description": "C. Reuter grounded out to (0-2 KS)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Mitchell",
-      "batter": "A.",
+      "inning": "Top 6",
+      "pitcher": "Sam Mitchell",
+      "batter": "Austin Fawley",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "BSFBFFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "A.",
+        "1B": "Austin Fawley",
         "2B": null,
         "3B": null
       },
@@ -1144,23 +1148,23 @@
       "description": "A. Fawley singled through the left side (3-2 BSFBFFB)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Mitchell",
-      "batter": "O.",
+      "inning": "Top 6",
+      "pitcher": "Sam Mitchell",
+      "batter": "Owen Paino",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KBSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "A.",
+        "1B": "Austin Fawley",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "A.",
+        "1B": "Austin Fawley",
         "2B": null,
         "3B": null
       },
@@ -1171,23 +1175,23 @@
       "description": "O. Paino struck out swinging (1-2 KBSS)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Steckmesser",
-      "batter": "D.",
+      "inning": "Top 6",
+      "pitcher": "Evan Steckmesser",
+      "batter": "Daniel Pacella",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "FBSBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "A.",
+        "1B": "Austin Fawley",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "A.",
+        "1B": "Austin Fawley",
         "2B": null,
         "3B": null
       },
@@ -1198,23 +1202,23 @@
       "description": "D. Pacella struck out swinging (2-2 FBSBS)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Steckmesser",
-      "batter": "D.",
+      "inning": "Bottom 6",
+      "pitcher": "Taylor Rabe",
+      "batter": "D. Pacella",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "A.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "A.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1225,18 +1229,18 @@
       "description": "D. Pacella to lf."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Steckmesser",
+      "inning": "Bottom 6",
+      "pitcher": "Taylor Rabe",
       "batter": "Luke Vaughn",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "A.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1252,16 +1256,16 @@
       "description": "Vaughn singled to left field (2-1 BKB)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "Steckmesser",
+      "inning": "Bottom 6",
+      "pitcher": "Taylor Rabe",
       "batter": "Peyton Steele",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
       "pitches": "FFBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Luke Vaughn",
         "2B": null,
@@ -1279,24 +1283,24 @@
       "description": "Steele struck out looking (1-2 FFBK)."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "Steckmesser",
+      "inning": "Bottom 6",
+      "pitcher": "Taylor Rabe",
       "batter": "Bryce Fowler",
       "outcome": "Hit by pitch",
       "count": "2-2",
       "pitches": "BBSK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": null,
+        "1B": "Luke Vaughn",
         "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Bryce Fowler",
-        "2B": null,
+        "2B": "Luke Vaughn",
         "3B": null
       },
       "score": {
@@ -1306,25 +1310,25 @@
       "description": "Fowler hit by pitch (2-2 BBSK) Vaughn advanced to second."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "Steckmesser",
+      "inning": "Bottom 6",
+      "pitcher": "Taylor Rabe",
       "batter": "Justin Lebron",
       "outcome": "Fielder's choice",
       "count": "0-1",
       "pitches": "S",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Bryce Fowler",
-        "2B": null,
+        "2B": "Luke Vaughn",
         "3B": null
       },
       "runners_after": {
         "1B": "Justin Lebron",
         "2B": null,
-        "3B": null
+        "3B": "Luke Vaughn"
       },
       "score": {
         "away": 5,
@@ -1333,25 +1337,25 @@
       "description": "Lebron reached on a fielder's choice to third base (0-1 S) Fowler out at second to 2b Vaughn advanced to third."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "Steckmesser",
+      "inning": "Bottom 6",
+      "pitcher": "Taylor Rabe",
       "batter": "Brady Neal",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "FSS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Justin Lebron",
         "2B": null,
-        "3B": null
+        "3B": "Luke Vaughn"
       },
       "runners_after": {
         "1B": "Justin Lebron",
         "2B": null,
-        "3B": null
+        "3B": "Luke Vaughn"
       },
       "score": {
         "away": 5,
@@ -1360,23 +1364,23 @@
       "description": "Neal struck out swinging (0-2 FSS)."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "Steckmesser",
-      "batter": "D.",
+      "inning": "Top 7",
+      "pitcher": "Evan Steckmesser",
+      "batter": "Dom Decker",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KFBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Justin Lebron",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Justin Lebron",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1387,16 +1391,16 @@
       "description": "D. Decker struck out swinging (1-2 KFBS)."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Steckmesser",
-      "batter": "J.",
+      "inning": "Top 7",
+      "pitcher": "Evan Steckmesser",
+      "batter": "Judd Utermark",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KSFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1414,16 +1418,16 @@
       "description": "J. Utermark struck out swinging (0-2 KSFS)."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Steckmesser",
-      "batter": "T.",
+      "inning": "Top 7",
+      "pitcher": "Evan Steckmesser",
+      "batter": "Tristan Bissetta",
       "outcome": "Groundout",
       "count": "3-2",
       "pitches": "BBKKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1441,7 +1445,7 @@
       "description": "T. Bissetta grounded out to 1b unassisted (3-2 BBKKB)."
     },
     {
-      "inning": "Bottom 13",
+      "inning": "Bottom 7",
       "pitcher": "J.",
       "batter": "Eric Hines",
       "outcome": "Flyout",
@@ -1449,8 +1453,8 @@
       "pitches": "BFSB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1468,7 +1472,7 @@
       "description": "Hines flied out to rf (2-2 BFSB)."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 7",
       "pitcher": "J.",
       "batter": "John Lemm",
       "outcome": "Strikeout (swinging)",
@@ -1476,8 +1480,8 @@
       "pitches": "SKFBBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1495,7 +1499,7 @@
       "description": "Lemm struck out swinging (2-2 SKFBBS)."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 7",
       "pitcher": "J.",
       "batter": "Jason Torres",
       "outcome": "Single",
@@ -1503,8 +1507,8 @@
       "pitches": "BBBKSFF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1522,7 +1526,7 @@
       "description": "Torres singled to right field (3-2 BBBKSFF)."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 7",
       "pitcher": "J.",
       "batter": "Brennan Holt",
       "outcome": "Hit by pitch",
@@ -1530,8 +1534,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Jason Torres",
         "2B": null,
@@ -1549,7 +1553,7 @@
       "description": "Holt hit by pitch (0-0) Torres advanced to second."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 7",
       "pitcher": "J.",
       "batter": "Luke Vaughn",
       "outcome": "Groundout",
@@ -1557,8 +1561,8 @@
       "pitches": "BK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Brennan Holt",
         "2B": "Jason Torres",
@@ -1576,24 +1580,24 @@
       "description": "Vaughn grounded out to 2b (1-1 BK)."
     },
     {
-      "inning": "Bottom 14",
-      "pitcher": "J.",
-      "batter": "W.",
+      "inning": "Top 8",
+      "pitcher": "Evan Steckmesser",
+      "batter": "Will Furniss",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "BSSBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "Brennan Holt",
-        "2B": "Jason Torres",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Brennan Holt",
-        "2B": "Jason Torres",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1603,16 +1607,16 @@
       "description": "W. Furniss struck out swinging (2-2 BSSBS)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "J.",
-      "batter": "H.",
+      "inning": "Top 8",
+      "pitcher": "Evan Steckmesser",
+      "batter": "Hayden Federico",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
       "pitches": "SKK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1630,23 +1634,23 @@
       "description": "H. Federico struck out looking (0-2 SKK)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "J.",
-      "batter": "C.",
+      "inning": "Top 8",
+      "pitcher": "Evan Steckmesser",
+      "batter": "Collin Reuter",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "C.",
+        "1B": "Collin Reuter",
         "2B": null,
         "3B": null
       },
@@ -1657,25 +1661,26 @@
       "description": "C. Reuter singled to left field (0-0)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "J.",
-      "batter": "A.",
+      "inning": "Top 8",
+      "pitcher": "Evan Steckmesser",
+      "batter": "Austin Fawley",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "A."
+        "Collin Reuter",
+        "Austin Fawley"
       ],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "C.",
+        "1B": "Collin Reuter",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "C.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1686,23 +1691,23 @@
       "description": "A. Fawley homered to left field, 2 RBI (0-0) C. Reuter scored."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "J.",
-      "batter": "O.",
+      "inning": "Top 8",
+      "pitcher": "Evan Steckmesser",
+      "batter": "Owen Paino",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "SKBBBFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "C.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "O.",
+        "1B": "Owen Paino",
         "2B": null,
         "3B": null
       },
@@ -1713,23 +1718,23 @@
       "description": "O. Paino walked (3-2 SKBBBFB)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Morris",
-      "batter": "B.",
+      "inning": "Top 8",
+      "pitcher": "Austin Morris",
+      "batter": "Brett Moseley",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "BSKS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "O.",
+        "1B": "Owen Paino",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "O.",
+        "1B": "Owen Paino",
         "2B": null,
         "3B": null
       },
@@ -1740,23 +1745,23 @@
       "description": "B. Moseley struck out swinging (1-2 BSKS)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Morris",
-      "batter": "H.",
+      "inning": "Bottom 8",
+      "pitcher": "J.",
+      "batter": "H. Federico",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "O.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "O.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1767,23 +1772,23 @@
       "description": "H. Federico to lf."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Morris",
-      "batter": "B.",
+      "inning": "Bottom 8",
+      "pitcher": "J.",
+      "batter": "B. Moseley",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "O.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "O.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1794,23 +1799,23 @@
       "description": "B. Moseley to cf."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Morris",
+      "inning": "Bottom 8",
+      "pitcher": "J.",
       "batter": "Jojo Williamson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KBKFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "O.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "O.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1821,16 +1826,16 @@
       "description": "Williamson struck out swinging (1-2 KBKFS)."
     },
     {
-      "inning": "Bottom 16",
-      "pitcher": "Morris",
+      "inning": "Bottom 8",
+      "pitcher": "J.",
       "batter": "Bryce Fowler",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "KB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1848,16 +1853,16 @@
       "description": "Fowler grounded out to ss (1-1 KB)."
     },
     {
-      "inning": "Bottom 16",
-      "pitcher": "Morris",
+      "inning": "Bottom 8",
+      "pitcher": "J.",
       "batter": "Justin Lebron",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BKFFBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1875,16 +1880,16 @@
       "description": "Lebron walked (3-2 BKFFBBB)."
     },
     {
-      "inning": "Bottom 16",
-      "pitcher": "Morris",
+      "inning": "Bottom 8",
+      "pitcher": "J.",
       "batter": "Brady Neal",
       "outcome": "Pop out",
       "count": "2-2",
       "pitches": "KFBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Justin Lebron",
         "2B": null,
@@ -1902,23 +1907,23 @@
       "description": "Neal popped up to ss (2-2 KFBB)."
     },
     {
-      "inning": "Bottom 16",
-      "pitcher": "Morris",
-      "batter": "D.",
+      "inning": "Top 9",
+      "pitcher": "Austin Morris",
+      "batter": "Dom Decker",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "KBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Justin Lebron",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "D.",
+        "1B": "Dom Decker",
         "2B": null,
         "3B": null
       },
@@ -1929,24 +1934,24 @@
       "description": "D. Decker singled to left center (1-2 KBS)."
     },
     {
-      "inning": "Bottom 16",
-      "pitcher": "Morris",
-      "batter": "J.",
+      "inning": "Top 9",
+      "pitcher": "Austin Morris",
+      "batter": "Judd Utermark",
       "outcome": "Groundout",
       "count": "3-2",
       "pitches": "FBKBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "D.",
+        "1B": "Dom Decker",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "D.",
-        "2B": null,
+        "1B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -1956,25 +1961,25 @@
       "description": "J. Utermark grounded out to ss (3-2 FBKBB) D. Decker advanced to second."
     },
     {
-      "inning": "Bottom 17",
-      "pitcher": "Lehman",
+      "inning": "Top 9",
+      "pitcher": "Connor Lehman",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "runners_after": {
         "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Dom Decker"
       },
       "score": {
         "away": 7,
@@ -1983,25 +1988,25 @@
       "description": "D. Decker advanced to third on a wild pitch."
     },
     {
-      "inning": "Bottom 17",
-      "pitcher": "Lehman",
-      "batter": "T.",
+      "inning": "Top 9",
+      "pitcher": "Connor Lehman",
+      "batter": "Tristan Bissetta",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Dom Decker"
       },
       "runners_after": {
-        "1B": "T.",
+        "1B": "Tristan Bissetta",
         "2B": null,
-        "3B": null
+        "3B": "Dom Decker"
       },
       "score": {
         "away": 7,
@@ -2010,23 +2015,25 @@
       "description": "T. Bissetta walked (3-0 BBBB)."
     },
     {
-      "inning": "Bottom 17",
-      "pitcher": "Lehman",
-      "batter": "W.",
+      "inning": "Top 9",
+      "pitcher": "Connor Lehman",
+      "batter": "Will Furniss",
       "outcome": "Flyout",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "runs_scored": [
+        "Dom Decker"
+      ],
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "T.",
+        "1B": "Tristan Bissetta",
         "2B": null,
-        "3B": null
+        "3B": "Dom Decker"
       },
       "runners_after": {
-        "1B": "T.",
+        "1B": "Tristan Bissetta",
         "2B": null,
         "3B": null
       },
@@ -2037,25 +2044,25 @@
       "description": "W. Furniss flied out to rf, SF, RBI (1-0 B) D. Decker scored."
     },
     {
-      "inning": "Bottom 17",
-      "pitcher": "Lehman",
-      "batter": "H.",
+      "inning": "Top 9",
+      "pitcher": "Connor Lehman",
+      "batter": "Hayden Federico",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BSB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "T.",
+        "1B": "Tristan Bissetta",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "H.",
+        "1B": "Hayden Federico",
         "2B": null,
-        "3B": null
+        "3B": "Tristan Bissetta"
       },
       "score": {
         "away": 8,
@@ -2064,24 +2071,26 @@
       "description": "H. Federico singled to center field (2-1 BSB) T. Bissetta advanced to third."
     },
     {
-      "inning": "Bottom 17",
-      "pitcher": "Kittrell",
+      "inning": "Top 9",
+      "pitcher": "Zach Kittrell",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "runs_scored": [
+        "Tristan Bissetta"
+      ],
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "H.",
+        "1B": "Hayden Federico",
         "2B": null,
-        "3B": null
+        "3B": "Tristan Bissetta"
       },
       "runners_after": {
-        "1B": "H.",
-        "2B": null,
+        "1B": null,
+        "2B": "Hayden Federico",
         "3B": null
       },
       "score": {
@@ -2091,25 +2100,25 @@
       "description": "H. Federico advanced to second on a wild pitch T. Bissetta scored on a wild pitch."
     },
     {
-      "inning": "Bottom 17",
-      "pitcher": "Kittrell",
+      "inning": "Top 9",
+      "pitcher": "Zach Kittrell",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "H.",
-        "2B": null,
+        "1B": null,
+        "2B": "Hayden Federico",
         "3B": null
       },
       "runners_after": {
-        "1B": "H.",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Hayden Federico"
       },
       "score": {
         "away": 9,
@@ -2118,25 +2127,25 @@
       "description": "H. Federico advanced to third on a passed ball."
     },
     {
-      "inning": "Bottom 17",
-      "pitcher": "Kittrell",
-      "batter": "C.",
+      "inning": "Top 9",
+      "pitcher": "Zach Kittrell",
+      "batter": "Collin Reuter",
       "outcome": "Groundout",
       "count": "3-2",
       "pitches": "BKKBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "H.",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Hayden Federico"
       },
       "runners_after": {
-        "1B": "H.",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Hayden Federico"
       },
       "score": {
         "away": 9,
@@ -2145,23 +2154,23 @@
       "description": "C. Reuter grounded out to ss (3-2 BKKBB)."
     },
     {
-      "inning": "Bottom 17",
-      "pitcher": "Kittrell",
+      "inning": "Bottom 9",
+      "pitcher": "J.",
       "batter": "Eric Hines",
       "outcome": "Groundout",
       "count": "3-1",
       "pitches": "SBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "H.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "H.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2172,16 +2181,16 @@
       "description": "Hines grounded out to 2b (3-1 SBBB)."
     },
     {
-      "inning": "Bottom 18",
-      "pitcher": "Kittrell",
+      "inning": "Bottom 9",
+      "pitcher": "J.",
       "batter": "John Lemm",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2199,16 +2208,16 @@
       "description": "Lemm struck out swinging (0-2 KFS)."
     },
     {
-      "inning": "Bottom 18",
-      "pitcher": "Kittrell",
+      "inning": "Bottom 9",
+      "pitcher": "J.",
       "batter": "Jason Torres",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,

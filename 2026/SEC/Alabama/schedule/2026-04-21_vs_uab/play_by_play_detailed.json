@@ -1,14 +1,14 @@
 {
   "contest_id": "6515313",
   "date": "04/21/2026",
-  "batting_team": "Alabama",
-  "pitching_team": "UAB",
-  "note": "Broken-down from the saved play_by_play.json, which contains the Alabama at-bats only. Innings inferred by counting outs; pitcher tracked via in-text pitching changes.",
+  "away_team": "UAB",
+  "home_team": "Alabama",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
   "plays": [
     {
-      "inning": "Bottom 1",
-      "pitcher": "Isaac Warrick",
-      "batter": "K.",
+      "inning": "Top 1",
+      "pitcher": "Luke Smyers",
+      "batter": "K. Hall",
       "outcome": "Foul out",
       "count": "0-0",
       "pitches": "",
@@ -33,9 +33,9 @@
       "description": "K. Hall Jr. fouled out to 1b (0-0)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Isaac Warrick",
-      "batter": "J.",
+      "inning": "Top 1",
+      "pitcher": "Luke Smyers",
+      "batter": "John Paul Head",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "KBBBKB",
@@ -49,7 +49,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "John Paul Head",
         "2B": null,
         "3B": null
       },
@@ -60,8 +60,8 @@
       "description": "J. Head walked (3-2 KBBBKB)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Isaac Warrick",
+      "inning": "Top 1",
+      "pitcher": "Luke Smyers",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -71,14 +71,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "J.",
+        "1B": "John Paul Head",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "John Paul Head"
       },
       "score": {
         "away": 0,
@@ -87,9 +87,9 @@
       "description": "J. Head advanced to second on a throwing error by p, advanced to third, failed pickoff attempt."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Isaac Warrick",
-      "batter": "L.",
+      "inning": "Top 1",
+      "pitcher": "Luke Smyers",
+      "batter": "Landon Beaver",
       "outcome": "Hit by pitch",
       "count": "1-2",
       "pitches": "KBKF",
@@ -98,14 +98,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "J.",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "John Paul Head"
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": "Landon Beaver",
         "2B": null,
-        "3B": null
+        "3B": "John Paul Head"
       },
       "score": {
         "away": 0,
@@ -114,8 +114,8 @@
       "description": "L. Beaver hit by pitch (1-2 KBKF)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Isaac Warrick",
+      "inning": "Top 1",
+      "pitcher": "Luke Smyers",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -125,14 +125,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "L.",
+        "1B": "Landon Beaver",
         "2B": null,
-        "3B": null
+        "3B": "John Paul Head"
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": "Landon Beaver",
         "2B": null,
-        "3B": null
+        "3B": "John Paul Head"
       },
       "score": {
         "away": 0,
@@ -141,9 +141,9 @@
       "description": "L. Beaver stole second."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Isaac Warrick",
-      "batter": "M.",
+      "inning": "Top 1",
+      "pitcher": "Luke Smyers",
+      "batter": "Max Price",
       "outcome": "Hit by pitch",
       "count": "3-0",
       "pitches": "BBB",
@@ -152,14 +152,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "L.",
+        "1B": "Landon Beaver",
         "2B": null,
-        "3B": null
+        "3B": "John Paul Head"
       },
       "runners_after": {
-        "1B": "M.",
+        "1B": "Max Price",
         "2B": null,
-        "3B": null
+        "3B": "John Paul Head"
       },
       "score": {
         "away": 0,
@@ -168,24 +168,26 @@
       "description": "M. Price hit by pitch (3-0 BBB)."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Isaac Warrick",
-      "batter": "B.",
+      "inning": "Top 1",
+      "pitcher": "Luke Smyers",
+      "batter": "Brady Waugh",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "John Paul Head"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "M.",
+        "1B": "Max Price",
         "2B": null,
-        "3B": null
+        "3B": "John Paul Head"
       },
       "runners_after": {
-        "1B": "B.",
-        "2B": null,
+        "1B": "Brady Waugh",
+        "2B": "Max Price",
         "3B": null
       },
       "score": {
@@ -195,24 +197,26 @@
       "description": "B. Waugh singled to left field, RBI (0-1 K) M. Price advanced to second L. Beaver advanced to third J. Head scored."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Isaac Warrick",
-      "batter": "A.",
+      "inning": "Top 1",
+      "pitcher": "Luke Smyers",
+      "batter": "Andrew Hunt",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "SFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Max Price"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "B.",
-        "2B": null,
+        "1B": "Brady Waugh",
+        "2B": "Max Price",
         "3B": null
       },
       "runners_after": {
-        "1B": "A.",
-        "2B": null,
+        "1B": "Andrew Hunt",
+        "2B": "Brady Waugh",
         "3B": null
       },
       "score": {
@@ -222,9 +226,9 @@
       "description": "A. Hunt singled to center field, 2 RBI (1-2 SFB) B. Waugh advanced to second M. Price advanced to third, scored on an error by cf L. Beaver scored."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Isaac Warrick",
-      "batter": "W.",
+      "inning": "Top 1",
+      "pitcher": "Luke Smyers",
+      "batter": "Wesley Helms",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "KB",
@@ -233,14 +237,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "A.",
-        "2B": null,
+        "1B": "Andrew Hunt",
+        "2B": "Brady Waugh",
         "3B": null
       },
       "runners_after": {
-        "1B": "W.",
-        "2B": null,
-        "3B": null
+        "1B": "Wesley Helms",
+        "2B": "Andrew Hunt",
+        "3B": "Brady Waugh"
       },
       "score": {
         "away": 3,
@@ -249,24 +253,27 @@
       "description": "W. Helms singled to center field (1-1 KB) A. Hunt advanced to second B. Waugh advanced to third."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Blackwood",
-      "batter": "A.",
+      "inning": "Top 1",
+      "pitcher": "JT Blackwood",
+      "batter": "Alex Dupuy",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "KBSF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Andrew Hunt",
+        "Brady Waugh"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "W.",
-        "2B": null,
-        "3B": null
+        "1B": "Wesley Helms",
+        "2B": "Andrew Hunt",
+        "3B": "Brady Waugh"
       },
       "runners_after": {
-        "1B": "A.",
-        "2B": null,
+        "1B": "Alex Dupuy",
+        "2B": "Wesley Helms",
         "3B": null
       },
       "score": {
@@ -276,23 +283,26 @@
       "description": "A. Dupuy singled to shortstop, 2 RBI (1-2 KBSF) W. Helms advanced to second A. Hunt scored B. Waugh scored."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Blackwood",
-      "batter": "B.",
+      "inning": "Top 1",
+      "pitcher": "JT Blackwood",
+      "batter": "Baylor Roberts",
       "outcome": "Reached on error",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Alex Dupuy",
+        "Wesley Helms"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "A.",
-        "2B": null,
+        "1B": "Alex Dupuy",
+        "2B": "Wesley Helms",
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": "Baylor Roberts",
         "2B": null,
         "3B": null
       },
@@ -303,9 +313,9 @@
       "description": "B. Roberts reached on a throwing error by , SAC, bunt, advanced to second, out at second rf to ss (0-0) A. Dupuy scored, unearned W. Helms scored, unearned."
     },
     {
-      "inning": "Bottom 1",
-      "pitcher": "Blackwood",
-      "batter": "K.",
+      "inning": "Top 1",
+      "pitcher": "JT Blackwood",
+      "batter": "K. Hall",
       "outcome": "Groundout",
       "count": "2-1",
       "pitches": "BKB",
@@ -314,12 +324,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "B.",
+        "1B": "Baylor Roberts",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": "Baylor Roberts",
         "2B": null,
         "3B": null
       },
@@ -331,22 +341,22 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Blackwood",
+      "pitcher": "Isaac Warrick",
       "batter": "Bryce Fowler",
       "outcome": "Flyout",
       "count": "3-2",
       "pitches": "BBKBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "B.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -357,16 +367,16 @@
       "description": "Fowler flied out to cf (3-2 BBKBK)."
     },
     {
-      "inning": "Bottom 2",
-      "pitcher": "Blackwood",
+      "inning": "Bottom 1",
+      "pitcher": "Isaac Warrick",
       "batter": "Justin Lebron",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "KFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -384,16 +394,16 @@
       "description": "Lebron grounded out to ss (1-2 KFB)."
     },
     {
-      "inning": "Bottom 2",
-      "pitcher": "Blackwood",
+      "inning": "Bottom 1",
+      "pitcher": "Isaac Warrick",
       "batter": "Brady Neal",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "BFBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -411,23 +421,23 @@
       "description": "Neal grounded out to 1b unassisted (2-2 BFBK)."
     },
     {
-      "inning": "Bottom 2",
-      "pitcher": "Blackwood",
-      "batter": "J.",
+      "inning": "Top 2",
+      "pitcher": "JT Blackwood",
+      "batter": "John Paul Head",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "John Paul Head",
         "2B": null,
         "3B": null
       },
@@ -438,24 +448,24 @@
       "description": "J. Head singled to center field (1-0 B)."
     },
     {
-      "inning": "Bottom 2",
-      "pitcher": "Blackwood",
-      "batter": "L.",
+      "inning": "Top 2",
+      "pitcher": "JT Blackwood",
+      "batter": "Landon Beaver",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "FBF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "J.",
+        "1B": "John Paul Head",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
-        "2B": null,
+        "1B": "Landon Beaver",
+        "2B": "John Paul Head",
         "3B": null
       },
       "score": {
@@ -465,24 +475,24 @@
       "description": "L. Beaver singled to right field (1-2 FBF) J. Head advanced to second."
     },
     {
-      "inning": "Bottom 2",
-      "pitcher": "Blackwood",
-      "batter": "M.",
+      "inning": "Top 2",
+      "pitcher": "JT Blackwood",
+      "batter": "Max Price",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "FFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "L.",
-        "2B": null,
+        "1B": "Landon Beaver",
+        "2B": "John Paul Head",
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
-        "2B": null,
+        "1B": "Landon Beaver",
+        "2B": "John Paul Head",
         "3B": null
       },
       "score": {
@@ -492,24 +502,24 @@
       "description": "M. Price struck out swinging (0-2 FFS)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Blackwood",
-      "batter": "B.",
+      "inning": "Top 2",
+      "pitcher": "JT Blackwood",
+      "batter": "Brady Waugh",
       "outcome": "Grounded into double play",
       "count": "1-2",
       "pitches": "SKFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
-        "2B": null,
+        "1B": "Landon Beaver",
+        "2B": "John Paul Head",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": null,
+        "2B": "John Paul Head",
         "3B": null
       },
       "score": {
@@ -519,16 +529,16 @@
       "description": "B. Waugh grounded into double play 2b to ss to 1b (1-2 SKFB) L. Beaver out on the play."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Blackwood",
+      "inning": "Bottom 2",
+      "pitcher": "Isaac Warrick",
       "batter": "Eric Hines",
       "outcome": "Hit by pitch",
       "count": "1-2",
       "pitches": "SBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -546,16 +556,16 @@
       "description": "Hines hit by pitch (1-2 SBS)."
     },
     {
-      "inning": "Bottom 3",
-      "pitcher": "Blackwood",
+      "inning": "Bottom 2",
+      "pitcher": "Isaac Warrick",
       "batter": "John Lemm",
       "outcome": "Pop out",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Eric Hines",
         "2B": null,
@@ -573,23 +583,23 @@
       "description": "Lemm popped up to 1b (0-0)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Blackwood",
+      "inning": "Bottom 2",
+      "pitcher": "Isaac Warrick",
       "batter": "Luke Vaughn",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "SFBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Eric Hines",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Eric Hines",
         "2B": null,
         "3B": null
       },
@@ -600,23 +610,23 @@
       "description": "Vaughn struck out swinging (1-2 SFBS)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Blackwood",
+      "inning": "Bottom 2",
+      "pitcher": "Isaac Warrick",
       "batter": "Caleb Barnett",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
       "pitches": "KFBFBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
+        "1B": "Eric Hines",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": null,
+        "1B": "Eric Hines",
         "2B": null,
         "3B": null
       },
@@ -627,16 +637,16 @@
       "description": "Barnett struck out swinging (2-2 KFBFBS)."
     },
     {
-      "inning": "Bottom 4",
-      "pitcher": "Blackwood",
-      "batter": "A.",
+      "inning": "Top 3",
+      "pitcher": "JT Blackwood",
+      "batter": "Andrew Hunt",
       "outcome": "Groundout",
       "count": "2-1",
       "pitches": "KBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -654,16 +664,16 @@
       "description": "A. Hunt grounded out to ss (2-1 KBB)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Blackwood",
-      "batter": "W.",
+      "inning": "Top 3",
+      "pitcher": "JT Blackwood",
+      "batter": "Wesley Helms",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -681,16 +691,16 @@
       "description": "W. Helms flied out to cf (0-0)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Blackwood",
-      "batter": "A.",
+      "inning": "Top 3",
+      "pitcher": "JT Blackwood",
+      "batter": "Alex Dupuy",
       "outcome": "Pop out",
       "count": "3-2",
       "pitches": "KKBFBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -708,16 +718,16 @@
       "description": "A. Dupuy popped up to (3-2 KKBFBB)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Blackwood",
+      "inning": "Bottom 3",
+      "pitcher": "Isaac Warrick",
       "batter": "Jason Torres",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -735,16 +745,16 @@
       "description": "Torres walked (3-0 BBBB)."
     },
     {
-      "inning": "Bottom 5",
-      "pitcher": "Blackwood",
+      "inning": "Bottom 3",
+      "pitcher": "Isaac Warrick",
       "batter": "Brennan Holt",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
       "pitches": "SFBBFBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Jason Torres",
         "2B": null,
@@ -762,18 +772,18 @@
       "description": "Holt struck out looking (3-2 SFBBFBK)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Blackwood",
+      "inning": "Bottom 3",
+      "pitcher": "Isaac Warrick",
       "batter": "Bryce Fowler",
       "outcome": "Fielder's choice",
       "count": "0-2",
       "pitches": "FK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
-        "1B": null,
+        "1B": "Jason Torres",
         "2B": null,
         "3B": null
       },
@@ -789,7 +799,7 @@
       "description": "Fowler reached on a fielder's choice to first base (0-2 FK) Torres out at second 1b to ss."
     },
     {
-      "inning": "Bottom 6",
+      "inning": "Bottom 3",
       "pitcher": "R.",
       "batter": "Justin Lebron",
       "outcome": "Single",
@@ -797,8 +807,8 @@
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Bryce Fowler",
         "2B": null,
@@ -816,7 +826,7 @@
       "description": "Lebron singled up the middle (1-0 B) Fowler advanced to third."
     },
     {
-      "inning": "Bottom 6",
+      "inning": "Bottom 3",
       "pitcher": "R.",
       "batter": null,
       "outcome": "Stolen base",
@@ -824,8 +834,8 @@
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Justin Lebron",
         "2B": null,
@@ -843,7 +853,7 @@
       "description": "Lebron stole second."
     },
     {
-      "inning": "Bottom 6",
+      "inning": "Bottom 3",
       "pitcher": "R.",
       "batter": "Brady Neal",
       "outcome": "Walk",
@@ -851,8 +861,8 @@
       "pitches": "BBBFKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": "Justin Lebron",
         "2B": null,
@@ -870,7 +880,7 @@
       "description": "Neal walked (3-2 BBBFKB)."
     },
     {
-      "inning": "Bottom 6",
+      "inning": "Bottom 3",
       "pitcher": "R.",
       "batter": "Eric Hines",
       "outcome": "Strikeout (looking)",
@@ -878,8 +888,8 @@
       "pitches": "FBBFFFK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Brady Neal",
         "2B": null,
@@ -897,25 +907,25 @@
       "description": "Hines struck out looking (2-2 FBBFFFK)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "R.",
-      "batter": "B.",
+      "inning": "Top 4",
+      "pitcher": "JT Blackwood",
+      "batter": "Baylor Roberts",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBKFBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "Brady Neal",
+        "1B": null,
         "2B": null,
-        "3B": "Bryce Fowler"
+        "3B": null
       },
       "runners_after": {
-        "1B": "B.",
+        "1B": "Baylor Roberts",
         "2B": null,
-        "3B": "Bryce Fowler"
+        "3B": null
       },
       "score": {
         "away": 7,
@@ -924,25 +934,25 @@
       "description": "B. Roberts walked (3-2 BBKFBB)."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "R.",
-      "batter": "K.",
+      "inning": "Top 4",
+      "pitcher": "JT Blackwood",
+      "batter": "K. Hall",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "B.",
+        "1B": "Baylor Roberts",
         "2B": null,
-        "3B": "Bryce Fowler"
+        "3B": null
       },
       "runners_after": {
-        "1B": "K.",
+        "1B": "K. Hall",
         "2B": null,
-        "3B": "Bryce Fowler"
+        "3B": "Baylor Roberts"
       },
       "score": {
         "away": 7,
@@ -951,25 +961,27 @@
       "description": "K. Hall Jr. singled through the right side (1-0 B) B. Roberts advanced to third."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "R.",
-      "batter": "J.",
+      "inning": "Top 4",
+      "pitcher": "JT Blackwood",
+      "batter": "John Paul Head",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "runs_scored": [
+        "Baylor Roberts"
+      ],
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "K.",
+        "1B": "K. Hall",
         "2B": null,
-        "3B": "Bryce Fowler"
+        "3B": "Baylor Roberts"
       },
       "runners_after": {
-        "1B": "J.",
+        "1B": "John Paul Head",
         "2B": null,
-        "3B": "Bryce Fowler"
+        "3B": null
       },
       "score": {
         "away": 9,
@@ -978,25 +990,25 @@
       "description": "J. Head singled to right field, advanced to second on the throw, RBI (0-1 K) K. Hall Jr. advanced to third, scored on an error by rf, unearned B. Roberts scored."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Lehman",
-      "batter": "L.",
+      "inning": "Top 4",
+      "pitcher": "Connor Lehman",
+      "batter": "Landon Beaver",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBKFBFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "J.",
+        "1B": "John Paul Head",
         "2B": null,
-        "3B": "Bryce Fowler"
+        "3B": null
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": "Landon Beaver",
         "2B": null,
-        "3B": "Bryce Fowler"
+        "3B": "John Paul Head"
       },
       "score": {
         "away": 9,
@@ -1005,25 +1017,25 @@
       "description": "L. Beaver walked (3-2 BBKFBFB) J. Head advanced to third on a wild pitch."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Lehman",
-      "batter": "M.",
+      "inning": "Top 4",
+      "pitcher": "Connor Lehman",
+      "batter": "Max Price",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBBKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "L.",
+        "1B": "Landon Beaver",
         "2B": null,
-        "3B": "Bryce Fowler"
+        "3B": "John Paul Head"
       },
       "runners_after": {
-        "1B": "M.",
-        "2B": null,
-        "3B": "Bryce Fowler"
+        "1B": "Max Price",
+        "2B": "Landon Beaver",
+        "3B": "John Paul Head"
       },
       "score": {
         "away": 9,
@@ -1032,25 +1044,25 @@
       "description": "M. Price walked (3-1 BBBKB) L. Beaver advanced to second."
     },
     {
-      "inning": "Bottom 6",
-      "pitcher": "Lehman",
-      "batter": "B.",
+      "inning": "Top 4",
+      "pitcher": "Connor Lehman",
+      "batter": "Brady Waugh",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
       "pitches": "KFBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "M.",
-        "2B": null,
-        "3B": "Bryce Fowler"
+        "1B": "Max Price",
+        "2B": "Landon Beaver",
+        "3B": "John Paul Head"
       },
       "runners_after": {
-        "1B": "M.",
-        "2B": null,
-        "3B": "Bryce Fowler"
+        "1B": "Max Price",
+        "2B": "Landon Beaver",
+        "3B": "John Paul Head"
       },
       "score": {
         "away": 9,
@@ -1059,25 +1071,25 @@
       "description": "B. Waugh struck out looking (1-2 KFBK)."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Lehman",
-      "batter": "A.",
+      "inning": "Top 4",
+      "pitcher": "Connor Lehman",
+      "batter": "Andrew Hunt",
       "outcome": "Grounded into double play",
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 2,
+      "outs_before": 1,
+      "outs_after": 3,
       "runners_before": {
-        "1B": null,
-        "2B": null,
-        "3B": null
+        "1B": "Max Price",
+        "2B": "Landon Beaver",
+        "3B": "John Paul Head"
       },
       "runners_after": {
         "1B": null,
-        "2B": null,
-        "3B": null
+        "2B": "Landon Beaver",
+        "3B": "John Paul Head"
       },
       "score": {
         "away": 9,
@@ -1086,16 +1098,16 @@
       "description": "A. Hunt grounded into double play ss to 2b to 1b (3-1 BBBK) M. Price out on the play."
     },
     {
-      "inning": "Bottom 7",
-      "pitcher": "Lehman",
+      "inning": "Bottom 4",
+      "pitcher": "R.",
       "batter": "John Lemm",
       "outcome": "Flyout",
       "count": "1-2",
       "pitches": "KFB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1113,16 +1125,16 @@
       "description": "Lemm flied out to lf (1-2 KFB)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Lehman",
+      "inning": "Bottom 4",
+      "pitcher": "R.",
       "batter": "Luke Vaughn",
       "outcome": "Double",
       "count": "2-0",
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1140,16 +1152,16 @@
       "description": "Vaughn doubled to center field (2-0 BB)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Lehman",
+      "inning": "Bottom 4",
+      "pitcher": "R.",
       "batter": "Caleb Barnett",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
       "pitches": "KBBSK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": "Luke Vaughn",
@@ -1167,16 +1179,16 @@
       "description": "Barnett struck out looking (2-2 KBBSK)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Lehman",
+      "inning": "Bottom 4",
+      "pitcher": "R.",
       "batter": "Jason Torres",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "BF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": "Luke Vaughn",
@@ -1194,24 +1206,24 @@
       "description": "Torres grounded out to ss (1-1 BF)."
     },
     {
-      "inning": "Bottom 8",
-      "pitcher": "Sarna",
-      "batter": "W.",
+      "inning": "Top 5",
+      "pitcher": "Owen Sarna",
+      "batter": "Wesley Helms",
       "outcome": "Groundout",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Luke Vaughn",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Luke Vaughn",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1221,16 +1233,16 @@
       "description": "W. Helms grounded out to ss (1-0 B)."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Sarna",
-      "batter": "A.",
+      "inning": "Top 5",
+      "pitcher": "Owen Sarna",
+      "batter": "Alex Dupuy",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "KFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1248,16 +1260,16 @@
       "description": "A. Dupuy struck out swinging (0-2 KFS)."
     },
     {
-      "inning": "Bottom 9",
-      "pitcher": "Sarna",
-      "batter": "B.",
+      "inning": "Top 5",
+      "pitcher": "Owen Sarna",
+      "batter": "Baylor Roberts",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
       "pitches": "FSBFFFBBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1275,7 +1287,7 @@
       "description": "B. Roberts struck out swinging (3-2 FSBFFFBBS)."
     },
     {
-      "inning": "Bottom 9",
+      "inning": "Bottom 5",
       "pitcher": "K.",
       "batter": "Brennan Holt",
       "outcome": "Strikeout (swinging)",
@@ -1283,8 +1295,8 @@
       "pitches": "SBBSBFS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1302,7 +1314,7 @@
       "description": "Holt struck out swinging (3-2 SBBSBFS)."
     },
     {
-      "inning": "Bottom 10",
+      "inning": "Bottom 5",
       "pitcher": "K.",
       "batter": "Bryce Fowler",
       "outcome": "Groundout",
@@ -1310,8 +1322,8 @@
       "pitches": "F",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1329,7 +1341,7 @@
       "description": "Fowler grounded out to ss (0-1 F)."
     },
     {
-      "inning": "Bottom 10",
+      "inning": "Bottom 5",
       "pitcher": "K.",
       "batter": "Justin Lebron",
       "outcome": "Flyout",
@@ -1337,8 +1349,8 @@
       "pitches": "F",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1356,16 +1368,16 @@
       "description": "Lebron flied out to cf (0-1 F)."
     },
     {
-      "inning": "Bottom 10",
-      "pitcher": "K.",
-      "batter": "K.",
+      "inning": "Top 6",
+      "pitcher": "Owen Sarna",
+      "batter": "K. Hall",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "BF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1383,16 +1395,16 @@
       "description": "K. Hall Jr. grounded out to 2b (1-1 BF)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "K.",
-      "batter": "J.",
+      "inning": "Top 6",
+      "pitcher": "Owen Sarna",
+      "batter": "John Paul Head",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
       "pitches": "BBBKKS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1410,23 +1422,23 @@
       "description": "J. Head struck out swinging (3-2 BBBKKS)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "K.",
-      "batter": "L.",
+      "inning": "Top 6",
+      "pitcher": "Owen Sarna",
+      "batter": "Landon Beaver",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "F",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "L.",
+        "1B": "Landon Beaver",
         "2B": null,
         "3B": null
       },
@@ -1437,24 +1449,24 @@
       "description": "L. Beaver singled through the right side (0-1 F)."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "K.",
-      "batter": "M.",
+      "inning": "Top 6",
+      "pitcher": "Owen Sarna",
+      "batter": "Max Price",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BSBSBB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "L.",
+        "1B": "Landon Beaver",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "M.",
-        "2B": null,
+        "1B": "Max Price",
+        "2B": "Landon Beaver",
         "3B": null
       },
       "score": {
@@ -1464,24 +1476,24 @@
       "description": "M. Price walked (3-2 BSBSBB) L. Beaver advanced to second."
     },
     {
-      "inning": "Bottom 11",
-      "pitcher": "K.",
-      "batter": "B.",
+      "inning": "Top 6",
+      "pitcher": "Owen Sarna",
+      "batter": "Brady Waugh",
       "outcome": "Foul out",
       "count": "1-2",
       "pitches": "BKSF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
-        "1B": "M.",
-        "2B": null,
+        "1B": "Max Price",
+        "2B": "Landon Beaver",
         "3B": null
       },
       "runners_after": {
-        "1B": "M.",
-        "2B": null,
+        "1B": "Max Price",
+        "2B": "Landon Beaver",
         "3B": null
       },
       "score": {
@@ -1491,23 +1503,23 @@
       "description": "B. Waugh fouled out to (1-2 BKSF)."
     },
     {
-      "inning": "Bottom 11",
+      "inning": "Bottom 6",
       "pitcher": "K.",
-      "batter": "A.",
+      "batter": "A. Cheeseman",
       "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "M.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "M.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1518,7 +1530,7 @@
       "description": "A. Cheeseman to 2b for B. Waugh."
     },
     {
-      "inning": "Bottom 11",
+      "inning": "Bottom 6",
       "pitcher": "K.",
       "batter": "Brady Neal",
       "outcome": "Single",
@@ -1526,10 +1538,10 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
-        "1B": "M.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1545,7 +1557,7 @@
       "description": "Neal singled to left center (0-0)."
     },
     {
-      "inning": "Bottom 11",
+      "inning": "Bottom 6",
       "pitcher": "K.",
       "batter": "Eric Hines",
       "outcome": "Fielder's choice",
@@ -1553,8 +1565,8 @@
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": "Brady Neal",
         "2B": null,
@@ -1572,7 +1584,7 @@
       "description": "Hines reached on a fielder's choice to shortstop (0-0) Neal out at second ss to 2b."
     },
     {
-      "inning": "Bottom 12",
+      "inning": "Bottom 6",
       "pitcher": "K.",
       "batter": "John Lemm",
       "outcome": "Home run",
@@ -1580,12 +1592,13 @@
       "pitches": "KB",
       "rbi": true,
       "runs_scored": [
+        "Eric Hines",
         "John Lemm"
       ],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": null,
+        "1B": "Eric Hines",
         "2B": null,
         "3B": null
       },
@@ -1601,7 +1614,7 @@
       "description": "Lemm homered to right center, 2 RBI (1-1 KB) Hines scored."
     },
     {
-      "inning": "Bottom 12",
+      "inning": "Bottom 6",
       "pitcher": "K.",
       "batter": "Luke Vaughn",
       "outcome": "Strikeout (swinging)",
@@ -1609,8 +1622,8 @@
       "pitches": "KKBBBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1628,7 +1641,7 @@
       "description": "Vaughn struck out swinging (3-2 KKBBBS)."
     },
     {
-      "inning": "Bottom 12",
+      "inning": "Bottom 6",
       "pitcher": "K.",
       "batter": "Will Plattner",
       "outcome": "Flyout",
@@ -1636,8 +1649,8 @@
       "pitches": "B",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1655,23 +1668,23 @@
       "description": "Plattner flied out to rf (1-0 B)."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "Morris",
-      "batter": "A.",
+      "inning": "Top 7",
+      "pitcher": "Austin Morris",
+      "batter": "Andrew Hunt",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "A.",
+        "1B": "Andrew Hunt",
         "2B": null,
         "3B": null
       },
@@ -1682,23 +1695,23 @@
       "description": "A. Hunt singled to left field (0-0)."
     },
     {
-      "inning": "Bottom 12",
-      "pitcher": "Morris",
-      "batter": "W.",
+      "inning": "Top 7",
+      "pitcher": "Austin Morris",
+      "batter": "Wesley Helms",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KFBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
-        "1B": "A.",
+        "1B": "Andrew Hunt",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "A.",
+        "1B": "Andrew Hunt",
         "2B": null,
         "3B": null
       },
@@ -1709,24 +1722,26 @@
       "description": "W. Helms struck out swinging (1-2 KFBS)."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Morris",
-      "batter": "A.",
+      "inning": "Top 7",
+      "pitcher": "Austin Morris",
+      "batter": "Alex Dupuy",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "runs_scored": [
+        "Andrew Hunt"
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
       "runners_before": {
-        "1B": null,
+        "1B": "Andrew Hunt",
         "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "A.",
+        "2B": "Alex Dupuy",
         "3B": null
       },
       "score": {
@@ -1736,24 +1751,26 @@
       "description": "A. Dupuy doubled down the rf line, advanced to third on an error by rf, RBI (0-0) A. Hunt scored."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Morris",
-      "batter": "B.",
+      "inning": "Top 7",
+      "pitcher": "Austin Morris",
+      "batter": "Baylor Roberts",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "runs_scored": [
+        "Alex Dupuy"
+      ],
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "A.",
+        "2B": "Alex Dupuy",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "A.",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1763,24 +1780,24 @@
       "description": "B. Roberts grounded out to p, SAC, bunt, RBI (0-1 K) A. Dupuy scored, unearned."
     },
     {
-      "inning": "Bottom 13",
-      "pitcher": "Morris",
-      "batter": "K.",
+      "inning": "Top 7",
+      "pitcher": "Austin Morris",
+      "batter": "K. Hall",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
       "pitches": "BSKK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "A.",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "A.",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1790,7 +1807,7 @@
       "description": "K. Hall Jr. struck out looking (1-2 BSKK)."
     },
     {
-      "inning": "Bottom 13",
+      "inning": "Bottom 7",
       "pitcher": "B.",
       "batter": "Jason Torres",
       "outcome": "Pop out",
@@ -1798,16 +1815,16 @@
       "pitches": "BF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "A.",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "A.",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1817,7 +1834,7 @@
       "description": "Torres popped up to ss (1-1 BF)."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 7",
       "pitcher": "B.",
       "batter": "Brennan Holt",
       "outcome": "Pop out",
@@ -1825,8 +1842,8 @@
       "pitches": "BKF",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1844,7 +1861,7 @@
       "description": "Holt popped up to ss (1-2 BKF)."
     },
     {
-      "inning": "Bottom 14",
+      "inning": "Bottom 7",
       "pitcher": "B.",
       "batter": "Chase Kroberger",
       "outcome": "Strikeout (swinging)",
@@ -1852,8 +1869,8 @@
       "pitches": "KKFBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1871,16 +1888,16 @@
       "description": "Kroberger struck out swinging (1-2 KKFBS)."
     },
     {
-      "inning": "Bottom 14",
-      "pitcher": "Chiarodo",
-      "batter": "J.",
+      "inning": "Top 8",
+      "pitcher": "Joe Chiarodo",
+      "batter": "John Paul Head",
       "outcome": "Flyout",
       "count": "3-2",
       "pitches": "BBKBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1898,16 +1915,16 @@
       "description": "J. Head flied out to lf (3-2 BBKBK)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Chiarodo",
-      "batter": "L.",
+      "inning": "Top 8",
+      "pitcher": "Joe Chiarodo",
+      "batter": "Landon Beaver",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "BKS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1925,16 +1942,16 @@
       "description": "L. Beaver grounded out to (1-2 BKS)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Chiarodo",
-      "batter": "M.",
+      "inning": "Top 8",
+      "pitcher": "Joe Chiarodo",
+      "batter": "Max Price",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
       "pitches": "SBKBBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1952,16 +1969,16 @@
       "description": "M. Price struck out swinging (3-2 SBKBBS)."
     },
     {
-      "inning": "Bottom 15",
-      "pitcher": "Chiarodo",
+      "inning": "Bottom 8",
+      "pitcher": "B.",
       "batter": "Justin Lebron",
       "outcome": "Lineout",
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 1,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -1979,16 +1996,16 @@
       "description": "Lebron lined out to cf (0-1 K)."
     },
     {
-      "inning": "Bottom 16",
-      "pitcher": "Chiarodo",
+      "inning": "Bottom 8",
+      "pitcher": "B.",
       "batter": "Brady Neal",
       "outcome": "Groundout",
       "count": "3-2",
       "pitches": "KBBKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 1,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2006,16 +2023,16 @@
       "description": "Neal grounded out to 2b (3-2 KBBKB)."
     },
     {
-      "inning": "Bottom 16",
-      "pitcher": "Chiarodo",
+      "inning": "Bottom 8",
+      "pitcher": "B.",
       "batter": "Eric Hines",
       "outcome": "Groundout",
       "count": "2-0",
       "pitches": "BB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
-      "outs_after": 2,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2033,23 +2050,23 @@
       "description": "Hines grounded out to ss (2-0 BB)."
     },
     {
-      "inning": "Bottom 16",
-      "pitcher": "Kittrell",
-      "batter": "A.",
+      "inning": "Top 9",
+      "pitcher": "Zach Kittrell",
+      "batter": "Alex Cheeseman",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBBKKB",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 2,
+      "outs_before": 0,
+      "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "A.",
+        "1B": "Alex Cheeseman",
         "2B": null,
         "3B": null
       },
@@ -2060,23 +2077,23 @@
       "description": "A. Cheeseman walked (3-2 BBBKKB)."
     },
     {
-      "inning": "Bottom 16",
-      "pitcher": "Kittrell",
-      "batter": "A.",
+      "inning": "Top 9",
+      "pitcher": "Zach Kittrell",
+      "batter": "Andrew Hunt",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "KKBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
+      "outs_before": 0,
+      "outs_after": 2,
       "runners_before": {
-        "1B": "A.",
+        "1B": "Alex Cheeseman",
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "A.",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2087,12 +2104,39 @@
       "description": "A. Hunt struck out swinging (1-2 KKBS) A. Cheeseman out at second c to 2b, caught stealing."
     },
     {
-      "inning": "Bottom 17",
-      "pitcher": "Kittrell",
-      "batter": "W.",
+      "inning": "Top 9",
+      "pitcher": "Zach Kittrell",
+      "batter": "Wesley Helms",
       "outcome": "Lineout",
       "count": "2-2",
       "pitches": "BKSB",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 3,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 11,
+        "home": 2
+      },
+      "description": "W. Helms lined out to lf (2-2 BKSB)."
+    },
+    {
+      "inning": "Bottom 9",
+      "pitcher": "B.",
+      "batter": "Jojo Williamson",
+      "outcome": "Flyout",
+      "count": "3-2",
+      "pitches": "KBSFBFB",
       "rbi": false,
       "runs_scored": [],
       "outs_before": 0,
@@ -2111,15 +2155,15 @@
         "away": 11,
         "home": 2
       },
-      "description": "W. Helms lined out to lf (2-2 BKSB)."
+      "description": "Williamson flied out to cf (3-2 KBSFBFB)."
     },
     {
-      "inning": "Bottom 17",
-      "pitcher": "Kittrell",
-      "batter": "Jojo Williamson",
+      "inning": "Bottom 9",
+      "pitcher": "B.",
+      "batter": "Peyton Steele",
       "outcome": "Flyout",
-      "count": "3-2",
-      "pitches": "KBSFBFB",
+      "count": "0-0",
+      "pitches": "",
       "rbi": false,
       "runs_scored": [],
       "outs_before": 1,
@@ -2138,46 +2182,19 @@
         "away": 11,
         "home": 2
       },
-      "description": "Williamson flied out to cf (3-2 KBSFBFB)."
-    },
-    {
-      "inning": "Bottom 17",
-      "pitcher": "Kittrell",
-      "batter": "Peyton Steele",
-      "outcome": "Flyout",
-      "count": "0-0",
-      "pitches": "",
-      "rbi": false,
-      "runs_scored": [],
-      "outs_before": 2,
-      "outs_after": 3,
-      "runners_before": {
-        "1B": null,
-        "2B": null,
-        "3B": null
-      },
-      "runners_after": {
-        "1B": null,
-        "2B": null,
-        "3B": null
-      },
-      "score": {
-        "away": 11,
-        "home": 2
-      },
       "description": "Steele flied out to cf (0-0)."
     },
     {
-      "inning": "Bottom 18",
-      "pitcher": "Kittrell",
+      "inning": "Bottom 9",
+      "pitcher": "B.",
       "batter": "Will Plattner",
       "outcome": "Single",
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 0,
+      "outs_before": 2,
+      "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": null,
@@ -2195,16 +2212,16 @@
       "description": "Plattner singled through the left side (3-1 BBBK)."
     },
     {
-      "inning": "Bottom 18",
-      "pitcher": "Kittrell",
+      "inning": "Bottom 9",
+      "pitcher": "B.",
       "batter": "Evan Taylor",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
       "pitches": "KSBBFBS",
       "rbi": false,
       "runs_scored": [],
-      "outs_before": 0,
-      "outs_after": 1,
+      "outs_before": 2,
+      "outs_after": 3,
       "runners_before": {
         "1B": "Will Plattner",
         "2B": null,

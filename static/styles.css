@@ -562,6 +562,35 @@ a { color: inherit; text-decoration: none; }
 .stand-table .row--static { cursor: default; }
 .bbx-row--static { cursor: default; }
 
+/* Display Stats chip selector on the team Player · Batting · Basic view.
+   Mirrors the Stats page chips; buttons are placeholders (not wired yet). */
+.pstat-display { margin-bottom: 16px; }
+.pstat-display__top {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; margin-bottom: 10px;
+}
+.pstat-display__label {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--muted);
+}
+.pstat-display__count {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em;
+  color: var(--muted); white-space: nowrap;
+}
+.pstat-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.pstat-chip {
+  font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+  padding: 7px 14px; border-radius: 7px; cursor: pointer;
+  color: var(--muted); background: transparent; border: 1px solid var(--line);
+  transition: color .12s, border-color .12s, background .12s;
+}
+.pstat-chip:hover { color: var(--ink); border-color: var(--line-2); }
+.pstat-chip.is-on {
+  background: var(--accent); border-color: var(--accent); color: #fff;
+}
+.pstat-chip.is-disabled { opacity: 0.4; cursor: not-allowed; }
+.pstat-chip.is-disabled:hover { color: var(--muted); border-color: var(--line); }
+
 /* Player batting/pitching toggle */
 .player-toggle {
   display: inline-flex;
