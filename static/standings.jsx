@@ -110,7 +110,7 @@ function Top25Table({ onTeamClick }) {
             const teamObj = { id: t.seo, logo: t.logo, name: t.name,
                               mark: (t.name || "").slice(0, 4).toUpperCase() };
             return (
-              <tr key={t.rank} className={"row" + (t.known ? "" : " row--static")}
+              <tr key={t.seo || t.rank} className={"row" + (t.known ? "" : " row--static")}
                   onClick={() => t.known && onTeamClick && onTeamClick(t.seo)}>
                 <td className="td td--pos">{String(t.rank).padStart(2, "0")}</td>
                 <td className="td td--team">

@@ -5,6 +5,10 @@
 const Monogram = ({ team, size = 44 }) => {
   const fontSize = size <= 28 ? 11 : size <= 36 ? 13 : size <= 48 ? 15 : 18;
   const [failed, setFailed] = React.useState(false);
+  // Reset the failed flag whenever the logo changes, so an instance reused for a
+  // different team (e.g. a re-sorted standings row) retries the new logo instead of
+  // staying on the previous team's fallback chip.
+  React.useEffect(() => { setFailed(false); }, [team.logo]);
 
   if (team.logo && !failed) {
     return (

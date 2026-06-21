@@ -6,8 +6,8 @@ later rounds (super regionals, CWS, finals) are mostly TBD until they're played.
 Also returns a left/right `tree` pairing each super regional's two feeder
 regionals, for the bracket-style overview.
 
-sec_bracket(teams, schedules, records):  the SEC Tournament, reconstructed from
-the locally-saved SEC-tournament games (phase == "SEC Tournament") and seeded by
+conf_bracket(teams, schedules, records, phase_label, title):  any conference
+tournament, reconstructed from its locally-saved tournament games and seeded by
 the regular-season conference standings.
 """
 
@@ -443,6 +443,3 @@ def conf_bracket(teams, schedules, records, phase_label, title=None):
     return {"title": title or ("2026 " + phase_label), "seeds": seeds, "rounds": rounds}
 
 
-def sec_bracket(teams, schedules, records):
-    """Back-compat alias — the SEC tournament via the generic conf_bracket."""
-    return conf_bracket(teams, schedules, records, "SEC Tournament", "2026 SEC Tournament")

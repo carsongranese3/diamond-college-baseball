@@ -49,6 +49,14 @@ def _memo(key, ttl, producer):
     return value
 
 
+def _league_json(prefix, ttl, fn, by_date=False):
+    """A ?league=-scoped, memoized JSON endpoint. by_date keys the cache on the
+    effective date too (for week-relative data + the dev time machine)."""
+    league = request.args.get("league", "sec")
+    key = f"{prefix}:{clock.today().isoformat()}:{league}" if by_date else f"{prefix}:{league}"
+    return jsonify(_memo(key, ttl, lambda: fn(league)))
+
+
 # ── Dev "Update" — run scripts/update.py to pull fresh data ───────────────────
 # A single-user dev tool (like the time machine): the bottom-left Update button
 # kicks this off, polls it, then reloads. update.py boots the stealth browser and
@@ -361,9 +369,7 @@ def _conference_leaders(league="sec"):
 
 @app.route("/api/conference-leaders")
 def conference_leaders():
-    league = request.args.get("league", "sec")
-    return jsonify(_memo(f"conference_leaders:{league}", season.SEASON_AGGREGATE_TTL,
-                         lambda: _conference_leaders(league)))
+    return _league_json("conference_leaders", season.SEASON_AGGREGATE_TTL, _conference_leaders)
 
 
 def _rankings_history(league="sec"):
@@ -396,9 +402,7 @@ def _rankings_history(league="sec"):
 
 @app.route("/api/rankings/history")
 def rankings_history():
-    league = request.args.get("league", "sec")
-    return jsonify(_memo(f"rankings_history:{league}", season.SEASON_AGGREGATE_TTL,
-                         lambda: _rankings_history(league)))
+    return _league_json("rankings_history", season.SEASON_AGGREGATE_TTL, _rankings_history)
 
 
 def _slug(name):
@@ -407,6 +411,49 @@ def _slug(name):
     while "--" in s:
         s = s.replace("--", "-")
     return s.strip("-")
+
+
+def _logo_norm(s):
+    """Match key for a school name vs a logo file: lowercased, the word 'state' folded
+    to 'st' (logos use the -st slug), non-alphanumerics dropped. So 'Oregon State' and
+    the file 'oregon-st.svg' both reduce to 'oregonst'."""
+    return "".join(c for c in (s or "").lower().replace("state", "st") if c.isalnum())
+
+
+_logo_index_cache = None
+
+
+def _logo_seo_index():
+    """{normalized name -> logo seo} built from the bundled static/logos/ files, so a
+    poll/RPI display name resolves to the right logo even when its slug differs."""
+    global _logo_index_cache
+    if _logo_index_cache is None:
+        idx = {}
+        try:
+            for f in os.listdir(ncaa._LOGO_DIR):
+                if f.endswith(".svg"):
+                    idx.setdefault(_logo_norm(f[:-4]), f[:-4])
+        except OSError:
+            pass
+        _logo_index_cache = idx
+    return _logo_index_cache
+
+
+# Poll/RPI display names whose normalized form still doesn't match a logo file —
+# abbreviations and misspellings the index can't catch. Keyed by _logo_norm(name).
+_NAME_LOGO_ALIASES = {
+    "fsu": "florida-st",
+    "jaxst": "jacksonville-st",   # "Jax State"
+    "lousiana": "louisiana",      # the poll's misspelling of "Louisiana"
+}
+
+
+def _resolve_logo_seo(name):
+    """ncaa.com logo slug for a poll/RPI display name — maps name quirks to the bundled
+    logos (e.g. 'Oregon State' -> oregon-st, 'FSU' -> florida-st) so the NCAA standings
+    show real logos instead of the initials fallback. Falls back to a plain slug."""
+    key = _logo_norm(name)
+    return _NAME_LOGO_ALIASES.get(key) or _logo_seo_index().get(key) or _slug(name)
 
 
 def _top25():
@@ -428,7 +475,7 @@ def _top25():
         except (TypeError, ValueError):
             continue
         t = by_norm.get(season._norm(name))
-        seo = t["id"] if t else _slug(name)
+        seo = t["id"] if t else _resolve_logo_seo(name)
         out.append({
             "rank": rank,
             "name": t["name"] if t else name,
@@ -663,17 +710,13 @@ def _players_to_watch(league="sec", n=4):
 
 @app.route("/api/player-of-week")
 def player_of_week():
-    league = request.args.get("league", "sec")
-    # Keyed by the effective date so the time machine picks the right prior week.
-    return jsonify(_memo(f"potw:{clock.today().isoformat()}:{league}", 1800,
-                         lambda: _player_of_week(league)))
+    # by_date so the time machine picks the right prior week.
+    return _league_json("potw", 1800, _player_of_week, by_date=True)
 
 
 @app.route("/api/players-to-watch")
 def players_to_watch():
-    league = request.args.get("league", "sec")
-    return jsonify(_memo(f"ptw:{clock.today().isoformat()}:{league}", 1800,
-                         lambda: _players_to_watch(league)))
+    return _league_json("ptw", 1800, _players_to_watch, by_date=True)
 
 
 @app.route("/api/bootstrap")
@@ -789,15 +832,6 @@ def bracket_ncaa():
     # Full 64-team NCAA bracket, straight from the API (covers every team, not
     # just the SEC ones). Cached 30 min since the tournament is live.
     return jsonify(_memo("bracket_ncaa", 1800, bracket.ncaa_bracket))
-
-
-@app.route("/api/bracket/sec")
-def bracket_sec():
-    data = _season_for_league("sec")
-    schedules = _memo("local_schedules:sec", season.SEASON_AGGREGATE_TTL,
-                      lambda: local_data.schedules(data["teams"]))
-    records = local_data.regular_season_records(schedules)
-    return jsonify(bracket.sec_bracket(data["teams"], schedules, records))
 
 
 @app.route("/api/bracket/conf/<league>")
