@@ -174,6 +174,9 @@ const GameInfo = ({ detail }) => {
 
 const TeamScore = ({ team, runs, winner, label, onTeamClick }) => {
   const matchTeam = window.TEAM_BY_ID[team.seo];
+  // Postseason-only stubs (non-SEC/ACC tournament teams) have no team page, so they
+  // resolve for name/logo/rank but must NOT be clickable.
+  const clickable = matchTeam && !matchTeam.postseason;
   return (
     <div
       className={`team-score ${winner ? "team-score--win" : ""}`}
@@ -182,8 +185,8 @@ const TeamScore = ({ team, runs, winner, label, onTeamClick }) => {
       <div className="team-score__label">{label}</div>
       <div
         className="team-score__row"
-        onClick={matchTeam ? () => onTeamClick(team.seo) : undefined}
-        style={matchTeam ? { cursor: "pointer" } : undefined}
+        onClick={clickable ? () => onTeamClick(team.seo) : undefined}
+        style={clickable ? { cursor: "pointer" } : undefined}
       >
         <Monogram team={team} size={56} />
         <div className="team-score__text">
