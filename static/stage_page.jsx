@@ -67,8 +67,13 @@ function stgRec(t) { return t && t.ovrW != null ? `${t.ovrW}–${t.ovrL}` : ""; 
 // All games (deduped) on a given iso, both teams resolved + scores oriented home/away.
 function stgGamesOn(day) {
   const sch = window.SCHEDULES || {}, byId = window.TEAM_BY_ID || {}, seen = new Set(), out = [];
+  const realToday = stgToday();
   for (const seo in sch) for (const g of sch[seo] || []) {
     if (!g.iso || g.iso !== day || seen.has(g.id)) continue;
+    // A game with no result whose date has already passed never happened that day
+    // (rain postponement / reschedule) — drop the stale original-date entry so a
+    // moved game doesn't linger on its old day as well as its new one.
+    if (!g.result && g.iso < realToday) continue;
     seen.add(g.id);
     const me = byId[seo], opp = (g.opp && byId[g.opp.id]) || g.opp || null;
     const home = g.home ? me : opp, away = g.home ? opp : me;
@@ -458,6 +463,7 @@ function stgRoundMatchups(round, today) {
   // spell the same team differently (e.g. "st-john-s-ny" vs "st-johns-ny"), which
   // would otherwise show the game twice (once from each side).
   const norm = (s) => (s || "?").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const realToday = stgToday();
   const seen = new Set();
   const rows = [];
   for (const seo in S) {
@@ -466,6 +472,9 @@ function stgRoundMatchups(round, today) {
     // doubleheaders), so we don't stop at the first.
     for (const game of reg) {
       if (game.iso !== today) continue;
+      // Skip a postponed game's stale original-date entry (unplayed, date already
+      // past) so a rain-delayed game doesn't show on both its old and new day.
+      if (!game.result && game.iso < realToday) continue;
       const oppId = game.opp && game.opp.id;
       if (!isNCAA && !(leagueSet.has(seo) || (oppId && leagueSet.has(oppId)))) continue;
       const key = [norm(seo), norm(oppId)].sort().join("|") + "|" + today;
@@ -1047,6 +1056,13 @@ const HomeStage = ({ phase, onTeam, onGame, onGameModal, league }) => {
       featured = null;
     } else {
       featured = rows.length ? stgFeatured(phase, rows, day, league) : null;
+    }
+    // Gap day before the round's games start: the board is previewing a FUTURE day,
+    // so relabel "WHAT'S AT STAKE TODAY" as upcoming (and name the day) — those games
+    // haven't been played yet.
+    if (dayGrid && day > now) {
+      const dl = (dayGrid.games || []).map((x) => x.game && x.game.date).find(Boolean);
+      dayGrid.title = dl ? `WHAT'S AT STAKE · UPCOMING ${dl}` : "WHAT'S AT STAKE · UPCOMING";
     }
   }
 

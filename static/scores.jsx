@@ -11,18 +11,23 @@ const _fmtShort = (iso) =>
   _parseIso(iso).toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" });
 
 // Flatten window.SCHEDULES into neutral home/away game cards grouped by date,
-// scoped to the chosen league. A game appears under both teams' schedules, so we
-// only walk the league's teams (and dedupe by id) — that keeps a cross-conference
-// game when EITHER side is in the league, without double-listing it.
+// scoped to the chosen league. A game appears under both teams' schedules — and the
+// two sides can carry different ids/slugs for the same matchup (box score vs
+// scoreboard vs bracket, e.g. "nc-state" vs "north-carolina-st") — so we dedupe by
+// date + the two team NAMES (consistent across sources) + score. The score keeps a
+// genuine same-day doubleheader distinct; walking only the league's teams keeps a
+// cross-conference game when EITHER side is in the league.
 function _scoreboardByDate(league) {
   const inLeague = new Set(window.leagueTeams(league).map((t) => t.id));
-  const byId = {};
+  const nrm = (s) => (s || "?").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const seen = new Set();
+  const all = [];
   for (const [seo, games] of Object.entries(window.SCHEDULES || {})) {
     if (!inLeague.has(seo)) continue;
     const me = window.TEAM_BY_ID[seo];
     if (!me) continue;
     for (const g of games) {
-      if (!g.iso || byId[g.id]) continue;
+      if (!g.iso) continue;
       const opp = g.opp;
       const final = !!g.score;
       let home, away, homeScore, awayScore;
@@ -35,15 +40,19 @@ function _scoreboardByDate(league) {
         homeScore = final ? g.score.them : null;
         awayScore = final ? g.score.us : null;
       }
-      byId[g.id] = {
+      const key = g.iso + "|" + [nrm(home && home.name), nrm(away && away.name)].sort().join("|")
+        + "|" + (final ? homeScore + "-" + awayScore : "u");
+      if (seen.has(key)) continue;
+      seen.add(key);
+      all.push({
         id: g.id, iso: g.iso, time: g.time, final,
         home, away, homeScore, awayScore,
         hostSeo: seo, hostGame: g, // for opening the box-score detail
-      };
+      });
     }
   }
   const byDate = {};
-  for (const game of Object.values(byId)) {
+  for (const game of all) {
     (byDate[game.iso] = byDate[game.iso] || []).push(game);
   }
   for (const iso in byDate) {
