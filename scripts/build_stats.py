@@ -103,6 +103,7 @@ def _pa_event_type(play):
     desc = (play.get("description") or "").lower()
     if oc == "Strikeout (swinging)": return "ks"
     if oc == "Strikeout (looking)":  return "kl"
+    if oc == "Catcher interference": return "ci"   # now its own outcome in the PBP
     if oc == "Reached on error":     return "roe"
     if oc == "Fielder's choice":     return "fc"
     if "catcher's interference" in desc:
@@ -173,6 +174,51 @@ def _add_batted_balls(game_dir, players, side, bat):
         if et:
             acc[et] += 1
 
+
+# Outcomes where the batter put the ball in play. The count sequence stops before
+# that final pitch, so we add it back as one strike (a ball in play is a strike).
+_CONTACT_OUTCOMES = {
+    "Single", "Double", "Triple", "Home run", "Groundout", "Flyout", "Lineout",
+    "Pop out", "Foul out", "Grounded into double play", "Fielder's choice",
+    "Reached on error", "Infield fly",
+}
+
+
+def _add_pbp_pitching(game_dir, players, side, pit):
+    """Tally pitcher stats from the detailed PBP, matched to OUR pitchers via each
+    play's `pitcher` field: GB/FB/LD/PU allowed + GIDP induced (best-effort, same
+    classifier as the batters), and pitches/strikes/balls from the play's count
+    sequence (B = ball, everything else = strike) plus one strike for a ball put in
+    play (which isn't in the sequence). The box score has no pitch count."""
+    dp = os.path.join(game_dir, "play_by_play_detailed.json")
+    if not os.path.exists(dp):
+        return
+    try:
+        pbp = json.load(open(dp, encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return
+    for pl in pbp.get("plays") or []:
+        pn = pl.get("pitcher")
+        acc = pit.get(_norm(pn)) if pn else None
+        if acc is None:                 # not one of our pitchers (or unresolved)
+            continue
+        bt = _batted_ball_type(pl)
+        if bt:
+            acc[bt] += 1
+        oc = pl.get("outcome") or ""
+        if oc == "Grounded into double play":
+            acc["gidp"] += 1
+        seq = pl.get("pitches") or ""
+        if seq:
+            balls = seq.count("B")
+            acc["balls"] += balls
+            acc["strikes"] += len(seq) - balls
+            acc["pt"] += len(seq)
+        if oc in _CONTACT_OUTCOMES:      # the ball-in-play pitch (a strike) isn't in seq
+            acc["strikes"] += 1
+            acc["pt"] += 1
+
+
 # raw player_stats key -> our stored key, for the straight counting stats.
 _BAT_COUNTS = {
     "R": "r", "AB": "ab", "H": "h", "2B": "2b", "3B": "3b", "HR": "hr",
@@ -183,6 +229,7 @@ _PIT_COUNTS = {
     "H": "h", "R": "r", "ER": "er", "BB": "bb", "IBB": "ibb", "SO": "so",
     "BF": "bf", "HR-A": "hr_a", "2B-A": "2b_a", "3B-A": "3b_a",
     "HB": "hb", "Bk": "bk", "WP": "wp",
+    "InhRun": "ir", "InhRunScore": "irs",   # inherited runners (and how many scored)
 }
 _DEC_KEY = {"win": "w", "loss": "l", "save": "s"}
 
@@ -260,7 +307,10 @@ def build_for_team(label):
             outs = ip_to_outs(row.get("IP"))
             if outs == 0 and to_int(row.get("BF")) == 0:
                 continue
-            acc = pit.setdefault(_norm(name), _blank(_PIT_COUNTS.values()) | {"g": 0, "gs": 0, "outs": 0, "w": 0, "l": 0, "s": 0})
+            acc = pit.setdefault(_norm(name), _blank(_PIT_COUNTS.values())
+                                 | {"g": 0, "gs": 0, "outs": 0, "w": 0, "l": 0, "s": 0,
+                                    "gb": 0, "fb": 0, "ld": 0, "pu": 0, "gidp": 0,
+                                    "pt": 0, "strikes": 0, "balls": 0})
             meta.setdefault(_norm(name), {"name": name, "num": row.get("#", ""), "pos": row.get("P", "P")})
             pc = pit_pos.setdefault(_norm(name), {})
             pv = (row.get("P") or "").strip().upper() or "P"
@@ -280,6 +330,9 @@ def build_for_team(label):
             target = pit.get(_norm(dec.get("name")))
             if target is not None:
                 target[letter] += 1
+
+        # GB/FB/LD/PU allowed, GIDP induced, and estimated pitches from the PBP.
+        _add_pbp_pitching(game_dir, players, side, pit)
 
     def rows_out(acc, num_sort, pos_counts=None):
         out = []

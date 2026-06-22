@@ -393,44 +393,19 @@ def _stat_leaders(league="sec"):
         roster = (stats or {}).get("roster") or {}
         ident = {"team": t["name"], "seo": t["id"], "abbr": t.get("mark"),
                  "color": t.get("color"), "logo": t.get("logo")}
+        # Ship each qualified player's FULL counting line (everything local_data
+        # exposes) + team identity, so the frontend can show / compute any stat —
+        # basic counting, the stored rates, or the advanced metrics it derives.
         for b in roster.get("batters", []):
             try:
                 ab = int(b.get("ab") or 0)
             except (TypeError, ValueError):
                 ab = 0
-            if ab < 50:                        # qualified batters only
-                continue
-            batters.append({**ident, "name": b.get("name"), "num": b.get("num"),
-                            "pos": b.get("pos"), "type": "B",
-                            # counting stats
-                            "ab": ab, "pa": int(b.get("pa") or 0),
-                            "r": int(b.get("r") or 0), "h": int(b.get("h") or 0),
-                            "hr": int(b.get("hr") or 0), "rbi": int(b.get("rbi") or 0),
-                            "bb": int(b.get("bb") or 0), "k": int(b.get("k") or 0),
-                            "sb": int(b.get("sb") or 0),
-                            # rate / advanced (pre-formatted display strings)
-                            "avg": b.get("avg"), "obp": b.get("obp"),
-                            "slg": b.get("slg"), "ops": b.get("ops"),
-                            "babip": b.get("babip"), "bbpct": b.get("bbpct"),
-                            "kpct": b.get("kpct"), "secavg": b.get("secavg"),
-                            "rc": b.get("rc")})
+            if ab >= 50:                       # qualified batters only
+                batters.append({**b, **ident, "type": "B"})
         for p in roster.get("pitchers", []):
-            if _ip_float(p.get("ip")) < 20:     # qualified pitchers only
-                continue
-            pitchers.append({**ident, "name": p.get("name"), "num": p.get("num"),
-                             "pos": p.get("pos"), "type": "P",
-                             # counting stats
-                             "gs": int(p.get("gs") or 0), "w": int(p.get("w") or 0),
-                             "l": int(p.get("l") or 0), "sv": int(p.get("sv") or 0),
-                             "ip": p.get("ip"),
-                             "h": int(p.get("h") or 0), "r": int(p.get("r") or 0),
-                             "er": int(p.get("er") or 0), "bb": int(p.get("bb") or 0),
-                             "k": int(p.get("k") or 0),
-                             # rate / advanced (pre-formatted display strings)
-                             "era": p.get("era"), "whip": p.get("whip"),
-                             "k9": p.get("k9"), "bb9": p.get("bb9"), "hr9": p.get("hr9"),
-                             "kbb": p.get("kbb"), "fip": p.get("fip"),
-                             "kbbpct": p.get("kbbpct"), "lobpct": p.get("lobpct")})
+            if _ip_float(p.get("ip")) >= 20:    # qualified pitchers only
+                pitchers.append({**p, **ident, "type": "P"})
     return {"batters": batters, "pitchers": pitchers,
             "teams": len(data["teams"]), "updated": data["updated"]}
 

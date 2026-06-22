@@ -1,68 +1,51 @@
 // Stats view — league-wide Stat Leaders.
 //
-// A sortable player leaderboard split by a mutually-exclusive Batter / Pitcher
-// toggle: pick a mode, choose which stat columns to show (chips, max 10), sort by
+// A sortable player leaderboard with a Batter/Pitcher toggle AND a Basic/Advanced
+// toggle: pick a view, choose which stat columns to show (chips, max 10), sort by
 // any column, and the leader hero up top follows whatever you sort by. Data comes
-// from /api/stat-leaders (pooled, qualified players across the league's teams).
-// Ported from the "Stats Page" prototype; wired to real data + the .bbx theme.
+// from /api/stat-leaders (the full counting line for every qualified player).
+//
+// The column sets + advanced-stat math are SHARED with the team page (team.jsx
+// loads first): BATTING_ALL_CHIPS / BATTING_ADV_CHIPS / PITCHING_ALL_CHIPS /
+// PITCHING_ADV_CHIPS give key+label, advBatting()/advPitching() derive the advanced
+// metrics. Here we only add each stat's fixed sort direction + a column width.
 
-// Every stat the table can show, in display order. `group` is the mode it belongs
-// to ("B" batting / "P" pitching), `w` the column width (px), `better` the sort
-// direction that puts the best value on top. Keys repeat across groups (batter BB
-// vs pitcher BB), so every lookup is group-scoped via stxDef().
-const STX_MASTER = [
-  // Batters
-  { key: "ab",     label: "AB",    group: "B", w: 50, better: "high" },
-  { key: "pa",     label: "PA",    group: "B", w: 50, better: "high" },
-  { key: "r",      label: "R",     group: "B", w: 46, better: "high" },
-  { key: "h",      label: "H",     group: "B", w: 46, better: "high" },
-  { key: "hr",     label: "HR",    group: "B", w: 48, better: "high" },
-  { key: "rbi",    label: "RBI",   group: "B", w: 50, better: "high" },
-  { key: "bb",     label: "BB",    group: "B", w: 46, better: "high" },
-  { key: "k",      label: "K",     group: "B", w: 44, better: "low" },
-  { key: "sb",     label: "SB",    group: "B", w: 46, better: "high" },
-  { key: "avg",    label: "AVG",   group: "B", w: 60, better: "high" },
-  { key: "obp",    label: "OBP",   group: "B", w: 60, better: "high" },
-  { key: "slg",    label: "SLG",   group: "B", w: 60, better: "high" },
-  { key: "ops",    label: "OPS",   group: "B", w: 64, better: "high" },
-  { key: "babip",  label: "BABIP", group: "B", w: 64, better: "high" },
-  { key: "bbpct",  label: "BB%",   group: "B", w: 58, better: "high" },
-  { key: "kpct",   label: "K%",    group: "B", w: 56, better: "low" },
-  { key: "secavg", label: "SEC",   group: "B", w: 60, better: "high" },
-  { key: "rc",     label: "RC",    group: "B", w: 54, better: "high" },
-  // Pitchers
-  { key: "gs",     label: "GS",    group: "P", w: 48, better: "high" },
-  { key: "w",      label: "W",     group: "P", w: 44, better: "high" },
-  { key: "l",      label: "L",     group: "P", w: 44, better: "low" },
-  { key: "sv",     label: "SV",    group: "P", w: 46, better: "high" },
-  { key: "ip",     label: "IP",    group: "P", w: 60, better: "high" },
-  { key: "h",      label: "H",     group: "P", w: 46, better: "low" },
-  { key: "r",      label: "R",     group: "P", w: 46, better: "low" },
-  { key: "er",     label: "ER",    group: "P", w: 46, better: "low" },
-  { key: "bb",     label: "BB",    group: "P", w: 46, better: "low" },
-  { key: "k",      label: "K",     group: "P", w: 44, better: "high" },
-  { key: "era",    label: "ERA",   group: "P", w: 60, better: "low" },
-  { key: "whip",   label: "WHIP",  group: "P", w: 64, better: "low" },
-  { key: "k9",     label: "K/9",   group: "P", w: 56, better: "high" },
-  { key: "bb9",    label: "BB/9",  group: "P", w: 58, better: "low" },
-  { key: "hr9",    label: "HR/9",  group: "P", w: 58, better: "low" },
-  { key: "kbb",    label: "KBB",   group: "P", w: 56, better: "high" },
-  { key: "fip",    label: "FIP",   group: "P", w: 58, better: "low" },
-  { key: "kbbpct", label: "K-BB%", group: "P", w: 66, better: "high" },
-  { key: "lobpct", label: "LOB%",  group: "P", w: 62, better: "high" },
-];
-// Group-scoped lookup — keys repeat across batting/pitching.
-const stxDef = (mode, key) => STX_MASTER.find((s) => s.group === mode && s.key === key);
-
-// Per-mode starting columns + sort. Switching mode resets to these.
-const STX_DEFAULTS = {
-  B: { selected: { avg: true, hr: true, rbi: true, obp: true, ops: true }, sortKey: "avg" },
-  P: { selected: { era: true, whip: true, w: true, k: true, ip: true }, sortKey: "era" },
+// Stats where a LOWER value is better (so the leaderboard sorts ascending).
+const STX_LOW_B = new Set(["k", "cs", "po", "kpct", "abhr", "abrbi"]);
+const STX_LOW_P = new Set([
+  "l", "h", "r", "er", "ur", "bb", "ibb", "hbp", "wp", "bk", "hr", "2b", "3b", "irs",
+  "ld", "balls", "era", "ra9", "whip", "bb9", "hr9", "h9", "hbp9", "wp9", "fip",
+  "dice", "bbpct", "ibbpct", "oppavg", "oppslg", "oppobp", "oppops", "oppiso",
+  "babip", "single", "tb", "xbh", "ldpct", "hrfb", "ballpct", "irspct", "pip", "pbf",
+]);
+function stxCols(list, group) {
+  const low = group === "B" ? STX_LOW_B : STX_LOW_P;
+  return list.map((c) => ({
+    key: c.k, label: c.label, group,
+    better: low.has(c.k) ? "low" : "high",
+    w: Math.max(48, 28 + c.label.length * 8),
+  }));
+}
+// Column defs for each "<mode>-<level>" view, built from the shared team-page lists.
+const STX_SETS = {
+  "B-basic": stxCols(BATTING_ALL_CHIPS, "B"),
+  "B-advanced": stxCols(BATTING_ADV_CHIPS, "B"),
+  "P-basic": stxCols(PITCHING_ALL_CHIPS, "P"),
+  "P-advanced": stxCols(PITCHING_ADV_CHIPS, "P"),
 };
+const stxDef = (cols, key) => cols.find((s) => s.key === key);
+const _selOf = (arr) => Object.fromEntries(arr.map((k) => [k, true]));
+
 const STX_MAX = 10;        // most stat columns selectable at once
 const STX_ROWS = 25;       // players shown in the table (rank 1–25)
-// Hero stat boxes per mode.
-const STX_HERO = { B: ["avg", "hr", "rbi", "ops"], P: ["era", "w", "k", "whip"] };
+
+// Starting columns + sort + hero stat boxes for each "<mode>-<level>" view.
+const STX_DEFAULTS = {
+  "B-basic": { sel: ["g", "ab", "r", "h", "hr", "rbi", "bb", "k", "sb", "tb"], sort: "hr", hero: ["h", "hr", "rbi", "sb"] },
+  "B-advanced": { sel: ["avg", "obp", "slg", "ops", "iso", "babip", "bbpct", "kpct", "seca", "rc"], sort: "avg", hero: ["avg", "obp", "slg", "ops"] },
+  "P-basic": { sel: ["g", "gs", "w", "l", "sv", "ip", "h", "er", "bb", "k"], sort: "k", hero: ["w", "k", "sv", "ip"] },
+  "P-advanced": { sel: ["era", "whip", "k9", "bb9", "kbb", "fip", "kpct", "bbpct", "babip", "lobpct"], sort: "era", hero: ["era", "whip", "k9", "fip"] },
+};
 
 // "#FF8200" -> "rgba(255,130,0,a)" for the leader-hero gradient.
 function stxRgba(hex, a) {
@@ -70,8 +53,8 @@ function stxRgba(hex, a) {
   const r = parseInt(h.slice(0, 2), 16), g = parseInt(h.slice(2, 4), 16), b = parseInt(h.slice(4, 6), 16);
   return `rgba(${r},${g},${b},${a})`;
 }
-// Numeric value for sorting. Rate stats arrive as strings (".327", "2.04") and IP
-// as "109.1" — parseFloat orders them all fine. null/missing -> null (sorts last).
+// Numeric value for sorting. Rate stats arrive as strings (".327", "2.04", "34.2%")
+// and IP as "109.1" — parseFloat orders them all fine. null/missing -> null (last).
 function stxNum(v) {
   if (v == null || v === "") return null;
   const n = parseFloat(v);
@@ -82,10 +65,11 @@ const Stats = ({ league, onTeamClick }) => {
   const [data, setData] = React.useState(null);
   const [err, setErr] = React.useState(null);
   const [mode, setMode] = React.useState("B");
-  const [selected, setSelected] = React.useState(STX_DEFAULTS.B.selected);
-  const [sortKey, setSortKey] = React.useState(STX_DEFAULTS.B.sortKey);
+  const [level, setLevel] = React.useState("basic");
+  const [selected, setSelected] = React.useState(_selOf(STX_DEFAULTS["B-basic"].sel));
+  const [sortKey, setSortKey] = React.useState(STX_DEFAULTS["B-basic"].sort);
   // Sort direction is NOT user-toggleable: each stat always sorts so its best value
-  // is on top (high-is-better -> descending, low-is-better like ERA/K% -> ascending).
+  // is on top (high-is-better -> descending, low-is-better like ERA/SO% -> ascending).
 
   React.useEffect(() => {
     let live = true;
@@ -96,13 +80,15 @@ const Stats = ({ league, onTeamClick }) => {
     return () => { live = false; };
   }, [league]);
 
-  // Flip Batter <-> Pitcher: reset the chip set + sort to that mode's defaults.
-  const setModeReset = (m) => {
-    if (m === mode) return;
-    const d = STX_DEFAULTS[m];
-    setMode(m);
-    setSelected(d.selected);
-    setSortKey(d.sortKey);
+  const viewKey = `${mode}-${level}`;
+  const cols = STX_SETS[viewKey];
+
+  // Switch view (Batter/Pitcher or Basic/Advanced): reset chips + sort to its defaults.
+  const goView = (m, lv) => {
+    if (m === mode && lv === level) return;
+    const d = STX_DEFAULTS[`${m}-${lv}`];
+    setMode(m); setLevel(lv);
+    setSelected(_selOf(d.sel)); setSortKey(d.sort);
   };
 
   // Add/remove a stat column (cap STX_MAX). If the current sort column is removed,
@@ -117,7 +103,7 @@ const Stats = ({ league, onTeamClick }) => {
         sel[key] = true;
       }
       if (!sel[sortKey]) {
-        const next = STX_MASTER.filter((s) => s.group === mode && sel[s.key])[0];
+        const next = cols.filter((s) => sel[s.key])[0];
         if (next) setSortKey(next.key);
       }
       return sel;
@@ -129,13 +115,16 @@ const Stats = ({ league, onTeamClick }) => {
 
   const built = React.useMemo(() => {
     if (!data) return null;
-    const pool = (mode === "B" ? data.batters : data.pitchers) || [];
-    const selectedDefs = STX_MASTER.filter((s) => s.group === mode && selected[s.key]);
+    let pool = (mode === "B" ? data.batters : data.pitchers) || [];
+    if (level === "advanced") {                  // derive the advanced metrics per player
+      const fn = mode === "B" ? advBatting : advPitching;
+      pool = pool.map((p) => ({ ...p, ...fn(p) }));
+    }
+    const selectedDefs = cols.filter((s) => selected[s.key]);
 
     // Direction is fixed by the stat: best value on top. Lower-is-better -> ascending.
-    const sortDir = (stxDef(mode, sortKey) || {}).better === "low" ? "asc" : "desc";
+    const sortDir = (stxDef(cols, sortKey) || {}).better === "low" ? "asc" : "desc";
 
-    // Sort the whole pool (nulls last), then cut to the visible rows.
     const sorted = [...pool].sort((x, y) => {
       const a = stxNum(x[sortKey]), b = stxNum(y[sortKey]);
       if (a == null && b == null) return 0;
@@ -146,25 +135,22 @@ const Stats = ({ league, onTeamClick }) => {
     });
     const rows = sorted.slice(0, STX_ROWS);
 
-    const headerDefs = selectedDefs.map((s) => ({
-      key: s.key, label: s.label,
-      active: s.key === sortKey,
-    }));
-    const gridCols = ["44px", "minmax(150px,1.4fr)", "44px", "96px", "54px"]
+    const headerDefs = selectedDefs.map((s) => ({ key: s.key, label: s.label, active: s.key === sortKey }));
+    // Fixed left block (rank, number, name, team, pos) — all fixed widths so team
+    // and pos never shift as stat columns are added/removed.
+    const gridCols = ["46px", "44px", "180px", "92px", "50px"]
       .concat(selectedDefs.map((s) => s.w + "px")).join(" ");
 
     const leader = sorted[0] || null;
-    const sortLabel = (stxDef(mode, sortKey) || {}).label || "";
-
-    return { selectedDefs, rows, headerDefs, gridCols, leader, sortLabel };
-  }, [data, mode, selected, sortKey]);
+    const sortLabel = (stxDef(cols, sortKey) || {}).label || "";
+    return { selectedDefs, rows, headerDefs, gridCols, leader, sortLabel, hero: STX_DEFAULTS[viewKey].hero };
+  }, [data, mode, level, selected, sortKey]);
 
   if (err) return <div className="hp-placeholder hp-placeholder--tall">Couldn't load stat leaders.</div>;
   if (!built) return <div className="hp-placeholder hp-placeholder--tall">Loading stat leaders…</div>;
 
-  const { selectedDefs, rows, headerDefs, gridCols, leader, sortLabel } = built;
+  const { selectedDefs, rows, headerDefs, gridCols, leader, sortLabel, hero } = built;
   const leagueName = (league || "NCAA").toUpperCase();
-  const chips = STX_MASTER.filter((s) => s.group === mode);
   const atCap = Object.keys(selected).length >= STX_MAX;
   const heroColor = leader ? leader.color : null;
   const heroBg = leader
@@ -183,20 +169,25 @@ const Stats = ({ league, onTeamClick }) => {
         </div>
       </div>
 
-      {/* (2) Display Stats — Batter/Pitcher toggle then the chip selector */}
+      {/* (2) Display Stats — Batter/Pitcher + Basic/Advanced toggles, then the chips */}
       <div className="stx-controls">
         <div className="stx-controls__top">
           <div className="segmented stx-modes" role="group" aria-label="Batter or pitcher">
             <button className={`segmented__btn stx-mode--bat ${mode === "B" ? "segmented__btn--active" : ""}`}
-                    onClick={() => setModeReset("B")}>Batters</button>
+                    onClick={() => goView("B", level)}>Batters</button>
             <button className={`segmented__btn stx-mode--pit ${mode === "P" ? "segmented__btn--active" : ""}`}
-                    onClick={() => setModeReset("P")}>Pitchers</button>
+                    onClick={() => goView("P", level)}>Pitchers</button>
           </div>
-          <div className="stx-controls__label">Display Stats · click to add or remove columns</div>
+          <div className={`segmented stx-levels stx-levels--${mode === "B" ? "bat" : "pit"}`} role="group" aria-label="Basic or advanced">
+            <button className={`segmented__btn ${level === "basic" ? "segmented__btn--active" : ""}`}
+                    onClick={() => goView(mode, "basic")}>Basic</button>
+            <button className={`segmented__btn ${level === "advanced" ? "segmented__btn--active" : ""}`}
+                    onClick={() => goView(mode, "advanced")}>Advanced</button>
+          </div>
           <div className="stx-controls__count">{selectedDefs.length}/{STX_MAX} SELECTED</div>
         </div>
         <div className="stx-chips">
-          {chips.map((s) => {
+          {cols.map((s) => {
             const on = !!selected[s.key];
             const disabled = !on && atCap;
             return (
@@ -221,11 +212,11 @@ const Stats = ({ league, onTeamClick }) => {
               <div className="stx-hero__meta">{[leader.pos, leader.team].filter(Boolean).join(" · ")}</div>
             </div>
             <div className="stx-hero__boxes">
-              {STX_HERO[mode].map((k) => {
-                const m = stxDef(mode, k);
+              {hero.map((k) => {
+                const m = stxDef(cols, k);
                 return (
                   <div className="stx-hero__box" key={k}>
-                    <div className="stx-hero__box-label">{m.label}</div>
+                    <div className="stx-hero__box-label">{m ? m.label : k}</div>
                     <div className="stx-hero__box-val">{cell(leader, k)}</div>
                   </div>
                 );
@@ -239,8 +230,8 @@ const Stats = ({ league, onTeamClick }) => {
       <div className="stx-table">
         <div className="stx-trow stx-trow--head" style={{ gridTemplateColumns: gridCols }}>
           <div>Rank</div>
-          <div>Player</div>
           <div className="stx-num">No.</div>
+          <div>Player</div>
           <div>Team</div>
           <div>Pos</div>
           {headerDefs.map((hd) => (
@@ -251,8 +242,8 @@ const Stats = ({ league, onTeamClick }) => {
         {rows.map((p, i) => (
           <div className="stx-trow" key={(p.seo || "") + p.name + i} style={{ gridTemplateColumns: gridCols }}>
             <div className={`stx-rank ${i === 0 ? "is-top" : ""}`}>{String(i + 1).padStart(2, "0")}</div>
-            <div className="stx-name">{p.name}</div>
             <div className="stx-num">{p.num || "—"}</div>
+            <div className="stx-name">{p.name}</div>
             <div className="stx-team" onClick={() => onTeamClick && onTeamClick(p.seo)} title={p.team}>
               <Monogram team={{ logo: p.logo, name: p.team, mark: p.abbr, color: p.color }} size={22} />
               <span className="stx-team__abbr">{p.abbr}</span>

@@ -579,11 +579,27 @@ a { color: inherit; text-decoration: none; }
 }
 .pstat-chips { display: flex; gap: 8px; flex-wrap: wrap; }
 .pstat-chip {
+  position: relative;
   font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
   padding: 7px 14px; border-radius: 7px; cursor: pointer;
   color: var(--muted); background: transparent; border: 1px solid var(--line);
   transition: color .12s, border-color .12s, background .12s;
 }
+/* Styled hover tooltip on each chip (matches the column-header .th-tip). */
+.pstat-chip__tip {
+  position: absolute; top: calc(100% + 8px); left: 0; z-index: 30;
+  width: max-content; max-width: 220px; padding: 7px 10px;
+  background: var(--ink); color: var(--bg); border-radius: 4px;
+  font-family: var(--font-sans); font-weight: 400; font-size: 11px; line-height: 1.4;
+  letter-spacing: 0; text-transform: none; text-align: left;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+  opacity: 0; visibility: hidden; transition: opacity 120ms; pointer-events: none;
+}
+.pstat-chip__tip::after {
+  content: ""; position: absolute; bottom: 100%; left: 14px;
+  border: 5px solid transparent; border-bottom-color: var(--ink);
+}
+.pstat-chip:hover .pstat-chip__tip { opacity: 1; visibility: visible; }
 .pstat-chip:hover { color: var(--ink); border-color: var(--line-2); }
 .pstat-chip.is-on {
   background: var(--accent); border-color: var(--accent); color: #fff;
@@ -622,6 +638,8 @@ a { color: inherit; text-decoration: none; }
 .player-table .td { padding: 8px 8px; }
 .player-table .th--sortable { cursor: pointer; }
 .player-table .th--sortable:hover { color: var(--ink); }
+/* The column the table is sorted by lights up gold. */
+.player-table .th--active { color: var(--gold) !important; }
 
 /* Stat header help tooltip (advanced columns) */
 .th-help {
@@ -2670,6 +2688,12 @@ a { color: inherit; text-decoration: none; }
 .stx-modes .segmented__btn:hover { color: var(--bbx-ink); }
 .stx-mode--bat.segmented__btn--active { background: var(--bbx-gold); color: #0A0E16; box-shadow: none; }
 .stx-mode--pit.segmented__btn--active { background: var(--bbx-blue); color: #0A0E16; box-shadow: none; }
+.stx-levels { flex: 0 0 auto; margin-bottom: 0; background: var(--bbx-panel2); border-color: var(--bbx-line); }
+.stx-levels .segmented__btn { color: var(--bbx-ink2); text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; font-weight: 700; }
+.stx-levels .segmented__btn:hover { color: var(--bbx-ink); }
+/* Active Basic/Advanced matches the active Batter/Pitcher color (gold / blue). */
+.stx-levels--bat .segmented__btn--active { background: var(--bbx-gold); color: #0A0E16; box-shadow: none; }
+.stx-levels--pit .segmented__btn--active { background: var(--bbx-blue); color: #0A0E16; box-shadow: none; }
 .stx-controls__label { font-family: var(--bbx-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bbx-ink2); }
 .stx-controls__count { margin-left: auto; font-family: var(--bbx-mono); font-size: 10px; letter-spacing: 0.1em; color: var(--bbx-faint); }
 .stx-chips { display: flex; gap: 8px; flex-wrap: wrap; }
@@ -2706,7 +2730,7 @@ a { color: inherit; text-decoration: none; }
 .stx-rank { font-family: var(--bbx-cond); font-size: 20px; color: var(--bbx-faint); }
 .stx-rank.is-top { color: var(--bbx-gold); }
 .stx-name { font-weight: 700; font-size: 15px; color: var(--bbx-ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.stx-num { font-family: var(--bbx-mono); font-size: 11px; color: var(--bbx-faint); text-align: right; padding-right: 10px; }
+.stx-num { font-family: var(--bbx-mono); font-size: 11px; color: var(--bbx-faint); text-align: left; }
 .stx-team { display: flex; align-items: center; gap: 7px; cursor: pointer; overflow: hidden; padding-right: 8px; }
 .stx-team .monogram { flex: 0 0 auto; }
 .stx-team__abbr { font-family: var(--bbx-mono); font-size: 11px; color: var(--bbx-ink2); letter-spacing: 0.06em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

@@ -475,41 +475,272 @@ const STAT_COLUMNS = {
 // itself still shows the STAT_COLUMNS basic/advanced subsets, which include the
 // derived rate stats.)
 const BATTING_ALL_CHIPS = [
-  { k: "g", label: "G" }, { k: "pa", label: "PA" }, { k: "ab", label: "AB" },
-  { k: "r", label: "R" }, { k: "h", label: "H" }, { k: "1b", label: "1B" },
-  { k: "2b", label: "2B" }, { k: "3b", label: "3B" }, { k: "hr", label: "HR" },
-  { k: "tb", label: "TB" }, { k: "rbi", label: "RBI" }, { k: "bb", label: "BB" },
-  { k: "ibb", label: "IBB" },
-  { k: "k", label: "SO" }, { k: "ks", label: "K" }, { k: "kl", label: "ꓘ" },
-  { k: "hbp", label: "HBP" },
-  { k: "sf", label: "SF" }, { k: "sh", label: "SH" }, { k: "sb", label: "SB" },
-  { k: "cs", label: "CS" }, { k: "po", label: "PO" }, { k: "gb", label: "GB" }, { k: "fb", label: "FB" },
-  { k: "ld", label: "LD" }, { k: "pu", label: "PU" }, { k: "outs", label: "OUTS" },
-  { k: "roe", label: "ROE" }, { k: "fc", label: "FC" }, { k: "ci", label: "CI" },
+  { k: "g", label: "G", desc: "Games" }, { k: "pa", label: "PA", desc: "Plate Appearances" },
+  { k: "ab", label: "AB", desc: "At-Bats" }, { k: "r", label: "R", desc: "Runs" },
+  { k: "h", label: "H", desc: "Hits" }, { k: "1b", label: "1B", desc: "Singles" },
+  { k: "2b", label: "2B", desc: "Doubles" }, { k: "3b", label: "3B", desc: "Triples" },
+  { k: "hr", label: "HR", desc: "Home Runs" }, { k: "tb", label: "TB", desc: "Total Bases" },
+  { k: "rbi", label: "RBI", desc: "Runs Batted In" }, { k: "bb", label: "BB", desc: "Walks" },
+  { k: "ibb", label: "IBB", desc: "Intentional Walks" },
+  { k: "k", label: "SO", desc: "Strikeouts (total)" },
+  { k: "ks", label: "K", desc: "Swinging Strikeouts" },
+  { k: "kl", label: "ꓘ", desc: "Looking Strikeouts" },
+  { k: "hbp", label: "HBP", desc: "Hit By Pitch" },
+  { k: "sf", label: "SF", desc: "Sacrifice Flies" }, { k: "sh", label: "SH", desc: "Sacrifice Hits (bunts)" },
+  { k: "sb", label: "SB", desc: "Stolen Bases" }, { k: "cs", label: "CS", desc: "Caught Stealing" },
+  { k: "po", label: "PO", desc: "Times Picked Off" },
+  { k: "gb", label: "GB", desc: "Ground Balls" }, { k: "fb", label: "FB", desc: "Fly Balls" },
+  { k: "ld", label: "LD", desc: "Line Drives" }, { k: "pu", label: "PU", desc: "Pop-Ups" },
+  { k: "outs", label: "OUTS", desc: "Outs Made" },
+  { k: "roe", label: "ROE", desc: "Reached On Error" }, { k: "fc", label: "FC", desc: "Reached On Fielder's Choice" },
+  { k: "ci", label: "CI", desc: "Reached On Catcher's Interference" },
 ];
 
-const BAT_CHIP_BY_KEY = Object.fromEntries(BATTING_ALL_CHIPS.map((c) => [c.k, c]));
 // Default Batting · Basic columns (the classic counting line) — a subset of the chips.
 const BAT_BASIC_DEFAULT = ["g", "ab", "pa", "r", "h", "hr", "rbi", "bb", "k", "sb"];
-const BAT_COLS_MAX = 10;   // most stat columns shown at once on Batting · Basic
+const STAT_COLS_MAX = 10;   // most stat columns shown at once on a · Basic view
+
+// The full pitching counting line carried in pitching.json / exposed by local_data —
+// HR/2B/3B are the allowed totals; PT/S/B are the sequence pitch counts.
+const PITCHING_ALL_CHIPS = [
+  { k: "g", label: "G", desc: "Games" }, { k: "gs", label: "GS", desc: "Games Started" },
+  { k: "w", label: "W", desc: "Wins" }, { k: "l", label: "L", desc: "Losses" },
+  { k: "sv", label: "SV", desc: "Saves" }, { k: "ip", label: "IP", desc: "Innings Pitched" },
+  { k: "outs", label: "O", desc: "Outs Recorded" }, { k: "bf", label: "BF", desc: "Batters Faced" },
+  { k: "h", label: "H", desc: "Hits Allowed" }, { k: "r", label: "R", desc: "Runs Allowed" },
+  { k: "er", label: "ER", desc: "Earned Runs" }, { k: "ur", label: "UR", desc: "Unearned Runs" },
+  { k: "bb", label: "BB", desc: "Walks" }, { k: "ibb", label: "IBB", desc: "Intentional Walks" },
+  { k: "k", label: "K", desc: "Strikeouts" },
+  { k: "hbp", label: "HBP", desc: "Hit Batters" }, { k: "wp", label: "WP", desc: "Wild Pitches" },
+  { k: "bk", label: "BK", desc: "Balks" },
+  { k: "hr", label: "HR", desc: "Home Runs Allowed" }, { k: "2b", label: "2B", desc: "Doubles Allowed" },
+  { k: "3b", label: "3B", desc: "Triples Allowed" },
+  { k: "ir", label: "IR", desc: "Inherited Runners" }, { k: "irs", label: "IRS", desc: "Inherited Runners Scored" },
+  { k: "gb", label: "GB", desc: "Ground Balls" }, { k: "fb", label: "FB", desc: "Fly Balls" },
+  { k: "ld", label: "LD", desc: "Line Drives" }, { k: "pu", label: "PU", desc: "Pop-Ups" },
+  { k: "gidp", label: "GIDP", desc: "Double Plays Induced" },
+  { k: "pt", label: "PT", desc: "Pitches" }, { k: "strikes", label: "S", desc: "Strikes" },
+  { k: "balls", label: "B", desc: "Balls" },
+];
+// Default Pitching · Basic columns (the classic pitching line).
+const PIT_BASIC_DEFAULT = ["g", "gs", "w", "l", "sv", "ip", "h", "er", "bb", "k"];
+
+// Batting · Advanced — all derived from the counting stats. label = abbr, desc =
+// "Full name — formula". Computed client-side by advBatting() onto each row.
+const BATTING_ADV_CHIPS = [
+  { k: "avg", label: "AVG", desc: "Batting Average — H ÷ AB" },
+  { k: "obp", label: "OBP", desc: "On-Base Percentage — (H + BB + HBP) ÷ (AB + BB + HBP + SF)" },
+  { k: "slg", label: "SLG", desc: "Slugging Percentage — TB ÷ AB" },
+  { k: "ops", label: "OPS", desc: "On-Base Plus Slugging — OBP + SLG" },
+  { k: "iso", label: "ISO", desc: "Isolated Power — SLG − AVG" },
+  { k: "gpa", label: "GPA", desc: "Gross Production Average — (1.8 × OBP + SLG) ÷ 4" },
+  { k: "seca", label: "SecA", desc: "Secondary Average — (TB − H + BB + SB − CS) ÷ AB" },
+  { k: "xbh", label: "XBH", desc: "Extra-Base Hits — 2B + 3B + HR" },
+  { k: "xbhpct", label: "XBH%", desc: "Extra-Base Hit Rate — (2B + 3B + HR) ÷ H" },
+  { k: "tbph", label: "TB/H", desc: "Bases per Hit — TB ÷ H" },
+  { k: "hrph", label: "HR/H", desc: "Home Runs per Hit — HR ÷ H" },
+  { k: "bbpct", label: "BB%", desc: "Walk Rate — BB ÷ PA" },
+  { k: "kpct", label: "SO%", desc: "Strikeout Rate — SO ÷ PA" },
+  { k: "bbk", label: "BB/K", desc: "Walk-to-Strikeout Ratio — BB ÷ SO" },
+  { k: "paso", label: "PA/SO", desc: "PA per Strikeout — PA ÷ SO" },
+  { k: "contact", label: "Con%", desc: "Contact Rate — (AB − SO) ÷ AB" },
+  { k: "ibbpct", label: "IBB%", desc: "Intentional Walk Rate — IBB ÷ PA" },
+  { k: "hbppct", label: "HBP%", desc: "Hit-By-Pitch Rate — HBP ÷ PA" },
+  { k: "swsh", label: "Sw%", desc: "Swinging-Strikeout Share — K ÷ SO" },
+  { k: "clsh", label: "ꓘ%", desc: "Called-Strikeout Share — ꓘ ÷ SO" },
+  { k: "bip", label: "BIP", desc: "Balls in Play — GB + FB + LD + PU" },
+  { k: "gbpct", label: "GB%", desc: "Ground-Ball Rate — GB ÷ BIP" },
+  { k: "fbpct", label: "FB%", desc: "Fly-Ball Rate — FB ÷ BIP" },
+  { k: "ldpct", label: "LD%", desc: "Line-Drive Rate — LD ÷ BIP" },
+  { k: "pupct", label: "PU%", desc: "Pop-up / Infield-Fly Rate — PU ÷ BIP" },
+  { k: "gbfb", label: "GB/FB", desc: "Ground-Ball-to-Fly-Ball Ratio — GB ÷ FB" },
+  { k: "hrfb", label: "HR/FB", desc: "Home Runs per Fly Ball — HR ÷ FB" },
+  { k: "babip", label: "BABIP", desc: "BABIP — (H − HR) ÷ (AB − SO − HR + SF)" },
+  { k: "rc", label: "RC", desc: "Runs Created — (H + BB) × TB ÷ (AB + BB)" },
+  { k: "rc27", label: "RC/27", desc: "Runs Created per 27 outs — (RC ÷ OUTS) × 27" },
+  { k: "sbpct", label: "SB%", desc: "Stolen-Base Percentage — SB ÷ (SB + CS)" },
+  { k: "psn", label: "PSN", desc: "Power-Speed Number — (2 × HR × SB) ÷ (HR + SB)" },
+  { k: "hrpct", label: "HR%", desc: "Home Run Rate — HR ÷ PA" },
+  { k: "abhr", label: "AB/HR", desc: "At Bats per Home Run — AB ÷ HR" },
+  { k: "hpa", label: "H/PA", desc: "Hits per Plate Appearance — H ÷ PA" },
+  { k: "rg", label: "R/G", desc: "Runs per Game — R ÷ G" },
+  { k: "rbig", label: "RBI/G", desc: "RBI per Game — RBI ÷ G" },
+  { k: "abrbi", label: "AB/RBI", desc: "At Bats per RBI — AB ÷ RBI" },
+];
+// FIP constant for 2026, computed so league FIP = league ERA across all pulled
+// teams: lgERA(5.07) − (13·HR+3·(BB+HBP)−2·K)/lgIP(1.34). Recompute if data changes.
+const FIP_CONSTANT = 3.73;
+
+// Pitching · Advanced — derived from the pitching counting line. IP uses true
+// innings (outs ÷ 3), never the "95.1" display string. label = abbr, desc =
+// "Full name — formula".
+const PITCHING_ADV_CHIPS = [
+  { k: "era", label: "ERA", desc: "Earned Run Average — 9 × ER ÷ IP" },
+  { k: "ra9", label: "RA9", desc: "Runs Allowed per 9 — 9 × R ÷ IP" },
+  { k: "whip", label: "WHIP", desc: "Walks + Hits per IP — (H + BB) ÷ IP" },
+  { k: "k9", label: "K/9", desc: "Strikeouts per 9 — 9 × K ÷ IP" },
+  { k: "bb9", label: "BB/9", desc: "Walks per 9 — 9 × BB ÷ IP" },
+  { k: "h9", label: "H/9", desc: "Hits per 9 — 9 × H ÷ IP" },
+  { k: "hr9", label: "HR/9", desc: "Home Runs per 9 — 9 × HR ÷ IP" },
+  { k: "kbb", label: "K/BB", desc: "Strikeout-to-Walk Ratio — K ÷ BB" },
+  { k: "kpct", label: "K%", desc: "Strikeout Rate — K ÷ BF" },
+  { k: "bbpct", label: "BB%", desc: "Walk Rate — BB ÷ BF" },
+  { k: "kbbpct", label: "K−BB%", desc: "Strikeout-minus-Walk Rate — (K ÷ BF) − (BB ÷ BF)" },
+  { k: "ibbpct", label: "IBB%", desc: "Intentional Walk Rate — IBB ÷ BF" },
+  { k: "hbp9", label: "HBP/9", desc: "HBP per 9 — 9 × HBP ÷ IP" },
+  { k: "wp9", label: "WP/9", desc: "Wild Pitches per 9 — 9 × WP ÷ IP" },
+  { k: "dice", label: "DICE", desc: "DICE (self-contained FIP) — 3.00 + (13×HR + 3×(BB+HBP) − 2×K) ÷ IP" },
+  { k: "fip", label: "FIP", desc: "Fielding Independent Pitching — (13×HR + 3×(BB+HBP) − 2×K) ÷ IP + 3.73 (2026 league constant)" },
+  { k: "lobpct", label: "LOB%", desc: "Left-On-Base Percentage — (H + BB + HBP − R) ÷ (H + BB + HBP − 1.4×HR)" },
+  { k: "wlpct", label: "W−L%", desc: "Win Percentage — W ÷ (W + L)" },
+  { k: "single", label: "1B", desc: "Singles Allowed — H − 2B − 3B − HR" },
+  { k: "tb", label: "TB", desc: "Total Bases Allowed — 1B + 2×2B + 3×3B + 4×HR" },
+  { k: "xbh", label: "XBH", desc: "Extra-Base Hits Allowed — 2B + 3B + HR" },
+  { k: "oppavg", label: "OppAVG", desc: "Opponent Batting Average — H ÷ (BF − BB − HBP)" },
+  { k: "oppslg", label: "OppSLG", desc: "Opponent Slugging — TB ÷ (BF − BB − HBP)" },
+  { k: "oppiso", label: "OppISO", desc: "Opponent ISO — OppSLG − OppAVG" },
+  { k: "oppobp", label: "OppOBP", desc: "On-Base Against — (H + BB + HBP) ÷ BF" },
+  { k: "oppops", label: "OppOPS", desc: "Opponent OPS — OppOBP + OppSLG" },
+  { k: "bip", label: "BIP", desc: "Balls In Play — GB + FB + LD + PU" },
+  { k: "gbpct", label: "GB%", desc: "Ground-Ball Rate — GB ÷ BIP" },
+  { k: "fbpct", label: "FB%", desc: "Fly-Ball Rate — FB ÷ BIP" },
+  { k: "ldpct", label: "LD%", desc: "Line-Drive Rate — LD ÷ BIP" },
+  { k: "pupct", label: "PU%", desc: "Pop-up Rate — PU ÷ BIP" },
+  { k: "gbfb", label: "GB/FB", desc: "Ground-Ball-to-Fly-Ball — GB ÷ FB" },
+  { k: "hrfb", label: "HR/FB", desc: "Home Runs per Fly Ball — HR ÷ FB" },
+  { k: "babip", label: "BABIP", desc: "BABIP Against — (H − HR) ÷ (BIP − HR)" },
+  { k: "gidp9", label: "GIDP/9", desc: "GIDP Induced per 9 — 9 × GIDP ÷ IP" },
+  { k: "strikepct", label: "Strike%", desc: "Strike Percentage — S ÷ PT" },
+  { k: "ballpct", label: "Ball%", desc: "Ball Percentage — B ÷ PT" },
+  { k: "pip", label: "P/IP", desc: "Pitches per Inning — PT ÷ IP" },
+  { k: "pbf", label: "P/BF", desc: "Pitches per Batter — PT ÷ BF" },
+  { k: "irspct", label: "IRS%", desc: "Inherited Runners Scored % — IRS ÷ IR" },
+  { k: "ipgs", label: "IP/GS", desc: "Innings per Start — IP ÷ GS" },
+  { k: "ipg", label: "IP/G", desc: "Innings per Appearance — IP ÷ G" },
+];
+
+// Compute every Pitching · Advanced stat for one pitcher from its counting line.
+function advPitching(p) {
+  const outs = p.outs, ip = outs / 3;
+  const er = p.er, r = p.r, h = p.h, bb = p.bb, k = p.k, hr = p.hr, d2 = p["2b"],
+        d3 = p["3b"], hbp = p.hbp, wp = p.wp, ibb = p.ibb, bf = p.bf, w = p.w, l = p.l,
+        gb = p.gb, fb = p.fb, ld = p.ld, pu = p.pu, gidp = p.gidp, strikes = p.strikes,
+        balls = p.balls, pt = p.pt, ir = p.ir, irs = p.irs, gs = p.gs, g = p.g;
+  const dv = (a, b) => b ? a / b : null;
+  const per9 = (x) => ip ? 9 * x / ip : null;
+  const f3 = (x) => x == null ? "—" : x.toFixed(3).replace(/^(-?)0\./, "$1.");
+  const pc = (x) => x == null ? "—" : (x * 100).toFixed(1) + "%";
+  const f2 = (x) => x == null ? "—" : x.toFixed(2);
+  const fi = (x) => x == null ? "—" : String(Math.round(x));
+  const single = h - d2 - d3 - hr, tb = single + 2 * d2 + 3 * d3 + 4 * hr;
+  const bip = gb + fb + ld + pu, ab = bf - bb - hbp;
+  const oppavg = dv(h, ab), oppslg = dv(tb, ab), oppobp = dv(h + bb + hbp, bf);
+  const fipComp = ip ? (13 * hr + 3 * (bb + hbp) - 2 * k) / ip : null;
+  const lobDen = h + bb + hbp - 1.4 * hr;
+  return {
+    era: f2(per9(er)), ra9: f2(per9(r)), whip: f2(dv(h + bb, ip)),
+    k9: f2(per9(k)), bb9: f2(per9(bb)), h9: f2(per9(h)), hr9: f2(per9(hr)),
+    kbb: f2(dv(k, bb)), kpct: pc(dv(k, bf)), bbpct: pc(dv(bb, bf)),
+    kbbpct: pc(bf ? k / bf - bb / bf : null), ibbpct: pc(dv(ibb, bf)),
+    hbp9: f2(per9(hbp)), wp9: f2(per9(wp)),
+    dice: f2(fipComp != null ? 3.00 + fipComp : null),
+    fip: f2(fipComp != null ? fipComp + FIP_CONSTANT : null),
+    lobpct: pc(lobDen ? (h + bb + hbp - r) / lobDen : null),
+    wlpct: f3(dv(w, w + l)),
+    single: fi(single), tb: fi(tb), xbh: fi(d2 + d3 + hr),
+    oppavg: f3(oppavg), oppslg: f3(oppslg),
+    oppiso: f3(oppslg != null && oppavg != null ? oppslg - oppavg : null),
+    oppobp: f3(oppobp),
+    oppops: f3(oppobp != null && oppslg != null ? oppobp + oppslg : null),
+    bip: fi(bip),
+    gbpct: pc(dv(gb, bip)), fbpct: pc(dv(fb, bip)), ldpct: pc(dv(ld, bip)), pupct: pc(dv(pu, bip)),
+    gbfb: f2(dv(gb, fb)), hrfb: f2(dv(hr, fb)),
+    babip: f3(dv(h - hr, bip - hr)),
+    gidp9: f2(per9(gidp)),
+    strikepct: pc(dv(strikes, pt)), ballpct: pc(dv(balls, pt)),
+    pip: f2(dv(pt, ip)), pbf: f2(dv(pt, bf)),
+    irspct: pc(dv(irs, ir)),
+    ipgs: f2(dv(ip, gs)), ipg: f2(dv(ip, g)),
+  };
+}
+
+// Compute every Batting · Advanced stat for one batter from its counting line.
+function advBatting(p) {
+  const ab = p.ab, h = p.h, bb = p.bb, hbp = p.hbp || 0, sf = p.sf || 0, tb = p.tb,
+        pa = p.pa, d2 = p["2b"], d3 = p["3b"], hr = p.hr, sb = p.sb, cs = p.cs,
+        so = p.k, ks = p.ks, kl = p.kl, ibb = p.ibb, gb = p.gb, fb = p.fb, ld = p.ld,
+        pu = p.pu, outs = p.outs, r = p.r, g = p.g, rbi = p.rbi;
+  const dv = (a, b) => b ? a / b : null;
+  const f3 = (x) => x == null ? "—" : x.toFixed(3).replace(/^(-?)0\./, "$1.");
+  const pc = (x) => x == null ? "—" : (x * 100).toFixed(1) + "%";
+  const f2 = (x) => x == null ? "—" : x.toFixed(2);
+  const fi = (x) => x == null ? "—" : String(Math.round(x));
+  const avg = dv(h, ab), slg = dv(tb, ab), obp = dv(h + bb + hbp, ab + bb + hbp + sf);
+  const ops = (obp != null && slg != null) ? obp + slg : null;
+  const bip = gb + fb + ld + pu, xbh = d2 + d3 + hr;
+  const rc = (ab + bb) ? (h + bb) * tb / (ab + bb) : null;
+  return {
+    avg: f3(avg), obp: f3(obp), slg: f3(slg), ops: f3(ops),
+    iso: f3(slg != null && avg != null ? slg - avg : null),
+    gpa: f3(obp != null && slg != null ? (1.8 * obp + slg) / 4 : null),
+    seca: f3(dv(tb - h + bb + sb - cs, ab)),
+    xbh: fi(xbh), xbhpct: pc(dv(xbh, h)),
+    tbph: f2(dv(tb, h)), hrph: f2(dv(hr, h)),
+    bbpct: pc(dv(bb, pa)), kpct: pc(dv(so, pa)),
+    bbk: f2(dv(bb, so)), paso: f2(dv(pa, so)),
+    contact: pc(dv(ab - so, ab)),
+    ibbpct: pc(dv(ibb, pa)), hbppct: pc(dv(hbp, pa)),
+    swsh: pc(dv(ks, so)), clsh: pc(dv(kl, so)),
+    bip: fi(bip),
+    gbpct: pc(dv(gb, bip)), fbpct: pc(dv(fb, bip)), ldpct: pc(dv(ld, bip)), pupct: pc(dv(pu, bip)),
+    gbfb: f2(dv(gb, fb)), hrfb: f2(dv(hr, fb)),
+    babip: f3(dv(h - hr, ab - so - hr + sf)),
+    rc: f2(rc), rc27: f2(rc != null && outs ? (rc / outs) * 27 : null),
+    sbpct: pc(dv(sb, sb + cs)), psn: f2((hr + sb) ? (2 * hr * sb) / (hr + sb) : null),
+    hrpct: pc(dv(hr, pa)), abhr: f2(dv(ab, hr)), hpa: f3(dv(h, pa)),
+    rg: f2(dv(r, g)), rbig: f2(dv(rbi, g)), abrbi: f2(dv(ab, rbi)),
+  };
+}
+
+// Chips + default columns for each "<view>-<level>" combination.
+const CHIPS_BY_VIEW = {
+  "batting-basic": BATTING_ALL_CHIPS, "batting-advanced": BATTING_ADV_CHIPS,
+  "pitching-basic": PITCHING_ALL_CHIPS, "pitching-advanced": PITCHING_ADV_CHIPS,
+};
+const DEFAULT_COLS_BY_VIEW = {
+  "batting-basic": BAT_BASIC_DEFAULT,
+  // 38 advanced stats > the 10-column cap, so default to the classic line.
+  "batting-advanced": ["avg", "obp", "slg", "ops", "iso", "babip", "bbpct", "kpct", "seca", "rc"],
+  "pitching-basic": PIT_BASIC_DEFAULT,
+  "pitching-advanced": ["era", "ra9", "whip", "k9", "bb9", "kbb", "fip", "kpct", "bbpct", "babip"],
+};
 
 const PlayerStatsView = ({ roster, playerView, setPlayerView, statLevel, setStatLevel, onPlayerClick }) => {
   const [sortKey, setSortKey] = React.useState(null);
   const [sortDir, setSortDir] = React.useState("desc");
-  // Which stat columns the Batting · Basic chip selector shows (max BAT_COLS_MAX).
-  const [batCols, setBatCols] = React.useState(BAT_BASIC_DEFAULT);
+  // Selected columns per view+level; each is its own chip selector (max STAT_COLS_MAX).
+  const [colsByView, setColsByView] = React.useState(DEFAULT_COLS_BY_VIEW);
+
+  const viewKey = `${playerView}-${statLevel}`;
+  const chips = CHIPS_BY_VIEW[viewKey];
+  const selCols = colsByView[viewKey];
+  const setSelCols = (updater) => setColsByView((prev) => ({
+    ...prev,
+    [viewKey]: typeof updater === "function" ? updater(prev[viewKey]) : updater,
+  }));
 
   const onSort = (key) => {
     if (sortKey === key) setSortDir(d => d === "desc" ? "asc" : "desc");
     else { setSortKey(key); setSortDir("desc"); }
   };
 
-  // Toggle a chip's column on/off, capped at BAT_COLS_MAX. Removing the sorted
-  // column clears the sort so the arrow doesn't point at a hidden column.
+  // Toggle a chip's column on/off for the active view, capped at STAT_COLS_MAX.
+  // Removing the sorted column clears the sort so the arrow doesn't point at a
+  // hidden column.
   const toggleStat = (key) => {
-    setBatCols((prev) => {
+    setSelCols((prev) => {
       if (prev.includes(key)) return prev.filter((k) => k !== key);
-      if (prev.length >= BAT_COLS_MAX) return prev;   // at the cap — no-op
+      if (prev.length >= STAT_COLS_MAX) return prev;   // at the cap — no-op
       return [...prev, key];
     });
     if (sortKey === key) setSortKey(null);
@@ -526,15 +757,16 @@ const PlayerStatsView = ({ roster, playerView, setPlayerView, statLevel, setStat
     });
   };
 
-  // Batting · Basic columns come from the chip selector; everything else is fixed.
-  const customBatting = playerView === "batting" && statLevel === "basic";
-  const cols = customBatting
-    ? batCols.map((k) => BAT_CHIP_BY_KEY[k]).filter(Boolean)
-    : STAT_COLUMNS[playerView][statLevel];
-  const rows = playerView === "batting" ? roster.batters : roster.pitchers;
+  // Every view (basic + advanced) is chip-driven; columns follow the chip order.
+  const cols = chips.filter((c) => selCols.includes(c.k));
+  const baseRows = playerView === "batting" ? roster.batters : roster.pitchers;
+  // Batting · Advanced stats are computed client-side and merged onto each row so
+  // both the cells and the sort read them like any other field.
+  const rows = viewKey === "batting-advanced" ? baseRows.map((p) => ({ ...p, ...advBatting(p) }))
+    : viewKey === "pitching-advanced" ? baseRows.map((p) => ({ ...p, ...advPitching(p) }))
+    : baseRows;
   const idLabel = playerView === "batting" ? "Batter" : "Pitcher";
   const posLabel = playerView === "batting" ? "Pos" : "Role";
-  // Advanced cells have no value yet — show a dash placeholder.
   const cell = (p, c) => (p[c.k] === undefined || p[c.k] === "" || p[c.k] === null) ? "—" : p[c.k];
 
   return (
@@ -562,25 +794,25 @@ const PlayerStatsView = ({ roster, playerView, setPlayerView, statLevel, setStat
         </div>
       </div>
 
-      {/* Display Stats chip selector (Batting · Basic) — toggles table columns, max 10. */}
-      {customBatting && (
+      {/* Display Stats chip selector — toggles columns (max 10) for every view. */}
+      {(
         <div className="pstat-display">
           <div className="pstat-display__top">
             <div className="pstat-display__label">Display Stats · click to add or remove columns</div>
-            <div className="pstat-display__count">{batCols.length}/{BAT_COLS_MAX} SELECTED</div>
+            <div className="pstat-display__count">{selCols.length}/{STAT_COLS_MAX} SELECTED</div>
           </div>
           <div className="pstat-chips">
-            {BATTING_ALL_CHIPS.map((c) => {
-              const on = batCols.includes(c.k);
-              const disabled = !on && batCols.length >= BAT_COLS_MAX;
+            {chips.map((c) => {
+              const on = selCols.includes(c.k);
+              const disabled = !on && selCols.length >= STAT_COLS_MAX;
               return (
                 <button
                   key={c.k}
                   type="button"
                   className={`pstat-chip ${on ? "is-on" : ""} ${disabled ? "is-disabled" : ""}`}
                   onClick={() => !disabled && toggleStat(c.k)}
-                  disabled={disabled}
-                >{c.label}</button>
+                  aria-disabled={disabled}
+                >{c.label}<span className="pstat-chip__tip">{c.desc}</span></button>
               );
             })}
           </div>
@@ -617,7 +849,6 @@ const PlayerStatsView = ({ roster, playerView, setPlayerView, statLevel, setStat
 
       <div className="player-note muted small">
         Cumulative season totals. Click a column header to sort.
-        {statLevel === "advanced" && " Advanced metrics are coming soon."}
       </div>
     </div>
   );

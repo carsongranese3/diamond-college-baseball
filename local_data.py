@@ -306,6 +306,18 @@ def team_stats(seo, name):
             "w": to_int(p.get("w")), "l": to_int(p.get("l")), "sv": to_int(p.get("s")),
             "ip": p.get("ip") or outs_to_ip(outs),
             "h": h, "r": r, "er": er, "bb": bb, "k": k,
+            # Full counting line for the column picker: outs, unearned runs, inherited
+            # runners, batted-ball types, GIDP, pitch counts, and the allowed-hit line.
+            "outs": outs, "ur": r - er, "bf": bf,
+            "ibb": to_int(p.get("ibb")), "hbp": hbp, "wp": to_int(p.get("wp")),
+            "bk": to_int(p.get("bk")), "hr": hra,
+            "2b": to_int(p.get("2b_a")), "3b": to_int(p.get("3b_a")),
+            "ir": to_int(p.get("ir")), "irs": to_int(p.get("irs")),
+            "gb": to_int(p.get("gb")), "fb": to_int(p.get("fb")),
+            "ld": to_int(p.get("ld")), "pu": to_int(p.get("pu")),
+            "gidp": to_int(p.get("gidp")),
+            "pt": to_int(p.get("pt")), "strikes": to_int(p.get("strikes")),
+            "balls": to_int(p.get("balls")),
             "era": fmt2(era), "whip": fmt2(whip),
             "k9": per9(k, outs), "bb9": per9(bb, outs), "hr9": per9(hra, outs),
             "kbb": ratio(k, bb), "fip": fip(hra, bb, hbp, k, outs),

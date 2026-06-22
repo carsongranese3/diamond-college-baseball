@@ -118,6 +118,7 @@ _OUTCOMES = [
     (r"tripled", "Triple", "3B"),
     (r"homered|home run", "Home run", "HR"),
     (r"singled", "Single", "1B"),
+    (r"catcher'?s interference", "Catcher interference", "1B"),
     (r"reached on a fielder's choice|fielder's choice", "Fielder's choice", "1B"),
     (r"reached on an? error|reached on", "Reached on error", "1B"),
     (r"grounded out", "Groundout", None),
