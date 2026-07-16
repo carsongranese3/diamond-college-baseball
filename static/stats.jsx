@@ -11,12 +11,13 @@
 // metrics. Here we only add each stat's fixed sort direction + a column width.
 
 // Stats where a LOWER value is better (so the leaderboard sorts ascending).
-const STX_LOW_B = new Set(["k", "cs", "po", "kpct", "abhr", "abrbi"]);
+const STX_LOW_B = new Set(["k", "ks", "kl", "cs", "po", "kpct", "outpct", "abhr", "abrbi"]);
 const STX_LOW_P = new Set([
-  "l", "h", "r", "er", "ur", "bb", "ibb", "hbp", "wp", "bk", "hr", "2b", "3b", "irs",
+  "l", "h", "r", "er", "ur", "bb", "ibb", "hbp", "wp", "bk", "hr", "1b", "2b", "3b", "xbh", "tb", "irs",
   "ld", "balls", "era", "ra9", "whip", "bb9", "hr9", "h9", "hbp9", "wp9", "fip",
-  "dice", "bbpct", "ibbpct", "oppavg", "oppslg", "oppobp", "oppops", "oppiso",
-  "babip", "single", "tb", "xbh", "ldpct", "hrfb", "ballpct", "irspct", "pip", "pbf",
+  "dice", "bbpct", "ibbpct", "hbppct", "oppavg", "oppslg", "oppobp", "oppops", "oppiso",
+  "babip", "hpct", "1bpct", "2bpct", "3bpct", "hrpct", "xbhpct",
+  "ldpct", "hrfb", "ballpct", "irspct", "pip", "pbf",
 ]);
 function stxCols(list, group) {
   const low = group === "B" ? STX_LOW_B : STX_LOW_P;
@@ -41,10 +42,11 @@ const STX_ROWS = 25;       // players shown in the table (rank 1–25)
 
 // Starting columns + sort + hero stat boxes for each "<mode>-<level>" view.
 const STX_DEFAULTS = {
-  "B-basic": { sel: ["g", "ab", "r", "h", "hr", "rbi", "bb", "k", "sb", "tb"], sort: "hr", hero: ["h", "hr", "rbi", "sb"] },
+  // sel mirrors the team page's DEFAULT_COLS_BY_VIEW so both open on the same columns.
+  "B-basic": { sel: ["g", "ab", "pa", "r", "h", "hr", "rbi", "bb", "k", "sb"], sort: "hr", hero: ["h", "hr", "rbi", "sb"] },
   "B-advanced": { sel: ["avg", "obp", "slg", "ops", "iso", "babip", "bbpct", "kpct", "seca", "rc"], sort: "avg", hero: ["avg", "obp", "slg", "ops"] },
   "P-basic": { sel: ["g", "gs", "w", "l", "sv", "ip", "h", "er", "bb", "k"], sort: "k", hero: ["w", "k", "sv", "ip"] },
-  "P-advanced": { sel: ["era", "whip", "k9", "bb9", "kbb", "fip", "kpct", "bbpct", "babip", "lobpct"], sort: "era", hero: ["era", "whip", "k9", "fip"] },
+  "P-advanced": { sel: ["era", "ra9", "whip", "k9", "bb9", "kbb", "fip", "kpct", "bbpct", "babip"], sort: "era", hero: ["era", "whip", "k9", "fip"] },
 };
 
 // "#FF8200" -> "rgba(255,130,0,a)" for the leader-hero gradient.
