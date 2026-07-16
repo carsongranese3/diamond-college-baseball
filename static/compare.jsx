@@ -374,7 +374,7 @@
   // ── player comparison ────────────────────────────────────────────────────--
   const latestSeason = (data) => (data && data.seasons && data.seasons[0]) || null;
 
-  function PlayerCompare({ a, b, onSwap }) {
+  function PlayerCompare({ a, b, onSwap, roleFilter }) {
     const ta = window.TEAM_BY_ID[a.teamId], tb = window.TEAM_BY_ID[b.teamId];
     const [da, setDa] = useState(null), [db, setDb] = useState(null);
 
@@ -398,6 +398,8 @@
       const seaA = latestSeason(da), seaB = latestSeason(db);
       const batBoth = seaA && seaA.batting && seaB && seaB.batting;
       const pitBoth = seaA && seaA.pitching && seaB && seaB.pitching;
+      // Show the statline for the selected filter; fall back to whichever both share.
+      const showBat = roleFilter === "pitcher" ? (!pitBoth && batBoth) : batBoth;
       if (!batBoth && !pitBoth) {
         body = (
           <div className="cmp-mismatch">
@@ -409,16 +411,16 @@
           </div>
         );
       } else {
-        const set = batBoth ? PLAYER_BAT : PLAYER_PIT;
-        const blockA = batBoth ? seaA.batting : seaA.pitching;
-        const blockB = batBoth ? seaB.batting : seaB.pitching;
+        const set = showBat ? PLAYER_BAT : PLAYER_PIT;
+        const blockA = showBat ? seaA.batting : seaA.pitching;
+        const blockB = showBat ? seaB.batting : seaB.pitching;
         const rows = set.map((st) => {
           const ga = pstat(blockA, st), gb = pstat(blockB, st);
           return { label: st.label.toUpperCase(), dir: st.dir, valA: ga.val, valB: gb.val, dispA: ga.disp, dispB: gb.disp };
         });
         body = (
           <StatBars
-            title={(batBoth ? "Batting" : "Pitching") + " Statline"}
+            title={(showBat ? "Batting" : "Pitching") + " Statline"}
             num="01"
             rows={rows}
             left={{ color: ta.color, name: a.name.split(",")[0] }}
@@ -451,6 +453,10 @@
     const [aId, setAId] = useState(validTeam(initialMode !== "players" ? initialA : null) || defA);
     const [bId, setBId] = useState(validTeam(initialMode !== "players" ? initialB : null) || defB);
     const [tab, setTab] = useState(initialTab || "standings");
+    // Players mode: Batters/Pitchers filter for the pickers + the statline shown.
+    // Two-way players bat AND pitch, so they show in both lists.
+    const [roleFilter, setRoleFilter] = useState("batter"); // "batter" | "pitcher"
+    const isRole = (p) => roleFilter === "pitcher" ? p.role !== "Batter" : p.role !== "Pitcher";
 
     const [players, setPlayers] = useState(null);
     const [pErr, setPErr] = useState(null);
@@ -499,6 +505,8 @@
       if (ra || rb) {
         if (ra) { setPa(ra); setPtA(ra.teamId); }
         if (rb) { setPb(rb); setPtB(rb.teamId); }
+        // Match the filter to the shared selection (pitcher link → Pitchers).
+        if (ra || rb) setRoleFilter((ra || rb).role === "Pitcher" ? "pitcher" : "batter");
         return;
       }
       if (pa && pb) return; // already chosen this session
@@ -519,6 +527,17 @@
       else reportPlayers(pa, pb);
     };
 
+    // Switch Batters<->Pitchers: reselect each side's first player of that role so
+    // the pickers and the comparison statline match the filter.
+    const selectRoleFilter = (rf) => {
+      if (rf === roleFilter) return;
+      setRoleFilter(rf);
+      const isRf = (p) => rf === "pitcher" ? p.role !== "Batter" : p.role !== "Pitcher";
+      const pick = (tid) => (players || []).find((p) => p.teamId === tid && isRf(p));
+      const npa = pick(ptA) || pa, npb = pick(ptB) || pb;
+      setPa(npa); setPb(npb); reportPlayers(npa, npb);
+    };
+
     // teams handlers
     const selectA = (t) => { setAId(t.id); reportTeams(t.id, bId, tab); };
     const selectB = (t) => { setBId(t.id); reportTeams(aId, t.id, tab); };
@@ -536,7 +555,7 @@
     // player) so the side never ends up empty.
     const firstOf = (tid) => {
       const list = (players || []).filter((p) => p.teamId === tid);
-      return list.find((p) => p.role !== "Pitcher") || list[0] || null;
+      return list.find((p) => isRole(p)) || list[0] || null;
     };
     const setSideTeam = (side, t) => {
       const np = firstOf(t.id);
@@ -554,9 +573,17 @@
         <header className="cmp-top">
           <Eyebrow>2026 Season · Head-to-Head</Eyebrow>
           <h1 className="display">Compare</h1>
-          <div className="cmp-modes">
-            <button className={"cmp-mode" + (mode === "teams" ? " active" : "")} onClick={() => selectMode("teams")}>Teams</button>
-            <button className={"cmp-mode" + (mode === "players" ? " active" : "")} onClick={() => selectMode("players")}>Players</button>
+          <div className="cmp-modes-row">
+            <div className="cmp-modes">
+              <button className={"cmp-mode" + (mode === "teams" ? " active" : "")} onClick={() => selectMode("teams")}>Teams</button>
+              <button className={"cmp-mode" + (mode === "players" ? " active" : "")} onClick={() => selectMode("players")}>Players</button>
+            </div>
+            {mode === "players" && (
+              <div className="cmp-modes">
+                <button className={"cmp-mode" + (roleFilter === "batter" ? " active" : "")} onClick={() => selectRoleFilter("batter")}>Batters</button>
+                <button className={"cmp-mode" + (roleFilter === "pitcher" ? " active" : "")} onClick={() => selectRoleFilter("pitcher")}>Pitchers</button>
+              </div>
+            )}
           </div>
         </header>
 
@@ -574,11 +601,11 @@
             <React.Fragment>
               <div className="cmp-side">
                 <TeamSelectMini teams={teams} value={window.TEAM_BY_ID[ptA]} onChange={(t) => setSideTeam("A", t)} color={colorA} />
-                <PlayerPicker players={players.filter((p) => p.teamId === ptA)} value={pa} onChange={selectPa} color={colorA} />
+                <PlayerPicker players={players.filter((p) => p.teamId === ptA && isRole(p))} value={pa} onChange={selectPa} color={colorA} />
               </div>
               <div className="cmp-side">
                 <TeamSelectMini teams={teams} value={window.TEAM_BY_ID[ptB]} onChange={(t) => setSideTeam("B", t)} color={colorB} />
-                <PlayerPicker players={players.filter((p) => p.teamId === ptB)} value={pb} onChange={selectPb} color={colorB} />
+                <PlayerPicker players={players.filter((p) => p.teamId === ptB && isRole(p))} value={pb} onChange={selectPb} color={colorB} />
               </div>
             </React.Fragment>
           )}
@@ -587,7 +614,7 @@
         {mode === "teams" ? (
           <TeamCompare aId={aId} bId={bId} onSwap={swapTeams} tab={tab} onTab={selectTab} />
         ) : pa && pb ? (
-          <PlayerCompare a={pa} b={pb} onSwap={swapPlayers} />
+          <PlayerCompare a={pa} b={pb} onSwap={swapPlayers} roleFilter={roleFilter} />
         ) : null}
       </div>
     );
