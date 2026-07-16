@@ -293,7 +293,10 @@ def ncaa_bracket(year=2026):
             "left": _cws_half(left_ws, "left") if left_ws else None,
             "right": _cws_half(right_ws, "right") if right_ws else None,
         },
-        "finals": {"top": top, "bottom": bottom, "state": fstate, "startDate": finals_start},
+        "finals": {"top": top, "bottom": bottom, "state": fstate, "startDate": finals_start,
+                   # Per-game series list (same _bgame shape as a super's games) so the
+                   # frontend can open the best-of-3 finals like a super regional.
+                   "games": sections.get(finals_sid, []) if finals_sid else []},
     }
 
     # team seo -> its regional's host city, for every team in every regional, so

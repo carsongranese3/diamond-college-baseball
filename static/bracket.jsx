@@ -365,7 +365,7 @@ const RegionalModal = ({ group, onClose, onGameClick }) => {
 
 // Super-regional detail: the matchup + the best-of-3 games, game by game. Opened
 // by clicking a super-regional box (mirrors the regional modal).
-const SuperModal = ({ pairing, onClose, onGameClick }) => {
+const SuperModal = ({ pairing, onClose, onGameClick, title, bestOf }) => {
   React.useEffect(() => {
     const onKey = (e) => { if (e.key === "Escape") onClose(); };
     window.addEventListener("keydown", onKey);
@@ -382,12 +382,12 @@ const SuperModal = ({ pairing, onClose, onGameClick }) => {
     <div className="rmodal" onClick={onClose}>
       <div className="rmodal__box rmodal__box--super" onClick={(e) => e.stopPropagation()}>
         <div className="rmodal__head">
-          <div className="rmodal__title"><span>{host ? host + " " : ""}Super Regional</span></div>
+          <div className="rmodal__title"><span>{title || ((host ? host + " " : "") + "Super Regional")}</span></div>
           <button className="rmodal__close" onClick={onClose} aria-label="Close">✕</button>
         </div>
         <div className="smodal">
           <BGame g={pairing.super} />
-          <div className="smodal__bestof mono">Best-of-3 · winner advances to the College World Series</div>
+          <div className="smodal__bestof mono">{bestOf || "Best-of-3 · winner advances to the College World Series"}</div>
           {games.length ? (
             <div className="smodal__games">
               {games.map((g, i) => (
@@ -492,8 +492,10 @@ const SuperUnit = ({ pairing, side, onPod, onSuper }) => {
 const NcaaBracket = ({ data, onGameClick }) => {
   const [sel, setSel] = React.useState(null);
   const [selSuper, setSelSuper] = React.useState(null);
+  const [selFinals, setSelFinals] = React.useState(null);
   const tree = data.tree || { left: [], right: [] };
   const center = data.center;
+  const finalsClickable = !!(center && center.finals && (center.finals.top || center.finals.bottom));
   return (
     <div className="bracket-ncaa">
       <div className="ncaa-tree">
@@ -505,6 +507,11 @@ const NcaaBracket = ({ data, onGameClick }) => {
         {center && (
           <div className="ncaa-center">
             <div className="ncaa-center__label">College World Series</div>
+            <div className="ncaa-center__finals">
+              <div className="sunit__super-label">National Championship</div>
+              <BGame g={center.finals}
+                     onOpen={finalsClickable ? () => setSelFinals(center.finals) : undefined} />
+            </div>
             <div className="ncaa-cws">
               {["left", "right"].map((s) => center.halves[s] && (
                 <div className="ncaa-cws__half" key={s}>
@@ -512,10 +519,6 @@ const NcaaBracket = ({ data, onGameClick }) => {
                   <CwsPod group={center.halves[s]} onClick={() => setSel(center.halves[s])} />
                 </div>
               ))}
-            </div>
-            <div className="ncaa-center__finals">
-              <div className="sunit__super-label">National Championship</div>
-              <BGame g={center.finals} />
             </div>
             <div className="ncaa-center__note muted">Best-of-3 · score = series wins</div>
           </div>
@@ -528,6 +531,15 @@ const NcaaBracket = ({ data, onGameClick }) => {
       </div>
       {sel && <RegionalModal group={sel} onClose={() => setSel(null)} onGameClick={onGameClick} />}
       {selSuper && <SuperModal pairing={selSuper} onClose={() => setSelSuper(null)} onGameClick={onGameClick} />}
+      {selFinals && (
+        <SuperModal
+          pairing={{ super: selFinals, games: selFinals.games }}
+          title="National Championship"
+          bestOf="Best-of-3 · winner is the national champion"
+          onClose={() => setSelFinals(null)}
+          onGameClick={onGameClick}
+        />
+      )}
     </div>
   );
 };
