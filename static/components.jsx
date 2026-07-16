@@ -47,6 +47,24 @@ const RankChip = ({ rank, size = "md" }) => {
   return <span className={`rank-chip rank-${size}`}>#{rank}</span>;
 };
 
+// Poll-movement arrow: this week's rank vs. its previous rank. Moving up (a lower
+// number) is green ▲, dropping is red ▼, unchanged is a yellow –. "NR"/new entry
+// counts as moving up; a missing previous rank shows nothing.
+const RankDelta = ({ rank, prev }) => {
+  const cur = parseInt(rank, 10);
+  if (isNaN(cur)) return null;
+  const prevStr = String(prev == null ? "" : prev).trim();
+  const p = parseInt(prevStr, 10);
+  let dir, sym;
+  if (isNaN(p)) {
+    if (!prevStr) return null;
+    dir = "up"; sym = "▲";
+  } else if (cur < p) { dir = "up"; sym = "▲"; }
+  else if (cur > p) { dir = "down"; sym = "▼"; }
+  else { dir = "same"; sym = "–"; }
+  return <span className={`rank-delta rank-delta--${dir}`} aria-label={`rank ${dir}`}>{sym}</span>;
+};
+
 // Section heading: SERIF eyebrow / kicker style
 const Eyebrow = ({ children }) => (
   <div className="eyebrow">{children}</div>
@@ -66,4 +84,4 @@ const BackLink = ({ onClick, children }) => (
   </button>
 );
 
-Object.assign(window, { Monogram, RankChip, Eyebrow, StatCell, BackLink });
+Object.assign(window, { Monogram, RankChip, RankDelta, Eyebrow, StatCell, BackLink });

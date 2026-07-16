@@ -1525,6 +1525,34 @@ a { color: inherit; text-decoration: none; }
 .cmp-top { margin-bottom: 22px; }
 /* Row holding the Teams/Players pill and (in Players mode) the Batters/Pitchers pill. */
 .cmp-modes-row { display: inline-flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+/* Players of the Season — 4-card grid at the bottom of the homepage. */
+.hp-pos { margin-top: 44px; }
+.hp-pos__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+.hp-pos__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+@media (max-width: 900px) { .hp-pos__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .hp-pos__grid { grid-template-columns: 1fr; } }
+.hp-pos__card {
+  display: flex; flex-direction: column; gap: 14px; width: 100%; text-align: left;
+  padding: 16px; border: 1px solid var(--line); border-radius: 12px;
+  transition: border-color .12s, background .12s;
+}
+.hp-pos__card:hover { border-color: var(--muted); background: var(--hover); }
+.hp-pos__top { display: flex; align-items: center; gap: 10px; }
+.hp-pos__rank { font-size: 11px; font-weight: 700; }
+.hp-pos__idtext { display: flex; flex-direction: column; min-width: 0; }
+.hp-pos__name { font-weight: 700; font-size: 15px; line-height: 1.15; }
+.hp-pos__meta { font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; }
+.hp-pos__stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; border-top: 1px solid var(--line); padding-top: 12px; }
+.hp-pos__stat { text-align: center; }
+.hp-pos__statval { font-size: 15px; font-weight: 700; }
+.hp-pos__statlbl { font-size: 9px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 3px; }
+
+/* Poll-movement arrow next to a team's previous ranking. */
+.rank-delta { font-family: var(--font-mono); font-size: 11px; font-weight: 800; line-height: 1; }
+.rank-delta--up { color: #1ca54e; }
+.rank-delta--down { color: #e0483d; }
+.rank-delta--same { color: #d9a400; }
+
 .cmp-modes {
   display: inline-flex;
   margin-top: 16px;

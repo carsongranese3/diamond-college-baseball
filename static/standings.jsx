@@ -82,7 +82,9 @@ function RankGraph({ onTeamClick, league }) {
 // NCAA view: the official Division I Top 25 poll (from /api/rankings/top25).
 // Teams we have data for are clickable with their real crest; others show a
 // name + best-effort logo (Monogram falls back to initials if it 404s).
-function Top25Table({ onTeamClick }) {
+// The national D1 poll as a table. `league` (a conference display name like "SEC")
+// filters to that conference's ranked teams; `limit` caps the row count.
+function Top25Table({ onTeamClick, league, limit }) {
   const [data, setData] = React.useState(null);
   const [err, setErr] = React.useState(null);
   React.useEffect(() => {
@@ -94,6 +96,11 @@ function Top25Table({ onTeamClick }) {
   }, []);
   if (err) return <div className="loading-block">Couldn't load the Top 25.</div>;
   if (!data) return <div className="loading-block">Loading Top 25…</div>;
+  let rows = data;
+  if (league && league !== "NCAA")
+    rows = rows.filter((t) => (t.conference || "").toUpperCase() === String(league).toUpperCase());
+  if (limit) rows = rows.slice(0, limit);
+  if (!rows.length) return <div className="loading-block">No ranked teams.</div>;
   return (
     <div className="table-wrap">
       <table className="stand-table">
@@ -103,10 +110,11 @@ function Top25Table({ onTeamClick }) {
             <th className="th th--left">Team</th>
             <th className="th th--right">Record</th>
             <th className="th th--right">Prev</th>
+            <th className="th th--left"></th>
           </tr>
         </thead>
         <tbody>
-          {data.map((t) => {
+          {rows.map((t) => {
             const teamObj = { id: t.seo, logo: t.logo, name: t.name,
                               mark: (t.name || "").slice(0, 4).toUpperCase() };
             return (
@@ -124,6 +132,7 @@ function Top25Table({ onTeamClick }) {
                 </td>
                 <td className="td td--right mono">{t.record}</td>
                 <td className="td td--right mono muted">{t.prev || "—"}</td>
+                <td className="td td--left"><RankDelta rank={t.rank} prev={t.prev} /></td>
               </tr>
             );
           })}
@@ -164,6 +173,33 @@ const Standings = ({ onTeamClick, league }) => {
       {sortBy === key && <span className="th__sort"> ▾</span>}
     </th>
   );
+
+  // Off-season: the "final standings" become the Top 10 of the national poll.
+  // A conference view is filtered to that conference's ranked teams (which may be
+  // fewer than 10); the NCAA view shows the national Top 10.
+  const offseason = !!(window.SEASON_PHASE && window.SEASON_PHASE.phase === "offseason");
+  if (offseason) {
+    const conf = league && league !== "NCAA";
+    return (
+      <div className="standings">
+        <header className="standings__header">
+          <Eyebrow>2026 Season · Final</Eyebrow>
+          <h1 className="display">Final {league || "NCAA"} Standings</h1>
+          <div className="standings__sub">
+            <span>{conf ? `${league} teams in the D1 Top 25` : "Division I Top 25"}</span>
+            <span className="dot">·</span>
+            <span>Final national poll</span>
+            <span className="dot">·</span>
+            <span className="muted">Tap a ranked team for its schedule &amp; stats</span>
+          </div>
+        </header>
+        <Top25Table onTeamClick={onTeamClick} league={league} limit={25} />
+        <footer className="standings__footer">
+          <span>Data shown is illustrative — 2026 season mockup.</span>
+        </footer>
+      </div>
+    );
+  }
 
   // NCAA = the official Top 25 poll, not a conference table.
   if (league === "NCAA") {

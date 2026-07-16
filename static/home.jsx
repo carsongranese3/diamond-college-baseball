@@ -163,8 +163,51 @@ function HPStreak({ streak }) {
   return <span className={"chip " + (s.t === "W" ? "chip-w" : "chip-l")}>{s.t}{s.n}</span>;
 }
 
+// Off-season: the "final standings" are the Top-N of the national poll — filtered
+// to the selected conference (may be fewer than N), the NCAA view shows the field.
+function HPPollStandings({ n = 10, onTeam, league }) {
+  const [data, setData] = React.useState(null);
+  React.useEffect(() => {
+    let live = true;
+    window.fetchTop25().then((d) => live && setData(d || [])).catch(() => live && setData([]));
+    return () => { live = false; };
+  }, []);
+  if (!data) return <div className="hp-placeholder">Loading rankings…</div>;
+  let rows = data;
+  if (league && league !== "NCAA")
+    rows = rows.filter((t) => (t.conference || "").toUpperCase() === String(league).toUpperCase());
+  rows = rows.slice(0, n);
+  if (!rows.length) return <div className="hp-placeholder">No ranked teams.</div>;
+  return (
+    <div className="hp-standings">
+      <div className="hp-standings__head">
+        {["", "Team", "Rec", "Prev", ""].map((h, i) => (
+          <span key={i} className="hp-eyebrow" style={{ textAlign: i >= 2 ? "right" : "left" }}>{h}</span>
+        ))}
+      </div>
+      {rows.map((t) => {
+        const team = { id: t.seo, logo: t.logo, name: t.name, mark: (t.name || "").slice(0, 4).toUpperCase() };
+        return (
+          <button key={t.seo || t.rank} className="bare-btn hp-standings__row"
+                  onClick={() => t.known && onTeam && onTeam(t.seo)}>
+            <span className="mono hp-faint">{String(t.rank).padStart(2, "0")}</span>
+            <span className="hp-standings__team">
+              <HPLogo team={team} size={24} />
+              <span className="hp-standings__name">{t.name}</span>
+            </span>
+            <span className="mono hp-r">{t.record}</span>
+            <span className="mono hp-r hp-ink2">{t.prev || "—"}</span>
+            <span className="hp-r"><RankDelta rank={t.rank} prev={t.prev} /></span>
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 // Compact top-N standings table (reused on the homepage).
-function HPStandings({ n = 10, onTeam, league }) {
+function HPStandings({ n = 10, onTeam, league, offseason }) {
+  if (offseason) return <HPPollStandings n={n} onTeam={onTeam} league={league} />;
   const rows = hpSecTeams(league).slice(0, n);
   return (
     <div className="hp-standings">
@@ -321,7 +364,101 @@ const HP_POST_PHASES = new Set([
   "sec_tournament", "regionals", "super_regionals", "cws", "cws_finals",
 ]);
 
-const Home = ({ onTeam, onNav, league }) => {
+// Players of the Season — the 4 best batters (by OPS) and 4 best pitchers (by ERA)
+// in the league, toggled. No team/position limits: it's a straight top-4, so four
+// teammates can all appear. Cards link to the player page.
+function HPPlayersOfSeason({ league, onPlayer, onTeam }) {
+  const [data, setData] = React.useState(null);
+  const [view, setView] = React.useState("batting");   // batting | pitching
+  React.useEffect(() => {
+    let live = true;
+    setData(null);
+    window.fetchStatLeaders(league).then((d) => live && setData(d)).catch(() => live && setData(false));
+    return () => { live = false; };
+  }, [league]);
+  const bat = view === "batting";
+  const players = React.useMemo(() => {
+    if (!data) return [];
+    if (!bat) {
+      // Pitchers: a composite of ERA + WHIP + SO. ERA and WHIP are lower-is-better
+      // (inverted), SO is higher-is-better; each is min–max normalized to 0–1 across
+      // the pool and summed (0–3) so all three carry equal weight, best score first.
+      const pool = data.pitchers || [];
+      const num = (v) => parseFloat(v) || 0;
+      const rng = (key) => {
+        const xs = pool.map((p) => num(p[key]));
+        const mn = Math.min(...xs);
+        return [mn, Math.max(Math.max(...xs) - mn, 1e-9)];
+      };
+      const [eMin, eSpan] = rng("era"), [wMin, wSpan] = rng("whip"), [sMin, sSpan] = rng("k");
+      const score = (p) =>
+        (1 - (num(p.era) - eMin) / eSpan) +
+        (1 - (num(p.whip) - wMin) / wSpan) +
+        ((num(p.k) - sMin) / sSpan);
+      return [...pool].sort((a, b) => score(b) - score(a)).slice(0, 4);
+    }
+    // Batters: a composite of OPS + HR + RBI. Each is normalized to the league max
+    // so the rate (OPS) and the two counts (HR, RBI) carry equal weight, then summed
+    // (0–3); the highest all-around score ranks first.
+    const pool = data.batters || [];
+    const num = (v) => parseFloat(v) || 0;
+    const cap = (key) => Math.max(1, ...pool.map((p) => num(p[key])));
+    const maxOps = cap("ops"), maxHr = cap("hr"), maxRbi = cap("rbi");
+    const score = (p) => num(p.ops) / maxOps + num(p.hr) / maxHr + num(p.rbi) / maxRbi;
+    return [...pool].sort((a, b) => score(b) - score(a)).slice(0, 4);
+  }, [data, view]);
+  const statLine = (p) => bat
+    ? [["AVG", p.avg], ["HR", p.hr], ["RBI", p.rbi], ["OPS", p.ops]]
+    : [["ERA", p.era], ["WHIP", p.whip], ["SO", p.k], ["IP", p.ip]];
+  const openPlayer = (p) => onPlayer ? onPlayer(p.seo, p.name) : (onTeam && onTeam(p.seo));
+  return (
+    <section className="hp-pos">
+      <div className="hp-pos__head">
+        <HPLabel>Players of the Season</HPLabel>
+        <div className="hp-cl-toggle">
+          {[["batting", "Batters"], ["pitching", "Pitchers"]].map(([v, lbl]) => (
+            <button key={v} className={"hp-cl-toggle__btn" + (view === v ? " hp-cl-toggle__btn--on" : "")}
+                    onClick={() => setView(v)}>{lbl}</button>
+          ))}
+        </div>
+      </div>
+      {!data ? (
+        <div className="hp-placeholder">Loading players…</div>
+      ) : !players.length ? (
+        <div className="hp-placeholder">No qualified players yet.</div>
+      ) : (
+        <div className="hp-pos__grid">
+          {players.map((p, i) => {
+            const team = (window.TEAM_BY_ID || {})[p.seo]
+              || { id: p.seo, logo: p.logo, name: p.team, mark: p.abbr, color: p.color };
+            return (
+              <button key={(p.seo || "") + p.name} className="bare-btn hp-pos__card" onClick={() => openPlayer(p)}>
+                <div className="hp-pos__top">
+                  <span className="hp-pos__rank mono hp-faint">{String(i + 1).padStart(2, "0")}</span>
+                  <HPLogo team={team} size={34} />
+                  <span className="hp-pos__idtext">
+                    <span className="hp-pos__name">{p.name}</span>
+                    <span className="hp-pos__meta mono hp-faint">{[p.pos, p.team].filter(Boolean).join(" · ")}</span>
+                  </span>
+                </div>
+                <div className="hp-pos__stats">
+                  {statLine(p).map(([lbl, val]) => (
+                    <div key={lbl} className="hp-pos__stat">
+                      <div className="hp-pos__statval mono">{val == null || val === "" ? "—" : val}</div>
+                      <div className="hp-pos__statlbl">{lbl}</div>
+                    </div>
+                  ))}
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      )}
+    </section>
+  );
+}
+
+const Home = ({ onTeam, onNav, onPlayer, league }) => {
   const sp = window.SEASON_PHASE || { phase: "regular", label: "Regular Season" };
   const post = HP_POST_PHASES.has(sp.phase);
   const offseason = sp.phase === "offseason";
@@ -382,7 +519,7 @@ const Home = ({ onTeam, onNav, league }) => {
             <HPLabel>{final ? `Final ${lw} Standings` : `${lw} Standings`}</HPLabel>
             <button className="bare-btn hp-link" onClick={() => onNav && onNav("standings")}>Full table &rarr;</button>
           </div>
-          <HPStandings n={10} onTeam={onTeam} league={league} />
+          <HPStandings n={10} onTeam={onTeam} league={league} offseason={offseason} />
         </div>
         <div className="hp-split__rule" />
         <div>
@@ -396,6 +533,9 @@ const Home = ({ onTeam, onNav, league }) => {
             )}
         </div>
       </section>
+
+      {/* players of the season — 4 best batters / pitchers, toggled */}
+      <HPPlayersOfSeason league={league} onPlayer={onPlayer} onTeam={onTeam} />
     </div>
   );
 };

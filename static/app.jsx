@@ -262,7 +262,7 @@ const App = () => {
             return <HomeRegular league={league} onTeam={goTeam} onNav={goNav} onGame={onGame} />;
           if (["sec_tournament", "regionals", "super_regionals", "cws", "cws_finals"].includes(ph))
             return <HomeStage league={league} phase={ph} onTeam={goTeam} onGame={onGame} onGameModal={openGameModal} />;
-          return <Home league={league} onTeam={goTeam} onNav={goNav} />;   // offseason
+          return <Home league={league} onTeam={goTeam} onNav={goNav} onPlayer={goPlayer} />;   // offseason
         })()}
         {view.name === "standings" && <Standings league={league} onTeamClick={goTeam} />}
         {view.name === "stats" && <Stats league={league} onTeamClick={goTeam} />}
