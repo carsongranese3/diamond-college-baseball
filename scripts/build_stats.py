@@ -1,17 +1,28 @@
 """Build per-team season stat files under <SEASON>/<TEAM>/stats/.
 
 Aggregates every saved per-game box score (player_stats.json + boxscore.json) into
-two files of season totals, one row per player:
+three files of season totals, one row per player:
 
     <SEASON>/<TEAM>/stats/batting.json
     <SEASON>/<TEAM>/stats/pitching.json
+    <SEASON>/<TEAM>/stats/fielding.json
 
 Only BASIC counting stats are stored — the raw building blocks. Rate/derived
-stats (AVG, OBP, SLG, OPS, ISO, ERA, WHIP, K/9, FIP, …) are NOT stored here; they
-are computed from these counts by whoever reads the files.
+stats (AVG, OBP, SLG, OPS, ISO, ERA, WHIP, K/9, FIP, fielding %, …) are NOT stored
+here; they are computed from these counts by whoever reads the files.
 
   batting:  g, pa, ab, r, h, 1b, 2b, 3b, hr, rbi, bb, ibb, so, hbp, sf, sh, sb, cs, tb
   pitching: g, gs, w, l, s, outs, ip, h, r, er, bb, ibb, so, bf, hr_a, 2b_a, 3b_a, hb, bk, wp
+  fielding: one row per fielder whose `pos` is a LIST with a separate entry per
+            position played. Every entry carries the universal fielding stats
+            (g, po, a, tc, e, dp, tp); OUTFIELD entries add ofa (outfield assists =
+            assists at an OF spot); CATCHER entries add the catcher-only stats
+            (pb, sba, csb, ci) — a LF has no SBA, so those keys are omitted off the
+            plate. DH/pinch appearances are excluded; each game's line is attributed
+            to that game's primary fielding position (a compound code -> its first
+            real spot, since the box score can't split a game's chances across
+            positions). Only stats recorded in the box-score fielding line are kept
+            (no GS / innings / fielding-vs-throwing error split / pickoffs).
 
 Pitcher wins / losses / saves come from each game's `decisions` block (added by the
 scraper) attributed to this team's side.
@@ -208,6 +219,10 @@ def _add_pbp_pitching(game_dir, players, side, pit):
         oc = pl.get("outcome") or ""
         if oc == "Grounded into double play":
             acc["gidp"] += 1
+        elif oc == "Strikeout (swinging)":
+            acc["ks"] += 1
+        elif oc == "Strikeout (looking)":
+            acc["kl"] += 1
         seq = pl.get("pitches") or ""
         if seq:
             balls = seq.count("B")
@@ -232,6 +247,15 @@ _PIT_COUNTS = {
     "InhRun": "ir", "InhRunScore": "irs",   # inherited runners (and how many scored)
 }
 _DEC_KEY = {"win": "w", "loss": "l", "save": "s"}
+# raw fielding key -> our stored key. PO/A/E/TC are the core line; CI/PB/SBA/CSB
+# are catcher-specific; IDP is double plays the fielder took part in (a per-player
+# count, NOT a team DP total — see build_for_team); TP is triple plays.
+_FIELD_COUNTS = {
+    "PO": "po", "A": "a", "TC": "tc", "E": "e", "IDP": "dp", "TP": "tp",
+    "CI": "ci", "PB": "pb", "SBA": "sba", "CSB": "csb",
+}
+# Outfield positions — "outfield assists" (OFA) is simply assists made at an OF spot.
+_OUTFIELD = {"LF", "CF", "RF", "OF"}
 
 
 def _blank(keys):
@@ -248,7 +272,9 @@ def build_for_team(label):
         return None
 
     # name -> accumulator. Keep display name / number / position from the rows.
-    bat, pit, meta = {}, {}, {}
+    # fld is nested: name -> {position -> counts}, so each fielding position a
+    # player manned gets its own stat line.
+    bat, pit, fld, meta = {}, {}, {}, {}
     # name -> {position: games} so a player's stored pos is the one played most.
     # Tracked separately per table so a two-way player's batting position doesn't
     # leak into their pitching row (they share `meta`).
@@ -310,6 +336,7 @@ def build_for_team(label):
             acc = pit.setdefault(_norm(name), _blank(_PIT_COUNTS.values())
                                  | {"g": 0, "gs": 0, "outs": 0, "w": 0, "l": 0, "s": 0,
                                     "gb": 0, "fb": 0, "ld": 0, "pu": 0, "gidp": 0,
+                                    "ks": 0, "kl": 0,
                                     "pt": 0, "strikes": 0, "balls": 0})
             meta.setdefault(_norm(name), {"name": name, "num": row.get("#", ""), "pos": row.get("P", "P")})
             pc = pit_pos.setdefault(_norm(name), {})
@@ -334,6 +361,24 @@ def build_for_team(label):
         # GB/FB/LD/PU allowed, GIDP induced, and estimated pitches from the PBP.
         _add_pbp_pitching(game_dir, players, side, pit)
 
+        # Fielding: one row per defensive appearance. Skip the team-totals row and
+        # DH-only rows (a DH took no defensive position), so g/pos count real
+        # fielding games. PO/A/E/TC etc. accumulate straight from the box score.
+        for row in rows.get("fielding") or []:
+            name = (row.get("Name") or "").strip()
+            if not name or ld._is_totals_row(row, label):
+                continue
+            pos0 = ld.primary_position(row.get("P"))
+            if pos0 in ("", "DH") or pos0 in ld._PSEUDO_POS:
+                continue  # DH / pinch roles aren't defensive appearances
+            meta.setdefault(_norm(name), {"name": name, "num": row.get("#", ""), "pos": row.get("P", "")})
+            # Attribute this game's fielding line to its primary position.
+            posmap = fld.setdefault(_norm(name), {})
+            acc = posmap.setdefault(pos0, _blank(_FIELD_COUNTS.values()) | {"g": 0})
+            acc["g"] += 1
+            for src, dst in _FIELD_COUNTS.items():
+                acc[dst] += to_int(row.get(src))
+
     def rows_out(acc, num_sort, pos_counts=None):
         out = []
         for nkey, a in acc.items():
@@ -353,15 +398,42 @@ def build_for_team(label):
     pit_rows = rows_out(pit, "outs", pit_pos)
     for r in pit_rows:
         r["ip"] = outs_to_ip(r["outs"])  # convenience; `outs` is the canonical count
+        # ks/kl are reconstructed per pitch from the PBP, whose pitcher-of-record is
+        # rebuilt from box-score BF. At a mid-PA pitching change NCAA charges the
+        # strikeout to the pitcher who left with two strikes, which BF windows can't
+        # capture, so the split can drift a strikeout or two past the authoritative
+        # box SO. Clamp it: when ks+kl exceeds SO, scale both down to sum to SO,
+        # preserving the swinging/looking ratio (matches batting, where K+ꓘ ≤ SO).
+        ks, kl, so = r.get("ks", 0), r.get("kl", 0), r.get("so", 0)
+        if ks + kl > so:
+            r["ks"] = round(ks * so / (ks + kl)) if (ks + kl) else 0
+            r["kl"] = so - r["ks"]
+    # Fielding: one row per player whose `pos` is a list of per-position stat lines.
+    fld_rows = []
+    for nkey, posmap in fld.items():
+        m = meta.get(nkey, {})
+        entries = []
+        for pos, a in posmap.items():
+            ent = {"pos": pos, "g": a["g"], "po": a["po"], "a": a["a"],
+                   "tc": a["tc"], "e": a["e"], "dp": a["dp"], "tp": a["tp"]}
+            if pos == "C":  # catcher-only stats; meaningless at any other position
+                ent.update(pb=a["pb"], sba=a["sba"], csb=a["csb"], ci=a["ci"])
+            elif pos in _OUTFIELD:  # outfield assists (a subset of A)
+                ent["ofa"] = a["a"]
+            entries.append(ent)
+        entries.sort(key=lambda r: (-r["g"], -r["tc"]))  # primary position first
+        fld_rows.append({"num": m.get("num", ""), "name": m.get("name", ""), "pos": entries})
+    fld_rows.sort(key=lambda r: -sum(e["tc"] for e in r["pos"]))  # most active gloves first
 
     stats_dir = os.path.join(team_dir, "stats")
     os.makedirs(stats_dir, exist_ok=True)
     stamp = datetime.date.today().isoformat()
-    for fname, players in (("batting.json", bat_rows), ("pitching.json", pit_rows)):
+    for fname, players in (("batting.json", bat_rows), ("pitching.json", pit_rows),
+                           ("fielding.json", fld_rows)):
         with open(os.path.join(stats_dir, fname), "w", encoding="utf-8") as fh:
             json.dump({"team": label, "season": SEASON, "generated": stamp,
                        "players": players}, fh, indent=2)
-    return len(bat_rows), len(pit_rows)
+    return len(bat_rows), len(pit_rows), len(fld_rows)
 
 
 def main():
@@ -371,8 +443,8 @@ def main():
         if res is None:
             print(f"  SKIP {label} (no folder)", flush=True)
         else:
-            b, p = res
-            print(f"  {label}: {b} batters, {p} pitchers -> {SEASON}/{label}/stats/", flush=True)
+            b, p, f = res
+            print(f"  {label}: {b} batters, {p} pitchers, {f} fielders -> {SEASON}/{label}/stats/", flush=True)
 
 
 if __name__ == "__main__":
