@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing:border-box; }
+  button { font-family:inherit; }
+  body { margin:0; }
+</style>
+</helmet>
+
+<div style="min-height:100vh; background:#070A11; padding:44px 32px; font-family:Archivo, sans-serif; display:flex; justify-content:center;">
+  <div style="width:100%; max-width:1180px;">
+    <div style="margin-bottom:18px;">
+      <div style="font-family:'Newsreader', serif; font-weight:600; font-size:24px; color:#f1efe8;">Situational Splits</div>
+      <div style="font-family:Archivo, sans-serif; font-size:13px; color:#7b818d; margin-top:3px; letter-spacing:.01em;">Tap the diamond bases &amp; out dots to filter the team's batting splits.</div>
+    </div>
+    <div data-screen-label="Situational Splits (Scoreboard)" style="background:#0A0D14; border:1px solid rgba(255,255,255,0.07); border-radius:7px; box-shadow:0 1px 4px rgba(0,0,0,0.45); overflow:hidden; font-family:Archivo, sans-serif;">
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:16px 22px; border-bottom:1px solid rgba(255,255,255,0.06);">
+        <span style="font:600 11px Archivo; letter-spacing:.2em; color:#5c636f;">TEXAS · TEAM BATTING</span>
+        <div style="display:flex; gap:2px; background:rgba(255,255,255,0.035); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:3px;">
+          <span style="font:600 12px Archivo; color:#7b818d; padding:6px 15px; border-radius:6px;">Basic</span>
+          <span style="font:600 12px Archivo; color:#7b818d; padding:6px 15px; border-radius:6px;">Advanced</span>
+          <span style="font:600 12px Archivo; color:#fff; background:rgba(255,255,255,0.11); padding:6px 15px; border-radius:6px;">Situational</span>
+        </div>
+      </div>
+      <div style="padding:22px 24px;">
+        <div style="font:600 11px Archivo; letter-spacing:.2em; color:#5c636f; margin-bottom:14px;">SELECT SITUATION</div>
+        <div style="display:flex; align-items:stretch; background:#06090F; border:1px solid rgba(255,255,255,0.08); border-radius:9px; overflow:hidden;">
+          <div style="display:flex; align-items:center; justify-content:center; padding:20px 30px; border-right:1px solid rgba(255,255,255,0.07); background:radial-gradient(circle at 50% 42%, rgba(191,87,0,0.07), transparent 70%);">
+            <div style="position:relative; width:150px; height:150px; flex:none;">
+              <div style="position:absolute; top:50%; left:50%; width:100px; height:100px; transform:translate(-50%,-50%) rotate(45deg); border:1.5px solid rgba(255,255,255,0.14); border-radius:8px; background:linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0));"></div>
+              <div style="position:absolute; top:50%; left:50%; width:6px; height:6px; transform:translate(-50%,-50%); border-radius:50%; background:rgba(255,255,255,0.16);"></div>
+              <button onClick="{{ vmB.b2.onClick }}" style="{{ vmB.b2.style }}"></button>
+              <button onClick="{{ vmB.b1.onClick }}" style="{{ vmB.b1.style }}"></button>
+              <button onClick="{{ vmB.b3.onClick }}" style="{{ vmB.b3.style }}"></button>
+              <div style="position:absolute; bottom:7px; left:50%; width:18px; height:18px; transform:translateX(-50%) rotate(45deg); border:1.5px solid rgba(255,255,255,0.32); border-radius:3px; background:rgba(255,255,255,0.05);"></div>
+              <span style="position:absolute; top:-7px; left:50%; transform:translateX(-50%); font:600 9px Archivo; letter-spacing:.1em; color:#5c636f;">2B</span>
+              <span style="position:absolute; right:-10px; top:50%; transform:translateY(-50%); font:600 9px Archivo; letter-spacing:.1em; color:#5c636f;">1B</span>
+              <span style="position:absolute; left:-10px; top:50%; transform:translateY(-50%); font:600 9px Archivo; letter-spacing:.1em; color:#5c636f;">3B</span>
+            </div>
+          </div>
+          <div style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:9px; padding:20px 28px;">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <span style="font:600 10px Archivo; letter-spacing:.22em; color:#5c636f;">BASE / OUT STATE</span>
+              <sc-if value="{{ vmB.rispTag }}" hint-placeholder-val="{{ true }}"><span style="font:600 9px 'JetBrains Mono'; letter-spacing:.12em; padding:3px 8px; border-radius:4px; {{ vmB.rispStyle }};">{{ vmB.rispTag }}</span></sc-if>
+            </div>
+            <div style="font-family:'JetBrains Mono', monospace; font-weight:700; font-size:27px; letter-spacing:.03em; color:#ff7d1f; text-shadow:0 0 20px rgba(255,125,31,0.5); line-height:1;">{{ vmB.scoreLine }}</div>
+            <div style="font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:.04em; color:#8a909c;">{{ vmB.sampleN }} plate appearances in this split</div>
+            <div style="display:flex; align-items:flex-start; gap:18px; margin-top:8px;">
+              <span style="font:600 10px Archivo; letter-spacing:.2em; color:#5c636f; padding-top:1px;">OUTS</span>
+              <div style="display:flex; align-items:flex-start; gap:18px;">
+                <sc-for list="{{ vmB.outDots }}" as="d" hint-placeholder-count="3">
+                  <div onClick="{{ d.onClick }}" style="display:flex; flex-direction:column; align-items:center; gap:6px; cursor:pointer;">
+                    <span style="{{ d.style }}"></span>
+                    <span style="font:600 10px 'JetBrains Mono'; color:{{ d.labelColor }};">{{ d.n }}</span>
+                  </div>
+                </sc-for>
+                <button onClick="{{ vmB.onAny }}" style="font:600 10px Archivo; letter-spacing:.1em; padding:6px 12px; border-radius:7px; cursor:pointer; {{ vmB.anyStyle }};">ANY</button>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex; flex-direction:column; justify-content:center; align-items:flex-end; gap:5px; padding:20px 28px; border-left:1px solid rgba(255,255,255,0.07); min-width:158px;">
+            <span style="font:600 10px Archivo; letter-spacing:.2em; color:#5c636f;">TEAM OPS</span>
+            <span style="font-family:'JetBrains Mono', monospace; font-weight:700; font-size:32px; color:#f4f2ec; line-height:1;">{{ vmB.teamOps }}</span>
+            <span style="font-family:'JetBrains Mono', monospace; font-size:11px; color:{{ vmB.deltaColor }};">{{ vmB.deltaLabel }} vs season</span>
+          </div>
+        </div>
+      </div>
+      <dc-import name="SituationalTable" rows="{{ vmB.rows }}" hint-size="100%,440px"></dc-import>
+    </div>
+  </div>
+</div>
+</x-dc>
+<!-- DC prototype logic (synthetic RNG data). The real implementation computes
+     these splits from each team's saved play_by_play_detailed.json. The view-model
+     math (compute / _row / _vm) is ported to the frontend; see docs/design.md. -->
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { B: { mask: 1, outs: 2 } };
+
+  roster = [
+    { num: 43, name: 'Aiden Robbins',  pos: 'CF', pa: 284, avg: .333, bb: .12, k: .20, hrR: .30 },
+    { num: 5,  name: 'Ethan Mendoza',  pos: '2B', pa: 283, avg: .278, bb: .11, k: .14, hrR: .15 },
+    { num: 1,  name: 'Temo Becerra',   pos: '3B', pa: 278, avg: .301, bb: .13, k: .19, hrR: .12 },
+    { num: 27, name: 'Jared Thomas',   pos: 'LF', pa: 270, avg: .312, bb: .15, k: .17, hrR: .10 },
+    { num: 16, name: 'Will Gasparino', pos: 'RF', pa: 252, avg: .265, bb: .10, k: .24, hrR: .22 },
+    { num: 2,  name: 'Jalin Flores',   pos: 'SS', pa: 265, avg: .289, bb: .08, k: .18, hrR: .14 },
+    { num: 11, name: 'Casey Borba',    pos: '1B', pa: 240, avg: .258, bb: .12, k: .21, hrR: .25 },
+    { num: 24, name: 'Rylan Galvan',   pos: 'DH', pa: 231, avg: .271, bb: .14, k: .23, hrR: .28 },
+    { num: 9,  name: 'Kade Schuessler', pos: 'C', pa: 210, avg: .244, bb: .09, k: .26, hrR: .18 },
+    { num: 7,  name: 'Adrian Ruiz',    pos: 'UT', pa: 162, avg: .236, bb: .07, k: .20, hrR: .08 },
+  ];
+
+  toggle(f, bit) { this.setState(s => ({ [f]: { ...s[f], mask: s[f].mask ^ (1 << bit) } })); }
+  setOuts(f, v)  { this.setState(s => ({ [f]: { ...s[f], outs: v } })); }
+  setMask(f, m)  { this.setState(s => ({ [f]: { ...s[f], mask: m } })); }
+
+  // ... synthetic-data helpers (_hash/_rng/_one) omitted from the saved copy; the
+  // real version aggregates from PBP. The aggregation/format logic below is ported:
+  _f3(x) { return x == null ? '—' : (x >= 1 ? x.toFixed(3) : x.toFixed(3).replace(/^0\./, '.')); }
+
+  _row(p, mask, outs) {
+    const t = this._agg(p, mask, outs);
+    const _1B = t.H - t.d2 - t.d3 - t.HR;
+    const tb = _1B + 2 * t.d2 + 3 * t.d3 + 4 * t.HR;
+    const avg = t.AB > 0 ? t.H / t.AB : null;
+    const obp = (t.AB + t.BB) > 0 ? (t.H + t.BB) / (t.AB + t.BB) : null;
+    const slg = t.AB > 0 ? tb / t.AB : null;
+    const ops = (obp != null && slg != null) ? obp + slg : null;
+    return { num: p.num, name: p.name, pos: p.pos, PA: t.PA, AB: t.AB, H: t.H, HR: t.HR, RBI: t.RBI, BB: t.BB, SO: t.SO, avg, obp, slg, ops, tb };
+  }
+  compute(mask, outs) {
+    let rows = this.roster.map(p => this._row(p, mask, outs));
+    rows.sort((a, b) => (b.PA - a.PA) || ((b.ops || -1) - (a.ops || -1)));
+    let TA = 0, TH = 0, TBB = 0, TTB = 0, sampleN = 0;
+    rows.forEach(r => { TA += r.AB; TH += r.H; TBB += r.BB; TTB += r.tb; sampleN += r.PA; });
+    const tObp = (TA + TBB) > 0 ? (TH + TBB) / (TA + TBB) : null;
+    const tSlg = TA > 0 ? TTB / TA : null;
+    const tOps = (tObp != null && tSlg != null) ? tObp + tSlg : null;
+    let leadNum = null, leadOps = -1;
+    rows.forEach(r => { if (r.PA >= 6 && r.ops != null && r.ops > leadOps) { leadOps = r.ops; leadNum = r.num; } });
+    return { rows, sampleN, tOps, leadNum };
+  }
+
+  // Base-state labels (mask bit0=1B, bit1=2B, bit2=3B):
+  // SB: 0 BASES EMPTY, 1 ON 1ST, 2 ON 2ND, 4 ON 3RD, 3 1ST & 2ND, 5 CORNERS, 6 2ND & 3RD, 7 LOADED
+  // RISP = (mask & 6) !== 0 ; delta baseline = season team OPS.
+}
+</script>
+</body>
+</html>

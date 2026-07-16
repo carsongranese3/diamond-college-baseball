@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<div style="font-family:'JetBrains Mono', monospace; overflow:hidden;">
+<table style="width:100%; border-collapse:collapse; font:500 12.5px 'JetBrains Mono', monospace; table-layout:fixed;">
+<thead>
+<tr>
+<th style="text-align:left; padding:10px 8px 10px 16px; font:600 10px Archivo; letter-spacing:.12em; color:#5c636f; border-bottom:1px solid rgba(255,255,255,0.10); width:40px;">#</th>
+<th style="text-align:left; padding:10px 8px; font:600 10px Archivo; letter-spacing:.12em; color:#5c636f; border-bottom:1px solid rgba(255,255,255,0.10);">BATTER</th>
+<th style="text-align:left; padding:10px 8px; font:600 10px Archivo; letter-spacing:.12em; color:#5c636f; border-bottom:1px solid rgba(255,255,255,0.10); width:46px;">POS</th>
+<th style="text-align:right; padding:10px 8px; font:600 10px Archivo; letter-spacing:.1em; color:#5c636f; border-bottom:1px solid rgba(255,255,255,0.10); width:46px;">PA</th>
+<th style="text-align:right; padding:10px 8px; font:600 10px Archivo; letter-spacing:.1em; color:#5c636f; border-bottom:1px solid rgba(255,255,255,0.10); width:46px;">AB</th>
+<th style="text-align:right; padding:10px 8px; font:600 10px Archivo; letter-spacing:.1em; color:#5c636f; border-bottom:1px solid rgba(255,255,255,0.10); width:42px;">H</th>
+<th style="text-align:right; padding:10px 8px; font:600 10px Archivo; letter-spacing:.1em; color:#5c636f; border-bottom:1px solid rgba(255,255,255,0.10); width:42px;">HR</th>
+<th style="text-align:right; padding:10px 8px; font:600 10px Archivo; letter-spacing:.1em; color:#5c636f; border-bottom:1px solid rgba(255,255,255,0.10); width:46px;">RBI</th>
+<th style="text-align:right; padding:10px 8px; font:600 10px Archivo; letter-spacing:.1em; color:#5c636f; border-bottom:1px solid rgba(255,255,255,0.10); width:42px;">BB</th>
+<th style="text-align:right; padding:10px 8px; font:600 10px Archivo; letter-spacing:.1em; color:#5c636f; border-bottom:1px solid rgba(255,255,255,0.10); width:42px;">SO</th>
+<th style="text-align:right; padding:10px 8px; font:600 10px Archivo; letter-spacing:.1em; color:#7e858f; border-bottom:1px solid rgba(255,255,255,0.10); width:58px;">AVG</th>
+<th style="text-align:right; padding:10px 8px; font:600 10px Archivo; letter-spacing:.1em; color:#7e858f; border-bottom:1px solid rgba(255,255,255,0.10); width:58px;">OBP</th>
+<th style="text-align:right; padding:10px 8px; font:600 10px Archivo; letter-spacing:.1em; color:#7e858f; border-bottom:1px solid rgba(255,255,255,0.10); width:58px;">SLG</th>
+<th style="text-align:right; padding:10px 16px 10px 8px; font:600 10px Archivo; letter-spacing:.1em; color:#9aa0ac; border-bottom:1px solid rgba(255,255,255,0.10); width:62px;">OPS</th>
+</tr>
+</thead>
+<tbody>
+<sc-for list="{{ rows }}" as="r" hint-placeholder-count="8">
+<tr style="background:{{ r.bg }};">
+<td style="padding:11px 8px 11px 14px; border-bottom:1px solid rgba(255,255,255,0.05); border-left:{{ r.lb }}; color:#6b7280; opacity:{{ r.op }};">{{ r.num }}</td>
+<td style="padding:11px 8px; border-bottom:1px solid rgba(255,255,255,0.05); font:600 13px Archivo; color:#ECEAE3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; opacity:{{ r.op }};">{{ r.name }}</td>
+<td style="padding:11px 8px; border-bottom:1px solid rgba(255,255,255,0.05); font:500 11px 'JetBrains Mono'; color:#7b818d; letter-spacing:.05em; opacity:{{ r.op }};">{{ r.pos }}</td>
+<td style="text-align:right; padding:11px 8px; border-bottom:1px solid rgba(255,255,255,0.05); color:#9aa0ac; opacity:{{ r.op }};">{{ r.pa }}</td>
+<td style="text-align:right; padding:11px 8px; border-bottom:1px solid rgba(255,255,255,0.05); color:#9aa0ac; opacity:{{ r.op }};">{{ r.ab }}</td>
+<td style="text-align:right; padding:11px 8px; border-bottom:1px solid rgba(255,255,255,0.05); color:#c3c8d1; opacity:{{ r.op }};">{{ r.h }}</td>
+<td style="text-align:right; padding:11px 8px; border-bottom:1px solid rgba(255,255,255,0.05); color:#c3c8d1; opacity:{{ r.op }};">{{ r.hr }}</td>
+<td style="text-align:right; padding:11px 8px; border-bottom:1px solid rgba(255,255,255,0.05); color:#c3c8d1; opacity:{{ r.op }};">{{ r.rbi }}</td>
+<td style="text-align:right; padding:11px 8px; border-bottom:1px solid rgba(255,255,255,0.05); color:#9aa0ac; opacity:{{ r.op }};">{{ r.bb }}</td>
+<td style="text-align:right; padding:11px 8px; border-bottom:1px solid rgba(255,255,255,0.05); color:#9aa0ac; opacity:{{ r.op }};">{{ r.so }}</td>
+<td style="text-align:right; padding:11px 8px; border-bottom:1px solid rgba(255,255,255,0.05); color:#cfd3da; opacity:{{ r.op }};">{{ r.avg }}</td>
+<td style="text-align:right; padding:11px 8px; border-bottom:1px solid rgba(255,255,255,0.05); color:#cfd3da; opacity:{{ r.op }};">{{ r.obp }}</td>
+<td style="text-align:right; padding:11px 8px; border-bottom:1px solid rgba(255,255,255,0.05); color:#cfd3da; opacity:{{ r.op }};">{{ r.slg }}</td>
+<td style="text-align:right; padding:11px 16px 11px 8px; border-bottom:1px solid rgba(255,255,255,0.05); font-weight:700; color:{{ r.opsColor }}; opacity:{{ r.op }};">{{ r.ops }}</td>
+</tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script></script>
+</body>
+</html>
