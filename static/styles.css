@@ -578,6 +578,8 @@ a { color: inherit; text-decoration: none; }
   color: var(--muted); white-space: nowrap;
 }
 .pstat-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+/* Forces the next chip onto a fresh row (advanced groups: %, ratios, other). */
+.pstat-chips__break { flex-basis: 100%; height: 0; margin: 0; }
 .pstat-chip {
   position: relative;
   font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
@@ -600,7 +602,9 @@ a { color: inherit; text-decoration: none; }
   border: 5px solid transparent; border-bottom-color: var(--ink);
 }
 .pstat-chip:hover .pstat-chip__tip { opacity: 1; visibility: visible; }
-.pstat-chip:hover { color: var(--ink); border-color: var(--line-2); }
+/* z-index lifts the hovered chip's stacking context above its siblings so its
+   tooltip is never painted over by a later (e.g. selected) chip in the row. */
+.pstat-chip:hover { color: var(--ink); border-color: var(--line-2); z-index: 40; }
 .pstat-chip.is-on {
   background: var(--accent); border-color: var(--accent); color: #fff;
 }
@@ -1307,6 +1311,148 @@ a { color: inherit; text-decoration: none; }
   font-weight: 600;
   color: var(--muted);
   font-size: 12px;
+}
+
+/* ─── Grouped play-by-play ─── */
+.pbp__inning {
+  border-bottom: 1px solid var(--line);
+}
+.pbp__inning:last-child { border-bottom: 0; }
+
+.pbp__inning-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 9px 16px;
+  background: var(--bg-2);
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-bottom: 1px solid var(--line);
+}
+
+.pbp__inning-label {
+  font-family: var(--font-mono);
+  color: var(--ink);
+}
+
+.pbp__inning-score {
+  flex: 1;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 12px;
+}
+
+.pbp__inning-toggle {
+  color: var(--muted);
+  font-size: 9px;
+  flex: 0 0 auto;
+}
+
+.pbp__play {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 7px 16px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--line);
+}
+.pbp__play:last-child { border-bottom: 0; }
+.pbp__play:nth-child(even) { background: var(--bg); }
+
+.pbp__play-main {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.pbp__batter {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.pbp__outcome {
+  color: var(--ink-2);
+}
+
+.pbp__count {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.pbp__play-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+/* Base diagram — three rotated squares (3B · 2B · 1B) */
+.pbp__bases {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.pbp__base {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border: 1.5px solid var(--muted);
+  transform: rotate(45deg);
+  background: transparent;
+  opacity: 0.45;
+}
+
+.pbp__base--on {
+  background: var(--accent);
+  border-color: var(--accent);
+  opacity: 1;
+}
+
+/* Out dots — three circles filled per out */
+.pbp__outs {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.pbp__out-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1.5px solid var(--muted);
+  background: transparent;
+  opacity: 0.45;
+}
+
+.pbp__out-dot--on {
+  background: var(--muted);
+  border-color: var(--muted);
+  opacity: 1;
+}
+
+/* RBI / run chip */
+.pbp__rbi {
+  background: var(--accent);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 3px;
+  letter-spacing: 0.04em;
+  font-family: var(--font-mono);
+  flex: 0 0 auto;
 }
 
 .notes {
@@ -2315,17 +2461,16 @@ a { color: inherit; text-decoration: none; }
 .bbx-panel__head { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px 0; }
 
 /* ── player of the week ── */
-.bbx-potw__body { display: grid; grid-template-columns: 140px 1fr; gap: 14px; padding: 16px; }
-.bbx-potw__cutout { border-radius: 6px; height: 196px;
-  background: repeating-linear-gradient(135deg, var(--bbx-panel2) 0 11px, transparent 11px 22px);
-  border: 1px solid var(--bbx-line); display: flex; align-items: center; justify-content: center;
-  text-align: center; font-family: var(--bbx-mono); font-size: 10px; letter-spacing: 0.14em; color: var(--bbx-faint); }
+.bbx-potw__body { padding: 16px; }
+.bbx-potw__main { width: 100%; text-align: left; }
 .bbx-potw__teamline { display: flex; align-items: center; gap: 7px; font-family: var(--bbx-mono);
   font-size: 10.5px; letter-spacing: 0.08em; color: var(--bbx-ink2); }
-.bbx-potw__name { font-family: var(--bbx-cond); font-size: 32px; line-height: 0.95; margin-top: 8px; }
+.bbx-potw__nameline { display: flex; align-items: center; justify-content: flex-start; gap: 12px; margin-top: 8px; }
+.bbx-potw__name { font-family: var(--bbx-cond); font-size: 32px; line-height: 0.95; min-width: 0; overflow-wrap: break-word; }
+.bbx-potw__nameline .monogram { flex: 0 0 auto; }
 .bbx-potw__wk { font-family: var(--bbx-mono); font-size: 9px; letter-spacing: 0.12em; color: var(--bbx-gold); margin-top: 6px; }
 .bbx-potw__advlabel { font-family: var(--bbx-mono); font-size: 9px; letter-spacing: 0.14em; color: var(--bbx-faint); margin: 12px 0 6px; }
-.bbx-statgrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-top: 12px; }
+.bbx-statgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); gap: 8px; margin-top: 12px; }
 .bbx-stat { background: var(--bbx-panel2); border-radius: 4px; padding: 8px 6px; text-align: center; }
 .bbx-stat--adv { background: none; border: 1px solid var(--bbx-line); }
 .bbx-stat__n { font-family: var(--bbx-cond); font-size: 23px; }
@@ -2518,16 +2663,13 @@ a { color: inherit; text-decoration: none; }
 /* Card rendered as a button (clicks through to the team) — reset + align like the div. */
 .stg-pcard--btn { width: 100%; text-align: left; padding: 0; font: inherit; color: inherit; cursor: pointer; }
 .stg-pcard--btn:hover { border-color: var(--bbx-faint); }
-.stg-pcard__photo { position: relative; height: 150px;
-  background: repeating-linear-gradient(135deg, var(--bbx-panel2) 0 11px, transparent 11px 22px);
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--bbx-mono); font-size: 11px; letter-spacing: 0.14em; color: var(--bbx-faint); }
-.stg-pcard__logo { position: absolute; top: 10px; left: 10px; }
 .stg-pcard__badge { position: absolute; top: 12px; right: 10px; font-family: var(--bbx-mono); font-size: 8.5px;
   letter-spacing: 0.1em; color: #0A0E16; background: var(--bbx-gold); padding: 3px 7px; border-radius: 3px; font-weight: 600; white-space: nowrap; }
 .stg-pcard__body { padding: 14px; }
 .stg-pcard__pos { font-size: 9.5px; letter-spacing: 0.08em; }
-.stg-pcard__name { font-family: var(--bbx-cond); font-size: 24px; line-height: 0.95; margin-top: 4px; }
+.stg-pcard__nameline { display: flex; align-items: center; justify-content: flex-start; gap: 12px; margin-top: 4px; }
+.stg-pcard__name { font-family: var(--bbx-cond); font-size: 24px; line-height: 0.95; min-width: 0; overflow-wrap: break-word; }
+.stg-pcard__nameline .monogram { flex: 0 0 auto; }
 .stg-pcard__line { display: flex; gap: 14px; margin-top: 12px; }
 .stg-pcard__n { font-family: var(--bbx-cond); font-size: 22px; color: var(--bbx-gold); white-space: nowrap; }
 .stg-pcard__l { font-size: 8px; letter-spacing: 0.1em; color: var(--bbx-faint); margin-top: 1px; }
@@ -2746,3 +2888,604 @@ a { color: inherit; text-decoration: none; }
   .stx-hero { flex-direction: column; align-items: flex-start; }
   .stx-hero__name { font-size: 48px; }
 }
+
+/* ─── Situational Splits ─────────────────────────────────────────────────── */
+/* "Select Situation" eyebrow (left) + Batting/Pitching toggle (right), one line. */
+.split-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.split-section-head .eyebrow { margin-bottom: 14px; }
+/* Reuses the Players-tab toggle; drop its tab-strip chrome since it's inline
+   here rather than sitting atop its own bordered row. */
+.split-section-head .player-toggle { width: auto; margin-bottom: 14px; border-bottom: none; }
+
+/* Wrapper for the stacked stat-pill rows — batting (percentages / rates)
+   and pitching (counts / percentages / rates) each render their own set of
+   rows inside this wrapper; each row is its own `.split-stat-toggle`. This
+   just stacks them with a small vertical gap and owns the bottom margin
+   before the controls row (the individual rows have no bottom margin of
+   their own). */
+.split-stat-toggle-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+/* Heatmap stat picker (batting AVG/OBP/SLG/OPS/ISO/etc, pitching ERA/WHIP/
+   etc) — multi-select pill row, sitting between the section head and the
+   controls row (or stacked inside `.split-stat-toggle-rows`). Active state
+   color is set inline via team.color. */
+.split-stat-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.split-stat-toggle-rows .split-stat-toggle { margin-bottom: 0; }
+.split-stat-toggle__btn {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 6px 14px;
+  border-radius: 7px;
+  border: 1.5px solid var(--line-2);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background 120ms, border-color 120ms, color 120ms;
+}
+/* z-index lifts the hovered button's whole stacking context above its siblings
+   so its tooltip is never painted over by a later (e.g. selected) pill. */
+.split-stat-toggle__btn:hover { color: var(--ink); border-color: var(--muted); z-index: 40; }
+/* At the 3-stat cap, unselected pills are dimmed/inert until one is
+   deselected — selected pills (which stay clickable) never get this class. */
+.split-stat-toggle__btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.split-stat-toggle__btn:disabled:hover { color: var(--muted); border-color: var(--line-2); }
+/* Styled hover tooltip on each situational stat-picker button — mirrors
+   .pstat-chip__tip exactly (same bubble look, arrow, colors, transition).
+   `.split-stat-toggle` rows wrap (flex-wrap: wrap), so a high z-index keeps
+   the tip above sibling buttons on the next line. */
+.split-stat-toggle__btn-tip {
+  position: absolute; top: calc(100% + 8px); left: 0; z-index: 30;
+  width: max-content; max-width: 220px; padding: 7px 10px;
+  background: var(--ink); color: var(--bg); border-radius: 4px;
+  font-family: var(--font-sans); font-weight: 400; font-size: 11px; line-height: 1.4;
+  letter-spacing: 0; text-transform: none; text-align: left;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+  opacity: 0; visibility: hidden; transition: opacity 120ms; pointer-events: none;
+}
+.split-stat-toggle__btn-tip::after {
+  content: ""; position: absolute; bottom: 100%; left: 14px;
+  border: 5px solid transparent; border-bottom-color: var(--ink);
+}
+.split-stat-toggle__btn:hover .split-stat-toggle__btn-tip { opacity: 1; visibility: visible; }
+
+/* Selector card: up to three flex columns (diamond | summary | team OPS / handedness). */
+.split-controls {
+  display: flex;
+  align-items: stretch;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+/* Column 1 — diamond wrap. Sized up from the original 150px diamond (~1.17x)
+   now that only 3 heatmaps (no ISO) share the row, so this column doesn't
+   look tiny next to the larger heatmap columns. */
+.split-diamond-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 40px;
+  border-right: 1px solid var(--line);
+  flex: 0 0 auto;
+}
+
+/* "Any" base state — bottom-left of the diamond wrap; reuses .split-any-btn's
+   look but is pinned in a corner instead of sitting inline with the outs row. */
+.split-base-any {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+}
+
+/* 175 × 175 px field container — buttons can overflow without clipping */
+.split-diamond {
+  position: relative;
+  width: 175px;
+  height: 175px;
+  flex: none;
+}
+
+/* Rotated-square diamond outline (117 × 117 px field, rotated 45°) */
+.split-diamond__field {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 117px;
+  height: 117px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border: 1.5px solid var(--line-2);
+  border-radius: 7px;
+  background: var(--hover);
+  pointer-events: none;
+}
+
+/* Pitcher's mound center dot */
+.split-diamond__dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--muted);
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+/* Static home plate (rotated square, bottom vertex) */
+.split-diamond__plate {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  width: 21px;
+  height: 21px;
+  transform: translateX(-50%) rotate(45deg);
+  border: 1.5px solid var(--line-2);
+  border-radius: 3px;
+  background: var(--hover);
+  pointer-events: none;
+}
+
+/* Clickable base buttons — rotated squares at the three vertices.
+   Empty = transparent (just a border); active = team color fill (set inline). */
+.split-base {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border: 2px solid var(--line-2);
+  border-radius: 4px;
+  background: transparent;
+  transform: rotate(45deg);   /* appears as a diamond */
+  cursor: pointer;
+  padding: 0;
+  transition: background 120ms, border-color 120ms;
+  outline: none;
+}
+.split-base:hover { border-color: var(--ink-2); }
+.split-base:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* 2B — top vertex, centered horizontally, slightly above container */
+.split-base--2b { top: -9px; left: 50%; transform: translateX(-50%) rotate(45deg); }
+/* 1B — right vertex, vertically centered, slightly right of container */
+.split-base--1b { right: -9px; top: 50%; transform: translateY(-50%) rotate(45deg); }
+/* 3B — left vertex, vertically centered, slightly left of container */
+.split-base--3b { left: -9px; top: 50%; transform: translateY(-50%) rotate(45deg); }
+
+/* Small eyebrow labels near each base */
+.split-base-label {
+  position: absolute;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  line-height: 1;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.split-base-label--2b { top: -25px; left: 50%; transform: translateX(-50%); }
+.split-base-label--1b { right: -27px; top: 50%; transform: translateY(-50%); }
+.split-base-label--3b { left: -27px; top: 50%; transform: translateY(-50%); }
+
+/* Column 2 — situation summary. `min-width: 0` lets it shrink below its
+   content's default min-content size instead of forcing the row to overflow
+   when the heatmap columns need the space. */
+.split-summary {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 26px 32px;
+}
+.split-summary__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.split-summary__eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-family: var(--font-sans);
+}
+
+/* RISP chip — color + border-color set inline via team.color */
+.split-risp-chip {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 4px 9px;
+  border-radius: 4px;
+  border: 1px solid currentColor;
+  line-height: 1.4;
+}
+
+/* Big situational label (e.g. "ON 1ST · 2 OUTS") — color set inline */
+.split-score-line {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 25px;
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+/* "N plate appearances in this split" — capped to a narrow column so it
+   wraps onto ~2 lines, reclaiming horizontal space for the heatmap columns. */
+.split-pa-count {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  max-width: 210px;
+  line-height: 1.35;
+}
+
+/* Outs selector row */
+.split-outs {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.split-outs__label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  flex: 0 0 auto;
+}
+/* "-" (any outs) / 0 / 1 / 2 dots, one inline row — "-" is just another
+   out-dot (setOuts("any")), no separate ANY button. */
+.split-outs__controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Individual out dot (circle) + number label below */
+.split-out-dot-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+.split-out-dot-wrap:focus-visible { outline: 2px solid var(--accent); border-radius: 50%; }
+.split-out-dot {
+  display: block;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  border: 1.5px solid var(--line-2);
+  background: transparent;
+  transition: background 120ms, border-color 120ms;
+}
+.split-out-dot__label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  transition: color 120ms;
+}
+
+/* ANY pill button — active state overridden inline with team.color */
+.split-any-btn {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-family: var(--font-sans);
+  padding: 6px 13px;
+  border-radius: 7px;
+  border: 1.5px solid var(--line-2);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background 120ms, border-color 120ms, color 120ms;
+}
+.split-any-btn:hover { color: var(--ink); border-color: var(--muted); }
+
+/* Columns 3+ — base/out situational heatmap(s). Batting mode places THREE
+   side by side (AVG / OBP / SLG — ISO temporarily not rendered, see
+   `renderHeatGrid` call site); pitching mode places one (OPP AVG). Each grid
+   has 4 data columns ("-" = any outs, then 0 / 1 / 2).
+   `flex: 1 1 0` + `min-width: 0` (instead of a fixed width) let the three
+   columns share whatever space remains after the diamond + summary and
+   shrink together as needed — guarantees the row can never overflow
+   `.split-controls`, rather than a hand-tuned fixed width that can. */
+.split-heat-col {
+  display: flex;
+  align-items: center;
+  padding: 14px 12px;
+  border-left: 1px solid var(--line);
+  min-width: 0;
+  flex: 1 1 0;
+}
+.split-heat {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+/* Label on its own line, full-width gradient bar beneath it — uses the
+   otherwise-empty horizontal room at the top of each heatmap column. */
+.split-heat__head {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.split-heat__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  white-space: nowrap;
+}
+.split-heat__legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  cursor: help;
+}
+.split-heat__legend-bar {
+  flex: 1;
+  height: 12px;
+  border-radius: 3px;
+  border: 1px solid var(--line);
+}
+.split-heat__legend-end {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  white-space: nowrap;
+  flex: none;
+}
+.split-heat__grid {
+  display: grid;
+  /* minmax(0, 1fr) — not plain 1fr — so these 4 tracks can shrink below the
+     cells' own min-content size instead of forcing the grid (and the flex
+     column around it) wider than the space `.split-heat-col` was given. */
+  grid-template-columns: auto repeat(4, minmax(0, 1fr));
+  gap: 3px;
+  align-items: stretch;
+}
+.split-heat__corner { min-width: 30px; }
+.split-heat__colhead {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--muted);
+  text-align: center;
+  padding-bottom: 3px;
+}
+.split-heat__rowhead {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 3px;
+  white-space: nowrap;
+}
+.split-heat__cell {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  height: 27px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--hover);
+  cursor: pointer;
+  padding: 0;
+  transition: border-color 120ms, transform 80ms;
+}
+.split-heat__cell:hover { border-color: var(--muted); }
+.split-heat__cell:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.split-heat__cell--selected {
+  border-color: var(--ink) !important;
+  border-width: 2px;
+  box-shadow: 0 0 0 1px var(--ink) inset;
+}
+.split-heat__cell--clicked {
+  border-color: #ffd60a !important;
+  border-width: 2px;
+  box-shadow: 0 0 0 2px #ffd60a inset !important;
+}
+.split-heat__cell-value {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+.split-heat__empty {
+  padding: 10px 0;
+}
+
+/* Table modifiers */
+.split-table .split-row--dim { opacity: 0.45; }
+
+/* Sorted-column highlight — whichever stat column the table is currently
+   sorted by (the last-clicked heatmap's stat) gets the same color the old
+   OPS/WHIP leader-row highlight used. `--split-sort-color` is set (to the
+   team's color) on the SituationalView root, matching this file's existing
+   per-team-color convention (see `--team-color` on .team-hero/.player-hero). */
+.split-table .split-col--sorted {
+  color: var(--split-sort-color, var(--accent));
+  font-weight: 700;
+}
+
+/* Splits table sizing — batting can have ~28 columns (# / name / POS / PA /
+   AB / 20-stat counting line / up to 3 selected columns) and pitching ~20;
+   `table-layout: fixed` + `width: 100%` makes every column obey the widths
+   below instead of growing to fit content, so the table always fits its
+   `.boxscore__wrap` container at desktop widths with no horizontal scroll.
+   The unclassed player-name column (2nd column in both tables) has no
+   explicit width, so it absorbs whatever space is left over after every
+   fixed-width column — and truncates with an ellipsis instead of widening
+   the table when a name is long. */
+.split-table {
+  table-layout: fixed;
+  width: 100%;
+}
+.split-table .th {
+  padding: 5px 4px;
+  font-size: 9px;
+  letter-spacing: 0.03em;
+  white-space: normal;    /* short header abbreviations may wrap to 2 lines */
+  line-height: 1.15;
+  vertical-align: bottom;
+}
+.split-table .td {
+  padding: 4px 3px;
+  font-size: 10px;
+  white-space: nowrap;    /* values are short (ints, ".395", "12.5%", "-12.3%") — never wrap */
+}
+.split-table td:nth-child(2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Column width hints for the splits table. Rate columns get a bit more room
+   than count columns since they can carry longer values (e.g. "-12.3%",
+   "12.50") and longer header labels (e.g. "K-BB%", "AB/RBI"). */
+.split-th-num  { width: 26px; }
+.split-th-pos  { width: 30px; }
+.split-th-cnt  { width: 30px; }
+.split-th-rate { width: 50px; }
+
+/* Responsive: stack selector columns on narrow viewports */
+@media (max-width: 760px) {
+  .split-controls { flex-direction: column; }
+  .split-diamond-wrap { border-right: none; border-bottom: 1px solid var(--line); }
+  .split-heat-col { border-left: none; border-top: 1px solid var(--line); }
+  .split-hand-col { border-left: none; border-top: 1px solid var(--line); }
+  .split-section-head { flex-direction: column; align-items: flex-start; gap: 4px; }
+  /* Below desktop widths, revert to content-sized columns + the wrapper's
+     existing horizontal scroll rather than squeezing ~28 columns unreadably
+     small. */
+  .split-table { table-layout: auto; }
+}
+
+/* ─── Batter-handedness selector (pitching view only) ───────────────────────
+   Column 3 of .split-controls, alongside the diamond and outs — a small
+   eyebrow label above two "batter's box" placeholders flanking a home plate,
+   with a live "Any" pill beneath. Only "Any" affects data today — L/R are
+   inert placeholders. */
+.split-hand-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 24px;
+  border-left: 1px solid var(--line);
+  min-width: 168px;
+  flex: 0 0 auto;
+}
+.split-hand-col__eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-family: var(--font-sans);
+}
+.split-hand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.split-hand__row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.split-hand__box {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border: 1.5px dashed var(--line-2);
+  border-radius: 6px;
+  background: var(--hover);
+  color: var(--muted);
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+.split-hand__box-letter {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+.split-hand__box-sub {
+  font-family: var(--font-sans);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+/* Home plate between the two boxes — same rotated-square motif as the diamond's plate */
+.split-hand__plate {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  border: 1.5px solid var(--line-2);
+  border-radius: 3px;
+  background: var(--hover);
+  transform: rotate(45deg);
+}
+/* "Any" pill beneath the plate — the only functional control in this row */
+.split-hand__any {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-family: var(--font-sans);
+  padding: 5px 14px;
+  border-radius: 7px;
+  border: 1.5px solid var(--line-2);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background 120ms, border-color 120ms, color 120ms;
+}
+.split-hand__any:hover { color: var(--ink); border-color: var(--muted); }
