@@ -3,7 +3,7 @@
   "date": "02/18/2026",
   "away_team": "Indiana St.",
   "home_team": "Miami (FL)",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -103,8 +103,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Carter Beck",
-        "2B": null,
+        "1B": null,
+        "2B": "Carter Beck",
         "3B": null
       },
       "score": {
@@ -125,13 +125,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Carter Beck",
-        "2B": null,
+        "1B": null,
+        "2B": "Carter Beck",
         "3B": null
       },
       "runners_after": {
-        "1B": "Carter Beck",
-        "2B": null,
+        "1B": null,
+        "2B": "Carter Beck",
         "3B": null
       },
       "score": {
@@ -400,8 +400,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Derek Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Derek Williams",
         "3B": null
       },
       "score": {
@@ -422,13 +422,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Derek Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Derek Williams",
         "3B": null
       },
       "runners_after": {
-        "1B": "Derek Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Derek Williams",
         "3B": null
       },
       "score": {
@@ -449,13 +449,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Derek Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Derek Williams",
         "3B": null
       },
       "runners_after": {
-        "1B": "Derek Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Derek Williams",
         "3B": null
       },
       "score": {
@@ -574,7 +574,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Spencer Johnsen",
       "batter": "Vance Sheahan",
       "outcome": "Groundout",
       "count": "0-0",
@@ -601,7 +601,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Spencer Johnsen",
       "batter": "Fabio Peralta",
       "outcome": "Groundout",
       "count": "3-2",
@@ -628,7 +628,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Spencer Johnsen",
       "batter": "Jake Ogden",
       "outcome": "Flyout",
       "count": "0-0",
@@ -751,8 +751,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Andrew Ortiz",
-        "2B": null,
+        "1B": null,
+        "2B": "Andrew Ortiz",
         "3B": null
       },
       "score": {
@@ -773,13 +773,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Andrew Ortiz",
-        "2B": null,
+        "1B": null,
+        "2B": "Andrew Ortiz",
         "3B": null
       },
       "runners_after": {
         "1B": "Jeremy Martinez",
-        "2B": null,
+        "2B": "Andrew Ortiz",
         "3B": null
       },
       "score": {
@@ -801,12 +801,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jeremy Martinez",
-        "2B": null,
+        "2B": "Andrew Ortiz",
         "3B": null
       },
       "runners_after": {
         "1B": "Jeremy Martinez",
-        "2B": null,
+        "2B": "Andrew Ortiz",
         "3B": null
       },
       "score": {
@@ -817,7 +817,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Colby Morse",
       "batter": "Michael Torres",
       "outcome": "Single",
       "count": "2-1",
@@ -844,7 +844,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Colby Morse",
       "batter": "Daniel Cuvet",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -871,7 +871,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Colby Morse",
       "batter": "Alex Sosa",
       "outcome": "Single",
       "count": "3-2",
@@ -898,13 +898,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Colby Morse",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -925,13 +927,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Colby Morse",
       "batter": "Alonzo Alvarez",
       "outcome": "Double",
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -952,7 +956,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Colby Morse",
       "batter": "Brylan West",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1066,7 +1070,9 @@
       "count": "2-1",
       "pitches": "BFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1087,7 +1093,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Sebastian Santos-Olson",
+      "pitcher": "Brixton Lofgren",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1103,8 +1109,8 @@
       },
       "runners_after": {
         "1B": "Jorge Cartagena",
-        "2B": "Emil Estrella",
-        "3B": null
+        "2B": null,
+        "3B": "Emil Estrella"
       },
       "score": {
         "away": 1,
@@ -1114,7 +1120,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Sebastian Santos-Olson",
+      "pitcher": "Brixton Lofgren",
       "batter": "Caden Miller",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -1125,13 +1131,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Jorge Cartagena",
-        "2B": "Emil Estrella",
-        "3B": null
+        "2B": null,
+        "3B": "Emil Estrella"
       },
       "runners_after": {
         "1B": "Caden Miller",
-        "2B": "Emil Estrella",
-        "3B": null
+        "2B": null,
+        "3B": "Emil Estrella"
       },
       "score": {
         "away": 1,
@@ -1141,24 +1147,26 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Sebastian Santos-Olson",
+      "pitcher": "Brixton Lofgren",
       "batter": "Nick Sutherlin",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Caden Miller",
-        "2B": "Emil Estrella",
-        "3B": null
+        "2B": null,
+        "3B": "Emil Estrella"
       },
       "runners_after": {
         "1B": "Nick Sutherlin",
-        "2B": "Emil Estrella",
-        "3B": null
+        "2B": null,
+        "3B": "Emil Estrella"
       },
       "score": {
         "away": 2,
@@ -1168,7 +1176,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Sebastian Santos-Olson",
+      "pitcher": "Brixton Lofgren",
       "batter": "Marcelino Alonso",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1179,13 +1187,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Nick Sutherlin",
-        "2B": "Emil Estrella",
-        "3B": null
+        "2B": null,
+        "3B": "Emil Estrella"
       },
       "runners_after": {
         "1B": "Nick Sutherlin",
-        "2B": "Emil Estrella",
-        "3B": null
+        "2B": null,
+        "3B": "Emil Estrella"
       },
       "score": {
         "away": 2,
@@ -1195,7 +1203,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Colby Morse",
       "batter": "Vance Sheahan",
       "outcome": "Lineout",
       "count": "2-2",
@@ -1222,7 +1230,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Colby Morse",
       "batter": "Fabio Peralta",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1249,7 +1257,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Colby Morse",
       "batter": "Jake Ogden",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1276,7 +1284,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Sebastian Santos-Olson",
+      "pitcher": "Lazaro Collera",
       "batter": "Jeremy Martinez",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1303,7 +1311,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Sebastian Santos-Olson",
+      "pitcher": "Lazaro Collera",
       "batter": "Nomar Garcia",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1330,7 +1338,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Sebastian Santos-Olson",
+      "pitcher": "Lazaro Collera",
       "batter": "Caleb Niehaus",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1357,7 +1365,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Colby Morse",
       "batter": "Michael Torres",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1384,7 +1392,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Brady Banker",
       "batter": "Daniel Cuvet",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1411,7 +1419,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Hunter Small",
       "batter": "Alex Sosa",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1438,7 +1446,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sebastian Santos-Olson",
+      "pitcher": "Rob Evans",
       "batter": "Jorge Cartagena",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1465,7 +1473,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sebastian Santos-Olson",
+      "pitcher": "Rob Evans",
       "batter": "Carter Beck",
       "outcome": "Walk",
       "count": "3-2",
@@ -1492,7 +1500,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sebastian Santos-Olson",
+      "pitcher": "Rob Evans",
       "batter": "Emil Estrella",
       "outcome": "Single",
       "count": "0-0",
@@ -1519,7 +1527,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sebastian Santos-Olson",
+      "pitcher": "Rob Evans",
       "batter": "Caden Miller",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1546,7 +1554,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sebastian Santos-Olson",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "Emil Estrella",
       "outcome": "\u2014",
       "count": null,
@@ -1573,7 +1581,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Hunter Small",
       "batter": "Derek Williams",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1600,7 +1608,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Hunter Small",
       "batter": "Alonzo Alvarez",
       "outcome": "Home run",
       "count": "2-0",
@@ -1629,7 +1637,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Hunter Small",
       "batter": "Brylan West",
       "outcome": "Single",
       "count": "0-0",
@@ -1656,7 +1664,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Hunter Small",
       "batter": "Vance Sheahan",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1683,7 +1691,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Hunter Small",
       "batter": "Fabio Peralta",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1710,7 +1718,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sebastian Santos-Olson",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "Nick Sutherlin",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1737,7 +1745,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sebastian Santos-Olson",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "Marcelino Alonso",
       "outcome": "Single",
       "count": "1-2",
@@ -1764,7 +1772,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sebastian Santos-Olson",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "Jeremy Martinez",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1791,7 +1799,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sebastian Santos-Olson",
+      "pitcher": "Ryan Bilka",
       "batter": "Jaxon Sparks",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1818,7 +1826,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Hunter Small",
       "batter": "Jake Ogden",
       "outcome": "Walk",
       "count": "3-1",
@@ -1845,7 +1853,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Aaron Moss",
       "batter": "Michael Torres",
       "outcome": "Fielder's choice",
       "count": "1-2",
@@ -1872,13 +1880,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Aaron Moss",
       "batter": "Daniel Cuvet",
       "outcome": "Double",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1899,7 +1909,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Breyllin Suriel",
       "batter": "Alex Sosa",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1926,14 +1936,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Breyllin Suriel",
       "batter": "Derek Williams",
       "outcome": "Home run",
       "count": "3-0",
       "pitches": "BBB",
       "rbi": true,
       "runs_scored": [
-        "Derek Williams"
+        "Derek Williams",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1955,7 +1966,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Breyllin Suriel",
       "batter": "Alonzo Alvarez",
       "outcome": "Walk",
       "count": "3-2",
@@ -1982,7 +1993,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Breyllin Suriel",
       "batter": "Brylan West",
       "outcome": "Walk",
       "count": "3-2",
@@ -2009,7 +2020,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ty Brooks",
+      "pitcher": "Emil Estrella",
       "batter": "Vance Sheahan",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2036,7 +2047,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Sebastian Santos-Olson",
+      "pitcher": "Ryan Bilka",
       "batter": "Caleb Niehaus",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2063,7 +2074,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Sebastian Santos-Olson",
+      "pitcher": "Ryan Bilka",
       "batter": "Jorge Cartagena",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2090,7 +2101,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Sebastian Santos-Olson",
+      "pitcher": "",
       "batter": "Carter Beck",
       "outcome": "Groundout",
       "count": "1-2",

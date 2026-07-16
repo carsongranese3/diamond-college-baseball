@@ -3,7 +3,7 @@
   "date": "04/21/2026",
   "away_team": "Oral Roberts",
   "home_team": "Oklahoma",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -149,7 +149,10 @@
       "pitches": "BKB",
       "rbi": true,
       "runs_scored": [
-        "Cooper"
+        "Cooper",
+        null,
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -294,7 +297,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jaxon Willits",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -438,6 +441,33 @@
         "home": 0
       },
       "description": "Makani Tanak walked (3-2 FFBBBB) Will Edmunso advanced to second Hudson Ellis advanced to third."
+    },
+    {
+      "inning": "Top 2",
+      "pitcher": "Nick Wesloski",
+      "batter": "Wesloski, N. to p for Catalano, M..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Makani",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Makani",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 0
+      },
+      "description": "Wesloski, N. to p for Catalano, M.."
     },
     {
       "inning": "Top 2",
@@ -850,7 +880,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Nick Wesloski",
+      "pitcher": "Nate Smithburg",
       "batter": "Will",
       "outcome": "Single",
       "count": "0-1",
@@ -874,6 +904,33 @@
         "home": 1
       },
       "description": "Will Edmunso singled to right field (0-1 F) Hudson Ellis advanced to second."
+    },
+    {
+      "inning": "Top 4",
+      "pitcher": "Nate Smithburg",
+      "batter": "Smithburg, N to p for Wesloski, N..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Will",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Will",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 1
+      },
+      "description": "Smithburg, N to p for Wesloski, N.."
     },
     {
       "inning": "Top 4",
@@ -910,7 +967,9 @@
       "count": "0-2",
       "pitches": "SK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1002,7 +1061,7 @@
       "runners_after": {
         "1B": "Deiten Lachance",
         "2B": null,
-        "3B": null
+        "3B": "Camden Johnson"
       },
       "score": {
         "away": 6,
@@ -1024,12 +1083,12 @@
       "runners_before": {
         "1B": "Deiten Lachance",
         "2B": null,
-        "3B": null
+        "3B": "Camden Johnson"
       },
       "runners_after": {
         "1B": "Deiten Lachance",
         "2B": null,
-        "3B": null
+        "3B": "Camden Johnson"
       },
       "score": {
         "away": 6,
@@ -1045,13 +1104,15 @@
       "count": "2-2",
       "pitches": "KBBFFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Camden Johnson"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Deiten Lachance",
         "2B": null,
-        "3B": null
+        "3B": "Camden Johnson"
       },
       "runners_after": {
         "1B": "Deiten Lachance",
@@ -1081,8 +1142,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Deiten Lachance",
-        "2B": null,
+        "1B": null,
+        "2B": "Deiten Lachance",
         "3B": null
       },
       "score": {
@@ -1103,13 +1164,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Deiten Lachance",
-        "2B": null,
+        "1B": null,
+        "2B": "Deiten Lachance",
         "3B": null
       },
       "runners_after": {
         "1B": "Alec Blair",
-        "2B": null,
+        "2B": "Deiten Lachance",
         "3B": null
       },
       "score": {
@@ -1131,12 +1192,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Alec Blair",
-        "2B": null,
+        "2B": "Deiten Lachance",
         "3B": null
       },
       "runners_after": {
         "1B": "Alec Blair",
-        "2B": null,
+        "2B": "Deiten Lachance",
         "3B": null
       },
       "score": {
@@ -1201,7 +1262,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Nate Smithburg",
+      "pitcher": "Mason Bixby",
       "batter": "Ethan",
       "outcome": "Double",
       "count": "0-0",
@@ -1228,7 +1289,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Nate Smithburg",
+      "pitcher": "Mason Bixby",
       "batter": "Keaton",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1255,7 +1316,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Maddox",
+      "pitcher": "Maddox Thornton",
+      "batter": "Maddox",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 2
+      },
+      "description": "Maddox Thorn to p for Brenden Ashe."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Maddox Thornton",
       "batter": "Connor Larkin",
       "outcome": "Single",
       "count": "1-0",
@@ -1282,7 +1370,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Maddox",
+      "pitcher": "Maddox Thornton",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1297,8 +1385,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Connor Larkin",
-        "2B": null,
+        "1B": null,
+        "2B": "Connor Larkin",
         "3B": null
       },
       "score": {
@@ -1309,7 +1397,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Maddox",
+      "pitcher": "Maddox Thornton",
       "batter": "Jaxon Willits",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1319,13 +1407,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Connor Larkin",
-        "2B": null,
+        "1B": null,
+        "2B": "Connor Larkin",
         "3B": null
       },
       "runners_after": {
-        "1B": "Connor Larkin",
-        "2B": null,
+        "1B": null,
+        "2B": "Connor Larkin",
         "3B": null
       },
       "score": {
@@ -1336,7 +1424,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Maddox",
+      "pitcher": "Maddox Thornton",
       "batter": "Brendan Brock",
       "outcome": "Single",
       "count": "0-0",
@@ -1346,14 +1434,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Connor Larkin",
-        "2B": null,
+        "1B": null,
+        "2B": "Connor Larkin",
         "3B": null
       },
       "runners_after": {
         "1B": "Brendan Brock",
         "2B": null,
-        "3B": null
+        "3B": "Connor Larkin"
       },
       "score": {
         "away": 6,
@@ -1363,19 +1451,21 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Maddox",
+      "pitcher": "Maddox Thornton",
       "batter": "Camden Johnson",
       "outcome": "Flyout",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Connor Larkin"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Brendan Brock",
         "2B": null,
-        "3B": null
+        "3B": "Connor Larkin"
       },
       "runners_after": {
         "1B": "Brendan Brock",
@@ -1390,7 +1480,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Maddox",
+      "pitcher": "Conner Johnson",
       "batter": "Deiten Lachance",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1417,7 +1507,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Mason Bixby",
+      "pitcher": "Jaden Barfield",
+      "batter": "Bixby, M. to p for Smithburg, N.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 3
+      },
+      "description": "Bixby, M. to p for Smithburg, N."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Reid Hensley",
       "batter": "Hudson",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1444,7 +1561,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Mason Bixby",
+      "pitcher": "Reid Hensley",
       "batter": "Will",
       "outcome": "Walk",
       "count": "3-2",
@@ -1471,7 +1588,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jaden Barfield",
+      "pitcher": "Xander Mercurius",
+      "batter": "Barfield, J to p for Bixby, M..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Will",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Will",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 3
+      },
+      "description": "Barfield, J to p for Bixby, M.."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Xander Mercurius",
       "batter": "Makani",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1498,7 +1642,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Reid Hensley",
+      "pitcher": "Xander Mercurius",
+      "batter": "Hensley, R. to p for Barfield, J.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Will",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Will",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 3
+      },
+      "description": "Hensley, R. to p for Barfield, J."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Xander Mercurius",
       "batter": "Wailele",
       "outcome": "Walk",
       "count": "3-2",
@@ -1525,7 +1696,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Reid Hensley",
+      "pitcher": "Xander Mercurius",
       "batter": "Martell",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1552,7 +1723,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Conner",
+      "pitcher": "Conner Johnson",
+      "batter": "Conner",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 3
+      },
+      "description": "Conner Johns to p for Maddox Thorn."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Conner Johnson",
       "batter": "Nolan Stevens",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1579,7 +1777,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Conner",
+      "pitcher": "Conner Johnson",
       "batter": "Dasan Harris",
       "outcome": "Single",
       "count": "0-0",
@@ -1606,7 +1804,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Conner",
+      "pitcher": "Conner Johnson",
       "batter": "Alec Blair",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1621,8 +1819,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dasan Harris",
-        "2B": null,
+        "1B": null,
+        "2B": "Dasan Harris",
         "3B": null
       },
       "score": {
@@ -1633,7 +1831,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Conner",
+      "pitcher": "Conner Johnson",
       "batter": "Kyle Branch",
       "outcome": "Walk",
       "count": "3-2",
@@ -1643,13 +1841,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Dasan Harris",
-        "2B": null,
+        "1B": null,
+        "2B": "Dasan Harris",
         "3B": null
       },
       "runners_after": {
         "1B": "Kyle Branch",
-        "2B": null,
+        "2B": "Dasan Harris",
         "3B": null
       },
       "score": {
@@ -1660,7 +1858,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Conner",
+      "pitcher": "Conner Johnson",
       "batter": "Connor Larkin",
       "outcome": "Walk",
       "count": "3-2",
@@ -1671,13 +1869,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kyle Branch",
-        "2B": null,
+        "2B": "Dasan Harris",
         "3B": null
       },
       "runners_after": {
         "1B": "Connor Larkin",
-        "2B": null,
-        "3B": null
+        "2B": "Kyle Branch",
+        "3B": "Dasan Harris"
       },
       "score": {
         "away": 6,
@@ -1687,24 +1885,27 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Conner",
+      "pitcher": "Jack Hill",
       "batter": "Jaxon Willits",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
+        "Connor Larkin",
+        "Kyle Branch",
+        "Dasan Harris",
         "Jaxon Willits"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Connor Larkin",
-        "2B": null,
-        "3B": null
+        "2B": "Kyle Branch",
+        "3B": "Dasan Harris"
       },
       "runners_after": {
-        "1B": "Connor Larkin",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1716,7 +1917,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Conner",
+      "pitcher": "Luke Williams",
       "batter": "Brendan Brock",
       "outcome": "Triple",
       "count": "3-2",
@@ -1726,12 +1927,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Connor Larkin",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Connor Larkin",
+        "1B": null,
         "2B": null,
         "3B": "Brendan Brock"
       },
@@ -1743,7 +1944,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jack",
+      "pitcher": "Luke Williams",
+      "batter": "Jack",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": "Brendan Brock"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": "Brendan Brock"
+      },
+      "score": {
+        "away": 6,
+        "home": 7
+      },
+      "description": "Jack Hill to p for Conner Johns."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Luke Williams",
       "batter": "Camden Johnson",
       "outcome": "Pop out",
       "count": "1-1",
@@ -1753,12 +1981,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Connor Larkin",
+        "1B": null,
         "2B": null,
         "3B": "Brendan Brock"
       },
       "runners_after": {
-        "1B": "Connor Larkin",
+        "1B": null,
         "2B": null,
         "3B": "Brendan Brock"
       },
@@ -1767,6 +1995,33 @@
         "home": 7
       },
       "description": "Johnson, C popped up to ss (1-1 FB)."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Xander Mercurius",
+      "batter": "Mercurius, X to p for Hensley, R..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 7
+      },
+      "description": "Mercurius, X to p for Hensley, R.."
     },
     {
       "inning": "Top 7",
@@ -1851,7 +2106,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Luke",
+      "pitcher": "Luke Williams",
+      "batter": "Luke",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 7
+      },
+      "description": "Luke William to p for Jack Hill."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Kash Ferris",
       "batter": "Deiten Lachance",
       "outcome": "Walk",
       "count": "3-2",
@@ -1878,7 +2160,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Luke",
+      "pitcher": "Kash Ferris",
       "batter": "Drew Dickerson",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1905,7 +2187,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Luke",
+      "pitcher": "Kash Ferris",
       "batter": "Dasan Harris",
       "outcome": "Fielder's choice",
       "count": "1-1",
@@ -1932,7 +2214,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Luke",
+      "pitcher": "",
       "batter": "Alec Blair",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1959,7 +2241,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Xander Mercurius",
+      "pitcher": "",
       "batter": "Kole",
       "outcome": "\u2014",
       "count": null,
@@ -1986,7 +2268,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Xander Mercurius",
+      "pitcher": "",
       "batter": "Kole",
       "outcome": "Foul out",
       "count": "2-2",
@@ -2013,7 +2295,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Xander Mercurius",
+      "pitcher": "",
       "batter": "Hudson",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2040,7 +2322,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Xander Mercurius",
+      "pitcher": "",
       "batter": "Will",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2067,7 +2349,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Kash",
+      "pitcher": "",
+      "batter": "Kash",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 7
+      },
+      "description": "Kash Ferris to p for Luke William."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Austin",
       "outcome": "\u2014",
       "count": null,
@@ -2094,7 +2403,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Kash",
+      "pitcher": "",
       "batter": "Kyle Branch",
       "outcome": "Pop out",
       "count": "0-0",
@@ -2121,7 +2430,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Kash",
+      "pitcher": "",
       "batter": "Connor Larkin",
       "outcome": "Walk",
       "count": "3-0",
@@ -2148,7 +2457,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Kash",
+      "pitcher": "",
       "batter": "Jaxon Willits",
       "outcome": "Grounded into double play",
       "count": "0-1",
@@ -2163,7 +2472,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Connor Larkin",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2175,7 +2484,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Xander Mercurius",
+      "pitcher": "",
       "batter": "Dickerson, D to dh.",
       "outcome": "\u2014",
       "count": null,
@@ -2202,7 +2511,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Xander Mercurius",
+      "pitcher": "",
       "batter": "Harris, Das. to rf.",
       "outcome": "\u2014",
       "count": null,
@@ -2229,7 +2538,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Xander Mercurius",
+      "pitcher": "",
       "batter": "Walk, J. to cf for Blair, A..",
       "outcome": "\u2014",
       "count": null,
@@ -2256,7 +2565,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Xander Mercurius",
+      "pitcher": "",
       "batter": "Makani",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2283,7 +2592,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Xander Mercurius",
+      "pitcher": "",
       "batter": "Wailele",
       "outcome": "Pop out",
       "count": "0-0",
@@ -2310,7 +2619,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Xander Mercurius",
+      "pitcher": "",
       "batter": "Martell",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",

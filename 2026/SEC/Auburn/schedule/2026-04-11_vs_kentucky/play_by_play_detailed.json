@@ -3,7 +3,7 @@
   "date": "04/11/2026",
   "away_team": "Kentucky",
   "home_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -123,7 +123,10 @@
       "count": "2-2",
       "pitches": "KBSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -622,9 +625,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brandon McCraine",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brandon McCraine"
       },
       "score": {
         "away": 5,
@@ -644,14 +647,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brandon McCraine",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brandon McCraine"
       },
       "runners_after": {
-        "1B": "Brandon McCraine",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brandon McCraine"
       },
       "score": {
         "away": 5,
@@ -1027,8 +1030,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Rembert",
-        "2B": null,
+        "1B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "score": {
@@ -1049,13 +1052,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Chris Rembert",
-        "2B": null,
+        "1B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Rembert",
-        "2B": null,
+        "1B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "score": {
@@ -1076,13 +1079,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Chris Rembert",
-        "2B": null,
+        "1B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Rembert",
-        "2B": null,
+        "1B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "score": {
@@ -1099,17 +1102,19 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Chris Rembert",
-        "2B": null,
+        "1B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "runners_after": {
         "1B": "Logan Gregorio",
-        "2B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "score": {
@@ -1131,12 +1136,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Logan Gregorio",
-        "2B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "runners_after": {
         "1B": "Brandon McCraine",
-        "2B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "score": {
@@ -1158,12 +1163,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Brandon McCraine",
-        "2B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "runners_after": {
         "1B": "Bristol Carter",
-        "2B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "score": {
@@ -1185,12 +1190,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Bristol Carter",
-        "2B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "runners_after": {
         "1B": "Bristol Carter",
-        "2B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "score": {
@@ -1198,6 +1203,33 @@
         "home": 1
       },
       "description": "Fralick, C. struck out swinging (2-2 BKBFS)."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Marcel Kulik",
+      "batter": "Kulik, M. to p for Marciano, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 1
+      },
+      "description": "Kulik, M. to p for Marciano, J.."
     },
     {
       "inning": "Top 5",
@@ -1282,7 +1314,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "C.",
+      "pitcher": "Chase Alderman",
+      "batter": "C. Alderman",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 1
+      },
+      "description": "C. Alderman to p for N. Harris."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Chase Alderman",
       "batter": "Eric Guevara",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -1309,7 +1368,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "C.",
+      "pitcher": "Chase Alderman",
       "batter": "Bub Terrell",
       "outcome": "Double",
       "count": "0-0",
@@ -1336,13 +1395,16 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "C.",
+      "pitcher": "Ryan Mullan",
       "batter": "Chris Rembert",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "SBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1363,7 +1425,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "R.",
+      "pitcher": "Ryan Mullan",
+      "batter": "R. Mullan",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Chris Rembert",
+        "2B": "Bub Terrell",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Chris Rembert",
+        "2B": "Bub Terrell",
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 3
+      },
+      "description": "R. Mullan to p for C. Alderman."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Jackson Soucie",
       "batter": "Eddie Madrigal",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1390,7 +1479,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "R.",
+      "pitcher": "Jackson Soucie",
       "batter": "Ethin Bingaman",
       "outcome": "Lineout",
       "count": "1-1",
@@ -1471,7 +1560,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Marcel Kulik",
+      "pitcher": "Garrett Brewer",
       "batter": "Tyler Bell",
       "outcome": "Single",
       "count": "1-2",
@@ -1495,6 +1584,33 @@
         "home": 3
       },
       "description": "T. Bell singled to shortstop (1-2 KBK); R. Schwartz advanced to third."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Garrett Brewer",
+      "batter": "Brewer, G. to p for Kulik, M..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Tyler Bell",
+        "2B": "Ryan Schwartz",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Tyler Bell",
+        "2B": "Ryan Schwartz",
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 3
+      },
+      "description": "Brewer, G. to p for Kulik, M.."
     },
     {
       "inning": "Top 6",
@@ -1579,7 +1695,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "J.",
+      "pitcher": "Nile Adcock",
+      "batter": "J. Soucie",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 3
+      },
+      "description": "J. Soucie to p for R. Mullan."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Nile Adcock",
       "batter": "Logan Gregorio",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -1606,7 +1749,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "J.",
+      "pitcher": "Nile Adcock",
       "batter": "Brandon McCraine",
       "outcome": "Hit by pitch",
       "count": "0-2",
@@ -1633,7 +1776,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
+      "batter": "N. Adcock",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Brandon McCraine",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Brandon McCraine",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 3
+      },
+      "description": "N. Adcock to p for J. Soucie."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Nile Adcock",
       "batter": "Bristol Carter",
       "outcome": "Fielder's choice",
       "count": "0-0",
@@ -1660,7 +1830,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1675,9 +1845,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 5,
@@ -1687,7 +1857,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
       "batter": "Chase Fralick",
       "outcome": "Walk",
       "count": "2-0",
@@ -1697,14 +1867,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
         "1B": "Chase Fralick",
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 5,
@@ -1714,24 +1884,26 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
       "batter": "Eric Guevara",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
       "pitches": "FSK",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Chase Fralick",
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
         "1B": "Chase Fralick",
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 5,
@@ -1741,7 +1913,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
       "batter": "Bub Terrell",
       "outcome": "Foul out",
       "count": "0-2",
@@ -1753,12 +1925,12 @@
       "runners_before": {
         "1B": "Chase Fralick",
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
         "1B": "Chase Fralick",
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 5,
@@ -1876,7 +2048,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
       "batter": "Chris Rembert",
       "outcome": "Lineout",
       "count": "3-1",
@@ -1903,7 +2075,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
       "batter": "Eddie Madrigal",
       "outcome": "\u2014",
       "count": "1-2",
@@ -1930,7 +2102,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
       "batter": "Ethin Bingaman",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2119,7 +2291,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
       "batter": "W. Marcy",
       "outcome": "\u2014",
       "count": null,
@@ -2146,7 +2318,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
       "batter": "Logan Gregorio",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2173,7 +2345,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
       "batter": "Brandon McCraine",
       "outcome": "Pop out",
       "count": "2-1",
@@ -2200,7 +2372,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "N.",
+      "pitcher": "Leighton Harris",
       "batter": "Bristol Carter",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2281,7 +2453,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "",
       "batter": "Caeden Cloud",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2308,7 +2480,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Chase Fralick",
       "outcome": "Groundout",
       "count": "1-0",
@@ -2335,7 +2507,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Eric Guevara",
       "outcome": "Single",
       "count": "1-2",
@@ -2362,7 +2534,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Bub Terrell",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -2389,7 +2561,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Chris Rembert",
       "outcome": "Flyout",
       "count": "2-0",
@@ -2416,7 +2588,34 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "L.",
+      "pitcher": "",
+      "batter": "L. Harris",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Bub Terrell",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Bub Terrell",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 4
+      },
+      "description": "L. Harris to p for N. Adcock."
+    },
+    {
+      "inning": "Bottom 9",
+      "pitcher": "",
       "batter": "Lucas Steele",
       "outcome": "Flyout",
       "count": "0-0",

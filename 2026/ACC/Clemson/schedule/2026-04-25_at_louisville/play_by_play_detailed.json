@@ -3,7 +3,7 @@
   "date": "04/25/2026",
   "away_team": "Clemson",
   "home_team": "Louisville",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -97,7 +97,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Jacob Jarrell"
+        "Jacob Jarrell",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -449,7 +450,9 @@
       "count": "2-2",
       "pitches": "SBKFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1099,7 +1102,10 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1471,7 +1477,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ethan Eberle",
+      "pitcher": "Jake Schweitzer",
       "batter": "LICHTENBERGE",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1552,7 +1558,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Michael Sharman",
+      "pitcher": "Hayden Simmerson",
       "batter": "Ky.",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1579,13 +1585,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Michael Sharman",
+      "pitcher": "Hayden Simmerson",
       "batter": "Alex Alicea",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1639,7 +1647,9 @@
       "count": "2-2",
       "pitches": "KBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1741,7 +1751,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jake Schweitzer",
+      "pitcher": "Jack Brown",
       "batter": "Tryston McCladdie",
       "outcome": "Walk",
       "count": "3-1",
@@ -1768,13 +1778,42 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
+      "batter": "J. Brown",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Tryston McCladdie",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Tryston McCladdie",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 6
+      },
+      "description": "J. Brown to p for Schweitzer."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Jack Brown",
       "batter": "Luke Gaffney",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1795,13 +1834,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "Jacob Jarrell",
       "outcome": "Fielder's choice",
       "count": "1-1",
       "pitches": "BS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1822,13 +1863,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "Jack Crighton",
       "outcome": "Groundout",
       "count": "3-2",
       "pitches": "FKFBBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -1849,7 +1892,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "Bryce Clavon",
       "outcome": "Walk",
       "count": "3-2",
@@ -1876,7 +1919,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "Jay Dillard",
       "outcome": "Pop out",
       "count": "0-1",
@@ -1972,8 +2015,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bayram Hot",
-        "2B": null,
+        "1B": null,
+        "2B": "Bayram Hot",
         "3B": null
       },
       "score": {
@@ -1994,13 +2037,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bayram Hot",
-        "2B": null,
+        "1B": null,
+        "2B": "Bayram Hot",
         "3B": null
       },
       "runners_after": {
         "1B": "Ben Slanker",
-        "2B": null,
+        "2B": "Bayram Hot",
         "3B": null
       },
       "score": {
@@ -2022,12 +2065,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Ben Slanker",
-        "2B": null,
+        "2B": "Bayram Hot",
         "3B": null
       },
       "runners_after": {
         "1B": "Ben Slanker",
-        "2B": null,
+        "2B": "Bayram Hot",
         "3B": null
       },
       "score": {
@@ -2038,7 +2081,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Hayden Simmerson",
+      "pitcher": "Ariston Veasey",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2049,13 +2092,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Ben Slanker",
-        "2B": null,
+        "2B": "Bayram Hot",
         "3B": null
       },
       "runners_after": {
         "1B": "Ben Slanker",
         "2B": null,
-        "3B": null
+        "3B": "Bayram Hot"
       },
       "score": {
         "away": 6,
@@ -2065,7 +2108,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Hayden Simmerson",
+      "pitcher": "Ariston Veasey",
       "batter": "Ky.",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2077,12 +2120,12 @@
       "runners_before": {
         "1B": "Ben Slanker",
         "2B": null,
-        "3B": null
+        "3B": "Bayram Hot"
       },
       "runners_after": {
         "1B": "Ben Slanker",
         "2B": null,
-        "3B": null
+        "3B": "Bayram Hot"
       },
       "score": {
         "away": 6,
@@ -2092,7 +2135,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "LICHTENBERGE",
       "outcome": "Single",
       "count": "0-0",
@@ -2119,7 +2162,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "Jarren Purify",
       "outcome": "Walk",
       "count": "3-1",
@@ -2146,7 +2189,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "Aaron England",
       "batter": "Nate Savoie",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2173,7 +2216,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "Aaron England",
       "batter": "Tryston McCladdie",
       "outcome": "Flyout",
       "count": "1-2",
@@ -2200,7 +2243,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Hayden Simmerson",
+      "pitcher": "Ariston Veasey",
       "batter": "Alex Alicea",
       "outcome": "Walk",
       "count": "3-1",
@@ -2227,7 +2270,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ariston Veasey",
+      "pitcher": "Justin LeGuernic",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2242,8 +2285,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Alex Alicea",
-        "2B": null,
+        "1B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "score": {
@@ -2254,7 +2297,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ariston Veasey",
+      "pitcher": "Justin LeGuernic",
       "batter": "Lucas Moore",
       "outcome": "Walk",
       "count": "3-2",
@@ -2264,13 +2307,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Alex Alicea",
-        "2B": null,
+        "1B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "runners_after": {
         "1B": "Lucas Moore",
-        "2B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "score": {
@@ -2281,23 +2324,25 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ariston Veasey",
+      "pitcher": "Danny Nelson",
       "batter": "Zion Rose",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Lucas Moore",
-        "2B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "runners_after": {
         "1B": "Zion Rose",
-        "2B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "score": {
@@ -2308,7 +2353,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Justin LeGuernic",
+      "pitcher": "Danny Nelson",
       "batter": "Tague Davis",
       "outcome": "Walk",
       "count": "3-1",
@@ -2319,12 +2364,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Zion Rose",
-        "2B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "runners_after": {
         "1B": "Tague Davis",
-        "2B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "score": {
@@ -2341,17 +2386,19 @@
       "count": "0-2",
       "pitches": "FS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Tague Davis",
-        "2B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "runners_after": {
         "1B": "Bayram Hot",
-        "2B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "score": {
@@ -2368,17 +2415,19 @@
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Bayram Hot",
-        "2B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "runners_after": {
         "1B": "Bayram Hot",
-        "2B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "score": {
@@ -2400,12 +2449,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Bayram Hot",
-        "2B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "runners_after": {
         "1B": "Ben Slanker",
-        "2B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "score": {
@@ -2416,23 +2465,26 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Danny Nelson",
+      "pitcher": "",
       "batter": "Kade Elam",
       "outcome": "Fielder's choice",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Ben Slanker",
-        "2B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "runners_after": {
         "1B": "Kade Elam",
-        "2B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "score": {
@@ -2443,7 +2495,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Danny Nelson",
+      "pitcher": "",
       "batter": "Ky.",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2454,12 +2506,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kade Elam",
-        "2B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "runners_after": {
         "1B": "Kade Elam",
-        "2B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "score": {
@@ -2497,7 +2549,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Aaron England",
+      "pitcher": "",
       "batter": "Jacob Jarrell",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2524,7 +2576,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Aaron England",
+      "pitcher": "",
       "batter": "Jack Crighton",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",

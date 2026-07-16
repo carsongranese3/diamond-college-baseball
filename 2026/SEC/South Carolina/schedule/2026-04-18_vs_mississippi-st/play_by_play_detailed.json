@@ -3,7 +3,7 @@
   "date": "04/18/2026",
   "away_team": "Mississippi St.",
   "home_team": "South Carolina",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -157,8 +157,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Will Craddock",
-        "2B": null,
+        "1B": null,
+        "2B": "Will Craddock",
         "3B": null
       },
       "score": {
@@ -179,13 +179,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Will Craddock",
-        "2B": null,
+        "1B": null,
+        "2B": "Will Craddock",
         "3B": null
       },
       "runners_after": {
-        "1B": "Will Craddock",
-        "2B": null,
+        "1B": null,
+        "2B": "Will Craddock",
         "3B": null
       },
       "score": {
@@ -206,13 +206,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Will Craddock",
-        "2B": null,
+        "1B": null,
+        "2B": "Will Craddock",
         "3B": null
       },
       "runners_after": {
-        "1B": "Will Craddock",
-        "2B": null,
+        "1B": null,
+        "2B": "Will Craddock",
         "3B": null
       },
       "score": {
@@ -715,7 +715,9 @@
       "count": "2-1",
       "pitches": "BBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -770,7 +772,9 @@
       "pitches": "SKF",
       "rbi": true,
       "runs_scored": [
-        "Blake Bevis"
+        "Blake Bevis",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -852,7 +856,9 @@
       "count": "1-2",
       "pitches": "BKF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1131,8 +1137,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Noah Sullivan",
-        "2B": null,
+        "1B": null,
+        "2B": "Noah Sullivan",
         "3B": null
       },
       "score": {
@@ -1153,13 +1159,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Noah Sullivan",
-        "2B": null,
+        "1B": null,
+        "2B": "Noah Sullivan",
         "3B": null
       },
       "runners_after": {
-        "1B": "Noah Sullivan",
-        "2B": null,
+        "1B": null,
+        "2B": "Noah Sullivan",
         "3B": null
       },
       "score": {
@@ -1338,7 +1344,9 @@
       "count": "2-1",
       "pitches": "SBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1791,7 +1799,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Billingsley",
+      "pitcher": "Chris Billingsley Jr.",
       "batter": "Luke Yuhasz",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1818,7 +1826,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Billingsley",
+      "pitcher": "Chris Billingsley Jr.",
       "batter": "Will Craddock",
       "outcome": "Walk",
       "count": "3-2",
@@ -1845,7 +1853,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Billingsley",
+      "pitcher": "Chris Billingsley Jr.",
       "batter": "Patrick Evans",
       "outcome": "Pop out",
       "count": "3-2",
@@ -1872,7 +1880,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Billingsley",
+      "pitcher": "Chris Billingsley Jr.",
       "batter": "Tyler Bak",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1960,7 +1968,8 @@
       "pitches": "BFFBFB",
       "rbi": true,
       "runs_scored": [
-        "Ace Reese"
+        "Ace Reese",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -2024,8 +2033,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Noah Sullivan",
-        "2B": "Bryce Chance",
+        "1B": null,
+        "2B": "Noah Sullivan",
         "3B": null
       },
       "score": {
@@ -2046,13 +2055,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Noah Sullivan",
-        "2B": "Bryce Chance",
+        "1B": null,
+        "2B": "Noah Sullivan",
         "3B": null
       },
       "runners_after": {
-        "1B": "Noah Sullivan",
-        "2B": "Bryce Chance",
+        "1B": null,
+        "2B": "Noah Sullivan",
         "3B": null
       },
       "score": {
@@ -2069,17 +2078,19 @@
       "count": "1-1",
       "pitches": "BS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Noah Sullivan",
-        "2B": "Bryce Chance",
+        "1B": null,
+        "2B": "Noah Sullivan",
         "3B": null
       },
       "runners_after": {
         "1B": "Jacob Parker",
-        "2B": "Bryce Chance",
+        "2B": "Noah Sullivan",
         "3B": null
       },
       "score": {
@@ -2101,12 +2112,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Jacob Parker",
-        "2B": "Bryce Chance",
+        "2B": "Noah Sullivan",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jacob Parker",
-        "2B": "Bryce Chance",
+        "1B": null,
+        "2B": "Jacob Parker",
         "3B": null
       },
       "score": {
@@ -2127,13 +2138,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jacob Parker",
-        "2B": "Bryce Chance",
+        "1B": null,
+        "2B": "Jacob Parker",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jacob Parker",
-        "2B": "Bryce Chance",
+        "1B": null,
+        "2B": "Jacob Parker",
         "3B": null
       },
       "score": {

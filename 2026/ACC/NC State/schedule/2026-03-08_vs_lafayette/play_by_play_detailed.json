@@ -3,7 +3,7 @@
   "date": "03/08/2026",
   "away_team": "Lafayette",
   "home_team": "NC State",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -157,7 +157,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris McHugh",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -427,8 +427,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brandon Doubek",
-        "2B": null,
+        "1B": null,
+        "2B": "Brandon Doubek",
         "3B": null
       },
       "score": {
@@ -449,14 +449,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Brandon Doubek",
-        "2B": null,
+        "1B": null,
+        "2B": "Brandon Doubek",
         "3B": null
       },
       "runners_after": {
         "1B": "Ryan Ulisse",
         "2B": null,
-        "3B": null
+        "3B": "Brandon Doubek"
       },
       "score": {
         "away": 0,
@@ -478,12 +478,12 @@
       "runners_before": {
         "1B": "Ryan Ulisse",
         "2B": null,
-        "3B": null
+        "3B": "Brandon Doubek"
       },
       "runners_after": {
         "1B": "Alex Barrist",
         "2B": null,
-        "3B": null
+        "3B": "Brandon Doubek"
       },
       "score": {
         "away": 0,
@@ -505,12 +505,12 @@
       "runners_before": {
         "1B": "Alex Barrist",
         "2B": null,
-        "3B": null
+        "3B": "Brandon Doubek"
       },
       "runners_after": {
         "1B": "Alex Barrist",
         "2B": null,
-        "3B": null
+        "3B": "Brandon Doubek"
       },
       "score": {
         "away": 0,
@@ -526,17 +526,19 @@
       "count": "1-2",
       "pitches": "KBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Brandon Doubek"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Alex Barrist",
         "2B": null,
-        "3B": null
+        "3B": "Brandon Doubek"
       },
       "runners_after": {
         "1B": "Matt Colella",
-        "2B": null,
+        "2B": "Alex Barrist",
         "3B": null
       },
       "score": {
@@ -558,12 +560,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Matt Colella",
-        "2B": null,
+        "2B": "Alex Barrist",
         "3B": null
       },
       "runners_after": {
         "1B": "Matt Colella",
-        "2B": null,
+        "2B": "Alex Barrist",
         "3B": null
       },
       "score": {
@@ -646,8 +648,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Sherman Johnson",
-        "3B": null
+        "2B": null,
+        "3B": "Sherman Johnson"
       },
       "score": {
         "away": 1,
@@ -668,13 +670,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Sherman Johnson",
-        "3B": null
+        "2B": null,
+        "3B": "Sherman Johnson"
       },
       "runners_after": {
         "1B": "Chris McHugh",
-        "2B": "Sherman Johnson",
-        "3B": null
+        "2B": null,
+        "3B": "Sherman Johnson"
       },
       "score": {
         "away": 1,
@@ -690,17 +692,19 @@
       "count": "2-1",
       "pitches": "KBB",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Sherman Johnson"
+      ],
       "outs_before": 1,
       "outs_after": 3,
       "runners_before": {
         "1B": "Chris McHugh",
-        "2B": "Sherman Johnson",
-        "3B": null
+        "2B": null,
+        "3B": "Sherman Johnson"
       },
       "runners_after": {
-        "1B": "Chris McHugh",
-        "2B": "Sherman Johnson",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -891,7 +895,7 @@
       },
       "runners_after": {
         "1B": "Brayden Fraasman",
-        "2B": null,
+        "2B": "Luke Nixon",
         "3B": null
       },
       "score": {
@@ -913,13 +917,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Brayden Fraasman",
-        "2B": null,
+        "2B": "Luke Nixon",
         "3B": null
       },
       "runners_after": {
         "1B": "Mikey Ryan",
-        "2B": null,
-        "3B": null
+        "2B": "Brayden Fraasman",
+        "3B": "Luke Nixon"
       },
       "score": {
         "away": 2,
@@ -929,24 +933,26 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Ben Waterman",
       "batter": "Preston Bonn",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Luke Nixon"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Mikey Ryan",
-        "2B": null,
-        "3B": null
+        "2B": "Brayden Fraasman",
+        "3B": "Luke Nixon"
       },
       "runners_after": {
         "1B": "Preston Bonn",
-        "2B": null,
-        "3B": null
+        "2B": "Mikey Ryan",
+        "3B": "Brayden Fraasman"
       },
       "score": {
         "away": 2,
@@ -956,24 +962,26 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Ben Waterman",
       "batter": "Sherman Johnson",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Brayden Fraasman"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Preston Bonn",
-        "2B": null,
-        "3B": null
+        "2B": "Mikey Ryan",
+        "3B": "Brayden Fraasman"
       },
       "runners_after": {
         "1B": "Sherman Johnson",
-        "2B": null,
-        "3B": null
+        "2B": "Preston Bonn",
+        "3B": "Mikey Ryan"
       },
       "score": {
         "away": 2,
@@ -983,24 +991,26 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Ben Waterman",
       "batter": "Ty Head",
       "outcome": "Fielder's choice",
       "count": "1-2",
       "pitches": "KSBFFFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Mikey Ryan"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Sherman Johnson",
-        "2B": null,
-        "3B": null
+        "2B": "Preston Bonn",
+        "3B": "Mikey Ryan"
       },
       "runners_after": {
         "1B": "Ty Head",
         "2B": null,
-        "3B": null
+        "3B": "Preston Bonn"
       },
       "score": {
         "away": 2,
@@ -1010,24 +1020,26 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Ben Waterman",
       "batter": "Chris McHugh",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Preston Bonn"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Ty Head",
         "2B": null,
-        "3B": null
+        "3B": "Preston Bonn"
       },
       "runners_after": {
         "1B": "Chris McHugh",
         "2B": null,
-        "3B": null
+        "3B": "Ty Head"
       },
       "score": {
         "away": 2,
@@ -1037,7 +1049,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Ben Waterman",
       "batter": "Dalton Bargo",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1049,12 +1061,12 @@
       "runners_before": {
         "1B": "Chris McHugh",
         "2B": null,
-        "3B": null
+        "3B": "Ty Head"
       },
       "runners_after": {
         "1B": "Chris McHugh",
         "2B": null,
-        "3B": null
+        "3B": "Ty Head"
       },
       "score": {
         "away": 2,
@@ -1145,7 +1157,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Trey Deitelbaum",
       "batter": "Sherman Johnson",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -1172,13 +1184,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Trey Deitelbaum",
       "batter": "Luke Nixon",
       "outcome": "Triple",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Sherman Johnson"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1187,7 +1201,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Sherman Johnson",
+        "1B": null,
         "2B": null,
         "3B": "Luke Nixon"
       },
@@ -1199,7 +1213,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Trey Deitelbaum",
       "batter": "Brayden Fraasman",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1209,12 +1223,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Sherman Johnson",
+        "1B": null,
         "2B": null,
         "3B": "Luke Nixon"
       },
       "runners_after": {
-        "1B": "Sherman Johnson",
+        "1B": null,
         "2B": null,
         "3B": "Luke Nixon"
       },
@@ -1226,24 +1240,26 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Trey Deitelbaum",
       "batter": "Mikey Ryan",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "KBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Luke Nixon"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Sherman Johnson",
+        "1B": null,
         "2B": null,
         "3B": "Luke Nixon"
       },
       "runners_after": {
         "1B": "Mikey Ryan",
         "2B": null,
-        "3B": "Luke Nixon"
+        "3B": null
       },
       "score": {
         "away": 2,
@@ -1253,7 +1269,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Trey Deitelbaum",
       "batter": "Preston Bonn",
       "outcome": "Double",
       "count": "1-1",
@@ -1265,12 +1281,12 @@
       "runners_before": {
         "1B": "Mikey Ryan",
         "2B": null,
-        "3B": "Luke Nixon"
+        "3B": null
       },
       "runners_after": {
-        "1B": "Mikey Ryan",
+        "1B": null,
         "2B": "Preston Bonn",
-        "3B": "Luke Nixon"
+        "3B": "Mikey Ryan"
       },
       "score": {
         "away": 2,
@@ -1280,7 +1296,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Trey Deitelbaum",
       "batter": "Sherman Johnson",
       "outcome": "Walk",
       "count": "3-1",
@@ -1290,14 +1306,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Mikey Ryan",
+        "1B": null,
         "2B": "Preston Bonn",
-        "3B": "Luke Nixon"
+        "3B": "Mikey Ryan"
       },
       "runners_after": {
         "1B": "Sherman Johnson",
         "2B": "Preston Bonn",
-        "3B": "Luke Nixon"
+        "3B": "Mikey Ryan"
       },
       "score": {
         "away": 2,
@@ -1307,24 +1323,26 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Kellen Moore",
       "batter": "Ty Head",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Mikey Ryan"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Sherman Johnson",
         "2B": "Preston Bonn",
-        "3B": "Luke Nixon"
+        "3B": "Mikey Ryan"
       },
       "runners_after": {
         "1B": "Ty Head",
-        "2B": "Preston Bonn",
-        "3B": "Luke Nixon"
+        "2B": "Sherman Johnson",
+        "3B": "Preston Bonn"
       },
       "score": {
         "away": 2,
@@ -1334,24 +1352,26 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Kellen Moore",
       "batter": "Chris McHugh",
       "outcome": "Fielder's choice",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Preston Bonn"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Ty Head",
-        "2B": "Preston Bonn",
-        "3B": "Luke Nixon"
+        "2B": "Sherman Johnson",
+        "3B": "Preston Bonn"
       },
       "runners_after": {
         "1B": "Chris McHugh",
-        "2B": "Preston Bonn",
-        "3B": "Luke Nixon"
+        "2B": "Ty Head",
+        "3B": "Sherman Johnson"
       },
       "score": {
         "away": 2,
@@ -1361,7 +1381,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Kellen Moore",
       "batter": "Dalton Bargo",
       "outcome": "Grounded into double play",
       "count": "0-0",
@@ -1372,13 +1392,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Chris McHugh",
-        "2B": "Preston Bonn",
-        "3B": "Luke Nixon"
+        "2B": "Ty Head",
+        "3B": "Sherman Johnson"
       },
       "runners_after": {
-        "1B": "Chris McHugh",
-        "2B": "Preston Bonn",
-        "3B": "Luke Nixon"
+        "1B": null,
+        "2B": "Ty Head",
+        "3B": "Sherman Johnson"
       },
       "score": {
         "away": 2,
@@ -1430,8 +1450,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Matt Colella",
-        "2B": null,
+        "1B": null,
+        "2B": "Matt Colella",
         "3B": null
       },
       "score": {
@@ -1452,14 +1472,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Matt Colella",
-        "2B": null,
+        "1B": null,
+        "2B": "Matt Colella",
         "3B": null
       },
       "runners_after": {
-        "1B": "Matt Colella",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Matt Colella"
       },
       "score": {
         "away": 2,
@@ -1469,7 +1489,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Cooper Consiglio",
+      "pitcher": "Tristan Potts",
       "batter": "Bode Grieve",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1479,14 +1499,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Matt Colella",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Matt Colella"
       },
       "runners_after": {
-        "1B": "Matt Colella",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Matt Colella"
       },
       "score": {
         "away": 2,
@@ -1496,7 +1516,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Kellen Moore",
       "batter": "Sherman Johnson",
       "outcome": "Single",
       "count": "0-1",
@@ -1523,7 +1543,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Kellen Moore",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1538,8 +1558,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Sherman Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Sherman Johnson",
         "3B": null
       },
       "score": {
@@ -1550,7 +1570,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Kellen Moore",
       "batter": "Luke Nixon",
       "outcome": "Walk",
       "count": "3-0",
@@ -1560,13 +1580,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Sherman Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Sherman Johnson",
         "3B": null
       },
       "runners_after": {
         "1B": "Luke Nixon",
-        "2B": null,
+        "2B": "Sherman Johnson",
         "3B": null
       },
       "score": {
@@ -1577,7 +1597,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Kellen Moore",
       "batter": "Brayden Fraasman",
       "outcome": "\u2014",
       "count": "0-0",
@@ -1588,13 +1608,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Luke Nixon",
-        "2B": null,
+        "2B": "Sherman Johnson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Luke Nixon",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Luke Nixon",
+        "3B": "Sherman Johnson"
       },
       "score": {
         "away": 2,
@@ -1604,7 +1624,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Kellen Moore",
       "batter": "Mikey Ryan",
       "outcome": "Lineout",
       "count": "1-1",
@@ -1614,14 +1634,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Luke Nixon",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Luke Nixon",
+        "3B": "Sherman Johnson"
       },
       "runners_after": {
-        "1B": "Luke Nixon",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Luke Nixon",
+        "3B": "Sherman Johnson"
       },
       "score": {
         "away": 2,
@@ -1631,24 +1651,26 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Kellen Moore",
       "batter": "Preston Bonn",
       "outcome": "Home run",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
+        "Sherman Johnson",
+        "Luke Nixon",
         "Preston Bonn"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Luke Nixon",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Luke Nixon",
+        "3B": "Sherman Johnson"
       },
       "runners_after": {
-        "1B": "Luke Nixon",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1660,7 +1682,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Antonio Correa",
       "batter": "Sherman Johnson",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1670,12 +1692,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Luke Nixon",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Luke Nixon",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1687,7 +1709,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cooper Consiglio",
+      "pitcher": "Tristan Potts",
       "batter": "Kyle McKernan",
       "outcome": "Single",
       "count": "1-1",
@@ -1714,13 +1736,14 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cooper Consiglio",
+      "pitcher": "Danny Heintz",
       "batter": "Ryan Stoddard",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "BKBBK",
       "rbi": true,
       "runs_scored": [
+        "Kyle McKernan",
         "Ryan Stoddard"
       ],
       "outs_before": 0,
@@ -1731,7 +1754,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle McKernan",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1743,7 +1766,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cooper Consiglio",
+      "pitcher": "Danny Heintz",
       "batter": "Luke Caucci",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1753,12 +1776,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Kyle McKernan",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle McKernan",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1770,7 +1793,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cooper Consiglio",
+      "pitcher": "Danny Heintz",
       "batter": "Alex Barrist",
       "outcome": "Lineout",
       "count": "0-2",
@@ -1780,12 +1803,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kyle McKernan",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle McKernan",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1797,7 +1820,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cooper Consiglio",
+      "pitcher": "",
       "batter": "Will Dobil",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1807,12 +1830,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Kyle McKernan",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle McKernan",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1824,7 +1847,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Antonio Correa",
       "batter": "Ty Head",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1851,7 +1874,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Antonio Correa",
       "batter": "Chris McHugh",
       "outcome": "Flyout",
       "count": "3-1",
@@ -1878,7 +1901,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Gregory Quintana",
+      "pitcher": "Antonio Correa",
       "batter": "Brandon Novy",
       "outcome": "Home run",
       "count": "0-1",

@@ -3,7 +3,7 @@
   "date": "04/21/2026",
   "away_team": "Lipscomb",
   "home_team": "Tennessee",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -131,7 +131,7 @@
       },
       "runners_after": {
         "1B": "Henry Ford",
-        "2B": null,
+        "2B": "Garrett Wright",
         "3B": null
       },
       "score": {
@@ -153,13 +153,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Henry Ford",
-        "2B": null,
+        "2B": "Garrett Wright",
         "3B": null
       },
       "runners_after": {
         "1B": "Reese Chapman",
-        "2B": null,
-        "3B": null
+        "2B": "Henry Ford",
+        "3B": "Garrett Wright"
       },
       "score": {
         "away": 0,
@@ -175,17 +175,19 @@
       "count": "3-2",
       "pitches": "KBBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Garrett Wright"
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Reese Chapman",
-        "2B": null,
-        "3B": null
+        "2B": "Henry Ford",
+        "3B": "Garrett Wright"
       },
       "runners_after": {
         "1B": "Reese Chapman",
-        "2B": null,
+        "2B": "Henry Ford",
         "3B": null
       },
       "score": {
@@ -207,13 +209,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Reese Chapman",
-        "2B": null,
+        "2B": "Henry Ford",
         "3B": null
       },
       "runners_after": {
         "1B": "Trent Grindlinger",
-        "2B": null,
-        "3B": null
+        "2B": "Reese Chapman",
+        "3B": "Henry Ford"
       },
       "score": {
         "away": 0,
@@ -223,24 +225,53 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "C.",
-      "batter": "Stone Lawless",
-      "outcome": "Single",
-      "count": "1-0",
-      "pitches": "B",
-      "rbi": true,
+      "pitcher": "Cameron Guise",
+      "batter": "C. Guise",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
       "runs_scored": [],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Trent Grindlinger",
-        "2B": null,
-        "3B": null
+        "2B": "Reese Chapman",
+        "3B": "Henry Ford"
+      },
+      "runners_after": {
+        "1B": "Trent Grindlinger",
+        "2B": "Reese Chapman",
+        "3B": "Henry Ford"
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "C. Guise to p for Martin Jr.."
+    },
+    {
+      "inning": "Bottom 1",
+      "pitcher": "Cameron Guise",
+      "batter": "Stone Lawless",
+      "outcome": "Single",
+      "count": "1-0",
+      "pitches": "B",
+      "rbi": true,
+      "runs_scored": [
+        "Henry Ford"
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Trent Grindlinger",
+        "2B": "Reese Chapman",
+        "3B": "Henry Ford"
       },
       "runners_after": {
         "1B": "Stone Lawless",
         "2B": "Trent Grindlinger",
-        "3B": null
+        "3B": "Reese Chapman"
       },
       "score": {
         "away": 0,
@@ -250,7 +281,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "C.",
+      "pitcher": "Cameron Guise",
       "batter": "Blaine Brown",
       "outcome": "Fielder's choice",
       "count": "0-1",
@@ -262,11 +293,11 @@
       "runners_before": {
         "1B": "Stone Lawless",
         "2B": "Trent Grindlinger",
-        "3B": null
+        "3B": "Reese Chapman"
       },
       "runners_after": {
         "1B": "Blaine Brown",
-        "2B": null,
+        "2B": "Stone Lawless",
         "3B": "Trent Grindlinger"
       },
       "score": {
@@ -277,25 +308,26 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "C.",
+      "pitcher": "Cameron Guise",
       "batter": "Manny Marin",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
+        "Stone Lawless",
         "Trent Grindlinger"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Blaine Brown",
-        "2B": null,
+        "2B": "Stone Lawless",
         "3B": "Trent Grindlinger"
       },
       "runners_after": {
         "1B": "Manny Marin",
-        "2B": null,
+        "2B": "Blaine Brown",
         "3B": null
       },
       "score": {
@@ -306,7 +338,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "C.",
+      "pitcher": "Cameron Guise",
       "batter": "Levi Clark",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -317,13 +349,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Manny Marin",
-        "2B": null,
+        "2B": "Blaine Brown",
         "3B": null
       },
       "runners_after": {
         "1B": "Levi Clark",
-        "2B": null,
-        "3B": null
+        "2B": "Manny Marin",
+        "3B": "Blaine Brown"
       },
       "score": {
         "away": 0,
@@ -333,23 +365,26 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "C.",
+      "pitcher": "Cameron Guise",
       "batter": "Garrett Wright",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Manny Marin",
+        "Blaine Brown"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Levi Clark",
-        "2B": null,
-        "3B": null
+        "2B": "Manny Marin",
+        "3B": "Blaine Brown"
       },
       "runners_after": {
         "1B": "Garrett Wright",
-        "2B": null,
+        "2B": "Levi Clark",
         "3B": null
       },
       "score": {
@@ -360,7 +395,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "C.",
+      "pitcher": "Caden Shanks",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -371,13 +406,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Garrett Wright",
-        "2B": null,
+        "2B": "Levi Clark",
         "3B": null
       },
       "runners_after": {
-        "1B": "Garrett Wright",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Garrett Wright",
+        "3B": "Levi Clark"
       },
       "score": {
         "away": 0,
@@ -387,7 +422,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "C.",
+      "pitcher": "Caden Shanks",
       "batter": "Henry Ford",
       "outcome": "Flyout",
       "count": "2-2",
@@ -397,14 +432,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Garrett Wright",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Garrett Wright",
+        "3B": "Levi Clark"
       },
       "runners_after": {
-        "1B": "Garrett Wright",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Garrett Wright",
+        "3B": "Levi Clark"
       },
       "score": {
         "away": 0,
@@ -638,7 +673,34 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "C.",
+      "pitcher": "Caden Shanks",
+      "batter": "C. Shanks",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 6
+      },
+      "description": "C. Shanks to p for C. Guise."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Caden Shanks",
       "batter": "Reese Chapman",
       "outcome": "Groundout",
       "count": "2-0",
@@ -665,7 +727,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "C.",
+      "pitcher": "Caden Shanks",
       "batter": "Blake Grimmer",
       "outcome": "Groundout",
       "count": "2-0",
@@ -692,7 +754,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "C.",
+      "pitcher": "Caden Shanks",
       "batter": "Trent Grindlinger",
       "outcome": "Groundout",
       "count": "0-1",
@@ -716,6 +778,33 @@
         "home": 6
       },
       "description": "GRINDLINGER grounded out to 2b (0-1 K)."
+    },
+    {
+      "inning": "Top 3",
+      "pitcher": "Ethan Baiotto",
+      "batter": "BAIOTTO, E. to p for ABRAHAM, N..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 6
+      },
+      "description": "BAIOTTO, E. to p for ABRAHAM, N.."
     },
     {
       "inning": "Top 3",
@@ -800,7 +889,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "C.",
+      "pitcher": "Caden Shanks",
       "batter": "Stone Lawless",
       "outcome": "Walk",
       "count": "3-1",
@@ -827,13 +916,14 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "C.",
+      "pitcher": "Caden Shanks",
       "batter": "Blaine Brown",
       "outcome": "Home run",
       "count": "0-2",
       "pitches": "FF",
       "rbi": true,
       "runs_scored": [
+        "Stone Lawless",
         "Blaine Brown"
       ],
       "outs_before": 0,
@@ -844,7 +934,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Stone Lawless",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -856,7 +946,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "C.",
+      "pitcher": "Caden Shanks",
       "batter": "Manny Marin",
       "outcome": "Home run",
       "count": "2-0",
@@ -868,12 +958,12 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Stone Lawless",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Stone Lawless",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -885,7 +975,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "C.",
+      "pitcher": "Caden Shanks",
       "batter": "Levi Clark",
       "outcome": "Flyout",
       "count": "1-2",
@@ -895,12 +985,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Stone Lawless",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Stone Lawless",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -912,7 +1002,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "C.",
+      "pitcher": "Mack Mabrey",
       "batter": "Garrett Wright",
       "outcome": "Single",
       "count": "1-1",
@@ -922,7 +1012,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Stone Lawless",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -939,7 +1029,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "C.",
+      "pitcher": "Mack Mabrey",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -954,7 +1044,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Garrett Wright",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -966,7 +1056,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "C.",
+      "pitcher": "Mack Mabrey",
       "batter": "Henry Ford",
       "outcome": "Groundout",
       "count": "2-2",
@@ -976,12 +1066,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Garrett Wright",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Garrett Wright",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1074,7 +1164,34 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "M.",
+      "pitcher": "Mack Mabrey",
+      "batter": "M. Mabrey",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 9
+      },
+      "description": "M. Mabrey to p for C. Shanks."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Mack Mabrey",
       "batter": "Reese Chapman",
       "outcome": "Hit by pitch",
       "count": "3-1",
@@ -1101,7 +1218,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "M.",
+      "pitcher": "Mack Mabrey",
       "batter": "Blake Grimmer",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1128,7 +1245,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "M.",
+      "pitcher": "Mack Mabrey",
       "batter": "Trent Grindlinger",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1155,13 +1272,14 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "M.",
+      "pitcher": "Mack Mabrey",
       "batter": "Stone Lawless",
       "outcome": "Home run",
       "count": "2-1",
       "pitches": "BBF",
       "rbi": true,
       "runs_scored": [
+        "Reese Chapman",
         "Stone Lawless"
       ],
       "outs_before": 2,
@@ -1172,7 +1290,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Reese Chapman",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1184,7 +1302,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "M.",
+      "pitcher": "Mack Mabrey",
       "batter": "Blaine Brown",
       "outcome": "Lineout",
       "count": "3-1",
@@ -1194,12 +1312,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Reese Chapman",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Reese Chapman",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1265,7 +1383,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ethan Baiotto",
+      "pitcher": "Brayden Krenzel",
       "batter": "Hutson Miles",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1292,7 +1410,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ethan Baiotto",
+      "pitcher": "Brayden Krenzel",
       "batter": "Brady Miller",
       "outcome": "Foul out",
       "count": "0-1",
@@ -1319,7 +1437,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ethan Baiotto",
+      "pitcher": "Brayden Krenzel",
       "batter": "Jordan Thomas",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1346,7 +1464,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "M.",
+      "pitcher": "Mack Mabrey",
       "batter": "Manny Marin",
       "outcome": "Pop out",
       "count": "2-0",
@@ -1373,7 +1491,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "M.",
+      "pitcher": "Mack Mabrey",
       "batter": "Levi Clark",
       "outcome": "Walk",
       "count": "3-2",
@@ -1400,7 +1518,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "M.",
+      "pitcher": "Mack Mabrey",
       "batter": "Garrett Wright",
       "outcome": "Double",
       "count": "1-0",
@@ -1415,9 +1533,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Levi Clark",
+        "1B": null,
         "2B": "Garrett Wright",
-        "3B": null
+        "3B": "Levi Clark"
       },
       "score": {
         "away": 4,
@@ -1427,24 +1545,26 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "M.",
+      "pitcher": "Tanner Lyne",
       "batter": "Henry Ford",
       "outcome": "Flyout",
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Levi Clark"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Levi Clark",
+        "1B": null,
         "2B": "Garrett Wright",
-        "3B": null
+        "3B": "Levi Clark"
       },
       "runners_after": {
-        "1B": "Levi Clark",
-        "2B": "Garrett Wright",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Garrett Wright"
       },
       "score": {
         "away": 4,
@@ -1454,7 +1574,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "M.",
+      "pitcher": "Tanner Lyne",
       "batter": "Reese Chapman",
       "outcome": "Walk",
       "count": "3-2",
@@ -1464,14 +1584,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Levi Clark",
-        "2B": "Garrett Wright",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Garrett Wright"
       },
       "runners_after": {
         "1B": "Reese Chapman",
-        "2B": "Garrett Wright",
-        "3B": null
+        "2B": null,
+        "3B": "Garrett Wright"
       },
       "score": {
         "away": 4,
@@ -1481,7 +1601,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "M.",
+      "pitcher": "Tanner Lyne",
       "batter": "Blake Grimmer",
       "outcome": "Fielder's choice",
       "count": "0-0",
@@ -1492,13 +1612,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Reese Chapman",
-        "2B": "Garrett Wright",
-        "3B": null
+        "2B": null,
+        "3B": "Garrett Wright"
       },
       "runners_after": {
         "1B": "Blake Grimmer",
-        "2B": "Garrett Wright",
-        "3B": null
+        "2B": null,
+        "3B": "Garrett Wright"
       },
       "score": {
         "away": 4,
@@ -1508,7 +1628,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ethan Baiotto",
+      "pitcher": "Brayden Krenzel",
       "batter": "HIGH, H. to rf.",
       "outcome": "\u2014",
       "count": null,
@@ -1535,7 +1655,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ethan Baiotto",
+      "pitcher": "Jax Bishop",
       "batter": "ANTIGUA, A. to ss for MARIN, M..",
       "outcome": "\u2014",
       "count": null,
@@ -1562,7 +1682,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "Jax Bishop",
+      "batter": "KRENZEL, B. to p for BAIOTTO, E..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 12
+      },
+      "description": "KRENZEL, B. to p for BAIOTTO, E.."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Brady Frederick",
       "batter": "Aaron Stelogeannis",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1589,7 +1736,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "Brady Frederick",
       "batter": "Cam Pruitt",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1616,7 +1763,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "",
       "batter": "Kai Holm",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1643,7 +1790,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "T.",
+      "pitcher": "Tanner Lyne",
+      "batter": "T. Lyne",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 12
+      },
+      "description": "T. Lyne to p for M. Mabrey."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Landon Kiefer",
       "batter": "S. Scharff",
       "outcome": "\u2014",
       "count": null,
@@ -1670,7 +1844,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "T.",
+      "pitcher": "Landon Kiefer",
       "batter": "Trent Grindlinger",
       "outcome": "Home run",
       "count": "1-2",
@@ -1699,7 +1873,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "T.",
+      "pitcher": "Landon Kiefer",
       "batter": "Jay Abernathy",
       "outcome": "Single",
       "count": "2-2",
@@ -1726,7 +1900,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "Blaine Brown",
       "outcome": "Double",
       "count": "0-0",
@@ -1753,7 +1927,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "Ariel Antigua",
       "outcome": "Walk",
       "count": "3-0",
@@ -1780,7 +1954,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "L.",
+      "pitcher": "",
+      "batter": "L. Kiefer",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Ariel Antigua",
+        "2B": "Blaine Brown",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ariel Antigua",
+        "2B": "Blaine Brown",
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 13
+      },
+      "description": "L. Kiefer to p for T. Lyne."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "",
       "batter": "Levi Clark",
       "outcome": "Walk",
       "count": "3-2",
@@ -1796,7 +1997,7 @@
       },
       "runners_after": {
         "1B": "Levi Clark",
-        "2B": "Blaine Brown",
+        "2B": "Ariel Antigua",
         "3B": null
       },
       "score": {
@@ -1807,24 +2008,26 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Garrett Wright",
       "outcome": "Double",
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Levi Clark",
-        "2B": "Blaine Brown",
+        "2B": "Ariel Antigua",
         "3B": null
       },
       "runners_after": {
-        "1B": "Levi Clark",
+        "1B": null,
         "2B": "Garrett Wright",
-        "3B": null
+        "3B": "Levi Clark"
       },
       "score": {
         "away": 4,
@@ -1834,7 +2037,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Henry Ford",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1844,14 +2047,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Levi Clark",
+        "1B": null,
         "2B": "Garrett Wright",
-        "3B": null
+        "3B": "Levi Clark"
       },
       "runners_after": {
-        "1B": "Levi Clark",
+        "1B": null,
         "2B": "Garrett Wright",
-        "3B": null
+        "3B": "Levi Clark"
       },
       "score": {
         "away": 4,
@@ -1861,7 +2064,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "",
       "batter": "MYATT, T. to 2b for GRIMMER, B..",
       "outcome": "\u2014",
       "count": null,
@@ -1888,7 +2091,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "",
       "batter": "NEWSTROM, C. to lf.",
       "outcome": "\u2014",
       "count": null,
@@ -1915,7 +2118,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "",
       "batter": "Danny Ramirez",
       "outcome": "Single",
       "count": "2-2",
@@ -1942,7 +2145,34 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jax Bishop",
+      "pitcher": "",
+      "batter": "BISHOP, J. to p for KRENZEL, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Danny Ramirez",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Danny Ramirez",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 14
+      },
+      "description": "BISHOP, J. to p for KRENZEL, B.."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "",
       "batter": "Simon Scharff",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1969,7 +2199,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jax Bishop",
+      "pitcher": "",
       "batter": "Blake Carter",
       "outcome": "Walk",
       "count": "3-2",
@@ -1996,7 +2226,34 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brady Frederick",
+      "pitcher": "",
+      "batter": "FREDERICK, B to p for BISHOP, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Blake Carter",
+        "2B": "Danny Ramirez",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Blake Carter",
+        "2B": "Danny Ramirez",
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 14
+      },
+      "description": "FREDERICK, B to p for BISHOP, J.."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "",
       "batter": "Jacob Tobias",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2023,7 +2280,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brady Frederick",
+      "pitcher": "",
       "batter": "Brady Miller",
       "outcome": "Single",
       "count": "3-1",

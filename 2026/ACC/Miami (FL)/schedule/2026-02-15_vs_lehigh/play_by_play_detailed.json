@@ -3,7 +3,7 @@
   "date": "02/15/2026",
   "away_team": "Lehigh",
   "home_team": "Miami (FL)",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -364,7 +364,9 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -412,7 +414,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Brandon Coughlin",
       "batter": "Vance Sheahan",
       "outcome": "Flyout",
       "count": "0-0",
@@ -439,13 +441,16 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Brandon Coughlin",
       "batter": "Michael Torres",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -466,7 +471,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Brandon Coughlin",
       "batter": "Jake Ogden",
       "outcome": "Single",
       "count": "0-2",
@@ -493,13 +498,15 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Brandon Coughlin",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -520,7 +527,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Brandon Coughlin",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -535,9 +542,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Ogden",
+        "1B": null,
         "2B": "Derek Williams",
-        "3B": null
+        "3B": "Jake Ogden"
       },
       "score": {
         "away": 0,
@@ -547,7 +554,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Brandon Coughlin",
       "batter": "Daniel Cuvet",
       "outcome": "Flyout",
       "count": "1-1",
@@ -557,14 +564,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jake Ogden",
+        "1B": null,
         "2B": "Derek Williams",
-        "3B": null
+        "3B": "Jake Ogden"
       },
       "runners_after": {
-        "1B": "Jake Ogden",
+        "1B": null,
         "2B": "Derek Williams",
-        "3B": null
+        "3B": "Jake Ogden"
       },
       "score": {
         "away": 0,
@@ -635,7 +642,8 @@
       "pitches": "KK",
       "rbi": true,
       "runs_scored": [
-        "Raffaele Rogers"
+        "Raffaele Rogers",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -738,7 +746,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Brandon Coughlin",
       "batter": "Alex Sosa",
       "outcome": "Groundout",
       "count": "2-2",
@@ -765,7 +773,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jake Mulvehill",
       "batter": "Derek Williams",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -792,7 +800,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jake Mulvehill",
       "batter": "Cian Copeland",
       "outcome": "Single",
       "count": "1-1",
@@ -819,7 +827,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jake Mulvehill",
       "batter": "Alonzo Alvarez",
       "outcome": "Walk",
       "count": "3-1",
@@ -846,7 +854,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jake Mulvehill",
       "batter": "Vance Sheahan",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -873,7 +881,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jake Mulvehill",
       "batter": "Michael Torres",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -981,7 +989,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jake Mulvehill",
       "batter": "Jake Ogden",
       "outcome": "Double",
       "count": "0-1",
@@ -1008,13 +1016,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jake Mulvehill",
       "batter": "Max Galvin",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1035,14 +1045,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jake Mulvehill",
       "batter": "Daniel Cuvet",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Daniel Cuvet"
+        "Daniel Cuvet",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1064,7 +1075,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jake Mulvehill",
       "batter": "Alex Sosa",
       "outcome": "Hit by pitch",
       "count": "2-1",
@@ -1091,7 +1102,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jake Mulvehill",
       "batter": "Derek Williams",
       "outcome": "Double",
       "count": "2-2",
@@ -1118,13 +1129,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jake Mulvehill",
       "batter": "Cian Copeland",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -1145,7 +1158,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jake Mulvehill",
       "batter": "Alonzo Alvarez",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1172,7 +1185,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jake Mulvehill",
       "batter": "Vance Sheahan",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1286,7 +1299,9 @@
       "count": "2-1",
       "pitches": "BBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1307,7 +1322,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Brixton Lofgren",
       "batter": "Ryan Cochran",
       "outcome": "Foul out",
       "count": "1-1",
@@ -1334,7 +1349,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jake Mulvehill",
       "batter": "Michael Torres",
       "outcome": "Hit by pitch",
       "count": "3-0",
@@ -1361,7 +1376,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jake Mulvehill",
       "batter": "Jake Ogden",
       "outcome": "Single",
       "count": "0-0",
@@ -1388,13 +1403,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Cole Kochanowicz",
       "batter": "Max Galvin",
       "outcome": "Single",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1415,7 +1432,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Cole Kochanowicz",
       "batter": "Daniel Cuvet",
       "outcome": "Walk",
       "count": "3-2",
@@ -1442,7 +1459,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Cole Kochanowicz",
       "batter": "Alex Sosa",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1469,13 +1486,16 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Cole Kochanowicz",
       "batter": "Derek Williams",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "FSFBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1496,13 +1516,16 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Cole Kochanowicz",
       "batter": "Cian Copeland",
       "outcome": "Double",
       "count": "2-1",
       "pitches": "BBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1523,13 +1546,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Cole Kochanowicz",
       "batter": "Alonzo Alvarez",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1550,13 +1575,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Cole Kochanowicz",
       "batter": "Vance Sheahan",
       "outcome": "Single",
       "count": "3-1",
       "pitches": "BBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1577,7 +1604,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Cole Kochanowicz",
       "batter": "Michael Torres",
       "outcome": "Walk",
       "count": "3-1",
@@ -1604,7 +1631,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Cole Kochanowicz",
       "batter": "Jake Ogden",
       "outcome": "Walk",
       "count": "3-0",
@@ -1631,13 +1658,17 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jackson Shepelsky",
       "batter": "Fabio Peralta",
       "outcome": "Triple",
       "count": "0-2",
       "pitches": "KS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1658,7 +1689,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jackson Shepelsky",
       "batter": "Gabriel Milano",
       "outcome": "Pop out",
       "count": "0-2",
@@ -1685,7 +1716,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jackson Shepelsky",
       "batter": "Brylan West",
       "outcome": "Hit by pitch",
       "count": "3-1",
@@ -1712,13 +1743,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jackson Shepelsky",
       "batter": "Dylan Dubovik",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "SBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1739,13 +1772,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jackson Shepelsky",
       "batter": "Donavan Jeffrey",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "SBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1766,13 +1801,16 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jackson Shepelsky",
       "batter": "Alonzo Alvarez",
       "outcome": "Triple",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1793,13 +1831,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Jackson Shepelsky",
       "batter": "Brandon DeGoti",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "KFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1820,7 +1860,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "David Andolina",
       "batter": "Mason Greenhouse",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1847,7 +1887,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Michael Fernandez",
       "batter": "Joey Esposito",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1874,7 +1914,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Michael Fernandez",
       "batter": "Trystan Crawford",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1901,7 +1941,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Michael Fernandez",
       "batter": "Ryan Davis",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1928,7 +1968,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "David Andolina",
       "batter": "Jailen Watkins",
       "outcome": "Walk",
       "count": "3-0",
@@ -1955,7 +1995,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "David Andolina",
       "batter": "Bennett Gary",
       "outcome": "Walk",
       "count": "3-2",
@@ -1982,14 +2022,16 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "David Andolina",
       "batter": "Gabriel Milano",
       "outcome": "Home run",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "Gabriel Milano"
+        "Gabriel Milano",
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -2011,7 +2053,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "David Andolina",
       "batter": "Brylan West",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -2038,7 +2080,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Max Treonze",
       "batter": "Dylan Dubovik",
       "outcome": "Single",
       "count": "0-1",
@@ -2065,13 +2107,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Max Treonze",
       "batter": "Donavan Jeffrey",
       "outcome": "Grounded into double play",
       "count": "0-2",
       "pitches": "KS",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -2092,7 +2136,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Shane O'Neill",
+      "pitcher": "Max Treonze",
       "batter": "Jackson Hugus",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2119,7 +2163,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "Jack Frankovic",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2146,7 +2190,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "Max Dantoni",
       "outcome": "Single",
       "count": "2-2",
@@ -2173,7 +2217,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "Jasper Adelman",
       "outcome": "Pop out",
       "count": "2-0",
@@ -2200,7 +2244,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "Matt Tsiaras",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",

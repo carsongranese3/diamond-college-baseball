@@ -3,7 +3,7 @@
   "date": "04/24/2026",
   "away_team": "Oklahoma",
   "home_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -76,8 +76,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jaxon Willits",
-        "2B": null,
+        "1B": null,
+        "2B": "Jaxon Willits",
         "3B": null
       },
       "score": {
@@ -98,14 +98,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jaxon Willits",
-        "2B": null,
+        "1B": null,
+        "2B": "Jaxon Willits",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jaxon Willits",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jaxon Willits"
       },
       "score": {
         "away": 0,
@@ -125,14 +125,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jaxon Willits",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jaxon Willits"
       },
       "runners_after": {
-        "1B": "Jaxon Willits",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jaxon Willits"
       },
       "score": {
         "away": 0,
@@ -152,14 +152,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jaxon Willits",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jaxon Willits"
       },
       "runners_after": {
-        "1B": "Jaxon Willits",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jaxon Willits"
       },
       "score": {
         "away": 0,
@@ -530,7 +530,9 @@
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -881,7 +883,9 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -935,7 +939,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -971,8 +977,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Deiten Lachance",
-        "2B": "Brendan Brock",
+        "1B": null,
+        "2B": "Deiten Lachance",
         "3B": null
       },
       "score": {
@@ -993,13 +999,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Deiten Lachance",
-        "2B": "Brendan Brock",
+        "1B": null,
+        "2B": "Deiten Lachance",
         "3B": null
       },
       "runners_after": {
-        "1B": "Deiten Lachance",
-        "2B": "Brendan Brock",
+        "1B": null,
+        "2B": "Deiten Lachance",
         "3B": null
       },
       "score": {
@@ -1038,13 +1044,41 @@
     {
       "inning": "Bottom 4",
       "pitcher": "Mason Bixby",
+      "batter": "Bixby, M. to p for Mercurius, L.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Mason McCraine",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Mason McCraine",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 3
+      },
+      "description": "Bixby, M. to p for Mercurius, L."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Mason Bixby",
       "batter": "Eric Guevara",
       "outcome": "Home run",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Eric Guevara"
+        "Eric Guevara",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1471,7 +1505,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Mason Bixby",
+      "pitcher": "Trent Collier",
       "batter": "Eric Guevara",
       "outcome": "Single",
       "count": "1-0",
@@ -1495,6 +1529,33 @@
         "home": 5
       },
       "description": "Guevara, E. singled to right field (1-0 B)."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Trent Collier",
+      "batter": "Collier, T. to p for Bixby, M..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Eric Guevara",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Eric Guevara",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 5
+      },
+      "description": "Collier, T. to p for Bixby, M.."
     },
     {
       "inning": "Bottom 6",
@@ -1634,6 +1695,33 @@
     {
       "inning": "Top 7",
       "pitcher": "Jackson Sanders",
+      "batter": "Sanders, J. to p for Alvarez, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Kyle Branch",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Kyle Branch",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 5
+      },
+      "description": "Sanders, J. to p for Alvarez, A.."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Jackson Sanders",
       "batter": "Dasan Harris",
       "outcome": "Single",
       "count": "0-1",
@@ -1666,7 +1754,9 @@
       "count": "3-2",
       "pitches": "FBKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1714,7 +1804,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Trent Collier",
+      "pitcher": "Nate Smithburg",
       "batter": "Bub Terrell",
       "outcome": "Single",
       "count": "0-1",
@@ -1741,7 +1831,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Trent Collier",
+      "pitcher": "Nate Smithburg",
       "batter": "Ethin Bingaman",
       "outcome": "Single",
       "count": "1-2",
@@ -1765,6 +1855,33 @@
         "home": 5
       },
       "description": "Bingaman, E. singled to center field (1-2 SFB); Terrell, B. advanced to second."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Nate Smithburg",
+      "batter": "Smithburg, N to p for Collier, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Ethin Bingaman",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ethin Bingaman",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 5
+      },
+      "description": "Smithburg, N to p for Collier, T.."
     },
     {
       "inning": "Bottom 7",
@@ -1801,7 +1918,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1936,7 +2055,9 @@
       "count": "3-2",
       "pitches": "BSBFFFBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2011,7 +2132,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nate Smithburg",
+      "pitcher": "",
       "batter": "Mason McCraine",
       "outcome": "Walk",
       "count": "3-2",
@@ -2038,7 +2159,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nate Smithburg",
+      "pitcher": "",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -2053,7 +2174,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2065,7 +2186,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nate Smithburg",
+      "pitcher": "",
       "batter": "Eric Guevara",
       "outcome": "Flyout",
       "count": "3-2",
@@ -2075,12 +2196,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Mason McCraine",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2092,7 +2213,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nate Smithburg",
+      "pitcher": "",
       "batter": "Chase Fralick",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2102,12 +2223,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Mason McCraine",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2173,7 +2294,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jackson Sanders",
+      "pitcher": "",
       "batter": "Jason Walk",
       "outcome": "Groundout",
       "count": "1-0",

@@ -3,7 +3,7 @@
   "date": "02/24/2026",
   "away_team": "Southeast Mo. St.",
   "home_team": "Ole Miss",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -94,7 +94,9 @@
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -256,7 +258,9 @@
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -283,7 +287,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -337,7 +343,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -355,6 +363,33 @@
         "home": 3
       },
       "description": "T. Jones singled to third base, RBI (0-0); C. Reuter advanced to second; T. Bissetta scored."
+    },
+    {
+      "inning": "Bottom 1",
+      "pitcher": "JoJo Keldsen",
+      "batter": "Keldsen, J to p for Kickhaefer,C.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Topher Jones",
+        "2B": "Judd Utermark",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Topher Jones",
+        "2B": "Judd Utermark",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 3
+      },
+      "description": "Keldsen, J to p for Kickhaefer,C."
     },
     {
       "inning": "Bottom 1",
@@ -481,9 +516,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Logan Yule",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Logan Yule"
       },
       "score": {
         "away": 1,
@@ -499,18 +534,20 @@
       "count": "2-2",
       "pitches": "KBSFBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Logan Yule",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Logan Yule"
       },
       "runners_after": {
         "1B": "Carson Schrack",
         "2B": null,
-        "3B": null
+        "3B": "Logan Yule"
       },
       "score": {
         "away": 2,
@@ -520,7 +557,34 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "O.",
+      "pitcher": "Owen Kelly",
+      "batter": "O. Kelly",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Carson Schrack",
+        "2B": null,
+        "3B": "Logan Yule"
+      },
+      "runners_after": {
+        "1B": "Carson Schrack",
+        "2B": null,
+        "3B": "Logan Yule"
+      },
+      "score": {
+        "away": 2,
+        "home": 3
+      },
+      "description": "O. Kelly to p for T. Hayes Jr.."
+    },
+    {
+      "inning": "Top 2",
+      "pitcher": "Owen Kelly",
       "batter": "Caleb Klein",
       "outcome": "\u2014",
       "count": "0-0",
@@ -532,12 +596,12 @@
       "runners_before": {
         "1B": "Carson Schrack",
         "2B": null,
-        "3B": null
+        "3B": "Logan Yule"
       },
       "runners_after": {
         "1B": "Carson Schrack",
         "2B": null,
-        "3B": null
+        "3B": "Logan Yule"
       },
       "score": {
         "away": 2,
@@ -628,13 +692,15 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "JoJo Keldsen",
+      "pitcher": "John Klus",
       "batter": "Will Furniss",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -655,7 +721,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "JoJo Keldsen",
+      "pitcher": "John Klus",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -685,12 +751,41 @@
     {
       "inning": "Bottom 2",
       "pitcher": "John Klus",
+      "batter": "Klus, J to p for Keldsen, J.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Judd Utermark",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Judd Utermark",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 5
+      },
+      "description": "Klus, J to p for Keldsen, J."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "John Klus",
       "batter": "Tristan Bissetta",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "KBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -744,7 +839,10 @@
       "count": "2-2",
       "pitches": "KBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -792,7 +890,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "John Klus",
+      "pitcher": "Eddie White",
       "batter": "Brayden Randle",
       "outcome": "Single",
       "count": "1-1",
@@ -819,7 +917,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "John Klus",
+      "pitcher": "Eddie White",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -848,7 +946,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "John Klus",
+      "pitcher": "Eddie White",
       "batter": "Hayden Federico",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -872,6 +970,33 @@
         "home": 9
       },
       "description": "H. Federico hit by pitch (1-2 FFB)."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Eddie White",
+      "batter": "White, E to p for Klus, J.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Hayden Federico",
+        "2B": "Collin Reuter",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Hayden Federico",
+        "2B": "Collin Reuter",
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 9
+      },
+      "description": "White, E to p for Klus, J."
     },
     {
       "inning": "Bottom 2",
@@ -929,7 +1054,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "O.",
+      "pitcher": "Owen Kelly",
       "batter": "Brooks Kettering",
       "outcome": "Walk",
       "count": "3-2",
@@ -956,7 +1081,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "O.",
+      "pitcher": "Owen Kelly",
       "batter": "Cal Sullivan",
       "outcome": "Flyout",
       "count": "0-1",
@@ -983,7 +1108,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "O.",
+      "pitcher": "Owen Kelly",
       "batter": "Josiah Hall",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1010,7 +1135,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "O.",
+      "pitcher": "Owen Kelly",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1025,8 +1150,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brooks Kettering",
-        "2B": null,
+        "1B": null,
+        "2B": "Brooks Kettering",
         "3B": null
       },
       "score": {
@@ -1037,7 +1162,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "O.",
+      "pitcher": "Owen Kelly",
       "batter": "Dakota Joggerst",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1047,13 +1172,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brooks Kettering",
-        "2B": null,
+        "1B": null,
+        "2B": "Brooks Kettering",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brooks Kettering",
-        "2B": null,
+        "1B": null,
+        "2B": "Brooks Kettering",
         "3B": null
       },
       "score": {
@@ -1172,7 +1297,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "O.",
+      "pitcher": "Owen Kelly",
       "batter": "Tank Sims",
       "outcome": "Walk",
       "count": "3-2",
@@ -1199,7 +1324,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "O.",
+      "pitcher": "Owen Kelly",
       "batter": "Joseph Terranova",
       "outcome": "Lineout",
       "count": "0-2",
@@ -1226,7 +1351,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "O.",
+      "pitcher": "Owen Kelly",
       "batter": "Logan Yule",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1253,7 +1378,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "O.",
+      "pitcher": "Marko Sipila",
       "batter": "Carson Schrack",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1307,7 +1432,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eddie White",
+      "pitcher": "Ranard Grace",
       "batter": "Topher Jones",
       "outcome": "Single",
       "count": "2-1",
@@ -1334,7 +1459,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eddie White",
+      "pitcher": "Ranard Grace",
       "batter": "Brayden Randle",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1361,7 +1486,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eddie White",
+      "pitcher": "Ranard Grace",
       "batter": "Hayden Federico",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1388,7 +1513,34 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "M.",
+      "pitcher": "Marko Sipila",
+      "batter": "M. Sipila",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 9
+      },
+      "description": "M. Sipila to p for O. Kelly."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Marko Sipila",
       "batter": "Caleb Klein",
       "outcome": "Walk",
       "count": "3-2",
@@ -1415,7 +1567,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "M.",
+      "pitcher": "Marko Sipila",
       "batter": "Brooks Kettering",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1442,7 +1594,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "M.",
+      "pitcher": "Marko Sipila",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1457,8 +1609,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Caleb Klein",
-        "2B": null,
+        "1B": null,
+        "2B": "Caleb Klein",
         "3B": null
       },
       "score": {
@@ -1469,7 +1621,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "M.",
+      "pitcher": "Marko Sipila",
       "batter": "Cal Sullivan",
       "outcome": "Walk",
       "count": "3-2",
@@ -1479,13 +1631,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Caleb Klein",
-        "2B": null,
+        "1B": null,
+        "2B": "Caleb Klein",
         "3B": null
       },
       "runners_after": {
         "1B": "Cal Sullivan",
-        "2B": null,
+        "2B": "Caleb Klein",
         "3B": null
       },
       "score": {
@@ -1496,23 +1648,25 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "M.",
+      "pitcher": "Marko Sipila",
       "batter": "Josiah Hall",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Cal Sullivan",
-        "2B": null,
+        "2B": "Caleb Klein",
         "3B": null
       },
       "runners_after": {
         "1B": "Josiah Hall",
-        "2B": null,
+        "2B": "Caleb Klein",
         "3B": null
       },
       "score": {
@@ -1523,7 +1677,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "M.",
+      "pitcher": "Patrick Collopy",
       "batter": "Dakota Joggerst",
       "outcome": "Flyout",
       "count": "3-1",
@@ -1534,12 +1688,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Josiah Hall",
-        "2B": null,
+        "2B": "Caleb Klein",
         "3B": null
       },
       "runners_after": {
         "1B": "Josiah Hall",
-        "2B": null,
+        "2B": "Caleb Klein",
         "3B": null
       },
       "score": {
@@ -1550,7 +1704,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "M.",
+      "pitcher": "Patrick Collopy",
       "batter": "Tank Sims",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1561,12 +1715,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Josiah Hall",
-        "2B": null,
+        "2B": "Caleb Klein",
         "3B": null
       },
       "runners_after": {
         "1B": "Josiah Hall",
-        "2B": null,
+        "2B": "Caleb Klein",
         "3B": null
       },
       "score": {
@@ -1578,6 +1732,33 @@
     {
       "inning": "Bottom 5",
       "pitcher": "Ranard Grace",
+      "batter": "Grace, R to p for White, E.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 9
+      },
+      "description": "Grace, R to p for White, E."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Nathan Mertens",
       "batter": "Dom Decker",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1604,7 +1785,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ranard Grace",
+      "pitcher": "Nathan Mertens",
       "batter": "Judd Utermark",
       "outcome": "Hit by pitch",
       "count": "2-1",
@@ -1631,7 +1812,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ranard Grace",
+      "pitcher": "Nathan Mertens",
       "batter": "Will Furniss",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1658,7 +1839,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ranard Grace",
+      "pitcher": "Noah Bourgeois",
       "batter": "Tristan Bissetta",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1685,7 +1866,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "P.",
+      "pitcher": "Patrick Collopy",
+      "batter": "P. Collopy",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 9
+      },
+      "description": "P. Collopy to p for M. Sipila."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Patrick Collopy",
       "batter": "Joseph Terranova",
       "outcome": "\u2014",
       "count": "1-1",
@@ -1712,7 +1920,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "P.",
+      "pitcher": "Grayson Gibson",
       "batter": "Logan Yule",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1739,7 +1947,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "P.",
+      "pitcher": "Grayson Gibson",
       "batter": "Carson Schrack",
       "outcome": "Walk",
       "count": "3-2",
@@ -1766,7 +1974,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "P.",
+      "pitcher": "Grayson Gibson",
       "batter": "Caleb Klein",
       "outcome": "Fielder's choice",
       "count": "2-1",
@@ -1793,7 +2001,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nathan Mertens",
+      "pitcher": "Noah Bourgeois",
+      "batter": "Mertens, N to p for Grace, R.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 9
+      },
+      "description": "Mertens, N to p for Grace, R."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Noah Bourgeois",
       "batter": "Collin Reuter",
       "outcome": "Pop out",
       "count": "2-0",
@@ -1820,7 +2055,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nathan Mertens",
+      "pitcher": "Noah Bourgeois",
       "batter": "Cannon Goldin",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1847,7 +2082,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nathan Mertens",
+      "pitcher": "Noah Bourgeois",
       "batter": "Topher Jones",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1874,7 +2109,34 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "G.",
+      "pitcher": "",
+      "batter": "G. Gibson",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 9
+      },
+      "description": "G. Gibson to p for P. Collopy."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "",
       "batter": "Brooks Kettering",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1901,7 +2163,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "G.",
+      "pitcher": "",
       "batter": "Cal Sullivan",
       "outcome": "Walk",
       "count": "3-2",
@@ -1928,7 +2190,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "G.",
+      "pitcher": "",
       "batter": "Cal Sullivan",
       "outcome": "\u2014",
       "count": null,
@@ -1955,7 +2217,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "G.",
+      "pitcher": "",
       "batter": "Josiah Hall",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1982,7 +2244,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Noah Bourgeois",
+      "pitcher": "",
+      "batter": "Bourgeois, N to p for Mertens, N.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 9
+      },
+      "description": "Bourgeois, N to p for Mertens, N."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "",
       "batter": "Brayden Randle",
       "outcome": "Walk",
       "count": "3-0",
@@ -2009,7 +2298,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Noah Bourgeois",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2024,8 +2313,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brayden Randle",
-        "2B": null,
+        "1B": null,
+        "2B": "Brayden Randle",
         "3B": null
       },
       "score": {
@@ -2036,7 +2325,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Noah Bourgeois",
+      "pitcher": "",
       "batter": "Hayden Federico",
       "outcome": "Walk",
       "count": "3-2",
@@ -2046,13 +2335,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Brayden Randle",
-        "2B": null,
+        "1B": null,
+        "2B": "Brayden Randle",
         "3B": null
       },
       "runners_after": {
         "1B": "Hayden Federico",
-        "2B": null,
+        "2B": "Brayden Randle",
         "3B": null
       },
       "score": {
@@ -2063,23 +2352,25 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Noah Bourgeois",
+      "pitcher": "",
       "batter": "Owen Paino",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "KBBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Hayden Federico",
-        "2B": null,
+        "2B": "Brayden Randle",
         "3B": null
       },
       "runners_after": {
         "1B": "Owen Paino",
-        "2B": null,
+        "2B": "Brayden Randle",
         "3B": null
       },
       "score": {
@@ -2090,7 +2381,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Noah Bourgeois",
+      "pitcher": "",
       "batter": "Judd Utermark",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2101,12 +2392,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Owen Paino",
-        "2B": null,
+        "2B": "Brayden Randle",
         "3B": null
       },
       "runners_after": {
         "1B": "Owen Paino",
-        "2B": null,
+        "2B": "Brayden Randle",
         "3B": null
       },
       "score": {
@@ -2117,25 +2408,27 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Noah Bourgeois",
+      "pitcher": "",
       "batter": "Will Furniss",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Will Furniss"
+        "Will Furniss",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Owen Paino",
-        "2B": null,
+        "2B": "Brayden Randle",
         "3B": null
       },
       "runners_after": {
         "1B": "Owen Paino",
-        "2B": null,
+        "2B": "Brayden Randle",
         "3B": null
       },
       "score": {

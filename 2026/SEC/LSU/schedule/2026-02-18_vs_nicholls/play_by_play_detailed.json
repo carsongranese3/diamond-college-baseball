@@ -3,7 +3,7 @@
   "date": "02/18/2026",
   "away_team": "Nicholls",
   "home_team": "LSU",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -396,7 +396,10 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Trent Caraway"
+        "Trent Caraway",
+        null,
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -667,7 +670,9 @@
       "count": "2-2",
       "pitches": "BFKBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1027,8 +1032,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kaul Perkins",
-        "2B": null,
+        "1B": null,
+        "2B": "Kaul Perkins",
         "3B": null
       },
       "score": {
@@ -1049,13 +1054,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Kaul Perkins",
-        "2B": null,
+        "1B": null,
+        "2B": "Kaul Perkins",
         "3B": null
       },
       "runners_after": {
         "1B": "Nico Rijo-Berger",
-        "2B": null,
+        "2B": "Kaul Perkins",
         "3B": null
       },
       "score": {
@@ -1077,12 +1082,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Nico Rijo-Berger",
-        "2B": null,
+        "2B": "Kaul Perkins",
         "3B": null
       },
       "runners_after": {
         "1B": "Caston Thompson",
-        "2B": null,
+        "2B": "Kaul Perkins",
         "3B": null
       },
       "score": {
@@ -1104,12 +1109,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Caston Thompson",
-        "2B": null,
+        "2B": "Kaul Perkins",
         "3B": null
       },
       "runners_after": {
         "1B": "Caston Thompson",
-        "2B": null,
+        "2B": "Kaul Perkins",
         "3B": null
       },
       "score": {
@@ -1147,7 +1152,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cole Simoneaux",
+      "pitcher": "Tyler Avery",
       "batter": "Derek Curiel",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1417,7 +1422,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Eli Waters",
+      "pitcher": "Cole Simoneaux",
       "batter": "Trent Caraway",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1444,7 +1449,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Santiago Garcia",
+      "pitcher": "Reagan Ricken",
       "batter": "Logan Mock",
       "outcome": "Walk",
       "count": "3-2",
@@ -1606,7 +1611,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Joseph Bordelon",
+      "pitcher": "Eli Waters",
       "batter": "Derek Curiel",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1648,8 +1653,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tanner Reaves",
-        "2B": null,
+        "1B": null,
+        "2B": "Tanner Reaves",
         "3B": null
       },
       "score": {
@@ -1670,13 +1675,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Tanner Reaves",
-        "2B": null,
+        "1B": null,
+        "2B": "Tanner Reaves",
         "3B": null
       },
       "runners_after": {
         "1B": "Steven Milam",
-        "2B": null,
+        "2B": "Tanner Reaves",
         "3B": null
       },
       "score": {
@@ -1693,17 +1698,19 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Steven Milam",
-        "2B": null,
+        "2B": "Tanner Reaves",
         "3B": null
       },
       "runners_after": {
         "1B": "Jake Brown",
-        "2B": null,
+        "2B": "Tanner Reaves",
         "3B": null
       },
       "score": {
@@ -1720,17 +1727,19 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jake Brown"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jake Brown",
-        "2B": null,
+        "2B": "Tanner Reaves",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Brown",
-        "2B": null,
+        "1B": null,
+        "2B": "Tanner Reaves",
         "3B": null
       },
       "score": {
@@ -1751,13 +1760,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jake Brown",
-        "2B": null,
+        "1B": null,
+        "2B": "Tanner Reaves",
         "3B": null
       },
       "runners_after": {
         "1B": "Cade Arrambide",
-        "2B": null,
+        "2B": "Tanner Reaves",
         "3B": null
       },
       "score": {
@@ -1768,7 +1777,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Caleb Dyess",
+      "pitcher": "Joseph Bordelon",
       "batter": "Zach Yorke",
       "outcome": "Walk",
       "count": "3-1",
@@ -1779,12 +1788,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Cade Arrambide",
-        "2B": null,
+        "2B": "Tanner Reaves",
         "3B": null
       },
       "runners_after": {
         "1B": "Zach Yorke",
-        "2B": null,
+        "2B": "Tanner Reaves",
         "3B": null
       },
       "score": {
@@ -1806,12 +1815,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Zach Yorke",
-        "2B": null,
+        "2B": "Tanner Reaves",
         "3B": null
       },
       "runners_after": {
         "1B": "Zach Yorke",
-        "2B": null,
+        "2B": "Tanner Reaves",
         "3B": null
       },
       "score": {
@@ -1990,7 +1999,9 @@
       "count": "2-2",
       "pitches": "KBSB",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -2119,7 +2130,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Reagan Ricken",
+      "pitcher": "",
       "batter": "Andy Miller",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2146,7 +2157,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Reagan Ricken",
+      "pitcher": "",
       "batter": "Logan Terry",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2173,7 +2184,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Reagan Ricken",
+      "pitcher": "",
       "batter": "Kaul Perkins",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2335,14 +2346,16 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cannon Hensarling",
+      "pitcher": "",
       "batter": "John Pearson",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "John Pearson"
+        "John Pearson",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,

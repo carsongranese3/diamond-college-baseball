@@ -3,7 +3,7 @@
   "date": "04/09/2026",
   "away_team": "Oklahoma",
   "home_team": "Vanderbilt",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -643,8 +643,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brendan Brock",
-        "2B": null,
+        "1B": null,
+        "2B": "Brendan Brock",
         "3B": null
       },
       "score": {
@@ -665,14 +665,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Brendan Brock",
-        "2B": null,
+        "1B": null,
+        "2B": "Brendan Brock",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brendan Brock",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brendan Brock"
       },
       "score": {
         "away": 0,
@@ -692,14 +692,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brendan Brock",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brendan Brock"
       },
       "runners_after": {
-        "1B": "Brendan Brock",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brendan Brock"
       },
       "score": {
         "away": 0,
@@ -716,19 +716,20 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Deiten Lachance"
+        "Deiten Lachance",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brendan Brock",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brendan Brock"
       },
       "runners_after": {
-        "1B": "Brendan Brock",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brendan Brock"
       },
       "score": {
         "away": 2,
@@ -748,14 +749,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brendan Brock",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brendan Brock"
       },
       "runners_after": {
-        "1B": "Brendan Brock",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brendan Brock"
       },
       "score": {
         "away": 2,
@@ -852,7 +853,9 @@
       "count": "0-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -969,7 +972,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jason Walk",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -991,12 +994,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jason Walk",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jason Walk",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1443,6 +1446,33 @@
     {
       "inning": "Bottom 7",
       "pitcher": "Kadyn Leon",
+      "batter": "Leon, K. to p for Mercurius, L.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Ryker Waite",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ryker Waite",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 2
+      },
+      "description": "Leon, K. to p for Mercurius, L."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Kadyn Leon",
       "batter": "Korbin Reynolds",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1496,13 +1526,16 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Kadyn Leon",
+      "pitcher": "Jason Bodin",
       "batter": "Mike Mancini",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1520,6 +1553,33 @@
         "home": 4
       },
       "description": "Mancini doubled down the lf line, 2 RBI (1-0); Rigdon advanced to third; Reynolds scored; Waite scored."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Jason Bodin",
+      "batter": "Bodin, J. to p for Leon, K..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Rustan Rigdon",
+        "2B": "Mike Mancini",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Rustan Rigdon",
+        "2B": "Mike Mancini",
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 4
+      },
+      "description": "Bodin, J. to p for Leon, K.."
     },
     {
       "inning": "Bottom 7",
@@ -1556,7 +1616,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1691,7 +1753,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1718,7 +1782,9 @@
       "count": "1-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1754,8 +1820,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brendan Brock",
-        "2B": "Trey Gambill",
+        "1B": null,
+        "2B": "Brendan Brock",
         "3B": null
       },
       "score": {
@@ -1776,13 +1842,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brendan Brock",
-        "2B": "Trey Gambill",
+        "1B": null,
+        "2B": "Brendan Brock",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brendan Brock",
-        "2B": "Trey Gambill",
+        "1B": null,
+        "2B": "Brendan Brock",
         "3B": null
       },
       "score": {
@@ -1793,7 +1859,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jason Bodin",
+      "pitcher": "Gavyn Jones",
       "batter": "Tockey, D. to 1b for Stevens, N..",
       "outcome": "\u2014",
       "count": null,
@@ -1820,7 +1886,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jason Bodin",
+      "pitcher": "Gavyn Jones",
       "batter": "Chris Maldonado",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1847,7 +1913,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jason Bodin",
+      "pitcher": "Gavyn Jones",
       "batter": "Braden Holcomb",
       "outcome": "Walk",
       "count": "3-2",
@@ -1874,7 +1940,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jason Bodin",
+      "pitcher": "Gavyn Jones",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1889,8 +1955,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Braden Holcomb",
-        "2B": null,
+        "1B": null,
+        "2B": "Braden Holcomb",
         "3B": null
       },
       "score": {
@@ -1901,7 +1967,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jason Bodin",
+      "pitcher": "Gavyn Jones",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1911,8 +1977,8 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Braden Holcomb",
-        "2B": null,
+        "1B": null,
+        "2B": "Braden Holcomb",
         "3B": null
       },
       "runners_after": {
@@ -1928,7 +1994,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jason Bodin",
+      "pitcher": "Gavyn Jones",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1954,6 +2020,33 @@
         "home": 6
       },
       "description": "Holcomb scored on the throw."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Gavyn Jones",
+      "batter": "Jones, G. to p for Bodin, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 6
+      },
+      "description": "Jones, G. to p for Bodin, J.."
     },
     {
       "inning": "Bottom 8",
@@ -2013,7 +2106,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Gavyn Jones",
+      "pitcher": "",
       "batter": "Korbin Reynolds",
       "outcome": "Single",
       "count": "0-0",
@@ -2040,7 +2133,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Gavyn Jones",
+      "pitcher": "",
       "batter": "Rustan Rigdon",
       "outcome": "Fielder's choice",
       "count": "2-2",
@@ -2067,14 +2160,16 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Gavyn Jones",
+      "pitcher": "",
       "batter": "Mike Mancini",
       "outcome": "Home run",
       "count": "0-1",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Mike Mancini"
+        "Mike Mancini",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -2096,7 +2191,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Gavyn Jones",
+      "pitcher": "",
       "batter": "Colin Barczi",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2237,7 +2332,9 @@
       "count": "1-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {

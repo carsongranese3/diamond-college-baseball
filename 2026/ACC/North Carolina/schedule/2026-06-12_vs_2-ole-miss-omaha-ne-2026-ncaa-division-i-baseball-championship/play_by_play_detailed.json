@@ -3,7 +3,7 @@
   "date": "06/12/2026",
   "away_team": "Ole Miss",
   "home_team": "North Carolina",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -472,7 +472,9 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1306,6 +1308,33 @@
     {
       "inning": "Bottom 6",
       "pitcher": "Hudson Calhoun",
+      "batter": "Calhoun, H. to p for Rabe, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 1
+      },
+      "description": "Calhoun, H. to p for Rabe, T.."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Hudson Calhoun",
       "batter": "Cooper Nicholson",
       "outcome": "Strikeout (looking)",
       "count": null,
@@ -1414,12 +1443,41 @@
     {
       "inning": "Top 7",
       "pitcher": "Caden Glauber",
+      "batter": "Glauber, C. to p for DeCaro, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": "Dom Decker",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Dom Decker",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 1
+      },
+      "description": "Glauber, C. to p for DeCaro, J.."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Caden Glauber",
       "batter": "Judd Utermark",
       "outcome": "Single",
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1494,7 +1552,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Hudson Calhoun",
+      "pitcher": "Walker Hooks",
       "batter": "Federico, H. to lf.",
       "outcome": "\u2014",
       "count": null,
@@ -1521,7 +1579,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Hudson Calhoun",
+      "pitcher": "Walker Hooks",
       "batter": "Moseley, B. to cf for Randle, B..",
       "outcome": "\u2014",
       "count": null,
@@ -1548,7 +1606,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Hudson Calhoun",
+      "pitcher": "Walker Hooks",
       "batter": "Tyler Howe",
       "outcome": "Walk",
       "count": null,
@@ -1575,7 +1633,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Hudson Calhoun",
+      "pitcher": "Walker Hooks",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1590,8 +1648,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Howe",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Howe",
         "3B": null
       },
       "score": {
@@ -1602,7 +1660,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Hudson Calhoun",
+      "pitcher": "Walker Hooks",
       "batter": "Colin Hynek",
       "outcome": "Walk",
       "count": null,
@@ -1612,13 +1670,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Tyler Howe",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Howe",
         "3B": null
       },
       "runners_after": {
         "1B": "Colin Hynek",
-        "2B": null,
+        "2B": "Tyler Howe",
         "3B": null
       },
       "score": {
@@ -1626,6 +1684,33 @@
         "home": 1
       },
       "description": "Hynek, C. walked."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Walker Hooks",
+      "batter": "Hooks, W. to p for Calhoun, H..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Colin Hynek",
+        "2B": "Tyler Howe",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Colin Hynek",
+        "2B": "Tyler Howe",
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 1
+      },
+      "description": "Hooks, W. to p for Calhoun, H.."
     },
     {
       "inning": "Bottom 7",
@@ -1640,12 +1725,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Colin Hynek",
-        "2B": null,
+        "2B": "Tyler Howe",
         "3B": null
       },
       "runners_after": {
         "1B": "Colin Hynek",
-        "2B": null,
+        "2B": "Tyler Howe",
         "3B": null
       },
       "score": {
@@ -1662,17 +1747,19 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Colin Hynek",
-        "2B": null,
+        "2B": "Tyler Howe",
         "3B": null
       },
       "runners_after": {
         "1B": "Colin Hynek",
-        "2B": null,
+        "2B": "Tyler Howe",
         "3B": null
       },
       "score": {
@@ -1689,17 +1776,19 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Colin Hynek",
-        "2B": null,
+        "2B": "Tyler Howe",
         "3B": null
       },
       "runners_after": {
         "1B": "Gavin Gallaher",
-        "2B": null,
+        "2B": "Tyler Howe",
         "3B": null
       },
       "score": {
@@ -1721,12 +1810,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Gavin Gallaher",
-        "2B": null,
+        "2B": "Tyler Howe",
         "3B": null
       },
       "runners_after": {
         "1B": "Gavin Gallaher",
-        "2B": null,
+        "2B": "Tyler Howe",
         "3B": null
       },
       "score": {
@@ -1899,7 +1988,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Walker Hooks",
+      "pitcher": "",
       "batter": "Cooper Nicholson",
       "outcome": "Hit by pitch",
       "count": null,
@@ -1926,7 +2015,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Walker Hooks",
+      "pitcher": "",
       "batter": "Tyler Howe",
       "outcome": "Double",
       "count": null,
@@ -1953,14 +2042,16 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Walker Hooks",
+      "pitcher": "",
       "batter": "Colin Hynek",
       "outcome": "Home run",
       "count": null,
       "pitches": null,
       "rbi": true,
       "runs_scored": [
-        "Colin Hynek"
+        "Colin Hynek",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1982,7 +2073,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Walker Hooks",
+      "pitcher": "",
       "batter": "Carter French",
       "outcome": "Flyout",
       "count": null,
@@ -2063,7 +2154,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Caden Glauber",
+      "pitcher": "",
       "batter": "Dom Decker",
       "outcome": "Flyout",
       "count": null,

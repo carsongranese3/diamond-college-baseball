@@ -3,7 +3,7 @@
   "date": "03/31/2026",
   "away_team": "Liberty",
   "home_team": "NC State",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -184,7 +184,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Luke Nixon",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -265,7 +265,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Nick Barone",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -454,8 +454,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Hvidsten",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Hvidsten",
         "3B": null
       },
       "score": {
@@ -476,13 +476,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Kyle Hvidsten",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Hvidsten",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Hvidsten",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Hvidsten",
         "3B": null
       },
       "score": {
@@ -574,7 +574,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Josh Swink",
+      "pitcher": "Brandon Dahlman",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -589,7 +589,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mikey Ryan",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -682,7 +682,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Josh Swink",
+      "pitcher": "Brandon Dahlman",
       "batter": "Rett Johnson",
       "outcome": "Groundout",
       "count": "2-2",
@@ -709,7 +709,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Josh Swink",
+      "pitcher": "Brandon Dahlman",
       "batter": "Chris McHugh",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -736,7 +736,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Josh Swink",
+      "pitcher": "Brandon Dahlman",
       "batter": "Luke Nixon",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -844,7 +844,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Josh Swink",
+      "pitcher": "Brandon Dahlman",
       "batter": "Rett Johnson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -871,7 +871,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Josh Swink",
+      "pitcher": "Brandon Dahlman",
       "batter": "Ty Head",
       "outcome": "Walk",
       "count": "3-1",
@@ -898,7 +898,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Josh Swink",
+      "pitcher": "Brandon Dahlman",
       "batter": "Brayden Fraasman",
       "outcome": "Walk",
       "count": "3-2",
@@ -914,7 +914,7 @@
       },
       "runners_after": {
         "1B": "Brayden Fraasman",
-        "2B": null,
+        "2B": "Ty Head",
         "3B": null
       },
       "score": {
@@ -925,7 +925,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Josh Swink",
+      "pitcher": "Spencer Williams",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -936,13 +936,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Brayden Fraasman",
-        "2B": null,
+        "2B": "Ty Head",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brayden Fraasman",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Brayden Fraasman",
+        "3B": "Ty Head"
       },
       "score": {
         "away": 0,
@@ -952,24 +952,26 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Josh Swink",
+      "pitcher": "Spencer Williams",
       "batter": "Dalton Bargo",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "SSFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ty Head"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brayden Fraasman",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Brayden Fraasman",
+        "3B": "Ty Head"
       },
       "runners_after": {
-        "1B": "Brayden Fraasman",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brayden Fraasman"
       },
       "score": {
         "away": 0,
@@ -979,19 +981,21 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Josh Swink",
+      "pitcher": "Josh McCusker",
       "batter": "Vincent DeCarlo",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "BBKBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Brayden Fraasman"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brayden Fraasman",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brayden Fraasman"
       },
       "runners_after": {
         "1B": "Vincent DeCarlo",
@@ -1006,7 +1010,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Josh Swink",
+      "pitcher": "Josh McCusker",
       "batter": "Mikey Ryan",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1103,7 +1107,7 @@
       },
       "runners_after": {
         "1B": "Tanner Marsh",
-        "2B": null,
+        "2B": "Kyle Hvidsten",
         "3B": null
       },
       "score": {
@@ -1114,7 +1118,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Ryan Drumm",
       "outcome": "Walk",
       "count": "3-0",
@@ -1125,13 +1129,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Tanner Marsh",
-        "2B": null,
+        "2B": "Kyle Hvidsten",
         "3B": null
       },
       "runners_after": {
         "1B": "Ryan Drumm",
-        "2B": null,
-        "3B": null
+        "2B": "Tanner Marsh",
+        "3B": "Kyle Hvidsten"
       },
       "score": {
         "away": 0,
@@ -1141,24 +1145,26 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Jordan Jaffe",
       "outcome": "Fielder's choice",
       "count": "2-2",
       "pitches": "BKBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kyle Hvidsten"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Ryan Drumm",
-        "2B": null,
-        "3B": null
+        "2B": "Tanner Marsh",
+        "3B": "Kyle Hvidsten"
       },
       "runners_after": {
         "1B": "Jordan Jaffe",
         "2B": null,
-        "3B": null
+        "3B": "Tanner Marsh"
       },
       "score": {
         "away": 1,
@@ -1168,7 +1174,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1180,12 +1186,12 @@
       "runners_before": {
         "1B": "Jordan Jaffe",
         "2B": null,
-        "3B": null
+        "3B": "Tanner Marsh"
       },
       "runners_after": {
-        "1B": "Jordan Jaffe",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Jordan Jaffe",
+        "3B": "Tanner Marsh"
       },
       "score": {
         "away": 1,
@@ -1195,19 +1201,22 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Jaxon Sorenson",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "KBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Tanner Marsh",
+        "Jordan Jaffe"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jordan Jaffe",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Jordan Jaffe",
+        "3B": "Tanner Marsh"
       },
       "runners_after": {
         "1B": "Jaxon Sorenson",
@@ -1222,7 +1231,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Ryder Garino",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1237,8 +1246,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jaxon Sorenson",
-        "2B": null,
+        "1B": null,
+        "2B": "Jaxon Sorenson",
         "3B": null
       },
       "score": {
@@ -1249,7 +1258,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Ryder Garino",
       "batter": "Nick Barone",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1259,13 +1268,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jaxon Sorenson",
-        "2B": null,
+        "1B": null,
+        "2B": "Jaxon Sorenson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jaxon Sorenson",
-        "2B": null,
+        "1B": null,
+        "2B": "Jaxon Sorenson",
         "3B": null
       },
       "score": {
@@ -1276,7 +1285,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Josh Swink",
+      "pitcher": "Jake Potts",
       "batter": "Rett Johnson",
       "outcome": "Single",
       "count": "1-1",
@@ -1303,7 +1312,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Josh Swink",
+      "pitcher": "Jake Potts",
       "batter": "Chris McHugh",
       "outcome": "Pop out",
       "count": "0-0",
@@ -1330,7 +1339,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Josh Swink",
+      "pitcher": "Jake Potts",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1345,8 +1354,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Rett Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Rett Johnson",
         "3B": null
       },
       "score": {
@@ -1357,7 +1366,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Josh Swink",
+      "pitcher": "Jake Potts",
       "batter": "Luke Nixon",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1367,14 +1376,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Rett Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Rett Johnson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Rett Johnson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Rett Johnson"
       },
       "score": {
         "away": 3,
@@ -1384,22 +1393,24 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Josh Swink",
+      "pitcher": "Jake Potts",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Rett Johnson"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Rett Johnson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Rett Johnson"
       },
       "runners_after": {
-        "1B": "Rett Johnson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1411,7 +1422,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Josh Swink",
+      "pitcher": "Jake Potts",
       "batter": "Rett Johnson",
       "outcome": "Foul out",
       "count": "2-1",
@@ -1421,12 +1432,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Rett Johnson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Rett Johnson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1438,7 +1449,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Ryder Garino",
       "batter": "Riley DeCandido",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1465,7 +1476,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Ryder Garino",
       "batter": "Easton Swofford",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1492,7 +1503,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Ryder Garino",
       "batter": "Kyle Hvidsten",
       "outcome": "Walk",
       "count": "3-2",
@@ -1519,7 +1530,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Ryder Garino",
       "batter": "Josh Campos",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1546,7 +1557,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Josh Swink",
+      "pitcher": "Jaxon Lucas",
       "batter": "Ty Head",
       "outcome": "Single",
       "count": "2-2",
@@ -1573,7 +1584,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Josh Swink",
+      "pitcher": "Jaxon Lucas",
       "batter": "Brayden Fraasman",
       "outcome": "Pop out",
       "count": "0-1",
@@ -1600,7 +1611,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Josh Swink",
+      "pitcher": "Jaxon Lucas",
       "batter": "Dalton Bargo",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1627,7 +1638,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Josh Swink",
+      "pitcher": "Jaxon Lucas",
       "batter": "Vincent DeCarlo",
       "outcome": "Walk",
       "count": "3-2",
@@ -1643,7 +1654,7 @@
       },
       "runners_after": {
         "1B": "Vincent DeCarlo",
-        "2B": null,
+        "2B": "Ty Head",
         "3B": null
       },
       "score": {
@@ -1654,7 +1665,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Josh Swink",
+      "pitcher": "Jaxon Lucas",
       "batter": "Mikey Ryan",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1665,12 +1676,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Vincent DeCarlo",
-        "2B": null,
+        "2B": "Ty Head",
         "3B": null
       },
       "runners_after": {
         "1B": "Vincent DeCarlo",
-        "2B": null,
+        "2B": "Ty Head",
         "3B": null
       },
       "score": {
@@ -1681,7 +1692,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Ryder Garino",
       "batter": "Tanner Marsh",
       "outcome": "Home run",
       "count": "3-2",
@@ -1710,7 +1721,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Ryder Garino",
       "batter": "Ryan Drumm",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1737,7 +1748,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Ryder Garino",
       "batter": "Jordan Jaffe",
       "outcome": "Single",
       "count": "2-2",
@@ -1764,7 +1775,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Ryder Garino",
       "batter": "Jaxon Sorenson",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1791,7 +1802,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Ryder Garino",
       "batter": "Nick Barone",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1818,7 +1829,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Josh Swink",
+      "pitcher": "Tyler August",
       "batter": "Rett Johnson",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1845,7 +1856,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Josh Swink",
+      "pitcher": "Tyler August",
       "batter": "Chris McHugh",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1872,13 +1883,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Josh Swink",
+      "pitcher": "Tyler August",
       "batter": "Luke Nixon",
       "outcome": "Triple",
       "count": "2-2",
       "pitches": "FBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Chris McHugh"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1887,7 +1900,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris McHugh",
+        "1B": null,
         "2B": null,
         "3B": "Luke Nixon"
       },
@@ -1899,24 +1912,26 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Josh Swink",
+      "pitcher": "Tyler August",
       "batter": "Rett Johnson",
       "outcome": "\u2014",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Luke Nixon"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Chris McHugh",
+        "1B": null,
         "2B": null,
         "3B": "Luke Nixon"
       },
       "runners_after": {
-        "1B": "Chris McHugh",
+        "1B": null,
         "2B": null,
-        "3B": "Luke Nixon"
+        "3B": null
       },
       "score": {
         "away": 4,
@@ -1926,7 +1941,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Josh Swink",
+      "pitcher": "Tyler August",
       "batter": "Ty Head",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1936,14 +1951,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Chris McHugh",
+        "1B": null,
         "2B": null,
-        "3B": "Luke Nixon"
+        "3B": null
       },
       "runners_after": {
-        "1B": "Chris McHugh",
+        "1B": null,
         "2B": null,
-        "3B": "Luke Nixon"
+        "3B": null
       },
       "score": {
         "away": 4,
@@ -1953,7 +1968,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Danny Heintz",
       "batter": "Riley DeCandido",
       "outcome": "Walk",
       "count": "3-1",
@@ -1980,7 +1995,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Danny Heintz",
       "batter": "Easton Swofford",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2007,7 +2022,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Danny Heintz",
       "batter": "Kyle Hvidsten",
       "outcome": "Single",
       "count": "1-1",
@@ -2024,7 +2039,7 @@
       "runners_after": {
         "1B": "Kyle Hvidsten",
         "2B": null,
-        "3B": null
+        "3B": "Riley DeCandido"
       },
       "score": {
         "away": 4,
@@ -2034,7 +2049,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Danny Heintz",
       "batter": "Josh Campos",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2046,12 +2061,12 @@
       "runners_before": {
         "1B": "Kyle Hvidsten",
         "2B": null,
-        "3B": null
+        "3B": "Riley DeCandido"
       },
       "runners_after": {
         "1B": "Kyle Hvidsten",
         "2B": null,
-        "3B": null
+        "3B": "Riley DeCandido"
       },
       "score": {
         "away": 4,
@@ -2061,19 +2076,21 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Danny Heintz",
       "batter": "Tanner Marsh",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Riley DeCandido"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Kyle Hvidsten",
         "2B": null,
-        "3B": null
+        "3B": "Riley DeCandido"
       },
       "runners_after": {
         "1B": "Tanner Marsh",
@@ -2088,7 +2105,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Danny Heintz",
       "batter": "John Simmons",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -2104,7 +2121,7 @@
       },
       "runners_after": {
         "1B": "John Simmons",
-        "2B": null,
+        "2B": "Tanner Marsh",
         "3B": null
       },
       "score": {
@@ -2115,24 +2132,27 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Danny Heintz",
       "batter": "Jordan Jaffe",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "FBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Tanner Marsh",
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "John Simmons",
-        "2B": null,
+        "2B": "Tanner Marsh",
         "3B": null
       },
       "runners_after": {
         "1B": "Jordan Jaffe",
         "2B": null,
-        "3B": null
+        "3B": "John Simmons"
       },
       "score": {
         "away": 7,
@@ -2142,7 +2162,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Danny Heintz",
       "batter": "Jaxon Sorenson",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2154,12 +2174,12 @@
       "runners_before": {
         "1B": "Jordan Jaffe",
         "2B": null,
-        "3B": null
+        "3B": "John Simmons"
       },
       "runners_after": {
         "1B": "Jordan Jaffe",
         "2B": null,
-        "3B": null
+        "3B": "John Simmons"
       },
       "score": {
         "away": 7,
@@ -2169,7 +2189,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Josh Swink",
+      "pitcher": "Cooper Harrington",
       "batter": "Brayden Fraasman",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2196,7 +2216,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Josh Swink",
+      "pitcher": "Cooper Harrington",
       "batter": "Dalton Bargo",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2223,7 +2243,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Josh Swink",
+      "pitcher": "Cooper Harrington",
       "batter": "Andrew Wiggins",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",

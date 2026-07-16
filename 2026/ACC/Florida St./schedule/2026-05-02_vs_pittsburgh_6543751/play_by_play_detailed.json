@@ -3,7 +3,7 @@
   "date": "05/02/2026(2)",
   "away_team": "Pittsburgh",
   "home_team": "Florida St.",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -103,8 +103,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Caden Dulin",
-        "2B": null,
+        "1B": null,
+        "2B": "Caden Dulin",
         "3B": null
       },
       "score": {
@@ -125,13 +125,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Caden Dulin",
-        "2B": null,
+        "1B": null,
+        "2B": "Caden Dulin",
         "3B": null
       },
       "runners_after": {
-        "1B": "Caden Dulin",
-        "2B": null,
+        "1B": null,
+        "2B": "Caden Dulin",
         "3B": null
       },
       "score": {
@@ -229,7 +229,9 @@
       "count": "0-2",
       "pitches": "KF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -256,7 +258,10 @@
       "count": "0-2",
       "pitches": "SK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -385,7 +390,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Joey Ciancimino",
       "batter": "Eli Putnam",
       "outcome": "Flyout",
       "count": "1-0",
@@ -412,7 +417,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Joey Ciancimino",
       "batter": "Cal Fisher",
       "outcome": "Walk",
       "count": "3-2",
@@ -439,7 +444,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Joey Ciancimino",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -454,8 +459,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cal Fisher",
-        "2B": null,
+        "1B": null,
+        "2B": "Cal Fisher",
         "3B": null
       },
       "score": {
@@ -466,23 +471,25 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Joey Ciancimino",
       "batter": "Carter McCulley",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Cal Fisher",
-        "2B": null,
+        "1B": null,
+        "2B": "Cal Fisher",
         "3B": null
       },
       "runners_after": {
         "1B": "Carter McCulley",
-        "2B": null,
+        "2B": "Cal Fisher",
         "3B": null
       },
       "score": {
@@ -493,7 +500,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Joey Ciancimino",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -504,12 +511,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Carter McCulley",
-        "2B": null,
+        "2B": "Cal Fisher",
         "3B": null
       },
       "runners_after": {
-        "1B": "Carter McCulley",
-        "2B": null,
+        "1B": null,
+        "2B": "Carter McCulley",
         "3B": null
       },
       "score": {
@@ -520,7 +527,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Joey Ciancimino",
       "batter": "John Stuetzer",
       "outcome": "Flyout",
       "count": "2-2",
@@ -530,13 +537,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Carter McCulley",
-        "2B": null,
+        "1B": null,
+        "2B": "Carter McCulley",
         "3B": null
       },
       "runners_after": {
-        "1B": "Carter McCulley",
-        "2B": null,
+        "1B": null,
+        "2B": "Carter McCulley",
         "3B": null
       },
       "score": {
@@ -547,22 +554,24 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Joey Ciancimino",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Carter McCulley"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Carter McCulley",
-        "2B": null,
+        "1B": null,
+        "2B": "Carter McCulley",
         "3B": null
       },
       "runners_after": {
-        "1B": "Carter McCulley",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -574,7 +583,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Joey Ciancimino",
       "batter": "Brody DeLamielleure",
       "outcome": "Groundout",
       "count": "3-1",
@@ -584,12 +593,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Carter McCulley",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Carter McCulley",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -718,7 +727,9 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Lorenzo Carrier"
+        "Lorenzo Carrier",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -821,7 +832,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Hunter Carns",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -848,7 +859,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Nathan Cmeyla",
       "outcome": "Single",
       "count": "0-0",
@@ -875,7 +886,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Gabe Fraser",
       "outcome": "Single",
       "count": "1-0",
@@ -902,7 +913,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Noah Sheffield",
       "outcome": "Lineout",
       "count": "0-1",
@@ -929,7 +940,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Eli Putnam",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1091,7 +1102,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Michael Savarese",
       "batter": "Cal Fisher",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1118,7 +1129,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Michael Savarese",
       "batter": "Carter McCulley",
       "outcome": "Foul out",
       "count": "1-1",
@@ -1145,7 +1156,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Michael Savarese",
       "batter": "John Stuetzer",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1241,8 +1252,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kai Wagner",
-        "2B": null,
+        "1B": null,
+        "2B": "Kai Wagner",
         "3B": null
       },
       "score": {
@@ -1263,13 +1274,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Kai Wagner",
-        "2B": null,
+        "1B": null,
+        "2B": "Kai Wagner",
         "3B": null
       },
       "runners_after": {
         "1B": "Trey Fenderson",
-        "2B": null,
+        "2B": "Kai Wagner",
         "3B": null
       },
       "score": {
@@ -1291,12 +1302,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Trey Fenderson",
-        "2B": null,
+        "2B": "Kai Wagner",
         "3B": null
       },
       "runners_after": {
         "1B": "Trey Fenderson",
-        "2B": null,
+        "2B": "Kai Wagner",
         "3B": null
       },
       "score": {
@@ -1307,7 +1318,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Michael Savarese",
       "batter": "Brody DeLamielleure",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1334,7 +1345,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Michael Savarese",
       "batter": "Hunter Carns",
       "outcome": "Home run",
       "count": "2-1",
@@ -1363,7 +1374,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Michael Savarese",
       "batter": "Nathan Cmeyla",
       "outcome": "Home run",
       "count": "2-1",
@@ -1392,7 +1403,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Michael Savarese",
       "batter": "Gabe Fraser",
       "outcome": "Lineout",
       "count": "0-2",
@@ -1419,7 +1430,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Michael Savarese",
       "batter": "Noah Sheffield",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1554,7 +1565,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Brandon Reiter",
       "batter": "Eli Putnam",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1581,7 +1592,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Brandon Reiter",
       "batter": "Cal Fisher",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1608,7 +1619,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Brandon Reiter",
       "batter": "Carter McCulley",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1635,7 +1646,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Trey Beard",
+      "pitcher": "John Abraham",
       "batter": "Caden Dulin",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1662,7 +1673,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Trey Beard",
+      "pitcher": "John Abraham",
       "batter": "Lorenzo Carrier",
       "outcome": "Walk",
       "count": "3-2",
@@ -1689,7 +1700,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Trey Beard",
+      "pitcher": "John Abraham",
       "batter": "Kai Wagner",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1716,7 +1727,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Trey Beard",
+      "pitcher": "John Abraham",
       "batter": "Trey Fenderson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1743,7 +1754,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Brandon Reiter",
       "batter": "John Stuetzer",
       "outcome": "Walk",
       "count": "3-2",
@@ -1770,7 +1781,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Brandon Reiter",
       "batter": "Brody DeLamielleure",
       "outcome": "Single",
       "count": "1-0",
@@ -1797,7 +1808,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Brandon Reiter",
       "batter": "Hunter Carns",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1824,13 +1835,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Brandon Reiter",
       "batter": "Nathan Cmeyla",
       "outcome": "Fielder's choice",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1851,7 +1864,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Brandon Reiter",
       "batter": "Gabe Fraser",
       "outcome": "Double",
       "count": "0-0",
@@ -1878,7 +1891,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Brandon Reiter",
       "batter": "Noah Sheffield",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1905,7 +1918,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Trey Beard",
+      "pitcher": "John Abraham",
       "batter": "Joey Baran",
       "outcome": "Single",
       "count": "1-1",
@@ -1932,7 +1945,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Trey Beard",
+      "pitcher": "John Abraham",
       "batter": "Sebastian Pisacreta",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1959,7 +1972,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Trey Beard",
+      "pitcher": "John Abraham",
       "batter": "Carter Dierdorf",
       "outcome": "Walk",
       "count": "3-2",
@@ -1986,7 +1999,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Trey Beard",
+      "pitcher": "John Abraham",
       "batter": "Jackson Cooke",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2013,7 +2026,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Trey Beard",
+      "pitcher": "John Abraham",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -2040,7 +2053,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Sam Bryan",
       "batter": "Eli Putnam",
       "outcome": "Groundout",
       "count": "2-0",
@@ -2067,7 +2080,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Sam Bryan",
       "batter": "Cal Fisher",
       "outcome": "Single",
       "count": "2-2",
@@ -2094,7 +2107,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Sam Bryan",
       "batter": "Carter McCulley",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2121,7 +2134,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Sam Bryan",
       "batter": "John Stuetzer",
       "outcome": "Walk",
       "count": "3-2",
@@ -2148,7 +2161,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Chase Kriebel",
+      "pitcher": "Sam Bryan",
       "batter": "Brody DeLamielleure",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2175,7 +2188,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Trey Beard",
+      "pitcher": "John Abraham",
       "batter": "AJ Nessler",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2202,7 +2215,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Trey Beard",
+      "pitcher": "John Abraham",
       "batter": "Caden Dulin",
       "outcome": "Home run",
       "count": "1-2",
@@ -2231,7 +2244,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Trey Beard",
+      "pitcher": "John Abraham",
       "batter": "Lorenzo Carrier",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2258,7 +2271,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Trey Beard",
+      "pitcher": "John Abraham",
       "batter": "Kai Wagner",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",

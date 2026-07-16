@@ -3,7 +3,7 @@
   "date": "03/07/2026",
   "away_team": "USC Upstate",
   "home_team": "Texas",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -242,9 +242,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Adrian Rodriguez",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Adrian Rodriguez"
       },
       "score": {
         "away": 0,
@@ -266,9 +266,9 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Adrian Rodriguez",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Adrian Rodriguez"
       },
       "runners_after": {
         "1B": "Temo Becerra",
@@ -325,8 +325,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Temo Becerra",
-        "2B": null,
+        "1B": null,
+        "2B": "Temo Becerra",
         "3B": null
       },
       "score": {
@@ -347,13 +347,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Temo Becerra",
-        "2B": null,
+        "1B": null,
+        "2B": "Temo Becerra",
         "3B": null
       },
       "runners_after": {
         "1B": "Casey Borba",
-        "2B": null,
+        "2B": "Temo Becerra",
         "3B": null
       },
       "score": {
@@ -375,12 +375,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Casey Borba",
-        "2B": null,
+        "2B": "Temo Becerra",
         "3B": null
       },
       "runners_after": {
         "1B": "Casey Borba",
-        "2B": null,
+        "2B": "Temo Becerra",
         "3B": null
       },
       "score": {
@@ -461,8 +461,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Gage Griggs",
-        "3B": null
+        "2B": null,
+        "3B": "Gage Griggs"
       },
       "score": {
         "away": 0,
@@ -483,13 +483,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Gage Griggs",
-        "3B": null
+        "2B": null,
+        "3B": "Gage Griggs"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Gage Griggs",
-        "3B": null
+        "2B": null,
+        "3B": "Gage Griggs"
       },
       "score": {
         "away": 0,
@@ -505,13 +505,15 @@
       "count": "0-2",
       "pitches": "KK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Gage Griggs"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Gage Griggs",
-        "3B": null
+        "2B": null,
+        "3B": "Gage Griggs"
       },
       "runners_after": {
         "1B": null,
@@ -850,7 +852,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Brent Stukes",
+      "pitcher": "Andrew Kummer",
       "batter": "Casey Borba",
       "outcome": "Fielder's choice",
       "count": "1-2",
@@ -920,7 +922,7 @@
       },
       "runners_after": {
         "1B": "Maloy Heaghney",
-        "2B": null,
+        "2B": "Tyler Lang",
         "3B": null
       },
       "score": {
@@ -942,12 +944,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Maloy Heaghney",
-        "2B": null,
+        "2B": "Tyler Lang",
         "3B": null
       },
       "runners_after": {
         "1B": "Maloy Heaghney",
-        "2B": null,
+        "2B": "Tyler Lang",
         "3B": null
       },
       "score": {
@@ -969,12 +971,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Maloy Heaghney",
-        "2B": null,
+        "2B": "Tyler Lang",
         "3B": null
       },
       "runners_after": {
         "1B": "Maloy Heaghney",
-        "2B": null,
+        "2B": "Tyler Lang",
         "3B": null
       },
       "score": {
@@ -996,12 +998,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Maloy Heaghney",
-        "2B": null,
+        "2B": "Tyler Lang",
         "3B": null
       },
       "runners_after": {
         "1B": "Maloy Heaghney",
-        "2B": null,
+        "2B": "Tyler Lang",
         "3B": null
       },
       "score": {
@@ -1009,6 +1011,33 @@
         "home": 3
       },
       "description": "WATERS, W. struck out swinging (0-2 SKS)."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Andrew Kummer",
+      "batter": "KUMMER, A. to p for STUKES, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 3
+      },
+      "description": "KUMMER, A. to p for STUKES, B.."
     },
     {
       "inning": "Bottom 4",
@@ -1218,9 +1247,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Henry Zenor",
+        "1B": null,
         "2B": "Tyler Lang",
-        "3B": null
+        "3B": "Henry Zenor"
       },
       "score": {
         "away": 2,
@@ -1236,18 +1265,20 @@
       "count": "2-2",
       "pitches": "SFBBF",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Henry Zenor"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Henry Zenor",
+        "1B": null,
         "2B": "Tyler Lang",
-        "3B": null
+        "3B": "Henry Zenor"
       },
       "runners_after": {
         "1B": "Maloy Heaghney",
-        "2B": "Tyler Lang",
-        "3B": null
+        "2B": null,
+        "3B": "Tyler Lang"
       },
       "score": {
         "away": 3,
@@ -1268,13 +1299,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Maloy Heaghney",
-        "2B": "Tyler Lang",
-        "3B": null
+        "2B": null,
+        "3B": "Tyler Lang"
       },
       "runners_after": {
         "1B": "Maloy Heaghney",
-        "2B": "Tyler Lang",
-        "3B": null
+        "2B": null,
+        "3B": "Tyler Lang"
       },
       "score": {
         "away": 3,
@@ -1395,7 +1426,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Andrew Kummer",
+      "pitcher": "Wyatt Land",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1410,8 +1441,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Temo Becerra",
-        "2B": null,
+        "1B": null,
+        "2B": "Temo Becerra",
         "3B": null
       },
       "score": {
@@ -1422,7 +1453,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Andrew Kummer",
+      "pitcher": "Wyatt Land",
       "batter": "Pack",
       "outcome": "Reached on error",
       "count": "1-1",
@@ -1432,8 +1463,8 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Temo Becerra",
-        "2B": null,
+        "1B": null,
+        "2B": "Temo Becerra",
         "3B": null
       },
       "runners_after": {
@@ -1449,7 +1480,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Andrew Kummer",
+      "pitcher": "Wyatt Land",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1476,14 +1507,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Andrew Kummer",
+      "pitcher": "Wyatt Land",
       "batter": "Casey Borba",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "KBK",
       "rbi": true,
       "runs_scored": [
-        "Temo Becerra"
+        "Temo Becerra",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1505,7 +1537,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Andrew Kummer",
+      "pitcher": "Wyatt Land",
       "batter": "BENTLEY, T. to lf for COLEMAN, M..",
       "outcome": "\u2014",
       "count": null,
@@ -1533,6 +1565,33 @@
     {
       "inning": "Bottom 5",
       "pitcher": "Wyatt Land",
+      "batter": "LAND, W. to p for KUMMER, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Casey Borba",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Casey Borba",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 7
+      },
+      "description": "LAND, W. to p for KUMMER, A.."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Reece Hemmerling",
       "batter": "Ashton Larson",
       "outcome": "Double",
       "count": "0-1",
@@ -1561,7 +1620,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Wyatt Land",
+      "pitcher": "Reece Hemmerling",
       "batter": "Josh Livingston",
       "outcome": "Walk",
       "count": "3-1",
@@ -1588,7 +1647,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Wyatt Land",
+      "pitcher": "Reece Hemmerling",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1615,7 +1674,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Wyatt Land",
+      "pitcher": "Reece Hemmerling",
       "batter": "Ethan Mendoza",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -1642,13 +1701,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Wyatt Land",
+      "pitcher": "Reece Hemmerling",
       "batter": "Carson Tinney",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BKBKBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1753,6 +1814,33 @@
     {
       "inning": "Top 6",
       "pitcher": "Jason Flores",
+      "batter": "Flores",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 10
+      },
+      "description": "Flores Jas to p for Leffew."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Jason Flores",
       "batter": "Kenan Bowman",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1806,7 +1894,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jason Flores",
+      "pitcher": "Ethan Walker",
       "batter": "Trey Bentley",
       "outcome": "Walk",
       "count": "3-0",
@@ -1822,7 +1910,7 @@
       },
       "runners_after": {
         "1B": "Trey Bentley",
-        "2B": null,
+        "2B": "Wylie Waters",
         "3B": null
       },
       "score": {
@@ -1833,7 +1921,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jason Flores",
+      "pitcher": "Ethan Walker",
       "batter": "Game",
       "outcome": "\u2014",
       "count": null,
@@ -1844,12 +1932,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Trey Bentley",
-        "2B": null,
+        "2B": "Wylie Waters",
         "3B": null
       },
       "runners_after": {
         "1B": "Trey Bentley",
-        "2B": null,
+        "2B": "Wylie Waters",
         "3B": null
       },
       "score": {
@@ -1871,12 +1959,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Trey Bentley",
-        "2B": null,
+        "2B": "Wylie Waters",
         "3B": null
       },
       "runners_after": {
         "1B": "Trey Bentley",
-        "2B": null,
+        "2B": "Wylie Waters",
         "3B": null
       },
       "score": {
@@ -1887,7 +1975,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ethan Walker",
+      "pitcher": "Brody Walls",
       "batter": "Jake Armsey",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1898,12 +1986,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Trey Bentley",
-        "2B": null,
+        "2B": "Wylie Waters",
         "3B": null
       },
       "runners_after": {
         "1B": "Trey Bentley",
-        "2B": null,
+        "2B": "Wylie Waters",
         "3B": null
       },
       "score": {
@@ -1995,7 +2083,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ethan Walker",
+      "pitcher": "Brody Walls",
       "batter": "Henry Zenor",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2091,8 +2179,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Lang",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Lang",
         "3B": null
       },
       "score": {
@@ -2113,13 +2201,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Tyler Lang",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Lang",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Lang",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Lang",
         "3B": null
       },
       "score": {
@@ -2130,7 +2218,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Reece Hemmerling",
+      "pitcher": "Brad Benton",
       "batter": "Josh Livingston",
       "outcome": "Groundout",
       "count": "2-1",
@@ -2157,7 +2245,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Reece Hemmerling",
+      "pitcher": "Brad Benton",
       "batter": "Ethan Mendoza",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2184,7 +2272,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Reece Hemmerling",
+      "pitcher": "Brad Benton",
       "batter": "Carson Tinney",
       "outcome": "Walk",
       "count": "3-2",
@@ -2211,7 +2299,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Reece Hemmerling",
+      "pitcher": "Brad Benton",
       "batter": "Aiden Robbins",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2347,6 +2435,33 @@
     {
       "inning": "Bottom 8",
       "pitcher": "Brad Benton",
+      "batter": "BENTON, B. to p for HEMMERLING.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 10
+      },
+      "description": "BENTON, B. to p for HEMMERLING."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Brad Benton",
       "batter": "Adrian Rodriguez",
       "outcome": "Single",
       "count": "0-2",
@@ -2373,7 +2488,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brad Benton",
+      "pitcher": "",
       "batter": "Temo Becerra",
       "outcome": "Single",
       "count": "1-0",
@@ -2400,7 +2515,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brad Benton",
+      "pitcher": "",
       "batter": "Pack",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2429,7 +2544,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brad Benton",
+      "pitcher": "",
       "batter": "Casey Borba",
       "outcome": "Walk",
       "count": "3-2",
@@ -2456,7 +2571,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brad Benton",
+      "pitcher": "",
       "batter": "Duplantier J",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2483,7 +2598,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brad Benton",
+      "pitcher": "",
       "batter": "Josh Livingston",
       "outcome": "Flyout",
       "count": "1-2",
@@ -2537,7 +2652,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brody Walls",
+      "pitcher": "Hudson Hamilton",
       "batter": "Henry Zenor",
       "outcome": "Single",
       "count": "1-2",
@@ -2553,7 +2668,7 @@
       },
       "runners_after": {
         "1B": "Henry Zenor",
-        "2B": null,
+        "2B": "Jake Armsey",
         "3B": null
       },
       "score": {
@@ -2564,7 +2679,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brody Walls",
+      "pitcher": "Hudson Hamilton",
       "batter": "Tyler Lang",
       "outcome": "Walk",
       "count": "3-2",
@@ -2575,13 +2690,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Henry Zenor",
-        "2B": null,
+        "2B": "Jake Armsey",
         "3B": null
       },
       "runners_after": {
         "1B": "Tyler Lang",
-        "2B": null,
-        "3B": null
+        "2B": "Henry Zenor",
+        "3B": "Jake Armsey"
       },
       "score": {
         "away": 3,
@@ -2597,18 +2712,20 @@
       "count": "3-2",
       "pitches": "BBKKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jake Armsey"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Tyler Lang",
-        "2B": null,
-        "3B": null
+        "2B": "Henry Zenor",
+        "3B": "Jake Armsey"
       },
       "runners_after": {
         "1B": "Maloy Heaghney",
-        "2B": null,
-        "3B": null
+        "2B": "Tyler Lang",
+        "3B": "Henry Zenor"
       },
       "score": {
         "away": 4,
@@ -2618,24 +2735,26 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Hudson Hamilton",
+      "pitcher": "Thomas Burns",
       "batter": "Gage Griggs",
       "outcome": "Fielder's choice",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Henry Zenor"
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Maloy Heaghney",
-        "2B": null,
-        "3B": null
+        "2B": "Tyler Lang",
+        "3B": "Henry Zenor"
       },
       "runners_after": {
         "1B": "Gage Griggs",
         "2B": null,
-        "3B": null
+        "3B": "Tyler Lang"
       },
       "score": {
         "away": 5,
@@ -2645,23 +2764,25 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Hudson Hamilton",
+      "pitcher": "Thomas Burns",
       "batter": "Kenan Bowman",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Tyler Lang"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Gage Griggs",
         "2B": null,
-        "3B": null
+        "3B": "Tyler Lang"
       },
       "runners_after": {
         "1B": "Kenan Bowman",
-        "2B": null,
+        "2B": "Gage Griggs",
         "3B": null
       },
       "score": {
@@ -2683,13 +2804,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Kenan Bowman",
-        "2B": null,
+        "2B": "Gage Griggs",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kenan Bowman",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Kenan Bowman",
+        "3B": "Gage Griggs"
       },
       "score": {
         "away": 6,
@@ -2709,14 +2830,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Kenan Bowman",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Kenan Bowman",
+        "3B": "Gage Griggs"
       },
       "runners_after": {
         "1B": "Wylie Waters",
-        "2B": null,
-        "3B": null
+        "2B": "Kenan Bowman",
+        "3B": "Gage Griggs"
       },
       "score": {
         "away": 6,
@@ -2732,18 +2853,20 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Gage Griggs"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Wylie Waters",
-        "2B": null,
-        "3B": null
+        "2B": "Kenan Bowman",
+        "3B": "Gage Griggs"
       },
       "runners_after": {
         "1B": "Trey Bentley",
-        "2B": null,
-        "3B": null
+        "2B": "Wylie Waters",
+        "3B": "Kenan Bowman"
       },
       "score": {
         "away": 7,
@@ -2753,7 +2876,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Thomas Burns",
+      "pitcher": "Michael Winter",
       "batter": "Brady Small",
       "outcome": "Pop out",
       "count": "2-1",
@@ -2764,13 +2887,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Trey Bentley",
-        "2B": null,
-        "3B": null
+        "2B": "Wylie Waters",
+        "3B": "Kenan Bowman"
       },
       "runners_after": {
         "1B": "Trey Bentley",
-        "2B": null,
-        "3B": null
+        "2B": "Wylie Waters",
+        "3B": "Kenan Bowman"
       },
       "score": {
         "away": 7,
@@ -2780,24 +2903,27 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Thomas Burns",
+      "pitcher": "",
       "batter": "Jake Armsey",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "BSBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Wylie Waters",
+        "Kenan Bowman"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Trey Bentley",
-        "2B": null,
-        "3B": null
+        "2B": "Wylie Waters",
+        "3B": "Kenan Bowman"
       },
       "runners_after": {
         "1B": "Jake Armsey",
         "2B": null,
-        "3B": null
+        "3B": "Trey Bentley"
       },
       "score": {
         "away": 9,
@@ -2807,7 +2933,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Michael Winter",
+      "pitcher": "",
       "batter": "Henry Zenor",
       "outcome": "Flyout",
       "count": "1-2",
@@ -2819,12 +2945,12 @@
       "runners_before": {
         "1B": "Jake Armsey",
         "2B": null,
-        "3B": null
+        "3B": "Trey Bentley"
       },
       "runners_after": {
         "1B": "Jake Armsey",
         "2B": null,
-        "3B": null
+        "3B": "Trey Bentley"
       },
       "score": {
         "away": 9,

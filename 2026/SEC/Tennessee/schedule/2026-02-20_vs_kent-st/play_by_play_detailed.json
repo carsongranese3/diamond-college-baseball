@@ -3,7 +3,7 @@
   "date": "02/20/2026",
   "away_team": "Kent St.",
   "home_team": "Tennessee",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -184,8 +184,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Blaine Brown",
-        "2B": null,
+        "1B": null,
+        "2B": "Blaine Brown",
         "3B": null
       },
       "score": {
@@ -206,13 +206,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Blaine Brown",
-        "2B": null,
+        "1B": null,
+        "2B": "Blaine Brown",
         "3B": null
       },
       "runners_after": {
-        "1B": "Blaine Brown",
-        "2B": null,
+        "1B": null,
+        "2B": "Blaine Brown",
         "3B": null
       },
       "score": {
@@ -233,13 +233,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Blaine Brown",
-        "2B": null,
+        "1B": null,
+        "2B": "Blaine Brown",
         "3B": null
       },
       "runners_after": {
-        "1B": "Blaine Brown",
-        "2B": null,
+        "1B": null,
+        "2B": "Blaine Brown",
         "3B": null
       },
       "score": {
@@ -455,7 +455,7 @@
       },
       "runners_after": {
         "1B": "Jay Abernathy",
-        "2B": null,
+        "2B": "Manny Marin",
         "3B": null
       },
       "score": {
@@ -477,12 +477,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jay Abernathy",
-        "2B": null,
+        "2B": "Manny Marin",
         "3B": null
       },
       "runners_after": {
         "1B": "Jay Abernathy",
-        "2B": null,
+        "2B": "Manny Marin",
         "3B": null
       },
       "score": {
@@ -671,7 +671,7 @@
       },
       "runners_after": {
         "1B": "Levi Clark",
-        "2B": null,
+        "2B": "Henry Ford",
         "3B": null
       },
       "score": {
@@ -693,13 +693,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Levi Clark",
-        "2B": null,
+        "2B": "Henry Ford",
         "3B": null
       },
       "runners_after": {
         "1B": "Reese Chapman",
-        "2B": null,
-        "3B": null
+        "2B": "Levi Clark",
+        "3B": "Henry Ford"
       },
       "score": {
         "away": 0,
@@ -720,13 +720,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Reese Chapman",
-        "2B": null,
-        "3B": null
+        "2B": "Levi Clark",
+        "3B": "Henry Ford"
       },
       "runners_after": {
         "1B": "Reese Chapman",
-        "2B": null,
-        "3B": null
+        "2B": "Levi Clark",
+        "3B": "Henry Ford"
       },
       "score": {
         "away": 0,
@@ -747,13 +747,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Reese Chapman",
-        "2B": null,
-        "3B": null
+        "2B": "Levi Clark",
+        "3B": "Henry Ford"
       },
       "runners_after": {
         "1B": "Reese Chapman",
-        "2B": null,
-        "3B": null
+        "2B": "Levi Clark",
+        "3B": "Henry Ford"
       },
       "score": {
         "away": 0,
@@ -850,7 +850,9 @@
       "count": "2-1",
       "pitches": "BBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1141,7 +1143,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jordan",
+      "pitcher": "Jordan Kolenda",
+      "batter": "Jordan",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 0
+      },
+      "description": "Jordan Kolen to p for Ciaran Caugh."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Jordan Kolenda",
       "batter": "Henry Ford",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1168,7 +1197,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jordan",
+      "pitcher": "Jordan Kolenda",
       "batter": "Blaine Brown",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1195,7 +1224,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jordan",
+      "pitcher": "Jordan Kolenda",
       "batter": "Levi Clark",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1304,6 +1333,33 @@
     {
       "inning": "Top 6",
       "pitcher": "Brayden Krenzel",
+      "batter": "KRENZEL, B. to p for KUHNS, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Ripken",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ripken",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 0
+      },
+      "description": "KRENZEL, B. to p for KUHNS, T.."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Brayden Krenzel",
       "batter": "Luke",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1330,7 +1386,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jordan",
+      "pitcher": "Jordan Kolenda",
       "batter": "Reese Chapman",
       "outcome": "Double",
       "count": "1-1",
@@ -1357,7 +1413,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jordan",
+      "pitcher": "Jordan Kolenda",
       "batter": "Stone Lawless",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1373,8 +1429,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Reese Chapman",
-        "3B": null
+        "2B": null,
+        "3B": "Reese Chapman"
       },
       "score": {
         "away": 1,
@@ -1384,23 +1440,25 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jordan",
+      "pitcher": "Jordan Kolenda",
       "batter": "Manny Marin",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Reese Chapman"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Reese Chapman",
-        "3B": null
+        "2B": null,
+        "3B": "Reese Chapman"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Reese Chapman",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1411,7 +1469,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jordan",
+      "pitcher": "Jordan Kolenda",
       "batter": "Chris Newstrom",
       "outcome": "Walk",
       "count": "3-1",
@@ -1422,12 +1480,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Reese Chapman",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Chris Newstrom",
-        "2B": "Reese Chapman",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1438,25 +1496,26 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jordan",
+      "pitcher": "Jordan Kolenda",
       "batter": "Jay Abernathy",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
+        "Chris Newstrom",
         "Jay Abernathy"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Chris Newstrom",
-        "2B": "Reese Chapman",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Newstrom",
-        "2B": "Reese Chapman",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1467,7 +1526,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jordan",
+      "pitcher": "Brody Krzysiak",
       "batter": "Ariel Antigua",
       "outcome": "Walk",
       "count": "3-2",
@@ -1477,13 +1536,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Chris Newstrom",
-        "2B": "Reese Chapman",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Ariel Antigua",
-        "2B": "Reese Chapman",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1494,7 +1553,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Brody",
+      "pitcher": "Brody Krzysiak",
+      "batter": "Brody",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Ariel Antigua",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ariel Antigua",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 3
+      },
+      "description": "Brody Krzysi to p for Jordan Kolen."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Brody Krzysiak",
       "batter": "Henry Ford",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1505,12 +1591,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Ariel Antigua",
-        "2B": "Reese Chapman",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Ariel Antigua",
-        "2B": "Reese Chapman",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1602,7 +1688,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Brody",
+      "pitcher": "Brody Krzysiak",
       "batter": "Blaine Brown",
       "outcome": "Pop out",
       "count": "1-2",
@@ -1629,7 +1715,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Brody",
+      "pitcher": "Brody Krzysiak",
       "batter": "Levi Clark",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1656,7 +1742,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Brody",
+      "pitcher": "Brody Krzysiak",
       "batter": "Reese Chapman",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1791,13 +1877,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "Mark Hindy",
       "batter": "Micah",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "FF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1818,7 +1906,34 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Mark Hindy",
+      "pitcher": "Bo Rhudy",
+      "batter": "HINDY, M. to p for KRENZEL, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Micah",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Micah",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 3
+      },
+      "description": "HINDY, M. to p for KRENZEL, B.."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Bo Rhudy",
       "batter": "Hunter",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1845,7 +1960,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brody",
+      "pitcher": "Brody Krzysiak",
       "batter": "Stone Lawless",
       "outcome": "Single",
       "count": "2-1",
@@ -1872,7 +1987,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brody",
+      "pitcher": "Brody Krzysiak",
       "batter": "Manny Marin",
       "outcome": "Grounded into double play",
       "count": "2-2",
@@ -1887,7 +2002,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Stone Lawless",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1899,7 +2014,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brody",
+      "pitcher": "Caden Leonard",
       "batter": "Chris Newstrom",
       "outcome": "Single",
       "count": "1-1",
@@ -1909,7 +2024,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Stone Lawless",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1926,7 +2041,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brody",
+      "pitcher": "",
       "batter": "Jay Abernathy",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1950,6 +2065,33 @@
         "home": 3
       },
       "description": "ABERNATHY, J grounded out to (0-0)."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "Bo Rhudy",
+      "batter": "RHUDY, B. to p for HINDY, M..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 3
+      },
+      "description": "RHUDY, B. to p for HINDY, M.."
     },
     {
       "inning": "Top 9",
@@ -2007,7 +2149,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "Brady Frederick",
       "batter": "Max",
       "outcome": "Single",
       "count": "0-0",
@@ -2034,7 +2176,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "Brady Frederick",
       "batter": "Grady",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -2061,13 +2203,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "",
       "batter": "Sawyer",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2088,7 +2232,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brady Frederick",
+      "pitcher": "",
+      "batter": "FREDERICK, B to p for RHUDY, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Sawyer",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Sawyer",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 3
+      },
+      "description": "FREDERICK, B to p for RHUDY, B.."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": "Brody",
       "outcome": "Fielder's choice",
       "count": "0-2",
@@ -2115,7 +2286,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brady Frederick",
+      "pitcher": "",
       "batter": "Ripken",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2142,7 +2313,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Brody",
+      "pitcher": "",
       "batter": "Max",
       "outcome": "\u2014",
       "count": null,
@@ -2169,7 +2340,34 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Caden",
+      "pitcher": "",
+      "batter": "Caden",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 3
+      },
+      "description": "Caden Leonar to p for Brody Krzysi."
+    },
+    {
+      "inning": "Bottom 9",
+      "pitcher": "",
       "batter": "Tyler Myatt",
       "outcome": "Home run",
       "count": "1-1",

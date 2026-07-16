@@ -3,7 +3,7 @@
   "date": "04/14/2026",
   "away_team": "NC State",
   "home_team": "East Carolina",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -103,8 +103,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris McHugh",
-        "2B": "Luke Nixon",
+        "1B": null,
+        "2B": "Chris McHugh",
         "3B": null
       },
       "score": {
@@ -125,13 +125,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Chris McHugh",
-        "2B": "Luke Nixon",
+        "1B": null,
+        "2B": "Chris McHugh",
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris McHugh",
-        "2B": "Luke Nixon",
+        "1B": null,
+        "2B": "Chris McHugh",
         "3B": null
       },
       "score": {
@@ -293,7 +293,7 @@
       },
       "runners_after": {
         "1B": "Rett Johnson",
-        "2B": null,
+        "2B": "Mikey Ryan",
         "3B": null
       },
       "score": {
@@ -315,12 +315,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Rett Johnson",
-        "2B": null,
+        "2B": "Mikey Ryan",
         "3B": null
       },
       "runners_after": {
         "1B": "Rett Johnson",
-        "2B": null,
+        "2B": "Mikey Ryan",
         "3B": null
       },
       "score": {
@@ -342,13 +342,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Rett Johnson",
-        "2B": null,
+        "2B": "Mikey Ryan",
         "3B": null
       },
       "runners_after": {
         "1B": "Brayden Fraasman",
         "2B": null,
-        "3B": null
+        "3B": "Mikey Ryan"
       },
       "score": {
         "away": 0,
@@ -364,17 +364,19 @@
       "count": "1-2",
       "pitches": "BSS",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Mikey Ryan"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Brayden Fraasman",
         "2B": null,
-        "3B": null
+        "3B": "Mikey Ryan"
       },
       "runners_after": {
         "1B": "Vincent DeCarlo",
-        "2B": null,
+        "2B": "Brayden Fraasman",
         "3B": null
       },
       "score": {
@@ -391,18 +393,20 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Brayden Fraasman"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Vincent DeCarlo",
-        "2B": null,
+        "2B": "Brayden Fraasman",
         "3B": null
       },
       "runners_after": {
         "1B": "Rett Johnson",
         "2B": null,
-        "3B": null
+        "3B": "Vincent DeCarlo"
       },
       "score": {
         "away": 2,
@@ -424,12 +428,12 @@
       "runners_before": {
         "1B": "Rett Johnson",
         "2B": null,
-        "3B": null
+        "3B": "Vincent DeCarlo"
       },
       "runners_after": {
         "1B": "Rett Johnson",
         "2B": null,
-        "3B": null
+        "3B": "Vincent DeCarlo"
       },
       "score": {
         "away": 2,
@@ -601,13 +605,14 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Ethan Rose",
       "batter": "Ty Head",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
+        "Chris McHugh",
         "Ty Head"
       ],
       "outs_before": 1,
@@ -618,7 +623,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris McHugh",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -630,7 +635,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Ethan Rose",
       "batter": "Mikey Ryan",
       "outcome": "Walk",
       "count": "3-1",
@@ -640,7 +645,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Chris McHugh",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -657,7 +662,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Ethan Rose",
       "batter": "Rett Johnson",
       "outcome": "Single",
       "count": "3-2",
@@ -674,7 +679,7 @@
       "runners_after": {
         "1B": "Rett Johnson",
         "2B": null,
-        "3B": null
+        "3B": "Mikey Ryan"
       },
       "score": {
         "away": 4,
@@ -684,19 +689,21 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Ethan Rose",
       "batter": "Brandon Novy",
       "outcome": "\u2014",
       "count": "2-1",
       "pitches": "BBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Mikey Ryan"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Rett Johnson",
         "2B": null,
-        "3B": null
+        "3B": "Mikey Ryan"
       },
       "runners_after": {
         "1B": "Rett Johnson",
@@ -711,7 +718,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Sean Jenkins",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -726,8 +733,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Rett Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Rett Johnson",
         "3B": null
       },
       "score": {
@@ -738,7 +745,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Sean Jenkins",
       "batter": "Brayden Fraasman",
       "outcome": "Groundout",
       "count": "0-2",
@@ -748,13 +755,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Rett Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Rett Johnson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Rett Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Rett Johnson",
         "3B": null
       },
       "score": {
@@ -846,7 +853,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Sean Jenkins",
       "batter": "Vincent DeCarlo",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -873,7 +880,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Sean Jenkins",
       "batter": "Rett Johnson",
       "outcome": "Groundout",
       "count": "0-1",
@@ -900,7 +907,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Sean Jenkins",
       "batter": "Luke Nixon",
       "outcome": "Lineout",
       "count": "0-2",
@@ -1024,7 +1031,7 @@
       },
       "runners_after": {
         "1B": "Matthew Lashley",
-        "2B": null,
+        "2B": "Jack Herring",
         "3B": null
       },
       "score": {
@@ -1046,12 +1053,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Matthew Lashley",
-        "2B": null,
+        "2B": "Jack Herring",
         "3B": null
       },
       "runners_after": {
         "1B": "Matthew Lashley",
-        "2B": null,
+        "2B": "Jack Herring",
         "3B": null
       },
       "score": {
@@ -1062,7 +1069,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Sean Jenkins",
       "batter": "Chris McHugh",
       "outcome": "Walk",
       "count": "3-0",
@@ -1089,7 +1096,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Sean Jenkins",
       "batter": "Ty Head",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1116,7 +1123,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Sean Jenkins",
       "batter": "Mikey Ryan",
       "outcome": "Grounded into double play",
       "count": "1-0",
@@ -1131,7 +1138,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris McHugh",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1143,7 +1150,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Michael Ragusa",
       "batter": "Michael Kalinich",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1170,7 +1177,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Michael Ragusa",
       "batter": "Austin Irby",
       "outcome": "Pop out",
       "count": "2-0",
@@ -1197,7 +1204,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Michael Ragusa",
       "batter": "Braden Burress",
       "outcome": "Lineout",
       "count": "2-2",
@@ -1224,7 +1231,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Sean Jenkins",
       "batter": "Rett Johnson",
       "outcome": "Double",
       "count": "0-1",
@@ -1251,7 +1258,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Sean Jenkins",
       "batter": "Brandon Novy",
       "outcome": "\u2014",
       "count": "1-0",
@@ -1267,8 +1274,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Rett Johnson",
-        "3B": null
+        "2B": null,
+        "3B": "Rett Johnson"
       },
       "score": {
         "away": 5,
@@ -1278,23 +1285,25 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Sean Jenkins",
       "batter": "Brayden Fraasman",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "BFS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Rett Johnson"
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Rett Johnson",
-        "3B": null
+        "2B": null,
+        "3B": "Rett Johnson"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Rett Johnson",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1305,7 +1314,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Sean Jenkins",
       "batter": "Vincent DeCarlo",
       "outcome": "Single",
       "count": "2-0",
@@ -1316,12 +1325,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Rett Johnson",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Vincent DeCarlo",
-        "2B": "Rett Johnson",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1332,7 +1341,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Sean Jenkins",
       "batter": "Rett Johnson",
       "outcome": "Walk",
       "count": "3-1",
@@ -1343,12 +1352,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Vincent DeCarlo",
-        "2B": "Rett Johnson",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Rett Johnson",
-        "2B": "Rett Johnson",
+        "2B": "Vincent DeCarlo",
         "3B": null
       },
       "score": {
@@ -1359,7 +1368,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Jackson DiLorenzo",
       "batter": "Luke Nixon",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1370,12 +1379,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Rett Johnson",
-        "2B": "Rett Johnson",
+        "2B": "Vincent DeCarlo",
         "3B": null
       },
       "runners_after": {
         "1B": "Rett Johnson",
-        "2B": "Rett Johnson",
+        "2B": "Vincent DeCarlo",
         "3B": null
       },
       "score": {
@@ -1386,7 +1395,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Michael Ragusa",
       "batter": "Davin Whitaker",
       "outcome": "Walk",
       "count": "3-2",
@@ -1413,7 +1422,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Michael Ragusa",
       "batter": "Jack Herring",
       "outcome": "Single",
       "count": "0-0",
@@ -1430,7 +1439,7 @@
       "runners_after": {
         "1B": "Jack Herring",
         "2B": null,
-        "3B": null
+        "3B": "Davin Whitaker"
       },
       "score": {
         "away": 6,
@@ -1440,19 +1449,21 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Michael Ragusa",
       "batter": "Brayden Bachman",
       "outcome": "\u2014",
       "count": "1-2",
       "pitches": "KKBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Davin Whitaker"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Jack Herring",
         "2B": null,
-        "3B": null
+        "3B": "Davin Whitaker"
       },
       "runners_after": {
         "1B": "Jack Herring",
@@ -1467,7 +1478,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1482,8 +1493,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jack Herring",
-        "2B": null,
+        "1B": null,
+        "2B": "Jack Herring",
         "3B": null
       },
       "score": {
@@ -1494,7 +1505,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Colby Wallace",
       "outcome": "Pop out",
       "count": "3-2",
@@ -1504,13 +1515,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jack Herring",
-        "2B": null,
+        "1B": null,
+        "2B": "Jack Herring",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jack Herring",
-        "2B": null,
+        "1B": null,
+        "2B": "Jack Herring",
         "3B": null
       },
       "score": {
@@ -1521,7 +1532,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Matthew Lashley",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1531,13 +1542,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jack Herring",
-        "2B": null,
+        "1B": null,
+        "2B": "Jack Herring",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jack Herring",
-        "2B": null,
+        "1B": null,
+        "2B": "Jack Herring",
         "3B": null
       },
       "score": {
@@ -1548,7 +1559,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Jackson DiLorenzo",
       "batter": "Chris McHugh",
       "outcome": "Single",
       "count": "1-0",
@@ -1575,7 +1586,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Jackson DiLorenzo",
       "batter": "Ty Head",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1602,7 +1613,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Jackson DiLorenzo",
       "batter": "Mikey Ryan",
       "outcome": "Fielder's choice",
       "count": "1-0",
@@ -1629,7 +1640,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Jackson DiLorenzo",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1644,8 +1655,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mikey Ryan",
-        "2B": null,
+        "1B": null,
+        "2B": "Mikey Ryan",
         "3B": null
       },
       "score": {
@@ -1656,18 +1667,20 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Jackson DiLorenzo",
       "batter": "Rett Johnson",
       "outcome": "Reached on error",
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Mikey Ryan"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Mikey Ryan",
-        "2B": null,
+        "1B": null,
+        "2B": "Mikey Ryan",
         "3B": null
       },
       "runners_after": {
@@ -1683,7 +1696,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Jackson DiLorenzo",
       "batter": "Brandon Novy",
       "outcome": "Pop out",
       "count": "0-1",
@@ -1710,7 +1723,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Blade Carver",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1737,7 +1750,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Michael Kalinich",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1764,7 +1777,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Austin Irby",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1791,7 +1804,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Jackson DiLorenzo",
       "batter": "Brayden Fraasman",
       "outcome": "Walk",
       "count": "3-2",
@@ -1818,13 +1831,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Jackson DiLorenzo",
       "batter": "Drew Lanphere",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Brayden Fraasman"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1833,7 +1848,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brayden Fraasman",
+        "1B": null,
         "2B": "Drew Lanphere",
         "3B": null
       },
@@ -1845,7 +1860,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Jackson DiLorenzo",
       "batter": "Rett Johnson",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1855,14 +1870,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Brayden Fraasman",
+        "1B": null,
         "2B": "Drew Lanphere",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brayden Fraasman",
-        "2B": "Drew Lanphere",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Drew Lanphere"
       },
       "score": {
         "away": 8,
@@ -1872,25 +1887,26 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Frank Ciccone",
       "batter": "Luke Nixon",
       "outcome": "Home run",
       "count": "0-2",
       "pitches": "FS",
       "rbi": true,
       "runs_scored": [
+        "Drew Lanphere",
         "Luke Nixon"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Brayden Fraasman",
-        "2B": "Drew Lanphere",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Drew Lanphere"
       },
       "runners_after": {
-        "1B": "Brayden Fraasman",
-        "2B": "Drew Lanphere",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1901,7 +1917,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Frank Ciccone",
       "batter": "Chris McHugh",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1911,13 +1927,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brayden Fraasman",
-        "2B": "Drew Lanphere",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Brayden Fraasman",
-        "2B": "Drew Lanphere",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1928,7 +1944,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Frank Ciccone",
       "batter": "Ty Head",
       "outcome": "Groundout",
       "count": "2-0",
@@ -1938,13 +1954,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brayden Fraasman",
-        "2B": "Drew Lanphere",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Brayden Fraasman",
-        "2B": "Drew Lanphere",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1955,7 +1971,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Braden Burress",
       "outcome": "Single",
       "count": "0-0",
@@ -1982,13 +1998,14 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Davin Whitaker",
       "outcome": "Home run",
       "count": "2-2",
       "pitches": "KBFBF",
       "rbi": true,
       "runs_scored": [
+        "Braden Burress",
         "Davin Whitaker"
       ],
       "outs_before": 0,
@@ -1999,7 +2016,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Braden Burress",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2011,7 +2028,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Jack Herring",
       "outcome": "Lineout",
       "count": "0-1",
@@ -2021,12 +2038,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Braden Burress",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Braden Burress",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2038,7 +2055,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Brayden Bachman",
       "outcome": "Flyout",
       "count": "2-0",
@@ -2048,12 +2065,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Braden Burress",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Braden Burress",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2065,7 +2082,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Aiden Kitchings",
       "batter": "Colby Wallace",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2075,12 +2092,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Braden Burress",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Braden Burress",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2092,7 +2109,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Frank Ciccone",
       "batter": "Mikey Ryan",
       "outcome": "Flyout",
       "count": "2-2",
@@ -2119,7 +2136,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ryan Towers",
+      "pitcher": "Frank Ciccone",
       "batter": "Wyatt Peifer",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2146,7 +2163,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ryan Towers",
+      "pitcher": "",
       "batter": "Brandon Novy",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2173,7 +2190,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Truitt Manuel",
       "batter": "Nick Parham",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2200,7 +2217,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Truitt Manuel",
       "batter": "Blade Carver",
       "outcome": "Lineout",
       "count": "2-0",
@@ -2227,7 +2244,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Truitt Manuel",
       "batter": "Michael Kalinich",
       "outcome": "Groundout",
       "count": "1-2",

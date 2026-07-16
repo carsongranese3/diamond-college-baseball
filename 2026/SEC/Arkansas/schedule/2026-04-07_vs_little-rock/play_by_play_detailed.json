@@ -3,7 +3,7 @@
   "date": "04/07/2026",
   "away_team": "Little Rock",
   "home_team": "Arkansas",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -994,8 +994,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "TJ Pompey",
-        "2B": null,
+        "1B": null,
+        "2B": "TJ Pompey",
         "3B": null
       },
       "score": {
@@ -1016,13 +1016,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "TJ Pompey",
-        "2B": null,
+        "1B": null,
+        "2B": "TJ Pompey",
         "3B": null
       },
       "runners_after": {
         "1B": "Reese Robinett",
-        "2B": null,
+        "2B": "TJ Pompey",
         "3B": null
       },
       "score": {
@@ -1044,12 +1044,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Reese Robinett",
-        "2B": null,
+        "2B": "TJ Pompey",
         "3B": null
       },
       "runners_after": {
         "1B": "Reese Robinett",
-        "2B": null,
+        "2B": "TJ Pompey",
         "3B": null
       },
       "score": {
@@ -1071,13 +1071,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Reese Robinett",
-        "2B": null,
+        "2B": "TJ Pompey",
         "3B": null
       },
       "runners_after": {
-        "1B": "Reese Robinett",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "TJ Pompey",
+        "3B": "Reese Robinett"
       },
       "score": {
         "away": 0,
@@ -1093,18 +1093,20 @@
       "count": "2-2",
       "pitches": "BKBSFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Reese Robinett",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "TJ Pompey",
+        "3B": "Reese Robinett"
       },
       "runners_after": {
-        "1B": "Reese Robinett",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "TJ Pompey",
+        "3B": "Reese Robinett"
       },
       "score": {
         "away": 0,
@@ -1124,14 +1126,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Reese Robinett",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "TJ Pompey",
+        "3B": "Reese Robinett"
       },
       "runners_after": {
         "1B": "Camden Kozeal",
-        "2B": null,
-        "3B": null
+        "2B": "TJ Pompey",
+        "3B": "Reese Robinett"
       },
       "score": {
         "away": 0,
@@ -1152,13 +1154,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Camden Kozeal",
-        "2B": null,
-        "3B": null
+        "2B": "TJ Pompey",
+        "3B": "Reese Robinett"
       },
       "runners_after": {
         "1B": "Maika Niu",
-        "2B": null,
-        "3B": null
+        "2B": "TJ Pompey",
+        "3B": "Reese Robinett"
       },
       "score": {
         "away": 0,
@@ -1363,7 +1365,11 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1417,7 +1423,9 @@
       "count": "1-2",
       "pitches": "FKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 3,
       "outs_after": 3,
       "runners_before": {
@@ -1444,7 +1452,9 @@
       "count": "3-1",
       "pitches": "BBSBB",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 3,
       "outs_after": 3,
       "runners_before": {
@@ -1600,7 +1610,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Gabe Gaeckle",
+      "pitcher": "Cooper Dossett",
       "batter": "Trey Hill",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1818,7 +1828,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Cooper Dossett",
+      "pitcher": "Ethan McElvain",
       "batter": "Luis Castillo",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2061,7 +2071,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethan McElvain",
+      "pitcher": "",
       "batter": "Austin Coyle",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",

@@ -3,7 +3,7 @@
   "date": "03/12/2026",
   "away_team": "Georgia Tech",
   "home_team": "Clemson",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -500,7 +500,8 @@
       "pitches": null,
       "rbi": true,
       "runs_scored": [
-        "Drew Burress"
+        "Drew Burress",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -583,7 +584,8 @@
       "pitches": null,
       "rbi": true,
       "runs_scored": [
-        "Vahn Lackey"
+        "Vahn Lackey",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -991,7 +993,9 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1045,7 +1049,9 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1108,8 +1114,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kent Schmidt",
-        "2B": null,
+        "1B": null,
+        "2B": "Kent Schmidt",
         "3B": null
       },
       "score": {
@@ -1126,17 +1132,20 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Kent Schmidt",
-        "2B": null,
+        "1B": null,
+        "2B": "Kent Schmidt",
         "3B": null
       },
       "runners_after": {
         "1B": "Will Baker",
-        "2B": null,
+        "2B": "Kent Schmidt",
         "3B": null
       },
       "score": {
@@ -1158,12 +1167,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Will Baker",
-        "2B": null,
+        "2B": "Kent Schmidt",
         "3B": null
       },
       "runners_after": {
         "1B": "Will Baker",
-        "2B": null,
+        "2B": "Kent Schmidt",
         "3B": null
       },
       "score": {
@@ -1720,7 +1729,9 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {

@@ -3,7 +3,7 @@
   "date": "05/30/2026",
   "away_team": "West Virginia",
   "home_team": "Kentucky",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -202,7 +202,10 @@
       "count": "3-2",
       "pitches": "KBFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -230,7 +233,8 @@
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "VanCleave,Braxton homered to deep right field (417 ft), 6th of season, 2RBI (2-0 BB): Hindle,Ethan scored from second base, unearned."
+        "VanCleave,Braxton homered to deep right field (417 ft), 6th of season, 2RBI (2-0 BB): Hindle,Ethan scored from second base, unearned.",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -279,7 +283,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Ian Korn",
       "batter": "Caeden Cloud",
       "outcome": "Lineout",
       "count": "0-2",
@@ -402,8 +406,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Armani Guzman",
-        "2B": null,
+        "1B": null,
+        "2B": "Armani Guzman",
         "3B": null
       },
       "score": {
@@ -424,13 +428,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Armani Guzman",
-        "2B": null,
+        "1B": null,
+        "2B": "Armani Guzman",
         "3B": null
       },
       "runners_after": {
         "1B": "Brodie Kresser",
-        "2B": null,
+        "2B": "Armani Guzman",
         "3B": null
       },
       "score": {
@@ -452,12 +456,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Brodie Kresser",
-        "2B": null,
+        "2B": "Armani Guzman",
         "3B": null
       },
       "runners_after": {
         "1B": "Brodie Kresser",
-        "2B": null,
+        "2B": "Armani Guzman",
         "3B": null
       },
       "score": {
@@ -468,7 +472,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Ian Korn",
       "batter": "Owen Jenkins",
       "outcome": "Lineout",
       "count": "1-0",
@@ -495,7 +499,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Ian Korn",
       "batter": "Jayce Tharnish",
       "outcome": "Single",
       "count": "0-0",
@@ -522,7 +526,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Ian Korn",
       "batter": "Tyler Bell",
       "outcome": "Single",
       "count": "0-1",
@@ -549,13 +553,15 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Ian Korn",
       "batter": "Luke Lawrence",
       "outcome": "Double",
       "count": "3-2",
       "pitches": "KFBBBFFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -576,7 +582,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Ian Korn",
       "batter": "Hudson Brown",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -603,13 +609,15 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Ian Korn",
       "batter": "Ethan Hindle",
       "outcome": "Fielder's choice",
       "count": "0-2",
       "pitches": "KK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -630,7 +638,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Ian Korn",
       "batter": "VanCleave,Braxton grounded out up the middle, ss to 1b (1-2 BFF).",
       "outcome": "Groundout",
       "count": "1-2",
@@ -699,8 +707,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyrus Hall",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyrus Hall",
         "3B": null
       },
       "score": {
@@ -721,13 +729,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tyrus Hall",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyrus Hall",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyrus Hall",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyrus Hall",
         "3B": null
       },
       "score": {
@@ -745,18 +753,19 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Gavin Kelly"
+        "Gavin Kelly",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tyrus Hall",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyrus Hall",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyrus Hall",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyrus Hall",
         "3B": null
       },
       "score": {
@@ -777,13 +786,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tyrus Hall",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyrus Hall",
         "3B": null
       },
       "runners_after": {
         "1B": "Paul Schoenfeld",
-        "2B": null,
+        "2B": "Tyrus Hall",
         "3B": null
       },
       "score": {
@@ -805,12 +814,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Paul Schoenfeld",
-        "2B": null,
+        "2B": "Tyrus Hall",
         "3B": null
       },
       "runners_after": {
         "1B": "Paul Schoenfeld",
-        "2B": null,
+        "2B": "Tyrus Hall",
         "3B": null
       },
       "score": {
@@ -832,12 +841,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Paul Schoenfeld",
-        "2B": null,
+        "2B": "Tyrus Hall",
         "3B": null
       },
       "runners_after": {
         "1B": "Paul Schoenfeld",
-        "2B": null,
+        "2B": "Tyrus Hall",
         "3B": null
       },
       "score": {
@@ -848,7 +857,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Ian Korn",
       "batter": "Carson Hansen",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -875,7 +884,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Ian Korn",
       "batter": "Caeden Cloud",
       "outcome": "Single",
       "count": "0-2",
@@ -902,7 +911,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Ian Korn",
       "batter": "Owen Jenkins",
       "outcome": "Grounded into double play",
       "count": "0-0",
@@ -1016,7 +1025,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1053,8 +1064,8 @@
       },
       "runners_after": {
         "1B": "Ben Lumsden",
-        "2B": "Tyrus Hall",
-        "3B": null
+        "2B": null,
+        "3B": "Tyrus Hall"
       },
       "score": {
         "away": 3,
@@ -1070,17 +1081,19 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Tyrus Hall"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Ben Lumsden",
-        "2B": "Tyrus Hall",
-        "3B": null
+        "2B": null,
+        "3B": "Tyrus Hall"
       },
       "runners_after": {
         "1B": "Ben Lumsden",
-        "2B": "Tyrus Hall",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1102,12 +1115,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Ben Lumsden",
-        "2B": "Tyrus Hall",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Matthew Ineich",
-        "2B": "Tyrus Hall",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1118,7 +1131,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Nate Harris",
+      "pitcher": "Ryan Mullan",
       "batter": "Gavin Kelly",
       "outcome": "Walk",
       "count": "3-1",
@@ -1129,12 +1142,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Matthew Ineich",
-        "2B": "Tyrus Hall",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Gavin Kelly",
-        "2B": "Tyrus Hall",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1145,7 +1158,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Nate Harris",
+      "pitcher": "Ryan Mullan",
       "batter": "Paul Schoenfeld",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -1156,12 +1169,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Gavin Kelly",
-        "2B": "Tyrus Hall",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Paul Schoenfeld",
-        "2B": "Tyrus Hall",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1172,23 +1185,25 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Sams",
       "batter": "Sean Smith",
       "outcome": "Hit by pitch",
       "count": "2-0",
       "pitches": "BBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Paul Schoenfeld",
-        "2B": "Tyrus Hall",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Sean Smith",
-        "2B": "Tyrus Hall",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1199,7 +1214,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Sams",
       "batter": "Matthew Graveline",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1210,12 +1225,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Sean Smith",
-        "2B": "Tyrus Hall",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Sean Smith",
-        "2B": "Tyrus Hall",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1226,7 +1241,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Ian Korn",
       "batter": "Jayce Tharnish",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1253,7 +1268,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Ian Korn",
       "batter": "Tyler Bell",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1280,7 +1295,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Ian Korn",
       "batter": "Luke Lawrence",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1307,7 +1322,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Sams",
       "batter": "Armani Guzman",
       "outcome": "Walk",
       "count": "3-2",
@@ -1334,7 +1349,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Sams",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-1",
@@ -1361,13 +1376,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Sams",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Armani Guzman"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1376,7 +1393,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Armani Guzman",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1388,7 +1405,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Sams",
       "batter": "Ben Lumsden",
       "outcome": "Walk",
       "count": "3-2",
@@ -1398,7 +1415,7 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Armani Guzman",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1415,7 +1432,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Sams",
       "batter": "Tyrus Hall",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1442,7 +1459,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Nate Harris",
+      "pitcher": "Ira Austin",
       "batter": "Matthew Ineich",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1469,7 +1486,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Ian Korn",
       "batter": "Hudson Brown",
       "outcome": "Reached on error",
       "count": "1-0",
@@ -1496,7 +1513,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Ian Korn",
       "batter": "Ethan Hindle",
       "outcome": "Single",
       "count": "2-2",
@@ -1523,7 +1540,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Ian Korn",
       "batter": "VanCleave,Braxton struck out swinging (2-2 BSSBFS).",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1550,7 +1567,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Ian Korn",
       "batter": "Carson Hansen",
       "outcome": "Single",
       "count": "3-2",
@@ -1577,7 +1594,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Reese Bassinger",
       "batter": "Caeden Cloud",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1604,13 +1621,16 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Reese Bassinger",
       "batter": "Owen Jenkins",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "BBBKK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1631,7 +1651,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Nate Harris",
+      "pitcher": "Ira Austin",
       "batter": "Gavin Kelly",
       "outcome": "Home run",
       "count": "1-2",
@@ -1660,7 +1680,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Bennett",
       "batter": "Paul Schoenfeld",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1687,7 +1707,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Bennett",
       "batter": "Sean Smith",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1714,7 +1734,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Bennett",
       "batter": "Matthew Graveline",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1741,7 +1761,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Reese Bassinger",
       "batter": "Jayce Tharnish",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1768,7 +1788,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Reese Bassinger",
       "batter": "Tyler Bell",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1795,7 +1815,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Reese Bassinger",
       "batter": "Luke Lawrence",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1822,7 +1842,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Bennett",
       "batter": "Armani Guzman",
       "outcome": "Double",
       "count": "1-2",
@@ -1849,7 +1869,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Bennett",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
@@ -1876,7 +1896,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Bennett",
       "batter": "Ben Lumsden",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1903,13 +1923,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Bennett",
       "batter": "Tyrus Hall",
       "outcome": "Double",
       "count": "0-2",
       "pitches": "KF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1930,7 +1952,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Bennett",
       "batter": "Matthew Ineich",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1957,7 +1979,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Reese Bassinger",
       "batter": "Hudson Brown",
       "outcome": "Walk",
       "count": "3-2",
@@ -1984,7 +2006,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Reese Bassinger",
       "batter": "Ethan Hindle",
       "outcome": "Grounded into double play",
       "count": "1-1",
@@ -2011,7 +2033,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Reese Bassinger",
       "batter": "VanCleave,Braxton hit by pitch (0-0 B).",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -2038,7 +2060,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Reese Bassinger",
       "batter": "Carson Hansen",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2065,7 +2087,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Bennett",
       "batter": "Gavin Kelly",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2092,7 +2114,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Bennett",
       "batter": "Paul Schoenfeld",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2119,7 +2141,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Bennett",
       "batter": "Sean Smith",
       "outcome": "Flyout",
       "count": "1-0",
@@ -2146,7 +2168,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Reese Bassinger",
       "batter": "Caeden Cloud",
       "outcome": "Flyout",
       "count": "1-2",
@@ -2173,7 +2195,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Reese Bassinger",
       "batter": "Owen Jenkins",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -2200,7 +2222,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Reese Bassinger",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2215,8 +2237,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Owen Jenkins",
-        "2B": null,
+        "1B": null,
+        "2B": "Owen Jenkins",
         "3B": null
       },
       "score": {
@@ -2227,7 +2249,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Reese Bassinger",
       "batter": "Jayce Tharnish",
       "outcome": "Single",
       "count": "0-1",
@@ -2237,13 +2259,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Owen Jenkins",
-        "2B": null,
+        "1B": null,
+        "2B": "Owen Jenkins",
         "3B": null
       },
       "runners_after": {
         "1B": "Jayce Tharnish",
-        "2B": null,
+        "2B": "Owen Jenkins",
         "3B": null
       },
       "score": {
@@ -2254,7 +2276,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Reese Bassinger",
       "batter": "Tyler Bell",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -2265,12 +2287,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Jayce Tharnish",
-        "2B": null,
+        "2B": "Owen Jenkins",
         "3B": null
       },
       "runners_after": {
         "1B": "Tyler Bell",
-        "2B": null,
+        "2B": "Owen Jenkins",
         "3B": null
       },
       "score": {
@@ -2281,23 +2303,25 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Reese Bassinger",
       "batter": "Luke Lawrence",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Tyler Bell",
-        "2B": null,
+        "2B": "Owen Jenkins",
         "3B": null
       },
       "runners_after": {
         "1B": "Luke Lawrence",
-        "2B": null,
+        "2B": "Owen Jenkins",
         "3B": null
       },
       "score": {
@@ -2308,23 +2332,26 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Ben McDougal",
       "batter": "Hudson Brown",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Luke Lawrence",
-        "2B": null,
+        "2B": "Owen Jenkins",
         "3B": null
       },
       "runners_after": {
         "1B": "Hudson Brown",
-        "2B": null,
+        "2B": "Owen Jenkins",
         "3B": null
       },
       "score": {
@@ -2335,7 +2362,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Ben McDougal",
       "batter": "Ethan Hindle",
       "outcome": "Fielder's choice",
       "count": "0-0",
@@ -2346,12 +2373,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Hudson Brown",
-        "2B": null,
+        "2B": "Owen Jenkins",
         "3B": null
       },
       "runners_after": {
         "1B": "Ethan Hindle",
-        "2B": null,
+        "2B": "Owen Jenkins",
         "3B": null
       },
       "score": {
@@ -2362,7 +2389,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Maxx Yehl",
+      "pitcher": "Ben McDougal",
       "batter": "VanCleave,Braxton flied out to lf (3-1 BBKB).",
       "outcome": "Flyout",
       "count": "3-1",
@@ -2373,12 +2400,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Ethan Hindle",
-        "2B": null,
+        "2B": "Owen Jenkins",
         "3B": null
       },
       "runners_after": {
         "1B": "Ethan Hindle",
-        "2B": null,
+        "2B": "Owen Jenkins",
         "3B": null
       },
       "score": {
@@ -2389,7 +2416,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Bennett",
       "batter": "Matthew Graveline",
       "outcome": "Single",
       "count": "2-2",
@@ -2416,7 +2443,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Bennett",
       "batter": "Armani Guzman",
       "outcome": "Walk",
       "count": "3-1",
@@ -2443,7 +2470,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Bennett",
       "batter": "Brodie Kresser",
       "outcome": "Grounded into double play",
       "count": "1-2",
@@ -2470,13 +2497,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Bennett",
       "batter": "Ben Lumsden",
       "outcome": "Reached on error",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2497,7 +2526,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nate Harris",
+      "pitcher": "Jack Bennett",
       "batter": "Zahir Barjam",
       "outcome": "Flyout",
       "count": "2-2",

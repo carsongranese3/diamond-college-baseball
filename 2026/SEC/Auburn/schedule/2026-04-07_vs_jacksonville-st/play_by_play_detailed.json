@@ -3,7 +3,7 @@
   "date": "04/07/2026",
   "away_team": "Jacksonville St.",
   "home_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -67,7 +67,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -95,7 +97,8 @@
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Brady Thomas"
+        "Brady Thomas",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -333,7 +336,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Christian Chatterton",
+      "pitcher": "Marcel Kulik",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -496,6 +499,33 @@
     {
       "inning": "Top 3",
       "pitcher": "Marcel Kulik",
+      "batter": "Kulik, M. to p for Chatterton,C.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 0
+      },
+      "description": "Kulik, M. to p for Chatterton,C."
+    },
+    {
+      "inning": "Top 3",
+      "pitcher": "Marcel Kulik",
       "batter": "Jaxon Pate",
       "outcome": "Double",
       "count": "0-0",
@@ -555,7 +585,9 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -591,8 +623,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Caleb Johnson",
-        "2B": "Jaxon Pate",
+        "1B": null,
+        "2B": "Caleb Johnson",
         "3B": null
       },
       "score": {
@@ -613,13 +645,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Caleb Johnson",
-        "2B": "Jaxon Pate",
+        "1B": null,
+        "2B": "Caleb Johnson",
         "3B": null
       },
       "runners_after": {
         "1B": "Brady Thomas",
-        "2B": "Jaxon Pate",
+        "2B": "Caleb Johnson",
         "3B": null
       },
       "score": {
@@ -636,17 +668,19 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Brady Thomas",
-        "2B": "Jaxon Pate",
+        "2B": "Caleb Johnson",
         "3B": null
       },
       "runners_after": {
         "1B": "Grayson Ashe",
-        "2B": "Jaxon Pate",
+        "2B": "Caleb Johnson",
         "3B": null
       },
       "score": {
@@ -657,7 +691,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Marcel Kulik",
+      "pitcher": "Ryan Hetzler",
       "batter": "Matthew Cash",
       "outcome": "Grounded into double play",
       "count": "0-0",
@@ -668,12 +702,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Grayson Ashe",
-        "2B": "Jaxon Pate",
+        "2B": "Caleb Johnson",
         "3B": null
       },
       "runners_after": {
         "1B": "Grayson Ashe",
-        "2B": "Jaxon Pate",
+        "2B": "Caleb Johnson",
         "3B": null
       },
       "score": {
@@ -684,7 +718,34 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "J.",
+      "pitcher": "Josh Sibley",
+      "batter": "J. Sibley",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 0
+      },
+      "description": "J. Sibley to p for R. Geraghty."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Josh Sibley",
       "batter": "Brandon McCraine",
       "outcome": "Walk",
       "count": "3-2",
@@ -711,7 +772,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "J.",
+      "pitcher": "Josh Sibley",
       "batter": "Bristol Carter",
       "outcome": "Single",
       "count": "0-0",
@@ -738,7 +799,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "J.",
+      "pitcher": "Josh Sibley",
       "batter": "Chase Fralick",
       "outcome": "Groundout",
       "count": "1-1",
@@ -765,7 +826,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "J.",
+      "pitcher": "Josh Sibley",
       "batter": "Chris Rembert",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -792,7 +853,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "J.",
+      "pitcher": "Jud Files",
       "batter": "Bub Terrell",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -816,6 +877,33 @@
         "home": 0
       },
       "description": "Terrell, B. struck out swinging (0-2 KFS)."
+    },
+    {
+      "inning": "Top 4",
+      "pitcher": "Ryan Hetzler",
+      "batter": "Hetzler, R. to p for Kulik, M..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 0
+      },
+      "description": "Hetzler, R. to p for Kulik, M.."
     },
     {
       "inning": "Top 4",
@@ -927,7 +1015,34 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "J.",
+      "pitcher": "Jud Files",
+      "batter": "J. Files",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 0
+      },
+      "description": "J. Files to p for J. Sibley."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Jud Files",
       "batter": "Eric Guevara",
       "outcome": "Groundout",
       "count": "2-2",
@@ -954,7 +1069,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "J.",
+      "pitcher": "Jud Files",
       "batter": "Ethin Bingaman",
       "outcome": "Groundout",
       "count": "2-2",
@@ -981,7 +1096,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "J.",
+      "pitcher": "Jud Files",
       "batter": "Logan Gregorio",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1089,14 +1204,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "Griffin Graves",
       "batter": "Grayson Ashe",
       "outcome": "Home run",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Grayson Ashe"
+        "Grayson Ashe",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1118,7 +1234,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "Griffin Graves",
       "batter": "Matthew Cash",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1145,7 +1261,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "J.",
+      "pitcher": "Jud Files",
       "batter": "Brandon McCraine",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1172,7 +1288,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "J.",
+      "pitcher": "Jud Files",
       "batter": "Brandon McCraine",
       "outcome": "Double",
       "count": "0-1",
@@ -1199,7 +1315,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "J.",
+      "pitcher": "Jud Files",
       "batter": "Bristol Carter",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1226,7 +1342,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "J.",
+      "pitcher": "Maddox McDougall",
       "batter": "Chase Fralick",
       "outcome": "Walk",
       "count": "3-2",
@@ -1253,7 +1369,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "J.",
+      "pitcher": "Maddox McDougall",
       "batter": "Chris Rembert",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1277,6 +1393,33 @@
         "home": 0
       },
       "description": "Rembert, C. struck out swinging (2-2 BSBKS)."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Griffin Graves",
+      "batter": "Graves, G. to p for Hetzler, R..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 0
+      },
+      "description": "Graves, G. to p for Hetzler, R.."
     },
     {
       "inning": "Top 6",
@@ -1334,7 +1477,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Griffin Graves",
+      "pitcher": "Garrett Brewer",
       "batter": "Luke Williams",
       "outcome": "Single",
       "count": "3-1",
@@ -1361,7 +1504,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Griffin Graves",
+      "pitcher": "Garrett Brewer",
       "batter": "Jaxon Pate",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1388,7 +1531,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Griffin Graves",
+      "pitcher": "Justice de Jong",
       "batter": "Caleb Johnson",
       "outcome": "Walk",
       "count": "3-1",
@@ -1415,13 +1558,44 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "Justice de Jong",
+      "batter": "Brewer, G. to p for Graves, G..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Caleb Johnson",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Caleb Johnson",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 0
+      },
+      "description": "Brewer, G. to p for Graves, G.."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Justice de Jong",
       "batter": "Cooper Blauser",
       "outcome": "Double",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1442,7 +1616,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "Ethan Harden",
       "batter": "Brady Thomas",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1469,7 +1643,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "M.",
+      "pitcher": "Maddox McDougall",
+      "batter": "M. McDougall",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 10,
+        "home": 0
+      },
+      "description": "M. McDougall to p for J. Files."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Maddox McDougall",
       "batter": "Bub Terrell",
       "outcome": "Single",
       "count": "2-1",
@@ -1496,7 +1697,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "M.",
+      "pitcher": "Maddox McDougall",
       "batter": "Eric Guevara",
       "outcome": "Single",
       "count": "2-2",
@@ -1523,7 +1724,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "M.",
+      "pitcher": "Maddox McDougall",
       "batter": "Ethin Bingaman",
       "outcome": "Single",
       "count": "1-2",
@@ -1550,13 +1751,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "M.",
+      "pitcher": "Maddox McDougall",
       "batter": "Logan Gregorio",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1577,13 +1780,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "M.",
+      "pitcher": "Chase Horst",
       "batter": "Brandon McCraine",
       "outcome": "Flyout",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -1604,13 +1809,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "M.",
+      "pitcher": "Chase Horst",
       "batter": "Brandon McCraine",
       "outcome": "Flyout",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1631,13 +1838,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "M.",
+      "pitcher": "Chase Horst",
       "batter": "Bristol Carter",
       "outcome": "Double",
       "count": "3-2",
       "pitches": "FBBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1658,7 +1867,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Chase Horst",
+      "batter": "C. Horst",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Logan Gregorio",
+        "2B": "Bristol Carter",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Logan Gregorio",
+        "2B": "Bristol Carter",
+        "3B": null
+      },
+      "score": {
+        "away": 10,
+        "home": 4
+      },
+      "description": "C. Horst to p for M. McDougall."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Chase Horst",
       "batter": "Chase Fralick",
       "outcome": "Walk",
       "count": "3-1",
@@ -1685,7 +1921,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Chase Horst",
       "batter": "Chris Rembert",
       "outcome": "Fielder's choice",
       "count": "1-1",
@@ -1712,7 +1948,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "LJ Cormier",
       "batter": "de Jong, J. to p for Brewer, G..",
       "outcome": "\u2014",
       "count": null,
@@ -1739,7 +1975,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "LJ Cormier",
       "batter": "Grayson Ashe",
       "outcome": "Walk",
       "count": "3-0",
@@ -1766,7 +2002,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "LJ Cormier",
       "batter": "Matthew Cash",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1793,7 +2029,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "Connor Gatwood",
       "batter": "Greg LaChance",
       "outcome": "Single",
       "count": "1-2",
@@ -1820,13 +2056,42 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ethan Harden",
+      "pitcher": "Connor Gatwood",
+      "batter": "Harden, E. to p for de Jong, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Greg LaChance",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Greg LaChance",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 10,
+        "home": 4
+      },
+      "description": "Harden, E. to p for de Jong, J.."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Connor Gatwood",
       "batter": "Trey King",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1847,7 +2112,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ethan Harden",
+      "pitcher": "Abe Chancellor",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1874,7 +2139,34 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "LJ Cormier",
+      "pitcher": "Abe Chancellor",
+      "batter": "Cormier, L. to p for Harden, E..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": "Trey King"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": "Trey King"
+      },
+      "score": {
+        "away": 11,
+        "home": 4
+      },
+      "description": "Cormier, L. to p for Harden, E.."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Abe Chancellor",
       "batter": "Luke Williams",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1901,13 +2193,16 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "LJ Cormier",
+      "pitcher": "Abe Chancellor",
       "batter": "Jaxon Pate",
       "outcome": "Reached on error",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1928,7 +2223,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "LJ Cormier",
+      "pitcher": "",
       "batter": "Caleb Johnson",
       "outcome": "Pop out",
       "count": "2-1",
@@ -1955,7 +2250,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "C.",
+      "pitcher": "Chase Horst",
       "batter": "Bub Terrell",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1982,7 +2277,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "C.",
+      "pitcher": "Chase Horst",
       "batter": "Eric Guevara",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2009,7 +2304,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "C.",
+      "pitcher": "Chase Horst",
       "batter": "Ethin Bingaman",
       "outcome": "Single",
       "count": "0-2",
@@ -2036,7 +2331,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "C.",
+      "pitcher": "Chase Horst",
       "batter": "Logan Gregorio",
       "outcome": "Single",
       "count": "0-1",
@@ -2063,7 +2358,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "C.",
+      "pitcher": "Chase Horst",
       "batter": "Brandon McCraine",
       "outcome": "Fielder's choice",
       "count": "0-1",
@@ -2090,7 +2385,34 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Connor Gatwood",
+      "pitcher": "",
+      "batter": "Gatwood, C. to p for Cormier, L..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 13,
+        "home": 4
+      },
+      "description": "Gatwood, C. to p for Cormier, L.."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "",
       "batter": "Steele, L. to c for Fralick, C..",
       "outcome": "\u2014",
       "count": null,
@@ -2117,7 +2439,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Connor Gatwood",
+      "pitcher": "",
       "batter": "Thompson, T. to 2b for Rembert, C..",
       "outcome": "\u2014",
       "count": null,
@@ -2144,7 +2466,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Connor Gatwood",
+      "pitcher": "",
       "batter": "Cooper Blauser",
       "outcome": "Walk",
       "count": "3-2",
@@ -2171,7 +2493,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Connor Gatwood",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2186,8 +2508,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cooper Blauser",
-        "2B": null,
+        "1B": null,
+        "2B": "Cooper Blauser",
         "3B": null
       },
       "score": {
@@ -2198,23 +2520,25 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Connor Gatwood",
+      "pitcher": "",
       "batter": "Brady Thomas",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "BFFFFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Cooper Blauser",
-        "2B": null,
+        "1B": null,
+        "2B": "Cooper Blauser",
         "3B": null
       },
       "runners_after": {
         "1B": "Brady Thomas",
-        "2B": null,
+        "2B": "Cooper Blauser",
         "3B": null
       },
       "score": {
@@ -2225,7 +2549,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Connor Gatwood",
+      "pitcher": "",
       "batter": "Grayson Ashe",
       "outcome": "Single",
       "count": "2-2",
@@ -2236,12 +2560,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Brady Thomas",
-        "2B": null,
+        "2B": "Cooper Blauser",
         "3B": null
       },
       "runners_after": {
         "1B": "Grayson Ashe",
-        "2B": null,
+        "2B": "Cooper Blauser",
         "3B": null
       },
       "score": {
@@ -2252,23 +2576,52 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Abe Chancellor",
+      "pitcher": "",
+      "batter": "Chancellor,A to p for Gatwood, C..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Grayson Ashe",
+        "2B": "Cooper Blauser",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Grayson Ashe",
+        "2B": "Cooper Blauser",
+        "3B": null
+      },
+      "score": {
+        "away": 14,
+        "home": 4
+      },
+      "description": "Chancellor,A to p for Gatwood, C.."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "",
       "batter": "Sam Richardson",
       "outcome": "Grounded into double play",
       "count": "0-2",
       "pitches": "SK",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Grayson Ashe",
-        "2B": null,
+        "2B": "Cooper Blauser",
         "3B": null
       },
       "runners_after": {
         "1B": "Grayson Ashe",
-        "2B": null,
+        "2B": "Cooper Blauser",
         "3B": null
       },
       "score": {
@@ -2279,7 +2632,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Abe Chancellor",
+      "pitcher": "",
       "batter": "Greg LaChance",
       "outcome": "Single",
       "count": "0-1",
@@ -2290,12 +2643,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Grayson Ashe",
-        "2B": null,
+        "2B": "Cooper Blauser",
         "3B": null
       },
       "runners_after": {
         "1B": "Greg LaChance",
-        "2B": null,
+        "2B": "Cooper Blauser",
         "3B": null
       },
       "score": {
@@ -2306,7 +2659,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Abe Chancellor",
+      "pitcher": "",
       "batter": "Trey King",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2317,12 +2670,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Greg LaChance",
-        "2B": null,
+        "2B": "Cooper Blauser",
         "3B": null
       },
       "runners_after": {
         "1B": "Greg LaChance",
-        "2B": null,
+        "2B": "Cooper Blauser",
         "3B": null
       },
       "score": {
@@ -2333,7 +2686,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "",
       "batter": "O. Pena",
       "outcome": "\u2014",
       "count": null,
@@ -2360,7 +2713,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "",
       "batter": "T. Majette",
       "outcome": "\u2014",
       "count": null,
@@ -2387,7 +2740,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "",
       "batter": "Todd Clay",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2414,7 +2767,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "",
       "batter": "Bristol Carter",
       "outcome": "Walk",
       "count": "3-1",
@@ -2441,7 +2794,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "",
       "batter": "Lucas Steele",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2468,7 +2821,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "",
       "batter": "Ty Thompson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",

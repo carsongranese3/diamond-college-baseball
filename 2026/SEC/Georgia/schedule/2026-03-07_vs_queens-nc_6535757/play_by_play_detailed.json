@@ -3,7 +3,7 @@
   "date": "03/07/2026(1)",
   "away_team": "Queens (NC)",
   "home_team": "Georgia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -283,7 +283,9 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -310,7 +312,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -337,7 +341,9 @@
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -364,7 +370,9 @@
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -742,7 +750,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -823,7 +833,9 @@
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -878,7 +890,10 @@
       "pitches": "BBBK",
       "rbi": true,
       "runs_scored": [
-        "Kolby Branch"
+        "Kolby Branch",
+        null,
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1254,6 +1269,33 @@
     {
       "inning": "Bottom 5",
       "pitcher": "Jake Young",
+      "batter": "YOUNG, J to p for RULLER, J.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Ryan Wynn",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ryan Wynn",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 7
+      },
+      "description": "YOUNG, J to p for RULLER, J."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Jake Young",
       "batter": "Bryce Calloway",
       "outcome": "Hit by pitch",
       "count": "3-1",
@@ -1448,7 +1490,9 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1592,8 +1636,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -1614,13 +1658,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -1641,14 +1685,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Daniel Jackson"
       },
       "score": {
         "away": 5,
@@ -1668,14 +1712,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Daniel Jackson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Daniel Jackson"
       },
       "runners_after": {
         "1B": "Henry Allen",
         "2B": null,
-        "3B": null
+        "3B": "Daniel Jackson"
       },
       "score": {
         "away": 5,
@@ -1697,12 +1741,12 @@
       "runners_before": {
         "1B": "Henry Allen",
         "2B": null,
-        "3B": null
+        "3B": "Daniel Jackson"
       },
       "runners_after": {
-        "1B": "Henry Allen",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Henry Allen",
+        "3B": "Daniel Jackson"
       },
       "score": {
         "away": 5,
@@ -1718,18 +1762,20 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Henry Allen",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Henry Allen",
+        "3B": "Daniel Jackson"
       },
       "runners_after": {
-        "1B": "Henry Allen",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Henry Allen",
+        "3B": "Daniel Jackson"
       },
       "score": {
         "away": 5,
@@ -1749,14 +1795,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Henry Allen",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Henry Allen",
+        "3B": "Daniel Jackson"
       },
       "runners_after": {
         "1B": "Rylan Lujo",
-        "2B": null,
-        "3B": null
+        "2B": "Henry Allen",
+        "3B": "Daniel Jackson"
       },
       "score": {
         "away": 5,
@@ -1777,13 +1823,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Rylan Lujo",
-        "2B": null,
-        "3B": null
+        "2B": "Henry Allen",
+        "3B": "Daniel Jackson"
       },
       "runners_after": {
         "1B": "Rylan Lujo",
-        "2B": null,
-        "3B": null
+        "2B": "Henry Allen",
+        "3B": "Daniel Jackson"
       },
       "score": {
         "away": 5,
@@ -2046,7 +2092,9 @@
       "count": "2-2",
       "pitches": "KBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2074,7 +2122,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Ryan Wynn"
+        "Ryan Wynn",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -2096,7 +2145,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jake Young",
+      "pitcher": "Davin Pollard",
       "batter": "Rylan Lujo",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2177,7 +2226,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Justin Byrd",
+      "pitcher": "Teddy Brennan",
       "batter": "Hunter Huneycutt",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2201,6 +2250,33 @@
         "home": 13
       },
       "description": "HUNEYCUTT, H struck out swinging (2-2 FBKBS)."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Davin Pollard",
+      "batter": "POLLARD, D to p for YOUNG, J.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 13
+      },
+      "description": "POLLARD, D to p for YOUNG, J."
     },
     {
       "inning": "Bottom 8",
@@ -2339,7 +2415,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Davin Pollard",
+      "pitcher": "",
       "batter": "Tre Phelps",
       "outcome": "Lineout",
       "count": "1-0",
@@ -2366,7 +2442,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Davin Pollard",
+      "pitcher": "",
       "batter": "Daniel Jackson",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2528,7 +2604,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Teddy Brennan",
+      "pitcher": "",
       "batter": "Mitchell Basterrechea",
       "outcome": "Pop out",
       "count": "3-1",

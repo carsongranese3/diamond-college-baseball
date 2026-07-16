@@ -3,7 +3,7 @@
   "date": "05/02/2026",
   "away_team": "Ole Miss",
   "home_team": "Arkansas",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -121,7 +121,9 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -149,7 +151,10 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Collin Reuter"
+        "Collin Reuter",
+        null,
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1363,14 +1368,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cade Townsend",
+      "pitcher": "Hudson Calhoun",
       "batter": "Maika Niu",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Maika Niu"
+        "Maika Niu",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1392,7 +1398,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cade Townsend",
+      "pitcher": "Hudson Calhoun",
       "batter": "Camden Kozeal",
       "outcome": "Walk",
       "count": "3-0",
@@ -1419,7 +1425,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
+      "batter": "H. Calhoun",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Camden Kozeal",
+        "2B": "Carter Rutenbar",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Camden Kozeal",
+        "2B": "Carter Rutenbar",
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 2
+      },
+      "description": "H. Calhoun to p for C. Townsend."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Hudson Calhoun",
       "batter": "Ryder Helfrick",
       "outcome": "Walk",
       "count": "3-0",
@@ -1446,7 +1479,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Nolan Souza",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1473,7 +1506,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Damian Ruiz",
       "outcome": "Fielder's choice",
       "count": "0-0",
@@ -1561,7 +1594,8 @@
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "Will Furniss"
+        "Will Furniss",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1664,7 +1698,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Zack Stewart",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1691,7 +1725,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Kuhio Aloy",
       "outcome": "Home run",
       "count": "2-2",
@@ -1720,7 +1754,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "TJ Pompey",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1747,7 +1781,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Carter Rutenbar",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1855,7 +1889,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "H.",
+      "pitcher": "Walker Hooks",
       "batter": "Maika Niu",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1882,7 +1916,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "H.",
+      "pitcher": "Walker Hooks",
       "batter": "Camden Kozeal",
       "outcome": "Home run",
       "count": "1-1",
@@ -1911,7 +1945,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "H.",
+      "pitcher": "Walker Hooks",
       "batter": "Ryder Helfrick",
       "outcome": "Walk",
       "count": "3-1",
@@ -1938,7 +1972,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
+      "batter": "W. Hooks",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Ryder Helfrick",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ryder Helfrick",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 9,
+        "home": 4
+      },
+      "description": "W. Hooks to p for H. Calhoun."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Walker Hooks",
       "batter": "Nolan Souza",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1965,7 +2026,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Damian Ruiz",
       "outcome": "Single",
       "count": "1-1",
@@ -1992,7 +2053,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "W.",
+      "pitcher": "",
       "batter": "Zack Stewart",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2088,8 +2149,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Judd Utermark",
-        "2B": null,
+        "1B": null,
+        "2B": "Judd Utermark",
         "3B": null
       },
       "score": {
@@ -2110,13 +2171,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Judd Utermark",
-        "2B": null,
+        "1B": null,
+        "2B": "Judd Utermark",
         "3B": null
       },
       "runners_after": {
-        "1B": "Judd Utermark",
-        "2B": null,
+        "1B": null,
+        "2B": "Judd Utermark",
         "3B": null
       },
       "score": {
@@ -2133,16 +2194,18 @@
       "count": "0-2",
       "pitches": "KS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Judd Utermark",
-        "2B": null,
+        "1B": null,
+        "2B": "Judd Utermark",
         "3B": null
       },
       "runners_after": {
-        "1B": "Judd Utermark",
+        "1B": null,
         "2B": "Hayden Federico",
         "3B": null
       },
@@ -2160,11 +2223,13 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Judd Utermark",
+        "1B": null,
         "2B": "Hayden Federico",
         "3B": null
       },
@@ -2235,7 +2300,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "W.",
+      "pitcher": "",
       "batter": "C. Goldin",
       "outcome": "\u2014",
       "count": null,
@@ -2262,7 +2327,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "W.",
+      "pitcher": "",
       "batter": "Kuhio Aloy",
       "outcome": "Groundout",
       "count": "0-2",
@@ -2289,7 +2354,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "W.",
+      "pitcher": "",
       "batter": "TJ Pompey",
       "outcome": "Flyout",
       "count": "1-2",
@@ -2316,7 +2381,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "W.",
+      "pitcher": "",
       "batter": "Carter Rutenbar",
       "outcome": "Flyout",
       "count": "2-1",

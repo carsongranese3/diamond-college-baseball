@@ -3,7 +3,7 @@
   "date": "04/21/2026",
   "away_team": "Presbyterian",
   "home_team": "South Carolina",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -68,7 +68,8 @@
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Matthew Rollison"
+        "Matthew Rollison",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -258,7 +259,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -429,8 +432,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cam Mallo",
-        "2B": null,
+        "1B": null,
+        "2B": "Cam Mallo",
         "3B": null
       },
       "score": {
@@ -451,13 +454,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cam Mallo",
-        "2B": null,
+        "1B": null,
+        "2B": "Cam Mallo",
         "3B": null
       },
       "runners_after": {
         "1B": "James Green",
-        "2B": null,
+        "2B": "Cam Mallo",
         "3B": null
       },
       "score": {
@@ -828,7 +831,8 @@
       "pitches": "FB",
       "rbi": true,
       "runs_scored": [
-        "KJ Scobey"
+        "KJ Scobey",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1036,6 +1040,33 @@
         "home": 4
       },
       "description": "WILLIAMS, J. struck out swinging (2-2 BKBFS)."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "JJ Harrell",
+      "batter": "HARRELL, J. to p for MEREDITH, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 4
+      },
+      "description": "HARRELL, J. to p for MEREDITH, T.."
     },
     {
       "inning": "Bottom 4",
@@ -1317,7 +1348,9 @@
       "count": "3-2",
       "pitches": "BSSBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1344,7 +1377,9 @@
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1371,7 +1406,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1419,7 +1456,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "JJ Harrell",
+      "pitcher": "Bauer Burkart",
       "batter": "Tyler Bak",
       "outcome": "Foul out",
       "count": "3-1",
@@ -1560,7 +1597,9 @@
       "count": "0-2",
       "pitches": "SKS",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
@@ -1609,6 +1648,33 @@
     {
       "inning": "Bottom 6",
       "pitcher": "Bauer Burkart",
+      "batter": "BURKART, B. to p for HARRELL, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 8
+      },
+      "description": "BURKART, B. to p for HARRELL, J.."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Bauer Burkart",
       "batter": "MOODY, B. to .",
       "outcome": "\u2014",
       "count": null,
@@ -1635,7 +1701,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Bauer Burkart",
+      "pitcher": "Domaine Vann",
       "batter": "LINKER, B. to ss for WILLIAMS, J..",
       "outcome": "\u2014",
       "count": null,
@@ -1662,7 +1728,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Bauer Burkart",
+      "pitcher": "Domaine Vann",
       "batter": "Talmadge LeCroy",
       "outcome": "Foul out",
       "count": "0-0",
@@ -1689,7 +1755,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Bauer Burkart",
+      "pitcher": "Domaine Vann",
       "batter": "Dawson Harman",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1716,7 +1782,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Bauer Burkart",
+      "pitcher": "Domaine Vann",
       "batter": "Jake Randolph",
       "outcome": "\u2014",
       "count": "3-2",
@@ -1824,7 +1890,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Bauer Burkart",
+      "pitcher": "Brooks Chamberlin",
       "batter": "CONNER, M. to cf for ALBERTUS, A..",
       "outcome": "\u2014",
       "count": null,
@@ -1851,7 +1917,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Bauer Burkart",
+      "pitcher": "Brooks Chamberlin",
       "batter": "HYNEMAN, L. to c for MASON, C..",
       "outcome": "\u2014",
       "count": null,
@@ -1878,7 +1944,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Domaine Vann",
+      "pitcher": "Brooks Chamberlin",
+      "batter": "VANN, D. to p for BURKART, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 8
+      },
+      "description": "VANN, D. to p for BURKART, B.."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "",
       "batter": "KJ Scobey",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1905,7 +1998,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Domaine Vann",
+      "pitcher": "",
       "batter": "Logan Sutter",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1932,7 +2025,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Domaine Vann",
+      "pitcher": "",
       "batter": "Ethan Lizama",
       "outcome": "Home run",
       "count": "0-0",
@@ -1961,7 +2054,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Domaine Vann",
+      "pitcher": "",
       "batter": "Luke Yuhasz",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2069,7 +2162,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brooks Chamberlin",
+      "pitcher": "",
+      "batter": "CHAMBERLIN, to p for VANN, D..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 9
+      },
+      "description": "CHAMBERLIN, to p for VANN, D.."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "ADAMS, J. to lf for GUILFORD, E..",
       "outcome": "\u2014",
       "count": null,
@@ -2096,7 +2216,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brooks Chamberlin",
+      "pitcher": "",
       "batter": "Patrick Evans",
       "outcome": "Pop out",
       "count": "1-2",
@@ -2123,7 +2243,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brooks Chamberlin",
+      "pitcher": "",
       "batter": "Caleb Hoover",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2150,7 +2270,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brooks Chamberlin",
+      "pitcher": "",
       "batter": "Talmadge LeCroy",
       "outcome": "Lineout",
       "count": "0-0",
@@ -2258,7 +2378,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Cooper Parks",
+      "pitcher": "",
       "batter": "Brody Linker",
       "outcome": "Strikeout (looking)",
       "count": "1-2",

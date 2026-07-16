@@ -3,7 +3,7 @@
   "date": "03/29/2026",
   "away_team": "Texas A&M",
   "home_team": "Missouri",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -103,8 +103,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Gavin Grahovac",
-        "2B": null,
+        "1B": null,
+        "2B": "Gavin Grahovac",
         "3B": null
       },
       "score": {
@@ -125,13 +125,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Gavin Grahovac",
-        "2B": null,
+        "1B": null,
+        "2B": "Gavin Grahovac",
         "3B": null
       },
       "runners_after": {
-        "1B": "Gavin Grahovac",
-        "2B": null,
+        "1B": null,
+        "2B": "Gavin Grahovac",
         "3B": null
       },
       "score": {
@@ -211,8 +211,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kaden Peer",
-        "2B": null,
+        "1B": null,
+        "2B": "Kaden Peer",
         "3B": null
       },
       "score": {
@@ -233,13 +233,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kaden Peer",
-        "2B": null,
+        "1B": null,
+        "2B": "Kaden Peer",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kaden Peer",
-        "2B": null,
+        "1B": null,
+        "2B": "Kaden Peer",
         "3B": null
       },
       "score": {
@@ -260,14 +260,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kaden Peer",
-        "2B": null,
+        "1B": null,
+        "2B": "Kaden Peer",
         "3B": null
       },
       "runners_after": {
         "1B": "Pierre Seals",
         "2B": null,
-        "3B": null
+        "3B": "Kaden Peer"
       },
       "score": {
         "away": 0,
@@ -289,12 +289,12 @@
       "runners_before": {
         "1B": "Pierre Seals",
         "2B": null,
-        "3B": null
+        "3B": "Kaden Peer"
       },
       "runners_after": {
         "1B": "Pierre Seals",
         "2B": null,
-        "3B": null
+        "3B": "Kaden Peer"
       },
       "score": {
         "away": 0,
@@ -304,7 +304,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Luke Sullivan",
       "batter": "Nico Partida",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -331,7 +331,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Luke Sullivan",
       "batter": "Blake Binderup",
       "outcome": "Walk",
       "count": "3-2",
@@ -358,7 +358,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Luke Sullivan",
       "batter": "Jorian Wilson",
       "outcome": "Flyout",
       "count": "1-2",
@@ -385,7 +385,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Luke Sullivan",
       "batter": "Bear Harrison",
       "outcome": "Walk",
       "count": "3-2",
@@ -401,7 +401,7 @@
       },
       "runners_after": {
         "1B": "Bear Harrison",
-        "2B": null,
+        "2B": "Blake Binderup",
         "3B": null
       },
       "score": {
@@ -412,23 +412,25 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Luke Sullivan",
       "batter": "Boston Kellner",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BKKBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Blake Binderup"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Bear Harrison",
-        "2B": null,
+        "2B": "Blake Binderup",
         "3B": null
       },
       "runners_after": {
         "1B": "Boston Kellner",
-        "2B": null,
+        "2B": "Bear Harrison",
         "3B": null
       },
       "score": {
@@ -439,24 +441,26 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Luke Sullivan",
       "batter": "Gavin Grahovac",
       "outcome": "Home run",
       "count": "1-2",
       "pitches": "KKB",
       "rbi": true,
       "runs_scored": [
+        "Bear Harrison",
+        "Boston Kellner",
         "Gavin Grahovac"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Boston Kellner",
-        "2B": null,
+        "2B": "Bear Harrison",
         "3B": null
       },
       "runners_after": {
-        "1B": "Boston Kellner",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -468,7 +472,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Luke Sullivan",
       "batter": "Caden Sorrell",
       "outcome": "Double",
       "count": "0-1",
@@ -478,12 +482,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Boston Kellner",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Boston Kellner",
+        "1B": null,
         "2B": "Caden Sorrell",
         "3B": null
       },
@@ -495,7 +499,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Luke Sullivan",
       "batter": "Chris Hacopian",
       "outcome": "Flyout",
       "count": "0-2",
@@ -505,12 +509,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Boston Kellner",
+        "1B": null,
         "2B": "Caden Sorrell",
         "3B": null
       },
       "runners_after": {
-        "1B": "Boston Kellner",
+        "1B": null,
         "2B": "Caden Sorrell",
         "3B": null
       },
@@ -591,7 +595,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Blaize Ward",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -603,7 +607,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Luke Sullivan",
       "batter": "Jake Duer",
       "outcome": "Walk",
       "count": "3-1",
@@ -630,7 +634,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Luke Sullivan",
       "batter": "Nico Partida",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -657,13 +661,14 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Luke Sullivan",
       "batter": "Blake Binderup",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
+        "Jake Duer",
         "Blake Binderup"
       ],
       "outs_before": 1,
@@ -674,7 +679,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Duer",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -686,7 +691,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Ian Lohse",
       "batter": "Jorian Wilson",
       "outcome": "Single",
       "count": "0-0",
@@ -696,7 +701,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jake Duer",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -713,7 +718,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Ian Lohse",
       "batter": "Bear Harrison",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -729,7 +734,7 @@
       },
       "runners_after": {
         "1B": "Bear Harrison",
-        "2B": null,
+        "2B": "Jorian Wilson",
         "3B": null
       },
       "score": {
@@ -740,7 +745,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Ian Lohse",
       "batter": "Boston Kellner",
       "outcome": "Walk",
       "count": "3-1",
@@ -751,13 +756,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Bear Harrison",
-        "2B": null,
+        "2B": "Jorian Wilson",
         "3B": null
       },
       "runners_after": {
         "1B": "Boston Kellner",
-        "2B": null,
-        "3B": null
+        "2B": "Bear Harrison",
+        "3B": "Jorian Wilson"
       },
       "score": {
         "away": 6,
@@ -767,24 +772,27 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Ian Lohse",
       "batter": "Gavin Grahovac",
       "outcome": "Home run",
       "count": "2-2",
       "pitches": "BKFBF",
       "rbi": true,
       "runs_scored": [
+        "Jorian Wilson",
+        "Bear Harrison",
+        "Boston Kellner",
         "Gavin Grahovac"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Boston Kellner",
-        "2B": null,
-        "3B": null
+        "2B": "Bear Harrison",
+        "3B": "Jorian Wilson"
       },
       "runners_after": {
-        "1B": "Boston Kellner",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -796,7 +804,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Ian Lohse",
       "batter": "Caden Sorrell",
       "outcome": "Home run",
       "count": "0-1",
@@ -808,12 +816,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Boston Kellner",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Boston Kellner",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -825,7 +833,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Ian Lohse",
       "batter": "Chris Hacopian",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -835,12 +843,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Boston Kellner",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Boston Kellner",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -852,7 +860,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Ian Lohse",
       "batter": "Jake Duer",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -862,12 +870,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Boston Kellner",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Boston Kellner",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1016,7 +1024,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Trey Lawrence",
       "batter": "Nico Partida",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1043,7 +1051,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Trey Lawrence",
       "batter": "Blake Binderup",
       "outcome": "Single",
       "count": "2-2",
@@ -1070,7 +1078,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Trey Lawrence",
       "batter": "Jorian Wilson",
       "outcome": "Single",
       "count": "1-0",
@@ -1086,7 +1094,7 @@
       },
       "runners_after": {
         "1B": "Jorian Wilson",
-        "2B": null,
+        "2B": "Blake Binderup",
         "3B": null
       },
       "score": {
@@ -1097,7 +1105,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Trey Lawrence",
       "batter": "Bear Harrison",
       "outcome": "Pop out",
       "count": "2-2",
@@ -1108,12 +1116,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Jorian Wilson",
-        "2B": null,
+        "2B": "Blake Binderup",
         "3B": null
       },
       "runners_after": {
         "1B": "Jorian Wilson",
-        "2B": null,
+        "2B": "Blake Binderup",
         "3B": null
       },
       "score": {
@@ -1124,7 +1132,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Trey Lawrence",
       "batter": "Boston Kellner",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1135,12 +1143,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jorian Wilson",
-        "2B": null,
+        "2B": "Blake Binderup",
         "3B": null
       },
       "runners_after": {
         "1B": "Jorian Wilson",
-        "2B": null,
+        "2B": "Blake Binderup",
         "3B": null
       },
       "score": {
@@ -1259,7 +1267,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Trey Lawrence",
       "batter": "Gavin Grahovac",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1286,7 +1294,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Trey Lawrence",
       "batter": "Caden Sorrell",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1313,7 +1321,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Trey Lawrence",
       "batter": "Chris Hacopian",
       "outcome": "Single",
       "count": "0-0",
@@ -1340,7 +1348,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Trey Lawrence",
       "batter": "Jake Duer",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1455,6 +1463,7 @@
       "pitches": "FB",
       "rbi": true,
       "runs_scored": [
+        "Kaden Peer",
         "Jase Woita"
       ],
       "outs_before": 2,
@@ -1465,7 +1474,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kaden Peer",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1487,12 +1496,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Kaden Peer",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Kaden Peer",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1504,7 +1513,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Sam Rosand",
       "batter": "Nico Partida",
       "outcome": "Pop out",
       "count": "0-1",
@@ -1531,7 +1540,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Sam Rosand",
       "batter": "Blake Binderup",
       "outcome": "Double",
       "count": "0-1",
@@ -1558,7 +1567,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Sam Rosand",
       "batter": "Jorian Wilson",
       "outcome": "Single",
       "count": "0-0",
@@ -1574,8 +1583,8 @@
       },
       "runners_after": {
         "1B": "Jorian Wilson",
-        "2B": "Blake Binderup",
-        "3B": null
+        "2B": null,
+        "3B": "Blake Binderup"
       },
       "score": {
         "away": 11,
@@ -1585,23 +1594,25 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Sam Rosand",
       "batter": "Bear Harrison",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Blake Binderup"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Jorian Wilson",
-        "2B": "Blake Binderup",
-        "3B": null
+        "2B": null,
+        "3B": "Blake Binderup"
       },
       "runners_after": {
         "1B": "Bear Harrison",
-        "2B": "Blake Binderup",
+        "2B": "Jorian Wilson",
         "3B": null
       },
       "score": {
@@ -1612,7 +1623,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Sam Rosand",
       "batter": "Boston Kellner",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1623,12 +1634,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Bear Harrison",
-        "2B": "Blake Binderup",
+        "2B": "Jorian Wilson",
         "3B": null
       },
       "runners_after": {
         "1B": "Bear Harrison",
-        "2B": "Blake Binderup",
+        "2B": "Jorian Wilson",
         "3B": null
       },
       "score": {
@@ -1639,7 +1650,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Sam Rosand",
       "batter": "Gavin Grahovac",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1650,12 +1661,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Bear Harrison",
-        "2B": "Blake Binderup",
+        "2B": "Jorian Wilson",
         "3B": null
       },
       "runners_after": {
         "1B": "Bear Harrison",
-        "2B": "Blake Binderup",
+        "2B": "Jorian Wilson",
         "3B": null
       },
       "score": {
@@ -1736,7 +1747,7 @@
       },
       "runners_after": {
         "1B": "Donovan Jordan",
-        "2B": null,
+        "2B": "Blaize Ward",
         "3B": null
       },
       "score": {
@@ -1747,7 +1758,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Aiden Sims",
+      "pitcher": "Juan Vargas",
       "batter": "Mateo Serna",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1758,12 +1769,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Donovan Jordan",
-        "2B": null,
+        "2B": "Blaize Ward",
         "3B": null
       },
       "runners_after": {
         "1B": "Donovan Jordan",
-        "2B": null,
+        "2B": "Blaize Ward",
         "3B": null
       },
       "score": {
@@ -1774,7 +1785,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Aiden Sims",
+      "pitcher": "Juan Vargas",
       "batter": "Keegan Knutson",
       "outcome": "Walk",
       "count": "3-0",
@@ -1785,13 +1796,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Donovan Jordan",
-        "2B": null,
+        "2B": "Blaize Ward",
         "3B": null
       },
       "runners_after": {
         "1B": "Keegan Knutson",
-        "2B": null,
-        "3B": null
+        "2B": "Donovan Jordan",
+        "3B": "Blaize Ward"
       },
       "score": {
         "away": 12,
@@ -1801,7 +1812,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Aiden Sims",
+      "pitcher": "Juan Vargas",
       "batter": "Kam Durnin",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1812,13 +1823,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Keegan Knutson",
-        "2B": null,
-        "3B": null
+        "2B": "Donovan Jordan",
+        "3B": "Blaize Ward"
       },
       "runners_after": {
         "1B": "Keegan Knutson",
-        "2B": null,
-        "3B": null
+        "2B": "Donovan Jordan",
+        "3B": "Blaize Ward"
       },
       "score": {
         "away": 12,
@@ -1828,7 +1839,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Sam Rosand",
       "batter": "Caden Sorrell",
       "outcome": "Single",
       "count": "1-0",
@@ -1855,7 +1866,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Sam Rosand",
       "batter": "Chris Hacopian",
       "outcome": "Fielder's choice",
       "count": "1-1",
@@ -1882,13 +1893,14 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Sam Rosand",
       "batter": "Jake Duer",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "FBBFB",
       "rbi": true,
       "runs_scored": [
+        "Chris Hacopian",
         "Jake Duer"
       ],
       "outs_before": 1,
@@ -1899,7 +1911,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Hacopian",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1911,7 +1923,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Sam Rosand",
       "batter": "Nico Partida",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1921,12 +1933,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Chris Hacopian",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Hacopian",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1938,7 +1950,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "JD Dohrmann",
+      "pitcher": "Sam Rosand",
       "batter": "Blake Binderup",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1948,12 +1960,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Chris Hacopian",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Hacopian",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1965,7 +1977,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Aiden Sims",
+      "pitcher": "Ethan Darden",
       "batter": "Kaden Peer",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1992,7 +2004,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Aiden Sims",
+      "pitcher": "Ethan Darden",
       "batter": "Tyler Macon",
       "outcome": "Flyout",
       "count": "2-0",
@@ -2019,7 +2031,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Aiden Sims",
+      "pitcher": "Ethan Darden",
       "batter": "Leo Humbert",
       "outcome": "Groundout",
       "count": "1-1",

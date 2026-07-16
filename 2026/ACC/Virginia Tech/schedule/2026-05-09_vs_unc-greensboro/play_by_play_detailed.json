@@ -3,7 +3,7 @@
   "date": "05/09/2026",
   "away_team": "UNC Greensboro",
   "home_team": "Virginia Tech",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -103,8 +103,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brantley Truitt",
-        "2B": null,
+        "1B": null,
+        "2B": "Brantley Truitt",
         "3B": null
       },
       "score": {
@@ -121,17 +121,19 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brantley Truitt",
-        "2B": null,
+        "1B": null,
+        "2B": "Brantley Truitt",
         "3B": null
       },
       "runners_after": {
         "1B": "Jacob Budzik",
-        "2B": null,
+        "2B": "Brantley Truitt",
         "3B": null
       },
       "score": {
@@ -153,7 +155,7 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Jacob Budzik",
-        "2B": null,
+        "2B": "Brantley Truitt",
         "3B": null
       },
       "runners_after": {
@@ -283,7 +285,10 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -385,7 +390,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Logan Eisenreich",
       "batter": "Luke Jenkins",
       "outcome": "Home run",
       "count": "3-2",
@@ -414,7 +419,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Logan Eisenreich",
       "batter": "Ethan Brittain",
       "outcome": "Pop out",
       "count": "1-2",
@@ -441,7 +446,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Logan Eisenreich",
       "batter": "Jake Barbour",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -468,7 +473,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Logan Eisenreich",
       "batter": "Brantley Truitt",
       "outcome": "Groundout",
       "count": "1-0",
@@ -555,7 +560,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -630,7 +637,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Logan Eisenreich",
       "batter": "Jacob Mueller",
       "outcome": "Walk",
       "count": "3-2",
@@ -657,14 +664,15 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Logan Eisenreich",
       "batter": "Jacob Dilley",
       "outcome": "Home run",
       "count": "0-2",
       "pitches": "KS",
       "rbi": true,
       "runs_scored": [
-        "Jacob Dilley"
+        "Jacob Dilley",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -686,7 +694,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Logan Eisenreich",
       "batter": "Jacob Budzik",
       "outcome": "Groundout",
       "count": "2-2",
@@ -713,7 +721,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Logan Eisenreich",
       "batter": "Luke Holland",
       "outcome": "Groundout",
       "count": "2-2",
@@ -740,7 +748,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Aiden Robertson",
       "batter": "Tanner Berry",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -884,7 +892,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Nick Locurto"
+        "Nick Locurto",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -933,7 +942,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Aiden Robertson",
       "batter": "Luke Jenkins",
       "outcome": "Walk",
       "count": "3-2",
@@ -960,7 +969,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Aiden Robertson",
       "batter": "Ethan Brittain",
       "outcome": "Foul out",
       "count": "0-1",
@@ -987,7 +996,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Aiden Robertson",
       "batter": "Jake Barbour",
       "outcome": "Walk",
       "count": "3-1",
@@ -1014,7 +1023,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Aiden Robertson",
       "batter": "Brantley Truitt",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1041,13 +1050,16 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Aiden Robertson",
       "batter": "Jacob Mueller",
       "outcome": "Single",
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1068,7 +1080,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Aiden Robertson",
       "batter": "Jacob Dilley",
       "outcome": "Walk",
       "count": "3-1",
@@ -1095,14 +1107,16 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Aiden Robertson",
       "batter": "Jacob Budzik",
       "outcome": "Home run",
       "count": "0-2",
       "pitches": "KSF",
       "rbi": true,
       "runs_scored": [
-        "Jacob Budzik"
+        "Jacob Budzik",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1124,7 +1138,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Brendan Yagesh",
       "batter": "Luke Holland",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1151,7 +1165,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Noah Chapman",
+      "pitcher": "Mayson Dear",
       "batter": "Sam Grube",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1178,7 +1192,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Noah Chapman",
+      "pitcher": "Mayson Dear",
       "batter": "Ethan Gibson",
       "outcome": "Home run",
       "count": "0-0",
@@ -1207,7 +1221,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Noah Chapman",
+      "pitcher": "Mayson Dear",
       "batter": "Henry Cooke",
       "outcome": "Single",
       "count": "1-1",
@@ -1234,7 +1248,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Noah Chapman",
+      "pitcher": "Mayson Dear",
       "batter": "Ethan Ball",
       "outcome": "Double",
       "count": "0-0",
@@ -1261,7 +1275,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Noah Chapman",
+      "pitcher": "Mayson Dear",
       "batter": "Pete Daniel",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1288,7 +1302,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Noah Chapman",
+      "pitcher": "Mayson Dear",
       "batter": "Sam Gates",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1315,7 +1329,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Brendan Yagesh",
       "batter": "Tanner Berry",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1342,7 +1356,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Brendan Yagesh",
       "batter": "Luke Jenkins",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1369,7 +1383,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Brendan Yagesh",
       "batter": "Ethan Brittain",
       "outcome": "Groundout",
       "count": "2-0",
@@ -1396,7 +1410,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Noah Chapman",
+      "pitcher": "Mayson Dear",
       "batter": "Owen Petrich",
       "outcome": "Single",
       "count": "1-0",
@@ -1423,7 +1437,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Noah Chapman",
+      "pitcher": "Mayson Dear",
       "batter": "Nick Locurto",
       "outcome": "Hit by pitch",
       "count": "2-1",
@@ -1450,13 +1464,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Noah Chapman",
+      "pitcher": "Mayson Dear",
       "batter": "Treyson Hughes",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1477,7 +1493,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Noah Chapman",
+      "pitcher": "Mayson Dear",
       "batter": "Sam Grube",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1504,7 +1520,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Noah Chapman",
+      "pitcher": "Mayson Dear",
       "batter": "Ethan Gibson",
       "outcome": "Walk",
       "count": "3-2",
@@ -1531,13 +1547,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Noah Chapman",
+      "pitcher": "Mayson Dear",
       "batter": "Henry Cooke",
       "outcome": "Fielder's choice",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1558,7 +1576,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Noah Chapman",
+      "pitcher": "Mayson Dear",
       "batter": "Ethan Ball",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1585,7 +1603,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Brendan Yagesh",
       "batter": "Jake Barbour",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1612,7 +1630,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Brendan Yagesh",
       "batter": "Brantley Truitt",
       "outcome": "Groundout",
       "count": "3-1",
@@ -1639,7 +1657,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Brendan Yagesh",
       "batter": "Jacob Mueller",
       "outcome": "Home run",
       "count": "1-1",
@@ -1668,7 +1686,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Brendan Yagesh",
       "batter": "Jacob Dilley",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1695,7 +1713,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Noah Chapman",
+      "pitcher": "Mayson Dear",
       "batter": "Pete Daniel",
       "outcome": "Walk",
       "count": "3-2",
@@ -1722,7 +1740,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Noah Chapman",
+      "pitcher": "Mayson Dear",
       "batter": "Sam Gates",
       "outcome": "Fielder's choice",
       "count": "2-0",
@@ -1749,7 +1767,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Noah Chapman",
+      "pitcher": "Mayson Dear",
       "batter": "Owen Petrich",
       "outcome": "Grounded into double play",
       "count": "1-0",
@@ -1776,7 +1794,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Brendan Yagesh",
       "batter": "Jacob Budzik",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1803,7 +1821,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Brendan Yagesh",
       "batter": "Luke Holland",
       "outcome": "Walk",
       "count": "3-2",
@@ -1830,7 +1848,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Brendan Yagesh",
       "batter": "Tanner Berry",
       "outcome": "Single",
       "count": "3-2",
@@ -1857,14 +1875,16 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Luke Jenkins",
       "outcome": "Home run",
       "count": "2-2",
       "pitches": "SFBBF",
       "rbi": true,
       "runs_scored": [
-        "Luke Jenkins"
+        "Luke Jenkins",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1886,7 +1906,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Ethan Brittain",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1913,7 +1933,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Jake Barbour",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1940,7 +1960,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Noah Chapman",
+      "pitcher": "Mayson Dear",
       "batter": "Nick Locurto",
       "outcome": "Walk",
       "count": "3-2",
@@ -1967,7 +1987,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Noah Chapman",
+      "pitcher": "Mayson Dear",
       "batter": "Treyson Hughes",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1994,7 +2014,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Noah Chapman",
+      "pitcher": "Mayson Dear",
       "batter": "Sam Grube",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2021,13 +2041,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Noah Chapman",
+      "pitcher": "Mayson Dear",
       "batter": "Ethan Gibson",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2048,7 +2070,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Noah Chapman",
+      "pitcher": "John Horton",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -2063,8 +2085,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethan Gibson",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethan Gibson",
         "3B": null
       },
       "score": {
@@ -2075,7 +2097,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Noah Chapman",
+      "pitcher": "John Horton",
       "batter": "Henry Cooke",
       "outcome": "Groundout",
       "count": "2-1",
@@ -2085,13 +2107,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Ethan Gibson",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethan Gibson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethan Gibson",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethan Gibson",
         "3B": null
       },
       "score": {
@@ -2102,7 +2124,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Brantley Truitt",
       "outcome": "Single",
       "count": "1-2",
@@ -2129,7 +2151,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -2144,7 +2166,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brantley Truitt",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2156,7 +2178,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Jacob Mueller",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2166,12 +2188,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brantley Truitt",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Brantley Truitt",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2183,7 +2205,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Jacob Dilley",
       "outcome": "Walk",
       "count": "3-0",
@@ -2193,7 +2215,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brantley Truitt",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2210,7 +2232,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Jacob Budzik",
       "outcome": "Walk",
       "count": "3-2",
@@ -2237,14 +2259,16 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Luke Holland",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Luke Holland"
+        "Luke Holland",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -2266,7 +2290,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Danny Lazaro",
       "batter": "Tanner Berry",
       "outcome": "Single",
       "count": "3-2",
@@ -2293,7 +2317,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Danny Lazaro",
       "batter": "Luke Jenkins",
       "outcome": "Flyout",
       "count": "1-0",
@@ -2320,7 +2344,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Noah Chapman",
+      "pitcher": "John Horton",
       "batter": "Ethan Ball",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2347,7 +2371,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Noah Chapman",
+      "pitcher": "John Horton",
       "batter": "Pete Daniel",
       "outcome": "Single",
       "count": "0-2",
@@ -2374,7 +2398,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Noah Chapman",
+      "pitcher": "John Horton",
       "batter": "Sam Gates",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2401,7 +2425,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Noah Chapman",
+      "pitcher": "John Horton",
       "batter": "Owen Petrich",
       "outcome": "Flyout",
       "count": "3-2",
@@ -2428,7 +2452,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Danny Lazaro",
       "batter": "Ethan Brittain",
       "outcome": "Walk",
       "count": "3-0",
@@ -2455,7 +2479,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Jacob Exum",
       "batter": "Anthony Ruocco",
       "outcome": "Single",
       "count": "0-0",
@@ -2482,13 +2506,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Jacob Exum",
       "batter": "Brantley Truitt",
       "outcome": "Single",
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -2509,7 +2535,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Jacob Exum",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2524,9 +2550,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brantley Truitt",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brantley Truitt"
       },
       "score": {
         "away": 17,
@@ -2536,7 +2562,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Jacob Exum",
       "batter": "Jacob Mueller",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2546,14 +2572,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Brantley Truitt",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brantley Truitt"
       },
       "runners_after": {
-        "1B": "Brantley Truitt",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brantley Truitt"
       },
       "score": {
         "away": 17,
@@ -2563,24 +2589,26 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Jacob Exum",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Brantley Truitt",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brantley Truitt"
       },
       "runners_after": {
-        "1B": "Brantley Truitt",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brantley Truitt"
       },
       "score": {
         "away": 18,
@@ -2590,7 +2618,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Jacob Exum",
       "batter": "Jacob Budzik",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2600,14 +2628,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brantley Truitt",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brantley Truitt"
       },
       "runners_after": {
-        "1B": "Brantley Truitt",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brantley Truitt"
       },
       "score": {
         "away": 18,
@@ -2617,7 +2645,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Noah Chapman",
+      "pitcher": "John Horton",
       "batter": "Nick Locurto",
       "outcome": "Single",
       "count": "0-2",
@@ -2644,7 +2672,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Noah Chapman",
+      "pitcher": "John Horton",
       "batter": "Treyson Hughes",
       "outcome": "Foul out",
       "count": "1-1",
@@ -2671,7 +2699,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Noah Chapman",
+      "pitcher": "John Horton",
       "batter": "Sam Grube",
       "outcome": "Single",
       "count": "0-1",
@@ -2698,7 +2726,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Noah Chapman",
+      "pitcher": "John Horton",
       "batter": "Ethan Gibson",
       "outcome": "Flyout",
       "count": "2-2",
@@ -2725,14 +2753,16 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Noah Chapman",
+      "pitcher": "John Horton",
       "batter": "Henry Cooke",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Henry Cooke"
+        "Henry Cooke",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -2754,7 +2784,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Noah Chapman",
+      "pitcher": "John Horton",
       "batter": "Ethan Ball",
       "outcome": "Lineout",
       "count": "0-0",

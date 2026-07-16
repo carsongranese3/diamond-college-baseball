@@ -3,7 +3,7 @@
   "date": "02/18/2026",
   "away_team": "Longwood",
   "home_team": "North Carolina",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -157,8 +157,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Schaffner",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Schaffner",
         "3B": null
       },
       "score": {
@@ -179,13 +179,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jake Schaffner",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Schaffner",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Schaffner",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Schaffner",
         "3B": null
       },
       "score": {
@@ -206,13 +206,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jake Schaffner",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Schaffner",
         "3B": null
       },
       "runners_after": {
         "1B": "Macon Winslow",
-        "2B": null,
+        "2B": "Jake Schaffner",
         "3B": null
       },
       "score": {
@@ -234,13 +234,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Macon Winslow",
-        "2B": null,
+        "2B": "Jake Schaffner",
         "3B": null
       },
       "runners_after": {
         "1B": "Erik Paulsen",
-        "2B": null,
-        "3B": null
+        "2B": "Macon Winslow",
+        "3B": "Jake Schaffner"
       },
       "score": {
         "away": 0,
@@ -256,17 +256,20 @@
       "count": "1-2",
       "pitches": "FBFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jake Schaffner",
+        "Macon Winslow"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Erik Paulsen",
-        "2B": null,
-        "3B": null
+        "2B": "Macon Winslow",
+        "3B": "Jake Schaffner"
       },
       "runners_after": {
         "1B": "Michael Maginnis",
-        "2B": null,
+        "2B": "Erik Paulsen",
         "3B": null
       },
       "score": {
@@ -288,13 +291,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Michael Maginnis",
-        "2B": null,
+        "2B": "Erik Paulsen",
         "3B": null
       },
       "runners_after": {
         "1B": "Tyler Howe",
-        "2B": null,
-        "3B": null
+        "2B": "Michael Maginnis",
+        "3B": "Erik Paulsen"
       },
       "score": {
         "away": 0,
@@ -304,24 +307,27 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Jackson Garland",
       "batter": "Colin Hynek",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Erik Paulsen",
+        "Michael Maginnis"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Tyler Howe",
-        "2B": null,
-        "3B": null
+        "2B": "Michael Maginnis",
+        "3B": "Erik Paulsen"
       },
       "runners_after": {
         "1B": "Colin Hynek",
         "2B": null,
-        "3B": null
+        "3B": "Tyler Howe"
       },
       "score": {
         "away": 0,
@@ -331,7 +337,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Jackson Garland",
       "batter": "Cooper Nicholson",
       "outcome": "Walk",
       "count": "3-0",
@@ -343,12 +349,12 @@
       "runners_before": {
         "1B": "Colin Hynek",
         "2B": null,
-        "3B": null
+        "3B": "Tyler Howe"
       },
       "runners_after": {
         "1B": "Cooper Nicholson",
-        "2B": null,
-        "3B": null
+        "2B": "Colin Hynek",
+        "3B": "Tyler Howe"
       },
       "score": {
         "away": 0,
@@ -358,7 +364,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Jackson Garland",
       "batter": "Jake Schaffner",
       "outcome": "Flyout",
       "count": "1-1",
@@ -369,13 +375,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Cooper Nicholson",
-        "2B": null,
-        "3B": null
+        "2B": "Colin Hynek",
+        "3B": "Tyler Howe"
       },
       "runners_after": {
         "1B": "Cooper Nicholson",
-        "2B": null,
-        "3B": null
+        "2B": "Colin Hynek",
+        "3B": "Tyler Howe"
       },
       "score": {
         "away": 0,
@@ -428,7 +434,7 @@
       },
       "runners_after": {
         "1B": "Jayson Nash",
-        "2B": null,
+        "2B": "Tr\u00e9 Keels",
         "3B": null
       },
       "score": {
@@ -445,18 +451,20 @@
       "count": "1-2",
       "pitches": "KBKS",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Tr\u00e9 Keels"
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Jayson Nash",
-        "2B": null,
+        "2B": "Tr\u00e9 Keels",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jayson Nash",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jayson Nash"
       },
       "score": {
         "away": 1,
@@ -476,14 +484,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jayson Nash",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jayson Nash"
       },
       "runners_after": {
-        "1B": "Jayson Nash",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jayson Nash"
       },
       "score": {
         "away": 1,
@@ -503,14 +511,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jayson Nash",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jayson Nash"
       },
       "runners_after": {
         "1B": "Max Lawson",
         "2B": null,
-        "3B": null
+        "3B": "Jayson Nash"
       },
       "score": {
         "away": 1,
@@ -532,12 +540,12 @@
       "runners_before": {
         "1B": "Max Lawson",
         "2B": null,
-        "3B": null
+        "3B": "Jayson Nash"
       },
       "runners_after": {
-        "1B": "Max Lawson",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Max Lawson",
+        "3B": "Jayson Nash"
       },
       "score": {
         "away": 1,
@@ -557,14 +565,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Max Lawson",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Max Lawson",
+        "3B": "Jayson Nash"
       },
       "runners_after": {
-        "1B": "Max Lawson",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Max Lawson",
+        "3B": "Jayson Nash"
       },
       "score": {
         "away": 1,
@@ -574,7 +582,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Jackson Garland",
       "batter": "Gavin Gallaher",
       "outcome": "Double",
       "count": "1-2",
@@ -601,7 +609,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Jackson Garland",
       "batter": "Owen Hull",
       "outcome": "Walk",
       "count": "3-0",
@@ -628,7 +636,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Jackson Garland",
       "batter": "Macon Winslow",
       "outcome": "Pop out",
       "count": "1-0",
@@ -655,7 +663,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Jackson Garland",
       "batter": "Erik Paulsen",
       "outcome": "Flyout",
       "count": "1-2",
@@ -682,7 +690,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Jackson Garland",
       "batter": "Michael Maginnis",
       "outcome": "Walk",
       "count": "3-0",
@@ -698,8 +706,8 @@
       },
       "runners_after": {
         "1B": "Michael Maginnis",
-        "2B": "Gavin Gallaher",
-        "3B": null
+        "2B": "Owen Hull",
+        "3B": "Gavin Gallaher"
       },
       "score": {
         "away": 1,
@@ -709,7 +717,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Jackson Garland",
       "batter": "Tyler Howe",
       "outcome": "Flyout",
       "count": "3-2",
@@ -720,13 +728,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Michael Maginnis",
-        "2B": "Gavin Gallaher",
-        "3B": null
+        "2B": "Owen Hull",
+        "3B": "Gavin Gallaher"
       },
       "runners_after": {
         "1B": "Michael Maginnis",
-        "2B": "Gavin Gallaher",
-        "3B": null
+        "2B": "Owen Hull",
+        "3B": "Gavin Gallaher"
       },
       "score": {
         "away": 1,
@@ -736,7 +744,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Cameron Padgett",
       "batter": "Lucas Johnson",
       "outcome": "Groundout",
       "count": "2-2",
@@ -763,7 +771,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Cameron Padgett",
       "batter": "Brogan Jones",
       "outcome": "Pop out",
       "count": "0-2",
@@ -790,7 +798,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Cameron Padgett",
       "batter": "Mac Tufts",
       "outcome": "Double",
       "count": "1-1",
@@ -817,7 +825,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Cameron Padgett",
       "batter": "Tr\u00e9 Keels",
       "outcome": "Single",
       "count": "0-0",
@@ -833,8 +841,8 @@
       },
       "runners_after": {
         "1B": "Tr\u00e9 Keels",
-        "2B": "Mac Tufts",
-        "3B": null
+        "2B": null,
+        "3B": "Mac Tufts"
       },
       "score": {
         "away": 1,
@@ -844,7 +852,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Cameron Padgett",
       "batter": "Jayson Nash",
       "outcome": "Flyout",
       "count": "1-2",
@@ -855,13 +863,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Tr\u00e9 Keels",
-        "2B": "Mac Tufts",
-        "3B": null
+        "2B": null,
+        "3B": "Mac Tufts"
       },
       "runners_after": {
         "1B": "Tr\u00e9 Keels",
-        "2B": "Mac Tufts",
-        "3B": null
+        "2B": null,
+        "3B": "Mac Tufts"
       },
       "score": {
         "away": 1,
@@ -871,7 +879,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Wyatt Bunch",
       "batter": "Colin Hynek",
       "outcome": "Flyout",
       "count": "1-0",
@@ -898,7 +906,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Wyatt Bunch",
       "batter": "Cooper Nicholson",
       "outcome": "Flyout",
       "count": "0-1",
@@ -925,7 +933,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Wyatt Bunch",
       "batter": "Jake Schaffner",
       "outcome": "Single",
       "count": "0-1",
@@ -952,7 +960,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Wyatt Bunch",
       "batter": "Gavin Gallaher",
       "outcome": "Fielder's choice",
       "count": "1-1",
@@ -979,7 +987,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Cameron Padgett",
       "batter": "Jordan Brown",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1006,7 +1014,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Cameron Padgett",
       "batter": "Ben Pulliam",
       "outcome": "Double",
       "count": "0-0",
@@ -1033,7 +1041,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Cameron Padgett",
       "batter": "Max Lawson",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1049,7 +1057,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Ben Pulliam",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1060,7 +1068,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Wyatt Bunch",
       "batter": "Owen Hull",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1087,7 +1095,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Wyatt Bunch",
       "batter": "Macon Winslow",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1114,7 +1122,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Wyatt Bunch",
       "batter": "Erik Paulsen",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1141,7 +1149,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Cameron Padgett",
       "batter": "Jae'dan Carter",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1168,7 +1176,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Cameron Padgett",
       "batter": "Lucas Johnson",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1195,7 +1203,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Cameron Padgett",
       "batter": "Brogan Jones",
       "outcome": "Double",
       "count": "1-0",
@@ -1222,13 +1230,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Cameron Padgett",
       "batter": "Mac Tufts",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Brogan Jones"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1238,7 +1248,7 @@
       },
       "runners_after": {
         "1B": "Mac Tufts",
-        "2B": "Brogan Jones",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1249,7 +1259,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Walker McDuffie",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1260,12 +1270,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Mac Tufts",
-        "2B": "Brogan Jones",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Mac Tufts",
-        "2B": "Brogan Jones",
+        "1B": null,
+        "2B": "Mac Tufts",
         "3B": null
       },
       "score": {
@@ -1276,7 +1286,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Walker McDuffie",
       "batter": "Tr\u00e9 Keels",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1286,13 +1296,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Mac Tufts",
-        "2B": "Brogan Jones",
+        "1B": null,
+        "2B": "Mac Tufts",
         "3B": null
       },
       "runners_after": {
-        "1B": "Mac Tufts",
-        "2B": "Brogan Jones",
+        "1B": null,
+        "2B": "Mac Tufts",
         "3B": null
       },
       "score": {
@@ -1303,7 +1313,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Wyatt Bunch",
       "batter": "Michael Maginnis",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1330,7 +1340,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Wyatt Bunch",
       "batter": "Tyler Howe",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1357,7 +1367,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Wyatt Bunch",
       "batter": "Colin Hynek",
       "outcome": "Reached on error",
       "count": "1-0",
@@ -1384,7 +1394,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Wyatt Bunch",
       "batter": "Cooper Nicholson",
       "outcome": "Single",
       "count": "3-2",
@@ -1401,7 +1411,7 @@
       "runners_after": {
         "1B": "Cooper Nicholson",
         "2B": null,
-        "3B": null
+        "3B": "Colin Hynek"
       },
       "score": {
         "away": 2,
@@ -1411,7 +1421,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Wyatt Bunch",
       "batter": "Jake Schaffner",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1423,12 +1433,12 @@
       "runners_before": {
         "1B": "Cooper Nicholson",
         "2B": null,
-        "3B": null
+        "3B": "Colin Hynek"
       },
       "runners_after": {
         "1B": "Cooper Nicholson",
         "2B": null,
-        "3B": null
+        "3B": "Colin Hynek"
       },
       "score": {
         "away": 2,
@@ -1438,7 +1448,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Walker McDuffie",
       "batter": "Jayson Nash",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1465,7 +1475,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Walker McDuffie",
       "batter": "Jordan Brown",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1492,7 +1502,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Walker McDuffie",
       "batter": "Ben Pulliam",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1519,7 +1529,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Drew Siegner",
       "batter": "Gavin Gallaher",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1546,7 +1556,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Drew Siegner",
       "batter": "Owen Hull",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1573,7 +1583,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Drew Siegner",
       "batter": "Macon Winslow",
       "outcome": "Single",
       "count": "3-2",
@@ -1600,7 +1610,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Drew Siegner",
       "batter": "Erik Paulsen",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1627,7 +1637,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Caden Glauber",
       "batter": "Max Lawson",
       "outcome": "Single",
       "count": "0-2",
@@ -1654,7 +1664,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Caden Glauber",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1669,8 +1679,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Max Lawson",
-        "2B": null,
+        "1B": null,
+        "2B": "Max Lawson",
         "3B": null
       },
       "score": {
@@ -1681,7 +1691,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Caden Glauber",
       "batter": "Jae'dan Carter",
       "outcome": "Pop out",
       "count": "0-0",
@@ -1691,13 +1701,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Max Lawson",
-        "2B": null,
+        "1B": null,
+        "2B": "Max Lawson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Max Lawson",
-        "2B": null,
+        "1B": null,
+        "2B": "Max Lawson",
         "3B": null
       },
       "score": {
@@ -1708,18 +1718,20 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Caden Glauber",
       "batter": "Lucas Johnson",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Max Lawson"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Max Lawson",
-        "2B": null,
+        "1B": null,
+        "2B": "Max Lawson",
         "3B": null
       },
       "runners_after": {
@@ -1735,7 +1747,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Caden Glauber",
       "batter": "Brogan Jones",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1762,7 +1774,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Caden Glauber",
       "batter": "Mac Tufts",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1789,7 +1801,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Drew Siegner",
       "batter": "Michael Maginnis",
       "outcome": "Reached on error",
       "count": "1-0",
@@ -1816,7 +1828,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Drew Siegner",
       "batter": "Tyler Howe",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1843,13 +1855,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Drew Siegner",
       "batter": "Colin Hynek",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Michael Maginnis"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1858,7 +1872,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Michael Maginnis",
+        "1B": null,
         "2B": "Colin Hynek",
         "3B": null
       },
@@ -1870,7 +1884,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Drew Siegner",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1880,14 +1894,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Michael Maginnis",
+        "1B": null,
         "2B": "Colin Hynek",
         "3B": null
       },
       "runners_after": {
-        "1B": "Michael Maginnis",
-        "2B": "Colin Hynek",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Colin Hynek"
       },
       "score": {
         "away": 3,
@@ -1897,7 +1911,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "Drew Siegner",
       "batter": "Cooper Nicholson",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1907,14 +1921,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Michael Maginnis",
-        "2B": "Colin Hynek",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Colin Hynek"
       },
       "runners_after": {
-        "1B": "Michael Maginnis",
-        "2B": "Colin Hynek",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Colin Hynek"
       },
       "score": {
         "away": 3,
@@ -1924,7 +1938,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "JR Fordham",
       "batter": "Jake Schaffner",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1934,14 +1948,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Michael Maginnis",
-        "2B": "Colin Hynek",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Colin Hynek"
       },
       "runners_after": {
-        "1B": "Michael Maginnis",
-        "2B": "Colin Hynek",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Colin Hynek"
       },
       "score": {
         "away": 3,
@@ -1951,7 +1965,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Caden Glauber",
       "batter": "Tr\u00e9 Keels",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1978,7 +1992,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Caden Glauber",
       "batter": "Jayson Nash",
       "outcome": "Single",
       "count": "3-2",
@@ -2005,7 +2019,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Caden Glauber",
       "batter": "Jordan Brown",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2032,7 +2046,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Caden Glauber",
       "batter": "Ben Pulliam",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2059,7 +2073,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "JR Fordham",
       "batter": "Gavin Gallaher",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2086,7 +2100,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "JR Fordham",
       "batter": "Owen Hull",
       "outcome": "Walk",
       "count": "3-2",
@@ -2113,7 +2127,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "JR Fordham",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2128,8 +2142,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Owen Hull",
-        "2B": null,
+        "1B": null,
+        "2B": "Owen Hull",
         "3B": null
       },
       "score": {
@@ -2140,7 +2154,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "JR Fordham",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2150,14 +2164,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Owen Hull",
-        "2B": null,
+        "1B": null,
+        "2B": "Owen Hull",
         "3B": null
       },
       "runners_after": {
-        "1B": "Owen Hull",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Owen Hull"
       },
       "score": {
         "away": 3,
@@ -2167,7 +2181,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "JR Fordham",
       "batter": "Macon Winslow",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2177,14 +2191,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Owen Hull",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Owen Hull"
       },
       "runners_after": {
-        "1B": "Owen Hull",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Owen Hull"
       },
       "score": {
         "away": 3,
@@ -2194,7 +2208,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "JR Fordham",
       "batter": "Erik Paulsen",
       "outcome": "Walk",
       "count": "3-2",
@@ -2204,14 +2218,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Owen Hull",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Owen Hull"
       },
       "runners_after": {
         "1B": "Erik Paulsen",
         "2B": null,
-        "3B": null
+        "3B": "Owen Hull"
       },
       "score": {
         "away": 3,
@@ -2221,7 +2235,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Chadwell",
+      "pitcher": "JR Fordham",
       "batter": "Carter French",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2233,12 +2247,12 @@
       "runners_before": {
         "1B": "Erik Paulsen",
         "2B": null,
-        "3B": null
+        "3B": "Owen Hull"
       },
       "runners_after": {
         "1B": "Erik Paulsen",
         "2B": null,
-        "3B": null
+        "3B": "Owen Hull"
       },
       "score": {
         "away": 3,
@@ -2248,7 +2262,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Matthew Matthijs",
       "batter": "Max Lawson",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2275,7 +2289,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Matthew Matthijs",
       "batter": "Jae'dan Carter",
       "outcome": "Walk",
       "count": "3-1",
@@ -2302,7 +2316,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Matthew Matthijs",
       "batter": "Lucas Johnson",
       "outcome": "Flyout",
       "count": "0-2",
@@ -2329,7 +2343,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Matthew Matthijs",
       "batter": "Brogan Jones",
       "outcome": "Walk",
       "count": "3-2",
@@ -2356,7 +2370,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Matthew Matthijs",
       "batter": "Mac Tufts",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -2372,7 +2386,7 @@
       },
       "runners_after": {
         "1B": "Mac Tufts",
-        "2B": null,
+        "2B": "Brogan Jones",
         "3B": null
       },
       "score": {
@@ -2383,7 +2397,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Boston Flannery",
+      "pitcher": "Matthew Matthijs",
       "batter": "Tr\u00e9 Keels",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2394,12 +2408,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Mac Tufts",
-        "2B": null,
+        "2B": "Brogan Jones",
         "3B": null
       },
       "runners_after": {
         "1B": "Mac Tufts",
-        "2B": null,
+        "2B": "Brogan Jones",
         "3B": null
       },
       "score": {

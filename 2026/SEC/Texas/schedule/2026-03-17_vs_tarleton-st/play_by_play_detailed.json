@@ -3,7 +3,7 @@
   "date": "03/17/2026",
   "away_team": "Tarleton St.",
   "home_team": "Texas",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -321,7 +321,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brady Englett",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -330,6 +330,33 @@
         "home": 1
       },
       "description": "Smeenk, R. grounded into double play ss to 1b (2-1 BKB) Englett, B. out on the play."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Ethan Jaques",
+      "batter": "Jaques, E. to p for Carter, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "Jaques, E. to p for Carter, B.."
     },
     {
       "inning": "Bottom 2",
@@ -456,7 +483,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ike Shirey",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -478,12 +505,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Ike Shirey",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Ike Shirey",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -646,7 +673,7 @@
       },
       "runners_after": {
         "1B": "Slade McCloud",
-        "2B": null,
+        "2B": "Rayner Heinrich",
         "3B": null
       },
       "score": {
@@ -668,13 +695,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Slade McCloud",
-        "2B": null,
+        "2B": "Rayner Heinrich",
         "3B": null
       },
       "runners_after": {
         "1B": "Carson Lorch",
-        "2B": null,
-        "3B": null
+        "2B": "Slade McCloud",
+        "3B": "Rayner Heinrich"
       },
       "score": {
         "away": 0,
@@ -690,18 +717,20 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Rayner Heinrich"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Carson Lorch",
-        "2B": null,
-        "3B": null
+        "2B": "Slade McCloud",
+        "3B": "Rayner Heinrich"
       },
       "runners_after": {
         "1B": "Slade McCloud",
-        "2B": null,
-        "3B": null
+        "2B": "Carson Lorch",
+        "3B": "Slade McCloud"
       },
       "score": {
         "away": 1,
@@ -717,18 +746,20 @@
       "count": "3-2",
       "pitches": "FSBFBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Slade McCloud"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Slade McCloud",
-        "2B": null,
-        "3B": null
+        "2B": "Carson Lorch",
+        "3B": "Slade McCloud"
       },
       "runners_after": {
         "1B": "Brady Englett",
-        "2B": null,
-        "3B": null
+        "2B": "Slade McCloud",
+        "3B": "Carson Lorch"
       },
       "score": {
         "away": 2,
@@ -749,13 +780,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Brady Englett",
-        "2B": null,
-        "3B": null
+        "2B": "Slade McCloud",
+        "3B": "Carson Lorch"
       },
       "runners_after": {
         "1B": "Brady Englett",
-        "2B": null,
-        "3B": null
+        "2B": "Slade McCloud",
+        "3B": "Carson Lorch"
       },
       "score": {
         "away": 2,
@@ -771,17 +802,20 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Slade McCloud",
+        "Carson Lorch"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Brady Englett",
-        "2B": null,
-        "3B": null
+        "2B": "Slade McCloud",
+        "3B": "Carson Lorch"
       },
       "runners_after": {
         "1B": "Ike Shirey",
-        "2B": null,
+        "2B": "Brady Englett",
         "3B": null
       },
       "score": {
@@ -803,7 +837,7 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Ike Shirey",
-        "2B": null,
+        "2B": "Brady Englett",
         "3B": null
       },
       "runners_after": {
@@ -873,7 +907,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ethan Jaques",
+      "pitcher": "Jackson Elizondo",
       "batter": "Pack",
       "outcome": "\u2014",
       "count": "3-2",
@@ -982,6 +1016,33 @@
     {
       "inning": "Bottom 5",
       "pitcher": "Jackson Elizondo",
+      "batter": "Elizondo, J. to p for Jaques, E..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 1
+      },
+      "description": "Elizondo, J. to p for Jaques, E.."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Jackson Elizondo",
       "batter": "Casey Borba",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1035,7 +1096,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jackson Elizondo",
+      "pitcher": "Anthony Treto",
       "batter": "Andrew Ermis",
       "outcome": "Walk",
       "count": "3-0",
@@ -1051,7 +1112,7 @@
       },
       "runners_after": {
         "1B": "Andrew Ermis",
-        "2B": null,
+        "2B": "Duplantier J",
         "3B": null
       },
       "score": {
@@ -1062,7 +1123,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jackson Elizondo",
+      "pitcher": "Anthony Treto",
       "batter": "Ethan Mendoza",
       "outcome": "Grounded into double play",
       "count": "3-2",
@@ -1073,12 +1134,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Andrew Ermis",
-        "2B": null,
+        "2B": "Duplantier J",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": null,
+        "2B": "Duplantier J",
         "3B": null
       },
       "score": {
@@ -1213,7 +1274,7 @@
       },
       "runners_after": {
         "1B": "Raphael Smeenk",
-        "2B": null,
+        "2B": "Brady Englett",
         "3B": null
       },
       "score": {
@@ -1235,12 +1296,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Raphael Smeenk",
-        "2B": null,
+        "2B": "Brady Englett",
         "3B": null
       },
       "runners_after": {
         "1B": "Raphael Smeenk",
-        "2B": null,
+        "2B": "Brady Englett",
         "3B": null
       },
       "score": {
@@ -1248,6 +1309,33 @@
         "home": 1
       },
       "description": "Shirey, I. flied out to rf (0-0)."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Anthony Treto",
+      "batter": "Treto, A. to p for Elizondo, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 1
+      },
+      "description": "Treto, A. to p for Elizondo, J.."
     },
     {
       "inning": "Bottom 6",
@@ -1374,9 +1462,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Adrian Rodriguez",
-        "2B": "Aiden Robbins",
-        "3B": null
+        "1B": null,
+        "2B": "Adrian Rodriguez",
+        "3B": "Aiden Robbins"
       },
       "score": {
         "away": 4,
@@ -1396,14 +1484,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Adrian Rodriguez",
-        "2B": "Aiden Robbins",
-        "3B": null
+        "1B": null,
+        "2B": "Adrian Rodriguez",
+        "3B": "Aiden Robbins"
       },
       "runners_after": {
-        "1B": "Adrian Rodriguez",
-        "2B": "Aiden Robbins",
-        "3B": null
+        "1B": null,
+        "2B": "Adrian Rodriguez",
+        "3B": "Aiden Robbins"
       },
       "score": {
         "away": 4,
@@ -1494,7 +1582,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Max Grubbs",
+      "pitcher": "Brody Walls",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1509,8 +1597,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Rayner Heinrich",
-        "2B": null,
+        "1B": null,
+        "2B": "Rayner Heinrich",
         "3B": null
       },
       "score": {
@@ -1521,18 +1609,20 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Max Grubbs",
+      "pitcher": "Brody Walls",
       "batter": "Slade McCloud",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "FBS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Rayner Heinrich"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Rayner Heinrich",
-        "2B": null,
+        "1B": null,
+        "2B": "Rayner Heinrich",
         "3B": null
       },
       "runners_after": {
@@ -1564,7 +1654,7 @@
       },
       "runners_after": {
         "1B": "Carson Lorch",
-        "2B": null,
+        "2B": "Slade McCloud",
         "3B": null
       },
       "score": {
@@ -1586,12 +1676,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Carson Lorch",
-        "2B": null,
+        "2B": "Slade McCloud",
         "3B": null
       },
       "runners_after": {
         "1B": "Carson Lorch",
-        "2B": null,
+        "2B": "Slade McCloud",
         "3B": null
       },
       "score": {
@@ -1818,7 +1908,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Anthony Treto",
+      "pitcher": "Tai Phetluangsy",
       "batter": "Aiden Robbins",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1845,7 +1935,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Anthony Treto",
+      "pitcher": "Tai Phetluangsy",
       "batter": "Adrian Rodriguez",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1872,7 +1962,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Anthony Treto",
+      "pitcher": "Tai Phetluangsy",
       "batter": "Temo Becerra",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1986,7 +2076,9 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Rayner Heinrich"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2024,7 +2116,7 @@
       "runners_after": {
         "1B": "Carson Lorch",
         "2B": null,
-        "3B": null
+        "3B": "Slade McCloud"
       },
       "score": {
         "away": 6,
@@ -2034,7 +2126,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brody Walls",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2046,12 +2138,12 @@
       "runners_before": {
         "1B": "Carson Lorch",
         "2B": null,
-        "3B": null
+        "3B": "Slade McCloud"
       },
       "runners_after": {
-        "1B": "Carson Lorch",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Carson Lorch",
+        "3B": "Slade McCloud"
       },
       "score": {
         "away": 6,
@@ -2061,7 +2153,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brody Walls",
+      "pitcher": "",
       "batter": "Slade McCloud",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2071,12 +2163,39 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Carson Lorch",
+        "1B": null,
+        "2B": "Carson Lorch",
+        "3B": "Slade McCloud"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Carson Lorch",
+        "3B": "Slade McCloud"
+      },
+      "score": {
+        "away": 6,
+        "home": 1
+      },
+      "description": "McCloud, C. struck out swinging (2-2 BKSFBS)."
+    },
+    {
+      "inning": "Bottom 9",
+      "pitcher": "Tai Phetluangsy",
+      "batter": "Phetluangsy, to p for Treto, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Carson Lorch",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2084,7 +2203,7 @@
         "away": 6,
         "home": 1
       },
-      "description": "McCloud, C. struck out swinging (2-2 BKSFBS)."
+      "description": "Phetluangsy, to p for Treto, A.."
     },
     {
       "inning": "Bottom 9",
@@ -2115,7 +2234,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Tai Phetluangsy",
+      "pitcher": "",
       "batter": "Casey Borba",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2142,7 +2261,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Tai Phetluangsy",
+      "pitcher": "",
       "batter": "Duplantier J",
       "outcome": "Walk",
       "count": "3-2",
@@ -2169,7 +2288,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Tai Phetluangsy",
+      "pitcher": "",
       "batter": "Josh Livingston",
       "outcome": "Single",
       "count": "0-1",
@@ -2186,7 +2305,7 @@
       "runners_after": {
         "1B": "Josh Livingston",
         "2B": null,
-        "3B": null
+        "3B": "Duplantier J"
       },
       "score": {
         "away": 6,
@@ -2196,7 +2315,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Tai Phetluangsy",
+      "pitcher": "",
       "batter": "Ethan Mendoza",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2208,12 +2327,12 @@
       "runners_before": {
         "1B": "Josh Livingston",
         "2B": null,
-        "3B": null
+        "3B": "Duplantier J"
       },
       "runners_after": {
         "1B": "Josh Livingston",
         "2B": null,
-        "3B": null
+        "3B": "Duplantier J"
       },
       "score": {
         "away": 6,

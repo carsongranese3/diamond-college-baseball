@@ -3,7 +3,7 @@
   "date": "03/10/2026",
   "away_team": "West Ga.",
   "home_team": "Georgia Tech",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -240,8 +240,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Vahn Lackey",
-        "2B": null,
+        "1B": null,
+        "2B": "Vahn Lackey",
         "3B": null
       },
       "score": {
@@ -262,13 +262,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Vahn Lackey",
-        "2B": null,
+        "1B": null,
+        "2B": "Vahn Lackey",
         "3B": null
       },
       "runners_after": {
-        "1B": "Vahn Lackey",
-        "2B": null,
+        "1B": null,
+        "2B": "Vahn Lackey",
         "3B": null
       },
       "score": {
@@ -387,7 +387,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Rowan Park",
       "batter": "Will Baker",
       "outcome": "Walk",
       "count": "3-1",
@@ -414,7 +414,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Rowan Park",
       "batter": "Drew Rogers",
       "outcome": "Grounded into double play",
       "count": "0-0",
@@ -441,7 +441,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Rowan Park",
       "batter": "Carson Kerce",
       "outcome": "Single",
       "count": "0-2",
@@ -468,14 +468,15 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Rowan Park",
       "batter": "Drew Burress",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Drew Burress"
+        "Drew Burress",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -497,7 +498,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Rowan Park",
       "batter": "Alex Hernandez",
       "outcome": "Single",
       "count": "3-2",
@@ -524,14 +525,15 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Rowan Park",
       "batter": "Jarren Advincula",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Jarren Advincula"
+        "Jarren Advincula",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -553,7 +555,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Rowan Park",
       "batter": "Vahn Lackey",
       "outcome": "Triple",
       "count": "0-1",
@@ -580,7 +582,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Rowan Park",
       "batter": "Kent Schmidt",
       "outcome": "Walk",
       "count": "3-2",
@@ -607,7 +609,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Rowan Park",
       "batter": "Ryan Zuckerman",
       "outcome": "Lineout",
       "count": "0-2",
@@ -742,7 +744,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Josh Lanum",
       "batter": "Will Baker",
       "outcome": "Single",
       "count": "1-2",
@@ -769,7 +771,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Josh Lanum",
       "batter": "Drew Rogers",
       "outcome": "Flyout",
       "count": "2-2",
@@ -796,7 +798,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Josh Lanum",
       "batter": "Carson Kerce",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -823,7 +825,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Josh Lanum",
       "batter": "Drew Burress",
       "outcome": "Walk",
       "count": "3-0",
@@ -850,13 +852,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Josh Lanum",
       "batter": "Alex Hernandez",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -877,13 +881,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Josh Lanum",
       "batter": "Jarren Advincula",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -904,13 +910,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Josh Lanum",
       "batter": "Vahn Lackey",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -931,13 +939,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Josh Lanum",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Vahn Lackey"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -947,7 +957,7 @@
       },
       "runners_after": {
         "1B": "Jarren Advincula",
-        "2B": "Vahn Lackey",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -958,23 +968,25 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Josh Lanum",
       "batter": "Kent Schmidt",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "KBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jarren Advincula",
-        "2B": "Vahn Lackey",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Kent Schmidt",
-        "2B": "Vahn Lackey",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -985,7 +997,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Josh Lanum",
       "batter": "Ryan Zuckerman",
       "outcome": "Walk",
       "count": "3-0",
@@ -996,12 +1008,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kent Schmidt",
-        "2B": "Vahn Lackey",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Ryan Zuckerman",
-        "2B": "Vahn Lackey",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1012,7 +1024,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Josh Lanum",
       "batter": "Will Baker",
       "outcome": "Foul out",
       "count": "1-0",
@@ -1023,12 +1035,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Ryan Zuckerman",
-        "2B": "Vahn Lackey",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Ryan Zuckerman",
-        "2B": "Vahn Lackey",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1066,7 +1078,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Dimitri Angelakos",
+      "pitcher": "Adam McKelvey",
       "batter": "Blake Bradford",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1093,7 +1105,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Dimitri Angelakos",
+      "pitcher": "Adam McKelvey",
       "batter": "Patrick McCullough",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1120,7 +1132,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Gavin Mask",
       "batter": "Drew Rogers",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1147,7 +1159,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Gavin Mask",
       "batter": "Carson Kerce",
       "outcome": "Walk",
       "count": "3-1",
@@ -1174,7 +1186,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Gavin Mask",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1189,8 +1201,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Carson Kerce",
-        "2B": null,
+        "1B": null,
+        "2B": "Carson Kerce",
         "3B": null
       },
       "score": {
@@ -1201,7 +1213,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Gavin Mask",
       "batter": "Drew Burress",
       "outcome": "Walk",
       "count": "3-0",
@@ -1211,13 +1223,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Carson Kerce",
-        "2B": null,
+        "1B": null,
+        "2B": "Carson Kerce",
         "3B": null
       },
       "runners_after": {
         "1B": "Drew Burress",
-        "2B": null,
+        "2B": "Carson Kerce",
         "3B": null
       },
       "score": {
@@ -1228,7 +1240,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Gavin Mask",
       "batter": "Alex Hernandez",
       "outcome": "\u2014",
       "count": "1-0",
@@ -1239,12 +1251,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Drew Burress",
-        "2B": null,
+        "2B": "Carson Kerce",
         "3B": null
       },
       "runners_after": {
         "1B": "Drew Burress",
-        "2B": null,
+        "2B": "Carson Kerce",
         "3B": null
       },
       "score": {
@@ -1255,7 +1267,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Dimitri Angelakos",
+      "pitcher": "Charlie Willcox",
       "batter": "Andon Lewis",
       "outcome": "Pop out",
       "count": "0-1",
@@ -1282,7 +1294,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Dimitri Angelakos",
+      "pitcher": "Charlie Willcox",
       "batter": "Gabe Young",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1309,7 +1321,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Dimitri Angelakos",
+      "pitcher": "Charlie Willcox",
       "batter": "Blane Schmitt",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1336,7 +1348,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Gavin Mask",
       "batter": "Jarren Advincula",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1363,7 +1375,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Gavin Mask",
       "batter": "Vahn Lackey",
       "outcome": "Home run",
       "count": "1-2",
@@ -1392,7 +1404,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Gavin Mask",
       "batter": "Kent Schmidt",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1419,7 +1431,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Gavin Mask",
       "batter": "Ryan Zuckerman",
       "outcome": "Single",
       "count": "2-2",
@@ -1446,7 +1458,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Gavin Mask",
       "batter": "Will Baker",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1473,7 +1485,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Dimitri Angelakos",
+      "pitcher": "Charlie Willcox",
       "batter": "Jacob Bowman",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1500,7 +1512,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Dimitri Angelakos",
+      "pitcher": "Charlie Willcox",
       "batter": "Gabe Wuerth",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1527,7 +1539,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Dimitri Angelakos",
+      "pitcher": "Charlie Willcox",
       "batter": "Anthony Cole",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1554,7 +1566,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Grayson Stroumpis",
       "batter": "Coleman Lewis",
       "outcome": "Walk",
       "count": "3-0",
@@ -1581,14 +1593,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Grayson Stroumpis",
       "batter": "Caleb Daniel",
       "outcome": "Home run",
       "count": "3-0",
       "pitches": "BBB",
       "rbi": true,
       "runs_scored": [
-        "Caleb Daniel"
+        "Caleb Daniel",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1610,7 +1623,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Grayson Stroumpis",
       "batter": "Drew Burress",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -1637,7 +1650,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Davis Williams",
       "batter": "Alex Hernandez",
       "outcome": "Single",
       "count": "3-2",
@@ -1664,13 +1677,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Davis Williams",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1691,7 +1706,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Davis Williams",
       "batter": "Vahn Lackey",
       "outcome": "Fielder's choice",
       "count": "0-0",
@@ -1718,7 +1733,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Davis Williams",
       "batter": "Cade Brown",
       "outcome": "Single",
       "count": "0-0",
@@ -1745,7 +1760,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Davis Williams",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -1760,9 +1775,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cade Brown",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cade Brown"
       },
       "score": {
         "away": 0,
@@ -1772,7 +1787,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Maverick Torres",
+      "pitcher": "Davis Williams",
       "batter": "Ryan Zuckerman",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1782,14 +1797,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Cade Brown",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cade Brown"
       },
       "runners_after": {
-        "1B": "Cade Brown",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cade Brown"
       },
       "score": {
         "away": 0,
@@ -1799,7 +1814,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Dimitri Angelakos",
+      "pitcher": "Porter Buursema",
       "batter": "Landon Weidner",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1826,7 +1841,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Dimitri Angelakos",
+      "pitcher": "Porter Buursema",
       "batter": "Brady McDevitt",
       "outcome": "Walk",
       "count": "3-2",
@@ -1853,7 +1868,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Dimitri Angelakos",
+      "pitcher": "Porter Buursema",
       "batter": "Patrick McCullough",
       "outcome": "Walk",
       "count": "3-2",
@@ -1880,7 +1895,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Dimitri Angelakos",
+      "pitcher": "Porter Buursema",
       "batter": "Carson Mynatt",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1907,7 +1922,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Dimitri Angelakos",
+      "pitcher": "Porter Buursema",
       "batter": "Gabe Young",
       "outcome": "Strikeout (looking)",
       "count": "2-2",

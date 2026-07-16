@@ -3,7 +3,7 @@
   "date": "04/05/2026",
   "away_team": "Virginia Tech",
   "home_team": "Miami (FL)",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -283,7 +283,10 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -665,7 +668,9 @@
       "count": "2-2",
       "pitches": "BSFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1259,7 +1264,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1307,7 +1314,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "AJ Ciscar",
+      "pitcher": "Jake Dorn",
       "batter": "Willie Hurt",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1334,7 +1341,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "AJ Ciscar",
+      "pitcher": "Jake Dorn",
       "batter": "Sam Gates",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1361,7 +1368,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "AJ Ciscar",
+      "pitcher": "Jake Dorn",
       "batter": "Ethan Gibson",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1388,7 +1395,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Luke Craytor",
       "batter": "Dylan Dubovik",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1415,7 +1422,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Luke Craytor",
       "batter": "Fabio Peralta",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1442,7 +1449,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Luke Craytor",
       "batter": "Jake Ogden",
       "outcome": "Single",
       "count": "2-2",
@@ -1469,7 +1476,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Luke Craytor",
       "batter": "Daniel Cuvet",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1496,7 +1503,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "AJ Ciscar",
+      "pitcher": "Jake Dorn",
       "batter": "Anderson French",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -1523,7 +1530,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "AJ Ciscar",
+      "pitcher": "Ryan Bilka",
       "batter": "Nick Locurto",
       "outcome": "Lineout",
       "count": "0-1",
@@ -1550,7 +1557,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "AJ Ciscar",
+      "pitcher": "Ryan Bilka",
       "batter": "Ethan Ball",
       "outcome": "Grounded into double play",
       "count": "2-1",
@@ -1577,7 +1584,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Preston Crowl",
       "batter": "Alex Sosa",
       "outcome": "Walk",
       "count": "3-1",
@@ -1604,7 +1611,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Preston Crowl",
       "batter": "Derek Williams",
       "outcome": "Single",
       "count": "1-1",
@@ -1631,7 +1638,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Preston Crowl",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
@@ -1658,7 +1665,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Preston Crowl",
       "batter": "Max Galvin",
       "outcome": "\u2014",
       "count": "1-2",
@@ -1685,7 +1692,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "AJ Ciscar",
+      "pitcher": "Ryan Bilka",
       "batter": "Sam Grube",
       "outcome": "Walk",
       "count": "3-2",
@@ -1712,7 +1719,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "AJ Ciscar",
+      "pitcher": "Ryan Bilka",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1727,9 +1734,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Grube",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Sam Grube"
       },
       "score": {
         "away": 4,
@@ -1739,7 +1746,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "AJ Ciscar",
+      "pitcher": "Ryan Bilka",
       "batter": "Henry Cooke",
       "outcome": "Walk",
       "count": "3-2",
@@ -1749,14 +1756,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Sam Grube",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Sam Grube"
       },
       "runners_after": {
         "1B": "Henry Cooke",
         "2B": null,
-        "3B": null
+        "3B": "Sam Grube"
       },
       "score": {
         "away": 4,
@@ -1766,24 +1773,26 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "AJ Ciscar",
+      "pitcher": "Ryan Bilka",
       "batter": "Hudson Lutterman",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Henry Cooke",
         "2B": null,
-        "3B": null
+        "3B": "Sam Grube"
       },
       "runners_after": {
         "1B": "Henry Cooke",
         "2B": null,
-        "3B": null
+        "3B": "Sam Grube"
       },
       "score": {
         "away": 5,
@@ -1793,7 +1802,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "AJ Ciscar",
+      "pitcher": "Ryan Bilka",
       "batter": "Owen Petrich",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1805,12 +1814,12 @@
       "runners_before": {
         "1B": "Henry Cooke",
         "2B": null,
-        "3B": null
+        "3B": "Sam Grube"
       },
       "runners_after": {
         "1B": "Henry Cooke",
         "2B": null,
-        "3B": null
+        "3B": "Sam Grube"
       },
       "score": {
         "away": 5,
@@ -1820,7 +1829,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "AJ Ciscar",
+      "pitcher": "Jack Durso",
       "batter": "Sam Gates",
       "outcome": "Walk",
       "count": "3-0",
@@ -1832,12 +1841,12 @@
       "runners_before": {
         "1B": "Henry Cooke",
         "2B": null,
-        "3B": null
+        "3B": "Sam Grube"
       },
       "runners_after": {
         "1B": "Sam Gates",
         "2B": null,
-        "3B": null
+        "3B": "Sam Grube"
       },
       "score": {
         "away": 5,
@@ -1847,24 +1856,26 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "AJ Ciscar",
+      "pitcher": "Jack Durso",
       "batter": "Ethan Gibson",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Sam Gates",
         "2B": null,
-        "3B": null
+        "3B": "Sam Grube"
       },
       "runners_after": {
         "1B": "Ethan Gibson",
         "2B": null,
-        "3B": null
+        "3B": "Sam Grube"
       },
       "score": {
         "away": 6,
@@ -1874,7 +1885,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Preston Crowl",
       "batter": "Vance Sheahan",
       "outcome": "Single",
       "count": "3-2",
@@ -1901,7 +1912,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Preston Crowl",
       "batter": "Dylan Dubovik",
       "outcome": "Double",
       "count": "1-2",
@@ -1928,13 +1939,15 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Preston Crowl",
       "batter": null,
       "outcome": "Baserunning",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1955,7 +1968,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Preston Crowl",
       "batter": "Jake Ogden",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1982,7 +1995,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Preston Crowl",
       "batter": "Daniel Cuvet",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",

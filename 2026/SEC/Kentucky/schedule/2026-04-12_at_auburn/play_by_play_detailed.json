@@ -3,7 +3,7 @@
   "date": "04/12/2026",
   "away_team": "Kentucky",
   "home_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -175,7 +175,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -203,7 +205,8 @@
       "pitches": "BBSSFFB",
       "rbi": true,
       "runs_scored": [
-        "Bub Terrell"
+        "Bub Terrell",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -582,7 +585,9 @@
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -630,7 +635,34 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "R.",
+      "pitcher": "Ryan Mullan",
+      "batter": "R. Mullan",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Chris Rembert",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Chris Rembert",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 4
+      },
+      "description": "R. Mullan to p for B. Cleaver."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Connor Mattison",
       "batter": "Ethin Bingaman",
       "outcome": "Lineout",
       "count": "1-0",
@@ -792,7 +824,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "R.",
+      "pitcher": "Connor Mattison",
       "batter": "W. Marcy",
       "outcome": "\u2014",
       "count": null,
@@ -819,7 +851,34 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "C.",
+      "pitcher": "Connor Mattison",
+      "batter": "C. Mattison",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 4
+      },
+      "description": "C. Mattison to p for R. Mullan."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Connor Mattison",
       "batter": "Eddie Madrigal",
       "outcome": "Single",
       "count": "2-2",
@@ -846,7 +905,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "C.",
+      "pitcher": "Connor Mattison",
       "batter": "Brandon McCraine",
       "outcome": "Pop out",
       "count": "0-2",
@@ -873,7 +932,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "C.",
+      "pitcher": "Connor Mattison",
       "batter": "Logan Gregorio",
       "outcome": "Pop out",
       "count": "2-2",
@@ -900,7 +959,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "C.",
+      "pitcher": "Connor Mattison",
       "batter": "Bristol Carter",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1035,7 +1094,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "C.",
+      "pitcher": "Leighton Harris",
       "batter": "Chase Fralick",
       "outcome": "Single",
       "count": "1-2",
@@ -1062,7 +1121,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "C.",
+      "pitcher": "Ira Austin",
       "batter": "Eric Guevara",
       "outcome": "Double",
       "count": "1-0",
@@ -1089,13 +1148,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "C.",
+      "pitcher": "Burkley Bounds",
       "batter": "Chris Rembert",
       "outcome": "Single",
       "count": "3-1",
       "pitches": "BBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1116,9 +1177,9 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "L.",
-      "batter": null,
-      "outcome": "Baserunning",
+      "pitcher": "Burkley Bounds",
+      "batter": "L. Harris",
+      "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
@@ -1137,13 +1198,42 @@
       },
       "score": {
         "away": 0,
+        "home": 5
+      },
+      "description": "L. Harris to p for C. Mattison."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Burkley Bounds",
+      "batter": null,
+      "outcome": "Baserunning",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [
+        "Chris Rembert"
+      ],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Chris Rembert",
+        "2B": "Eric Guevara",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Eric Guevara",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
         "home": 6
       },
       "description": "Rembert, C. advanced to second on an error by p, failed pickoff attempt; Guevara, E. scored."
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "L.",
+      "pitcher": "Burkley Bounds",
       "batter": "Bub Terrell",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1153,12 +1243,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Chris Rembert",
+        "1B": null,
         "2B": "Eric Guevara",
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Rembert",
+        "1B": null,
         "2B": "Eric Guevara",
         "3B": null
       },
@@ -1170,7 +1260,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "I.",
+      "pitcher": "Burkley Bounds",
+      "batter": "I. Austin",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": "Eric Guevara",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Eric Guevara",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 6
+      },
+      "description": "I. Austin to p for L. Harris."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Jackson Soucie",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1180,12 +1297,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Chris Rembert",
+        "1B": null,
         "2B": "Eric Guevara",
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Rembert",
+        "1B": null,
         "2B": "Eric Guevara",
         "3B": null
       },
@@ -1197,17 +1314,19 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "I.",
+      "pitcher": "Jackson Soucie",
       "batter": "Ethin Bingaman",
       "outcome": "Single",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Chris Rembert",
+        "1B": null,
         "2B": "Eric Guevara",
         "3B": null
       },
@@ -1224,9 +1343,9 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "B.",
-      "batter": null,
-      "outcome": "Wild pitch",
+      "pitcher": "Tristan Hunter",
+      "batter": "B. Bounds",
+      "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
@@ -1247,15 +1366,15 @@
         "away": 0,
         "home": 7
       },
-      "description": "Bingaman, E. advanced to second on a wild pitch."
+      "description": "B. Bounds to p for I. Austin."
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "B.",
-      "batter": "Eddie Madrigal",
-      "outcome": "Walk",
-      "count": "3-2",
-      "pitches": "BKKBBB",
+      "pitcher": "Tristan Hunter",
+      "batter": null,
+      "outcome": "Wild pitch",
+      "count": null,
+      "pitches": null,
       "rbi": false,
       "runs_scored": [],
       "outs_before": 1,
@@ -1266,8 +1385,35 @@
         "3B": null
       },
       "runners_after": {
+        "1B": null,
+        "2B": "Ethin Bingaman",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 7
+      },
+      "description": "Bingaman, E. advanced to second on a wild pitch."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Tristan Hunter",
+      "batter": "Eddie Madrigal",
+      "outcome": "Walk",
+      "count": "3-2",
+      "pitches": "BKKBBB",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": "Ethin Bingaman",
+        "3B": null
+      },
+      "runners_after": {
         "1B": "Eddie Madrigal",
-        "2B": "Eric Guevara",
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "score": {
@@ -1278,7 +1424,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "B.",
+      "pitcher": "Tristan Hunter",
       "batter": "Brandon McCraine",
       "outcome": "Single",
       "count": "2-0",
@@ -1289,12 +1435,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Eddie Madrigal",
-        "2B": "Eric Guevara",
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "runners_after": {
         "1B": "Brandon McCraine",
-        "2B": "Eric Guevara",
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "score": {
@@ -1305,25 +1451,28 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "B.",
+      "pitcher": "Tristan Hunter",
       "batter": "Logan Gregorio",
       "outcome": "Home run",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "Logan Gregorio"
+        "Logan Gregorio",
+        null,
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Brandon McCraine",
-        "2B": "Eric Guevara",
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "runners_after": {
         "1B": "Brandon McCraine",
-        "2B": "Eric Guevara",
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "score": {
@@ -1334,7 +1483,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "B.",
+      "pitcher": "Tristan Hunter",
       "batter": "Bristol Carter",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1345,12 +1494,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Brandon McCraine",
-        "2B": "Eric Guevara",
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "runners_after": {
         "1B": "Brandon McCraine",
-        "2B": "Eric Guevara",
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "score": {
@@ -1361,7 +1510,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "J.",
+      "pitcher": "",
+      "batter": "J. Soucie",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Brandon McCraine",
+        "2B": "Ethin Bingaman",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Brandon McCraine",
+        "2B": "Ethin Bingaman",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 11
+      },
+      "description": "J. Soucie to p for B. Bounds."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "",
       "batter": "Chase Fralick",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1372,12 +1548,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Brandon McCraine",
-        "2B": "Eric Guevara",
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "runners_after": {
         "1B": "Brandon McCraine",
-        "2B": "Eric Guevara",
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "score": {
@@ -1523,7 +1699,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "T.",
+      "pitcher": "",
+      "batter": "T. Hunter",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 11
+      },
+      "description": "T. Hunter to p for J. Soucie."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "",
       "batter": "Eric Guevara",
       "outcome": "Single",
       "count": "2-1",
@@ -1550,7 +1753,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "Chris Rembert",
       "outcome": "Single",
       "count": "1-0",
@@ -1577,7 +1780,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "Bub Terrell",
       "outcome": "Grounded into double play",
       "count": "3-1",
@@ -1604,7 +1807,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "Ethin Bingaman",
       "outcome": "Walk",
       "count": "3-2",
@@ -1631,7 +1834,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "Eddie Madrigal",
       "outcome": "Groundout",
       "count": "1-0",

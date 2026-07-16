@@ -3,7 +3,7 @@
   "date": "03/24/2026",
   "away_team": "South Alabama",
   "home_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -148,7 +148,9 @@
       "count": "1-2",
       "pitches": "BKS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -472,7 +474,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -508,8 +512,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "score": {
@@ -526,17 +530,19 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "score": {
@@ -557,13 +563,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "score": {
@@ -1012,7 +1018,10 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1060,7 +1069,34 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Tyler",
+      "pitcher": "Tyler Smith",
+      "batter": "Tyler",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Chris Rembert",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Chris Rembert",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 5
+      },
+      "description": "Tyler Smith to p for Hayden O'Del."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Tyler Smith",
       "batter": "Eric Guevara",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1168,7 +1204,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler",
+      "pitcher": "Tyler Smith",
       "batter": "Ethin Bingaman",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -1195,7 +1231,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler",
+      "pitcher": "Tyler Smith",
       "batter": "Eddie Madrigal",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1222,7 +1258,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler",
+      "pitcher": "Tyler Smith",
       "batter": "Lucas Steele",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -1249,7 +1285,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler",
+      "pitcher": "Tyler Smith",
       "batter": "Brandon McCraine",
       "outcome": "Foul out",
       "count": "1-0",
@@ -1276,7 +1312,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler",
+      "pitcher": "Max Miller",
       "batter": "Cade Belyeu",
       "outcome": "\u2014",
       "count": "2-2",
@@ -1384,7 +1420,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Max",
+      "pitcher": "Max Miller",
+      "batter": "Max",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 5
+      },
+      "description": "Max Miller to p for Tyler Smith."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Max Miller",
       "batter": "Bristol Carter",
       "outcome": "Pop out",
       "count": "1-2",
@@ -1411,7 +1474,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Max",
+      "pitcher": "Jacob Haley",
       "batter": "Chris Rembert",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1438,7 +1501,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Max",
+      "pitcher": "Jacob Haley",
       "batter": "Chase Fralick",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1546,7 +1609,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jacob",
+      "pitcher": "Jacob Haley",
+      "batter": "Jacob",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 5
+      },
+      "description": "Jacob Haley to p for Max Miller."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Jacob Haley",
       "batter": "Eric Guevara",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1573,7 +1663,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jacob",
+      "pitcher": "Andrew Floyd",
       "batter": "Ethin Bingaman",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1600,7 +1690,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jacob",
+      "pitcher": "Andrew Floyd",
       "batter": "Eddie Madrigal",
       "outcome": "Single",
       "count": "2-1",
@@ -1627,7 +1717,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jacob",
+      "pitcher": "Andrew Floyd",
       "batter": "Lucas Steele",
       "outcome": "Walk",
       "count": "3-2",
@@ -1654,7 +1744,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Andrew",
+      "pitcher": "Brian Garmon II",
+      "batter": "Andrew",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Lucas Steele",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Lucas Steele",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 5
+      },
+      "description": "Andrew Floyd to p for Jacob Haley."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "",
       "batter": "Brandon McCraine",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1681,13 +1798,16 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Andrew",
+      "pitcher": "",
       "batter": "Cade Belyeu",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 3,
       "outs_after": 3,
       "runners_before": {
@@ -1708,13 +1828,16 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Andrew",
+      "pitcher": "",
       "batter": "Bristol Carter",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 3,
       "outs_after": 3,
       "runners_before": {
@@ -1732,6 +1855,33 @@
         "home": 9
       },
       "description": "Carter, B. singled, out at second rf to 1b to ss, 2 RBI (0-1 K); Belyeu, C. scored; Steele, L. scored."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Marcel Kulik",
+      "batter": "Kulik, M. to p for Alvarez, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 9
+      },
+      "description": "Kulik, M. to p for Alvarez, A.."
     },
     {
       "inning": "Top 8",
@@ -1843,7 +1993,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Marcel Kulik",
+      "pitcher": "",
       "batter": "Duncan",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1870,7 +2020,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Andrew",
+      "pitcher": "",
       "batter": "Brady",
       "outcome": "\u2014",
       "count": null,
@@ -1897,7 +2047,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brian",
+      "pitcher": "",
+      "batter": "Brian",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 9
+      },
+      "description": "Brian Garmon to p for Andrew Floyd."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Chris Rembert",
       "outcome": "Home run",
       "count": "0-0",

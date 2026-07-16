@@ -3,7 +3,7 @@
   "date": "03/01/2026",
   "away_team": "Virginia Tech",
   "home_team": "Tennessee",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -590,7 +590,7 @@
       },
       "runners_after": {
         "1B": "Jay Abernathy",
-        "2B": null,
+        "2B": "Ariel Antigua",
         "3B": null
       },
       "score": {
@@ -607,18 +607,20 @@
       "count": "2-2",
       "pitches": "SBBS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ariel Antigua"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jay Abernathy",
-        "2B": null,
+        "2B": "Ariel Antigua",
         "3B": null
       },
       "runners_after": {
         "1B": "Henry Ford",
         "2B": null,
-        "3B": null
+        "3B": "Jay Abernathy"
       },
       "score": {
         "away": 0,
@@ -640,12 +642,12 @@
       "runners_before": {
         "1B": "Henry Ford",
         "2B": null,
-        "3B": null
+        "3B": "Jay Abernathy"
       },
       "runners_after": {
         "1B": "Henry Ford",
         "2B": null,
-        "3B": null
+        "3B": "Jay Abernathy"
       },
       "score": {
         "away": 0,
@@ -1117,6 +1119,33 @@
     {
       "inning": "Top 6",
       "pitcher": "Mark Hindy",
+      "batter": "HINDY, M. to p for BLANCO, E..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Ethan Ball",
+        "2B": "Nick Locurto",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ethan Ball",
+        "2B": "Nick Locurto",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 1
+      },
+      "description": "HINDY, M. to p for BLANCO, E.."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Mark Hindy",
       "batter": "Treyson Hughes",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1143,7 +1172,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Mark Hindy",
+      "pitcher": "Brayden Krenzel",
       "batter": "Hudson Lutterman",
       "outcome": "Foul out",
       "count": "1-0",
@@ -1197,15 +1226,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
-      "batter": "Henry Ford",
-      "outcome": "Groundout",
-      "count": "1-0",
-      "pitches": "B",
+      "pitcher": "Chase Swift",
+      "batter": "C. Swift",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
       "rbi": false,
       "runs_scored": [],
       "outs_before": 0,
-      "outs_after": 1,
+      "outs_after": 0,
       "runners_before": {
         "1B": "Jay Abernathy",
         "2B": null,
@@ -1220,18 +1249,18 @@
         "away": 1,
         "home": 1
       },
-      "description": "FORD, H. grounded out to p (1-0 B) ABERNATHY, J advanced to second."
+      "description": "C. Swift to p for E. Grim."
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
-      "batter": "Blaine Brown",
-      "outcome": "Double",
-      "count": "0-2",
-      "pitches": "SSF",
-      "rbi": true,
+      "pitcher": "Chase Swift",
+      "batter": "Henry Ford",
+      "outcome": "Groundout",
+      "count": "1-0",
+      "pitches": "B",
+      "rbi": false,
       "runs_scored": [],
-      "outs_before": 1,
+      "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Jay Abernathy",
@@ -1239,7 +1268,36 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jay Abernathy",
+        "1B": null,
+        "2B": "Jay Abernathy",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 1
+      },
+      "description": "FORD, H. grounded out to p (1-0 B) ABERNATHY, J advanced to second."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Chase Swift",
+      "batter": "Blaine Brown",
+      "outcome": "Double",
+      "count": "0-2",
+      "pitches": "SSF",
+      "rbi": true,
+      "runs_scored": [
+        "Jay Abernathy"
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": "Jay Abernathy",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
         "2B": "Blaine Brown",
         "3B": null
       },
@@ -1251,22 +1309,24 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Chase Swift",
       "batter": "Levi Clark",
       "outcome": "Double",
       "count": "2-1",
       "pitches": "BSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Blaine Brown"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jay Abernathy",
+        "1B": null,
         "2B": "Blaine Brown",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jay Abernathy",
+        "1B": null,
         "2B": "Levi Clark",
         "3B": null
       },
@@ -1278,7 +1338,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Chase Swift",
       "batter": "Reese Chapman",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1288,12 +1348,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jay Abernathy",
+        "1B": null,
         "2B": "Levi Clark",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jay Abernathy",
+        "1B": null,
         "2B": "Levi Clark",
         "3B": null
       },
@@ -1305,7 +1365,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Logan Eisenreich",
       "batter": "Tyler Myatt",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1315,12 +1375,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jay Abernathy",
+        "1B": null,
         "2B": "Levi Clark",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jay Abernathy",
+        "1B": null,
         "2B": "Levi Clark",
         "3B": null
       },
@@ -1329,6 +1389,33 @@
         "home": 3
       },
       "description": "MYATT, T. struck out looking (2-2 BBKFK)."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Brayden Krenzel",
+      "batter": "KRENZEL, B. to p for HINDY, M..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 3
+      },
+      "description": "KRENZEL, B. to p for HINDY, M.."
     },
     {
       "inning": "Top 7",
@@ -1710,7 +1797,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Logan Eisenreich",
+      "pitcher": "",
       "batter": "Reese Chapman",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1764,7 +1851,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "",
       "batter": "Hudson Lutterman",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1791,7 +1878,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "",
       "batter": "Owen Petrich",
       "outcome": "Groundout",
       "count": "1-2",

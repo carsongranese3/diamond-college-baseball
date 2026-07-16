@@ -3,7 +3,7 @@
   "date": "04/18/2026",
   "away_team": "Auburn",
   "home_team": "Florida",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -863,8 +863,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethin Bingaman",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "score": {
@@ -885,13 +885,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Ethin Bingaman",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "runners_after": {
         "1B": "Lucas Steele",
-        "2B": null,
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "score": {
@@ -913,13 +913,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Lucas Steele",
-        "2B": null,
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "runners_after": {
         "1B": "Mason McCraine",
         "2B": null,
-        "3B": null
+        "3B": "Ethin Bingaman"
       },
       "score": {
         "away": 0,
@@ -941,12 +941,12 @@
       "runners_before": {
         "1B": "Mason McCraine",
         "2B": null,
-        "3B": null
+        "3B": "Ethin Bingaman"
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Mason McCraine",
+        "3B": "Ethin Bingaman"
       },
       "score": {
         "away": 0,
@@ -962,17 +962,19 @@
       "count": "2-2",
       "pitches": "BFSBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ethin Bingaman"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Mason McCraine",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Mason McCraine",
+        "3B": "Ethin Bingaman"
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -989,12 +991,14 @@
       "count": "2-2",
       "pitches": "KBSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Mason McCraine"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
@@ -1241,7 +1245,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Rembert",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1403,7 +1407,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethin Bingaman",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1425,12 +1429,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Ethin Bingaman",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethin Bingaman",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1661,6 +1665,33 @@
     {
       "inning": "Bottom 8",
       "pitcher": "Ryan Hetzler",
+      "batter": "Hetzler, R. to p for Petrovic, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 3
+      },
+      "description": "Hetzler, R. to p for Petrovic, A.."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Ryan Hetzler",
       "batter": "Cole Stanford",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1801,7 +1832,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1812,7 +1845,7 @@
       "runners_after": {
         "1B": "Lucas Steele",
         "2B": null,
-        "3B": null
+        "3B": "Ethin Bingaman"
       },
       "score": {
         "away": 4,
@@ -1828,16 +1861,19 @@
       "count": "2-2",
       "pitches": "BBKKF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Lucas Steele",
+        "Ethin Bingaman"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Lucas Steele",
         "2B": null,
-        "3B": null
+        "3B": "Ethin Bingaman"
       },
       "runners_after": {
-        "1B": "Lucas Steele",
+        "1B": null,
         "2B": "Mason McCraine",
         "3B": null
       },
@@ -1859,12 +1895,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Lucas Steele",
+        "1B": null,
         "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
-        "1B": "Lucas Steele",
+        "1B": null,
         "2B": "Mason McCraine",
         "3B": null
       },
@@ -1883,18 +1919,19 @@
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
+        "Mason McCraine",
         "Mason McCraine"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Lucas Steele",
+        "1B": null,
         "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
-        "1B": "Lucas Steele",
-        "2B": "Mason McCraine",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1915,13 +1952,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Lucas Steele",
-        "2B": "Mason McCraine",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Lucas Steele",
-        "2B": "Mason McCraine",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1942,13 +1979,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Lucas Steele",
-        "2B": "Mason McCraine",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Chase Fralick",
-        "2B": "Mason McCraine",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1970,12 +2007,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Chase Fralick",
-        "2B": "Mason McCraine",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Chris Rembert",
-        "2B": "Mason McCraine",
+        "2B": "Chase Fralick",
         "3B": null
       },
       "score": {
@@ -1997,12 +2034,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Chris Rembert",
-        "2B": "Mason McCraine",
+        "2B": "Chase Fralick",
         "3B": null
       },
       "runners_after": {
         "1B": "Chris Rembert",
-        "2B": "Mason McCraine",
+        "2B": "Chase Fralick",
         "3B": null
       },
       "score": {
@@ -2121,7 +2158,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": "Brendan Lawson",
       "outcome": "Lineout",
       "count": "0-0",
@@ -2148,7 +2185,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": "Ethan Surowiec",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2175,7 +2212,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": "Karson Bowen",
       "outcome": "Single",
       "count": "1-2",
@@ -2202,7 +2239,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": "Blake Cyr",
       "outcome": "Home run",
       "count": "0-1",
@@ -2232,7 +2269,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": "Landon Stripling",
       "outcome": "Lineout",
       "count": "2-2",

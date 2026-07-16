@@ -3,7 +3,7 @@
   "date": "02/25/2026",
   "away_team": "George Washington",
   "home_team": "Virginia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -231,7 +231,9 @@
       "count": "2-2",
       "pitches": "BFFFFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -258,7 +260,9 @@
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -285,7 +289,9 @@
       "count": "1-1",
       "pitches": "BS",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -312,7 +318,9 @@
       "count": "3-2",
       "pitches": "BBKBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -360,13 +368,16 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Aidan Carey",
       "batter": "Eric Becker",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "KBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -387,7 +398,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Aidan Carey",
       "batter": "AJ Gracia",
       "outcome": "Walk",
       "count": "3-1",
@@ -414,7 +425,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Aidan Carey",
       "batter": "Joe Tiroly",
       "outcome": "Flyout",
       "count": "1-1",
@@ -537,8 +548,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Nick Mullen",
-        "2B": null,
+        "1B": null,
+        "2B": "Nick Mullen",
         "3B": null
       },
       "score": {
@@ -559,14 +570,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Nick Mullen",
-        "2B": null,
+        "1B": null,
+        "2B": "Nick Mullen",
         "3B": null
       },
       "runners_after": {
-        "1B": "Nick Mullen",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Nick Mullen"
       },
       "score": {
         "away": 0,
@@ -586,14 +597,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Nick Mullen",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Nick Mullen"
       },
       "runners_after": {
         "1B": "Michael Bravette",
         "2B": null,
-        "3B": null
+        "3B": "Nick Mullen"
       },
       "score": {
         "away": 0,
@@ -615,12 +626,12 @@
       "runners_before": {
         "1B": "Michael Bravette",
         "2B": null,
-        "3B": null
+        "3B": "Nick Mullen"
       },
       "runners_after": {
         "1B": "Michael Bravette",
         "2B": null,
-        "3B": null
+        "3B": "Nick Mullen"
       },
       "score": {
         "away": 0,
@@ -630,7 +641,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Colin Lebel",
       "batter": "Sam Harris",
       "outcome": "Walk",
       "count": "3-0",
@@ -657,7 +668,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Colin Lebel",
       "batter": "Harrison Didawick",
       "outcome": "Fielder's choice",
       "count": "2-1",
@@ -684,7 +695,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Colin Lebel",
       "batter": "Noah Murray",
       "outcome": "Grounded into double play",
       "count": "1-2",
@@ -711,7 +722,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Noah Yoder",
       "batter": "Robbie Lavey",
       "outcome": "Single",
       "count": "0-0",
@@ -738,7 +749,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Noah Yoder",
       "batter": "Charlie Rogan",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -765,7 +776,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Noah Yoder",
       "batter": "Christian Dewey",
       "outcome": "Fielder's choice",
       "count": "1-1",
@@ -792,7 +803,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Noah Yoder",
       "batter": "Travis Peitz",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -819,7 +830,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Colin Lebel",
       "batter": "Antonio Perrotta",
       "outcome": "Pop out",
       "count": "2-2",
@@ -846,7 +857,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Colin Lebel",
       "batter": "Griffin Enis",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -873,7 +884,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Colin Lebel",
       "batter": "Noah Jouras",
       "outcome": "Hit by pitch",
       "count": "3-2",
@@ -900,7 +911,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Colin Lebel",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -915,8 +926,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Noah Jouras",
-        "2B": null,
+        "1B": null,
+        "2B": "Noah Jouras",
         "3B": null
       },
       "score": {
@@ -927,7 +938,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Colin Lebel",
       "batter": "Eric Becker",
       "outcome": "Groundout",
       "count": "3-2",
@@ -937,13 +948,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Noah Jouras",
-        "2B": null,
+        "1B": null,
+        "2B": "Noah Jouras",
         "3B": null
       },
       "runners_after": {
-        "1B": "Noah Jouras",
-        "2B": null,
+        "1B": null,
+        "2B": "Noah Jouras",
         "3B": null
       },
       "score": {
@@ -954,7 +965,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Noah Yoder",
       "batter": "Charlie Walsh",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -981,7 +992,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Noah Yoder",
       "batter": "Nick Mullen",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1008,7 +1019,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Noah Yoder",
       "batter": "Conlon Walker",
       "outcome": "Single",
       "count": "2-2",
@@ -1035,7 +1046,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Noah Yoder",
       "batter": "Connor Jones",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1062,7 +1073,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Brad Marks",
       "batter": "AJ Gracia",
       "outcome": "Double",
       "count": "2-1",
@@ -1089,7 +1100,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Brad Marks",
       "batter": "Joe Tiroly",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1116,7 +1127,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Brad Marks",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -1132,8 +1143,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "AJ Gracia",
-        "3B": null
+        "2B": null,
+        "3B": "AJ Gracia"
       },
       "score": {
         "away": 0,
@@ -1143,24 +1154,26 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Brad Marks",
       "batter": "Sam Harris",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "KKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "AJ Gracia",
-        "3B": null
+        "2B": null,
+        "3B": "AJ Gracia"
       },
       "runners_after": {
         "1B": null,
-        "2B": "AJ Gracia",
-        "3B": null
+        "2B": null,
+        "3B": "AJ Gracia"
       },
       "score": {
         "away": 0,
@@ -1170,7 +1183,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Brad Marks",
       "batter": "Harrison Didawick",
       "outcome": "Hit by pitch",
       "count": "3-2",
@@ -1181,13 +1194,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "AJ Gracia",
-        "3B": null
+        "2B": null,
+        "3B": "AJ Gracia"
       },
       "runners_after": {
         "1B": "Harrison Didawick",
-        "2B": "AJ Gracia",
-        "3B": null
+        "2B": null,
+        "3B": "AJ Gracia"
       },
       "score": {
         "away": 0,
@@ -1197,7 +1210,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Brad Marks",
       "batter": "Noah Murray",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1208,13 +1221,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Harrison Didawick",
-        "2B": "AJ Gracia",
-        "3B": null
+        "2B": null,
+        "3B": "AJ Gracia"
       },
       "runners_after": {
         "1B": "Harrison Didawick",
-        "2B": "AJ Gracia",
-        "3B": null
+        "2B": null,
+        "3B": "AJ Gracia"
       },
       "score": {
         "away": 0,
@@ -1224,7 +1237,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Christian Lucarelli",
       "batter": "Jack Kent",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1251,7 +1264,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Christian Lucarelli",
       "batter": "Robbie Lavey",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1278,7 +1291,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Christian Lucarelli",
       "batter": "Charlie Rogan",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1305,7 +1318,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Reese Crochet",
       "batter": "Sam Harris",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1332,7 +1345,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Reese Crochet",
       "batter": "Griffin Enis",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1359,7 +1372,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Reese Crochet",
       "batter": "Noah Jouras",
       "outcome": "Walk",
       "count": "3-2",
@@ -1386,7 +1399,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Reese Crochet",
       "batter": "Eric Becker",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1413,7 +1426,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Christian Lucarelli",
       "batter": "Christian Dewey",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1440,7 +1453,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Christian Lucarelli",
       "batter": "Travis Peitz",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1467,7 +1480,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Christian Lucarelli",
       "batter": "Charlie Walsh",
       "outcome": "Walk",
       "count": "3-1",
@@ -1494,7 +1507,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Christian Lucarelli",
       "batter": "Nick Mullen",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1521,7 +1534,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Henry Knighton",
       "batter": "AJ Gracia",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1548,7 +1561,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Henry Knighton",
       "batter": "Joe Tiroly",
       "outcome": "Walk",
       "count": "3-2",
@@ -1575,7 +1588,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Henry Knighton",
       "batter": "Sam Harris",
       "outcome": "Walk",
       "count": "3-1",
@@ -1602,13 +1615,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Henry Knighton",
       "batter": "Harrison Didawick",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1629,7 +1644,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Henry Knighton",
       "batter": "Noah Murray",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1656,7 +1671,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Henry Knighton",
       "batter": "Sam Harris",
       "outcome": "Fielder's choice",
       "count": "2-2",
@@ -1683,7 +1698,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Matt Augustin",
       "batter": "Conlon Walker",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1710,7 +1725,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Matt Augustin",
       "batter": "Connor Jones",
       "outcome": "Walk",
       "count": "3-2",
@@ -1737,7 +1752,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Matt Augustin",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1752,8 +1767,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Connor Jones",
-        "2B": null,
+        "1B": null,
+        "2B": "Connor Jones",
         "3B": null
       },
       "score": {
@@ -1764,7 +1779,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Matt Augustin",
       "batter": "Greg Marmo",
       "outcome": "Walk",
       "count": "3-1",
@@ -1774,13 +1789,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Connor Jones",
-        "2B": null,
+        "1B": null,
+        "2B": "Connor Jones",
         "3B": null
       },
       "runners_after": {
         "1B": "Greg Marmo",
-        "2B": null,
+        "2B": "Connor Jones",
         "3B": null
       },
       "score": {
@@ -1791,7 +1806,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Brendan Cowen",
       "batter": "Robbie Lavey",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1802,12 +1817,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Greg Marmo",
-        "2B": null,
+        "2B": "Connor Jones",
         "3B": null
       },
       "runners_after": {
         "1B": "Greg Marmo",
-        "2B": null,
+        "2B": "Connor Jones",
         "3B": null
       },
       "score": {
@@ -1818,7 +1833,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Brendan Cowen",
       "batter": "Charlie Rogan",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1829,12 +1844,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Greg Marmo",
-        "2B": null,
+        "2B": "Connor Jones",
         "3B": null
       },
       "runners_after": {
         "1B": "Greg Marmo",
-        "2B": null,
+        "2B": "Connor Jones",
         "3B": null
       },
       "score": {
@@ -1845,7 +1860,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Jasper Nadel",
       "batter": "Zach Jackson",
       "outcome": "Walk",
       "count": "3-0",
@@ -1872,7 +1887,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Jasper Nadel",
       "batter": "Noah Jouras",
       "outcome": "Walk",
       "count": "3-2",
@@ -1899,13 +1914,16 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nathan Murphy",
+      "pitcher": "Jasper Nadel",
       "batter": "Eric Becker",
       "outcome": "Double",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {

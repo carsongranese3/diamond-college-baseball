@@ -3,7 +3,7 @@
   "date": "03/03/2026",
   "away_team": "Central Ark.",
   "home_team": "Vanderbilt",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -553,7 +553,9 @@
       "count": "1-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -580,7 +582,9 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Zeb Allen"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -589,7 +593,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Zeb Allen",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -607,16 +611,18 @@
       "count": "1-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Zeb Allen",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Zeb Allen",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -638,12 +644,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Zeb Allen",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Zeb Allen",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1041,7 +1047,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1095,7 +1103,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1225,6 +1235,33 @@
     {
       "inning": "Bottom 5",
       "pitcher": "JB Williams",
+      "batter": "WILLIAMS, JB to p for FERNANDEZ, P.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Mike Mancini",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Mike Mancini",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 1
+      },
+      "description": "WILLIAMS, JB to p for FERNANDEZ, P."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "JB Williams",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1257,7 +1294,9 @@
       "count": "2-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1473,7 +1512,9 @@
       "count": "2-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1494,7 +1535,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "JB Williams",
+      "pitcher": "Braxton Haywood",
       "batter": "Collin Brightwell",
       "outcome": "Single",
       "count": "1-2",
@@ -1518,6 +1559,33 @@
         "home": 3
       },
       "description": "Brightwell singled to left field (1-2); Waite advanced to second."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Braxton Haywood",
+      "batter": "HAYWOOD, Bra to p for WILLIAMS, JB.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Collin Brightwell",
+        "2B": null,
+        "3B": "Max Jensen"
+      },
+      "runners_after": {
+        "1B": "Collin Brightwell",
+        "2B": null,
+        "3B": "Max Jensen"
+      },
+      "score": {
+        "away": 5,
+        "home": 3
+      },
+      "description": "HAYWOOD, Bra to p for WILLIAMS, JB."
     },
     {
       "inning": "Bottom 6",
@@ -1617,8 +1685,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Parker Gwyn",
-        "2B": null,
+        "1B": null,
+        "2B": "Parker Gwyn",
         "3B": null
       },
       "score": {
@@ -1639,13 +1707,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Parker Gwyn",
-        "2B": null,
+        "1B": null,
+        "2B": "Parker Gwyn",
         "3B": null
       },
       "runners_after": {
-        "1B": "Parker Gwyn",
-        "2B": null,
+        "1B": null,
+        "2B": "Parker Gwyn",
         "3B": null
       },
       "score": {
@@ -1683,7 +1751,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Braxton Haywood",
+      "pitcher": "Denver Hamilton",
       "batter": "Mike Mancini",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1710,7 +1778,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Braxton Haywood",
+      "pitcher": "Denver Hamilton",
       "batter": "Braden Holcomb",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1819,6 +1887,33 @@
     {
       "inning": "Bottom 8",
       "pitcher": "Denver Hamilton",
+      "batter": "HAMILTON, De to p for HAYWOOD, Bra.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 3
+      },
+      "description": "HAMILTON, De to p for HAYWOOD, Bra."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Denver Hamilton",
       "batter": "Chris Maldonado",
       "outcome": "Lineout",
       "count": "3-2",
@@ -1872,7 +1967,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Denver Hamilton",
+      "pitcher": "Hunter Alexander",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1899,7 +1994,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Denver Hamilton",
+      "pitcher": "Hunter Alexander",
       "batter": "Mack Whitcomb",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1926,13 +2021,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Denver Hamilton",
+      "pitcher": "Hunter Alexander",
       "batter": "Ryker Waite",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1953,7 +2050,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Denver Hamilton",
+      "pitcher": "Hunter Alexander",
       "batter": "Collin Brightwell",
       "outcome": "Flyout",
       "count": "1-0",
@@ -2061,7 +2158,34 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Hunter Alexander",
+      "pitcher": "",
+      "batter": "ALEXANDER, H to p for HAMILTON, De.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 4
+      },
+      "description": "ALEXANDER, H to p for HAMILTON, De."
+    },
+    {
+      "inning": "Bottom 9",
+      "pitcher": "",
       "batter": "DENTON, Zane to c for ADAMS, Zach.",
       "outcome": "\u2014",
       "count": null,
@@ -2088,7 +2212,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Hunter Alexander",
+      "pitcher": "",
       "batter": "Korbin Reynolds",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2115,7 +2239,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Hunter Alexander",
+      "pitcher": "",
       "batter": "Logan Johnstone",
       "outcome": "Groundout",
       "count": "1-0",
@@ -2142,7 +2266,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Hunter Alexander",
+      "pitcher": "",
       "batter": "Mike Mancini",
       "outcome": "Groundout",
       "count": "0-0",

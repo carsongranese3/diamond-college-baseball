@@ -3,7 +3,7 @@
   "date": "02/13/2026(2)",
   "away_team": "Maine",
   "home_team": "Duke",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -67,7 +67,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -593,8 +595,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Coltin Quagliano",
-        "2B": null,
+        "1B": null,
+        "2B": "Coltin Quagliano",
         "3B": null
       },
       "score": {
@@ -615,13 +617,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Coltin Quagliano",
-        "2B": null,
+        "1B": null,
+        "2B": "Coltin Quagliano",
         "3B": null
       },
       "runners_after": {
-        "1B": "Coltin Quagliano",
-        "2B": null,
+        "1B": null,
+        "2B": "Coltin Quagliano",
         "3B": null
       },
       "score": {
@@ -1041,7 +1043,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Owen Wheeler",
       "batter": null,
       "outcome": "Baserunning",
       "count": "2-1",
@@ -1068,13 +1070,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Owen Wheeler",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Brooks Perez"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1083,7 +1087,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brooks Perez",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1095,7 +1099,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Owen Wheeler",
       "batter": "Jake Lambdin",
       "outcome": "Walk",
       "count": "3-1",
@@ -1105,7 +1109,7 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Brooks Perez",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1122,7 +1126,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Owen Wheeler",
       "batter": "RJ Hamilton",
       "outcome": "Walk",
       "count": "3-1",
@@ -1149,7 +1153,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Owen Wheeler",
       "batter": "Cider Canon",
       "outcome": "Pop out",
       "count": "2-1",
@@ -1176,7 +1180,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Owen Wheeler",
       "batter": "Michael DiMartini",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1203,7 +1207,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Matthew Nochowitz",
+      "pitcher": "Bennett LaPalm",
       "batter": "Troy Carpenter",
       "outcome": "Hit by pitch",
       "count": "3-2",
@@ -1230,7 +1234,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Matthew Nochowitz",
+      "pitcher": "Bennett LaPalm",
       "batter": "Brody Rasmussen",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1257,7 +1261,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Matthew Nochowitz",
+      "pitcher": "Bennett LaPalm",
       "batter": "StDenis,Hunter grounded out to short, ss to 1b (1-2 SFB); Carpenter,Troy advanced to second base.",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1284,7 +1288,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Matthew Nochowitz",
+      "pitcher": "Bennett LaPalm",
       "batter": "Nic Pepe",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1311,7 +1315,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Marshall Loch",
       "batter": "Bobby Marsh",
       "outcome": "Pop out",
       "count": "1-2",
@@ -1338,7 +1342,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Marshall Loch",
       "batter": "Adin Zorn",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1365,7 +1369,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Marshall Loch",
       "batter": "Matthew Strand",
       "outcome": "Pop out",
       "count": "2-1",
@@ -1392,7 +1396,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Matthew Nochowitz",
+      "pitcher": "Bennett LaPalm",
       "batter": "Quinn Murphy",
       "outcome": "Single",
       "count": "3-1",
@@ -1419,7 +1423,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Matthew Nochowitz",
+      "pitcher": "Bennett LaPalm",
       "batter": "Aidan Bardi",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1446,7 +1450,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Matthew Nochowitz",
+      "pitcher": "Bennett LaPalm",
       "batter": "Juju Stevens",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1473,7 +1477,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Matthew Nochowitz",
+      "pitcher": "Bennett LaPalm",
       "batter": "DeLaRosa,Albert struck out swinging (2-2 SBSBS).",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1500,7 +1504,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Marshall Loch",
       "batter": "Brooks Perez",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -1527,7 +1531,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Marshall Loch",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1542,8 +1546,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brooks Perez",
-        "2B": null,
+        "1B": null,
+        "2B": "Brooks Perez",
         "3B": null
       },
       "score": {
@@ -1554,7 +1558,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Marshall Loch",
       "batter": "Coltin Quagliano",
       "outcome": "Single",
       "count": "0-1",
@@ -1564,13 +1568,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Brooks Perez",
-        "2B": null,
+        "1B": null,
+        "2B": "Brooks Perez",
         "3B": null
       },
       "runners_after": {
         "1B": "Coltin Quagliano",
-        "2B": null,
+        "2B": "Brooks Perez",
         "3B": null
       },
       "score": {
@@ -1581,7 +1585,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Marshall Loch",
       "batter": "Jake Lambdin",
       "outcome": "\u2014",
       "count": "1-2",
@@ -1592,12 +1596,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Coltin Quagliano",
-        "2B": null,
+        "2B": "Brooks Perez",
         "3B": null
       },
       "runners_after": {
         "1B": "Coltin Quagliano",
-        "2B": null,
+        "2B": "Brooks Perez",
         "3B": null
       },
       "score": {
@@ -1608,7 +1612,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Matthew Nochowitz",
+      "pitcher": "Peter Lemke",
       "batter": "Christopher Mondesir",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1635,7 +1639,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Matthew Nochowitz",
+      "pitcher": "Peter Lemke",
       "batter": "Troy Carpenter",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1662,7 +1666,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Matthew Nochowitz",
+      "pitcher": "Peter Lemke",
       "batter": "Brody Rasmussen",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1689,7 +1693,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Sebastian Holt",
       "batter": "RJ Hamilton",
       "outcome": "Walk",
       "count": "3-2",
@@ -1716,7 +1720,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Sebastian Holt",
       "batter": "RJ Hamilton",
       "outcome": "\u2014",
       "count": null,
@@ -1743,7 +1747,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Sebastian Holt",
       "batter": "Cider Canon",
       "outcome": "Walk",
       "count": "3-1",
@@ -1770,7 +1774,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Sebastian Holt",
       "batter": "Michael DiMartini",
       "outcome": "Walk",
       "count": "3-0",
@@ -1797,7 +1801,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Sebastian Holt",
       "batter": "Bobby Marsh",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1824,7 +1828,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Sebastian Holt",
       "batter": "Adin Zorn",
       "outcome": "Pop out",
       "count": "1-2",
@@ -1851,7 +1855,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Matthew Nochowitz",
+      "pitcher": "Peter Lemke",
       "batter": "StDenis,Hunter fouled out in first base side foul territory putout by 1b (2-2 BKKFB).",
       "outcome": "Foul out",
       "count": "2-2",
@@ -1878,7 +1882,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Matthew Nochowitz",
+      "pitcher": "Peter Lemke",
       "batter": "Nic Pepe",
       "outcome": "Walk",
       "count": "3-1",
@@ -1905,7 +1909,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Matthew Nochowitz",
+      "pitcher": "Peter Lemke",
       "batter": "Eric Wainwright",
       "outcome": "Grounded into double play",
       "count": "1-2",
@@ -1932,7 +1936,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Sebastian Holt",
       "batter": "Matthew Strand",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1959,7 +1963,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Sebastian Holt",
       "batter": "Brooks Perez",
       "outcome": "Walk",
       "count": "3-2",
@@ -1986,7 +1990,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Sebastian Holt",
       "batter": "Coltin Quagliano",
       "outcome": "Single",
       "count": "1-0",
@@ -2013,7 +2017,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Sebastian Holt",
       "batter": "Jake Lambdin",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2040,7 +2044,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Jack Donlin",
       "batter": "RJ Hamilton",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2067,7 +2071,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Matthew Nochowitz",
+      "pitcher": "Peter Lemke",
       "batter": "Aidan Bardi",
       "outcome": "Walk",
       "count": "3-1",
@@ -2094,7 +2098,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Matthew Nochowitz",
+      "pitcher": "Roman DiGiacomo",
       "batter": "Juju Stevens",
       "outcome": "Single",
       "count": "1-0",
@@ -2121,7 +2125,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Matthew Nochowitz",
+      "pitcher": "Roman DiGiacomo",
       "batter": "DeLaRosa,Albert flied out to cf (0-1 K); Bardi,Aidan advanced to third base; Stevens,Juju advanced to second base on the throw.",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2148,13 +2152,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Matthew Nochowitz",
+      "pitcher": "Roman DiGiacomo",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Juju Stevens"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2163,7 +2169,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Juju Stevens",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2175,7 +2181,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Matthew Nochowitz",
+      "pitcher": "Roman DiGiacomo",
       "batter": "Jack Quigley",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2185,12 +2191,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Juju Stevens",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Juju Stevens",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2202,7 +2208,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Matthew Nochowitz",
+      "pitcher": "Roman DiGiacomo",
       "batter": "Troy Carpenter",
       "outcome": "Walk",
       "count": "3-2",
@@ -2212,7 +2218,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Juju Stevens",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2229,7 +2235,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Matthew Nochowitz",
+      "pitcher": "Roman DiGiacomo",
       "batter": "Brody Rasmussen",
       "outcome": "Flyout",
       "count": "0-2",
@@ -2256,7 +2262,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Jack Donlin",
       "batter": "Cider Canon",
       "outcome": "Hit by pitch",
       "count": "3-1",
@@ -2283,7 +2289,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Jack Donlin",
       "batter": "Michael DiMartini",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2310,7 +2316,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Jack Donlin",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2325,8 +2331,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cider Canon",
-        "2B": null,
+        "1B": null,
+        "2B": "Cider Canon",
         "3B": null
       },
       "score": {
@@ -2337,7 +2343,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "Jack Donlin",
       "batter": "Bobby Marsh",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2347,13 +2353,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cider Canon",
-        "2B": null,
+        "1B": null,
+        "2B": "Cider Canon",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cider Canon",
-        "2B": null,
+        "1B": null,
+        "2B": "Cider Canon",
         "3B": null
       },
       "score": {
@@ -2364,7 +2370,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2374,14 +2380,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cider Canon",
-        "2B": null,
+        "1B": null,
+        "2B": "Cider Canon",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cider Canon",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cider Canon"
       },
       "score": {
         "away": 4,
@@ -2391,7 +2397,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Brennan Rumpf",
+      "pitcher": "",
       "batter": "Adin Zorn",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2401,14 +2407,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Cider Canon",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cider Canon"
       },
       "runners_after": {
-        "1B": "Cider Canon",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cider Canon"
       },
       "score": {
         "away": 4,

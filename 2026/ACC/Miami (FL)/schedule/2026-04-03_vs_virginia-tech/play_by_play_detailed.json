@@ -3,7 +3,7 @@
   "date": "04/03/2026",
   "away_team": "Virginia Tech",
   "home_team": "Miami (FL)",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -40,7 +40,9 @@
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -474,7 +476,10 @@
       "count": "3-2",
       "pitches": "SBSFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -502,7 +507,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Jake Ogden"
+        "Jake Ogden",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -719,7 +725,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -827,7 +835,9 @@
       "count": "3-2",
       "pitches": "BBKFBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -848,13 +858,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Danny Lazaro",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jake Ogden"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -863,7 +875,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Ogden",
+        "1B": null,
         "2B": "Derek Williams",
         "3B": null
       },
@@ -875,7 +887,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Danny Lazaro",
       "batter": "Daniel Cuvet",
       "outcome": "Walk",
       "count": "1-1",
@@ -885,7 +897,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jake Ogden",
+        "1B": null,
         "2B": "Derek Williams",
         "3B": null
       },
@@ -902,13 +914,16 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Danny Lazaro",
       "batter": "Alex Sosa",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -929,7 +944,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Danny Lazaro",
       "batter": "Derek Williams",
       "outcome": "Walk",
       "count": "3-2",
@@ -956,14 +971,17 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Aiden Robertson",
       "batter": "Brylan West",
       "outcome": "Home run",
       "count": "1-2",
       "pitches": "SSFBFFF",
       "rbi": true,
       "runs_scored": [
-        "Brylan West"
+        "Brylan West",
+        null,
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -985,7 +1003,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Aiden Robertson",
       "batter": "Vance Sheahan",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1120,7 +1138,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Aiden Robertson",
       "batter": "Dylan Dubovik",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1147,7 +1165,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Aiden Robertson",
       "batter": "Alonzo Alvarez",
       "outcome": "Home run",
       "count": "0-2",
@@ -1176,7 +1194,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Aiden Robertson",
       "batter": "Fabio Peralta",
       "outcome": "Double",
       "count": "0-0",
@@ -1203,7 +1221,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Aiden Robertson",
       "batter": "Jake Ogden",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1230,13 +1248,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Aiden Robertson",
       "batter": "Daniel Cuvet",
       "outcome": "Double",
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1257,7 +1277,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Jacob Exum",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1273,8 +1293,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Daniel Cuvet",
-        "3B": null
+        "2B": null,
+        "3B": "Daniel Cuvet"
       },
       "score": {
         "away": 1,
@@ -1284,7 +1304,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Jacob Exum",
       "batter": "Alex Sosa",
       "outcome": "Walk",
       "count": "3-0",
@@ -1295,13 +1315,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Daniel Cuvet",
-        "3B": null
+        "2B": null,
+        "3B": "Daniel Cuvet"
       },
       "runners_after": {
         "1B": "Alex Sosa",
-        "2B": "Daniel Cuvet",
-        "3B": null
+        "2B": null,
+        "3B": "Daniel Cuvet"
       },
       "score": {
         "away": 1,
@@ -1311,7 +1331,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Jacob Exum",
       "batter": "Derek Williams",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1322,13 +1342,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Alex Sosa",
-        "2B": "Daniel Cuvet",
-        "3B": null
+        "2B": null,
+        "3B": "Daniel Cuvet"
       },
       "runners_after": {
         "1B": "Alex Sosa",
-        "2B": "Daniel Cuvet",
-        "3B": null
+        "2B": null,
+        "3B": "Daniel Cuvet"
       },
       "score": {
         "away": 1,
@@ -1446,7 +1466,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Tyler Stone",
       "batter": "Brylan West",
       "outcome": "Walk",
       "count": "3-1",
@@ -1473,7 +1493,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Tyler Stone",
       "batter": "Vance Sheahan",
       "outcome": "Walk",
       "count": "3-1",
@@ -1500,13 +1520,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Tyler Stone",
       "batter": "Dylan Dubovik",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "KS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1527,13 +1549,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Tyler Stone",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Dylan Dubovik"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1542,7 +1566,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dylan Dubovik",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1554,7 +1578,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Tyler Stone",
       "batter": "Max Galvin",
       "outcome": "Single",
       "count": "3-2",
@@ -1564,7 +1588,7 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Dylan Dubovik",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1581,7 +1605,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Tyler Stone",
       "batter": "Fabio Peralta",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1608,13 +1632,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Tyler Stone",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1635,7 +1661,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Tyler Stone",
       "batter": "Jailen Watkins",
       "outcome": "Walk",
       "count": "3-0",
@@ -1662,7 +1688,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Jake Wise",
       "batter": "Gabriel Milano",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1689,7 +1715,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Jake Wise",
       "batter": "Jackson Hugus",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1716,7 +1742,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Rob Evans",
+      "pitcher": "Brixton Lofgren",
       "batter": "Sam Grube",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1743,7 +1769,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Rob Evans",
+      "pitcher": "Brixton Lofgren",
       "batter": "CJ Oxendine",
       "outcome": "Foul out",
       "count": "0-2",
@@ -1770,7 +1796,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Rob Evans",
+      "pitcher": "Brixton Lofgren",
       "batter": "Nick Locurto",
       "outcome": "Single",
       "count": "3-2",
@@ -1797,7 +1823,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Rob Evans",
+      "pitcher": "Brixton Lofgren",
       "batter": "Aimon Chandler",
       "outcome": "Pop out",
       "count": "0-0",
@@ -1824,7 +1850,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Jake Wise",
       "batter": "Bennett Gary",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1851,7 +1877,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Jake Wise",
       "batter": "Cian Copeland",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1878,7 +1904,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Brendan Yagesh",
+      "pitcher": "Jake Wise",
       "batter": "Brandon DeGoti",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1905,7 +1931,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Rob Evans",
+      "pitcher": "Erick Peralta",
       "batter": "Anderson French",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1932,7 +1958,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Rob Evans",
+      "pitcher": "Erick Peralta",
       "batter": "Ethan Gibson",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1959,7 +1985,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Rob Evans",
+      "pitcher": "Erick Peralta",
       "batter": "Willie Hurt",
       "outcome": "Walk",
       "count": "3-0",
@@ -1986,7 +2012,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Rob Evans",
+      "pitcher": "Erick Peralta",
       "batter": "Treyson Hughes",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",

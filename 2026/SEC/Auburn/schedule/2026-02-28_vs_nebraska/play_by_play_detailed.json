@@ -3,7 +3,7 @@
   "date": "02/28/2026",
   "away_team": "Nebraska",
   "home_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -103,8 +103,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Case Sanderson",
-        "2B": null,
+        "1B": null,
+        "2B": "Case Sanderson",
         "3B": null
       },
       "score": {
@@ -125,13 +125,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Case Sanderson",
-        "2B": null,
+        "1B": null,
+        "2B": "Case Sanderson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Case Sanderson",
-        "2B": null,
+        "1B": null,
+        "2B": "Case Sanderson",
         "3B": null
       },
       "score": {
@@ -184,8 +184,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "score": {
@@ -206,13 +206,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "score": {
@@ -233,13 +233,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "runners_after": {
         "1B": "Eric Guevara",
-        "2B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "score": {
@@ -261,12 +261,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Eric Guevara",
-        "2B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "runners_after": {
         "1B": "Bub Terrell",
-        "2B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "score": {
@@ -283,17 +283,19 @@
       "count": "3-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Bub Terrell",
-        "2B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "runners_after": {
         "1B": "Ethin Bingaman",
-        "2B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "score": {
@@ -310,17 +312,19 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Ethin Bingaman",
-        "2B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "runners_after": {
         "1B": "Ethin Bingaman",
-        "2B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "score": {
@@ -337,17 +341,20 @@
       "count": "0-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Ethin Bingaman",
-        "2B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "runners_after": {
         "1B": "Mason McCraine",
-        "2B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "score": {
@@ -369,7 +376,7 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Mason McCraine",
-        "2B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "runners_after": {
@@ -548,6 +555,33 @@
     {
       "inning": "Bottom 2",
       "pitcher": "Colin Nowaczyk",
+      "batter": "Nowaczyk, C to p for Jasa, C..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 4
+      },
+      "description": "Nowaczyk, C to p for Jasa, C.."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Colin Nowaczyk",
       "batter": "Newhan, N. to rf for Jesske, W..",
       "outcome": "\u2014",
       "count": null,
@@ -709,13 +743,15 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Colin Nowaczyk",
+      "pitcher": "Ryan Harrahill",
       "batter": "Ethin Bingaman",
       "outcome": "Hit by pitch",
       "count": "1-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -736,13 +772,15 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Colin Nowaczyk",
+      "pitcher": "Ryan Harrahill",
       "batter": "Chris Rembert",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -763,13 +801,16 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Colin Nowaczyk",
+      "pitcher": "Ryan Harrahill",
       "batter": "Mason McCraine",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -787,6 +828,33 @@
         "home": 8
       },
       "description": "McCraine, M. singled through the right side, 2 RBI (2-2); Rembert, C. advanced to second; Bingaman, E. scored; Guevara, E. scored."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Ryan Harrahill",
+      "batter": "Harrahill, R to p for Nowaczyk, C.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Mason McCraine",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Mason McCraine",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 8
+      },
+      "description": "Harrahill, R to p for Nowaczyk, C."
     },
     {
       "inning": "Bottom 2",
@@ -1121,7 +1189,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Jett Buck"
+        "Jett Buck",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1224,7 +1293,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ryan Harrahill",
+      "pitcher": "Lynden Bruegman",
       "batter": "Chris Rembert",
       "outcome": "Hit by pitch",
       "count": "3-1",
@@ -1251,7 +1320,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ryan Harrahill",
+      "pitcher": "Lynden Bruegman",
       "batter": "Mason McCraine",
       "outcome": "Single",
       "count": "2-1",
@@ -1278,7 +1347,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ryan Harrahill",
+      "pitcher": "Lynden Bruegman",
       "batter": "Mason McCraine",
       "outcome": "Lineout",
       "count": "0-1",
@@ -1305,7 +1374,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ryan Harrahill",
+      "pitcher": "Lynden Bruegman",
       "batter": "Lucas Steele",
       "outcome": "Lineout",
       "count": "3-1",
@@ -1366,7 +1435,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Nico Newhan"
+        "Nico Newhan",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1439,6 +1509,33 @@
         "home": 8
       },
       "description": "Overbeek, J. doubled to left center (3-2)."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Christian Chatterton",
+      "batter": "Chatterton,C to p for Sanders, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Mac Moyer",
+        "2B": "Josh Overbeek",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Mac Moyer",
+        "2B": "Josh Overbeek",
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 8
+      },
+      "description": "Chatterton,C to p for Sanders, J.."
     },
     {
       "inning": "Top 5",
@@ -1550,7 +1647,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Lynden Bruegman",
+      "pitcher": "Tucker Timmerman",
+      "batter": "Bruegman, L. to p for Harrahill, R.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 8
+      },
+      "description": "Bruegman, L. to p for Harrahill, R."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Tucker Timmerman",
       "batter": "Bristol Carter",
       "outcome": "Single",
       "count": "2-1",
@@ -1577,13 +1701,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Lynden Bruegman",
+      "pitcher": "Tucker Timmerman",
       "batter": "Chase Fralick",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1604,14 +1730,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Lynden Bruegman",
+      "pitcher": "Tucker Timmerman",
       "batter": "Eric Guevara",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Eric Guevara"
+        "Eric Guevara",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1633,7 +1760,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Lynden Bruegman",
+      "pitcher": "Tucker Timmerman",
       "batter": "Bub Terrell",
       "outcome": "Home run",
       "count": "2-1",
@@ -1659,6 +1786,33 @@
         "home": 12
       },
       "description": "Terrell, B. homered to right center, RBI (2-1)."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Tucker Timmerman",
+      "batter": "Timmerman, T to p for Bruegman, L..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Bristol Carter",
+        "2B": "Chase Fralick",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Bristol Carter",
+        "2B": "Chase Fralick",
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 12
+      },
+      "description": "Timmerman, T to p for Bruegman, L.."
     },
     {
       "inning": "Bottom 5",
@@ -1689,7 +1843,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tucker Timmerman",
+      "pitcher": "Jalen Worthley",
       "batter": "Chris Rembert",
       "outcome": "Lineout",
       "count": "1-1",
@@ -1716,7 +1870,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tucker Timmerman",
+      "pitcher": "Jalen Worthley",
       "batter": "Mason McCraine",
       "outcome": "Pop out",
       "count": "3-2",
@@ -1824,7 +1978,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tucker Timmerman",
+      "pitcher": "Jalen Worthley",
       "batter": "Fikes, T. to c for Freeman, P..",
       "outcome": "\u2014",
       "count": null,
@@ -1851,7 +2005,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tucker Timmerman",
+      "pitcher": "Jalen Worthley",
       "batter": "Mason McCraine",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1878,7 +2032,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tucker Timmerman",
+      "pitcher": "Jalen Worthley",
       "batter": "Lucas Steele",
       "outcome": "Walk",
       "count": "3-1",
@@ -1905,7 +2059,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tucker Timmerman",
+      "pitcher": "",
       "batter": "Bristol Carter",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1932,7 +2086,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tucker Timmerman",
+      "pitcher": "",
       "batter": "Chase Fralick",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2013,7 +2167,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Christian Chatterton",
+      "pitcher": "",
       "batter": "Dylan Carey",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2040,7 +2194,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jalen Worthley",
+      "pitcher": "",
+      "batter": "Worthley, Ja to p for Timmerman, T.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 12
+      },
+      "description": "Worthley, Ja to p for Timmerman, T."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "",
       "batter": "Eric Guevara",
       "outcome": "Pop out",
       "count": "0-1",
@@ -2067,7 +2248,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jalen Worthley",
+      "pitcher": "",
       "batter": "Bub Terrell",
       "outcome": "Catcher interference",
       "count": "0-2",
@@ -2094,7 +2275,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jalen Worthley",
+      "pitcher": "",
       "batter": "Ethin Bingaman",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2121,13 +2302,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jalen Worthley",
+      "pitcher": "",
       "batter": "Chris Rembert",
       "outcome": "Double",
       "count": "3-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2148,7 +2331,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jalen Worthley",
+      "pitcher": "",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2164,8 +2347,8 @@
       },
       "runners_after": {
         "1B": "Bub Terrell",
-        "2B": "Chris Rembert",
-        "3B": null
+        "2B": null,
+        "3B": "Chris Rembert"
       },
       "score": {
         "away": 4,
@@ -2175,26 +2358,27 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jalen Worthley",
+      "pitcher": "",
       "batter": "Mason McCraine",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Mason McCraine"
+        "Mason McCraine",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Bub Terrell",
-        "2B": "Chris Rembert",
-        "3B": null
+        "2B": null,
+        "3B": "Chris Rembert"
       },
       "runners_after": {
         "1B": "Bub Terrell",
-        "2B": "Chris Rembert",
-        "3B": null
+        "2B": null,
+        "3B": "Chris Rembert"
       },
       "score": {
         "away": 4,

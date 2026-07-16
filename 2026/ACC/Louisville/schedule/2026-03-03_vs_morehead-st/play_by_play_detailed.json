@@ -3,7 +3,7 @@
   "date": "03/03/2026",
   "away_team": "Morehead St.",
   "home_team": "Louisville",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -1000,8 +1000,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Krupp",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Krupp",
         "3B": null
       },
       "score": {
@@ -1022,13 +1022,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Kyle Krupp",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Krupp",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Krupp",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Krupp",
         "3B": null
       },
       "score": {
@@ -1049,13 +1049,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Kyle Krupp",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Krupp",
         "3B": null
       },
       "runners_after": {
         "1B": "Aubrey Kearns",
-        "2B": null,
+        "2B": "Kyle Krupp",
         "3B": null
       },
       "score": {
@@ -1072,12 +1072,14 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kyle Krupp"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Aubrey Kearns",
-        "2B": null,
+        "2B": "Kyle Krupp",
         "3B": null
       },
       "runners_after": {
@@ -1593,7 +1595,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1794,8 +1798,8 @@
       },
       "runners_after": {
         "1B": "Austyn Peak",
-        "2B": "Jaden Correa",
-        "3B": null
+        "2B": null,
+        "3B": "Jaden Correa"
       },
       "score": {
         "away": 9,
@@ -1816,13 +1820,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Austyn Peak",
-        "2B": "Jaden Correa",
-        "3B": null
+        "2B": null,
+        "3B": "Jaden Correa"
       },
       "runners_after": {
-        "1B": "Austyn Peak",
-        "2B": "Jaden Correa",
-        "3B": null
+        "1B": null,
+        "2B": "Austyn Peak",
+        "3B": "Jaden Correa"
       },
       "score": {
         "away": 9,
@@ -1842,14 +1846,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Austyn Peak",
-        "2B": "Jaden Correa",
-        "3B": null
+        "1B": null,
+        "2B": "Austyn Peak",
+        "3B": "Jaden Correa"
       },
       "runners_after": {
         "1B": "Kyle Krupp",
-        "2B": "Jaden Correa",
-        "3B": null
+        "2B": "Austyn Peak",
+        "3B": "Jaden Correa"
       },
       "score": {
         "away": 9,
@@ -1859,7 +1863,34 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
+      "batter": "J. Brown",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Kyle Krupp",
+        "2B": "Austyn Peak",
+        "3B": "Jaden Correa"
+      },
+      "runners_after": {
+        "1B": "Kyle Krupp",
+        "2B": "Austyn Peak",
+        "3B": "Jaden Correa"
+      },
+      "score": {
+        "away": 9,
+        "home": 3
+      },
+      "description": "J. Brown to p for Schlageter."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Jack Brown",
       "batter": "Caden Sheridan",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1872,13 +1903,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kyle Krupp",
-        "2B": "Jaden Correa",
-        "3B": null
+        "2B": "Austyn Peak",
+        "3B": "Jaden Correa"
       },
       "runners_after": {
         "1B": null,
         "2B": "Kyle Krupp",
-        "3B": null
+        "3B": "Austyn Peak"
       },
       "score": {
         "away": 10,
@@ -1888,7 +1919,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "Aubrey Kearns",
       "outcome": "Walk",
       "count": "3-2",
@@ -1900,12 +1931,12 @@
       "runners_before": {
         "1B": null,
         "2B": "Kyle Krupp",
-        "3B": null
+        "3B": "Austyn Peak"
       },
       "runners_after": {
         "1B": "Aubrey Kearns",
         "2B": "Kyle Krupp",
-        "3B": null
+        "3B": "Austyn Peak"
       },
       "score": {
         "away": 10,
@@ -1915,19 +1946,21 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Casen Murphy",
       "batter": "Davis Germann",
       "outcome": "Hit by pitch",
       "count": "1-2",
       "pitches": "BKFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Austyn Peak"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Aubrey Kearns",
         "2B": "Kyle Krupp",
-        "3B": null
+        "3B": "Austyn Peak"
       },
       "runners_after": {
         "1B": "Davis Germann",
@@ -2271,7 +2304,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Casen Murphy",
+      "pitcher": "Bryce Koch",
       "batter": "Jaden Correa",
       "outcome": "Walk",
       "count": "3-1",
@@ -2298,7 +2331,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Casen Murphy",
+      "pitcher": "Bryce Koch",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -2325,7 +2358,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Casen Murphy",
+      "pitcher": "Bryce Koch",
       "batter": "Austyn Peak",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2394,8 +2427,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jimmy Nugent",
-        "2B": null,
+        "1B": null,
+        "2B": "Jimmy Nugent",
         "3B": null
       },
       "score": {
@@ -2416,13 +2449,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jimmy Nugent",
-        "2B": null,
+        "1B": null,
+        "2B": "Jimmy Nugent",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jimmy Nugent",
-        "2B": null,
+        "1B": null,
+        "2B": "Jimmy Nugent",
         "3B": null
       },
       "score": {
@@ -2443,13 +2476,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jimmy Nugent",
-        "2B": null,
+        "1B": null,
+        "2B": "Jimmy Nugent",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jimmy Nugent",
-        "2B": null,
+        "1B": null,
+        "2B": "Jimmy Nugent",
         "3B": null
       },
       "score": {
@@ -2460,7 +2493,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "B.",
+      "pitcher": "Nicholas Ballard",
+      "batter": "B. Koch",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 12,
+        "home": 5
+      },
+      "description": "B. Koch to p for Murphy."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "Nicholas Ballard",
       "batter": "Kyle Krupp",
       "outcome": "Walk",
       "count": "3-2",
@@ -2487,7 +2547,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "B.",
+      "pitcher": "Nicholas Ballard",
       "batter": "Caden Sheridan",
       "outcome": "Walk",
       "count": "3-0",
@@ -2543,7 +2603,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nicholas Ballard",
+      "pitcher": "",
       "batter": "Davis Germann",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2570,7 +2630,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nicholas Ballard",
+      "pitcher": "",
       "batter": "Alex Kean",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2597,7 +2657,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nicholas Ballard",
+      "pitcher": "",
       "batter": "JJ Dutton",
       "outcome": "Strikeout (looking)",
       "count": "2-2",

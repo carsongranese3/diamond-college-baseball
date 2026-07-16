@@ -3,7 +3,7 @@
   "date": "04/14/2026",
   "away_team": "Alabama St.",
   "home_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -130,8 +130,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "score": {
@@ -152,14 +152,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 0,
@@ -179,14 +179,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
         "1B": "Chase Fralick",
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 0,
@@ -202,18 +202,20 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Chase Fralick",
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
         "1B": "Chase Fralick",
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 0,
@@ -235,12 +237,12 @@
       "runners_before": {
         "1B": "Chase Fralick",
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
         "1B": "Chris Rembert",
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 0,
@@ -262,12 +264,12 @@
       "runners_before": {
         "1B": "Chris Rembert",
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
         "1B": "Chris Rembert",
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 0,
@@ -634,7 +636,9 @@
       "count": "3-2",
       "pitches": "FBFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -682,7 +686,34 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Trey",
+      "pitcher": "Trey Power",
+      "batter": "Trey",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Bub Terrell",
+        "2B": "Chris Rembert",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Bub Terrell",
+        "2B": "Chris Rembert",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 2
+      },
+      "description": "Trey Power to p for Caleb Sander."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Trey Power",
       "batter": "Ethin Bingaman",
       "outcome": "Flyout",
       "count": "1-2",
@@ -709,7 +740,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Trey",
+      "pitcher": "Trey Power",
       "batter": "Logan Gregorio",
       "outcome": "Groundout",
       "count": "1-1",
@@ -733,6 +764,33 @@
         "home": 2
       },
       "description": "Gregorio, L. grounded out to ss (1-1 SB)."
+    },
+    {
+      "inning": "Top 4",
+      "pitcher": "Jett Johnston",
+      "batter": "Johnston, J. to p for Graves, G..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 2
+      },
+      "description": "Johnston, J. to p for Graves, G.."
     },
     {
       "inning": "Top 4",
@@ -817,7 +875,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Trey",
+      "pitcher": "Trey Power",
       "batter": "Brandon McCraine",
       "outcome": "Single",
       "count": "0-1",
@@ -844,7 +902,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Trey",
+      "pitcher": "Trey Power",
       "batter": "Lucas Steele",
       "outcome": "Walk",
       "count": "3-0",
@@ -871,7 +929,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Trey",
+      "pitcher": "Trey Power",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -898,13 +956,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Trey",
+      "pitcher": "Trey Power",
       "batter": "Bristol Carter",
       "outcome": "Groundout",
       "count": "3-1",
       "pitches": "BKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -925,7 +985,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Trey",
+      "pitcher": "James Peterson",
       "batter": "Chase Fralick",
       "outcome": "Lineout",
       "count": "3-2",
@@ -952,14 +1012,42 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "James",
+      "pitcher": "James Peterson",
+      "batter": "James",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Lucas Steele",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Lucas Steele",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 3
+      },
+      "description": "James Peters to p for Trey Power."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "James Peterson",
       "batter": "Eric Guevara",
       "outcome": "Home run",
       "count": "1-2",
       "pitches": "BKKF",
       "rbi": true,
       "runs_scored": [
-        "Eric Guevara"
+        "Eric Guevara",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -981,7 +1069,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "James",
+      "pitcher": "James Peterson",
       "batter": "Chris Rembert",
       "outcome": "Triple",
       "count": "1-0",
@@ -1008,14 +1096,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "James",
+      "pitcher": "Joe Dolinshek",
       "batter": "Bub Terrell",
       "outcome": "Home run",
       "count": "2-1",
       "pitches": "BFB",
       "rbi": true,
       "runs_scored": [
-        "Bub Terrell"
+        "Bub Terrell",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1037,7 +1126,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "James",
+      "pitcher": "Joe Dolinshek",
       "batter": "Ethin Bingaman",
       "outcome": "Single",
       "count": "2-2",
@@ -1064,7 +1153,34 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Joe",
+      "pitcher": "Joe Dolinshek",
+      "batter": "Joe",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Ethin Bingaman",
+        "2B": null,
+        "3B": "Chris Rembert"
+      },
+      "runners_after": {
+        "1B": "Ethin Bingaman",
+        "2B": null,
+        "3B": "Chris Rembert"
+      },
+      "score": {
+        "away": 0,
+        "home": 7
+      },
+      "description": "Joe Dolinshe to p for James Peters."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Joe Dolinshek",
       "batter": "Logan Gregorio",
       "outcome": "Flyout",
       "count": "3-1",
@@ -1145,7 +1261,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jett Johnston",
+      "pitcher": "Abe Chancellor",
       "batter": "Jackson",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1172,7 +1288,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Joe",
+      "pitcher": "Joe Dolinshek",
       "batter": "Brandon McCraine",
       "outcome": "Single",
       "count": "2-2",
@@ -1199,7 +1315,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Joe",
+      "pitcher": "Joe Dolinshek",
       "batter": "Lucas Steele",
       "outcome": "Single",
       "count": "0-2",
@@ -1226,7 +1342,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Joe",
+      "pitcher": "Joe Dolinshek",
       "batter": null,
       "outcome": "Baserunning",
       "count": "1-0",
@@ -1253,7 +1369,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Joe",
+      "pitcher": "Joe Dolinshek",
       "batter": "Chase Fralick",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -1280,7 +1396,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Joe",
+      "pitcher": "Joe Dolinshek",
       "batter": "Eric Guevara",
       "outcome": "Pop out",
       "count": "2-1",
@@ -1307,13 +1423,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Joe",
+      "pitcher": "Jacob Loeffler",
       "batter": "Chris Rembert",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1334,13 +1452,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Joe",
+      "pitcher": "Jacob Loeffler",
       "batter": "Bub Terrell",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBKBFFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1361,7 +1481,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jacob",
+      "pitcher": "Jacob Loeffler",
+      "batter": "Jacob",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Bub Terrell",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Bub Terrell",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 9
+      },
+      "description": "Jacob Loeffl to p for Joe Dolinshe."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Jacob Loeffler",
       "batter": "Ethin Bingaman",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1385,6 +1532,33 @@
         "home": 9
       },
       "description": "Bingaman, E. flied out to rf (0-2 KS)."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Abe Chancellor",
+      "batter": "Chancellor,A to p for Johnston, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 9
+      },
+      "description": "Chancellor,A to p for Johnston, J.."
     },
     {
       "inning": "Top 6",
@@ -1415,7 +1589,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Abe Chancellor",
+      "pitcher": "Ethan Harden",
       "batter": "Aden",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1442,7 +1616,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Abe Chancellor",
+      "pitcher": "Ethan Harden",
       "batter": "Fabian",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1469,7 +1643,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jacob",
+      "pitcher": "Jacob Loeffler",
       "batter": "Logan Gregorio",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1496,7 +1670,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jacob",
+      "pitcher": "Jacob Loeffler",
       "batter": "Brandon McCraine",
       "outcome": "Single",
       "count": "2-2",
@@ -1523,14 +1697,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jacob",
+      "pitcher": "Jacob Loeffler",
       "batter": "Lucas Steele",
       "outcome": "Home run",
       "count": "2-2",
       "pitches": "BFBK",
       "rbi": true,
       "runs_scored": [
-        "Lucas Steele"
+        "Lucas Steele",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1552,7 +1727,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jacob",
+      "pitcher": "Jacob Loeffler",
       "batter": "Bristol Carter",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1579,7 +1754,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jacob",
+      "pitcher": "",
       "batter": "Chase Fralick",
       "outcome": "Single",
       "count": "2-2",
@@ -1606,14 +1781,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jacob",
+      "pitcher": "",
       "batter": "Eric Guevara",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Eric Guevara"
+        "Eric Guevara",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1635,7 +1811,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jacob",
+      "pitcher": "",
       "batter": "Chris Rembert",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1659,6 +1835,33 @@
         "home": 13
       },
       "description": "Rembert, C. struck out swinging (1-2 KSBS)."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Ethan Harden",
+      "batter": "Harden, E. to p for Chancellor,A.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 13
+      },
+      "description": "Harden, E. to p for Chancellor,A."
     },
     {
       "inning": "Top 7",
@@ -1716,7 +1919,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ethan Harden",
+      "pitcher": "",
       "batter": "Miguel",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1743,7 +1946,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ethan Harden",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1770,7 +1973,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ethan Harden",
+      "pitcher": "",
       "batter": "Niguel",
       "outcome": "Walk",
       "count": "3-2",
@@ -1797,7 +2000,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ethan Harden",
+      "pitcher": "",
       "batter": "Trey",
       "outcome": "Flyout",
       "count": "0-0",

@@ -3,7 +3,7 @@
   "date": "04/21/2026",
   "away_team": "Pittsburgh",
   "home_team": "West Virginia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -324,7 +324,7 @@
       },
       "runners_after": {
         "1B": "Julian Irizarry",
-        "2B": null,
+        "2B": "Carter Dierdorf",
         "3B": null
       },
       "score": {
@@ -342,17 +342,19 @@
       "pitches": "BFBB",
       "rbi": true,
       "runs_scored": [
+        "Carter Dierdorf",
+        "Julian Irizarry",
         "AJ Nessler"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Julian Irizarry",
-        "2B": null,
+        "2B": "Carter Dierdorf",
         "3B": null
       },
       "runners_after": {
-        "1B": "Julian Irizarry",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -364,7 +366,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Bryant Yoak",
       "batter": "Caden Dulin",
       "outcome": "Groundout",
       "count": "2-1",
@@ -374,12 +376,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Julian Irizarry",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Julian Irizarry",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -391,7 +393,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Bryant Yoak",
       "batter": "Lorenzo Carrier",
       "outcome": "Single",
       "count": "1-0",
@@ -401,7 +403,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Julian Irizarry",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -418,7 +420,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Bryant Yoak",
       "batter": "Kai Wagner",
       "outcome": "Walk",
       "count": "3-0",
@@ -434,7 +436,7 @@
       },
       "runners_after": {
         "1B": "Kai Wagner",
-        "2B": null,
+        "2B": "Lorenzo Carrier",
         "3B": null
       },
       "score": {
@@ -445,7 +447,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Bryant Yoak",
       "batter": "Trey Fenderson",
       "outcome": "Walk",
       "count": "3-2",
@@ -456,13 +458,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kai Wagner",
-        "2B": null,
+        "2B": "Lorenzo Carrier",
         "3B": null
       },
       "runners_after": {
         "1B": "Trey Fenderson",
-        "2B": null,
-        "3B": null
+        "2B": "Kai Wagner",
+        "3B": "Lorenzo Carrier"
       },
       "score": {
         "away": 5,
@@ -472,24 +474,26 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "David Hagen",
       "batter": "Joey Baran",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Lorenzo Carrier"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Trey Fenderson",
-        "2B": null,
-        "3B": null
+        "2B": "Kai Wagner",
+        "3B": "Lorenzo Carrier"
       },
       "runners_after": {
         "1B": "Joey Baran",
-        "2B": null,
-        "3B": null
+        "2B": "Trey Fenderson",
+        "3B": "Kai Wagner"
       },
       "score": {
         "away": 6,
@@ -499,23 +503,26 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "David Hagen",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Trey Fenderson",
+        "Kai Wagner"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Joey Baran",
-        "2B": null,
-        "3B": null
+        "2B": "Trey Fenderson",
+        "3B": "Kai Wagner"
       },
       "runners_after": {
-        "1B": "Joey Baran",
-        "2B": null,
+        "1B": null,
+        "2B": "Joey Baran",
         "3B": null
       },
       "score": {
@@ -526,7 +533,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "David Hagen",
       "batter": "Sebastian Pisacreta",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -536,13 +543,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Joey Baran",
-        "2B": null,
+        "1B": null,
+        "2B": "Joey Baran",
         "3B": null
       },
       "runners_after": {
-        "1B": "Joey Baran",
-        "2B": null,
+        "1B": null,
+        "2B": "Joey Baran",
         "3B": null
       },
       "score": {
@@ -634,7 +641,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "David Leslie",
+      "pitcher": "Chase Kriebel",
       "batter": "Armani Guzman",
       "outcome": "Walk",
       "count": "3-1",
@@ -650,7 +657,7 @@
       },
       "runners_after": {
         "1B": "Armani Guzman",
-        "2B": null,
+        "2B": "Tyrus Hall",
         "3B": null
       },
       "score": {
@@ -661,7 +668,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "David Leslie",
+      "pitcher": "Chase Kriebel",
       "batter": "Matthew Graveline",
       "outcome": "Walk",
       "count": "3-0",
@@ -672,13 +679,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Armani Guzman",
-        "2B": null,
+        "2B": "Tyrus Hall",
         "3B": null
       },
       "runners_after": {
         "1B": "Matthew Graveline",
-        "2B": null,
-        "3B": null
+        "2B": "Armani Guzman",
+        "3B": "Tyrus Hall"
       },
       "score": {
         "away": 8,
@@ -688,7 +695,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "David Leslie",
+      "pitcher": "Chase Kriebel",
       "batter": "Brock Wills",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -699,13 +706,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Matthew Graveline",
-        "2B": null,
-        "3B": null
+        "2B": "Armani Guzman",
+        "3B": "Tyrus Hall"
       },
       "runners_after": {
         "1B": "Matthew Graveline",
-        "2B": null,
-        "3B": null
+        "2B": "Armani Guzman",
+        "3B": "Tyrus Hall"
       },
       "score": {
         "away": 8,
@@ -715,7 +722,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "David Hagen",
       "batter": "Carter Dierdorf",
       "outcome": "Walk",
       "count": "3-1",
@@ -742,7 +749,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "David Hagen",
       "batter": "Julian Irizarry",
       "outcome": "Single",
       "count": "1-2",
@@ -758,7 +765,7 @@
       },
       "runners_after": {
         "1B": "Julian Irizarry",
-        "2B": null,
+        "2B": "Carter Dierdorf",
         "3B": null
       },
       "score": {
@@ -769,7 +776,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "David Hagen",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -780,13 +787,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Julian Irizarry",
-        "2B": null,
+        "2B": "Carter Dierdorf",
         "3B": null
       },
       "runners_after": {
-        "1B": "Julian Irizarry",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Julian Irizarry",
+        "3B": "Carter Dierdorf"
       },
       "score": {
         "away": 8,
@@ -796,7 +803,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "David Hagen",
       "batter": "AJ Nessler",
       "outcome": "Groundout",
       "count": "2-0",
@@ -806,14 +813,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Julian Irizarry",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Julian Irizarry",
+        "3B": "Carter Dierdorf"
       },
       "runners_after": {
-        "1B": "Julian Irizarry",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Julian Irizarry",
+        "3B": "Carter Dierdorf"
       },
       "score": {
         "away": 8,
@@ -823,24 +830,26 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "David Hagen",
       "batter": "Caden Dulin",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
+        "Carter Dierdorf",
+        "Julian Irizarry",
         "Caden Dulin"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Julian Irizarry",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Julian Irizarry",
+        "3B": "Carter Dierdorf"
       },
       "runners_after": {
-        "1B": "Julian Irizarry",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -852,7 +861,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "David Hagen",
       "batter": "Lorenzo Carrier",
       "outcome": "Walk",
       "count": "3-2",
@@ -862,7 +871,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Julian Irizarry",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -879,7 +888,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "David Hagen",
       "batter": "Kai Wagner",
       "outcome": "Walk",
       "count": "3-0",
@@ -895,7 +904,7 @@
       },
       "runners_after": {
         "1B": "Kai Wagner",
-        "2B": null,
+        "2B": "Lorenzo Carrier",
         "3B": null
       },
       "score": {
@@ -906,7 +915,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "JT Huether",
       "batter": "Trey Fenderson",
       "outcome": "Flyout",
       "count": "1-0",
@@ -917,12 +926,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kai Wagner",
-        "2B": null,
+        "2B": "Lorenzo Carrier",
         "3B": null
       },
       "runners_after": {
         "1B": "Kai Wagner",
-        "2B": null,
+        "2B": "Lorenzo Carrier",
         "3B": null
       },
       "score": {
@@ -933,7 +942,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "JT Huether",
       "batter": "Joey Baran",
       "outcome": "Walk",
       "count": "3-0",
@@ -944,13 +953,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kai Wagner",
-        "2B": null,
+        "2B": "Lorenzo Carrier",
         "3B": null
       },
       "runners_after": {
         "1B": "Joey Baran",
-        "2B": null,
-        "3B": null
+        "2B": "Kai Wagner",
+        "3B": "Lorenzo Carrier"
       },
       "score": {
         "away": 11,
@@ -960,24 +969,26 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "JT Huether",
       "batter": "Sebastian Pisacreta",
       "outcome": "Hit by pitch",
       "count": "3-2",
       "pitches": "BBKKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Lorenzo Carrier"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Joey Baran",
-        "2B": null,
-        "3B": null
+        "2B": "Kai Wagner",
+        "3B": "Lorenzo Carrier"
       },
       "runners_after": {
         "1B": "Sebastian Pisacreta",
-        "2B": null,
-        "3B": null
+        "2B": "Joey Baran",
+        "3B": "Kai Wagner"
       },
       "score": {
         "away": 12,
@@ -987,24 +998,26 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "JT Huether",
       "batter": "Carter Dierdorf",
       "outcome": "Hit by pitch",
       "count": "1-2",
       "pitches": "KSFBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kai Wagner"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Sebastian Pisacreta",
-        "2B": null,
-        "3B": null
+        "2B": "Joey Baran",
+        "3B": "Kai Wagner"
       },
       "runners_after": {
         "1B": "Carter Dierdorf",
-        "2B": null,
-        "3B": null
+        "2B": "Sebastian Pisacreta",
+        "3B": "Joey Baran"
       },
       "score": {
         "away": 13,
@@ -1014,24 +1027,26 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "JT Huether",
       "batter": "Julian Irizarry",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Joey Baran"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Carter Dierdorf",
-        "2B": null,
-        "3B": null
+        "2B": "Sebastian Pisacreta",
+        "3B": "Joey Baran"
       },
       "runners_after": {
         "1B": "Julian Irizarry",
-        "2B": null,
-        "3B": null
+        "2B": "Carter Dierdorf",
+        "3B": "Sebastian Pisacreta"
       },
       "score": {
         "away": 14,
@@ -1041,23 +1056,26 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "JT Huether",
       "batter": "AJ Nessler",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "KBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Sebastian Pisacreta",
+        "Carter Dierdorf"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Julian Irizarry",
-        "2B": null,
-        "3B": null
+        "2B": "Carter Dierdorf",
+        "3B": "Sebastian Pisacreta"
       },
       "runners_after": {
         "1B": "AJ Nessler",
-        "2B": null,
+        "2B": "Julian Irizarry",
         "3B": null
       },
       "score": {
@@ -1068,7 +1086,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "JT Huether",
       "batter": "Caden Dulin",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1079,12 +1097,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "AJ Nessler",
-        "2B": null,
+        "2B": "Julian Irizarry",
         "3B": null
       },
       "runners_after": {
         "1B": "AJ Nessler",
-        "2B": null,
+        "2B": "Julian Irizarry",
         "3B": null
       },
       "score": {
@@ -1095,7 +1113,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "David Leslie",
+      "pitcher": "Sam Bryan",
       "batter": "Paul Schoenfeld",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1122,7 +1140,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "David Leslie",
+      "pitcher": "Sam Bryan",
       "batter": "Gavin Kelly",
       "outcome": "Walk",
       "count": "3-2",
@@ -1149,7 +1167,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "David Leslie",
+      "pitcher": "Sam Bryan",
       "batter": "Sean Smith",
       "outcome": "Walk",
       "count": "3-1",
@@ -1165,7 +1183,7 @@
       },
       "runners_after": {
         "1B": "Sean Smith",
-        "2B": null,
+        "2B": "Gavin Kelly",
         "3B": null
       },
       "score": {
@@ -1176,7 +1194,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "David Leslie",
+      "pitcher": "Sam Bryan",
       "batter": "Matthew Ineich",
       "outcome": "Grounded into double play",
       "count": "2-1",
@@ -1187,12 +1205,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Sean Smith",
-        "2B": null,
+        "2B": "Gavin Kelly",
         "3B": null
       },
       "runners_after": {
-        "1B": "Sean Smith",
-        "2B": null,
+        "1B": null,
+        "2B": "Gavin Kelly",
         "3B": null
       },
       "score": {
@@ -1203,7 +1221,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Ben McDougal",
       "batter": "Lorenzo Carrier",
       "outcome": "Walk",
       "count": "3-2",
@@ -1230,7 +1248,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Ben McDougal",
       "batter": "Kai Wagner",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1257,7 +1275,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Ben McDougal",
       "batter": "Trey Fenderson",
       "outcome": "Fielder's choice",
       "count": "0-0",
@@ -1284,7 +1302,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Ben McDougal",
       "batter": "Joey Baran",
       "outcome": "Walk",
       "count": "3-2",
@@ -1300,7 +1318,7 @@
       },
       "runners_after": {
         "1B": "Joey Baran",
-        "2B": null,
+        "2B": "Trey Fenderson",
         "3B": null
       },
       "score": {
@@ -1311,7 +1329,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Ben McDougal",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1322,13 +1340,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Joey Baran",
-        "2B": null,
+        "2B": "Trey Fenderson",
         "3B": null
       },
       "runners_after": {
         "1B": "Joey Baran",
         "2B": null,
-        "3B": null
+        "3B": "Trey Fenderson"
       },
       "score": {
         "away": 16,
@@ -1338,13 +1356,15 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Ben McDougal",
       "batter": "Sebastian Pisacreta",
       "outcome": "Home run",
       "count": "1-2",
       "pitches": "KSBF",
       "rbi": true,
       "runs_scored": [
+        "Trey Fenderson",
+        "Joey Baran",
         "Sebastian Pisacreta"
       ],
       "outs_before": 2,
@@ -1352,10 +1372,10 @@
       "runners_before": {
         "1B": "Joey Baran",
         "2B": null,
-        "3B": null
+        "3B": "Trey Fenderson"
       },
       "runners_after": {
-        "1B": "Joey Baran",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1367,7 +1387,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Ben McDougal",
       "batter": "Carter Dierdorf",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1377,12 +1397,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Joey Baran",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Joey Baran",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1394,7 +1414,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "David Leslie",
+      "pitcher": "Sam Bryan",
       "batter": "Tyrus Hall",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1421,7 +1441,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "David Leslie",
+      "pitcher": "Sam Bryan",
       "batter": "Brodie Kresser",
       "outcome": "Hit by pitch",
       "count": "3-2",
@@ -1448,7 +1468,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "David Leslie",
+      "pitcher": "Michael Gray",
       "batter": "Armani Guzman",
       "outcome": "Fielder's choice",
       "count": "0-2",
@@ -1475,7 +1495,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "David Leslie",
+      "pitcher": "Michael Gray",
       "batter": "Matthew Graveline",
       "outcome": "Single",
       "count": "0-0",
@@ -1492,7 +1512,7 @@
       "runners_after": {
         "1B": "Matthew Graveline",
         "2B": null,
-        "3B": null
+        "3B": "Armani Guzman"
       },
       "score": {
         "away": 19,
@@ -1502,23 +1522,25 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "David Leslie",
+      "pitcher": "Michael Gray",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Armani Guzman"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Matthew Graveline",
         "2B": null,
-        "3B": null
+        "3B": "Armani Guzman"
       },
       "runners_after": {
-        "1B": "Matthew Graveline",
-        "2B": null,
+        "1B": null,
+        "2B": "Matthew Graveline",
         "3B": null
       },
       "score": {
@@ -1529,7 +1551,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "David Leslie",
+      "pitcher": "Michael Gray",
       "batter": "Brock Wills",
       "outcome": "Walk",
       "count": "3-2",
@@ -1539,13 +1561,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Matthew Graveline",
-        "2B": null,
+        "1B": null,
+        "2B": "Matthew Graveline",
         "3B": null
       },
       "runners_after": {
         "1B": "Brock Wills",
-        "2B": null,
+        "2B": "Matthew Graveline",
         "3B": null
       },
       "score": {
@@ -1556,7 +1578,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "David Leslie",
+      "pitcher": "Michael Gray",
       "batter": "Paul Schoenfeld",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1567,12 +1589,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Brock Wills",
-        "2B": null,
+        "2B": "Matthew Graveline",
         "3B": null
       },
       "runners_after": {
         "1B": "Brock Wills",
-        "2B": null,
+        "2B": "Matthew Graveline",
         "3B": null
       },
       "score": {
@@ -1583,7 +1605,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Weston Smith",
       "batter": "Julian Irizarry",
       "outcome": "Single",
       "count": "0-1",
@@ -1610,7 +1632,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Weston Smith",
       "batter": "AJ Nessler",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1637,7 +1659,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Weston Smith",
       "batter": "Caden Dulin",
       "outcome": "Walk",
       "count": "3-2",
@@ -1653,7 +1675,7 @@
       },
       "runners_after": {
         "1B": "Caden Dulin",
-        "2B": null,
+        "2B": "Julian Irizarry",
         "3B": null
       },
       "score": {
@@ -1664,7 +1686,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Weston Smith",
       "batter": "Lorenzo Carrier",
       "outcome": "Lineout",
       "count": "1-1",
@@ -1675,13 +1697,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Caden Dulin",
-        "2B": null,
+        "2B": "Julian Irizarry",
         "3B": null
       },
       "runners_after": {
         "1B": "Caden Dulin",
         "2B": null,
-        "3B": null
+        "3B": "Julian Irizarry"
       },
       "score": {
         "away": 19,
@@ -1691,7 +1713,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Weston Smith",
       "batter": "Kai Wagner",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -1703,12 +1725,12 @@
       "runners_before": {
         "1B": "Caden Dulin",
         "2B": null,
-        "3B": null
+        "3B": "Julian Irizarry"
       },
       "runners_after": {
         "1B": "Kai Wagner",
-        "2B": null,
-        "3B": null
+        "2B": "Caden Dulin",
+        "3B": "Julian Irizarry"
       },
       "score": {
         "away": 19,
@@ -1718,22 +1740,26 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Weston Smith",
       "batter": "Trey Fenderson",
       "outcome": "Double",
       "count": "2-2",
       "pitches": "BBFK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Julian Irizarry",
+        "Caden Dulin",
+        "Kai Wagner"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Kai Wagner",
-        "2B": null,
-        "3B": null
+        "2B": "Caden Dulin",
+        "3B": "Julian Irizarry"
       },
       "runners_after": {
-        "1B": "Kai Wagner",
+        "1B": null,
         "2B": "Trey Fenderson",
         "3B": null
       },
@@ -1745,7 +1771,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Weston Smith",
       "batter": "Joey Baran",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1755,12 +1781,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Kai Wagner",
+        "1B": null,
         "2B": "Trey Fenderson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kai Wagner",
+        "1B": null,
         "2B": "Trey Fenderson",
         "3B": null
       },
@@ -1772,7 +1798,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "David Leslie",
+      "pitcher": "Joey Ciancimino",
       "batter": "Matthew Robaugh",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1799,7 +1825,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "David Leslie",
+      "pitcher": "Joey Ciancimino",
       "batter": "Ryan Maggy",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1826,7 +1852,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "David Leslie",
+      "pitcher": "Joey Ciancimino",
       "batter": "Weston Mazey",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1853,7 +1879,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "David Perez",
       "batter": "Sebastian Pisacreta",
       "outcome": "Walk",
       "count": "3-2",
@@ -1880,7 +1906,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "David Perez",
       "batter": "Jackson Cooke",
       "outcome": "Single",
       "count": "0-2",
@@ -1896,7 +1922,7 @@
       },
       "runners_after": {
         "1B": "Jackson Cooke",
-        "2B": null,
+        "2B": "Sebastian Pisacreta",
         "3B": null
       },
       "score": {
@@ -1907,24 +1933,26 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "David Perez",
       "batter": "Mason Ligenza",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Sebastian Pisacreta"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Jackson Cooke",
-        "2B": null,
+        "2B": "Sebastian Pisacreta",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jackson Cooke",
+        "1B": null,
         "2B": "Mason Ligenza",
-        "3B": null
+        "3B": "Jackson Cooke"
       },
       "score": {
         "away": 23,
@@ -1934,7 +1962,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "David Perez",
       "batter": "TarpleyJr,Derrick struck out swinging (2-2 SBKBS).",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1944,14 +1972,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jackson Cooke",
+        "1B": null,
         "2B": "Mason Ligenza",
-        "3B": null
+        "3B": "Jackson Cooke"
       },
       "runners_after": {
-        "1B": "Jackson Cooke",
+        "1B": null,
         "2B": "Mason Ligenza",
-        "3B": null
+        "3B": "Jackson Cooke"
       },
       "score": {
         "away": 23,
@@ -1961,7 +1989,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "David Perez",
       "batter": "Jake Kendro",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1971,14 +1999,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jackson Cooke",
+        "1B": null,
         "2B": "Mason Ligenza",
-        "3B": null
+        "3B": "Jackson Cooke"
       },
       "runners_after": {
-        "1B": "Jackson Cooke",
+        "1B": null,
         "2B": "Mason Ligenza",
-        "3B": null
+        "3B": "Jackson Cooke"
       },
       "score": {
         "away": 23,
@@ -1988,7 +2016,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Mac Stiffler",
       "batter": "Zachary Walsh",
       "outcome": "Walk",
       "count": "3-1",
@@ -1998,14 +2026,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jackson Cooke",
+        "1B": null,
         "2B": "Mason Ligenza",
-        "3B": null
+        "3B": "Jackson Cooke"
       },
       "runners_after": {
         "1B": "Zachary Walsh",
         "2B": "Mason Ligenza",
-        "3B": null
+        "3B": "Jackson Cooke"
       },
       "score": {
         "away": 23,
@@ -2015,7 +2043,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Mac Stiffler",
       "batter": "Anthony LaSala",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2027,12 +2055,12 @@
       "runners_before": {
         "1B": "Zachary Walsh",
         "2B": "Mason Ligenza",
-        "3B": null
+        "3B": "Jackson Cooke"
       },
       "runners_after": {
         "1B": "Zachary Walsh",
         "2B": "Mason Ligenza",
-        "3B": null
+        "3B": "Jackson Cooke"
       },
       "score": {
         "away": 23,
@@ -2042,7 +2070,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "David Leslie",
+      "pitcher": "Freddy Beruvides Jr.",
       "batter": "Colton Sims",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2069,7 +2097,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "David Leslie",
+      "pitcher": "Freddy Beruvides Jr.",
       "batter": "Brodie Kresser",
       "outcome": "Lineout",
       "count": "0-2",
@@ -2096,7 +2124,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "David Leslie",
+      "pitcher": "Freddy Beruvides Jr.",
       "batter": "Maxwell Molessa",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2123,7 +2151,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Joshua Surigao",
       "batter": "Gavin Miller",
       "outcome": "Walk",
       "count": "3-2",
@@ -2150,7 +2178,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Joshua Surigao",
       "batter": "Aidan McAskie",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2177,7 +2205,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bryson Thacker",
+      "pitcher": "Joshua Surigao",
       "batter": "Sebastian Pisacreta",
       "outcome": "Grounded into double play",
       "count": "0-1",
@@ -2192,7 +2220,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Gavin Miller",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2204,7 +2232,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "David Leslie",
+      "pitcher": "Michael Savarese",
       "batter": "Matthew Graveline",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2231,7 +2259,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "David Leslie",
+      "pitcher": "Michael Savarese",
       "batter": "Brock Wills",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2258,7 +2286,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "David Leslie",
+      "pitcher": "Michael Savarese",
       "batter": "Creed Erdos",
       "outcome": "Groundout",
       "count": "1-1",

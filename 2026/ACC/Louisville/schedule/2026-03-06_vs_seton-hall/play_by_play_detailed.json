@@ -3,7 +3,7 @@
   "date": "03/06/2026",
   "away_team": "Seton Hall",
   "home_team": "Louisville",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -512,8 +512,8 @@
         "3B": "Kade Elam"
       },
       "runners_after": {
-        "1B": "Alex Alicea",
-        "2B": null,
+        "1B": null,
+        "2B": "Alex Alicea",
         "3B": "Kade Elam"
       },
       "score": {
@@ -534,13 +534,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Alex Alicea",
-        "2B": null,
+        "1B": null,
+        "2B": "Alex Alicea",
         "3B": "Kade Elam"
       },
       "runners_after": {
         "1B": "Lucas Moore",
-        "2B": null,
+        "2B": "Alex Alicea",
         "3B": "Kade Elam"
       },
       "score": {
@@ -564,13 +564,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Lucas Moore",
-        "2B": null,
+        "2B": "Alex Alicea",
         "3B": "Kade Elam"
       },
       "runners_after": {
         "1B": "Ky.",
         "2B": "Lucas Moore",
-        "3B": null
+        "3B": "Alex Alicea"
       },
       "score": {
         "away": 0,
@@ -587,14 +587,16 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Lucas Moore"
+        "Lucas Moore",
+        "Alex Alicea",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Ky.",
         "2B": "Lucas Moore",
-        "3B": null
+        "3B": "Alex Alicea"
       },
       "runners_after": {
         "1B": "Ky.",
@@ -779,7 +781,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -827,7 +831,34 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jason",
+      "pitcher": "Jason Kuhn",
+      "batter": "Jason",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 7
+      },
+      "description": "Jason Kuhn to p for Steven Svens."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Jason Kuhn",
       "batter": "Ben Slanker",
       "outcome": "Walk",
       "count": "3-2",
@@ -854,7 +885,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jason",
+      "pitcher": "Jason Kuhn",
       "batter": "Kade Elam",
       "outcome": "Double",
       "count": "2-2",
@@ -881,7 +912,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jason",
+      "pitcher": "Jason Kuhn",
       "batter": "Alex Alicea",
       "outcome": "Flyout",
       "count": "2-1",
@@ -910,7 +941,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jason",
+      "pitcher": "Jason Kuhn",
       "batter": "Lucas Moore",
       "outcome": "Single",
       "count": "2-1",
@@ -939,7 +970,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jason",
+      "pitcher": "Jason Kuhn",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -954,8 +985,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "score": {
@@ -966,7 +997,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jason",
+      "pitcher": "Jason Kuhn",
       "batter": "Ky.",
       "outcome": "Walk",
       "count": "3-2",
@@ -976,13 +1007,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "runners_after": {
         "1B": "Ky.",
-        "2B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "score": {
@@ -993,20 +1024,22 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jason",
+      "pitcher": "Jason Kuhn",
       "batter": "Tague Davis",
       "outcome": "Home run",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
       "runs_scored": [
-        "Tague Davis"
+        "Lucas Moore",
+        "Tague Davis",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Ky.",
-        "2B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "runners_after": {
@@ -1022,7 +1055,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jason",
+      "pitcher": "Jason Kuhn",
       "batter": "Jimmy Nugent",
       "outcome": "Walk",
       "count": "3-0",
@@ -1049,7 +1082,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jason",
+      "pitcher": "Matt Pontari",
       "batter": "Griffin Crain",
       "outcome": "Home run",
       "count": "2-0",
@@ -1079,7 +1112,34 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Matt",
+      "pitcher": "Matt Pontari",
+      "batter": "Matt",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 14
+      },
+      "description": "Matt Pontari to p for Jason Kuhn."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Matt Pontari",
       "batter": "Bayram Hot",
       "outcome": "Double",
       "count": "3-2",
@@ -1106,7 +1166,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Matt",
+      "pitcher": "Matt Pontari",
       "batter": "Ben Slanker",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1133,7 +1193,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Matt",
+      "pitcher": "Matt Pontari",
       "batter": "Kade Elam",
       "outcome": "Foul out",
       "count": "1-1",
@@ -1295,7 +1355,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Matt",
+      "pitcher": "Matt Pontari",
       "batter": "Frankie",
       "outcome": "\u2014",
       "count": null,
@@ -1322,7 +1382,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Matt",
+      "pitcher": "Matt Pontari",
       "batter": "Tommy",
       "outcome": "\u2014",
       "count": null,
@@ -1349,7 +1409,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Matt",
+      "pitcher": "Matt Pontari",
       "batter": "Alex Alicea",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1376,7 +1436,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Matt",
+      "pitcher": "Matt Pontari",
       "batter": "Lucas Moore",
       "outcome": "Walk",
       "count": "3-0",
@@ -1403,7 +1463,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Matt",
+      "pitcher": "Matt Pontari",
       "batter": "Ky.",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1565,7 +1625,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Matt",
+      "pitcher": "John Donahue",
       "batter": "Tague Davis",
       "outcome": "Walk",
       "count": "3-0",
@@ -1592,7 +1652,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Matt",
+      "pitcher": "John Donahue",
       "batter": "Jimmy Nugent",
       "outcome": "Walk",
       "count": "3-1",
@@ -1619,7 +1679,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Matt",
+      "pitcher": "John Donahue",
       "batter": "Griffin Crain",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1646,7 +1706,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Matt",
+      "pitcher": "John Donahue",
       "batter": "Bayram Hot",
       "outcome": "Walk",
       "count": "3-0",
@@ -1673,13 +1733,42 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "John",
+      "pitcher": "John Donahue",
+      "batter": "John",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Bayram Hot",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Bayram Hot",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 14
+      },
+      "description": "John Donahue to p for Matt Pontari."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "John Donahue",
       "batter": "Ben Slanker",
       "outcome": "Flyout",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1700,7 +1789,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "John",
+      "pitcher": "John Donahue",
       "batter": "Kade Elam",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1808,7 +1897,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "John",
+      "pitcher": "",
       "batter": "Alex Alicea",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1835,7 +1924,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "John",
+      "pitcher": "",
       "batter": "Lucas Moore",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1862,7 +1951,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "John",
+      "pitcher": "",
       "batter": "Collin Mowry",
       "outcome": "Single",
       "count": "1-2",
@@ -1889,7 +1978,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "John",
+      "pitcher": "",
       "batter": "Drew Freeman",
       "outcome": "Double",
       "count": "3-2",
@@ -1918,7 +2007,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "John",
+      "pitcher": "",
       "batter": "Kaden Schoenly",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2053,7 +2142,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Anthony Karbowski",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2080,7 +2169,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Anthony Karbowski",
+      "pitcher": "",
       "batter": "Nick",
       "outcome": "Groundout",
       "count": "2-1",

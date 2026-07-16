@@ -3,7 +3,7 @@
   "date": "02/20/2026",
   "away_team": "Penn",
   "home_team": "Texas A&M",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -940,8 +940,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Travis Chestnut",
-        "2B": null,
+        "1B": null,
+        "2B": "Travis Chestnut",
         "3B": null
       },
       "score": {
@@ -962,13 +962,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Travis Chestnut",
-        "2B": null,
+        "1B": null,
+        "2B": "Travis Chestnut",
         "3B": null
       },
       "runners_after": {
         "1B": "Boston Kellner",
-        "2B": null,
+        "2B": "Travis Chestnut",
         "3B": null
       },
       "score": {
@@ -990,12 +990,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Boston Kellner",
-        "2B": null,
+        "2B": "Travis Chestnut",
         "3B": null
       },
       "runners_after": {
         "1B": "Boston Kellner",
-        "2B": null,
+        "2B": "Travis Chestnut",
         "3B": null
       },
       "score": {
@@ -1156,8 +1156,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Wesley Jordan",
-        "2B": null,
+        "1B": null,
+        "2B": "Wesley Jordan",
         "3B": null
       },
       "score": {
@@ -1178,13 +1178,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Wesley Jordan",
-        "2B": null,
+        "1B": null,
+        "2B": "Wesley Jordan",
         "3B": null
       },
       "runners_after": {
-        "1B": "Wesley Jordan",
-        "2B": null,
+        "1B": null,
+        "2B": "Wesley Jordan",
         "3B": null
       },
       "score": {
@@ -1762,7 +1762,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethan Darden",
+      "pitcher": "Josh Stewart",
       "batter": "Davis Baker",
       "outcome": "Single",
       "count": "1-1",
@@ -1870,7 +1870,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Josh Stewart",
+      "pitcher": "",
       "batter": "Nick Spaventa",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1957,7 +1957,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {

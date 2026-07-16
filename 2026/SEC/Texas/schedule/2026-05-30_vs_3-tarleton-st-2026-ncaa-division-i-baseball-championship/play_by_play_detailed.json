@@ -3,7 +3,7 @@
   "date": "05/30/2026",
   "away_team": "Texas",
   "home_team": "Tarleton St.",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -612,6 +612,33 @@
     {
       "inning": "Top 3",
       "pitcher": "Ashton Bassett",
+      "batter": "Bassett, A. to p for Wendel, E..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 0
+      },
+      "description": "Bassett, A. to p for Wendel, E.."
+    },
+    {
+      "inning": "Top 3",
+      "pitcher": "Ashton Bassett",
       "batter": "Ashton Larson",
       "outcome": "Flyout",
       "count": "2-2",
@@ -981,7 +1008,7 @@
       "runners_after": {
         "1B": "Ashton Larson",
         "2B": null,
-        "3B": null
+        "3B": "Adrian Rodriguez"
       },
       "score": {
         "away": 7,
@@ -997,18 +1024,20 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Adrian Rodriguez"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Ashton Larson",
         "2B": null,
-        "3B": null
+        "3B": "Adrian Rodriguez"
       },
       "runners_after": {
-        "1B": "Ashton Larson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Ashton Larson"
       },
       "score": {
         "away": 8,
@@ -1028,14 +1057,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Ashton Larson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Ashton Larson"
       },
       "runners_after": {
         "1B": "Ethan Mendoza",
         "2B": null,
-        "3B": null
+        "3B": "Ashton Larson"
       },
       "score": {
         "away": 8,
@@ -1045,7 +1074,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Ashton Bassett",
+      "pitcher": "Andrew Hardin",
       "batter": "Dariyan Pendergrass",
       "outcome": "Walk",
       "count": "3-2",
@@ -1057,12 +1086,12 @@
       "runners_before": {
         "1B": "Ethan Mendoza",
         "2B": null,
-        "3B": null
+        "3B": "Ashton Larson"
       },
       "runners_after": {
         "1B": "Dariyan Pendergrass",
         "2B": "Ethan Mendoza",
-        "3B": null
+        "3B": "Ashton Larson"
       },
       "score": {
         "away": 8,
@@ -1073,18 +1102,47 @@
     {
       "inning": "Top 4",
       "pitcher": "Andrew Hardin",
-      "batter": "Aiden Robbins",
-      "outcome": "Walk",
-      "count": "3-0",
-      "pitches": "BBBB",
-      "rbi": true,
+      "batter": "Hardin, A. to p for Bassett, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
       "runs_scored": [],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Dariyan Pendergrass",
         "2B": "Ethan Mendoza",
-        "3B": null
+        "3B": "Ashton Larson"
+      },
+      "runners_after": {
+        "1B": "Dariyan Pendergrass",
+        "2B": "Ethan Mendoza",
+        "3B": "Ashton Larson"
+      },
+      "score": {
+        "away": 8,
+        "home": 0
+      },
+      "description": "Hardin, A. to p for Bassett, A.."
+    },
+    {
+      "inning": "Top 4",
+      "pitcher": "Andrew Hardin",
+      "batter": "Aiden Robbins",
+      "outcome": "Walk",
+      "count": "3-0",
+      "pitches": "BBBB",
+      "rbi": true,
+      "runs_scored": [
+        "Ashton Larson"
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Dariyan Pendergrass",
+        "2B": "Ethan Mendoza",
+        "3B": "Ashton Larson"
       },
       "runners_after": {
         "1B": "Aiden Robbins",
@@ -1128,7 +1186,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Andrew Hardin",
+      "pitcher": "Conner Doucet",
       "batter": "Pack",
       "outcome": "Walk",
       "count": "3-1",
@@ -1157,7 +1215,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Andrew Hardin",
+      "pitcher": "Conner Doucet",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1186,7 +1244,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Andrew Hardin",
+      "pitcher": "Conner Doucet",
       "batter": "Temo Becerra",
       "outcome": "Walk",
       "count": "3-1",
@@ -1210,6 +1268,33 @@
         "home": 0
       },
       "description": "Becerra walked (3-1 BBBKB)."
+    },
+    {
+      "inning": "Top 4",
+      "pitcher": "Conner Doucet",
+      "batter": "Doucet, C. to p for Hardin, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Temo Becerra",
+        "2B": null,
+        "3B": "Carson Tinney"
+      },
+      "runners_after": {
+        "1B": "Temo Becerra",
+        "2B": null,
+        "3B": "Carson Tinney"
+      },
+      "score": {
+        "away": 12,
+        "home": 0
+      },
+      "description": "Doucet, C. to p for Hardin, A.."
     },
     {
       "inning": "Top 4",
@@ -1337,7 +1422,7 @@
       },
       "runners_after": {
         "1B": "Carson Lorch",
-        "2B": null,
+        "2B": "Rayner Heinrich",
         "3B": null
       },
       "score": {
@@ -1359,12 +1444,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Carson Lorch",
-        "2B": null,
+        "2B": "Rayner Heinrich",
         "3B": null
       },
       "runners_after": {
         "1B": "Carson Lorch",
-        "2B": null,
+        "2B": "Rayner Heinrich",
         "3B": null
       },
       "score": {
@@ -1386,12 +1471,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Carson Lorch",
-        "2B": null,
+        "2B": "Rayner Heinrich",
         "3B": null
       },
       "runners_after": {
         "1B": "Carson Lorch",
-        "2B": null,
+        "2B": "Rayner Heinrich",
         "3B": null
       },
       "score": {
@@ -1429,7 +1514,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Conner Doucet",
+      "pitcher": "Corbin Walter",
       "batter": "Ethan Mendoza",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1456,7 +1541,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Conner Doucet",
+      "pitcher": "Corbin Walter",
       "batter": "Dariyan Pendergrass",
       "outcome": "Walk",
       "count": "3-2",
@@ -1483,7 +1568,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Conner Doucet",
+      "pitcher": "Corbin Walter",
       "batter": "Aiden Robbins",
       "outcome": "Grounded into double play",
       "count": "2-2",
@@ -1588,6 +1673,33 @@
         "home": 0
       },
       "description": "Johnson, K. grounded out to 2b (0-1 K)."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Corbin Walter",
+      "batter": "Walter, C. to p for Doucet, C..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 12,
+        "home": 0
+      },
+      "description": "Walter, C. to p for Doucet, C.."
     },
     {
       "inning": "Top 6",
@@ -1701,7 +1813,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Corbin Walter",
+      "pitcher": "Jack Lovin",
       "batter": "Adrian Rodriguez",
       "outcome": "Double",
       "count": "2-2",
@@ -1728,7 +1840,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Corbin Walter",
+      "pitcher": "Jack Lovin",
       "batter": "Casey Borba",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1757,7 +1869,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Corbin Walter",
+      "pitcher": "Jack Lovin",
       "batter": "Ashton Larson",
       "outcome": "Single",
       "count": "2-0",
@@ -1786,7 +1898,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Corbin Walter",
+      "pitcher": "Jack Lovin",
       "batter": "Ethan Mendoza",
       "outcome": "\u2014",
       "count": "0-1",
@@ -1891,6 +2003,33 @@
         "home": 0
       },
       "description": "Heinrich, R. grounded out to 2b (0-1 K)."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Jack Lovin",
+      "batter": "Lovin, J. to p for Walter, C..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 15,
+        "home": 0
+      },
+      "description": "Lovin, J. to p for Walter, C.."
     },
     {
       "inning": "Top 7",
@@ -2002,7 +2141,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jack Lovin",
+      "pitcher": "Carter Coffin",
       "batter": "Temo Becerra",
       "outcome": "Groundout",
       "count": "2-1",
@@ -2126,7 +2265,7 @@
       },
       "runners_after": {
         "1B": "Sergio Guerra",
-        "2B": null,
+        "2B": "Slade McCloud",
         "3B": null
       },
       "score": {
@@ -2143,16 +2282,19 @@
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Sergio Guerra",
+        "Slade McCloud"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Sergio Guerra",
-        "2B": null,
+        "2B": "Slade McCloud",
         "3B": null
       },
       "runners_after": {
-        "1B": "Sergio Guerra",
+        "1B": null,
         "2B": "Raphael Smeenk",
         "3B": null
       },
@@ -2174,7 +2316,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Sergio Guerra",
+        "1B": null,
         "2B": "Raphael Smeenk",
         "3B": null
       },
@@ -2218,7 +2360,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jack Lovin",
+      "pitcher": "Carter Coffin",
       "batter": "Kirk, M. to c for Guerra, S..",
       "outcome": "\u2014",
       "count": null,
@@ -2245,7 +2387,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jack Lovin",
+      "pitcher": "Carter Coffin",
       "batter": "Adrian Rodriguez",
       "outcome": "Home run",
       "count": "3-2",
@@ -2274,7 +2416,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jack Lovin",
+      "pitcher": "Carter Coffin",
       "batter": "Casey Borba",
       "outcome": "Pop out",
       "count": "3-2",
@@ -2301,7 +2443,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jack Lovin",
+      "pitcher": "",
       "batter": "Ashton Larson",
       "outcome": "Groundout",
       "count": "0-2",
@@ -2328,7 +2470,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jack Lovin",
+      "pitcher": "",
       "batter": "Ethan Mendoza",
       "outcome": "Flyout",
       "count": "1-2",
@@ -2424,7 +2566,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Rayner Heinrich",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2436,7 +2578,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Carter Coffin",
+      "pitcher": "",
+      "batter": "Coffin, C. to p for Lovin, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 16,
+        "home": 2
+      },
+      "description": "Coffin, C. to p for Lovin, J.."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": "Dariyan Pendergrass",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2463,7 +2632,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Carter Coffin",
+      "pitcher": "",
       "batter": "Blake Peterson",
       "outcome": "Lineout",
       "count": "2-2",
@@ -2490,7 +2659,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Carter Coffin",
+      "pitcher": "",
       "batter": "Andrew Ermis",
       "outcome": "Single",
       "count": "2-2",
@@ -2517,7 +2686,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Carter Coffin",
+      "pitcher": "",
       "batter": "Duplantier J",
       "outcome": "Flyout",
       "count": "1-1",

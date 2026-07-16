@@ -3,7 +3,7 @@
   "date": "02/21/2026",
   "away_team": "Missouri St.",
   "home_team": "Ole Miss",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -157,9 +157,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Judd Utermark",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Judd Utermark"
       },
       "score": {
         "away": 0,
@@ -175,18 +175,20 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Judd Utermark",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Judd Utermark"
       },
       "runners_after": {
         "1B": "Tristan Bissetta",
         "2B": null,
-        "3B": null
+        "3B": "Judd Utermark"
       },
       "score": {
         "away": 0,
@@ -208,12 +210,12 @@
       "runners_before": {
         "1B": "Tristan Bissetta",
         "2B": null,
-        "3B": null
+        "3B": "Judd Utermark"
       },
       "runners_after": {
         "1B": "Tristan Bissetta",
         "2B": null,
-        "3B": null
+        "3B": "Judd Utermark"
       },
       "score": {
         "away": 0,
@@ -235,12 +237,12 @@
       "runners_before": {
         "1B": "Tristan Bissetta",
         "2B": null,
-        "3B": null
+        "3B": "Judd Utermark"
       },
       "runners_after": {
         "1B": "Tristan Bissetta",
         "2B": null,
-        "3B": null
+        "3B": "Judd Utermark"
       },
       "score": {
         "away": 0,
@@ -952,7 +954,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Max Knight",
+      "pitcher": "Brock Lucas",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -967,8 +969,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tate Sirmans",
-        "2B": null,
+        "1B": null,
+        "2B": "Tate Sirmans",
         "3B": null
       },
       "score": {
@@ -979,7 +981,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Max Knight",
+      "pitcher": "Brock Lucas",
       "batter": "Brayden Randle",
       "outcome": "Flyout",
       "count": "3-1",
@@ -989,13 +991,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Tate Sirmans",
-        "2B": null,
+        "1B": null,
+        "2B": "Tate Sirmans",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tate Sirmans",
-        "2B": null,
+        "1B": null,
+        "2B": "Tate Sirmans",
         "3B": null
       },
       "score": {
@@ -1006,7 +1008,34 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "T.",
+      "pitcher": "Taylor Rabe",
+      "batter": "T. Rabe",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "T. Rabe to p for C. Townsend."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Taylor Rabe",
       "batter": "Bobby Atkinson",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1033,7 +1062,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "T.",
+      "pitcher": "Taylor Rabe",
       "batter": "Jax Ryan",
       "outcome": "Home run",
       "count": "3-1",
@@ -1062,7 +1091,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "T.",
+      "pitcher": "Taylor Rabe",
       "batter": "Gabe Roessler",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1089,7 +1118,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "T.",
+      "pitcher": "Taylor Rabe",
       "batter": "Caden Bogenpohl",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1116,7 +1145,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Max Knight",
+      "pitcher": "Brock Lucas",
       "batter": "Knight,M. to dh.",
       "outcome": "\u2014",
       "count": null,
@@ -1143,7 +1172,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Max Knight",
+      "pitcher": "Brock Lucas",
       "batter": "Lucas,B. to p.",
       "outcome": "\u2014",
       "count": null,
@@ -1170,7 +1199,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Max Knight",
+      "pitcher": "Brock Lucas",
       "batter": "Hayden Federico",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1197,7 +1226,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Max Knight",
+      "pitcher": "Brock Lucas",
       "batter": "Dom Decker",
       "outcome": "Single",
       "count": "2-1",
@@ -1224,7 +1253,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Max Knight",
+      "pitcher": "Brock Lucas",
       "batter": "Judd Utermark",
       "outcome": "Fielder's choice",
       "count": "0-0",
@@ -1251,7 +1280,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Max Knight",
+      "pitcher": "Brock Lucas",
       "batter": "Tristan Bissetta",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1278,7 +1307,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "T.",
+      "pitcher": "Taylor Rabe",
       "batter": "Taeg Gollert",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1305,7 +1334,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "T.",
+      "pitcher": "Taylor Rabe",
       "batter": "Bryce Cermenelli",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1332,7 +1361,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "T.",
+      "pitcher": "Taylor Rabe",
       "batter": "Carter Bergman",
       "outcome": "Pop out",
       "count": "2-1",
@@ -1359,7 +1388,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Max Knight",
+      "pitcher": "Brock Lucas",
       "batter": "Kragel,B. to 1b for Atkinson,B..",
       "outcome": "\u2014",
       "count": null,
@@ -1386,7 +1415,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Max Knight",
+      "pitcher": "Brock Lucas",
       "batter": "Collin Reuter",
       "outcome": "Double",
       "count": "0-1",
@@ -1413,7 +1442,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Max Knight",
+      "pitcher": "Brock Lucas",
       "batter": "Will Furniss",
       "outcome": "Single",
       "count": "3-2",
@@ -1440,7 +1469,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Max Knight",
+      "pitcher": "Ross Felder",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1467,7 +1496,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Max Knight",
+      "pitcher": "Ross Felder",
       "batter": "Cannon Goldin",
       "outcome": "Walk",
       "count": "3-1",
@@ -1494,13 +1523,17 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Max Knight",
+      "pitcher": "Ross Felder",
       "batter": "Austin Fawley",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "KKBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1521,7 +1554,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Max Knight",
+      "pitcher": "Ross Felder",
       "batter": "Brayden Randle",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1548,13 +1581,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Max Knight",
+      "pitcher": "Ross Felder",
       "batter": "Hayden Federico",
       "outcome": "Single",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1572,6 +1607,33 @@
         "home": 5
       },
       "description": "H. Federico singled to pitcher, RBI (2-0 BB); A. Fawley scored."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Ross Felder",
+      "batter": "Felder,R. to p for Lucas,B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Hayden Federico",
+        "2B": "Austin Fawley",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Hayden Federico",
+        "2B": "Austin Fawley",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 5
+      },
+      "description": "Felder,R. to p for Lucas,B.."
     },
     {
       "inning": "Bottom 6",
@@ -1602,7 +1664,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ross Felder",
+      "pitcher": "Charlie Spoonhour",
       "batter": "Judd Utermark",
       "outcome": "Fielder's choice",
       "count": "0-1",
@@ -1629,7 +1691,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "T.",
+      "pitcher": "Taylor Rabe",
       "batter": "C. Goldin",
       "outcome": "\u2014",
       "count": null,
@@ -1656,7 +1718,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "T.",
+      "pitcher": "Taylor Rabe",
       "batter": "Max Knight",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1683,7 +1745,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "T.",
+      "pitcher": "Taylor Rabe",
       "batter": "Curry Sutherland",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1710,7 +1772,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "T.",
+      "pitcher": "Taylor Rabe",
       "batter": "Brant Kragel",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1737,7 +1799,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ross Felder",
+      "pitcher": "Curry Sutherland",
       "batter": "Tristan Bissetta",
       "outcome": "Single",
       "count": "0-0",
@@ -1764,7 +1826,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ross Felder",
+      "pitcher": "Curry Sutherland",
       "batter": "Collin Reuter",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1791,7 +1853,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ross Felder",
+      "pitcher": "Curry Sutherland",
       "batter": "Will Furniss",
       "outcome": "Single",
       "count": "0-0",
@@ -1818,7 +1880,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ross Felder",
+      "pitcher": "Curry Sutherland",
       "batter": "Cannon Goldin",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1845,7 +1907,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Charlie Spoonhour",
+      "pitcher": "",
+      "batter": "Spoonhour,C. to p for Felder,R..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Will Furniss",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Will Furniss",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 5
+      },
+      "description": "Spoonhour,C. to p for Felder,R.."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "",
       "batter": "Austin Fawley",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1872,7 +1961,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "T.",
+      "pitcher": "Taylor Rabe",
       "batter": "Jax Ryan",
       "outcome": "Single",
       "count": "0-0",
@@ -1899,7 +1988,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "T.",
+      "pitcher": "Landon Koenig",
       "batter": "Gabe Roessler",
       "outcome": "Single",
       "count": "1-0",
@@ -1926,13 +2015,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "T.",
+      "pitcher": "Landon Koenig",
       "batter": null,
       "outcome": "Baserunning",
       "count": "3-2",
       "pitches": "BFBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1953,7 +2044,34 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
+      "batter": "L. Koenig",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Gabe Roessler",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Gabe Roessler",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 5
+      },
+      "description": "L. Koenig to p for T. Rabe."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Landon Koenig",
       "batter": "Taeg Gollert",
       "outcome": "Double",
       "count": "1-1",
@@ -1980,13 +2098,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
       "batter": "Bryce Cermenelli",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -2007,7 +2127,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
       "batter": "Carter Bergman",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2034,7 +2154,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Charlie Spoonhour",
+      "pitcher": "",
       "batter": "Knight,M. to 1b.",
       "outcome": "\u2014",
       "count": null,
@@ -2061,7 +2181,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Charlie Spoonhour",
+      "pitcher": "",
       "batter": "Sutherland,C to p.",
       "outcome": "\u2014",
       "count": null,
@@ -2088,7 +2208,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Charlie Spoonhour",
+      "pitcher": "",
       "batter": "Fyffe,L. to for Kragel,B..",
       "outcome": "\u2014",
       "count": null,
@@ -2115,7 +2235,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Charlie Spoonhour",
+      "pitcher": "",
       "batter": "Brayden Randle",
       "outcome": "Walk",
       "count": "3-2",
@@ -2142,7 +2262,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Charlie Spoonhour",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2157,8 +2277,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brayden Randle",
-        "2B": null,
+        "1B": null,
+        "2B": "Brayden Randle",
         "3B": null
       },
       "score": {
@@ -2169,7 +2289,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Charlie Spoonhour",
+      "pitcher": "",
       "batter": "Hayden Federico",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2179,13 +2299,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Brayden Randle",
-        "2B": null,
+        "1B": null,
+        "2B": "Brayden Randle",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brayden Randle",
-        "2B": null,
+        "1B": null,
+        "2B": "Brayden Randle",
         "3B": null
       },
       "score": {
@@ -2196,23 +2316,25 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Charlie Spoonhour",
+      "pitcher": "",
       "batter": "Dom Decker",
       "outcome": "Flyout",
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brayden Randle",
-        "2B": null,
+        "1B": null,
+        "2B": "Brayden Randle",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brayden Randle",
-        "2B": null,
+        "1B": null,
+        "2B": "Brayden Randle",
         "3B": null
       },
       "score": {
@@ -2223,7 +2345,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Charlie Spoonhour",
+      "pitcher": "",
       "batter": "Judd Utermark",
       "outcome": "Pop out",
       "count": "3-2",
@@ -2233,13 +2355,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brayden Randle",
-        "2B": null,
+        "1B": null,
+        "2B": "Brayden Randle",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brayden Randle",
-        "2B": null,
+        "1B": null,
+        "2B": "Brayden Randle",
         "3B": null
       },
       "score": {
@@ -2250,7 +2372,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
       "batter": "Max Knight",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2277,7 +2399,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
       "batter": "Curry Sutherland",
       "outcome": "Single",
       "count": "1-1",
@@ -2304,7 +2426,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Logan Fyffe",
       "outcome": "Lineout",
       "count": "0-0",
@@ -2331,7 +2453,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Jax Ryan",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",

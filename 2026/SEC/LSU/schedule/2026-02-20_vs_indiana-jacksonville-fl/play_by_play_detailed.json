@@ -3,7 +3,7 @@
   "date": "02/20/2026",
   "away_team": "LSU",
   "home_team": "Indiana",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -121,7 +121,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -526,7 +528,9 @@
       "count": "2-1",
       "pitches": "KBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -688,7 +692,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -715,7 +721,10 @@
       "count": "3-2",
       "pitches": "BBBKF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1120,7 +1129,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1141,7 +1152,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Michael Sarhatt",
+      "pitcher": "Gavin Seebold",
       "batter": "Cade Arrambide",
       "outcome": "Walk",
       "count": "3-0",
@@ -1174,7 +1185,9 @@
       "count": "3-1",
       "pitches": "SBBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1681,7 +1694,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Gavin Seebold",
+      "pitcher": "Jackson Yarberry",
       "batter": "Trent Caraway",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1795,7 +1808,9 @@
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1822,7 +1837,9 @@
       "count": "2-2",
       "pitches": "BKFBFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1951,14 +1968,16 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jackson Yarberry",
+      "pitcher": "Peter Haas",
       "batter": "Zach Yorke",
       "outcome": "Home run",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "Zach Yorke"
+        "Zach Yorke",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1977,6 +1996,33 @@
         "home": 5
       },
       "description": "Yorke homered to right center, 3 RBI (2-0 BB); Braun scored; Curiel scored."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Peter Haas",
+      "batter": "Haas, P. to p for Yarberry.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Mason Braun",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Mason Braun",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 5
+      },
+      "description": "Haas, P. to p for Yarberry."
     },
     {
       "inning": "Top 8",
@@ -2040,7 +2086,9 @@
       "count": "0-2",
       "pitches": "FK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2061,13 +2109,16 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Peter Haas",
+      "pitcher": "Kaden Jacobi",
       "batter": "Tanner Reaves",
       "outcome": "Single",
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2088,7 +2139,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Peter Haas",
+      "pitcher": "Kaden Jacobi",
       "batter": "Trent Caraway",
       "outcome": "Walk",
       "count": "3-2",
@@ -2148,7 +2199,9 @@
       "count": "1-2",
       "pitches": "KFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2175,7 +2228,10 @@
       "count": "1-2",
       "pitches": "FBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2223,7 +2279,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Kaden Jacobi",
+      "pitcher": "Ian White Jr.",
       "batter": "Steven Milam",
       "outcome": "\u2014",
       "count": "3-2",
@@ -2250,7 +2306,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Gavin Guidry",
+      "pitcher": "Grant Fontenot",
       "batter": "Reaves",
       "outcome": "\u2014",
       "count": null,
@@ -2391,7 +2447,9 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2418,7 +2476,9 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2439,7 +2499,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Grant Fontenot",
+      "pitcher": "Connor Benge",
       "batter": "Will Moore",
       "outcome": "Groundout",
       "count": "2-0",
@@ -2466,7 +2526,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "White",
+      "pitcher": "Ian White Jr.",
       "batter": "Cade Arrambide",
       "outcome": "Walk",
       "count": "3-2",
@@ -2493,7 +2553,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "White",
+      "pitcher": "Ian White Jr.",
       "batter": "Jack Ruckert",
       "outcome": "Walk",
       "count": "3-1",
@@ -2520,7 +2580,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "White",
+      "pitcher": "Ian White Jr.",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2547,7 +2607,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "White",
+      "pitcher": "Ian White Jr.",
       "batter": "Tanner Reaves",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2574,7 +2634,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "White",
+      "pitcher": "Jacob Vogel",
       "batter": "Daniel Harden",
       "outcome": "Hit by pitch",
       "count": "3-2",
@@ -2607,7 +2667,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -2628,7 +2690,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jacob Vogel",
+      "pitcher": "",
       "batter": "Jake Brown",
       "outcome": "Lineout",
       "count": "1-2",
@@ -2655,7 +2717,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Connor Benge",
+      "pitcher": "Danny Lachenmayer",
       "batter": "Hogan Denny",
       "outcome": "Flyout",
       "count": "2-1",
@@ -2709,7 +2771,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Danny Lachenmayer",
+      "pitcher": "",
       "batter": "Jake Hanley",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",

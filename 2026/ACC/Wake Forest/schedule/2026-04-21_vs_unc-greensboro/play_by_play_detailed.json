@@ -3,7 +3,7 @@
   "date": "04/21/2026",
   "away_team": "UNC Greensboro",
   "home_team": "Wake Forest",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -284,6 +284,7 @@
       "pitches": "SB",
       "rbi": true,
       "runs_scored": [
+        "Kade Lewis",
         "Matt Conte"
       ],
       "outs_before": 0,
@@ -294,7 +295,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kade Lewis",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -316,12 +317,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Kade Lewis",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Kade Lewis",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -343,12 +344,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kade Lewis",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Kade Lewis",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -370,7 +371,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kade Lewis",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -393,7 +394,9 @@
       "count": "0-2",
       "pitches": "KF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -404,7 +407,7 @@
       "runners_after": {
         "1B": "JD Stein",
         "2B": null,
-        "3B": null
+        "3B": "Blake Schaaf"
       },
       "score": {
         "away": 0,
@@ -414,24 +417,26 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Jake Colucci",
       "batter": "Javar Williams",
       "outcome": "\u2014",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Blake Schaaf"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "JD Stein",
         "2B": null,
-        "3B": null
+        "3B": "Blake Schaaf"
       },
       "runners_after": {
-        "1B": "JD Stein",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "JD Stein"
       },
       "score": {
         "away": 0,
@@ -441,7 +446,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Jake Colucci",
       "batter": "Dalton Wentz",
       "outcome": "Flyout",
       "count": "3-2",
@@ -451,14 +456,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "JD Stein",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "JD Stein"
       },
       "runners_after": {
-        "1B": "JD Stein",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "JD Stein"
       },
       "score": {
         "away": 0,
@@ -564,8 +569,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "JJ Parsons",
-        "2B": null,
+        "1B": null,
+        "2B": "JJ Parsons",
         "3B": null
       },
       "score": {
@@ -586,13 +591,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "JJ Parsons",
-        "2B": null,
+        "1B": null,
+        "2B": "JJ Parsons",
         "3B": null
       },
       "runners_after": {
-        "1B": "JJ Parsons",
-        "2B": null,
+        "1B": null,
+        "2B": "JJ Parsons",
         "3B": null
       },
       "score": {
@@ -603,7 +608,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Jake Colucci",
       "batter": "Luke Costello",
       "outcome": "Reached on error",
       "count": "2-2",
@@ -630,7 +635,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Jake Colucci",
       "batter": "Kade Lewis",
       "outcome": "Lineout",
       "count": "0-0",
@@ -657,7 +662,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Jake Colucci",
       "batter": "Matt Conte",
       "outcome": "Flyout",
       "count": "0-0",
@@ -684,7 +689,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Jake Colucci",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -699,8 +704,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Luke Costello",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Costello",
         "3B": null
       },
       "score": {
@@ -711,18 +716,20 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Jake Colucci",
       "batter": "Jackson Miller",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "KBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Luke Costello"
+      ],
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Luke Costello",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Costello",
         "3B": null
       },
       "runners_after": {
@@ -807,7 +814,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jacob Mueller",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -819,7 +826,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Ayden West",
       "batter": "Ryan Preisano",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -846,7 +853,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Ayden West",
       "batter": "Blake Schaaf",
       "outcome": "Home run",
       "count": "1-0",
@@ -875,7 +882,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Ayden West",
       "batter": "JD Stein",
       "outcome": "Walk",
       "count": "3-0",
@@ -902,7 +909,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Ayden West",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -917,8 +924,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "JD Stein",
-        "2B": null,
+        "1B": null,
+        "2B": "JD Stein",
         "3B": null
       },
       "score": {
@@ -929,7 +936,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Ayden West",
       "batter": "Javar Williams",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -939,14 +946,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "JD Stein",
-        "2B": null,
+        "1B": null,
+        "2B": "JD Stein",
         "3B": null
       },
       "runners_after": {
-        "1B": "JD Stein",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "JD Stein"
       },
       "score": {
         "away": 0,
@@ -956,7 +963,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Ayden West",
       "batter": "Dalton Wentz",
       "outcome": "Groundout",
       "count": "2-0",
@@ -966,14 +973,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "JD Stein",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "JD Stein"
       },
       "runners_after": {
-        "1B": "JD Stein",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "JD Stein"
       },
       "score": {
         "away": 0,
@@ -1025,8 +1032,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Barbour",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Barbour",
         "3B": null
       },
       "score": {
@@ -1047,13 +1054,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jake Barbour",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Barbour",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Barbour",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Barbour",
         "3B": null
       },
       "score": {
@@ -1074,14 +1081,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jake Barbour",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Barbour",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Barbour",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jake Barbour"
       },
       "score": {
         "away": 0,
@@ -1101,14 +1108,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jake Barbour",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jake Barbour"
       },
       "runners_after": {
-        "1B": "Jake Barbour",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jake Barbour"
       },
       "score": {
         "away": 0,
@@ -1118,7 +1125,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Thomas Hester",
       "batter": "Luke Costello",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1145,7 +1152,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Thomas Hester",
       "batter": "Kade Lewis",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -1172,7 +1179,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Thomas Hester",
       "batter": "Matt Conte",
       "outcome": "Lineout",
       "count": "0-0",
@@ -1199,7 +1206,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Thomas Hester",
       "batter": "Jackson Miller",
       "outcome": "Walk",
       "count": "3-0",
@@ -1215,7 +1222,7 @@
       },
       "runners_after": {
         "1B": "Jackson Miller",
-        "2B": null,
+        "2B": "Kade Lewis",
         "3B": null
       },
       "score": {
@@ -1226,23 +1233,25 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Thomas Hester",
       "batter": "Ryan Preisano",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kade Lewis"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jackson Miller",
-        "2B": null,
+        "2B": "Kade Lewis",
         "3B": null
       },
       "runners_after": {
         "1B": "Ryan Preisano",
-        "2B": null,
+        "2B": "Jackson Miller",
         "3B": null
       },
       "score": {
@@ -1253,24 +1262,26 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Thomas Hester",
       "batter": "Blake Schaaf",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "BKFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jackson Miller"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Ryan Preisano",
-        "2B": null,
+        "2B": "Jackson Miller",
         "3B": null
       },
       "runners_after": {
         "1B": "Blake Schaaf",
         "2B": null,
-        "3B": null
+        "3B": "Ryan Preisano"
       },
       "score": {
         "away": 0,
@@ -1280,7 +1291,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Thomas Hester",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1292,12 +1303,12 @@
       "runners_before": {
         "1B": "Blake Schaaf",
         "2B": null,
-        "3B": null
+        "3B": "Ryan Preisano"
       },
       "runners_after": {
-        "1B": "Blake Schaaf",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Blake Schaaf",
+        "3B": "Ryan Preisano"
       },
       "score": {
         "away": 0,
@@ -1307,24 +1318,26 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Thomas Hester",
       "batter": "JD Stein",
       "outcome": "Home run",
       "count": "2-2",
       "pitches": "KKBB",
       "rbi": true,
       "runs_scored": [
+        "Ryan Preisano",
+        "Blake Schaaf",
         "JD Stein"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Blake Schaaf",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Blake Schaaf",
+        "3B": "Ryan Preisano"
       },
       "runners_after": {
-        "1B": "Blake Schaaf",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1336,7 +1349,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Hazen Lancaster",
       "batter": "Javar Williams",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1346,12 +1359,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Blake Schaaf",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Blake Schaaf",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1363,7 +1376,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Tyler Wood",
       "batter": "Ethan Brittain",
       "outcome": "Walk",
       "count": "3-1",
@@ -1390,7 +1403,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Tyler Wood",
       "batter": "Brantley Truitt",
       "outcome": "Walk",
       "count": "3-2",
@@ -1406,7 +1419,7 @@
       },
       "runners_after": {
         "1B": "Brantley Truitt",
-        "2B": null,
+        "2B": "Ethan Brittain",
         "3B": null
       },
       "score": {
@@ -1417,7 +1430,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Tyler Wood",
       "batter": "Jacob Mueller",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1428,12 +1441,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Brantley Truitt",
-        "2B": null,
+        "2B": "Ethan Brittain",
         "3B": null
       },
       "runners_after": {
         "1B": "Brantley Truitt",
-        "2B": null,
+        "2B": "Ethan Brittain",
         "3B": null
       },
       "score": {
@@ -1444,24 +1457,26 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Tyler Wood",
       "batter": "Jacob Dilley",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
+        "Ethan Brittain",
+        "Brantley Truitt",
         "Jacob Dilley"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Brantley Truitt",
-        "2B": null,
+        "2B": "Ethan Brittain",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brantley Truitt",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1473,7 +1488,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Tyler Wood",
       "batter": "Jacob Budzik",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1483,12 +1498,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brantley Truitt",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Brantley Truitt",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1500,7 +1515,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Zach Johnston",
       "batter": "Jake Barbour",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1510,12 +1525,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brantley Truitt",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Brantley Truitt",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1527,7 +1542,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Hazen Lancaster",
       "batter": "Dalton Wentz",
       "outcome": "Home run",
       "count": "1-0",
@@ -1556,7 +1571,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Hazen Lancaster",
       "batter": "Luke Costello",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1583,7 +1598,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Hazen Lancaster",
       "batter": "Kade Lewis",
       "outcome": "Double",
       "count": "0-1",
@@ -1610,13 +1625,14 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Dylan Smith",
       "batter": "Matt Conte",
       "outcome": "Home run",
       "count": "2-2",
       "pitches": "KBSFBFFF",
       "rbi": true,
       "runs_scored": [
+        "Kade Lewis",
         "Matt Conte"
       ],
       "outs_before": 1,
@@ -1628,7 +1644,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Kade Lewis",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1639,7 +1655,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Dylan Smith",
       "batter": "Jackson Miller",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1650,12 +1666,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Kade Lewis",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Kade Lewis",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1666,7 +1682,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Mayson Dear",
+      "pitcher": "Dylan Smith",
       "batter": "Ryan Preisano",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1677,12 +1693,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Kade Lewis",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Kade Lewis",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1693,7 +1709,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Ryan Brennecke",
       "batter": "Tanner Berry",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1720,7 +1736,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Ryan Brennecke",
       "batter": "Luke Jenkins",
       "outcome": "Walk",
       "count": "3-1",
@@ -1747,7 +1763,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Ryan Brennecke",
       "batter": "JJ Parsons",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1774,7 +1790,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Grant Nicholson",
       "batter": "Ethan Brittain",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",

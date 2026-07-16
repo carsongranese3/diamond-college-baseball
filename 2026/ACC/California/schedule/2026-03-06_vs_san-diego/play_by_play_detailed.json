@@ -3,7 +3,7 @@
   "date": "03/06/2026",
   "away_team": "San Diego",
   "home_team": "California",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -229,7 +229,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -391,7 +393,9 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -799,7 +803,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Jett Kenady"
+        "Jett Kenady",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -890,8 +895,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Gannon Snyder",
-        "2B": "Carl Schmidt",
+        "1B": null,
+        "2B": "Gannon Snyder",
         "3B": null
       },
       "score": {
@@ -912,13 +917,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Gannon Snyder",
-        "2B": "Carl Schmidt",
+        "1B": null,
+        "2B": "Gannon Snyder",
         "3B": null
       },
       "runners_after": {
-        "1B": "Gannon Snyder",
-        "2B": "Carl Schmidt",
+        "1B": null,
+        "2B": "Gannon Snyder",
         "3B": null
       },
       "score": {
@@ -939,13 +944,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Gannon Snyder",
-        "2B": "Carl Schmidt",
+        "1B": null,
+        "2B": "Gannon Snyder",
         "3B": null
       },
       "runners_after": {
         "1B": "Hideki Prather",
-        "2B": "Carl Schmidt",
+        "2B": "Gannon Snyder",
         "3B": null
       },
       "score": {
@@ -962,12 +967,15 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Hideki Prather",
-        "2B": "Carl Schmidt",
+        "2B": "Gannon Snyder",
         "3B": null
       },
       "runners_after": {
@@ -983,7 +991,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "Jagger Edwards",
       "batter": "Daniel Murillo",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1118,7 +1126,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "Jagger Edwards",
       "batter": "Cade Campbell",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1145,7 +1153,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "Jagger Edwards",
       "batter": "Carl Schmidt",
       "outcome": "Walk",
       "count": "3-1",
@@ -1172,7 +1180,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "Jagger Edwards",
       "batter": "Jett Kenady",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1199,7 +1207,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "Jagger Edwards",
       "batter": "Joshua Hanson",
       "outcome": "Fielder's choice",
       "count": "1-0",
@@ -1361,7 +1369,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "Jagger Edwards",
       "batter": "Gannon Snyder",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1388,7 +1396,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "Jagger Edwards",
       "batter": "Ethan Kodama",
       "outcome": "Walk",
       "count": "3-1",
@@ -1415,7 +1423,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "Jagger Edwards",
       "batter": "Hideki Prather",
       "outcome": "Fielder's choice",
       "count": "0-0",
@@ -1442,7 +1450,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "Jagger Edwards",
       "batter": "Jacob French",
       "outcome": "Single",
       "count": "0-0",
@@ -1469,7 +1477,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "Jagger Edwards",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1484,9 +1492,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jacob French",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jacob French"
       },
       "score": {
         "away": 1,
@@ -1496,24 +1504,27 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "Jagger Edwards",
       "batter": "Daniel Murillo",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jacob French",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jacob French"
       },
       "runners_after": {
         "1B": "Daniel Murillo",
         "2B": null,
-        "3B": null
+        "3B": "Jacob French"
       },
       "score": {
         "away": 1,
@@ -1523,7 +1534,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "Jagger Edwards",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1535,12 +1546,12 @@
       "runners_before": {
         "1B": "Daniel Murillo",
         "2B": null,
-        "3B": null
+        "3B": "Jacob French"
       },
       "runners_after": {
-        "1B": "Daniel Murillo",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Daniel Murillo",
+        "3B": "Jacob French"
       },
       "score": {
         "away": 1,
@@ -1550,26 +1561,27 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "Jagger Edwards",
       "batter": "Cade Campbell",
       "outcome": "Home run",
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
       "runs_scored": [
-        "Cade Campbell"
+        "Cade Campbell",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Daniel Murillo",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Daniel Murillo",
+        "3B": "Jacob French"
       },
       "runners_after": {
-        "1B": "Daniel Murillo",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Daniel Murillo",
+        "3B": "Jacob French"
       },
       "score": {
         "away": 1,
@@ -1579,7 +1591,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "Jagger Edwards",
       "batter": "Carl Schmidt",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1589,14 +1601,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Daniel Murillo",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Daniel Murillo",
+        "3B": "Jacob French"
       },
       "runners_after": {
-        "1B": "Daniel Murillo",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Daniel Murillo",
+        "3B": "Jacob French"
       },
       "score": {
         "away": 1,
@@ -1660,7 +1672,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Oliver de la Torre",
+      "pitcher": "Quinn Larson",
       "batter": "Gage Mestas",
       "outcome": "Walk",
       "count": "3-2",
@@ -1687,7 +1699,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Oliver de la Torre",
+      "pitcher": "Quinn Larson",
       "batter": "Gabe Springer",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1714,7 +1726,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "A\u00eddan Gonzalez",
       "batter": "Jett Kenady",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1741,7 +1753,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "A\u00eddan Gonzalez",
       "batter": "Joshua Hanson",
       "outcome": "Single",
       "count": "3-2",
@@ -1768,7 +1780,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "A\u00eddan Gonzalez",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1783,8 +1795,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Joshua Hanson",
-        "2B": null,
+        "1B": null,
+        "2B": "Joshua Hanson",
         "3B": null
       },
       "score": {
@@ -1795,7 +1807,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "A\u00eddan Gonzalez",
       "batter": "Gannon Snyder",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1805,13 +1817,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Joshua Hanson",
-        "2B": null,
+        "1B": null,
+        "2B": "Joshua Hanson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Joshua Hanson",
-        "2B": null,
+        "1B": null,
+        "2B": "Joshua Hanson",
         "3B": null
       },
       "score": {
@@ -1822,7 +1834,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "A\u00eddan Gonzalez",
       "batter": "Ethan Kodama",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1832,13 +1844,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Joshua Hanson",
-        "2B": null,
+        "1B": null,
+        "2B": "Joshua Hanson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Joshua Hanson",
-        "2B": null,
+        "1B": null,
+        "2B": "Joshua Hanson",
         "3B": null
       },
       "score": {
@@ -1849,7 +1861,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Oliver de la Torre",
+      "pitcher": "Quinn Larson",
       "batter": "CJ Moran",
       "outcome": "Walk",
       "count": "3-2",
@@ -1876,7 +1888,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Oliver de la Torre",
+      "pitcher": "Quinn Larson",
       "batter": "Diego Gonzalez",
       "outcome": "Foul out",
       "count": "1-1",
@@ -1903,7 +1915,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Oliver de la Torre",
+      "pitcher": "Quinn Larson",
       "batter": "Nico Button",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1930,7 +1942,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Oliver de la Torre",
+      "pitcher": "Quinn Larson",
       "batter": "Aden Howard",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1957,7 +1969,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "Phoenix Brant",
       "batter": "Hideki Prather",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1984,7 +1996,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "Phoenix Brant",
       "batter": "Jacob French",
       "outcome": "Single",
       "count": "1-0",
@@ -2011,7 +2023,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "Phoenix Brant",
       "batter": "Daniel Murillo",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2038,7 +2050,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "Phoenix Brant",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2053,8 +2065,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jacob French",
-        "2B": null,
+        "1B": null,
+        "2B": "Jacob French",
         "3B": null
       },
       "score": {
@@ -2065,23 +2077,25 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Diego Gutierrez",
+      "pitcher": "Phoenix Brant",
       "batter": "Cade Campbell",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jacob French",
-        "2B": null,
+        "1B": null,
+        "2B": "Jacob French",
         "3B": null
       },
       "runners_after": {
         "1B": "Cade Campbell",
-        "2B": null,
+        "2B": "Jacob French",
         "3B": null
       },
       "score": {

@@ -3,7 +3,7 @@
   "date": "03/13/2026",
   "away_team": "Tennessee",
   "home_team": "Georgia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -472,7 +472,10 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -508,7 +511,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Henry Ford",
+        "1B": null,
         "2B": "Garrett Wright",
         "3B": null
       },
@@ -530,7 +533,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Henry Ford",
+        "1B": null,
         "2B": "Garrett Wright",
         "3B": null
       },
@@ -1104,8 +1107,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Rylan Lujo",
-        "2B": null,
+        "1B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "score": {
@@ -1122,17 +1125,19 @@
       "count": "2-2",
       "pitches": "SBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Rylan Lujo",
-        "2B": null,
+        "1B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "runners_after": {
         "1B": "Brennan Hudson",
-        "2B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "score": {
@@ -1154,7 +1159,7 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Brennan Hudson",
-        "2B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "runners_after": {
@@ -1171,12 +1176,42 @@
     {
       "inning": "Bottom 5",
       "pitcher": "Brady Frederick",
+      "batter": "FREDERICK, B to p for KUHNS, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Brennan Hudson",
+        "2B": "Tre Phelps",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Brennan Hudson",
+        "2B": "Tre Phelps",
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 2
+      },
+      "description": "FREDERICK, B to p for KUHNS, T.."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Brady Frederick",
       "batter": "Daniel Jackson",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1197,7 +1232,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brady Frederick",
+      "pitcher": "Brandon Arvidson",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1212,8 +1247,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
-        "2B": "Tre Phelps",
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -1224,7 +1259,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brady Frederick",
+      "pitcher": "Brandon Arvidson",
       "batter": "Jordy Oriach",
       "outcome": "Walk",
       "count": "3-1",
@@ -1234,13 +1269,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Daniel Jackson",
-        "2B": "Tre Phelps",
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "runners_after": {
         "1B": "Jordy Oriach",
-        "2B": "Tre Phelps",
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -1248,6 +1283,33 @@
         "home": 4
       },
       "description": "Oriach walked (3-1 BBBKB)."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Brandon Arvidson",
+      "batter": "ARVIDSON, B. to p for FREDERICK, B.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Jordy Oriach",
+        "2B": "Daniel Jackson",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Jordy Oriach",
+        "2B": "Daniel Jackson",
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 4
+      },
+      "description": "ARVIDSON, B. to p for FREDERICK, B."
     },
     {
       "inning": "Bottom 5",
@@ -1262,12 +1324,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jordy Oriach",
-        "2B": "Tre Phelps",
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "runners_after": {
         "1B": "Jordy Oriach",
-        "2B": "Tre Phelps",
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -1392,7 +1454,10 @@
       "count": "0-2",
       "pitches": "SK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1482,8 +1547,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cole Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Cole Johnson",
         "3B": null
       },
       "score": {
@@ -1504,13 +1569,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Cole Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Cole Johnson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cole Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Cole Johnson",
         "3B": null
       },
       "score": {
@@ -1531,13 +1596,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cole Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Cole Johnson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cole Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Cole Johnson",
         "3B": null
       },
       "score": {
@@ -1558,13 +1623,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Cole Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Cole Johnson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cole Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Cole Johnson",
         "3B": null
       },
       "score": {
@@ -2148,7 +2213,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Brandon Arvidson",
+      "pitcher": "",
       "batter": "Rylan Lujo",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2175,7 +2240,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Brandon Arvidson",
+      "pitcher": "",
       "batter": "Brennan Hudson",
       "outcome": "Flyout",
       "count": "2-2",
@@ -2202,7 +2267,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Brandon Arvidson",
+      "pitcher": "",
       "batter": "Tre Phelps",
       "outcome": "Groundout",
       "count": "0-1",

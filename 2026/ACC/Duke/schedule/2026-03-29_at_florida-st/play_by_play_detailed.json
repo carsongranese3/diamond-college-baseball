@@ -3,7 +3,7 @@
   "date": "03/29/2026",
   "away_team": "Duke",
   "home_team": "Florida St.",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -337,7 +337,10 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -796,7 +799,9 @@
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -878,7 +883,10 @@
       "pitches": "KBSB",
       "rbi": true,
       "runs_scored": [
-        "Matthew Strand"
+        "Matthew Strand",
+        null,
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1089,7 +1097,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Kevin Mebil",
       "batter": "Coltin Quagliano",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1116,7 +1124,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Kevin Mebil",
       "batter": "Michael DiMartini",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1143,7 +1151,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Kevin Mebil",
       "batter": "Brooks Perez",
       "outcome": "Walk",
       "count": "3-2",
@@ -1170,7 +1178,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Kevin Mebil",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1185,8 +1193,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brooks Perez",
-        "2B": null,
+        "1B": null,
+        "2B": "Brooks Perez",
         "3B": null
       },
       "score": {
@@ -1197,7 +1205,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Kevin Mebil",
       "batter": "Tyler Albright",
       "outcome": "Hit by pitch",
       "count": "3-2",
@@ -1207,13 +1215,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brooks Perez",
-        "2B": null,
+        "1B": null,
+        "2B": "Brooks Perez",
         "3B": null
       },
       "runners_after": {
         "1B": "Tyler Albright",
-        "2B": null,
+        "2B": "Brooks Perez",
         "3B": null
       },
       "score": {
@@ -1224,23 +1232,25 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Kevin Mebil",
       "batter": "RJ Hamilton",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Tyler Albright",
-        "2B": null,
+        "2B": "Brooks Perez",
         "3B": null
       },
       "runners_after": {
         "1B": "RJ Hamilton",
-        "2B": null,
+        "2B": "Brooks Perez",
         "3B": null
       },
       "score": {
@@ -1251,7 +1261,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Kevin Mebil",
       "batter": "Kaden Smith",
       "outcome": "Foul out",
       "count": "2-1",
@@ -1262,12 +1272,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "RJ Hamilton",
-        "2B": null,
+        "2B": "Brooks Perez",
         "3B": null
       },
       "runners_after": {
         "1B": "RJ Hamilton",
-        "2B": null,
+        "2B": "Brooks Perez",
         "3B": null
       },
       "score": {
@@ -1359,7 +1369,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cade O'Leary",
       "batter": "Matthew Strand",
       "outcome": "Lineout",
       "count": "1-1",
@@ -1386,7 +1396,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cade O'Leary",
       "batter": "Jake Lambdin",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1413,7 +1423,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cade O'Leary",
       "batter": "Collin Anderson",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1500,7 +1510,9 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1521,7 +1533,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Andy Leon",
+      "pitcher": "Marcello Mastroianni",
       "batter": "Eli Putnam",
       "outcome": "Walk",
       "count": "3-2",
@@ -1548,7 +1560,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Andy Leon",
+      "pitcher": "Marcello Mastroianni",
       "batter": "Brody DeLamielleure",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1575,7 +1587,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Andy Leon",
+      "pitcher": "Marcello Mastroianni",
       "batter": "Cal Fisher",
       "outcome": "Pop out",
       "count": "1-2",
@@ -1602,7 +1614,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cade O'Leary",
       "batter": "Coltin Quagliano",
       "outcome": "Single",
       "count": "2-2",
@@ -1629,7 +1641,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cade O'Leary",
       "batter": "Michael DiMartini",
       "outcome": "Single",
       "count": "0-0",
@@ -1656,7 +1668,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cade O'Leary",
       "batter": "Brooks Perez",
       "outcome": "Walk",
       "count": "3-1",
@@ -1683,7 +1695,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cade O'Leary",
       "batter": "Tyler Albright",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1710,13 +1722,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Jake Echols",
       "batter": null,
       "outcome": "Baserunning",
       "count": "2-1",
       "pitches": "BBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1737,7 +1751,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Jake Echols",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1752,9 +1766,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brooks Perez",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brooks Perez"
       },
       "score": {
         "away": 9,
@@ -1764,7 +1778,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Jake Echols",
       "batter": "Kaden Smith",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1774,14 +1788,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brooks Perez",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brooks Perez"
       },
       "runners_after": {
-        "1B": "Brooks Perez",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brooks Perez"
       },
       "score": {
         "away": 9,
@@ -1791,7 +1805,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Andy Leon",
+      "pitcher": "Marcello Mastroianni",
       "batter": "Carter McCulley",
       "outcome": "Single",
       "count": "0-1",
@@ -1818,7 +1832,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Andy Leon",
+      "pitcher": "Marcello Mastroianni",
       "batter": "Will Bavaro",
       "outcome": "Single",
       "count": "1-1",
@@ -1845,13 +1859,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Andy Leon",
+      "pitcher": "Marcello Mastroianni",
       "batter": "John Stuetzer",
       "outcome": "Fielder's choice",
       "count": "3-2",
       "pitches": "BSFBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1872,7 +1888,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Andy Leon",
+      "pitcher": "Ben Dean",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1887,8 +1903,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "John Stuetzer",
-        "2B": null,
+        "1B": null,
+        "2B": "John Stuetzer",
         "3B": null
       },
       "score": {
@@ -1899,7 +1915,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Andy Leon",
+      "pitcher": "Ben Dean",
       "batter": "PaulinoJr,Kelvyn struck out swinging (1-2 BFSS).",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1909,13 +1925,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "John Stuetzer",
-        "2B": null,
+        "1B": null,
+        "2B": "John Stuetzer",
         "3B": null
       },
       "runners_after": {
-        "1B": "John Stuetzer",
-        "2B": null,
+        "1B": null,
+        "2B": "John Stuetzer",
         "3B": null
       },
       "score": {
@@ -1926,7 +1942,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Andy Leon",
+      "pitcher": "Ben Dean",
       "batter": "Brayden Dowd",
       "outcome": "Walk",
       "count": "3-2",
@@ -1936,13 +1952,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "John Stuetzer",
-        "2B": null,
+        "1B": null,
+        "2B": "John Stuetzer",
         "3B": null
       },
       "runners_after": {
         "1B": "Brayden Dowd",
-        "2B": null,
+        "2B": "John Stuetzer",
         "3B": null
       },
       "score": {
@@ -1953,7 +1969,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Andy Leon",
+      "pitcher": "Ben Dean",
       "batter": "Hunter Carns",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1964,12 +1980,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Brayden Dowd",
-        "2B": null,
+        "2B": "John Stuetzer",
         "3B": null
       },
       "runners_after": {
         "1B": "Brayden Dowd",
-        "2B": null,
+        "2B": "John Stuetzer",
         "3B": null
       },
       "score": {
@@ -1980,7 +1996,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Jake Echols",
       "batter": "Matthew Strand",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2007,7 +2023,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Jake Echols",
       "batter": "Jake Lambdin",
       "outcome": "Lineout",
       "count": "1-0",
@@ -2034,7 +2050,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Jake Echols",
       "batter": "Collin Anderson",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2061,7 +2077,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Andy Leon",
+      "pitcher": "Ben Dean",
       "batter": "Eli Putnam",
       "outcome": "Single",
       "count": "1-0",
@@ -2088,7 +2104,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Andy Leon",
+      "pitcher": "Ben Dean",
       "batter": "Noah Sheffield",
       "outcome": "Single",
       "count": "0-2",
@@ -2115,13 +2131,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Andy Leon",
+      "pitcher": "Ben Dean",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -2142,7 +2160,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Andy Leon",
+      "pitcher": "Ben Dean",
       "batter": "Carter McCulley",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2169,7 +2187,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Andy Leon",
+      "pitcher": "Ben Dean",
       "batter": "Will Bavaro",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2196,7 +2214,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Jake Echols",
       "batter": "Coltin Quagliano",
       "outcome": "Walk",
       "count": "3-2",
@@ -2223,7 +2241,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Jake Echols",
       "batter": "Michael DiMartini",
       "outcome": "Double",
       "count": "0-0",
@@ -2250,13 +2268,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Rhett Vaughn",
       "batter": null,
       "outcome": "Baserunning",
       "count": "1-2",
       "pitches": "KSFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -2277,7 +2297,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Rhett Vaughn",
       "batter": "Tyler Albright",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2304,13 +2324,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Rhett Vaughn",
       "batter": "RJ Hamilton",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2331,7 +2353,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Rhett Vaughn",
       "batter": "Kaden Smith",
       "outcome": "Lineout",
       "count": "1-2",
@@ -2358,7 +2380,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Andy Leon",
+      "pitcher": "Ben Dean",
       "batter": "John Stuetzer",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2385,7 +2407,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Andy Leon",
+      "pitcher": "Ben Dean",
       "batter": "PaulinoJr,Kelvyn tripled to left center (2-1 KBB).",
       "outcome": "Triple",
       "count": "2-1",
@@ -2412,7 +2434,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Andy Leon",
+      "pitcher": "Ben Dean",
       "batter": "Brayden Dowd",
       "outcome": "Walk",
       "count": "3-1",
@@ -2439,13 +2461,15 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Andy Leon",
+      "pitcher": "Ben Dean",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Brayden Dowd"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2454,7 +2478,7 @@
         "3B": "PaulinoJr,Kelvyn tripled to left center (2-1 KBB)."
       },
       "runners_after": {
-        "1B": "Brayden Dowd",
+        "1B": null,
         "2B": null,
         "3B": "PaulinoJr,Kelvyn tripled to left center (2-1 KBB)."
       },
@@ -2466,7 +2490,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Andy Leon",
+      "pitcher": "Ben Dean",
       "batter": "Kaden Frommelt",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2476,12 +2500,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brayden Dowd",
+        "1B": null,
         "2B": null,
         "3B": "PaulinoJr,Kelvyn tripled to left center (2-1 KBB)."
       },
       "runners_after": {
-        "1B": "Brayden Dowd",
+        "1B": null,
         "2B": null,
         "3B": "PaulinoJr,Kelvyn tripled to left center (2-1 KBB)."
       },
@@ -2493,7 +2517,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Andy Leon",
+      "pitcher": "Ben Dean",
       "batter": "Eli Putnam",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2503,12 +2527,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brayden Dowd",
+        "1B": null,
         "2B": null,
         "3B": "PaulinoJr,Kelvyn tripled to left center (2-1 KBB)."
       },
       "runners_after": {
-        "1B": "Brayden Dowd",
+        "1B": null,
         "2B": null,
         "3B": "PaulinoJr,Kelvyn tripled to left center (2-1 KBB)."
       },

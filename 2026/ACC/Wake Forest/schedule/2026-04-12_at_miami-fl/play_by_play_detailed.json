@@ -3,7 +3,7 @@
   "date": "04/12/2026",
   "away_team": "Wake Forest",
   "home_team": "Miami (FL)",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -292,8 +292,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Boston Torres",
-        "2B": null,
+        "1B": null,
+        "2B": "Boston Torres",
         "3B": null
       },
       "score": {
@@ -314,13 +314,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Boston Torres",
-        "2B": null,
+        "1B": null,
+        "2B": "Boston Torres",
         "3B": null
       },
       "runners_after": {
-        "1B": "Boston Torres",
-        "2B": null,
+        "1B": null,
+        "2B": "Boston Torres",
         "3B": null
       },
       "score": {
@@ -535,7 +535,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Javar Williams",
+        "1B": null,
         "2B": "Blake Schaaf",
         "3B": null
       },
@@ -635,7 +635,8 @@
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Alex Sosa"
+        "Alex Sosa",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -852,7 +853,9 @@
       "count": "3-1",
       "pitches": "BBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1041,7 +1044,9 @@
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1062,14 +1067,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Blake Morningstar",
       "batter": "Derek Williams",
       "outcome": "Home run",
       "count": "1-2",
       "pitches": "BFS",
       "rbi": true,
       "runs_scored": [
-        "Derek Williams"
+        "Derek Williams",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1091,7 +1097,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Blake Morningstar",
       "batter": "Brylan West",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1118,7 +1124,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Blake Morningstar",
       "batter": "Max Galvin",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1226,7 +1232,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Blake Morningstar",
       "batter": "Vance Sheahan",
       "outcome": "Single",
       "count": "0-0",
@@ -1253,7 +1259,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Blake Morningstar",
       "batter": "Alonzo Alvarez",
       "outcome": "Double",
       "count": "0-2",
@@ -1280,13 +1286,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Blake Morningstar",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1307,7 +1315,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Blake Morningstar",
       "batter": "Jake Ogden",
       "outcome": "Fielder's choice",
       "count": "1-1",
@@ -1334,7 +1342,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Blake Morningstar",
       "batter": "Daniel Cuvet",
       "outcome": "\u2014",
       "count": "0-0",
@@ -1469,7 +1477,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Blake Morningstar",
       "batter": "Alex Sosa",
       "outcome": "Walk",
       "count": "3-1",
@@ -1496,7 +1504,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Blake Morningstar",
       "batter": "Derek Williams",
       "outcome": "Single",
       "count": "0-1",
@@ -1523,7 +1531,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Blake Morningstar",
       "batter": "Brylan West",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1550,13 +1558,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Blake Morningstar",
       "batter": "Max Galvin",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1577,7 +1587,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Ryan Bosch",
       "batter": "Vance Sheahan",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1604,7 +1614,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "AJ Ciscar",
+      "pitcher": "Lyndon Glidewell",
       "batter": "Boston Torres",
       "outcome": "Reached on error",
       "count": "0-1",
@@ -1631,7 +1641,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "AJ Ciscar",
+      "pitcher": "Lyndon Glidewell",
       "batter": "Jimmy Keenan",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1658,7 +1668,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "AJ Ciscar",
+      "pitcher": "Lyndon Glidewell",
       "batter": "Blake Schaaf",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1685,7 +1695,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "AJ Ciscar",
+      "pitcher": "Lyndon Glidewell",
       "batter": "JD Stein",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1712,7 +1722,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Ryan Bosch",
       "batter": "Alonzo Alvarez",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1739,7 +1749,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Ryan Bosch",
       "batter": "Fabio Peralta",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1766,7 +1776,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Ryan Bosch",
       "batter": "Jake Ogden",
       "outcome": "Walk",
       "count": "3-2",
@@ -1793,7 +1803,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Zach Johnston",
       "batter": "Daniel Cuvet",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1820,7 +1830,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "AJ Ciscar",
+      "pitcher": "Lyndon Glidewell",
       "batter": "Jackson Miller",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1847,7 +1857,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "AJ Ciscar",
+      "pitcher": "Lyndon Glidewell",
       "batter": "Tyler Figueroa",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1874,7 +1884,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "AJ Ciscar",
+      "pitcher": "Lyndon Glidewell",
       "batter": "Dalton Wentz",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",

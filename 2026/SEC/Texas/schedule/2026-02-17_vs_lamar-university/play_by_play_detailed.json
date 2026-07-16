@@ -3,7 +3,7 @@
   "date": "02/17/2026",
   "away_team": "Lamar University",
   "home_team": "Texas",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -1383,7 +1383,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Duplantier J"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1392,7 +1394,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Duplantier J",
+        "1B": null,
         "2B": "Ashton Larson",
         "3B": null
       },
@@ -1414,7 +1416,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Duplantier J",
+        "1B": null,
         "2B": "Ashton Larson",
         "3B": null
       },
@@ -1976,6 +1978,33 @@
     {
       "inning": "Bottom 7",
       "pitcher": "Gabriel Rodriguez",
+      "batter": "Adrian Rodriguez",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Josh Livingston",
+        "2B": null,
+        "3B": "Carson Tinney"
+      },
+      "runners_after": {
+        "1B": "Josh Livingston",
+        "2B": null,
+        "3B": "Carson Tinney"
+      },
+      "score": {
+        "away": 4,
+        "home": 10
+      },
+      "description": "Rodriguez, G to p for Weiblinger."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Gabriel Rodriguez",
       "batter": "Temo Becerra",
       "outcome": "Walk",
       "count": "3-2",
@@ -2031,13 +2060,14 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Gabriel Rodriguez",
+      "pitcher": "",
       "batter": "Maddox Monsour",
       "outcome": "Triple",
       "count": "1-2",
       "pitches": "KKB",
       "rbi": true,
       "runs_scored": [
+        "Duplantier J",
         "Temo Becerra",
         "Josh Livingston"
       ],
@@ -2049,7 +2079,7 @@
         "3B": "Josh Livingston"
       },
       "runners_after": {
-        "1B": "Duplantier J",
+        "1B": null,
         "2B": null,
         "3B": "Maddox Monsour"
       },

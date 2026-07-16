@@ -3,7 +3,7 @@
   "date": "04/14/2026",
   "away_team": "Coastal Carolina",
   "home_team": "Wake Forest",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -77,7 +77,7 @@
       },
       "runners_after": {
         "1B": "Walker Mitchell",
-        "2B": null,
+        "2B": "Blake Barthol",
         "3B": null
       },
       "score": {
@@ -99,13 +99,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Walker Mitchell",
-        "2B": null,
+        "2B": "Blake Barthol",
         "3B": null
       },
       "runners_after": {
-        "1B": "Walker Mitchell",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Walker Mitchell",
+        "3B": "Blake Barthol"
       },
       "score": {
         "away": 0,
@@ -125,14 +125,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Walker Mitchell",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Walker Mitchell",
+        "3B": "Blake Barthol"
       },
       "runners_after": {
-        "1B": "Walker Mitchell",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Walker Mitchell",
+        "3B": "Blake Barthol"
       },
       "score": {
         "away": 0,
@@ -319,8 +319,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brice Estep",
-        "2B": null,
+        "1B": null,
+        "2B": "Brice Estep",
         "3B": null
       },
       "score": {
@@ -341,13 +341,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brice Estep",
-        "2B": null,
+        "1B": null,
+        "2B": "Brice Estep",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brice Estep",
-        "2B": null,
+        "1B": null,
+        "2B": "Brice Estep",
         "3B": null
       },
       "score": {
@@ -589,8 +589,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Blake Schaaf",
-        "2B": null,
+        "1B": null,
+        "2B": "Blake Schaaf",
         "3B": null
       },
       "score": {
@@ -611,13 +611,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Blake Schaaf",
-        "2B": null,
+        "1B": null,
+        "2B": "Blake Schaaf",
         "3B": null
       },
       "runners_after": {
-        "1B": "Blake Schaaf",
-        "2B": null,
+        "1B": null,
+        "2B": "Blake Schaaf",
         "3B": null
       },
       "score": {
@@ -634,12 +634,14 @@
       "count": "1-1",
       "pitches": "SB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Blake Schaaf"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Blake Schaaf",
-        "2B": null,
+        "1B": null,
+        "2B": "Blake Schaaf",
         "3B": null
       },
       "runners_after": {
@@ -671,7 +673,7 @@
       },
       "runners_after": {
         "1B": "Dalton Wentz",
-        "2B": null,
+        "2B": "Kade Lewis",
         "3B": null
       },
       "score": {
@@ -688,18 +690,20 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kade Lewis"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Dalton Wentz",
-        "2B": null,
+        "2B": "Kade Lewis",
         "3B": null
       },
       "runners_after": {
         "1B": "Luke Costello",
         "2B": null,
-        "3B": null
+        "3B": "Dalton Wentz"
       },
       "score": {
         "away": 0,
@@ -721,12 +725,12 @@
       "runners_before": {
         "1B": "Luke Costello",
         "2B": null,
-        "3B": null
+        "3B": "Dalton Wentz"
       },
       "runners_after": {
         "1B": "Boston Torres",
-        "2B": null,
-        "3B": null
+        "2B": "Luke Costello",
+        "3B": "Dalton Wentz"
       },
       "score": {
         "away": 0,
@@ -736,24 +740,27 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Connor Kane",
       "batter": "Luke Costello",
       "outcome": "Single",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Dalton Wentz",
+        "Luke Costello"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Boston Torres",
-        "2B": null,
-        "3B": null
+        "2B": "Luke Costello",
+        "3B": "Dalton Wentz"
       },
       "runners_after": {
         "1B": "Luke Costello",
         "2B": null,
-        "3B": null
+        "3B": "Boston Torres"
       },
       "score": {
         "away": 0,
@@ -763,23 +770,25 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Connor Kane",
       "batter": "Javar Williams",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Boston Torres"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Luke Costello",
         "2B": null,
-        "3B": null
+        "3B": "Boston Torres"
       },
       "runners_after": {
         "1B": "Javar Williams",
-        "2B": null,
+        "2B": "Luke Costello",
         "3B": null
       },
       "score": {
@@ -790,7 +799,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Connor Kane",
       "batter": "Jackson Miller",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -801,12 +810,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Javar Williams",
-        "2B": null,
+        "2B": "Luke Costello",
         "3B": null
       },
       "runners_after": {
         "1B": "Javar Williams",
-        "2B": null,
+        "2B": "Luke Costello",
         "3B": null
       },
       "score": {
@@ -850,7 +859,9 @@
       "count": "0-2",
       "pitches": "KK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Rex Watson"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -860,7 +871,7 @@
       },
       "runners_after": {
         "1B": "Jordan Taylor",
-        "2B": "Rex Watson",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -878,18 +889,19 @@
       "pitches": "KSFBF",
       "rbi": true,
       "runs_scored": [
+        "Jordan Taylor",
         "Jackson Winer"
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Jordan Taylor",
-        "2B": "Rex Watson",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jordan Taylor",
-        "2B": "Rex Watson",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -910,13 +922,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jordan Taylor",
-        "2B": "Rex Watson",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jordan Taylor",
-        "2B": "Rex Watson",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -937,13 +949,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jordan Taylor",
-        "2B": "Rex Watson",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jordan Taylor",
-        "2B": "Rex Watson",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -964,13 +976,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jordan Taylor",
-        "2B": "Rex Watson",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jordan Taylor",
-        "2B": "Rex Watson",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -981,7 +993,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Connor Kane",
       "batter": "Blake Schaaf",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1008,7 +1020,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Connor Kane",
       "batter": "JD Stein",
       "outcome": "Single",
       "count": "0-0",
@@ -1035,7 +1047,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Connor Kane",
       "batter": "Kade Lewis",
       "outcome": "Walk",
       "count": "3-1",
@@ -1051,7 +1063,7 @@
       },
       "runners_after": {
         "1B": "Kade Lewis",
-        "2B": null,
+        "2B": "JD Stein",
         "3B": null
       },
       "score": {
@@ -1062,7 +1074,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Connor Kane",
       "batter": "Dalton Wentz",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1073,12 +1085,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kade Lewis",
-        "2B": null,
+        "2B": "JD Stein",
         "3B": null
       },
       "runners_after": {
         "1B": "Kade Lewis",
-        "2B": null,
+        "2B": "JD Stein",
         "3B": null
       },
       "score": {
@@ -1089,7 +1101,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Connor Kane",
       "batter": "Luke Costello",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1100,12 +1112,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Kade Lewis",
-        "2B": null,
+        "2B": "JD Stein",
         "3B": null
       },
       "runners_after": {
         "1B": "Kade Lewis",
-        "2B": null,
+        "2B": "JD Stein",
         "3B": null
       },
       "score": {
@@ -1212,8 +1224,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Blake Barthol",
-        "2B": null,
+        "1B": null,
+        "2B": "Blake Barthol",
         "3B": null
       },
       "score": {
@@ -1234,13 +1246,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Blake Barthol",
-        "2B": null,
+        "1B": null,
+        "2B": "Blake Barthol",
         "3B": null
       },
       "runners_after": {
         "1B": "Rex Watson",
-        "2B": null,
+        "2B": "Blake Barthol",
         "3B": null
       },
       "score": {
@@ -1262,12 +1274,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Rex Watson",
-        "2B": null,
+        "2B": "Blake Barthol",
         "3B": null
       },
       "runners_after": {
         "1B": "Rex Watson",
-        "2B": null,
+        "2B": "Blake Barthol",
         "3B": null
       },
       "score": {
@@ -1278,7 +1290,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Connor Kane",
       "batter": "Boston Torres",
       "outcome": "Home run",
       "count": "2-1",
@@ -1307,7 +1319,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Connor Kane",
       "batter": "Luke Costello",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1334,7 +1346,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Connor Kane",
       "batter": "Javar Williams",
       "outcome": "Pop out",
       "count": "0-1",
@@ -1361,7 +1373,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Connor Kane",
       "batter": "Jackson Miller",
       "outcome": "Home run",
       "count": "0-1",
@@ -1390,7 +1402,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Connor Kane",
       "batter": "Blake Schaaf",
       "outcome": "Single",
       "count": "0-2",
@@ -1417,7 +1429,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Connor Kane",
       "batter": "JD Stein",
       "outcome": "Lineout",
       "count": "1-2",
@@ -1444,7 +1456,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Rhys Bowie",
       "batter": "Jackson Winer",
       "outcome": "Single",
       "count": "0-0",
@@ -1471,7 +1483,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Rhys Bowie",
       "batter": "Jackson Winer",
       "outcome": "\u2014",
       "count": null,
@@ -1498,7 +1510,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Rhys Bowie",
       "batter": "Brice Estep",
       "outcome": "Walk",
       "count": "3-1",
@@ -1525,7 +1537,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Rhys Bowie",
       "batter": "Cole Chamberlain",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1552,7 +1564,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Rhys Bowie",
       "batter": "Brice Estep",
       "outcome": "\u2014",
       "count": null,
@@ -1579,7 +1591,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Darin Horn",
       "batter": "Kade Lewis",
       "outcome": "Single",
       "count": "0-1",
@@ -1606,7 +1618,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Darin Horn",
       "batter": "Dalton Wentz",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1633,7 +1645,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Darin Horn",
       "batter": "Luke Costello",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1660,7 +1672,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Darin Horn",
       "batter": "Boston Torres",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1687,7 +1699,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Rhys Bowie",
       "batter": "Ty Barrango",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1714,7 +1726,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Marcelo Harsch",
       "batter": "Dean Mihos",
       "outcome": "Double",
       "count": "3-2",
@@ -1741,7 +1753,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Marcelo Harsch",
       "batter": "Blake Barthol",
       "outcome": "Strikeout",
       "count": "1-3",
@@ -1757,8 +1769,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Dean Mihos",
-        "3B": null
+        "2B": null,
+        "3B": "Dean Mihos"
       },
       "score": {
         "away": 3,
@@ -1768,7 +1780,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Marcelo Harsch",
       "batter": "Walker Mitchell",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1779,13 +1791,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Dean Mihos",
-        "3B": null
+        "2B": null,
+        "3B": "Dean Mihos"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Dean Mihos",
-        "3B": null
+        "2B": null,
+        "3B": "Dean Mihos"
       },
       "score": {
         "away": 3,
@@ -1795,23 +1807,25 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Marcelo Harsch",
       "batter": "Rex Watson",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Dean Mihos"
+      ],
       "outs_before": 3,
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Dean Mihos",
-        "3B": null
+        "2B": null,
+        "3B": "Dean Mihos"
       },
       "runners_after": {
         "1B": "Rex Watson",
-        "2B": "Dean Mihos",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1822,7 +1836,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Marcelo Harsch",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1833,12 +1847,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Rex Watson",
-        "2B": "Dean Mihos",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Rex Watson",
-        "2B": "Dean Mihos",
+        "1B": null,
+        "2B": "Rex Watson",
         "3B": null
       },
       "score": {
@@ -1849,7 +1863,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Marcelo Harsch",
       "batter": "Jordan Taylor",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1859,13 +1873,13 @@
       "outs_before": 3,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Rex Watson",
-        "2B": "Dean Mihos",
+        "1B": null,
+        "2B": "Rex Watson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Rex Watson",
-        "2B": "Dean Mihos",
+        "1B": null,
+        "2B": "Rex Watson",
         "3B": null
       },
       "score": {
@@ -1876,7 +1890,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Colby Richardson",
       "batter": "Luke Costello",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1903,7 +1917,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Colby Richardson",
       "batter": "Javar Williams",
       "outcome": "Walk",
       "count": "3-0",
@@ -1930,7 +1944,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Colby Richardson",
       "batter": "Jackson Miller",
       "outcome": "Single",
       "count": "0-1",
@@ -1947,7 +1961,7 @@
       "runners_after": {
         "1B": "Jackson Miller",
         "2B": null,
-        "3B": null
+        "3B": "Javar Williams"
       },
       "score": {
         "away": 4,
@@ -1957,7 +1971,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Colby Richardson",
       "batter": "Blake Schaaf",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1969,12 +1983,12 @@
       "runners_before": {
         "1B": "Jackson Miller",
         "2B": null,
-        "3B": null
+        "3B": "Javar Williams"
       },
       "runners_after": {
         "1B": "Jackson Miller",
         "2B": null,
-        "3B": null
+        "3B": "Javar Williams"
       },
       "score": {
         "away": 4,
@@ -1984,7 +1998,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Colby Richardson",
       "batter": "JD Stein",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1996,12 +2010,12 @@
       "runners_before": {
         "1B": "Jackson Miller",
         "2B": null,
-        "3B": null
+        "3B": "Javar Williams"
       },
       "runners_after": {
         "1B": "Jackson Miller",
         "2B": null,
-        "3B": null
+        "3B": "Javar Williams"
       },
       "score": {
         "away": 4,
@@ -2011,7 +2025,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Marcelo Harsch",
       "batter": "Jackson Winer",
       "outcome": "Home run",
       "count": "2-1",
@@ -2040,7 +2054,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Marcelo Harsch",
       "batter": "Brice Estep",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2067,7 +2081,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Marcelo Harsch",
       "batter": "Cole Chamberlain",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2094,7 +2108,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Will Ray",
       "batter": "Cruz Harlan",
       "outcome": "Single",
       "count": "2-0",
@@ -2121,7 +2135,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Will Ray",
       "batter": "Dean Mihos",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2148,7 +2162,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Ryan Lynch",
       "batter": "Kade Lewis",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2175,7 +2189,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Ryan Lynch",
       "batter": "Dalton Wentz",
       "outcome": "Home run",
       "count": "1-2",
@@ -2204,7 +2218,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Ryan Lynch",
       "batter": "Luke Costello",
       "outcome": "Home run",
       "count": "0-0",
@@ -2233,7 +2247,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Ryan Lynch",
       "batter": "Boston Torres",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2260,7 +2274,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Ryan Lynch",
       "batter": "Jimmy Keenan",
       "outcome": "Home run",
       "count": "2-2",
@@ -2289,7 +2303,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Kellen Karr",
       "batter": "Javar Williams",
       "outcome": "Double",
       "count": "3-2",
@@ -2316,7 +2330,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Kellen Karr",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2332,8 +2346,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Javar Williams",
-        "3B": null
+        "2B": null,
+        "3B": "Javar Williams"
       },
       "score": {
         "away": 5,
@@ -2343,7 +2357,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Smallets",
+      "pitcher": "Kellen Karr",
       "batter": "Jackson Miller",
       "outcome": "Flyout",
       "count": "1-2",
@@ -2354,13 +2368,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Javar Williams",
-        "3B": null
+        "2B": null,
+        "3B": "Javar Williams"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Javar Williams",
-        "3B": null
+        "2B": null,
+        "3B": "Javar Williams"
       },
       "score": {
         "away": 5,
@@ -2370,7 +2384,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Will Ray",
       "batter": "Blake Barthol",
       "outcome": "Single",
       "count": "2-2",
@@ -2397,7 +2411,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Will Ray",
       "batter": "Walker Mitchell",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2424,7 +2438,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "Will Ray",
       "batter": "Rex Watson",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -2440,7 +2454,7 @@
       },
       "runners_after": {
         "1B": "Rex Watson",
-        "2B": null,
+        "2B": "Blake Barthol",
         "3B": null
       },
       "score": {
@@ -2451,7 +2465,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "",
       "batter": "Jordan Taylor",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2462,12 +2476,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Rex Watson",
-        "2B": null,
+        "2B": "Blake Barthol",
         "3B": null
       },
       "runners_after": {
         "1B": "Rex Watson",
-        "2B": null,
+        "2B": "Blake Barthol",
         "3B": null
       },
       "score": {
@@ -2478,7 +2492,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Duncan Marsten",
+      "pitcher": "",
       "batter": "Jackson Winer",
       "outcome": "Fielder's choice",
       "count": "2-2",
@@ -2489,12 +2503,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Rex Watson",
-        "2B": null,
+        "2B": "Blake Barthol",
         "3B": null
       },
       "runners_after": {
         "1B": "Jackson Winer",
-        "2B": null,
+        "2B": "Blake Barthol",
         "3B": null
       },
       "score": {

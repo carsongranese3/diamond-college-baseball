@@ -3,7 +3,7 @@
   "date": "03/29/2026",
   "away_team": "Mississippi St.",
   "home_team": "Ole Miss",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -41,7 +41,8 @@
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Ace Reese"
+        "Ace Reese",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -258,7 +259,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -909,7 +912,8 @@
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "Andrew Raymond"
+        "Andrew Raymond",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1039,7 +1043,34 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
+      "batter": "J. Robertson",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 1
+      },
+      "description": "J. Robertson to p for C. Townsend."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "JP Robertson",
       "batter": "Aidan Teel",
       "outcome": "Single",
       "count": "2-0",
@@ -1066,7 +1097,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1093,7 +1124,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": "Ace Reese",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1120,7 +1151,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": "Noah Sullivan",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1147,13 +1178,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": "Reed Stallman",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1174,7 +1207,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1336,7 +1369,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": "Ryder Woodson",
       "outcome": "Walk",
       "count": "3-2",
@@ -1363,7 +1396,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "J.",
+      "pitcher": "Walker Hooks",
       "batter": "Jacob Parker",
       "outcome": "Walk",
       "count": "3-1",
@@ -1390,7 +1423,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
+      "batter": "W. Hooks",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Jacob Parker",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Jacob Parker",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 1
+      },
+      "description": "W. Hooks to p for J. Robertson."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Walker Hooks",
       "batter": "Gehrig Frei",
       "outcome": "Grounded into double play",
       "count": "0-2",
@@ -1417,7 +1477,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Vytas Valincius",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1606,7 +1666,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Bryce Chance",
       "outcome": "Single",
       "count": "2-1",
@@ -1633,7 +1693,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1648,8 +1708,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bryce Chance",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "score": {
@@ -1660,7 +1720,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Aidan Teel",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1670,13 +1730,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bryce Chance",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bryce Chance",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "score": {
@@ -1687,7 +1747,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Ace Reese",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1697,13 +1757,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Bryce Chance",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bryce Chance",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "score": {
@@ -1714,7 +1774,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Noah Sullivan",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1724,13 +1784,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Bryce Chance",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bryce Chance",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "score": {
@@ -1822,7 +1882,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Reed Stallman",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1849,7 +1909,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "W.",
+      "pitcher": "Landon Waters",
       "batter": "Ryder Woodson",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1876,7 +1936,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "W.",
+      "pitcher": "Landon Waters",
       "batter": "Jacob Parker",
       "outcome": "Flyout",
       "count": "2-0",
@@ -2065,7 +2125,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "Landon Waters",
+      "batter": "L. Waters",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 1
+      },
+      "description": "L. Waters to p for W. Hooks."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "Landon Waters",
       "batter": "Gehrig Frei",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2092,7 +2179,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Kevin Milewski",
       "outcome": "Home run",
       "count": "2-0",
@@ -2121,7 +2208,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Bryce Chance",
       "outcome": "Groundout",
       "count": "1-0",
@@ -2148,7 +2235,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Aidan Teel",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",

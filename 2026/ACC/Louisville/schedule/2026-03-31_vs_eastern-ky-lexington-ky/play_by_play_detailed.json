@@ -3,7 +3,7 @@
   "date": "03/31/2026",
   "away_team": "Louisville",
   "home_team": "Eastern Ky.",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -68,6 +68,7 @@
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
+        "Lucas Moore",
         "Bayram Hot"
       ],
       "outs_before": 1,
@@ -78,7 +79,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lucas Moore",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -102,12 +103,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Lucas Moore",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Lucas Moore",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -129,7 +130,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Lucas Moore",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -162,7 +163,7 @@
       },
       "runners_after": {
         "1B": "Jimmy Nugent",
-        "2B": null,
+        "2B": "Ben Slanker",
         "3B": null
       },
       "score": {
@@ -184,7 +185,7 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jimmy Nugent",
-        "2B": null,
+        "2B": "Ben Slanker",
         "3B": null
       },
       "runners_after": {
@@ -243,7 +244,7 @@
       },
       "runners_after": {
         "1B": "Dylan Littlefield",
-        "2B": null,
+        "2B": "Pedro Moreno",
         "3B": null
       },
       "score": {
@@ -261,17 +262,19 @@
       "pitches": "F",
       "rbi": true,
       "runs_scored": [
+        "Pedro Moreno",
+        "Dylan Littlefield",
         "David Alvarez"
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Dylan Littlefield",
-        "2B": null,
+        "2B": "Pedro Moreno",
         "3B": null
       },
       "runners_after": {
-        "1B": "Dylan Littlefield",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -293,12 +296,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Dylan Littlefield",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Dylan Littlefield",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -320,7 +323,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Dylan Littlefield",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -353,7 +356,7 @@
       },
       "runners_after": {
         "1B": "Ricco Longo",
-        "2B": null,
+        "2B": "Jackson Cauthron",
         "3B": null
       },
       "score": {
@@ -364,24 +367,26 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Kian Vorster",
+      "pitcher": "TJ Schlageter",
       "batter": "Jackson Reid",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jackson Cauthron"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Ricco Longo",
-        "2B": null,
+        "2B": "Jackson Cauthron",
         "3B": null
       },
       "runners_after": {
         "1B": "Jackson Reid",
         "2B": null,
-        "3B": null
+        "3B": "Ricco Longo"
       },
       "score": {
         "away": 3,
@@ -391,7 +396,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Kian Vorster",
+      "pitcher": "TJ Schlageter",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -403,12 +408,12 @@
       "runners_before": {
         "1B": "Jackson Reid",
         "2B": null,
-        "3B": null
+        "3B": "Ricco Longo"
       },
       "runners_after": {
-        "1B": "Jackson Reid",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Jackson Reid",
+        "3B": "Ricco Longo"
       },
       "score": {
         "away": 3,
@@ -418,7 +423,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Kian Vorster",
+      "pitcher": "TJ Schlageter",
       "batter": "Boone Shevey",
       "outcome": "Walk",
       "count": "3-2",
@@ -428,14 +433,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jackson Reid",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Jackson Reid",
+        "3B": "Ricco Longo"
       },
       "runners_after": {
         "1B": "Boone Shevey",
-        "2B": null,
-        "3B": null
+        "2B": "Jackson Reid",
+        "3B": "Ricco Longo"
       },
       "score": {
         "away": 3,
@@ -445,7 +450,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Kian Vorster",
+      "pitcher": "TJ Schlageter",
       "batter": "Kobe Benson",
       "outcome": "Grounded into double play",
       "count": "1-2",
@@ -456,13 +461,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Boone Shevey",
-        "2B": null,
-        "3B": null
+        "2B": "Jackson Reid",
+        "3B": "Ricco Longo"
       },
       "runners_after": {
-        "1B": "Boone Shevey",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Jackson Reid",
+        "3B": "Ricco Longo"
       },
       "score": {
         "away": 3,
@@ -514,7 +519,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Alex Alicea",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -536,12 +541,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Alex Alicea",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Alex Alicea",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -563,12 +568,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Alex Alicea",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Alex Alicea",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -580,7 +585,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Kian Vorster",
+      "pitcher": "TJ Schlageter",
       "batter": "Pedro Moreno",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -607,7 +612,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Kian Vorster",
+      "pitcher": "TJ Schlageter",
       "batter": "Dylan Littlefield",
       "outcome": "Walk",
       "count": "3-2",
@@ -634,7 +639,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Kian Vorster",
+      "pitcher": "TJ Schlageter",
       "batter": "David Alvarez",
       "outcome": "Grounded into double play",
       "count": "2-2",
@@ -649,7 +654,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dylan Littlefield",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -661,7 +666,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jack Briese",
+      "pitcher": "Addison Stockham",
       "batter": "Lucas Moore",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -688,7 +693,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jack Briese",
+      "pitcher": "Addison Stockham",
       "batter": "Bayram Hot",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -703,7 +708,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lucas Moore",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -715,7 +720,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jack Briese",
+      "pitcher": "Addison Stockham",
       "batter": "Tague Davis",
       "outcome": "Walk",
       "count": "3-2",
@@ -725,7 +730,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Lucas Moore",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -742,7 +747,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jack Briese",
+      "pitcher": "Addison Stockham",
       "batter": "Ben Slanker",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -758,7 +763,7 @@
       },
       "runners_after": {
         "1B": "Ben Slanker",
-        "2B": null,
+        "2B": "Tague Davis",
         "3B": null
       },
       "score": {
@@ -769,24 +774,26 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jack Briese",
+      "pitcher": "Addison Stockham",
       "batter": "Jimmy Nugent",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Tague Davis"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Ben Slanker",
-        "2B": null,
+        "2B": "Tague Davis",
         "3B": null
       },
       "runners_after": {
-        "1B": "Ben Slanker",
+        "1B": null,
         "2B": "Jimmy Nugent",
-        "3B": null
+        "3B": "Ben Slanker"
       },
       "score": {
         "away": 4,
@@ -796,7 +803,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jack Briese",
+      "pitcher": "Addison Stockham",
       "batter": "Kade Elam",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -806,14 +813,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Ben Slanker",
+        "1B": null,
         "2B": "Jimmy Nugent",
-        "3B": null
+        "3B": "Ben Slanker"
       },
       "runners_after": {
-        "1B": "Ben Slanker",
+        "1B": null,
         "2B": "Jimmy Nugent",
-        "3B": null
+        "3B": "Ben Slanker"
       },
       "score": {
         "away": 4,
@@ -823,7 +830,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Kian Vorster",
+      "pitcher": "TJ Schlageter",
       "batter": "Khaleel Pratt",
       "outcome": "Flyout",
       "count": "1-1",
@@ -850,7 +857,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Kian Vorster",
+      "pitcher": "TJ Schlageter",
       "batter": "Jackson Cauthron",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -877,7 +884,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Kian Vorster",
+      "pitcher": "TJ Schlageter",
       "batter": "Ricco Longo",
       "outcome": "Flyout",
       "count": "2-0",
@@ -904,7 +911,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Kian Vorster",
+      "pitcher": "TJ Schlageter",
       "batter": "Jackson Reid",
       "outcome": "Flyout",
       "count": "1-2",
@@ -931,7 +938,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jack Briese",
+      "pitcher": "Cooper Pumphrey",
       "batter": "Alex Alicea",
       "outcome": "Groundout",
       "count": "0-0",
@@ -958,7 +965,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jack Briese",
+      "pitcher": "Cooper Pumphrey",
       "batter": "Kyle Campbell",
       "outcome": "Walk",
       "count": "3-0",
@@ -985,7 +992,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jack Briese",
+      "pitcher": "Cooper Pumphrey",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1000,8 +1007,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Campbell",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Campbell",
         "3B": null
       },
       "score": {
@@ -1012,7 +1019,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jack Briese",
+      "pitcher": "Cooper Pumphrey",
       "batter": "Griffin Crain",
       "outcome": "Walk",
       "count": "3-0",
@@ -1022,13 +1029,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Kyle Campbell",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Campbell",
         "3B": null
       },
       "runners_after": {
         "1B": "Griffin Crain",
-        "2B": null,
+        "2B": "Kyle Campbell",
         "3B": null
       },
       "score": {
@@ -1039,7 +1046,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jack Briese",
+      "pitcher": "Cooper Pumphrey",
       "batter": "Lucas Moore",
       "outcome": "Single",
       "count": "3-1",
@@ -1050,13 +1057,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Griffin Crain",
-        "2B": null,
+        "2B": "Kyle Campbell",
         "3B": null
       },
       "runners_after": {
         "1B": "Lucas Moore",
-        "2B": null,
-        "3B": null
+        "2B": "Griffin Crain",
+        "3B": "Kyle Campbell"
       },
       "score": {
         "away": 4,
@@ -1066,24 +1073,27 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jack Briese",
+      "pitcher": "Cooper Pumphrey",
       "batter": "Bayram Hot",
       "outcome": "Double",
       "count": "0-2",
       "pitches": "KK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kyle Campbell",
+        "Griffin Crain"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Lucas Moore",
-        "2B": null,
-        "3B": null
+        "2B": "Griffin Crain",
+        "3B": "Kyle Campbell"
       },
       "runners_after": {
-        "1B": "Lucas Moore",
+        "1B": null,
         "2B": "Bayram Hot",
-        "3B": null
+        "3B": "Lucas Moore"
       },
       "score": {
         "away": 6,
@@ -1093,7 +1103,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jack Briese",
+      "pitcher": "Caleb Freeman",
       "batter": "Tague Davis",
       "outcome": "Walk",
       "count": "0-0",
@@ -1103,14 +1113,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Lucas Moore",
+        "1B": null,
         "2B": "Bayram Hot",
-        "3B": null
+        "3B": "Lucas Moore"
       },
       "runners_after": {
         "1B": "Tague Davis",
         "2B": "Bayram Hot",
-        "3B": null
+        "3B": "Lucas Moore"
       },
       "score": {
         "away": 6,
@@ -1120,13 +1130,16 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jack Briese",
+      "pitcher": "Caleb Freeman",
       "batter": "Ben Slanker",
       "outcome": "Home run",
       "count": "3-1",
       "pitches": "BFBB",
       "rbi": true,
       "runs_scored": [
+        "Lucas Moore",
+        "Bayram Hot",
+        "Tague Davis",
         "Ben Slanker"
       ],
       "outs_before": 1,
@@ -1134,11 +1147,11 @@
       "runners_before": {
         "1B": "Tague Davis",
         "2B": "Bayram Hot",
-        "3B": null
+        "3B": "Lucas Moore"
       },
       "runners_after": {
-        "1B": "Tague Davis",
-        "2B": "Bayram Hot",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1149,7 +1162,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jack Briese",
+      "pitcher": "Caleb Freeman",
       "batter": "Jimmy Nugent",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1159,13 +1172,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Tague Davis",
-        "2B": "Bayram Hot",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Tague Davis",
-        "2B": "Bayram Hot",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1176,7 +1189,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jack Briese",
+      "pitcher": "Caleb Freeman",
       "batter": "Kade Elam",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1186,13 +1199,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Tague Davis",
-        "2B": "Bayram Hot",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Tague Davis",
-        "2B": "Bayram Hot",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1203,7 +1216,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Jake Gregor",
       "batter": "Boone Shevey",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1230,7 +1243,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Jake Gregor",
       "batter": "Kobe Benson",
       "outcome": "Single",
       "count": "0-2",
@@ -1257,7 +1270,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Jake Gregor",
       "batter": "Pedro Moreno",
       "outcome": "Lineout",
       "count": "2-1",
@@ -1284,13 +1297,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Jake Gregor",
       "batter": "Dylan Littlefield",
       "outcome": "Double",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kobe Benson"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1299,7 +1314,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kobe Benson",
+        "1B": null,
         "2B": "Dylan Littlefield",
         "3B": null
       },
@@ -1311,7 +1326,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Jake Gregor",
       "batter": "David Alvarez",
       "outcome": "Single",
       "count": "3-1",
@@ -1321,14 +1336,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kobe Benson",
+        "1B": null,
         "2B": "Dylan Littlefield",
         "3B": null
       },
       "runners_after": {
         "1B": "David Alvarez",
-        "2B": "Dylan Littlefield",
-        "3B": null
+        "2B": null,
+        "3B": "Dylan Littlefield"
       },
       "score": {
         "away": 10,
@@ -1338,7 +1353,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Jake Gregor",
       "batter": "Khaleel Pratt",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1349,13 +1364,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "David Alvarez",
-        "2B": "Dylan Littlefield",
-        "3B": null
+        "2B": null,
+        "3B": "Dylan Littlefield"
       },
       "runners_after": {
         "1B": "David Alvarez",
-        "2B": "Dylan Littlefield",
-        "3B": null
+        "2B": null,
+        "3B": "Dylan Littlefield"
       },
       "score": {
         "away": 10,
@@ -1365,7 +1380,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jack Briese",
+      "pitcher": "Caleb Freeman",
       "batter": "Alex Alicea",
       "outcome": "Walk",
       "count": "3-0",
@@ -1392,7 +1407,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jack Briese",
+      "pitcher": "Caleb Freeman",
       "batter": "Kyle Campbell",
       "outcome": "Single",
       "count": "0-0",
@@ -1408,7 +1423,7 @@
       },
       "runners_after": {
         "1B": "Kyle Campbell",
-        "2B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "score": {
@@ -1419,7 +1434,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jack Briese",
+      "pitcher": "Caleb Freeman",
       "batter": "Griffin Crain",
       "outcome": "Fielder's choice",
       "count": "2-2",
@@ -1430,13 +1445,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Kyle Campbell",
-        "2B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "runners_after": {
         "1B": "Griffin Crain",
         "2B": null,
-        "3B": null
+        "3B": "Alex Alicea"
       },
       "score": {
         "away": 10,
@@ -1446,19 +1461,21 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jack Briese",
+      "pitcher": "Gavin Faulkner",
       "batter": "Lucas Moore",
       "outcome": "Fielder's choice",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Alex Alicea"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Griffin Crain",
         "2B": null,
-        "3B": null
+        "3B": "Alex Alicea"
       },
       "runners_after": {
         "1B": "Lucas Moore",
@@ -1473,7 +1490,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jack Briese",
+      "pitcher": "Gavin Faulkner",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1488,8 +1505,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "score": {
@@ -1500,7 +1517,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jack Briese",
+      "pitcher": "Gavin Faulkner",
       "batter": "Bayram Hot",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1510,13 +1527,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "runners_after": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "score": {
@@ -1527,7 +1544,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Joe Olson",
       "batter": "Jackson Cauthron",
       "outcome": "Foul out",
       "count": "0-2",
@@ -1554,7 +1571,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Joe Olson",
       "batter": "Ricco Longo",
       "outcome": "Single",
       "count": "1-1",
@@ -1581,7 +1598,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Joe Olson",
       "batter": "Jackson Reid",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1596,8 +1613,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ricco Longo",
-        "2B": null,
+        "1B": null,
+        "2B": "Ricco Longo",
         "3B": null
       },
       "score": {
@@ -1608,7 +1625,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Joe Olson",
       "batter": "Boone Shevey",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1618,13 +1635,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Ricco Longo",
-        "2B": null,
+        "1B": null,
+        "2B": "Ricco Longo",
         "3B": null
       },
       "runners_after": {
-        "1B": "Ricco Longo",
-        "2B": null,
+        "1B": null,
+        "2B": "Ricco Longo",
         "3B": null
       },
       "score": {
@@ -1635,7 +1652,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jack Briese",
+      "pitcher": "Chardy Tierney",
       "batter": "Tague Davis",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1662,7 +1679,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jack Briese",
+      "pitcher": "Chardy Tierney",
       "batter": "Ben Slanker",
       "outcome": "Walk",
       "count": "3-2",
@@ -1689,7 +1706,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jack Briese",
+      "pitcher": "Chardy Tierney",
       "batter": "George Baker",
       "outcome": "Walk",
       "count": "3-2",
@@ -1705,7 +1722,7 @@
       },
       "runners_after": {
         "1B": "George Baker",
-        "2B": null,
+        "2B": "Ben Slanker",
         "3B": null
       },
       "score": {
@@ -1716,24 +1733,26 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jack Briese",
+      "pitcher": "Chardy Tierney",
       "batter": "Kade Elam",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "KBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ben Slanker"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "George Baker",
-        "2B": null,
+        "2B": "Ben Slanker",
         "3B": null
       },
       "runners_after": {
         "1B": "Kade Elam",
         "2B": null,
-        "3B": null
+        "3B": "George Baker"
       },
       "score": {
         "away": 12,
@@ -1743,7 +1762,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jack Briese",
+      "pitcher": "Chardy Tierney",
       "batter": "Zion Rose",
       "outcome": "Catcher interference",
       "count": "1-0",
@@ -1755,12 +1774,12 @@
       "runners_before": {
         "1B": "Kade Elam",
         "2B": null,
-        "3B": null
+        "3B": "George Baker"
       },
       "runners_after": {
         "1B": "Zion Rose",
-        "2B": null,
-        "3B": null
+        "2B": "Kade Elam",
+        "3B": "George Baker"
       },
       "score": {
         "away": 12,
@@ -1770,24 +1789,26 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jack Briese",
+      "pitcher": "Chardy Tierney",
       "batter": "Kyle Campbell",
       "outcome": "Groundout",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "George Baker"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Zion Rose",
-        "2B": null,
-        "3B": null
+        "2B": "Kade Elam",
+        "3B": "George Baker"
       },
       "runners_after": {
         "1B": "Zion Rose",
         "2B": null,
-        "3B": null
+        "3B": "Kade Elam"
       },
       "score": {
         "away": 13,
@@ -1797,7 +1818,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jack Briese",
+      "pitcher": "Rantz Payton",
       "batter": "Griffin Crain",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1809,12 +1830,12 @@
       "runners_before": {
         "1B": "Zion Rose",
         "2B": null,
-        "3B": null
+        "3B": "Kade Elam"
       },
       "runners_after": {
         "1B": "Zion Rose",
         "2B": null,
-        "3B": null
+        "3B": "Kade Elam"
       },
       "score": {
         "away": 13,
@@ -1824,7 +1845,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Joe Olson",
       "batter": "Kobe Benson",
       "outcome": "Single",
       "count": "0-1",
@@ -1851,7 +1872,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Joe Olson",
       "batter": "Pedro Moreno",
       "outcome": "Walk",
       "count": "3-2",
@@ -1867,7 +1888,7 @@
       },
       "runners_after": {
         "1B": "Pedro Moreno",
-        "2B": null,
+        "2B": "Kobe Benson",
         "3B": null
       },
       "score": {
@@ -1878,7 +1899,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Joe Olson",
       "batter": "Kobe Benson",
       "outcome": "\u2014",
       "count": null,
@@ -1889,12 +1910,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Pedro Moreno",
-        "2B": null,
+        "2B": "Kobe Benson",
         "3B": null
       },
       "runners_after": {
         "1B": "Pedro Moreno",
-        "2B": null,
+        "2B": "Kobe Benson",
         "3B": null
       },
       "score": {
@@ -1905,25 +1926,26 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Joe Olson",
       "batter": "Julius Scearce",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "FSBBFBF",
       "rbi": true,
       "runs_scored": [
+        "Pedro Moreno",
         "Julius Scearce"
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Pedro Moreno",
-        "2B": null,
+        "2B": "Kobe Benson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Pedro Moreno",
-        "2B": null,
+        "1B": null,
+        "2B": "Kobe Benson",
         "3B": null
       },
       "score": {
@@ -1934,7 +1956,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Joe Olson",
       "batter": "David Alvarez",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1944,13 +1966,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Pedro Moreno",
-        "2B": null,
+        "1B": null,
+        "2B": "Kobe Benson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Pedro Moreno",
-        "2B": null,
+        "1B": null,
+        "2B": "Kobe Benson",
         "3B": null
       },
       "score": {
@@ -1961,7 +1983,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Joe Olson",
       "batter": "Khaleel Pratt",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -1971,13 +1993,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Pedro Moreno",
-        "2B": null,
+        "1B": null,
+        "2B": "Kobe Benson",
         "3B": null
       },
       "runners_after": {
         "1B": "Khaleel Pratt",
-        "2B": null,
+        "2B": "Kobe Benson",
         "3B": null
       },
       "score": {
@@ -1988,7 +2010,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Anthony Karbowski",
       "batter": "Jackson Cauthron",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1999,12 +2021,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Khaleel Pratt",
-        "2B": null,
+        "2B": "Kobe Benson",
         "3B": null
       },
       "runners_after": {
         "1B": "Khaleel Pratt",
-        "2B": null,
+        "2B": "Kobe Benson",
         "3B": null
       },
       "score": {
@@ -2015,7 +2037,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jack Briese",
+      "pitcher": "Rantz Payton",
       "batter": "Lucas Moore",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2042,7 +2064,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jack Briese",
+      "pitcher": "Rantz Payton",
       "batter": "Bayram Hot",
       "outcome": "Single",
       "count": "2-2",
@@ -2069,7 +2091,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jack Briese",
+      "pitcher": "Rantz Payton",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2084,8 +2106,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bayram Hot",
-        "2B": null,
+        "1B": null,
+        "2B": "Bayram Hot",
         "3B": null
       },
       "score": {
@@ -2096,18 +2118,20 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jack Briese",
+      "pitcher": "Rantz Payton",
       "batter": "Tague Davis",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BKSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Bayram Hot"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bayram Hot",
-        "2B": null,
+        "1B": null,
+        "2B": "Bayram Hot",
         "3B": null
       },
       "runners_after": {
@@ -2123,7 +2147,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jack Briese",
+      "pitcher": "Rantz Payton",
       "batter": "Ben Slanker",
       "outcome": "Walk",
       "count": "3-1",
@@ -2139,7 +2163,7 @@
       },
       "runners_after": {
         "1B": "Ben Slanker",
-        "2B": null,
+        "2B": "Tague Davis",
         "3B": null
       },
       "score": {
@@ -2150,7 +2174,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jack Briese",
+      "pitcher": "Rantz Payton",
       "batter": "George Baker",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2161,13 +2185,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Ben Slanker",
-        "2B": null,
+        "2B": "Tague Davis",
         "3B": null
       },
       "runners_after": {
-        "1B": "Ben Slanker",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Ben Slanker",
+        "3B": "Tague Davis"
       },
       "score": {
         "away": 14,
@@ -2177,24 +2201,26 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jack Briese",
+      "pitcher": "Rantz Payton",
       "batter": "Kade Elam",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Tague Davis"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ben Slanker",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Ben Slanker",
+        "3B": "Tague Davis"
       },
       "runners_after": {
         "1B": "Kade Elam",
         "2B": null,
-        "3B": null
+        "3B": "Ben Slanker"
       },
       "score": {
         "away": 15,
@@ -2204,24 +2230,26 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jack Briese",
+      "pitcher": "Rantz Payton",
       "batter": "Tague Davis",
       "outcome": "Double",
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ben Slanker"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Kade Elam",
         "2B": null,
-        "3B": null
+        "3B": "Ben Slanker"
       },
       "runners_after": {
-        "1B": "Kade Elam",
+        "1B": null,
         "2B": "Tague Davis",
-        "3B": null
+        "3B": "Kade Elam"
       },
       "score": {
         "away": 16,
@@ -2231,7 +2259,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jack Briese",
+      "pitcher": "Clay Cartledge",
       "batter": "Jax Hisle",
       "outcome": "Walk",
       "count": "3-2",
@@ -2241,14 +2269,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kade Elam",
+        "1B": null,
         "2B": "Tague Davis",
-        "3B": null
+        "3B": "Kade Elam"
       },
       "runners_after": {
         "1B": "Jax Hisle",
         "2B": "Tague Davis",
-        "3B": null
+        "3B": "Kade Elam"
       },
       "score": {
         "away": 16,
@@ -2258,24 +2286,26 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jack Briese",
+      "pitcher": "Clay Cartledge",
       "batter": "Griffin Crain",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kade Elam"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jax Hisle",
         "2B": "Tague Davis",
-        "3B": null
+        "3B": "Kade Elam"
       },
       "runners_after": {
         "1B": "Griffin Crain",
-        "2B": "Tague Davis",
-        "3B": null
+        "2B": "Jax Hisle",
+        "3B": "Tague Davis"
       },
       "score": {
         "away": 17,
@@ -2285,7 +2315,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jack Briese",
+      "pitcher": "Clay Cartledge",
       "batter": "Lucas Moore",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2296,13 +2326,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Griffin Crain",
-        "2B": "Tague Davis",
-        "3B": null
+        "2B": "Jax Hisle",
+        "3B": "Tague Davis"
       },
       "runners_after": {
         "1B": "Griffin Crain",
-        "2B": "Tague Davis",
-        "3B": null
+        "2B": "Jax Hisle",
+        "3B": "Tague Davis"
       },
       "score": {
         "away": 17,
@@ -2312,7 +2342,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Anthony Karbowski",
       "batter": "Ricco Longo",
       "outcome": "Groundout",
       "count": "0-2",
@@ -2339,7 +2369,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Anthony Karbowski",
       "batter": "Jackson Reid",
       "outcome": "Groundout",
       "count": "2-0",
@@ -2366,7 +2396,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Anthony Karbowski",
       "batter": "Owen Barger",
       "outcome": "Double",
       "count": "0-0",
@@ -2393,7 +2423,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Kian Vorster",
+      "pitcher": "",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -2409,8 +2439,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Owen Barger",
-        "3B": null
+        "2B": null,
+        "3B": "Owen Barger"
       },
       "score": {
         "away": 17,
@@ -2420,7 +2450,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Kian Vorster",
+      "pitcher": "",
       "batter": "Kobe Benson",
       "outcome": "Groundout",
       "count": "2-0",
@@ -2431,13 +2461,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Owen Barger",
-        "3B": null
+        "2B": null,
+        "3B": "Owen Barger"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Owen Barger",
-        "3B": null
+        "2B": null,
+        "3B": "Owen Barger"
       },
       "score": {
         "away": 17,

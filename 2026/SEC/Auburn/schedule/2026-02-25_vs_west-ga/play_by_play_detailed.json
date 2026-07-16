@@ -3,7 +3,7 @@
   "date": "02/25/2026",
   "away_team": "West Ga.",
   "home_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -427,8 +427,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brandon McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "score": {
@@ -449,13 +449,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brandon McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brandon McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "score": {
@@ -554,7 +554,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Andon"
+        "Andon",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -603,7 +604,34 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Evimael",
+      "pitcher": "Evimael Quiles",
+      "batter": "Evimael",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 0
+      },
+      "description": "Evimael Quil to p for Maverick Tor."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Evimael Quiles",
       "batter": "Cade Belyeu",
       "outcome": "Groundout",
       "count": "0-0",
@@ -630,7 +658,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Evimael",
+      "pitcher": "Evimael Quiles",
       "batter": "Bristol Carter",
       "outcome": "Hit by pitch",
       "count": "3-2",
@@ -657,7 +685,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Evimael",
+      "pitcher": "Evimael Quiles",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -672,8 +700,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "score": {
@@ -684,22 +712,24 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Evimael",
+      "pitcher": "Evimael Quiles",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Bristol Carter"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -711,7 +741,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Evimael",
+      "pitcher": "Evimael Quiles",
       "batter": "Chase Fralick",
       "outcome": "Double",
       "count": "3-1",
@@ -721,12 +751,12 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": "Chase Fralick",
         "3B": null
       },
@@ -738,7 +768,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Evimael",
+      "pitcher": "Evimael Quiles",
       "batter": "Eric Guevara",
       "outcome": "Groundout",
       "count": "1-0",
@@ -748,12 +778,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": "Chase Fralick",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": "Chase Fralick",
         "3B": null
       },
@@ -765,7 +795,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Evimael",
+      "pitcher": "Zane Wright",
       "batter": "Ethin Bingaman",
       "outcome": "Groundout",
       "count": "2-2",
@@ -775,12 +805,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": "Chase Fralick",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": "Chase Fralick",
         "3B": null
       },
@@ -900,7 +930,34 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Zane",
+      "pitcher": "Zane Wright",
+      "batter": "Zane",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 1
+      },
+      "description": "Zane Wright to p for Evimael Quil."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Zane Wright",
       "batter": "Bub Terrell",
       "outcome": "Flyout",
       "count": "1-2",
@@ -927,7 +984,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Zane",
+      "pitcher": "Zane Wright",
       "batter": "Brandon McCraine",
       "outcome": "Single",
       "count": "0-1",
@@ -954,7 +1011,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Zane",
+      "pitcher": "Zane Wright",
       "batter": "Logan Gregorio",
       "outcome": "Walk",
       "count": "3-1",
@@ -981,7 +1038,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Zane",
+      "pitcher": "Zane Wright",
       "batter": "Todd Clay",
       "outcome": "Walk",
       "count": "3-0",
@@ -1008,7 +1065,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Zane",
+      "pitcher": "Zane Wright",
       "batter": "Cade Belyeu",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1035,7 +1092,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Zane",
+      "pitcher": "Zane Wright",
       "batter": "Bristol Carter",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1143,7 +1200,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Zane",
+      "pitcher": "Zane Wright",
       "batter": "Chase Fralick",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1170,7 +1227,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Zane",
+      "pitcher": "Rowan Park",
       "batter": "Eric Guevara",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1197,7 +1254,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Zane",
+      "pitcher": "Rowan Park",
       "batter": "Ethin Bingaman",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1306,6 +1363,33 @@
     {
       "inning": "Top 6",
       "pitcher": "Drew Whalen",
+      "batter": "Whalen, D. to p for Alvarez, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Fano",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Fano",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 1
+      },
+      "description": "Whalen, D. to p for Alvarez, A.."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Drew Whalen",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1386,7 +1470,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Rowan",
+      "pitcher": "Rowan Park",
+      "batter": "Rowan",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 1
+      },
+      "description": "Rowan Park to p for Zane Wright."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Rowan Park",
       "batter": "Bub Terrell",
       "outcome": "Lineout",
       "count": "3-2",
@@ -1413,7 +1524,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Rowan",
+      "pitcher": "Rowan Park",
       "batter": "Brandon McCraine",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1440,7 +1551,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Rowan",
+      "pitcher": "Davis Williams",
       "batter": "Logan Gregorio",
       "outcome": "Single",
       "count": "2-2",
@@ -1467,7 +1578,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Rowan",
+      "pitcher": "Davis Williams",
       "batter": "Todd Clay",
       "outcome": "Reached on error",
       "count": "0-1",
@@ -1494,7 +1605,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Rowan",
+      "pitcher": "Davis Williams",
       "batter": "Cade Belyeu",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1656,7 +1767,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Davis",
+      "pitcher": "Davis Williams",
+      "batter": "Davis",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 1
+      },
+      "description": "Davis Willia to p for Rowan Park."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Lex Kenny",
       "batter": "Bristol Carter",
       "outcome": "Pop out",
       "count": "3-2",
@@ -1683,7 +1821,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Davis",
+      "pitcher": "Lex Kenny",
       "batter": "Chase Fralick",
       "outcome": "Single",
       "count": "2-0",
@@ -1710,7 +1848,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Davis",
+      "pitcher": "Lex Kenny",
       "batter": "Eric Guevara",
       "outcome": "Fielder's choice",
       "count": "1-2",
@@ -1737,7 +1875,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Davis",
+      "pitcher": "Lex Kenny",
       "batter": "Ethin Bingaman",
       "outcome": "Single",
       "count": "2-0",
@@ -1764,7 +1902,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Lex",
+      "pitcher": "Lex Kenny",
+      "batter": "Lex",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Ethin Bingaman",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ethin Bingaman",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 1
+      },
+      "description": "Lex Kenny to p for Davis Willia."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Lex Kenny",
       "batter": "Bub Terrell",
       "outcome": "Fielder's choice",
       "count": "1-1",
@@ -1928,7 +2093,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Lex",
+      "pitcher": "Lex Kenny",
       "batter": "Brady",
       "outcome": "\u2014",
       "count": null,
@@ -1955,7 +2120,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Lex",
+      "pitcher": "Lex Kenny",
       "batter": "Hank",
       "outcome": "\u2014",
       "count": null,
@@ -1982,7 +2147,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Lex",
+      "pitcher": "Lex Kenny",
       "batter": "Brandon McCraine",
       "outcome": "Walk",
       "count": "3-2",
@@ -2009,7 +2174,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Lex",
+      "pitcher": "Lex Kenny",
       "batter": "Logan Gregorio",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2036,7 +2201,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Lex",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2051,8 +2216,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brandon McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "score": {
@@ -2063,7 +2228,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Lex",
+      "pitcher": "",
       "batter": "Lucas Steele",
       "outcome": "Groundout",
       "count": "3-1",
@@ -2073,13 +2238,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brandon McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brandon McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "score": {
@@ -2090,23 +2255,25 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Lex",
+      "pitcher": "",
       "batter": "Brandon McCraine",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brandon McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "runners_after": {
         "1B": "Brandon McCraine",
-        "2B": null,
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "score": {
@@ -2117,7 +2284,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Drew Whalen",
+      "pitcher": "Ryan Hetzler",
       "batter": "Guevara, E. to .",
       "outcome": "\u2014",
       "count": null,
@@ -2144,7 +2311,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Drew Whalen",
+      "pitcher": "Ryan Hetzler",
       "batter": "Farber, R. to ss for Steele, L..",
       "outcome": "\u2014",
       "count": null,
@@ -2171,7 +2338,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Drew Whalen",
+      "pitcher": "Ryan Hetzler",
       "batter": "McCraine, M. to rf.",
       "outcome": "\u2014",
       "count": null,
@@ -2199,6 +2366,33 @@
     {
       "inning": "Top 9",
       "pitcher": "Ryan Hetzler",
+      "batter": "Hetzler, R. to p for Whalen, D..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 2
+      },
+      "description": "Hetzler, R. to p for Whalen, D.."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": "Gabe",
       "outcome": "Walk",
       "count": "3-2",
@@ -2225,7 +2419,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": "Jacob",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2252,7 +2446,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": "Patrick",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2279,7 +2473,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": "Gabe",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2306,7 +2500,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Lex",
+      "pitcher": "",
       "batter": "Blane",
       "outcome": "\u2014",
       "count": null,
@@ -2333,7 +2527,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Lex",
+      "pitcher": "",
       "batter": "Bristol Carter",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2360,7 +2554,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Lex",
+      "pitcher": "",
       "batter": "Chase Fralick",
       "outcome": "Walk",
       "count": "3-0",
@@ -2387,7 +2581,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Lex",
+      "pitcher": "",
       "batter": "Eric Guevara",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2414,13 +2608,15 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Lex",
+      "pitcher": "",
       "batter": "Ethin Bingaman",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2441,7 +2637,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Lex",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2456,8 +2652,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethin Bingaman",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "score": {
@@ -2468,23 +2664,25 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Lex",
+      "pitcher": "",
       "batter": "Bub Terrell",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ethin Bingaman",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "runners_after": {
         "1B": "Bub Terrell",
-        "2B": null,
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "score": {

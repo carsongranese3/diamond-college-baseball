@@ -3,7 +3,7 @@
   "date": "04/14/2026",
   "away_team": "UNC Asheville",
   "home_team": "Tennessee",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -196,7 +196,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Blaine Brown",
+      "pitcher": "Taylor Tracey",
       "batter": "BROWN, B. to dh.",
       "outcome": "\u2014",
       "count": null,
@@ -223,7 +223,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Blaine Brown",
+      "pitcher": "Taylor Tracey",
       "batter": "TRACEY, T. to p.",
       "outcome": "\u2014",
       "count": null,
@@ -250,7 +250,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Blaine Brown",
+      "pitcher": "Taylor Tracey",
       "batter": "Jake Minarik",
       "outcome": "Foul out",
       "count": "1-2",
@@ -277,7 +277,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Blaine Brown",
+      "pitcher": "Taylor Tracey",
       "batter": "Ben Green",
       "outcome": "Flyout",
       "count": "0-2",
@@ -304,7 +304,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Blaine Brown",
+      "pitcher": "Taylor Tracey",
       "batter": "Tyler Parks",
       "outcome": "Flyout",
       "count": "3-2",
@@ -412,7 +412,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Blaine Brown",
+      "pitcher": "Taylor Tracey",
       "batter": "Eric Krumpe",
       "outcome": "Groundout",
       "count": "1-0",
@@ -439,7 +439,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Blaine Brown",
+      "pitcher": "Taylor Tracey",
       "batter": "Coleman McGinnis",
       "outcome": "Groundout",
       "count": "1-2",
@@ -466,7 +466,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Blaine Brown",
+      "pitcher": "Will Haas",
       "batter": "Jake Pereira",
       "outcome": "Single",
       "count": "3-2",
@@ -493,7 +493,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Blaine Brown",
+      "pitcher": "Will Haas",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -508,8 +508,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Pereira",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Pereira",
         "3B": null
       },
       "score": {
@@ -520,7 +520,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Blaine Brown",
+      "pitcher": "Will Haas",
       "batter": "Logan Lowe",
       "outcome": "Walk",
       "count": "3-0",
@@ -530,14 +530,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jake Pereira",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Pereira",
         "3B": null
       },
       "runners_after": {
         "1B": "Logan Lowe",
         "2B": null,
-        "3B": null
+        "3B": "Jake Pereira"
       },
       "score": {
         "away": 0,
@@ -547,7 +547,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Blaine Brown",
+      "pitcher": "Will Haas",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -559,12 +559,12 @@
       "runners_before": {
         "1B": "Logan Lowe",
         "2B": null,
-        "3B": null
+        "3B": "Jake Pereira"
       },
       "runners_after": {
-        "1B": "Logan Lowe",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Logan Lowe",
+        "3B": "Jake Pereira"
       },
       "score": {
         "away": 0,
@@ -574,7 +574,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Blaine Brown",
+      "pitcher": "Will Haas",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -584,13 +584,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Logan Lowe",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Logan Lowe",
+        "3B": "Jake Pereira"
       },
       "runners_after": {
-        "1B": "Logan Lowe",
-        "2B": null,
+        "1B": null,
+        "2B": "Logan Lowe",
         "3B": null
       },
       "score": {
@@ -661,7 +661,9 @@
       "count": "2-2",
       "pitches": "FSBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Nate Eisfelder"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -670,7 +672,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Nate Eisfelder",
+        "1B": null,
         "2B": "Garrett Wright",
         "3B": null
       },
@@ -688,17 +690,19 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Garrett Wright"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Nate Eisfelder",
+        "1B": null,
         "2B": "Garrett Wright",
         "3B": null
       },
       "runners_after": {
         "1B": "Reese Chapman",
-        "2B": "Garrett Wright",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -720,12 +724,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Reese Chapman",
-        "2B": "Garrett Wright",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Reese Chapman",
-        "2B": "Garrett Wright",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -733,6 +737,33 @@
         "home": 2
       },
       "description": "FORD, H. lined into double play ss to 1b (0-1 F) CHAPMAN, R. out on the play."
+    },
+    {
+      "inning": "Top 4",
+      "pitcher": "Will Haas",
+      "batter": "HAAS, W. to p for TRACEY, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 2
+      },
+      "description": "HAAS, W. to p for TRACEY, T.."
     },
     {
       "inning": "Top 4",
@@ -763,7 +794,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Will Haas",
+      "pitcher": "Ethan Baiotto",
       "batter": "Patrick Gillen",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -790,7 +821,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Will Haas",
+      "pitcher": "Ethan Baiotto",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -817,7 +848,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Will Haas",
+      "pitcher": "Ethan Baiotto",
       "batter": "Jake Minarik",
       "outcome": "Single",
       "count": "1-1",
@@ -844,7 +875,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Will Haas",
+      "pitcher": "Ethan Baiotto",
       "batter": "Ben Green",
       "outcome": "Flyout",
       "count": "2-2",
@@ -949,6 +980,33 @@
         "home": 2
       },
       "description": "BROWN, B. grounded out to (3-1 BFBB)."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Ethan Baiotto",
+      "batter": "BAIOTTO, E. to p for HAAS, W..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 2
+      },
+      "description": "BAIOTTO, E. to p for HAAS, W.."
     },
     {
       "inning": "Top 5",
@@ -1103,7 +1161,7 @@
       },
       "runners_after": {
         "1B": "Nate Eisfelder",
-        "2B": null,
+        "2B": "Levi Clark",
         "3B": null
       },
       "score": {
@@ -1125,12 +1183,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Nate Eisfelder",
-        "2B": null,
+        "2B": "Levi Clark",
         "3B": null
       },
       "runners_after": {
         "1B": "Nate Eisfelder",
-        "2B": null,
+        "2B": "Levi Clark",
         "3B": null
       },
       "score": {
@@ -1152,12 +1210,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Nate Eisfelder",
-        "2B": null,
+        "2B": "Levi Clark",
         "3B": null
       },
       "runners_after": {
         "1B": "Nate Eisfelder",
-        "2B": null,
+        "2B": "Levi Clark",
         "3B": null
       },
       "score": {
@@ -1168,7 +1226,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ethan Baiotto",
+      "pitcher": "Brady Frederick",
       "batter": "Jake Pereira",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1195,7 +1253,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ethan Baiotto",
+      "pitcher": "Brady Frederick",
       "batter": "Logan Lowe",
       "outcome": "Walk",
       "count": "3-2",
@@ -1222,7 +1280,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ethan Baiotto",
+      "pitcher": "Brady Frederick",
       "batter": "Blaize Johnson",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1249,7 +1307,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ethan Baiotto",
+      "pitcher": "Brady Frederick",
       "batter": "Patrick Gillen",
       "outcome": "Single",
       "count": "1-0",
@@ -1273,6 +1331,33 @@
         "home": 2
       },
       "description": "P. Gillen singled to shortstop (1-0 B) L. Lowe advanced to second."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Brady Frederick",
+      "batter": "FREDERICK, B to p for BAIOTTO, E..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Patrick Gillen",
+        "2B": "Logan Lowe",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Patrick Gillen",
+        "2B": "Logan Lowe",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 2
+      },
+      "description": "FREDERICK, B to p for BAIOTTO, E.."
     },
     {
       "inning": "Top 6",
@@ -1373,8 +1458,8 @@
       },
       "runners_after": {
         "1B": "Trent Grindlinger",
-        "2B": "Henry Ford",
-        "3B": null
+        "2B": "Blake Grimmer",
+        "3B": "Henry Ford"
       },
       "score": {
         "away": 0,
@@ -1395,13 +1480,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Trent Grindlinger",
-        "2B": "Henry Ford",
-        "3B": null
+        "2B": "Blake Grimmer",
+        "3B": "Henry Ford"
       },
       "runners_after": {
         "1B": "Trent Grindlinger",
-        "2B": "Henry Ford",
-        "3B": null
+        "2B": "Blake Grimmer",
+        "3B": "Henry Ford"
       },
       "score": {
         "away": 0,
@@ -1417,13 +1502,16 @@
       "count": "1-2",
       "pitches": "FFFBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Blake Grimmer",
+        "Henry Ford"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Trent Grindlinger",
-        "2B": "Henry Ford",
-        "3B": null
+        "2B": "Blake Grimmer",
+        "3B": "Henry Ford"
       },
       "runners_after": {
         "1B": null,
@@ -1519,7 +1607,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brady Frederick",
+      "pitcher": "Brayden Krenzel",
       "batter": "ABERNATHY, J to cf for EISFELDER, N.",
       "outcome": "\u2014",
       "count": null,
@@ -1546,7 +1634,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brady Frederick",
+      "pitcher": "Brayden Krenzel",
       "batter": "Ben Green",
       "outcome": "Walk",
       "count": "3-1",
@@ -1573,7 +1661,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brady Frederick",
+      "pitcher": "Brayden Krenzel",
       "batter": "Tyler Parks",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1600,7 +1688,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brady Frederick",
+      "pitcher": "Brayden Krenzel",
       "batter": "Eric Krumpe",
       "outcome": "Fielder's choice",
       "count": "3-2",
@@ -1627,7 +1715,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brady Frederick",
+      "pitcher": "Brayden Krenzel",
       "batter": "Coleman McGinnis",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -1654,7 +1742,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brady Frederick",
+      "pitcher": "",
       "batter": "Jake Pereira",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1683,7 +1771,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brady Frederick",
+      "pitcher": "",
       "batter": "Logan Lowe",
       "outcome": "\u2014",
       "count": "1-0",
@@ -1791,12 +1879,12 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "N.",
-      "batter": "Blake Grimmer",
-      "outcome": "Single",
-      "count": "3-1",
-      "pitches": "BBBK",
-      "rbi": true,
+      "pitcher": "Nic Melton",
+      "batter": "N. Melton",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
       "runs_scored": [],
       "outs_before": 1,
       "outs_after": 1,
@@ -1806,8 +1894,37 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Blake Grimmer",
+        "1B": "Henry Ford",
         "2B": "Garrett Wright",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 4
+      },
+      "description": "N. Melton to p for G. Crum."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Nic Melton",
+      "batter": "Blake Grimmer",
+      "outcome": "Single",
+      "count": "3-1",
+      "pitches": "BBBK",
+      "rbi": true,
+      "runs_scored": [
+        "Garrett Wright"
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Henry Ford",
+        "2B": "Garrett Wright",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Blake Grimmer",
+        "2B": "Henry Ford",
         "3B": null
       },
       "score": {
@@ -1818,7 +1935,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "N.",
+      "pitcher": "Nic Melton",
       "batter": "Trent Grindlinger",
       "outcome": "Reached on error",
       "count": "1-0",
@@ -1829,13 +1946,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Blake Grimmer",
-        "2B": "Garrett Wright",
+        "2B": "Henry Ford",
         "3B": null
       },
       "runners_after": {
         "1B": "Trent Grindlinger",
-        "2B": "Garrett Wright",
-        "3B": null
+        "2B": "Blake Grimmer",
+        "3B": "Henry Ford"
       },
       "score": {
         "away": 1,
@@ -1845,7 +1962,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "N.",
+      "pitcher": "Nic Melton",
       "batter": "Blaine Brown",
       "outcome": "Infield fly",
       "count": "1-1",
@@ -1856,13 +1973,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Trent Grindlinger",
-        "2B": "Garrett Wright",
-        "3B": null
+        "2B": "Blake Grimmer",
+        "3B": "Henry Ford"
       },
       "runners_after": {
         "1B": "Trent Grindlinger",
-        "2B": "Garrett Wright",
-        "3B": null
+        "2B": "Blake Grimmer",
+        "3B": "Henry Ford"
       },
       "score": {
         "away": 1,
@@ -1872,7 +1989,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "N.",
+      "pitcher": "Nic Melton",
       "batter": "Manny Marin",
       "outcome": "Home run",
       "count": "1-0",
@@ -1880,18 +1997,20 @@
       "rbi": true,
       "runs_scored": [
         "Trent Grindlinger",
+        "Blake Grimmer",
+        "Henry Ford",
         "Manny Marin"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Trent Grindlinger",
-        "2B": "Garrett Wright",
-        "3B": null
+        "2B": "Blake Grimmer",
+        "3B": "Henry Ford"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Garrett Wright",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1902,7 +2021,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "N.",
+      "pitcher": "Daylinh Nguyen-Brown",
       "batter": "Levi Clark",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1913,12 +2032,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Garrett Wright",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Garrett Wright",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1929,7 +2048,34 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "",
+      "batter": "KRENZEL, B. to p for FREDERICK, B.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 9
+      },
+      "description": "KRENZEL, B. to p for FREDERICK, B."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "",
       "batter": "Blaize Johnson",
       "outcome": "Pop out",
       "count": "1-0",
@@ -1956,7 +2102,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "",
       "batter": "Patrick Gillen",
       "outcome": "Walk",
       "count": "3-1",
@@ -1983,7 +2129,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "",
       "batter": "Jake Minarik",
       "outcome": "Single",
       "count": "1-1",
@@ -2010,7 +2156,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2037,7 +2183,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "",
       "batter": "Ben Green",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2064,7 +2210,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "",
       "batter": "Tyler Parks",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2133,8 +2279,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jay Abernathy",
-        "2B": null,
+        "1B": null,
+        "2B": "Jay Abernathy",
         "3B": null
       },
       "score": {
@@ -2155,13 +2301,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jay Abernathy",
-        "2B": null,
+        "1B": null,
+        "2B": "Jay Abernathy",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jay Abernathy",
-        "2B": null,
+        "1B": null,
+        "2B": "Jay Abernathy",
         "3B": null
       },
       "score": {
@@ -2182,14 +2328,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jay Abernathy",
-        "2B": null,
+        "1B": null,
+        "2B": "Jay Abernathy",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jay Abernathy",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jay Abernathy"
       },
       "score": {
         "away": 1,
@@ -2209,14 +2355,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jay Abernathy",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jay Abernathy"
       },
       "runners_after": {
         "1B": "Reese Chapman",
         "2B": null,
-        "3B": null
+        "3B": "Jay Abernathy"
       },
       "score": {
         "away": 1,
@@ -2238,12 +2384,12 @@
       "runners_before": {
         "1B": "Reese Chapman",
         "2B": null,
-        "3B": null
+        "3B": "Jay Abernathy"
       },
       "runners_after": {
         "1B": "Henry Ford",
-        "2B": null,
-        "3B": null
+        "2B": "Reese Chapman",
+        "3B": "Jay Abernathy"
       },
       "score": {
         "away": 1,
@@ -2259,17 +2405,19 @@
       "count": "2-2",
       "pitches": "BBFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jay Abernathy"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Henry Ford",
-        "2B": null,
-        "3B": null
+        "2B": "Reese Chapman",
+        "3B": "Jay Abernathy"
       },
       "runners_after": {
         "1B": "Finley Bates",
-        "2B": null,
+        "2B": "Henry Ford",
         "3B": null
       },
       "score": {
@@ -2280,24 +2428,26 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Daylinh Nguyen-Brown",
+      "pitcher": "",
       "batter": "Trent Grindlinger",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Henry Ford"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Finley Bates",
-        "2B": null,
+        "2B": "Henry Ford",
         "3B": null
       },
       "runners_after": {
         "1B": "Trent Grindlinger",
         "2B": null,
-        "3B": null
+        "3B": "Finley Bates"
       },
       "score": {
         "away": 1,

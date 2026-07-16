@@ -3,7 +3,7 @@
   "date": "03/31/2026",
   "away_team": "Miami (OH)",
   "home_team": "Kentucky",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -366,7 +366,9 @@
       "count": "3-1",
       "pitches": "BBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -414,7 +416,34 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Taylor",
+      "pitcher": "Taylor Echols",
+      "batter": "Taylor",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 0
+      },
+      "description": "Taylor Echol to p for Jake Tedesco."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Taylor Echols",
       "batter": "Ethan Hindle",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -441,7 +470,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Taylor",
+      "pitcher": "Taylor Echols",
       "batter": "Will Marcy",
       "outcome": "Flyout",
       "count": "2-0",
@@ -468,7 +497,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Taylor",
+      "pitcher": "Taylor Echols",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -483,8 +512,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethan Hindle",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethan Hindle",
         "3B": null
       },
       "score": {
@@ -495,23 +524,25 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Taylor",
+      "pitcher": "Taylor Echols",
       "batter": "Carson Hansen",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Ethan Hindle",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethan Hindle",
         "3B": null
       },
       "runners_after": {
         "1B": "Carson Hansen",
-        "2B": null,
+        "2B": "Ethan Hindle",
         "3B": null
       },
       "score": {
@@ -522,7 +553,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Taylor",
+      "pitcher": "Taylor Echols",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -533,12 +564,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Carson Hansen",
-        "2B": null,
+        "2B": "Ethan Hindle",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": null,
+        "2B": "Ethan Hindle",
         "3B": null
       },
       "score": {
@@ -549,7 +580,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Taylor",
+      "pitcher": "Taylor Echols",
       "batter": "Ryan Schwartz",
       "outcome": "Single",
       "count": "1-1",
@@ -560,12 +591,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": null,
+        "2B": "Ethan Hindle",
         "3B": null
       },
       "runners_after": {
         "1B": "Ryan Schwartz",
-        "2B": null,
+        "2B": "Ethan Hindle",
         "3B": null
       },
       "score": {
@@ -576,7 +607,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Taylor",
+      "pitcher": "Taylor Echols",
       "batter": "Tagger Tyson",
       "outcome": "Walk",
       "count": "3-2",
@@ -587,12 +618,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Ryan Schwartz",
-        "2B": null,
+        "2B": "Ethan Hindle",
         "3B": null
       },
       "runners_after": {
         "1B": "Tagger Tyson",
-        "2B": null,
+        "2B": "Ethan Hindle",
         "3B": null
       },
       "score": {
@@ -603,7 +634,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Taylor",
+      "pitcher": "Kaden Pfeffer",
       "batter": "Jayce Tharnish",
       "outcome": "Flyout",
       "count": "2-2",
@@ -614,12 +645,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Tagger Tyson",
-        "2B": null,
+        "2B": "Ethan Hindle",
         "3B": null
       },
       "runners_after": {
         "1B": "Tagger Tyson",
-        "2B": null,
+        "2B": "Ethan Hindle",
         "3B": null
       },
       "score": {
@@ -765,7 +796,34 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Kaden",
+      "pitcher": "Kaden Pfeffer",
+      "batter": "Kaden",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 1
+      },
+      "description": "Kaden Pfeffe to p for Taylor Echol."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Kaden Pfeffer",
       "batter": "Luke Lawrence",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -792,7 +850,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Kaden",
+      "pitcher": "Kaden Pfeffer",
       "batter": "Tyler Bell",
       "outcome": "Groundout",
       "count": "2-2",
@@ -819,7 +877,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Kaden",
+      "pitcher": "Kaden Pfeffer",
       "batter": "Hudson Brown",
       "outcome": "Flyout",
       "count": "1-1",
@@ -846,7 +904,34 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "C.",
+      "pitcher": "Chase Alderman",
+      "batter": "C. Alderman",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 1
+      },
+      "description": "C. Alderman to p for C. Mattison."
+    },
+    {
+      "inning": "Top 4",
+      "pitcher": "Chase Alderman",
       "batter": "Keenan",
       "outcome": "Single",
       "count": "1-1",
@@ -873,13 +958,15 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "C.",
+      "pitcher": "Chase Alderman",
       "batter": "Diego",
       "outcome": "Flyout",
       "count": "2-2",
       "pitches": "KSFBFFFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -900,7 +987,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "C.",
+      "pitcher": "Chase Alderman",
       "batter": "Christopher",
       "outcome": "Groundout",
       "count": "0-0",
@@ -927,7 +1014,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "C.",
+      "pitcher": "Chase Alderman",
       "batter": "Marcus",
       "outcome": "Single",
       "count": "0-1",
@@ -954,7 +1041,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "C.",
+      "pitcher": "Tommy Skelding",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -981,7 +1068,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "C.",
+      "pitcher": "Tommy Skelding",
       "batter": "Ryan",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1008,7 +1095,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kaden",
+      "pitcher": "Kaden Pfeffer",
       "batter": "Ethan Hindle",
       "outcome": "Walk",
       "count": "3-2",
@@ -1035,7 +1122,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kaden",
+      "pitcher": "Kaden Pfeffer",
       "batter": "Will Marcy",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1062,14 +1149,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kaden",
+      "pitcher": "Cameron Novak",
       "batter": "Carson Hansen",
       "outcome": "Home run",
       "count": "2-2",
       "pitches": "BFSFB",
       "rbi": true,
       "runs_scored": [
-        "Carson Hansen"
+        "Carson Hansen",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1091,7 +1179,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kaden",
+      "pitcher": "Cameron Novak",
       "batter": "Ryan Schwartz",
       "outcome": "Walk",
       "count": "3-2",
@@ -1118,7 +1206,34 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cameron",
+      "pitcher": "Carson Byers",
+      "batter": "Cameron",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Ryan Schwartz",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ryan Schwartz",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 3
+      },
+      "description": "Cameron Nova to p for Kaden Pfeffe."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Carson Byers",
       "batter": "Tagger Tyson",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -1145,7 +1260,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cameron",
+      "pitcher": "Carson Byers",
       "batter": "Jayce Tharnish",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -1172,7 +1287,34 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Carson",
+      "pitcher": "Carson Byers",
+      "batter": "Carson",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Jayce Tharnish",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Jayce Tharnish",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 3
+      },
+      "description": "Carson Byers to p for Cameron Nova."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Carson Byers",
       "batter": "Luke Lawrence",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1199,13 +1341,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Carson",
+      "pitcher": "Carson Byers",
       "batter": "Tyler Bell",
       "outcome": "Hit by pitch",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1226,13 +1370,16 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Carson",
+      "pitcher": "Marc Iozzo",
       "batter": "Hudson Brown",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "KS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1253,7 +1400,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Carson",
+      "pitcher": "Marc Iozzo",
       "batter": "Ethan Hindle",
       "outcome": "Walk",
       "count": "3-1",
@@ -1280,13 +1427,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Carson",
+      "pitcher": "Marc Iozzo",
       "batter": "Will Marcy",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BSBFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1307,7 +1456,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Carson",
+      "pitcher": "Marc Iozzo",
       "batter": "Carson Hansen",
       "outcome": "Lineout",
       "count": "2-1",
@@ -1334,7 +1483,34 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "T.",
+      "pitcher": "Tommy Skelding",
+      "batter": "T. Skelding",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 7
+      },
+      "description": "T. Skelding to p for C. Alderman."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Tommy Skelding",
       "batter": "Evan",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1361,7 +1537,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "T.",
+      "pitcher": "Tommy Skelding",
       "batter": "Tommy",
       "outcome": "Reached on error",
       "count": "1-1",
@@ -1388,7 +1564,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "T.",
+      "pitcher": "Tommy Skelding",
       "batter": "Dominic",
       "outcome": "Walk",
       "count": "3-1",
@@ -1415,7 +1591,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "T.",
+      "pitcher": "Tommy Skelding",
       "batter": "Matt",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -1442,13 +1618,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "T.",
+      "pitcher": "Tommy Skelding",
       "batter": "Keenan",
       "outcome": "Fielder's choice",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1469,13 +1647,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "T.",
+      "pitcher": "Burkley Bounds",
       "batter": "Diego",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1496,7 +1676,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "T.",
+      "pitcher": "Burkley Bounds",
       "batter": "Christopher",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1523,7 +1703,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Marc",
+      "pitcher": "Marc Iozzo",
+      "batter": "Marc",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 7
+      },
+      "description": "Marc Iozzo to p for Carson Byers."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Marc Iozzo",
       "batter": "Ryan Schwartz",
       "outcome": "Foul out",
       "count": "0-0",
@@ -1550,7 +1757,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Marc",
+      "pitcher": "Marc Iozzo",
       "batter": "Tagger Tyson",
       "outcome": "Double",
       "count": "1-2",
@@ -1577,7 +1784,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Marc",
+      "pitcher": "Marc Iozzo",
       "batter": "Jayce Tharnish",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1604,7 +1811,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Marc",
+      "pitcher": "Marc Iozzo",
       "batter": "Luke Lawrence",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1631,7 +1838,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "B.",
+      "pitcher": "Burkley Bounds",
+      "batter": "B. Bounds",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 7
+      },
+      "description": "B. Bounds to p for T. Skelding."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Burkley Bounds",
       "batter": "Marcus",
       "outcome": "Walk",
       "count": "3-2",
@@ -1658,13 +1892,15 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "B.",
+      "pitcher": "Burkley Bounds",
       "batter": "Ryan",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "KFBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1685,7 +1921,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "B.",
+      "pitcher": "Tristan Hunter",
       "batter": "Evan",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1712,7 +1948,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "B.",
+      "pitcher": "Tristan Hunter",
       "batter": "Tommy",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -1739,13 +1975,15 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "B.",
+      "pitcher": "Tristan Hunter",
       "batter": "Dominic",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1766,7 +2004,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "T.",
+      "pitcher": "Tristan Hunter",
+      "batter": "T. Hunter",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Dominic",
+        "2B": "Ryan",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Dominic",
+        "2B": "Ryan",
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 7
+      },
+      "description": "T. Hunter to p for B. Bounds."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Tristan Hunter",
       "batter": "Matt",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1793,13 +2058,15 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "T.",
+      "pitcher": "William Coleman",
       "batter": "Keenan",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "KBSBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1820,7 +2087,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "T.",
+      "pitcher": "William Coleman",
       "batter": "Diego",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1847,13 +2114,16 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "T.",
+      "pitcher": "William Coleman",
       "batter": "Christopher",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1874,7 +2144,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "T.",
+      "pitcher": "William Coleman",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1889,8 +2159,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Christopher",
-        "2B": "Ryan",
+        "1B": null,
+        "2B": "Christopher",
         "3B": null
       },
       "score": {
@@ -1901,7 +2171,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "T.",
+      "pitcher": "William Coleman",
       "batter": "Marcus",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1911,13 +2181,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Christopher",
-        "2B": "Ryan",
+        "1B": null,
+        "2B": "Christopher",
         "3B": null
       },
       "runners_after": {
-        "1B": "Christopher",
-        "2B": "Ryan",
+        "1B": null,
+        "2B": "Christopher",
         "3B": null
       },
       "score": {
@@ -1928,7 +2198,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Marc",
+      "pitcher": "Marc Iozzo",
       "batter": "Tyler Bell",
       "outcome": "Single",
       "count": "2-1",
@@ -1955,7 +2225,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Marc",
+      "pitcher": "Marc Iozzo",
       "batter": "Hudson Brown",
       "outcome": "Walk",
       "count": "3-1",
@@ -1982,7 +2252,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Marc",
+      "pitcher": "Connor Preisel",
       "batter": "Ethan Hindle",
       "outcome": "Walk",
       "count": "3-1",
@@ -2009,13 +2279,16 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Marc",
+      "pitcher": "Connor Preisel",
       "batter": "Will Marcy",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -2036,7 +2309,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Marc",
+      "pitcher": "Connor Preisel",
       "batter": "Carson Hansen",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2063,13 +2336,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Marc",
+      "pitcher": "Connor Preisel",
       "batter": "Ryan Schwartz",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -2090,7 +2365,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Marc",
+      "pitcher": "Landon Fulk",
       "batter": "Tagger Tyson",
       "outcome": "Flyout",
       "count": "1-0",
@@ -2117,7 +2392,34 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "W.",
+      "pitcher": "Nile Adcock",
+      "batter": "W. Coleman",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 10,
+        "home": 10
+      },
+      "description": "W. Coleman to p for T. Hunter."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Nile Adcock",
       "batter": "Ryan",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2144,7 +2446,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "W.",
+      "pitcher": "Nile Adcock",
       "batter": "Evan",
       "outcome": "Hit by pitch",
       "count": "3-1",
@@ -2171,7 +2473,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "W.",
+      "pitcher": "Nile Adcock",
       "batter": "Tommy",
       "outcome": "Reached on error",
       "count": "0-0",
@@ -2198,7 +2500,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "W.",
+      "pitcher": "Nile Adcock",
       "batter": "Dominic",
       "outcome": "Hit by pitch",
       "count": "3-1",
@@ -2225,7 +2527,34 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
+      "batter": "N. Adcock",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Dominic",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Dominic",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 10,
+        "home": 10
+      },
+      "description": "N. Adcock to p for W. Coleman."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Nile Adcock",
       "batter": "Mason",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2252,7 +2581,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
       "batter": "Keenan",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2279,7 +2608,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Connor",
+      "pitcher": "Landon Fulk",
+      "batter": "Connor",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 10,
+        "home": 10
+      },
+      "description": "Connor Preis to p for Marc Iozzo."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Landon Fulk",
       "batter": "Carson",
       "outcome": "\u2014",
       "count": null,
@@ -2306,7 +2662,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Connor",
+      "pitcher": "Landon Fulk",
       "batter": "Jayce Tharnish",
       "outcome": "Single",
       "count": "1-1",
@@ -2333,7 +2689,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Connor",
+      "pitcher": "Landon Fulk",
       "batter": "Luke Lawrence",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2360,7 +2716,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Connor",
+      "pitcher": "Landon Fulk",
       "batter": "Tyler Bell",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -2387,7 +2743,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Connor",
+      "pitcher": "Luke Ross",
       "batter": "Hudson Brown",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -2414,13 +2770,42 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Landon",
+      "pitcher": "Alex Gay",
+      "batter": "Landon",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Hudson Brown",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Hudson Brown",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 10,
+        "home": 10
+      },
+      "description": "Landon Fulk to p for Connor Preis."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Alex Gay",
       "batter": "Ethan Hindle",
       "outcome": "Hit by pitch",
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2441,7 +2826,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Landon",
+      "pitcher": "",
       "batter": "Will Marcy",
       "outcome": "Grounded into double play",
       "count": "0-0",
@@ -2468,7 +2853,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
       "batter": "Diego",
       "outcome": "Groundout",
       "count": "2-1",
@@ -2495,7 +2880,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
       "batter": "Christopher",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2522,7 +2907,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Marcus",
       "outcome": "Pop out",
       "count": "3-2",
@@ -2549,7 +2934,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Landon",
+      "pitcher": "",
       "batter": "Carson Hansen",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2576,7 +2961,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Landon",
+      "pitcher": "",
       "batter": "Ryan Schwartz",
       "outcome": "Single",
       "count": "1-0",
@@ -2603,7 +2988,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Landon",
+      "pitcher": "",
       "batter": "Tagger Tyson",
       "outcome": "Walk",
       "count": "3-0",
@@ -2630,13 +3015,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Landon",
+      "pitcher": "",
       "batter": "Jayce Tharnish",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2657,7 +3044,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke",
+      "pitcher": "",
+      "batter": "Luke",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Jayce Tharnish",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Jayce Tharnish",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 10,
+        "home": 12
+      },
+      "description": "Luke Ross to p for Landon Fulk."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2672,8 +3086,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jayce Tharnish",
-        "2B": null,
+        "1B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "score": {
@@ -2684,7 +3098,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke",
+      "pitcher": "",
       "batter": "Luke Lawrence",
       "outcome": "Walk",
       "count": "3-0",
@@ -2694,13 +3108,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jayce Tharnish",
-        "2B": null,
+        "1B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "runners_after": {
         "1B": "Luke Lawrence",
-        "2B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "score": {
@@ -2711,23 +3125,52 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Alex",
-      "batter": "Tyler Bell",
-      "outcome": "Walk",
-      "count": "3-0",
-      "pitches": "BBBB",
-      "rbi": true,
+      "pitcher": "",
+      "batter": "Alex",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
       "runs_scored": [],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Luke Lawrence",
-        "2B": null,
+        "2B": "Jayce Tharnish",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Luke Lawrence",
+        "2B": "Jayce Tharnish",
+        "3B": null
+      },
+      "score": {
+        "away": 10,
+        "home": 12
+      },
+      "description": "Alex Gay to p for Luke Ross."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
+      "batter": "Tyler Bell",
+      "outcome": "Walk",
+      "count": "3-0",
+      "pitches": "BBBB",
+      "rbi": true,
+      "runs_scored": [
+        null
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Luke Lawrence",
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "runners_after": {
         "1B": "Tyler Bell",
-        "2B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "score": {
@@ -2738,23 +3181,25 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Alex",
+      "pitcher": "",
       "batter": "Hudson Brown",
       "outcome": "Flyout",
       "count": "0-2",
       "pitches": "FS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Tyler Bell",
-        "2B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "runners_after": {
         "1B": "Tyler Bell",
-        "2B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "score": {
@@ -2765,7 +3210,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Alex",
+      "pitcher": "",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -2776,12 +3221,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Tyler Bell",
-        "2B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "score": {
@@ -2792,7 +3237,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "S. Campbell",
       "outcome": "\u2014",
       "count": null,
@@ -2819,7 +3264,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Ryan",
       "outcome": "Groundout",
       "count": "2-1",
@@ -2846,7 +3291,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Evan",
       "outcome": "Single",
       "count": "1-0",
@@ -2873,13 +3318,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Tommy",
       "outcome": "Double",
       "count": "0-2",
       "pitches": "KF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2900,7 +3347,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Dominic",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2927,7 +3374,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Carson",
       "outcome": "Groundout",
       "count": "2-1",

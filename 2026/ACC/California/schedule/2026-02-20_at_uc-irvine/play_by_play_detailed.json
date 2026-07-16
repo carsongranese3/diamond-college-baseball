@@ -3,7 +3,7 @@
   "date": "02/20/2026",
   "away_team": "California",
   "home_team": "UC Irvine",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -661,7 +661,9 @@
       "count": "1-1",
       "pitches": "BS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -688,7 +690,9 @@
       "count": "0-2",
       "pitches": "FFFFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -931,7 +935,9 @@
       "count": "1-2",
       "pitches": "BSKF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -1021,8 +1027,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Farmer, T. walked (3-2 BKBBKB).",
-        "2B": "Zach Doyle",
+        "1B": null,
+        "2B": "Farmer, T. walked (3-2 BKBBKB).",
         "3B": null
       },
       "score": {
@@ -1039,17 +1045,20 @@
       "count": "2-1",
       "pitches": "BKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Farmer, T. walked (3-2 BKBBKB).",
-        "2B": "Zach Doyle",
+        "1B": null,
+        "2B": "Farmer, T. walked (3-2 BKBBKB).",
         "3B": null
       },
       "runners_after": {
         "1B": "Alonso Reyes",
-        "2B": "Zach Doyle",
+        "2B": "Farmer, T. walked (3-2 BKBBKB).",
         "3B": null
       },
       "score": {
@@ -1071,12 +1080,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Alonso Reyes",
-        "2B": "Zach Doyle",
+        "2B": "Farmer, T. walked (3-2 BKBBKB).",
         "3B": null
       },
       "runners_after": {
         "1B": "Alonso Reyes",
-        "2B": "Zach Doyle",
+        "2B": "Farmer, T. walked (3-2 BKBBKB).",
         "3B": null
       },
       "score": {
@@ -1633,7 +1642,9 @@
       "count": "3-2",
       "pitches": "SBBKBFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1660,7 +1671,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1843,7 +1856,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Trevor Hansen",
+      "pitcher": "Peyton Rodgers",
       "batter": "Daniel Murillo",
       "outcome": "Triple",
       "count": "1-0",
@@ -1871,12 +1884,41 @@
     {
       "inning": "Top 9",
       "pitcher": "Peyton Rodgers",
+      "batter": "Rodgers, P. to p for Hansen, Tr..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": "Daniel Murillo"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": "Daniel Murillo"
+      },
+      "score": {
+        "away": 2,
+        "home": 5
+      },
+      "description": "Rodgers, P. to p for Hansen, Tr.."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "Peyton Rodgers",
       "batter": "Joshua Hanson",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "BKSF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1897,7 +1939,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Peyton Rodgers",
+      "pitcher": "",
       "batter": "Kevin Jeon",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1924,7 +1966,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Peyton Rodgers",
+      "pitcher": "",
       "batter": "Cade Campbell",
       "outcome": "Lineout",
       "count": "1-2",

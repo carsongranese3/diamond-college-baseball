@@ -3,7 +3,7 @@
   "date": "03/21/2026",
   "away_team": "Oklahoma",
   "home_team": "LSU",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -205,7 +205,8 @@
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Serna"
+        "Serna",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -512,8 +513,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jason Walk",
-        "2B": null,
+        "1B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "score": {
@@ -534,13 +535,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jason Walk",
-        "2B": null,
+        "1B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "runners_after": {
         "1B": "Trey Gambill",
-        "2B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "score": {
@@ -562,12 +563,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Trey Gambill",
-        "2B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "runners_after": {
         "1B": "Camden Johnson",
-        "2B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "score": {
@@ -589,12 +590,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Camden Johnson",
-        "2B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "runners_after": {
         "1B": "Camden Johnson",
-        "2B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "score": {
@@ -616,12 +617,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Camden Johnson",
-        "2B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "runners_after": {
         "1B": "Camden Johnson",
-        "2B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "score": {
@@ -1079,9 +1080,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Camden Johnson"
       },
       "score": {
         "away": 1,
@@ -1101,14 +1102,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Camden Johnson"
       },
       "runners_after": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Camden Johnson"
       },
       "score": {
         "away": 1,
@@ -1128,14 +1129,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Camden Johnson"
       },
       "runners_after": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Camden Johnson"
       },
       "score": {
         "away": 1,
@@ -1155,14 +1156,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Camden Johnson"
       },
       "runners_after": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Camden Johnson"
       },
       "score": {
         "away": 1,
@@ -1201,7 +1202,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cord Rager",
+      "pitcher": "Gavyn Jones",
       "batter": "Trent Caraway",
       "outcome": "Lineout",
       "count": "3-1",
@@ -1225,6 +1226,33 @@
         "home": 3
       },
       "description": "Caraway lined out to ss (3-1 BBBK)."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Gavyn Jones",
+      "batter": "Jones, G. to p for Rager, C..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 3
+      },
+      "description": "Jones, G. to p for Rager, C.."
     },
     {
       "inning": "Bottom 5",
@@ -1255,7 +1283,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Gavyn Jones",
+      "pitcher": "Kadyn Leon",
       "batter": "Derek Curiel",
       "outcome": "Single",
       "count": "1-0",
@@ -1282,7 +1310,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Gavyn Jones",
+      "pitcher": "Kadyn Leon",
       "batter": "Jake Brown",
       "outcome": "Grounded into double play",
       "count": "2-0",
@@ -1414,6 +1442,33 @@
         "home": 3
       },
       "description": "Walk, J. struck out swinging (0-2 FSS)."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Kadyn Leon",
+      "batter": "Leon, K. to p for Jones, G..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 3
+      },
+      "description": "Leon, K. to p for Jones, G.."
     },
     {
       "inning": "Bottom 6",
@@ -1621,9 +1676,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brendan Brock",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brendan Brock"
       },
       "score": {
         "away": 1,
@@ -1643,14 +1698,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brendan Brock",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brendan Brock"
       },
       "runners_after": {
-        "1B": "Brendan Brock",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brendan Brock"
       },
       "score": {
         "away": 1,
@@ -1670,14 +1725,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brendan Brock",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brendan Brock"
       },
       "runners_after": {
-        "1B": "Brendan Brock",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brendan Brock"
       },
       "score": {
         "away": 1,
@@ -1714,7 +1769,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Kadyn Leon",
+      "pitcher": "Jackson Cleveland",
       "batter": "Chris Stanfield",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1741,7 +1796,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Kadyn Leon",
+      "pitcher": "Jackson Cleveland",
       "batter": "Trent Caraway",
       "outcome": "Single",
       "count": "1-1",
@@ -1768,7 +1823,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Kadyn Leon",
+      "pitcher": "Jackson Cleveland",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1795,7 +1850,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Kadyn Leon",
+      "pitcher": "Jackson Cleveland",
       "batter": "Cade Arrambide",
       "outcome": "Walk",
       "count": "3-1",
@@ -1819,6 +1874,33 @@
         "home": 3
       },
       "description": "Arrambide walked (3-1 BBBKB)."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Jackson Cleveland",
+      "batter": "Cleveland, J to p for Leon, K..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Cade Arrambide",
+        "2B": "Trent Caraway",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Cade Arrambide",
+        "2B": "Trent Caraway",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 3
+      },
+      "description": "Cleveland, J to p for Leon, K.."
     },
     {
       "inning": "Bottom 7",
@@ -1909,7 +1991,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1930,7 +2014,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Gavin Guidry",
+      "pitcher": "Deven Sheerin",
       "batter": null,
       "outcome": "Baserunning",
       "count": "2-1",
@@ -1990,7 +2074,9 @@
       "count": "1-2",
       "pitches": "SFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2017,7 +2103,9 @@
       "count": "0-2",
       "pitches": "KK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -2146,7 +2234,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Mason Braun",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2269,8 +2357,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dasan Harris",
-        "2B": null,
+        "1B": null,
+        "2B": "Dasan Harris",
         "3B": null
       },
       "score": {
@@ -2291,13 +2379,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Dasan Harris",
-        "2B": null,
+        "1B": null,
+        "2B": "Dasan Harris",
         "3B": null
       },
       "runners_after": {
-        "1B": "Dasan Harris",
-        "2B": null,
+        "1B": null,
+        "2B": "Dasan Harris",
         "3B": null
       },
       "score": {
@@ -2308,7 +2396,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Deven Sheerin",
+      "pitcher": "",
       "batter": "Jason Walk",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2318,13 +2406,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Dasan Harris",
-        "2B": null,
+        "1B": null,
+        "2B": "Dasan Harris",
         "3B": null
       },
       "runners_after": {
-        "1B": "Dasan Harris",
-        "2B": null,
+        "1B": null,
+        "2B": "Dasan Harris",
         "3B": null
       },
       "score": {
@@ -2335,7 +2423,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Steven Milam",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2362,7 +2450,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Seth Dardar",
       "outcome": "Lineout",
       "count": "1-0",
@@ -2389,7 +2477,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Chris Stanfield",
       "outcome": "Groundout",
       "count": "2-1",

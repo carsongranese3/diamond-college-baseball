@@ -3,7 +3,7 @@
   "date": "03/06/2026",
   "away_team": "Stanford",
   "home_team": "Wake Forest",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -187,8 +187,8 @@
       },
       "runners_after": {
         "1B": "Dalton Wentz",
-        "2B": "Kade Lewis",
-        "3B": null
+        "2B": null,
+        "3B": "Kade Lewis"
       },
       "score": {
         "away": 1,
@@ -204,17 +204,19 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kade Lewis"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Dalton Wentz",
-        "2B": "Kade Lewis",
-        "3B": null
+        "2B": null,
+        "3B": "Kade Lewis"
       },
       "runners_after": {
         "1B": "Luke Costello",
-        "2B": "Kade Lewis",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -236,12 +238,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Luke Costello",
-        "2B": "Kade Lewis",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Matt Conte",
-        "2B": "Kade Lewis",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -295,8 +297,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Jimmy Nati",
-        "3B": null
+        "2B": null,
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 1,
@@ -317,13 +319,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Jimmy Nati",
-        "3B": null
+        "2B": null,
+        "3B": "Jimmy Nati"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Jimmy Nati",
-        "3B": null
+        "2B": null,
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 1,
@@ -344,13 +346,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Jimmy Nati",
-        "3B": null
+        "2B": null,
+        "3B": "Jimmy Nati"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Jimmy Nati",
-        "3B": null
+        "2B": null,
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 1,
@@ -618,8 +620,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Javar Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Javar Williams",
         "3B": null
       },
       "score": {
@@ -640,13 +642,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Javar Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Javar Williams",
         "3B": null
       },
       "runners_after": {
-        "1B": "Javar Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Javar Williams",
         "3B": null
       },
       "score": {
@@ -808,7 +810,7 @@
       },
       "runners_after": {
         "1B": "Jackson Miller",
-        "2B": null,
+        "2B": "Matt Conte",
         "3B": null
       },
       "score": {
@@ -830,13 +832,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Jackson Miller",
-        "2B": null,
+        "2B": "Matt Conte",
         "3B": null
       },
       "runners_after": {
         "1B": "Austin Hawke",
-        "2B": null,
-        "3B": null
+        "2B": "Jackson Miller",
+        "3B": "Matt Conte"
       },
       "score": {
         "away": 1,
@@ -852,18 +854,20 @@
       "count": "2-1",
       "pitches": "SBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Matt Conte"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Austin Hawke",
-        "2B": null,
-        "3B": null
+        "2B": "Jackson Miller",
+        "3B": "Matt Conte"
       },
       "runners_after": {
         "1B": "Blake Schaaf",
-        "2B": null,
-        "3B": null
+        "2B": "Austin Hawke",
+        "3B": "Jackson Miller"
       },
       "score": {
         "away": 1,
@@ -879,13 +883,16 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jackson Miller",
+        "Austin Hawke"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Blake Schaaf",
-        "2B": null,
-        "3B": null
+        "2B": "Austin Hawke",
+        "3B": "Jackson Miller"
       },
       "runners_after": {
         "1B": "JD Stein",
@@ -1041,7 +1048,9 @@
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Javar Williams"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1051,7 +1060,7 @@
       },
       "runners_after": {
         "1B": "Kade Lewis",
-        "2B": "Javar Williams",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1073,12 +1082,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Kade Lewis",
-        "2B": "Javar Williams",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Kade Lewis",
-        "2B": "Javar Williams",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1100,12 +1109,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Kade Lewis",
-        "2B": "Javar Williams",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Luke Costello",
-        "2B": "Javar Williams",
+        "2B": "Kade Lewis",
         "3B": null
       },
       "score": {
@@ -1127,12 +1136,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Luke Costello",
-        "2B": "Javar Williams",
+        "2B": "Kade Lewis",
         "3B": null
       },
       "runners_after": {
         "1B": "Luke Costello",
-        "2B": "Javar Williams",
+        "2B": "Kade Lewis",
         "3B": null
       },
       "score": {
@@ -1149,17 +1158,19 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kade Lewis"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Luke Costello",
-        "2B": "Javar Williams",
+        "2B": "Kade Lewis",
         "3B": null
       },
       "runners_after": {
         "1B": "Jackson Miller",
-        "2B": "Javar Williams",
+        "2B": "Luke Costello",
         "3B": null
       },
       "score": {
@@ -1181,12 +1192,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jackson Miller",
-        "2B": "Javar Williams",
+        "2B": "Luke Costello",
         "3B": null
       },
       "runners_after": {
         "1B": "Jackson Miller",
-        "2B": "Javar Williams",
+        "2B": "Luke Costello",
         "3B": null
       },
       "score": {
@@ -1278,7 +1289,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Kassius Thomas",
       "batter": "Blake Schaaf",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1305,7 +1316,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Kassius Thomas",
       "batter": "JD Stein",
       "outcome": "Single",
       "count": "0-0",
@@ -1332,7 +1343,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Kassius Thomas",
       "batter": "Javar Williams",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1359,7 +1370,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Kassius Thomas",
       "batter": "Kade Lewis",
       "outcome": "Double",
       "count": "1-1",
@@ -1374,9 +1385,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "JD Stein",
+        "1B": null,
         "2B": "Kade Lewis",
-        "3B": null
+        "3B": "JD Stein"
       },
       "score": {
         "away": 1,
@@ -1386,7 +1397,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Kassius Thomas",
       "batter": "Dalton Wentz",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1396,14 +1407,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "JD Stein",
+        "1B": null,
         "2B": "Kade Lewis",
-        "3B": null
+        "3B": "JD Stein"
       },
       "runners_after": {
-        "1B": "JD Stein",
+        "1B": null,
         "2B": "Kade Lewis",
-        "3B": null
+        "3B": "JD Stein"
       },
       "score": {
         "away": 1,
@@ -1413,7 +1424,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Rhys Bowie",
       "batter": "Sebastian David",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1440,7 +1451,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Rhys Bowie",
       "batter": "Luke Lavin",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1467,7 +1478,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Rhys Bowie",
       "batter": "Brock Ketelsen",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1494,7 +1505,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Kassius Thomas",
       "batter": "Luke Costello",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1521,7 +1532,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Kassius Thomas",
       "batter": "Matt Conte",
       "outcome": "Single",
       "count": "1-1",
@@ -1548,7 +1559,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Kassius Thomas",
       "batter": "Jackson Miller",
       "outcome": "Fielder's choice",
       "count": "1-1",
@@ -1575,7 +1586,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Kassius Thomas",
       "batter": "Austin Hawke",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1602,7 +1613,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Rhys Bowie",
       "batter": "Tatum Marsh",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1629,7 +1640,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Rhys Bowie",
       "batter": "Cort MacDonald",
       "outcome": "Single",
       "count": "0-2",
@@ -1656,7 +1667,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Rhys Bowie",
       "batter": "Rintaro Sasaki",
       "outcome": "Grounded into double play",
       "count": "3-2",
@@ -1671,7 +1682,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cort MacDonald",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1683,7 +1694,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Kassius Thomas",
       "batter": "Blake Schaaf",
       "outcome": "Single",
       "count": "0-2",
@@ -1710,7 +1721,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Kassius Thomas",
       "batter": "JD Stein",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1725,8 +1736,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Blake Schaaf",
-        "2B": null,
+        "1B": null,
+        "2B": "Blake Schaaf",
         "3B": null
       },
       "score": {
@@ -1737,7 +1748,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Kassius Thomas",
       "batter": "Javar Williams",
       "outcome": "Single",
       "count": "2-2",
@@ -1747,14 +1758,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Blake Schaaf",
-        "2B": null,
+        "1B": null,
+        "2B": "Blake Schaaf",
         "3B": null
       },
       "runners_after": {
         "1B": "Javar Williams",
         "2B": null,
-        "3B": null
+        "3B": "Blake Schaaf"
       },
       "score": {
         "away": 1,
@@ -1764,19 +1775,21 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Kassius Thomas",
       "batter": "Kade Lewis",
       "outcome": "Fielder's choice",
       "count": "0-2",
       "pitches": "FF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Blake Schaaf"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Javar Williams",
         "2B": null,
-        "3B": null
+        "3B": "Blake Schaaf"
       },
       "runners_after": {
         "1B": "Kade Lewis",
@@ -1791,7 +1804,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Dominic Panella",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1806,8 +1819,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kade Lewis",
-        "2B": null,
+        "1B": null,
+        "2B": "Kade Lewis",
         "3B": null
       },
       "score": {
@@ -1818,7 +1831,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Dominic Panella",
       "batter": "Dalton Wentz",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1828,13 +1841,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Kade Lewis",
-        "2B": null,
+        "1B": null,
+        "2B": "Kade Lewis",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kade Lewis",
-        "2B": null,
+        "1B": null,
+        "2B": "Kade Lewis",
         "3B": null
       },
       "score": {
@@ -1845,7 +1858,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Rhys Bowie",
       "batter": "Teddy Tokheim",
       "outcome": "Double",
       "count": "0-0",
@@ -1872,13 +1885,14 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Rhys Bowie",
       "batter": "Henry McDonald",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "BKBFFB",
       "rbi": true,
       "runs_scored": [
+        "Teddy Tokheim",
         "Henry McDonald"
       ],
       "outs_before": 0,
@@ -1890,7 +1904,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Teddy Tokheim",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1901,7 +1915,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Rhys Bowie",
       "batter": "Eric Jeon",
       "outcome": "Home run",
       "count": "3-2",
@@ -1914,12 +1928,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": null,
-        "2B": "Teddy Tokheim",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Teddy Tokheim",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1930,7 +1944,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Will Ray",
       "batter": "Sebastian David",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1941,12 +1955,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Teddy Tokheim",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Teddy Tokheim",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1957,7 +1971,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Will Ray",
       "batter": "Luke Lavin",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1968,12 +1982,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Teddy Tokheim",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Teddy Tokheim",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1984,7 +1998,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Will Ray",
       "batter": "Philip Cheong",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1995,12 +2009,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Teddy Tokheim",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Teddy Tokheim",
+        "2B": null,
         "3B": null
       },
       "score": {

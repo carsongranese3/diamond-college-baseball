@@ -3,7 +3,7 @@
   "date": "03/29/2026",
   "away_team": "North Carolina",
   "home_team": "Notre Dame",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -178,7 +178,8 @@
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Noah Coy"
+        "Noah Coy",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -287,7 +288,9 @@
       "count": "2-1",
       "pitches": "BBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -422,7 +425,9 @@
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -449,7 +454,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -476,7 +483,9 @@
       "count": "3-2",
       "pitches": "FBBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -512,8 +521,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Gavin Gallaher",
-        "2B": null,
+        "1B": null,
+        "2B": "Gavin Gallaher",
         "3B": null
       },
       "score": {
@@ -534,13 +543,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Gavin Gallaher",
-        "2B": null,
+        "1B": null,
+        "2B": "Gavin Gallaher",
         "3B": null
       },
       "runners_after": {
-        "1B": "Gavin Gallaher",
-        "2B": null,
+        "1B": null,
+        "2B": "Gavin Gallaher",
         "3B": null
       },
       "score": {
@@ -666,7 +675,9 @@
       "pitches": "FB",
       "rbi": true,
       "runs_scored": [
-        "Mark Quatrani"
+        "Mark Quatrani",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -877,7 +888,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Camron Seagraves",
       "batter": "Parker Brzustewicz",
       "outcome": "Groundout",
       "count": "0-1",
@@ -904,13 +915,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Camron Seagraves",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jayce Lee"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -920,7 +933,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Jayce Lee",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -931,7 +944,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Camron Seagraves",
       "batter": "Mason Barth",
       "outcome": "Groundout",
       "count": "1-1",
@@ -942,12 +955,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Jayce Lee",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Jayce Lee",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1039,7 +1052,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Camron Seagraves",
       "batter": "Jamie Zee",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1066,7 +1079,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Camron Seagraves",
       "batter": "Drew Berkland",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -1093,7 +1106,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Camron Seagraves",
       "batter": "Noah Coy",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1120,7 +1133,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Camron Seagraves",
       "batter": "Mark Quatrani",
       "outcome": "Fielder's choice",
       "count": "0-0",
@@ -1207,7 +1220,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1234,7 +1249,9 @@
       "count": "0-2",
       "pitches": "FFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1255,7 +1272,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ty Uber",
+      "pitcher": "Dylan Singleton",
       "batter": "Colin Hynek",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1282,13 +1299,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ty Uber",
+      "pitcher": "Dylan Singleton",
       "batter": "Tyler Howe",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1309,7 +1328,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ty Uber",
+      "pitcher": "Dylan Singleton",
       "batter": "Cooper Nicholson",
       "outcome": "Walk",
       "count": "3-1",
@@ -1336,13 +1355,16 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ty Uber",
+      "pitcher": "Dylan Singleton",
       "batter": "Carter French",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "BFK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1363,13 +1385,16 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ty Uber",
+      "pitcher": "Dylan Singleton",
       "batter": "Jake Schaffner",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1390,13 +1415,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ty Uber",
+      "pitcher": "Dylan Singleton",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jake Schaffner"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1406,7 +1433,7 @@
       },
       "runners_after": {
         "1B": "Carter French",
-        "2B": "Jake Schaffner",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1417,7 +1444,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ty Uber",
+      "pitcher": "Dylan Singleton",
       "batter": "Gavin Gallaher",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1428,12 +1455,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Carter French",
-        "2B": "Jake Schaffner",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Carter French",
-        "2B": "Jake Schaffner",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1444,7 +1471,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ty Uber",
+      "pitcher": "Dylan Singleton",
       "batter": "Erik Paulsen",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1455,12 +1482,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Carter French",
-        "2B": "Jake Schaffner",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Carter French",
-        "2B": "Jake Schaffner",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1471,7 +1498,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Camron Seagraves",
       "batter": "Bino Watters",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1498,7 +1525,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Camron Seagraves",
       "batter": "Davis Johnson",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1525,7 +1552,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Camron Seagraves",
       "batter": "Jayce Lee",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1552,7 +1579,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ty Uber",
+      "pitcher": "Dylan Singleton",
       "batter": "Macon Winslow",
       "outcome": "Pop out",
       "count": "0-1",
@@ -1579,7 +1606,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ty Uber",
+      "pitcher": "Dylan Singleton",
       "batter": "Owen Hull",
       "outcome": "Double",
       "count": "0-0",
@@ -1606,7 +1633,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ty Uber",
+      "pitcher": "Dylan Singleton",
       "batter": "Colin Hynek",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1633,7 +1660,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ty Uber",
+      "pitcher": "Dylan Singleton",
       "batter": "Tyler Howe",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1660,7 +1687,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Talan Holiday",
       "batter": "Parker Brzustewicz",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1687,7 +1714,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Talan Holiday",
       "batter": "Dylan Passo",
       "outcome": "Single",
       "count": "1-2",
@@ -1714,7 +1741,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Talan Holiday",
       "batter": "Jamie Zee",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1741,7 +1768,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Tom Chmielewski",
       "batter": "Drew Berkland",
       "outcome": "Double",
       "count": "3-2",
@@ -1768,13 +1795,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Tom Chmielewski",
       "batter": "Noah Coy",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1795,7 +1824,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ty Uber",
+      "pitcher": "Dylan Singleton",
       "batter": "Cooper Nicholson",
       "outcome": "Foul out",
       "count": "2-2",
@@ -1822,7 +1851,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ty Uber",
+      "pitcher": "Dylan Singleton",
       "batter": "Carter French",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1849,7 +1878,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ty Uber",
+      "pitcher": "Dylan Singleton",
       "batter": "Jake Schaffner",
       "outcome": "Walk",
       "count": "3-2",
@@ -1876,7 +1905,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ty Uber",
+      "pitcher": "Dylan Singleton",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1891,8 +1920,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Schaffner",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Schaffner",
         "3B": null
       },
       "score": {
@@ -1903,7 +1932,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ty Uber",
+      "pitcher": "Dylan Singleton",
       "batter": "Gavin Gallaher",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1913,13 +1942,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jake Schaffner",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Schaffner",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Schaffner",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Schaffner",
         "3B": null
       },
       "score": {
@@ -1930,7 +1959,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Cameron Padgett",
       "batter": "Mark Quatrani",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1957,7 +1986,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Cameron Padgett",
       "batter": "Bino Watters",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1984,7 +2013,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Cameron Padgett",
       "batter": "Davis Johnson",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2011,7 +2040,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ty Uber",
+      "pitcher": "Oisin Lee",
       "batter": "Erik Paulsen",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2038,7 +2067,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ty Uber",
+      "pitcher": "Oisin Lee",
       "batter": "Macon Winslow",
       "outcome": "Groundout",
       "count": "2-0",
@@ -2065,7 +2094,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ty Uber",
+      "pitcher": "Oisin Lee",
       "batter": "Owen Hull",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2092,7 +2121,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Cameron Padgett",
       "batter": "Jayce Lee",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2119,7 +2148,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Cameron Padgett",
       "batter": "Parker Brzustewicz",
       "outcome": "Walk",
       "count": "3-0",
@@ -2146,7 +2175,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Cameron Padgett",
       "batter": "Dylan Passo",
       "outcome": "Single",
       "count": "1-2",
@@ -2173,13 +2202,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Caden Glauber",
       "batter": "Jamie Zee",
       "outcome": "Double",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2200,13 +2231,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Caden Glauber",
       "batter": null,
       "outcome": "Baserunning",
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2227,7 +2260,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Caden Glauber",
       "batter": "Noah Coy",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2254,7 +2287,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ty Uber",
+      "pitcher": "Oisin Lee",
       "batter": "Colin Hynek",
       "outcome": "Flyout",
       "count": "0-2",
@@ -2281,7 +2314,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ty Uber",
+      "pitcher": "Oisin Lee",
       "batter": "Tyler Howe",
       "outcome": "Walk",
       "count": "3-0",
@@ -2308,13 +2341,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ty Uber",
+      "pitcher": "Oisin Lee",
       "batter": "Cooper Nicholson",
       "outcome": "Double",
       "count": "2-2",
       "pitches": "FBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2335,7 +2370,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ty Uber",
+      "pitcher": "Chase Van Ameyde",
       "batter": "Carter French",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -2362,13 +2397,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ty Uber",
+      "pitcher": "Chase Van Ameyde",
       "batter": "Jake Schaffner",
       "outcome": "Double",
       "count": "2-2",
       "pitches": "KBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2389,13 +2426,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ty Uber",
+      "pitcher": "Chase Van Ameyde",
       "batter": "Gavin Gallaher",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2416,7 +2455,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ty Uber",
+      "pitcher": "Chase Van Ameyde",
       "batter": "Erik Paulsen",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2443,7 +2482,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ty Uber",
+      "pitcher": "Chase Van Ameyde",
       "batter": "Macon Winslow",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2470,7 +2509,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Caden Glauber",
       "batter": "Mark Quatrani",
       "outcome": "Flyout",
       "count": "3-1",
@@ -2497,7 +2536,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Caden Glauber",
       "batter": "Bino Watters",
       "outcome": "Groundout",
       "count": "2-1",
@@ -2524,7 +2563,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Caden Glauber",
       "batter": "Davis Johnson",
       "outcome": "Double",
       "count": "1-1",
@@ -2551,7 +2590,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Caden Glauber",
       "batter": "Jayce Lee",
       "outcome": "Pop out",
       "count": "2-2",

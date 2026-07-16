@@ -3,7 +3,7 @@
   "date": "03/08/2026",
   "away_team": "Princeton",
   "home_team": "South Carolina",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -175,7 +175,9 @@
       "count": "3-1",
       "pitches": "FBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -348,8 +350,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Kernodle",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Kernodle",
         "3B": null
       },
       "score": {
@@ -370,13 +372,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jake Kernodle",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Kernodle",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Kernodle",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Kernodle",
         "3B": null
       },
       "score": {
@@ -528,7 +530,10 @@
       "count": "3-2",
       "pitches": "BBKBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -699,7 +704,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bennett Crerar",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -745,7 +750,8 @@
       "pitches": "SSF",
       "rbi": true,
       "runs_scored": [
-        "Logan Sutter"
+        "Logan Sutter",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -791,6 +797,33 @@
         "home": 5
       },
       "description": "Reynolds singled up the middle (2-1 FBB)."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Will Sword",
+      "batter": "Sword, W. to p for Kaufman, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Jack Reynolds",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Jack Reynolds",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 5
+      },
+      "description": "Sword, W. to p for Kaufman, B.."
     },
     {
       "inning": "Bottom 3",
@@ -854,7 +887,9 @@
       "count": "2-2",
       "pitches": "BKBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -881,7 +916,9 @@
       "count": "0-2",
       "pitches": "FF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -929,7 +966,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Will Sword",
+      "pitcher": "Parker Codington",
       "batter": "KJ Scobey",
       "outcome": "\u2014",
       "count": "2-2",
@@ -1334,13 +1371,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Parker Codington",
+      "pitcher": "Kasey Gilman",
       "batter": "Will Craddock",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "BKBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1358,6 +1397,33 @@
         "home": 8
       },
       "description": "Craddock singled to left field, RBI (3-2 BKBFB); Hoover advanced to second; Harman scored."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Kasey Gilman",
+      "batter": "Gilman, K. to p for Codington.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Will Craddock",
+        "2B": "Dawson Harman",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Will Craddock",
+        "2B": "Dawson Harman",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 8
+      },
+      "description": "Gilman, K. to p for Codington."
     },
     {
       "inning": "Bottom 5",
@@ -1395,7 +1461,10 @@
       "pitches": "BKB",
       "rbi": true,
       "runs_scored": [
-        "Talmadge LeCroy"
+        "Talmadge LeCroy",
+        null,
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1477,7 +1546,9 @@
       "count": "2-2",
       "pitches": "KKBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1525,7 +1596,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Kasey Gilman",
+      "pitcher": "Joe Montembeau",
       "batter": "Dawson Harman",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1552,7 +1623,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Kasey Gilman",
+      "pitcher": "Joe Montembeau",
       "batter": "Caleb Hoover",
       "outcome": "\u2014",
       "count": "1-1",
@@ -1660,7 +1731,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kasey Gilman",
+      "pitcher": "Joe Montembeau",
       "batter": "Beau Hollins",
       "outcome": "Single",
       "count": "1-0",
@@ -1687,7 +1758,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kasey Gilman",
+      "pitcher": "Joe Montembeau",
       "batter": "Aaron Jamison",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1714,7 +1785,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kasey Gilman",
+      "pitcher": "",
       "batter": "Gavin Braland",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1741,7 +1812,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kasey Gilman",
+      "pitcher": "",
       "batter": "Erik Parker",
       "outcome": "Groundout",
       "count": "0-0",

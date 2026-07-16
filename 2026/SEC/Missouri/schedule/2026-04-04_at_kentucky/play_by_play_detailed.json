@@ -3,7 +3,7 @@
   "date": "04/04/2026",
   "away_team": "Missouri",
   "home_team": "Kentucky",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -149,7 +149,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Tyler Bell"
+        "Tyler Bell",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -483,8 +484,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jayce Tharnish",
-        "2B": null,
+        "1B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "score": {
@@ -505,13 +506,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jayce Tharnish",
-        "2B": null,
+        "1B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "runners_after": {
         "1B": "Luke Lawrence",
-        "2B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "score": {
@@ -535,12 +536,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Luke Lawrence",
-        "2B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "score": {
@@ -562,12 +563,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "score": {
@@ -755,8 +756,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Bell",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Bell",
         "3B": null
       },
       "score": {
@@ -773,17 +774,19 @@
       "count": "1-2",
       "pitches": "SFBFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Tyler Bell",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Bell",
         "3B": null
       },
       "runners_after": {
         "1B": "Tagger Tyson",
-        "2B": null,
+        "2B": "Tyler Bell",
         "3B": null
       },
       "score": {
@@ -805,12 +808,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Tagger Tyson",
-        "2B": null,
+        "2B": "Tyler Bell",
         "3B": null
       },
       "runners_after": {
         "1B": "Ethan Hindle",
-        "2B": null,
+        "2B": "Tyler Bell",
         "3B": null
       },
       "score": {
@@ -832,12 +835,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Ethan Hindle",
-        "2B": null,
+        "2B": "Tyler Bell",
         "3B": null
       },
       "runners_after": {
         "1B": "Will Marcy",
-        "2B": null,
+        "2B": "Tyler Bell",
         "3B": null
       },
       "score": {
@@ -855,18 +858,21 @@
       "pitches": "S",
       "rbi": true,
       "runs_scored": [
-        "Scott Campbell"
+        "Scott Campbell",
+        null,
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Will Marcy",
-        "2B": null,
+        "2B": "Tyler Bell",
         "3B": null
       },
       "runners_after": {
         "1B": "Will Marcy",
-        "2B": null,
+        "2B": "Tyler Bell",
         "3B": null
       },
       "score": {
@@ -888,12 +894,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Will Marcy",
-        "2B": null,
+        "2B": "Tyler Bell",
         "3B": null
       },
       "runners_after": {
         "1B": "Jayce Tharnish",
-        "2B": null,
+        "2B": "Tyler Bell",
         "3B": null
       },
       "score": {
@@ -915,12 +921,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jayce Tharnish",
-        "2B": null,
+        "2B": "Tyler Bell",
         "3B": null
       },
       "runners_after": {
         "1B": "Jayce Tharnish",
-        "2B": null,
+        "2B": "Tyler Bell",
         "3B": null
       },
       "score": {
@@ -1067,6 +1073,33 @@
     {
       "inning": "Bottom 4",
       "pitcher": "Luke Sullivan",
+      "batter": "SULLIVAN, Lu to p for KEHLENBRINK,.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Tyler Bell",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Tyler Bell",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 8
+      },
+      "description": "SULLIVAN, Lu to p for KEHLENBRINK,."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Luke Sullivan",
       "batter": "Carson Hansen",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1108,8 +1141,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Bell",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Bell",
         "3B": null
       },
       "score": {
@@ -1130,13 +1163,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Tyler Bell",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Bell",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Bell",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Bell",
         "3B": null
       },
       "score": {
@@ -1207,7 +1240,9 @@
       "count": "3-2",
       "pitches": "SFBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1261,7 +1296,9 @@
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1297,8 +1334,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Macon",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Macon",
         "3B": null
       },
       "score": {
@@ -1319,13 +1356,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tyler Macon",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Macon",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Macon",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Macon",
         "3B": null
       },
       "score": {
@@ -1460,8 +1497,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Kaden Peer",
-        "3B": null
+        "2B": null,
+        "3B": "Kaden Peer"
       },
       "score": {
         "away": 2,
@@ -1482,13 +1519,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": null,
-        "2B": "Kaden Peer",
-        "3B": null
+        "2B": null,
+        "3B": "Kaden Peer"
       },
       "runners_after": {
         "1B": "Jase Woita",
-        "2B": "Kaden Peer",
-        "3B": null
+        "2B": null,
+        "3B": "Kaden Peer"
       },
       "score": {
         "away": 2,
@@ -1498,7 +1535,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "R.",
+      "pitcher": "Ryan Mullan",
+      "batter": "R. Mullan",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Jase Woita",
+        "2B": null,
+        "3B": "Kaden Peer"
+      },
+      "runners_after": {
+        "1B": "Jase Woita",
+        "2B": null,
+        "3B": "Kaden Peer"
+      },
+      "score": {
+        "away": 2,
+        "home": 8
+      },
+      "description": "R. Mullan to p for N. Harris."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Ryan Mullan",
       "batter": "Pierre Seals",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1509,13 +1573,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Jase Woita",
-        "2B": "Kaden Peer",
-        "3B": null
+        "2B": null,
+        "3B": "Kaden Peer"
       },
       "runners_after": {
         "1B": "Jase Woita",
-        "2B": "Kaden Peer",
-        "3B": null
+        "2B": null,
+        "3B": "Kaden Peer"
       },
       "score": {
         "away": 2,
@@ -1525,7 +1589,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "R.",
+      "pitcher": "Ira Austin",
       "batter": "Eric Maisonet",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1536,13 +1600,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Jase Woita",
-        "2B": "Kaden Peer",
-        "3B": null
+        "2B": null,
+        "3B": "Kaden Peer"
       },
       "runners_after": {
         "1B": "Jase Woita",
-        "2B": "Kaden Peer",
-        "3B": null
+        "2B": null,
+        "3B": "Kaden Peer"
       },
       "score": {
         "away": 2,
@@ -1714,7 +1778,34 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "I.",
+      "pitcher": "Ira Austin",
+      "batter": "I. Austin",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 8
+      },
+      "description": "I. Austin to p for R. Mullan."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Ira Austin",
       "batter": "C. Cloud",
       "outcome": "\u2014",
       "count": null,
@@ -1741,7 +1832,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "I.",
+      "pitcher": "Ira Austin",
       "batter": "Donovan Jordan",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1768,7 +1859,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "I.",
+      "pitcher": "Leighton Harris",
       "batter": "L. Lawrence",
       "outcome": "\u2014",
       "count": null,
@@ -1795,7 +1886,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "I.",
+      "pitcher": "Leighton Harris",
       "batter": "C. Cloud",
       "outcome": "\u2014",
       "count": null,
@@ -1822,7 +1913,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "I.",
+      "pitcher": "Leighton Harris",
       "batter": "Mateo Serna",
       "outcome": "Double",
       "count": "2-0",
@@ -1849,7 +1940,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "I.",
+      "pitcher": "Tristan Hunter",
       "batter": "Keegan Knutson",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1876,7 +1967,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "I.",
+      "pitcher": "Tristan Hunter",
       "batter": "Tyler Macon",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1984,7 +2075,34 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "L.",
+      "pitcher": "Tristan Hunter",
+      "batter": "L. Harris",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 8
+      },
+      "description": "L. Harris to p for I. Austin."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "",
       "batter": "Kam Durnin",
       "outcome": "Pop out",
       "count": "0-0",
@@ -2011,7 +2129,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Kaden Peer",
       "outcome": "Single",
       "count": "0-1",
@@ -2038,7 +2156,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Jase Woita",
       "outcome": "Grounded into double play",
       "count": "1-0",
@@ -2065,7 +2183,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke Sullivan",
+      "pitcher": "Isaiah Salas",
       "batter": "Will Marcy",
       "outcome": "Reached on error",
       "count": "1-1",
@@ -2092,7 +2210,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke Sullivan",
+      "pitcher": "Isaiah Salas",
       "batter": "Scott Campbell",
       "outcome": "Groundout",
       "count": "1-0",
@@ -2119,7 +2237,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke Sullivan",
+      "pitcher": "Isaiah Salas",
       "batter": "Jayce Tharnish",
       "outcome": "Single",
       "count": "2-0",
@@ -2146,13 +2264,42 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Isaiah Salas",
+      "pitcher": "",
+      "batter": "SALAS, Isaia to p for SULLIVAN, Lu.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Jayce Tharnish",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Jayce Tharnish",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 8
+      },
+      "description": "SALAS, Isaia to p for SULLIVAN, Lu."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Luke Lawrence",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "SBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2173,7 +2320,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Isaiah Salas",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2200,7 +2347,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Isaiah Salas",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2215,8 +2362,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Luke Lawrence",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "score": {
@@ -2227,7 +2374,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Isaiah Salas",
+      "pitcher": "",
       "batter": "Caeden Cloud",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2237,13 +2384,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Luke Lawrence",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "runners_after": {
-        "1B": "Luke Lawrence",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "score": {
@@ -2254,7 +2401,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Isaiah Salas",
+      "pitcher": "",
       "batter": "Hudson Brown",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2264,13 +2411,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Luke Lawrence",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "runners_after": {
-        "1B": "Luke Lawrence",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "score": {
@@ -2281,7 +2428,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "T.",
+      "pitcher": "",
+      "batter": "T. Hunter",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 9
+      },
+      "description": "T. Hunter to p for L. Harris."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": "Pierre Seals",
       "outcome": "Flyout",
       "count": "0-2",
@@ -2308,7 +2482,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "Eric Maisonet",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2335,7 +2509,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "Donovan Jordan",
       "outcome": "Strikeout (looking)",
       "count": "2-2",

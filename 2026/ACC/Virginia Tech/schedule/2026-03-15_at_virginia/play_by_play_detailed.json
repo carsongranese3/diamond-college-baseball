@@ -3,7 +3,7 @@
   "date": "03/15/2026",
   "away_team": "Virginia Tech",
   "home_team": "Virginia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -662,7 +662,9 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Hudson Lutterman"
+        "Hudson Lutterman",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -861,8 +863,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Noah Murray",
-        "2B": null,
+        "1B": null,
+        "2B": "Noah Murray",
         "3B": null
       },
       "score": {
@@ -883,13 +885,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Noah Murray",
-        "2B": null,
+        "1B": null,
+        "2B": "Noah Murray",
         "3B": null
       },
       "runners_after": {
-        "1B": "Noah Murray",
-        "2B": null,
+        "1B": null,
+        "2B": "Noah Murray",
         "3B": null
       },
       "score": {
@@ -954,13 +956,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Sam Grube",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "FBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -981,13 +985,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Nick Locurto",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "BS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -1008,13 +1014,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Sam Grube"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1024,7 +1032,7 @@
       },
       "runners_after": {
         "1B": "Pete Daniel",
-        "2B": "Sam Grube",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1035,7 +1043,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Ethan Ball",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1046,12 +1054,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Pete Daniel",
-        "2B": "Sam Grube",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Pete Daniel",
-        "2B": "Sam Grube",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1062,7 +1070,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Treyson Hughes",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1073,12 +1081,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Pete Daniel",
-        "2B": "Sam Grube",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Pete Daniel",
-        "2B": "Sam Grube",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1199,7 +1207,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Hudson Lutterman",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1226,7 +1234,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Sam Gates",
       "outcome": "Single",
       "count": "1-1",
@@ -1253,7 +1261,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1268,7 +1276,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Gates",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1280,7 +1288,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Owen Petrich",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1290,12 +1298,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Sam Gates",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Gates",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1415,7 +1423,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Anderson French",
       "outcome": "Walk",
       "count": "3-2",
@@ -1442,7 +1450,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Pete Daniel",
       "outcome": "Foul out",
       "count": "0-1",
@@ -1469,7 +1477,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Sam Grube",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1496,7 +1504,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Nick Locurto",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1523,7 +1531,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Luke Craytor",
       "batter": "Zach Jackson",
       "outcome": "Pop out",
       "count": "0-2",
@@ -1550,7 +1558,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Luke Craytor",
       "batter": "Kyle Johnson",
       "outcome": "Triple",
       "count": "3-2",
@@ -1577,14 +1585,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Luke Craytor",
       "batter": "Antonio Perrotta",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Antonio Perrotta"
+        "Antonio Perrotta",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1606,7 +1615,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Brody Roe",
       "batter": "Eric Becker",
       "outcome": "Lineout",
       "count": "0-1",
@@ -1633,7 +1642,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Brody Roe",
       "batter": "AJ Gracia",
       "outcome": "Pop out",
       "count": "1-1",
@@ -1660,7 +1669,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "John Paone",
+      "pitcher": "Jayden Stroman",
       "batter": "Ethan Ball",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1687,7 +1696,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "John Paone",
+      "pitcher": "Jayden Stroman",
       "batter": "Treyson Hughes",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1714,7 +1723,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "John Paone",
+      "pitcher": "Jayden Stroman",
       "batter": "Hudson Lutterman",
       "outcome": "Reached on error",
       "count": "2-0",
@@ -1741,7 +1750,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "John Paone",
+      "pitcher": "Jayden Stroman",
       "batter": "Sam Gates",
       "outcome": "Walk",
       "count": "3-1",
@@ -1768,7 +1777,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "John Paone",
+      "pitcher": "Jayden Stroman",
       "batter": "Owen Petrich",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1795,7 +1804,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Brody Roe",
       "batter": "Joe Tiroly",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1822,7 +1831,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Brody Roe",
       "batter": "Sam Harris",
       "outcome": "Walk",
       "count": "3-1",
@@ -1849,7 +1858,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Brody Roe",
       "batter": "Harrison Didawick",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1876,7 +1885,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Preston Crowl",
       "batter": "Noah Murray",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1903,7 +1912,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "John Paone",
+      "pitcher": "Tyler Kapa",
       "batter": "Anderson French",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1930,7 +1939,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "John Paone",
+      "pitcher": "Tyler Kapa",
       "batter": "Willie Hurt",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1957,7 +1966,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "John Paone",
+      "pitcher": "Tyler Kapa",
       "batter": "Sam Grube",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1984,7 +1993,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Preston Crowl",
       "batter": "Zach Jackson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2011,7 +2020,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Preston Crowl",
       "batter": "Kyle Johnson",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2038,7 +2047,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Preston Crowl",
       "batter": "Thomas O'Connell",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",

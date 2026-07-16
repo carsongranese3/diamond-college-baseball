@@ -3,7 +3,7 @@
   "date": "03/21/2026",
   "away_team": "Texas",
   "home_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -319,8 +319,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Adrian Rodriguez",
-        "2B": null,
+        "1B": null,
+        "2B": "Adrian Rodriguez",
         "3B": null
       },
       "score": {
@@ -341,13 +341,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Adrian Rodriguez",
-        "2B": null,
+        "1B": null,
+        "2B": "Adrian Rodriguez",
         "3B": null
       },
       "runners_after": {
         "1B": "Pack",
-        "2B": null,
+        "2B": "Adrian Rodriguez",
         "3B": null
       },
       "score": {
@@ -369,12 +369,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Pack",
-        "2B": null,
+        "2B": "Adrian Rodriguez",
         "3B": null
       },
       "runners_after": {
         "1B": "Casey Borba",
-        "2B": null,
+        "2B": "Adrian Rodriguez",
         "3B": null
       },
       "score": {
@@ -396,12 +396,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Casey Borba",
-        "2B": null,
+        "2B": "Adrian Rodriguez",
         "3B": null
       },
       "runners_after": {
         "1B": "Casey Borba",
-        "2B": null,
+        "2B": "Adrian Rodriguez",
         "3B": null
       },
       "score": {
@@ -418,17 +418,20 @@
       "count": "1-2",
       "pitches": "BKK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Casey Borba",
-        "2B": null,
+        "2B": "Adrian Rodriguez",
         "3B": null
       },
       "runners_after": {
         "1B": "Maddox Monsour",
-        "2B": null,
+        "2B": "Adrian Rodriguez",
         "3B": null
       },
       "score": {
@@ -450,12 +453,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Maddox Monsour",
-        "2B": null,
+        "2B": "Adrian Rodriguez",
         "3B": null
       },
       "runners_after": {
         "1B": "Ethan Mendoza",
-        "2B": null,
+        "2B": "Adrian Rodriguez",
         "3B": null
       },
       "score": {
@@ -477,12 +480,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Ethan Mendoza",
-        "2B": null,
+        "2B": "Adrian Rodriguez",
         "3B": null
       },
       "runners_after": {
         "1B": "Ethan Mendoza",
-        "2B": null,
+        "2B": "Adrian Rodriguez",
         "3B": null
       },
       "score": {
@@ -745,7 +748,9 @@
       "pitches": "KBBSB",
       "rbi": true,
       "runs_scored": [
-        "Duplantier J"
+        "Duplantier J",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -791,6 +796,33 @@
         "home": 0
       },
       "description": "Monsour singled to center field (2-2 BKBK)."
+    },
+    {
+      "inning": "Top 3",
+      "pitcher": "LJ Cormier",
+      "batter": "Cormier, L. to p for Sanders, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Maddox Monsour",
+        "2B": "Temo Becerra",
+        "3B": "Casey Borba"
+      },
+      "runners_after": {
+        "1B": "Maddox Monsour",
+        "2B": "Temo Becerra",
+        "3B": "Casey Borba"
+      },
+      "score": {
+        "away": 6,
+        "home": 0
+      },
+      "description": "Cormier, L. to p for Sanders, J.."
     },
     {
       "inning": "Top 3",
@@ -1124,7 +1156,9 @@
       "count": "3-1",
       "pitches": "BKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -1151,7 +1185,9 @@
       "count": "3-2",
       "pitches": "BBKBKF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1469,7 +1505,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "LJ Cormier",
+      "pitcher": "Marcel Kulik",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1496,13 +1532,15 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "LJ Cormier",
+      "pitcher": "Marcel Kulik",
       "batter": "Carson Tinney",
       "outcome": "Double",
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1520,6 +1558,33 @@
         "home": 2
       },
       "description": "Tinney doubled down the lf line, RBI (1-1 FB); Monsour scored."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Marcel Kulik",
+      "batter": "Kulik, M. to p for Cormier, L..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": "Carson Tinney",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Carson Tinney",
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 2
+      },
+      "description": "Kulik, M. to p for Cormier, L.."
     },
     {
       "inning": "Top 6",
@@ -1658,7 +1723,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Luke Harrison",
+      "pitcher": "Max Grubbs",
       "batter": "Mason McCraine",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1739,7 +1804,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Marcel Kulik",
+      "pitcher": "Ryan Hetzler",
       "batter": "Waldrop, T. to for Gregorio, L..",
       "outcome": "\u2014",
       "count": null,
@@ -1766,7 +1831,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Marcel Kulik",
+      "pitcher": "Ryan Hetzler",
       "batter": "Pack",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1793,7 +1858,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Marcel Kulik",
+      "pitcher": "Ryan Hetzler",
       "batter": "Casey Borba",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1820,7 +1885,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Marcel Kulik",
+      "pitcher": "Ryan Hetzler",
       "batter": "Duplantier J",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1957,7 +2022,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Max Grubbs",
+      "pitcher": "Brett Crossland",
       "batter": "Ethin Bingaman",
       "outcome": "Single",
       "count": "2-1",
@@ -1990,7 +2055,9 @@
       "count": "1-2",
       "pitches": "KSBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2017,7 +2084,9 @@
       "count": "1-2",
       "pitches": "SBS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2038,7 +2107,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Brett Crossland",
+      "pitcher": "Samuel Cozart",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2053,8 +2122,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Eric Guevara",
-        "2B": null,
+        "1B": null,
+        "2B": "Eric Guevara",
         "3B": null
       },
       "score": {
@@ -2065,7 +2134,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Brett Crossland",
+      "pitcher": "Samuel Cozart",
       "batter": "Mason McCraine",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2075,13 +2144,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Eric Guevara",
-        "2B": null,
+        "1B": null,
+        "2B": "Eric Guevara",
         "3B": null
       },
       "runners_after": {
-        "1B": "Eric Guevara",
-        "2B": null,
+        "1B": null,
+        "2B": "Eric Guevara",
         "3B": null
       },
       "score": {
@@ -2089,6 +2158,33 @@
         "home": 5
       },
       "description": "McCraine, M. struck out looking (3-2 BKBKBK)."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Ryan Hetzler",
+      "batter": "Hetzler, R. to p for Kulik, M..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 5
+      },
+      "description": "Hetzler, R. to p for Kulik, M.."
     },
     {
       "inning": "Top 8",
@@ -2254,7 +2350,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Samuel Cozart",
+      "pitcher": "Thomas Burns",
       "batter": "Chris Rembert",
       "outcome": "Single",
       "count": "0-0",
@@ -2287,7 +2383,9 @@
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2323,9 +2421,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Chase Fralick",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Chase Fralick"
       },
       "score": {
         "away": 7,
@@ -2345,14 +2443,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Chase Fralick",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Chase Fralick"
       },
       "runners_after": {
-        "1B": "Chase Fralick",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Chase Fralick"
       },
       "score": {
         "away": 7,
@@ -2362,7 +2460,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": "Bingaman, E. to .",
       "outcome": "\u2014",
       "count": null,
@@ -2389,7 +2487,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": "Terrell, B. to 1b.",
       "outcome": "\u2014",
       "count": null,
@@ -2416,7 +2514,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": "Belyeu, C. to lf for Steele, L..",
       "outcome": "\u2014",
       "count": null,
@@ -2443,7 +2541,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": "Aiden Robbins",
       "outcome": "Groundout",
       "count": "1-0",
@@ -2470,7 +2568,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": "Adrian Rodriguez",
       "outcome": "Single",
       "count": "1-1",
@@ -2497,7 +2595,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -2524,7 +2622,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": "Temo Becerra",
       "outcome": "Walk",
       "count": "3-2",
@@ -2551,7 +2649,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": "Pack",
       "outcome": "Flyout",
       "count": "1-0",
@@ -2578,7 +2676,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": "Casey Borba",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2740,7 +2838,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Thomas Burns",
+      "pitcher": "",
       "batter": "Bristol Carter",
       "outcome": "Fielder's choice",
       "count": "2-1",

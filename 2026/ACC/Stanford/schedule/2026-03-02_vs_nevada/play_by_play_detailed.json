@@ -3,7 +3,7 @@
   "date": "03/02/2026",
   "away_team": "Nevada",
   "home_team": "Stanford",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -365,7 +365,8 @@
       "pitches": "KBFFF",
       "rbi": true,
       "runs_scored": [
-        "Luke Lavin"
+        "Luke Lavin",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -565,8 +566,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Jack Metcho",
-        "3B": null
+        "2B": null,
+        "3B": "Jack Metcho"
       },
       "score": {
         "away": 0,
@@ -587,13 +588,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Jack Metcho",
-        "3B": null
+        "2B": null,
+        "3B": "Jack Metcho"
       },
       "runners_after": {
         "1B": "Rominic Quiban",
-        "2B": "Jack Metcho",
-        "3B": null
+        "2B": null,
+        "3B": "Jack Metcho"
       },
       "score": {
         "away": 0,
@@ -609,18 +610,20 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Rominic Quiban"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Rominic Quiban",
-        "2B": "Jack Metcho",
-        "3B": null
+        "2B": null,
+        "3B": "Jack Metcho"
       },
       "runners_after": {
-        "1B": "Rominic Quiban",
-        "2B": "Jack Metcho",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Jack Metcho"
       },
       "score": {
         "away": 1,
@@ -640,14 +643,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Rominic Quiban",
-        "2B": "Jack Metcho",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Jack Metcho"
       },
       "runners_after": {
-        "1B": "Rominic Quiban",
-        "2B": "Jack Metcho",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Jack Metcho"
       },
       "score": {
         "away": 1,
@@ -667,14 +670,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Rominic Quiban",
-        "2B": "Jack Metcho",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Jack Metcho"
       },
       "runners_after": {
-        "1B": "Rominic Quiban",
-        "2B": "Jack Metcho",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Jack Metcho"
       },
       "score": {
         "away": 1,
@@ -690,18 +693,20 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Rominic Quiban",
-        "2B": "Jack Metcho",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Jack Metcho"
       },
       "runners_after": {
         "1B": "Jayce Dobie",
-        "2B": "Jack Metcho",
-        "3B": null
+        "2B": null,
+        "3B": "Jack Metcho"
       },
       "score": {
         "away": 2,
@@ -722,13 +727,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jayce Dobie",
-        "2B": "Jack Metcho",
-        "3B": null
+        "2B": null,
+        "3B": "Jack Metcho"
       },
       "runners_after": {
         "1B": "Jayce Dobie",
-        "2B": "Jack Metcho",
-        "3B": null
+        "2B": null,
+        "3B": "Jack Metcho"
       },
       "score": {
         "away": 2,
@@ -1044,7 +1049,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Rintaro Sasaki"
+        "Rintaro Sasaki",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1108,8 +1114,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Teddy Tokheim",
-        "2B": "Rashad Hayes",
+        "1B": null,
+        "2B": "Teddy Tokheim",
         "3B": null
       },
       "score": {
@@ -1130,13 +1136,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Teddy Tokheim",
-        "2B": "Rashad Hayes",
+        "1B": null,
+        "2B": "Teddy Tokheim",
         "3B": null
       },
       "runners_after": {
-        "1B": "Teddy Tokheim",
-        "2B": "Rashad Hayes",
+        "1B": null,
+        "2B": "Teddy Tokheim",
         "3B": null
       },
       "score": {
@@ -1207,7 +1213,9 @@
       "count": "3-2",
       "pitches": "KBBBSF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1255,7 +1263,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "Trevor Moore",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -1271,8 +1279,8 @@
       },
       "runners_after": {
         "1B": "Jack Metcho",
-        "2B": "Rominic Quiban",
-        "3B": null
+        "2B": null,
+        "3B": "Rominic Quiban"
       },
       "score": {
         "away": 3,
@@ -1282,24 +1290,26 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "Trevor Moore",
       "batter": "Jayce Dobie",
       "outcome": "Double",
       "count": "2-2",
       "pitches": "SBBS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jack Metcho",
-        "2B": "Rominic Quiban",
-        "3B": null
+        "2B": null,
+        "3B": "Rominic Quiban"
       },
       "runners_after": {
         "1B": "Jack Metcho",
         "2B": "Jayce Dobie",
-        "3B": null
+        "3B": "Rominic Quiban"
       },
       "score": {
         "away": 4,
@@ -1309,7 +1319,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "Andrew Shaw",
       "batter": "Sean Yamaguchi",
       "outcome": "Pop out",
       "count": "1-2",
@@ -1321,12 +1331,12 @@
       "runners_before": {
         "1B": "Jack Metcho",
         "2B": "Jayce Dobie",
-        "3B": null
+        "3B": "Rominic Quiban"
       },
       "runners_after": {
         "1B": "Jack Metcho",
         "2B": "Jayce Dobie",
-        "3B": null
+        "3B": "Rominic Quiban"
       },
       "score": {
         "away": 4,
@@ -1336,7 +1346,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Aiden Pollock",
       "batter": "Jimmy Nati",
       "outcome": "Walk",
       "count": "3-1",
@@ -1363,7 +1373,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Aiden Pollock",
       "batter": "Brock Sell",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1390,7 +1400,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Aiden Pollock",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1405,9 +1415,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jimmy Nati",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 4,
@@ -1417,7 +1427,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Aiden Pollock",
       "batter": "Tatum Marsh",
       "outcome": "Walk",
       "count": "3-2",
@@ -1427,14 +1437,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jimmy Nati",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "runners_after": {
         "1B": "Tatum Marsh",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 4,
@@ -1444,24 +1454,26 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Aiden Pollock",
       "batter": "Luke Lavin",
       "outcome": "Groundout",
       "count": "0-2",
       "pitches": "SF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Tatum Marsh",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "runners_after": {
         "1B": "Tatum Marsh",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 4,
@@ -1471,7 +1483,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Aiden Pollock",
       "batter": "Brock Ketelsen",
       "outcome": "Walk",
       "count": "3-2",
@@ -1483,12 +1495,12 @@
       "runners_before": {
         "1B": "Tatum Marsh",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "runners_after": {
         "1B": "Brock Ketelsen",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 4,
@@ -1498,7 +1510,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Aiden Pollock",
       "batter": "Rashad Hayes",
       "outcome": "Flyout",
       "count": "3-1",
@@ -1510,12 +1522,12 @@
       "runners_before": {
         "1B": "Brock Ketelsen",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "runners_after": {
         "1B": "Brock Ketelsen",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 4,
@@ -1525,7 +1537,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "Andrew Shaw",
       "batter": "Jacob Doyle",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1552,7 +1564,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "Andrew Shaw",
       "batter": "Jackson Waller",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1579,7 +1591,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "Andrew Shaw",
       "batter": "Sam Kane",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1606,7 +1618,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Aiden Pollock",
       "batter": "Rintaro Sasaki",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1633,7 +1645,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Aiden Pollock",
       "batter": "Teddy Tokheim",
       "outcome": "Foul out",
       "count": "1-1",
@@ -1660,7 +1672,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Aiden Pollock",
       "batter": "JJ Moran",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1687,7 +1699,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "Andrew Shaw",
       "batter": "Nate Snakenborg",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1714,7 +1726,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "Andrew Shaw",
       "batter": "Jack Metcho",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1741,7 +1753,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "Toran O'Harran",
       "batter": "Rominic Quiban",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1768,7 +1780,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Nik Miller",
       "batter": "Jimmy Nati",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1795,7 +1807,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Nik Miller",
       "batter": "Philip Cheong",
       "outcome": "Lineout",
       "count": "0-0",
@@ -1822,7 +1834,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Nik Miller",
       "batter": "Tatum Marsh",
       "outcome": "Foul out",
       "count": "2-2",
@@ -1849,7 +1861,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "Toran O'Harran",
       "batter": "Junhyuk Kwon",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1876,7 +1888,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "Toran O'Harran",
       "batter": "Jayce Dobie",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1903,7 +1915,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "Toran O'Harran",
       "batter": "Sean Yamaguchi",
       "outcome": "Lineout",
       "count": "2-2",
@@ -1930,7 +1942,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Andres Castro",
       "batter": "Luke Lavin",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1957,7 +1969,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Andres Castro",
       "batter": "Brock Ketelsen",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1984,7 +1996,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Andres Castro",
       "batter": "Rashad Hayes",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2011,7 +2023,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "Toran O'Harran",
       "batter": "Lee Matsuzaki",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2038,7 +2050,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "Toran O'Harran",
       "batter": "Jackson Waller",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2065,7 +2077,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "Toran O'Harran",
       "batter": "Sam Kane",
       "outcome": "Single",
       "count": "1-1",
@@ -2092,7 +2104,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "Toran O'Harran",
       "batter": "Nate Snakenborg",
       "outcome": "Single",
       "count": "1-2",
@@ -2119,7 +2131,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "Toran O'Harran",
       "batter": "Jack Metcho",
       "outcome": "Reached on error",
       "count": "3-2",
@@ -2146,13 +2158,16 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "Toran O'Harran",
       "batter": "Rominic Quiban",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2173,13 +2188,16 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "Toran O'Harran",
       "batter": "Junhyuk Kwon",
       "outcome": "Double",
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2200,13 +2218,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "Kassius Thomas",
       "batter": "Jayce Dobie",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "KBFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2227,7 +2247,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "Kassius Thomas",
       "batter": "Sean Yamaguchi",
       "outcome": "Walk",
       "count": "3-0",
@@ -2254,7 +2274,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brock Ketelsen",
+      "pitcher": "",
       "batter": "Lee Matsuzaki",
       "outcome": "Lineout",
       "count": "0-0",
@@ -2281,7 +2301,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Andres Castro",
       "batter": "Rintaro Sasaki",
       "outcome": "Single",
       "count": "1-0",
@@ -2308,7 +2328,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Andres Castro",
       "batter": "Cort MacDonald",
       "outcome": "Single",
       "count": "1-0",
@@ -2335,7 +2355,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Andres Castro",
       "batter": "JJ Moran",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2362,7 +2382,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Andres Castro",
       "batter": "Jimmy Nati",
       "outcome": "Grounded into double play",
       "count": "1-0",

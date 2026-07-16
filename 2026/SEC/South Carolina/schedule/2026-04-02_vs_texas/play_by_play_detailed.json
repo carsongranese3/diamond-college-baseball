@@ -3,7 +3,7 @@
   "date": "04/02/2026",
   "away_team": "Texas",
   "home_team": "South Carolina",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -445,7 +445,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -472,7 +474,9 @@
       "count": "1-1",
       "pitches": "BS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -526,7 +530,10 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -553,7 +560,9 @@
       "count": "2-1",
       "pitches": "BSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -879,7 +888,9 @@
       "count": "1-2",
       "pitches": "BKS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1528,7 +1539,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Patrick Evans"
+        "Patrick Evans",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1659,6 +1671,33 @@
     {
       "inning": "Bottom 7",
       "pitcher": "Jason Flores",
+      "batter": "Flores",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 8
+      },
+      "description": "Flores Jas to p for Walls."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Jason Flores",
       "batter": "Jake Randolph",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1741,7 +1780,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jason Flores",
+      "pitcher": "Cody Howard",
       "batter": "Luke Yuhasz",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1903,7 +1942,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cody Howard",
+      "pitcher": "",
       "batter": "Erik Parker",
       "outcome": "Flyout",
       "count": "0-0",

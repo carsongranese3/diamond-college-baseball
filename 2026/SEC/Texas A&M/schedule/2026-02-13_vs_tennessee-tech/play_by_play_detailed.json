@@ -3,7 +3,7 @@
   "date": "02/13/2026",
   "away_team": "Tennessee Tech",
   "home_team": "Texas A&M",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -393,7 +393,9 @@
       "count": "2-2",
       "pitches": "BBKK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -485,9 +487,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Caden Sorrell",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Caden Sorrell"
       },
       "score": {
         "away": 0,
@@ -509,7 +511,34 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Caden Sorrell",
+        "1B": null,
+        "2B": null,
+        "3B": "Caden Sorrell"
+      },
+      "runners_after": {
+        "1B": "Chris Hacopian",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 4
+      },
+      "description": "HACOPIAN singled through the left side, RBI (3-1 BBFB) SORRELL scored."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Garrett Holpuch",
+      "batter": "Holpuch, Gar to p for Pease, Jaxso.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Chris Hacopian",
         "2B": null,
         "3B": null
       },
@@ -522,7 +551,7 @@
         "away": 0,
         "home": 4
       },
-      "description": "HACOPIAN singled through the left side, RBI (3-1 BBFB) SORRELL scored."
+      "description": "Holpuch, Gar to p for Pease, Jaxso."
     },
     {
       "inning": "Bottom 2",
@@ -623,7 +652,7 @@
       },
       "runners_after": {
         "1B": "Manny Garza",
-        "2B": null,
+        "2B": "Landon Smelser",
         "3B": null
       },
       "score": {
@@ -645,12 +674,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Manny Garza",
-        "2B": null,
+        "2B": "Landon Smelser",
         "3B": null
       },
       "runners_after": {
         "1B": "Manny Garza",
-        "2B": null,
+        "2B": "Landon Smelser",
         "3B": null
       },
       "score": {
@@ -672,13 +701,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Manny Garza",
-        "2B": null,
+        "2B": "Landon Smelser",
         "3B": null
       },
       "runners_after": {
-        "1B": "Manny Garza",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Manny Garza",
+        "3B": "Landon Smelser"
       },
       "score": {
         "away": 0,
@@ -695,17 +724,19 @@
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
+        "Manny Garza",
+        "Landon Smelser",
         "Owen Lee"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Manny Garza",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Manny Garza",
+        "3B": "Landon Smelser"
       },
       "runners_after": {
-        "1B": "Manny Garza",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -727,12 +758,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Manny Garza",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Manny Garza",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1194,8 +1225,8 @@
       },
       "runners_after": {
         "1B": "Luke Bragga",
-        "2B": "Manny Garza",
-        "3B": null
+        "2B": null,
+        "3B": "Manny Garza"
       },
       "score": {
         "away": 3,
@@ -1211,17 +1242,19 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Manny Garza"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Luke Bragga",
-        "2B": "Manny Garza",
-        "3B": null
+        "2B": null,
+        "3B": "Manny Garza"
       },
       "runners_after": {
         "1B": "Jackson Rooker",
-        "2B": "Manny Garza",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1243,12 +1276,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jackson Rooker",
-        "2B": "Manny Garza",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Jackson Rooker",
-        "2B": "Manny Garza",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1464,7 +1497,7 @@
       },
       "runners_after": {
         "1B": "Connor Crowson",
-        "2B": null,
+        "2B": "Jorsixt Jimenez",
         "3B": null
       },
       "score": {
@@ -1486,12 +1519,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Connor Crowson",
-        "2B": null,
+        "2B": "Jorsixt Jimenez",
         "3B": null
       },
       "runners_after": {
-        "1B": "Connor Crowson",
-        "2B": null,
+        "1B": null,
+        "2B": "Jorsixt Jimenez",
         "3B": null
       },
       "score": {
@@ -1531,7 +1564,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Garrett Holpuch",
+      "pitcher": "Micah Summar",
       "batter": "Chris Hacopian",
       "outcome": "Single",
       "count": "2-1",
@@ -1555,6 +1588,33 @@
         "home": 6
       },
       "description": "HACOPIAN singled to center field (2-1 BKB)."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Micah Summar",
+      "batter": "Summar, Mica to p for Holpuch, Gar.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Chris Hacopian",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Chris Hacopian",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 6
+      },
+      "description": "Summar, Mica to p for Holpuch, Gar."
     },
     {
       "inning": "Bottom 6",
@@ -1737,7 +1797,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Landon Smelser",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1759,12 +1819,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Landon Smelser",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Landon Smelser",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1803,7 +1863,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Micah Summar",
+      "pitcher": "Jayden Dillard",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1830,7 +1890,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Micah Summar",
+      "pitcher": "Jayden Dillard",
       "batter": "Gavin Grahovac",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -1857,7 +1917,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Micah Summar",
+      "pitcher": "Jayden Dillard",
       "batter": "Caden Sorrell",
       "outcome": "Home run",
       "count": "3-1",
@@ -1885,6 +1945,33 @@
         "home": 10
       },
       "description": "SORRELL homered to right field, 3 RBI (3-1 BSBB) GRAHOVAC scored KELLNER scored."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Jayden Dillard",
+      "batter": "Dillard, Jay to p for Summar, Mica.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 10
+      },
+      "description": "Dillard, Jay to p for Summar, Mica."
     },
     {
       "inning": "Bottom 7",
@@ -2250,6 +2337,7 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
+        "Owen Lee",
         "Jorsixt Jimenez"
       ],
       "outs_before": 2,
@@ -2260,7 +2348,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Owen Lee",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2282,12 +2370,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Owen Lee",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Owen Lee",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2309,12 +2397,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Owen Lee",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Owen Lee",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2407,7 +2495,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jayden Dillard",
+      "pitcher": "",
       "batter": "Wesley Jordan",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -2434,7 +2522,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jayden Dillard",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2449,8 +2537,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Wesley Jordan",
-        "2B": null,
+        "1B": null,
+        "2B": "Wesley Jordan",
         "3B": null
       },
       "score": {
@@ -2461,7 +2549,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jayden Dillard",
+      "pitcher": "",
       "batter": "Jorian Wilson",
       "outcome": "Walk",
       "count": "3-0",
@@ -2471,13 +2559,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Wesley Jordan",
-        "2B": null,
+        "1B": null,
+        "2B": "Wesley Jordan",
         "3B": null
       },
       "runners_after": {
         "1B": "Jorian Wilson",
-        "2B": null,
+        "2B": "Wesley Jordan",
         "3B": null
       },
       "score": {
@@ -2488,7 +2576,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jayden Dillard",
+      "pitcher": "",
       "batter": "Nico Partida",
       "outcome": "Home run",
       "count": "0-0",
@@ -2496,13 +2584,14 @@
       "rbi": true,
       "runs_scored": [
         "Jorian Wilson",
+        "Wesley Jordan",
         "Nico Partida"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jorian Wilson",
-        "2B": null,
+        "2B": "Wesley Jordan",
         "3B": null
       },
       "runners_after": {
@@ -2518,7 +2607,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jayden Dillard",
+      "pitcher": "",
       "batter": "KIEL",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2572,7 +2661,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Cole Hubert",
+      "pitcher": "",
       "batter": "Landon Smelser",
       "outcome": "Groundout",
       "count": "1-0",
@@ -2599,7 +2688,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Cole Hubert",
+      "pitcher": "",
       "batter": "Manny Garza",
       "outcome": "Single",
       "count": "1-1",
@@ -2626,7 +2715,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Cole Hubert",
+      "pitcher": "",
       "batter": "Luke Bragga",
       "outcome": "Flyout",
       "count": "2-2",

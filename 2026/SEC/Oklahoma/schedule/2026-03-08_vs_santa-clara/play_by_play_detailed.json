@@ -3,7 +3,7 @@
   "date": "03/08/2026",
   "away_team": "Santa Clara",
   "home_team": "Oklahoma",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -157,8 +157,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brendan Brock",
-        "2B": null,
+        "1B": null,
+        "2B": "Brendan Brock",
         "3B": null
       },
       "score": {
@@ -179,14 +179,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Brendan Brock",
-        "2B": null,
+        "1B": null,
+        "2B": "Brendan Brock",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brendan Brock",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brendan Brock"
       },
       "score": {
         "away": 0,
@@ -206,14 +206,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Brendan Brock",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brendan Brock"
       },
       "runners_after": {
         "1B": "Drew Dickerson",
         "2B": null,
-        "3B": null
+        "3B": "Brendan Brock"
       },
       "score": {
         "away": 0,
@@ -235,12 +235,12 @@
       "runners_before": {
         "1B": "Drew Dickerson",
         "2B": null,
-        "3B": null
+        "3B": "Brendan Brock"
       },
       "runners_after": {
         "1B": "Jaxon Willits",
-        "2B": null,
-        "3B": null
+        "2B": "Drew Dickerson",
+        "3B": "Brendan Brock"
       },
       "score": {
         "away": 0,
@@ -256,18 +256,20 @@
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Brendan Brock"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Jaxon Willits",
-        "2B": null,
-        "3B": null
+        "2B": "Drew Dickerson",
+        "3B": "Brendan Brock"
       },
       "runners_after": {
         "1B": "Deiten Lachance",
-        "2B": null,
-        "3B": null
+        "2B": "Jaxon Willits",
+        "3B": "Drew Dickerson"
       },
       "score": {
         "away": 0,
@@ -283,18 +285,20 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Drew Dickerson"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Deiten Lachance",
-        "2B": null,
-        "3B": null
+        "2B": "Jaxon Willits",
+        "3B": "Drew Dickerson"
       },
       "runners_after": {
         "1B": "Alec Blair",
-        "2B": null,
-        "3B": null
+        "2B": "Deiten Lachance",
+        "3B": "Jaxon Willits"
       },
       "score": {
         "away": 0,
@@ -310,18 +314,20 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jaxon Willits"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Alec Blair",
-        "2B": null,
-        "3B": null
+        "2B": "Deiten Lachance",
+        "3B": "Jaxon Willits"
       },
       "runners_after": {
-        "1B": "Alec Blair",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Alec Blair",
+        "3B": "Deiten Lachance"
       },
       "score": {
         "away": 0,
@@ -341,14 +347,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Alec Blair",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Alec Blair",
+        "3B": "Deiten Lachance"
       },
       "runners_after": {
-        "1B": "Alec Blair",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Alec Blair",
+        "3B": "Deiten Lachance"
       },
       "score": {
         "away": 0,
@@ -368,14 +374,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Alec Blair",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Alec Blair",
+        "3B": "Deiten Lachance"
       },
       "runners_after": {
-        "1B": "Alec Blair",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Alec Blair",
+        "3B": "Deiten Lachance"
       },
       "score": {
         "away": 0,
@@ -799,7 +805,9 @@
       "count": "3-2",
       "pitches": "BFBFFFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Deiten Lachance"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -809,7 +817,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Deiten Lachance",
+        "2B": null,
         "3B": "Alec Blair"
       },
       "score": {
@@ -831,12 +839,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Deiten Lachance",
+        "2B": null,
         "3B": "Alec Blair"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Deiten Lachance",
+        "2B": null,
         "3B": "Alec Blair"
       },
       "score": {
@@ -874,7 +882,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Cord Rager",
+      "pitcher": "Reid Hensley",
       "batter": "Luke Devine",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -898,6 +906,33 @@
         "home": 4
       },
       "description": "DEVINE hit by pitch (1-0 B) ROSS advanced to second."
+    },
+    {
+      "inning": "Top 4",
+      "pitcher": "Reid Hensley",
+      "batter": "Hensley, R. to p for Rager, C..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Luke Devine",
+        "2B": "Max Ross",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Luke Devine",
+        "2B": "Max Ross",
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 4
+      },
+      "description": "Hensley, R. to p for Rager, C.."
     },
     {
       "inning": "Top 4",
@@ -1147,7 +1182,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Reid Hensley",
+      "pitcher": "Jason Bodin",
       "batter": "Ben Cleary",
       "outcome": "Lineout",
       "count": "2-2",
@@ -1174,7 +1209,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Reid Hensley",
+      "pitcher": "Jason Bodin",
       "batter": "Max Ross",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -1198,6 +1233,33 @@
         "home": 4
       },
       "description": "ROSS hit by pitch (2-2 BBKSF)."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Jason Bodin",
+      "batter": "Bodin, J. to p for Hensley, R..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Max Ross",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Max Ross",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 4
+      },
+      "description": "Bodin, J. to p for Hensley, R.."
     },
     {
       "inning": "Top 5",
@@ -1270,8 +1332,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Camden Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Camden Johnson",
         "3B": null
       },
       "score": {
@@ -1288,16 +1350,18 @@
       "count": "2-2",
       "pitches": "BBKK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Camden Johnson"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Camden Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Camden Johnson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": null,
         "3B": "Drew Dickerson"
       },
@@ -1319,12 +1383,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": null,
         "3B": "Drew Dickerson"
       },
       "runners_after": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": null,
         "3B": "Drew Dickerson"
       },
@@ -1342,18 +1406,20 @@
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Drew Dickerson"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": null,
         "3B": "Drew Dickerson"
       },
       "runners_after": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": "Deiten Lachance",
-        "3B": "Drew Dickerson"
+        "3B": null
       },
       "score": {
         "away": 4,
@@ -1369,18 +1435,20 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Deiten Lachance"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": "Deiten Lachance",
-        "3B": "Drew Dickerson"
+        "3B": null
       },
       "runners_after": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": "Alec Blair",
-        "3B": "Drew Dickerson"
+        "3B": null
       },
       "score": {
         "away": 4,
@@ -1400,14 +1468,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": "Alec Blair",
-        "3B": "Drew Dickerson"
+        "3B": null
       },
       "runners_after": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": "Alec Blair",
-        "3B": "Drew Dickerson"
+        "3B": null
       },
       "score": {
         "away": 4,
@@ -1417,7 +1485,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cooper Lanz",
+      "pitcher": "Hunter Hargett",
       "batter": "Dayton Tockey",
       "outcome": "Walk",
       "count": "3-1",
@@ -1427,14 +1495,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": "Alec Blair",
-        "3B": "Drew Dickerson"
+        "3B": null
       },
       "runners_after": {
         "1B": "Dayton Tockey",
         "2B": "Alec Blair",
-        "3B": "Drew Dickerson"
+        "3B": null
       },
       "score": {
         "away": 4,
@@ -1456,12 +1524,12 @@
       "runners_before": {
         "1B": "Dayton Tockey",
         "2B": "Alec Blair",
-        "3B": "Drew Dickerson"
+        "3B": null
       },
       "runners_after": {
         "1B": "Dayton Tockey",
         "2B": "Alec Blair",
-        "3B": "Drew Dickerson"
+        "3B": null
       },
       "score": {
         "away": 4,
@@ -1606,7 +1674,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Hunter Hargett",
+      "pitcher": "Nick Chow",
       "batter": "Brendan Brock",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1633,7 +1701,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Hunter Hargett",
+      "pitcher": "Nick Chow",
       "batter": "Camden Johnson",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1795,7 +1863,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nick Chow",
+      "pitcher": "Sebastian Schreiber",
       "batter": "Deiten Lachance",
       "outcome": "Single",
       "count": "0-1",
@@ -1811,7 +1879,7 @@
       },
       "runners_after": {
         "1B": "Deiten Lachance",
-        "2B": null,
+        "2B": "Jaxon Willits",
         "3B": null
       },
       "score": {
@@ -1822,7 +1890,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nick Chow",
+      "pitcher": "Sebastian Schreiber",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1833,13 +1901,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Deiten Lachance",
-        "2B": null,
+        "2B": "Jaxon Willits",
         "3B": null
       },
       "runners_after": {
-        "1B": "Deiten Lachance",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Deiten Lachance",
+        "3B": "Jaxon Willits"
       },
       "score": {
         "away": 4,
@@ -1849,7 +1917,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nick Chow",
+      "pitcher": "Sebastian Schreiber",
       "batter": "Alec Blair",
       "outcome": "Walk",
       "count": "3-2",
@@ -1859,14 +1927,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Deiten Lachance",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Deiten Lachance",
+        "3B": "Jaxon Willits"
       },
       "runners_after": {
         "1B": "Alec Blair",
-        "2B": null,
-        "3B": null
+        "2B": "Deiten Lachance",
+        "3B": "Jaxon Willits"
       },
       "score": {
         "away": 4,
@@ -1882,18 +1950,20 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jaxon Willits"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Alec Blair",
-        "2B": null,
-        "3B": null
+        "2B": "Deiten Lachance",
+        "3B": "Jaxon Willits"
       },
       "runners_after": {
         "1B": "Alec Blair",
         "2B": null,
-        "3B": null
+        "3B": "Deiten Lachance"
       },
       "score": {
         "away": 4,
@@ -1903,7 +1973,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Sebastian Schreiber",
+      "pitcher": "Vincent Braga",
       "batter": "Kyle Branch",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -1915,12 +1985,12 @@
       "runners_before": {
         "1B": "Alec Blair",
         "2B": null,
-        "3B": null
+        "3B": "Deiten Lachance"
       },
       "runners_after": {
         "1B": "Kyle Branch",
-        "2B": null,
-        "3B": null
+        "2B": "Alec Blair",
+        "3B": "Deiten Lachance"
       },
       "score": {
         "away": 4,
@@ -1930,7 +2000,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Sebastian Schreiber",
+      "pitcher": "Vincent Braga",
       "batter": "Jason Walk",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1941,13 +2011,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Kyle Branch",
-        "2B": null,
-        "3B": null
+        "2B": "Alec Blair",
+        "3B": "Deiten Lachance"
       },
       "runners_after": {
         "1B": "Kyle Branch",
-        "2B": null,
-        "3B": null
+        "2B": "Alec Blair",
+        "3B": "Deiten Lachance"
       },
       "score": {
         "away": 4,
@@ -2011,7 +2081,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jason Bodin",
+      "pitcher": "Gavyn Jones",
       "batter": "Max Ross",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -2038,7 +2108,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jason Bodin",
+      "pitcher": "Kadyn Leon",
       "batter": "Luke Devine",
       "outcome": "Single",
       "count": "0-2",
@@ -2065,7 +2135,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jason Bodin",
+      "pitcher": "Jackson Cleveland",
       "batter": "Will Anderson",
       "outcome": "Walk",
       "count": "3-0",
@@ -2092,7 +2162,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jason Bodin",
+      "pitcher": "Jackson Cleveland",
       "batter": "Tate Medicoff",
       "outcome": "Fielder's choice",
       "count": "1-1",
@@ -2121,7 +2191,34 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Gavyn Jones",
+      "pitcher": "Jackson Cleveland",
+      "batter": "Jones, G. to p for Bodin, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Tate Medicoff",
+        "2B": "Will Anderson",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Tate Medicoff",
+        "2B": "Will Anderson",
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 8
+      },
+      "description": "Jones, G. to p for Bodin, J.."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Jackson Cleveland",
       "batter": "Waylon Walsh",
       "outcome": "Single",
       "count": "1-0",
@@ -2150,7 +2247,34 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Kadyn Leon",
+      "pitcher": "",
+      "batter": "Leon, K. to p for Jones, G..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Waylon Walsh",
+        "2B": null,
+        "3B": "Tate Medicoff"
+      },
+      "runners_after": {
+        "1B": "Waylon Walsh",
+        "2B": null,
+        "3B": "Tate Medicoff"
+      },
+      "score": {
+        "away": 6,
+        "home": 8
+      },
+      "description": "Leon, K. to p for Jones, G.."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "",
       "batter": "Russ Filter",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2204,7 +2328,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Vincent Braga",
+      "pitcher": "",
       "batter": "Camden Johnson",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2231,7 +2355,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Vincent Braga",
+      "pitcher": "",
       "batter": "Drew Dickerson",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2258,7 +2382,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
+      "batter": "Cleveland, J to p for Leon, K..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 8
+      },
+      "description": "Cleveland, J to p for Leon, K.."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": "Mateo Garcia",
       "outcome": "Single",
       "count": "1-0",
@@ -2285,7 +2436,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Thomas Ferroggiaro",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2312,7 +2463,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Ben Cleary",
       "outcome": "Reached on error",
       "count": "2-2",
@@ -2339,7 +2490,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Max Ross",
       "outcome": "Grounded into double play",
       "count": "0-2",

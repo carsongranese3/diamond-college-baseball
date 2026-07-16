@@ -3,7 +3,7 @@
   "date": "06/13/2026",
   "away_team": "Texas",
   "home_team": "Georgia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -205,9 +205,7 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [
-        "Call"
-      ],
+      "runs_scored": [],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -343,7 +341,8 @@
       "pitches": "KBSS",
       "rbi": false,
       "runs_scored": [
-        "Kenny Ishikawa"
+        "Kenny Ishikawa",
+        null
       ],
       "outs_before": 3,
       "outs_after": 3,
@@ -488,8 +487,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Adrian Rodriguez",
-        "2B": null,
+        "1B": null,
+        "2B": "Adrian Rodriguez",
         "3B": null
       },
       "score": {
@@ -510,13 +509,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Adrian Rodriguez",
-        "2B": null,
+        "1B": null,
+        "2B": "Adrian Rodriguez",
         "3B": null
       },
       "runners_after": {
-        "1B": "Adrian Rodriguez",
-        "2B": null,
+        "1B": null,
+        "2B": "Adrian Rodriguez",
         "3B": null
       },
       "score": {
@@ -537,13 +536,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Adrian Rodriguez",
-        "2B": null,
+        "1B": null,
+        "2B": "Adrian Rodriguez",
         "3B": null
       },
       "runners_after": {
-        "1B": "Adrian Rodriguez",
-        "2B": null,
+        "1B": null,
+        "2B": "Adrian Rodriguez",
         "3B": null
       },
       "score": {
@@ -1611,7 +1610,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Dylan Volantis",
+      "pitcher": "Brett Crossland",
       "batter": "Kenny Ishikawa",
       "outcome": "Single",
       "count": "0-1",
@@ -1683,8 +1682,8 @@
         "3B": "Kenny Ishikawa"
       },
       "runners_after": {
-        "1B": "Ryan Wynn",
-        "2B": null,
+        "1B": null,
+        "2B": "Ryan Wynn",
         "3B": "Kenny Ishikawa"
       },
       "score": {
@@ -1705,13 +1704,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ryan Wynn",
-        "2B": null,
+        "1B": null,
+        "2B": "Ryan Wynn",
         "3B": "Kenny Ishikawa"
       },
       "runners_after": {
-        "1B": "Ryan Wynn",
-        "2B": null,
+        "1B": null,
+        "2B": "Ryan Wynn",
         "3B": "Kenny Ishikawa"
       },
       "score": {
@@ -1722,7 +1721,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Brett Crossland",
+      "pitcher": "Michael Winter",
       "batter": "Kolby Branch",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1732,13 +1731,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Ryan Wynn",
-        "2B": null,
+        "1B": null,
+        "2B": "Ryan Wynn",
         "3B": "Kenny Ishikawa"
       },
       "runners_after": {
-        "1B": "Ryan Wynn",
-        "2B": null,
+        "1B": null,
+        "2B": "Ryan Wynn",
         "3B": "Kenny Ishikawa"
       },
       "score": {
@@ -1938,7 +1937,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Michael Winter",
+      "pitcher": "",
       "batter": "Rylan Lujo",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2046,7 +2045,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Joey Volchko",
+      "pitcher": "",
       "batter": "Temo Becerra",
       "outcome": "Strikeout (looking)",
       "count": "0-2",

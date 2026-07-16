@@ -3,7 +3,7 @@
   "date": "05/09/2026(2)",
   "away_team": "Texas A&M",
   "home_team": "Ole Miss",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -157,8 +157,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dom Decker",
-        "2B": null,
+        "1B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -179,13 +179,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Dom Decker",
-        "2B": null,
+        "1B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "runners_after": {
-        "1B": "Dom Decker",
-        "2B": null,
+        "1B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -206,13 +206,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Dom Decker",
-        "2B": null,
+        "1B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "runners_after": {
-        "1B": "Dom Decker",
-        "2B": null,
+        "1B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -365,7 +365,8 @@
       "pitches": "BFSB",
       "rbi": true,
       "runs_scored": [
-        "Austin Fawley"
+        "Austin Fawley",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -693,7 +694,8 @@
       "pitches": "FBS",
       "rbi": true,
       "runs_scored": [
-        "Collin Reuter"
+        "Collin Reuter",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -913,7 +915,9 @@
       "pitches": "BBS",
       "rbi": true,
       "runs_scored": [
-        "Blake Binderup"
+        "Blake Binderup",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1342,7 +1346,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Taylor Rabe",
+      "pitcher": "JP Robertson",
       "batter": "Jorian Wilson",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1450,7 +1454,34 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
+      "batter": "J. Robertson",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 5
+      },
+      "description": "J. Robertson to p for T. Rabe."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "JP Robertson",
       "batter": "Blake Binderup",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1477,7 +1508,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": "Ben Royo",
       "outcome": "Single",
       "count": "3-1",
@@ -1504,7 +1535,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Sawyer Farr",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1531,7 +1562,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Gavin Grahovac",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1654,8 +1685,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dom Decker",
-        "2B": null,
+        "1B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -1672,17 +1703,19 @@
       "count": "1-2",
       "pitches": "FSBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Dom Decker",
-        "2B": null,
+        "1B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "runners_after": {
         "1B": "Judd Utermark",
-        "2B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -1704,12 +1737,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Judd Utermark",
-        "2B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "runners_after": {
         "1B": "Will Furniss",
-        "2B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -1731,12 +1764,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Will Furniss",
-        "2B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "runners_after": {
         "1B": "Will Furniss",
-        "2B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -1747,7 +1780,34 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
+      "batter": "H. Calhoun",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 6
+      },
+      "description": "H. Calhoun to p for J. Robertson."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Hudson Calhoun",
       "batter": "H. Federico",
       "outcome": "\u2014",
       "count": null,
@@ -1774,7 +1834,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "B. Moseley",
       "outcome": "\u2014",
       "count": null,
@@ -1801,7 +1861,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "H.",
+      "pitcher": "Walker Hooks",
       "batter": "Caden Sorrell",
       "outcome": "Single",
       "count": "2-2",
@@ -1828,7 +1888,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "H.",
+      "pitcher": "Walker Hooks",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1843,8 +1903,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Caden Sorrell",
-        "2B": null,
+        "1B": null,
+        "2B": "Caden Sorrell",
         "3B": null
       },
       "score": {
@@ -1855,7 +1915,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "H.",
+      "pitcher": "Walker Hooks",
       "batter": "Chris Hacopian",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1865,13 +1925,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Caden Sorrell",
-        "2B": null,
+        "1B": null,
+        "2B": "Caden Sorrell",
         "3B": null
       },
       "runners_after": {
-        "1B": "Caden Sorrell",
-        "2B": null,
+        "1B": null,
+        "2B": "Caden Sorrell",
         "3B": null
       },
       "score": {
@@ -1882,7 +1942,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "H.",
+      "pitcher": "Walker Hooks",
       "batter": null,
       "outcome": "Baserunning",
       "count": "1-2",
@@ -1892,13 +1952,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Caden Sorrell",
-        "2B": null,
+        "1B": null,
+        "2B": "Caden Sorrell",
         "3B": null
       },
       "runners_after": {
-        "1B": "Caden Sorrell",
-        "2B": null,
+        "1B": null,
+        "2B": "Caden Sorrell",
         "3B": null
       },
       "score": {
@@ -1909,7 +1969,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "H.",
+      "pitcher": "Walker Hooks",
       "batter": "Bear Harrison",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -1919,13 +1979,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Caden Sorrell",
-        "2B": null,
+        "1B": null,
+        "2B": "Caden Sorrell",
         "3B": null
       },
       "runners_after": {
         "1B": "Bear Harrison",
-        "2B": null,
+        "2B": "Caden Sorrell",
         "3B": null
       },
       "score": {
@@ -1936,7 +1996,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "H.",
+      "pitcher": "",
       "batter": "Jorian Wilson",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1947,12 +2007,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Bear Harrison",
-        "2B": null,
+        "2B": "Caden Sorrell",
         "3B": null
       },
       "runners_after": {
         "1B": "Bear Harrison",
-        "2B": null,
+        "2B": "Caden Sorrell",
         "3B": null
       },
       "score": {
@@ -2044,7 +2104,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "",
+      "batter": "W. Hooks",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 6
+      },
+      "description": "W. Hooks to p for H. Calhoun."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": "Blake Binderup",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2071,7 +2158,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "",
       "batter": "Ben Royo",
       "outcome": "Single",
       "count": "0-0",
@@ -2098,7 +2185,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "",
       "batter": "Wesley Jordan",
       "outcome": "Grounded into double play",
       "count": "1-1",

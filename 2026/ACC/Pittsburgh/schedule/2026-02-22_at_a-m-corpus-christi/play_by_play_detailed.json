@@ -3,7 +3,7 @@
   "date": "02/22/2026",
   "away_team": "Pittsburgh",
   "home_team": "A&M-Corpus Christi",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -265,7 +265,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Trey Fenderson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -391,7 +391,9 @@
       "count": "0-2",
       "pitches": "KFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -418,7 +420,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -589,8 +593,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jackson Cooke",
-        "2B": null,
+        "1B": null,
+        "2B": "Jackson Cooke",
         "3B": null
       },
       "score": {
@@ -611,13 +615,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jackson Cooke",
-        "2B": null,
+        "1B": null,
+        "2B": "Jackson Cooke",
         "3B": null
       },
       "runners_after": {
         "1B": "AJ Nessler",
-        "2B": null,
+        "2B": "Jackson Cooke",
         "3B": null
       },
       "score": {
@@ -639,12 +643,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "AJ Nessler",
-        "2B": null,
+        "2B": "Jackson Cooke",
         "3B": null
       },
       "runners_after": {
         "1B": "Caden Dulin",
-        "2B": null,
+        "2B": "Jackson Cooke",
         "3B": null
       },
       "score": {
@@ -666,12 +670,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Caden Dulin",
-        "2B": null,
+        "2B": "Jackson Cooke",
         "3B": null
       },
       "runners_after": {
         "1B": "Caden Dulin",
-        "2B": null,
+        "2B": "Jackson Cooke",
         "3B": null
       },
       "score": {
@@ -805,9 +809,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Isaiah Afework",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Isaiah Afework"
       },
       "score": {
         "away": 0,
@@ -827,14 +831,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Isaiah Afework",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Isaiah Afework"
       },
       "runners_after": {
-        "1B": "Isaiah Afework",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Isaiah Afework"
       },
       "score": {
         "away": 0,
@@ -913,9 +917,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lorenzo Carrier",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Lorenzo Carrier"
       },
       "score": {
         "away": 0,
@@ -935,14 +939,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Lorenzo Carrier",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Lorenzo Carrier"
       },
       "runners_after": {
         "1B": "Sebastian Pisacreta",
         "2B": null,
-        "3B": null
+        "3B": "Lorenzo Carrier"
       },
       "score": {
         "away": 0,
@@ -964,12 +968,12 @@
       "runners_before": {
         "1B": "Sebastian Pisacreta",
         "2B": null,
-        "3B": null
+        "3B": "Lorenzo Carrier"
       },
       "runners_after": {
         "1B": "Sebastian Pisacreta",
         "2B": null,
-        "3B": null
+        "3B": "Lorenzo Carrier"
       },
       "score": {
         "away": 0,
@@ -991,12 +995,12 @@
       "runners_before": {
         "1B": "Sebastian Pisacreta",
         "2B": null,
-        "3B": null
+        "3B": "Lorenzo Carrier"
       },
       "runners_after": {
         "1B": "Sebastian Pisacreta",
         "2B": null,
-        "3B": null
+        "3B": "Lorenzo Carrier"
       },
       "score": {
         "away": 0,
@@ -1060,13 +1064,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Freddy Beruvides Jr.",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jack Bergstrom"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1075,7 +1081,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jack Bergstrom",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1087,7 +1093,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Freddy Beruvides Jr.",
       "batter": "Matt Evans",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1097,12 +1103,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jack Bergstrom",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jack Bergstrom",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1114,22 +1120,24 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Freddy Beruvides Jr.",
       "batter": "Austin Russell",
       "outcome": "Double",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jack Bergstrom",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jack Bergstrom",
+        "1B": null,
         "2B": "Austin Russell",
         "3B": null
       },
@@ -1141,7 +1149,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Freddy Beruvides Jr.",
       "batter": "Jackson Smith",
       "outcome": "Walk",
       "count": "3-2",
@@ -1151,7 +1159,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jack Bergstrom",
+        "1B": null,
         "2B": "Austin Russell",
         "3B": null
       },
@@ -1168,7 +1176,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Freddy Beruvides Jr.",
       "batter": "Cade Sanchez",
       "outcome": "Walk",
       "count": "3-2",
@@ -1195,7 +1203,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Joey Ciancimino",
       "batter": "Isaiah Afework",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1222,7 +1230,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Joey Ciancimino",
       "batter": "Max Towchik",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1249,7 +1257,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Matthew Molina",
       "batter": "Jake Kendro",
       "outcome": "Walk",
       "count": "3-1",
@@ -1276,7 +1284,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Matthew Molina",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1291,8 +1299,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Kendro",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Kendro",
         "3B": null
       },
       "score": {
@@ -1303,7 +1311,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Matthew Molina",
       "batter": "AJ Nessler",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1313,13 +1321,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jake Kendro",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Kendro",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Kendro",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Kendro",
         "3B": null
       },
       "score": {
@@ -1330,7 +1338,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Matthew Molina",
       "batter": "Caden Dulin",
       "outcome": "Walk",
       "count": "3-2",
@@ -1340,13 +1348,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jake Kendro",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Kendro",
         "3B": null
       },
       "runners_after": {
         "1B": "Caden Dulin",
-        "2B": null,
+        "2B": "Jake Kendro",
         "3B": null
       },
       "score": {
@@ -1357,7 +1365,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Matthew Molina",
       "batter": "Kai Wagner",
       "outcome": "Walk",
       "count": "3-0",
@@ -1368,12 +1376,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Caden Dulin",
-        "2B": null,
+        "2B": "Jake Kendro",
         "3B": null
       },
       "runners_after": {
         "1B": "Kai Wagner",
-        "2B": null,
+        "2B": "Jake Kendro",
         "3B": null
       },
       "score": {
@@ -1384,23 +1392,25 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Matthew Molina",
       "batter": "Lorenzo Carrier",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBSBSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Kai Wagner",
-        "2B": null,
+        "2B": "Jake Kendro",
         "3B": null
       },
       "runners_after": {
         "1B": "Lorenzo Carrier",
-        "2B": null,
+        "2B": "Jake Kendro",
         "3B": null
       },
       "score": {
@@ -1411,23 +1421,25 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Easten Smith",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Lorenzo Carrier",
-        "2B": null,
+        "2B": "Jake Kendro",
         "3B": null
       },
       "runners_after": {
         "1B": "Lorenzo Carrier",
-        "2B": null,
+        "2B": "Jake Kendro",
         "3B": null
       },
       "score": {
@@ -1438,7 +1450,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Easten Smith",
       "batter": "Sebastian Pisacreta",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1449,12 +1461,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Lorenzo Carrier",
-        "2B": null,
+        "2B": "Jake Kendro",
         "3B": null
       },
       "runners_after": {
         "1B": "Lorenzo Carrier",
-        "2B": null,
+        "2B": "Jake Kendro",
         "3B": null
       },
       "score": {
@@ -1465,7 +1477,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Joey Ciancimino",
       "batter": "Jake Barron",
       "outcome": "Walk",
       "count": "3-2",
@@ -1492,7 +1504,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Joey Ciancimino",
       "batter": "Jayden Reynolds",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1519,7 +1531,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Joey Ciancimino",
       "batter": "Jack Bergstrom",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1546,7 +1558,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Joey Ciancimino",
       "batter": "Matt Evans",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1573,7 +1585,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Easten Smith",
       "batter": "Julian Irizarry",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1600,7 +1612,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Easten Smith",
       "batter": "Jackson Cooke",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1627,7 +1639,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Easten Smith",
       "batter": "Jake Kendro",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1654,7 +1666,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Joey Ciancimino",
       "batter": "Austin Russell",
       "outcome": "Single",
       "count": "1-1",
@@ -1681,7 +1693,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Joey Ciancimino",
       "batter": "Jackson Smith",
       "outcome": "Single",
       "count": "2-2",
@@ -1708,7 +1720,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Joey Ciancimino",
       "batter": "Cade Sanchez",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1735,7 +1747,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Joey Ciancimino",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1750,7 +1762,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jackson Smith",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1762,7 +1774,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Joey Ciancimino",
       "batter": "Isaiah Afework",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1772,12 +1784,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jackson Smith",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jackson Smith",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1789,7 +1801,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Easten Smith",
       "batter": "AJ Nessler",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1816,7 +1828,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Easten Smith",
       "batter": "Caden Dulin",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1843,7 +1855,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Easten Smith",
       "batter": "Kai Wagner",
       "outcome": "Single",
       "count": "1-2",
@@ -1870,7 +1882,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Easten Smith",
       "batter": "Lorenzo Carrier",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1897,7 +1909,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Daniel McAuliff",
       "batter": "Max Towchik",
       "outcome": "Walk",
       "count": "3-1",
@@ -1924,7 +1936,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Daniel McAuliff",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
@@ -1951,13 +1963,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Daniel McAuliff",
       "batter": "Jayden Reynolds",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "SK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1978,7 +1992,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Daniel McAuliff",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1993,7 +2007,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jayden Reynolds",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2005,7 +2019,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Daniel McAuliff",
       "batter": "Jack Bergstrom",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2015,12 +2029,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jayden Reynolds",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jayden Reynolds",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2032,7 +2046,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Easten Smith",
       "batter": "Trey Fenderson",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2059,7 +2073,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Easten Smith",
       "batter": "Sebastian Pisacreta",
       "outcome": "Pop out",
       "count": "2-1",
@@ -2086,7 +2100,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Easten Smith",
       "batter": "Julian Irizarry",
       "outcome": "Flyout",
       "count": "2-2",
@@ -2113,7 +2127,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Daniel McAuliff",
       "batter": "Matt Evans",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2140,7 +2154,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Daniel McAuliff",
       "batter": "Austin Russell",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2167,7 +2181,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Daniel McAuliff",
       "batter": "Jackson Smith",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2194,7 +2208,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Easten Smith",
       "batter": "Jackson Cooke",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2221,7 +2235,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Easten Smith",
       "batter": "Carter Dierdorf",
       "outcome": "Walk",
       "count": "3-2",
@@ -2248,7 +2262,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Easten Smith",
       "batter": "AJ Nessler",
       "outcome": "Pop out",
       "count": "0-2",
@@ -2275,7 +2289,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Easten Smith",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2302,7 +2316,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bryson Shea",
+      "pitcher": "Easten Smith",
       "batter": "Caden Dulin",
       "outcome": "Strikeout (looking)",
       "count": "3-2",

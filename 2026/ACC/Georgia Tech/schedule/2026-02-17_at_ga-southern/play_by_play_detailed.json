@@ -3,7 +3,7 @@
   "date": "02/17/2026",
   "away_team": "Georgia Tech",
   "home_team": "Ga. Southern",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -76,8 +76,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Drew Burress",
-        "2B": null,
+        "1B": null,
+        "2B": "Drew Burress",
         "3B": null
       },
       "score": {
@@ -94,12 +94,14 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Drew Burress"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Drew Burress",
-        "2B": null,
+        "1B": null,
+        "2B": "Drew Burress",
         "3B": null
       },
       "runners_after": {
@@ -293,7 +295,7 @@
       },
       "runners_after": {
         "1B": "Will Baker",
-        "2B": null,
+        "2B": "Ryan Zuckerman",
         "3B": null
       },
       "score": {
@@ -315,12 +317,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Will Baker",
-        "2B": null,
+        "2B": "Ryan Zuckerman",
         "3B": null
       },
       "runners_after": {
         "1B": "Will Baker",
-        "2B": null,
+        "2B": "Ryan Zuckerman",
         "3B": null
       },
       "score": {
@@ -342,12 +344,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Will Baker",
-        "2B": null,
+        "2B": "Ryan Zuckerman",
         "3B": null
       },
       "runners_after": {
         "1B": "Will Baker",
-        "2B": null,
+        "2B": "Ryan Zuckerman",
         "3B": null
       },
       "score": {
@@ -358,7 +360,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Will Holder",
+      "pitcher": "Jax Lewis",
       "batter": "Jarren Advincula",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -369,13 +371,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Will Baker",
-        "2B": null,
+        "2B": "Ryan Zuckerman",
         "3B": null
       },
       "runners_after": {
         "1B": "Jarren Advincula",
-        "2B": null,
-        "3B": null
+        "2B": "Will Baker",
+        "3B": "Ryan Zuckerman"
       },
       "score": {
         "away": 1,
@@ -385,24 +387,26 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Will Holder",
+      "pitcher": "Jax Lewis",
       "batter": "Drew Burress",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBSBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ryan Zuckerman"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jarren Advincula",
-        "2B": null,
-        "3B": null
+        "2B": "Will Baker",
+        "3B": "Ryan Zuckerman"
       },
       "runners_after": {
         "1B": "Drew Burress",
-        "2B": null,
-        "3B": null
+        "2B": "Jarren Advincula",
+        "3B": "Will Baker"
       },
       "score": {
         "away": 2,
@@ -412,24 +416,27 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Will Holder",
+      "pitcher": "Jax Lewis",
       "batter": "Kent Schmidt",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Will Baker",
+        "Jarren Advincula"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Drew Burress",
-        "2B": null,
-        "3B": null
+        "2B": "Jarren Advincula",
+        "3B": "Will Baker"
       },
       "runners_after": {
-        "1B": "Drew Burress",
+        "1B": null,
         "2B": "Kent Schmidt",
-        "3B": null
+        "3B": "Drew Burress"
       },
       "score": {
         "away": 4,
@@ -439,7 +446,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Will Holder",
+      "pitcher": "Jax Lewis",
       "batter": "Alex Hernandez",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -449,14 +456,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Drew Burress",
+        "1B": null,
         "2B": "Kent Schmidt",
-        "3B": null
+        "3B": "Drew Burress"
       },
       "runners_after": {
         "1B": "Alex Hernandez",
         "2B": "Kent Schmidt",
-        "3B": null
+        "3B": "Drew Burress"
       },
       "score": {
         "away": 4,
@@ -466,24 +473,26 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Will Holder",
+      "pitcher": "Jax Lewis",
       "batter": "Vahn Lackey",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "FK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Drew Burress"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Alex Hernandez",
         "2B": "Kent Schmidt",
-        "3B": null
+        "3B": "Drew Burress"
       },
       "runners_after": {
         "1B": "Vahn Lackey",
-        "2B": "Kent Schmidt",
-        "3B": null
+        "2B": "Alex Hernandez",
+        "3B": "Kent Schmidt"
       },
       "score": {
         "away": 5,
@@ -493,22 +502,26 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Will Holder",
+      "pitcher": "Jax Lewis",
       "batter": "Ryan Zuckerman",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kent Schmidt",
+        "Alex Hernandez",
+        "Vahn Lackey"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Vahn Lackey",
-        "2B": "Kent Schmidt",
-        "3B": null
+        "2B": "Alex Hernandez",
+        "3B": "Kent Schmidt"
       },
       "runners_after": {
-        "1B": "Vahn Lackey",
+        "1B": null,
         "2B": "Ryan Zuckerman",
         "3B": null
       },
@@ -520,7 +533,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Will Holder",
+      "pitcher": "Thomas Burke",
       "batter": "Will Baker",
       "outcome": "Groundout",
       "count": "1-0",
@@ -530,12 +543,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Vahn Lackey",
+        "1B": null,
         "2B": "Ryan Zuckerman",
         "3B": null
       },
       "runners_after": {
-        "1B": "Vahn Lackey",
+        "1B": null,
         "2B": "Ryan Zuckerman",
         "3B": null
       },
@@ -655,7 +668,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Will Holder",
+      "pitcher": "Thomas Burke",
       "batter": "Caleb Daniel",
       "outcome": "Lineout",
       "count": "2-1",
@@ -682,7 +695,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Will Holder",
+      "pitcher": "Thomas Burke",
       "batter": "Carson Kerce",
       "outcome": "Double",
       "count": "0-2",
@@ -709,7 +722,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Will Holder",
+      "pitcher": "Thomas Burke",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -725,8 +738,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Carson Kerce",
-        "3B": null
+        "2B": null,
+        "3B": "Carson Kerce"
       },
       "score": {
         "away": 8,
@@ -736,7 +749,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Will Holder",
+      "pitcher": "Thomas Burke",
       "batter": "Jarren Advincula",
       "outcome": "Walk",
       "count": "3-0",
@@ -747,13 +760,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Carson Kerce",
-        "3B": null
+        "2B": null,
+        "3B": "Carson Kerce"
       },
       "runners_after": {
         "1B": "Jarren Advincula",
-        "2B": "Carson Kerce",
-        "3B": null
+        "2B": null,
+        "3B": "Carson Kerce"
       },
       "score": {
         "away": 8,
@@ -763,23 +776,25 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Will Holder",
+      "pitcher": "Thomas Burke",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Carson Kerce"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Jarren Advincula",
-        "2B": "Carson Kerce",
-        "3B": null
+        "2B": null,
+        "3B": "Carson Kerce"
       },
       "runners_after": {
-        "1B": "Jarren Advincula",
-        "2B": "Carson Kerce",
+        "1B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "score": {
@@ -790,7 +805,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Will Holder",
+      "pitcher": "Thomas Burke",
       "batter": "Drew Burress",
       "outcome": "Groundout",
       "count": "0-1",
@@ -800,14 +815,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jarren Advincula",
-        "2B": "Carson Kerce",
+        "1B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jarren Advincula",
-        "2B": "Carson Kerce",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Jarren Advincula"
       },
       "score": {
         "away": 9,
@@ -817,7 +832,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Will Holder",
+      "pitcher": "Thomas Burke",
       "batter": "Kent Schmidt",
       "outcome": "Walk",
       "count": "3-1",
@@ -827,14 +842,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jarren Advincula",
-        "2B": "Carson Kerce",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Jarren Advincula"
       },
       "runners_after": {
         "1B": "Kent Schmidt",
-        "2B": "Carson Kerce",
-        "3B": null
+        "2B": null,
+        "3B": "Jarren Advincula"
       },
       "score": {
         "away": 9,
@@ -844,24 +859,26 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Will Holder",
+      "pitcher": "Dayson Griffis",
       "batter": "Alex Hernandez",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jarren Advincula"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Kent Schmidt",
-        "2B": "Carson Kerce",
-        "3B": null
+        "2B": null,
+        "3B": "Jarren Advincula"
       },
       "runners_after": {
         "1B": "Alex Hernandez",
-        "2B": "Carson Kerce",
-        "3B": null
+        "2B": null,
+        "3B": "Kent Schmidt"
       },
       "score": {
         "away": 10,
@@ -871,7 +888,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Will Holder",
+      "pitcher": "Dayson Griffis",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -882,13 +899,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Alex Hernandez",
-        "2B": "Carson Kerce",
-        "3B": null
+        "2B": null,
+        "3B": "Kent Schmidt"
       },
       "runners_after": {
-        "1B": "Alex Hernandez",
-        "2B": "Carson Kerce",
-        "3B": null
+        "1B": null,
+        "2B": "Alex Hernandez",
+        "3B": "Kent Schmidt"
       },
       "score": {
         "away": 10,
@@ -898,25 +915,27 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Will Holder",
+      "pitcher": "Dayson Griffis",
       "batter": "Vahn Lackey",
       "outcome": "Home run",
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
       "runs_scored": [
+        "Kent Schmidt",
+        "Alex Hernandez",
         "Vahn Lackey"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Alex Hernandez",
-        "2B": "Carson Kerce",
-        "3B": null
+        "1B": null,
+        "2B": "Alex Hernandez",
+        "3B": "Kent Schmidt"
       },
       "runners_after": {
-        "1B": "Alex Hernandez",
-        "2B": "Carson Kerce",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -927,7 +946,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Will Holder",
+      "pitcher": "Dayson Griffis",
       "batter": "Ryan Zuckerman",
       "outcome": "Groundout",
       "count": "0-0",
@@ -937,13 +956,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Alex Hernandez",
-        "2B": "Carson Kerce",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Alex Hernandez",
-        "2B": "Carson Kerce",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -954,7 +973,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Carson Ballard",
       "batter": "Nico Senese",
       "outcome": "Single",
       "count": "2-1",
@@ -981,7 +1000,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Carson Ballard",
       "batter": "Grant Jordan",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1008,7 +1027,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Carson Ballard",
       "batter": "Mason Gazaway",
       "outcome": "Double",
       "count": "1-2",
@@ -1023,9 +1042,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Nico Senese",
+        "1B": null,
         "2B": "Mason Gazaway",
-        "3B": null
+        "3B": "Nico Senese"
       },
       "score": {
         "away": 13,
@@ -1035,7 +1054,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Carson Ballard",
       "batter": "Kaden Thompson",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1045,14 +1064,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Nico Senese",
+        "1B": null,
         "2B": "Mason Gazaway",
-        "3B": null
+        "3B": "Nico Senese"
       },
       "runners_after": {
-        "1B": "Nico Senese",
+        "1B": null,
         "2B": "Mason Gazaway",
-        "3B": null
+        "3B": "Nico Senese"
       },
       "score": {
         "away": 13,
@@ -1062,7 +1081,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Carson Ballard",
       "batter": "James McCoy",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1072,14 +1091,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Nico Senese",
+        "1B": null,
         "2B": "Mason Gazaway",
-        "3B": null
+        "3B": "Nico Senese"
       },
       "runners_after": {
-        "1B": "Nico Senese",
+        "1B": null,
         "2B": "Mason Gazaway",
-        "3B": null
+        "3B": "Nico Senese"
       },
       "score": {
         "away": 13,
@@ -1089,7 +1108,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Will Holder",
+      "pitcher": "Dayson Griffis",
       "batter": "Will Baker",
       "outcome": "Single",
       "count": "2-0",
@@ -1116,7 +1135,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Will Holder",
+      "pitcher": "Dayson Griffis",
       "batter": "Caleb Daniel",
       "outcome": "\u2014",
       "count": "1-0",
@@ -1131,7 +1150,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Will Baker",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1143,7 +1162,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Will Holder",
+      "pitcher": "Dayson Griffis",
       "batter": "Carson Kerce",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -1153,7 +1172,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Will Baker",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1170,7 +1189,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Will Holder",
+      "pitcher": "Dayson Griffis",
       "batter": "Jarren Advincula",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1197,7 +1216,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jackson Blakely",
       "batter": "Sean White",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1224,7 +1243,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jackson Blakely",
       "batter": "Jack Myers",
       "outcome": "Single",
       "count": "0-0",
@@ -1251,7 +1270,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jackson Blakely",
       "batter": "Max Prozny",
       "outcome": "Fielder's choice",
       "count": "0-1",
@@ -1278,7 +1297,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jackson Blakely",
       "batter": "John Davis",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1305,7 +1324,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Will Holder",
+      "pitcher": "Brady Pendley",
       "batter": "Drew Burress",
       "outcome": "Double",
       "count": "0-2",
@@ -1332,7 +1351,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Will Holder",
+      "pitcher": "Brady Pendley",
       "batter": "Kent Schmidt",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1348,7 +1367,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Drew Burress",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1359,7 +1378,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Will Holder",
+      "pitcher": "Brady Pendley",
       "batter": "Alex Hernandez",
       "outcome": "Single",
       "count": "0-0",
@@ -1370,12 +1389,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Drew Burress",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Alex Hernandez",
-        "2B": "Drew Burress",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1386,7 +1405,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Will Holder",
+      "pitcher": "Brady Pendley",
       "batter": "Vahn Lackey",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -1397,12 +1416,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Alex Hernandez",
-        "2B": "Drew Burress",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Vahn Lackey",
-        "2B": "Drew Burress",
+        "2B": "Alex Hernandez",
         "3B": null
       },
       "score": {
@@ -1413,23 +1432,26 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Will Holder",
+      "pitcher": "Brady Pendley",
       "batter": "Ryan Zuckerman",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Alex Hernandez",
+        "Vahn Lackey"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Vahn Lackey",
-        "2B": "Drew Burress",
+        "2B": "Alex Hernandez",
         "3B": null
       },
       "runners_after": {
         "1B": "Ryan Zuckerman",
-        "2B": "Drew Burress",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1440,7 +1462,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Will Holder",
+      "pitcher": "Brady Pendley",
       "batter": "Will Baker",
       "outcome": "Walk",
       "count": "3-1",
@@ -1451,12 +1473,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Ryan Zuckerman",
-        "2B": "Drew Burress",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Will Baker",
-        "2B": "Drew Burress",
+        "2B": "Ryan Zuckerman",
         "3B": null
       },
       "score": {
@@ -1467,7 +1489,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Will Holder",
+      "pitcher": "Brady Pendley",
       "batter": "Caleb Daniel",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1478,12 +1500,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Will Baker",
-        "2B": "Drew Burress",
+        "2B": "Ryan Zuckerman",
         "3B": null
       },
       "runners_after": {
         "1B": "Will Baker",
-        "2B": "Drew Burress",
+        "2B": "Ryan Zuckerman",
         "3B": null
       },
       "score": {
@@ -1494,7 +1516,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jackson Blakely",
       "batter": "Nico Senese",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1521,7 +1543,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jackson Blakely",
       "batter": "Grant Jordan",
       "outcome": "Single",
       "count": "0-0",
@@ -1548,7 +1570,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jackson Blakely",
       "batter": "Mason Gazaway",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1575,7 +1597,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jackson Blakely",
       "batter": "Kaden Thompson",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -1591,7 +1613,7 @@
       },
       "runners_after": {
         "1B": "Kaden Thompson",
-        "2B": null,
+        "2B": "Grant Jordan",
         "3B": null
       },
       "score": {
@@ -1602,7 +1624,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jackson Blakely",
       "batter": "James McCoy",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1613,12 +1635,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Kaden Thompson",
-        "2B": null,
+        "2B": "Grant Jordan",
         "3B": null
       },
       "runners_after": {
         "1B": "Kaden Thompson",
-        "2B": null,
+        "2B": "Grant Jordan",
         "3B": null
       },
       "score": {
@@ -1629,7 +1651,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Will Holder",
+      "pitcher": "Craig Kalkbrenner",
       "batter": "Carson Kerce",
       "outcome": "Double",
       "count": "2-1",
@@ -1656,7 +1678,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Will Holder",
+      "pitcher": "Craig Kalkbrenner",
       "batter": "Jarren Advincula",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1683,13 +1705,15 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Will Holder",
+      "pitcher": "Craig Kalkbrenner",
       "batter": "Drew Burress",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1710,7 +1734,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Will Holder",
+      "pitcher": "Craig Kalkbrenner",
       "batter": "Kent Schmidt",
       "outcome": "Single",
       "count": "0-0",
@@ -1727,7 +1751,7 @@
       "runners_after": {
         "1B": "Kent Schmidt",
         "2B": "Carson Kerce",
-        "3B": null
+        "3B": "Drew Burress"
       },
       "score": {
         "away": 16,
@@ -1737,19 +1761,21 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Will Holder",
+      "pitcher": "Craig Kalkbrenner",
       "batter": "Alex Hernandez",
       "outcome": "Fielder's choice",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Drew Burress"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Kent Schmidt",
         "2B": "Carson Kerce",
-        "3B": null
+        "3B": "Drew Burress"
       },
       "runners_after": {
         "1B": "Alex Hernandez",
@@ -1764,7 +1790,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Will Holder",
+      "pitcher": "Craig Kalkbrenner",
       "batter": "Vahn Lackey",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1791,7 +1817,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jackson Blakely",
       "batter": "Sean White",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1818,7 +1844,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jackson Blakely",
       "batter": "Jack Myers",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1845,7 +1871,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jackson Blakely",
       "batter": "Max Prozny",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1872,7 +1898,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Will Holder",
+      "pitcher": "Jansen Kenty",
       "batter": "Ryan Zuckerman",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1899,7 +1925,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Will Holder",
+      "pitcher": "Jansen Kenty",
       "batter": "Will Baker",
       "outcome": "Single",
       "count": "3-2",
@@ -1926,7 +1952,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Will Holder",
+      "pitcher": "Jansen Kenty",
       "batter": "Caleb Daniel",
       "outcome": "Double",
       "count": "3-0",
@@ -1941,9 +1967,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Will Baker",
+        "1B": null,
         "2B": "Caleb Daniel",
-        "3B": null
+        "3B": "Will Baker"
       },
       "score": {
         "away": 17,
@@ -1953,7 +1979,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Will Holder",
+      "pitcher": "Jansen Kenty",
       "batter": "Cade Brown",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1963,14 +1989,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Will Baker",
+        "1B": null,
         "2B": "Caleb Daniel",
-        "3B": null
+        "3B": "Will Baker"
       },
       "runners_after": {
-        "1B": "Will Baker",
+        "1B": null,
         "2B": "Caleb Daniel",
-        "3B": null
+        "3B": "Will Baker"
       },
       "score": {
         "away": 17,
@@ -1980,23 +2006,26 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Will Holder",
+      "pitcher": "Jansen Kenty",
       "batter": "Jarren Advincula",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Will Baker",
+        "Caleb Daniel"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Will Baker",
+        "1B": null,
         "2B": "Caleb Daniel",
-        "3B": null
+        "3B": "Will Baker"
       },
       "runners_after": {
         "1B": "Jarren Advincula",
-        "2B": "Caleb Daniel",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -2007,7 +2036,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Will Holder",
+      "pitcher": "Jansen Kenty",
       "batter": "Coleman Lewis",
       "outcome": "Single",
       "count": "0-2",
@@ -2018,13 +2047,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Jarren Advincula",
-        "2B": "Caleb Daniel",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Coleman Lewis",
-        "2B": "Caleb Daniel",
-        "3B": null
+        "2B": null,
+        "3B": "Jarren Advincula"
       },
       "score": {
         "away": 19,
@@ -2034,24 +2063,26 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Will Holder",
+      "pitcher": "Alex Mason",
       "batter": "Nathanael Coupet",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Coleman Lewis",
-        "2B": "Caleb Daniel",
-        "3B": null
+        "2B": null,
+        "3B": "Jarren Advincula"
       },
       "runners_after": {
         "1B": "Nathanael Coupet",
-        "2B": "Caleb Daniel",
-        "3B": null
+        "2B": "Coleman Lewis",
+        "3B": "Jarren Advincula"
       },
       "score": {
         "away": 20,
@@ -2061,26 +2092,28 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Will Holder",
+      "pitcher": "Alex Mason",
       "batter": "Parker Brosius",
       "outcome": "Home run",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
+        "Coleman Lewis",
+        "Nathanael Coupet",
         "Parker Brosius"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Nathanael Coupet",
-        "2B": "Caleb Daniel",
-        "3B": null
+        "2B": "Coleman Lewis",
+        "3B": "Jarren Advincula"
       },
       "runners_after": {
-        "1B": "Nathanael Coupet",
-        "2B": "Caleb Daniel",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Jarren Advincula"
       },
       "score": {
         "away": 23,
@@ -2090,7 +2123,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Will Holder",
+      "pitcher": "Alex Mason",
       "batter": "Drew Rogers",
       "outcome": "Single",
       "count": "3-0",
@@ -2100,14 +2133,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Nathanael Coupet",
-        "2B": "Caleb Daniel",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Jarren Advincula"
       },
       "runners_after": {
         "1B": "Drew Rogers",
-        "2B": "Caleb Daniel",
-        "3B": null
+        "2B": null,
+        "3B": "Jarren Advincula"
       },
       "score": {
         "away": 23,
@@ -2117,23 +2150,25 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Will Holder",
+      "pitcher": "Alex Mason",
       "batter": "Ryan Zuckerman",
       "outcome": "Triple",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Drew Rogers"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Drew Rogers",
-        "2B": "Caleb Daniel",
-        "3B": null
+        "2B": null,
+        "3B": "Jarren Advincula"
       },
       "runners_after": {
-        "1B": "Drew Rogers",
-        "2B": "Caleb Daniel",
+        "1B": null,
+        "2B": null,
         "3B": "Ryan Zuckerman"
       },
       "score": {
@@ -2144,24 +2179,26 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Will Holder",
+      "pitcher": "Alex Mason",
       "batter": "Judson Hartwell",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ryan Zuckerman"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Drew Rogers",
-        "2B": "Caleb Daniel",
+        "1B": null,
+        "2B": null,
         "3B": "Ryan Zuckerman"
       },
       "runners_after": {
         "1B": "Judson Hartwell",
-        "2B": "Caleb Daniel",
-        "3B": "Ryan Zuckerman"
+        "2B": null,
+        "3B": null
       },
       "score": {
         "away": 25,
@@ -2171,7 +2208,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Will Holder",
+      "pitcher": "Alex Mason",
       "batter": "Tyler Neises",
       "outcome": "Single",
       "count": "0-1",
@@ -2182,13 +2219,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Judson Hartwell",
-        "2B": "Caleb Daniel",
-        "3B": "Ryan Zuckerman"
+        "2B": null,
+        "3B": null
       },
       "runners_after": {
         "1B": "Tyler Neises",
-        "2B": "Caleb Daniel",
-        "3B": "Ryan Zuckerman"
+        "2B": null,
+        "3B": "Judson Hartwell"
       },
       "score": {
         "away": 25,
@@ -2198,7 +2235,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Will Holder",
+      "pitcher": "Alex Mason",
       "batter": "Cade Brown",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2209,13 +2246,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Tyler Neises",
-        "2B": "Caleb Daniel",
-        "3B": "Ryan Zuckerman"
+        "2B": null,
+        "3B": "Judson Hartwell"
       },
       "runners_after": {
         "1B": "Tyler Neises",
-        "2B": "Caleb Daniel",
-        "3B": "Ryan Zuckerman"
+        "2B": null,
+        "3B": "Judson Hartwell"
       },
       "score": {
         "away": 25,
@@ -2225,7 +2262,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Adam McKelvey",
       "batter": "John Davis",
       "outcome": "Walk",
       "count": "3-2",
@@ -2252,7 +2289,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Adam McKelvey",
       "batter": "Kade Kisz",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2279,7 +2316,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Adam McKelvey",
       "batter": "Grant Jordan",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2306,7 +2343,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Adam McKelvey",
       "batter": "Mason Gazaway",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2333,7 +2370,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Will Holder",
+      "pitcher": "Will Robbins",
       "batter": "Michael Dee",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2360,7 +2397,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Will Holder",
+      "pitcher": "Will Robbins",
       "batter": "Coleman Lewis",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2387,7 +2424,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Will Holder",
+      "pitcher": "Will Robbins",
       "batter": "Nathanael Coupet",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2414,7 +2451,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Brett Barfield",
       "batter": "Kaden Thompson",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2441,7 +2478,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Brett Barfield",
       "batter": "James McCoy",
       "outcome": "Lineout",
       "count": "0-1",
@@ -2468,7 +2505,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Brett Barfield",
       "batter": "Bennett Edwards",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2495,7 +2532,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Will Holder",
+      "pitcher": "Jayden White",
       "batter": "Parker Brosius",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2522,7 +2559,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Will Holder",
+      "pitcher": "Jayden White",
       "batter": "Drew Rogers",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2549,7 +2586,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Will Holder",
+      "pitcher": "Jayden White",
       "batter": "Dominic Stephenson",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2576,7 +2613,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jake Lankie",
       "batter": "Frank Wells",
       "outcome": "Reached on error",
       "count": "1-2",
@@ -2603,7 +2640,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jake Lankie",
       "batter": "Brady Christman",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2630,7 +2667,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jake Lankie",
       "batter": "John Davis",
       "outcome": "Double",
       "count": "2-0",
@@ -2645,9 +2682,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Frank Wells",
+        "1B": null,
         "2B": "John Davis",
-        "3B": null
+        "3B": "Frank Wells"
       },
       "score": {
         "away": 25,
@@ -2657,22 +2694,24 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jake Lankie",
       "batter": "Kade Kisz",
       "outcome": "\u2014",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Frank Wells"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Frank Wells",
+        "1B": null,
         "2B": "John Davis",
-        "3B": null
+        "3B": "Frank Wells"
       },
       "runners_after": {
-        "1B": "Frank Wells",
+        "1B": null,
         "2B": "John Davis",
         "3B": null
       },
@@ -2684,7 +2723,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jake Lankie",
       "batter": "Grant Jordan",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2694,12 +2733,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Frank Wells",
+        "1B": null,
         "2B": "John Davis",
         "3B": null
       },
       "runners_after": {
-        "1B": "Frank Wells",
+        "1B": null,
         "2B": "John Davis",
         "3B": null
       },

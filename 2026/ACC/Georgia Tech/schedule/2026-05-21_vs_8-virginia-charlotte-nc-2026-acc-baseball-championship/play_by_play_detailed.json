@@ -3,7 +3,7 @@
   "date": "05/21/2026",
   "away_team": "Virginia",
   "home_team": "Georgia Tech",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -765,7 +765,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Tate McKee",
+      "pitcher": "Dylan Loy",
       "batter": "Zach Jackson",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -792,14 +792,15 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Tate McKee",
+      "pitcher": "Dylan Loy",
       "batter": "Antonio Perrotta",
       "outcome": "Home run",
       "count": "2-1",
       "pitches": "BFB",
       "rbi": true,
       "runs_scored": [
-        "Antonio Perrotta"
+        "Antonio Perrotta",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -821,7 +822,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Tate McKee",
+      "pitcher": "Dylan Loy",
       "batter": "Noah Murray",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -848,7 +849,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Tate McKee",
+      "pitcher": "Dylan Loy",
       "batter": "Eric Becker",
       "outcome": "Groundout",
       "count": "1-0",
@@ -989,7 +990,9 @@
       "count": "2-2",
       "pitches": "FBSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1016,7 +1019,10 @@
       "count": "0-2",
       "pitches": "KK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1037,7 +1043,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "John Paone",
+      "pitcher": "Thomas Stewart",
       "batter": "Drew Burress",
       "outcome": "Walk",
       "count": "3-2",
@@ -1064,7 +1070,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "John Paone",
+      "pitcher": "Thomas Stewart",
       "batter": "Jarren Advincula",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1091,7 +1097,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Tate McKee",
+      "pitcher": "Dylan Loy",
       "batter": "AJ Gracia",
       "outcome": "Single",
       "count": "2-1",
@@ -1118,14 +1124,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Tate McKee",
+      "pitcher": "Dylan Loy",
       "batter": "Joe Tiroly",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Joe Tiroly"
+        "Joe Tiroly",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1147,7 +1154,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Tate McKee",
+      "pitcher": "Dylan Loy",
       "batter": "Sam Harris",
       "outcome": "Walk",
       "count": "3-2",
@@ -1174,7 +1181,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Tate McKee",
+      "pitcher": "Brett Barfield",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -1189,8 +1196,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Harris",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Harris",
         "3B": null
       },
       "score": {
@@ -1201,25 +1208,26 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Tate McKee",
+      "pitcher": "Brett Barfield",
       "batter": "Harrison Didawick",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "KSBBFFB",
       "rbi": true,
       "runs_scored": [
-        "Harrison Didawick"
+        "Harrison Didawick",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Sam Harris",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Harris",
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Harris",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Harris",
         "3B": null
       },
       "score": {
@@ -1230,7 +1238,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Tate McKee",
+      "pitcher": "Brett Barfield",
       "batter": "Jake Weatherspoon",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1240,13 +1248,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Sam Harris",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Harris",
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Harris",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Harris",
         "3B": null
       },
       "score": {
@@ -1257,7 +1265,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Tate McKee",
+      "pitcher": "Brett Barfield",
       "batter": "Zach Jackson",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1267,13 +1275,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Sam Harris",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Harris",
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Harris",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Harris",
         "3B": null
       },
       "score": {
@@ -1284,7 +1292,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Tate McKee",
+      "pitcher": "Brett Barfield",
       "batter": "Antonio Perrotta",
       "outcome": "Double",
       "count": "0-1",
@@ -1294,12 +1302,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Sam Harris",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Harris",
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Harris",
+        "1B": null,
         "2B": "Antonio Perrotta",
         "3B": null
       },
@@ -1311,7 +1319,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Tate McKee",
+      "pitcher": "Brett Barfield",
       "batter": "Noah Murray",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1321,12 +1329,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Sam Harris",
+        "1B": null,
         "2B": "Antonio Perrotta",
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Harris",
+        "1B": null,
         "2B": "Antonio Perrotta",
         "3B": null
       },
@@ -1338,7 +1346,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "John Paone",
+      "pitcher": "Thomas Stewart",
       "batter": "Vahn Lackey",
       "outcome": "Home run",
       "count": "0-0",
@@ -1367,7 +1375,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "John Paone",
+      "pitcher": "Thomas Stewart",
       "batter": "Ryan Zuckerman",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1394,7 +1402,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "John Paone",
+      "pitcher": "Thomas Stewart",
       "batter": "Kent Schmidt",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1421,7 +1429,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "John Paone",
+      "pitcher": "Thomas Stewart",
       "batter": "Alex Hernandez",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1448,7 +1456,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Eric Becker",
       "outcome": "Single",
       "count": "1-2",
@@ -1475,7 +1483,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "AJ Gracia",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1502,7 +1510,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Joe Tiroly",
       "outcome": "Single",
       "count": "1-0",
@@ -1529,13 +1537,15 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1556,7 +1566,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Harrison Didawick",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1583,7 +1593,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "John Paone",
+      "pitcher": "Max Stammel",
       "batter": "Will Baker",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1610,7 +1620,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "John Paone",
+      "pitcher": "Max Stammel",
       "batter": "Parker Brosius",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1637,7 +1647,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "John Paone",
+      "pitcher": "Max Stammel",
       "batter": "Carson Kerce",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1664,7 +1674,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Jake Weatherspoon",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1691,7 +1701,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Zach Jackson",
       "outcome": "Single",
       "count": "1-2",
@@ -1718,7 +1728,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Antonio Perrotta",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1745,7 +1755,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Noah Murray",
       "outcome": "Walk",
       "count": "3-1",
@@ -1772,13 +1782,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Eric Becker",
       "outcome": "Double",
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1799,7 +1811,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "AJ Gracia",
       "outcome": "Walk",
       "count": "0-0",
@@ -1826,13 +1838,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Joe Tiroly",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "KFBBFFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1853,7 +1867,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Sam Harris",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1880,7 +1894,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "John Paone",
+      "pitcher": "Max Stammel",
       "batter": "Drew Burress",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1907,7 +1921,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "John Paone",
+      "pitcher": "Max Stammel",
       "batter": "Jarren Advincula",
       "outcome": "Double",
       "count": "0-1",
@@ -1934,7 +1948,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "John Paone",
+      "pitcher": "Max Stammel",
       "batter": "Vahn Lackey",
       "outcome": "Walk",
       "count": "3-0",
@@ -1961,7 +1975,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "John Paone",
+      "pitcher": "Max Stammel",
       "batter": "Ryan Zuckerman",
       "outcome": "Single",
       "count": "1-2",
@@ -1988,13 +2002,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "John Paone",
+      "pitcher": "Max Stammel",
       "batter": "Kent Schmidt",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "KSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2015,13 +2031,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "John Paone",
+      "pitcher": "Max Stammel",
       "batter": "Alex Hernandez",
       "outcome": "Fielder's choice",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2042,7 +2060,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "John Paone",
+      "pitcher": "Max Stammel",
       "batter": "Will Baker",
       "outcome": "Walk",
       "count": "3-1",
@@ -2069,14 +2087,17 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Parker Brosius",
       "outcome": "Home run",
       "count": "0-2",
       "pitches": "KK",
       "rbi": true,
       "runs_scored": [
-        "Parker Brosius"
+        "Parker Brosius",
+        null,
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -2098,7 +2119,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Carson Kerce",
       "outcome": "Home run",
       "count": "2-2",
@@ -2127,7 +2148,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Drew Burress",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2154,7 +2175,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Harrison Didawick",
       "outcome": "Double",
       "count": "0-2",
@@ -2181,7 +2202,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Jake Weatherspoon",
       "outcome": "Flyout",
       "count": "3-1",
@@ -2208,13 +2229,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2235,7 +2258,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Antonio Perrotta",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2262,7 +2285,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "John Paone",
+      "pitcher": "Christian Lucarelli",
       "batter": "Jarren Advincula",
       "outcome": "Walk",
       "count": "3-2",
@@ -2289,14 +2312,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "John Paone",
+      "pitcher": "Christian Lucarelli",
       "batter": "Vahn Lackey",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "BKBKB",
       "rbi": true,
       "runs_scored": [
-        "Vahn Lackey"
+        "Vahn Lackey",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -2318,7 +2342,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "John Paone",
+      "pitcher": "Christian Lucarelli",
       "batter": "Ryan Zuckerman",
       "outcome": "Walk",
       "count": "3-2",
@@ -2345,14 +2369,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "John Paone",
+      "pitcher": "Kevin Jaxel",
       "batter": "Kent Schmidt",
       "outcome": "Home run",
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": true,
       "runs_scored": [
-        "Kent Schmidt"
+        "Kent Schmidt",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -2374,7 +2399,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "John Paone",
+      "pitcher": "Kevin Jaxel",
       "batter": "Alex Hernandez",
       "outcome": "Flyout",
       "count": "0-2",
@@ -2401,7 +2426,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "John Paone",
+      "pitcher": "Kevin Jaxel",
       "batter": "Will Baker",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2428,7 +2453,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "John Paone",
+      "pitcher": "Kevin Jaxel",
       "batter": "Parker Brosius",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -2455,7 +2480,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "John Paone",
+      "pitcher": "Noah Yoder",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2470,8 +2495,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Parker Brosius",
-        "2B": null,
+        "1B": null,
+        "2B": "Parker Brosius",
         "3B": null
       },
       "score": {
@@ -2482,7 +2507,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "John Paone",
+      "pitcher": "Noah Yoder",
       "batter": "Carson Kerce",
       "outcome": "Walk",
       "count": "3-2",
@@ -2492,13 +2517,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Parker Brosius",
-        "2B": null,
+        "1B": null,
+        "2B": "Parker Brosius",
         "3B": null
       },
       "runners_after": {
         "1B": "Carson Kerce",
-        "2B": null,
+        "2B": "Parker Brosius",
         "3B": null
       },
       "score": {
@@ -2509,7 +2534,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "John Paone",
+      "pitcher": "Noah Yoder",
       "batter": "Drew Burress",
       "outcome": "Flyout",
       "count": "1-2",
@@ -2520,12 +2545,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Carson Kerce",
-        "2B": null,
+        "2B": "Parker Brosius",
         "3B": null
       },
       "runners_after": {
         "1B": "Carson Kerce",
-        "2B": null,
+        "2B": "Parker Brosius",
         "3B": null
       },
       "score": {
@@ -2536,7 +2561,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Noah Murray",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2563,7 +2588,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Eric Becker",
       "outcome": "Single",
       "count": "0-0",
@@ -2590,7 +2615,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Tate McKee",
+      "pitcher": "Justin Shadek",
       "batter": "AJ Gracia",
       "outcome": "Grounded into double play",
       "count": "1-1",

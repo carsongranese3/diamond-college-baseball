@@ -3,7 +3,7 @@
   "date": "03/10/2026",
   "away_team": "Ga. Southern",
   "home_team": "Clemson",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -157,8 +157,8 @@
         "3B": "James McCoy"
       },
       "runners_after": {
-        "1B": "Sean White",
-        "2B": null,
+        "1B": null,
+        "2B": "Sean White",
         "3B": "James McCoy"
       },
       "score": {
@@ -179,13 +179,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Sean White",
-        "2B": null,
+        "1B": null,
+        "2B": "Sean White",
         "3B": "James McCoy"
       },
       "runners_after": {
-        "1B": "Sean White",
-        "2B": null,
+        "1B": null,
+        "2B": "Sean White",
         "3B": "James McCoy"
       },
       "score": {
@@ -418,7 +418,9 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -502,7 +504,10 @@
       "pitches": null,
       "rbi": true,
       "runs_scored": [
-        "Sean White"
+        "Sean White",
+        null,
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1849,7 +1854,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Hayden Simmerson",
+      "pitcher": "Brendon Bennett",
       "batter": "DILLARD",
       "outcome": "\u2014",
       "count": null,

@@ -3,7 +3,7 @@
   "date": "02/15/2026",
   "away_team": "UC Davis",
   "home_team": "Texas",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -522,7 +522,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Eli Solem",
+      "pitcher": "Braydon Wooldridge",
       "batter": "Carson Tinney",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -630,7 +630,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Solem",
+      "pitcher": "Braydon Wooldridge",
       "batter": "Casey Borba",
       "outcome": "Pop out",
       "count": "2-2",
@@ -657,7 +657,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Solem",
+      "pitcher": "Braydon Wooldridge",
       "batter": "Josh Livingston",
       "outcome": "Walk",
       "count": "3-1",
@@ -684,7 +684,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Solem",
+      "pitcher": "Braydon Wooldridge",
       "batter": "Temo Becerra",
       "outcome": "Walk",
       "count": "3-1",
@@ -711,7 +711,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Solem",
+      "pitcher": "Braydon Wooldridge",
       "batter": "Pack",
       "outcome": "Single",
       "count": "3-2",
@@ -738,7 +738,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Solem",
+      "pitcher": "Braydon Wooldridge",
       "batter": "Ashton Larson",
       "outcome": "Flyout",
       "count": "1-1",
@@ -767,7 +767,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Solem",
+      "pitcher": "Braydon Wooldridge",
       "batter": "Ethan Mendoza",
       "outcome": "Single",
       "count": "1-0",
@@ -794,7 +794,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Solem",
+      "pitcher": "Braydon Wooldridge",
       "batter": "Adrian Rodriguez",
       "outcome": "Double",
       "count": "0-0",
@@ -802,7 +802,8 @@
       "rbi": true,
       "runs_scored": [
         "Ethan Mendoza",
-        "Temo Becerra"
+        "Temo Becerra",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -824,7 +825,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Solem",
+      "pitcher": "Braydon Wooldridge",
       "batter": "Aiden Robbins",
       "outcome": "Single",
       "count": "3-2",
@@ -853,7 +854,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Solem",
+      "pitcher": "Braydon Wooldridge",
       "batter": "Carson Tinney",
       "outcome": "Single",
       "count": "0-0",
@@ -880,7 +881,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Solem",
+      "pitcher": "Taylor Werth",
       "batter": "Casey Borba",
       "outcome": "Single",
       "count": "3-2",
@@ -909,7 +910,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Taylor Werth",
+      "pitcher": "Grayson Bonanno",
       "batter": "Josh Livingston",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1314,7 +1315,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Grayson Bonanno",
+      "pitcher": "Jack Meek",
       "batter": "Josh Livingston",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1748,7 +1749,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jack Meek",
+      "pitcher": "Tyler Wood",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1763,8 +1764,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethan Mendoza",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethan Mendoza",
         "3B": null
       },
       "score": {
@@ -1775,7 +1776,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jack Meek",
+      "pitcher": "Tyler Wood",
       "batter": "Aiden Robbins",
       "outcome": "Walk",
       "count": "3-0",
@@ -1785,13 +1786,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Ethan Mendoza",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethan Mendoza",
         "3B": null
       },
       "runners_after": {
         "1B": "Aiden Robbins",
-        "2B": null,
+        "2B": "Ethan Mendoza",
         "3B": null
       },
       "score": {
@@ -1813,13 +1814,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Aiden Robbins",
-        "2B": null,
+        "2B": "Ethan Mendoza",
         "3B": null
       },
       "runners_after": {
-        "1B": "Aiden Robbins",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Aiden Robbins",
+        "3B": "Ethan Mendoza"
       },
       "score": {
         "away": 1,
@@ -1839,14 +1840,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Aiden Robbins",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Aiden Robbins",
+        "3B": "Ethan Mendoza"
       },
       "runners_after": {
-        "1B": "Aiden Robbins",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Aiden Robbins",
+        "3B": "Ethan Mendoza"
       },
       "score": {
         "away": 1,
@@ -1856,19 +1857,21 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Tyler Wood",
+      "pitcher": "Mason Lerma",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ethan Mendoza"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Aiden Robbins",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Aiden Robbins",
+        "3B": "Ethan Mendoza"
       },
       "runners_after": {
         "1B": null,
@@ -1883,7 +1886,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Tyler Wood",
+      "pitcher": "Mason Lerma",
       "batter": "Casey Borba",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2101,7 +2104,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Mason Lerma",
+      "pitcher": "",
       "batter": "Ethan Mendoza",
       "outcome": "\u2014",
       "count": "1-2",

@@ -3,7 +3,7 @@
   "date": "02/21/2026(2)",
   "away_team": "Lafayette",
   "home_team": "Miami (FL)",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -76,8 +76,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Liam Ebbs",
-        "2B": null,
+        "1B": null,
+        "2B": "Liam Ebbs",
         "3B": null
       },
       "score": {
@@ -98,13 +98,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Liam Ebbs",
-        "2B": null,
+        "1B": null,
+        "2B": "Liam Ebbs",
         "3B": null
       },
       "runners_after": {
-        "1B": "Liam Ebbs",
-        "2B": null,
+        "1B": null,
+        "2B": "Liam Ebbs",
         "3B": null
       },
       "score": {
@@ -125,13 +125,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Liam Ebbs",
-        "2B": null,
+        "1B": null,
+        "2B": "Liam Ebbs",
         "3B": null
       },
       "runners_after": {
         "1B": "Jack Mislan",
-        "2B": null,
+        "2B": "Liam Ebbs",
         "3B": null
       },
       "score": {
@@ -153,12 +153,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jack Mislan",
-        "2B": null,
+        "2B": "Liam Ebbs",
         "3B": null
       },
       "runners_after": {
         "1B": "Jack Mislan",
-        "2B": null,
+        "2B": "Liam Ebbs",
         "3B": null
       },
       "score": {
@@ -418,7 +418,9 @@
       "count": "2-1",
       "pitches": "SBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -446,7 +448,10 @@
       "pitches": "KSB",
       "rbi": true,
       "runs_scored": [
-        "Dylan Dubovik"
+        "Dylan Dubovik",
+        null,
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -495,7 +500,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Trace Florio",
+      "pitcher": "Dalton Brown",
       "batter": "Jake Ogden",
       "outcome": "Flyout",
       "count": "1-2",
@@ -522,7 +527,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Trace Florio",
+      "pitcher": "Dalton Brown",
       "batter": "Michael Torres",
       "outcome": "Pop out",
       "count": "1-1",
@@ -630,7 +635,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Trace Florio",
+      "pitcher": "Dalton Brown",
       "batter": "Daniel Cuvet",
       "outcome": "Groundout",
       "count": "3-2",
@@ -657,7 +662,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Trace Florio",
+      "pitcher": "Dalton Brown",
       "batter": "Alex Sosa",
       "outcome": "Single",
       "count": "2-0",
@@ -684,7 +689,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Trace Florio",
+      "pitcher": "Dalton Brown",
       "batter": "Derek Williams",
       "outcome": "Single",
       "count": "1-1",
@@ -711,13 +716,16 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Trace Florio",
+      "pitcher": "Dalton Brown",
       "batter": "Alonzo Alvarez",
       "outcome": "Triple",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -738,7 +746,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Trace Florio",
+      "pitcher": "Dalton Brown",
       "batter": "Brylan West",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -765,14 +773,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Trace Florio",
+      "pitcher": "Dalton Brown",
       "batter": "Dylan Dubovik",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Dylan Dubovik"
+        "Dylan Dubovik",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -794,7 +803,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Trace Florio",
+      "pitcher": "Dalton Brown",
       "batter": "Brandon DeGoti",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -902,7 +911,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Trace Florio",
+      "pitcher": "Dalton Brown",
       "batter": "Jake Ogden",
       "outcome": "Groundout",
       "count": "0-2",
@@ -929,7 +938,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Trace Florio",
+      "pitcher": "Dalton Brown",
       "batter": "Michael Torres",
       "outcome": "Groundout",
       "count": "0-0",
@@ -956,7 +965,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Trace Florio",
+      "pitcher": "Dalton Brown",
       "batter": "Daniel Cuvet",
       "outcome": "Walk",
       "count": "3-2",
@@ -983,7 +992,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Trace Florio",
+      "pitcher": "Dalton Brown",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -998,8 +1007,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Daniel Cuvet",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Cuvet",
         "3B": null
       },
       "score": {
@@ -1010,7 +1019,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Trace Florio",
+      "pitcher": "Dalton Brown",
       "batter": "Alex Sosa",
       "outcome": "Single",
       "count": "1-2",
@@ -1020,13 +1029,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Daniel Cuvet",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Cuvet",
         "3B": null
       },
       "runners_after": {
         "1B": "Alex Sosa",
-        "2B": null,
+        "2B": "Daniel Cuvet",
         "3B": null
       },
       "score": {
@@ -1037,7 +1046,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Trace Florio",
+      "pitcher": "Dalton Brown",
       "batter": "Derek Williams",
       "outcome": "Walk",
       "count": "3-1",
@@ -1048,12 +1057,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Alex Sosa",
-        "2B": null,
+        "2B": "Daniel Cuvet",
         "3B": null
       },
       "runners_after": {
         "1B": "Derek Williams",
-        "2B": null,
+        "2B": "Daniel Cuvet",
         "3B": null
       },
       "score": {
@@ -1064,23 +1073,25 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Trace Florio",
+      "pitcher": "Dalton Brown",
       "batter": "Alonzo Alvarez",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "FBBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Derek Williams",
-        "2B": null,
+        "2B": "Daniel Cuvet",
         "3B": null
       },
       "runners_after": {
         "1B": "Alonzo Alvarez",
-        "2B": null,
+        "2B": "Daniel Cuvet",
         "3B": null
       },
       "score": {
@@ -1091,23 +1102,25 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Trace Florio",
+      "pitcher": "Gregory Quintana",
       "batter": "Brylan West",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Alonzo Alvarez",
-        "2B": null,
+        "2B": "Daniel Cuvet",
         "3B": null
       },
       "runners_after": {
         "1B": "Brylan West",
-        "2B": null,
+        "2B": "Daniel Cuvet",
         "3B": null
       },
       "score": {
@@ -1118,7 +1131,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Trace Florio",
+      "pitcher": "Gregory Quintana",
       "batter": "Dylan Dubovik",
       "outcome": "Pop out",
       "count": "0-1",
@@ -1129,12 +1142,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Brylan West",
-        "2B": null,
+        "2B": "Daniel Cuvet",
         "3B": null
       },
       "runners_after": {
         "1B": "Brylan West",
-        "2B": null,
+        "2B": "Daniel Cuvet",
         "3B": null
       },
       "score": {
@@ -1307,7 +1320,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Trace Florio",
+      "pitcher": "Gregory Quintana",
       "batter": "Brandon DeGoti",
       "outcome": "Walk",
       "count": "3-2",
@@ -1334,7 +1347,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Trace Florio",
+      "pitcher": "Gregory Quintana",
       "batter": "Jake Ogden",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1361,13 +1374,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Trace Florio",
+      "pitcher": "Gregory Quintana",
       "batter": "Michael Torres",
       "outcome": "Triple",
       "count": "1-2",
       "pitches": "SBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1388,7 +1403,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Trace Florio",
+      "pitcher": "Gregory Quintana",
       "batter": "Daniel Cuvet",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1415,7 +1430,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Trace Florio",
+      "pitcher": "Gregory Quintana",
       "batter": "Jackson Hugus",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -1442,7 +1457,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Trace Florio",
+      "pitcher": "Gregory Quintana",
       "batter": "Bennett Gary",
       "outcome": "Groundout",
       "count": "2-0",
@@ -1469,7 +1484,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "Brixton Lofgren",
       "batter": "Matt Colella",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1496,7 +1511,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "Brixton Lofgren",
       "batter": "Jack Mislan",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1523,7 +1538,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "Brixton Lofgren",
       "batter": "Charlie Chropuvka",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1550,7 +1565,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Trace Florio",
+      "pitcher": "Gregory Quintana",
       "batter": "Alonzo Alvarez",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1577,7 +1592,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Trace Florio",
+      "pitcher": "Gregory Quintana",
       "batter": "Donavan Jeffrey",
       "outcome": "Pop out",
       "count": "3-1",
@@ -1604,7 +1619,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Trace Florio",
+      "pitcher": "Gregory Quintana",
       "batter": "Dylan Dubovik",
       "outcome": "Single",
       "count": "0-1",
@@ -1631,7 +1646,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Trace Florio",
+      "pitcher": "Gregory Quintana",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1646,8 +1661,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dylan Dubovik",
-        "2B": null,
+        "1B": null,
+        "2B": "Dylan Dubovik",
         "3B": null
       },
       "score": {
@@ -1658,22 +1673,24 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Trace Florio",
+      "pitcher": "Gregory Quintana",
       "batter": "Brandon DeGoti",
       "outcome": "Double",
       "count": "2-1",
       "pitches": "KBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Dylan Dubovik",
-        "2B": null,
+        "1B": null,
+        "2B": "Dylan Dubovik",
         "3B": null
       },
       "runners_after": {
-        "1B": "Dylan Dubovik",
+        "1B": null,
         "2B": "Brandon DeGoti",
         "3B": null
       },
@@ -1685,7 +1702,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Trace Florio",
+      "pitcher": "Gregory Quintana",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1695,14 +1712,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Dylan Dubovik",
+        "1B": null,
         "2B": "Brandon DeGoti",
         "3B": null
       },
       "runners_after": {
-        "1B": "Dylan Dubovik",
-        "2B": "Brandon DeGoti",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Brandon DeGoti"
       },
       "score": {
         "away": 0,
@@ -1712,24 +1729,26 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Trace Florio",
+      "pitcher": "Gregory Quintana",
       "batter": "Jailen Watkins",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "SKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Dylan Dubovik",
-        "2B": "Brandon DeGoti",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Brandon DeGoti"
       },
       "runners_after": {
         "1B": "Jailen Watkins",
-        "2B": "Brandon DeGoti",
-        "3B": null
+        "2B": null,
+        "3B": "Brandon DeGoti"
       },
       "score": {
         "away": 0,
@@ -1739,7 +1758,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Trace Florio",
+      "pitcher": "Gregory Quintana",
       "batter": "Gabriel Milano",
       "outcome": "Single",
       "count": "0-2",
@@ -1750,13 +1769,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Jailen Watkins",
-        "2B": "Brandon DeGoti",
-        "3B": null
+        "2B": null,
+        "3B": "Brandon DeGoti"
       },
       "runners_after": {
         "1B": "Gabriel Milano",
-        "2B": "Brandon DeGoti",
-        "3B": null
+        "2B": null,
+        "3B": "Brandon DeGoti"
       },
       "score": {
         "away": 0,
@@ -1766,7 +1785,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Trace Florio",
+      "pitcher": "Gregory Quintana",
       "batter": "Mason Greenhouse",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1777,13 +1796,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Gabriel Milano",
-        "2B": "Brandon DeGoti",
-        "3B": null
+        "2B": null,
+        "3B": "Brandon DeGoti"
       },
       "runners_after": {
         "1B": "Gabriel Milano",
-        "2B": "Brandon DeGoti",
-        "3B": null
+        "2B": null,
+        "3B": "Brandon DeGoti"
       },
       "score": {
         "away": 0,
@@ -1793,7 +1812,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "Jake Lodgek",
       "batter": "Teddy Cashman",
       "outcome": "Single",
       "count": "0-1",
@@ -1820,7 +1839,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "Jake Lodgek",
       "batter": "Vince Libretto",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1847,7 +1866,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "Jake Lodgek",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1862,8 +1881,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Teddy Cashman",
-        "2B": null,
+        "1B": null,
+        "2B": "Teddy Cashman",
         "3B": null
       },
       "score": {
@@ -1874,7 +1893,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "Jake Lodgek",
       "batter": "Ryan Stoddard",
       "outcome": "Pop out",
       "count": "3-0",
@@ -1884,13 +1903,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Teddy Cashman",
-        "2B": null,
+        "1B": null,
+        "2B": "Teddy Cashman",
         "3B": null
       },
       "runners_after": {
-        "1B": "Teddy Cashman",
-        "2B": null,
+        "1B": null,
+        "2B": "Teddy Cashman",
         "3B": null
       },
       "score": {
@@ -1901,23 +1920,25 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "Jake Lodgek",
       "batter": "Luke Caucci",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Teddy Cashman",
-        "2B": null,
+        "1B": null,
+        "2B": "Teddy Cashman",
         "3B": null
       },
       "runners_after": {
         "1B": "Luke Caucci",
-        "2B": null,
+        "2B": "Teddy Cashman",
         "3B": null
       },
       "score": {
@@ -1928,18 +1949,20 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "Jake Lodgek",
       "batter": "Alex Barrist",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Luke Caucci",
-        "2B": null,
+        "2B": "Teddy Cashman",
         "3B": null
       },
       "runners_after": {
@@ -1955,13 +1978,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "Jake Lodgek",
       "batter": "Liam Ebbs",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBBFB",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1982,7 +2007,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "Jake Lodgek",
       "batter": "Matt Colella",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",

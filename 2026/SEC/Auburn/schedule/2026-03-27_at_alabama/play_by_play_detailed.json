@@ -3,7 +3,7 @@
   "date": "03/27/2026",
   "away_team": "Auburn",
   "home_team": "Alabama",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -76,8 +76,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "score": {
@@ -98,14 +98,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 0,
@@ -121,16 +121,18 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Bristol Carter"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": "Eric Guevara",
         "3B": null
       },
@@ -152,12 +154,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": "Eric Guevara",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": "Eric Guevara",
         "3B": null
       },
@@ -565,8 +567,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cade Belyeu",
-        "2B": null,
+        "1B": null,
+        "2B": "Cade Belyeu",
         "3B": null
       },
       "score": {
@@ -587,14 +589,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cade Belyeu",
-        "2B": null,
+        "1B": null,
+        "2B": "Cade Belyeu",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cade Belyeu",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cade Belyeu"
       },
       "score": {
         "away": 1,
@@ -614,14 +616,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cade Belyeu",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cade Belyeu"
       },
       "runners_after": {
-        "1B": "Cade Belyeu",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cade Belyeu"
       },
       "score": {
         "away": 1,
@@ -1392,6 +1394,33 @@
     {
       "inning": "Bottom 6",
       "pitcher": "Jett Johnston",
+      "batter": "Johnston, J. to p for Marciano, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": "Luke Vaughn",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Luke Vaughn",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 4
+      },
+      "description": "Johnston, J. to p for Marciano, J.."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Jett Johnston",
       "batter": "Brennan Holt",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1487,7 +1516,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brandon McCraine",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1580,7 +1609,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jett Johnston",
+      "pitcher": "Justice de Jong",
       "batter": "Jason Torres",
       "outcome": "Single",
       "count": "1-2",
@@ -1610,7 +1639,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jett Johnston",
+      "pitcher": "Justice de Jong",
       "batter": "de Jong, J. to p for Johnston, J..",
       "outcome": "\u2014",
       "count": null,
@@ -1637,7 +1666,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jett Johnston",
+      "pitcher": "Justice de Jong",
       "batter": "John Lemm",
       "outcome": "Home run",
       "count": "3-2",
@@ -1667,7 +1696,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jett Johnston",
+      "pitcher": "Justice de Jong",
       "batter": "Will Plattner",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1694,7 +1723,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jett Johnston",
+      "pitcher": "Justice de Jong",
       "batter": "Justin Osterhouse",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1792,7 +1821,7 @@
       "runners_after": {
         "1B": "Chase Fralick",
         "2B": null,
-        "3B": null
+        "3B": "Chris Rembert"
       },
       "score": {
         "away": 1,
@@ -1814,12 +1843,12 @@
       "runners_before": {
         "1B": "Chase Fralick",
         "2B": null,
-        "3B": null
+        "3B": "Chris Rembert"
       },
       "runners_after": {
         "1B": "Chase Fralick",
         "2B": null,
-        "3B": null
+        "3B": "Chris Rembert"
       },
       "score": {
         "away": 1,
@@ -1841,12 +1870,12 @@
       "runners_before": {
         "1B": "Chase Fralick",
         "2B": null,
-        "3B": null
+        "3B": "Chris Rembert"
       },
       "runners_after": {
         "1B": "Chase Fralick",
         "2B": null,
-        "3B": null
+        "3B": "Chris Rembert"
       },
       "score": {
         "away": 1,
@@ -1856,7 +1885,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jett Johnston",
+      "pitcher": "Justice de Jong",
       "batter": "Luke Vaughn",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1883,7 +1912,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jett Johnston",
+      "pitcher": "Justice de Jong",
       "batter": "Brennan Holt",
       "outcome": "Single",
       "count": "0-0",
@@ -1910,7 +1939,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jett Johnston",
+      "pitcher": "Connor Gatwood",
       "batter": "Bryce Fowler",
       "outcome": "Single",
       "count": "0-1",
@@ -1937,7 +1966,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jett Johnston",
+      "pitcher": "Connor Gatwood",
       "batter": "Justin Lebron",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1965,6 +1994,33 @@
     {
       "inning": "Bottom 8",
       "pitcher": "Connor Gatwood",
+      "batter": "Gatwood, C. to p for de Jong, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Bryce Fowler",
+        "2B": "Brennan Holt",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Bryce Fowler",
+        "2B": "Brennan Holt",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 8
+      },
+      "description": "Gatwood, C. to p for de Jong, J.."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Brady Neal",
       "outcome": "Single",
       "count": "0-0",
@@ -1993,7 +2049,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Connor Gatwood",
+      "pitcher": "",
       "batter": "Jason Torres",
       "outcome": "Single",
       "count": "2-1",
@@ -2022,7 +2078,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Connor Gatwood",
+      "pitcher": "",
       "batter": "John Lemm",
       "outcome": "Single",
       "count": "2-2",

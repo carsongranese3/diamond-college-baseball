@@ -3,7 +3,7 @@
   "date": "03/04/2026",
   "away_team": "Virginia",
   "home_team": "Charlotte",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -94,7 +94,9 @@
       "count": "1-2",
       "pitches": "SSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -112,6 +114,33 @@
         "home": 0
       },
       "description": "HarrisS singled to right center, RBI (1-2 SSB); Tiroly advanced to second; Gracia advanced to third; Becker scored."
+    },
+    {
+      "inning": "Top 1",
+      "pitcher": "AJ Camp",
+      "batter": "Camp, A. to p for Jones, W..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "HarrisS",
+        "2B": "Eric Becker",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "HarrisS",
+        "2B": "Eric Becker",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 0
+      },
+      "description": "Camp, A. to p for Jones, W.."
     },
     {
       "inning": "Top 1",
@@ -148,7 +177,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -202,7 +233,10 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -364,7 +398,9 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Dylan Koontz"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -373,7 +409,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dylan Koontz",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -395,7 +431,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Dylan Koontz",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -427,9 +463,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Alec DeMartino",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Alec DeMartino"
       },
       "score": {
         "away": 4,
@@ -449,14 +485,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Alec DeMartino",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Alec DeMartino"
       },
       "runners_after": {
-        "1B": "Alec DeMartino",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Alec DeMartino"
       },
       "score": {
         "away": 4,
@@ -736,7 +772,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "AJ Camp",
+      "pitcher": "Sebastian Perez",
       "batter": "Antonio Perrotta",
       "outcome": "Groundout",
       "count": "0-1",
@@ -860,8 +896,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Dawson Bryce",
-        "3B": null
+        "2B": null,
+        "3B": "Dawson Bryce"
       },
       "score": {
         "away": 4,
@@ -882,13 +918,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Dawson Bryce",
-        "3B": null
+        "2B": null,
+        "3B": "Dawson Bryce"
       },
       "runners_after": {
         "1B": "Dylan Koontz",
-        "2B": "Dawson Bryce",
-        "3B": null
+        "2B": null,
+        "3B": "Dawson Bryce"
       },
       "score": {
         "away": 4,
@@ -909,19 +945,46 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Dylan Koontz",
-        "2B": "Dawson Bryce",
-        "3B": null
+        "2B": null,
+        "3B": "Dawson Bryce"
       },
       "runners_after": {
         "1B": "Dylan Koontz",
-        "2B": "Dawson Bryce",
-        "3B": null
+        "2B": null,
+        "3B": "Dawson Bryce"
       },
       "score": {
         "away": 4,
         "home": 1
       },
       "description": "DeMartino, A fouled out to 1b (0-1 S)."
+    },
+    {
+      "inning": "Top 4",
+      "pitcher": "Sebastian Perez",
+      "batter": "Perez, S. to p for Camp, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 1
+      },
+      "description": "Perez, S. to p for Camp, A.."
     },
     {
       "inning": "Top 4",
@@ -1006,13 +1069,15 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Sebastian Perez",
+      "pitcher": "Joseph Taylor",
       "batter": "Joe Tiroly",
       "outcome": "Flyout",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1033,7 +1098,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Sebastian Perez",
+      "pitcher": "Joseph Taylor",
       "batter": "HarrisS",
       "outcome": "Single",
       "count": "1-2",
@@ -1057,6 +1122,33 @@
         "home": 1
       },
       "description": "HarrisS singled through the right side (1-2 BSK); Gracia advanced to second."
+    },
+    {
+      "inning": "Top 4",
+      "pitcher": "Joseph Taylor",
+      "batter": "Taylor, J. to p for Perez, S..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "HarrisS",
+        "2B": "Eric Becker",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "HarrisS",
+        "2B": "Eric Becker",
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 1
+      },
+      "description": "Taylor, J. to p for Perez, S.."
     },
     {
       "inning": "Top 4",
@@ -1276,7 +1368,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Joseph Taylor",
+      "pitcher": "Chase Carson",
       "batter": "Antonio Perrotta",
       "outcome": "Walk",
       "count": "3-2",
@@ -1303,7 +1395,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Joseph Taylor",
+      "pitcher": "Chase Carson",
       "batter": "Thomas O'Connell",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1330,7 +1422,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Joseph Taylor",
+      "pitcher": "Chase Carson",
       "batter": "Eric Becker",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1466,6 +1558,33 @@
     {
       "inning": "Top 6",
       "pitcher": "Chase Carson",
+      "batter": "Carson, C. to p for Taylor, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 1
+      },
+      "description": "Carson, C. to p for Taylor, J.."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Ryan Combs",
       "batter": "AJ Gracia",
       "outcome": "Single",
       "count": "1-1",
@@ -1492,7 +1611,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Chase Carson",
+      "pitcher": "Ryan Combs",
       "batter": "Joe Tiroly",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1519,7 +1638,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Chase Carson",
+      "pitcher": "Ryan Combs",
       "batter": "HarrisS",
       "outcome": "Walk",
       "count": "3-0",
@@ -1546,7 +1665,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Chase Carson",
+      "pitcher": "Ryan Combs",
       "batter": "Harrison Didawick",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1570,6 +1689,33 @@
         "home": 1
       },
       "description": "Didawick grounded out to 1b unassisted (1-1 BF); HarrisS advanced to second; Gracia advanced to third."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Ryan Combs",
+      "batter": "Combs, R. to p for Carson, C..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "HarrisS",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "HarrisS",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 1
+      },
+      "description": "Combs, R. to p for Carson, C.."
     },
     {
       "inning": "Top 6",
@@ -1669,8 +1815,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Robert Nedry",
-        "2B": null,
+        "1B": null,
+        "2B": "Robert Nedry",
         "3B": null
       },
       "score": {
@@ -1691,13 +1837,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Robert Nedry",
-        "2B": null,
+        "1B": null,
+        "2B": "Robert Nedry",
         "3B": null
       },
       "runners_after": {
-        "1B": "Robert Nedry",
-        "2B": null,
+        "1B": null,
+        "2B": "Robert Nedry",
         "3B": null
       },
       "score": {
@@ -1718,13 +1864,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Robert Nedry",
-        "2B": null,
+        "1B": null,
+        "2B": "Robert Nedry",
         "3B": null
       },
       "runners_after": {
-        "1B": "Robert Nedry",
-        "2B": null,
+        "1B": null,
+        "2B": "Robert Nedry",
         "3B": null
       },
       "score": {
@@ -1762,7 +1908,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ryan Combs",
+      "pitcher": "Adam Stanton",
       "batter": "Antonio Perrotta",
       "outcome": "Walk",
       "count": "3-0",
@@ -1789,7 +1935,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ryan Combs",
+      "pitcher": "Adam Stanton",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1816,7 +1962,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ryan Combs",
+      "pitcher": "Adam Stanton",
       "batter": "Thomas O'Connell",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1843,7 +1989,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ryan Combs",
+      "pitcher": "Adam Stanton",
       "batter": "Eric Becker",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1951,7 +2097,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ryan Combs",
+      "pitcher": "Adam Stanton",
       "batter": "AJ Gracia",
       "outcome": "Single",
       "count": "2-2",
@@ -1978,7 +2124,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ryan Combs",
+      "pitcher": "Andrew Kribbs",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2005,13 +2151,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ryan Combs",
+      "pitcher": "Andrew Kribbs",
       "batter": "Joe Tiroly",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "SB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -2032,7 +2180,34 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Adam Stanton",
+      "pitcher": "Andrew Kribbs",
+      "batter": "Stanton, A. to p for Combs, R..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Joe Tiroly",
+        "2B": "AJ Gracia",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Joe Tiroly",
+        "2B": "AJ Gracia",
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 1
+      },
+      "description": "Stanton, A. to p for Combs, R.."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Andrew Kribbs",
       "batter": "HarrisS",
       "outcome": "Fielder's choice",
       "count": "1-2",
@@ -2059,7 +2234,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Adam Stanton",
+      "pitcher": "Andrew Kribbs",
       "batter": "Harrison Didawick",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2086,7 +2261,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Adam Stanton",
+      "pitcher": "Jaden Winter",
       "batter": "Noah Murray",
       "outcome": "Walk",
       "count": "3-2",
@@ -2113,13 +2288,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Adam Stanton",
+      "pitcher": "",
       "batter": "Zach Jackson",
       "outcome": "Single",
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2140,9 +2317,9 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Andrew Kribbs",
-      "batter": null,
-      "outcome": "Stolen base",
+      "pitcher": "",
+      "batter": "Kribbs, A. to p for Stanton, A..",
+      "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
@@ -2160,6 +2337,35 @@
         "3B": null
       },
       "score": {
+        "away": 7,
+        "home": 1
+      },
+      "description": "Kribbs, A. to p for Stanton, A.."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "",
+      "batter": null,
+      "outcome": "Stolen base",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [
+        null
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Zach Jackson",
+        "2B": "AJ Gracia",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Zach Jackson",
+        "3B": null
+      },
+      "score": {
         "away": 8,
         "home": 1
       },
@@ -2167,7 +2373,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Andrew Kribbs",
+      "pitcher": "",
       "batter": "Antonio Perrotta",
       "outcome": "Groundout",
       "count": "2-0",
@@ -2177,13 +2383,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Zach Jackson",
-        "2B": "AJ Gracia",
+        "1B": null,
+        "2B": "Zach Jackson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Zach Jackson",
-        "2B": "AJ Gracia",
+        "1B": null,
+        "2B": "Zach Jackson",
         "3B": null
       },
       "score": {
@@ -2290,8 +2496,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Alec DeMartino",
-        "2B": null,
+        "1B": null,
+        "2B": "Alec DeMartino",
         "3B": null
       },
       "score": {
@@ -2312,13 +2518,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Alec DeMartino",
-        "2B": null,
+        "1B": null,
+        "2B": "Alec DeMartino",
         "3B": null
       },
       "runners_after": {
-        "1B": "Alec DeMartino",
-        "2B": null,
+        "1B": null,
+        "2B": "Alec DeMartino",
         "3B": null
       },
       "score": {
@@ -2329,7 +2535,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Andrew Kribbs",
+      "pitcher": "",
       "batter": "Orozco, A. to c.",
       "outcome": "\u2014",
       "count": null,
@@ -2356,7 +2562,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Andrew Kribbs",
+      "pitcher": "",
       "batter": "Thomas O'Connell",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2383,7 +2589,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Andrew Kribbs",
+      "pitcher": "",
       "batter": "Eric Becker",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -2410,7 +2616,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Andrew Kribbs",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2437,7 +2643,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Andrew Kribbs",
+      "pitcher": "",
       "batter": "AJ Gracia",
       "outcome": "Walk",
       "count": "3-2",
@@ -2464,7 +2670,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jaden Winter",
+      "pitcher": "",
+      "batter": "Winter, J. to p for Kribbs, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "AJ Gracia",
+        "2B": "Eric Becker",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "AJ Gracia",
+        "2B": "Eric Becker",
+        "3B": null
+      },
+      "score": {
+        "away": 8,
+        "home": 1
+      },
+      "description": "Winter, J. to p for Kribbs, A.."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": "Joe Tiroly",
       "outcome": "Grounded into double play",
       "count": "1-0",

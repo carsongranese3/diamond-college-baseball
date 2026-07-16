@@ -3,7 +3,7 @@
   "date": "04/26/2026",
   "away_team": "Georgia",
   "home_team": "Ole Miss",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -130,8 +130,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dom Decker",
-        "2B": null,
+        "1B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -152,13 +152,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Dom Decker",
-        "2B": null,
+        "1B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "runners_after": {
         "1B": "Tristan Bissetta",
-        "2B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -175,17 +175,19 @@
       "count": "1-2",
       "pitches": "FKFFB",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Tristan Bissetta",
-        "2B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "runners_after": {
         "1B": "Tristan Bissetta",
-        "2B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -207,12 +209,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Tristan Bissetta",
-        "2B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "runners_after": {
         "1B": "Will Furniss",
-        "2B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -234,12 +236,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Will Furniss",
-        "2B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "runners_after": {
         "1B": "Topher Jones",
-        "2B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -337,7 +339,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1386,7 +1390,34 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "W.",
+      "pitcher": "Taylor Rabe",
+      "batter": "W. Hooks",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": "Ryan Black",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Ryan Black",
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 1
+      },
+      "description": "W. Hooks to p for T. Rabe."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Walker Hooks",
       "batter": "Tre Phelps",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -1413,7 +1444,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Daniel Jackson",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1440,7 +1471,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1455,9 +1486,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tre Phelps",
+        "1B": null,
         "2B": "Ryan Black",
-        "3B": null
+        "3B": "Tre Phelps"
       },
       "score": {
         "away": 2,
@@ -1467,24 +1498,26 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Rylan Lujo",
       "outcome": "Flyout",
       "count": "2-2",
       "pitches": "BFBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Tre Phelps",
+        "1B": null,
         "2B": "Ryan Black",
-        "3B": null
+        "3B": "Tre Phelps"
       },
       "runners_after": {
-        "1B": "Tre Phelps",
+        "1B": null,
         "2B": "Ryan Black",
-        "3B": null
+        "3B": "Tre Phelps"
       },
       "score": {
         "away": 3,
@@ -1494,7 +1527,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Michael O'Shaughnessy",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1504,14 +1537,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Tre Phelps",
+        "1B": null,
         "2B": "Ryan Black",
-        "3B": null
+        "3B": "Tre Phelps"
       },
       "runners_after": {
-        "1B": "Tre Phelps",
+        "1B": null,
         "2B": "Ryan Black",
-        "3B": null
+        "3B": "Tre Phelps"
       },
       "score": {
         "away": 3,
@@ -1656,7 +1689,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Bryce Calloway",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1683,7 +1716,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Henry Allen",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1710,7 +1743,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Ryan Wynn",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1899,7 +1932,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Kolby Branch",
       "outcome": "Single",
       "count": "3-2",
@@ -1926,7 +1959,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Ryan Black",
       "outcome": "Foul out",
       "count": "0-2",
@@ -1953,7 +1986,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Tre Phelps",
       "outcome": "Reached on error",
       "count": "0-1",
@@ -1980,13 +2013,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Daniel Jackson",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -2007,7 +2042,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2022,8 +2057,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tre Phelps",
-        "2B": null,
+        "1B": null,
+        "2B": "Tre Phelps",
         "3B": null
       },
       "score": {
@@ -2034,7 +2069,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Rylan Lujo",
       "outcome": "Walk",
       "count": null,
@@ -2044,13 +2079,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Tre Phelps",
-        "2B": null,
+        "1B": null,
+        "2B": "Tre Phelps",
         "3B": null
       },
       "runners_after": {
         "1B": "Rylan Lujo",
-        "2B": null,
+        "2B": "Tre Phelps",
         "3B": null
       },
       "score": {
@@ -2061,23 +2096,25 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Michael O'Shaughnessy",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BSBS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Rylan Lujo",
-        "2B": null,
+        "2B": "Tre Phelps",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael O'Shaughnessy",
-        "2B": null,
+        "2B": "Tre Phelps",
         "3B": null
       },
       "score": {
@@ -2088,7 +2125,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Bryce Calloway",
       "outcome": "Fielder's choice",
       "count": "0-0",
@@ -2099,12 +2136,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Michael O'Shaughnessy",
-        "2B": null,
+        "2B": "Tre Phelps",
         "3B": null
       },
       "runners_after": {
         "1B": "Bryce Calloway",
-        "2B": null,
+        "2B": "Tre Phelps",
         "3B": null
       },
       "score": {
@@ -2196,7 +2233,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Justin Byrd",
+      "pitcher": "",
       "batter": "Hayden Federico",
       "outcome": "Strikeout (looking)",
       "count": "2-2",

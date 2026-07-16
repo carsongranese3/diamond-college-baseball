@@ -3,7 +3,7 @@
   "date": "03/10/2026",
   "away_team": "Marshall",
   "home_team": "Louisville",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -1141,7 +1141,8 @@
       "rbi": true,
       "runs_scored": [
         "Zion Rose",
-        "Tague Davis"
+        "Tague Davis",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1504,8 +1505,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kade Elam",
-        "2B": null,
+        "1B": null,
+        "2B": "Kade Elam",
         "3B": null
       },
       "score": {
@@ -1526,13 +1527,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Kade Elam",
-        "2B": null,
+        "1B": null,
+        "2B": "Kade Elam",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kade Elam",
-        "2B": null,
+        "1B": null,
+        "2B": "Kade Elam",
         "3B": null
       },
       "score": {
@@ -1553,8 +1554,8 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Kade Elam",
-        "2B": null,
+        "1B": null,
+        "2B": "Kade Elam",
         "3B": null
       },
       "runners_after": {
@@ -1585,8 +1586,8 @@
         "3B": "Kade Elam"
       },
       "runners_after": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": "Kade Elam"
       },
       "score": {
@@ -1610,8 +1611,8 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": "Kade Elam"
       },
       "runners_after": {
@@ -1762,7 +1763,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
+      "batter": "J. Brown",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": "Cleary Simpson",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Cleary Simpson",
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 13
+      },
+      "description": "J. Brown to p for Starke."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Jack Brown",
       "batter": "Tyler Kamerer",
       "outcome": "Pop out",
       "count": "0-2",
@@ -2011,7 +2039,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "Ky.",
       "outcome": "\u2014",
       "count": null,
@@ -2038,7 +2066,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "Patrick Mazur",
       "outcome": "Single",
       "count": "2-2",
@@ -2065,7 +2093,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "",
       "batter": "AJ Havrilla",
       "outcome": "Grounded into double play",
       "count": "1-0",
@@ -2092,7 +2120,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "",
       "batter": "Cooper Hinson",
       "outcome": "Flyout",
       "count": "3-1",

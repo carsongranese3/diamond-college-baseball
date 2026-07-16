@@ -3,7 +3,7 @@
   "date": "03/04/2026",
   "away_team": "Ohio",
   "home_team": "Pittsburgh",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -186,7 +186,7 @@
       "runners_after": {
         "1B": "Trey Fenderson",
         "2B": null,
-        "3B": null
+        "3B": "Lorenzo Carrier"
       },
       "score": {
         "away": 0,
@@ -208,12 +208,12 @@
       "runners_before": {
         "1B": "Trey Fenderson",
         "2B": null,
-        "3B": null
+        "3B": "Lorenzo Carrier"
       },
       "runners_after": {
         "1B": "Kai Wagner",
         "2B": null,
-        "3B": null
+        "3B": "Lorenzo Carrier"
       },
       "score": {
         "away": 0,
@@ -230,17 +230,20 @@
       "pitches": "KF",
       "rbi": true,
       "runs_scored": [
-        "Sebastian Pisacreta"
+        "Lorenzo Carrier",
+        "Kai Wagner",
+        "Sebastian Pisacreta",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Kai Wagner",
         "2B": null,
-        "3B": null
+        "3B": "Lorenzo Carrier"
       },
       "runners_after": {
-        "1B": "Kai Wagner",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -262,7 +265,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kai Wagner",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -296,7 +299,7 @@
       "runners_after": {
         "1B": "Jackson Cooke",
         "2B": null,
-        "3B": null
+        "3B": "Carter Dierdorf"
       },
       "score": {
         "away": 0,
@@ -318,12 +321,12 @@
       "runners_before": {
         "1B": "Jackson Cooke",
         "2B": null,
-        "3B": null
+        "3B": "Carter Dierdorf"
       },
       "runners_after": {
         "1B": "Julian Irizarry",
-        "2B": null,
-        "3B": null
+        "2B": "Jackson Cooke",
+        "3B": "Carter Dierdorf"
       },
       "score": {
         "away": 0,
@@ -333,7 +336,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Chase Keen",
+      "pitcher": "Landon Price",
       "batter": "AJ Nessler",
       "outcome": "Pop out",
       "count": "3-2",
@@ -344,13 +347,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Julian Irizarry",
-        "2B": null,
-        "3B": null
+        "2B": "Jackson Cooke",
+        "3B": "Carter Dierdorf"
       },
       "runners_after": {
         "1B": "Julian Irizarry",
-        "2B": null,
-        "3B": null
+        "2B": "Jackson Cooke",
+        "3B": "Carter Dierdorf"
       },
       "score": {
         "away": 0,
@@ -468,7 +471,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Chase Keen",
+      "pitcher": "Landon Price",
       "batter": "Caden Dulin",
       "outcome": "Flyout",
       "count": "1-0",
@@ -495,7 +498,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Chase Keen",
+      "pitcher": "Landon Price",
       "batter": "Lorenzo Carrier",
       "outcome": "Walk",
       "count": "3-1",
@@ -522,7 +525,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Chase Keen",
+      "pitcher": "Landon Price",
       "batter": "Trey Fenderson",
       "outcome": "Lineout",
       "count": "2-2",
@@ -549,7 +552,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Chase Keen",
+      "pitcher": "Landon Price",
       "batter": "Kai Wagner",
       "outcome": "Flyout",
       "count": "3-1",
@@ -618,7 +621,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Reese Harmon",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -640,12 +643,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Reese Harmon",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Reese Harmon",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -657,7 +660,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Chase Keen",
+      "pitcher": "Landon Price",
       "batter": "Sebastian Pisacreta",
       "outcome": "Single",
       "count": "1-0",
@@ -684,13 +687,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Chase Keen",
+      "pitcher": "Landon Price",
       "batter": "Carter Dierdorf",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Sebastian Pisacreta"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -699,7 +704,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Sebastian Pisacreta",
+        "1B": null,
         "2B": "Carter Dierdorf",
         "3B": null
       },
@@ -711,7 +716,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Chase Keen",
+      "pitcher": "Landon Price",
       "batter": "Jackson Cooke",
       "outcome": "Flyout",
       "count": "3-1",
@@ -721,14 +726,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Sebastian Pisacreta",
+        "1B": null,
         "2B": "Carter Dierdorf",
         "3B": null
       },
       "runners_after": {
-        "1B": "Sebastian Pisacreta",
-        "2B": "Carter Dierdorf",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Carter Dierdorf"
       },
       "score": {
         "away": 0,
@@ -738,23 +743,25 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Chase Keen",
+      "pitcher": "Landon Price",
       "batter": "Julian Irizarry",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Carter Dierdorf"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Sebastian Pisacreta",
-        "2B": "Carter Dierdorf",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Carter Dierdorf"
       },
       "runners_after": {
         "1B": "Julian Irizarry",
-        "2B": "Carter Dierdorf",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -765,7 +772,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Chase Keen",
+      "pitcher": "Landon Price",
       "batter": "AJ Nessler",
       "outcome": "Pop out",
       "count": "0-0",
@@ -776,12 +783,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Julian Irizarry",
-        "2B": "Carter Dierdorf",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Julian Irizarry",
-        "2B": "Carter Dierdorf",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -792,7 +799,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Chase Keen",
+      "pitcher": "Julian Robertson",
       "batter": "Caden Dulin",
       "outcome": "Walk",
       "count": "3-0",
@@ -803,12 +810,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Julian Irizarry",
-        "2B": "Carter Dierdorf",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Caden Dulin",
-        "2B": "Carter Dierdorf",
+        "2B": "Julian Irizarry",
         "3B": null
       },
       "score": {
@@ -819,25 +826,27 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Chase Keen",
+      "pitcher": "Julian Robertson",
       "batter": "Lorenzo Carrier",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
+        "Julian Irizarry",
+        "Caden Dulin",
         "Lorenzo Carrier"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Caden Dulin",
-        "2B": "Carter Dierdorf",
+        "2B": "Julian Irizarry",
         "3B": null
       },
       "runners_after": {
-        "1B": "Caden Dulin",
-        "2B": "Carter Dierdorf",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -848,7 +857,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Chase Keen",
+      "pitcher": "Julian Robertson",
       "batter": "Trey Fenderson",
       "outcome": "Walk",
       "count": "3-2",
@@ -858,13 +867,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Caden Dulin",
-        "2B": "Carter Dierdorf",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Trey Fenderson",
-        "2B": "Carter Dierdorf",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -875,7 +884,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Chase Keen",
+      "pitcher": "Julian Robertson",
       "batter": "Kai Wagner",
       "outcome": "Flyout",
       "count": "3-2",
@@ -886,12 +895,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Trey Fenderson",
-        "2B": "Carter Dierdorf",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Trey Fenderson",
-        "2B": "Carter Dierdorf",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1010,7 +1019,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Chase Keen",
+      "pitcher": "Aaron Blum",
       "batter": "Sebastian Pisacreta",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1037,7 +1046,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Chase Keen",
+      "pitcher": "Aaron Blum",
       "batter": "Carter Dierdorf",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1064,7 +1073,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Chase Keen",
+      "pitcher": "Aaron Blum",
       "batter": "Jackson Cooke",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1091,7 +1100,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Chase Keen",
+      "pitcher": "Aaron Blum",
       "batter": "Julian Irizarry",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1216,7 +1225,7 @@
       "runners_after": {
         "1B": "Cam Hill",
         "2B": null,
-        "3B": null
+        "3B": "Reese Harmon"
       },
       "score": {
         "away": 0,
@@ -1232,16 +1241,19 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Reese Harmon",
+        "Cam Hill"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Cam Hill",
         "2B": null,
-        "3B": null
+        "3B": "Reese Harmon"
       },
       "runners_after": {
-        "1B": "Cam Hill",
+        "1B": null,
         "2B": "Cam Bryant",
         "3B": null
       },
@@ -1253,7 +1265,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Michael Gray",
       "batter": "Cameron Boyd",
       "outcome": "Single",
       "count": "3-1",
@@ -1263,14 +1275,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cam Hill",
+        "1B": null,
         "2B": "Cam Bryant",
         "3B": null
       },
       "runners_after": {
         "1B": "Cameron Boyd",
-        "2B": "Cam Bryant",
-        "3B": null
+        "2B": null,
+        "3B": "Cam Bryant"
       },
       "score": {
         "away": 2,
@@ -1280,7 +1292,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Michael Gray",
       "batter": "Will Henson",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1291,13 +1303,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Cameron Boyd",
-        "2B": "Cam Bryant",
-        "3B": null
+        "2B": null,
+        "3B": "Cam Bryant"
       },
       "runners_after": {
         "1B": "Cameron Boyd",
-        "2B": "Cam Bryant",
-        "3B": null
+        "2B": null,
+        "3B": "Cam Bryant"
       },
       "score": {
         "away": 2,
@@ -1307,7 +1319,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Chase Keen",
+      "pitcher": "Aaron Blum",
       "batter": "AJ Nessler",
       "outcome": "Single",
       "count": "3-2",
@@ -1334,7 +1346,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Chase Keen",
+      "pitcher": "Aaron Blum",
       "batter": "Caden Dulin",
       "outcome": "Grounded into double play",
       "count": "0-0",
@@ -1349,7 +1361,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "AJ Nessler",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1361,7 +1373,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Chase Keen",
+      "pitcher": "Aaron Blum",
       "batter": "Lorenzo Carrier",
       "outcome": "Triple",
       "count": "3-2",
@@ -1371,12 +1383,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "AJ Nessler",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "AJ Nessler",
+        "1B": null,
         "2B": null,
         "3B": "Lorenzo Carrier"
       },
@@ -1388,7 +1400,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Chase Keen",
+      "pitcher": "Aaron Blum",
       "batter": "Trey Fenderson",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1398,12 +1410,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "AJ Nessler",
+        "1B": null,
         "2B": null,
         "3B": "Lorenzo Carrier"
       },
       "runners_after": {
-        "1B": "AJ Nessler",
+        "1B": null,
         "2B": null,
         "3B": "Lorenzo Carrier"
       },
@@ -1415,7 +1427,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Michael Gray",
       "batter": "Dylan Shepherd",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1442,7 +1454,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Michael Gray",
       "batter": "Tyler Stack",
       "outcome": "Single",
       "count": "2-1",
@@ -1469,7 +1481,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Michael Gray",
       "batter": "Max Palinski",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1484,8 +1496,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Stack",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Stack",
         "3B": null
       },
       "score": {
@@ -1496,7 +1508,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Michael Gray",
       "batter": "Taylor Harris",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1506,13 +1518,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Tyler Stack",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Stack",
         "3B": null
       },
       "runners_after": {
         "1B": "Taylor Harris",
-        "2B": null,
+        "2B": "Tyler Stack",
         "3B": null
       },
       "score": {
@@ -1523,7 +1535,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Michael Gray",
       "batter": "Reese Harmon",
       "outcome": "Walk",
       "count": "3-0",
@@ -1534,13 +1546,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Taylor Harris",
-        "2B": null,
+        "2B": "Tyler Stack",
         "3B": null
       },
       "runners_after": {
         "1B": "Reese Harmon",
-        "2B": null,
-        "3B": null
+        "2B": "Taylor Harris",
+        "3B": "Tyler Stack"
       },
       "score": {
         "away": 2,
@@ -1550,7 +1562,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Michael Gray",
       "batter": "Cam Hill",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1561,13 +1573,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Reese Harmon",
-        "2B": null,
-        "3B": null
+        "2B": "Taylor Harris",
+        "3B": "Tyler Stack"
       },
       "runners_after": {
         "1B": "Reese Harmon",
-        "2B": null,
-        "3B": null
+        "2B": "Taylor Harris",
+        "3B": "Tyler Stack"
       },
       "score": {
         "away": 2,
@@ -1577,7 +1589,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Keen",
+      "pitcher": "Aaron Blum",
       "batter": "Kai Wagner",
       "outcome": "Walk",
       "count": "3-2",
@@ -1604,7 +1616,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Keen",
+      "pitcher": "Hayden Blosser",
       "batter": "Sebastian Pisacreta",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -1620,7 +1632,7 @@
       },
       "runners_after": {
         "1B": "Sebastian Pisacreta",
-        "2B": null,
+        "2B": "Kai Wagner",
         "3B": null
       },
       "score": {
@@ -1631,24 +1643,26 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Keen",
+      "pitcher": "Hayden Blosser",
       "batter": "Carter Dierdorf",
       "outcome": "Home run",
       "count": "2-2",
       "pitches": "BSBFF",
       "rbi": true,
       "runs_scored": [
+        "Kai Wagner",
+        "Sebastian Pisacreta",
         "Carter Dierdorf"
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Sebastian Pisacreta",
-        "2B": null,
+        "2B": "Kai Wagner",
         "3B": null
       },
       "runners_after": {
-        "1B": "Sebastian Pisacreta",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1660,7 +1674,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Keen",
+      "pitcher": "Hayden Blosser",
       "batter": "Jackson Cooke",
       "outcome": "Walk",
       "count": "3-2",
@@ -1670,7 +1684,7 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Sebastian Pisacreta",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1687,7 +1701,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Keen",
+      "pitcher": "Hayden Blosser",
       "batter": "Julian Irizarry",
       "outcome": "Walk",
       "count": "3-2",
@@ -1703,7 +1717,7 @@
       },
       "runners_after": {
         "1B": "Julian Irizarry",
-        "2B": null,
+        "2B": "Jackson Cooke",
         "3B": null
       },
       "score": {
@@ -1714,7 +1728,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Keen",
+      "pitcher": "Hayden Blosser",
       "batter": "Jackson Cooke",
       "outcome": "\u2014",
       "count": null,
@@ -1725,12 +1739,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Julian Irizarry",
-        "2B": null,
+        "2B": "Jackson Cooke",
         "3B": null
       },
       "runners_after": {
         "1B": "Julian Irizarry",
-        "2B": null,
+        "2B": "Jackson Cooke",
         "3B": null
       },
       "score": {
@@ -1741,7 +1755,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Keen",
+      "pitcher": "Hayden Blosser",
       "batter": "AJ Nessler",
       "outcome": "Single",
       "count": "0-2",
@@ -1752,12 +1766,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Julian Irizarry",
-        "2B": null,
+        "2B": "Jackson Cooke",
         "3B": null
       },
       "runners_after": {
         "1B": "AJ Nessler",
-        "2B": null,
+        "2B": "Julian Irizarry",
         "3B": null
       },
       "score": {
@@ -1768,7 +1782,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Keen",
+      "pitcher": "Hayden Blosser",
       "batter": "Caden Dulin",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1779,12 +1793,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "AJ Nessler",
-        "2B": null,
+        "2B": "Julian Irizarry",
         "3B": null
       },
       "runners_after": {
         "1B": "AJ Nessler",
-        "2B": null,
+        "2B": "Julian Irizarry",
         "3B": null
       },
       "score": {
@@ -1795,23 +1809,25 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Keen",
+      "pitcher": "Hunter Brooks",
       "batter": "Lorenzo Carrier",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Julian Irizarry"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "AJ Nessler",
-        "2B": null,
+        "2B": "Julian Irizarry",
         "3B": null
       },
       "runners_after": {
         "1B": "Lorenzo Carrier",
-        "2B": null,
+        "2B": "AJ Nessler",
         "3B": null
       },
       "score": {
@@ -1822,7 +1838,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Keen",
+      "pitcher": "Hunter Brooks",
       "batter": "Gavin Miller",
       "outcome": "Walk",
       "count": "3-1",
@@ -1833,13 +1849,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Lorenzo Carrier",
-        "2B": null,
+        "2B": "AJ Nessler",
         "3B": null
       },
       "runners_after": {
         "1B": "Gavin Miller",
-        "2B": null,
-        "3B": null
+        "2B": "Lorenzo Carrier",
+        "3B": "AJ Nessler"
       },
       "score": {
         "away": 2,
@@ -1849,22 +1865,26 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Keen",
+      "pitcher": "Hunter Brooks",
       "batter": "Mason Ligenza",
       "outcome": "Double",
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "AJ Nessler",
+        "Lorenzo Carrier",
+        "Gavin Miller"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Gavin Miller",
-        "2B": null,
-        "3B": null
+        "2B": "Lorenzo Carrier",
+        "3B": "AJ Nessler"
       },
       "runners_after": {
-        "1B": "Gavin Miller",
+        "1B": null,
         "2B": "Mason Ligenza",
         "3B": null
       },
@@ -1876,7 +1896,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Keen",
+      "pitcher": "",
       "batter": "Sebastian Pisacreta",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1886,12 +1906,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Gavin Miller",
+        "1B": null,
         "2B": "Mason Ligenza",
         "3B": null
       },
       "runners_after": {
-        "1B": "Gavin Miller",
+        "1B": null,
         "2B": "Mason Ligenza",
         "3B": null
       },
@@ -1903,7 +1923,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Sam Bryan",
       "batter": "Cam Bryant",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1930,7 +1950,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Sam Bryan",
       "batter": "Cameron Boyd",
       "outcome": "Single",
       "count": "1-1",
@@ -1957,7 +1977,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Sam Bryan",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1972,8 +1992,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cameron Boyd",
-        "2B": null,
+        "1B": null,
+        "2B": "Cameron Boyd",
         "3B": null
       },
       "score": {
@@ -1984,7 +2004,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Sam Bryan",
       "batter": "Will Henson",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1994,13 +2014,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cameron Boyd",
-        "2B": null,
+        "1B": null,
+        "2B": "Cameron Boyd",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cameron Boyd",
-        "2B": null,
+        "1B": null,
+        "2B": "Cameron Boyd",
         "3B": null
       },
       "score": {
@@ -2011,7 +2031,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Sam Bryan",
       "batter": "Dylan Shepherd",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2021,13 +2041,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Cameron Boyd",
-        "2B": null,
+        "1B": null,
+        "2B": "Cameron Boyd",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cameron Boyd",
-        "2B": null,
+        "1B": null,
+        "2B": "Cameron Boyd",
         "3B": null
       },
       "score": {

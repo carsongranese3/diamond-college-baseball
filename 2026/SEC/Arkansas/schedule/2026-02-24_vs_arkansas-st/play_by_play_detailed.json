@@ -3,7 +3,7 @@
   "date": "02/24/2026",
   "away_team": "Arkansas St.",
   "home_team": "Arkansas",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -368,7 +368,9 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -423,7 +425,10 @@
       "pitches": "S",
       "rbi": true,
       "runs_scored": [
-        "Ashton Quiller"
+        "Ashton Quiller",
+        null,
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -472,7 +477,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Peyton Lee",
+      "pitcher": "Tate McGuire",
       "batter": "Patrick Engskov",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -634,13 +639,15 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Andrew Allen",
+      "pitcher": "Brett Foss",
       "batter": "Maika Niu",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "BBBKK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -795,6 +802,33 @@
         "home": 2
       },
       "description": "Torres, Raul struck out swinging (2-2 KFBFBFFS)."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Brett Foss",
+      "batter": "Foss, Brett to p for Allen, Andre.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 2
+      },
+      "description": "Foss, Brett to p for Allen, Andre."
     },
     {
       "inning": "Bottom 3",
@@ -989,7 +1023,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Tate McGuire",
+      "pitcher": "Ethan McElvain",
       "batter": "Patrick Engskov",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1261,7 +1295,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brett Foss",
+      "pitcher": "Cooper Garrison",
       "batter": "Ryder Helfrick",
       "outcome": "Walk",
       "count": "3-2",
@@ -1288,7 +1322,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brett Foss",
+      "pitcher": "Cooper Garrison",
       "batter": "Camden Kozeal",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1384,8 +1418,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Raul Torres",
-        "2B": null,
+        "1B": null,
+        "2B": "Raul Torres",
         "3B": null
       },
       "score": {
@@ -1406,13 +1440,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Raul Torres",
-        "2B": null,
+        "1B": null,
+        "2B": "Raul Torres",
         "3B": null
       },
       "runners_after": {
-        "1B": "Raul Torres",
-        "2B": null,
+        "1B": null,
+        "2B": "Raul Torres",
         "3B": null
       },
       "score": {
@@ -1423,7 +1457,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ethan McElvain",
+      "pitcher": "Cooper Dossett",
       "batter": "Ashton Quiller",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1433,13 +1467,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Raul Torres",
-        "2B": null,
+        "1B": null,
+        "2B": "Raul Torres",
         "3B": null
       },
       "runners_after": {
-        "1B": "Raul Torres",
-        "2B": null,
+        "1B": null,
+        "2B": "Raul Torres",
         "3B": null
       },
       "score": {
@@ -1447,6 +1481,33 @@
         "home": 3
       },
       "description": "Quiller, Ash grounded out to 2b (1-2 FSBF)."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Cooper Garrison",
+      "batter": "Garrison, Co to p for Foss, Brett.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 8,
+        "home": 3
+      },
+      "description": "Garrison, Co to p for Foss, Brett."
     },
     {
       "inning": "Bottom 6",
@@ -1618,7 +1679,9 @@
       "count": "1-2",
       "pitches": "FBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1646,7 +1709,8 @@
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Cross Jumper"
+        "Cross Jumper",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1668,7 +1732,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cooper Dossett",
+      "pitcher": "Luke Cornelison",
       "batter": "Cason Campbell",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1917,7 +1981,9 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Patrick Engskov"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1926,7 +1992,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Patrick Engskov",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1948,7 +2014,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Patrick Engskov",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2127,7 +2193,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Luke Cornelison",
+      "pitcher": "",
       "batter": "Raul Torres",
       "outcome": "Grounded into double play",
       "count": "0-0",
@@ -2208,7 +2274,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cooper Garrison",
+      "pitcher": "",
       "batter": "TJ Pompey",
       "outcome": "Single",
       "count": "2-2",
@@ -2235,7 +2301,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cooper Garrison",
+      "pitcher": "",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2262,13 +2328,15 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cooper Garrison",
+      "pitcher": "",
       "batter": "Zack Stewart",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2289,7 +2357,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cooper Garrison",
+      "pitcher": "",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2316,7 +2384,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cooper Garrison",
+      "pitcher": "",
       "batter": "Carson Willis",
       "outcome": "Pop out",
       "count": "1-1",

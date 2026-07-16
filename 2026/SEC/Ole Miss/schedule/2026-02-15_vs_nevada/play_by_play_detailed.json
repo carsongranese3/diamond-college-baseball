@@ -3,7 +3,7 @@
   "date": "02/15/2026",
   "away_team": "Nevada",
   "home_team": "Ole Miss",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -130,8 +130,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dom Decker",
-        "2B": null,
+        "1B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -152,13 +152,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Dom Decker",
-        "2B": null,
+        "1B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "runners_after": {
         "1B": "Tristan Bissetta",
-        "2B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -175,12 +175,14 @@
       "count": "2-2",
       "pitches": "KFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Tristan Bissetta",
-        "2B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "runners_after": {
@@ -202,7 +204,10 @@
       "count": "2-2",
       "pitches": "BBKKF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -230,7 +235,8 @@
       "pitches": "BBFS",
       "rbi": true,
       "runs_scored": [
-        "Daniel Pacella"
+        "Daniel Pacella",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -773,7 +779,9 @@
       "count": "3-2",
       "pitches": "FSBBBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -991,7 +999,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1153,7 +1163,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1423,7 +1435,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1450,7 +1464,9 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Judd Utermark"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1460,7 +1476,7 @@
       },
       "runners_after": {
         "1B": "Tristan Bissetta",
-        "2B": "Judd Utermark",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1482,12 +1498,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Tristan Bissetta",
-        "2B": "Judd Utermark",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Will Furniss",
-        "2B": "Judd Utermark",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1509,12 +1525,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Will Furniss",
-        "2B": "Judd Utermark",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Daniel Pacella",
-        "2B": "Judd Utermark",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1531,12 +1547,14 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Daniel Pacella",
-        "2B": "Judd Utermark",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
@@ -1558,7 +1576,10 @@
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1687,7 +1708,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "P.",
+      "pitcher": "Patrick Collopy",
+      "batter": "P. Collopy",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 13
+      },
+      "description": "P. Collopy to p for W. Libbert."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Patrick Collopy",
       "batter": "Junhyuk Kwon",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1714,7 +1762,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "P.",
+      "pitcher": "Patrick Collopy",
       "batter": "Sean Yamaguchi",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1741,7 +1789,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "P.",
+      "pitcher": "Patrick Collopy",
       "batter": "Rominic Quiban",
       "outcome": "Single",
       "count": "1-1",
@@ -1768,7 +1816,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "P.",
+      "pitcher": "Landon Waters",
       "batter": "Jackson Waller",
       "outcome": "Groundout",
       "count": "3-1",
@@ -1903,7 +1951,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "P.",
+      "pitcher": "Landon Waters",
       "batter": "C. Goldin",
       "outcome": "\u2014",
       "count": null,
@@ -1930,7 +1978,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "P.",
+      "pitcher": "Landon Waters",
       "batter": "T. Jones",
       "outcome": "\u2014",
       "count": null,
@@ -1957,7 +2005,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "P.",
+      "pitcher": "Landon Waters",
       "batter": "L. Romine",
       "outcome": "\u2014",
       "count": null,
@@ -1984,7 +2032,34 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "L.",
+      "pitcher": "Landon Waters",
+      "batter": "L. Waters",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 13
+      },
+      "description": "L. Waters to p for P. Collopy."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "",
       "batter": "Lee Matsuzaki",
       "outcome": "Double",
       "count": "1-0",
@@ -2011,7 +2086,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Cruz",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2038,7 +2113,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Jacob Doyle",
       "outcome": "Walk",
       "count": "3-2",
@@ -2065,7 +2140,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Jake Harvey",
       "outcome": "Fielder's choice",
       "count": "0-2",
@@ -2092,7 +2167,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Jayce Dobie",
       "outcome": "Fielder's choice",
       "count": "1-0",

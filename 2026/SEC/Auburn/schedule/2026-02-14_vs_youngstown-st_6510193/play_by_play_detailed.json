@@ -3,7 +3,7 @@
   "date": "02/14/2026(2)",
   "away_team": "Youngstown St.",
   "home_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -149,7 +149,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Chase Fralick"
+        "Chase Fralick",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -402,8 +403,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brandon McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "score": {
@@ -420,17 +421,19 @@
       "count": "2-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Brandon McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "runners_after": {
         "1B": "Bristol Carter",
-        "2B": null,
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "score": {
@@ -452,7 +455,7 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Bristol Carter",
-        "2B": null,
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "runners_after": {
@@ -501,7 +504,10 @@
       "count": "1-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -546,6 +552,33 @@
         "home": 5
       },
       "description": "Fralick, C. singled through the right side (3-1); Terrell, B. advanced to second."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Tyler Heflin",
+      "batter": "HEFLIN, T. to p for MIKOS, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Chase Fralick",
+        "2B": "Ryne Farber",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Chase Fralick",
+        "2B": "Ryne Farber",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 5
+      },
+      "description": "HEFLIN, T. to p for MIKOS, B.."
     },
     {
       "inning": "Bottom 2",
@@ -807,9 +840,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ryne Farber",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Ryne Farber"
       },
       "score": {
         "away": 0,
@@ -829,14 +862,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Ryne Farber",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Ryne Farber"
       },
       "runners_after": {
-        "1B": "Ryne Farber",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Ryne Farber"
       },
       "score": {
         "away": 0,
@@ -981,7 +1014,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Tyler Heflin",
+      "pitcher": "Bryce Palms",
       "batter": "Lucas Steele",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -1009,12 +1042,41 @@
     {
       "inning": "Bottom 4",
       "pitcher": "Bryce Palms",
+      "batter": "PALMS, B. to p for HEFLIN, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Lucas Steele",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Lucas Steele",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 5
+      },
+      "description": "PALMS, B. to p for HEFLIN, T.."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Bryce Palms",
       "batter": "Cade Belyeu",
       "outcome": "Flyout",
       "count": "1-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -1197,7 +1259,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Bryce Palms",
+      "pitcher": "Sumner Estes",
       "batter": "SHANNON, B. to 1b.",
       "outcome": "\u2014",
       "count": null,
@@ -1224,7 +1286,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Bryce Palms",
+      "pitcher": "Sumner Estes",
       "batter": "Bristol Carter",
       "outcome": "Walk",
       "count": "3-0",
@@ -1251,7 +1313,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Bryce Palms",
+      "pitcher": "Sumner Estes",
       "batter": "Ryne Farber",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1278,7 +1340,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Bryce Palms",
+      "pitcher": "Sumner Estes",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1293,8 +1355,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "score": {
@@ -1305,7 +1367,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Bryce Palms",
+      "pitcher": "Sumner Estes",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -1315,14 +1377,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 0,
@@ -1332,24 +1394,26 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Bryce Palms",
+      "pitcher": "Sumner Estes",
       "batter": "Eric Guevara",
       "outcome": "Double",
       "count": "3-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": "Eric Guevara",
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 0,
@@ -1360,6 +1424,33 @@
     {
       "inning": "Bottom 5",
       "pitcher": "Sumner Estes",
+      "batter": "ESTES, S. to p for PALMS, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": "Eric Guevara",
+        "3B": "Bristol Carter"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Eric Guevara",
+        "3B": "Bristol Carter"
+      },
+      "score": {
+        "away": 0,
+        "home": 7
+      },
+      "description": "ESTES, S. to p for PALMS, B.."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Kale Wemer",
       "batter": "Bub Terrell",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -1369,14 +1460,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": "Eric Guevara",
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
         "1B": "Bub Terrell",
         "2B": "Eric Guevara",
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 0,
@@ -1386,7 +1477,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Sumner Estes",
+      "pitcher": "Kale Wemer",
       "batter": "Chase Fralick",
       "outcome": "Fielder's choice",
       "count": "1-2",
@@ -1398,12 +1489,12 @@
       "runners_before": {
         "1B": "Bub Terrell",
         "2B": "Eric Guevara",
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
         "1B": "Chase Fralick",
         "2B": "Eric Guevara",
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 0,
@@ -1413,7 +1504,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Sumner Estes",
+      "pitcher": "Kale Wemer",
       "batter": "Lucas Steele",
       "outcome": "Walk",
       "count": "3-0",
@@ -1425,12 +1516,12 @@
       "runners_before": {
         "1B": "Chase Fralick",
         "2B": "Eric Guevara",
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
         "1B": "Lucas Steele",
         "2B": "Eric Guevara",
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 0,
@@ -1440,24 +1531,26 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Sumner Estes",
+      "pitcher": "Kale Wemer",
       "batter": "Cade Belyeu",
       "outcome": "Reached on error",
       "count": "2-2",
       "pitches": "",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Lucas Steele",
         "2B": "Eric Guevara",
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
         "1B": "Cade Belyeu",
         "2B": "Eric Guevara",
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 0,
@@ -1467,24 +1560,26 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Sumner Estes",
+      "pitcher": "Kale Wemer",
       "batter": "Brandon McCraine",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Cade Belyeu",
         "2B": "Eric Guevara",
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
         "1B": "Brandon McCraine",
         "2B": "Eric Guevara",
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 0,
@@ -1495,23 +1590,52 @@
     {
       "inning": "Bottom 5",
       "pitcher": "Kale Wemer",
-      "batter": "Brandon McCraine",
-      "outcome": "Single",
-      "count": "0-0",
-      "pitches": "",
-      "rbi": true,
+      "batter": "WEMER, K. to p for ESTES, S..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
       "runs_scored": [],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Brandon McCraine",
         "2B": "Eric Guevara",
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
         "1B": "Brandon McCraine",
         "2B": "Eric Guevara",
-        "3B": null
+        "3B": "Bristol Carter"
+      },
+      "score": {
+        "away": 0,
+        "home": 9
+      },
+      "description": "WEMER, K. to p for ESTES, S.."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Kale Wemer",
+      "batter": "Brandon McCraine",
+      "outcome": "Single",
+      "count": "0-0",
+      "pitches": "",
+      "rbi": true,
+      "runs_scored": [
+        null
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Brandon McCraine",
+        "2B": "Eric Guevara",
+        "3B": "Bristol Carter"
+      },
+      "runners_after": {
+        "1B": "Brandon McCraine",
+        "2B": "Eric Guevara",
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 0,
@@ -1527,18 +1651,20 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Brandon McCraine"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Brandon McCraine",
         "2B": "Eric Guevara",
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
-        "1B": "Brandon McCraine",
+        "1B": null,
         "2B": "Eric Guevara",
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 0,
@@ -1554,18 +1680,21 @@
       "count": "2-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Brandon McCraine",
+        "1B": null,
         "2B": "Eric Guevara",
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
         "1B": "Bristol Carter",
         "2B": "Eric Guevara",
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 0,
@@ -1581,18 +1710,20 @@
       "count": "2-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Bristol Carter",
         "2B": "Eric Guevara",
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
         "1B": "Ryne Farber",
         "2B": "Eric Guevara",
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 0,
@@ -1614,18 +1745,45 @@
       "runners_before": {
         "1B": "Ryne Farber",
         "2B": "Eric Guevara",
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
         "1B": "Ryne Farber",
         "2B": "Eric Guevara",
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 0,
         "home": 14
       },
       "description": "Guevara, E. struck out looking (1-2)."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "LJ Cormier",
+      "batter": "Cormier, L. to p for Petrovic, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 14
+      },
+      "description": "Cormier, L. to p for Petrovic, A.."
     },
     {
       "inning": "Top 6",
@@ -1737,7 +1895,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "LJ Cormier",
+      "pitcher": "Ethan Harden",
       "batter": "Brevin Smith",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1818,7 +1976,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kale Wemer",
+      "pitcher": "",
       "batter": "SMITH, Brev. to .",
       "outcome": "\u2014",
       "count": null,
@@ -1845,7 +2003,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kale Wemer",
+      "pitcher": "",
       "batter": "Bub Terrell",
       "outcome": "Home run",
       "count": "1-1",
@@ -1874,7 +2032,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kale Wemer",
+      "pitcher": "",
       "batter": "Tanner Waldrop",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1901,7 +2059,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kale Wemer",
+      "pitcher": "",
       "batter": "Taylor Belza",
       "outcome": "Reached on error",
       "count": "3-2",
@@ -1928,7 +2086,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kale Wemer",
+      "pitcher": "",
       "batter": "Cade Belyeu",
       "outcome": "Single",
       "count": "2-2",
@@ -1955,13 +2113,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kale Wemer",
+      "pitcher": "",
       "batter": "Brandon McCraine",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1982,13 +2142,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kale Wemer",
+      "pitcher": "",
       "batter": "Brandon McCraine",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2009,7 +2171,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kale Wemer",
+      "pitcher": "",
       "batter": "Bristol Carter",
       "outcome": "Single",
       "count": "0-0",
@@ -2036,7 +2198,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kale Wemer",
+      "pitcher": "",
       "batter": "Ryne Farber",
       "outcome": "Grounded into double play",
       "count": "0-0",
@@ -2063,7 +2225,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "LJ Cormier",
+      "pitcher": "Ethan Harden",
       "batter": "Belza, T. to c.",
       "outcome": "\u2014",
       "count": null,
@@ -2087,6 +2249,33 @@
         "home": 17
       },
       "description": "Belza, T. to c."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Ethan Harden",
+      "batter": "Harden, E. to p for Cormier, L..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 17
+      },
+      "description": "Harden, E. to p for Cormier, L.."
     },
     {
       "inning": "Top 7",
@@ -2171,7 +2360,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ethan Harden",
+      "pitcher": "Connor Gatwood",
       "batter": "Chyran Humphries",
       "outcome": "Walk",
       "count": "3-1",
@@ -2198,13 +2387,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ethan Harden",
+      "pitcher": "",
       "batter": "Alex Jang",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2225,7 +2416,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ethan Harden",
+      "pitcher": "",
       "batter": "Misael Uriepero",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -2252,9 +2443,9 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Connor Gatwood",
-      "batter": null,
-      "outcome": "Wild pitch",
+      "pitcher": "",
+      "batter": "Gatwood, C. to p for Harden, E..",
+      "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
@@ -2272,6 +2463,35 @@
         "3B": null
       },
       "score": {
+        "away": 1,
+        "home": 17
+      },
+      "description": "Gatwood, C. to p for Harden, E.."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "",
+      "batter": null,
+      "outcome": "Wild pitch",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [
+        "Misael Uriepero"
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Misael Uriepero",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
         "away": 2,
         "home": 17
       },
@@ -2279,7 +2499,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Connor Gatwood",
+      "pitcher": "",
       "batter": "James Carlson",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2289,12 +2509,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Misael Uriepero",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Misael Uriepero",
+        "1B": null,
         "2B": null,
         "3B": null
       },

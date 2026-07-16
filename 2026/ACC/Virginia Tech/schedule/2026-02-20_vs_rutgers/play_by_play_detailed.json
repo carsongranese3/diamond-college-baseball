@@ -3,7 +3,7 @@
   "date": "02/20/2026",
   "away_team": "Rutgers",
   "home_team": "Virginia Tech",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -256,7 +256,9 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Yomar Carreras"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -265,7 +267,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Yomar Carreras",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -287,12 +289,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Yomar Carreras",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Yomar Carreras",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -314,12 +316,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Yomar Carreras",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Yomar Carreras",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -341,12 +343,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Yomar Carreras",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Yomar Carreras",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -740,7 +742,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Trey Wells",
       "outcome": "Walk",
       "count": "3-2",
@@ -767,7 +769,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Yomar Carreras",
       "outcome": "Flyout",
       "count": "2-2",
@@ -794,7 +796,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Quinten Perilli",
       "outcome": "Grounded into double play",
       "count": "3-2",
@@ -956,7 +958,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Dallin Harrison",
+      "pitcher": "Joe Mazza",
       "batter": "Treyson Hughes",
       "outcome": "Flyout",
       "count": "1-0",
@@ -983,7 +985,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Matthew Chatelle",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1010,7 +1012,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Ryan Jaros",
       "outcome": "Single",
       "count": "2-2",
@@ -1037,7 +1039,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Peyton Bonds",
       "outcome": "Fielder's choice",
       "count": "1-0",
@@ -1064,7 +1066,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1079,8 +1081,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Peyton Bonds",
-        "2B": null,
+        "1B": null,
+        "2B": "Peyton Bonds",
         "3B": null
       },
       "score": {
@@ -1091,7 +1093,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Chase Krewson",
       "outcome": "Walk",
       "count": "3-0",
@@ -1101,13 +1103,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Peyton Bonds",
-        "2B": null,
+        "1B": null,
+        "2B": "Peyton Bonds",
         "3B": null
       },
       "runners_after": {
         "1B": "Chase Krewson",
-        "2B": null,
+        "2B": "Peyton Bonds",
         "3B": null
       },
       "score": {
@@ -1118,25 +1120,27 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Charlie Meglio",
       "outcome": "Home run",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "Charlie Meglio"
+        "Charlie Meglio",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Chase Krewson",
-        "2B": null,
+        "2B": "Peyton Bonds",
         "3B": null
       },
       "runners_after": {
         "1B": "Chase Krewson",
-        "2B": null,
+        "2B": "Peyton Bonds",
         "3B": null
       },
       "score": {
@@ -1147,7 +1151,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Tristan Salinas",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1158,12 +1162,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Chase Krewson",
-        "2B": null,
+        "2B": "Peyton Bonds",
         "3B": null
       },
       "runners_after": {
         "1B": "Chase Krewson",
-        "2B": null,
+        "2B": "Peyton Bonds",
         "3B": null
       },
       "score": {
@@ -1174,7 +1178,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Dallin Harrison",
+      "pitcher": "Joe Mazza",
       "batter": "Sam Grube",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1201,7 +1205,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Dallin Harrison",
+      "pitcher": "Joe Mazza",
       "batter": "Henry Cooke",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1228,7 +1232,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Dallin Harrison",
+      "pitcher": "Joe Mazza",
       "batter": "Ethan Ball",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1255,7 +1259,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Trey Wells",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1282,7 +1286,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Yomar Carreras",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1309,7 +1313,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Quinten Perilli",
       "outcome": "Walk",
       "count": "3-0",
@@ -1336,7 +1340,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Matthew Chatelle",
       "outcome": "Single",
       "count": "1-0",
@@ -1363,7 +1367,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Ryan Jaros",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1390,7 +1394,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Dallin Harrison",
+      "pitcher": "Joe Mazza",
       "batter": "Owen Petrich",
       "outcome": "Double",
       "count": "1-0",
@@ -1417,7 +1421,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Dallin Harrison",
+      "pitcher": "Joe Mazza",
       "batter": "Sam Gates",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1444,7 +1448,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Dallin Harrison",
+      "pitcher": "Joe Mazza",
       "batter": "Pete Daniel",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1471,7 +1475,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Dallin Harrison",
+      "pitcher": "Joe Mazza",
       "batter": "Hudson Lutterman",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1498,7 +1502,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Peyton Bonds",
       "outcome": "Single",
       "count": "0-2",
@@ -1525,7 +1529,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Chase Krewson",
       "outcome": "Single",
       "count": "1-0",
@@ -1552,13 +1556,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Charlie Meglio",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1579,7 +1585,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Ben Weber",
       "batter": "Tristan Salinas",
       "outcome": "Single",
       "count": "0-0",
@@ -1606,13 +1612,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Ben Weber",
       "batter": "Trey Wells",
       "outcome": "Grounded into double play",
       "count": "0-2",
       "pitches": "SK",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -1633,13 +1641,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Ben Weber",
       "batter": "Yomar Carreras",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1660,7 +1670,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Ben Weber",
       "batter": "Quinten Perilli",
       "outcome": "Lineout",
       "count": "1-0",
@@ -1687,7 +1697,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Dallin Harrison",
+      "pitcher": "Joe Mazza",
       "batter": "Ethan Gibson",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1714,7 +1724,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Dallin Harrison",
+      "pitcher": "Joe Mazza",
       "batter": "Treyson Hughes",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1741,7 +1751,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Dallin Harrison",
+      "pitcher": "Joe Mazza",
       "batter": "Sam Grube",
       "outcome": "Single",
       "count": "0-0",
@@ -1768,7 +1778,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Dallin Harrison",
+      "pitcher": "Joe Mazza",
       "batter": "Henry Cooke",
       "outcome": "Single",
       "count": "2-1",
@@ -1795,7 +1805,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Dallin Harrison",
+      "pitcher": "Joe Mazza",
       "batter": "Ethan Ball",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1822,7 +1832,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Ben Weber",
       "batter": "Matthew Chatelle",
       "outcome": "Walk",
       "count": "3-2",
@@ -1849,7 +1859,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Ben Weber",
       "batter": "Ryan Jaros",
       "outcome": "Single",
       "count": "0-1",
@@ -1876,13 +1886,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Jake Wise",
       "batter": "Peyton Bonds",
       "outcome": "Single",
       "count": "3-1",
       "pitches": "SBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1903,7 +1915,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Jake Wise",
       "batter": "Chase Krewson",
       "outcome": "Walk",
       "count": "3-2",
@@ -1930,13 +1942,16 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Josh Berzonski",
       "batter": "Charlie Meglio",
       "outcome": "Single",
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1957,7 +1972,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Josh Berzonski",
       "batter": "Julius Rosado",
       "outcome": "Walk",
       "count": "3-2",
@@ -1984,13 +1999,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Josh Berzonski",
       "batter": "Trey Wells",
       "outcome": "Groundout",
       "count": "0-2",
       "pitches": "KS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -2011,13 +2028,16 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Josh Berzonski",
       "batter": "Yomar Carreras",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "BBFBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2038,7 +2058,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Tyler Stone",
       "batter": "Tyler Wiltsey",
       "outcome": "Walk",
       "count": "3-0",
@@ -2065,13 +2085,16 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Tyler Stone",
       "batter": "Matthew Chatelle",
       "outcome": "Double",
       "count": "3-2",
       "pitches": "KSBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2092,7 +2115,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Tyler Stone",
       "batter": "Gabriel Rivera",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2119,7 +2142,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Tyler Stone",
       "batter": "Peyton Bonds",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2146,7 +2169,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Dallin Harrison",
+      "pitcher": "Matthew Cruz",
       "batter": "Owen Petrich",
       "outcome": "Walk",
       "count": "3-2",
@@ -2173,7 +2196,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Dallin Harrison",
+      "pitcher": "Matthew Cruz",
       "batter": "Nick Locurto",
       "outcome": "Walk",
       "count": "3-2",
@@ -2200,7 +2223,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Dallin Harrison",
+      "pitcher": "Matthew Cruz",
       "batter": "Willie Hurt",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2227,7 +2250,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Dallin Harrison",
+      "pitcher": "Matthew Cruz",
       "batter": "CJ Oxendine",
       "outcome": "Walk",
       "count": "3-1",
@@ -2254,7 +2277,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Dallin Harrison",
+      "pitcher": "Matthew Cruz",
       "batter": "Ethan Gibson",
       "outcome": "Grounded into double play",
       "count": "0-0",

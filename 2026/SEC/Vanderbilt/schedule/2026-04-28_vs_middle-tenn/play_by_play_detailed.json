@@ -3,7 +3,7 @@
   "date": "04/28/2026",
   "away_team": "Middle Tenn.",
   "home_team": "Vanderbilt",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -121,7 +121,9 @@
       "count": "1-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -229,7 +231,9 @@
       "count": "2-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -747,7 +751,9 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Colin Barczi"
+        "Colin Barczi",
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -766,6 +772,33 @@
         "home": 6
       },
       "description": "Barczi homered to left center, 3 RBI (2-1); L. Johnstone scored; Holcomb scored."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "John Michael Pickens",
+      "batter": "Pickens, Joh to p for Albarran, Ab.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Carter Johnstone",
+        "2B": "Braden Holcomb",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Carter Johnstone",
+        "2B": "Braden Holcomb",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 6
+      },
+      "description": "Pickens, Joh to p for Albarran, Ab."
     },
     {
       "inning": "Bottom 3",
@@ -946,8 +979,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brett Rogers",
-        "2B": null,
+        "1B": null,
+        "2B": "Brett Rogers",
         "3B": null
       },
       "score": {
@@ -968,13 +1001,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brett Rogers",
-        "2B": null,
+        "1B": null,
+        "2B": "Brett Rogers",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brett Rogers",
-        "2B": null,
+        "1B": null,
+        "2B": "Brett Rogers",
         "3B": null
       },
       "score": {
@@ -1012,7 +1045,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "John Michael Pickens",
+      "pitcher": "Bryant Beranek",
       "batter": "Mike Mancini",
       "outcome": "Double",
       "count": "3-2",
@@ -1040,13 +1073,42 @@
     {
       "inning": "Bottom 4",
       "pitcher": "Bryant Beranek",
+      "batter": "Beranek, Bry to p for Pickens, Joh.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Ryker Waite",
+        "2B": "Mike Mancini",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ryker Waite",
+        "2B": "Mike Mancini",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 6
+      },
+      "description": "Beranek, Bry to p for Pickens, Joh."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Bryant Beranek",
       "batter": "Brodie Johnston",
       "outcome": "Home run",
       "count": "2-1",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Brodie Johnston"
+        "Brodie Johnston",
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1284,7 +1346,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Bryant Beranek",
+      "pitcher": "Walker Shaw",
       "batter": "Tommy Goodin",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1311,7 +1373,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Bryant Beranek",
+      "pitcher": "Walker Shaw",
       "batter": "Aukai Kea",
       "outcome": "Lineout",
       "count": "2-0",
@@ -1420,6 +1482,33 @@
     {
       "inning": "Bottom 6",
       "pitcher": "Walker Shaw",
+      "batter": "Shaw, Walker to p for Beranek, Bry.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 9
+      },
+      "description": "Shaw, Walker to p for Beranek, Bry."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Walker Shaw",
       "batter": "Ryker Waite",
       "outcome": "Walk",
       "count": "3-2",
@@ -1473,7 +1562,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Walker Shaw",
+      "pitcher": "Landon Sexton",
       "batter": "Brodie Johnston",
       "outcome": "Walk",
       "count": "3-2",
@@ -1500,7 +1589,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Walker Shaw",
+      "pitcher": "Landon Sexton",
       "batter": "Will Hampton",
       "outcome": "Walk",
       "count": "3-2",
@@ -1527,7 +1616,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Walker Shaw",
+      "pitcher": "Landon Sexton",
       "batter": "Carter Johnstone",
       "outcome": "Lineout",
       "count": "0-0",
@@ -1636,6 +1725,33 @@
     {
       "inning": "Bottom 7",
       "pitcher": "Landon Sexton",
+      "batter": "Sexton, Land to p for Shaw, Walker.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 9
+      },
+      "description": "Sexton, Land to p for Shaw, Walker."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Landon Sexton",
       "batter": "Colin Barczi",
       "outcome": "Lineout",
       "count": "1-0",
@@ -1662,7 +1778,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Landon Sexton",
+      "pitcher": "Colin Kerrigan",
       "batter": "Rustan Rigdon",
       "outcome": "Flyout",
       "count": "3-1",
@@ -1689,7 +1805,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Landon Sexton",
+      "pitcher": "Colin Kerrigan",
       "batter": "Chris Maldonado",
       "outcome": "Walk",
       "count": "3-1",
@@ -1716,7 +1832,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Landon Sexton",
+      "pitcher": "",
       "batter": "Aukai Kea",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1839,8 +1955,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Minnick",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Minnick",
         "3B": null
       },
       "score": {
@@ -1861,13 +1977,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Tyler Minnick",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Minnick",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Minnick",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Minnick",
         "3B": null
       },
       "score": {
@@ -1878,7 +1994,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Landon Sexton",
+      "pitcher": "",
       "batter": "Collin Brightwell",
       "outcome": "Walk",
       "count": "3-2",
@@ -1905,7 +2021,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Colin Kerrigan",
+      "pitcher": "",
+      "batter": "Kerrigan, Co to p for Sexton, Land.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Collin Brightwell",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Collin Brightwell",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 9
+      },
+      "description": "Kerrigan, Co to p for Sexton, Land."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Carter Johnstone",
       "outcome": "Grounded into double play",
       "count": "1-2",
@@ -1932,7 +2075,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Colin Kerrigan",
+      "pitcher": "",
       "batter": "Max Jensen",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1959,7 +2102,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nate Schlote",
+      "pitcher": "Alex Kranzler",
       "batter": "C. Johnstone",
       "outcome": "\u2014",
       "count": null,
@@ -1986,7 +2129,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nate Schlote",
+      "pitcher": "Alex Kranzler",
       "batter": "Jensen",
       "outcome": "\u2014",
       "count": null,
@@ -2040,7 +2183,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Alex Kranzler",
+      "pitcher": "",
       "batter": "Nathan Brewer",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2067,7 +2210,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Alex Kranzler",
+      "pitcher": "",
       "batter": "Brett Rogers",
       "outcome": "Groundout",
       "count": "2-2",

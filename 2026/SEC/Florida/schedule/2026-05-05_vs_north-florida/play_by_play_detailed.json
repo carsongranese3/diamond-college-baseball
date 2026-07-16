@@ -3,7 +3,7 @@
   "date": "05/05/2026",
   "away_team": "North Florida",
   "home_team": "Florida",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -253,6 +253,33 @@
     {
       "inning": "Bottom 1",
       "pitcher": "Jeremiah Stewart",
+      "batter": "STEWART, J. to p for GROOM, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Ethan Surowiec",
+        "2B": "Blake Cyr",
+        "3B": "Brendan Lawson"
+      },
+      "runners_after": {
+        "1B": "Ethan Surowiec",
+        "2B": "Blake Cyr",
+        "3B": "Brendan Lawson"
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "STEWART, J. to p for GROOM, T.."
+    },
+    {
+      "inning": "Bottom 1",
+      "pitcher": "Jeremiah Stewart",
       "batter": "Caden McDonald",
       "outcome": "Single",
       "count": "2-2",
@@ -461,7 +488,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Carter White",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -650,8 +677,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mitchell Collins",
-        "2B": null,
+        "1B": null,
+        "2B": "Mitchell Collins",
         "3B": null
       },
       "score": {
@@ -672,14 +699,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Mitchell Collins",
-        "2B": null,
+        "1B": null,
+        "2B": "Mitchell Collins",
         "3B": null
       },
       "runners_after": {
         "1B": "Matthew Farner",
         "2B": null,
-        "3B": null
+        "3B": "Mitchell Collins"
       },
       "score": {
         "away": 0,
@@ -689,7 +716,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Billy Barlow",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -701,12 +728,12 @@
       "runners_before": {
         "1B": "Matthew Farner",
         "2B": null,
-        "3B": null
+        "3B": "Mitchell Collins"
       },
       "runners_after": {
-        "1B": "Matthew Farner",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Matthew Farner",
+        "3B": "Mitchell Collins"
       },
       "score": {
         "away": 0,
@@ -716,7 +743,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Billy Barlow",
       "batter": "Gialdri Gomez",
       "outcome": "Pop out",
       "count": "3-2",
@@ -726,14 +753,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Matthew Farner",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Matthew Farner",
+        "3B": "Mitchell Collins"
       },
       "runners_after": {
-        "1B": "Matthew Farner",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Matthew Farner",
+        "3B": "Mitchell Collins"
       },
       "score": {
         "away": 0,
@@ -1098,7 +1125,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jeremiah Stewart",
+      "pitcher": "Tyler Kozera",
       "batter": "Ethan Surowiec",
       "outcome": "Pop out",
       "count": "0-0",
@@ -1194,7 +1221,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Drew Buchanan",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1203,6 +1230,33 @@
         "home": 6
       },
       "description": "COLLINS, M. grounded into double play 2b to ss to 1b (1-2 KKFBF) BUCHANAN, D. out on the play."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Tyler Kozera",
+      "batter": "KOZERA, T. to p for STEWART, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 6
+      },
+      "description": "KOZERA, T. to p for STEWART, J.."
     },
     {
       "inning": "Bottom 5",
@@ -1440,8 +1494,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Gialdri Gomez",
-        "3B": null
+        "2B": null,
+        "3B": "Gialdri Gomez"
       },
       "score": {
         "away": 0,
@@ -1451,7 +1505,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Billy Barlow",
+      "pitcher": "Christian Rodriguez",
       "batter": "Jackson Toberman",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1462,13 +1516,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Gialdri Gomez",
-        "3B": null
+        "2B": null,
+        "3B": "Gialdri Gomez"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Gialdri Gomez",
-        "3B": null
+        "2B": null,
+        "3B": "Gialdri Gomez"
       },
       "score": {
         "away": 0,
@@ -1505,7 +1559,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tyler Kozera",
+      "pitcher": "Joseph Dimino",
       "batter": "Blake Cyr",
       "outcome": "Double",
       "count": "2-1",
@@ -1532,7 +1586,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tyler Kozera",
+      "pitcher": "Joseph Dimino",
       "batter": "Ethan Surowiec",
       "outcome": "Single",
       "count": "0-0",
@@ -1558,6 +1612,33 @@
         "home": 8
       },
       "description": "Surowiec singled to left field, RBI (0-0) Cyr scored."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Joseph Dimino",
+      "batter": "DIMINO, J. to p for KOZERA, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Ethan Surowiec",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ethan Surowiec",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 8
+      },
+      "description": "DIMINO, J. to p for KOZERA, T.."
     },
     {
       "inning": "Bottom 6",
@@ -1671,7 +1752,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Joseph Dimino",
+      "pitcher": "Zane Starling",
       "batter": "Cole Stanford",
       "outcome": "Flyout",
       "count": "3-1",
@@ -1768,7 +1849,7 @@
       },
       "runners_after": {
         "1B": "Jackson Schrafft",
-        "2B": null,
+        "2B": "Sean Benjamin",
         "3B": null
       },
       "score": {
@@ -1779,7 +1860,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Christian Rodriguez",
+      "pitcher": "Ricky Reeth",
       "batter": "Santiago Ordonez",
       "outcome": "Walk",
       "count": "3-1",
@@ -1790,13 +1871,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Jackson Schrafft",
-        "2B": null,
+        "2B": "Sean Benjamin",
         "3B": null
       },
       "runners_after": {
         "1B": "Santiago Ordonez",
-        "2B": null,
-        "3B": null
+        "2B": "Jackson Schrafft",
+        "3B": "Sean Benjamin"
       },
       "score": {
         "away": 0,
@@ -1812,17 +1893,19 @@
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Sean Benjamin"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Santiago Ordonez",
-        "2B": null,
-        "3B": null
+        "2B": "Jackson Schrafft",
+        "3B": "Sean Benjamin"
       },
       "runners_after": {
         "1B": "Santiago Ordonez",
-        "2B": null,
+        "2B": "Jackson Schrafft",
         "3B": null
       },
       "score": {
@@ -1833,7 +1916,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ricky Reeth",
+      "pitcher": "",
       "batter": "Matthew Farner",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1844,12 +1927,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Santiago Ordonez",
-        "2B": null,
+        "2B": "Jackson Schrafft",
         "3B": null
       },
       "runners_after": {
         "1B": "Santiago Ordonez",
-        "2B": null,
+        "2B": "Jackson Schrafft",
         "3B": null
       },
       "score": {
@@ -1860,7 +1943,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Joseph Dimino",
+      "pitcher": "Zane Starling",
       "batter": "ACOSTA, J. to for ORDONEZ, S..",
       "outcome": "\u2014",
       "count": null,
@@ -1887,7 +1970,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Joseph Dimino",
+      "pitcher": "",
       "batter": "Hayden Yost",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1914,7 +1997,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Joseph Dimino",
+      "pitcher": "",
       "batter": "Kyle Jones",
       "outcome": "Walk",
       "count": "3-2",
@@ -1941,7 +2024,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Zane Starling",
+      "pitcher": "",
+      "batter": "STARLING, Z. to p for DIMINO, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Kyle Jones",
+        "2B": "Hayden Yost",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Kyle Jones",
+        "2B": "Hayden Yost",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 9
+      },
+      "description": "STARLING, Z. to p for DIMINO, J.."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "",
       "batter": "Brendan Lawson",
       "outcome": "Walk",
       "count": "3-1",
@@ -1968,7 +2078,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Zane Starling",
+      "pitcher": "",
       "batter": "Blake Cyr",
       "outcome": "Grounded into double play",
       "count": "0-0",
@@ -1997,7 +2107,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Zane Starling",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,

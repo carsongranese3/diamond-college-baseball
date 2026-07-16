@@ -3,7 +3,7 @@
   "date": "03/29/2026",
   "away_team": "Auburn",
   "home_team": "Alabama",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -77,7 +77,7 @@
       },
       "runners_after": {
         "1B": "Chase Fralick",
-        "2B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "score": {
@@ -94,17 +94,19 @@
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Chris Rembert"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Chase Fralick",
-        "2B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "runners_after": {
         "1B": "Eric Guevara",
-        "2B": null,
+        "2B": "Chase Fralick",
         "3B": null
       },
       "score": {
@@ -126,7 +128,7 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Eric Guevara",
-        "2B": null,
+        "2B": "Chase Fralick",
         "3B": null
       },
       "runners_after": {
@@ -319,8 +321,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -341,13 +343,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -563,7 +565,7 @@
       },
       "runners_after": {
         "1B": "Eric Guevara",
-        "2B": null,
+        "2B": "Chase Fralick",
         "3B": null
       },
       "score": {
@@ -585,12 +587,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Eric Guevara",
-        "2B": null,
+        "2B": "Chase Fralick",
         "3B": null
       },
       "runners_after": {
         "1B": "Eric Guevara",
-        "2B": null,
+        "2B": "Chase Fralick",
         "3B": null
       },
       "score": {
@@ -969,8 +971,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cade Belyeu",
-        "2B": null,
+        "1B": null,
+        "2B": "Cade Belyeu",
         "3B": null
       },
       "score": {
@@ -991,13 +993,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Cade Belyeu",
-        "2B": null,
+        "1B": null,
+        "2B": "Cade Belyeu",
         "3B": null
       },
       "runners_after": {
         "1B": "Chris Rembert",
-        "2B": null,
+        "2B": "Cade Belyeu",
         "3B": null
       },
       "score": {
@@ -1019,13 +1021,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Chris Rembert",
-        "2B": null,
+        "2B": "Cade Belyeu",
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Rembert",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Chris Rembert",
+        "3B": "Cade Belyeu"
       },
       "score": {
         "away": 1,
@@ -1045,14 +1047,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Chris Rembert",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Chris Rembert",
+        "3B": "Cade Belyeu"
       },
       "runners_after": {
-        "1B": "Chris Rembert",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Chris Rembert",
+        "3B": "Cade Belyeu"
       },
       "score": {
         "away": 1,
@@ -1278,7 +1280,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Alex Petrovic",
+      "pitcher": "LJ Cormier",
       "batter": "Bingaman, E. to rf.",
       "outcome": "\u2014",
       "count": null,
@@ -1302,6 +1304,33 @@
         "home": 1
       },
       "description": "Bingaman, E. to rf."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "LJ Cormier",
+      "batter": "Cormier, L. to p for Petrovic, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 1
+      },
+      "description": "Cormier, L. to p for Petrovic, A.."
     },
     {
       "inning": "Bottom 6",
@@ -1521,7 +1550,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "LJ Cormier",
+      "pitcher": "Garrett Brewer",
       "batter": "Luke Vaughn",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1548,7 +1577,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "LJ Cormier",
+      "pitcher": "Garrett Brewer",
       "batter": "Brennan Holt",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1645,7 +1674,7 @@
       },
       "runners_after": {
         "1B": "Eddie Madrigal",
-        "2B": null,
+        "2B": "Eric Guevara",
         "3B": null
       },
       "score": {
@@ -1667,12 +1696,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Eddie Madrigal",
-        "2B": null,
+        "2B": "Eric Guevara",
         "3B": null
       },
       "runners_after": {
-        "1B": "Eddie Madrigal",
-        "2B": null,
+        "1B": null,
+        "2B": "Eric Guevara",
         "3B": null
       },
       "score": {
@@ -1680,6 +1709,33 @@
         "home": 1
       },
       "description": "Steele, L. grounded into double play 2b to 1b (0-0) Madrigal, E. out on the play."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Garrett Brewer",
+      "batter": "Brewer, G. to p for Cormier, L..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 1
+      },
+      "description": "Brewer, G. to p for Cormier, L.."
     },
     {
       "inning": "Bottom 8",
@@ -1710,7 +1766,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "Jett Johnston",
       "batter": "Justin Lebron",
       "outcome": "Fielder's choice",
       "count": "0-0",
@@ -1737,7 +1793,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "Jett Johnston",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1752,8 +1808,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Justin Lebron",
-        "2B": null,
+        "1B": null,
+        "2B": "Justin Lebron",
         "3B": null
       },
       "score": {
@@ -1764,7 +1820,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "Jett Johnston",
       "batter": "Brady Neal",
       "outcome": "Walk",
       "count": "3-0",
@@ -1774,8 +1830,8 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Justin Lebron",
-        "2B": null,
+        "1B": null,
+        "2B": "Justin Lebron",
         "3B": null
       },
       "runners_after": {
@@ -1791,7 +1847,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "Jett Johnston",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1820,7 +1876,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "Jett Johnston",
       "batter": "Jason Torres",
       "outcome": "Walk",
       "count": "3-1",
@@ -1847,7 +1903,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jett Johnston",
+      "pitcher": "",
+      "batter": "Johnston, J. to p for Brewer, G..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Jason Torres",
+        "2B": "Brady Neal",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Jason Torres",
+        "2B": "Brady Neal",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 2
+      },
+      "description": "Johnston, J. to p for Brewer, G.."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "John Lemm",
       "outcome": "Lineout",
       "count": "3-0",
@@ -1874,7 +1957,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jett Johnston",
+      "pitcher": "",
       "batter": "Will Plattner",
       "outcome": "Single",
       "count": "0-0",
@@ -1903,7 +1986,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jett Johnston",
+      "pitcher": "",
       "batter": "Justin Osterhouse",
       "outcome": "Groundout",
       "count": "0-2",

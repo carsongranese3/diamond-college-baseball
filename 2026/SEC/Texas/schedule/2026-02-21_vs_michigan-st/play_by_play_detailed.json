@@ -3,7 +3,7 @@
   "date": "02/21/2026",
   "away_team": "Michigan St.",
   "home_team": "Texas",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -510,8 +510,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Issac Sturgess",
-        "2B": null,
+        "1B": null,
+        "2B": "Issac Sturgess",
         "3B": null
       },
       "score": {
@@ -532,14 +532,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Issac Sturgess",
-        "2B": null,
+        "1B": null,
+        "2B": "Issac Sturgess",
         "3B": null
       },
       "runners_after": {
-        "1B": "Issac Sturgess",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Issac Sturgess"
       },
       "score": {
         "away": 0,
@@ -555,13 +555,15 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Issac Sturgess"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Issac Sturgess",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Issac Sturgess"
       },
       "runners_after": {
         "1B": "Ryan McKay",
@@ -916,7 +918,7 @@
       },
       "runners_after": {
         "1B": "CJ Deckinga",
-        "2B": null,
+        "2B": "Jasen Oliver",
         "3B": null
       },
       "score": {
@@ -938,12 +940,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "CJ Deckinga",
-        "2B": null,
+        "2B": "Jasen Oliver",
         "3B": null
       },
       "runners_after": {
         "1B": "CJ Deckinga",
-        "2B": null,
+        "2B": "Jasen Oliver",
         "3B": null
       },
       "score": {
@@ -965,12 +967,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "CJ Deckinga",
-        "2B": null,
+        "2B": "Jasen Oliver",
         "3B": null
       },
       "runners_after": {
-        "1B": "CJ Deckinga",
-        "2B": null,
+        "1B": null,
+        "2B": "Jasen Oliver",
         "3B": null
       },
       "score": {
@@ -1185,7 +1187,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Randy Seymour",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1495,6 +1497,33 @@
     {
       "inning": "Bottom 7",
       "pitcher": "Nolan Higgins",
+      "batter": "Higgins,N to p for Monke,C.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Temo Becerra",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Temo Becerra",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 1
+      },
+      "description": "Higgins,N to p for Monke,C."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Nolan Higgins",
       "batter": "Pack",
       "outcome": "Fielder's choice",
       "count": "1-0",
@@ -1527,7 +1556,9 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1793,7 +1824,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nolan Higgins",
+      "pitcher": "",
       "batter": "Duplantier J",
       "outcome": "Groundout",
       "count": "0-1",

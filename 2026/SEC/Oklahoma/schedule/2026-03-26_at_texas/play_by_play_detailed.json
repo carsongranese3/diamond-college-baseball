@@ -3,7 +3,7 @@
   "date": "03/26/2026",
   "away_team": "Oklahoma",
   "home_team": "Texas",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -50,8 +50,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Trey Gambill",
-        "3B": null
+        "2B": null,
+        "3B": "Trey Gambill"
       },
       "score": {
         "away": 0,
@@ -72,12 +72,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Trey Gambill",
-        "3B": null
+        "2B": null,
+        "3B": "Trey Gambill"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Trey Gambill",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -314,7 +314,10 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -747,7 +750,8 @@
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Temo Becerra"
+        "Temo Becerra",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -795,6 +799,33 @@
         "home": 7
       },
       "description": "Duplantier J doubled down the lf line, RBI (1-2 FBS) Borba scored."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Trent Collier",
+      "batter": "Collier, T. to p for Mercurius, L.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": "Duplantier J",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Duplantier J",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 7
+      },
+      "description": "Collier, T. to p for Mercurius, L."
     },
     {
       "inning": "Bottom 3",
@@ -852,7 +883,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Trent Collier",
+      "pitcher": "Mason Bixby",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -868,8 +899,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Duplantier J",
-        "3B": null
+        "2B": null,
+        "3B": "Duplantier J"
       },
       "score": {
         "away": 0,
@@ -879,7 +910,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Trent Collier",
+      "pitcher": "Mason Bixby",
       "batter": "Carson Tinney",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -890,13 +921,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Duplantier J",
-        "3B": null
+        "2B": null,
+        "3B": "Duplantier J"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Duplantier J",
-        "3B": null
+        "2B": null,
+        "3B": "Duplantier J"
       },
       "score": {
         "away": 0,
@@ -1015,6 +1046,33 @@
     {
       "inning": "Bottom 4",
       "pitcher": "Mason Bixby",
+      "batter": "Bixby, M. to p for Collier, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 7
+      },
+      "description": "Bixby, M. to p for Collier, T.."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Mason Bixby",
       "batter": "Aiden Robbins",
       "outcome": "Single",
       "count": "2-1",
@@ -1068,7 +1126,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Mason Bixby",
+      "pitcher": "Reid Hensley",
       "batter": "Temo Becerra",
       "outcome": "Single",
       "count": "1-2",
@@ -1097,7 +1155,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Mason Bixby",
+      "pitcher": "Reid Hensley",
       "batter": "Pack",
       "outcome": "Walk",
       "count": "3-1",
@@ -1121,6 +1179,33 @@
         "home": 8
       },
       "description": "Pack Jr. walked (3-1 BBKBB) Becerra advanced to second Rodriguez advanced to third."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Reid Hensley",
+      "batter": "Hensley, R. to p for Bixby, M..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Pack",
+        "2B": "Temo Becerra",
+        "3B": "Adrian Rodriguez"
+      },
+      "runners_after": {
+        "1B": "Pack",
+        "2B": "Temo Becerra",
+        "3B": "Adrian Rodriguez"
+      },
+      "score": {
+        "away": 0,
+        "home": 8
+      },
+      "description": "Hensley, R. to p for Bixby, M.."
     },
     {
       "inning": "Bottom 4",
@@ -1158,7 +1243,8 @@
       "pitches": "BBKB",
       "rbi": true,
       "runs_scored": [
-        "Temo Becerra"
+        "Temo Becerra",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1196,7 +1282,7 @@
       },
       "runners_after": {
         "1B": "Ashton Larson",
-        "2B": null,
+        "2B": "Duplantier J",
         "3B": "Casey Borba"
       },
       "score": {
@@ -1207,7 +1293,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Reid Hensley",
+      "pitcher": "Nate Smithburg",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1220,13 +1306,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Ashton Larson",
-        "2B": null,
+        "2B": "Duplantier J",
         "3B": "Casey Borba"
       },
       "runners_after": {
         "1B": null,
         "2B": "Ashton Larson",
-        "3B": null
+        "3B": "Duplantier J"
       },
       "score": {
         "away": 0,
@@ -1236,7 +1322,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Reid Hensley",
+      "pitcher": "Nate Smithburg",
       "batter": "Ethan Mendoza",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1248,12 +1334,12 @@
       "runners_before": {
         "1B": null,
         "2B": "Ashton Larson",
-        "3B": null
+        "3B": "Duplantier J"
       },
       "runners_after": {
         "1B": null,
         "2B": "Ashton Larson",
-        "3B": null
+        "3B": "Duplantier J"
       },
       "score": {
         "away": 0,
@@ -1263,7 +1349,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Reid Hensley",
+      "pitcher": "Nate Smithburg",
       "batter": "Carson Tinney",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1275,12 +1361,12 @@
       "runners_before": {
         "1B": null,
         "2B": "Ashton Larson",
-        "3B": null
+        "3B": "Duplantier J"
       },
       "runners_after": {
         "1B": null,
         "2B": "Ashton Larson",
-        "3B": null
+        "3B": "Duplantier J"
       },
       "score": {
         "away": 0,
@@ -1360,7 +1446,7 @@
       },
       "runners_after": {
         "1B": "Kyle Branch",
-        "2B": null,
+        "2B": "Alec Blair",
         "3B": null
       },
       "score": {
@@ -1382,12 +1468,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kyle Branch",
-        "2B": null,
+        "2B": "Alec Blair",
         "3B": null
       },
       "runners_after": {
         "1B": "Kyle Branch",
-        "2B": null,
+        "2B": "Alec Blair",
         "3B": null
       },
       "score": {
@@ -1409,13 +1495,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kyle Branch",
-        "2B": null,
+        "2B": "Alec Blair",
         "3B": null
       },
       "runners_after": {
         "1B": "Trey Gambill",
-        "2B": null,
-        "3B": null
+        "2B": "Kyle Branch",
+        "3B": "Alec Blair"
       },
       "score": {
         "away": 0,
@@ -1436,13 +1522,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Trey Gambill",
-        "2B": null,
-        "3B": null
+        "2B": "Kyle Branch",
+        "3B": "Alec Blair"
       },
       "runners_after": {
         "1B": "Trey Gambill",
-        "2B": null,
-        "3B": null
+        "2B": "Kyle Branch",
+        "3B": "Alec Blair"
       },
       "score": {
         "away": 0,
@@ -1452,7 +1538,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Reid Hensley",
+      "pitcher": "Nate Smithburg",
       "batter": "Harris, D. to cf.",
       "outcome": "\u2014",
       "count": null,
@@ -1479,7 +1565,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Reid Hensley",
+      "pitcher": "Nate Smithburg",
       "batter": "Aiden Robbins",
       "outcome": "Triple",
       "count": "2-1",
@@ -1507,6 +1593,33 @@
     {
       "inning": "Bottom 5",
       "pitcher": "Nate Smithburg",
+      "batter": "Smithburg, N to p for Hensley, R..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": "Aiden Robbins"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": "Aiden Robbins"
+      },
+      "score": {
+        "away": 0,
+        "home": 11
+      },
+      "description": "Smithburg, N to p for Hensley, R.."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Jaden Barfield",
       "batter": "Adrian Rodriguez",
       "outcome": "Pop out",
       "count": "2-2",
@@ -1533,7 +1646,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Nate Smithburg",
+      "pitcher": "Jaden Barfield",
       "batter": "Temo Becerra",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1560,7 +1673,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Nate Smithburg",
+      "pitcher": "Jaden Barfield",
       "batter": "Pack",
       "outcome": "Double",
       "count": "1-1",
@@ -1589,14 +1702,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Nate Smithburg",
+      "pitcher": "Jaden Barfield",
       "batter": "Casey Borba",
       "outcome": "Home run",
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
       "runs_scored": [
-        "Casey Borba"
+        "Casey Borba",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1618,7 +1732,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Nate Smithburg",
+      "pitcher": "Jaden Barfield",
       "batter": "Duplantier J",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1742,7 +1856,7 @@
       },
       "runners_after": {
         "1B": "Alec Blair",
-        "2B": null,
+        "2B": "Jaxon Willits",
         "3B": null
       },
       "score": {
@@ -1764,12 +1878,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Alec Blair",
-        "2B": null,
+        "2B": "Jaxon Willits",
         "3B": null
       },
       "runners_after": {
         "1B": "Alec Blair",
-        "2B": null,
+        "2B": "Jaxon Willits",
         "3B": null
       },
       "score": {
@@ -1780,7 +1894,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jaden Barfield",
+      "pitcher": "",
+      "batter": "Barfield, J to p for Smithburg, N.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 14
+      },
+      "description": "Barfield, J to p for Smithburg, N."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "",
       "batter": "Maddox Monsour",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1807,7 +1948,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jaden Barfield",
+      "pitcher": "",
       "batter": "Ethan Mendoza",
       "outcome": "Double",
       "count": "3-1",
@@ -1834,7 +1975,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jaden Barfield",
+      "pitcher": "",
       "batter": "Carson Tinney",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -1861,7 +2002,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jaden Barfield",
+      "pitcher": "",
       "batter": "Aiden Robbins",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1888,7 +2029,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jaden Barfield",
+      "pitcher": "",
       "batter": "Adrian Rodriguez",
       "outcome": "Groundout",
       "count": "1-1",

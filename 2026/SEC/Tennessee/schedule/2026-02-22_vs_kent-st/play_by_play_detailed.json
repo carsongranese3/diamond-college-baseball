@@ -3,7 +3,7 @@
   "date": "02/22/2026",
   "away_team": "Kent St.",
   "home_team": "Tennessee",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -121,7 +121,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -481,9 +483,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Reese Chapman",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Reese Chapman"
       },
       "score": {
         "away": 1,
@@ -503,14 +505,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Reese Chapman",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Reese Chapman"
       },
       "runners_after": {
         "1B": "Tyler Myatt",
         "2B": null,
-        "3B": null
+        "3B": "Reese Chapman"
       },
       "score": {
         "away": 1,
@@ -526,18 +528,20 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Tyler Myatt",
         "2B": null,
-        "3B": null
+        "3B": "Reese Chapman"
       },
       "runners_after": {
         "1B": "Tyler Myatt",
         "2B": null,
-        "3B": null
+        "3B": "Reese Chapman"
       },
       "score": {
         "away": 1,
@@ -559,12 +563,12 @@
       "runners_before": {
         "1B": "Tyler Myatt",
         "2B": null,
-        "3B": null
+        "3B": "Reese Chapman"
       },
       "runners_after": {
         "1B": "Tyler Myatt",
         "2B": null,
-        "3B": null
+        "3B": "Reese Chapman"
       },
       "score": {
         "away": 1,
@@ -805,8 +809,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jay Abernathy",
-        "2B": null,
+        "1B": null,
+        "2B": "Jay Abernathy",
         "3B": null
       },
       "score": {
@@ -823,17 +827,19 @@
       "count": "3-2",
       "pitches": "FSBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jay Abernathy",
-        "2B": null,
+        "1B": null,
+        "2B": "Jay Abernathy",
         "3B": null
       },
       "runners_after": {
         "1B": "Henry Ford",
-        "2B": null,
+        "2B": "Jay Abernathy",
         "3B": null
       },
       "score": {
@@ -855,12 +861,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Henry Ford",
-        "2B": null,
+        "2B": "Jay Abernathy",
         "3B": null
       },
       "runners_after": {
         "1B": "Henry Ford",
-        "2B": null,
+        "2B": "Jay Abernathy",
         "3B": null
       },
       "score": {
@@ -882,12 +888,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Henry Ford",
-        "2B": null,
+        "2B": "Jay Abernathy",
         "3B": null
       },
       "runners_after": {
-        "1B": "Henry Ford",
-        "2B": null,
+        "1B": null,
+        "2B": "Henry Ford",
         "3B": null
       },
       "score": {
@@ -908,13 +914,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Henry Ford",
-        "2B": null,
+        "1B": null,
+        "2B": "Henry Ford",
         "3B": null
       },
       "runners_after": {
-        "1B": "Henry Ford",
-        "2B": null,
+        "1B": null,
+        "2B": "Henry Ford",
         "3B": null
       },
       "score": {
@@ -1039,7 +1045,10 @@
       "count": "3-2",
       "pitches": "BBFKBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1169,6 +1178,33 @@
     {
       "inning": "Top 5",
       "pitcher": "Ethan Baiotto",
+      "batter": "BAIOTTO, E. to p for BLANCO, E..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 2
+      },
+      "description": "BAIOTTO, E. to p for BLANCO, E.."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Ethan Baiotto",
       "batter": "Sawyer",
       "outcome": "Walk",
       "count": "3-1",
@@ -1222,7 +1258,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ethan Baiotto",
+      "pitcher": "Nic Abraham",
       "batter": "Ripken",
       "outcome": "Walk",
       "count": "3-0",
@@ -1250,12 +1286,41 @@
     {
       "inning": "Top 5",
       "pitcher": "Nic Abraham",
+      "batter": "ABRAHAM, N. to p for BAIOTTO, E..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Ripken",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ripken",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 2
+      },
+      "description": "ABRAHAM, N. to p for BAIOTTO, E.."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Nic Abraham",
       "batter": "Micah",
       "outcome": "Hit by pitch",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1303,13 +1368,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Nic Abraham",
+      "pitcher": "Brady Frederick",
       "batter": "Brody",
       "outcome": "Fielder's choice",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1330,13 +1397,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Nic Abraham",
+      "pitcher": "Brady Frederick",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1357,7 +1426,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Nic Abraham",
+      "pitcher": "Brady Frederick",
       "batter": "Brady",
       "outcome": "Groundout",
       "count": "2-0",
@@ -1411,7 +1480,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ben Rabatin",
+      "pitcher": "Evan Holewinski",
       "batter": "Finley Bates",
       "outcome": "Single",
       "count": "1-0",
@@ -1438,7 +1507,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Evan",
+      "pitcher": "Evan Holewinski",
+      "batter": "Evan",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Finley Bates",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Finley Bates",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 2
+      },
+      "description": "Evan Holewin to p for Ben Rabatin."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Evan Holewinski",
       "batter": "Jay Abernathy",
       "outcome": "Single",
       "count": "2-1",
@@ -1465,7 +1561,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Evan",
+      "pitcher": "Evan Holewinski",
       "batter": "Henry Ford",
       "outcome": "Single",
       "count": "0-2",
@@ -1492,13 +1588,17 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Evan",
+      "pitcher": "Evan Holewinski",
       "batter": "Blaine Brown",
       "outcome": "Flyout",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1519,7 +1619,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Evan",
+      "pitcher": "Evan Holewinski",
       "batter": "Levi Clark",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1543,6 +1643,33 @@
         "home": 5
       },
       "description": "CLARK, L. flied out to cf (0-0)."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Brady Frederick",
+      "batter": "FREDERICK, B to p for ABRAHAM, N..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 5
+      },
+      "description": "FREDERICK, B to p for ABRAHAM, N.."
     },
     {
       "inning": "Top 6",
@@ -1681,7 +1808,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Evan",
+      "pitcher": "Evan Holewinski",
       "batter": "Reese Chapman",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1708,7 +1835,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Evan",
+      "pitcher": "Evan Holewinski",
       "batter": "Tyler Myatt",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1735,7 +1862,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Evan",
+      "pitcher": "Evan Holewinski",
       "batter": "Stone Lawless",
       "outcome": "Single",
       "count": "2-2",
@@ -1762,7 +1889,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Evan",
+      "pitcher": "Evan Holewinski",
       "batter": "Manny Marin",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1897,7 +2024,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Evan",
+      "pitcher": "Evan Holewinski",
       "batter": "Finley Bates",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1924,7 +2051,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Evan",
+      "pitcher": "Evan Holewinski",
       "batter": "Jay Abernathy",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1951,7 +2078,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Evan",
+      "pitcher": "Evan Holewinski",
       "batter": "Henry Ford",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2005,7 +2132,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brady Frederick",
+      "pitcher": "Brayden Krenzel",
       "batter": "Max",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2032,7 +2159,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brady Frederick",
+      "pitcher": "Brayden Krenzel",
       "batter": "Grady",
       "outcome": "Single",
       "count": "0-0",
@@ -2059,7 +2186,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brady Frederick",
+      "pitcher": "Brayden Krenzel",
       "batter": "Sawyer",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -2086,7 +2213,34 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "Bo Rhudy",
+      "batter": "KRENZEL, B. to p for FREDERICK, B.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Sawyer",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Sawyer",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 5
+      },
+      "description": "KRENZEL, B. to p for FREDERICK, B."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Bo Rhudy",
       "batter": "Luke",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -2113,13 +2267,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "Bo Rhudy",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2140,7 +2296,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "Bo Rhudy",
       "batter": "Ripken",
       "outcome": "Walk",
       "count": "3-0",
@@ -2167,13 +2323,16 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "Bo Rhudy",
       "batter": "Micah",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "KBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2194,7 +2353,34 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "",
+      "batter": "RHUDY, B. to p for KRENZEL, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Micah",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Micah",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 9,
+        "home": 5
+      },
+      "description": "RHUDY, B. to p for KRENZEL, B.."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2221,7 +2407,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "",
       "batter": "Hunter",
       "outcome": "Pop out",
       "count": "0-1",
@@ -2248,7 +2434,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Evan",
+      "pitcher": "Evan Holewinski",
       "batter": "Blaine Brown",
       "outcome": "Lineout",
       "count": "0-0",
@@ -2275,7 +2461,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Evan",
+      "pitcher": "Evan Holewinski",
       "batter": "Levi Clark",
       "outcome": "Lineout",
       "count": "1-0",
@@ -2302,7 +2488,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Evan",
+      "pitcher": "Evan Holewinski",
       "batter": "Reese Chapman",
       "outcome": "Flyout",
       "count": "3-2",
@@ -2329,7 +2515,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "",
       "batter": "Brody",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2356,7 +2542,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "",
       "batter": "Brady",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2383,7 +2569,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "",
       "batter": "Max",
       "outcome": "Foul out",
       "count": "1-2",
@@ -2410,7 +2596,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Evan",
+      "pitcher": "Evan Holewinski",
       "batter": "Tyler Myatt",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2437,7 +2623,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Evan",
+      "pitcher": "",
       "batter": "Stone Lawless",
       "outcome": "Flyout",
       "count": "0-2",
@@ -2464,7 +2650,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Evan",
+      "pitcher": "",
       "batter": "Manny Marin",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",

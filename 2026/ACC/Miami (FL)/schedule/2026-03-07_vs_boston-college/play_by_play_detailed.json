@@ -3,7 +3,7 @@
   "date": "03/07/2026",
   "away_team": "Boston College",
   "home_team": "Miami (FL)",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -175,7 +175,9 @@
       "count": "3-1",
       "pitches": "BBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -229,7 +231,9 @@
       "count": "3-2",
       "pitches": "KBBBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -256,7 +260,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -364,7 +370,9 @@
       "count": "2-1",
       "pitches": "BBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -508,7 +516,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Ogden",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1091,7 +1099,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler Mudd",
+      "pitcher": "John D Mitchell",
       "batter": "Daniel Cuvet",
       "outcome": "Single",
       "count": "1-0",
@@ -1118,7 +1126,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler Mudd",
+      "pitcher": "John D Mitchell",
       "batter": "Alex Sosa",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1145,7 +1153,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler Mudd",
+      "pitcher": "John D Mitchell",
       "batter": "Derek Williams",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1253,7 +1261,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tyler Mudd",
+      "pitcher": "John D Mitchell",
       "batter": "Brylan West",
       "outcome": "Flyout",
       "count": "3-1",
@@ -1280,7 +1288,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tyler Mudd",
+      "pitcher": "John D Mitchell",
       "batter": "Dylan Dubovik",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1307,7 +1315,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tyler Mudd",
+      "pitcher": "John D Mitchell",
       "batter": "Vance Sheahan",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1415,7 +1423,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Tyler Mudd",
+      "pitcher": "John D Mitchell",
       "batter": "Alonzo Alvarez",
       "outcome": "Walk",
       "count": "3-2",
@@ -1442,7 +1450,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Tyler Mudd",
+      "pitcher": "Luke D'Ancona",
       "batter": "Jake Ogden",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1469,7 +1477,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Tyler Mudd",
+      "pitcher": "Luke D'Ancona",
       "batter": "Michael Torres",
       "outcome": "Fielder's choice",
       "count": "1-2",
@@ -1496,7 +1504,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Tyler Mudd",
+      "pitcher": "Luke D'Ancona",
       "batter": "Daniel Cuvet",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1523,7 +1531,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Rob Evans",
+      "pitcher": "Jake Dorn",
       "batter": "Owen DeShazo",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1550,7 +1558,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Rob Evans",
+      "pitcher": "Jake Dorn",
       "batter": "Ben Williams",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1577,7 +1585,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Rob Evans",
+      "pitcher": "Jake Dorn",
       "batter": "Julio Solier",
       "outcome": "Single",
       "count": "0-1",
@@ -1604,7 +1612,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Rob Evans",
+      "pitcher": "Jake Dorn",
       "batter": "Ty Mainolfi",
       "outcome": "Double",
       "count": "0-1",
@@ -1631,13 +1639,16 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Rob Evans",
+      "pitcher": "Jake Dorn",
       "batter": "Nick Wang",
       "outcome": "Double",
       "count": "3-2",
       "pitches": "KBSBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1658,7 +1669,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Rob Evans",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1674,7 +1685,7 @@
       },
       "runners_after": {
         "1B": "Julio Solier",
-        "2B": "Nick Wang",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1685,7 +1696,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Tyler Mudd",
+      "pitcher": "Luke D'Ancona",
       "batter": "Alex Sosa",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1712,7 +1723,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Tyler Mudd",
+      "pitcher": "Luke D'Ancona",
       "batter": "Derek Williams",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1739,7 +1750,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Tyler Mudd",
+      "pitcher": "Luke D'Ancona",
       "batter": "Brylan West",
       "outcome": "Single",
       "count": "1-1",
@@ -1766,7 +1777,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Tyler Mudd",
+      "pitcher": "Luke D'Ancona",
       "batter": "Dylan Dubovik",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1793,7 +1804,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Rob Evans",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "Jack Toomey",
       "outcome": "Foul out",
       "count": "1-2",
@@ -1820,7 +1831,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Rob Evans",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "Esteban Garcia",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1847,7 +1858,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Rob Evans",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "Luke Gallo",
       "outcome": "Groundout",
       "count": "2-2",

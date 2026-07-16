@@ -3,7 +3,7 @@
   "date": "05/07/2026",
   "away_team": "Auburn",
   "home_team": "Mississippi St.",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -580,6 +580,33 @@
     {
       "inning": "Bottom 3",
       "pitcher": "LJ Cormier",
+      "batter": "Cormier, L. to p for Marciano, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 4
+      },
+      "description": "Cormier, L. to p for Marciano, J.."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "LJ Cormier",
       "batter": "Noah Sullivan",
       "outcome": "Single",
       "count": "2-1",
@@ -621,8 +648,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Noah Sullivan",
-        "2B": null,
+        "1B": null,
+        "2B": "Noah Sullivan",
         "3B": null
       },
       "score": {
@@ -643,13 +670,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Noah Sullivan",
-        "2B": null,
+        "1B": null,
+        "2B": "Noah Sullivan",
         "3B": null
       },
       "runners_after": {
-        "1B": "Noah Sullivan",
-        "2B": null,
+        "1B": null,
+        "2B": "Noah Sullivan",
         "3B": null
       },
       "score": {
@@ -672,8 +699,8 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Noah Sullivan",
-        "2B": null,
+        "1B": null,
+        "2B": "Noah Sullivan",
         "3B": null
       },
       "runners_after": {
@@ -947,8 +974,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethin Bingaman",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "score": {
@@ -965,12 +992,14 @@
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ethin Bingaman"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ethin Bingaman",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "runners_after": {
@@ -1001,9 +1030,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Mason McCraine"
       },
       "score": {
         "away": 1,
@@ -1023,14 +1052,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Mason McCraine",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Mason McCraine"
       },
       "runners_after": {
-        "1B": "Mason McCraine",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Mason McCraine"
       },
       "score": {
         "away": 1,
@@ -1285,7 +1314,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "LJ Cormier",
+      "pitcher": "Ethan Harden",
       "batter": "Ryder Woodson",
       "outcome": "Walk",
       "count": "3-2",
@@ -1309,6 +1338,33 @@
         "home": 6
       },
       "description": "Woodson walked (3-2 BBSKBB)."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Ethan Harden",
+      "batter": "Harden, E. to p for Cormier, L..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Ryder Woodson",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ryder Woodson",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 6
+      },
+      "description": "Harden, E. to p for Cormier, L.."
     },
     {
       "inning": "Bottom 6",
@@ -1369,7 +1425,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ethan Harden",
+      "pitcher": "Christian Chatterton",
       "batter": "Blake Bevis",
       "outcome": "Single",
       "count": "1-0",
@@ -1396,7 +1452,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ethan Harden",
+      "pitcher": "Christian Chatterton",
       "batter": "Noah Sullivan",
       "outcome": "Fielder's choice",
       "count": "0-1",
@@ -1511,6 +1567,7 @@
       "pitches": "SBSFF",
       "rbi": true,
       "runs_scored": [
+        "Chris Rembert",
         "Bub Terrell"
       ],
       "outs_before": 2,
@@ -1521,7 +1578,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Rembert",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1543,12 +1600,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Chris Rembert",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Rembert",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1557,6 +1614,33 @@
         "home": 8
       },
       "description": "McCraine, B. flied out to rf (0-0)."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Christian Chatterton",
+      "batter": "Chatterton,C to p for Harden, E..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 8
+      },
+      "description": "Chatterton,C to p for Harden, E.."
     },
     {
       "inning": "Bottom 7",
@@ -1616,7 +1700,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Christian Chatterton",
+      "pitcher": "Abe Chancellor",
       "batter": "Vytas Valincius",
       "outcome": "Single",
       "count": "0-1",
@@ -1643,7 +1727,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Christian Chatterton",
+      "pitcher": "Abe Chancellor",
       "batter": "Kevin Milewski",
       "outcome": "Groundout",
       "count": "2-0",
@@ -1658,8 +1742,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Vytas Valincius",
-        "2B": null,
+        "1B": null,
+        "2B": "Vytas Valincius",
         "3B": "Bryce Chance"
       },
       "score": {
@@ -1670,7 +1754,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Christian Chatterton",
+      "pitcher": "Abe Chancellor",
       "batter": "Ryder Woodson",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1682,20 +1766,47 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Vytas Valincius",
-        "2B": null,
+        "1B": null,
+        "2B": "Vytas Valincius",
         "3B": "Bryce Chance"
       },
       "runners_after": {
-        "1B": "Vytas Valincius",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Vytas Valincius"
       },
       "score": {
         "away": 3,
         "home": 10
       },
       "description": "Woodson flied out to rf, SF, RBI (1-2 SBK) Valincius, V advanced to third Chance scored."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Abe Chancellor",
+      "batter": "Chancellor,A to p for Chatterton,C.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": "Vytas Valincius"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": "Vytas Valincius"
+      },
+      "score": {
+        "away": 3,
+        "home": 10
+      },
+      "description": "Chancellor,A to p for Chatterton,C."
     },
     {
       "inning": "Bottom 7",
@@ -1709,14 +1820,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Vytas Valincius",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Vytas Valincius"
       },
       "runners_after": {
-        "1B": "Vytas Valincius",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Vytas Valincius"
       },
       "score": {
         "away": 3,
@@ -1834,7 +1945,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Abe Chancellor",
+      "pitcher": "",
       "batter": "Belyeu, C. to cf for Combs, C..",
       "outcome": "\u2014",
       "count": null,
@@ -1861,7 +1972,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Abe Chancellor",
+      "pitcher": "",
       "batter": "Ace Reese",
       "outcome": "Single",
       "count": "3-1",
@@ -1888,7 +1999,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Abe Chancellor",
+      "pitcher": "",
       "batter": "Reed Stallman",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1915,7 +2026,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Abe Chancellor",
+      "pitcher": "",
       "batter": "Noah Sullivan",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1942,7 +2053,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Abe Chancellor",
+      "pitcher": "",
       "batter": "Jacob Parker",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -1969,7 +2080,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Abe Chancellor",
+      "pitcher": "",
       "batter": "Bryce Chance",
       "outcome": "Fielder's choice",
       "count": "1-2",

@@ -3,7 +3,7 @@
   "date": "03/27/2026",
   "away_team": "Tennessee",
   "home_team": "Vanderbilt",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -265,8 +265,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Garrett Wright",
-        "2B": null,
+        "1B": null,
+        "2B": "Garrett Wright",
         "3B": null
       },
       "score": {
@@ -287,13 +287,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Garrett Wright",
-        "2B": null,
+        "1B": null,
+        "2B": "Garrett Wright",
         "3B": null
       },
       "runners_after": {
-        "1B": "Garrett Wright",
-        "2B": null,
+        "1B": null,
+        "2B": "Garrett Wright",
         "3B": null
       },
       "score": {
@@ -661,7 +661,9 @@
       "count": "0-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1149,7 +1151,9 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Henry Ford"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1158,7 +1162,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Henry Ford",
+        "1B": null,
         "2B": "Blake Grimmer",
         "3B": null
       },
@@ -1180,12 +1184,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Henry Ford",
+        "1B": null,
         "2B": "Blake Grimmer",
         "3B": null
       },
       "runners_after": {
-        "1B": "Henry Ford",
+        "1B": null,
         "2B": "Blake Grimmer",
         "3B": null
       },
@@ -1194,6 +1198,33 @@
         "home": 2
       },
       "description": "BROWN, B. struck out swinging (3-2)."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Tegan Kuhns",
+      "batter": "KUHNS, T. to p for ARVIDSON, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 2
+      },
+      "description": "KUHNS, T. to p for ARVIDSON, B.."
     },
     {
       "inning": "Bottom 6",
@@ -1617,8 +1648,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Manny Marin",
-        "2B": null,
+        "1B": null,
+        "2B": "Manny Marin",
         "3B": null
       },
       "score": {
@@ -1639,13 +1670,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Manny Marin",
-        "2B": null,
+        "1B": null,
+        "2B": "Manny Marin",
         "3B": null
       },
       "runners_after": {
-        "1B": "Manny Marin",
-        "2B": null,
+        "1B": null,
+        "2B": "Manny Marin",
         "3B": null
       },
       "score": {
@@ -1662,17 +1693,19 @@
       "count": "2-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Manny Marin",
-        "2B": null,
+        "1B": null,
+        "2B": "Manny Marin",
         "3B": null
       },
       "runners_after": {
         "1B": "Levi Clark",
-        "2B": null,
+        "2B": "Manny Marin",
         "3B": null
       },
       "score": {
@@ -1694,12 +1727,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Levi Clark",
-        "2B": null,
+        "2B": "Manny Marin",
         "3B": null
       },
       "runners_after": {
-        "1B": "Levi Clark",
-        "2B": null,
+        "1B": null,
+        "2B": "Levi Clark",
         "3B": null
       },
       "score": {
@@ -1720,13 +1753,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Levi Clark",
-        "2B": null,
+        "1B": null,
+        "2B": "Levi Clark",
         "3B": null
       },
       "runners_after": {
         "1B": "Blake Grimmer",
-        "2B": null,
+        "2B": "Levi Clark",
         "3B": null
       },
       "score": {
@@ -1748,12 +1781,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Blake Grimmer",
-        "2B": null,
+        "2B": "Levi Clark",
         "3B": null
       },
       "runners_after": {
         "1B": "Blake Grimmer",
-        "2B": null,
+        "2B": "Levi Clark",
         "3B": null
       },
       "score": {
@@ -2130,7 +2163,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Garrett Wright",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2152,7 +2185,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Garrett Wright",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2196,7 +2229,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Brennan Seiber",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2211,8 +2244,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Levi Clark",
-        "2B": null,
+        "1B": null,
+        "2B": "Levi Clark",
         "3B": null
       },
       "score": {
@@ -2223,7 +2256,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Brennan Seiber",
+      "pitcher": "",
       "batter": "Blake Grimmer",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2233,13 +2266,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Levi Clark",
-        "2B": null,
+        "1B": null,
+        "2B": "Levi Clark",
         "3B": null
       },
       "runners_after": {
-        "1B": "Levi Clark",
-        "2B": null,
+        "1B": null,
+        "2B": "Levi Clark",
         "3B": null
       },
       "score": {
@@ -2304,7 +2337,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Tegan Kuhns",
+      "pitcher": "Bo Rhudy",
       "batter": "Colin Barczi",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -2331,7 +2364,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Tegan Kuhns",
+      "pitcher": "Mark Hindy",
       "batter": "Brodie Johnston",
       "outcome": "Single",
       "count": "0-0",
@@ -2358,7 +2391,34 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "",
+      "batter": "RHUDY, B. to p for KUHNS, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Brodie Johnston",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Brodie Johnston",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 2
+      },
+      "description": "RHUDY, B. to p for KUHNS, T.."
+    },
+    {
+      "inning": "Bottom 10",
+      "pitcher": "",
       "batter": "Braden Holcomb",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2385,13 +2445,42 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Mark Hindy",
+      "pitcher": "",
+      "batter": "HINDY, M. to p for RHUDY, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Brodie Johnston",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Brodie Johnston",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 2
+      },
+      "description": "HINDY, M. to p for RHUDY, B.."
+    },
+    {
+      "inning": "Bottom 10",
+      "pitcher": "",
       "batter": "Logan Johnstone",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {

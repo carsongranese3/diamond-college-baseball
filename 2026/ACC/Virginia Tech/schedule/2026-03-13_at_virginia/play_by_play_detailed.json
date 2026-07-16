@@ -3,7 +3,7 @@
   "date": "03/13/2026",
   "away_team": "Virginia Tech",
   "home_team": "Virginia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -121,7 +121,9 @@
       "count": "3-1",
       "pitches": "BKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -256,7 +258,9 @@
       "count": "2-2",
       "pitches": "BBSS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -283,7 +287,9 @@
       "count": "1-2",
       "pitches": "BFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -499,7 +505,9 @@
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -562,9 +570,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "AJ Gracia",
+        "1B": null,
         "2B": "Eric Becker",
-        "3B": null
+        "3B": "AJ Gracia"
       },
       "score": {
         "away": 1,
@@ -584,14 +592,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "AJ Gracia",
+        "1B": null,
         "2B": "Eric Becker",
-        "3B": null
+        "3B": "AJ Gracia"
       },
       "runners_after": {
-        "1B": "AJ Gracia",
+        "1B": null,
         "2B": "Eric Becker",
-        "3B": null
+        "3B": "AJ Gracia"
       },
       "score": {
         "away": 1,
@@ -877,7 +885,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -904,7 +914,9 @@
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -931,7 +943,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -979,7 +993,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Kyle Johnson",
       "outcome": "Single",
       "count": "3-2",
@@ -1006,7 +1020,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
@@ -1033,7 +1047,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Eric Becker",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1060,7 +1074,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "AJ Gracia",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1168,7 +1182,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Joe Tiroly",
       "outcome": "Pop out",
       "count": "0-0",
@@ -1195,7 +1209,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Sam Harris",
       "outcome": "Reached on error",
       "count": "0-2",
@@ -1222,7 +1236,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Harrison Didawick",
       "outcome": "Single",
       "count": "1-2",
@@ -1249,14 +1263,16 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Noah Murray",
       "outcome": "Home run",
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
       "runs_scored": [
-        "Noah Murray"
+        "Noah Murray",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1278,7 +1294,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Zach Jackson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1305,7 +1321,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Kyle Johnson",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1420,7 +1436,8 @@
       "pitches": "KFBF",
       "rbi": true,
       "runs_scored": [
-        "Sam Gates"
+        "Sam Gates",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1469,7 +1486,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Noah Jouras",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1496,7 +1513,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Eric Becker",
       "outcome": "Reached on error",
       "count": "1-0",
@@ -1523,14 +1540,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "AJ Gracia",
       "outcome": "Home run",
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
       "runs_scored": [
-        "AJ Gracia"
+        "AJ Gracia",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1552,7 +1570,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Joe Tiroly",
       "outcome": "Single",
       "count": "2-0",
@@ -1579,7 +1597,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Sam Harris",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1606,7 +1624,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Harrison Didawick",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1714,7 +1732,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Noah Murray",
       "outcome": "Walk",
       "count": "3-2",
@@ -1741,7 +1759,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Zach Jackson",
       "outcome": "Walk",
       "count": "3-0",
@@ -1768,13 +1786,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Kyle Johnson",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "SB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1795,7 +1815,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-1",
@@ -1822,13 +1842,16 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Eric Becker",
       "outcome": "Reached on error",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1849,7 +1872,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brody Roe",
       "batter": "AJ Gracia",
       "outcome": "Single",
       "count": "0-1",
@@ -1876,7 +1899,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brody Roe",
       "batter": "Joe Tiroly",
       "outcome": "Grounded into double play",
       "count": "1-2",
@@ -1930,7 +1953,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Hudson Lutterman",
       "outcome": "Lineout",
       "count": "1-2",
@@ -1957,7 +1980,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Anderson French",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1984,7 +2007,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brody Roe",
       "batter": "Sam Harris",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2011,7 +2034,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brody Roe",
       "batter": "Harrison Didawick",
       "outcome": "Single",
       "count": "0-0",
@@ -2038,7 +2061,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brody Roe",
       "batter": "Noah Murray",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2065,7 +2088,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brody Roe",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2080,8 +2103,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Harrison Didawick",
-        "2B": null,
+        "1B": null,
+        "2B": "Harrison Didawick",
         "3B": null
       },
       "score": {
@@ -2092,7 +2115,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brody Roe",
       "batter": "Zach Jackson",
       "outcome": "Flyout",
       "count": "1-2",
@@ -2102,13 +2125,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Harrison Didawick",
-        "2B": null,
+        "1B": null,
+        "2B": "Harrison Didawick",
         "3B": null
       },
       "runners_after": {
-        "1B": "Harrison Didawick",
-        "2B": null,
+        "1B": null,
+        "2B": "Harrison Didawick",
         "3B": null
       },
       "score": {
@@ -2119,7 +2142,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Willie Hurt",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2146,7 +2169,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Sam Gates",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2173,7 +2196,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Pete Daniel",
       "outcome": "Groundout",
       "count": "0-1",

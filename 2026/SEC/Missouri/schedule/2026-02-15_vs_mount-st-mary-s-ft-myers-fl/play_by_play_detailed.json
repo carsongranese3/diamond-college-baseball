@@ -3,7 +3,7 @@
   "date": "02/15/2026",
   "away_team": "Mount St. Mary's",
   "home_team": "Missouri",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -311,7 +311,9 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Sam Meyer"
+        "Sam Meyer",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -456,8 +458,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jamal George",
-        "2B": null,
+        "1B": null,
+        "2B": "Jamal George",
         "3B": null
       },
       "score": {
@@ -478,13 +480,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jamal George",
-        "2B": null,
+        "1B": null,
+        "2B": "Jamal George",
         "3B": null
       },
       "runners_after": {
         "1B": "Isaiah Frost",
-        "2B": null,
+        "2B": "Jamal George",
         "3B": null
       },
       "score": {
@@ -506,12 +508,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Isaiah Frost",
-        "2B": null,
+        "2B": "Jamal George",
         "3B": null
       },
       "runners_after": {
         "1B": "Gehrig Goldbeck",
-        "2B": null,
+        "2B": "Jamal George",
         "3B": null
       },
       "score": {
@@ -528,17 +530,20 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Gehrig Goldbeck",
-        "2B": null,
+        "2B": "Jamal George",
         "3B": null
       },
       "runners_after": {
         "1B": "Tyler Macon",
-        "2B": null,
+        "2B": "Jamal George",
         "3B": null
       },
       "score": {
@@ -556,18 +561,20 @@
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Jase Woita"
+        "Jase Woita",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Tyler Macon",
-        "2B": null,
+        "2B": "Jamal George",
         "3B": null
       },
       "runners_after": {
         "1B": "Tyler Macon",
-        "2B": null,
+        "2B": "Jamal George",
         "3B": null
       },
       "score": {
@@ -589,12 +596,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Tyler Macon",
-        "2B": null,
+        "2B": "Jamal George",
         "3B": null
       },
       "runners_after": {
         "1B": "Tyler Macon",
-        "2B": null,
+        "2B": "Jamal George",
         "3B": null
       },
       "score": {
@@ -729,8 +736,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Cameron Benson",
-        "3B": null
+        "2B": null,
+        "3B": "Cameron Benson"
       },
       "score": {
         "away": 3,
@@ -746,18 +753,20 @@
       "count": "0-2",
       "pitches": "KK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": null,
-        "2B": "Cameron Benson",
-        "3B": null
+        "2B": null,
+        "3B": "Cameron Benson"
       },
       "runners_after": {
         "1B": "Chris Patterson",
-        "2B": "Cameron Benson",
-        "3B": null
+        "2B": null,
+        "3B": "Cameron Benson"
       },
       "score": {
         "away": 3,
@@ -778,13 +787,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Chris Patterson",
-        "2B": "Cameron Benson",
-        "3B": null
+        "2B": null,
+        "3B": "Cameron Benson"
       },
       "runners_after": {
         "1B": "Jamal George",
-        "2B": "Cameron Benson",
-        "3B": null
+        "2B": null,
+        "3B": "Cameron Benson"
       },
       "score": {
         "away": 3,
@@ -794,7 +803,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Brandon Rice",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
@@ -805,13 +814,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Jamal George",
-        "2B": "Cameron Benson",
-        "3B": null
+        "2B": null,
+        "3B": "Cameron Benson"
       },
       "runners_after": {
         "1B": "Jamal George",
-        "2B": "Cameron Benson",
-        "3B": null
+        "2B": null,
+        "3B": "Cameron Benson"
       },
       "score": {
         "away": 3,
@@ -821,24 +830,27 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Brandon Rice",
       "batter": "Isaiah Frost",
       "outcome": "Double",
       "count": "3-2",
       "pitches": "BBBKK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Jamal George",
-        "2B": "Cameron Benson",
-        "3B": null
+        "2B": null,
+        "3B": "Cameron Benson"
       },
       "runners_after": {
         "1B": "Jamal George",
         "2B": "Isaiah Frost",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "score": {
         "away": 3,
@@ -848,7 +860,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Brandon Rice",
       "batter": "Gehrig Goldbeck",
       "outcome": "Walk",
       "count": "3-2",
@@ -860,12 +872,12 @@
       "runners_before": {
         "1B": "Jamal George",
         "2B": "Isaiah Frost",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "runners_after": {
         "1B": "Gehrig Goldbeck",
         "2B": "Isaiah Frost",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "score": {
         "away": 3,
@@ -875,24 +887,26 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Brandon Rice",
       "batter": "Tyler Macon",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Gehrig Goldbeck",
         "2B": "Isaiah Frost",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "runners_after": {
         "1B": "Gehrig Goldbeck",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "score": {
         "away": 3,
@@ -902,7 +916,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Brandon Rice",
       "batter": "Jase Woita",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -914,12 +928,12 @@
       "runners_before": {
         "1B": "Gehrig Goldbeck",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "runners_after": {
         "1B": "Jase Woita",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "score": {
         "away": 3,
@@ -929,24 +943,27 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Brandon Rice",
       "batter": "Pierre Seals",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Jase Woita",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "runners_after": {
         "1B": "Pierre Seals",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "score": {
         "away": 3,
@@ -956,7 +973,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Brandon Rice",
       "batter": "Cameron Benson",
       "outcome": "Single",
       "count": "0-0",
@@ -968,12 +985,12 @@
       "runners_before": {
         "1B": "Pierre Seals",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "runners_after": {
         "1B": "Cameron Benson",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "score": {
         "away": 3,
@@ -983,24 +1000,26 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Brandon Rice",
       "batter": "Chris Patterson",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BKBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Cameron Benson",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "runners_after": {
         "1B": "Chris Patterson",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "score": {
         "away": 3,
@@ -1010,24 +1029,26 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Owen Crowe",
       "batter": "Jamal George",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
       "pitches": "SBSFS",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Chris Patterson",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "runners_after": {
         "1B": "Chris Patterson",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "score": {
         "away": 3,
@@ -1037,7 +1058,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Owen Crowe",
       "batter": "Peyton Basler",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -1049,12 +1070,12 @@
       "runners_before": {
         "1B": "Chris Patterson",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "runners_after": {
         "1B": "Peyton Basler",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "score": {
         "away": 3,
@@ -1064,24 +1085,27 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Owen Crowe",
       "batter": "Isaiah Frost",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BSSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Peyton Basler",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "runners_after": {
         "1B": "Isaiah Frost",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "score": {
         "away": 3,
@@ -1091,7 +1115,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Owen Crowe",
       "batter": "Gehrig Goldbeck",
       "outcome": "Walk",
       "count": "3-1",
@@ -1103,12 +1127,12 @@
       "runners_before": {
         "1B": "Isaiah Frost",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "runners_after": {
         "1B": "Gehrig Goldbeck",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "score": {
         "away": 3,
@@ -1118,24 +1142,27 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Owen Crowe",
       "batter": "Tyler Macon",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Gehrig Goldbeck",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "runners_after": {
         "1B": "Tyler Macon",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "score": {
         "away": 3,
@@ -1145,24 +1172,26 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Owen Crowe",
       "batter": "Jase Woita",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Tyler Macon",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "runners_after": {
         "1B": "Jase Woita",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "score": {
         "away": 3,
@@ -1172,7 +1201,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Owen Crowe",
       "batter": "Pierre Seals",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1184,12 +1213,12 @@
       "runners_before": {
         "1B": "Jase Woita",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "runners_after": {
         "1B": "Jase Woita",
         "2B": "Tyler Macon",
-        "3B": null
+        "3B": "Cameron Benson"
       },
       "score": {
         "away": 3,
@@ -1280,7 +1309,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Owen Crowe",
       "batter": "Cameron Benson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1307,7 +1336,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Jake Arnold",
       "batter": "Chris Patterson",
       "outcome": "Walk",
       "count": "3-1",
@@ -1334,7 +1363,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Jake Arnold",
       "batter": "Jamal George",
       "outcome": "Hit by pitch",
       "count": "3-0",
@@ -1361,7 +1390,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Jake Arnold",
       "batter": "Peyton Basler",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -1388,7 +1417,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Jake Arnold",
       "batter": "Isaiah Frost",
       "outcome": "Foul out",
       "count": "2-0",
@@ -1415,13 +1444,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Jake Arnold",
       "batter": "Gehrig Goldbeck",
       "outcome": "Hit by pitch",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1442,13 +1473,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Jake Arnold",
       "batter": "Tyler Macon",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1469,13 +1502,16 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Jake Arnold",
       "batter": "Jase Woita",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "KBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1496,13 +1532,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Jake Andrews",
       "batter": "Pierre Seals",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1523,7 +1561,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Jake Andrews",
       "batter": "Cameron Benson",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1658,7 +1696,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Jake Andrews",
       "batter": "Chris Patterson",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1685,7 +1723,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Nathan Berzonski",
       "batter": "Jamal George",
       "outcome": "Triple",
       "count": "0-0",
@@ -1712,7 +1750,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Nathan Berzonski",
       "batter": "Peyton Basler",
       "outcome": "Walk",
       "count": "3-2",
@@ -1739,13 +1777,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Nathan Berzonski",
       "batter": "Isaiah Frost",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "FBKF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1766,7 +1806,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Nathan Berzonski",
       "batter": "Gehrig Goldbeck",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1793,13 +1833,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Nathan Berzonski",
       "batter": "Tyler Macon",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "KBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1820,7 +1862,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Nathan Berzonski",
       "batter": "Jase Woita",
       "outcome": "Lineout",
       "count": "1-0",
@@ -1847,7 +1889,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brady Kehlenbrink",
+      "pitcher": "Dane Bjorn",
       "batter": "Rodriguez,Nathan singled down the right field line (1-2 FBS).",
       "outcome": "Single",
       "count": "1-2",
@@ -1874,7 +1916,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brady Kehlenbrink",
+      "pitcher": "Dane Bjorn",
       "batter": "Ty Fredo",
       "outcome": "Grounded into double play",
       "count": "1-0",
@@ -1901,7 +1943,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brady Kehlenbrink",
+      "pitcher": "Dane Bjorn",
       "batter": "Bryce Rudisill",
       "outcome": "Strikeout",
       "count": "0-3",
@@ -1928,7 +1970,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Nathan Berzonski",
       "batter": "Pierre Seals",
       "outcome": "Walk",
       "count": "3-0",
@@ -1955,7 +1997,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Nathan Berzonski",
       "batter": "Sam Parker",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1982,7 +2024,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Nathan Berzonski",
       "batter": "Chris Patterson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2009,7 +2051,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Nathan Berzonski",
       "batter": "Juliomar Campos",
       "outcome": "Fielder's choice",
       "count": "2-1",
@@ -2036,7 +2078,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brady Kehlenbrink",
+      "pitcher": "Keagen Kohlhoff",
       "batter": "Joey Agar",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2063,7 +2105,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brady Kehlenbrink",
+      "pitcher": "Keagen Kohlhoff",
       "batter": "Hefferman,Sean hit by pitch (2-1 KBB).",
       "outcome": "Hit by pitch",
       "count": "2-1",
@@ -2090,7 +2132,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brady Kehlenbrink",
+      "pitcher": "Keagen Kohlhoff",
       "batter": "Phoenix Williams",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2117,7 +2159,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brady Kehlenbrink",
+      "pitcher": "Keagen Kohlhoff",
       "batter": "Sam Meyer",
       "outcome": "Walk",
       "count": "3-2",
@@ -2144,7 +2186,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brady Kehlenbrink",
+      "pitcher": "Keagen Kohlhoff",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2159,9 +2201,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Meyer",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Sam Meyer"
       },
       "score": {
         "away": 3,
@@ -2171,7 +2213,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brady Kehlenbrink",
+      "pitcher": "Keagen Kohlhoff",
       "batter": "Ryan McKay",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2181,14 +2223,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Sam Meyer",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Sam Meyer"
       },
       "runners_after": {
-        "1B": "Sam Meyer",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Sam Meyer"
       },
       "score": {
         "away": 3,
@@ -2198,7 +2240,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Nathan Berzonski",
       "batter": "Keegan Knutson",
       "outcome": "Flyout",
       "count": "1-2",
@@ -2225,7 +2267,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Riley Williams",
       "batter": "Leo Humbert",
       "outcome": "Walk",
       "count": "3-2",
@@ -2252,7 +2294,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Riley Williams",
       "batter": "Eric Maisonet",
       "outcome": "Single",
       "count": "0-1",
@@ -2279,7 +2321,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Riley Williams",
       "batter": "Tyler Macon",
       "outcome": "Walk",
       "count": "3-0",
@@ -2306,13 +2348,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Riley Williams",
       "batter": "Jase Woita",
       "outcome": "Fielder's choice",
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2333,7 +2377,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Riley Williams",
       "batter": "Donovan Jordan",
       "outcome": "Walk",
       "count": "3-2",
@@ -2360,13 +2404,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Riley Williams",
       "batter": "Sam Parker",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BSBBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2387,7 +2433,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Riley Williams",
       "batter": "Chris Patterson",
       "outcome": "Fielder's choice",
       "count": "1-0",
@@ -2414,7 +2460,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brady Kehlenbrink",
+      "pitcher": "Eli Skidmore",
       "batter": "Alex Mendes",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2441,7 +2487,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brady Kehlenbrink",
+      "pitcher": "Eli Skidmore",
       "batter": "Rodriguez,Nathan flied out to rf (2-2 FSBB).",
       "outcome": "Flyout",
       "count": "2-2",
@@ -2468,7 +2514,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brady Kehlenbrink",
+      "pitcher": "Eli Skidmore",
       "batter": "Parker Hildebrand",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2495,7 +2541,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Riley Williams",
       "batter": "Juliomar Campos",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2522,7 +2568,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Dylan Izenman",
       "batter": "Keegan Knutson",
       "outcome": "Foul out",
       "count": "0-0",
@@ -2549,7 +2595,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Dylan Izenman",
       "batter": "Leo Humbert",
       "outcome": "Walk",
       "count": "3-2",
@@ -2576,13 +2622,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Dylan Izenman",
       "batter": "Eric Maisonet",
       "outcome": "Triple",
       "count": "0-2",
       "pitches": "KF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2603,13 +2651,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Dylan Izenman",
       "batter": "Tyler Macon",
       "outcome": "Double",
       "count": "3-2",
       "pitches": "KBBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2630,13 +2680,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Dylan Izenman",
       "batter": "Jase Woita",
       "outcome": "Single",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2657,7 +2709,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Dylan Izenman",
       "batter": "Donovan Jordan",
       "outcome": "Single",
       "count": "3-1",
@@ -2684,14 +2736,16 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Dylan Izenman",
       "batter": "Sam Parker",
       "outcome": "Home run",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
       "runs_scored": [
-        "Sam Parker"
+        "Sam Parker",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -2713,7 +2767,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Dylan Izenman",
       "batter": "Chris Patterson",
       "outcome": "Home run",
       "count": "2-0",
@@ -2742,7 +2796,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Dylan Izenman",
       "batter": "Juliomar Campos",
       "outcome": "Single",
       "count": "0-2",
@@ -2769,7 +2823,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli DeRossi-Cytron",
+      "pitcher": "Tom Menar",
       "batter": "Keegan Knutson",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2796,7 +2850,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brady Kehlenbrink",
+      "pitcher": "Luke Sullivan",
       "batter": "Bryce Rudisill",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2823,7 +2877,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brady Kehlenbrink",
+      "pitcher": "Luke Sullivan",
       "batter": "Joey Agar",
       "outcome": "Flyout",
       "count": "1-2",
@@ -2850,7 +2904,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brady Kehlenbrink",
+      "pitcher": "Luke Sullivan",
       "batter": "Hefferman,Sean struck out looking (2-2 KKBBK).",
       "outcome": "Strikeout (looking)",
       "count": "2-2",

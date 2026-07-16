@@ -3,7 +3,7 @@
   "date": "03/01/2026",
   "away_team": "Arizona St.",
   "home_team": "Texas A&M",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -122,7 +122,8 @@
       "pitches": "KBF",
       "rbi": true,
       "runs_scored": [
-        "Caden Sorrell"
+        "Caden Sorrell",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -843,8 +844,8 @@
         "3B": "Blake Binderup"
       },
       "runners_after": {
-        "1B": "Bear Harrison",
-        "2B": null,
+        "1B": null,
+        "2B": "Bear Harrison",
         "3B": "Blake Binderup"
       },
       "score": {
@@ -867,8 +868,8 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Bear Harrison",
-        "2B": null,
+        "1B": null,
+        "2B": "Bear Harrison",
         "3B": "Blake Binderup"
       },
       "runners_after": {
@@ -980,8 +981,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Nu'u Contrades",
-        "2B": null,
+        "1B": null,
+        "2B": "Nu'u Contrades",
         "3B": null
       },
       "score": {
@@ -1002,13 +1003,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Nu'u Contrades",
-        "2B": null,
+        "1B": null,
+        "2B": "Nu'u Contrades",
         "3B": null
       },
       "runners_after": {
         "1B": "Longo",
-        "2B": null,
+        "2B": "Nu'u Contrades",
         "3B": null
       },
       "score": {
@@ -1030,13 +1031,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Longo",
-        "2B": null,
+        "2B": "Nu'u Contrades",
         "3B": null
       },
       "runners_after": {
-        "1B": "Longo",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Longo",
+        "3B": "Nu'u Contrades"
       },
       "score": {
         "away": 2,
@@ -1056,14 +1057,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Longo",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Longo",
+        "3B": "Nu'u Contrades"
       },
       "runners_after": {
-        "1B": "Longo",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Longo",
+        "3B": "Nu'u Contrades"
       },
       "score": {
         "away": 2,
@@ -1083,14 +1084,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Longo",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Longo",
+        "3B": "Nu'u Contrades"
       },
       "runners_after": {
-        "1B": "Longo",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Longo",
+        "3B": "Nu'u Contrades"
       },
       "score": {
         "away": 2,
@@ -1478,7 +1479,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Taylor Penn",
+      "pitcher": "Easton Barrett",
       "batter": "Sawyer Farr",
       "outcome": "\u2014",
       "count": "0-1",
@@ -1696,7 +1697,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Easton Barrett",
+      "pitcher": "Josh Butler",
       "batter": "Jake Duer",
       "outcome": "Walk",
       "count": "3-2",
@@ -1729,7 +1730,9 @@
       "count": "2-2",
       "pitches": "BKKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1969,7 +1972,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Josh Butler",
+      "pitcher": "Sean Fitzpatrick",
       "batter": "KIEL",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1996,7 +1999,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Sean Fitzpatrick",
+      "pitcher": "Colby Guy",
       "batter": "Caden Sorrell",
       "outcome": "Lineout",
       "count": "2-2",
@@ -2185,7 +2188,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Colby Guy",
+      "pitcher": "",
       "batter": "Nico Partida",
       "outcome": "Flyout",
       "count": "2-1",
@@ -2347,7 +2350,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Clayton Freshcorn",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2362,8 +2365,8 @@
         "3B": "Austen Roellig"
       },
       "runners_after": {
-        "1B": "Landon Hairston",
-        "2B": null,
+        "1B": null,
+        "2B": "Landon Hairston",
         "3B": "Austen Roellig"
       },
       "score": {
@@ -2374,7 +2377,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Clayton Freshcorn",
+      "pitcher": "",
       "batter": "PJ Moutzouridis",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2384,13 +2387,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Landon Hairston",
-        "2B": null,
+        "1B": null,
+        "2B": "Landon Hairston",
         "3B": "Austen Roellig"
       },
       "runners_after": {
-        "1B": "Landon Hairston",
-        "2B": null,
+        "1B": null,
+        "2B": "Landon Hairston",
         "3B": "Austen Roellig"
       },
       "score": {

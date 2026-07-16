@@ -3,7 +3,7 @@
   "date": "03/03/2026",
   "away_team": "Houston Christian",
   "home_team": "Texas",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -802,7 +802,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -1325,6 +1327,33 @@
     {
       "inning": "Top 6",
       "pitcher": "Jason Flores",
+      "batter": "Flores",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 12
+      },
+      "description": "Flores Jas to p for Cozart."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Jason Flores",
       "batter": "Luke Bard",
       "outcome": "Double",
       "count": "0-1",
@@ -1378,7 +1407,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Matthews",
+      "pitcher": "Jason Flores",
       "batter": "Jeremy Rader",
       "outcome": "\u2014",
       "count": "0-0",
@@ -1407,7 +1436,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Matthews",
+      "pitcher": "Jason Flores",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1436,7 +1465,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Matthews",
+      "pitcher": "Jason Flores",
       "batter": "Anthony Avalos",
       "outcome": "Walk",
       "count": "3-2",
@@ -1463,7 +1492,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Matthews",
+      "pitcher": "Jason Flores",
       "batter": "Katcher Halligan",
       "outcome": "Single",
       "count": "0-0",
@@ -1490,7 +1519,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Matthews",
+      "pitcher": "Jason Flores",
       "batter": "Rhett Hendricks",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1517,7 +1546,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Matthews",
+      "pitcher": "Jason Flores",
       "batter": "Jackson Walker",
       "outcome": "\u2014",
       "count": "3-2",
@@ -1715,7 +1744,8 @@
       "pitches": "BBBKF",
       "rbi": true,
       "runs_scored": [
-        "Jonah Williams"
+        "Jonah Williams",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1820,7 +1850,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Matthews",
+      "pitcher": "Jason Flores",
       "batter": "Livingston",
       "outcome": "\u2014",
       "count": null,
@@ -1847,7 +1877,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Matthews",
+      "pitcher": "Jason Flores",
       "batter": "Zach Munton",
       "outcome": "Pop out",
       "count": "1-0",
@@ -1874,7 +1904,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Matthews",
+      "pitcher": "",
       "batter": "Preston Curtis",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1901,7 +1931,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Matthews",
+      "pitcher": "",
       "batter": "Luke Bard",
       "outcome": "Groundout",
       "count": "1-0",

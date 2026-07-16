@@ -3,7 +3,7 @@
   "date": "02/13/2026",
   "away_team": "UAB",
   "home_team": "Florida",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -76,8 +76,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Alex Dupuy",
-        "2B": null,
+        "1B": null,
+        "2B": "Alex Dupuy",
         "3B": null
       },
       "score": {
@@ -98,13 +98,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Alex Dupuy",
-        "2B": null,
+        "1B": null,
+        "2B": "Alex Dupuy",
         "3B": null
       },
       "runners_after": {
-        "1B": "Alex Dupuy",
-        "2B": null,
+        "1B": null,
+        "2B": "Alex Dupuy",
         "3B": null
       },
       "score": {
@@ -121,12 +121,14 @@
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Alex Dupuy",
-        "2B": null,
+        "1B": null,
+        "2B": "Alex Dupuy",
         "3B": null
       },
       "runners_after": {
@@ -296,8 +298,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brendan Lawson",
-        "2B": null,
+        "1B": null,
+        "2B": "Brendan Lawson",
         "3B": null
       },
       "score": {
@@ -320,8 +322,8 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Brendan Lawson",
-        "2B": null,
+        "1B": null,
+        "2B": "Brendan Lawson",
         "3B": null
       },
       "runners_after": {
@@ -1169,8 +1171,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Alex Cheeseman",
-        "2B": null,
+        "1B": null,
+        "2B": "Alex Cheeseman",
         "3B": null
       },
       "score": {
@@ -1191,13 +1193,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Alex Cheeseman",
-        "2B": null,
+        "1B": null,
+        "2B": "Alex Cheeseman",
         "3B": null
       },
       "runners_after": {
-        "1B": "Alex Cheeseman",
-        "2B": null,
+        "1B": null,
+        "2B": "Alex Cheeseman",
         "3B": null
       },
       "score": {
@@ -1218,14 +1220,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Alex Cheeseman",
-        "2B": null,
+        "1B": null,
+        "2B": "Alex Cheeseman",
         "3B": null
       },
       "runners_after": {
-        "1B": "Alex Cheeseman",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Alex Cheeseman"
       },
       "score": {
         "away": 5,
@@ -1245,14 +1247,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Alex Cheeseman",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Alex Cheeseman"
       },
       "runners_after": {
-        "1B": "Alex Cheeseman",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Alex Cheeseman"
       },
       "score": {
         "away": 5,
@@ -1424,7 +1426,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "B.",
+      "pitcher": "Brendan Conner",
+      "batter": "B. Conner",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 3
+      },
+      "description": "B. Conner to p for M. Steele."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Brendan Conner",
       "batter": "Brendan Lawson",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1451,7 +1480,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "B.",
+      "pitcher": "Brendan Conner",
       "batter": "Cade Kurland",
       "outcome": "\u2014",
       "count": "1-0",
@@ -1478,7 +1507,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "B.",
+      "pitcher": "Brendan Conner",
       "batter": "Karson Bowen",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1613,7 +1642,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "B.",
+      "pitcher": "Brendan Conner",
       "batter": "Hayden Yost",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1640,7 +1669,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "B.",
+      "pitcher": "Brendan Conner",
       "batter": "Ethan Surowiec",
       "outcome": "Hit by pitch",
       "count": "3-2",
@@ -1667,7 +1696,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "B.",
+      "pitcher": "Brendan Conner",
       "batter": "Blake Cyr",
       "outcome": "Double",
       "count": "2-2",
@@ -1694,7 +1723,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "B.",
+      "pitcher": "Brendan Conner",
       "batter": "Landon Stripling",
       "outcome": "Single",
       "count": "0-0",
@@ -1723,7 +1752,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "B.",
+      "pitcher": "Brendan Conner",
       "batter": "Jacob Kendall",
       "outcome": "Walk",
       "count": "3-1",
@@ -1750,7 +1779,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "B.",
+      "pitcher": "Brendan Conner",
       "batter": "Kyle Jones",
       "outcome": "Single",
       "count": "1-0",
@@ -1780,7 +1809,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "B.",
+      "pitcher": "Brendan Conner",
       "batter": "Brendan Lawson",
       "outcome": "Single",
       "count": "0-1",
@@ -1809,7 +1838,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "B.",
+      "pitcher": "Brendan Conner",
       "batter": "Cade Kurland",
       "outcome": "Lineout",
       "count": "1-0",
@@ -1836,7 +1865,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "B.",
+      "pitcher": "Riley Miller",
       "batter": "Karson Bowen",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2028,7 +2057,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "R.",
+      "pitcher": "Riley Miller",
+      "batter": "R. Miller",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 7
+      },
+      "description": "R. Miller to p for B. Conner."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Riley Miller",
       "batter": "Hayden Yost",
       "outcome": "Pop out",
       "count": "2-0",
@@ -2055,7 +2111,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "R.",
+      "pitcher": "Riley Miller",
       "batter": "Ethan Surowiec",
       "outcome": "Single",
       "count": "0-1",
@@ -2082,7 +2138,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "R.",
+      "pitcher": "Riley Miller",
       "batter": "Blake Cyr",
       "outcome": "Groundout",
       "count": "3-1",
@@ -2109,7 +2165,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "R.",
+      "pitcher": "Riley Miller",
       "batter": "Landon Stripling",
       "outcome": "Lineout",
       "count": "1-1",
@@ -2205,8 +2261,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Landon Beaver",
-        "2B": null,
+        "1B": null,
+        "2B": "Landon Beaver",
         "3B": null
       },
       "score": {
@@ -2227,13 +2283,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Landon Beaver",
-        "2B": null,
+        "1B": null,
+        "2B": "Landon Beaver",
         "3B": null
       },
       "runners_after": {
-        "1B": "Landon Beaver",
-        "2B": null,
+        "1B": null,
+        "2B": "Landon Beaver",
         "3B": null
       },
       "score": {
@@ -2254,13 +2310,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Landon Beaver",
-        "2B": null,
+        "1B": null,
+        "2B": "Landon Beaver",
         "3B": null
       },
       "runners_after": {
-        "1B": "Landon Beaver",
-        "2B": null,
+        "1B": null,
+        "2B": "Landon Beaver",
         "3B": null
       },
       "score": {
@@ -2271,7 +2327,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "R.",
+      "pitcher": "Riley Miller",
       "batter": "Jacob Kendall",
       "outcome": "\u2014",
       "count": "3-2",
@@ -2298,7 +2354,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "R.",
+      "pitcher": "Riley Miller",
       "batter": "Kyle Jones",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2325,7 +2381,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "R.",
+      "pitcher": "Riley Miller",
       "batter": "Brendan Lawson",
       "outcome": "Double",
       "count": "1-2",
@@ -2352,7 +2408,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "R.",
+      "pitcher": "Riley Miller",
       "batter": "Cade Kurland",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2493,7 +2549,9 @@
       "count": "0-2",
       "pitches": "KS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2570,7 +2628,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "R.",
+      "pitcher": "Riley Miller",
       "batter": "L. Beaver",
       "outcome": "\u2014",
       "count": null,
@@ -2597,7 +2655,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "R.",
+      "pitcher": "Riley Miller",
       "batter": "A. Hunt",
       "outcome": "\u2014",
       "count": null,
@@ -2624,7 +2682,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "R.",
+      "pitcher": "",
       "batter": "Karson Bowen",
       "outcome": "Lineout",
       "count": "0-0",
@@ -2651,7 +2709,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "R.",
+      "pitcher": "",
       "batter": "Hayden Yost",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2678,7 +2736,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "R.",
+      "pitcher": "",
       "batter": "Ethan Surowiec",
       "outcome": "Walk",
       "count": "3-1",
@@ -2705,7 +2763,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "R.",
+      "pitcher": "",
       "batter": "Blake Cyr",
       "outcome": "Groundout",
       "count": "1-2",

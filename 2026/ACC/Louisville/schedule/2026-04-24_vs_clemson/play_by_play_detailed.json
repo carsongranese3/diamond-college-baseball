@@ -3,7 +3,7 @@
   "date": "04/24/2026",
   "away_team": "Clemson",
   "home_team": "Louisville",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -213,8 +213,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Zion Rose",
-        "2B": null,
+        "1B": null,
+        "2B": "Zion Rose",
         "3B": null
       },
       "score": {
@@ -235,8 +235,8 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Zion Rose",
-        "2B": null,
+        "1B": null,
+        "2B": "Zion Rose",
         "3B": null
       },
       "runners_after": {
@@ -567,8 +567,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "score": {
@@ -589,13 +589,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "runners_after": {
         "1B": "Zion Rose",
-        "2B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "score": {
@@ -617,12 +617,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Zion Rose",
-        "2B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "runners_after": {
         "1B": "Zion Rose",
-        "2B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "score": {
@@ -1057,8 +1057,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "score": {
@@ -1079,8 +1079,8 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "runners_after": {
@@ -2334,7 +2334,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Peter Michael",
+      "pitcher": "Ty Starke",
       "batter": "Nate Savoie",
       "outcome": "Grounded into double play",
       "count": "3-1",
@@ -2403,8 +2403,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kade Elam",
-        "2B": null,
+        "1B": null,
+        "2B": "Kade Elam",
         "3B": null
       },
       "score": {
@@ -2425,8 +2425,8 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Kade Elam",
-        "2B": null,
+        "1B": null,
+        "2B": "Kade Elam",
         "3B": null
       },
       "runners_after": {
@@ -2558,7 +2558,9 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -2855,7 +2857,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ty Starke",
+      "pitcher": "",
       "batter": "Talan Bell",
       "outcome": "Strikeout (looking)",
       "count": "2-2",

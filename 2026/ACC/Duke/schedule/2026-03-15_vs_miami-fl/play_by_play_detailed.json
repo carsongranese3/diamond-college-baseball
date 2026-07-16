@@ -3,7 +3,7 @@
   "date": "03/15/2026",
   "away_team": "Miami (FL)",
   "home_team": "Duke",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -130,8 +130,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Albright",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Albright",
         "3B": null
       },
       "score": {
@@ -152,13 +152,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Tyler Albright",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Albright",
         "3B": null
       },
       "runners_after": {
         "1B": "Collin Anderson",
-        "2B": null,
+        "2B": "Tyler Albright",
         "3B": null
       },
       "score": {
@@ -180,12 +180,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Collin Anderson",
-        "2B": null,
+        "2B": "Tyler Albright",
         "3B": null
       },
       "runners_after": {
         "1B": "Jake Lambdin",
-        "2B": null,
+        "2B": "Tyler Albright",
         "3B": null
       },
       "score": {
@@ -207,13 +207,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Jake Lambdin",
-        "2B": null,
+        "2B": "Tyler Albright",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Lambdin",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Tyler Albright",
+        "3B": "Jake Lambdin"
       },
       "score": {
         "away": 0,
@@ -233,14 +233,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Jake Lambdin",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Tyler Albright",
+        "3B": "Jake Lambdin"
       },
       "runners_after": {
         "1B": "Kaden Smith",
-        "2B": null,
-        "3B": null
+        "2B": "Tyler Albright",
+        "3B": "Jake Lambdin"
       },
       "score": {
         "away": 0,
@@ -257,19 +257,22 @@
       "pitches": "FBF",
       "rbi": true,
       "runs_scored": [
-        "Matthew Strand"
+        "Matthew Strand",
+        null,
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Kaden Smith",
-        "2B": null,
-        "3B": null
+        "2B": "Tyler Albright",
+        "3B": "Jake Lambdin"
       },
       "runners_after": {
         "1B": "Kaden Smith",
-        "2B": null,
-        "3B": null
+        "2B": "Tyler Albright",
+        "3B": "Jake Lambdin"
       },
       "score": {
         "away": 0,
@@ -279,7 +282,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Sebastian Santos-Olson",
       "batter": "Ben Petrone",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -290,13 +293,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Kaden Smith",
-        "2B": null,
-        "3B": null
+        "2B": "Tyler Albright",
+        "3B": "Jake Lambdin"
       },
       "runners_after": {
         "1B": "Kaden Smith",
-        "2B": null,
-        "3B": null
+        "2B": "Tyler Albright",
+        "3B": "Jake Lambdin"
       },
       "score": {
         "away": 0,
@@ -306,7 +309,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Sebastian Santos-Olson",
       "batter": "Coltin Quagliano",
       "outcome": "Lineout",
       "count": "1-1",
@@ -317,13 +320,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kaden Smith",
-        "2B": null,
-        "3B": null
+        "2B": "Tyler Albright",
+        "3B": "Jake Lambdin"
       },
       "runners_after": {
         "1B": "Kaden Smith",
-        "2B": null,
-        "3B": null
+        "2B": "Tyler Albright",
+        "3B": "Jake Lambdin"
       },
       "score": {
         "away": 0,
@@ -420,7 +423,9 @@
       "count": "3-2",
       "pitches": "BBSBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -447,7 +452,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -522,7 +529,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Sebastian Santos-Olson",
       "batter": "Brooks Perez",
       "outcome": "Flyout",
       "count": "2-2",
@@ -549,7 +556,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Sebastian Santos-Olson",
       "batter": "Adam Troch",
       "outcome": "Flyout",
       "count": "2-2",
@@ -576,7 +583,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Sebastian Santos-Olson",
       "batter": "Tyler Albright",
       "outcome": "Walk",
       "count": "3-1",
@@ -603,7 +610,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Sebastian Santos-Olson",
       "batter": "Collin Anderson",
       "outcome": "Foul out",
       "count": "1-1",
@@ -765,7 +772,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Sebastian Santos-Olson",
       "batter": "Jake Lambdin",
       "outcome": "Flyout",
       "count": "1-1",
@@ -792,7 +799,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Sebastian Santos-Olson",
       "batter": "Kaden Smith",
       "outcome": "Single",
       "count": "1-1",
@@ -819,7 +826,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Sebastian Santos-Olson",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -834,8 +841,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kaden Smith",
-        "2B": null,
+        "1B": null,
+        "2B": "Kaden Smith",
         "3B": null
       },
       "score": {
@@ -846,25 +853,26 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Sebastian Santos-Olson",
       "batter": "Matthew Strand",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "BKBBK",
       "rbi": true,
       "runs_scored": [
-        "Matthew Strand"
+        "Matthew Strand",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Kaden Smith",
-        "2B": null,
+        "1B": null,
+        "2B": "Kaden Smith",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kaden Smith",
-        "2B": null,
+        "1B": null,
+        "2B": "Kaden Smith",
         "3B": null
       },
       "score": {
@@ -875,7 +883,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Sebastian Santos-Olson",
       "batter": "Ben Petrone",
       "outcome": "Pop out",
       "count": "0-0",
@@ -885,13 +893,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kaden Smith",
-        "2B": null,
+        "1B": null,
+        "2B": "Kaden Smith",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kaden Smith",
-        "2B": null,
+        "1B": null,
+        "2B": "Kaden Smith",
         "3B": null
       },
       "score": {
@@ -902,7 +910,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Jake Dorn",
       "batter": "Coltin Quagliano",
       "outcome": "Double",
       "count": "1-0",
@@ -912,12 +920,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kaden Smith",
-        "2B": null,
+        "1B": null,
+        "2B": "Kaden Smith",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kaden Smith",
+        "1B": null,
         "2B": "Coltin Quagliano",
         "3B": null
       },
@@ -929,7 +937,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Jake Dorn",
       "batter": "Brooks Perez",
       "outcome": "Walk",
       "count": "3-2",
@@ -939,7 +947,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kaden Smith",
+        "1B": null,
         "2B": "Coltin Quagliano",
         "3B": null
       },
@@ -956,7 +964,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Jake Dorn",
       "batter": "Adam Troch",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1043,7 +1051,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1098,7 +1108,9 @@
       "pitches": "FSFFBB",
       "rbi": true,
       "runs_scored": [
-        "Daniel Cuvet"
+        "Daniel Cuvet",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1147,7 +1159,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Andy Leon",
+      "pitcher": "Jack Hedrick",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1162,8 +1174,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Alex Sosa",
-        "2B": "Michael Torres",
+        "1B": null,
+        "2B": "Alex Sosa",
         "3B": null
       },
       "score": {
@@ -1174,7 +1186,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Andy Leon",
+      "pitcher": "Jack Hedrick",
       "batter": "Derek Williams",
       "outcome": "Reached on error",
       "count": "3-2",
@@ -1184,13 +1196,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Alex Sosa",
-        "2B": "Michael Torres",
+        "1B": null,
+        "2B": "Alex Sosa",
         "3B": null
       },
       "runners_after": {
         "1B": "Derek Williams",
-        "2B": "Michael Torres",
+        "2B": "Alex Sosa",
         "3B": null
       },
       "score": {
@@ -1201,7 +1213,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Andy Leon",
+      "pitcher": "Jack Hedrick",
       "batter": "Brylan West",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1212,12 +1224,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Derek Williams",
-        "2B": "Michael Torres",
+        "2B": "Alex Sosa",
         "3B": null
       },
       "runners_after": {
         "1B": "Derek Williams",
-        "2B": "Michael Torres",
+        "2B": "Alex Sosa",
         "3B": null
       },
       "score": {
@@ -1228,7 +1240,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Andy Leon",
+      "pitcher": "Jack Hedrick",
       "batter": "Alonzo Alvarez",
       "outcome": "Walk",
       "count": "3-1",
@@ -1239,12 +1251,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Derek Williams",
-        "2B": "Michael Torres",
+        "2B": "Alex Sosa",
         "3B": null
       },
       "runners_after": {
         "1B": "Alonzo Alvarez",
-        "2B": "Michael Torres",
+        "2B": "Alex Sosa",
         "3B": null
       },
       "score": {
@@ -1255,7 +1267,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Andy Leon",
+      "pitcher": "Jack Hedrick",
       "batter": "Fabio Peralta",
       "outcome": "Fielder's choice",
       "count": "0-0",
@@ -1266,12 +1278,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Alonzo Alvarez",
-        "2B": "Michael Torres",
+        "2B": "Alex Sosa",
         "3B": null
       },
       "runners_after": {
         "1B": "Fabio Peralta",
-        "2B": "Michael Torres",
+        "2B": "Alex Sosa",
         "3B": null
       },
       "score": {
@@ -1282,7 +1294,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Jake Dorn",
       "batter": "Tyler Albright",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1309,7 +1321,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Jake Dorn",
       "batter": "Collin Anderson",
       "outcome": "Walk",
       "count": "3-0",
@@ -1336,13 +1348,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Tate DeRias",
+      "pitcher": "TJ Coats",
       "batter": "Jake Lambdin",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1363,13 +1377,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Tate DeRias",
+      "pitcher": "TJ Coats",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1390,7 +1406,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Tate DeRias",
+      "pitcher": "TJ Coats",
       "batter": "Matthew Strand",
       "outcome": "Walk",
       "count": "3-2",
@@ -1417,7 +1433,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Tate DeRias",
+      "pitcher": "TJ Coats",
       "batter": "Ben Petrone",
       "outcome": "Single",
       "count": "2-2",
@@ -1444,7 +1460,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Tate DeRias",
+      "pitcher": "TJ Coats",
       "batter": "Coltin Quagliano",
       "outcome": "Pop out",
       "count": "0-1",
@@ -1471,7 +1487,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Andy Leon",
+      "pitcher": "Jack Hedrick",
       "batter": "Vance Sheahan",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1498,7 +1514,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Andy Leon",
+      "pitcher": "Jack Hedrick",
       "batter": "Michael Torres",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1525,7 +1541,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Andy Leon",
+      "pitcher": "Jack Hedrick",
       "batter": "Jake Ogden",
       "outcome": "Single",
       "count": "0-1",
@@ -1552,13 +1568,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Andy Leon",
+      "pitcher": "Jack Hedrick",
       "batter": "Daniel Cuvet",
       "outcome": "Double",
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1579,14 +1597,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Andy Leon",
+      "pitcher": "Jack Hedrick",
       "batter": "Alex Sosa",
       "outcome": "Home run",
       "count": "1-2",
       "pitches": "FSFB",
       "rbi": true,
       "runs_scored": [
-        "Alex Sosa"
+        "Alex Sosa",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1608,7 +1627,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Andy Leon",
+      "pitcher": "Jack Hedrick",
       "batter": "Derek Williams",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1635,7 +1654,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "TJ Coats",
       "batter": "Brooks Perez",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1662,7 +1681,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Jack Durso",
       "batter": "Adam Troch",
       "outcome": "Single",
       "count": "1-2",
@@ -1689,7 +1708,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Jack Durso",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1704,8 +1723,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Adam Troch",
-        "2B": null,
+        "1B": null,
+        "2B": "Adam Troch",
         "3B": null
       },
       "score": {
@@ -1716,7 +1735,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Jack Durso",
       "batter": "Tyler Albright",
       "outcome": "Walk",
       "count": "3-2",
@@ -1726,13 +1745,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Adam Troch",
-        "2B": null,
+        "1B": null,
+        "2B": "Adam Troch",
         "3B": null
       },
       "runners_after": {
         "1B": "Tyler Albright",
-        "2B": null,
+        "2B": "Adam Troch",
         "3B": null
       },
       "score": {
@@ -1743,7 +1762,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1754,12 +1773,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Tyler Albright",
-        "2B": null,
+        "2B": "Adam Troch",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Albright",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Albright",
         "3B": null
       },
       "score": {
@@ -1770,22 +1789,25 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "Collin Anderson",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tyler Albright",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Albright",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Albright",
+        "1B": null,
         "2B": "Collin Anderson",
         "3B": null
       },
@@ -1797,7 +1819,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1807,14 +1829,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tyler Albright",
+        "1B": null,
         "2B": "Collin Anderson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Albright",
-        "2B": "Collin Anderson",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Collin Anderson"
       },
       "score": {
         "away": 9,
@@ -1824,7 +1846,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "Jake Lambdin",
       "outcome": "Walk",
       "count": "3-2",
@@ -1834,14 +1856,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tyler Albright",
-        "2B": "Collin Anderson",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Collin Anderson"
       },
       "runners_after": {
         "1B": "Jake Lambdin",
-        "2B": "Collin Anderson",
-        "3B": null
+        "2B": null,
+        "3B": "Collin Anderson"
       },
       "score": {
         "away": 9,
@@ -1851,7 +1873,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1862,13 +1884,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Jake Lambdin",
-        "2B": "Collin Anderson",
-        "3B": null
+        "2B": null,
+        "3B": "Collin Anderson"
       },
       "runners_after": {
-        "1B": "Jake Lambdin",
-        "2B": "Collin Anderson",
-        "3B": null
+        "1B": null,
+        "2B": "Jake Lambdin",
+        "3B": "Collin Anderson"
       },
       "score": {
         "away": 9,
@@ -1878,7 +1900,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "Kaden Smith",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1888,14 +1910,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jake Lambdin",
-        "2B": "Collin Anderson",
-        "3B": null
+        "1B": null,
+        "2B": "Jake Lambdin",
+        "3B": "Collin Anderson"
       },
       "runners_after": {
-        "1B": "Jake Lambdin",
-        "2B": "Collin Anderson",
-        "3B": null
+        "1B": null,
+        "2B": "Jake Lambdin",
+        "3B": "Collin Anderson"
       },
       "score": {
         "away": 9,
@@ -1905,7 +1927,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Brixton Lofgren",
       "batter": "Matthew Strand",
       "outcome": "Hit by pitch",
       "count": "3-2",
@@ -1915,14 +1937,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jake Lambdin",
-        "2B": "Collin Anderson",
-        "3B": null
+        "1B": null,
+        "2B": "Jake Lambdin",
+        "3B": "Collin Anderson"
       },
       "runners_after": {
         "1B": "Matthew Strand",
-        "2B": "Collin Anderson",
-        "3B": null
+        "2B": "Jake Lambdin",
+        "3B": "Collin Anderson"
       },
       "score": {
         "away": 9,
@@ -1932,24 +1954,27 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Brixton Lofgren",
       "batter": "Ben Petrone",
       "outcome": "Single",
       "count": "3-1",
       "pitches": "BBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Matthew Strand",
-        "2B": "Collin Anderson",
-        "3B": null
+        "2B": "Jake Lambdin",
+        "3B": "Collin Anderson"
       },
       "runners_after": {
         "1B": "Ben Petrone",
-        "2B": "Collin Anderson",
-        "3B": null
+        "2B": "Jake Lambdin",
+        "3B": "Collin Anderson"
       },
       "score": {
         "away": 9,
@@ -1959,24 +1984,26 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Brixton Lofgren",
       "batter": "Coltin Quagliano",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Ben Petrone",
-        "2B": "Collin Anderson",
-        "3B": null
+        "2B": "Jake Lambdin",
+        "3B": "Collin Anderson"
       },
       "runners_after": {
         "1B": "Coltin Quagliano",
-        "2B": "Collin Anderson",
-        "3B": null
+        "2B": "Jake Lambdin",
+        "3B": "Collin Anderson"
       },
       "score": {
         "away": 9,
@@ -1986,7 +2013,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Brixton Lofgren",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1997,13 +2024,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Coltin Quagliano",
-        "2B": "Collin Anderson",
-        "3B": null
+        "2B": "Jake Lambdin",
+        "3B": "Collin Anderson"
       },
       "runners_after": {
-        "1B": "Coltin Quagliano",
-        "2B": "Collin Anderson",
-        "3B": null
+        "1B": null,
+        "2B": "Jake Lambdin",
+        "3B": "Coltin Quagliano"
       },
       "score": {
         "away": 9,
@@ -2013,7 +2040,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Brixton Lofgren",
       "batter": "Brooks Perez",
       "outcome": "Walk",
       "count": "3-1",
@@ -2023,14 +2050,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Coltin Quagliano",
-        "2B": "Collin Anderson",
-        "3B": null
+        "1B": null,
+        "2B": "Jake Lambdin",
+        "3B": "Coltin Quagliano"
       },
       "runners_after": {
         "1B": "Brooks Perez",
-        "2B": "Collin Anderson",
-        "3B": null
+        "2B": "Jake Lambdin",
+        "3B": "Coltin Quagliano"
       },
       "score": {
         "away": 9,
@@ -2040,24 +2067,26 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Brixton Lofgren",
       "batter": "Adam Troch",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Brooks Perez",
-        "2B": "Collin Anderson",
-        "3B": null
+        "2B": "Jake Lambdin",
+        "3B": "Coltin Quagliano"
       },
       "runners_after": {
         "1B": "Adam Troch",
-        "2B": "Collin Anderson",
-        "3B": null
+        "2B": "Jake Lambdin",
+        "3B": "Coltin Quagliano"
       },
       "score": {
         "away": 9,
@@ -2067,24 +2096,27 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Michael Fernandez",
       "batter": "Tyler Albright",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Adam Troch",
-        "2B": "Collin Anderson",
-        "3B": null
+        "2B": "Jake Lambdin",
+        "3B": "Coltin Quagliano"
       },
       "runners_after": {
         "1B": "Tyler Albright",
-        "2B": "Collin Anderson",
-        "3B": null
+        "2B": "Jake Lambdin",
+        "3B": "Coltin Quagliano"
       },
       "score": {
         "away": 9,
@@ -2094,24 +2126,26 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Michael Fernandez",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Tyler Albright"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Tyler Albright",
-        "2B": "Collin Anderson",
-        "3B": null
+        "2B": "Jake Lambdin",
+        "3B": "Coltin Quagliano"
       },
       "runners_after": {
-        "1B": "Tyler Albright",
-        "2B": "Collin Anderson",
-        "3B": null
+        "1B": null,
+        "2B": "Jake Lambdin",
+        "3B": "Coltin Quagliano"
       },
       "score": {
         "away": 9,
@@ -2121,7 +2155,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Andy Leon",
+      "pitcher": "Jack Hedrick",
       "batter": "Brylan West",
       "outcome": "Lineout",
       "count": "0-1",
@@ -2148,7 +2182,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Andy Leon",
+      "pitcher": "Jack Hedrick",
       "batter": "Alonzo Alvarez",
       "outcome": "Walk",
       "count": "3-2",
@@ -2175,7 +2209,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Andy Leon",
+      "pitcher": "Jack Hedrick",
       "batter": "Fabio Peralta",
       "outcome": "Single",
       "count": "0-0",
@@ -2202,7 +2236,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Andy Leon",
+      "pitcher": "Aiden O'Connell",
       "batter": "Vance Sheahan",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -2229,13 +2263,15 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Andy Leon",
+      "pitcher": "Aiden O'Connell",
       "batter": "Michael Torres",
       "outcome": "Fielder's choice",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2256,7 +2292,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Andy Leon",
+      "pitcher": "Aiden O'Connell",
       "batter": "Jake Ogden",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2283,7 +2319,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Michael Fernandez",
       "batter": "Collin Anderson",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2310,7 +2346,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Michael Fernandez",
       "batter": "Jake Lambdin",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2337,7 +2373,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Michael Fernandez",
       "batter": "Kaden Smith",
       "outcome": "Home run",
       "count": "1-1",
@@ -2366,7 +2402,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Michael Fernandez",
       "batter": "Matthew Strand",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2393,7 +2429,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Andy Leon",
+      "pitcher": "Aiden O'Connell",
       "batter": "Daniel Cuvet",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2420,7 +2456,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Andy Leon",
+      "pitcher": "Aiden O'Connell",
       "batter": "Alex Sosa",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2447,7 +2483,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Andy Leon",
+      "pitcher": "Aiden O'Connell",
       "batter": "Derek Williams",
       "outcome": "Hit by pitch",
       "count": "2-0",
@@ -2474,7 +2510,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Andy Leon",
+      "pitcher": "Aiden O'Connell",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2489,8 +2525,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Derek Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Derek Williams",
         "3B": null
       },
       "score": {
@@ -2501,7 +2537,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Andy Leon",
+      "pitcher": "Aiden O'Connell",
       "batter": "Brylan West",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2511,13 +2547,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Derek Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Derek Williams",
         "3B": null
       },
       "runners_after": {
-        "1B": "Derek Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Derek Williams",
         "3B": null
       },
       "score": {
@@ -2528,7 +2564,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Michael Fernandez",
       "batter": "Ben Petrone",
       "outcome": "Walk",
       "count": "3-1",
@@ -2555,7 +2591,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Michael Fernandez",
       "batter": "Michael DiMartini",
       "outcome": "\u2014",
       "count": null,
@@ -2582,7 +2618,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Michael Fernandez",
       "batter": "Coltin Quagliano",
       "outcome": "Reached on error",
       "count": "2-2",
@@ -2609,14 +2645,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Michael Fernandez",
       "batter": "Brooks Perez",
       "outcome": "Home run",
       "count": "1-2",
       "pitches": "SFB",
       "rbi": true,
       "runs_scored": [
-        "Brooks Perez"
+        "Brooks Perez",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,

@@ -3,7 +3,7 @@
   "date": "04/22/2026",
   "away_team": "San Francisco",
   "home_team": "California",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -132,8 +132,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "TJ Rogers",
-        "2B": null,
+        "1B": null,
+        "2B": "TJ Rogers",
         "3B": null
       },
       "score": {
@@ -154,13 +154,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "TJ Rogers",
-        "2B": null,
+        "1B": null,
+        "2B": "TJ Rogers",
         "3B": null
       },
       "runners_after": {
-        "1B": "TJ Rogers",
-        "2B": null,
+        "1B": null,
+        "2B": "TJ Rogers",
         "3B": null
       },
       "score": {
@@ -350,7 +350,7 @@
       "runners_after": {
         "1B": "Zach Nagy",
         "2B": null,
-        "3B": null
+        "3B": "Jayden Garrison"
       },
       "score": {
         "away": 1,
@@ -372,12 +372,12 @@
       "runners_before": {
         "1B": "Zach Nagy",
         "2B": null,
-        "3B": null
+        "3B": "Jayden Garrison"
       },
       "runners_after": {
         "1B": "Zach Nagy",
         "2B": null,
-        "3B": null
+        "3B": "Jayden Garrison"
       },
       "score": {
         "away": 1,
@@ -387,7 +387,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Cade Colombara",
       "batter": "Myles Kallinger",
       "outcome": "Flyout",
       "count": "2-0",
@@ -399,12 +399,12 @@
       "runners_before": {
         "1B": "Zach Nagy",
         "2B": null,
-        "3B": null
+        "3B": "Jayden Garrison"
       },
       "runners_after": {
         "1B": "Zach Nagy",
         "2B": null,
-        "3B": null
+        "3B": "Jayden Garrison"
       },
       "score": {
         "away": 1,
@@ -414,7 +414,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Thomas Gonzales",
       "batter": "Ethan Kodama",
       "outcome": "Single",
       "count": "0-1",
@@ -441,7 +441,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Thomas Gonzales",
       "batter": "Joshua Hanson",
       "outcome": "Walk",
       "count": "3-1",
@@ -457,7 +457,7 @@
       },
       "runners_after": {
         "1B": "Joshua Hanson",
-        "2B": null,
+        "2B": "Ethan Kodama",
         "3B": null
       },
       "score": {
@@ -468,7 +468,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Thomas Gonzales",
       "batter": "Gannon Snyder",
       "outcome": "\u2014",
       "count": "0-1",
@@ -479,13 +479,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Joshua Hanson",
-        "2B": null,
+        "2B": "Ethan Kodama",
         "3B": null
       },
       "runners_after": {
-        "1B": "Joshua Hanson",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Joshua Hanson",
+        "3B": "Ethan Kodama"
       },
       "score": {
         "away": 1,
@@ -495,24 +495,26 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Thomas Gonzales",
       "batter": "Kalen Applefield",
       "outcome": "Groundout",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ethan Kodama"
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Joshua Hanson",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Joshua Hanson",
+        "3B": "Ethan Kodama"
       },
       "runners_after": {
-        "1B": "Joshua Hanson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Joshua Hanson"
       },
       "score": {
         "away": 1,
@@ -522,7 +524,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Thomas Gonzales",
       "batter": "Taichi Nakao",
       "outcome": "Lineout",
       "count": "0-0",
@@ -532,14 +534,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Joshua Hanson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Joshua Hanson"
       },
       "runners_after": {
-        "1B": "Joshua Hanson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Joshua Hanson"
       },
       "score": {
         "away": 1,
@@ -549,7 +551,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Cade Colombara",
       "batter": "Isaiah Landry",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -576,7 +578,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Cade Colombara",
       "batter": "Eddison Esquivel",
       "outcome": "Groundout",
       "count": "1-1",
@@ -603,7 +605,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Cade Colombara",
       "batter": "TJ Rogers",
       "outcome": "Groundout",
       "count": "0-0",
@@ -630,7 +632,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Thomas Gonzales",
       "batter": "Hideki Prather",
       "outcome": "Walk",
       "count": "3-1",
@@ -657,7 +659,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Thomas Gonzales",
       "batter": "Jett Kenady",
       "outcome": "Pop out",
       "count": "0-1",
@@ -684,7 +686,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Thomas Gonzales",
       "batter": "Carl Schmidt",
       "outcome": "Fielder's choice",
       "count": "0-0",
@@ -711,7 +713,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Thomas Gonzales",
       "batter": "Cade Campbell",
       "outcome": "Walk",
       "count": "3-2",
@@ -727,7 +729,7 @@
       },
       "runners_after": {
         "1B": "Cade Campbell",
-        "2B": null,
+        "2B": "Carl Schmidt",
         "3B": null
       },
       "score": {
@@ -738,7 +740,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Thomas Gonzales",
       "batter": "Ethan Kodama",
       "outcome": "Flyout",
       "count": "0-0",
@@ -749,12 +751,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Cade Campbell",
-        "2B": null,
+        "2B": "Carl Schmidt",
         "3B": null
       },
       "runners_after": {
         "1B": "Cade Campbell",
-        "2B": null,
+        "2B": "Carl Schmidt",
         "3B": null
       },
       "score": {
@@ -765,7 +767,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Duncan Russell",
       "batter": "Brendan Burke",
       "outcome": "Walk",
       "count": "3-0",
@@ -792,7 +794,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Duncan Russell",
       "batter": "Trevor Busby",
       "outcome": "Single",
       "count": "1-2",
@@ -808,7 +810,7 @@
       },
       "runners_after": {
         "1B": "Trevor Busby",
-        "2B": null,
+        "2B": "Brendan Burke",
         "3B": null
       },
       "score": {
@@ -819,7 +821,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Duncan Russell",
       "batter": "Jayden Garrison",
       "outcome": "Infield fly",
       "count": "2-2",
@@ -830,12 +832,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Trevor Busby",
-        "2B": null,
+        "2B": "Brendan Burke",
         "3B": null
       },
       "runners_after": {
         "1B": "Trevor Busby",
-        "2B": null,
+        "2B": "Brendan Burke",
         "3B": null
       },
       "score": {
@@ -846,7 +848,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Duncan Russell",
       "batter": "Zach Nagy",
       "outcome": "Infield fly",
       "count": "1-1",
@@ -857,12 +859,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Trevor Busby",
-        "2B": null,
+        "2B": "Brendan Burke",
         "3B": null
       },
       "runners_after": {
         "1B": "Trevor Busby",
-        "2B": null,
+        "2B": "Brendan Burke",
         "3B": null
       },
       "score": {
@@ -873,7 +875,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Duncan Russell",
       "batter": "Tino Vasell",
       "outcome": "Single",
       "count": "1-1",
@@ -884,7 +886,7 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Trevor Busby",
-        "2B": null,
+        "2B": "Brendan Burke",
         "3B": null
       },
       "runners_after": {
@@ -900,7 +902,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Magnus Nelson",
       "batter": "Joshua Hanson",
       "outcome": "Groundout",
       "count": "0-1",
@@ -927,7 +929,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Magnus Nelson",
       "batter": "Gannon Snyder",
       "outcome": "Flyout",
       "count": "2-2",
@@ -954,7 +956,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Magnus Nelson",
       "batter": "Kalen Applefield",
       "outcome": "Single",
       "count": "0-0",
@@ -981,7 +983,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Magnus Nelson",
       "batter": "Taichi Nakao",
       "outcome": "Single",
       "count": "0-0",
@@ -997,7 +999,7 @@
       },
       "runners_after": {
         "1B": "Taichi Nakao",
-        "2B": null,
+        "2B": "Kalen Applefield",
         "3B": null
       },
       "score": {
@@ -1008,7 +1010,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Magnus Nelson",
       "batter": "Hideki Prather",
       "outcome": "Walk",
       "count": "3-1",
@@ -1019,13 +1021,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Taichi Nakao",
-        "2B": null,
+        "2B": "Kalen Applefield",
         "3B": null
       },
       "runners_after": {
         "1B": "Hideki Prather",
-        "2B": null,
-        "3B": null
+        "2B": "Taichi Nakao",
+        "3B": "Kalen Applefield"
       },
       "score": {
         "away": 1,
@@ -1035,23 +1037,25 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Magnus Nelson",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kalen Applefield"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Hideki Prather",
-        "2B": null,
-        "3B": null
+        "2B": "Taichi Nakao",
+        "3B": "Kalen Applefield"
       },
       "runners_after": {
         "1B": "Hideki Prather",
-        "2B": null,
+        "2B": "Taichi Nakao",
         "3B": null
       },
       "score": {
@@ -1062,7 +1066,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Magnus Nelson",
       "batter": "Jett Kenady",
       "outcome": "Pop out",
       "count": "1-3",
@@ -1073,12 +1077,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Hideki Prather",
-        "2B": null,
+        "2B": "Taichi Nakao",
         "3B": null
       },
       "runners_after": {
         "1B": "Hideki Prather",
-        "2B": null,
+        "2B": "Taichi Nakao",
         "3B": null
       },
       "score": {
@@ -1089,7 +1093,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Trent Roach",
       "batter": "Myles Kallinger",
       "outcome": "Lineout",
       "count": "1-2",
@@ -1116,7 +1120,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Trent Roach",
       "batter": "Isaiah Landry",
       "outcome": "Groundout",
       "count": "3-1",
@@ -1143,7 +1147,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Trent Roach",
       "batter": "Eddison Esquivel",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1170,7 +1174,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Alex Gomez",
       "batter": "Carl Schmidt",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1197,7 +1201,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Alex Gomez",
       "batter": "Cade Campbell",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1224,7 +1228,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Alex Gomez",
       "batter": "Ethan Kodama",
       "outcome": "Walk",
       "count": "3-1",
@@ -1251,7 +1255,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Alex Gomez",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1266,8 +1270,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethan Kodama",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethan Kodama",
         "3B": null
       },
       "score": {
@@ -1278,7 +1282,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Alex Gomez",
       "batter": "Ethan Kodama",
       "outcome": "\u2014",
       "count": null,
@@ -1288,13 +1292,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ethan Kodama",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethan Kodama",
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethan Kodama",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethan Kodama",
         "3B": null
       },
       "score": {
@@ -1305,7 +1309,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Jett Wright",
       "batter": "TJ Rogers",
       "outcome": "Walk",
       "count": "3-1",
@@ -1332,7 +1336,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Jett Wright",
       "batter": "Brendan Burke",
       "outcome": "Walk",
       "count": "3-2",
@@ -1348,7 +1352,7 @@
       },
       "runners_after": {
         "1B": "Brendan Burke",
-        "2B": null,
+        "2B": "TJ Rogers",
         "3B": null
       },
       "score": {
@@ -1359,7 +1363,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Jett Wright",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1370,13 +1374,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Brendan Burke",
-        "2B": null,
+        "2B": "TJ Rogers",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brendan Burke",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Brendan Burke",
+        "3B": "TJ Rogers"
       },
       "score": {
         "away": 1,
@@ -1386,23 +1390,25 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Jett Wright",
       "batter": "Trevor Busby",
       "outcome": "Lineout",
       "count": "3-1",
       "pitches": "KBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "TJ Rogers"
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Brendan Burke",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Brendan Burke",
+        "3B": "TJ Rogers"
       },
       "runners_after": {
-        "1B": "Brendan Burke",
-        "2B": null,
+        "1B": null,
+        "2B": "Brendan Burke",
         "3B": null
       },
       "score": {
@@ -1413,7 +1419,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Jett Wright",
       "batter": "Jayden Garrison",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1423,13 +1429,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brendan Burke",
-        "2B": null,
+        "1B": null,
+        "2B": "Brendan Burke",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brendan Burke",
-        "2B": null,
+        "1B": null,
+        "2B": "Brendan Burke",
         "3B": null
       },
       "score": {
@@ -1440,7 +1446,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Jett Wright",
       "batter": "Zach Nagy",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1450,13 +1456,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brendan Burke",
-        "2B": null,
+        "1B": null,
+        "2B": "Brendan Burke",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brendan Burke",
-        "2B": null,
+        "1B": null,
+        "2B": "Brendan Burke",
         "3B": null
       },
       "score": {
@@ -1467,7 +1473,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Alex Gomez",
       "batter": "Joshua Hanson",
       "outcome": "Walk",
       "count": "3-1",
@@ -1494,7 +1500,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Alex Gomez",
       "batter": "Gannon Snyder",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1521,7 +1527,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Alex Gomez",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1536,8 +1542,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Joshua Hanson",
-        "2B": null,
+        "1B": null,
+        "2B": "Joshua Hanson",
         "3B": null
       },
       "score": {
@@ -1548,7 +1554,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Alex Gomez",
       "batter": "Kalen Applefield",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1558,14 +1564,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Joshua Hanson",
-        "2B": null,
+        "1B": null,
+        "2B": "Joshua Hanson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Joshua Hanson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Joshua Hanson"
       },
       "score": {
         "away": 2,
@@ -1575,19 +1581,21 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Alex Gomez",
       "batter": "Taichi Nakao",
       "outcome": "Reached on error",
       "count": "3-2",
       "pitches": "KBBFFBF",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Joshua Hanson"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Joshua Hanson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Joshua Hanson"
       },
       "runners_after": {
         "1B": "Taichi Nakao",
@@ -1602,7 +1610,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Gino Rossi",
       "batter": "Hideki Prather",
       "outcome": "Fielder's choice",
       "count": "2-1",
@@ -1629,7 +1637,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Take Kreis",
       "batter": "Tino Vasell",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1656,7 +1664,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Take Kreis",
       "batter": "Myles Kallinger",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1683,7 +1691,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Take Kreis",
       "batter": "Isaiah Landry",
       "outcome": "Single",
       "count": "3-2",
@@ -1710,7 +1718,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Take Kreis",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1725,8 +1733,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Isaiah Landry",
-        "2B": null,
+        "1B": null,
+        "2B": "Isaiah Landry",
         "3B": null
       },
       "score": {
@@ -1737,7 +1745,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Take Kreis",
       "batter": "Eddison Esquivel",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1747,13 +1755,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Isaiah Landry",
-        "2B": null,
+        "1B": null,
+        "2B": "Isaiah Landry",
         "3B": null
       },
       "runners_after": {
-        "1B": "Isaiah Landry",
-        "2B": null,
+        "1B": null,
+        "2B": "Isaiah Landry",
         "3B": null
       },
       "score": {
@@ -1764,7 +1772,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Gino Rossi",
       "batter": "Jett Kenady",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1791,7 +1799,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Gino Rossi",
       "batter": "Carl Schmidt",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1818,7 +1826,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Gino Rossi",
       "batter": "Cade Campbell",
       "outcome": "Single",
       "count": "1-2",
@@ -1845,7 +1853,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Gino Rossi",
       "batter": "Ethan Kodama",
       "outcome": "Walk",
       "count": "3-0",
@@ -1861,7 +1869,7 @@
       },
       "runners_after": {
         "1B": "Ethan Kodama",
-        "2B": null,
+        "2B": "Cade Campbell",
         "3B": null
       },
       "score": {
@@ -1872,7 +1880,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Jake Andreas",
       "batter": "Joshua Hanson",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1883,12 +1891,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Ethan Kodama",
-        "2B": null,
+        "2B": "Cade Campbell",
         "3B": null
       },
       "runners_after": {
         "1B": "Ethan Kodama",
-        "2B": null,
+        "2B": "Cade Campbell",
         "3B": null
       },
       "score": {
@@ -1899,7 +1907,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Take Kreis",
       "batter": "TJ Rogers",
       "outcome": "Foul out",
       "count": "1-0",
@@ -1926,7 +1934,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Take Kreis",
       "batter": "Brendan Burke",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1953,7 +1961,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Take Kreis",
       "batter": "Trevor Busby",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1980,7 +1988,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Jake Andreas",
       "batter": "Gannon Snyder",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2007,7 +2015,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Jake Andreas",
       "batter": "Kalen Applefield",
       "outcome": "Groundout",
       "count": "1-0",
@@ -2034,7 +2042,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Jake Andreas",
       "batter": "Taichi Nakao",
       "outcome": "Double",
       "count": "2-0",
@@ -2061,7 +2069,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Chris Byhre",
       "batter": "Hideki Prather",
       "outcome": "Pop out",
       "count": "3-2",
@@ -2088,7 +2096,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Take Kreis",
       "batter": "Jayden Garrison",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2115,7 +2123,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Take Kreis",
       "batter": "Wyatt Davis",
       "outcome": "Single",
       "count": "1-0",
@@ -2142,7 +2150,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Take Kreis",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2169,7 +2177,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Take Kreis",
       "batter": "Tino Vasell",
       "outcome": "Single",
       "count": "2-2",
@@ -2196,13 +2204,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Ryan Spalliero",
       "batter": "Myles Kallinger",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -2211,8 +2221,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tino Vasell",
-        "2B": null,
+        "1B": null,
+        "2B": "Tino Vasell",
         "3B": null
       },
       "score": {
@@ -2223,7 +2233,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Ryan Spalliero",
       "batter": "Isaiah Landry",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2233,13 +2243,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Tino Vasell",
-        "2B": null,
+        "1B": null,
+        "2B": "Tino Vasell",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tino Vasell",
-        "2B": null,
+        "1B": null,
+        "2B": "Tino Vasell",
         "3B": null
       },
       "score": {
@@ -2250,7 +2260,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Chris Byhre",
       "batter": "Jett Kenady",
       "outcome": "Pop out",
       "count": "0-0",
@@ -2277,7 +2287,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Chris Byhre",
       "batter": "Carl Schmidt",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2304,7 +2314,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Paul Wheeler",
       "batter": "Cade Campbell",
       "outcome": "Flyout",
       "count": "3-1",
@@ -2331,7 +2341,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Ryan Spalliero",
       "batter": "Eddison Esquivel",
       "outcome": "Single",
       "count": "0-0",
@@ -2358,7 +2368,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Ryan Spalliero",
       "batter": "TJ Rogers",
       "outcome": "Single",
       "count": "2-0",
@@ -2374,7 +2384,7 @@
       },
       "runners_after": {
         "1B": "TJ Rogers",
-        "2B": null,
+        "2B": "Eddison Esquivel",
         "3B": null
       },
       "score": {
@@ -2385,7 +2395,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Ryan Spalliero",
       "batter": "Brendan Burke",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2396,12 +2406,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "TJ Rogers",
-        "2B": null,
+        "2B": "Eddison Esquivel",
         "3B": null
       },
       "runners_after": {
         "1B": "TJ Rogers",
-        "2B": null,
+        "2B": "Eddison Esquivel",
         "3B": null
       },
       "score": {
@@ -2412,7 +2422,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Ethan Foley",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2423,13 +2433,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "TJ Rogers",
-        "2B": null,
+        "2B": "Eddison Esquivel",
         "3B": null
       },
       "runners_after": {
-        "1B": "TJ Rogers",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "TJ Rogers",
+        "3B": "Eddison Esquivel"
       },
       "score": {
         "away": 3,
@@ -2439,7 +2449,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Ethan Foley",
       "batter": "Trevor Busby",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2449,14 +2459,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "TJ Rogers",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "TJ Rogers",
+        "3B": "Eddison Esquivel"
       },
       "runners_after": {
-        "1B": "TJ Rogers",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "TJ Rogers",
+        "3B": "Eddison Esquivel"
       },
       "score": {
         "away": 3,
@@ -2466,7 +2476,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Jordy Lopez",
+      "pitcher": "Ethan Foley",
       "batter": "Jayden Garrison",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2476,14 +2486,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "TJ Rogers",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "TJ Rogers",
+        "3B": "Eddison Esquivel"
       },
       "runners_after": {
-        "1B": "TJ Rogers",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "TJ Rogers",
+        "3B": "Eddison Esquivel"
       },
       "score": {
         "away": 3,
@@ -2493,7 +2503,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Paul Wheeler",
       "batter": "Ethan Kodama",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -2520,7 +2530,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Paul Wheeler",
       "batter": "Joshua Hanson",
       "outcome": "Walk",
       "count": "3-0",
@@ -2536,7 +2546,7 @@
       },
       "runners_after": {
         "1B": "Joshua Hanson",
-        "2B": null,
+        "2B": "Ethan Kodama",
         "3B": null
       },
       "score": {
@@ -2547,7 +2557,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Paul Wheeler",
       "batter": "Gannon Snyder",
       "outcome": "\u2014",
       "count": "0-0",
@@ -2558,13 +2568,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Joshua Hanson",
-        "2B": null,
+        "2B": "Ethan Kodama",
         "3B": null
       },
       "runners_after": {
-        "1B": "Joshua Hanson",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Joshua Hanson",
+        "3B": "Ethan Kodama"
       },
       "score": {
         "away": 3,
@@ -2574,7 +2584,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "Paul Wheeler",
       "batter": "Kalen Applefield",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -2584,14 +2594,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Joshua Hanson",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Joshua Hanson",
+        "3B": "Ethan Kodama"
       },
       "runners_after": {
         "1B": "Kalen Applefield",
-        "2B": null,
-        "3B": null
+        "2B": "Joshua Hanson",
+        "3B": "Ethan Kodama"
       },
       "score": {
         "away": 3,
@@ -2601,24 +2611,26 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Alan Gonzalez",
+      "pitcher": "",
       "batter": "Taichi Nakao",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ethan Kodama"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Kalen Applefield",
-        "2B": null,
-        "3B": null
+        "2B": "Joshua Hanson",
+        "3B": "Ethan Kodama"
       },
       "runners_after": {
         "1B": "Taichi Nakao",
-        "2B": null,
-        "3B": null
+        "2B": "Kalen Applefield",
+        "3B": "Joshua Hanson"
       },
       "score": {
         "away": 3,

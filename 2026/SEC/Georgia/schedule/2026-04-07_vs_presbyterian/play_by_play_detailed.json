@@ -3,7 +3,7 @@
   "date": "04/07/2026",
   "away_team": "Presbyterian",
   "home_team": "Georgia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -94,7 +94,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -359,6 +361,33 @@
     {
       "inning": "Bottom 2",
       "pitcher": "Jeremiah Hampton",
+      "batter": "HAMPTON, J. to p for MCGREGOR, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 0
+      },
+      "description": "HAMPTON, J. to p for MCGREGOR, T.."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Jeremiah Hampton",
       "batter": "Brennan Hudson",
       "outcome": "Walk",
       "count": "3-1",
@@ -474,7 +503,9 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -495,7 +526,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Jeremiah Hampton",
+      "pitcher": "Mason McDaniel",
       "batter": "Tre Phelps",
       "outcome": "Walk",
       "count": "3-1",
@@ -519,6 +550,33 @@
         "home": 2
       },
       "description": "Phelps walked (3-1 BBKBB): Johnson, Col advanced to second: Black advanced to third."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Mason McDaniel",
+      "batter": "MCDANIEL, M. to p for HAMPTON, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Tre Phelps",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Tre Phelps",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 2
+      },
+      "description": "MCDANIEL, M. to p for HAMPTON, J.."
     },
     {
       "inning": "Bottom 2",
@@ -557,7 +615,10 @@
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -638,7 +699,9 @@
       "count": "1-2",
       "pitches": "KBS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -692,7 +755,10 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -713,7 +779,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Mason McDaniel",
+      "pitcher": "Brooks Chamberlin",
       "batter": "Ryan Black",
       "outcome": "Walk",
       "count": "3-1",
@@ -740,7 +806,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Mason McDaniel",
+      "pitcher": "Brooks Chamberlin",
       "batter": "Cole Johnson",
       "outcome": "Walk",
       "count": "3-1",
@@ -768,13 +834,43 @@
     {
       "inning": "Bottom 2",
       "pitcher": "Brooks Chamberlin",
+      "batter": "CHAMBERLIN, to p for MCDANIEL, M..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Cole Johnson",
+        "2B": "Daniel Jackson",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Cole Johnson",
+        "2B": "Daniel Jackson",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 8
+      },
+      "description": "CHAMBERLIN, to p for MCDANIEL, M.."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Brooks Chamberlin",
       "batter": "Tre Phelps",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Tre Phelps"
+        "Tre Phelps",
+        null,
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -796,7 +892,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Brooks Chamberlin",
+      "pitcher": "Eli Bowery",
       "batter": "Daniel Jackson",
       "outcome": "Walk",
       "count": "3-1",
@@ -823,14 +919,15 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Brooks Chamberlin",
+      "pitcher": "Eli Bowery",
       "batter": "Michael O'Shaughnessy",
       "outcome": "Home run",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Michael O'Shaughnessy"
+        "Michael O'Shaughnessy",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -852,7 +949,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Brooks Chamberlin",
+      "pitcher": "Eli Bowery",
       "batter": "Rylan Lujo",
       "outcome": "Groundout",
       "count": "1-0",
@@ -876,6 +973,33 @@
         "home": 14
       },
       "description": "Lujo grounded out to (1-0 B)."
+    },
+    {
+      "inning": "Top 3",
+      "pitcher": "Jordan Stephens",
+      "batter": "Stephens, J. to p for Jameson.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 14
+      },
+      "description": "Stephens, J. to p for Jameson."
     },
     {
       "inning": "Top 3",
@@ -987,7 +1111,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jordan Stephens",
+      "pitcher": "Luke Wiltrakis",
       "batter": "Emory Guilford",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1015,6 +1139,33 @@
     {
       "inning": "Bottom 3",
       "pitcher": "Eli Bowery",
+      "batter": "BOWERY, E. to p for CHAMBERLIN,.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 14
+      },
+      "description": "BOWERY, E. to p for CHAMBERLIN,."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Bauer Burkart",
       "batter": "Kenny Ishikawa",
       "outcome": "Walk",
       "count": "3-0",
@@ -1041,7 +1192,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Bowery",
+      "pitcher": "Bauer Burkart",
       "batter": "Brennan Hudson",
       "outcome": "Walk",
       "count": "3-2",
@@ -1068,13 +1219,16 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Bowery",
+      "pitcher": "Bauer Burkart",
       "batter": "Ryan Wynn",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1095,7 +1249,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Bowery",
+      "pitcher": "Bauer Burkart",
       "batter": "Ty Peeples",
       "outcome": "Walk",
       "count": "3-1",
@@ -1119,6 +1273,33 @@
         "home": 16
       },
       "description": "Peeples walked (3-1 BKBBB)."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Bauer Burkart",
+      "batter": "BURKART, B. to p for BOWERY, E..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Ty Peeples",
+        "2B": "Ryan Wynn",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ty Peeples",
+        "2B": "Ryan Wynn",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 16
+      },
+      "description": "BURKART, B. to p for BOWERY, E.."
     },
     {
       "inning": "Bottom 3",
@@ -1149,13 +1330,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Bauer Burkart",
+      "pitcher": "Cole Morgan",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Cole Johnson"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1164,7 +1347,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cole Johnson",
+        "1B": null,
         "2B": "Ryan Wynn",
         "3B": null
       },
@@ -1176,7 +1359,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Bauer Burkart",
+      "pitcher": "Cole Morgan",
       "batter": "Henry Allen",
       "outcome": "Walk",
       "count": "3-0",
@@ -1186,7 +1369,7 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Cole Johnson",
+        "1B": null,
         "2B": "Ryan Wynn",
         "3B": null
       },
@@ -1203,13 +1386,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Bauer Burkart",
+      "pitcher": "Cole Morgan",
       "batter": "Cole Koniarsky",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "KKBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1230,13 +1415,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Bauer Burkart",
+      "pitcher": "Cole Morgan",
       "batter": "Jordy Oriach",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1257,13 +1444,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Bauer Burkart",
+      "pitcher": "Cole Morgan",
       "batter": "Scott Newman",
       "outcome": "Fielder's choice",
       "count": "3-2",
       "pitches": "KBFBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1284,14 +1473,16 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Bauer Burkart",
+      "pitcher": "Cole Morgan",
       "batter": "Jack Arcamone",
       "outcome": "Home run",
       "count": "2-2",
       "pitches": "FBBF",
       "rbi": true,
       "runs_scored": [
-        "Jack Arcamone"
+        "Jack Arcamone",
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1310,6 +1501,33 @@
         "home": 23
       },
       "description": "Arcamone homered to center field, 3 RBI (2-2 FBBF): Newman scored: Koniarsky scored."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Cole Morgan",
+      "batter": "MORGAN, C. to p for BURKART, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Scott Newman",
+        "2B": "Ryan Wynn",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Scott Newman",
+        "2B": "Ryan Wynn",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 23
+      },
+      "description": "MORGAN, C. to p for BURKART, B.."
     },
     {
       "inning": "Bottom 3",
@@ -1421,7 +1639,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jordan Stephens",
+      "pitcher": "Luke Wiltrakis",
       "batter": "Allen, He. to .",
       "outcome": "\u2014",
       "count": null,
@@ -1475,7 +1693,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Luke Wiltrakis",
+      "pitcher": "Jackson Peavy",
       "batter": "Mikah Conner",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1502,7 +1720,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Luke Wiltrakis",
+      "pitcher": "Jackson Peavy",
       "batter": "Ian Lindsay",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1610,7 +1828,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cole Morgan",
+      "pitcher": "Landon Nichols",
       "batter": "CONNER, M. to cf.",
       "outcome": "\u2014",
       "count": null,
@@ -1637,7 +1855,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cole Morgan",
+      "pitcher": "Landon Nichols",
       "batter": "Henry Allen",
       "outcome": "Lineout",
       "count": "1-2",
@@ -1664,7 +1882,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cole Morgan",
+      "pitcher": "Landon Nichols",
       "batter": "Cole Koniarsky",
       "outcome": "Home run",
       "count": "2-0",
@@ -1693,7 +1911,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cole Morgan",
+      "pitcher": "Landon Nichols",
       "batter": "Jordy Oriach",
       "outcome": "Walk",
       "count": "3-2",
@@ -1720,7 +1938,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cole Morgan",
+      "pitcher": "Landon Nichols",
       "batter": "Scott Newman",
       "outcome": "Single",
       "count": "1-2",
@@ -1747,13 +1965,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cole Morgan",
+      "pitcher": "Landon Nichols",
       "batter": "Jack Arcamone",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1774,7 +1994,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cole Morgan",
+      "pitcher": "Landon Nichols",
       "batter": "Brennan Hudson",
       "outcome": "Single",
       "count": "1-0",
@@ -1801,13 +2021,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cole Morgan",
+      "pitcher": "",
       "batter": "Ryan Wynn",
       "outcome": "Flyout",
       "count": "3-2",
       "pitches": "BBFBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1828,13 +2050,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cole Morgan",
+      "pitcher": "",
       "batter": "Ty Peeples",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1855,7 +2079,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cole Morgan",
+      "pitcher": "",
       "batter": "Cole Johnson",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1936,7 +2160,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jackson Peavy",
+      "pitcher": "Dylan Wood",
       "batter": "Andrew Albertus",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1963,7 +2187,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jackson Peavy",
+      "pitcher": "Dylan Wood",
       "batter": "Brody Linker",
       "outcome": "Foul out",
       "count": "2-1",
@@ -1990,7 +2214,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cole Morgan",
+      "pitcher": "",
       "batter": "LINKER, B. to ss.",
       "outcome": "\u2014",
       "count": null,
@@ -2017,7 +2241,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cole Morgan",
+      "pitcher": "",
       "batter": "TAYLOR, A. to for ROLLISON, M..",
       "outcome": "\u2014",
       "count": null,
@@ -2044,7 +2268,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cole Morgan",
+      "pitcher": "",
       "batter": "HYNEMAN, L. to c.",
       "outcome": "\u2014",
       "count": null,
@@ -2071,7 +2295,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Landon Nichols",
+      "pitcher": "",
+      "batter": "NICHOLS, L. to p for MORGAN, C..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 27
+      },
+      "description": "NICHOLS, L. to p for MORGAN, C.."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "",
       "batter": "Henry Allen",
       "outcome": "Home run",
       "count": "1-2",
@@ -2100,7 +2351,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Landon Nichols",
+      "pitcher": "",
       "batter": "Cole Koniarsky",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2127,7 +2378,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Landon Nichols",
+      "pitcher": "",
       "batter": "Jordy Oriach",
       "outcome": "Flyout",
       "count": "2-2",
@@ -2154,7 +2405,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Landon Nichols",
+      "pitcher": "",
       "batter": "Scott Newman",
       "outcome": "Flyout",
       "count": "2-1",
@@ -2178,6 +2429,33 @@
         "home": 28
       },
       "description": "Newman flied out to cf (2-1 BSB)."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Dylan Wood",
+      "batter": "Wood, Dylan to p for Peavy.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 28
+      },
+      "description": "Wood, Dylan to p for Peavy."
     },
     {
       "inning": "Top 6",
@@ -2250,8 +2528,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Emory Guilford",
-        "2B": null,
+        "1B": null,
+        "2B": "Emory Guilford",
         "3B": null
       },
       "score": {
@@ -2272,13 +2550,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Emory Guilford",
-        "2B": null,
+        "1B": null,
+        "2B": "Emory Guilford",
         "3B": null
       },
       "runners_after": {
-        "1B": "Emory Guilford",
-        "2B": null,
+        "1B": null,
+        "2B": "Emory Guilford",
         "3B": null
       },
       "score": {
@@ -2295,17 +2573,19 @@
       "count": "0-0",
       "pitches": "",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Emory Guilford",
-        "2B": null,
+        "1B": null,
+        "2B": "Emory Guilford",
         "3B": null
       },
       "runners_after": {
         "1B": "Mikah Conner",
-        "2B": null,
+        "2B": "Emory Guilford",
         "3B": null
       },
       "score": {
@@ -2327,12 +2607,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Mikah Conner",
-        "2B": null,
+        "2B": "Emory Guilford",
         "3B": null
       },
       "runners_after": {
         "1B": "Mikah Conner",
-        "2B": null,
+        "2B": "Emory Guilford",
         "3B": null
       },
       "score": {
@@ -2343,7 +2623,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Dylan Wood",
+      "pitcher": "Brad Pruett",
       "batter": "Ian Lindsay",
       "outcome": "Hit by pitch",
       "count": "3-2",
@@ -2354,12 +2634,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Mikah Conner",
-        "2B": null,
+        "2B": "Emory Guilford",
         "3B": null
       },
       "runners_after": {
         "1B": "Ian Lindsay",
-        "2B": null,
+        "2B": "Emory Guilford",
         "3B": null
       },
       "score": {
@@ -2370,7 +2650,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Dylan Wood",
+      "pitcher": "Brad Pruett",
       "batter": "Layton Hyneman",
       "outcome": "Walk",
       "count": "3-0",
@@ -2381,12 +2661,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Ian Lindsay",
-        "2B": null,
+        "2B": "Emory Guilford",
         "3B": null
       },
       "runners_after": {
         "1B": "Layton Hyneman",
-        "2B": null,
+        "2B": "Emory Guilford",
         "3B": null
       },
       "score": {
@@ -2397,23 +2677,25 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Dylan Wood",
+      "pitcher": "Brad Pruett",
       "batter": "Cam Mallo",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Layton Hyneman",
-        "2B": null,
+        "2B": "Emory Guilford",
         "3B": null
       },
       "runners_after": {
         "1B": "Cam Mallo",
-        "2B": null,
+        "2B": "Emory Guilford",
         "3B": null
       },
       "score": {
@@ -2424,7 +2706,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Dylan Wood",
+      "pitcher": "",
       "batter": "Andrew Albertus",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2435,12 +2717,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Cam Mallo",
-        "2B": null,
+        "2B": "Emory Guilford",
         "3B": null
       },
       "runners_after": {
         "1B": "Cam Mallo",
-        "2B": null,
+        "2B": "Emory Guilford",
         "3B": null
       },
       "score": {
@@ -2451,7 +2733,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Landon Nichols",
+      "pitcher": "",
       "batter": "Jack Arcamone",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2478,7 +2760,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Landon Nichols",
+      "pitcher": "",
       "batter": "Alexander Sifford",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2505,7 +2787,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Landon Nichols",
+      "pitcher": "",
       "batter": "Ryan Wynn",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2532,7 +2814,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brad Pruett",
+      "pitcher": "",
       "batter": "Brody Linker",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2559,7 +2841,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brad Pruett",
+      "pitcher": "",
       "batter": "Matthew Cannon",
       "outcome": "Groundout",
       "count": "1-0",
@@ -2586,7 +2868,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brad Pruett",
+      "pitcher": "",
       "batter": "Connor Bradley",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",

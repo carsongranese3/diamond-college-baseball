@@ -3,7 +3,7 @@
   "date": "05/14/2026",
   "away_team": "Georgia",
   "home_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -158,8 +158,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Mason McCraine",
-        "3B": null
+        "2B": null,
+        "3B": "Mason McCraine"
       },
       "score": {
         "away": 0,
@@ -175,18 +175,20 @@
       "count": "1-2",
       "pitches": "SKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Mason McCraine",
-        "3B": null
+        "2B": null,
+        "3B": "Mason McCraine"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Mason McCraine",
-        "3B": null
+        "2B": null,
+        "3B": "Mason McCraine"
       },
       "score": {
         "away": 0,
@@ -207,13 +209,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Mason McCraine",
-        "3B": null
+        "2B": null,
+        "3B": "Mason McCraine"
       },
       "runners_after": {
         "1B": "Chase Fralick",
-        "2B": "Mason McCraine",
-        "3B": null
+        "2B": null,
+        "3B": "Mason McCraine"
       },
       "score": {
         "away": 0,
@@ -234,13 +236,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Chase Fralick",
-        "2B": "Mason McCraine",
-        "3B": null
+        "2B": null,
+        "3B": "Mason McCraine"
       },
       "runners_after": {
         "1B": "Chris Rembert",
-        "2B": "Mason McCraine",
-        "3B": null
+        "2B": null,
+        "3B": "Mason McCraine"
       },
       "score": {
         "away": 0,
@@ -261,13 +263,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Chris Rembert",
-        "2B": "Mason McCraine",
-        "3B": null
+        "2B": null,
+        "3B": "Mason McCraine"
       },
       "runners_after": {
         "1B": "Chris Rembert",
-        "2B": "Mason McCraine",
-        "3B": null
+        "2B": null,
+        "3B": "Mason McCraine"
       },
       "score": {
         "away": 0,
@@ -670,8 +672,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -692,13 +694,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -1389,6 +1391,33 @@
     {
       "inning": "Top 7",
       "pitcher": "Jackson Sanders",
+      "batter": "Sanders, J. to p for Marciano, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 1
+      },
+      "description": "Sanders, J. to p for Marciano, J.."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Jackson Sanders",
       "batter": "Kolby Branch",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1847,7 +1876,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jackson Sanders",
+      "pitcher": "",
       "batter": "Tre Phelps",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",

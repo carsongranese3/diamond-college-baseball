@@ -3,7 +3,7 @@
   "date": "02/22/2026",
   "away_team": "Michigan St.",
   "home_team": "Texas",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -184,8 +184,8 @@
         "3B": "Ethan Mendoza"
       },
       "runners_after": {
-        "1B": "Adrian Rodriguez",
-        "2B": null,
+        "1B": null,
+        "2B": "Adrian Rodriguez",
         "3B": "Ethan Mendoza"
       },
       "score": {
@@ -206,13 +206,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Adrian Rodriguez",
-        "2B": null,
+        "1B": null,
+        "2B": "Adrian Rodriguez",
         "3B": "Ethan Mendoza"
       },
       "runners_after": {
         "1B": "Carson Tinney",
-        "2B": null,
+        "2B": "Adrian Rodriguez",
         "3B": "Ethan Mendoza"
       },
       "score": {
@@ -236,13 +236,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Carson Tinney",
-        "2B": null,
+        "2B": "Adrian Rodriguez",
         "3B": "Ethan Mendoza"
       },
       "runners_after": {
         "1B": "Jonah Williams",
         "2B": "Carson Tinney",
-        "3B": null
+        "3B": "Adrian Rodriguez"
       },
       "score": {
         "away": 0,
@@ -258,13 +258,15 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Adrian Rodriguez"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jonah Williams",
         "2B": "Carson Tinney",
-        "3B": null
+        "3B": "Adrian Rodriguez"
       },
       "runners_after": {
         "1B": null,
@@ -403,7 +405,7 @@
       },
       "runners_after": {
         "1B": "Dayton Murphy",
-        "2B": null,
+        "2B": "CJ Deckinga",
         "3B": null
       },
       "score": {
@@ -425,13 +427,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Dayton Murphy",
-        "2B": null,
+        "2B": "CJ Deckinga",
         "3B": null
       },
       "runners_after": {
         "1B": "Trent Rice",
-        "2B": null,
-        "3B": null
+        "2B": "Dayton Murphy",
+        "3B": "CJ Deckinga"
       },
       "score": {
         "away": 0,
@@ -452,13 +454,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Trent Rice",
-        "2B": null,
-        "3B": null
+        "2B": "Dayton Murphy",
+        "3B": "CJ Deckinga"
       },
       "runners_after": {
         "1B": "Trent Rice",
-        "2B": null,
-        "3B": null
+        "2B": "Dayton Murphy",
+        "3B": "CJ Deckinga"
       },
       "score": {
         "away": 0,
@@ -591,8 +593,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ryan McKay",
-        "2B": null,
+        "1B": null,
+        "2B": "Ryan McKay",
         "3B": null
       },
       "score": {
@@ -613,13 +615,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ryan McKay",
-        "2B": null,
+        "1B": null,
+        "2B": "Ryan McKay",
         "3B": null
       },
       "runners_after": {
-        "1B": "Ryan McKay",
-        "2B": null,
+        "1B": null,
+        "2B": "Ryan McKay",
         "3B": null
       },
       "score": {
@@ -640,13 +642,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Ryan McKay",
-        "2B": null,
+        "1B": null,
+        "2B": "Ryan McKay",
         "3B": null
       },
       "runners_after": {
-        "1B": "Ryan McKay",
-        "2B": null,
+        "1B": null,
+        "2B": "Ryan McKay",
         "3B": null
       },
       "score": {
@@ -1459,8 +1461,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethan Mendoza",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethan Mendoza",
         "3B": null
       },
       "score": {
@@ -1481,13 +1483,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Ethan Mendoza",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethan Mendoza",
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethan Mendoza",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethan Mendoza",
         "3B": null
       },
       "score": {
@@ -1603,6 +1605,33 @@
         "home": 4
       },
       "description": "Rice,T struck out swinging, out at first c to 1b (2-2 KBBKS)."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Brady Chambers",
+      "batter": "Chambers,B to p for Szczepanski.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 4
+      },
+      "description": "Chambers,B to p for Szczepanski."
     },
     {
       "inning": "Bottom 7",
@@ -1849,7 +1878,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brady Chambers",
+      "pitcher": "",
       "batter": "Pack",
       "outcome": "Flyout",
       "count": "0-0",

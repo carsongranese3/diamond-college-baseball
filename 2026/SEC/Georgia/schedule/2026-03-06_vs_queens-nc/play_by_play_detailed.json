@@ -3,7 +3,7 @@
   "date": "03/06/2026",
   "away_team": "Queens (NC)",
   "home_team": "Georgia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -283,7 +283,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -634,7 +636,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -661,7 +665,9 @@
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -688,7 +694,9 @@
       "count": "3-2",
       "pitches": "FBBKFBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -716,7 +724,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Brennan Hudson"
+        "Brennan Hudson",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1050,8 +1059,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Thomas Mathay",
-        "2B": null,
+        "1B": null,
+        "2B": "Thomas Mathay",
         "3B": null
       },
       "score": {
@@ -1072,14 +1081,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Thomas Mathay",
-        "2B": null,
+        "1B": null,
+        "2B": "Thomas Mathay",
         "3B": null
       },
       "runners_after": {
-        "1B": "Thomas Mathay",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Thomas Mathay"
       },
       "score": {
         "away": 1,
@@ -1095,16 +1104,18 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Thomas Mathay"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Thomas Mathay",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Thomas Mathay"
       },
       "runners_after": {
-        "1B": "Thomas Mathay",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1126,7 +1137,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Thomas Mathay",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1232,7 +1243,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1340,7 +1353,10 @@
       "count": "3-1",
       "pitches": "KBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1565,8 +1581,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -1587,13 +1603,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael O'Shaughnessy",
-        "2B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -1615,12 +1631,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Michael O'Shaughnessy",
-        "2B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael O'Shaughnessy",
-        "2B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -1637,17 +1653,19 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Michael O'Shaughnessy",
-        "2B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael O'Shaughnessy",
-        "2B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -1669,12 +1687,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Michael O'Shaughnessy",
-        "2B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael O'Shaughnessy",
-        "2B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -1782,8 +1800,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Avery Booker",
-        "3B": null
+        "2B": null,
+        "3B": "Avery Booker"
       },
       "score": {
         "away": 2,
@@ -1804,13 +1822,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Avery Booker",
-        "3B": null
+        "2B": null,
+        "3B": "Avery Booker"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Avery Booker",
-        "3B": null
+        "2B": null,
+        "3B": "Avery Booker"
       },
       "score": {
         "away": 2,
@@ -2117,7 +2135,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jack Clevidence",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2144,7 +2162,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jack Clevidence",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2171,7 +2189,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jack Clevidence",
+      "pitcher": "",
       "batter": "Michael O'Shaughnessy",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2198,14 +2216,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jack Clevidence",
+      "pitcher": "",
       "batter": "Henry Allen",
       "outcome": "Home run",
       "count": "1-1",
       "pitches": "BS",
       "rbi": true,
       "runs_scored": [
-        "Henry Allen"
+        "Henry Allen",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,

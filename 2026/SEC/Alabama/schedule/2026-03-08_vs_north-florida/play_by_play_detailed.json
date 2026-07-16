@@ -3,7 +3,7 @@
   "date": "03/08/2026",
   "away_team": "North Florida",
   "home_team": "Alabama",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -157,8 +157,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Justin Lebron",
-        "2B": null,
+        "1B": null,
+        "2B": "Justin Lebron",
         "3B": null
       },
       "score": {
@@ -179,13 +179,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Justin Lebron",
-        "2B": null,
+        "1B": null,
+        "2B": "Justin Lebron",
         "3B": null
       },
       "runners_after": {
         "1B": "Brady Neal",
-        "2B": null,
+        "2B": "Justin Lebron",
         "3B": null
       },
       "score": {
@@ -207,13 +207,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Brady Neal",
-        "2B": null,
+        "2B": "Justin Lebron",
         "3B": null
       },
       "runners_after": {
         "1B": null,
         "2B": "Brady Neal",
-        "3B": null
+        "3B": "Justin Lebron"
       },
       "score": {
         "away": 0,
@@ -235,12 +235,12 @@
       "runners_before": {
         "1B": null,
         "2B": "Brady Neal",
-        "3B": null
+        "3B": "Justin Lebron"
       },
       "runners_after": {
         "1B": "Jason Torres",
         "2B": "Brady Neal",
-        "3B": null
+        "3B": "Justin Lebron"
       },
       "score": {
         "away": 0,
@@ -256,13 +256,15 @@
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Justin Lebron"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jason Torres",
         "2B": "Brady Neal",
-        "3B": null
+        "3B": "Justin Lebron"
       },
       "runners_after": {
         "1B": "Andrew Purdy",
@@ -440,6 +442,33 @@
     {
       "inning": "Bottom 2",
       "pitcher": "Brandon Adams",
+      "batter": "ADAMS, B. to p for DIMINO, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Peyton Steele",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Peyton Steele",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "ADAMS, B. to p for DIMINO, J.."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Brandon Adams",
       "batter": "Brennan Holt",
       "outcome": "Walk",
       "count": "3-2",
@@ -564,8 +593,8 @@
         "3B": "Brennan Holt"
       },
       "runners_after": {
-        "1B": "Bryce Fowler",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Fowler",
         "3B": "Brennan Holt"
       },
       "score": {
@@ -586,13 +615,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Bryce Fowler",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Fowler",
         "3B": "Brennan Holt"
       },
       "runners_after": {
-        "1B": "Bryce Fowler",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Fowler",
         "3B": "Brennan Holt"
       },
       "score": {
@@ -728,8 +757,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Matthew Farner",
-        "2B": null,
+        "1B": null,
+        "2B": "Matthew Farner",
         "3B": null
       },
       "score": {
@@ -750,13 +779,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Matthew Farner",
-        "2B": null,
+        "1B": null,
+        "2B": "Matthew Farner",
         "3B": null
       },
       "runners_after": {
-        "1B": "Matthew Farner",
-        "2B": null,
+        "1B": null,
+        "2B": "Matthew Farner",
         "3B": null
       },
       "score": {
@@ -1179,7 +1208,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brandon Adams",
+      "pitcher": "Will Ross",
       "batter": "Peyton Steele",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1284,6 +1313,33 @@
         "home": 7
       },
       "description": "ALFORD, S. struck out swinging (0-2 FSS)."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Will Ross",
+      "batter": "ROSS, W. to p for ADAMS, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 7
+      },
+      "description": "ROSS, W. to p for ADAMS, B.."
     },
     {
       "inning": "Bottom 5",
@@ -1422,7 +1478,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Will Ross",
+      "pitcher": "Devin Diggs",
       "batter": "Jason Torres",
       "outcome": "Double",
       "count": "1-0",
@@ -1453,7 +1509,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Will Ross",
+      "pitcher": "Devin Diggs",
       "batter": "Andrew Purdy",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1562,6 +1618,33 @@
     {
       "inning": "Bottom 6",
       "pitcher": "Devin Diggs",
+      "batter": "DIGGS, D. to p for ROSS, W..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 10
+      },
+      "description": "DIGGS, D. to p for ROSS, W.."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Devin Diggs",
       "batter": "Justin Osterhouse",
       "outcome": "Flyout",
       "count": "3-1",
@@ -1615,7 +1698,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Devin Diggs",
+      "pitcher": "",
       "batter": "Brennan Holt",
       "outcome": "Single",
       "count": "1-1",
@@ -1642,7 +1725,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Devin Diggs",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1657,8 +1740,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brennan Holt",
-        "2B": null,
+        "1B": null,
+        "2B": "Brennan Holt",
         "3B": null
       },
       "score": {
@@ -1669,7 +1752,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Devin Diggs",
+      "pitcher": "",
       "batter": "Bryce Fowler",
       "outcome": "Home run",
       "count": "3-1",
@@ -1682,8 +1765,8 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brennan Holt",
-        "2B": null,
+        "1B": null,
+        "2B": "Brennan Holt",
         "3B": null
       },
       "runners_after": {
@@ -1699,7 +1782,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Devin Diggs",
+      "pitcher": "",
       "batter": "Justin Lebron",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1769,7 +1852,7 @@
       },
       "runners_after": {
         "1B": "Sean Benjamin",
-        "2B": null,
+        "2B": "Boone Hosey",
         "3B": null
       },
       "score": {
@@ -1791,13 +1874,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Sean Benjamin",
-        "2B": null,
+        "2B": "Boone Hosey",
         "3B": null
       },
       "runners_after": {
         "1B": "WITHERIN., C singled to center field (0-2 KF)",
-        "2B": null,
-        "3B": null
+        "2B": "Sean Benjamin",
+        "3B": "Boone Hosey"
       },
       "score": {
         "away": 1,
@@ -1813,18 +1896,20 @@
       "count": "2-2",
       "pitches": "KSBB",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Boone Hosey"
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "WITHERIN., C singled to center field (0-2 KF)",
-        "2B": null,
-        "3B": null
+        "2B": "Sean Benjamin",
+        "3B": "Boone Hosey"
       },
       "runners_after": {
-        "1B": "WITHERIN., C singled to center field (0-2 KF)",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Sean Benjamin"
       },
       "score": {
         "away": 2,
@@ -1844,14 +1929,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "WITHERIN., C singled to center field (0-2 KF)",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Sean Benjamin"
       },
       "runners_after": {
-        "1B": "WITHERIN., C singled to center field (0-2 KF)",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Sean Benjamin"
       },
       "score": {
         "away": 2,

@@ -3,7 +3,7 @@
   "date": "04/17/2026",
   "away_team": "Pittsburgh",
   "home_team": "Virginia Tech",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -375,8 +375,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethan Gibson",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethan Gibson",
         "3B": null
       },
       "score": {
@@ -393,16 +393,18 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ethan Gibson",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethan Gibson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethan Gibson",
+        "1B": null,
         "2B": "Owen Petrich",
         "3B": null
       },
@@ -424,12 +426,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Ethan Gibson",
+        "1B": null,
         "2B": "Owen Petrich",
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethan Gibson",
+        "1B": null,
         "2B": "Owen Petrich",
         "3B": null
       },
@@ -744,7 +746,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -852,7 +856,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -879,7 +885,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -954,13 +962,16 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "David Leslie",
       "batter": "Pete Daniel",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "BFFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -981,13 +992,16 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "David Leslie",
       "batter": "Ethan Ball",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "KSBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1008,7 +1022,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "David Leslie",
       "batter": "Henry Cooke",
       "outcome": "Walk",
       "count": "3-0",
@@ -1035,7 +1049,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "David Leslie",
       "batter": "Hudson Lutterman",
       "outcome": "Walk",
       "count": "3-2",
@@ -1062,13 +1076,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "David Leslie",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Hudson Lutterman"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1077,7 +1093,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Hudson Lutterman",
+        "1B": null,
         "2B": "Ethan Ball",
         "3B": null
       },
@@ -1089,7 +1105,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "David Leslie",
       "batter": "Sam Grube",
       "outcome": "Walk",
       "count": "3-0",
@@ -1099,7 +1115,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Hudson Lutterman",
+        "1B": null,
         "2B": "Ethan Ball",
         "3B": null
       },
@@ -1116,7 +1132,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "David Leslie",
       "batter": "Nick Locurto",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1143,13 +1159,16 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "David Leslie",
       "batter": "Ethan Gibson",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BBFK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1170,7 +1189,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1185,9 +1204,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethan Gibson",
+        "1B": null,
         "2B": "Ethan Ball",
-        "3B": null
+        "3B": "Ethan Gibson"
       },
       "score": {
         "away": 1,
@@ -1197,7 +1216,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": "Owen Petrich",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1207,14 +1226,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Ethan Gibson",
+        "1B": null,
         "2B": "Ethan Ball",
-        "3B": null
+        "3B": "Ethan Gibson"
       },
       "runners_after": {
-        "1B": "Ethan Gibson",
+        "1B": null,
         "2B": "Ethan Ball",
-        "3B": null
+        "3B": "Ethan Gibson"
       },
       "score": {
         "away": 1,
@@ -1305,7 +1324,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": "Sam Gates",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1332,7 +1351,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": "Pete Daniel",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1359,7 +1378,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": "Ethan Ball",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1457,8 +1476,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lorenzo Carrier",
-        "2B": null,
+        "1B": null,
+        "2B": "Lorenzo Carrier",
         "3B": null
       },
       "score": {
@@ -1479,13 +1498,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Lorenzo Carrier",
-        "2B": null,
+        "1B": null,
+        "2B": "Lorenzo Carrier",
         "3B": null
       },
       "runners_after": {
-        "1B": "Lorenzo Carrier",
-        "2B": null,
+        "1B": null,
+        "2B": "Lorenzo Carrier",
         "3B": null
       },
       "score": {
@@ -1506,13 +1525,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Lorenzo Carrier",
-        "2B": null,
+        "1B": null,
+        "2B": "Lorenzo Carrier",
         "3B": null
       },
       "runners_after": {
-        "1B": "Lorenzo Carrier",
-        "2B": null,
+        "1B": null,
+        "2B": "Lorenzo Carrier",
         "3B": null
       },
       "score": {
@@ -1533,13 +1552,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Lorenzo Carrier",
-        "2B": null,
+        "1B": null,
+        "2B": "Lorenzo Carrier",
         "3B": null
       },
       "runners_after": {
-        "1B": "Lorenzo Carrier",
-        "2B": null,
+        "1B": null,
+        "2B": "Lorenzo Carrier",
         "3B": null
       },
       "score": {
@@ -1550,7 +1569,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": "Henry Cooke",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1577,7 +1596,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": "Hudson Lutterman",
       "outcome": "Foul out",
       "count": "3-2",
@@ -1604,7 +1623,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": "Sam Grube",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1631,7 +1650,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Sebastian Pisacreta",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1658,7 +1677,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Carter Dierdorf",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1685,7 +1704,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "TarpleyJr,Derrick walked (3-2 KBFBBB).",
       "outcome": "Walk",
       "count": "3-2",
@@ -1712,7 +1731,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "AJ Nessler",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -1739,7 +1758,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Caden Dulin",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1766,7 +1785,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": "Nick Locurto",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1793,7 +1812,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": "Ethan Gibson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1820,7 +1839,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": "Owen Petrich",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1847,7 +1866,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Lorenzo Carrier",
       "outcome": "Walk",
       "count": "3-2",
@@ -1874,7 +1893,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Kai Wagner",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1901,13 +1920,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Trey Fenderson",
       "outcome": "Triple",
       "count": "0-2",
       "pitches": "KSF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1928,7 +1949,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Joey Baran",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1955,7 +1976,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Preston Crowl",
       "batter": "Sebastian Pisacreta",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1982,7 +2003,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Noah Czajkowski",
       "batter": "Sam Gates",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2009,7 +2030,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Noah Czajkowski",
       "batter": "Pete Daniel",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2036,7 +2057,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Noah Czajkowski",
       "batter": "Ethan Ball",
       "outcome": "Flyout",
       "count": "2-2",
@@ -2063,7 +2084,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Josh Berzonski",
       "batter": "Carter Dierdorf",
       "outcome": "Double",
       "count": "1-2",
@@ -2090,13 +2111,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Josh Berzonski",
       "batter": "TarpleyJr,Derrick singled to right field (2-2 BBKF); Dierdorf,Carter scored from second base on a fielding error by Grube,Sam (E9).",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BBKF",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -2117,7 +2140,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Josh Berzonski",
       "batter": "AJ Nessler",
       "outcome": "Walk",
       "count": "3-1",
@@ -2144,7 +2167,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Brendan Yagesh",
       "batter": "Caden Dulin",
       "outcome": "Single",
       "count": "0-2",
@@ -2171,7 +2194,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Brendan Yagesh",
       "batter": "Lorenzo Carrier",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2198,13 +2221,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Brendan Yagesh",
       "batter": "Kai Wagner",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2225,7 +2250,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Brendan Yagesh",
       "batter": "Trey Fenderson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2252,7 +2277,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Brendan Yagesh",
       "batter": "Previous",
       "outcome": "\u2014",
       "count": null,
@@ -2279,13 +2304,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Luke Craytor",
       "batter": "Joey Baran",
       "outcome": "Hit by pitch",
       "count": "1-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2306,7 +2333,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "",
       "batter": "Sebastian Pisacreta",
       "outcome": "Flyout",
       "count": "1-1",

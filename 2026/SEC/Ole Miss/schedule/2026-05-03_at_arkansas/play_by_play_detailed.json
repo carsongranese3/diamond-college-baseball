@@ -3,7 +3,7 @@
   "date": "05/03/2026",
   "away_team": "Ole Miss",
   "home_team": "Arkansas",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -130,8 +130,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Damian Ruiz",
-        "2B": null,
+        "1B": null,
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "score": {
@@ -152,13 +152,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Damian Ruiz",
-        "2B": null,
+        "1B": null,
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "runners_after": {
         "1B": "Ryder Helfrick",
-        "2B": null,
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "score": {
@@ -180,12 +180,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Ryder Helfrick",
-        "2B": null,
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "runners_after": {
         "1B": "Camden Kozeal",
-        "2B": null,
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "score": {
@@ -207,12 +207,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Camden Kozeal",
-        "2B": null,
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "runners_after": {
         "1B": "Camden Kozeal",
-        "2B": null,
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "score": {
@@ -229,17 +229,19 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Camden Kozeal",
-        "2B": null,
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "runners_after": {
         "1B": "Kuhio Aloy",
-        "2B": null,
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "score": {
@@ -261,12 +263,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kuhio Aloy",
-        "2B": null,
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "runners_after": {
         "1B": "Kuhio Aloy",
-        "2B": null,
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "score": {
@@ -365,7 +367,9 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Owen Paino"
+        "Owen Paino",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -900,7 +904,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Gabe Gaeckle",
+      "pitcher": "Parker Coil",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1361,7 +1365,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
+      "batter": "J. Robertson",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 2
+      },
+      "description": "J. Robertson to p for T. Rabe."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "JP Robertson",
       "batter": "Maika Niu",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1388,7 +1419,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": "Kuhio Aloy",
       "outcome": "Home run",
       "count": "2-1",
@@ -1417,7 +1448,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": "Carter Rutenbar",
       "outcome": "Walk",
       "count": "3-2",
@@ -1444,7 +1475,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": "TJ Pompey",
       "outcome": "Grounded into double play",
       "count": "0-0",
@@ -1552,7 +1583,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": "T. Sirmans",
       "outcome": "\u2014",
       "count": null,
@@ -1579,7 +1610,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "J.",
+      "pitcher": "Walker Hooks",
       "batter": "Nolan Souza",
       "outcome": "Single",
       "count": "1-0",
@@ -1606,7 +1637,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "J.",
+      "pitcher": "Walker Hooks",
       "batter": "Zack Stewart",
       "outcome": "Walk",
       "count": "3-1",
@@ -1633,7 +1664,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
+      "batter": "W. Hooks",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Zack Stewart",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Zack Stewart",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 3
+      },
+      "description": "W. Hooks to p for J. Robertson."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Walker Hooks",
       "batter": "Damian Ruiz",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1660,7 +1718,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Ryder Helfrick",
       "outcome": "Walk",
       "count": null,
@@ -1687,7 +1745,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Camden Kozeal",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1714,7 +1772,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Maika Niu",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1878,7 +1936,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "B. Moseley",
       "outcome": "\u2014",
       "count": null,
@@ -1905,7 +1963,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "D. Pacella",
       "outcome": "\u2014",
       "count": null,
@@ -1932,7 +1990,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "W.",
+      "pitcher": "",
       "batter": "Kuhio Aloy",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1959,7 +2017,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "W.",
+      "pitcher": "",
       "batter": "Carter Rutenbar",
       "outcome": "Lineout",
       "count": "1-2",
@@ -1986,7 +2044,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "W.",
+      "pitcher": "",
       "batter": "TJ Pompey",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2094,7 +2152,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "W.",
+      "pitcher": "",
       "batter": "Nolan Souza",
       "outcome": "Single",
       "count": "2-2",
@@ -2121,14 +2179,15 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "W.",
+      "pitcher": "",
       "batter": "Christian Turner",
       "outcome": "Home run",
       "count": "1-2",
       "pitches": "SFFBFF",
       "rbi": true,
       "runs_scored": [
-        "Christian Turner"
+        "Christian Turner",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,

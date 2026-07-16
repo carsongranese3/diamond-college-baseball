@@ -3,7 +3,7 @@
   "date": "03/24/2026",
   "away_team": "USC Upstate",
   "home_team": "Tennessee",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -50,7 +50,7 @@
       },
       "runners_after": {
         "1B": "Tyler Lang",
-        "2B": null,
+        "2B": "Henry Zenor",
         "3B": null
       },
       "score": {
@@ -72,13 +72,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Tyler Lang",
-        "2B": null,
+        "2B": "Henry Zenor",
         "3B": null
       },
       "runners_after": {
         "1B": "Tyler Lang",
         "2B": null,
-        "3B": null
+        "3B": "Henry Zenor"
       },
       "score": {
         "away": 0,
@@ -100,12 +100,12 @@
       "runners_before": {
         "1B": "Tyler Lang",
         "2B": null,
-        "3B": null
+        "3B": "Henry Zenor"
       },
       "runners_after": {
         "1B": "Maloy Heaghney",
-        "2B": null,
-        "3B": null
+        "2B": "Tyler Lang",
+        "3B": "Henry Zenor"
       },
       "score": {
         "away": 0,
@@ -121,24 +121,53 @@
       "count": "2-2",
       "pitches": "BKSBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Henry Zenor"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Maloy Heaghney",
-        "2B": null,
-        "3B": null
+        "2B": "Tyler Lang",
+        "3B": "Henry Zenor"
       },
       "runners_after": {
         "1B": "Preston Lucas",
         "2B": null,
-        "3B": null
+        "3B": "Tyler Lang"
       },
       "score": {
         "away": 1,
         "home": 0
       },
       "description": "LUCAS, P. reached on a fielder's choice to second base, RBI (2-2 BKSBF) HEAGHNEY, M. out at second 2b unassisted LANG, T. advanced to third ZENOR, H. scored."
+    },
+    {
+      "inning": "Top 1",
+      "pitcher": "Brady Frederick",
+      "batter": "FREDERICK, B to p for TRACEY, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Preston Lucas",
+        "2B": null,
+        "3B": "Tyler Lang"
+      },
+      "runners_after": {
+        "1B": "Preston Lucas",
+        "2B": null,
+        "3B": "Tyler Lang"
+      },
+      "score": {
+        "away": 1,
+        "home": 0
+      },
+      "description": "FREDERICK, B to p for TRACEY, T.."
     },
     {
       "inning": "Top 1",
@@ -154,12 +183,12 @@
       "runners_before": {
         "1B": "Preston Lucas",
         "2B": null,
-        "3B": null
+        "3B": "Tyler Lang"
       },
       "runners_after": {
         "1B": "Preston Lucas",
         "2B": null,
-        "3B": null
+        "3B": "Tyler Lang"
       },
       "score": {
         "away": 1,
@@ -266,7 +295,7 @@
       },
       "runners_after": {
         "1B": "Stone Lawless",
-        "2B": null,
+        "2B": "Blaine Brown",
         "3B": null
       },
       "score": {
@@ -288,12 +317,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Stone Lawless",
-        "2B": null,
+        "2B": "Blaine Brown",
         "3B": null
       },
       "runners_after": {
         "1B": "Garrett Wright",
-        "2B": null,
+        "2B": "Blaine Brown",
         "3B": null
       },
       "score": {
@@ -400,7 +429,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Gage Griggs",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -601,7 +630,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Brady Frederick",
+      "pitcher": "Nic Abraham",
       "batter": "Maloy Heaghney",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -625,6 +654,33 @@
         "home": 0
       },
       "description": "HEAGHNEY, M. struck out swinging (0-2 KFS)."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Jack Gibson",
+      "batter": "GIBSON, J. to p for HOOK, N..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 0
+      },
+      "description": "GIBSON, J. to p for HOOK, N.."
     },
     {
       "inning": "Bottom 3",
@@ -726,7 +782,7 @@
       "runners_after": {
         "1B": "Stone Lawless",
         "2B": null,
-        "3B": null
+        "3B": "Reese Chapman"
       },
       "score": {
         "away": 1,
@@ -748,10 +804,37 @@
       "runners_before": {
         "1B": "Stone Lawless",
         "2B": null,
-        "3B": null
+        "3B": "Reese Chapman"
       },
       "runners_after": {
         "1B": "Garrett Wright",
+        "2B": null,
+        "3B": "Reese Chapman"
+      },
+      "score": {
+        "away": 1,
+        "home": 0
+      },
+      "description": "WRIGHT, G. reached on a fielder's choice to shortstop (2-2 BKSFB) LAWLESS, S. out at third ss to ."
+    },
+    {
+      "inning": "Top 4",
+      "pitcher": "Nic Abraham",
+      "batter": "ABRAHAM, N. to p for FREDERICK, B.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -759,7 +842,7 @@
         "away": 1,
         "home": 0
       },
-      "description": "WRIGHT, G. reached on a fielder's choice to shortstop (2-2 BKSFB) LAWLESS, S. out at third ss to ."
+      "description": "ABRAHAM, N. to p for FREDERICK, B."
     },
     {
       "inning": "Top 4",
@@ -832,8 +915,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Armsey",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Armsey",
         "3B": null
       },
       "score": {
@@ -854,13 +937,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jake Armsey",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Armsey",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Armsey",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Armsey",
         "3B": null
       },
       "score": {
@@ -913,7 +996,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Manny Marin",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -925,7 +1008,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jack Gibson",
+      "pitcher": "Reece Hemmerling",
       "batter": "Levi Clark",
       "outcome": "Lineout",
       "count": "0-0",
@@ -935,12 +1018,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Manny Marin",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Manny Marin",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1249,7 +1332,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Reece Hemmerling",
+      "pitcher": "Max Eichenberger",
       "batter": "Garrett Wright",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1303,7 +1386,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Nic Abraham",
+      "pitcher": "Bo Rhudy",
       "batter": "Trey Bentley",
       "outcome": "Single",
       "count": "3-2",
@@ -1319,7 +1402,7 @@
       },
       "runners_after": {
         "1B": "Trey Bentley",
-        "2B": null,
+        "2B": "Jake Armsey",
         "3B": null
       },
       "score": {
@@ -1330,7 +1413,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Nic Abraham",
+      "pitcher": "Bo Rhudy",
       "batter": "Kenan Bowman",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1341,12 +1424,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Trey Bentley",
-        "2B": null,
+        "2B": "Jake Armsey",
         "3B": null
       },
       "runners_after": {
         "1B": "Trey Bentley",
-        "2B": null,
+        "2B": "Jake Armsey",
         "3B": null
       },
       "score": {
@@ -1354,6 +1437,33 @@
         "home": 0
       },
       "description": "BOWMAN, K. struck out swinging, bunt (0-2 KFS)."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Bo Rhudy",
+      "batter": "RHUDY, B. to p for ABRAHAM, N..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Trey Bentley",
+        "2B": "Jake Armsey",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Trey Bentley",
+        "2B": "Jake Armsey",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 0
+      },
+      "description": "RHUDY, B. to p for ABRAHAM, N.."
     },
     {
       "inning": "Top 7",
@@ -1368,12 +1478,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Trey Bentley",
-        "2B": null,
+        "2B": "Jake Armsey",
         "3B": null
       },
       "runners_after": {
         "1B": "Trey Bentley",
-        "2B": null,
+        "2B": "Jake Armsey",
         "3B": null
       },
       "score": {
@@ -1395,12 +1505,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Trey Bentley",
-        "2B": null,
+        "2B": "Jake Armsey",
         "3B": null
       },
       "runners_after": {
         "1B": "Trey Bentley",
-        "2B": null,
+        "2B": "Jake Armsey",
         "3B": null
       },
       "score": {
@@ -1465,7 +1575,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Max Eichenberger",
+      "pitcher": "Andrew Kummer",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1492,7 +1602,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Max Eichenberger",
+      "pitcher": "Andrew Kummer",
       "batter": "Levi Clark",
       "outcome": "Fielder's choice",
       "count": "2-0",
@@ -1520,6 +1630,33 @@
     {
       "inning": "Bottom 7",
       "pitcher": "Andrew Kummer",
+      "batter": "KUMMER, A. to p for EICHENBERGER.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Levi Clark",
+        "2B": "Trent Grindlinger",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Levi Clark",
+        "2B": "Trent Grindlinger",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 0
+      },
+      "description": "KUMMER, A. to p for EICHENBERGER."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Andrew Kummer",
       "batter": "Tyler Myatt",
       "outcome": "Single",
       "count": "2-2",
@@ -1535,7 +1672,7 @@
       },
       "runners_after": {
         "1B": "Tyler Myatt",
-        "2B": "Trent Grindlinger",
+        "2B": "Levi Clark",
         "3B": null
       },
       "score": {
@@ -1557,12 +1694,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Tyler Myatt",
-        "2B": "Trent Grindlinger",
+        "2B": "Levi Clark",
         "3B": null
       },
       "runners_after": {
         "1B": "Tyler Myatt",
-        "2B": "Trent Grindlinger",
+        "2B": "Levi Clark",
         "3B": null
       },
       "score": {
@@ -1573,24 +1710,27 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Andrew Kummer",
+      "pitcher": "Cayden Mackey",
       "batter": "Blaine Brown",
       "outcome": "Single",
       "count": "3-1",
       "pitches": "FBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Levi Clark",
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Tyler Myatt",
-        "2B": "Trent Grindlinger",
+        "2B": "Levi Clark",
         "3B": null
       },
       "runners_after": {
         "1B": "Blaine Brown",
-        "2B": "Trent Grindlinger",
-        "3B": null
+        "2B": null,
+        "3B": "Tyler Myatt"
       },
       "score": {
         "away": 1,
@@ -1600,7 +1740,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Andrew Kummer",
+      "pitcher": "Cayden Mackey",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1611,13 +1751,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Blaine Brown",
-        "2B": "Trent Grindlinger",
-        "3B": null
+        "2B": null,
+        "3B": "Tyler Myatt"
       },
       "runners_after": {
-        "1B": "Blaine Brown",
-        "2B": "Trent Grindlinger",
-        "3B": null
+        "1B": null,
+        "2B": "Blaine Brown",
+        "3B": "Tyler Myatt"
       },
       "score": {
         "away": 1,
@@ -1627,7 +1767,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Andrew Kummer",
+      "pitcher": "Cayden Mackey",
       "batter": "Reese Chapman",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1637,14 +1777,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Blaine Brown",
-        "2B": "Trent Grindlinger",
-        "3B": null
+        "1B": null,
+        "2B": "Blaine Brown",
+        "3B": "Tyler Myatt"
       },
       "runners_after": {
-        "1B": "Blaine Brown",
-        "2B": "Trent Grindlinger",
-        "3B": null
+        "1B": null,
+        "2B": "Blaine Brown",
+        "3B": "Tyler Myatt"
       },
       "score": {
         "away": 1,
@@ -1762,7 +1902,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "Brayden Krenzel",
       "batter": "Tyler Lang",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1789,7 +1929,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "Brayden Krenzel",
       "batter": "Johnny Sweeney",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1816,7 +1956,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "",
       "batter": "Maloy Heaghney",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1840,6 +1980,33 @@
         "home": 2
       },
       "description": "HEAGHNEY, M. flied out to rf (3-2 BBSSB)."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Cayden Mackey",
+      "batter": "MACKEY, C. to p for KUMMER, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 2
+      },
+      "description": "MACKEY, C. to p for KUMMER, A.."
     },
     {
       "inning": "Bottom 8",
@@ -1924,7 +2091,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "",
       "batter": "Preston Lucas",
       "outcome": "Double",
       "count": "0-2",
@@ -1951,7 +2118,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "",
       "batter": "Jake Armsey",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1978,13 +2145,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "",
       "batter": "Trey Bentley",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Preston Lucas"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2005,7 +2174,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -2021,8 +2190,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Trey Bentley",
-        "3B": null
+        "2B": null,
+        "3B": "Trey Bentley"
       },
       "score": {
         "away": 2,
@@ -2032,7 +2201,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "",
       "batter": "Clayton Campidilli",
       "outcome": "Walk",
       "count": "3-1",
@@ -2043,13 +2212,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Trey Bentley",
-        "3B": null
+        "2B": null,
+        "3B": "Trey Bentley"
       },
       "runners_after": {
         "1B": "Clayton Campidilli",
-        "2B": "Trey Bentley",
-        "3B": null
+        "2B": null,
+        "3B": "Trey Bentley"
       },
       "score": {
         "away": 2,
@@ -2059,7 +2228,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "",
+      "batter": "KRENZEL, B. to p for RHUDY, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Clayton Campidilli",
+        "2B": null,
+        "3B": "Trey Bentley"
+      },
+      "runners_after": {
+        "1B": "Clayton Campidilli",
+        "2B": null,
+        "3B": "Trey Bentley"
+      },
+      "score": {
+        "away": 2,
+        "home": 2
+      },
+      "description": "KRENZEL, B. to p for RHUDY, B.."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": "Gage Griggs",
       "outcome": "Pop out",
       "count": "0-0",
@@ -2070,13 +2266,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Clayton Campidilli",
-        "2B": "Trey Bentley",
-        "3B": null
+        "2B": null,
+        "3B": "Trey Bentley"
       },
       "runners_after": {
         "1B": "Clayton Campidilli",
-        "2B": "Trey Bentley",
-        "3B": null
+        "2B": null,
+        "3B": "Trey Bentley"
       },
       "score": {
         "away": 2,
@@ -2086,7 +2282,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2097,13 +2293,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Clayton Campidilli",
-        "2B": "Trey Bentley",
-        "3B": null
+        "2B": null,
+        "3B": "Trey Bentley"
       },
       "runners_after": {
         "1B": "Clayton Campidilli",
-        "2B": "Trey Bentley",
-        "3B": null
+        "2B": null,
+        "3B": "Trey Bentley"
       },
       "score": {
         "away": 2,
@@ -2113,7 +2309,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "",
       "batter": "Henry Zenor",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2124,13 +2320,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Clayton Campidilli",
-        "2B": "Trey Bentley",
-        "3B": null
+        "2B": null,
+        "3B": "Trey Bentley"
       },
       "runners_after": {
         "1B": "Clayton Campidilli",
-        "2B": "Trey Bentley",
-        "3B": null
+        "2B": null,
+        "3B": "Trey Bentley"
       },
       "score": {
         "away": 2,
@@ -2167,7 +2363,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cayden Mackey",
+      "pitcher": "",
       "batter": "Jay Abernathy",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2194,7 +2390,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cayden Mackey",
+      "pitcher": "",
       "batter": "Levi Clark",
       "outcome": "Walk",
       "count": "3-2",
@@ -2221,7 +2417,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cayden Mackey",
+      "pitcher": "",
       "batter": "Chris Newstrom",
       "outcome": "Fielder's choice",
       "count": "2-1",
@@ -2248,13 +2444,14 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cayden Mackey",
+      "pitcher": "",
       "batter": "Blake Grimmer",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
+        "Chris Newstrom",
         "Blake Grimmer"
       ],
       "outs_before": 2,
@@ -2265,7 +2462,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Newstrom",
+        "1B": null,
         "2B": null,
         "3B": null
       },

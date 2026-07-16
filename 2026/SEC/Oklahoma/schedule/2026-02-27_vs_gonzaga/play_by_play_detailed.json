@@ -3,7 +3,7 @@
   "date": "02/27/2026",
   "away_team": "Gonzaga",
   "home_team": "Oklahoma",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -157,8 +157,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jason Walk",
-        "2B": null,
+        "1B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "score": {
@@ -179,13 +179,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Jason Walk",
-        "2B": null,
+        "1B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "runners_after": {
         "1B": "Camden Johnson",
-        "2B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "score": {
@@ -207,12 +207,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Camden Johnson",
-        "2B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "runners_after": {
         "1B": "Camden Johnson",
-        "2B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "score": {
@@ -234,13 +234,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Camden Johnson",
-        "2B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "runners_after": {
         "1B": "Jaxon Willits",
-        "2B": null,
-        "3B": null
+        "2B": "Camden Johnson",
+        "3B": "Jason Walk"
       },
       "score": {
         "away": 0,
@@ -256,18 +256,20 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jason Walk"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jaxon Willits",
-        "2B": null,
-        "3B": null
+        "2B": "Camden Johnson",
+        "3B": "Jason Walk"
       },
       "runners_after": {
-        "1B": "Jaxon Willits",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Jaxon Willits",
+        "3B": "Camden Johnson"
       },
       "score": {
         "away": 0,
@@ -287,14 +289,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jaxon Willits",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Jaxon Willits",
+        "3B": "Camden Johnson"
       },
       "runners_after": {
         "1B": "Brendan Brock",
-        "2B": null,
-        "3B": null
+        "2B": "Jaxon Willits",
+        "3B": "Camden Johnson"
       },
       "score": {
         "away": 0,
@@ -310,17 +312,20 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jaxon Willits",
+        "Camden Johnson"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Brendan Brock",
-        "2B": null,
-        "3B": null
+        "2B": "Jaxon Willits",
+        "3B": "Camden Johnson"
       },
       "runners_after": {
         "1B": "Alec Blair",
-        "2B": null,
+        "2B": "Brendan Brock",
         "3B": null
       },
       "score": {
@@ -337,18 +342,20 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Brendan Brock"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Alec Blair",
-        "2B": null,
+        "2B": "Brendan Brock",
         "3B": null
       },
       "runners_after": {
-        "1B": "Alec Blair",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Alec Blair"
       },
       "score": {
         "away": 0,
@@ -365,17 +372,18 @@
       "pitches": "BBKSFB",
       "rbi": true,
       "runs_scored": [
+        "Alec Blair",
         "Dayton Tockey"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Alec Blair",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Alec Blair"
       },
       "runners_after": {
-        "1B": "Alec Blair",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -397,12 +405,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Alec Blair",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Alec Blair",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -672,8 +680,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Landon White",
-        "2B": null,
+        "1B": null,
+        "2B": "Landon White",
         "3B": null
       },
       "score": {
@@ -694,13 +702,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Landon White",
-        "2B": null,
+        "1B": null,
+        "2B": "Landon White",
         "3B": null
       },
       "runners_after": {
-        "1B": "Landon White",
-        "2B": null,
+        "1B": null,
+        "2B": "Landon White",
         "3B": null
       },
       "score": {
@@ -717,12 +725,14 @@
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Landon White"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Landon White",
-        "2B": null,
+        "1B": null,
+        "2B": "Landon White",
         "3B": null
       },
       "runners_after": {
@@ -753,8 +763,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Noah Meffert",
-        "2B": null,
+        "1B": null,
+        "2B": "Noah Meffert",
         "3B": null
       },
       "score": {
@@ -772,17 +782,18 @@
       "pitches": "BSSBB",
       "rbi": true,
       "runs_scored": [
+        "Noah Meffert",
         "Mikey Bell"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Noah Meffert",
-        "2B": null,
+        "1B": null,
+        "2B": "Noah Meffert",
         "3B": null
       },
       "runners_after": {
-        "1B": "Noah Meffert",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -804,12 +815,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Noah Meffert",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Noah Meffert",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -831,12 +842,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Noah Meffert",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Noah Meffert",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -917,7 +928,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brendan Brock",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -939,12 +950,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brendan Brock",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Brendan Brock",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -999,7 +1010,7 @@
       },
       "runners_after": {
         "1B": "Ricky Sanchez",
-        "2B": null,
+        "2B": "Hudson Shupe",
         "3B": null
       },
       "score": {
@@ -1021,12 +1032,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Ricky Sanchez",
-        "2B": null,
+        "2B": "Hudson Shupe",
         "3B": null
       },
       "runners_after": {
         "1B": "Ricky Sanchez",
-        "2B": null,
+        "2B": "Hudson Shupe",
         "3B": null
       },
       "score": {
@@ -1048,13 +1059,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Ricky Sanchez",
-        "2B": null,
+        "2B": "Hudson Shupe",
         "3B": null
       },
       "runners_after": {
         "1B": "Landon White",
-        "2B": null,
-        "3B": null
+        "2B": "Ricky Sanchez",
+        "3B": "Hudson Shupe"
       },
       "score": {
         "away": 3,
@@ -1075,13 +1086,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Landon White",
-        "2B": null,
-        "3B": null
+        "2B": "Ricky Sanchez",
+        "3B": "Hudson Shupe"
       },
       "runners_after": {
-        "1B": "Landon White",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Ricky Sanchez",
+        "3B": "Hudson Shupe"
       },
       "score": {
         "away": 3,
@@ -1133,8 +1144,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dayton Tockey",
-        "2B": null,
+        "1B": null,
+        "2B": "Dayton Tockey",
         "3B": null
       },
       "score": {
@@ -1155,14 +1166,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Dayton Tockey",
-        "2B": null,
+        "1B": null,
+        "2B": "Dayton Tockey",
         "3B": null
       },
       "runners_after": {
-        "1B": "Dayton Tockey",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Dayton Tockey"
       },
       "score": {
         "away": 3,
@@ -1182,14 +1193,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Dayton Tockey",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Dayton Tockey"
       },
       "runners_after": {
         "1B": "Camden Johnson",
         "2B": null,
-        "3B": null
+        "3B": "Dayton Tockey"
       },
       "score": {
         "away": 3,
@@ -1211,12 +1222,12 @@
       "runners_before": {
         "1B": "Camden Johnson",
         "2B": null,
-        "3B": null
+        "3B": "Dayton Tockey"
       },
       "runners_after": {
         "1B": "Camden Johnson",
         "2B": null,
-        "3B": null
+        "3B": "Dayton Tockey"
       },
       "score": {
         "away": 3,
@@ -1431,7 +1442,7 @@
       },
       "runners_after": {
         "1B": "Alec Blair",
-        "2B": null,
+        "2B": "Brendan Brock",
         "3B": null
       },
       "score": {
@@ -1439,6 +1450,33 @@
         "home": 6
       },
       "description": "Blair, A. walked (3-0 BBBB) Brock, B. advanced to second."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Jared Glenn",
+      "batter": "Glenn, J to p for O'Brien, F.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Alec Blair",
+        "2B": "Brendan Brock",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Alec Blair",
+        "2B": "Brendan Brock",
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 6
+      },
+      "description": "Glenn, J to p for O'Brien, F."
     },
     {
       "inning": "Bottom 5",
@@ -1453,13 +1491,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Alec Blair",
-        "2B": null,
+        "2B": "Brendan Brock",
         "3B": null
       },
       "runners_after": {
-        "1B": "Alec Blair",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Alec Blair",
+        "3B": "Brendan Brock"
       },
       "score": {
         "away": 3,
@@ -1475,13 +1513,16 @@
       "count": "3-2",
       "pitches": "BBSBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Alec Blair",
+        "Brendan Brock"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Alec Blair",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Alec Blair",
+        "3B": "Brendan Brock"
       },
       "runners_after": {
         "1B": "Dayton Tockey",
@@ -1511,8 +1552,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dayton Tockey",
-        "2B": null,
+        "1B": null,
+        "2B": "Dayton Tockey",
         "3B": null
       },
       "score": {
@@ -1533,13 +1574,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Dayton Tockey",
-        "2B": null,
+        "1B": null,
+        "2B": "Dayton Tockey",
         "3B": null
       },
       "runners_after": {
-        "1B": "Dayton Tockey",
-        "2B": null,
+        "1B": null,
+        "2B": "Dayton Tockey",
         "3B": null
       },
       "score": {
@@ -1547,6 +1588,33 @@
         "home": 8
       },
       "description": "Branch, K. struck out looking (3-2 KKBFBBFK)."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Trent Collier",
+      "batter": "Collier, T. to p for Johnson, Cam.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 8
+      },
+      "description": "Collier, T. to p for Johnson, Cam."
     },
     {
       "inning": "Top 6",
@@ -1673,8 +1741,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jason Walk",
-        "2B": null,
+        "1B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "score": {
@@ -1695,14 +1763,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Jason Walk",
-        "2B": null,
+        "1B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jason Walk",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jason Walk"
       },
       "score": {
         "away": 3,
@@ -1722,14 +1790,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Jason Walk",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jason Walk"
       },
       "runners_after": {
         "1B": "Camden Johnson",
         "2B": null,
-        "3B": null
+        "3B": "Jason Walk"
       },
       "score": {
         "away": 3,
@@ -1745,13 +1813,15 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jason Walk"
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Camden Johnson",
         "2B": null,
-        "3B": null
+        "3B": "Jason Walk"
       },
       "runners_after": {
         "1B": "Camden Johnson",
@@ -1781,7 +1851,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1803,7 +1873,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1836,7 +1906,7 @@
       },
       "runners_after": {
         "1B": "Trey Gambill",
-        "2B": null,
+        "2B": "Jaxon Willits",
         "3B": null
       },
       "score": {
@@ -1854,17 +1924,19 @@
       "pitches": "FBBFF",
       "rbi": true,
       "runs_scored": [
+        "Trey Gambill",
+        "Jaxon Willits",
         "Brendan Brock"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Trey Gambill",
-        "2B": null,
+        "2B": "Jaxon Willits",
         "3B": null
       },
       "runners_after": {
-        "1B": "Trey Gambill",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1876,7 +1948,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jared Glenn",
+      "pitcher": "Michael Cunneely",
       "batter": "Alec Blair",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1886,12 +1958,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Trey Gambill",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Trey Gambill",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1930,7 +2002,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Trent Collier",
+      "pitcher": "Reid Hensley",
       "batter": "Bo Shinkle",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1958,6 +2030,33 @@
     {
       "inning": "Top 7",
       "pitcher": "Reid Hensley",
+      "batter": "Hensley, R. to p for Collier, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 12
+      },
+      "description": "Hensley, R. to p for Collier, T.."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Reid Hensley",
       "batter": "Noah Meffert",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1981,6 +2080,33 @@
         "home": 12
       },
       "description": "Meffert, N struck out swinging (2-2 KBBSS)."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Michael Cunneely",
+      "batter": "Cunneely, M to p for Glenn, J.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 12
+      },
+      "description": "Cunneely, M to p for Glenn, J."
     },
     {
       "inning": "Bottom 7",
@@ -2038,7 +2164,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Michael Cunneely",
+      "pitcher": "Carson Boyer",
       "batter": "Jason Walk",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2065,7 +2191,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Michael Cunneely",
+      "pitcher": "Carson Boyer",
       "batter": "Camden Johnson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2162,7 +2288,7 @@
       },
       "runners_after": {
         "1B": "Luca DiPaolo",
-        "2B": null,
+        "2B": "Ryder Young",
         "3B": null
       },
       "score": {
@@ -2184,12 +2310,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Luca DiPaolo",
-        "2B": null,
+        "2B": "Ryder Young",
         "3B": null
       },
       "runners_after": {
         "1B": "Luca DiPaolo",
-        "2B": null,
+        "2B": "Ryder Young",
         "3B": null
       },
       "score": {
@@ -2200,24 +2326,26 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Reid Hensley",
+      "pitcher": "",
       "batter": "Ricky Sanchez",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "KF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ryder Young"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Luca DiPaolo",
-        "2B": null,
+        "2B": "Ryder Young",
         "3B": null
       },
       "runners_after": {
         "1B": "Ricky Sanchez",
         "2B": null,
-        "3B": null
+        "3B": "Luca DiPaolo"
       },
       "score": {
         "away": 4,
@@ -2227,7 +2355,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Reid Hensley",
+      "pitcher": "",
       "batter": "Tommy Eisenstat",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2239,12 +2367,12 @@
       "runners_before": {
         "1B": "Ricky Sanchez",
         "2B": null,
-        "3B": null
+        "3B": "Luca DiPaolo"
       },
       "runners_after": {
         "1B": "Ricky Sanchez",
         "2B": null,
-        "3B": null
+        "3B": "Luca DiPaolo"
       },
       "score": {
         "away": 4,
@@ -2255,6 +2383,33 @@
     {
       "inning": "Bottom 8",
       "pitcher": "Carson Boyer",
+      "batter": "Boyer, C to p for Cunneely, M.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 12
+      },
+      "description": "Boyer, C to p for Cunneely, M."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Deiten Lachance",
       "outcome": "Single",
       "count": "0-0",
@@ -2281,13 +2436,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Carson Boyer",
+      "pitcher": "",
       "batter": "Jaxon Willits",
       "outcome": "Triple",
       "count": "0-2",
       "pitches": "KFFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Deiten Lachance"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -2296,7 +2453,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Deiten Lachance",
+        "1B": null,
         "2B": null,
         "3B": "Jaxon Willits"
       },
@@ -2308,24 +2465,26 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Carson Boyer",
+      "pitcher": "",
       "batter": "Trey Gambill",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jaxon Willits"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Deiten Lachance",
+        "1B": null,
         "2B": null,
         "3B": "Jaxon Willits"
       },
       "runners_after": {
         "1B": "Trey Gambill",
         "2B": null,
-        "3B": "Jaxon Willits"
+        "3B": null
       },
       "score": {
         "away": 4,

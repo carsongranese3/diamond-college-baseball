@@ -3,7 +3,7 @@
   "date": "02/21/2026",
   "away_team": "Navy",
   "home_team": "South Carolina",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -186,8 +186,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Patrick Evans",
-        "2B": null,
+        "1B": null,
+        "2B": "Patrick Evans",
         "3B": null
       },
       "score": {
@@ -208,8 +208,8 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Patrick Evans",
-        "2B": null,
+        "1B": null,
+        "2B": "Patrick Evans",
         "3B": null
       },
       "runners_after": {
@@ -609,7 +609,10 @@
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -690,7 +693,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1036,6 +1041,33 @@
     {
       "inning": "Bottom 5",
       "pitcher": "Ian Brown",
+      "batter": "Brown, I. to p for Archibald, M.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 4
+      },
+      "description": "Brown, I. to p for Archibald, M."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Ian Brown",
       "batter": "Patrick Evans",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1095,7 +1127,9 @@
       "count": "0-2",
       "pitches": "SFFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1122,7 +1156,9 @@
       "count": "2-1",
       "pitches": "KBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1305,7 +1341,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Amp Phillips",
+      "pitcher": "Cooper Parks",
       "batter": "Victor Izquierdo",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1359,7 +1395,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ian Brown",
+      "pitcher": "Jackson Beattie",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -1386,7 +1422,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ian Brown",
+      "pitcher": "Jackson Beattie",
       "batter": "Ethan Lizama",
       "outcome": "Walk",
       "count": "3-2",
@@ -1410,6 +1446,33 @@
         "home": 6
       },
       "description": "Lizama walked (3-2 BBBKFB)."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Jackson Beattie",
+      "batter": "Beattie, J. to p for Brown, I..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Ethan Lizama",
+        "2B": "Dawson Harman",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ethan Lizama",
+        "2B": "Dawson Harman",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 6
+      },
+      "description": "Beattie, J. to p for Brown, I.."
     },
     {
       "inning": "Bottom 6",
@@ -1446,7 +1509,9 @@
       "count": "3-2",
       "pitches": "BBSSFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -1743,7 +1808,9 @@
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1791,7 +1858,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jackson Beattie",
+      "pitcher": "Timmy Virtudes",
       "batter": "Erik Parker",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1818,7 +1885,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jackson Beattie",
+      "pitcher": "Timmy Virtudes",
       "batter": "Will Craddock",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1926,7 +1993,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Cooper Parks",
+      "pitcher": "Hudson Lee",
       "batter": "Victor Izquierdo",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1954,6 +2021,33 @@
     {
       "inning": "Bottom 8",
       "pitcher": "Timmy Virtudes",
+      "batter": "Virtudes, T. to p for Beattie, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 8
+      },
+      "description": "Virtudes, T. to p for Beattie, J.."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Beau Hollins",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1980,7 +2074,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Timmy Virtudes",
+      "pitcher": "",
       "batter": "Luke Yuhasz",
       "outcome": "Pop out",
       "count": "1-2",
@@ -2007,7 +2101,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Timmy Virtudes",
+      "pitcher": "",
       "batter": "Gavin Braland",
       "outcome": "Flyout",
       "count": "3-2",
@@ -2088,7 +2182,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Hudson Lee",
+      "pitcher": "",
       "batter": "Will Howard",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",

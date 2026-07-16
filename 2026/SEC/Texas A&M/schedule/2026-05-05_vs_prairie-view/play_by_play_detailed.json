@@ -3,7 +3,7 @@
   "date": "05/05/2026",
   "away_team": "Prairie View",
   "home_team": "Texas A&M",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -730,8 +730,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Travis Chestnut",
-        "2B": null,
+        "1B": null,
+        "2B": "Travis Chestnut",
         "3B": null
       },
       "score": {
@@ -752,8 +752,8 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Travis Chestnut",
-        "2B": null,
+        "1B": null,
+        "2B": "Travis Chestnut",
         "3B": null
       },
       "runners_after": {
@@ -1131,7 +1131,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kamar Dove",
+      "pitcher": "Kelvin Battles",
       "batter": "Caden Sorrell",
       "outcome": "Walk",
       "count": "3-1",
@@ -1159,8 +1159,8 @@
     {
       "inning": "Bottom 4",
       "pitcher": "Kelvin Battles",
-      "batter": null,
-      "outcome": "Stolen base",
+      "batter": "BATTLES",
+      "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
@@ -1181,6 +1181,33 @@
         "away": 4,
         "home": 7
       },
+      "description": "BATTLES II to p for DOVE."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Kelvin Battles",
+      "batter": null,
+      "outcome": "Stolen base",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Caden Sorrell",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Caden Sorrell",
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 7
+      },
       "description": "SORRELL stole second."
     },
     {
@@ -1195,8 +1222,8 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Caden Sorrell",
-        "2B": null,
+        "1B": null,
+        "2B": "Caden Sorrell",
         "3B": null
       },
       "runners_after": {
@@ -1298,7 +1325,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kelvin Battles",
+      "pitcher": "Isaac Herrera",
       "batter": "Boston Kellner",
       "outcome": "Walk",
       "count": "3-2",
@@ -1327,7 +1354,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kelvin Battles",
+      "pitcher": "Isaac Herrera",
       "batter": "Blake Binderup",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1552,7 +1579,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1642,8 +1671,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Travis Chestnut",
-        "2B": null,
+        "1B": null,
+        "2B": "Travis Chestnut",
         "3B": null
       },
       "score": {
@@ -1664,8 +1693,8 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Travis Chestnut",
-        "2B": null,
+        "1B": null,
+        "2B": "Travis Chestnut",
         "3B": null
       },
       "runners_after": {
@@ -1681,7 +1710,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Isaac Herrera",
+      "pitcher": "Rayce Hudson",
       "batter": "Caden Sorrell",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1708,7 +1737,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Isaac Herrera",
+      "pitcher": "Rayce Hudson",
       "batter": "Wesley Jordan",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1951,7 +1980,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Rayce Hudson",
+      "pitcher": "Ty Pankonin",
       "batter": "Travis Chestnut",
       "outcome": "Walk",
       "count": "3-2",
@@ -1980,7 +2009,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Rayce Hudson",
+      "pitcher": "Ty Pankonin",
       "batter": "Gavin Grahovac",
       "outcome": "Groundout",
       "count": "3-1",
@@ -2130,9 +2159,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Caden Sorrell",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Caden Sorrell"
       },
       "score": {
         "away": 7,
@@ -2154,9 +2183,9 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Caden Sorrell",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Caden Sorrell"
       },
       "runners_after": {
         "1B": "Wesley Jordan",
@@ -2225,7 +2254,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ty Pankonin",
+      "pitcher": "Matthew Dinae",
       "batter": "Jorian Wilson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2252,7 +2281,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ty Pankonin",
+      "pitcher": "Matthew Dinae",
       "batter": "Boston Kellner",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2526,7 +2555,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Matthew Dinae",
+      "pitcher": "",
       "batter": "Bear Harrison",
       "outcome": "Walk",
       "count": "3-2",
@@ -2553,7 +2582,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Matthew Dinae",
+      "pitcher": "",
       "batter": "Jorian Wilson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",

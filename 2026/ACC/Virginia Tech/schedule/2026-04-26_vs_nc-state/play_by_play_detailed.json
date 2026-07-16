@@ -3,7 +3,7 @@
   "date": "04/26/2026",
   "away_team": "NC State",
   "home_team": "Virginia Tech",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -337,7 +337,9 @@
       "count": "3-1",
       "pitches": "BBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -967,7 +969,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Gates",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1120,7 +1122,11 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1256,7 +1262,9 @@
       "pitches": "FKB",
       "rbi": true,
       "runs_scored": [
-        "Ethan Ball"
+        "Ethan Ball",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1305,7 +1313,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Anderson Nance",
       "batter": "Willie Hurt",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1332,7 +1340,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Anderson Nance",
       "batter": "Nick Locurto",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1440,7 +1448,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Preston Crowl",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1455,7 +1463,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brayden Fraasman",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1467,7 +1475,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Anderson Nance",
       "batter": "Sam Gates",
       "outcome": "Single",
       "count": "2-0",
@@ -1494,7 +1502,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Anderson Nance",
       "batter": "Owen Petrich",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1521,7 +1529,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Anderson Nance",
       "batter": "Sam Grube",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1548,7 +1556,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Preston Crowl",
       "batter": "Rett Johnson",
       "outcome": "Walk",
       "count": "3-1",
@@ -1575,7 +1583,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Preston Crowl",
       "batter": "Luke Nixon",
       "outcome": "Fielder's choice",
       "count": "1-0",
@@ -1602,7 +1610,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Preston Crowl",
       "batter": "Chris McHugh",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1629,13 +1637,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Preston Crowl",
       "batter": "Ty Head",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1656,7 +1666,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Ethan Gibson",
       "outcome": "Single",
       "count": "3-2",
@@ -1683,7 +1693,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Henry Cooke",
       "outcome": "Double",
       "count": "3-2",
@@ -1710,13 +1720,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Michael Ragusa",
       "batter": null,
       "outcome": "Baserunning",
       "count": "2-2",
       "pitches": "BSBSF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1737,7 +1749,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Michael Ragusa",
       "batter": "Hudson Lutterman",
       "outcome": "Walk",
       "count": "3-2",
@@ -1764,7 +1776,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Michael Ragusa",
       "batter": "Willie Hurt",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1791,7 +1803,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Michael Ragusa",
       "batter": "Nick Locurto",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1818,7 +1830,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Chase Swift",
       "batter": "Rett Johnson",
       "outcome": "Foul out",
       "count": "1-2",
@@ -1845,7 +1857,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Chase Swift",
       "batter": "Vincent DeCarlo",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1872,7 +1884,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Griffin Stieg",
+      "pitcher": "Chase Swift",
       "batter": "Brandon Novy",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",

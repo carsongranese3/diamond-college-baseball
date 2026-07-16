@@ -3,7 +3,7 @@
   "date": "03/06/2026",
   "away_team": "Lipscomb",
   "home_team": "Mississippi St.",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -130,8 +130,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Drew Wyers",
-        "2B": null,
+        "1B": null,
+        "2B": "Drew Wyers",
         "3B": null
       },
       "score": {
@@ -152,13 +152,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Drew Wyers",
-        "2B": null,
+        "1B": null,
+        "2B": "Drew Wyers",
         "3B": null
       },
       "runners_after": {
-        "1B": "Drew Wyers",
-        "2B": null,
+        "1B": null,
+        "2B": "Drew Wyers",
         "3B": null
       },
       "score": {
@@ -179,13 +179,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Drew Wyers",
-        "2B": null,
+        "1B": null,
+        "2B": "Drew Wyers",
         "3B": null
       },
       "runners_after": {
-        "1B": "Drew Wyers",
-        "2B": null,
+        "1B": null,
+        "2B": "Drew Wyers",
         "3B": null
       },
       "score": {
@@ -206,13 +206,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Drew Wyers",
-        "2B": null,
+        "1B": null,
+        "2B": "Drew Wyers",
         "3B": null
       },
       "runners_after": {
-        "1B": "Drew Wyers",
-        "2B": null,
+        "1B": null,
+        "2B": "Drew Wyers",
         "3B": null
       },
       "score": {
@@ -511,8 +511,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bryce Chance",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "score": {
@@ -533,13 +533,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bryce Chance",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "runners_after": {
         "1B": "Drew Wyers",
-        "2B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "score": {
@@ -550,7 +550,34 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "J.",
+      "pitcher": "Jevarra Martin Jr.",
+      "batter": "J. Martin",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Drew Wyers",
+        "2B": "Bryce Chance",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Drew Wyers",
+        "2B": "Bryce Chance",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 2
+      },
+      "description": "J. Martin to p for Bosley-Smith."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Jevarra Martin Jr.",
       "batter": "Ace Reese",
       "outcome": "Walk",
       "count": "3-1",
@@ -561,13 +588,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Drew Wyers",
-        "2B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "runners_after": {
         "1B": "Ace Reese",
         "2B": "Drew Wyers",
-        "3B": null
+        "3B": "Bryce Chance"
       },
       "score": {
         "away": 0,
@@ -577,19 +604,21 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "J.",
+      "pitcher": "Jevarra Martin Jr.",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Bryce Chance"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Ace Reese",
         "2B": "Drew Wyers",
-        "3B": null
+        "3B": "Bryce Chance"
       },
       "runners_after": {
         "1B": null,
@@ -604,7 +633,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "J.",
+      "pitcher": "Jevarra Martin Jr.",
       "batter": "Noah Sullivan",
       "outcome": "Home run",
       "count": "2-2",
@@ -635,7 +664,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "J.",
+      "pitcher": "Jevarra Martin Jr.",
       "batter": "Gehrig Frei",
       "outcome": "Triple",
       "count": "1-1",
@@ -662,7 +691,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "J.",
+      "pitcher": "Jevarra Martin Jr.",
       "batter": "Andrew Raymond",
       "outcome": "Groundout",
       "count": "1-1",
@@ -855,7 +884,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "J.",
+      "pitcher": "Jevarra Martin Jr.",
       "batter": "Ryder Woodson",
       "outcome": "Double",
       "count": "3-1",
@@ -882,7 +911,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "J.",
+      "pitcher": "Jevarra Martin Jr.",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -909,7 +938,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "J.",
+      "pitcher": "Jevarra Martin Jr.",
       "batter": "Jacob Parker",
       "outcome": "Groundout",
       "count": "1-1",
@@ -936,7 +965,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "J.",
+      "pitcher": "Jace Trautner",
       "batter": "James Nunnallee",
       "outcome": "Groundout",
       "count": "1-1",
@@ -963,7 +992,34 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "J.",
+      "pitcher": "Jace Trautner",
+      "batter": "J. Trautner",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": "Ryder Woodson"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": "Ryder Woodson"
+      },
+      "score": {
+        "away": 2,
+        "home": 6
+      },
+      "description": "J. Trautner to p for J. Martin."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Jace Trautner",
       "batter": "Bryce Chance",
       "outcome": "Walk",
       "count": "3-2",
@@ -990,7 +1046,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "J.",
+      "pitcher": "Jace Trautner",
       "batter": "Ryder Woodson",
       "outcome": "\u2014",
       "count": null,
@@ -1098,7 +1154,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "J.",
+      "pitcher": "Jace Trautner",
       "batter": "Drew Wyers",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1125,7 +1181,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "J.",
+      "pitcher": "Jace Trautner",
       "batter": "Ace Reese",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1152,7 +1208,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "J.",
+      "pitcher": "Jace Trautner",
       "batter": "Noah Sullivan",
       "outcome": "Single",
       "count": "3-2",
@@ -1179,7 +1235,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "J.",
+      "pitcher": "Jace Trautner",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1194,8 +1250,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Noah Sullivan",
-        "2B": null,
+        "1B": null,
+        "2B": "Noah Sullivan",
         "3B": null
       },
       "score": {
@@ -1206,7 +1262,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "J.",
+      "pitcher": "Jace Trautner",
       "batter": "Gehrig Frei",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1216,13 +1272,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Noah Sullivan",
-        "2B": null,
+        "1B": null,
+        "2B": "Noah Sullivan",
         "3B": null
       },
       "runners_after": {
-        "1B": "Noah Sullivan",
-        "2B": null,
+        "1B": null,
+        "2B": "Noah Sullivan",
         "3B": null
       },
       "score": {
@@ -1314,7 +1370,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "J.",
+      "pitcher": "Jace Trautner",
       "batter": "Andrew Raymond",
       "outcome": "Double",
       "count": "1-0",
@@ -1341,7 +1397,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "J.",
+      "pitcher": "Cody Underwood",
       "batter": "Ryder Woodson",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1368,7 +1424,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "J.",
+      "pitcher": "Cody Underwood",
       "batter": "Jacob Parker",
       "outcome": "Lineout",
       "count": "0-1",
@@ -1395,7 +1451,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "J.",
+      "pitcher": "Cody Underwood",
       "batter": "James Nunnallee",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1530,7 +1586,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Cody Underwood",
+      "batter": "C. Underwood",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 6
+      },
+      "description": "C. Underwood to p for J. Trautner."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Cody Underwood",
       "batter": "Bryce Chance",
       "outcome": "Reached on error",
       "count": "3-2",
@@ -1557,7 +1640,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Cody Underwood",
       "batter": "Drew Wyers",
       "outcome": "Walk",
       "count": "3-2",
@@ -1584,7 +1667,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Cody Underwood",
       "batter": "Ace Reese",
       "outcome": "Fielder's choice",
       "count": "2-2",
@@ -1611,7 +1694,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Tanner Lyne",
       "batter": "Noah Sullivan",
       "outcome": "Single",
       "count": "1-2",
@@ -1640,7 +1723,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Tanner Lyne",
       "batter": "Gehrig Frei",
       "outcome": "Single",
       "count": "0-0",
@@ -1669,7 +1752,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Tanner Lyne",
       "batter": "Andrew Raymond",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1696,7 +1779,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Tanner Lyne",
       "batter": "Ryder Woodson",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1723,7 +1806,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Billingsley",
+      "pitcher": "Chris Billingsley Jr.",
       "batter": "Jordan Thomas",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1750,7 +1833,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Billingsley",
+      "pitcher": "Chris Billingsley Jr.",
       "batter": "Jacob Tobias",
       "outcome": "Lineout",
       "count": "3-2",
@@ -1777,7 +1860,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Billingsley",
+      "pitcher": "Chris Billingsley Jr.",
       "batter": "Keaton Mahan",
       "outcome": "Home run",
       "count": "3-2",
@@ -1806,7 +1889,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Billingsley",
+      "pitcher": "Chris Billingsley Jr.",
       "batter": "Brady Miller",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1833,7 +1916,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "C.",
+      "pitcher": "Tanner Lyne",
       "batter": "H. Miles",
       "outcome": "\u2014",
       "count": null,
@@ -1860,7 +1943,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "C.",
+      "pitcher": "Tanner Lyne",
       "batter": "J. Thomas",
       "outcome": "\u2014",
       "count": null,
@@ -1887,7 +1970,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "C.",
+      "pitcher": "Landon Kiefer",
       "batter": "K. Mahan",
       "outcome": "\u2014",
       "count": null,
@@ -1914,7 +1997,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "T.",
+      "pitcher": "Landon Kiefer",
+      "batter": "T. Lyne",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 8
+      },
+      "description": "T. Lyne to p for C. Underwood."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Landon Kiefer",
       "batter": "Jacob Parker",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1941,7 +2051,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "James Nunnallee",
       "outcome": "Single",
       "count": "0-0",
@@ -1968,7 +2078,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "Bryce Chance",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1995,7 +2105,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "Drew Wyers",
       "outcome": "Walk",
       "count": "3-1",
@@ -2022,7 +2132,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "Ace Reese",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2049,7 +2159,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Billingsley",
+      "pitcher": "Chris Billingsley Jr.",
       "batter": "Hutson Miles",
       "outcome": "Lineout",
       "count": "3-2",
@@ -2076,7 +2186,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Billingsley",
+      "pitcher": "Chris Billingsley Jr.",
       "batter": "Aaron Stelogeannis",
       "outcome": "Single",
       "count": "1-1",
@@ -2103,7 +2213,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Billingsley",
+      "pitcher": "Chris Billingsley Jr.",
       "batter": "Blake Carter",
       "outcome": "Flyout",
       "count": "2-2",
@@ -2130,7 +2240,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Billingsley",
+      "pitcher": "Chris Billingsley Jr.",
       "batter": "Kai Holm",
       "outcome": "Single",
       "count": "1-0",
@@ -2159,7 +2269,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Billingsley",
+      "pitcher": "Chris Billingsley Jr.",
       "batter": "Danny Ramirez",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2186,7 +2296,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "D. Ramirez",
       "outcome": "\u2014",
       "count": null,
@@ -2213,7 +2323,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "Noah Sullivan",
       "outcome": "Double",
       "count": "0-1",
@@ -2240,7 +2350,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "L.",
+      "pitcher": "",
+      "batter": "L. Kiefer",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": "Noah Sullivan",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Noah Sullivan",
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 8
+      },
+      "description": "L. Kiefer to p for T. Lyne."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Gehrig Frei",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2267,7 +2404,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Andrew Raymond",
       "outcome": "Single",
       "count": "0-1",
@@ -2296,7 +2433,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Ryder Woodson",
       "outcome": "Grounded into double play",
       "count": "1-2",

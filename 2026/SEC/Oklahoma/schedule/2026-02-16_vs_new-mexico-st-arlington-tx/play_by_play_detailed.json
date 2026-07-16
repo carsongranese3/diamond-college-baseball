@@ -3,7 +3,7 @@
   "date": "02/16/2026",
   "away_team": "New Mexico St.",
   "home_team": "Oklahoma",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -76,8 +76,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Aidan Taclas",
-        "2B": null,
+        "1B": null,
+        "2B": "Aidan Taclas",
         "3B": null
       },
       "score": {
@@ -98,13 +98,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Aidan Taclas",
-        "2B": null,
+        "1B": null,
+        "2B": "Aidan Taclas",
         "3B": null
       },
       "runners_after": {
         "1B": "Boston Vest",
-        "2B": null,
+        "2B": "Aidan Taclas",
         "3B": null
       },
       "score": {
@@ -126,13 +126,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Boston Vest",
-        "2B": null,
+        "2B": "Aidan Taclas",
         "3B": null
       },
       "runners_after": {
-        "1B": "Boston Vest",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Boston Vest",
+        "3B": "Aidan Taclas"
       },
       "score": {
         "away": 0,
@@ -148,16 +148,19 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Boston Vest",
+        "Aidan Taclas"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Boston Vest",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Boston Vest",
+        "3B": "Aidan Taclas"
       },
       "runners_after": {
-        "1B": "Boston Vest",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -179,7 +182,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Boston Vest",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -212,7 +215,7 @@
       },
       "runners_after": {
         "1B": "Chris Daniels",
-        "2B": null,
+        "2B": "Easton Rulli",
         "3B": null
       },
       "score": {
@@ -234,12 +237,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Chris Daniels",
-        "2B": null,
+        "2B": "Easton Rulli",
         "3B": null
       },
       "runners_after": {
         "1B": "Camden Kaufman",
-        "2B": null,
+        "2B": "Easton Rulli",
         "3B": null
       },
       "score": {
@@ -293,7 +296,7 @@
       },
       "runners_after": {
         "1B": "Brendan Brock",
-        "2B": null,
+        "2B": "Camden Johnson",
         "3B": null
       },
       "score": {
@@ -315,13 +318,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Brendan Brock",
-        "2B": null,
+        "2B": "Camden Johnson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brendan Brock",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Brendan Brock",
+        "3B": "Camden Johnson"
       },
       "score": {
         "away": 2,
@@ -341,14 +344,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Brendan Brock",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Brendan Brock",
+        "3B": "Camden Johnson"
       },
       "runners_after": {
         "1B": "Deiten Lachance",
-        "2B": null,
-        "3B": null
+        "2B": "Brendan Brock",
+        "3B": "Camden Johnson"
       },
       "score": {
         "away": 2,
@@ -359,23 +362,52 @@
     {
       "inning": "Bottom 1",
       "pitcher": "Cooper Reese",
-      "batter": "Jaxon Willits",
-      "outcome": "Walk",
+      "batter": "Reese, Coope to p for Yarc, Matthe.",
+      "outcome": "\u2014",
       "count": null,
       "pitches": null,
-      "rbi": true,
+      "rbi": false,
       "runs_scored": [],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Deiten Lachance",
-        "2B": null,
-        "3B": null
+        "2B": "Brendan Brock",
+        "3B": "Camden Johnson"
+      },
+      "runners_after": {
+        "1B": "Deiten Lachance",
+        "2B": "Brendan Brock",
+        "3B": "Camden Johnson"
+      },
+      "score": {
+        "away": 2,
+        "home": 0
+      },
+      "description": "Reese, Coope to p for Yarc, Matthe."
+    },
+    {
+      "inning": "Bottom 1",
+      "pitcher": "Cooper Reese",
+      "batter": "Jaxon Willits",
+      "outcome": "Walk",
+      "count": null,
+      "pitches": null,
+      "rbi": true,
+      "runs_scored": [
+        "Camden Johnson"
+      ],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Deiten Lachance",
+        "2B": "Brendan Brock",
+        "3B": "Camden Johnson"
       },
       "runners_after": {
         "1B": "Jaxon Willits",
-        "2B": null,
-        "3B": null
+        "2B": "Deiten Lachance",
+        "3B": "Brendan Brock"
       },
       "score": {
         "away": 2,
@@ -391,18 +423,20 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Brendan Brock"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Jaxon Willits",
-        "2B": null,
-        "3B": null
+        "2B": "Deiten Lachance",
+        "3B": "Brendan Brock"
       },
       "runners_after": {
         "1B": "Nolan Stevens",
-        "2B": null,
-        "3B": null
+        "2B": "Jaxon Willits",
+        "3B": "Deiten Lachance"
       },
       "score": {
         "away": 2,
@@ -418,18 +452,20 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Deiten Lachance"
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Nolan Stevens",
-        "2B": null,
-        "3B": null
+        "2B": "Jaxon Willits",
+        "3B": "Deiten Lachance"
       },
       "runners_after": {
-        "1B": "Nolan Stevens",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Nolan Stevens",
+        "3B": "Jaxon Willits"
       },
       "score": {
         "away": 2,
@@ -445,18 +481,20 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jaxon Willits"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Nolan Stevens",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Nolan Stevens",
+        "3B": "Jaxon Willits"
       },
       "runners_after": {
-        "1B": "Nolan Stevens",
+        "1B": null,
         "2B": "Cayden Brumbaugh",
-        "3B": null
+        "3B": "Nolan Stevens"
       },
       "score": {
         "away": 2,
@@ -472,18 +510,20 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Nolan Stevens"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Nolan Stevens",
+        "1B": null,
         "2B": "Cayden Brumbaugh",
-        "3B": null
+        "3B": "Nolan Stevens"
       },
       "runners_after": {
-        "1B": "Nolan Stevens",
-        "2B": "Cayden Brumbaugh",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Cayden Brumbaugh"
       },
       "score": {
         "away": 2,
@@ -493,7 +533,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Cooper Reese",
+      "pitcher": "Bradyn Barnes",
       "batter": "Drew Dickerson",
       "outcome": "Groundout",
       "count": null,
@@ -503,20 +543,47 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Nolan Stevens",
-        "2B": "Cayden Brumbaugh",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Cayden Brumbaugh"
       },
       "runners_after": {
-        "1B": "Nolan Stevens",
-        "2B": "Cayden Brumbaugh",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Cayden Brumbaugh"
       },
       "score": {
         "away": 2,
         "home": 5
       },
       "description": "Dickerson, D grounded out to p."
+    },
+    {
+      "inning": "Top 2",
+      "pitcher": "Nick Wesloski",
+      "batter": "Wesloski, N. to p for Rerick, D..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 5
+      },
+      "description": "Wesloski, N. to p for Rerick, D.."
     },
     {
       "inning": "Top 2",
@@ -629,6 +696,33 @@
     {
       "inning": "Bottom 2",
       "pitcher": "Bradyn Barnes",
+      "batter": "Barnes, Brad to p for Reese, Coope.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 5
+      },
+      "description": "Barnes, Brad to p for Reese, Coope."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Bradyn Barnes",
       "batter": "Camden Johnson",
       "outcome": "Double",
       "count": null,
@@ -698,8 +792,8 @@
       },
       "runners_after": {
         "1B": "Brendan Brock",
-        "2B": "Camden Johnson",
-        "3B": null
+        "2B": null,
+        "3B": "Camden Johnson"
       },
       "score": {
         "away": 2,
@@ -720,13 +814,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Brendan Brock",
-        "2B": "Camden Johnson",
-        "3B": null
+        "2B": null,
+        "3B": "Camden Johnson"
       },
       "runners_after": {
         "1B": "Deiten Lachance",
-        "2B": "Camden Johnson",
-        "3B": null
+        "2B": "Brendan Brock",
+        "3B": "Camden Johnson"
       },
       "score": {
         "away": 2,
@@ -742,18 +836,20 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Camden Johnson"
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Deiten Lachance",
-        "2B": "Camden Johnson",
-        "3B": null
+        "2B": "Brendan Brock",
+        "3B": "Camden Johnson"
       },
       "runners_after": {
         "1B": "Deiten Lachance",
-        "2B": "Camden Johnson",
-        "3B": null
+        "2B": null,
+        "3B": "Brendan Brock"
       },
       "score": {
         "away": 2,
@@ -769,17 +865,19 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Brendan Brock"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Deiten Lachance",
-        "2B": "Camden Johnson",
-        "3B": null
+        "2B": null,
+        "3B": "Brendan Brock"
       },
       "runners_after": {
-        "1B": "Deiten Lachance",
-        "2B": "Camden Johnson",
+        "1B": null,
+        "2B": "Deiten Lachance",
         "3B": null
       },
       "score": {
@@ -800,13 +898,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Deiten Lachance",
-        "2B": "Camden Johnson",
+        "1B": null,
+        "2B": "Deiten Lachance",
         "3B": null
       },
       "runners_after": {
-        "1B": "Deiten Lachance",
-        "2B": "Camden Johnson",
+        "1B": null,
+        "2B": "Deiten Lachance",
         "3B": null
       },
       "score": {
@@ -817,7 +915,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Nick Wesloski",
+      "pitcher": "Jaden Barfield",
       "batter": "Boston Vest",
       "outcome": "Hit by pitch",
       "count": null,
@@ -845,12 +943,40 @@
     {
       "inning": "Top 3",
       "pitcher": "Jaden Barfield",
+      "batter": "Barfield, J to p for Wesloski, N..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Boston Vest",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Boston Vest",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 7
+      },
+      "description": "Barfield, J to p for Wesloski, N.."
+    },
+    {
+      "inning": "Top 3",
+      "pitcher": "Jaden Barfield",
       "batter": "Bryce Campbell",
       "outcome": "Home run",
       "count": null,
       "pitches": null,
       "rbi": true,
       "runs_scored": [
+        "Boston Vest",
         "Bryce Campbell"
       ],
       "outs_before": 0,
@@ -861,7 +987,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Boston Vest",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -883,12 +1009,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Boston Vest",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Boston Vest",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -910,7 +1036,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Boston Vest",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -942,8 +1068,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Daniels",
-        "2B": null,
+        "1B": null,
+        "2B": "Chris Daniels",
         "3B": null
       },
       "score": {
@@ -964,13 +1090,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Chris Daniels",
-        "2B": null,
+        "1B": null,
+        "2B": "Chris Daniels",
         "3B": null
       },
       "runners_after": {
         "1B": "Dane Woodcook",
-        "2B": null,
+        "2B": "Chris Daniels",
         "3B": null
       },
       "score": {
@@ -981,7 +1107,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jaden Barfield",
+      "pitcher": "Mason Bixby",
       "batter": "Cole Rogers",
       "outcome": "Walk",
       "count": null,
@@ -992,13 +1118,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Dane Woodcook",
-        "2B": null,
+        "2B": "Chris Daniels",
         "3B": null
       },
       "runners_after": {
         "1B": "Cole Rogers",
-        "2B": null,
-        "3B": null
+        "2B": "Dane Woodcook",
+        "3B": "Chris Daniels"
       },
       "score": {
         "away": 4,
@@ -1008,24 +1134,26 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jaden Barfield",
+      "pitcher": "Mason Bixby",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Chris Daniels"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Cole Rogers",
-        "2B": null,
-        "3B": null
+        "2B": "Dane Woodcook",
+        "3B": "Chris Daniels"
       },
       "runners_after": {
-        "1B": "Cole Rogers",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Cole Rogers",
+        "3B": "Dane Woodcook"
       },
       "score": {
         "away": 5,
@@ -1035,7 +1163,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jaden Barfield",
+      "pitcher": "Mason Bixby",
       "batter": "Steve Solorzano",
       "outcome": "Groundout",
       "count": null,
@@ -1045,14 +1173,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Cole Rogers",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Cole Rogers",
+        "3B": "Dane Woodcook"
       },
       "runners_after": {
-        "1B": "Cole Rogers",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Cole Rogers",
+        "3B": "Dane Woodcook"
       },
       "score": {
         "away": 5,
@@ -1104,7 +1232,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cayden Brumbaugh",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1126,7 +1254,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cayden Brumbaugh",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1158,8 +1286,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Drew Dickerson",
-        "2B": null,
+        "1B": null,
+        "2B": "Drew Dickerson",
         "3B": null
       },
       "score": {
@@ -1180,14 +1308,14 @@
       "outs_before": 3,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Drew Dickerson",
-        "2B": null,
+        "1B": null,
+        "2B": "Drew Dickerson",
         "3B": null
       },
       "runners_after": {
         "1B": "Brendan Brock",
         "2B": null,
-        "3B": null
+        "3B": "Drew Dickerson"
       },
       "score": {
         "away": 5,
@@ -1203,16 +1331,20 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Brendan Brock",
+        "Drew Dickerson",
+        null
+      ],
       "outs_before": 3,
       "outs_after": 3,
       "runners_before": {
         "1B": "Brendan Brock",
         "2B": null,
-        "3B": null
+        "3B": "Drew Dickerson"
       },
       "runners_after": {
-        "1B": "Brendan Brock",
+        "1B": null,
         "2B": "Deiten Lachance",
         "3B": null
       },
@@ -1234,12 +1366,12 @@
       "outs_before": 3,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brendan Brock",
+        "1B": null,
         "2B": "Deiten Lachance",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brendan Brock",
+        "1B": null,
         "2B": "Deiten Lachance",
         "3B": null
       },
@@ -1248,6 +1380,33 @@
         "home": 10
       },
       "description": "Willits, J. struck out looking."
+    },
+    {
+      "inning": "Top 4",
+      "pitcher": "Mason Bixby",
+      "batter": "Bixby, M. to p for Barfield, J.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 10
+      },
+      "description": "Bixby, M. to p for Barfield, J."
     },
     {
       "inning": "Top 4",
@@ -1305,7 +1464,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Mason Bixby",
+      "pitcher": "Isaac Williams",
       "batter": "Bryce Campbell",
       "outcome": "Strikeout (swinging)",
       "count": null,
@@ -1332,7 +1491,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Mason Bixby",
+      "pitcher": "Isaac Williams",
       "batter": "Easton Rulli",
       "outcome": "Single",
       "count": null,
@@ -1348,7 +1507,7 @@
       },
       "runners_after": {
         "1B": "Easton Rulli",
-        "2B": null,
+        "2B": "Boston Vest",
         "3B": null
       },
       "score": {
@@ -1359,7 +1518,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Mason Bixby",
+      "pitcher": "Isaac Williams",
       "batter": "Chris Daniels",
       "outcome": "Strikeout (swinging)",
       "count": null,
@@ -1370,12 +1529,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Easton Rulli",
-        "2B": null,
+        "2B": "Boston Vest",
         "3B": null
       },
       "runners_after": {
         "1B": "Easton Rulli",
-        "2B": null,
+        "2B": "Boston Vest",
         "3B": null
       },
       "score": {
@@ -1467,7 +1626,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Bradyn Barnes",
+      "pitcher": "Jaden Davis",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1482,8 +1641,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cayden Brumbaugh",
-        "2B": null,
+        "1B": null,
+        "2B": "Cayden Brumbaugh",
         "3B": null
       },
       "score": {
@@ -1494,7 +1653,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Bradyn Barnes",
+      "pitcher": "Jaden Davis",
       "batter": "Alec Blair",
       "outcome": "Walk",
       "count": null,
@@ -1504,13 +1663,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cayden Brumbaugh",
-        "2B": null,
+        "1B": null,
+        "2B": "Cayden Brumbaugh",
         "3B": null
       },
       "runners_after": {
         "1B": "Alec Blair",
-        "2B": null,
+        "2B": "Cayden Brumbaugh",
         "3B": null
       },
       "score": {
@@ -1521,7 +1680,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Bradyn Barnes",
+      "pitcher": "Jaden Davis",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1532,13 +1691,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Alec Blair",
-        "2B": null,
+        "2B": "Cayden Brumbaugh",
         "3B": null
       },
       "runners_after": {
-        "1B": "Alec Blair",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Alec Blair",
+        "3B": "Cayden Brumbaugh"
       },
       "score": {
         "away": 5,
@@ -1548,7 +1707,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Bradyn Barnes",
+      "pitcher": "Jaden Davis",
       "batter": "Drew Dickerson",
       "outcome": "Strikeout (swinging)",
       "count": null,
@@ -1558,14 +1717,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Alec Blair",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Alec Blair",
+        "3B": "Cayden Brumbaugh"
       },
       "runners_after": {
-        "1B": "Alec Blair",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Alec Blair",
+        "3B": "Cayden Brumbaugh"
       },
       "score": {
         "away": 5,
@@ -1576,6 +1735,33 @@
     {
       "inning": "Top 5",
       "pitcher": "Isaac Williams",
+      "batter": "Williams, I. to p for Bixby, M..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 10
+      },
+      "description": "Williams, I. to p for Bixby, M.."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Kadyn Leon",
       "batter": "Camden Kaufman",
       "outcome": "Strikeout (swinging)",
       "count": null,
@@ -1602,7 +1788,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Isaac Williams",
+      "pitcher": "Kadyn Leon",
       "batter": "Dane Woodcook",
       "outcome": "Single",
       "count": null,
@@ -1629,7 +1815,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Isaac Williams",
+      "pitcher": "Kadyn Leon",
       "batter": "Cole Rogers",
       "outcome": "Strikeout (looking)",
       "count": null,
@@ -1656,7 +1842,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Isaac Williams",
+      "pitcher": "Kadyn Leon",
       "batter": "Steve Solorzano",
       "outcome": "Pop out",
       "count": null,
@@ -1680,6 +1866,33 @@
         "home": 10
       },
       "description": "Solorzano, S popped up to 2b."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Jaden Davis",
+      "batter": "Davis, Jaden to p for Barnes, Brad.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 10
+      },
+      "description": "Davis, Jaden to p for Barnes, Brad."
     },
     {
       "inning": "Bottom 5",
@@ -1764,7 +1977,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Kadyn Leon",
+      "pitcher": "Jason Bodin",
+      "batter": "Leon, K. to p for Williams, I..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 10
+      },
+      "description": "Leon, K. to p for Williams, I.."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Jason Bodin",
       "batter": "Aidan Taclas",
       "outcome": "Strikeout (looking)",
       "count": null,
@@ -1791,7 +2031,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Kadyn Leon",
+      "pitcher": "Jason Bodin",
       "batter": "Boston Vest",
       "outcome": "Walk",
       "count": null,
@@ -1818,7 +2058,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Kadyn Leon",
+      "pitcher": "Jason Bodin",
       "batter": "Bryce Campbell",
       "outcome": "Flyout",
       "count": null,
@@ -1845,7 +2085,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Kadyn Leon",
+      "pitcher": "Jason Bodin",
       "batter": "Easton Rulli",
       "outcome": "Groundout",
       "count": null,
@@ -1941,7 +2181,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dasan Harris",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1963,12 +2203,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Dasan Harris",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Dasan Harris",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1980,7 +2220,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Kadyn Leon",
+      "pitcher": "Jason Bodin",
       "batter": "Brock, B. to lf.",
       "outcome": "\u2014",
       "count": null,
@@ -2007,7 +2247,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Kadyn Leon",
+      "pitcher": "Jason Bodin",
       "batter": "LaChance, D. to c.",
       "outcome": "\u2014",
       "count": null,
@@ -2034,7 +2274,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Kadyn Leon",
+      "pitcher": "Jason Bodin",
       "batter": "Harris, D. to cf.",
       "outcome": "\u2014",
       "count": null,
@@ -2061,7 +2301,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Kadyn Leon",
+      "pitcher": "Jason Bodin",
       "batter": "Larkin, C. to 1b for Gambill, T..",
       "outcome": "\u2014",
       "count": null,
@@ -2088,7 +2328,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Kadyn Leon",
+      "pitcher": "Jackson Cleveland",
       "batter": "Blair, A. to rf.",
       "outcome": "\u2014",
       "count": null,
@@ -2115,7 +2355,34 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jason Bodin",
+      "pitcher": "Jackson Cleveland",
+      "batter": "Bodin, J. to p for Leon, K..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 10
+      },
+      "description": "Bodin, J. to p for Leon, K.."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Jackson Cleveland",
       "batter": "Chris Daniels",
       "outcome": "Groundout",
       "count": null,
@@ -2142,7 +2409,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jason Bodin",
+      "pitcher": "Jackson Cleveland",
       "batter": "Camden Kaufman",
       "outcome": "Strikeout (looking)",
       "count": null,
@@ -2169,7 +2436,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jason Bodin",
+      "pitcher": "Jackson Cleveland",
       "batter": "Dane Woodcook",
       "outcome": "Groundout",
       "count": null,
@@ -2223,7 +2490,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jaden Davis",
+      "pitcher": "Hazen Wright",
       "batter": "Alec Blair",
       "outcome": "Flyout",
       "count": null,
@@ -2250,7 +2517,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jaden Davis",
+      "pitcher": "Hazen Wright",
       "batter": "Drew Dickerson",
       "outcome": "Walk",
       "count": null,
@@ -2277,7 +2544,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jaden Davis",
+      "pitcher": "Hazen Wright",
       "batter": "Camden Johnson",
       "outcome": "Groundout",
       "count": null,
@@ -2304,7 +2571,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jason Bodin",
+      "pitcher": "Jackson Cleveland",
       "batter": "Branch, K. to 2b for Brumbaugh, C.",
       "outcome": "\u2014",
       "count": null,
@@ -2331,7 +2598,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jason Bodin",
+      "pitcher": "",
       "batter": "Cole Rogers",
       "outcome": "Single",
       "count": null,
@@ -2358,7 +2625,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jason Bodin",
+      "pitcher": "",
       "batter": "Steve Solorzano",
       "outcome": "Groundout",
       "count": null,
@@ -2373,8 +2640,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cole Rogers",
-        "2B": null,
+        "1B": null,
+        "2B": "Cole Rogers",
         "3B": null
       },
       "score": {
@@ -2385,18 +2652,20 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jason Bodin",
+      "pitcher": "",
       "batter": "Aidan Taclas",
       "outcome": "Single",
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Cole Rogers"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Cole Rogers",
-        "2B": null,
+        "1B": null,
+        "2B": "Cole Rogers",
         "3B": null
       },
       "runners_after": {
@@ -2412,7 +2681,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jason Bodin",
+      "pitcher": "",
       "batter": "Boston Vest",
       "outcome": "Flyout",
       "count": null,
@@ -2439,7 +2708,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jason Bodin",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2454,8 +2723,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Aidan Taclas",
-        "2B": null,
+        "1B": null,
+        "2B": "Aidan Taclas",
         "3B": null
       },
       "score": {
@@ -2466,7 +2735,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jason Bodin",
+      "pitcher": "",
       "batter": "Bryce Campbell",
       "outcome": "Walk",
       "count": null,
@@ -2476,13 +2745,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Aidan Taclas",
-        "2B": null,
+        "1B": null,
+        "2B": "Aidan Taclas",
         "3B": null
       },
       "runners_after": {
         "1B": "Bryce Campbell",
-        "2B": null,
+        "2B": "Aidan Taclas",
         "3B": null
       },
       "score": {
@@ -2493,7 +2762,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jason Bodin",
+      "pitcher": "",
       "batter": "Easton Rulli",
       "outcome": "Pop out",
       "count": null,
@@ -2504,12 +2773,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Bryce Campbell",
-        "2B": null,
+        "2B": "Aidan Taclas",
         "3B": null
       },
       "runners_after": {
         "1B": "Bryce Campbell",
-        "2B": null,
+        "2B": "Aidan Taclas",
         "3B": null
       },
       "score": {
@@ -2517,6 +2786,33 @@
         "home": 10
       },
       "description": "Rulli, Easto popped up to 1b."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Hazen Wright",
+      "batter": "Wright, Haze to p for Davis, Jaden.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 10
+      },
+      "description": "Wright, Haze to p for Davis, Jaden."
     },
     {
       "inning": "Bottom 8",
@@ -2547,7 +2843,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Hazen Wright",
+      "pitcher": "",
       "batter": "Deiten Lachance",
       "outcome": "Flyout",
       "count": null,
@@ -2574,7 +2870,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Hazen Wright",
+      "pitcher": "",
       "batter": "Jaxon Willits",
       "outcome": "Double",
       "count": null,
@@ -2601,7 +2897,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Hazen Wright",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2617,8 +2913,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Jaxon Willits",
-        "3B": null
+        "2B": null,
+        "3B": "Jaxon Willits"
       },
       "score": {
         "away": 6,
@@ -2628,7 +2924,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Hazen Wright",
+      "pitcher": "",
       "batter": "Dasan Harris",
       "outcome": "Walk",
       "count": null,
@@ -2639,13 +2935,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Jaxon Willits",
-        "3B": null
+        "2B": null,
+        "3B": "Jaxon Willits"
       },
       "runners_after": {
         "1B": "Dasan Harris",
-        "2B": "Jaxon Willits",
-        "3B": null
+        "2B": null,
+        "3B": "Jaxon Willits"
       },
       "score": {
         "away": 6,
@@ -2655,7 +2951,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Hazen Wright",
+      "pitcher": "",
       "batter": "Connor Larkin",
       "outcome": "Strikeout (swinging)",
       "count": null,
@@ -2666,13 +2962,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Dasan Harris",
-        "2B": "Jaxon Willits",
-        "3B": null
+        "2B": null,
+        "3B": "Jaxon Willits"
       },
       "runners_after": {
         "1B": "Dasan Harris",
-        "2B": "Jaxon Willits",
-        "3B": null
+        "2B": null,
+        "3B": "Jaxon Willits"
       },
       "score": {
         "away": 6,
@@ -2682,7 +2978,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
+      "batter": "Cleveland, J to p for Bodin, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 10
+      },
+      "description": "Cleveland, J to p for Bodin, J.."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": "Chris Daniels",
       "outcome": "Pop out",
       "count": null,
@@ -2709,7 +3032,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Camden Kaufman",
       "outcome": "Reached on error",
       "count": null,
@@ -2736,7 +3059,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Dane Woodcook",
       "outcome": "Walk",
       "count": null,
@@ -2752,7 +3075,7 @@
       },
       "runners_after": {
         "1B": "Dane Woodcook",
-        "2B": null,
+        "2B": "Camden Kaufman",
         "3B": null
       },
       "score": {
@@ -2763,7 +3086,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Cole Rogers",
       "outcome": "Fielder's choice",
       "count": null,
@@ -2774,13 +3097,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Dane Woodcook",
-        "2B": null,
+        "2B": "Camden Kaufman",
         "3B": null
       },
       "runners_after": {
         "1B": "Cole Rogers",
         "2B": null,
-        "3B": null
+        "3B": "Camden Kaufman"
       },
       "score": {
         "away": 6,
@@ -2790,7 +3113,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Steve Solorzano",
       "outcome": "Hit by pitch",
       "count": null,
@@ -2802,12 +3125,12 @@
       "runners_before": {
         "1B": "Cole Rogers",
         "2B": null,
-        "3B": null
+        "3B": "Camden Kaufman"
       },
       "runners_after": {
         "1B": "Steve Solorzano",
-        "2B": null,
-        "3B": null
+        "2B": "Cole Rogers",
+        "3B": "Camden Kaufman"
       },
       "score": {
         "away": 6,
@@ -2817,7 +3140,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Aidan Taclas",
       "outcome": "Groundout",
       "count": null,
@@ -2828,13 +3151,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Steve Solorzano",
-        "2B": null,
-        "3B": null
+        "2B": "Cole Rogers",
+        "3B": "Camden Kaufman"
       },
       "runners_after": {
         "1B": "Steve Solorzano",
-        "2B": null,
-        "3B": null
+        "2B": "Cole Rogers",
+        "3B": "Camden Kaufman"
       },
       "score": {
         "away": 6,

@@ -3,7 +3,7 @@
   "date": "05/12/2026",
   "away_team": "Auburn",
   "home_team": "Jacksonville St.",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -348,8 +348,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethin Bingaman",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "score": {
@@ -370,13 +370,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ethin Bingaman",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "runners_after": {
         "1B": "Mason McCraine",
-        "2B": null,
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "score": {
@@ -398,13 +398,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Mason McCraine",
-        "2B": null,
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Mason McCraine",
+        "3B": "Ethin Bingaman"
       },
       "score": {
         "away": 0,
@@ -424,14 +424,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Mason McCraine",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Mason McCraine",
+        "3B": "Ethin Bingaman"
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Mason McCraine",
+        "3B": "Ethin Bingaman"
       },
       "score": {
         "away": 0,
@@ -932,8 +932,8 @@
     {
       "inning": "Bottom 4",
       "pitcher": "Abe Chancellor",
-      "batter": null,
-      "outcome": "Stolen base",
+      "batter": "Chancellor,A to p for Graves, G..",
+      "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
@@ -954,6 +954,33 @@
         "away": 0,
         "home": 3
       },
+      "description": "Chancellor,A to p for Graves, G.."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Abe Chancellor",
+      "batter": null,
+      "outcome": "Stolen base",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "O. Pena",
+        "2B": null,
+        "3B": "Cooper Blauser"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "O. Pena",
+        "3B": "Cooper Blauser"
+      },
+      "score": {
+        "away": 0,
+        "home": 3
+      },
       "description": "O. Pena stole second."
     },
     {
@@ -968,13 +995,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "O. Pena",
-        "2B": null,
+        "1B": null,
+        "2B": "O. Pena",
         "3B": "Cooper Blauser"
       },
       "runners_after": {
         "1B": "Luke Williams",
-        "2B": null,
+        "2B": "O. Pena",
         "3B": "Cooper Blauser"
       },
       "score": {
@@ -998,13 +1025,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Luke Williams",
-        "2B": null,
+        "2B": "O. Pena",
         "3B": "Cooper Blauser"
       },
       "runners_after": {
         "1B": "Jaxon Pate",
         "2B": "Luke Williams",
-        "3B": null
+        "3B": "O. Pena"
       },
       "score": {
         "away": 0,
@@ -1026,12 +1053,12 @@
       "runners_before": {
         "1B": "Jaxon Pate",
         "2B": "Luke Williams",
-        "3B": null
+        "3B": "O. Pena"
       },
       "runners_after": {
         "1B": null,
         "2B": "Luke Williams",
-        "3B": null
+        "3B": "O. Pena"
       },
       "score": {
         "away": 0,
@@ -1176,7 +1203,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Abe Chancellor",
+      "pitcher": "Marcel Kulik",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1203,7 +1230,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Abe Chancellor",
+      "pitcher": "Marcel Kulik",
       "batter": "Brady Thomas",
       "outcome": "Strikeout (looking)",
       "count": null,
@@ -1227,6 +1254,33 @@
         "home": 4
       },
       "description": "B. Thomas struck out looking."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Marcel Kulik",
+      "batter": "Kulik, M. to p for Chancellor,A.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": "Grayson Ashe",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Grayson Ashe",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 4
+      },
+      "description": "Kulik, M. to p for Chancellor,A."
     },
     {
       "inning": "Bottom 5",
@@ -1365,7 +1419,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "J.",
+      "pitcher": "Jud Files",
+      "batter": "J. Files",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Bub Terrell",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Bub Terrell",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 4
+      },
+      "description": "J. Files to p for R. Geraghty."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Jud Files",
       "batter": "Chris Rembert",
       "outcome": "Groundout",
       "count": null,
@@ -1473,7 +1554,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jud Files",
       "batter": "Ethin Bingaman",
       "outcome": "Single",
       "count": null,
@@ -1500,7 +1581,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jud Files",
       "batter": "Eddie Madrigal",
       "outcome": "Single",
       "count": null,
@@ -1516,7 +1597,7 @@
       },
       "runners_after": {
         "1B": "Eddie Madrigal",
-        "2B": null,
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "score": {
@@ -1527,7 +1608,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jud Files",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1538,13 +1619,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Eddie Madrigal",
-        "2B": null,
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "runners_after": {
         "1B": "Eddie Madrigal",
         "2B": null,
-        "3B": null
+        "3B": "Ethin Bingaman"
       },
       "score": {
         "away": 0,
@@ -1554,19 +1635,21 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jud Files",
       "batter": "Mason McCraine",
       "outcome": "Single",
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ethin Bingaman"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Eddie Madrigal",
         "2B": null,
-        "3B": null
+        "3B": "Ethin Bingaman"
       },
       "runners_after": {
         "1B": "Mason McCraine",
@@ -1581,7 +1664,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jud Files",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1596,8 +1679,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -1608,7 +1691,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jud Files",
       "batter": "Lucas Steele",
       "outcome": "Strikeout (looking)",
       "count": null,
@@ -1618,13 +1701,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -1635,7 +1718,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jud Files",
       "batter": "Bristol Carter",
       "outcome": "Strikeout (swinging)",
       "count": null,
@@ -1645,13 +1728,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -1662,7 +1745,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jud Files",
       "batter": "Mason McCraine",
       "outcome": "Groundout",
       "count": null,
@@ -1672,13 +1755,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -1770,7 +1853,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Marcel Kulik",
+      "pitcher": "Garrett Brewer",
       "batter": "Brady Thomas",
       "outcome": "Walk",
       "count": null,
@@ -1797,7 +1880,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Marcel Kulik",
+      "pitcher": "Garrett Brewer",
       "batter": "Cooper Blauser",
       "outcome": "Fielder's choice",
       "count": null,
@@ -1824,7 +1907,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "Jud Files",
       "batter": "Eric Guevara",
       "outcome": "Hit by pitch",
       "count": null,
@@ -1851,7 +1934,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "Chase Horst",
       "batter": "Bub Terrell",
       "outcome": "Walk",
       "count": null,
@@ -1867,7 +1950,7 @@
       },
       "runners_after": {
         "1B": "Bub Terrell",
-        "2B": null,
+        "2B": "Eric Guevara",
         "3B": null
       },
       "score": {
@@ -1878,7 +1961,34 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "C.",
+      "pitcher": "Chase Horst",
+      "batter": "C. Horst",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Bub Terrell",
+        "2B": "Eric Guevara",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Bub Terrell",
+        "2B": "Eric Guevara",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 4
+      },
+      "description": "C. Horst to p for J. Files."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Chase Horst",
       "batter": "Chris Rembert",
       "outcome": "Flyout",
       "count": null,
@@ -1889,13 +1999,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Bub Terrell",
-        "2B": null,
+        "2B": "Eric Guevara",
         "3B": null
       },
       "runners_after": {
         "1B": "Bub Terrell",
         "2B": null,
-        "3B": null
+        "3B": "Eric Guevara"
       },
       "score": {
         "away": 1,
@@ -1905,7 +2015,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "C.",
+      "pitcher": "Chase Horst",
       "batter": "Ethin Bingaman",
       "outcome": "Grounded into double play",
       "count": null,
@@ -1917,12 +2027,12 @@
       "runners_before": {
         "1B": "Bub Terrell",
         "2B": null,
-        "3B": null
+        "3B": "Eric Guevara"
       },
       "runners_after": {
-        "1B": "Bub Terrell",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Eric Guevara"
       },
       "score": {
         "away": 1,
@@ -1933,6 +2043,33 @@
     {
       "inning": "Bottom 8",
       "pitcher": "Garrett Brewer",
+      "batter": "Brewer, G. to p for Kulik, M..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 4
+      },
+      "description": "Brewer, G. to p for Kulik, M.."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Trey Majette",
       "outcome": "Groundout",
       "count": null,
@@ -1959,7 +2096,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "",
       "batter": "O. Pena",
       "outcome": "Groundout",
       "count": null,
@@ -1986,7 +2123,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "",
       "batter": "Luke Williams",
       "outcome": "Strikeout (swinging)",
       "count": null,
@@ -2013,7 +2150,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "C.",
+      "pitcher": "Chase Horst",
       "batter": "Todd Clay",
       "outcome": "Strikeout (swinging)",
       "count": null,
@@ -2040,7 +2177,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "C.",
+      "pitcher": "",
       "batter": "Mason McCraine",
       "outcome": "Flyout",
       "count": null,
@@ -2067,7 +2204,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "C.",
+      "pitcher": "",
       "batter": "Lucas Steele",
       "outcome": "Strikeout (swinging)",
       "count": null,

@@ -3,7 +3,7 @@
   "date": "05/16/2026",
   "away_team": "Florida",
   "home_team": "LSU",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -582,7 +582,10 @@
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -827,7 +830,9 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1233,7 +1238,8 @@
       "pitches": "BF",
       "rbi": true,
       "runs_scored": [
-        "Cade Arrambide"
+        "Cade Arrambide",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1288,7 +1294,9 @@
       "count": "2-1",
       "pitches": "BBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1397,7 +1405,8 @@
       "pitches": "BBK",
       "rbi": true,
       "runs_scored": [
-        "Hayden Yost"
+        "Hayden Yost",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1608,7 +1617,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "Caden McDonald",
       "batter": "Derek Curiel",
       "outcome": "Fielder's choice",
       "count": "1-1",
@@ -1743,7 +1752,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "Caden McDonald",
       "batter": "Cade Arrambide",
       "outcome": "\u2014",
       "count": "3-2",
@@ -1770,7 +1779,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "Caden McDonald",
       "batter": "Mason Braun",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1797,7 +1806,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "Caden McDonald",
       "batter": "Seth Dardar",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1978,8 +1987,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brendan Lawson",
-        "2B": null,
+        "1B": null,
+        "2B": "Brendan Lawson",
         "3B": null
       },
       "score": {
@@ -1996,17 +2005,19 @@
       "count": "3-1",
       "pitches": "BFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brendan Lawson",
-        "2B": null,
+        "1B": null,
+        "2B": "Brendan Lawson",
         "3B": null
       },
       "runners_after": {
         "1B": "Ethan Surowiec",
-        "2B": null,
+        "2B": "Brendan Lawson",
         "3B": null
       },
       "score": {
@@ -2028,12 +2039,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Ethan Surowiec",
-        "2B": null,
+        "2B": "Brendan Lawson",
         "3B": null
       },
       "runners_after": {
         "1B": "Ethan Surowiec",
-        "2B": null,
+        "2B": "Brendan Lawson",
         "3B": null
       },
       "score": {
@@ -2044,7 +2055,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "Caden McDonald",
       "batter": "Brayden Simpson",
       "outcome": "Double",
       "count": "1-2",
@@ -2071,7 +2082,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "Caden McDonald",
       "batter": "Zach Yorke",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2098,7 +2109,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "Caden McDonald",
       "batter": "Chris Stanfield",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2125,7 +2136,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "Caden McDonald",
       "batter": "Yamin",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -2152,13 +2163,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "Caden McDonald",
       "batter": "Steven Milam",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BBKF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2179,7 +2192,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "Caden McDonald",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2206,7 +2219,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "Caden McDonald",
       "batter": "Derek Curiel",
       "outcome": "Walk",
       "count": "3-2",
@@ -2233,13 +2246,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "Cooper Walls",
       "batter": "Cade Arrambide",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2260,13 +2275,16 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "Cooper Walls",
       "batter": "Mason Braun",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2287,7 +2305,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "Cooper Walls",
       "batter": "Seth Dardar",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2314,7 +2332,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jaden Noot",
+      "pitcher": "Deven Sheerin",
       "batter": "Yamin",
       "outcome": "\u2014",
       "count": null,
@@ -2512,7 +2530,8 @@
       "pitches": "BFBBS",
       "rbi": true,
       "runs_scored": [
-        "Hayden Yost"
+        "Hayden Yost",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -2561,7 +2580,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Deven Sheerin",
+      "pitcher": "Dax Dathe",
       "batter": "Brendan Lawson",
       "outcome": "Single",
       "count": "2-2",
@@ -2621,7 +2640,11 @@
       "count": "3-2",
       "pitches": "KBFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2669,7 +2692,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Dax Dathe",
+      "pitcher": "Ethan Plog",
       "batter": "Karson Bowen",
       "outcome": "Walk",
       "count": "3-2",
@@ -2696,7 +2719,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethan Plog",
+      "pitcher": "",
       "batter": "Landon Stripling",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2723,7 +2746,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "Cooper Walls",
       "batter": "Brayden Simpson",
       "outcome": "Double",
       "count": "0-2",
@@ -2750,7 +2773,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "Cooper Walls",
       "batter": "Zach Yorke",
       "outcome": "Single",
       "count": "2-0",
@@ -2777,7 +2800,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "Cooper Walls",
       "batter": "Chris Stanfield",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2804,7 +2827,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "Cooper Walls",
       "batter": "Yamin",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2831,14 +2854,16 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "Cooper Walls",
       "batter": "Steven Milam",
       "outcome": "Home run",
       "count": "1-2",
       "pitches": "KFB",
       "rbi": true,
       "runs_scored": [
-        "Steven Milam"
+        "Steven Milam",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -2860,7 +2885,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "Cooper Walls",
       "batter": "Derek Curiel",
       "outcome": "Single",
       "count": "0-0",
@@ -2887,7 +2912,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "Cooper Walls",
       "batter": "Cade Arrambide",
       "outcome": "Flyout",
       "count": "1-1",

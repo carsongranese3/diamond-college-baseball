@@ -3,7 +3,7 @@
   "date": "02/20/2026",
   "away_team": "Xavier",
   "home_team": "Arkansas",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -203,7 +203,9 @@
       "pitches": "BK",
       "rbi": true,
       "runs_scored": [
-        "Camden Kozeal"
+        "Camden Kozeal",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1097,7 +1099,10 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {

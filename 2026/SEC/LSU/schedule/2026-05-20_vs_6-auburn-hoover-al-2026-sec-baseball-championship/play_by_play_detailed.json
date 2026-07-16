@@ -3,7 +3,7 @@
   "date": "05/20/2026",
   "away_team": "LSU",
   "home_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -661,7 +661,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1014,7 +1016,9 @@
       "count": "2-2",
       "pitches": "BSKB",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1253,6 +1257,33 @@
     },
     {
       "inning": "Top 7",
+      "pitcher": "Jake Marciano",
+      "batter": "Sanders, J. to p for Marciano, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 3
+      },
+      "description": "Sanders, J. to p for Marciano, J.."
+    },
+    {
+      "inning": "Top 7",
       "pitcher": "Jackson Sanders",
       "batter": "Brayden Simpson",
       "outcome": "Strikeout (looking)",
@@ -1376,7 +1407,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brandon McCraine",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1398,12 +1429,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brandon McCraine",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Brandon McCraine",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1425,7 +1456,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brandon McCraine",
+        "1B": null,
         "2B": null,
         "3B": null
       },

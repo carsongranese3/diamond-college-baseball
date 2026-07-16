@@ -3,7 +3,7 @@
   "date": "04/21/2026",
   "away_team": "Murray St.",
   "home_team": "Ole Miss",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -211,8 +211,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tristan Bissetta",
-        "2B": null,
+        "1B": null,
+        "2B": "Tristan Bissetta",
         "3B": null
       },
       "score": {
@@ -233,13 +233,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tristan Bissetta",
-        "2B": null,
+        "1B": null,
+        "2B": "Tristan Bissetta",
         "3B": null
       },
       "runners_after": {
         "1B": "Judd Utermark",
-        "2B": null,
+        "2B": "Tristan Bissetta",
         "3B": null
       },
       "score": {
@@ -261,12 +261,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Judd Utermark",
-        "2B": null,
+        "2B": "Tristan Bissetta",
         "3B": null
       },
       "runners_after": {
         "1B": "Judd Utermark",
-        "2B": null,
+        "2B": "Tristan Bissetta",
         "3B": null
       },
       "score": {
@@ -288,12 +288,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Judd Utermark",
-        "2B": null,
+        "2B": "Tristan Bissetta",
         "3B": null
       },
       "runners_after": {
         "1B": "Judd Utermark",
-        "2B": null,
+        "2B": "Tristan Bissetta",
         "3B": null
       },
       "score": {
@@ -520,13 +520,42 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Carter",
+      "pitcher": "Carter Boyd",
+      "batter": "Carter",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Austin Fawley",
+        "2B": null,
+        "3B": "Luke Romine"
+      },
+      "runners_after": {
+        "1B": "Austin Fawley",
+        "2B": null,
+        "3B": "Luke Romine"
+      },
+      "score": {
+        "away": 0,
+        "home": 0
+      },
+      "description": "Carter Boyd to p for Preston Chau."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Carter Boyd",
       "batter": "Owen Paino",
       "outcome": "Groundout",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -547,13 +576,15 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Carter",
+      "pitcher": "Carter Boyd",
       "batter": "Dom Decker",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "KFBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -574,7 +605,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Carter",
+      "pitcher": "Carter Boyd",
       "batter": "Tristan Bissetta",
       "outcome": "Walk",
       "count": "3-2",
@@ -601,7 +632,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Carter",
+      "pitcher": "Carter Boyd",
       "batter": "Judd Utermark",
       "outcome": "Flyout",
       "count": "1-1",
@@ -709,7 +740,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Carter",
+      "pitcher": "Carter Boyd",
       "batter": "Will Furniss",
       "outcome": "Flyout",
       "count": "3-2",
@@ -736,7 +767,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Carter",
+      "pitcher": "Carter Boyd",
       "batter": "Hayden Federico",
       "outcome": "Groundout",
       "count": "2-2",
@@ -763,7 +794,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Carter",
+      "pitcher": "Joshua Fleming",
       "batter": "Topher Jones",
       "outcome": "Single",
       "count": "1-2",
@@ -790,7 +821,34 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Josh",
+      "pitcher": "Joshua Fleming",
+      "batter": "Josh",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Topher Jones",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Topher Jones",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 2
+      },
+      "description": "Josh Fleming to p for Carter Boyd."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Joshua Fleming",
       "batter": "Luke Romine",
       "outcome": "Walk",
       "count": "3-2",
@@ -817,7 +875,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Josh",
+      "pitcher": "Joshua Fleming",
       "batter": "Austin Fawley",
       "outcome": "Lineout",
       "count": "1-0",
@@ -925,7 +983,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Josh",
+      "pitcher": "Joshua Fleming",
       "batter": "Owen Paino",
       "outcome": "Single",
       "count": "0-2",
@@ -952,7 +1010,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Josh",
+      "pitcher": "Parker Patterson",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -979,7 +1037,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Josh",
+      "pitcher": "Parker Patterson",
       "batter": "Dom Decker",
       "outcome": "Walk",
       "count": "3-1",
@@ -1006,13 +1064,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Josh",
+      "pitcher": "Parker Patterson",
       "batter": "Tristan Bissetta",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "BKK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1033,7 +1093,34 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Parker",
+      "pitcher": "Parker Patterson",
+      "batter": "Parker",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Tristan Bissetta",
+        "2B": "Owen Paino",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Tristan Bissetta",
+        "2B": "Owen Paino",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 3
+      },
+      "description": "Parker Patte to p for Josh Fleming."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Jackson Lux",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1062,14 +1149,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Parker",
+      "pitcher": "Jackson Lux",
       "batter": "Judd Utermark",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "BKSBBF",
       "rbi": true,
       "runs_scored": [
-        "Judd Utermark"
+        "Judd Utermark",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1091,7 +1179,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Parker",
+      "pitcher": "Jackson Lux",
       "batter": "Will Furniss",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1118,7 +1206,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Parker",
+      "pitcher": "Jackson Lux",
       "batter": "Hayden Federico",
       "outcome": "Home run",
       "count": "1-0",
@@ -1147,7 +1235,34 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jackson",
+      "pitcher": "Jackson Lux",
+      "batter": "Jackson",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": "Owen Paino",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Owen Paino",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 7
+      },
+      "description": "Jackson Lux to p for Parker Patte."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Jackson Lux",
       "batter": "Topher Jones",
       "outcome": "Home run",
       "count": "2-2",
@@ -1176,7 +1291,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jackson",
+      "pitcher": "Ethan Lyke",
       "batter": "Luke Romine",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1203,7 +1318,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jackson",
+      "pitcher": "Ethan Lyke",
       "batter": "Austin Fawley",
       "outcome": "Walk",
       "count": "3-1",
@@ -1230,14 +1345,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jackson",
+      "pitcher": "Ethan Lyke",
       "batter": "Owen Paino",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Owen Paino"
+        "Owen Paino",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1259,7 +1375,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jackson",
+      "pitcher": "Ethan Lyke",
       "batter": "Dom Decker",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1286,7 +1402,34 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "L.",
+      "pitcher": "Leo Odom",
+      "batter": "L. Odom",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 10
+      },
+      "description": "L. Odom to p for O. Kelly."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Leo Odom",
       "batter": "Daylan",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1313,7 +1456,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "L.",
+      "pitcher": "Leo Odom",
       "batter": "Jake",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1340,7 +1483,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "L.",
+      "pitcher": "Leo Odom",
       "batter": "Easton",
       "outcome": "Single",
       "count": "1-0",
@@ -1367,7 +1510,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "L.",
+      "pitcher": "Noah Allen",
       "batter": "Colby",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1394,7 +1537,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jackson",
+      "pitcher": "Ethan Lyke",
       "batter": "Charlie",
       "outcome": "\u2014",
       "count": null,
@@ -1421,7 +1564,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ethan",
+      "pitcher": "Jack Wajda",
+      "batter": "Ethan",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 10
+      },
+      "description": "Ethan Lyke to p for Jackson Lux."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Jack Wajda",
       "batter": "Tristan Bissetta",
       "outcome": "Single",
       "count": "0-0",
@@ -1448,14 +1618,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ethan",
+      "pitcher": "Jack Wajda",
       "batter": "Judd Utermark",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "SFBBFB",
       "rbi": true,
       "runs_scored": [
-        "Judd Utermark"
+        "Judd Utermark",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1477,7 +1648,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ethan",
+      "pitcher": "Jack Wajda",
       "batter": "Will Furniss",
       "outcome": "Walk",
       "count": "3-1",
@@ -1504,7 +1675,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ethan",
+      "pitcher": "Derek Lebron",
       "batter": "Hayden Federico",
       "outcome": "Reached on error",
       "count": "1-1",
@@ -1531,7 +1702,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ethan",
+      "pitcher": "Derek Lebron",
       "batter": "Topher Jones",
       "outcome": "Hit by pitch",
       "count": "3-2",
@@ -1558,13 +1729,42 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jack",
+      "pitcher": "Derek Lebron",
+      "batter": "Jack",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Topher Jones",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Topher Jones",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 12
+      },
+      "description": "Jack Wajda to p for Ethan Lyke."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Derek Lebron",
       "batter": "Luke Romine",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "KFBBFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1585,7 +1785,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jack",
+      "pitcher": "Derek Lebron",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1614,13 +1814,16 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jack",
+      "pitcher": "Derek Lebron",
       "batter": "Kelven Perera",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "KKFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1641,7 +1844,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jack",
+      "pitcher": "Derek Lebron",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1668,13 +1871,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jack",
+      "pitcher": "Derek Lebron",
       "batter": "Owen Paino",
       "outcome": "Single",
       "count": "3-0",
       "pitches": "BBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1695,7 +1900,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jack",
+      "pitcher": "Derek Lebron",
       "batter": "Dom Decker",
       "outcome": "Double",
       "count": "0-2",
@@ -1722,7 +1927,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Derek",
+      "pitcher": "Derek Lebron",
+      "batter": "Derek",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Owen Paino",
+        "2B": "Dom Decker",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Owen Paino",
+        "2B": "Dom Decker",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 17
+      },
+      "description": "Derek Lebron to p for Jack Wajda."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Derek Lebron",
       "batter": "Tate Sirmans",
       "outcome": "Pop out",
       "count": "1-1",
@@ -1749,7 +1981,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Derek",
+      "pitcher": "",
       "batter": "Brett Moseley",
       "outcome": "Hit by pitch",
       "count": "2-1",
@@ -1776,13 +2008,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Derek",
+      "pitcher": "",
       "batter": "Will Furniss",
       "outcome": "Single",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1803,13 +2037,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Derek",
+      "pitcher": "",
       "batter": "Hayden Federico",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1830,7 +2066,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Derek",
+      "pitcher": "",
       "batter": "Topher Jones",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -1857,7 +2093,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Derek",
+      "pitcher": "",
       "batter": "Luke Romine",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1884,7 +2120,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "L.",
+      "pitcher": "Noah Allen",
       "batter": "T. Sirmans",
       "outcome": "\u2014",
       "count": null,
@@ -1911,7 +2147,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "L.",
+      "pitcher": "Noah Allen",
       "batter": "B. Moseley",
       "outcome": "\u2014",
       "count": null,
@@ -1938,7 +2174,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "L.",
+      "pitcher": "Jake Reigert",
       "batter": "H. Federico",
       "outcome": "\u2014",
       "count": null,
@@ -1965,7 +2201,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "L.",
+      "pitcher": "Jake Reigert",
       "batter": "T. Jones",
       "outcome": "\u2014",
       "count": null,
@@ -1992,7 +2228,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "L.",
+      "pitcher": "Jake Reigert",
       "batter": "K. Perera",
       "outcome": "\u2014",
       "count": null,
@@ -2019,7 +2255,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "N.",
+      "pitcher": "Jake Reigert",
+      "batter": "N. Allen",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 19
+      },
+      "description": "N. Allen to p for L. Odom."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Jake Reigert",
       "batter": "Connor",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2046,7 +2309,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Luke",
       "outcome": "Lineout",
       "count": "1-1",
@@ -2073,7 +2336,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Kris",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2100,7 +2363,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Derek",
+      "pitcher": "",
       "batter": "Tyler",
       "outcome": "\u2014",
       "count": null,
@@ -2127,7 +2390,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Derek",
+      "pitcher": "",
       "batter": "Jackson",
       "outcome": "\u2014",
       "count": null,
@@ -2154,7 +2417,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Derek",
+      "pitcher": "",
       "batter": "Kelven Perera",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2181,7 +2444,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Derek",
+      "pitcher": "",
       "batter": "Daniel Pacella",
       "outcome": "Pop out",
       "count": "2-0",
@@ -2208,7 +2471,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Derek",
+      "pitcher": "",
       "batter": "Dom Decker",
       "outcome": "\u2014",
       "count": "0-1",
@@ -2235,7 +2498,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "B. Randle",
       "outcome": "\u2014",
       "count": null,
@@ -2262,7 +2525,34 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "",
+      "batter": "J. Reigert",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 19
+      },
+      "description": "J. Reigert to p for N. Allen."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "",
       "batter": "Jaxon",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2289,7 +2579,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "",
       "batter": "Conner",
       "outcome": "Double",
       "count": "0-1",
@@ -2316,7 +2606,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "",
       "batter": "Charlie",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2343,14 +2633,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "",
       "batter": "Jake",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Jake"
+        "Jake",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -2372,7 +2663,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "",
       "batter": "Easton",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",

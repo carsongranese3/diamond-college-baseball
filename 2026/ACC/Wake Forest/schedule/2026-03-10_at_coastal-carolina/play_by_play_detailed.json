@@ -3,7 +3,7 @@
   "date": "03/10/2026",
   "away_team": "Wake Forest",
   "home_team": "Coastal Carolina",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -445,7 +445,10 @@
       "count": "2-2",
       "pitches": "BKBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -535,8 +538,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "JD Stein",
-        "2B": null,
+        "1B": null,
+        "2B": "JD Stein",
         "3B": null
       },
       "score": {
@@ -557,13 +560,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "JD Stein",
-        "2B": null,
+        "1B": null,
+        "2B": "JD Stein",
         "3B": null
       },
       "runners_after": {
         "1B": "Javar Williams",
-        "2B": null,
+        "2B": "JD Stein",
         "3B": null
       },
       "score": {
@@ -585,12 +588,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Javar Williams",
-        "2B": null,
+        "2B": "JD Stein",
         "3B": null
       },
       "runners_after": {
         "1B": "Javar Williams",
-        "2B": null,
+        "2B": "JD Stein",
         "3B": null
       },
       "score": {
@@ -612,7 +615,7 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Javar Williams",
-        "2B": null,
+        "2B": "JD Stein",
         "3B": null
       },
       "runners_after": {
@@ -763,7 +766,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Colby Richardson",
       "batter": "Luke Costello",
       "outcome": "Walk",
       "count": "3-0",
@@ -790,7 +793,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Colby Richardson",
       "batter": "Matt Conte",
       "outcome": "Single",
       "count": "1-2",
@@ -817,7 +820,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Colby Richardson",
       "batter": "Jackson Miller",
       "outcome": "Single",
       "count": "2-0",
@@ -844,7 +847,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Colby Richardson",
       "batter": "Jimmy Keenan",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -871,13 +874,15 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Colby Richardson",
       "batter": "Blake Schaaf",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -898,7 +903,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Colby Richardson",
       "batter": "JD Stein",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1033,7 +1038,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Colby Richardson",
       "batter": "Javar Williams",
       "outcome": "Single",
       "count": "1-1",
@@ -1060,7 +1065,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Colby Richardson",
       "batter": "Kade Lewis",
       "outcome": "Single",
       "count": "0-1",
@@ -1087,7 +1092,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Colby Richardson",
       "batter": "Dalton Wentz",
       "outcome": "\u2014",
       "count": "1-1",
@@ -1114,14 +1119,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Colby Richardson",
       "batter": "Luke Costello",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Luke Costello"
+        "Luke Costello",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1143,7 +1149,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Colby Richardson",
       "batter": "Matt Conte",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1251,7 +1257,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Rhys Bowie",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1266,8 +1272,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Blake Barthol",
-        "2B": null,
+        "1B": null,
+        "2B": "Blake Barthol",
         "3B": null
       },
       "score": {
@@ -1278,7 +1284,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Rhys Bowie",
       "batter": "Rex Watson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1288,13 +1294,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Blake Barthol",
-        "2B": null,
+        "1B": null,
+        "2B": "Blake Barthol",
         "3B": null
       },
       "runners_after": {
-        "1B": "Blake Barthol",
-        "2B": null,
+        "1B": null,
+        "2B": "Blake Barthol",
         "3B": null
       },
       "score": {
@@ -1305,7 +1311,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Connor Kane",
       "batter": "Jackson Miller",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1332,7 +1338,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Connor Kane",
       "batter": "Jimmy Keenan",
       "outcome": "Single",
       "count": "2-2",
@@ -1359,7 +1365,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Connor Kane",
       "batter": null,
       "outcome": "Baserunning",
       "count": "1-0",
@@ -1386,7 +1392,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Connor Kane",
       "batter": "JD Stein",
       "outcome": "Lineout",
       "count": "0-2",
@@ -1413,13 +1419,15 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Connor Kane",
       "batter": "Javar Williams",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "BFFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1440,7 +1448,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Connor Kane",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1455,8 +1463,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Javar Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Javar Williams",
         "3B": null
       },
       "score": {
@@ -1467,7 +1475,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Connor Kane",
       "batter": "Kade Lewis",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1477,13 +1485,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Javar Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Javar Williams",
         "3B": null
       },
       "runners_after": {
-        "1B": "Javar Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Javar Williams",
         "3B": null
       },
       "score": {
@@ -1494,7 +1502,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Rhys Bowie",
       "batter": "Colby Thorndyke",
       "outcome": "Home run",
       "count": "1-1",
@@ -1523,7 +1531,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Rhys Bowie",
       "batter": "Walker Mitchell",
       "outcome": "Single",
       "count": "3-1",
@@ -1550,7 +1558,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Rhys Bowie",
       "batter": "Brayden Horton",
       "outcome": "Walk",
       "count": "3-2",
@@ -1577,7 +1585,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Luke Schmolke",
       "batter": "Brice Estep",
       "outcome": "Walk",
       "count": "3-1",
@@ -1604,13 +1612,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Luke Schmolke",
       "batter": "Ty Barrango",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBBKFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1631,13 +1641,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Troy Dressler",
       "batter": "Dean Mihos",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1658,13 +1670,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Troy Dressler",
       "batter": "Mazon,Trace singled to center field, RBI (1-0 B): Estep,Brice scored: Barrango,Ty advanced to third base: Mihos,Dean advanced to second base.",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1685,13 +1699,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Troy Dressler",
       "batter": "Blake Barthol",
       "outcome": "Hit by pitch",
       "count": "1-1",
       "pitches": "BFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1712,13 +1728,16 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Troy Dressler",
       "batter": "Rex Watson",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "BKS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1739,7 +1758,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Troy Dressler",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
@@ -1766,7 +1785,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Troy Dressler",
       "batter": "Walker Mitchell",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1793,7 +1812,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Troy Dressler",
       "batter": "Brayden Horton",
       "outcome": "Pop out",
       "count": "2-0",
@@ -1820,7 +1839,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Connor Kane",
       "batter": "Dalton Wentz",
       "outcome": "Walk",
       "count": "3-2",
@@ -1847,7 +1866,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Connor Kane",
       "batter": "Luke Costello",
       "outcome": "Lineout",
       "count": "1-2",
@@ -1874,7 +1893,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Connor Kane",
       "batter": "Matt Conte",
       "outcome": "Walk",
       "count": "3-1",
@@ -1901,7 +1920,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Connor Kane",
       "batter": "Jackson Miller",
       "outcome": "Fielder's choice",
       "count": "1-2",
@@ -1928,7 +1947,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Connor Kane",
       "batter": "Jimmy Keenan",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1955,7 +1974,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Troy Dressler",
       "batter": "Cole Chamberlain",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1982,7 +2001,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Nate Whysong",
       "batter": "Ty Barrango",
       "outcome": "Reached on error",
       "count": "0-0",
@@ -2009,7 +2028,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Nate Whysong",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2024,8 +2043,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ty Barrango",
-        "2B": null,
+        "1B": null,
+        "2B": "Ty Barrango",
         "3B": null
       },
       "score": {
@@ -2036,7 +2055,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Nate Whysong",
       "batter": "Dean Mihos",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2046,13 +2065,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ty Barrango",
-        "2B": null,
+        "1B": null,
+        "2B": "Ty Barrango",
         "3B": null
       },
       "runners_after": {
-        "1B": "Ty Barrango",
-        "2B": null,
+        "1B": null,
+        "2B": "Ty Barrango",
         "3B": null
       },
       "score": {
@@ -2063,23 +2082,25 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Nate Whysong",
       "batter": "Mazon,Trace singled to center field, RBI (0-1 S): Barrango,Ty scored from second base, unearned.",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ty Barrango",
-        "2B": null,
+        "1B": null,
+        "2B": "Ty Barrango",
         "3B": null
       },
       "runners_after": {
         "1B": "Mazon,Trace singled to center field, RBI (0-1 S): Barrango,Ty scored from second base, unearned.",
-        "2B": null,
+        "2B": "Ty Barrango",
         "3B": null
       },
       "score": {
@@ -2090,7 +2111,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Nate Whysong",
       "batter": "Blake Barthol",
       "outcome": "Lineout",
       "count": "1-0",
@@ -2101,12 +2122,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Mazon,Trace singled to center field, RBI (0-1 S): Barrango,Ty scored from second base, unearned.",
-        "2B": null,
+        "2B": "Ty Barrango",
         "3B": null
       },
       "runners_after": {
         "1B": "Mazon,Trace singled to center field, RBI (0-1 S): Barrango,Ty scored from second base, unearned.",
-        "2B": null,
+        "2B": "Ty Barrango",
         "3B": null
       },
       "score": {
@@ -2117,7 +2138,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Connor Kane",
       "batter": "Blake Schaaf",
       "outcome": "Single",
       "count": "1-0",
@@ -2144,7 +2165,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Connor Kane",
       "batter": "JD Stein",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2171,7 +2192,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Darin Horn",
       "batter": "Javar Williams",
       "outcome": "Single",
       "count": "2-1",
@@ -2198,7 +2219,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Darin Horn",
       "batter": "Kade Lewis",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2225,7 +2246,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Darin Horn",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2240,8 +2261,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Javar Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Javar Williams",
         "3B": null
       },
       "score": {
@@ -2252,7 +2273,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Darin Horn",
       "batter": "Dalton Wentz",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2262,13 +2283,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Javar Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Javar Williams",
         "3B": null
       },
       "runners_after": {
-        "1B": "Javar Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Javar Williams",
         "3B": null
       },
       "score": {
@@ -2279,7 +2300,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Nate Whysong",
       "batter": "Rex Watson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2306,7 +2327,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Ryan Bosch",
       "batter": "Colby Thorndyke",
       "outcome": "Walk",
       "count": "3-1",
@@ -2333,7 +2354,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Ryan Bosch",
       "batter": "Walker Mitchell",
       "outcome": "Flyout",
       "count": "1-2",
@@ -2360,7 +2381,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Marcelo Harsch",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2375,9 +2396,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Colby Thorndyke",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Colby Thorndyke"
       },
       "score": {
         "away": 4,
@@ -2387,7 +2408,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Marcelo Harsch",
       "batter": "Blagen Pado",
       "outcome": "Walk",
       "count": "3-0",
@@ -2397,14 +2418,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Colby Thorndyke",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Colby Thorndyke"
       },
       "runners_after": {
         "1B": "Blagen Pado",
         "2B": null,
-        "3B": null
+        "3B": "Colby Thorndyke"
       },
       "score": {
         "away": 4,
@@ -2414,7 +2435,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Marcelo Harsch",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2426,12 +2447,12 @@
       "runners_before": {
         "1B": "Blagen Pado",
         "2B": null,
-        "3B": null
+        "3B": "Colby Thorndyke"
       },
       "runners_after": {
-        "1B": "Blagen Pado",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Blagen Pado",
+        "3B": "Colby Thorndyke"
       },
       "score": {
         "away": 4,
@@ -2441,7 +2462,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cam Bagwell",
+      "pitcher": "Marcelo Harsch",
       "batter": "Domenico Tozzi",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2451,14 +2472,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Blagen Pado",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Blagen Pado",
+        "3B": "Colby Thorndyke"
       },
       "runners_after": {
-        "1B": "Blagen Pado",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Blagen Pado",
+        "3B": "Colby Thorndyke"
       },
       "score": {
         "away": 4,
@@ -2468,7 +2489,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Darin Horn",
       "batter": "Luke Costello",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2495,7 +2516,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Darin Horn",
       "batter": "Matt Conte",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2522,7 +2543,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Darin Horn",
       "batter": "Luke Costello",
       "outcome": "Walk",
       "count": "3-2",
@@ -2549,7 +2570,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Daniel Parker",
+      "pitcher": "Darin Horn",
       "batter": "Jimmy Keenan",
       "outcome": "Strikeout (looking)",
       "count": "3-2",

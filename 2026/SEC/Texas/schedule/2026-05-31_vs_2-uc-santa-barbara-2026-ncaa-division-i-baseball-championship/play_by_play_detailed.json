@@ -3,7 +3,7 @@
   "date": "05/31/2026",
   "away_team": "Texas",
   "home_team": "UC Santa Barbara",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -1765,8 +1765,8 @@
       },
       "runners_after": {
         "1B": "Casey Borba",
-        "2B": "Ethan Mendoza",
-        "3B": null
+        "2B": null,
+        "3B": "Ethan Mendoza"
       },
       "score": {
         "away": 5,
@@ -1782,18 +1782,20 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Casey Borba",
-        "2B": "Ethan Mendoza",
-        "3B": null
+        "2B": null,
+        "3B": "Ethan Mendoza"
       },
       "runners_after": {
         "1B": null,
         "2B": "Casey Borba",
-        "3B": null
+        "3B": "Ethan Mendoza"
       },
       "score": {
         "away": 6,
@@ -1815,12 +1817,12 @@
       "runners_before": {
         "1B": null,
         "2B": "Casey Borba",
-        "3B": null
+        "3B": "Ethan Mendoza"
       },
       "runners_after": {
         "1B": null,
         "2B": "Casey Borba",
-        "3B": null
+        "3B": "Ethan Mendoza"
       },
       "score": {
         "away": 6,
@@ -2075,7 +2077,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "AJ Krodel",
+      "pitcher": "",
       "batter": "Temo Becerra",
       "outcome": "\u2014",
       "count": null,

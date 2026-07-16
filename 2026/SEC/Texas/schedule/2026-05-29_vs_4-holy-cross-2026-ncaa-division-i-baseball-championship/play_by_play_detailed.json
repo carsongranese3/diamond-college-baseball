@@ -3,7 +3,7 @@
   "date": "05/29/2026",
   "away_team": "Holy Cross",
   "home_team": "Texas",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -922,8 +922,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Carson Tinney",
-        "2B": null,
+        "1B": null,
+        "2B": "Carson Tinney",
         "3B": null
       },
       "score": {
@@ -944,13 +944,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Carson Tinney",
-        "2B": null,
+        "1B": null,
+        "2B": "Carson Tinney",
         "3B": null
       },
       "runners_after": {
         "1B": "Pack",
-        "2B": null,
+        "2B": "Carson Tinney",
         "3B": null
       },
       "score": {
@@ -967,12 +967,15 @@
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Carson Tinney",
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Pack",
-        "2B": null,
+        "2B": "Carson Tinney",
         "3B": null
       },
       "runners_after": {
@@ -1360,8 +1363,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Temo Becerra",
-        "2B": null,
+        "1B": null,
+        "2B": "Temo Becerra",
         "3B": null
       },
       "score": {
@@ -1382,13 +1385,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Temo Becerra",
-        "2B": null,
+        "1B": null,
+        "2B": "Temo Becerra",
         "3B": null
       },
       "runners_after": {
-        "1B": "Temo Becerra",
-        "2B": null,
+        "1B": null,
+        "2B": "Temo Becerra",
         "3B": null
       },
       "score": {
@@ -1659,9 +1662,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Aiden Robbins",
-        "2B": "Dariyan Pendergrass",
-        "3B": null
+        "1B": null,
+        "2B": "Aiden Robbins",
+        "3B": "Dariyan Pendergrass"
       },
       "score": {
         "away": 0,
@@ -1681,14 +1684,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Aiden Robbins",
-        "2B": "Dariyan Pendergrass",
-        "3B": null
+        "1B": null,
+        "2B": "Aiden Robbins",
+        "3B": "Dariyan Pendergrass"
       },
       "runners_after": {
         "1B": "Carson Tinney",
-        "2B": "Dariyan Pendergrass",
-        "3B": null
+        "2B": "Aiden Robbins",
+        "3B": "Dariyan Pendergrass"
       },
       "score": {
         "away": 0,
@@ -1706,6 +1709,7 @@
       "rbi": true,
       "runs_scored": [
         "Carson Tinney",
+        "Aiden Robbins",
         "Dariyan Pendergrass",
         "Duplantier J"
       ],
@@ -1713,8 +1717,8 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Carson Tinney",
-        "2B": "Dariyan Pendergrass",
-        "3B": null
+        "2B": "Aiden Robbins",
+        "3B": "Dariyan Pendergrass"
       },
       "runners_after": {
         "1B": null,
@@ -2007,7 +2011,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -2190,7 +2196,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Hudson Hamilton",
+      "pitcher": "Jason Flores",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2217,7 +2223,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Hudson Hamilton",
+      "pitcher": "Jason Flores",
       "batter": "CJ Egrie",
       "outcome": "Pop out",
       "count": "1-2",
@@ -2382,6 +2388,33 @@
     {
       "inning": "Top 9",
       "pitcher": "Jason Flores",
+      "batter": "Flores",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 19
+      },
+      "description": "Flores Jas to p for Hamilton."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "Jason Flores",
       "batter": "Alex Sandell",
       "outcome": "Pop out",
       "count": "1-0",
@@ -2489,7 +2522,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jason Flores",
+      "pitcher": "",
       "batter": "John LaFleur",
       "outcome": "Single",
       "count": "0-0",
@@ -2518,7 +2551,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jason Flores",
+      "pitcher": "",
       "batter": "Colin Brown",
       "outcome": "Grounded into double play",
       "count": "1-0",

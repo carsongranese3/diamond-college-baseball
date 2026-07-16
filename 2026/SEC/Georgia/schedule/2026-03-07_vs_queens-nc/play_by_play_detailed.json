@@ -3,7 +3,7 @@
   "date": "03/07/2026(2)",
   "away_team": "Queens (NC)",
   "home_team": "Georgia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -448,7 +448,8 @@
       "pitches": "BBBK",
       "rbi": true,
       "runs_scored": [
-        "Brennan Hudson"
+        "Brennan Hudson",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -782,8 +783,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cole Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Cole Johnson",
         "3B": null
       },
       "score": {
@@ -804,13 +805,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Cole Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Cole Johnson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cole Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Cole Johnson",
         "3B": null
       },
       "score": {
@@ -831,14 +832,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Cole Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Cole Johnson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cole Johnson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cole Johnson"
       },
       "score": {
         "away": 0,
@@ -854,18 +855,20 @@
       "count": "2-2",
       "pitches": "FBFFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cole Johnson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cole Johnson"
       },
       "runners_after": {
-        "1B": "Cole Johnson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cole Johnson"
       },
       "score": {
         "away": 0,
@@ -885,14 +888,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Cole Johnson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cole Johnson"
       },
       "runners_after": {
-        "1B": "Cole Johnson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cole Johnson"
       },
       "score": {
         "away": 0,
@@ -1017,7 +1020,8 @@
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Tre Phelps"
+        "Tre Phelps",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1279,6 +1283,33 @@
         "home": 6
       },
       "description": "CHILDERS, G struck out swinging (1-2 SBSS)."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Owen Shipman",
+      "batter": "SHIPMAN, O to p for EAGEN, M.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 6
+      },
+      "description": "SHIPMAN, O to p for EAGEN, M."
     },
     {
       "inning": "Bottom 6",
@@ -1608,13 +1639,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Owen Shipman",
+      "pitcher": "",
       "batter": "Cole Johnson",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1635,14 +1668,16 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Owen Shipman",
+      "pitcher": "",
       "batter": "Kolby Branch",
       "outcome": "Home run",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
       "runs_scored": [
-        "Kolby Branch"
+        "Kolby Branch",
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,

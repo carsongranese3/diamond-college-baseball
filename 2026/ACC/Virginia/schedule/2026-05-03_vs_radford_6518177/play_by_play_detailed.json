@@ -3,7 +3,7 @@
   "date": "05/03/2026(1)",
   "away_team": "Radford",
   "home_team": "Virginia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -373,9 +373,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "RJ Holmes",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "RJ Holmes"
       },
       "score": {
         "away": 0,
@@ -395,14 +395,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "RJ Holmes",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "RJ Holmes"
       },
       "runners_after": {
         "1B": "Antonio Perrotta",
         "2B": null,
-        "3B": null
+        "3B": "RJ Holmes"
       },
       "score": {
         "away": 0,
@@ -424,12 +424,12 @@
       "runners_before": {
         "1B": "Antonio Perrotta",
         "2B": null,
-        "3B": null
+        "3B": "RJ Holmes"
       },
       "runners_after": {
         "1B": "Antonio Perrotta",
         "2B": null,
-        "3B": null
+        "3B": "RJ Holmes"
       },
       "score": {
         "away": 0,
@@ -526,7 +526,9 @@
       "count": "3-2",
       "pitches": "FBBSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -574,7 +576,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Matthew Lefevers",
       "batter": "AJ Gracia",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -601,7 +603,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Matthew Lefevers",
       "batter": "Joe Tiroly",
       "outcome": "Home run",
       "count": "1-0",
@@ -630,7 +632,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Matthew Lefevers",
       "batter": "Sam Harris",
       "outcome": "Home run",
       "count": "0-0",
@@ -659,7 +661,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Matthew Lefevers",
       "batter": "Harrison Didawick",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -686,7 +688,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Matthew Lefevers",
       "batter": "Jake Weatherspoon",
       "outcome": "Home run",
       "count": "0-0",
@@ -715,7 +717,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Matthew Lefevers",
       "batter": "Zach Jackson",
       "outcome": "Walk",
       "count": "3-0",
@@ -742,7 +744,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Matthew Lefevers",
       "batter": "RJ Holmes",
       "outcome": "Single",
       "count": "1-1",
@@ -769,7 +771,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Matthew Lefevers",
       "batter": "Antonio Perrotta",
       "outcome": "Walk",
       "count": "3-1",
@@ -796,7 +798,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Matthew Lefevers",
       "batter": "Noah Murray",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -931,7 +933,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Daniel Quintana",
       "batter": "AJ Gracia",
       "outcome": "Groundout",
       "count": "0-0",
@@ -958,7 +960,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Daniel Quintana",
       "batter": "Joe Tiroly",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -985,7 +987,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Daniel Quintana",
       "batter": "Sam Harris",
       "outcome": "Hit by pitch",
       "count": "0-2",
@@ -1012,7 +1014,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Daniel Quintana",
       "batter": "Harrison Didawick",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1093,7 +1095,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Kyle Johnson",
+      "pitcher": "Henry Zatkowski",
       "batter": "Alex Levesque",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1120,7 +1122,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Daniel Quintana",
       "batter": "Jake Weatherspoon",
       "outcome": "Pop out",
       "count": "1-1",
@@ -1147,7 +1149,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Daniel Quintana",
       "batter": "Zach Jackson",
       "outcome": "Groundout",
       "count": "3-1",
@@ -1174,7 +1176,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Daniel Quintana",
       "batter": "RJ Holmes",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1201,7 +1203,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Kyle Johnson",
+      "pitcher": "Henry Zatkowski",
       "batter": "Brooks Simpson",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1228,7 +1230,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Kyle Johnson",
+      "pitcher": "Henry Zatkowski",
       "batter": "Junho Son",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1255,7 +1257,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Kyle Johnson",
+      "pitcher": "Henry Zatkowski",
       "batter": "Hunter Keen",
       "outcome": "Single",
       "count": "2-1",
@@ -1282,7 +1284,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Kyle Johnson",
+      "pitcher": "Henry Zatkowski",
       "batter": "Hunter Keen",
       "outcome": "\u2014",
       "count": null,
@@ -1309,7 +1311,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Daniel Quintana",
       "batter": "Antonio Perrotta",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1336,7 +1338,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Daniel Quintana",
       "batter": "Noah Murray",
       "outcome": "Single",
       "count": "3-1",
@@ -1363,7 +1365,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Daniel Quintana",
       "batter": "AJ Gracia",
       "outcome": "Single",
       "count": "0-1",
@@ -1390,7 +1392,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Daniel Quintana",
       "batter": "Joe Tiroly",
       "outcome": "Walk",
       "count": "3-2",
@@ -1417,13 +1419,16 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Daniel Quintana",
       "batter": "Sam Harris",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1444,14 +1449,16 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Daniel Quintana",
       "batter": "Harrison Didawick",
       "outcome": "Home run",
       "count": "2-2",
       "pitches": "BFFB",
       "rbi": true,
       "runs_scored": [
-        "Harrison Didawick"
+        "Harrison Didawick",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1473,7 +1480,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Daniel Quintana",
       "batter": "Jake Weatherspoon",
       "outcome": "Single",
       "count": "0-0",
@@ -1500,14 +1507,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Daniel Quintana",
       "batter": "Zach Jackson",
       "outcome": "Home run",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "Zach Jackson"
+        "Zach Jackson",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1529,7 +1537,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Daniel Quintana",
       "batter": "RJ Holmes",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1556,7 +1564,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Daniel Quintana",
       "batter": "Antonio Perrotta",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1583,7 +1591,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Kyle Johnson",
+      "pitcher": "Henry Zatkowski",
       "batter": "Eli Hudgins",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1610,7 +1618,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Kyle Johnson",
+      "pitcher": "Henry Zatkowski",
       "batter": "Breckin Nace",
       "outcome": "Single",
       "count": "3-2",
@@ -1637,7 +1645,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Kyle Johnson",
+      "pitcher": "Henry Zatkowski",
       "batter": "Devin Parks",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1664,7 +1672,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Kyle Johnson",
+      "pitcher": "Henry Zatkowski",
       "batter": "Noah Toole",
       "outcome": "Walk",
       "count": "3-1",
@@ -1691,7 +1699,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Kyle Johnson",
+      "pitcher": "",
       "batter": "Brady Powell",
       "outcome": "Walk",
       "count": "3-2",
@@ -1718,7 +1726,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Kyle Johnson",
+      "pitcher": "",
       "batter": "Brady Whitacre",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1745,7 +1753,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Mason Self",
       "batter": "Noah Murray",
       "outcome": "Walk",
       "count": "3-1",
@@ -1772,7 +1780,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Mason Self",
       "batter": "AJ Gracia",
       "outcome": "Double",
       "count": "1-0",
@@ -1799,13 +1807,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Raymond Ladd",
+      "pitcher": "Mason Self",
       "batter": "Joe Tiroly",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BBKK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {

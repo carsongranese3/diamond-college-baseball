@@ -3,7 +3,7 @@
   "date": "04/15/2026",
   "away_team": "Santa Clara",
   "home_team": "Stanford",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -250,7 +250,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Robert Aivazian",
       "batter": "JJ Moran",
       "outcome": "Walk",
       "count": "3-1",
@@ -277,7 +277,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Robert Aivazian",
       "batter": "Eric Jeon",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -304,7 +304,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Robert Aivazian",
       "batter": "Cort MacDonald",
       "outcome": "Walk",
       "count": "3-0",
@@ -331,7 +331,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Robert Aivazian",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -346,9 +346,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cort MacDonald",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cort MacDonald"
       },
       "score": {
         "away": 0,
@@ -358,7 +358,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Robert Aivazian",
       "batter": "Tatum Marsh",
       "outcome": "Walk",
       "count": "3-1",
@@ -368,14 +368,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Cort MacDonald",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cort MacDonald"
       },
       "runners_after": {
         "1B": "Tatum Marsh",
         "2B": null,
-        "3B": null
+        "3B": "Cort MacDonald"
       },
       "score": {
         "away": 0,
@@ -385,24 +385,26 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Robert Aivazian",
       "batter": "Nolan Stoll",
       "outcome": "Groundout",
       "count": "2-1",
       "pitches": "BBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Tatum Marsh",
         "2B": null,
-        "3B": null
+        "3B": "Cort MacDonald"
       },
       "runners_after": {
         "1B": "Tatum Marsh",
         "2B": null,
-        "3B": null
+        "3B": "Cort MacDonald"
       },
       "score": {
         "away": 0,
@@ -412,7 +414,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Robert Aivazian",
       "batter": "Brock Sell",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -424,12 +426,12 @@
       "runners_before": {
         "1B": "Tatum Marsh",
         "2B": null,
-        "3B": null
+        "3B": "Cort MacDonald"
       },
       "runners_after": {
         "1B": "Tatum Marsh",
         "2B": null,
-        "3B": null
+        "3B": "Cort MacDonald"
       },
       "score": {
         "away": 0,
@@ -439,7 +441,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Sam Garewal",
       "batter": "Waylon Walsh",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -466,7 +468,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Sam Garewal",
       "batter": "Camden Sos",
       "outcome": "Groundout",
       "count": "2-2",
@@ -493,7 +495,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Sam Garewal",
       "batter": "Andrew Rayment",
       "outcome": "Groundout",
       "count": "0-2",
@@ -520,7 +522,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Andrew Habermann",
       "batter": "Rintaro Sasaki",
       "outcome": "Foul out",
       "count": "1-0",
@@ -547,7 +549,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Andrew Habermann",
       "batter": "Teddy Tokheim",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -574,7 +576,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Andrew Habermann",
       "batter": "Charlie Bates",
       "outcome": "Single",
       "count": "1-0",
@@ -601,7 +603,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Andrew Habermann",
       "batter": "JJ Moran",
       "outcome": "Pop out",
       "count": "0-1",
@@ -628,7 +630,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": "Payton Lambert",
       "outcome": "Groundout",
       "count": "0-2",
@@ -655,7 +657,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": "Ben Cleary",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -682,7 +684,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": "Max Ross",
       "outcome": "Flyout",
       "count": "3-1",
@@ -709,7 +711,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Max Reimers",
       "batter": "Eric Jeon",
       "outcome": "Single",
       "count": "3-2",
@@ -736,7 +738,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Max Reimers",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
@@ -763,7 +765,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Max Reimers",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -790,7 +792,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Max Reimers",
       "batter": "Tatum Marsh",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -817,7 +819,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Max Reimers",
       "batter": "Nolan Stoll",
       "outcome": "Walk",
       "count": "3-1",
@@ -844,7 +846,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Max Reimers",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -859,8 +861,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Nolan Stoll",
-        "2B": null,
+        "1B": null,
+        "2B": "Nolan Stoll",
         "3B": null
       },
       "score": {
@@ -871,7 +873,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Max Reimers",
       "batter": "Brock Sell",
       "outcome": "Walk",
       "count": "3-0",
@@ -881,13 +883,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Nolan Stoll",
-        "2B": null,
+        "1B": null,
+        "2B": "Nolan Stoll",
         "3B": null
       },
       "runners_after": {
         "1B": "Brock Sell",
-        "2B": null,
+        "2B": "Nolan Stoll",
         "3B": null
       },
       "score": {
@@ -898,7 +900,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Max Reimers",
       "batter": "Rintaro Sasaki",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -909,12 +911,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Brock Sell",
-        "2B": null,
+        "2B": "Nolan Stoll",
         "3B": null
       },
       "runners_after": {
         "1B": "Brock Sell",
-        "2B": null,
+        "2B": "Nolan Stoll",
         "3B": null
       },
       "score": {
@@ -925,7 +927,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": "Johnny Luetzow",
       "outcome": "Groundout",
       "count": "1-0",
@@ -952,7 +954,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": "Will Anderson",
       "outcome": "Groundout",
       "count": "1-1",
@@ -979,7 +981,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": "Luke Devine",
       "outcome": "Reached on error",
       "count": "1-1",
@@ -1006,7 +1008,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": "Waylon Walsh",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1033,7 +1035,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Jack Lazark",
       "batter": "Teddy Tokheim",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1060,7 +1062,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Jack Lazark",
       "batter": "Charlie Bates",
       "outcome": "Walk",
       "count": "3-0",
@@ -1087,7 +1089,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Jack Lazark",
       "batter": "JJ Moran",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1114,7 +1116,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Jack Lazark",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1129,8 +1131,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Charlie Bates",
-        "2B": null,
+        "1B": null,
+        "2B": "Charlie Bates",
         "3B": null
       },
       "score": {
@@ -1141,7 +1143,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Jack Lazark",
       "batter": "Eric Jeon",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1151,13 +1153,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Charlie Bates",
-        "2B": null,
+        "1B": null,
+        "2B": "Charlie Bates",
         "3B": null
       },
       "runners_after": {
-        "1B": "Charlie Bates",
-        "2B": null,
+        "1B": null,
+        "2B": "Charlie Bates",
         "3B": null
       },
       "score": {
@@ -1168,7 +1170,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Brock Ketelsen",
       "batter": "Camden Sos",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1195,7 +1197,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Brock Ketelsen",
       "batter": "Andrew Rayment",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1222,7 +1224,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Brock Ketelsen",
       "batter": "Payton Lambert",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1249,7 +1251,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Jack Lazark",
       "batter": "Cort MacDonald",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1276,7 +1278,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Sebastian Schreiber",
       "batter": "Tatum Marsh",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1303,7 +1305,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Sebastian Schreiber",
       "batter": "Nolan Stoll",
       "outcome": "Single",
       "count": "1-0",
@@ -1330,7 +1332,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Sebastian Schreiber",
       "batter": "Brock Sell",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1357,7 +1359,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Brock Ketelsen",
       "batter": "Ben Cleary",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1384,7 +1386,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Brock Ketelsen",
       "batter": "Max Ross",
       "outcome": "Walk",
       "count": "3-1",
@@ -1411,7 +1413,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Brock Ketelsen",
       "batter": "Johnny Luetzow",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1438,7 +1440,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Brock Ketelsen",
       "batter": "Will Anderson",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1465,13 +1467,16 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Brock Ketelsen",
       "batter": "Luke Devine",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1492,7 +1497,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Mike Erspamer",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1507,8 +1512,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Luke Devine",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Devine",
         "3B": null
       },
       "score": {
@@ -1519,7 +1524,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Mike Erspamer",
       "batter": "Waylon Walsh",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1529,13 +1534,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Luke Devine",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Devine",
         "3B": null
       },
       "runners_after": {
-        "1B": "Luke Devine",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Devine",
         "3B": null
       },
       "score": {
@@ -1546,7 +1551,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Sebastian Schreiber",
       "batter": "Rintaro Sasaki",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1573,7 +1578,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Vincent Braga",
       "batter": "Teddy Tokheim",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1600,7 +1605,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Vincent Braga",
       "batter": "Charlie Bates",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1627,7 +1632,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Mike Erspamer",
       "batter": "Camden Sos",
       "outcome": "Reached on error",
       "count": "3-1",
@@ -1654,7 +1659,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Mike Erspamer",
       "batter": "Andrew Rayment",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1681,7 +1686,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Mike Erspamer",
       "batter": "Payton Lambert",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1708,7 +1713,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Mike Erspamer",
       "batter": "Ben Cleary",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1735,7 +1740,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Vincent Braga",
       "batter": "JJ Moran",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1762,7 +1767,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Trevor Banning",
       "batter": "Eric Jeon",
       "outcome": "Walk",
       "count": "3-1",
@@ -1789,7 +1794,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Trevor Banning",
       "batter": "Cort MacDonald",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1816,7 +1821,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Trevor Banning",
       "batter": "Tatum Marsh",
       "outcome": "Walk",
       "count": "3-0",
@@ -1843,7 +1848,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Trevor Banning",
       "batter": "Nolan Stoll",
       "outcome": "Walk",
       "count": "3-2",
@@ -1870,7 +1875,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Josh Johnson",
       "batter": "Brock Sell",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1897,7 +1902,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Kassius Thomas",
       "batter": "Max Ross",
       "outcome": "Single",
       "count": "0-0",
@@ -1924,7 +1929,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Kassius Thomas",
       "batter": null,
       "outcome": "Baserunning",
       "count": "1-0",
@@ -1951,7 +1956,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Kassius Thomas",
       "batter": "Will Anderson",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1978,7 +1983,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Kassius Thomas",
       "batter": "Luke Devine",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2005,7 +2010,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "Josh Johnson",
       "batter": "Rintaro Sasaki",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2032,7 +2037,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "RJ Meyn",
       "batter": "Teddy Tokheim",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2059,7 +2064,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "RJ Meyn",
       "batter": "Charlie Bates",
       "outcome": "Single",
       "count": "3-1",
@@ -2086,7 +2091,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Brayden Dotoli",
+      "pitcher": "RJ Meyn",
       "batter": "JJ Moran",
       "outcome": "Flyout",
       "count": "2-2",

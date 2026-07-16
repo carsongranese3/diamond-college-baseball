@@ -3,7 +3,7 @@
   "date": "03/31/2026",
   "away_team": "Kansas",
   "home_team": "Missouri",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -133,7 +133,7 @@
       },
       "runners_after": {
         "1B": "Augusto Mungarrieta",
-        "2B": null,
+        "2B": "Brady Ballinger",
         "3B": null
       },
       "score": {
@@ -150,17 +150,19 @@
       "count": "2-1",
       "pitches": "BBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Brady Ballinger"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Augusto Mungarrieta",
-        "2B": null,
+        "2B": "Brady Ballinger",
         "3B": null
       },
       "runners_after": {
         "1B": "Tyson Owens",
-        "2B": null,
+        "2B": "Augusto Mungarrieta",
         "3B": null
       },
       "score": {
@@ -182,12 +184,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Tyson Owens",
-        "2B": null,
+        "2B": "Augusto Mungarrieta",
         "3B": null
       },
       "runners_after": {
         "1B": "Tyson Owens",
-        "2B": null,
+        "2B": "Augusto Mungarrieta",
         "3B": null
       },
       "score": {
@@ -240,8 +242,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kam Durnin",
-        "2B": null,
+        "1B": null,
+        "2B": "Kam Durnin",
         "3B": null
       },
       "score": {
@@ -262,14 +264,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Kam Durnin",
-        "2B": null,
+        "1B": null,
+        "2B": "Kam Durnin",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kam Durnin",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Kam Durnin"
       },
       "score": {
         "away": 2,
@@ -289,14 +291,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kam Durnin",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Kam Durnin"
       },
       "runners_after": {
-        "1B": "Kam Durnin",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Kam Durnin"
       },
       "score": {
         "away": 2,
@@ -316,14 +318,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Kam Durnin",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Kam Durnin"
       },
       "runners_after": {
-        "1B": "Kam Durnin",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Kam Durnin"
       },
       "score": {
         "away": 2,
@@ -430,7 +432,7 @@
       },
       "runners_after": {
         "1B": "Cade Baldridge",
-        "2B": null,
+        "2B": "Josh Dykhoff",
         "3B": null
       },
       "score": {
@@ -452,12 +454,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Cade Baldridge",
-        "2B": null,
+        "2B": "Josh Dykhoff",
         "3B": null
       },
       "runners_after": {
         "1B": "Cade Baldridge",
-        "2B": null,
+        "2B": "Josh Dykhoff",
         "3B": null
       },
       "score": {
@@ -675,7 +677,7 @@
       },
       "runners_after": {
         "1B": "Dariel Osoria",
-        "2B": null,
+        "2B": "Tyson Owens",
         "3B": null
       },
       "score": {
@@ -686,7 +688,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "PJ Green",
+      "pitcher": "Jackson Sobel",
       "batter": "Josh Dykhoff",
       "outcome": "Walk",
       "count": "3-1",
@@ -697,13 +699,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Dariel Osoria",
-        "2B": null,
+        "2B": "Tyson Owens",
         "3B": null
       },
       "runners_after": {
         "1B": "Josh Dykhoff",
-        "2B": null,
-        "3B": null
+        "2B": "Dariel Osoria",
+        "3B": "Tyson Owens"
       },
       "score": {
         "away": 3,
@@ -713,23 +715,25 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "PJ Green",
+      "pitcher": "Jackson Sobel",
       "batter": "Dylan Schlotterback",
       "outcome": "Fielder's choice",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Tyson Owens"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Josh Dykhoff",
-        "2B": null,
-        "3B": null
+        "2B": "Dariel Osoria",
+        "3B": "Tyson Owens"
       },
       "runners_after": {
         "1B": "Dylan Schlotterback",
-        "2B": null,
+        "2B": "Josh Dykhoff",
         "3B": null
       },
       "score": {
@@ -740,7 +744,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "PJ Green",
+      "pitcher": "Jackson Sobel",
       "batter": "Jordan Bach",
       "outcome": "Flyout",
       "count": "0-1",
@@ -751,12 +755,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Dylan Schlotterback",
-        "2B": null,
+        "2B": "Josh Dykhoff",
         "3B": null
       },
       "runners_after": {
         "1B": "Dylan Schlotterback",
-        "2B": null,
+        "2B": "Josh Dykhoff",
         "3B": null
       },
       "score": {
@@ -836,8 +840,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Macon",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Macon",
         "3B": null
       },
       "score": {
@@ -858,13 +862,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Tyler Macon",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Macon",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Macon",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Macon",
         "3B": null
       },
       "score": {
@@ -885,13 +889,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Tyler Macon",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Macon",
         "3B": null
       },
       "runners_after": {
         "1B": "Jase Woita",
-        "2B": null,
+        "2B": "Tyler Macon",
         "3B": null
       },
       "score": {
@@ -913,12 +917,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jase Woita",
-        "2B": null,
+        "2B": "Tyler Macon",
         "3B": null
       },
       "runners_after": {
         "1B": "Jase Woita",
-        "2B": null,
+        "2B": "Tyler Macon",
         "3B": null
       },
       "score": {
@@ -929,7 +933,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "PJ Green",
+      "pitcher": "Jackson Sobel",
       "batter": "Cade Baldridge",
       "outcome": "Walk",
       "count": "3-1",
@@ -956,7 +960,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "PJ Green",
+      "pitcher": "Jackson Sobel",
       "batter": "Tyson LeBlanc",
       "outcome": "Flyout",
       "count": "1-2",
@@ -983,7 +987,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "PJ Green",
+      "pitcher": "Jackson Sobel",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -998,8 +1002,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cade Baldridge",
-        "2B": null,
+        "1B": null,
+        "2B": "Cade Baldridge",
         "3B": null
       },
       "score": {
@@ -1010,7 +1014,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "PJ Green",
+      "pitcher": "Jackson Sobel",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1020,14 +1024,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Cade Baldridge",
-        "2B": null,
+        "1B": null,
+        "2B": "Cade Baldridge",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cade Baldridge",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cade Baldridge"
       },
       "score": {
         "away": 4,
@@ -1037,24 +1041,25 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "PJ Green",
+      "pitcher": "Jackson Sobel",
       "batter": "Brady Ballinger",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "KFFBBB",
       "rbi": true,
       "runs_scored": [
+        "Cade Baldridge",
         "Brady Ballinger"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Cade Baldridge",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cade Baldridge"
       },
       "runners_after": {
-        "1B": "Cade Baldridge",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1066,7 +1071,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "PJ Green",
+      "pitcher": "Sam Rosand",
       "batter": "Augusto Mungarrieta",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1076,12 +1081,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cade Baldridge",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Cade Baldridge",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1093,7 +1098,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "PJ Green",
+      "pitcher": "Sam Rosand",
       "batter": "Tyson Owens",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1103,12 +1108,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Cade Baldridge",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Cade Baldridge",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1120,7 +1125,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Mason Cook",
       "batter": "Blaize Ward",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1147,7 +1152,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Mason Cook",
       "batter": "Donovan Jordan",
       "outcome": "Walk",
       "count": "3-2",
@@ -1174,7 +1179,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Mason Cook",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1189,8 +1194,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Donovan Jordan",
-        "2B": null,
+        "1B": null,
+        "2B": "Donovan Jordan",
         "3B": null
       },
       "score": {
@@ -1201,24 +1206,25 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Mason Cook",
       "batter": "Juliomar Campos",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "KBKBFFBFF",
       "rbi": true,
       "runs_scored": [
+        "Donovan Jordan",
         "Juliomar Campos"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Donovan Jordan",
-        "2B": null,
+        "1B": null,
+        "2B": "Donovan Jordan",
         "3B": null
       },
       "runners_after": {
-        "1B": "Donovan Jordan",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1230,7 +1236,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Mason Cook",
       "batter": "Keegan Knutson",
       "outcome": "Walk",
       "count": "3-1",
@@ -1240,7 +1246,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Donovan Jordan",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1257,7 +1263,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Toby Scheidt",
       "batter": "Tyler Macon",
       "outcome": "Single",
       "count": "3-2",
@@ -1273,7 +1279,7 @@
       },
       "runners_after": {
         "1B": "Tyler Macon",
-        "2B": null,
+        "2B": "Keegan Knutson",
         "3B": null
       },
       "score": {
@@ -1284,7 +1290,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Toby Scheidt",
       "batter": "Kam Durnin",
       "outcome": "Single",
       "count": "1-2",
@@ -1295,13 +1301,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Tyler Macon",
-        "2B": null,
+        "2B": "Keegan Knutson",
         "3B": null
       },
       "runners_after": {
         "1B": "Kam Durnin",
-        "2B": null,
-        "3B": null
+        "2B": "Tyler Macon",
+        "3B": "Keegan Knutson"
       },
       "score": {
         "away": 6,
@@ -1311,23 +1317,26 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Caleb Deer",
       "batter": "Kaden Peer",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "SBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Keegan Knutson",
+        "Tyler Macon"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Kam Durnin",
-        "2B": null,
-        "3B": null
+        "2B": "Tyler Macon",
+        "3B": "Keegan Knutson"
       },
       "runners_after": {
         "1B": "Kaden Peer",
-        "2B": null,
+        "2B": "Kam Durnin",
         "3B": null
       },
       "score": {
@@ -1338,7 +1347,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Caleb Deer",
       "batter": "Jase Woita",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1349,13 +1358,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Kaden Peer",
-        "2B": null,
+        "2B": "Kam Durnin",
         "3B": null
       },
       "runners_after": {
         "1B": "Jase Woita",
-        "2B": null,
-        "3B": null
+        "2B": "Kaden Peer",
+        "3B": "Kam Durnin"
       },
       "score": {
         "away": 6,
@@ -1365,7 +1374,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Riane Ritter",
       "batter": "Pierre Seals",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1376,13 +1385,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Jase Woita",
-        "2B": null,
-        "3B": null
+        "2B": "Kaden Peer",
+        "3B": "Kam Durnin"
       },
       "runners_after": {
         "1B": "Jase Woita",
-        "2B": null,
-        "3B": null
+        "2B": "Kaden Peer",
+        "3B": "Kam Durnin"
       },
       "score": {
         "away": 6,
@@ -1392,22 +1401,26 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Riane Ritter",
       "batter": "Blaize Ward",
       "outcome": "Triple",
       "count": "2-1",
       "pitches": "KBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kam Durnin",
+        "Kaden Peer",
+        "Jase Woita"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jase Woita",
-        "2B": null,
-        "3B": null
+        "2B": "Kaden Peer",
+        "3B": "Kam Durnin"
       },
       "runners_after": {
-        "1B": "Jase Woita",
+        "1B": null,
         "2B": null,
         "3B": "Blaize Ward"
       },
@@ -1419,24 +1432,26 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Riane Ritter",
       "batter": "Donovan Jordan",
       "outcome": "Double",
       "count": "0-2",
       "pitches": "KF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Blaize Ward"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jase Woita",
+        "1B": null,
         "2B": null,
         "3B": "Blaize Ward"
       },
       "runners_after": {
-        "1B": "Jase Woita",
+        "1B": null,
         "2B": "Donovan Jordan",
-        "3B": "Blaize Ward"
+        "3B": null
       },
       "score": {
         "away": 6,
@@ -1446,7 +1461,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Riane Ritter",
       "batter": "Juliomar Campos",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1456,14 +1471,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jase Woita",
+        "1B": null,
         "2B": "Donovan Jordan",
-        "3B": "Blaize Ward"
+        "3B": null
       },
       "runners_after": {
-        "1B": "Jase Woita",
+        "1B": null,
         "2B": "Donovan Jordan",
-        "3B": "Blaize Ward"
+        "3B": null
       },
       "score": {
         "away": 6,
@@ -1473,7 +1488,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "PJ Green",
+      "pitcher": "Sam Rosand",
       "batter": "Dariel Osoria",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1500,7 +1515,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "PJ Green",
+      "pitcher": "Sam Rosand",
       "batter": "Josh Dykhoff",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1527,7 +1542,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "PJ Green",
+      "pitcher": "Sam Rosand",
       "batter": "Dylan Schlotterback",
       "outcome": "Walk",
       "count": "3-1",
@@ -1554,7 +1569,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "PJ Green",
+      "pitcher": "Sam Rosand",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -1569,8 +1584,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dylan Schlotterback",
-        "2B": null,
+        "1B": null,
+        "2B": "Dylan Schlotterback",
         "3B": null
       },
       "score": {
@@ -1581,18 +1596,20 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "PJ Green",
+      "pitcher": "Sam Rosand",
       "batter": "Jordan Bach",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "KBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Dylan Schlotterback"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Dylan Schlotterback",
-        "2B": null,
+        "1B": null,
+        "2B": "Dylan Schlotterback",
         "3B": null
       },
       "runners_after": {
@@ -1608,7 +1625,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "PJ Green",
+      "pitcher": "Sam Rosand",
       "batter": "Cade Baldridge",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1635,7 +1652,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Madden Seidl",
       "batter": "Keegan Knutson",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1662,7 +1679,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Madden Seidl",
       "batter": "Tyler Macon",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1689,7 +1706,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Madden Seidl",
       "batter": "Kam Durnin",
       "outcome": "Lineout",
       "count": "3-1",
@@ -1716,7 +1733,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "PJ Green",
+      "pitcher": "Sam Rosand",
       "batter": "Tyson LeBlanc",
       "outcome": "Foul out",
       "count": "1-1",
@@ -1743,7 +1760,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "PJ Green",
+      "pitcher": "Sam Rosand",
       "batter": "Brady Ballinger",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1770,7 +1787,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "PJ Green",
+      "pitcher": "Sam Rosand",
       "batter": "Augusto Mungarrieta",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1797,7 +1814,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Madden Seidl",
       "batter": "Kaden Peer",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1824,7 +1841,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Madden Seidl",
       "batter": "Jase Woita",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1851,7 +1868,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Madden Seidl",
       "batter": "Pierre Seals",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1878,7 +1895,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "PJ Green",
+      "pitcher": "Kadden Drew",
       "batter": "Tyson Owens",
       "outcome": "Lineout",
       "count": "2-2",
@@ -1905,7 +1922,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "PJ Green",
+      "pitcher": "Kadden Drew",
       "batter": "Dariel Osoria",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1932,7 +1949,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "PJ Green",
+      "pitcher": "Kadden Drew",
       "batter": "Josh Dykhoff",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1959,7 +1976,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Madden Seidl",
       "batter": "Blaize Ward",
       "outcome": "Single",
       "count": "2-1",
@@ -1986,7 +2003,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Madden Seidl",
       "batter": "Donovan Jordan",
       "outcome": "\u2014",
       "count": "0-0",
@@ -2013,7 +2030,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Madden Seidl",
       "batter": "Juliomar Campos",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2040,7 +2057,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "PJ Green",
+      "pitcher": "Kadden Drew",
       "batter": "Dylan Schlotterback",
       "outcome": "Single",
       "count": "0-0",
@@ -2067,7 +2084,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "PJ Green",
+      "pitcher": "Kadden Drew",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2082,8 +2099,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dylan Schlotterback",
-        "2B": null,
+        "1B": null,
+        "2B": "Dylan Schlotterback",
         "3B": null
       },
       "score": {
@@ -2094,18 +2111,20 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "PJ Green",
+      "pitcher": "Kadden Drew",
       "batter": "Jordan Bach",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Dylan Schlotterback"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Dylan Schlotterback",
-        "2B": null,
+        "1B": null,
+        "2B": "Dylan Schlotterback",
         "3B": null
       },
       "runners_after": {
@@ -2121,7 +2140,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "PJ Green",
+      "pitcher": "Kadden Drew",
       "batter": "Cade Baldridge",
       "outcome": "Single",
       "count": "0-0",
@@ -2137,7 +2156,7 @@
       },
       "runners_after": {
         "1B": "Cade Baldridge",
-        "2B": null,
+        "2B": "Jordan Bach",
         "3B": null
       },
       "score": {
@@ -2148,24 +2167,26 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "PJ Green",
+      "pitcher": "Eli Skidmore",
       "batter": "Tyson LeBlanc",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "BBBKF",
       "rbi": true,
       "runs_scored": [
+        "Jordan Bach",
+        "Cade Baldridge",
         "Tyson LeBlanc"
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Cade Baldridge",
-        "2B": null,
+        "2B": "Jordan Bach",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cade Baldridge",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2177,7 +2198,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "PJ Green",
+      "pitcher": "Eli Skidmore",
       "batter": "Brady Ballinger",
       "outcome": "Walk",
       "count": "3-0",
@@ -2187,7 +2208,7 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Cade Baldridge",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2204,7 +2225,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "PJ Green",
+      "pitcher": "Eli Skidmore",
       "batter": "Augusto Mungarrieta",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2231,7 +2252,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "PJ Green",
+      "pitcher": "Eli Skidmore",
       "batter": "Tyson Owens",
       "outcome": "Walk",
       "count": "3-2",
@@ -2247,7 +2268,7 @@
       },
       "runners_after": {
         "1B": "Tyson Owens",
-        "2B": null,
+        "2B": "Brady Ballinger",
         "3B": null
       },
       "score": {
@@ -2258,7 +2279,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "PJ Green",
+      "pitcher": "Eli Skidmore",
       "batter": "Dariel Osoria",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2269,12 +2290,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Tyson Owens",
-        "2B": null,
+        "2B": "Brady Ballinger",
         "3B": null
       },
       "runners_after": {
         "1B": "Tyson Owens",
-        "2B": null,
+        "2B": "Brady Ballinger",
         "3B": null
       },
       "score": {
@@ -2285,7 +2306,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "PJ Green",
+      "pitcher": "Juan Villarreal",
       "batter": "Josh Dykhoff",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2296,12 +2317,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Tyson Owens",
-        "2B": null,
+        "2B": "Brady Ballinger",
         "3B": null
       },
       "runners_after": {
         "1B": "Tyson Owens",
-        "2B": null,
+        "2B": "Brady Ballinger",
         "3B": null
       },
       "score": {
@@ -2312,7 +2333,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Manning West",
       "batter": "Keegan Knutson",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2339,7 +2360,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Manning West",
       "batter": "Tyler Macon",
       "outcome": "Pop out",
       "count": "0-0",
@@ -2366,7 +2387,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Manning West",
       "batter": "Kam Durnin",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2393,7 +2414,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "PJ Green",
+      "pitcher": "Juan Villarreal",
       "batter": "Dylan Schlotterback",
       "outcome": "Groundout",
       "count": "2-0",
@@ -2420,7 +2441,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "PJ Green",
+      "pitcher": "Juan Villarreal",
       "batter": "Jordan Bach",
       "outcome": "Flyout",
       "count": "0-2",
@@ -2447,7 +2468,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "PJ Green",
+      "pitcher": "Juan Villarreal",
       "batter": "Cade Baldridge",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2474,7 +2495,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Manning West",
       "batter": "Kaden Peer",
       "outcome": "Walk",
       "count": "3-1",
@@ -2501,7 +2522,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Manning West",
       "batter": "Jase Woita",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2528,7 +2549,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Manning West",
       "batter": "Pierre Seals",
       "outcome": "Lineout",
       "count": "0-1",
@@ -2555,7 +2576,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Manning West",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2570,9 +2591,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kaden Peer",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Kaden Peer"
       },
       "score": {
         "away": 11,
@@ -2582,7 +2603,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Manning West",
       "batter": "Cameron Benson",
       "outcome": "Walk",
       "count": "3-1",
@@ -2592,14 +2613,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kaden Peer",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Kaden Peer"
       },
       "runners_after": {
         "1B": "Cameron Benson",
         "2B": null,
-        "3B": null
+        "3B": "Kaden Peer"
       },
       "score": {
         "away": 11,
@@ -2609,7 +2630,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Manning West",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2621,12 +2642,12 @@
       "runners_before": {
         "1B": "Cameron Benson",
         "2B": null,
-        "3B": null
+        "3B": "Kaden Peer"
       },
       "runners_after": {
-        "1B": "Cameron Benson",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Cameron Benson",
+        "3B": "Kaden Peer"
       },
       "score": {
         "away": 11,
@@ -2636,7 +2657,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Kannon Carr",
+      "pitcher": "Manning West",
       "batter": "Donovan Jordan",
       "outcome": "Groundout",
       "count": "0-2",
@@ -2646,14 +2667,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Cameron Benson",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Cameron Benson",
+        "3B": "Kaden Peer"
       },
       "runners_after": {
-        "1B": "Cameron Benson",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Cameron Benson",
+        "3B": "Kaden Peer"
       },
       "score": {
         "away": 11,

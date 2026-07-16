@@ -3,7 +3,7 @@
   "date": "03/28/2026",
   "away_team": "South Carolina",
   "home_team": "Georgia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -76,8 +76,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Bak",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Bak",
         "3B": null
       },
       "score": {
@@ -98,13 +98,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Tyler Bak",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Bak",
         "3B": null
       },
       "runners_after": {
         "1B": "Jake Randolph",
-        "2B": null,
+        "2B": "Tyler Bak",
         "3B": null
       },
       "score": {
@@ -126,12 +126,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Jake Randolph",
-        "2B": null,
+        "2B": "Tyler Bak",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": null,
+        "2B": "Tyler Bak",
         "3B": "Jake Randolph"
       },
       "score": {
@@ -153,12 +153,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": null,
-        "2B": null,
+        "2B": "Tyler Bak",
         "3B": "Jake Randolph"
       },
       "runners_after": {
         "1B": "Talmadge LeCroy",
-        "2B": null,
+        "2B": "Tyler Bak",
         "3B": "Jake Randolph"
       },
       "score": {
@@ -175,17 +175,19 @@
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Talmadge LeCroy",
-        "2B": null,
+        "2B": "Tyler Bak",
         "3B": "Jake Randolph"
       },
       "runners_after": {
         "1B": "KJ Scobey",
-        "2B": null,
+        "2B": "Tyler Bak",
         "3B": "Jake Randolph"
       },
       "score": {
@@ -207,12 +209,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "KJ Scobey",
-        "2B": null,
+        "2B": "Tyler Bak",
         "3B": "Jake Randolph"
       },
       "runners_after": {
         "1B": "KJ Scobey",
-        "2B": null,
+        "2B": "Tyler Bak",
         "3B": "Jake Randolph"
       },
       "score": {
@@ -234,12 +236,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "KJ Scobey",
-        "2B": null,
+        "2B": "Tyler Bak",
         "3B": "Jake Randolph"
       },
       "runners_after": {
         "1B": "KJ Scobey",
-        "2B": null,
+        "2B": "Tyler Bak",
         "3B": "Jake Randolph"
       },
       "score": {
@@ -1393,7 +1395,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Rylan Lujo"
+        "Rylan Lujo",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,

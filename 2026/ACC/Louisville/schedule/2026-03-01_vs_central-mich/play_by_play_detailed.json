@@ -3,7 +3,7 @@
   "date": "03/01/2026",
   "away_team": "Central Mich.",
   "home_team": "Louisville",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -367,7 +367,9 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1532,7 +1534,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
+      "batter": "J. Brown",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Correa",
+        "2B": null,
+        "3B": "Guzik"
+      },
+      "runners_after": {
+        "1B": "Correa",
+        "2B": null,
+        "3B": "Guzik"
+      },
+      "score": {
+        "away": 4,
+        "home": 4
+      },
+      "description": "J. Brown to p for Bean."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Jack Brown",
       "batter": "Bryson Webb",
       "outcome": "Hit by pitch",
       "count": "2-0",
@@ -1559,7 +1588,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "Cole Prout",
       "outcome": "Fielder's choice",
       "count": "2-0",
@@ -1779,7 +1808,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "Joey Milto",
       "outcome": "Walk",
       "count": "3-1",
@@ -1806,7 +1835,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Ty Starke",
       "batter": "Harrison Bowman",
       "outcome": "Single",
       "count": "1-0",
@@ -1833,7 +1862,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ty Starke",
+      "pitcher": "Jake Gregor",
       "batter": "Brady Krzciok",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1887,7 +1916,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jake Gregor",
+      "pitcher": "Aaron England",
       "batter": "Drew Loikits",
       "outcome": "Flyout",
       "count": "2-1",
@@ -2377,7 +2406,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Aaron England",
+      "pitcher": "",
       "batter": "Drew Loikits",
       "outcome": "Flyout",
       "count": "0-1",

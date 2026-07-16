@@ -3,7 +3,7 @@
   "date": "03/10/2026",
   "away_team": "Texas",
   "home_team": "Texas St.",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -121,7 +121,9 @@
       "count": "1-2",
       "pitches": "KFBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -202,7 +204,9 @@
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -223,7 +227,34 @@
     },
     {
       "inning": "Top 1",
-      "pitcher": "Shane",
+      "pitcher": "Shane Connell",
+      "batter": "Shane",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Casey",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Casey",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 0
+      },
+      "description": "Shane Connell to p for Titan Targac."
+    },
+    {
+      "inning": "Top 1",
+      "pitcher": "Shane Connell",
       "batter": "Jayden",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -331,7 +362,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Shane",
+      "pitcher": "Shane Connell",
       "batter": "Josh",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -358,7 +389,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Shane",
+      "pitcher": "Shane Connell",
       "batter": "Ethan",
       "outcome": "Groundout",
       "count": "0-0",
@@ -385,7 +416,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Shane",
+      "pitcher": "Shane Connell",
       "batter": "Carson",
       "outcome": "Walk",
       "count": "3-1",
@@ -412,7 +443,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Shane",
+      "pitcher": "Shane Connell",
       "batter": "Aiden",
       "outcome": "Walk",
       "count": "3-2",
@@ -439,7 +470,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Shane",
+      "pitcher": "Shane Connell",
       "batter": "Adrian",
       "outcome": "Groundout",
       "count": "1-2",
@@ -547,7 +578,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Shane",
+      "pitcher": "Shane Connell",
       "batter": "Temo",
       "outcome": "Single",
       "count": "3-2",
@@ -574,7 +605,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Shane",
+      "pitcher": "Shane Connell",
       "batter": "Anthony",
       "outcome": "Hit by pitch",
       "count": "3-2",
@@ -601,14 +632,16 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Shane",
+      "pitcher": "Cade Smith",
       "batter": "Casey",
       "outcome": "Home run",
       "count": "1-2",
       "pitches": "KSB",
       "rbi": true,
       "runs_scored": [
-        "Casey"
+        "Casey",
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -630,7 +663,34 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Cade",
+      "pitcher": "Cade Smith",
+      "batter": "Cade",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Anthony",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Anthony",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 0
+      },
+      "description": "Cade Smith to p for Shane Connell."
+    },
+    {
+      "inning": "Top 3",
+      "pitcher": "Cade Smith",
       "batter": "Jayden",
       "outcome": "Lineout",
       "count": "0-1",
@@ -657,7 +717,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Cade",
+      "pitcher": "Cade Smith",
       "batter": "Josh",
       "outcome": "Double",
       "count": "0-1",
@@ -684,7 +744,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Cade",
+      "pitcher": "Cade Smith",
       "batter": "Ethan",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -711,7 +771,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Cade",
+      "pitcher": "Cade Smith",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -738,7 +798,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Cade",
+      "pitcher": "Cade Smith",
       "batter": "Carson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -846,7 +906,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Cade",
+      "pitcher": "Cade Smith",
       "batter": "Aiden",
       "outcome": "Single",
       "count": "1-0",
@@ -873,7 +933,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Cade",
+      "pitcher": "Cade Smith",
       "batter": "Adrian",
       "outcome": "Hit by pitch",
       "count": "2-1",
@@ -900,7 +960,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Cade",
+      "pitcher": "Alex Yearwood",
       "batter": "Temo",
       "outcome": "Fielder's choice",
       "count": "3-2",
@@ -927,14 +987,15 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Cade",
+      "pitcher": "Alex Yearwood",
       "batter": "Anthony",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "BBFBK",
       "rbi": true,
       "runs_scored": [
-        "Anthony"
+        "Anthony",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -956,7 +1017,34 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Alex",
+      "pitcher": "Alex Yearwood",
+      "batter": "Alex",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Temo",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Temo",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 0
+      },
+      "description": "Alex Yearwood to p for Cade Smith."
+    },
+    {
+      "inning": "Top 4",
+      "pitcher": "Alex Yearwood",
       "batter": "Casey",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1098,7 +1186,9 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Dawson"
+        "Dawson",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1147,7 +1237,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Alex",
+      "pitcher": "Alex Yearwood",
       "batter": "Jayden",
       "outcome": "Walk",
       "count": "3-1",
@@ -1174,7 +1264,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Alex",
+      "pitcher": "Alizaeh Gutierrez",
       "batter": "Josh",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1201,7 +1291,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Alex",
+      "pitcher": "Alizaeh Gutierrez",
       "batter": "Ethan",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1228,7 +1318,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Alex",
+      "pitcher": "Alizaeh Gutierrez",
       "batter": "Carson",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1336,7 +1426,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ethan",
+      "pitcher": "Ethan Walker",
+      "batter": "Ethan",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Clayton",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Clayton",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 3
+      },
+      "description": "Ethan Walker to p for Sam Cozart."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Ethan Walker",
       "batter": "Jackson",
       "outcome": "Walk",
       "count": "3-0",
@@ -1363,7 +1480,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ethan",
+      "pitcher": "Ethan Walker",
       "batter": "Rashawn",
       "outcome": "Fielder's choice",
       "count": "2-1",
@@ -1390,7 +1507,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Alizaeh",
+      "pitcher": "Alizaeh Gutierrez",
+      "batter": "Alizaeh",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 3
+      },
+      "description": "Alizaeh Gutierrez to p for Alex Yearwood."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Alizaeh Gutierrez",
       "batter": "Aiden",
       "outcome": "Single",
       "count": "0-0",
@@ -1417,7 +1561,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Alizaeh",
+      "pitcher": "Alizaeh Gutierrez",
       "batter": "Adrian",
       "outcome": "Grounded into double play",
       "count": "0-1",
@@ -1444,7 +1588,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Alizaeh",
+      "pitcher": "Alizaeh Gutierrez",
       "batter": "Temo",
       "outcome": "Flyout",
       "count": "3-1",
@@ -1471,7 +1615,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ethan",
+      "pitcher": "Ethan Walker",
       "batter": "Jaquae",
       "outcome": "Walk",
       "count": "3-2",
@@ -1498,7 +1642,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ethan",
+      "pitcher": "Max Grubbs",
       "batter": "Manny",
       "outcome": "Pop out",
       "count": "0-1",
@@ -1525,7 +1669,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Max",
+      "pitcher": "Max Grubbs",
+      "batter": "Max",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Jaquae",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Jaquae",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 3
+      },
+      "description": "Max Grubbs to p for Ethan Walker."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Max Grubbs",
       "batter": "Dawson",
       "outcome": "Walk",
       "count": "3-1",
@@ -1552,7 +1723,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Max",
+      "pitcher": "Max Grubbs",
       "batter": "Chase",
       "outcome": "Fielder's choice",
       "count": "2-2",
@@ -1579,7 +1750,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Max",
+      "pitcher": "Max Grubbs",
       "batter": "Zachary",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1606,7 +1777,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Alizaeh",
+      "pitcher": "Alizaeh Gutierrez",
       "batter": "Anthony",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1633,7 +1804,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Alizaeh",
+      "pitcher": "Alec Beversdorf",
       "batter": "Casey",
       "outcome": "Home run",
       "count": "1-2",
@@ -1662,7 +1833,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Alizaeh",
+      "pitcher": "Alec Beversdorf",
       "batter": "Jayden",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1689,7 +1860,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Alizaeh",
+      "pitcher": "Alec Beversdorf",
       "batter": "Josh",
       "outcome": "Walk",
       "count": "3-1",
@@ -1716,7 +1887,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Alizaeh",
+      "pitcher": "Alec Beversdorf",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1743,7 +1914,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Alizaeh",
+      "pitcher": "Alec Beversdorf",
       "batter": "Ethan",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1770,7 +1941,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Max",
+      "pitcher": "Max Grubbs",
       "batter": "Brady",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1797,7 +1968,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Max",
+      "pitcher": "Max Grubbs",
       "batter": "Clayton",
       "outcome": "Walk",
       "count": "3-1",
@@ -1824,7 +1995,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Max",
+      "pitcher": "Cal Higgins",
       "batter": "Jackson",
       "outcome": "Fielder's choice",
       "count": "3-2",
@@ -1851,13 +2022,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Max",
+      "pitcher": "Cal Higgins",
       "batter": "Rashawn",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1878,7 +2051,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Cal",
+      "pitcher": "Cal Higgins",
+      "batter": "Cal",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Jackson",
+        "2B": "Rashawn",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Jackson",
+        "2B": "Rashawn",
+        "3B": null
+      },
+      "score": {
+        "away": 8,
+        "home": 4
+      },
+      "description": "Cal Higgins to p for Max Grubbs."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Cal Higgins",
       "batter": "Jaquae",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1905,7 +2105,34 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Alec",
+      "pitcher": "Will Canalichio",
+      "batter": "Alec",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 8,
+        "home": 4
+      },
+      "description": "Alec Beversdorf to p for Alizaeh Gutierrez."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Cameron O'Banan",
       "batter": "Carson",
       "outcome": "Walk",
       "count": "3-2",
@@ -1932,7 +2159,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Alec",
+      "pitcher": "Cameron O'Banan",
       "batter": "Aiden",
       "outcome": "Single",
       "count": "0-0",
@@ -1959,13 +2186,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Alec",
+      "pitcher": "Cameron O'Banan",
       "batter": "Adrian",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1986,7 +2215,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Alec",
+      "pitcher": "Dylan Kerbow",
       "batter": "Temo",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2013,7 +2242,34 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Will",
+      "pitcher": "Dylan Kerbow",
+      "batter": "Will",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Aiden",
+        "2B": "Adrian",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Aiden",
+        "2B": "Adrian",
+        "3B": null
+      },
+      "score": {
+        "away": 9,
+        "home": 4
+      },
+      "description": "Will Canalichio to p for Alec Beversdorf."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Dylan Kerbow",
       "batter": "Anthony",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2040,7 +2296,34 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Cameron",
+      "pitcher": "Dylan Kerbow",
+      "batter": "Cameron",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Aiden",
+        "2B": "Adrian",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Aiden",
+        "2B": "Adrian",
+        "3B": null
+      },
+      "score": {
+        "away": 9,
+        "home": 4
+      },
+      "description": "Cameron O'Banan to p for Will Canalichio."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Dylan Kerbow",
       "batter": "Casey",
       "outcome": "Walk",
       "count": "3-1",
@@ -2067,13 +2350,16 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Cameron",
+      "pitcher": "Dylan Kerbow",
       "batter": "Jayden",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2094,13 +2380,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Cameron",
+      "pitcher": "Keller Eberly",
       "batter": "Josh",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "BKS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
@@ -2121,7 +2409,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cal",
+      "pitcher": "Cal Higgins",
       "batter": "Manny",
       "outcome": "Groundout",
       "count": "0-2",
@@ -2148,7 +2436,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cal",
+      "pitcher": "Cal Higgins",
       "batter": "Dawson",
       "outcome": "Flyout",
       "count": "2-2",
@@ -2175,7 +2463,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cal",
+      "pitcher": "Cal Higgins",
       "batter": "Chase",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2202,7 +2490,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Dylan",
+      "pitcher": "Keller Eberly",
+      "batter": "Dylan",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 12,
+        "home": 4
+      },
+      "description": "Dylan Kerbow to p for Cameron O'Banan."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "Keller Eberly",
       "batter": "Ethan",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2229,7 +2544,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Dylan",
+      "pitcher": "",
       "batter": "Carson",
       "outcome": "\u2014",
       "count": "2-0",
@@ -2256,7 +2571,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Dylan",
+      "pitcher": "",
       "batter": "Aiden",
       "outcome": "Fielder's choice",
       "count": "2-0",
@@ -2283,7 +2598,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Dylan",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2310,7 +2625,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Dylan",
+      "pitcher": "",
       "batter": "Adrian",
       "outcome": "Walk",
       "count": "3-2",
@@ -2337,14 +2652,16 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Dylan",
+      "pitcher": "",
       "batter": "Temo",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Temo"
+        "Temo",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -2366,7 +2683,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Dylan",
+      "pitcher": "",
       "batter": "Anthony",
       "outcome": "Double",
       "count": "0-0",
@@ -2393,7 +2710,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Keller",
+      "pitcher": "",
+      "batter": "Keller",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Adrian",
+        "2B": "Anthony",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Adrian",
+        "2B": "Anthony",
+        "3B": null
+      },
+      "score": {
+        "away": 15,
+        "home": 4
+      },
+      "description": "Keller Eberly to p for Dylan Kerbow."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": "Casey",
       "outcome": "Hit by pitch",
       "count": "2-0",
@@ -2420,7 +2764,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Keller",
+      "pitcher": "",
       "batter": "Jayden",
       "outcome": "Walk",
       "count": "3-0",
@@ -2447,7 +2791,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Keller",
+      "pitcher": "",
       "batter": "Josh",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2474,7 +2818,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cal",
+      "pitcher": "Cal Higgins",
       "batter": "Andrew",
       "outcome": "\u2014",
       "count": null,
@@ -2501,7 +2845,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cal",
+      "pitcher": "Cal Higgins",
       "batter": "Blake",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -2528,7 +2872,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cal",
+      "pitcher": "",
       "batter": "Samson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2555,7 +2899,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cal",
+      "pitcher": "",
       "batter": "Coy",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2582,7 +2926,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cal",
+      "pitcher": "",
       "batter": "Justin",
       "outcome": "Single",
       "count": "1-1",
@@ -2609,7 +2953,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cal",
+      "pitcher": "",
       "batter": "Austin",
       "outcome": "Groundout",
       "count": "2-0",

@@ -3,7 +3,7 @@
   "date": "02/27/2026",
   "away_team": "Dartmouth",
   "home_team": "LSU",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -76,8 +76,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Banez, Nico walked (3-1 BBBKB).",
-        "2B": null,
+        "1B": null,
+        "2B": "Banez, Nico walked (3-1 BBBKB).",
         "3B": null
       },
       "score": {
@@ -98,13 +98,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Banez, Nico walked (3-1 BBBKB).",
-        "2B": null,
+        "1B": null,
+        "2B": "Banez, Nico walked (3-1 BBBKB).",
         "3B": null
       },
       "runners_after": {
-        "1B": "Banez, Nico walked (3-1 BBBKB).",
-        "2B": null,
+        "1B": null,
+        "2B": "Banez, Nico walked (3-1 BBBKB).",
         "3B": null
       },
       "score": {
@@ -125,13 +125,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Banez, Nico walked (3-1 BBBKB).",
-        "2B": null,
+        "1B": null,
+        "2B": "Banez, Nico walked (3-1 BBBKB).",
         "3B": null
       },
       "runners_after": {
-        "1B": "Banez, Nico walked (3-1 BBBKB).",
-        "2B": null,
+        "1B": null,
+        "2B": "Banez, Nico walked (3-1 BBBKB).",
         "3B": null
       },
       "score": {
@@ -346,8 +346,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Milo Suarez",
-        "2B": null,
+        "1B": null,
+        "2B": "Milo Suarez",
         "3B": null
       },
       "score": {
@@ -368,13 +368,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Milo Suarez",
-        "2B": null,
+        "1B": null,
+        "2B": "Milo Suarez",
         "3B": null
       },
       "runners_after": {
-        "1B": "Milo Suarez",
-        "2B": null,
+        "1B": null,
+        "2B": "Milo Suarez",
         "3B": null
       },
       "score": {
@@ -391,17 +391,19 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Milo Suarez",
-        "2B": null,
+        "1B": null,
+        "2B": "Milo Suarez",
         "3B": null
       },
       "runners_after": {
         "1B": "Sam Andersen",
-        "2B": null,
+        "2B": "Milo Suarez",
         "3B": null
       },
       "score": {
@@ -423,12 +425,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Sam Andersen",
-        "2B": null,
+        "2B": "Milo Suarez",
         "3B": null
       },
       "runners_after": {
         "1B": "Sam Andersen",
-        "2B": null,
+        "2B": "Milo Suarez",
         "3B": null
       },
       "score": {
@@ -607,7 +609,9 @@
       "count": "3-1",
       "pitches": "BBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1066,7 +1070,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1250,6 +1256,33 @@
     {
       "inning": "Bottom 5",
       "pitcher": "Trey Sejnoha",
+      "batter": "Sejnoha, T. to p for Parsky, Izzy.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Zach Yorke",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Zach Yorke",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 1
+      },
+      "description": "Sejnoha, T. to p for Parsky, Izzy."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Trey Sejnoha",
       "batter": "Steven Milam",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1384,7 +1417,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Casan Evans",
+      "pitcher": "Gavin Guidry",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1399,8 +1432,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "A.J. DeMastrie",
-        "2B": null,
+        "1B": null,
+        "2B": "A.J. DeMastrie",
         "3B": null
       },
       "score": {
@@ -1421,13 +1454,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "A.J. DeMastrie",
-        "2B": null,
+        "1B": null,
+        "2B": "A.J. DeMastrie",
         "3B": null
       },
       "runners_after": {
-        "1B": "A.J. DeMastrie",
-        "2B": null,
+        "1B": null,
+        "2B": "A.J. DeMastrie",
         "3B": null
       },
       "score": {
@@ -1448,13 +1481,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "A.J. DeMastrie",
-        "2B": null,
+        "1B": null,
+        "2B": "A.J. DeMastrie",
         "3B": null
       },
       "runners_after": {
-        "1B": "A.J. DeMastrie",
-        "2B": null,
+        "1B": null,
+        "2B": "A.J. DeMastrie",
         "3B": null
       },
       "score": {
@@ -1546,13 +1579,16 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Trey Sejnoha",
+      "pitcher": "Mac Burke",
       "batter": "Derek Curiel",
       "outcome": "Double",
       "count": "2-2",
       "pitches": "FBFBFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1570,6 +1606,33 @@
         "home": 3
       },
       "description": "Curiel doubled to left field, 2 RBI (2-2 FBFBFF); Caraway scored; Simpson scored."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Mac Burke",
+      "batter": "Burke, Mac to p for Sejnoha, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Trent Caraway",
+        "2B": "Derek Curiel",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Trent Caraway",
+        "2B": "Derek Curiel",
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 3
+      },
+      "description": "Burke, Mac to p for Sejnoha, T.."
     },
     {
       "inning": "Bottom 6",
@@ -1735,7 +1798,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Mac Burke",
+      "pitcher": "Nathan Matoush",
       "batter": "Steven Milam",
       "outcome": "Reached on error",
       "count": "0-1",
@@ -1762,7 +1825,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Mac Burke",
+      "pitcher": "Nathan Matoush",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1789,7 +1852,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Mac Burke",
+      "pitcher": "Nathan Matoush",
       "batter": "Cade Arrambide",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1813,6 +1876,33 @@
         "home": 3
       },
       "description": "Arrambide grounded out to 2b (3-2 SKFBBFBF); Milam advanced to third."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Nathan Matoush",
+      "batter": "Matoush, N. to p for Burke, Mac.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": "Steven Milam",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Steven Milam",
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 3
+      },
+      "description": "Matoush, N. to p for Burke, Mac."
     },
     {
       "inning": "Bottom 7",
@@ -1843,13 +1933,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nathan Matoush",
+      "pitcher": "Nate Kugler",
       "batter": "Mason Braun",
       "outcome": "Groundout",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1870,7 +1962,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nathan Matoush",
+      "pitcher": "Nate Kugler",
       "batter": "Brayden Simpson",
       "outcome": "Walk",
       "count": "3-2",
@@ -1897,7 +1989,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nathan Matoush",
+      "pitcher": "Nate Kugler",
       "batter": "Trent Caraway",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2006,6 +2098,33 @@
     {
       "inning": "Bottom 8",
       "pitcher": "Nate Kugler",
+      "batter": "Kugler, Nate to p for Matoush, N..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 4
+      },
+      "description": "Kugler, Nate to p for Matoush, N.."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Derek Curiel",
       "outcome": "Single",
       "count": "0-1",
@@ -2032,13 +2151,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nate Kugler",
+      "pitcher": "",
       "batter": "Jake Brown",
       "outcome": "Double",
       "count": "2-1",
       "pitches": "KBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -2059,7 +2180,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nate Kugler",
+      "pitcher": "",
       "batter": "Zach Yorke",
       "outcome": "\u2014",
       "count": "0-0",
@@ -2086,7 +2207,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nate Kugler",
+      "pitcher": "",
       "batter": "Steven Milam",
       "outcome": "Groundout",
       "count": "1-0",

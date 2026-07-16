@@ -3,7 +3,7 @@
   "date": "03/06/2026",
   "away_team": "USC Upstate",
   "home_team": "Texas",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -1223,7 +1223,7 @@
       },
       "runners_after": {
         "1B": "Henry Zenor",
-        "2B": null,
+        "2B": "Johnny Sweeney",
         "3B": null
       },
       "score": {
@@ -1245,12 +1245,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Henry Zenor",
-        "2B": null,
+        "2B": "Johnny Sweeney",
         "3B": null
       },
       "runners_after": {
         "1B": "Henry Zenor",
-        "2B": null,
+        "2B": "Johnny Sweeney",
         "3B": null
       },
       "score": {
@@ -1258,6 +1258,33 @@
         "home": 6
       },
       "description": "LANG, T. struck out looking (1-2 FBSK)."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Jacob Kirby",
+      "batter": "KIRBY, J. to p for TORRES, C..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 6
+      },
+      "description": "KIRBY, J. to p for TORRES, C.."
     },
     {
       "inning": "Bottom 6",
@@ -1440,7 +1467,7 @@
       "runners_after": {
         "1B": "Kenan Bowman",
         "2B": null,
-        "3B": null
+        "3B": "Gage Griggs"
       },
       "score": {
         "away": 1,
@@ -1456,17 +1483,19 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Gage Griggs"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Kenan Bowman",
         "2B": null,
-        "3B": null
+        "3B": "Gage Griggs"
       },
       "runners_after": {
-        "1B": "Kenan Bowman",
-        "2B": null,
+        "1B": null,
+        "2B": "Kenan Bowman",
         "3B": null
       },
       "score": {
@@ -1487,13 +1516,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kenan Bowman",
-        "2B": null,
+        "1B": null,
+        "2B": "Kenan Bowman",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kenan Bowman",
-        "2B": null,
+        "1B": null,
+        "2B": "Kenan Bowman",
         "3B": null
       },
       "score": {
@@ -1514,13 +1543,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Kenan Bowman",
-        "2B": null,
+        "1B": null,
+        "2B": "Kenan Bowman",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kenan Bowman",
-        "2B": null,
+        "1B": null,
+        "2B": "Kenan Bowman",
         "3B": null
       },
       "score": {
@@ -1585,7 +1614,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jacob Kirby",
+      "pitcher": "Max Eichenberger",
       "batter": "Adrian Rodriguez",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1658,9 +1687,9 @@
         "3B": "Aiden Robbins"
       },
       "runners_after": {
-        "1B": "Temo Becerra",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Temo Becerra"
       },
       "score": {
         "away": 2,
@@ -1680,9 +1709,9 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Temo Becerra",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Temo Becerra"
       },
       "runners_after": {
         "1B": "Pack",
@@ -1751,7 +1780,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Max Grubbs",
+      "pitcher": "Haiden Leffew",
       "batter": "Pack",
       "outcome": "\u2014",
       "count": null,
@@ -1832,7 +1861,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Haiden Leffew",
+      "pitcher": "",
       "batter": "Henry Zenor",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1901,8 +1930,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Maddox Monsour",
-        "2B": null,
+        "1B": null,
+        "2B": "Maddox Monsour",
         "3B": null
       },
       "score": {
@@ -1923,14 +1952,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Maddox Monsour",
-        "2B": null,
+        "1B": null,
+        "2B": "Maddox Monsour",
         "3B": null
       },
       "runners_after": {
-        "1B": "Maddox Monsour",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Maddox Monsour"
       },
       "score": {
         "away": 2,
@@ -1952,9 +1981,9 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Maddox Monsour",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Maddox Monsour"
       },
       "runners_after": {
         "1B": null,
@@ -2067,8 +2096,8 @@
         "3B": "Carson Tinney"
       },
       "runners_after": {
-        "1B": "Aiden Robbins",
-        "2B": null,
+        "1B": null,
+        "2B": "Aiden Robbins",
         "3B": "Carson Tinney"
       },
       "score": {
@@ -2089,13 +2118,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Aiden Robbins",
-        "2B": null,
+        "1B": null,
+        "2B": "Aiden Robbins",
         "3B": "Carson Tinney"
       },
       "runners_after": {
-        "1B": "Aiden Robbins",
-        "2B": null,
+        "1B": null,
+        "2B": "Aiden Robbins",
         "3B": "Carson Tinney"
       },
       "score": {
@@ -2116,13 +2145,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Aiden Robbins",
-        "2B": null,
+        "1B": null,
+        "2B": "Aiden Robbins",
         "3B": "Carson Tinney"
       },
       "runners_after": {
         "1B": "Temo Becerra",
-        "2B": null,
+        "2B": "Aiden Robbins",
         "3B": "Carson Tinney"
       },
       "score": {
@@ -2133,7 +2162,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Max Eichenberger",
+      "pitcher": "",
       "batter": "Pack",
       "outcome": "Home run",
       "count": "0-0",
@@ -2141,6 +2170,7 @@
       "rbi": true,
       "runs_scored": [
         "Temo Becerra",
+        "Aiden Robbins",
         "Carson Tinney",
         "Pack"
       ],
@@ -2148,7 +2178,7 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Temo Becerra",
-        "2B": null,
+        "2B": "Aiden Robbins",
         "3B": "Carson Tinney"
       },
       "runners_after": {

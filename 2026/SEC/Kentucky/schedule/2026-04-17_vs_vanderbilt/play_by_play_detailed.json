@@ -3,7 +3,7 @@
   "date": "04/17/2026",
   "away_team": "Vanderbilt",
   "home_team": "Kentucky",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -283,7 +283,9 @@
       "count": "1-2",
       "pitches": "BKF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1023,8 +1025,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Scott Campbell",
-        "2B": null,
+        "1B": null,
+        "2B": "Scott Campbell",
         "3B": null
       },
       "score": {
@@ -1045,13 +1047,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Scott Campbell",
-        "2B": null,
+        "1B": null,
+        "2B": "Scott Campbell",
         "3B": null
       },
       "runners_after": {
-        "1B": "Scott Campbell",
-        "2B": null,
+        "1B": null,
+        "2B": "Scott Campbell",
         "3B": null
       },
       "score": {
@@ -1230,7 +1232,9 @@
       "count": "2-2",
       "pitches": "BKBKF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1413,7 +1417,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Connor Fennell",
+      "pitcher": "Tyler Baird",
       "batter": "Ethan Hindle",
       "outcome": "\u2014",
       "count": null,
@@ -1440,7 +1444,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Connor Fennell",
+      "pitcher": "Tyler Baird",
       "batter": "Tyler Cerny",
       "outcome": "Walk",
       "count": "3-2",
@@ -1509,8 +1513,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Cerny",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Cerny",
         "3B": null
       },
       "score": {
@@ -1531,13 +1535,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Tyler Cerny",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Cerny",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Cerny",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Cerny",
         "3B": null
       },
       "score": {
@@ -1737,7 +1741,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
+      "batter": "N. Adcock",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 1
+      },
+      "description": "N. Adcock to p for J. Jelkin."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "Nile Adcock",
       "batter": "Max Jensen",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1764,7 +1795,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
       "batter": "Braden Holcomb",
       "outcome": "Walk",
       "count": "3-2",
@@ -1791,7 +1822,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1806,8 +1837,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Braden Holcomb",
-        "2B": null,
+        "1B": null,
+        "2B": "Braden Holcomb",
         "3B": null
       },
       "score": {
@@ -1818,7 +1849,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
       "batter": "Rustan Rigdon",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1828,13 +1859,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Braden Holcomb",
-        "2B": null,
+        "1B": null,
+        "2B": "Braden Holcomb",
         "3B": null
       },
       "runners_after": {
-        "1B": "Braden Holcomb",
-        "2B": null,
+        "1B": null,
+        "2B": "Braden Holcomb",
         "3B": null
       },
       "score": {
@@ -1845,7 +1876,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Ryker Waite",
       "outcome": "\u2014",
       "count": "1-0",
@@ -1855,13 +1886,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Braden Holcomb",
-        "2B": null,
+        "1B": null,
+        "2B": "Braden Holcomb",
         "3B": null
       },
       "runners_after": {
-        "1B": "Braden Holcomb",
-        "2B": null,
+        "1B": null,
+        "2B": "Braden Holcomb",
         "3B": null
       },
       "score": {
@@ -1980,7 +2011,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Tyler Baird",
+      "pitcher": "",
       "batter": "Tagger Tyson",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2007,14 +2038,17 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Tyler Baird",
+      "pitcher": "",
       "batter": "B Van Cleave homered to right field, 4 RBI (1-1 FB); E. Hindle scored; J. Tharnish scored; C. Owens scored.",
       "outcome": "Home run",
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
       "runs_scored": [
-        "B Van Cleave homered to right field, 4 RBI (1-1 FB); E. Hindle scored; J. Tharnish scored; C. Owens scored."
+        "B Van Cleave homered to right field, 4 RBI (1-1 FB); E. Hindle scored; J. Tharnish scored; C. Owens scored.",
+        null,
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,

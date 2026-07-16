@@ -3,7 +3,7 @@
   "date": "03/06/2026",
   "away_team": "Sacramento St.",
   "home_team": "LSU",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -170,7 +170,8 @@
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "Jake Brown"
+        "Jake Brown",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -306,7 +307,10 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -469,7 +473,8 @@
       "pitches": "BBBKFFF",
       "rbi": true,
       "runs_scored": [
-        "Derek Curiel"
+        "Derek Curiel",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -796,7 +801,9 @@
       "count": "2-2",
       "pitches": "BBFK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -824,7 +831,9 @@
       "pitches": "KB",
       "rbi": true,
       "runs_scored": [
-        "Jake Brown"
+        "Jake Brown",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -906,7 +915,9 @@
       "count": "1-1",
       "pitches": "BS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1179,7 +1190,8 @@
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "Steven Milam"
+        "Steven Milam",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1471,7 +1483,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Casan Evans",
+      "pitcher": "Zion Theophilus",
       "batter": "Michael Perazzo",
       "outcome": "Single",
       "count": "2-2",
@@ -1498,7 +1510,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Casan Evans",
+      "pitcher": "Marcos Paz",
       "batter": "Brett Ott",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1525,13 +1537,16 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Casan Evans",
+      "pitcher": "Marcos Paz",
       "batter": "Erick Dessens",
       "outcome": "Triple",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1552,7 +1567,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Zion Theophilus",
+      "pitcher": "Marcos Paz",
       "batter": "Pimentel-Gue",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1576,6 +1591,33 @@
         "home": 15
       },
       "description": "Pimentel-Gue struck out swinging (1-2 FSBS)."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Colin Hunter",
+      "batter": "Hunter, C to p for Monson.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 15
+      },
+      "description": "Hunter, C to p for Monson."
     },
     {
       "inning": "Bottom 6",
@@ -1660,7 +1702,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Colin Hunter",
+      "pitcher": "",
       "batter": "Jake Brown",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1687,7 +1729,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Zion Theophilus",
+      "pitcher": "Marcos Paz",
       "batter": "Yamin",
       "outcome": "\u2014",
       "count": null,
@@ -1714,7 +1756,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Zion Theophilus",
+      "pitcher": "Marcos Paz",
       "batter": "Serna",
       "outcome": "\u2014",
       "count": null,
@@ -1768,7 +1810,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Marcos Paz",
+      "pitcher": "",
       "batter": "Jace Jeremiah",
       "outcome": "Walk",
       "count": "3-2",
@@ -1795,7 +1837,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Marcos Paz",
+      "pitcher": "",
       "batter": "Sam Harry",
       "outcome": "Walk",
       "count": "3-1",
@@ -1822,7 +1864,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Marcos Paz",
+      "pitcher": "",
       "batter": "Cameron Sewell",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1849,13 +1891,16 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Marcos Paz",
+      "pitcher": "",
       "batter": "Ryan Ellis",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1876,7 +1921,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Marcos Paz",
+      "pitcher": "",
       "batter": "Michael Perazzo",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",

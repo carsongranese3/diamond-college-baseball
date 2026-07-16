@@ -3,7 +3,7 @@
   "date": "06/06/2026",
   "away_team": "Auburn",
   "home_team": "Ole Miss",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -634,7 +634,10 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1174,7 +1177,10 @@
       "count": "1-1",
       "pitches": "SB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1192,6 +1198,33 @@
         "home": 2
       },
       "description": "J. Utermark doubled to right center, 2 RBI (1-1 SB); D. Decker scored; B. Randle scored."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Jackson Sanders",
+      "batter": "Sanders, J. to p for Petrovic, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Dom Decker",
+        "2B": "Judd Utermark",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Dom Decker",
+        "2B": "Judd Utermark",
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 2
+      },
+      "description": "Sanders, J. to p for Petrovic, A.."
     },
     {
       "inning": "Bottom 6",
@@ -1465,7 +1498,34 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
+      "batter": "J. Robertson",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 2
+      },
+      "description": "J. Robertson to p for T. Rabe."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "JP Robertson",
       "batter": "Mason McCraine",
       "outcome": "Pop out",
       "count": "0-0",
@@ -1492,7 +1552,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": "Eric Guevara",
       "outcome": "\u2014",
       "count": "3-1",
@@ -1519,7 +1579,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": "Chase Fralick",
       "outcome": "Walk",
       "count": "3-1",
@@ -1546,7 +1606,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": "Chris Rembert",
       "outcome": "Walk",
       "count": "3-2",
@@ -1573,7 +1633,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "Walker Hooks",
       "batter": "Ethin Bingaman",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1688,7 +1748,8 @@
       "pitches": "BKB",
       "rbi": true,
       "runs_scored": [
-        "Will Furniss"
+        "Will Furniss",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1710,7 +1771,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Sanders",
+      "pitcher": "Ryan Hetzler",
       "batter": "Tristan Bissetta",
       "outcome": "Home run",
       "count": "2-1",
@@ -1740,6 +1801,33 @@
     {
       "inning": "Bottom 8",
       "pitcher": "Ryan Hetzler",
+      "batter": "Hetzler, R. to p for Sanders, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": "Judd Utermark",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Judd Utermark",
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 5
+      },
+      "description": "Hetzler, R. to p for Sanders, J.."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Hayden Federico",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1766,7 +1854,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": "Owen Paino",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1793,7 +1881,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
+      "batter": "W. Hooks",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 5
+      },
+      "description": "W. Hooks to p for J. Robertson."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "Walker Hooks",
       "batter": "H. Federico",
       "outcome": "\u2014",
       "count": null,
@@ -1820,7 +1935,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "B. Moseley",
       "outcome": "\u2014",
       "count": null,
@@ -1847,7 +1962,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Bub Terrell",
       "outcome": "Single",
       "count": "1-1",
@@ -1874,7 +1989,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "",
       "batter": "Mason McCraine",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1901,7 +2016,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "",
       "batter": "Cade Belyeu",
       "outcome": "Hit by pitch",
       "count": "3-2",
@@ -1928,7 +2043,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1943,9 +2058,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cade Belyeu",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cade Belyeu"
       },
       "score": {
         "away": 2,
@@ -1955,24 +2070,26 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "",
       "batter": "Taylor Belza",
       "outcome": "Flyout",
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cade Belyeu",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cade Belyeu"
       },
       "runners_after": {
-        "1B": "Cade Belyeu",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cade Belyeu"
       },
       "score": {
         "away": 3,
@@ -1982,7 +2099,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "",
       "batter": "Mason McCraine",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1992,14 +2109,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Cade Belyeu",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cade Belyeu"
       },
       "runners_after": {
-        "1B": "Cade Belyeu",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cade Belyeu"
       },
       "score": {
         "away": 3,

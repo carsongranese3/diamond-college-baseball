@@ -3,7 +3,7 @@
   "date": "04/26/2026",
   "away_team": "Kentucky",
   "home_team": "South Carolina",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -447,7 +447,10 @@
       "count": "2-1",
       "pitches": "KBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -528,7 +531,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -826,7 +831,8 @@
       "pitches": "SB",
       "rbi": true,
       "runs_scored": [
-        "Ethan Lizama"
+        "Ethan Lizama",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -998,8 +1004,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Bell",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Bell",
         "3B": null
       },
       "score": {
@@ -1020,13 +1026,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Tyler Bell",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Bell",
         "3B": null
       },
       "runners_after": {
         "1B": "Ethan Hindle",
-        "2B": null,
+        "2B": "Tyler Bell",
         "3B": null
       },
       "score": {
@@ -1048,12 +1054,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Ethan Hindle",
-        "2B": null,
+        "2B": "Tyler Bell",
         "3B": null
       },
       "runners_after": {
         "1B": "Ethan Hindle",
-        "2B": null,
+        "2B": "Tyler Bell",
         "3B": null
       },
       "score": {
@@ -1205,7 +1211,10 @@
       "count": "2-1",
       "pitches": "BFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1226,7 +1235,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "J.",
+      "pitcher": "Jackson Soucie",
+      "batter": "J. Soucie",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Talmadge LeCroy",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Talmadge LeCroy",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 4
+      },
+      "description": "J. Soucie to p for C. Mattison."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Jackson Soucie",
       "batter": "Ethan Lizama",
       "outcome": "Walk",
       "count": "3-2",
@@ -1253,13 +1289,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "J.",
+      "pitcher": "Ryan Mullan",
       "batter": "Dawson Harman",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "FBFFBFFBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1280,7 +1318,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "R.",
+      "pitcher": "Jack Sams",
+      "batter": "R. Mullan",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Dawson Harman",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Dawson Harman",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 5
+      },
+      "description": "R. Mullan to p for J. Soucie."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Jack Sams",
       "batter": "KJ Scobey",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1415,7 +1480,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "J.",
+      "pitcher": "Jack Sams",
+      "batter": "J. Sams",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 5
+      },
+      "description": "J. Sams to p for R. Mullan."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Jack Sams",
       "batter": "Patrick Evans",
       "outcome": "Double",
       "count": "1-0",
@@ -1442,7 +1534,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "J.",
+      "pitcher": "Jack Sams",
       "batter": "Caleb Hoover",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1469,7 +1561,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "J.",
+      "pitcher": "Jack Sams",
       "batter": "Luke Yuhasz",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1496,7 +1588,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "J.",
+      "pitcher": "Jack Sams",
       "batter": "Aaron Jamison",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1604,7 +1696,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Sams",
       "batter": "Will Craddock",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1631,7 +1723,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Bennett",
       "batter": "Talmadge LeCroy",
       "outcome": "Single",
       "count": "2-2",
@@ -1658,7 +1750,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Bennett",
       "batter": "Ethan Lizama",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1685,7 +1777,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Bennett",
       "batter": "Dawson Harman",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1799,7 +1891,9 @@
       "count": "0-2",
       "pitches": "KF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1847,13 +1941,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Alex Philpott",
+      "pitcher": "Logan Prisco",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1874,7 +1970,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Alex Philpott",
+      "pitcher": "Logan Prisco",
       "batter": "Caeden Cloud",
       "outcome": "Home run",
       "count": "3-2",
@@ -1930,7 +2026,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "J.",
+      "pitcher": "Jack Bennett",
+      "batter": "J. Bennett",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 5
+      },
+      "description": "J. Bennett to p for J. Sams."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Jack Bennett",
       "batter": "C. Hansen",
       "outcome": "\u2014",
       "count": null,
@@ -1957,7 +2080,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "J.",
+      "pitcher": "Jack Bennett",
       "batter": "KJ Scobey",
       "outcome": "Walk",
       "count": "3-2",
@@ -1984,7 +2107,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "J.",
+      "pitcher": "Jack Bennett",
       "batter": "Patrick Evans",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2011,7 +2134,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "J.",
+      "pitcher": "Jack Bennett",
       "batter": "Jake Randolph",
       "outcome": "Hit by pitch",
       "count": "2-0",
@@ -2038,7 +2161,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "J.",
+      "pitcher": "",
       "batter": "Logan Sutter",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2065,7 +2188,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "J.",
+      "pitcher": "",
       "batter": "Aaron Jamison",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2119,7 +2242,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Logan Prisco",
+      "pitcher": "Josh Gregoire",
       "batter": "Tyler Bell",
       "outcome": "Single",
       "count": "1-1",
@@ -2179,7 +2302,10 @@
       "count": "3-2",
       "pitches": "KBBSBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2216,8 +2342,8 @@
       },
       "runners_after": {
         "1B": "Tyler Bell",
-        "2B": "Ethan Hindle",
-        "3B": null
+        "2B": null,
+        "3B": "Ethan Hindle"
       },
       "score": {
         "away": 9,
@@ -2238,13 +2364,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Tyler Bell",
-        "2B": "Ethan Hindle",
-        "3B": null
+        "2B": null,
+        "3B": "Ethan Hindle"
       },
       "runners_after": {
         "1B": "Tyler Bell",
-        "2B": "Ethan Hindle",
-        "3B": null
+        "2B": null,
+        "3B": "Ethan Hindle"
       },
       "score": {
         "away": 9,
@@ -2265,13 +2391,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Tyler Bell",
-        "2B": "Ethan Hindle",
-        "3B": null
+        "2B": null,
+        "3B": "Ethan Hindle"
       },
       "runners_after": {
         "1B": "Tyler Bell",
-        "2B": "Ethan Hindle",
-        "3B": null
+        "2B": null,
+        "3B": "Ethan Hindle"
       },
       "score": {
         "away": 9,
@@ -2281,7 +2407,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "J.",
+      "pitcher": "",
       "batter": "Will Craddock",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2308,7 +2434,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "J.",
+      "pitcher": "",
       "batter": "Talmadge LeCroy",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2335,7 +2461,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "J.",
+      "pitcher": "",
       "batter": "Ethan Lizama",
       "outcome": "Flyout",
       "count": "0-1",

@@ -3,7 +3,7 @@
   "date": "04/25/2026",
   "away_team": "Oklahoma",
   "home_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -283,7 +283,9 @@
       "count": "0-2",
       "pitches": "KS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -724,7 +726,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -746,12 +748,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Camden Johnson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1039,7 +1041,9 @@
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1192,6 +1196,33 @@
         "home": 0
       },
       "description": "Fralick, C. grounded out to 2b (3-2 KBBBK)."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "LJ Cormier",
+      "batter": "Cormier, L. to p for Marciano, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 0
+      },
+      "description": "Cormier, L. to p for Marciano, J.."
     },
     {
       "inning": "Top 6",
@@ -1381,6 +1412,33 @@
         "home": 0
       },
       "description": "Terrell, B. walked (3-0 BBBB)."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Xander Mercurius",
+      "batter": "Mercurius, X to p for Johnson, Cam.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Bub Terrell",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Bub Terrell",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 0
+      },
+      "description": "Mercurius, X to p for Johnson, Cam."
     },
     {
       "inning": "Bottom 6",
@@ -1764,7 +1822,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Xander Mercurius",
+      "pitcher": "Kadyn Leon",
       "batter": "Bub Terrell",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1818,7 +1876,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "LJ Cormier",
+      "pitcher": "Abe Chancellor",
       "batter": "Dasan Harris",
       "outcome": "Walk",
       "count": "3-0",
@@ -1846,6 +1904,33 @@
     {
       "inning": "Top 9",
       "pitcher": "Abe Chancellor",
+      "batter": "Chancellor,A to p for Cormier, L..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Dasan Harris",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Dasan Harris",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 1
+      },
+      "description": "Chancellor,A to p for Cormier, L.."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1860,8 +1945,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dasan Harris",
-        "2B": null,
+        "1B": null,
+        "2B": "Dasan Harris",
         "3B": null
       },
       "score": {
@@ -1872,7 +1957,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Abe Chancellor",
+      "pitcher": "",
       "batter": "Kyle Branch",
       "outcome": "Fielder's choice",
       "count": "0-2",
@@ -1882,13 +1967,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Dasan Harris",
-        "2B": null,
+        "1B": null,
+        "2B": "Dasan Harris",
         "3B": null
       },
       "runners_after": {
         "1B": "Kyle Branch",
-        "2B": null,
+        "2B": "Dasan Harris",
         "3B": null
       },
       "score": {
@@ -1899,7 +1984,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Abe Chancellor",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1910,12 +1995,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Kyle Branch",
-        "2B": null,
+        "2B": "Dasan Harris",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Branch",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Branch",
         "3B": null
       },
       "score": {
@@ -1926,7 +2011,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Abe Chancellor",
+      "pitcher": "",
       "batter": "Jason Walk",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1936,13 +2021,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kyle Branch",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Branch",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Branch",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Branch",
         "3B": null
       },
       "score": {
@@ -1950,6 +2035,33 @@
         "home": 1
       },
       "description": "Walk, J. struck out swinging (3-2 FBBBKS)."
+    },
+    {
+      "inning": "Bottom 9",
+      "pitcher": "Kadyn Leon",
+      "batter": "Leon, K. to p for Mercurius, X.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 1
+      },
+      "description": "Leon, K. to p for Mercurius, X."
     },
     {
       "inning": "Bottom 9",
@@ -2007,7 +2119,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Kadyn Leon",
+      "pitcher": "",
       "batter": "Bristol Carter",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2034,7 +2146,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Kadyn Leon",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2061,7 +2173,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Kadyn Leon",
+      "pitcher": "",
       "batter": "Mason McCraine",
       "outcome": "Groundout",
       "count": "2-0",

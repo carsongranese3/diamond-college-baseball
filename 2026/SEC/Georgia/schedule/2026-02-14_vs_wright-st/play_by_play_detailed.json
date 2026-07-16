@@ -3,7 +3,7 @@
   "date": "02/14/2026(2)",
   "away_team": "Wright St.",
   "home_team": "Georgia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -616,8 +616,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kenny Ishikawa",
-        "2B": null,
+        "1B": null,
+        "2B": "Kenny Ishikawa",
         "3B": null
       },
       "score": {
@@ -638,13 +638,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kenny Ishikawa",
-        "2B": null,
+        "1B": null,
+        "2B": "Kenny Ishikawa",
         "3B": null
       },
       "runners_after": {
         "1B": "Jordy Oriach",
-        "2B": null,
+        "2B": "Kenny Ishikawa",
         "3B": null
       },
       "score": {
@@ -666,12 +666,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jordy Oriach",
-        "2B": null,
+        "2B": "Kenny Ishikawa",
         "3B": null
       },
       "runners_after": {
         "1B": "Jordy Oriach",
-        "2B": null,
+        "2B": "Kenny Ishikawa",
         "3B": null
       },
       "score": {
@@ -796,7 +796,10 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -833,8 +836,8 @@
       },
       "runners_after": {
         "1B": "Patrick Fultz",
-        "2B": "Cy Turner",
-        "3B": null
+        "2B": null,
+        "3B": "Cy Turner"
       },
       "score": {
         "away": 2,
@@ -855,13 +858,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Patrick Fultz",
-        "2B": "Cy Turner",
-        "3B": null
+        "2B": null,
+        "3B": "Cy Turner"
       },
       "runners_after": {
         "1B": "Andrew Duncan",
-        "2B": "Cy Turner",
-        "3B": null
+        "2B": null,
+        "3B": "Cy Turner"
       },
       "score": {
         "away": 2,
@@ -877,18 +880,20 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Andrew Duncan",
-        "2B": "Cy Turner",
-        "3B": null
+        "2B": null,
+        "3B": "Cy Turner"
       },
       "runners_after": {
         "1B": "Andrew Duncan",
-        "2B": "Cy Turner",
-        "3B": null
+        "2B": null,
+        "3B": "Cy Turner"
       },
       "score": {
         "away": 3,
@@ -909,13 +914,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Andrew Duncan",
-        "2B": "Cy Turner",
-        "3B": null
+        "2B": null,
+        "3B": "Cy Turner"
       },
       "runners_after": {
         "1B": "Andrew Duncan",
-        "2B": "Cy Turner",
-        "3B": null
+        "2B": null,
+        "3B": "Cy Turner"
       },
       "score": {
         "away": 3,
@@ -985,7 +990,10 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1115,6 +1123,33 @@
     {
       "inning": "Top 5",
       "pitcher": "Jordan Stephens",
+      "batter": "Stephens, J. to p for Pruett.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 2
+      },
+      "description": "Stephens, J. to p for Pruett."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Jordan Stephens",
       "batter": "Braylen Blomquist",
       "outcome": "Strikeout (looking)",
       "count": null,
@@ -1183,8 +1218,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Gus Gregory",
-        "2B": null,
+        "1B": null,
+        "2B": "Gus Gregory",
         "3B": null
       },
       "score": {
@@ -1205,13 +1240,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Gus Gregory",
-        "2B": null,
+        "1B": null,
+        "2B": "Gus Gregory",
         "3B": null
       },
       "runners_after": {
         "1B": "Hunter Warren",
-        "2B": null,
+        "2B": "Gus Gregory",
         "3B": null
       },
       "score": {
@@ -1233,7 +1268,7 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Hunter Warren",
-        "2B": null,
+        "2B": "Gus Gregory",
         "3B": null
       },
       "runners_after": {
@@ -1285,7 +1320,8 @@
       "pitches": null,
       "rbi": true,
       "runs_scored": [
-        "JP Peltier"
+        "JP Peltier",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1307,7 +1343,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jordan Stephens",
+      "pitcher": "Thomas Ellisen",
       "batter": "Cy Turner",
       "outcome": "Strikeout (swinging)",
       "count": null,
@@ -1822,7 +1858,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Thomas Ellisen",
+      "pitcher": "Paul Farley",
       "batter": "Patrick Fultz",
       "outcome": "Strikeout (looking)",
       "count": null,
@@ -1876,7 +1912,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Paul Farley",
+      "pitcher": "Grant Edwards",
       "batter": "Cy Turner",
       "outcome": "Strikeout (swinging)",
       "count": null,
@@ -2038,7 +2074,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Grant Edwards",
+      "pitcher": "",
       "batter": "Parker Falkenstein",
       "outcome": "Single",
       "count": null,
@@ -2065,7 +2101,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Grant Edwards",
+      "pitcher": "",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,

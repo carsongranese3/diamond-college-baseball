@@ -3,7 +3,7 @@
   "date": "03/17/2026",
   "away_team": "Jackson St.",
   "home_team": "Mississippi St.",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -76,7 +76,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyree Reed",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -527,6 +527,33 @@
     {
       "inning": "Bottom 2",
       "pitcher": "Manuel Toro",
+      "batter": "Toro, Manuel to p for Williams, Jo.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": "Aidan Teel",
+        "3B": "Kevin Milewski"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Aidan Teel",
+        "3B": "Kevin Milewski"
+      },
+      "score": {
+        "away": 0,
+        "home": 3
+      },
+      "description": "Toro, Manuel to p for Williams, Jo."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Manuel Toro",
       "batter": "Ace Reese",
       "outcome": "Walk",
       "count": "3-2",
@@ -589,7 +616,8 @@
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Aidan Teel"
+        "Aidan Teel",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -638,7 +666,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Maddox Miller",
+      "pitcher": "Parker Rhodes",
       "batter": "Wyers",
       "outcome": "\u2014",
       "count": null,
@@ -869,8 +897,8 @@
         "3B": "Jacob Parker"
       },
       "runners_after": {
-        "1B": "Aidan Teel",
-        "2B": null,
+        "1B": null,
+        "2B": "Aidan Teel",
         "3B": "Jacob Parker"
       },
       "score": {
@@ -893,13 +921,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Aidan Teel",
-        "2B": null,
+        "1B": null,
+        "2B": "Aidan Teel",
         "3B": "Jacob Parker"
       },
       "runners_after": {
         "1B": "Bryce Chance",
-        "2B": null,
+        "2B": "Aidan Teel",
         "3B": null
       },
       "score": {
@@ -910,7 +938,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Manuel Toro",
+      "pitcher": "Shemar Harris",
       "batter": "Drew Wyers",
       "outcome": "Pop out",
       "count": "1-2",
@@ -921,12 +949,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Bryce Chance",
-        "2B": null,
+        "2B": "Aidan Teel",
         "3B": null
       },
       "runners_after": {
         "1B": "Bryce Chance",
-        "2B": null,
+        "2B": "Aidan Teel",
         "3B": null
       },
       "score": {
@@ -1018,7 +1046,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Parker Rhodes",
+      "pitcher": "Charlie Foster",
       "batter": "Payton Boines",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1042,6 +1070,33 @@
         "home": 7
       },
       "description": "Boines, Payt flied out to lf to left center (0-0)."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Shemar Harris",
+      "batter": "Harris, Shem to p for Toro, Manuel.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 7
+      },
+      "description": "Harris, Shem to p for Toro, Manuel."
     },
     {
       "inning": "Bottom 4",
@@ -1087,8 +1142,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Noah Sullivan",
-        "2B": null,
+        "1B": null,
+        "2B": "Noah Sullivan",
         "3B": null
       },
       "score": {
@@ -1109,8 +1164,8 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Noah Sullivan",
-        "2B": null,
+        "1B": null,
+        "2B": "Noah Sullivan",
         "3B": null
       },
       "runners_after": {
@@ -1170,9 +1225,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Gehrig Frei",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Gehrig Frei"
       },
       "score": {
         "away": 0,
@@ -1192,14 +1247,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Gehrig Frei",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Gehrig Frei"
       },
       "runners_after": {
-        "1B": "Gehrig Frei",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Gehrig Frei"
       },
       "score": {
         "away": 0,
@@ -1209,7 +1264,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Shemar Harris",
+      "pitcher": "Corey Richardson",
       "batter": "Jacob Parker",
       "outcome": "Single",
       "count": "1-1",
@@ -1221,9 +1276,9 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Gehrig Frei",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Gehrig Frei"
       },
       "runners_after": {
         "1B": "Jacob Parker",
@@ -1238,7 +1293,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Shemar Harris",
+      "pitcher": "Corey Richardson",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1253,8 +1308,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jacob Parker",
-        "2B": null,
+        "1B": null,
+        "2B": "Jacob Parker",
         "3B": null
       },
       "score": {
@@ -1265,7 +1320,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Shemar Harris",
+      "pitcher": "Corey Richardson",
       "batter": "Kevin Milewski",
       "outcome": "Reached on error",
       "count": "1-2",
@@ -1277,8 +1332,8 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jacob Parker",
-        "2B": null,
+        "1B": null,
+        "2B": "Jacob Parker",
         "3B": null
       },
       "runners_after": {
@@ -1291,6 +1346,33 @@
         "home": 10
       },
       "description": "Milewski reached on a throwing error by (1-2 FBK) Parker advanced to third, scored on the error, unearned."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Corey Richardson",
+      "batter": "Richardson, to p for Harris, Shem.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Kevin Milewski",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Kevin Milewski",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 10
+      },
+      "description": "Richardson, to p for Harris, Shem."
     },
     {
       "inning": "Bottom 4",
@@ -1321,7 +1403,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Corey Richardson",
+      "pitcher": "Trae Burton",
       "batter": "Bryce Chance",
       "outcome": "Double",
       "count": "1-0",
@@ -1351,7 +1433,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Corey Richardson",
+      "pitcher": "Trae Burton",
       "batter": "Drew Wyers",
       "outcome": "Walk",
       "count": "3-1",
@@ -1378,7 +1460,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Corey Richardson",
+      "pitcher": "Trae Burton",
       "batter": "Noah Sullivan",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1448,7 +1530,7 @@
       },
       "runners_after": {
         "1B": "Wilbert Perez",
-        "2B": null,
+        "2B": "Hederick Torres",
         "3B": null
       },
       "score": {
@@ -1470,13 +1552,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Wilbert Perez",
-        "2B": null,
+        "2B": "Hederick Torres",
         "3B": null
       },
       "runners_after": {
         "1B": "Parker Winfield",
-        "2B": null,
-        "3B": null
+        "2B": "Wilbert Perez",
+        "3B": "Hederick Torres"
       },
       "score": {
         "away": 0,
@@ -1497,13 +1579,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Parker Winfield",
-        "2B": null,
-        "3B": null
+        "2B": "Wilbert Perez",
+        "3B": "Hederick Torres"
       },
       "runners_after": {
         "1B": "Parker Winfield",
-        "2B": null,
-        "3B": null
+        "2B": "Wilbert Perez",
+        "3B": "Hederick Torres"
       },
       "score": {
         "away": 0,
@@ -1519,18 +1601,20 @@
       "count": "0-2",
       "pitches": "SS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Hederick Torres"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Parker Winfield",
-        "2B": null,
-        "3B": null
+        "2B": "Wilbert Perez",
+        "3B": "Hederick Torres"
       },
       "runners_after": {
         "1B": "Tate",
         "2B": null,
-        "3B": null
+        "3B": "Wilbert Perez"
       },
       "score": {
         "away": 1,
@@ -1540,7 +1624,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Charlie Foster",
+      "pitcher": "Tyler Pitzer",
       "batter": "Tyree Reed",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1552,10 +1636,37 @@
       "runners_before": {
         "1B": "Tate",
         "2B": null,
-        "3B": null
+        "3B": "Wilbert Perez"
       },
       "runners_after": {
         "1B": "Tate",
+        "2B": null,
+        "3B": "Wilbert Perez"
+      },
+      "score": {
+        "away": 1,
+        "home": 12
+      },
+      "description": "Reed, Tyree flied out to lf (1-0 B)."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Trae Burton",
+      "batter": "Burton, Trae to p for Richardson,.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1563,7 +1674,7 @@
         "away": 1,
         "home": 12
       },
-      "description": "Reed, Tyree flied out to lf (1-0 B)."
+      "description": "Burton, Trae to p for Richardson,."
     },
     {
       "inning": "Bottom 5",
@@ -1704,7 +1815,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Trae Burton",
+      "pitcher": "Talmagde Davis",
       "batter": "Kevin Milewski",
       "outcome": "Single",
       "count": "1-2",
@@ -1733,7 +1844,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Trae Burton",
+      "pitcher": "Talmagde Davis",
       "batter": "James Nunnallee",
       "outcome": "\u2014",
       "count": "2-0",
@@ -1760,7 +1871,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Trae Burton",
+      "pitcher": "Talmagde Davis",
       "batter": "Peter Mershon",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -1787,7 +1898,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Trae Burton",
+      "pitcher": "Talmagde Davis",
       "batter": "Drew Wyers",
       "outcome": "Double",
       "count": "0-1",
@@ -1818,7 +1929,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Talmagde Davis",
+      "pitcher": "",
+      "batter": "Davis, Talma to p for Burton, Trae.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": "Drew Wyers",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Drew Wyers",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 17
+      },
+      "description": "Davis, Talma to p for Burton, Trae."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "",
       "batter": "Jackson Owen",
       "outcome": "\u2014",
       "count": "0-2",
@@ -1926,7 +2064,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tyler Pitzer",
+      "pitcher": "Brendan Sweeney",
       "batter": "Hederick Torres",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1953,7 +2091,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Talmagde Davis",
+      "pitcher": "",
       "batter": "Blake Bevis",
       "outcome": "Foul out",
       "count": "0-0",
@@ -1980,7 +2118,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Talmagde Davis",
+      "pitcher": "",
       "batter": "Gehrig Frei",
       "outcome": "Groundout",
       "count": "2-1",
@@ -2007,7 +2145,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Talmagde Davis",
+      "pitcher": "",
       "batter": "Gatlin Sanders",
       "outcome": "Lineout",
       "count": "0-1",
@@ -2088,7 +2226,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brendan Sweeney",
+      "pitcher": "",
       "batter": "Tyshon Patty",
       "outcome": "Groundout",
       "count": "0-1",

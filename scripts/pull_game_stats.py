@@ -211,8 +211,46 @@ def build_detailed(game_dir):
         rows = [r for r in (players.get(side) or {}).get("pitching", [])
                 if r.get("Name") != team]
         return rows[0]["Name"] if rows else ""
-    # Current pitcher per pitching side (updated on in-text pitching changes).
-    cur_pitcher = {"away": _starter("away"), "home": _starter("home")}
+    # The saved PBP text carries NO pitching-substitution lines, so the pitcher
+    # facing each batter can't be read from the play text. Reconstruct it from the
+    # box score instead: pitchers are listed in order of appearance with a BF
+    # (batters-faced) count, so the Nth batter a side faces belongs to whichever
+    # pitcher's cumulative-BF window covers N.
+    def _bf_ordered(side):
+        team = (players.get(side) or {}).get("team")
+        out = []
+        for r in (players.get(side) or {}).get("pitching", []):
+            nm = r.get("Name")
+            if not nm or nm == team:
+                continue
+            try:
+                bf = int(str(r.get("BF", 0)).strip() or 0)
+            except ValueError:
+                bf = 0
+            out.append((nm, bf))
+        return out
+    bf_order = {s: _bf_ordered(s) for s in ("away", "home")}
+
+    def _pitcher_facing(side, faced):
+        """Full box-score name of the pitcher facing the `faced`-th (0-indexed)
+        batter this side has faced, by cumulative BF. Returns "" once past the
+        final BF window — that only happens when the box's BF column is
+        underreported (its sum < the batters actually faced), and guessing the
+        last pitcher there would fabricate a stat line, so we leave those overflow
+        PAs unattributed (build_stats ignores an empty pitcher) rather than inflate
+        whoever is listed last."""
+        lst = bf_order[side]
+        if not lst:
+            return _starter(side)
+        cum = 0
+        for nm, bf in lst:
+            cum += bf
+            if faced < cum:
+                return nm
+        return ""
+
+    # Batters faced so far, per pitching side — indexes into _pitcher_facing.
+    pa_faced = {"away": 0, "home": 0}
 
     # Per-half-inning state, reset whenever the batting side flips (= new half).
     prev_side = None
@@ -220,6 +258,10 @@ def build_detailed(game_dir):
     bases = {"1B": None, "2B": None, "3B": None}
     outs = 0
     plays = []
+
+    # Running score as of the last play we successfully parsed a score for —
+    # the reconciliation ground truth below (games start 0-0).
+    last_score = {"away": 0, "home": 0}
 
     def base_snapshot():
         return {b: bases[b] for b in ("1B", "2B", "3B")}
@@ -248,12 +290,9 @@ def build_detailed(game_dir):
         primary = subs[0]
         low = primary.lower()
 
-        # Pitching change: "Grubbs to p for Riojas." (updates the fielding side).
-        m = re.match(r"([A-Z][A-Za-z'\-\.]+).* to p for ", primary)
-        if m and " to p for " in primary:
-            cur_pitcher[pit_side] = pitchers.get(_last(m.group(1)), m.group(1))
-            continue
-        # Other substitutions ("X to lf", "X to ss for Y") — skip (not a PA).
+        # Substitutions ("X to lf", "X to ss for Y", "X to p for Y") — skip (not a
+        # PA). Pitching changes need no special handling here: the pitcher facing
+        # each batter is reconstructed from box-score BF (see _pitcher_facing).
         if re.match(r"[A-Z][A-Za-z'\-\.]+(?:\s[A-Z])?\s+to\s+\w+", primary) \
                 and not re.search(r"advanced|scored|out at|to (first|second|third|home)", low):
             continue
@@ -268,6 +307,11 @@ def build_detailed(game_dir):
         runner_event = (outcome is None and
                         re.search(r"advanced|stole|scored|caught stealing", low))
 
+        # The pitcher on the mound = the one facing the current batter (by BF).
+        # A runner-only event is thrown by that same pitcher but doesn't consume a
+        # plate appearance, so only real PAs advance the BF cursor.
+        this_pitcher = _pitcher_facing(pit_side, pa_faced[pit_side])
+
         if runner_event:
             batter_name = None
             outcome = ("Wild pitch" if "wild pitch" in low else
@@ -277,6 +321,7 @@ def build_detailed(game_dir):
                        "Baserunning")
             sub_events = subs
         else:
+            pa_faced[pit_side] += 1
             bname_short, _rest = _batter(primary)
             batter_name = batters.get(_last(bname_short), bname_short)
             sub_events = subs[1:]
@@ -285,7 +330,7 @@ def build_detailed(game_dir):
         # batter takes one), lead runners (closer to home) before trailing ones.
         def _prio(s):
             sl = s.lower()
-            if "scored" in sl or "to home" in sl:
+            if "scored" in sl or "home" in sl:
                 return 0
             if "third" in sl:
                 return 1
@@ -296,7 +341,16 @@ def build_detailed(game_dir):
             return 4
         for sub in sorted(sub_events, key=_prio):
             sl = sub.lower()
-            rm = re.search(r"([A-Z][A-Za-z'\-\.]+)\s+(advanced to (second|third|home)|scored|out)", sub)
+            # NCAA runner names are "Last, F." (e.g. "Harris, Das."); a regex
+            # requiring `\s+` right before the action word can't match across
+            # the comma and ends up grabbing the initial ("Das.") instead of
+            # the surname, so the runner lookup below silently fails. Capture
+            # the full leading name (comma and all) non-greedily up to the
+            # action keyword instead — `_last()` already knows how to pull the
+            # surname out of "Last, First" text. "stole"/"caught"/"picked" are
+            # included alongside "advanced"/"scored"/"out" so bare steal clauses
+            # ("Harris, Das. stole second.") anchor the same way.
+            rm = re.match(r"\s*(.+?)\s+(?:advanced\b|scored\b|out\b|stole\b|caught\b|picked\b)", sub)
             who = _find_runner(bases, _last(rm.group(1))) if rm else None
             if "scored" in sl:
                 if who:
@@ -304,16 +358,24 @@ def build_detailed(game_dir):
                 elif batter_name and place == "HR":
                     pass
             elif "out at" in sl or re.search(r"\bout\b", sl):
+                # Covers a caught-stealing/pickoff out ("out at second ...,
+                # caught stealing"/"out ..., picked off") as well as a plain
+                # baserunning out — every observed "caught stealing"/"picked
+                # off" clause in the saved data also contains the word "out",
+                # so this branch alone removes the runner and counts the out
+                # without any risk of double-counting a separate CS/pickoff
+                # branch (there isn't one — "stole"/"caught"/"picked" below
+                # only fire when this condition is False).
                 if who:
                     bases[who] = None
                 outs += 1
-            elif "advanced to third" in sl or "to third" in sl:
+            elif "advanced to third" in sl or "to third" in sl or "stole third" in sl:
                 if who:
                     nm = bases[who]; bases[who] = None; bases["3B"] = nm
-            elif "advanced to second" in sl or "to second" in sl:
+            elif "advanced to second" in sl or "to second" in sl or "stole second" in sl:
                 if who:
                     nm = bases[who]; bases[who] = None; bases["2B"] = nm
-            elif "advanced to home" in sl:
+            elif "advanced to home" in sl or "stole home" in sl:
                 if who:
                     scored.append(bases[who]); bases[who] = None
 
@@ -326,9 +388,31 @@ def build_detailed(game_dir):
             elif outcome:  # an out (the 2nd out of a GIDP is a runner sub-event)
                 outs += 1
 
+        # Reconcile `scored` against the authoritative running score. The
+        # clause-based parsing above silently drops a run whenever a scoring
+        # runner's surname can't be matched to a tracked base (`who` is None
+        # at the "scored" branch) — verified to lose ~30% of real runs across
+        # a season. The play's own `score` field is ground truth, so pad (or,
+        # in the rare over-count case, trim) `scored` so its length always
+        # matches the actual score delta for the batting side, while still
+        # keeping every runner name we DID resolve. Only reconciles when the
+        # score parses on both sides and the delta is sane (>= 0); otherwise
+        # leaves the clause-based list untouched and doesn't move the
+        # baseline, so a later valid score still reconciles correctly across
+        # the gap.
+        cur_score = parse_score(p.get("score"))
+        if cur_score is not None:
+            runs_this_play = cur_score[side] - last_score[side]
+            if runs_this_play >= 0:
+                if len(scored) < runs_this_play:
+                    scored = scored + [None] * (runs_this_play - len(scored))
+                elif len(scored) > runs_this_play:
+                    scored = scored[:runs_this_play]
+                last_score = cur_score
+
         plays.append({
             "inning": f"{half} {inning}",
-            "pitcher": cur_pitcher[pit_side],
+            "pitcher": this_pitcher,
             "batter": batter_name,
             "outcome": outcome or "—",
             "count": pitch_data["count"] if pitch_data else None,
@@ -339,7 +423,7 @@ def build_detailed(game_dir):
             "outs_after": min(outs, 3),
             "runners_before": runners_before,
             "runners_after": base_snapshot(),
-            "score": parse_score(p.get("score")),
+            "score": cur_score,
             "description": re.sub(r"\s*3[ab]\s*", " ", text).strip(),
         })
 
@@ -353,7 +437,7 @@ def build_detailed(game_dir):
         "home_team": (players.get("home") or {}).get("team"),
         "note": ("Broken-down from the saved play_by_play.json (both teams' at-bats). "
                  "Top = away batting, Bottom = home batting; outs/bases tracked per "
-                 "half-inning, pitcher tracked via in-text pitching changes."),
+                 "half-inning, pitcher-of-record reconstructed from box-score BF."),
         "plays": plays,
     }
     with open(os.path.join(game_dir, _DETAILED), "w", encoding="utf-8") as fh:

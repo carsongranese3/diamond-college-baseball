@@ -3,7 +3,7 @@
   "date": "02/25/2026",
   "away_team": "Arizona St.",
   "home_team": "Oklahoma",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -217,8 +217,8 @@
         "3B": "Longo"
       },
       "runners_after": {
-        "1B": "Matthew Polk",
-        "2B": null,
+        "1B": null,
+        "2B": "Matthew Polk",
         "3B": "Longo"
       },
       "score": {
@@ -239,13 +239,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Matthew Polk",
-        "2B": null,
+        "1B": null,
+        "2B": "Matthew Polk",
         "3B": "Longo"
       },
       "runners_after": {
-        "1B": "Matthew Polk",
-        "2B": null,
+        "1B": null,
+        "2B": "Matthew Polk",
         "3B": "Longo"
       },
       "score": {
@@ -418,7 +418,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Gavyn Jones",
+      "pitcher": "Kadyn Leon",
       "batter": "Moutzouridi",
       "outcome": "\u2014",
       "count": null,
@@ -552,6 +552,33 @@
         "home": 1
       },
       "description": "Stevens, N. grounded out to p (2-1 SBB)."
+    },
+    {
+      "inning": "Top 3",
+      "pitcher": "Kadyn Leon",
+      "batter": "Leon, K. to p for Jones, G..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 1
+      },
+      "description": "Leon, K. to p for Jones, G.."
     },
     {
       "inning": "Top 3",
@@ -706,7 +733,7 @@
       },
       "runners_after": {
         "1B": "Jason Walk",
-        "2B": null,
+        "2B": "Cayden Brumbaugh",
         "3B": null
       },
       "score": {
@@ -723,17 +750,19 @@
       "count": "1-2",
       "pitches": "KSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Cayden Brumbaugh"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Jason Walk",
-        "2B": null,
+        "2B": "Cayden Brumbaugh",
         "3B": null
       },
       "runners_after": {
         "1B": "Camden Johnson",
-        "2B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "score": {
@@ -755,7 +784,7 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Camden Johnson",
-        "2B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "runners_after": {
@@ -987,7 +1016,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Kadyn Leon",
+      "pitcher": "Jason Bodin",
       "batter": "Moutzouridi",
       "outcome": "Single",
       "count": "0-0",
@@ -1014,7 +1043,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Kadyn Leon",
+      "pitcher": "Jason Bodin",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1041,7 +1070,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Kadyn Leon",
+      "pitcher": "Jason Bodin",
       "batter": "Dean Toigo",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1146,6 +1175,33 @@
         "home": 2
       },
       "description": "Brumbaugh, C grounded out to (0-1 K)."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Jason Bodin",
+      "batter": "Bodin, J. to p for Leon, K..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 2
+      },
+      "description": "Bodin, J. to p for Leon, K.."
     },
     {
       "inning": "Top 6",
@@ -1392,7 +1448,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jason Bodin",
+      "pitcher": "Jackson Cleveland",
       "batter": "Beckett Zavorek",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1500,7 +1556,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jason Bodin",
+      "pitcher": "Jackson Cleveland",
       "batter": "Landon Hairston",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1527,7 +1583,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jason Bodin",
+      "pitcher": "Jackson Cleveland",
       "batter": "Moutzouridi",
       "outcome": "Walk",
       "count": "3-1",
@@ -1554,7 +1610,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jason Bodin",
+      "pitcher": "Jackson Cleveland",
       "batter": "Dean Toigo",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1578,6 +1634,33 @@
         "home": 2
       },
       "description": "Toigo struck out swinging (1-2 BSFS)."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Jackson Cleveland",
+      "batter": "Cleveland, J to p for Bodin, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Moutzouridi",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Moutzouridi",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 2
+      },
+      "description": "Cleveland, J to p for Bodin, J.."
     },
     {
       "inning": "Top 8",
@@ -1743,7 +1826,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Walk, J. to 2b.",
       "outcome": "\u2014",
       "count": null,
@@ -1770,7 +1853,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Harris, D. to cf.",
       "outcome": "\u2014",
       "count": null,
@@ -1797,7 +1880,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Longo",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1824,7 +1907,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Austen Roellig",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1851,7 +1934,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Dominic Smaldino",
       "outcome": "Single",
       "count": "2-2",
@@ -1878,7 +1961,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Brody Briggs",
       "outcome": "Single",
       "count": "0-0",
@@ -1905,7 +1988,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Beckett Zavorek",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1965,7 +2048,9 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Camden Johnson"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1976,7 +2061,7 @@
       "runners_after": {
         "1B": null,
         "2B": "Deiten Lachance",
-        "3B": "Camden Johnson"
+        "3B": null
       },
       "score": {
         "away": 3,
@@ -1992,18 +2077,20 @@
       "count": "2-2",
       "pitches": "BBKF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": "Deiten Lachance",
-        "3B": "Camden Johnson"
+        "3B": null
       },
       "runners_after": {
         "1B": null,
         "2B": "Jaxon Willits",
-        "3B": "Camden Johnson"
+        "3B": null
       },
       "score": {
         "away": 3,

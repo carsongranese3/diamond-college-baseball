@@ -3,7 +3,7 @@
   "date": "02/21/2026(2)",
   "away_team": "Rhode Island",
   "home_team": "Alabama",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -258,7 +258,9 @@
       "count": "3-1",
       "pitches": "BBKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1091,7 +1093,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Myles Upchurch",
+      "pitcher": "Austin Morris",
       "batter": "Ryan Henschel",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1381,8 +1383,8 @@
         "3B": "Brennan Holt"
       },
       "runners_after": {
-        "1B": "Bryce Fowler",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Fowler",
         "3B": "Brennan Holt"
       },
       "score": {
@@ -1403,13 +1405,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Bryce Fowler",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Fowler",
         "3B": "Brennan Holt"
       },
       "runners_after": {
-        "1B": "Bryce Fowler",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Fowler",
         "3B": "Brennan Holt"
       },
       "score": {
@@ -1692,7 +1694,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Austin Morris",
+      "pitcher": "Matthew Heiberger",
       "batter": "Aidan Botti",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1773,7 +1775,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Tommy Turner",
+      "pitcher": "Colin Maloney",
       "batter": "Peyton Steele",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1854,7 +1856,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Matthew Heiberger",
+      "pitcher": "",
       "batter": "Danny Leikus",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1881,7 +1883,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "Colin Maloney",
+      "batter": "C. Maloney",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 6
+      },
+      "description": "C. Maloney to p for Turner."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Colin Maloney",
       "batter": "Brennan Holt",
       "outcome": "Walk",
       "count": "3-2",
@@ -1908,7 +1937,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "Colin Maloney",
       "batter": "Bryce Fowler",
       "outcome": "Single",
       "count": "1-2",
@@ -1935,7 +1964,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "Colin Maloney",
       "batter": "Justin Lebron",
       "outcome": "Pop out",
       "count": "0-0",
@@ -1962,7 +1991,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "Colin Maloney",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1977,8 +2006,8 @@
         "3B": "Brennan Holt"
       },
       "runners_after": {
-        "1B": "Bryce Fowler",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Fowler",
         "3B": "Brennan Holt"
       },
       "score": {
@@ -1989,7 +2018,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "Colin Maloney",
       "batter": "Brady Neal",
       "outcome": "Single",
       "count": "3-2",
@@ -2001,8 +2030,8 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bryce Fowler",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Fowler",
         "3B": "Brennan Holt"
       },
       "runners_after": {
@@ -2018,7 +2047,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "Colin Maloney",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2033,8 +2062,8 @@
         "3B": "Bryce Fowler"
       },
       "runners_after": {
-        "1B": "Brady Neal",
-        "2B": null,
+        "1B": null,
+        "2B": "Brady Neal",
         "3B": "Bryce Fowler"
       },
       "score": {
@@ -2045,7 +2074,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "Colin Maloney",
       "batter": "Jason Torres",
       "outcome": "Walk",
       "count": "3-0",
@@ -2055,13 +2084,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Brady Neal",
-        "2B": null,
+        "1B": null,
+        "2B": "Brady Neal",
         "3B": "Bryce Fowler"
       },
       "runners_after": {
         "1B": "Jason Torres",
-        "2B": null,
+        "2B": "Brady Neal",
         "3B": "Bryce Fowler"
       },
       "score": {
@@ -2072,7 +2101,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "Dorsy Asencio",
       "batter": "Will Plattner",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2083,12 +2112,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Jason Torres",
-        "2B": null,
+        "2B": "Brady Neal",
         "3B": "Bryce Fowler"
       },
       "runners_after": {
         "1B": "Jason Torres",
-        "2B": null,
+        "2B": "Brady Neal",
         "3B": "Bryce Fowler"
       },
       "score": {
@@ -2099,7 +2128,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "Dorsy Asencio",
       "batter": "Luke Vaughn",
       "outcome": "Walk",
       "count": "3-2",
@@ -2112,13 +2141,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Jason Torres",
-        "2B": null,
+        "2B": "Brady Neal",
         "3B": "Bryce Fowler"
       },
       "runners_after": {
         "1B": "Luke Vaughn",
         "2B": "Jason Torres",
-        "3B": null
+        "3B": "Brady Neal"
       },
       "score": {
         "away": 1,
@@ -2128,19 +2157,21 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Dorsy Asencio",
+      "pitcher": "",
       "batter": "Justin Osterhouse",
       "outcome": "Hit by pitch",
       "count": "2-2",
       "pitches": "KSBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Brady Neal"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Luke Vaughn",
         "2B": "Jason Torres",
-        "3B": null
+        "3B": "Brady Neal"
       },
       "runners_after": {
         "1B": "Justin Osterhouse",
@@ -2155,7 +2186,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Dorsy Asencio",
+      "pitcher": "",
       "batter": "Peyton Steele",
       "outcome": "Single",
       "count": "2-1",

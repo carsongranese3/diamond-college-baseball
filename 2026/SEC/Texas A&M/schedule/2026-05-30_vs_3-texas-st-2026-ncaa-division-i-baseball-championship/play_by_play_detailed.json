@@ -3,7 +3,7 @@
   "date": "05/30/2026",
   "away_team": "Texas A&M",
   "home_team": "Texas St.",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -1320,7 +1320,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 3,
       "outs_after": 3,
       "runners_before": {
@@ -1377,7 +1379,8 @@
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "Chris Hacopian"
+        "Chris Hacopian",
+        null
       ],
       "outs_before": 3,
       "outs_after": 3,
@@ -1715,8 +1718,8 @@
         "3B": "Chris Hacopian"
       },
       "runners_after": {
-        "1B": "Nico Partida",
-        "2B": null,
+        "1B": null,
+        "2B": "Nico Partida",
         "3B": "Chris Hacopian"
       },
       "score": {
@@ -1737,13 +1740,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Nico Partida",
-        "2B": null,
+        "1B": null,
+        "2B": "Nico Partida",
         "3B": "Chris Hacopian"
       },
       "runners_after": {
-        "1B": "Nico Partida",
-        "2B": null,
+        "1B": null,
+        "2B": "Nico Partida",
         "3B": "Chris Hacopian"
       },
       "score": {
@@ -2120,7 +2123,8 @@
       "pitches": "FBB",
       "rbi": true,
       "runs_scored": [
-        "Nico Partida"
+        "Nico Partida",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -2520,7 +2524,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cole Hubert",
+      "pitcher": "Hunter Vincent",
       "batter": "Coy DeFury",
       "outcome": "Double",
       "count": "1-1",
@@ -2547,7 +2551,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cole Hubert",
+      "pitcher": "Hunter Vincent",
       "batter": "Justin Vossos",
       "outcome": "Flyout",
       "count": "2-1",
@@ -2574,7 +2578,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Hunter Vincent",
+      "pitcher": "",
       "batter": "Jackson Cotton",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2601,7 +2605,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Hunter Vincent",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2628,7 +2632,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Hunter Vincent",
+      "pitcher": "",
       "batter": "Chase Mora",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",

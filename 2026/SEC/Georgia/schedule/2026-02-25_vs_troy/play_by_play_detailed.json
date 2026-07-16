@@ -3,7 +3,7 @@
   "date": "02/25/2026",
   "away_team": "Troy",
   "home_team": "Georgia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -854,7 +854,9 @@
       "count": "3-1",
       "pitches": "BBFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1162,8 +1164,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tre Phelps",
-        "2B": null,
+        "1B": null,
+        "2B": "Tre Phelps",
         "3B": null
       },
       "score": {
@@ -1184,13 +1186,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Tre Phelps",
-        "2B": null,
+        "1B": null,
+        "2B": "Tre Phelps",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tre Phelps",
-        "2B": null,
+        "1B": null,
+        "2B": "Tre Phelps",
         "3B": null
       },
       "score": {
@@ -1306,6 +1308,33 @@
         "home": 2
       },
       "description": "Nelson walked (3-2 BSBSFBB)."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Jordan Stephens",
+      "batter": "Stephens, J. to p for Jameson.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Drew Nelson",
+        "2B": null,
+        "3B": "Steven Meier"
+      },
+      "runners_after": {
+        "1B": "Drew Nelson",
+        "2B": null,
+        "3B": "Steven Meier"
+      },
+      "score": {
+        "away": 2,
+        "home": 2
+      },
+      "description": "Stephens, J. to p for Jameson."
     },
     {
       "inning": "Top 6",
@@ -1525,7 +1554,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jordan Stephens",
+      "pitcher": "Paul Farley",
       "batter": "Aaron Piasecki",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1830,7 +1859,11 @@
       "count": "2-1",
       "pitches": "FBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2046,7 +2079,10 @@
       "count": "3-2",
       "pitches": "BFBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2148,7 +2184,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Paul Farley",
+      "pitcher": "Grant Edwards",
       "batter": "Jimmy Janicki",
       "outcome": "Single",
       "count": "1-2",
@@ -2391,7 +2427,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Grant Edwards",
+      "pitcher": "Brad Pruett",
       "batter": "Drew Nelson",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2418,7 +2454,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Grant Edwards",
+      "pitcher": "Brad Pruett",
       "batter": "Nolan Book",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2931,7 +2967,7 @@
     },
     {
       "inning": "Top 12",
-      "pitcher": "Brad Pruett",
+      "pitcher": "Teddy Brennan",
       "batter": "Drew Nelson",
       "outcome": "Walk",
       "count": "0-0",
@@ -2958,7 +2994,7 @@
     },
     {
       "inning": "Top 12",
-      "pitcher": "Brad Pruett",
+      "pitcher": "",
       "batter": "Nolan Book",
       "outcome": "Walk",
       "count": "3-2",
@@ -2985,7 +3021,7 @@
     },
     {
       "inning": "Top 12",
-      "pitcher": "Teddy Brennan",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -3014,7 +3050,7 @@
     },
     {
       "inning": "Top 12",
-      "pitcher": "Teddy Brennan",
+      "pitcher": "",
       "batter": "Jabe Boroff",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",

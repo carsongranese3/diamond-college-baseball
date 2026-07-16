@@ -3,7 +3,7 @@
   "date": "03/03/2026",
   "away_team": "Samford",
   "home_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -283,7 +283,9 @@
       "count": "2-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -319,8 +321,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Chase Fralick",
-        "2B": null,
+        "1B": null,
+        "2B": "Chase Fralick",
         "3B": null
       },
       "score": {
@@ -341,13 +343,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Chase Fralick",
-        "2B": null,
+        "1B": null,
+        "2B": "Chase Fralick",
         "3B": null
       },
       "runners_after": {
-        "1B": "Chase Fralick",
-        "2B": null,
+        "1B": null,
+        "2B": "Chase Fralick",
         "3B": null
       },
       "score": {
@@ -562,8 +564,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -584,13 +586,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
         "1B": "Ethin Bingaman",
-        "2B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -607,17 +609,19 @@
       "count": "1-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Ethin Bingaman",
-        "2B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
         "1B": "Bristol Carter",
-        "2B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -639,12 +643,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Bristol Carter",
-        "2B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
         "1B": "Chase Fralick",
-        "2B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -666,12 +670,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Chase Fralick",
-        "2B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
         "1B": "Chase Fralick",
-        "2B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -1170,7 +1174,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Andreas Alvarez",
+      "pitcher": "Jett Johnston",
       "batter": "Pierce Dutton",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1197,7 +1201,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Andreas Alvarez",
+      "pitcher": "Jett Johnston",
       "batter": "Gus Gandy",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1302,6 +1306,33 @@
         "home": 3
       },
       "description": "Rembert, C. grounded out to ss (0-1)."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Jett Johnston",
+      "batter": "Johnston, J. to p for Alvarez, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 3
+      },
+      "description": "Johnston, J. to p for Alvarez, A.."
     },
     {
       "inning": "Top 6",
@@ -1484,8 +1515,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -1506,13 +1537,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -1533,13 +1564,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -1604,7 +1635,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jett Johnston",
+      "pitcher": "Garrett Brewer",
       "batter": "Eddie Marshall",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1631,7 +1662,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jett Johnston",
+      "pitcher": "Garrett Brewer",
       "batter": "Pierce Dutton",
       "outcome": "Single",
       "count": "0-2",
@@ -1658,7 +1689,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jett Johnston",
+      "pitcher": "Garrett Brewer",
       "batter": "Gus Gandy",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1754,9 +1785,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 1,
@@ -1776,14 +1807,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
         "1B": "Bub Terrell",
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 1,
@@ -1799,18 +1830,20 @@
       "count": "1-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Bub Terrell",
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
         "1B": "Chris Rembert",
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 1,
@@ -1826,18 +1859,20 @@
       "count": "3-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Chris Rembert",
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
         "1B": "Mason McCraine",
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "score": {
         "away": 1,
@@ -1859,10 +1894,37 @@
       "runners_before": {
         "1B": "Mason McCraine",
         "2B": null,
-        "3B": null
+        "3B": "Bristol Carter"
       },
       "runners_after": {
         "1B": "Mason McCraine",
+        "2B": null,
+        "3B": "Bristol Carter"
+      },
+      "score": {
+        "away": 1,
+        "home": 5
+      },
+      "description": "McCraine, B. grounded out to (2-2)."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Garrett Brewer",
+      "batter": "Brewer, G. to p for Johnston, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1870,7 +1932,7 @@
         "away": 1,
         "home": 5
       },
-      "description": "McCraine, B. grounded out to (2-2)."
+      "description": "Brewer, G. to p for Johnston, J.."
     },
     {
       "inning": "Top 8",
@@ -1988,7 +2050,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2009,7 +2073,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Druckenmille",
+      "pitcher": "Will Andre",
       "batter": "Cade Belyeu",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2036,7 +2100,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Druckenmille",
+      "pitcher": "Drew Druckenmiller",
       "batter": "Ethin Bingaman",
       "outcome": "Walk",
       "count": "3-2",
@@ -2063,7 +2127,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Druckenmille",
+      "pitcher": "Drew Druckenmiller",
       "batter": "Bristol Carter",
       "outcome": "Walk",
       "count": "3-0",
@@ -2090,7 +2154,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Trey Sanders",
+      "pitcher": "Drew Druckenmiller",
       "batter": "Chase Fralick",
       "outcome": "Single",
       "count": "1-2",
@@ -2123,7 +2187,9 @@
       "count": "1-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -2144,7 +2210,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Zak Spurrier",
+      "pitcher": "Trey Sanders",
       "batter": "Eric Guevara",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2225,7 +2291,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "",
       "batter": "Jackson Harris",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2252,7 +2318,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "",
       "batter": "Eddie Marshall",
       "outcome": "Single",
       "count": "0-1",
@@ -2279,7 +2345,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "",
       "batter": "Charlie Bozeman",
       "outcome": "Fielder's choice",
       "count": "0-2",
@@ -2306,7 +2372,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "",
       "batter": "Gus Gandy",
       "outcome": "Single",
       "count": "1-2",
@@ -2333,7 +2399,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "",
       "batter": "Jeffrey Ince",
       "outcome": "Groundout",
       "count": "0-1",

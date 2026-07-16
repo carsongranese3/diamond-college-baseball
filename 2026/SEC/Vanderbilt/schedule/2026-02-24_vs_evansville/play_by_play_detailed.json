@@ -3,7 +3,7 @@
   "date": "02/24/2026",
   "away_team": "Evansville",
   "home_team": "Vanderbilt",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -445,7 +445,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -508,8 +510,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Logan Johnstone",
-        "2B": "Ryker Waite",
+        "1B": null,
+        "2B": "Logan Johnstone",
         "3B": null
       },
       "score": {
@@ -530,13 +532,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Logan Johnstone",
-        "2B": "Ryker Waite",
+        "1B": null,
+        "2B": "Logan Johnstone",
         "3B": null
       },
       "runners_after": {
         "1B": "Logan Johnstone",
-        "2B": "Ryker Waite",
+        "2B": "Logan Johnstone",
         "3B": null
       },
       "score": {
@@ -553,17 +555,19 @@
       "count": "3-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Logan Johnstone",
-        "2B": "Ryker Waite",
+        "2B": "Logan Johnstone",
         "3B": null
       },
       "runners_after": {
         "1B": "Brodie Johnston",
-        "2B": "Ryker Waite",
+        "2B": "Logan Johnstone",
         "3B": null
       },
       "score": {
@@ -581,18 +585,21 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Mike Mancini"
+        "Mike Mancini",
+        null,
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Brodie Johnston",
-        "2B": "Ryker Waite",
+        "2B": "Logan Johnstone",
         "3B": null
       },
       "runners_after": {
         "1B": "Brodie Johnston",
-        "2B": "Ryker Waite",
+        "2B": "Logan Johnstone",
         "3B": null
       },
       "score": {
@@ -614,12 +621,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Brodie Johnston",
-        "2B": "Ryker Waite",
+        "2B": "Logan Johnstone",
         "3B": null
       },
       "runners_after": {
         "1B": "Brodie Johnston",
-        "2B": "Ryker Waite",
+        "2B": "Logan Johnstone",
         "3B": null
       },
       "score": {
@@ -910,7 +917,10 @@
       "count": "0-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1127,7 +1137,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Braden Holcomb"
+        "Braden Holcomb",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1257,7 +1268,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Vander",
+      "pitcher": "Conner Vander-Luitgaren",
+      "batter": "Vander",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 10
+      },
+      "description": "Vander Luit. to p for Fieger."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Conner Vander-Luitgaren",
       "batter": "Mack Whitcomb",
       "outcome": "Pop out",
       "count": "0-0",
@@ -1284,7 +1322,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Vander",
+      "pitcher": "Conner Vander-Luitgaren",
       "batter": "Ryker Waite",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1311,7 +1349,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Vander",
+      "pitcher": "Conner Vander-Luitgaren",
       "batter": "Korbin Reynolds",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1446,7 +1484,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Vander",
+      "pitcher": "Conner Vander-Luitgaren",
       "batter": "Logan Johnstone",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1473,7 +1511,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Vander",
+      "pitcher": "Conner Vander-Luitgaren",
       "batter": "Logan Johnstone",
       "outcome": "Single",
       "count": "1-2",
@@ -1500,7 +1538,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Vander",
+      "pitcher": "Conner Vander-Luitgaren",
       "batter": "Brodie Johnston",
       "outcome": "Single",
       "count": "1-0",
@@ -1527,7 +1565,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Vander",
+      "pitcher": "Conner Vander-Luitgaren",
       "batter": "Mike Mancini",
       "outcome": "Fielder's choice",
       "count": "1-2",
@@ -1554,14 +1592,17 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Vander",
+      "pitcher": "Cameron Mosier",
       "batter": "Braden Holcomb",
       "outcome": "Home run",
       "count": "2-2",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Braden Holcomb"
+        "Braden Holcomb",
+        null,
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1697,7 +1738,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1718,7 +1761,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cameron Mosier",
+      "pitcher": "",
       "batter": "Logan Johnstone",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1805,7 +1848,9 @@
       "count": "3-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {

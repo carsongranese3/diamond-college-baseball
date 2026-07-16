@@ -3,7 +3,7 @@
   "date": "05/10/2026",
   "away_team": "Texas",
   "home_team": "Tennessee",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -149,7 +149,9 @@
       "pitches": "BFFFFB",
       "rbi": true,
       "runs_scored": [
-        "Adrian Rodriguez"
+        "Adrian Rodriguez",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -224,6 +226,33 @@
         "home": 0
       },
       "description": "Mendoza walked (3-2 KBBKBFB)."
+    },
+    {
+      "inning": "Top 1",
+      "pitcher": "Chandler Day",
+      "batter": "DAY, C. to p for TRACEY, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Ethan Mendoza",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ethan Mendoza",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 0
+      },
+      "description": "DAY, C. to p for TRACEY, T.."
     },
     {
       "inning": "Top 1",
@@ -396,7 +425,10 @@
       "pitches": "SB",
       "rbi": true,
       "runs_scored": [
-        "Reese Chapman"
+        "Reese Chapman",
+        null,
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -696,7 +728,9 @@
       "count": "3-2",
       "pitches": "BKBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -933,7 +967,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Chandler Day",
+      "pitcher": "Will Haas",
       "batter": "Carson Tinney",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -957,6 +991,33 @@
         "home": 4
       },
       "description": "Tinney struck out swinging (3-2 BKFFBBFS)."
+    },
+    {
+      "inning": "Top 4",
+      "pitcher": "Will Haas",
+      "batter": "HAAS, W. to p for DAY, C..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Aiden Robbins",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Aiden Robbins",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 4
+      },
+      "description": "HAAS, W. to p for DAY, C.."
     },
     {
       "inning": "Top 4",
@@ -1176,13 +1237,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Will Haas",
+      "pitcher": "Brayden Krenzel",
       "batter": "Ethan Mendoza",
       "outcome": "Fielder's choice",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1203,7 +1266,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Will Haas",
+      "pitcher": "Brayden Krenzel",
       "batter": "Duplantier J",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1339,6 +1402,33 @@
     {
       "inning": "Top 6",
       "pitcher": "Brayden Krenzel",
+      "batter": "KRENZEL, B. to p for HAAS, W..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 4
+      },
+      "description": "KRENZEL, B. to p for HAAS, W.."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Brayden Krenzel",
       "batter": "Maddox Monsour",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1419,7 +1509,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "Bo Rhudy",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1434,8 +1524,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Carson Tinney",
-        "2B": null,
+        "1B": null,
+        "2B": "Carson Tinney",
         "3B": null
       },
       "score": {
@@ -1446,7 +1536,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "Bo Rhudy",
       "batter": "Pack",
       "outcome": "Walk",
       "count": "3-2",
@@ -1456,13 +1546,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Carson Tinney",
-        "2B": null,
+        "1B": null,
+        "2B": "Carson Tinney",
         "3B": null
       },
       "runners_after": {
         "1B": "Pack",
-        "2B": null,
+        "2B": "Carson Tinney",
         "3B": null
       },
       "score": {
@@ -1473,23 +1563,25 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "Bo Rhudy",
       "batter": "Temo Becerra",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Pack",
-        "2B": null,
+        "2B": "Carson Tinney",
         "3B": null
       },
       "runners_after": {
         "1B": "Temo Becerra",
-        "2B": null,
+        "2B": "Carson Tinney",
         "3B": null
       },
       "score": {
@@ -1500,7 +1592,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "Bo Rhudy",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1511,12 +1603,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Temo Becerra",
-        "2B": null,
+        "2B": "Carson Tinney",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": null,
+        "2B": "Carson Tinney",
         "3B": "Temo Becerra"
       },
       "score": {
@@ -1527,7 +1619,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "Bo Rhudy",
       "batter": "Adrian Rodriguez",
       "outcome": "Walk",
       "count": null,
@@ -1538,12 +1630,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": null,
+        "2B": "Carson Tinney",
         "3B": "Temo Becerra"
       },
       "runners_after": {
         "1B": "Adrian Rodriguez",
-        "2B": null,
+        "2B": "Carson Tinney",
         "3B": "Temo Becerra"
       },
       "score": {
@@ -1555,24 +1647,54 @@
     {
       "inning": "Top 6",
       "pitcher": "Bo Rhudy",
+      "batter": "RHUDY, B. to p for KRENZEL, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Adrian Rodriguez",
+        "2B": "Carson Tinney",
+        "3B": "Temo Becerra"
+      },
+      "runners_after": {
+        "1B": "Adrian Rodriguez",
+        "2B": "Carson Tinney",
+        "3B": "Temo Becerra"
+      },
+      "score": {
+        "away": 8,
+        "home": 4
+      },
+      "description": "RHUDY, B. to p for KRENZEL, B.."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Bo Rhudy",
       "batter": "Casey Borba",
       "outcome": "Home run",
       "count": "2-2",
       "pitches": "BSFB",
       "rbi": true,
       "runs_scored": [
-        "Casey Borba"
+        "Casey Borba",
+        null,
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Adrian Rodriguez",
-        "2B": null,
+        "2B": "Carson Tinney",
         "3B": "Temo Becerra"
       },
       "runners_after": {
         "1B": "Adrian Rodriguez",
-        "2B": null,
+        "2B": "Carson Tinney",
         "3B": "Temo Becerra"
       },
       "score": {
@@ -1594,12 +1716,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Adrian Rodriguez",
-        "2B": null,
+        "2B": "Carson Tinney",
         "3B": "Temo Becerra"
       },
       "runners_after": {
         "1B": "Adrian Rodriguez",
-        "2B": null,
+        "2B": "Carson Tinney",
         "3B": "Temo Becerra"
       },
       "score": {
@@ -1644,7 +1766,8 @@
       "pitches": "SBFBFFFBFFF",
       "rbi": true,
       "runs_scored": [
-        "Reese Chapman"
+        "Reese Chapman",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1828,7 +1951,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "Mark Hindy",
       "batter": "Aiden Robbins",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1936,7 +2059,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "Ethan Baiotto",
       "batter": "Carson Tinney",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1963,7 +2086,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "Ethan Baiotto",
       "batter": "Pack",
       "outcome": "Double",
       "count": "1-0",
@@ -1990,7 +2113,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "Ethan Baiotto",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -2017,7 +2140,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "Ethan Baiotto",
       "batter": "Temo Becerra",
       "outcome": "Walk",
       "count": "3-2",
@@ -2044,7 +2167,34 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Mark Hindy",
+      "pitcher": "Ethan Baiotto",
+      "batter": "HINDY, M. to p for RHUDY, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Temo Becerra",
+        "2B": "Pack",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Temo Becerra",
+        "2B": "Pack",
+        "3B": null
+      },
+      "score": {
+        "away": 12,
+        "home": 6
+      },
+      "description": "HINDY, M. to p for RHUDY, B.."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Ethan Baiotto",
       "batter": "Adrian Rodriguez",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2179,7 +2329,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Mark Hindy",
+      "pitcher": "",
       "batter": "WRIGHT, G. to c.",
       "outcome": "\u2014",
       "count": null,
@@ -2206,7 +2356,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethan Baiotto",
+      "pitcher": "",
+      "batter": "BAIOTTO, E. to p for HINDY, M..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 12,
+        "home": 6
+      },
+      "description": "BAIOTTO, E. to p for HINDY, M.."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": "ABERNATHY, J to cf for EISFELDER, N.",
       "outcome": "\u2014",
       "count": null,
@@ -2233,7 +2410,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethan Baiotto",
+      "pitcher": "",
       "batter": "Casey Borba",
       "outcome": "Walk",
       "count": "3-0",
@@ -2260,7 +2437,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethan Baiotto",
+      "pitcher": "",
       "batter": "Ethan Mendoza",
       "outcome": "Walk",
       "count": "3-1",
@@ -2287,7 +2464,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethan Baiotto",
+      "pitcher": "",
       "batter": "Duplantier J",
       "outcome": "Groundout",
       "count": "3-1",
@@ -2314,13 +2491,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethan Baiotto",
+      "pitcher": "",
       "batter": "Ashton Larson",
       "outcome": "Groundout",
       "count": "3-2",
       "pitches": "BBBKF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -2341,7 +2520,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethan Baiotto",
+      "pitcher": "",
       "batter": "Aiden Robbins",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",

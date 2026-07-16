@@ -3,7 +3,7 @@
   "date": "03/17/2026",
   "away_team": "Stetson",
   "home_team": "Florida",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -184,8 +184,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brendan Lawson",
-        "2B": null,
+        "1B": null,
+        "2B": "Brendan Lawson",
         "3B": null
       },
       "score": {
@@ -206,13 +206,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Brendan Lawson",
-        "2B": null,
+        "1B": null,
+        "2B": "Brendan Lawson",
         "3B": null
       },
       "runners_after": {
         "1B": "Ethan Surowiec",
-        "2B": null,
+        "2B": "Brendan Lawson",
         "3B": null
       },
       "score": {
@@ -234,12 +234,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Ethan Surowiec",
-        "2B": null,
+        "2B": "Brendan Lawson",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": null,
+        "2B": "Brendan Lawson",
         "3B": null
       },
       "score": {
@@ -520,7 +520,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Russell Sandefer",
+      "pitcher": "Caden McDonald",
       "batter": "Paul Napolitano",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -771,7 +771,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1290,7 +1292,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Zane Coppersmith",
+      "pitcher": "Lathan Haywood",
       "batter": "Kolt Myers",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1317,7 +1319,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Zane Coppersmith",
+      "pitcher": "Lathan Haywood",
       "batter": "Hayden Yost",
       "outcome": "Foul out",
       "count": "1-1",
@@ -1452,7 +1454,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Caden McDonald",
+      "pitcher": "Jackson Hoyt",
       "batter": "Foster Apple",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1548,9 +1550,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Jones",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Kyle Jones"
       },
       "score": {
         "away": 1,
@@ -1570,14 +1572,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Kyle Jones",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Kyle Jones"
       },
       "runners_after": {
         "1B": "Ethan Surowiec",
         "2B": null,
-        "3B": null
+        "3B": "Kyle Jones"
       },
       "score": {
         "away": 1,
@@ -1593,13 +1595,15 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kyle Jones"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Ethan Surowiec",
         "2B": null,
-        "3B": null
+        "3B": "Kyle Jones"
       },
       "runners_after": {
         "1B": null,
@@ -1614,7 +1618,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Lathan Haywood",
+      "pitcher": "Jose Roig",
       "batter": "Cash Strayer",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1643,7 +1647,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Lathan Haywood",
+      "pitcher": "Jose Roig",
       "batter": "Cole Stanford",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1832,7 +1836,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jose Roig",
+      "pitcher": "Thrasher Steed",
       "batter": "Hayden Yost",
       "outcome": "Walk",
       "count": "3-0",
@@ -1859,7 +1863,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jose Roig",
+      "pitcher": "Thrasher Steed",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1886,7 +1890,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jose Roig",
+      "pitcher": "Thrasher Steed",
       "batter": "Kyle Jones",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1940,7 +1944,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jackson Hoyt",
+      "pitcher": "Billy Barlow",
       "batter": "Jack Harley",
       "outcome": "Walk",
       "count": "3-0",
@@ -2048,7 +2052,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Thrasher Steed",
+      "pitcher": "",
       "batter": "Ethan Surowiec",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2075,7 +2079,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Thrasher Steed",
+      "pitcher": "",
       "batter": "Jacob Kendall",
       "outcome": "Foul out",
       "count": "1-2",
@@ -2183,7 +2187,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Billy Barlow",
+      "pitcher": "",
       "batter": "Landon Russell",
       "outcome": "Fielder's choice",
       "count": "0-1",

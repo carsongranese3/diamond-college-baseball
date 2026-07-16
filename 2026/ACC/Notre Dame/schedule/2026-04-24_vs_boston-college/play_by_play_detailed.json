@@ -3,7 +3,7 @@
   "date": "04/24/2026",
   "away_team": "Boston College",
   "home_team": "Notre Dame",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -283,7 +283,9 @@
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -589,8 +591,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ben Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Ben Williams",
         "3B": null
       },
       "score": {
@@ -611,13 +613,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Ben Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Ben Williams",
         "3B": null
       },
       "runners_after": {
-        "1B": "Ben Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Ben Williams",
         "3B": null
       },
       "score": {
@@ -1012,7 +1014,9 @@
       "count": "3-1",
       "pitches": "BKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1039,7 +1043,9 @@
       "count": "3-2",
       "pitches": "BKBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1093,7 +1099,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1141,7 +1149,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "A.J. Colarusso",
+      "pitcher": "John Kwiatkowski",
       "batter": "Bino Watters",
       "outcome": "Walk",
       "count": "0-0",
@@ -1168,13 +1176,16 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "A.J. Colarusso",
+      "pitcher": "John Kwiatkowski",
       "batter": "Noah Coy",
       "outcome": "Double",
       "count": "2-2",
       "pitches": "BFBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1195,13 +1206,16 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "A.J. Colarusso",
+      "pitcher": "John Kwiatkowski",
       "batter": "Mark Quatrani",
       "outcome": "Double",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1222,7 +1236,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "A.J. Colarusso",
+      "pitcher": "John Kwiatkowski",
       "batter": "Jayce Lee",
       "outcome": "Single",
       "count": "1-0",
@@ -1249,14 +1263,16 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "A.J. Colarusso",
+      "pitcher": "John D Mitchell",
       "batter": "Dylan Passo",
       "outcome": "Home run",
       "count": "3-1",
       "pitches": "BKBB",
       "rbi": true,
       "runs_scored": [
-        "Dylan Passo"
+        "Dylan Passo",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1278,7 +1294,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "A.J. Colarusso",
+      "pitcher": "John D Mitchell",
       "batter": "Parker Brzustewicz",
       "outcome": "Walk",
       "count": "3-1",
@@ -1305,7 +1321,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "A.J. Colarusso",
+      "pitcher": "John D Mitchell",
       "batter": "Jamie Zee",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1332,7 +1348,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "A.J. Colarusso",
+      "pitcher": "John D Mitchell",
       "batter": "Brandon Logan",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1419,7 +1435,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1494,7 +1512,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "A.J. Colarusso",
+      "pitcher": "John D Mitchell",
       "batter": "Drew Berkland",
       "outcome": "Pop out",
       "count": "1-0",
@@ -1521,7 +1539,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "A.J. Colarusso",
+      "pitcher": "John D Mitchell",
       "batter": "Bino Watters",
       "outcome": "Home run",
       "count": "1-2",
@@ -1550,7 +1568,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "A.J. Colarusso",
+      "pitcher": "John D Mitchell",
       "batter": "Noah Coy",
       "outcome": "Lineout",
       "count": "3-2",
@@ -1577,7 +1595,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "A.J. Colarusso",
+      "pitcher": "Peter Schaefer",
       "batter": "Mark Quatrani",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1739,7 +1757,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "A.J. Colarusso",
+      "pitcher": "Peter Schaefer",
       "batter": "Jayce Lee",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1766,7 +1784,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "A.J. Colarusso",
+      "pitcher": "Peter Schaefer",
       "batter": "Dylan Passo",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -1793,7 +1811,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "A.J. Colarusso",
+      "pitcher": "Matthew Spada",
       "batter": "Parker Brzustewicz",
       "outcome": "Walk",
       "count": "3-1",
@@ -1820,7 +1838,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "A.J. Colarusso",
+      "pitcher": "Matthew Spada",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1835,9 +1853,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Parker Brzustewicz",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Parker Brzustewicz"
       },
       "score": {
         "away": 2,
@@ -1847,7 +1865,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "A.J. Colarusso",
+      "pitcher": "Matthew Spada",
       "batter": "Jamie Zee",
       "outcome": "Walk",
       "count": "3-1",
@@ -1857,14 +1875,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Parker Brzustewicz",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Parker Brzustewicz"
       },
       "runners_after": {
         "1B": "Jamie Zee",
         "2B": null,
-        "3B": null
+        "3B": "Parker Brzustewicz"
       },
       "score": {
         "away": 2,
@@ -1874,24 +1892,26 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "A.J. Colarusso",
+      "pitcher": "",
       "batter": "Brandon Logan",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "BFKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Jamie Zee",
         "2B": null,
-        "3B": null
+        "3B": "Parker Brzustewicz"
       },
       "runners_after": {
         "1B": "Brandon Logan",
         "2B": null,
-        "3B": null
+        "3B": "Parker Brzustewicz"
       },
       "score": {
         "away": 2,

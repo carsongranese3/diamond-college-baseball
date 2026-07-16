@@ -3,7 +3,7 @@
   "date": "02/14/2026",
   "away_team": "Northern Ky.",
   "home_team": "South Carolina",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -508,8 +508,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mark Nowak",
-        "2B": null,
+        "1B": null,
+        "2B": "Mark Nowak",
         "3B": null
       },
       "score": {
@@ -530,13 +530,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Mark Nowak",
-        "2B": null,
+        "1B": null,
+        "2B": "Mark Nowak",
         "3B": null
       },
       "runners_after": {
-        "1B": "Mark Nowak",
-        "2B": null,
+        "1B": null,
+        "2B": "Mark Nowak",
         "3B": null
       },
       "score": {
@@ -661,7 +661,9 @@
       "count": "2-2",
       "pitches": "BBFKFF",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1063,6 +1065,33 @@
     {
       "inning": "Bottom 5",
       "pitcher": "Cody Little",
+      "batter": "Little, Cody to p for Green, Elija.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Tyler Bak",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Tyler Bak",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 1
+      },
+      "description": "Little, Cody to p for Green, Elija."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Cody Little",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1203,7 +1232,9 @@
       "count": "1-2",
       "pitches": "KKBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1230,7 +1261,9 @@
       "count": "2-2",
       "pitches": "FBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1818,7 +1851,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cody Little",
+      "pitcher": "Kyle Cortner",
       "batter": "Ethan Lizama",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1845,7 +1878,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cody Little",
+      "pitcher": "Kyle Cortner",
       "batter": "Talmadge LeCroy",
       "outcome": "Lineout",
       "count": "0-1",
@@ -2007,7 +2040,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cody Little",
+      "pitcher": "Gabe Stout",
       "batter": "Beau Hollins",
       "outcome": "Walk",
       "count": "3-0",
@@ -2034,7 +2067,34 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Kyle Cortner",
+      "pitcher": "Gabe Stout",
+      "batter": "Cortner, Kyl to p for Little, Cody.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Beau Hollins",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Beau Hollins",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 1
+      },
+      "description": "Cortner, Kyl to p for Little, Cody."
+    },
+    {
+      "inning": "Bottom 9",
+      "pitcher": "Gabe Stout",
       "batter": "Patrick Evans",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2061,7 +2121,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Kyle Cortner",
+      "pitcher": "Gabe Stout",
       "batter": "Reese Moore",
       "outcome": "Double",
       "count": "2-2",
@@ -2088,13 +2148,42 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Gabe Stout",
+      "pitcher": "",
+      "batter": "Stout, Gabe to p for Cortner, Kyl.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Beau Hollins",
+        "2B": "Reese Moore",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Beau Hollins",
+        "2B": "Reese Moore",
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 1
+      },
+      "description": "Stout, Gabe to p for Cortner, Kyl."
+    },
+    {
+      "inning": "Bottom 9",
+      "pitcher": "",
       "batter": "Luke Yuhasz",
       "outcome": "Groundout",
       "count": "3-1",
       "pitches": "BFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -2115,7 +2204,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Gabe Stout",
+      "pitcher": "",
       "batter": "Tyler Bak",
       "outcome": "Walk",
       "count": "3-2",
@@ -2142,7 +2231,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Gabe Stout",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2169,7 +2258,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Gabe Stout",
+      "pitcher": "",
       "batter": "Dawson Harman",
       "outcome": "Walk",
       "count": "3-1",
@@ -2196,7 +2285,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Gabe Stout",
+      "pitcher": "",
       "batter": "KJ Scobey",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",

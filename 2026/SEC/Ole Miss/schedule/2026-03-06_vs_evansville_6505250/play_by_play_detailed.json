@@ -3,7 +3,7 @@
   "date": "03/06/2026(1)",
   "away_team": "Evansville",
   "home_team": "Ole Miss",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -611,7 +611,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -647,8 +649,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dom Decker",
-        "2B": "Hayden Federico",
+        "1B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -665,17 +667,19 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Dom Decker",
-        "2B": "Hayden Federico",
+        "1B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "runners_after": {
         "1B": "Will Furniss",
-        "2B": "Hayden Federico",
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -697,12 +701,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Will Furniss",
-        "2B": "Hayden Federico",
+        "2B": "Dom Decker",
         "3B": null
       },
       "runners_after": {
         "1B": "Collin Reuter",
-        "2B": "Hayden Federico",
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -724,12 +728,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Collin Reuter",
-        "2B": "Hayden Federico",
+        "2B": "Dom Decker",
         "3B": null
       },
       "runners_after": {
         "1B": "Collin Reuter",
-        "2B": "Hayden Federico",
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -1419,7 +1423,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
+      "batter": "H. Calhoun",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Reid",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Reid",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 4
+      },
+      "description": "H. Calhoun to p for H. Elliott."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Hudson Calhoun",
       "batter": "Spike",
       "outcome": "Fielder's choice",
       "count": "2-2",
@@ -1446,7 +1477,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1473,7 +1504,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Aaron",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1554,7 +1585,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Owen",
+      "pitcher": "Owen Byberg",
+      "batter": "Owen",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Austin Fawley",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Austin Fawley",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 4
+      },
+      "description": "Owen Byberg to p for Kenton Dever."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Owen Byberg",
       "batter": "Dom Decker",
       "outcome": "Walk",
       "count": "3-1",
@@ -1581,7 +1639,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Owen",
+      "pitcher": "Owen Byberg",
       "batter": "Judd Utermark",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1608,7 +1666,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Owen",
+      "pitcher": "Owen Byberg",
       "batter": "Will Furniss",
       "outcome": "Fielder's choice",
       "count": "0-0",
@@ -1635,7 +1693,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Ximi",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1662,7 +1720,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Drew",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1689,7 +1747,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Tate",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1716,7 +1774,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Owen",
+      "pitcher": "Owen Byberg",
       "batter": "Collin Reuter",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1743,7 +1801,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Owen",
+      "pitcher": "Owen Byberg",
       "batter": "Tristan Bissetta",
       "outcome": "Single",
       "count": "1-0",
@@ -1770,7 +1828,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Owen",
+      "pitcher": "Owen Byberg",
       "batter": "Tate Sirmans",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1797,7 +1855,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Owen",
+      "pitcher": "Owen Byberg",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1824,7 +1882,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Harrison",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1851,7 +1909,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Wyatt",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1878,7 +1936,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Charlie",
       "outcome": "Single",
       "count": "1-0",
@@ -1905,7 +1963,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Reid",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1932,7 +1990,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Owen",
+      "pitcher": "Owen Byberg",
       "batter": "Brayden Randle",
       "outcome": "Single",
       "count": "1-1",
@@ -1959,7 +2017,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Owen",
+      "pitcher": "Owen Byberg",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1986,7 +2044,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Owen",
+      "pitcher": "Owen Byberg",
       "batter": "Austin Fawley",
       "outcome": "Walk",
       "count": "3-2",
@@ -2013,7 +2071,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Owen",
+      "pitcher": "Owen Byberg",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-1",
@@ -2040,13 +2098,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Owen",
+      "pitcher": "Owen Byberg",
       "batter": "Dom Decker",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -2067,7 +2127,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Owen",
+      "pitcher": "Owen Byberg",
       "batter": "Judd Utermark",
       "outcome": "Walk",
       "count": "3-0",
@@ -2094,13 +2154,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Owen",
+      "pitcher": "Owen Byberg",
       "batter": "Will Furniss",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2121,7 +2183,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Owen",
+      "pitcher": "Owen Byberg",
       "batter": "Collin Reuter",
       "outcome": "Walk",
       "count": "3-1",
@@ -2148,13 +2210,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Owen",
+      "pitcher": "Owen Byberg",
       "batter": "Tristan Bissetta",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBBKSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2175,7 +2239,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Owen",
+      "pitcher": "Owen Byberg",
       "batter": "Brett Moseley",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2202,7 +2266,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "B. Moseley",
       "outcome": "\u2014",
       "count": null,
@@ -2229,7 +2293,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Spike",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2256,7 +2320,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "H.",
+      "pitcher": "",
       "batter": "Aaron",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2283,7 +2347,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "H.",
+      "pitcher": "",
       "batter": "Ximi",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",

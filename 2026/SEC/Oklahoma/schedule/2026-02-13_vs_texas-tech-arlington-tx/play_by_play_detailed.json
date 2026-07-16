@@ -3,7 +3,7 @@
   "date": "02/13/2026",
   "away_team": "Oklahoma",
   "home_team": "Texas Tech",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -239,7 +239,7 @@
       },
       "runners_after": {
         "1B": "Brendan Brock",
-        "2B": null,
+        "2B": "Nolan Stevens",
         "3B": null
       },
       "score": {
@@ -261,13 +261,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Brendan Brock",
-        "2B": null,
+        "2B": "Nolan Stevens",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brendan Brock",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Brendan Brock",
+        "3B": "Nolan Stevens"
       },
       "score": {
         "away": 0,
@@ -287,14 +287,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brendan Brock",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Brendan Brock",
+        "3B": "Nolan Stevens"
       },
       "runners_after": {
         "1B": "Dayton Tockey",
-        "2B": null,
-        "3B": null
+        "2B": "Brendan Brock",
+        "3B": "Nolan Stevens"
       },
       "score": {
         "away": 0,
@@ -315,13 +315,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Dayton Tockey",
-        "2B": null,
-        "3B": null
+        "2B": "Brendan Brock",
+        "3B": "Nolan Stevens"
       },
       "runners_after": {
         "1B": "Kyle Branch",
-        "2B": null,
-        "3B": null
+        "2B": "Brendan Brock",
+        "3B": "Nolan Stevens"
       },
       "score": {
         "away": 0,
@@ -564,8 +564,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jason Walk",
-        "2B": null,
+        "1B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "score": {
@@ -586,12 +586,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jason Walk",
-        "2B": null,
+        "1B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jason Walk",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -613,7 +613,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jason Walk",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -835,7 +835,7 @@
       },
       "runners_after": {
         "1B": "Trey Gambill",
-        "2B": null,
+        "2B": "Nolan Stevens",
         "3B": null
       },
       "score": {
@@ -857,12 +857,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Trey Gambill",
-        "2B": null,
+        "2B": "Nolan Stevens",
         "3B": null
       },
       "runners_after": {
         "1B": "Trey Gambill",
-        "2B": null,
+        "2B": "Nolan Stevens",
         "3B": null
       },
       "score": {
@@ -884,13 +884,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Trey Gambill",
-        "2B": null,
+        "2B": "Nolan Stevens",
         "3B": null
       },
       "runners_after": {
         "1B": "Kyle Branch",
-        "2B": null,
-        "3B": null
+        "2B": "Trey Gambill",
+        "3B": "Nolan Stevens"
       },
       "score": {
         "away": 0,
@@ -911,13 +911,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Kyle Branch",
-        "2B": null,
-        "3B": null
+        "2B": "Trey Gambill",
+        "3B": "Nolan Stevens"
       },
       "runners_after": {
         "1B": "Kyle Branch",
-        "2B": null,
-        "3B": null
+        "2B": "Trey Gambill",
+        "3B": "Nolan Stevens"
       },
       "score": {
         "away": 0,
@@ -1051,7 +1051,7 @@
       },
       "runners_after": {
         "1B": "Deiten Lachance",
-        "2B": null,
+        "2B": "Camden Johnson",
         "3B": null
       },
       "score": {
@@ -1073,13 +1073,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Deiten Lachance",
-        "2B": null,
+        "2B": "Camden Johnson",
         "3B": null
       },
       "runners_after": {
         "1B": "Deiten Lachance",
         "2B": null,
-        "3B": null
+        "3B": "Camden Johnson"
       },
       "score": {
         "away": 0,
@@ -1095,16 +1095,18 @@
       "count": "2-1",
       "pitches": "FBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Camden Johnson"
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Deiten Lachance",
         "2B": null,
-        "3B": null
+        "3B": "Camden Johnson"
       },
       "runners_after": {
-        "1B": "Deiten Lachance",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1126,7 +1128,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Deiten Lachance",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1158,8 +1160,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Nolan Stevens",
-        "2B": null,
+        "1B": null,
+        "2B": "Nolan Stevens",
         "3B": null
       },
       "score": {
@@ -1180,13 +1182,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Nolan Stevens",
-        "2B": null,
+        "1B": null,
+        "2B": "Nolan Stevens",
         "3B": null
       },
       "runners_after": {
-        "1B": "Nolan Stevens",
-        "2B": null,
+        "1B": null,
+        "2B": "Nolan Stevens",
         "3B": null
       },
       "score": {
@@ -1366,6 +1368,7 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
+        "Trey Gambill",
         "Dayton Tockey"
       ],
       "outs_before": 1,
@@ -1376,7 +1379,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Trey Gambill",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1398,12 +1401,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Trey Gambill",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Trey Gambill",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1425,12 +1428,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Trey Gambill",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Trey Gambill",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1523,7 +1526,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ryan Free",
+      "pitcher": "Parker Hutyra",
       "batter": "Camden Johnson",
       "outcome": "Lineout",
       "count": "0-1",
@@ -1601,6 +1604,33 @@
         "home": 1
       },
       "description": "Willits, J. flied out to cf (1-0 B)."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Xander Mercurius",
+      "batter": "Mercurius, X to p for Johnson, Cam.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 1
+      },
+      "description": "Mercurius, X to p for Johnson, Cam."
     },
     {
       "inning": "Bottom 7",
@@ -1714,7 +1744,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Xander Mercurius",
+      "pitcher": "Jackson Cleveland",
       "batter": "Hollis Porter",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1802,6 +1832,7 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
+        "Brendan Brock",
         "Trey Gambill"
       ],
       "outs_before": 1,
@@ -1813,7 +1844,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Brendan Brock",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1835,12 +1866,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Brendan Brock",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Brendan Brock",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1851,7 +1882,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Parker Hutyra",
+      "pitcher": "Adam Hayes",
       "batter": "Kyle Branch",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1862,12 +1893,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Brendan Brock",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Brendan Brock",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1878,7 +1909,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Xander Mercurius",
+      "pitcher": "Jackson Cleveland",
       "batter": "Harris, D. to rf for Stevens, N..",
       "outcome": "\u2014",
       "count": null,
@@ -1902,6 +1933,33 @@
         "home": 2
       },
       "description": "Harris, D. to rf for Stevens, N.."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Jackson Cleveland",
+      "batter": "Cleveland, J to p for Mercurius, X.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 2
+      },
+      "description": "Cleveland, J to p for Mercurius, X."
     },
     {
       "inning": "Bottom 8",
@@ -2042,7 +2100,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Adam Hayes",
+      "pitcher": "Heeryun Han",
       "batter": "Camden Johnson",
       "outcome": "Single",
       "count": "2-2",
@@ -2058,7 +2116,7 @@
       },
       "runners_after": {
         "1B": "Camden Johnson",
-        "2B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "score": {
@@ -2080,12 +2138,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Camden Johnson",
-        "2B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "runners_after": {
         "1B": "Camden Johnson",
-        "2B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "score": {
@@ -2102,18 +2160,20 @@
       "count": "1-2",
       "pitches": "KBKF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jason Walk"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Camden Johnson",
-        "2B": null,
+        "2B": "Jason Walk",
         "3B": null
       },
       "runners_after": {
         "1B": "Jaxon Willits",
         "2B": null,
-        "3B": null
+        "3B": "Camden Johnson"
       },
       "score": {
         "away": 6,
@@ -2135,12 +2195,12 @@
       "runners_before": {
         "1B": "Jaxon Willits",
         "2B": null,
-        "3B": null
+        "3B": "Camden Johnson"
       },
       "runners_after": {
         "1B": "Dasan Harris",
-        "2B": null,
-        "3B": null
+        "2B": "Jaxon Willits",
+        "3B": "Camden Johnson"
       },
       "score": {
         "away": 6,
@@ -2157,17 +2217,20 @@
       "pitches": "KKBF",
       "rbi": true,
       "runs_scored": [
+        "Dasan Harris",
+        "Jaxon Willits",
+        "Camden Johnson",
         "Brendan Brock"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Dasan Harris",
-        "2B": null,
-        "3B": null
+        "2B": "Jaxon Willits",
+        "3B": "Camden Johnson"
       },
       "runners_after": {
-        "1B": "Dasan Harris",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2179,7 +2242,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Heeryun Han",
+      "pitcher": "Jacob Rogers",
       "batter": "Trey Gambill",
       "outcome": "Walk",
       "count": "3-0",
@@ -2189,7 +2252,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Dasan Harris",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2233,7 +2296,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jacob Rogers",
+      "pitcher": "",
       "batter": "Cayden Brumbaugh",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2260,7 +2323,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Harris, D. to lf.",
       "outcome": "\u2014",
       "count": null,
@@ -2287,7 +2350,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Blair, A. to rf for Gambill, T..",
       "outcome": "\u2014",
       "count": null,
@@ -2314,7 +2377,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Brumbaugh, C to 2b.",
       "outcome": "\u2014",
       "count": null,
@@ -2341,7 +2404,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Linkin Garcia",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2368,7 +2431,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Caden Ferraro",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2395,7 +2458,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Matt Quintanar",
       "outcome": "Flyout",
       "count": "2-2",

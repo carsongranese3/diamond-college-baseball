@@ -3,7 +3,7 @@
   "date": "03/03/2026",
   "away_team": "Kentucky",
   "home_team": "Eastern Ky.",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -67,7 +67,9 @@
       "count": "0-2",
       "pitches": "KS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -265,8 +267,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "David Alvarez",
-        "2B": null,
+        "1B": null,
+        "2B": "David Alvarez",
         "3B": null
       },
       "score": {
@@ -287,13 +289,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "David Alvarez",
-        "2B": null,
+        "1B": null,
+        "2B": "David Alvarez",
         "3B": null
       },
       "runners_after": {
         "1B": "Silas Shaffer",
-        "2B": null,
+        "2B": "David Alvarez",
         "3B": null
       },
       "score": {
@@ -315,12 +317,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Silas Shaffer",
-        "2B": null,
+        "2B": "David Alvarez",
         "3B": null
       },
       "runners_after": {
         "1B": "Silas Shaffer",
-        "2B": null,
+        "2B": "David Alvarez",
         "3B": null
       },
       "score": {
@@ -400,9 +402,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Caeden Cloud",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Caeden Cloud"
       },
       "score": {
         "away": 1,
@@ -422,14 +424,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Caeden Cloud",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Caeden Cloud"
       },
       "runners_after": {
         "1B": "Ryan Schwartz",
         "2B": null,
-        "3B": null
+        "3B": "Caeden Cloud"
       },
       "score": {
         "away": 1,
@@ -439,26 +441,29 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Anthony Scarpino",
       "batter": "CampbellJr,Scott homered to left center, 4RBI (2-2 SBFB); Jenkins,Owen scored; Cloud,Caeden scored from second base; Schwartz,Ryan scored from first base.",
       "outcome": "Home run",
       "count": "2-2",
       "pitches": "SBFB",
       "rbi": true,
       "runs_scored": [
-        "CampbellJr,Scott homered to left center, 4RBI (2-2 SBFB); Jenkins,Owen scored; Cloud,Caeden scored from second base; Schwartz,Ryan scored from first base."
+        "CampbellJr,Scott homered to left center, 4RBI (2-2 SBFB); Jenkins,Owen scored; Cloud,Caeden scored from second base; Schwartz,Ryan scored from first base.",
+        null,
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Ryan Schwartz",
         "2B": null,
-        "3B": null
+        "3B": "Caeden Cloud"
       },
       "runners_after": {
         "1B": "Ryan Schwartz",
         "2B": null,
-        "3B": null
+        "3B": "Caeden Cloud"
       },
       "score": {
         "away": 5,
@@ -468,7 +473,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Anthony Scarpino",
       "batter": "Luke Lawrence",
       "outcome": "Lineout",
       "count": "0-0",
@@ -480,12 +485,12 @@
       "runners_before": {
         "1B": "Ryan Schwartz",
         "2B": null,
-        "3B": null
+        "3B": "Caeden Cloud"
       },
       "runners_after": {
         "1B": "Ryan Schwartz",
         "2B": null,
-        "3B": null
+        "3B": "Caeden Cloud"
       },
       "score": {
         "away": 5,
@@ -495,7 +500,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Anthony Scarpino",
       "batter": "Jayce Tharnish",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -507,12 +512,12 @@
       "runners_before": {
         "1B": "Ryan Schwartz",
         "2B": null,
-        "3B": null
+        "3B": "Caeden Cloud"
       },
       "runners_after": {
         "1B": "Ryan Schwartz",
         "2B": null,
-        "3B": null
+        "3B": "Caeden Cloud"
       },
       "score": {
         "away": 5,
@@ -522,7 +527,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Anthony Scarpino",
       "batter": "Hudson Brown",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -534,12 +539,12 @@
       "runners_before": {
         "1B": "Ryan Schwartz",
         "2B": null,
-        "3B": null
+        "3B": "Caeden Cloud"
       },
       "runners_after": {
         "1B": "Ryan Schwartz",
         "2B": null,
-        "3B": null
+        "3B": "Caeden Cloud"
       },
       "score": {
         "away": 5,
@@ -684,7 +689,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Anthony Scarpino",
       "batter": "Ethan Hindle",
       "outcome": "Home run",
       "count": "1-1",
@@ -713,7 +718,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Anthony Scarpino",
       "batter": "Carson Hansen",
       "outcome": "Groundout",
       "count": "0-0",
@@ -740,7 +745,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Anthony Scarpino",
       "batter": "Owen Jenkins",
       "outcome": "Double",
       "count": "1-1",
@@ -767,7 +772,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Anthony Scarpino",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -783,8 +788,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Owen Jenkins",
-        "3B": null
+        "2B": null,
+        "3B": "Owen Jenkins"
       },
       "score": {
         "away": 6,
@@ -794,7 +799,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Anthony Scarpino",
       "batter": "Caeden Cloud",
       "outcome": "Strikeout",
       "count": "1-3",
@@ -805,13 +810,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Owen Jenkins",
-        "3B": null
+        "2B": null,
+        "3B": "Owen Jenkins"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Owen Jenkins",
-        "3B": null
+        "2B": null,
+        "3B": "Owen Jenkins"
       },
       "score": {
         "away": 6,
@@ -821,7 +826,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Anthony Scarpino",
       "batter": "Ryan Schwartz",
       "outcome": "Flyout",
       "count": "0-2",
@@ -832,13 +837,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Owen Jenkins",
-        "3B": null
+        "2B": null,
+        "3B": "Owen Jenkins"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Owen Jenkins",
-        "3B": null
+        "2B": null,
+        "3B": "Owen Jenkins"
       },
       "score": {
         "away": 6,
@@ -848,7 +853,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "William Coleman",
+      "pitcher": "Tommy Skelding",
       "batter": "Jay Douglas",
       "outcome": "Lineout",
       "count": "1-0",
@@ -875,7 +880,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "William Coleman",
+      "pitcher": "Tommy Skelding",
       "batter": "David Alvarez",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -902,7 +907,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "William Coleman",
+      "pitcher": "Tommy Skelding",
       "batter": "Silas Shaffer",
       "outcome": "Groundout",
       "count": "0-0",
@@ -929,7 +934,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Cade Schneider",
       "batter": "CampbellJr,Scott walked (3-1 BSBBB).",
       "outcome": "Walk",
       "count": "3-1",
@@ -956,7 +961,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Cade Schneider",
       "batter": "Luke Lawrence",
       "outcome": "Fielder's choice",
       "count": "0-1",
@@ -983,7 +988,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Cade Schneider",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -998,8 +1003,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Luke Lawrence",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "score": {
@@ -1010,7 +1015,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Cade Schneider",
       "batter": "Jayce Tharnish",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1020,13 +1025,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Luke Lawrence",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "runners_after": {
-        "1B": "Luke Lawrence",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "score": {
@@ -1037,7 +1042,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Cade Schneider",
       "batter": "Hudson Brown",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -1047,13 +1052,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Luke Lawrence",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "runners_after": {
         "1B": "Hudson Brown",
-        "2B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "score": {
@@ -1064,18 +1069,20 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Cade Schneider",
       "batter": "Ethan Hindle",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Hudson Brown",
-        "2B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "runners_after": {
@@ -1091,7 +1098,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Cade Schneider",
       "batter": "Carson Hansen",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1118,7 +1125,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "William Coleman",
+      "pitcher": "Tommy Skelding",
       "batter": "Khaleel Pratt",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1145,7 +1152,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "William Coleman",
+      "pitcher": "Tommy Skelding",
       "batter": "Tyler Phillips",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1172,7 +1179,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "William Coleman",
+      "pitcher": "Tommy Skelding",
       "batter": "Carson Bittner",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1199,7 +1206,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Jack Briese",
       "batter": "Owen Jenkins",
       "outcome": "Pop out",
       "count": "1-0",
@@ -1226,7 +1233,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Jack Briese",
       "batter": "Caeden Cloud",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -1253,7 +1260,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Jack Briese",
       "batter": "Ryan Schwartz",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1280,7 +1287,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Jack Briese",
       "batter": "CampbellJr,Scott lined out to cf (0-0).",
       "outcome": "Lineout",
       "count": "0-0",
@@ -1307,7 +1314,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "William Coleman",
+      "pitcher": "Tommy Skelding",
       "batter": "Kobe Benson",
       "outcome": "Walk",
       "count": "3-2",
@@ -1334,7 +1341,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "William Coleman",
+      "pitcher": "Tommy Skelding",
       "batter": "Pedro Moreno",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1361,7 +1368,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "William Coleman",
+      "pitcher": "Tommy Skelding",
       "batter": "Dylan Littlefield",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1388,7 +1395,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "William Coleman",
+      "pitcher": "Tommy Skelding",
       "batter": "Jay Douglas",
       "outcome": "Pop out",
       "count": "0-0",
@@ -1415,7 +1422,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Jack Briese",
       "batter": "Luke Lawrence",
       "outcome": "Single",
       "count": "1-0",
@@ -1442,7 +1449,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Jack Briese",
       "batter": "Jayce Tharnish",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1469,7 +1476,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Jack Briese",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1484,8 +1491,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Luke Lawrence",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "score": {
@@ -1496,7 +1503,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Jack Briese",
       "batter": "Hudson Brown",
       "outcome": "Walk",
       "count": "3-2",
@@ -1506,13 +1513,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Luke Lawrence",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "runners_after": {
         "1B": "Hudson Brown",
-        "2B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "score": {
@@ -1523,7 +1530,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Jack Briese",
       "batter": "Ethan Hindle",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -1534,12 +1541,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Hudson Brown",
-        "2B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "runners_after": {
         "1B": "Ethan Hindle",
-        "2B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "score": {
@@ -1550,23 +1557,26 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Caleb Freeman",
       "batter": "Carson Hansen",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "SS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Ethan Hindle",
-        "2B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "runners_after": {
         "1B": "Carson Hansen",
-        "2B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "score": {
@@ -1577,7 +1587,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Caleb Freeman",
       "batter": "Owen Jenkins",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1588,12 +1598,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Carson Hansen",
-        "2B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "runners_after": {
         "1B": "Carson Hansen",
-        "2B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "score": {
@@ -1604,7 +1614,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Caleb Freeman",
       "batter": "Caeden Cloud",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1615,12 +1625,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Carson Hansen",
-        "2B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "runners_after": {
         "1B": "Carson Hansen",
-        "2B": null,
+        "2B": "Luke Lawrence",
         "3B": null
       },
       "score": {
@@ -1631,7 +1641,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "William Coleman",
+      "pitcher": "Tommy Skelding",
       "batter": "David Alvarez",
       "outcome": "Single",
       "count": "0-1",
@@ -1658,7 +1668,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "William Coleman",
+      "pitcher": "Tommy Skelding",
       "batter": "Silas Shaffer",
       "outcome": "Grounded into double play",
       "count": "2-2",
@@ -1685,7 +1695,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "William Coleman",
+      "pitcher": "Tommy Skelding",
       "batter": "Khaleel Pratt",
       "outcome": "Single",
       "count": "1-1",
@@ -1712,7 +1722,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "William Coleman",
+      "pitcher": "Tommy Skelding",
       "batter": "Tyler Phillips",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1739,7 +1749,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Brock Blanton",
       "batter": "Ryan Schwartz",
       "outcome": "Single",
       "count": "0-2",
@@ -1766,7 +1776,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Brock Blanton",
       "batter": "CampbellJr,Scott struck out swinging (2-2 BKFBFS).",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1793,7 +1803,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Brock Blanton",
       "batter": "Luke Lawrence",
       "outcome": "Single",
       "count": "0-0",
@@ -1820,13 +1830,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Brock Blanton",
       "batter": "Jayce Tharnish",
       "outcome": "Fielder's choice",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1847,7 +1859,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Brock Blanton",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1862,8 +1874,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jayce Tharnish",
-        "2B": null,
+        "1B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "score": {
@@ -1874,7 +1886,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cooper Pumphrey",
+      "pitcher": "Brock Blanton",
       "batter": "Hudson Brown",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1884,13 +1896,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jayce Tharnish",
-        "2B": null,
+        "1B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jayce Tharnish",
-        "2B": null,
+        "1B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "score": {
@@ -1901,7 +1913,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "William Coleman",
+      "pitcher": "Ryan Mullan",
       "batter": "Carson Bittner",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1928,7 +1940,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "William Coleman",
+      "pitcher": "Ryan Mullan",
       "batter": "Kobe Benson",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1955,7 +1967,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "William Coleman",
+      "pitcher": "Ryan Mullan",
       "batter": "Gunnar Bingham",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",

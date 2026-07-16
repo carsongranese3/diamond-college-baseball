@@ -3,7 +3,7 @@
   "date": "02/20/2026",
   "away_team": "UCF",
   "home_team": "Notre Dame",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -1131,8 +1131,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jayce Lee",
-        "2B": null,
+        "1B": null,
+        "2B": "Jayce Lee",
         "3B": null
       },
       "score": {
@@ -1149,17 +1149,19 @@
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jayce Lee",
-        "2B": null,
+        "1B": null,
+        "2B": "Jayce Lee",
         "3B": null
       },
       "runners_after": {
         "1B": "Noah Coy",
-        "2B": null,
+        "2B": "Jayce Lee",
         "3B": null
       },
       "score": {
@@ -1167,6 +1169,33 @@
         "home": 2
       },
       "description": "Coy singled to right field, RBI (1-1 KB); Lee,J scored."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Braden Smith",
+      "batter": "Schoneboom,K to p for Smith, B.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Noah Coy",
+        "2B": "Jayce Lee",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Noah Coy",
+        "2B": "Jayce Lee",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 2
+      },
+      "description": "Schoneboom,K to p for Smith, B."
     },
     {
       "inning": "Bottom 6",
@@ -1181,12 +1210,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Noah Coy",
-        "2B": null,
+        "2B": "Jayce Lee",
         "3B": null
       },
       "runners_after": {
         "1B": "Noah Coy",
-        "2B": null,
+        "2B": "Jayce Lee",
         "3B": null
       },
       "score": {
@@ -1446,7 +1475,9 @@
       "count": "2-2",
       "pitches": "BBFKFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1482,8 +1513,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason Wilson",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason Wilson",
         "3B": null
       },
       "score": {
@@ -1504,13 +1535,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Mason Wilson",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason Wilson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason Wilson",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason Wilson",
         "3B": null
       },
       "score": {
@@ -1602,7 +1633,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Kevin Schoneboom",
+      "pitcher": "Evan Jones",
       "batter": "Bino Watters",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1629,7 +1660,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Kevin Schoneboom",
+      "pitcher": "Evan Jones",
       "batter": "Mark Quatrani",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1656,7 +1687,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Kevin Schoneboom",
+      "pitcher": "Evan Jones",
       "batter": "Parker Brzustewicz",
       "outcome": "Single",
       "count": "1-2",
@@ -1684,6 +1715,33 @@
     {
       "inning": "Bottom 8",
       "pitcher": "Evan Jones",
+      "batter": "Jones, E to p for Schoneboom,K.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Parker Brzustewicz",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Parker Brzustewicz",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 2
+      },
+      "description": "Jones, E to p for Schoneboom,K."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Evan Jones",
       "batter": "Jayce Lee",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1707,6 +1765,33 @@
         "home": 2
       },
       "description": "Lee,J struck out looking (3-2 BBKBKK)."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "Oisin Lee",
+      "batter": "Lee,O to p for Rooney.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 2
+      },
+      "description": "Lee,O to p for Rooney."
     },
     {
       "inning": "Top 9",
@@ -1791,13 +1876,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Oisin Lee",
+      "pitcher": "Chase Van Ameyde",
       "batter": "Andrew Williamson",
       "outcome": "Triple",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1815,6 +1902,33 @@
         "home": 2
       },
       "description": "Williamson,A tripled to center field, RBI (0-0); Gaskin, C scored, unearned."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "Chase Van Ameyde",
+      "batter": "Ameyde,Van to p for Lee,O.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Stephen Chucka",
+        "2B": null,
+        "3B": "Andrew Williamson"
+      },
+      "runners_after": {
+        "1B": "Stephen Chucka",
+        "2B": null,
+        "3B": "Andrew Williamson"
+      },
+      "score": {
+        "away": 2,
+        "home": 2
+      },
+      "description": "Ameyde,Van to p for Lee,O."
     },
     {
       "inning": "Top 9",
@@ -1899,7 +2013,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Evan Jones",
+      "pitcher": "",
       "batter": "Mason Barth",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1926,7 +2040,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Evan Jones",
+      "pitcher": "",
       "batter": "Dylan Passo",
       "outcome": "Lineout",
       "count": "2-1",
@@ -1980,7 +2094,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Chase Van Ameyde",
+      "pitcher": "Eli Thurmond",
       "batter": "Mason Wilson",
       "outcome": "Pop out",
       "count": "1-0",
@@ -2007,7 +2121,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Chase Van Ameyde",
+      "pitcher": "Eli Thurmond",
       "batter": "Javier Crespo",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -2034,7 +2148,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Chase Van Ameyde",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2049,9 +2163,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Javier Crespo",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Javier Crespo"
       },
       "score": {
         "away": 2,
@@ -2061,24 +2175,27 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Eli Thurmond",
+      "pitcher": "",
       "batter": "James Hankerson Jr.",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Javier Crespo",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Javier Crespo"
       },
       "runners_after": {
         "1B": "James Hankerson Jr.",
         "2B": null,
-        "3B": null
+        "3B": "Javier Crespo"
       },
       "score": {
         "away": 4,
@@ -2088,7 +2205,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Eli Thurmond",
+      "pitcher": "",
       "batter": "Cayden Gaskin",
       "outcome": "\u2014",
       "count": "1-0",
@@ -2100,12 +2217,12 @@
       "runners_before": {
         "1B": "James Hankerson Jr.",
         "2B": null,
-        "3B": null
+        "3B": "Javier Crespo"
       },
       "runners_after": {
         "1B": "James Hankerson Jr.",
         "2B": null,
-        "3B": null
+        "3B": "Javier Crespo"
       },
       "score": {
         "away": 4,
@@ -2115,7 +2232,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Evan Jones",
+      "pitcher": "",
       "batter": "Malvasio, Z to lf.",
       "outcome": "\u2014",
       "count": null,
@@ -2142,7 +2259,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Evan Jones",
+      "pitcher": "",
       "batter": "Jamie Zee",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2169,7 +2286,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Evan Jones",
+      "pitcher": "",
       "batter": "Drew Berkland",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2196,7 +2313,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Evan Jones",
+      "pitcher": "",
       "batter": "Andrew Graham",
       "outcome": "Strikeout (looking)",
       "count": "1-2",

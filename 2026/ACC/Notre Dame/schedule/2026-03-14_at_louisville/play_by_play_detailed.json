@@ -3,7 +3,7 @@
   "date": "03/14/2026",
   "away_team": "Notre Dame",
   "home_team": "Louisville",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -184,8 +184,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Zion Rose",
-        "2B": null,
+        "1B": null,
+        "2B": "Zion Rose",
         "3B": null
       },
       "score": {
@@ -206,13 +206,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Zion Rose",
-        "2B": null,
+        "1B": null,
+        "2B": "Zion Rose",
         "3B": null
       },
       "runners_after": {
-        "1B": "Zion Rose",
-        "2B": null,
+        "1B": null,
+        "2B": "Zion Rose",
         "3B": null
       },
       "score": {
@@ -311,7 +311,8 @@
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "D Johnson homered down the lf line, 2 RBI (0-1 K)"
+        "D Johnson homered down the lf line, 2 RBI (0-1 K)",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -429,8 +430,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jax Hisle",
-        "2B": null,
+        "1B": null,
+        "2B": "Jax Hisle",
         "3B": null
       },
       "score": {
@@ -451,8 +452,8 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Jax Hisle",
-        "2B": null,
+        "1B": null,
+        "2B": "Jax Hisle",
         "3B": null
       },
       "runners_after": {
@@ -665,7 +666,10 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1299,8 +1303,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "score": {
@@ -1321,13 +1325,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "runners_after": {
         "1B": "Zion Rose",
-        "2B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "score": {
@@ -1349,13 +1353,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Zion Rose",
-        "2B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "runners_after": {
         "1B": null,
         "2B": "Zion Rose",
-        "3B": null
+        "3B": "Lucas Moore"
       },
       "score": {
         "away": 4,
@@ -1377,12 +1381,12 @@
       "runners_before": {
         "1B": null,
         "2B": "Zion Rose",
-        "3B": null
+        "3B": "Lucas Moore"
       },
       "runners_after": {
         "1B": null,
         "2B": "Zion Rose",
-        "3B": null
+        "3B": "Lucas Moore"
       },
       "score": {
         "away": 4,
@@ -1399,14 +1403,15 @@
       "pitches": "BFBB",
       "rbi": true,
       "runs_scored": [
-        "Zion Rose"
+        "Zion Rose",
+        "Lucas Moore"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": "Zion Rose",
-        "3B": null
+        "3B": "Lucas Moore"
       },
       "runners_after": {
         "1B": "Griffin Crain",
@@ -1508,7 +1513,9 @@
       "count": "0-1",
       "pitches": "S",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1556,7 +1563,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Caden Crowell",
+      "pitcher": "Xavier Hirsch",
       "batter": "X Hirsch to p for C Crowell.",
       "outcome": "\u2014",
       "count": null,
@@ -1583,7 +1590,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Caden Crowell",
+      "pitcher": "Xavier Hirsch",
       "batter": "Bayram Hot",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1610,7 +1617,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Caden Crowell",
+      "pitcher": "Xavier Hirsch",
       "batter": "George Baker",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1637,7 +1644,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Caden Crowell",
+      "pitcher": "Xavier Hirsch",
       "batter": "Kade Elam",
       "outcome": "Single",
       "count": "0-0",
@@ -1664,7 +1671,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Caden Crowell",
+      "pitcher": "Xavier Hirsch",
       "batter": "Alex Alicea",
       "outcome": "Single",
       "count": "1-0",
@@ -1691,7 +1698,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Caden Crowell",
+      "pitcher": "Xavier Hirsch",
       "batter": "Lucas Moore",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1805,7 +1812,10 @@
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1907,7 +1917,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Caden Crowell",
+      "pitcher": "Xavier Hirsch",
       "batter": "Zion Rose",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1934,7 +1944,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Caden Crowell",
+      "pitcher": "Xavier Hirsch",
       "batter": "Tague Davis",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1961,7 +1971,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Caden Crowell",
+      "pitcher": "Xavier Hirsch",
       "batter": "Jax Hisle",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2123,7 +2133,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Caden Crowell",
+      "pitcher": "Xavier Hirsch",
       "batter": "Griffin Crain",
       "outcome": "Single",
       "count": "1-0",
@@ -2150,7 +2160,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Caden Crowell",
+      "pitcher": "Xavier Hirsch",
       "batter": "Bayram Hot",
       "outcome": "Single",
       "count": "0-0",
@@ -2177,7 +2187,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Caden Crowell",
+      "pitcher": "Xavier Hirsch",
       "batter": "George Baker",
       "outcome": "Groundout",
       "count": "0-2",
@@ -2204,7 +2214,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Caden Crowell",
+      "pitcher": "Xavier Hirsch",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2233,7 +2243,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Caden Crowell",
+      "pitcher": "Xavier Hirsch",
       "batter": "Kade Elam",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2260,7 +2270,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Caden Crowell",
+      "pitcher": "Oisin Lee",
       "batter": "Alex Alicea",
       "outcome": "Triple",
       "count": "2-0",
@@ -2289,7 +2299,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Caden Crowell",
+      "pitcher": "Oisin Lee",
       "batter": "O Lee to p for X Hirsch.",
       "outcome": "\u2014",
       "count": null,
@@ -2316,7 +2326,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Caden Crowell",
+      "pitcher": "Dylan Singleton",
       "batter": "Lucas Moore",
       "outcome": "Walk",
       "count": "3-0",
@@ -2343,7 +2353,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Caden Crowell",
+      "pitcher": "Dylan Singleton",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2358,8 +2368,8 @@
         "3B": "Alex Alicea"
       },
       "runners_after": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": "Alex Alicea"
       },
       "score": {
@@ -2370,7 +2380,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Caden Crowell",
+      "pitcher": "Dylan Singleton",
       "batter": "Zion Rose",
       "outcome": "Walk",
       "count": "2-1",
@@ -2380,13 +2390,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": "Alex Alicea"
       },
       "runners_after": {
         "1B": "Zion Rose",
-        "2B": null,
+        "2B": "Lucas Moore",
         "3B": "Alex Alicea"
       },
       "score": {
@@ -2397,7 +2407,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Caden Crowell",
+      "pitcher": "",
       "batter": "D Singleton to p for O Lee.",
       "outcome": "\u2014",
       "count": null,
@@ -2408,12 +2418,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Zion Rose",
-        "2B": null,
+        "2B": "Lucas Moore",
         "3B": "Alex Alicea"
       },
       "runners_after": {
         "1B": "Zion Rose",
-        "2B": null,
+        "2B": "Lucas Moore",
         "3B": "Alex Alicea"
       },
       "score": {
@@ -2424,7 +2434,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Caden Crowell",
+      "pitcher": "",
       "batter": "Tague Davis",
       "outcome": "Single",
       "count": "0-1",
@@ -2437,13 +2447,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Zion Rose",
-        "2B": null,
+        "2B": "Lucas Moore",
         "3B": "Alex Alicea"
       },
       "runners_after": {
         "1B": "Tague Davis",
         "2B": "Zion Rose",
-        "3B": null
+        "3B": "Lucas Moore"
       },
       "score": {
         "away": 7,
@@ -2453,7 +2463,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Caden Crowell",
+      "pitcher": "",
       "batter": "Jax Hisle",
       "outcome": "Foul out",
       "count": "1-0",
@@ -2465,12 +2475,12 @@
       "runners_before": {
         "1B": "Tague Davis",
         "2B": "Zion Rose",
-        "3B": null
+        "3B": "Lucas Moore"
       },
       "runners_after": {
         "1B": "Tague Davis",
         "2B": "Zion Rose",
-        "3B": null
+        "3B": "Lucas Moore"
       },
       "score": {
         "away": 7,

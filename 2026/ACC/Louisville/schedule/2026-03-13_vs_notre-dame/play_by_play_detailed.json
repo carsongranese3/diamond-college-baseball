@@ -3,7 +3,7 @@
   "date": "03/13/2026",
   "away_team": "Notre Dame",
   "home_team": "Louisville",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -157,8 +157,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "score": {
@@ -179,8 +179,8 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "runners_after": {
@@ -699,8 +699,8 @@
         "3B": "Kade Elam"
       },
       "runners_after": {
-        "1B": "Alex Alicea",
-        "2B": null,
+        "1B": null,
+        "2B": "Alex Alicea",
         "3B": "Kade Elam"
       },
       "score": {
@@ -721,13 +721,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Alex Alicea",
-        "2B": null,
+        "1B": null,
+        "2B": "Alex Alicea",
         "3B": "Kade Elam"
       },
       "runners_after": {
         "1B": "Lucas Moore",
-        "2B": null,
+        "2B": "Alex Alicea",
         "3B": "Kade Elam"
       },
       "score": {
@@ -751,13 +751,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Lucas Moore",
-        "2B": null,
+        "2B": "Alex Alicea",
         "3B": "Kade Elam"
       },
       "runners_after": {
         "1B": "Zion Rose",
         "2B": "Lucas Moore",
-        "3B": null
+        "3B": "Alex Alicea"
       },
       "score": {
         "away": 0,
@@ -774,14 +774,15 @@
       "pitches": "BBSB",
       "rbi": true,
       "runs_scored": [
-        "Lucas Moore"
+        "Lucas Moore",
+        "Alex Alicea"
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Zion Rose",
         "2B": "Lucas Moore",
-        "3B": null
+        "3B": "Alex Alicea"
       },
       "runners_after": {
         "1B": "Tague Davis",
@@ -1022,7 +1023,9 @@
       "count": "3-2",
       "pitches": "BFBFFBFFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1050,7 +1053,10 @@
       "pitches": "KBB",
       "rbi": true,
       "runs_scored": [
-        "N Coy homered to right field, 4 RBI (2-1 KBB)"
+        "N Coy homered to right field, 4 RBI (2-1 KBB)",
+        null,
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1159,7 +1165,9 @@
       "count": "3-1",
       "pitches": "BKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1188,7 +1196,9 @@
       "rbi": true,
       "runs_scored": [
         "PBrzustewicz",
-        "D Johnson homered to right field, 4 RBI (0-1 F)"
+        "D Johnson homered to right field, 4 RBI (0-1 F)",
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1318,7 +1328,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jack Radel",
+      "pitcher": "Kellan Klosterman",
       "batter": "K Klosterman to p for J Radel.",
       "outcome": "\u2014",
       "count": null,
@@ -1345,7 +1355,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jack Radel",
+      "pitcher": "Kellan Klosterman",
       "batter": "Alex Alicea",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1372,7 +1382,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jack Radel",
+      "pitcher": "Kellan Klosterman",
       "batter": "Lucas Moore",
       "outcome": "Double",
       "count": "3-2",
@@ -1399,7 +1409,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jack Radel",
+      "pitcher": "Kellan Klosterman",
       "batter": "Zion Rose",
       "outcome": "Home run",
       "count": "1-1",
@@ -1429,7 +1439,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jack Radel",
+      "pitcher": "Kellan Klosterman",
       "batter": "Tague Davis",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1456,7 +1466,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jack Radel",
+      "pitcher": "Kellan Klosterman",
       "batter": "Jimmy Nugent",
       "outcome": "Walk",
       "count": "3-2",
@@ -1483,7 +1493,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jack Radel",
+      "pitcher": "William Jaisle",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1510,7 +1520,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jack Radel",
+      "pitcher": "William Jaisle",
       "batter": "Griffin Crain",
       "outcome": "Walk",
       "count": "3-2",
@@ -1537,7 +1547,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jack Radel",
+      "pitcher": "William Jaisle",
       "batter": "W Jaisle to p for K Klosterman.",
       "outcome": "\u2014",
       "count": null,
@@ -1564,7 +1574,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jack Radel",
+      "pitcher": "William Jaisle",
       "batter": "Bayram Hot",
       "outcome": "Fielder's choice",
       "count": "1-2",
@@ -1672,7 +1682,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jack Radel",
+      "pitcher": "William Jaisle",
       "batter": "Ben Slanker",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -1699,7 +1709,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jack Radel",
+      "pitcher": "William Jaisle",
       "batter": "Kade Elam",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1726,7 +1736,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jack Radel",
+      "pitcher": "William Jaisle",
       "batter": "Alex Alicea",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1753,7 +1763,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jack Radel",
+      "pitcher": "Eli Thurmond",
       "batter": "Lucas Moore",
       "outcome": "Walk",
       "count": "3-0",
@@ -1780,7 +1790,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jack Radel",
+      "pitcher": "Eli Thurmond",
       "batter": "Zion Rose",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1861,7 +1871,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
+      "batter": "J. Brown",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "D Johnson walked (3-2 BBBKFFB)",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "D Johnson walked (3-2 BBBKFFB)",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 10,
+        "home": 8
+      },
+      "description": "J. Brown to p for Murphy."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Jack Brown",
       "batter": "M Barth struck out looking (1-2 BSFK).",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1888,7 +1925,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "J Zee walked (3-2 BBKKBB)",
       "outcome": "Walk",
       "count": "3-2",
@@ -1915,13 +1952,15 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "D Berkland out at first 1b to p, RBI (0-1 K)",
       "outcome": "\u2014",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1942,7 +1981,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "N Coy walked (3-2 BBFFFFBB).",
       "outcome": "Walk",
       "count": "3-2",
@@ -1969,7 +2008,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "M Quatrani struck out swinging (1-2 FBFFS).",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1996,7 +2035,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jack Radel",
+      "pitcher": "Eli Thurmond",
       "batter": "E Thurmond to p for W Jaisle.",
       "outcome": "\u2014",
       "count": null,
@@ -2023,7 +2062,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jack Radel",
+      "pitcher": "Eli Thurmond",
       "batter": "Tague Davis",
       "outcome": "Single",
       "count": "1-1",
@@ -2050,7 +2089,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jack Radel",
+      "pitcher": "Eli Thurmond",
       "batter": "Jimmy Nugent",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2077,7 +2116,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jack Radel",
+      "pitcher": "Eli Thurmond",
       "batter": "Griffin Crain",
       "outcome": "Fielder's choice",
       "count": "0-1",
@@ -2104,7 +2143,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jack Radel",
+      "pitcher": "Eli Thurmond",
       "batter": "Bayram Hot",
       "outcome": "Double",
       "count": "2-2",
@@ -2131,7 +2170,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jack Radel",
+      "pitcher": "Eli Thurmond",
       "batter": "Ben Slanker",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2158,7 +2197,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "B Watters grounded out to (1-1 BF).",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2185,7 +2224,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "PBrzustewicz",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2212,7 +2251,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "J Lee walked (3-2 BKFBBFFFB).",
       "outcome": "Walk",
       "count": "3-2",
@@ -2239,13 +2278,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "D Johnson doubled to right field, RBI (0-0)",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2266,7 +2307,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "M Barth struck out looking (3-2 BKSBBK).",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2293,7 +2334,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jack Radel",
+      "pitcher": "Noah Rooney",
       "batter": "Kade Elam",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2320,7 +2361,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jack Radel",
+      "pitcher": "Noah Rooney",
       "batter": "Alex Alicea",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2347,7 +2388,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jack Radel",
+      "pitcher": "Noah Rooney",
       "batter": "Lucas Moore",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2374,7 +2415,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "J Zee grounded out to 1b unassisted (0-1 F).",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2401,7 +2442,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "D Berkland singled to center field (1-2 KBS).",
       "outcome": "Single",
       "count": "1-2",
@@ -2428,7 +2469,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "N Coy flied out to cf (2-0 BB).",
       "outcome": "Flyout",
       "count": "2-0",
@@ -2455,7 +2496,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "M Quatrani singled to left field (1-0 B)",
       "outcome": "Single",
       "count": "1-0",
@@ -2482,13 +2523,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "B Watters singled through the left side, RBI (1-2 KFB)",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "KFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2509,7 +2552,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "Tanner Thomas",
       "batter": "PBrzustewicz",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2536,7 +2579,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jack Radel",
+      "pitcher": "Noah Rooney",
       "batter": "N Rooney to p for E Thurmond.",
       "outcome": "\u2014",
       "count": null,
@@ -2563,7 +2606,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jack Radel",
+      "pitcher": "Noah Rooney",
       "batter": "Zion Rose",
       "outcome": "Single",
       "count": "2-2",
@@ -2590,7 +2633,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jack Radel",
+      "pitcher": "Noah Rooney",
       "batter": "Tague Davis",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2617,7 +2660,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jack Radel",
+      "pitcher": "Noah Rooney",
       "batter": "Jimmy Nugent",
       "outcome": "Fielder's choice",
       "count": "0-1",
@@ -2644,7 +2687,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jack Radel",
+      "pitcher": "Noah Rooney",
       "batter": "Griffin Crain",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2731,7 +2774,9 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2806,7 +2851,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Tanner Thomas",
+      "pitcher": "",
       "batter": "D Berkland grounded out to (0-1 F).",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2833,7 +2878,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jack Radel",
+      "pitcher": "Noah Rooney",
       "batter": "Bayram Hot",
       "outcome": "Double",
       "count": "0-1",
@@ -2860,7 +2905,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jack Radel",
+      "pitcher": "Noah Rooney",
       "batter": "Jax Hisle",
       "outcome": "Single",
       "count": "0-2",
@@ -2887,7 +2932,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jack Radel",
+      "pitcher": "Noah Rooney",
       "batter": "Kade Elam",
       "outcome": "Single",
       "count": "2-2",
@@ -2916,7 +2961,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jack Radel",
+      "pitcher": "",
       "batter": "Alex Alicea",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2943,7 +2988,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jack Radel",
+      "pitcher": "",
       "batter": "Lucas Moore",
       "outcome": "Groundout",
       "count": "2-1",
@@ -2970,7 +3015,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jack Radel",
+      "pitcher": "",
       "batter": "Zion Rose",
       "outcome": "Double",
       "count": "1-1",
@@ -3000,7 +3045,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jack Radel",
+      "pitcher": "",
       "batter": "Tague Davis",
       "outcome": "Groundout",
       "count": "0-0",

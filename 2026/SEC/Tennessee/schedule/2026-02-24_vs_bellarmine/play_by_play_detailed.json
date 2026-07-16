@@ -3,7 +3,7 @@
   "date": "02/24/2026",
   "away_team": "Bellarmine",
   "home_team": "Tennessee",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -277,7 +277,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Blaine Brown",
+      "pitcher": "Cam Appenzeller",
       "batter": "BROWN, B. to dh.",
       "outcome": "\u2014",
       "count": null,
@@ -304,7 +304,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Blaine Brown",
+      "pitcher": "Cam Appenzeller",
       "batter": "Charlie Rife",
       "outcome": "Walk",
       "count": "3-1",
@@ -331,7 +331,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Blaine Brown",
+      "pitcher": "Cam Appenzeller",
       "batter": "Luca Hoerger",
       "outcome": "Fielder's choice",
       "count": "1-2",
@@ -358,7 +358,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Blaine Brown",
+      "pitcher": "Cam Appenzeller",
       "batter": "Cole Huett",
       "outcome": "Flyout",
       "count": "1-0",
@@ -385,7 +385,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Blaine Brown",
+      "pitcher": "Taylor Tracey",
       "batter": "Jake Bell",
       "outcome": "Fielder's choice",
       "count": "0-1",
@@ -455,8 +455,8 @@
       },
       "runners_after": {
         "1B": "Finley Bates",
-        "2B": "Tyler Myatt",
-        "3B": null
+        "2B": null,
+        "3B": "Tyler Myatt"
       },
       "score": {
         "away": 0,
@@ -472,17 +472,19 @@
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Tyler Myatt"
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Finley Bates",
-        "2B": "Tyler Myatt",
-        "3B": null
+        "2B": null,
+        "3B": "Tyler Myatt"
       },
       "runners_after": {
         "1B": "Finley Bates",
-        "2B": "Tyler Myatt",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -504,12 +506,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Finley Bates",
-        "2B": "Tyler Myatt",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Finley Bates",
-        "2B": "Tyler Myatt",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -530,13 +532,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Finley Bates",
-        "2B": "Tyler Myatt",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Finley Bates",
-        "2B": "Tyler Myatt",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -544,6 +546,33 @@
         "home": 1
       },
       "description": "ANTIGUA, A. fouled out to 1b (2-2 BBFF)."
+    },
+    {
+      "inning": "Top 3",
+      "pitcher": "Taylor Tracey",
+      "batter": "TRACEY, T. to p for APPENZELLER.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "TRACEY, T. to p for APPENZELLER."
     },
     {
       "inning": "Top 3",
@@ -628,7 +657,34 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "A.",
+      "pitcher": "Aaron Ragat",
+      "batter": "A. Ragat",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "A. Ragat to p for D. Oak."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Aaron Ragat",
       "batter": "Jay Abernathy",
       "outcome": "Single",
       "count": "1-1",
@@ -655,7 +711,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "A.",
+      "pitcher": "Aaron Ragat",
       "batter": "Henry Ford",
       "outcome": "Flyout",
       "count": "2-2",
@@ -682,7 +738,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "A.",
+      "pitcher": "Aaron Ragat",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -697,8 +753,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jay Abernathy",
-        "2B": null,
+        "1B": null,
+        "2B": "Jay Abernathy",
         "3B": null
       },
       "score": {
@@ -709,7 +765,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "A.",
+      "pitcher": "Aaron Ragat",
       "batter": "Levi Clark",
       "outcome": "Flyout",
       "count": "2-2",
@@ -719,14 +775,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jay Abernathy",
-        "2B": null,
+        "1B": null,
+        "2B": "Jay Abernathy",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jay Abernathy",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jay Abernathy"
       },
       "score": {
         "away": 0,
@@ -736,7 +792,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "A.",
+      "pitcher": "Karl Ralamb",
       "batter": "Reese Chapman",
       "outcome": "Groundout",
       "count": "1-2",
@@ -746,14 +802,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jay Abernathy",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jay Abernathy"
       },
       "runners_after": {
-        "1B": "Jay Abernathy",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jay Abernathy"
       },
       "score": {
         "away": 0,
@@ -790,7 +846,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Taylor Tracey",
+      "pitcher": "Nic Abraham",
       "batter": "Mason Acton",
       "outcome": "Groundout",
       "count": "2-2",
@@ -817,7 +873,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Taylor Tracey",
+      "pitcher": "Nic Abraham",
       "batter": "Charlie Rife",
       "outcome": "Flyout",
       "count": "2-0",
@@ -844,7 +900,34 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "K.",
+      "pitcher": "Karl Ralamb",
+      "batter": "K. Ralamb",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "K. Ralamb to p for A. Ragat."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Karl Ralamb",
       "batter": "Blaine Brown",
       "outcome": "Flyout",
       "count": "0-1",
@@ -871,7 +954,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "K.",
+      "pitcher": "Chase Carver",
       "batter": "Tyler Myatt",
       "outcome": "Groundout",
       "count": "1-0",
@@ -898,7 +981,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "K.",
+      "pitcher": "Chase Carver",
       "batter": "Finley Bates",
       "outcome": "Groundout",
       "count": "3-1",
@@ -922,6 +1005,33 @@
         "home": 1
       },
       "description": "BATES, F. grounded out to 2b (3-1 BFBB)."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Nic Abraham",
+      "batter": "ABRAHAM, N. to p for TRACEY, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "ABRAHAM, N. to p for TRACEY, T.."
     },
     {
       "inning": "Top 5",
@@ -1060,7 +1170,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "C.",
+      "pitcher": "Chase Carver",
+      "batter": "C. Carver",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "C. Carver to p for K. Ralamb."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Chase Carver",
       "batter": "Hunter High",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1087,7 +1224,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "C.",
+      "pitcher": "Chase Chamberlain",
       "batter": "Ariel Antigua",
       "outcome": "Groundout",
       "count": "2-0",
@@ -1114,7 +1251,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "C.",
+      "pitcher": "Chase Chamberlain",
       "batter": "Jay Abernathy",
       "outcome": "Single",
       "count": "1-1",
@@ -1141,7 +1278,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "C.",
+      "pitcher": "Chase Chamberlain",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1156,8 +1293,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jay Abernathy",
-        "2B": null,
+        "1B": null,
+        "2B": "Jay Abernathy",
         "3B": null
       },
       "score": {
@@ -1168,7 +1305,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "C.",
+      "pitcher": "Chase Chamberlain",
       "batter": "Henry Ford",
       "outcome": "Pop out",
       "count": "1-0",
@@ -1178,13 +1315,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jay Abernathy",
-        "2B": null,
+        "1B": null,
+        "2B": "Jay Abernathy",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jay Abernathy",
-        "2B": null,
+        "1B": null,
+        "2B": "Jay Abernathy",
         "3B": null
       },
       "score": {
@@ -1195,7 +1332,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Nic Abraham",
+      "pitcher": "Sawyer Deering",
       "batter": "MARIN, M. to ss for ANTIGUA, A..",
       "outcome": "\u2014",
       "count": null,
@@ -1222,7 +1359,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Nic Abraham",
+      "pitcher": "Sawyer Deering",
       "batter": "NEWSTROM, C. to 2b for BATES, F..",
       "outcome": "\u2014",
       "count": null,
@@ -1249,7 +1386,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Nic Abraham",
+      "pitcher": "Sawyer Deering",
       "batter": "Eli Watson",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1276,7 +1413,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Nic Abraham",
+      "pitcher": "Sawyer Deering",
       "batter": "AJ Swader",
       "outcome": "Single",
       "count": "0-1",
@@ -1303,7 +1440,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Nic Abraham",
+      "pitcher": "Sawyer Deering",
       "batter": "Luke Scales",
       "outcome": "Pop out",
       "count": "0-2",
@@ -1330,7 +1467,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Nic Abraham",
+      "pitcher": "Mark Hindy",
       "batter": "Mason Acton",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1357,7 +1494,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Chase Chamberlain",
+      "batter": "C. Chamberla",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "C. Chamberla to p for C. Carver."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Evan Hart",
       "batter": "L. Murphy",
       "outcome": "\u2014",
       "count": null,
@@ -1384,7 +1548,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Evan Hart",
       "batter": "Levi Clark",
       "outcome": "Walk",
       "count": "3-2",
@@ -1411,7 +1575,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Evan Hart",
       "batter": "Reese Chapman",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1438,7 +1602,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Evan Hart",
       "batter": "Blaine Brown",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1465,7 +1629,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Evan Hart",
       "batter": "Tyler Myatt",
       "outcome": "Lineout",
       "count": "2-1",
@@ -1492,7 +1656,34 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sawyer Deering",
+      "pitcher": "Mark Hindy",
+      "batter": "DEERING, S. to p for ABRAHAM, N..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "DEERING, S. to p for ABRAHAM, N.."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Mark Hindy",
       "batter": "Sawyer Pace",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1519,7 +1710,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sawyer Deering",
+      "pitcher": "Chandler Day",
       "batter": "Luca Hoerger",
       "outcome": "Foul out",
       "count": "0-1",
@@ -1546,7 +1737,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sawyer Deering",
+      "pitcher": "Chandler Day",
       "batter": "Cole Huett",
       "outcome": "\u2014",
       "count": "1-0",
@@ -1573,7 +1764,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "E.",
+      "pitcher": "Evan Hart",
+      "batter": "E. Hart",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "E. Hart to p for C. Chamberla."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Evan Hart",
       "batter": "Chris Newstrom",
       "outcome": "Walk",
       "count": "3-2",
@@ -1600,7 +1818,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "E.",
+      "pitcher": "Evan Hart",
       "batter": "Hunter High",
       "outcome": "Fielder's choice",
       "count": "0-1",
@@ -1627,13 +1845,14 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "E.",
+      "pitcher": "Austin Egan",
       "batter": "Manny Marin",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "FBBFBF",
       "rbi": true,
       "runs_scored": [
+        "Hunter High",
         "Manny Marin"
       ],
       "outs_before": 1,
@@ -1644,7 +1863,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Hunter High",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1656,7 +1875,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "E.",
+      "pitcher": "Austin Egan",
       "batter": "Jay Abernathy",
       "outcome": "Single",
       "count": "0-0",
@@ -1666,7 +1885,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Hunter High",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1683,7 +1902,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "E.",
+      "pitcher": "Austin Egan",
       "batter": "Henry Ford",
       "outcome": "Fielder's choice",
       "count": "1-0",
@@ -1699,7 +1918,7 @@
       },
       "runners_after": {
         "1B": "Henry Ford",
-        "2B": null,
+        "2B": "Jay Abernathy",
         "3B": null
       },
       "score": {
@@ -1710,7 +1929,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "E.",
+      "pitcher": "Cade Rusch",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1721,13 +1940,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Henry Ford",
-        "2B": null,
+        "2B": "Jay Abernathy",
         "3B": null
       },
       "runners_after": {
-        "1B": "Henry Ford",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Henry Ford",
+        "3B": "Jay Abernathy"
       },
       "score": {
         "away": 0,
@@ -1737,24 +1956,26 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "E.",
+      "pitcher": "Cade Rusch",
       "batter": "Levi Clark",
       "outcome": "Reached on error",
       "count": "3-2",
       "pitches": "FBBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jay Abernathy"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Henry Ford",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Henry Ford",
+        "3B": "Jay Abernathy"
       },
       "runners_after": {
         "1B": "Levi Clark",
         "2B": null,
-        "3B": null
+        "3B": "Henry Ford"
       },
       "score": {
         "away": 0,
@@ -1764,24 +1985,26 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "E.",
+      "pitcher": "Cade Rusch",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Henry Ford"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Levi Clark",
         "2B": null,
-        "3B": null
+        "3B": "Henry Ford"
       },
       "runners_after": {
-        "1B": "Levi Clark",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Levi Clark"
       },
       "score": {
         "away": 0,
@@ -1791,7 +2014,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "E.",
+      "pitcher": "Cade Rusch",
       "batter": "Reese Chapman",
       "outcome": "Walk",
       "count": "3-1",
@@ -1801,14 +2024,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Levi Clark",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Levi Clark"
       },
       "runners_after": {
         "1B": "Reese Chapman",
         "2B": null,
-        "3B": null
+        "3B": "Levi Clark"
       },
       "score": {
         "away": 0,
@@ -1818,13 +2041,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "E.",
+      "pitcher": "Cade Rusch",
       "batter": "Blaine Brown",
       "outcome": "Home run",
       "count": "2-1",
       "pitches": "BBS",
       "rbi": true,
       "runs_scored": [
+        "Reese Chapman",
+        "Levi Clark",
         "Blaine Brown"
       ],
       "outs_before": 1,
@@ -1832,10 +2057,10 @@
       "runners_before": {
         "1B": "Reese Chapman",
         "2B": null,
-        "3B": null
+        "3B": "Levi Clark"
       },
       "runners_after": {
-        "1B": "Reese Chapman",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1847,7 +2072,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "A.",
+      "pitcher": "Cade Rusch",
+      "batter": "A. Egan",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 8
+      },
+      "description": "A. Egan to p for E. Hart."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Cade Rusch",
       "batter": "Tyler Myatt",
       "outcome": "Single",
       "count": "0-1",
@@ -1857,7 +2109,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Reese Chapman",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1874,7 +2126,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "A.",
+      "pitcher": "",
       "batter": "Chris Newstrom",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1889,8 +2141,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Myatt",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Myatt",
         "3B": null
       },
       "score": {
@@ -1901,7 +2153,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "A.",
+      "pitcher": "",
       "batter": "Hunter High",
       "outcome": "Pop out",
       "count": "1-0",
@@ -1911,13 +2163,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Tyler Myatt",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Myatt",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Myatt",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Myatt",
         "3B": null
       },
       "score": {
@@ -1928,7 +2180,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sawyer Deering",
+      "pitcher": "Chandler Day",
       "batter": "Jake Bell",
       "outcome": "Walk",
       "count": "3-1",
@@ -1955,7 +2207,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sawyer Deering",
+      "pitcher": "Chandler Day",
       "batter": "Landon Akers",
       "outcome": "Single",
       "count": "1-1",
@@ -1982,7 +2234,34 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Mark Hindy",
+      "pitcher": "Chandler Day",
+      "batter": "HINDY, M. to p for DEERING, S..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Landon Akers",
+        "2B": "Jake Bell",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Landon Akers",
+        "2B": "Jake Bell",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 8
+      },
+      "description": "HINDY, M. to p for DEERING, S.."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Chandler Day",
       "batter": "Eli Watson",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2009,7 +2288,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Mark Hindy",
+      "pitcher": "Chandler Day",
       "batter": "AJ Swader",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2036,7 +2315,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Mark Hindy",
+      "pitcher": "",
       "batter": "Luke Scales",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2063,7 +2342,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "",
+      "batter": "C. Rusch",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 8
+      },
+      "description": "C. Rusch to p for A. Egan."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Z. Jones",
       "outcome": "\u2014",
       "count": null,
@@ -2090,7 +2396,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "",
       "batter": "Manny Marin",
       "outcome": "Single",
       "count": "2-1",
@@ -2117,7 +2423,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "",
       "batter": "Nate Eisfelder",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2144,7 +2450,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "",
       "batter": "Henry Ford",
       "outcome": "Pop out",
       "count": "0-1",
@@ -2171,7 +2477,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "",
       "batter": "Levi Clark",
       "outcome": "Walk",
       "count": "3-2",
@@ -2187,7 +2493,7 @@
       },
       "runners_after": {
         "1B": "Levi Clark",
-        "2B": null,
+        "2B": "Manny Marin",
         "3B": null
       },
       "score": {
@@ -2198,7 +2504,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "",
       "batter": "Evan Hankins",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2209,12 +2515,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Levi Clark",
-        "2B": null,
+        "2B": "Manny Marin",
         "3B": null
       },
       "runners_after": {
         "1B": "Levi Clark",
-        "2B": null,
+        "2B": "Manny Marin",
         "3B": null
       },
       "score": {
@@ -2225,7 +2531,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Mark Hindy",
+      "pitcher": "",
       "batter": "EISFELDER, N to rf.",
       "outcome": "\u2014",
       "count": null,
@@ -2252,7 +2558,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Mark Hindy",
+      "pitcher": "",
       "batter": "WRIGHT, G. to cf for HANKINS, E..",
       "outcome": "\u2014",
       "count": null,
@@ -2279,7 +2585,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Chandler Day",
+      "pitcher": "",
+      "batter": "DAY, C. to p for HINDY, M..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 8
+      },
+      "description": "DAY, C. to p for HINDY, M.."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": "Logan Murphy",
       "outcome": "Lineout",
       "count": "2-0",
@@ -2306,7 +2639,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Chandler Day",
+      "pitcher": "",
       "batter": "N. Gnardelli",
       "outcome": "Single",
       "count": "1-0",
@@ -2333,7 +2666,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Chandler Day",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2360,7 +2693,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Chandler Day",
+      "pitcher": "",
       "batter": "Luca Hoerger",
       "outcome": "Single",
       "count": "2-2",
@@ -2387,7 +2720,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Chandler Day",
+      "pitcher": "",
       "batter": "Cole Huett",
       "outcome": "Single",
       "count": "1-1",
@@ -2416,7 +2749,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Chandler Day",
+      "pitcher": "",
       "batter": "Jake Bell",
       "outcome": "Walk",
       "count": "3-2",
@@ -2443,7 +2776,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Chandler Day",
+      "pitcher": "",
       "batter": "Landon Akers",
       "outcome": "Single",
       "count": "1-2",
@@ -2473,7 +2806,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Chandler Day",
+      "pitcher": "",
       "batter": "Eli Watson",
       "outcome": "Grounded into double play",
       "count": "1-0",

@@ -3,7 +3,7 @@
   "date": "02/13/2026",
   "away_team": "Wake Forest",
   "home_team": "Houston",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -103,8 +103,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kade Lewis",
-        "2B": null,
+        "1B": null,
+        "2B": "Kade Lewis",
         "3B": null
       },
       "score": {
@@ -125,13 +125,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kade Lewis",
-        "2B": null,
+        "1B": null,
+        "2B": "Kade Lewis",
         "3B": null
       },
       "runners_after": {
         "1B": "Matt Conte",
-        "2B": null,
+        "2B": "Kade Lewis",
         "3B": null
       },
       "score": {
@@ -153,12 +153,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Matt Conte",
-        "2B": null,
+        "2B": "Kade Lewis",
         "3B": null
       },
       "runners_after": {
         "1B": "Matt Conte",
-        "2B": null,
+        "2B": "Kade Lewis",
         "3B": null
       },
       "score": {
@@ -590,7 +590,7 @@
       },
       "runners_after": {
         "1B": "Jackson LaLima",
-        "2B": null,
+        "2B": "Blake Fields",
         "3B": null
       },
       "score": {
@@ -607,16 +607,19 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Blake Fields",
+        "Jackson LaLima"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Jackson LaLima",
-        "2B": null,
+        "2B": "Blake Fields",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jackson LaLima",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -638,7 +641,7 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Jackson LaLima",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -661,7 +664,9 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -670,8 +675,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tre Broussard",
-        "2B": null,
+        "1B": null,
+        "2B": "Tre Broussard",
         "3B": null
       },
       "score": {
@@ -692,14 +697,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Tre Broussard",
-        "2B": null,
+        "1B": null,
+        "2B": "Tre Broussard",
         "3B": null
       },
       "runners_after": {
         "1B": "Xavier Perez",
         "2B": null,
-        "3B": null
+        "3B": "Tre Broussard"
       },
       "score": {
         "away": 0,
@@ -715,17 +720,19 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Tre Broussard"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Xavier Perez",
         "2B": null,
-        "3B": null
+        "3B": "Tre Broussard"
       },
       "runners_after": {
         "1B": "Antonelli Savattere",
-        "2B": null,
+        "2B": "Xavier Perez",
         "3B": null
       },
       "score": {
@@ -747,12 +754,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Antonelli Savattere",
-        "2B": null,
+        "2B": "Xavier Perez",
         "3B": null
       },
       "runners_after": {
         "1B": "Antonelli Savattere",
-        "2B": null,
+        "2B": "Xavier Perez",
         "3B": null
       },
       "score": {
@@ -774,13 +781,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Antonelli Savattere",
-        "2B": null,
+        "2B": "Xavier Perez",
         "3B": null
       },
       "runners_after": {
         "1B": "Antonelli Savattere",
         "2B": null,
-        "3B": null
+        "3B": "Xavier Perez"
       },
       "score": {
         "away": 0,
@@ -802,12 +809,12 @@
       "runners_before": {
         "1B": "Antonelli Savattere",
         "2B": null,
-        "3B": null
+        "3B": "Xavier Perez"
       },
       "runners_after": {
         "1B": "McClane Helton",
-        "2B": null,
-        "3B": null
+        "2B": "Antonelli Savattere",
+        "3B": "Xavier Perez"
       },
       "score": {
         "away": 0,
@@ -828,13 +835,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "McClane Helton",
-        "2B": null,
-        "3B": null
+        "2B": "Antonelli Savattere",
+        "3B": "Xavier Perez"
       },
       "runners_after": {
         "1B": "McClane Helton",
-        "2B": null,
-        "3B": null
+        "2B": "Antonelli Savattere",
+        "3B": "Xavier Perez"
       },
       "score": {
         "away": 0,
@@ -886,7 +893,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dalton Wentz",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -898,7 +905,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Ryne Rodriguez",
       "batter": "Jimmy Keenan",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -908,12 +915,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Dalton Wentz",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Dalton Wentz",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -958,7 +965,9 @@
       "count": "2-2",
       "pitches": "KKBFBFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jackson LaLima"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -968,7 +977,7 @@
       },
       "runners_after": {
         "1B": "Tyler Cox",
-        "2B": "Jackson LaLima",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -979,7 +988,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Troy Dressler",
       "batter": "Tre Broussard",
       "outcome": "Single",
       "count": "0-0",
@@ -990,12 +999,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Tyler Cox",
-        "2B": "Jackson LaLima",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Tre Broussard",
-        "2B": "Jackson LaLima",
+        "2B": "Tyler Cox",
         "3B": null
       },
       "score": {
@@ -1006,7 +1015,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Troy Dressler",
       "batter": "Xavier Perez",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1017,12 +1026,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Tre Broussard",
-        "2B": "Jackson LaLima",
+        "2B": "Tyler Cox",
         "3B": null
       },
       "runners_after": {
         "1B": "Tre Broussard",
-        "2B": "Jackson LaLima",
+        "2B": "Tyler Cox",
         "3B": null
       },
       "score": {
@@ -1033,7 +1042,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Troy Dressler",
       "batter": "Antonelli Savattere",
       "outcome": "\u2014",
       "count": "0-2",
@@ -1044,12 +1053,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Tre Broussard",
-        "2B": "Jackson LaLima",
+        "2B": "Tyler Cox",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tre Broussard",
-        "2B": "Jackson LaLima",
+        "1B": null,
+        "2B": "Tyler Cox",
         "3B": null
       },
       "score": {
@@ -1060,7 +1069,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Ryne Rodriguez",
       "batter": "Javar Williams",
       "outcome": "Single",
       "count": "1-0",
@@ -1087,7 +1096,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Ryne Rodriguez",
       "batter": "Andrew Costello",
       "outcome": "Fielder's choice",
       "count": "3-2",
@@ -1114,7 +1123,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Ryne Rodriguez",
       "batter": "Ryan Preisano",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1141,7 +1150,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Ryne Rodriguez",
       "batter": "Blake Schaaf",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1168,7 +1177,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Troy Dressler",
       "batter": "Riley Jackson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1195,7 +1204,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Troy Dressler",
       "batter": "Dylan Maxcey",
       "outcome": "Walk",
       "count": "3-0",
@@ -1222,7 +1231,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Troy Dressler",
       "batter": "McClane Helton",
       "outcome": "Double",
       "count": "2-0",
@@ -1237,9 +1246,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dylan Maxcey",
+        "1B": null,
         "2B": "McClane Helton",
-        "3B": null
+        "3B": "Dylan Maxcey"
       },
       "score": {
         "away": 0,
@@ -1249,24 +1258,26 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Troy Dressler",
       "batter": "Blake Fields",
       "outcome": "\u2014",
       "count": "1-2",
       "pitches": "BFK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Dylan Maxcey"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Dylan Maxcey",
+        "1B": null,
         "2B": "McClane Helton",
-        "3B": null
+        "3B": "Dylan Maxcey"
       },
       "runners_after": {
-        "1B": "Dylan Maxcey",
-        "2B": "McClane Helton",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "McClane Helton"
       },
       "score": {
         "away": 0,
@@ -1276,7 +1287,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Troy Dressler",
       "batter": "Jackson LaLima",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1286,14 +1297,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Dylan Maxcey",
-        "2B": "McClane Helton",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "McClane Helton"
       },
       "runners_after": {
-        "1B": "Dylan Maxcey",
-        "2B": "McClane Helton",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "McClane Helton"
       },
       "score": {
         "away": 0,
@@ -1303,7 +1314,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Ryne Rodriguez",
       "batter": "JD Stein",
       "outcome": "Double",
       "count": "2-2",
@@ -1330,7 +1341,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Ryne Rodriguez",
       "batter": "Kade Lewis",
       "outcome": "Walk",
       "count": "3-0",
@@ -1357,13 +1368,15 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Ryne Rodriguez",
       "batter": "Dalton Wentz",
       "outcome": "Double",
       "count": "2-2",
       "pitches": "BKBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "JD Stein"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1372,9 +1385,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kade Lewis",
+        "1B": null,
         "2B": "Dalton Wentz",
-        "3B": null
+        "3B": "Kade Lewis"
       },
       "score": {
         "away": 1,
@@ -1384,7 +1397,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Chris Scinta",
       "batter": "Matt Conte",
       "outcome": "Walk",
       "count": "3-1",
@@ -1394,14 +1407,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Kade Lewis",
+        "1B": null,
         "2B": "Dalton Wentz",
-        "3B": null
+        "3B": "Kade Lewis"
       },
       "runners_after": {
         "1B": "Matt Conte",
         "2B": "Dalton Wentz",
-        "3B": null
+        "3B": "Kade Lewis"
       },
       "score": {
         "away": 1,
@@ -1411,7 +1424,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Chris Scinta",
       "batter": "Jimmy Keenan",
       "outcome": "Foul out",
       "count": "2-0",
@@ -1423,12 +1436,12 @@
       "runners_before": {
         "1B": "Matt Conte",
         "2B": "Dalton Wentz",
-        "3B": null
+        "3B": "Kade Lewis"
       },
       "runners_after": {
         "1B": "Matt Conte",
         "2B": "Dalton Wentz",
-        "3B": null
+        "3B": "Kade Lewis"
       },
       "score": {
         "away": 1,
@@ -1438,7 +1451,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Chris Scinta",
       "batter": "Javar Williams",
       "outcome": "Fielder's choice",
       "count": "1-1",
@@ -1450,12 +1463,12 @@
       "runners_before": {
         "1B": "Matt Conte",
         "2B": "Dalton Wentz",
-        "3B": null
+        "3B": "Kade Lewis"
       },
       "runners_after": {
         "1B": "Javar Williams",
-        "2B": "Dalton Wentz",
-        "3B": null
+        "2B": "Matt Conte",
+        "3B": "Dalton Wentz"
       },
       "score": {
         "away": 1,
@@ -1465,24 +1478,26 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Chris Scinta",
       "batter": "Andrew Costello",
       "outcome": "Fielder's choice",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Dalton Wentz"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Javar Williams",
-        "2B": "Dalton Wentz",
-        "3B": null
+        "2B": "Matt Conte",
+        "3B": "Dalton Wentz"
       },
       "runners_after": {
         "1B": "Andrew Costello",
-        "2B": "Dalton Wentz",
-        "3B": null
+        "2B": "Javar Williams",
+        "3B": "Matt Conte"
       },
       "score": {
         "away": 2,
@@ -1492,7 +1507,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Chris Scinta",
       "batter": "Ryan Preisano",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1503,13 +1518,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Andrew Costello",
-        "2B": "Dalton Wentz",
-        "3B": null
+        "2B": "Javar Williams",
+        "3B": "Matt Conte"
       },
       "runners_after": {
         "1B": "Andrew Costello",
-        "2B": "Dalton Wentz",
-        "3B": null
+        "2B": "Javar Williams",
+        "3B": "Matt Conte"
       },
       "score": {
         "away": 2,
@@ -1519,7 +1534,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Troy Dressler",
       "batter": "Tyler Cox",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1546,7 +1561,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Ryan Brennecke",
       "batter": "Tre Broussard",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1573,7 +1588,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Ryan Brennecke",
       "batter": "Xavier Perez",
       "outcome": "Walk",
       "count": "3-2",
@@ -1600,7 +1615,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Ryan Brennecke",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1615,8 +1630,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Xavier Perez",
-        "2B": null,
+        "1B": null,
+        "2B": "Xavier Perez",
         "3B": null
       },
       "score": {
@@ -1627,7 +1642,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Ryan Brennecke",
       "batter": "Antonelli Savattere",
       "outcome": "Pop out",
       "count": "3-2",
@@ -1637,13 +1652,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Xavier Perez",
-        "2B": null,
+        "1B": null,
+        "2B": "Xavier Perez",
         "3B": null
       },
       "runners_after": {
-        "1B": "Xavier Perez",
-        "2B": null,
+        "1B": null,
+        "2B": "Xavier Perez",
         "3B": null
       },
       "score": {
@@ -1654,7 +1669,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Chris Scinta",
       "batter": "Blake Schaaf",
       "outcome": "Single",
       "count": "1-1",
@@ -1681,7 +1696,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Chris Scinta",
       "batter": "JD Stein",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1708,7 +1723,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Chris Scinta",
       "batter": "Kade Lewis",
       "outcome": "Fielder's choice",
       "count": "1-1",
@@ -1724,7 +1739,7 @@
       },
       "runners_after": {
         "1B": "Kade Lewis",
-        "2B": null,
+        "2B": "Blake Schaaf",
         "3B": null
       },
       "score": {
@@ -1735,7 +1750,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Chris Scinta",
       "batter": "Dalton Wentz",
       "outcome": "Fielder's choice",
       "count": "0-2",
@@ -1746,13 +1761,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kade Lewis",
-        "2B": null,
+        "2B": "Blake Schaaf",
         "3B": null
       },
       "runners_after": {
         "1B": "Dalton Wentz",
         "2B": null,
-        "3B": null
+        "3B": "Blake Schaaf"
       },
       "score": {
         "away": 2,
@@ -1762,7 +1777,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Chris Scinta",
       "batter": "Matt Conte",
       "outcome": "Lineout",
       "count": "0-2",
@@ -1774,12 +1789,12 @@
       "runners_before": {
         "1B": "Dalton Wentz",
         "2B": null,
-        "3B": null
+        "3B": "Blake Schaaf"
       },
       "runners_after": {
         "1B": "Dalton Wentz",
         "2B": null,
-        "3B": null
+        "3B": "Blake Schaaf"
       },
       "score": {
         "away": 2,
@@ -1789,7 +1804,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Ryan Brennecke",
       "batter": "Riley Jackson",
       "outcome": "Pop out",
       "count": "0-0",
@@ -1816,7 +1831,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Ryan Brennecke",
       "batter": "Dylan Maxcey",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1843,7 +1858,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Ryan Brennecke",
       "batter": "McClane Helton",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1870,7 +1885,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Chris Scinta",
       "batter": "Jimmy Keenan",
       "outcome": "Lineout",
       "count": "0-0",
@@ -1897,7 +1912,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Chris Scinta",
       "batter": "Javar Williams",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1924,7 +1939,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Chris Scinta",
       "batter": "Andrew Costello",
       "outcome": "Lineout",
       "count": "2-1",
@@ -1951,7 +1966,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Grant Nicholson",
       "batter": "Blake Fields",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -1978,7 +1993,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Grant Nicholson",
       "batter": "Jackson LaLima",
       "outcome": "Single",
       "count": "1-0",
@@ -1994,7 +2009,7 @@
       },
       "runners_after": {
         "1B": "Jackson LaLima",
-        "2B": null,
+        "2B": "Blake Fields",
         "3B": null
       },
       "score": {
@@ -2005,7 +2020,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Grant Nicholson",
       "batter": "Tyler Cox",
       "outcome": "Walk",
       "count": "3-2",
@@ -2016,13 +2031,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Jackson LaLima",
-        "2B": null,
+        "2B": "Blake Fields",
         "3B": null
       },
       "runners_after": {
         "1B": "Tyler Cox",
-        "2B": null,
-        "3B": null
+        "2B": "Jackson LaLima",
+        "3B": "Blake Fields"
       },
       "score": {
         "away": 2,
@@ -2032,23 +2047,25 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Ryan Bosch",
       "batter": "Tre Broussard",
       "outcome": "\u2014",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Blake Fields"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Tyler Cox",
-        "2B": null,
-        "3B": null
+        "2B": "Jackson LaLima",
+        "3B": "Blake Fields"
       },
       "runners_after": {
         "1B": "Tyler Cox",
-        "2B": null,
+        "2B": "Jackson LaLima",
         "3B": null
       },
       "score": {
@@ -2059,7 +2076,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Ryan Bosch",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2070,13 +2087,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Tyler Cox",
-        "2B": null,
+        "2B": "Jackson LaLima",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Cox",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Tyler Cox",
+        "3B": "Jackson LaLima"
       },
       "score": {
         "away": 2,
@@ -2086,7 +2103,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Ryan Bosch",
       "batter": "Xavier Perez",
       "outcome": "Walk",
       "count": "0-0",
@@ -2096,14 +2113,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Tyler Cox",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Tyler Cox",
+        "3B": "Jackson LaLima"
       },
       "runners_after": {
         "1B": "Xavier Perez",
-        "2B": null,
-        "3B": null
+        "2B": "Tyler Cox",
+        "3B": "Jackson LaLima"
       },
       "score": {
         "away": 2,
@@ -2113,24 +2130,26 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Ryan Bosch",
       "batter": "Antonelli Savattere",
       "outcome": "Groundout",
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jackson LaLima"
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Xavier Perez",
-        "2B": null,
-        "3B": null
+        "2B": "Tyler Cox",
+        "3B": "Jackson LaLima"
       },
       "runners_after": {
-        "1B": "Xavier Perez",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Xavier Perez",
+        "3B": "Tyler Cox"
       },
       "score": {
         "away": 2,
@@ -2140,7 +2159,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -2150,13 +2169,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Xavier Perez",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Xavier Perez",
+        "3B": "Tyler Cox"
       },
       "runners_after": {
-        "1B": "Xavier Perez",
-        "2B": null,
+        "1B": null,
+        "2B": "Xavier Perez",
         "3B": null
       },
       "score": {
@@ -2167,7 +2186,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Chris Scinta",
       "batter": "Ryan Preisano",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2194,7 +2213,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Chris Scinta",
       "batter": "Blake Schaaf",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2221,7 +2240,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Chris Scinta",
       "batter": "JD Stein",
       "outcome": "Reached on error",
       "count": "0-0",
@@ -2248,7 +2267,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "Chris Scinta",
       "batter": "Kade Lewis",
       "outcome": "Single",
       "count": "1-2",
@@ -2265,7 +2284,7 @@
       "runners_after": {
         "1B": "Kade Lewis",
         "2B": null,
-        "3B": null
+        "3B": "JD Stein"
       },
       "score": {
         "away": 2,
@@ -2275,7 +2294,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Paul Schmitz",
+      "pitcher": "",
       "batter": "Dalton Wentz",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2287,12 +2306,12 @@
       "runners_before": {
         "1B": "Kade Lewis",
         "2B": null,
-        "3B": null
+        "3B": "JD Stein"
       },
       "runners_after": {
         "1B": "Kade Lewis",
         "2B": null,
-        "3B": null
+        "3B": "JD Stein"
       },
       "score": {
         "away": 2,

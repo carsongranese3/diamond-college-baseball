@@ -3,7 +3,7 @@
   "date": "03/23/2026",
   "away_team": "Utah Valley",
   "home_team": "Stanford",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -67,7 +67,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -121,7 +123,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -142,7 +146,7 @@
     },
     {
       "inning": "Top 1",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Austin Steeves",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -157,7 +161,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Chipper Beck",
+        "1B": null,
         "2B": "Mason Strong",
         "3B": null
       },
@@ -277,7 +281,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Austin Steeves",
       "batter": "Pitch",
       "outcome": "\u2014",
       "count": null,
@@ -304,7 +308,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Austin Steeves",
       "batter": "Mason Hamlin",
       "outcome": "Walk",
       "count": "3-2",
@@ -331,7 +335,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Austin Steeves",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -346,8 +350,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason Hamlin",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason Hamlin",
         "3B": null
       },
       "score": {
@@ -358,7 +362,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Austin Steeves",
       "batter": "Cooper Brass",
       "outcome": "Single",
       "count": "3-2",
@@ -368,13 +372,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Mason Hamlin",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason Hamlin",
         "3B": null
       },
       "runners_after": {
         "1B": "Cooper Brass",
-        "2B": null,
+        "2B": "Mason Hamlin",
         "3B": null
       },
       "score": {
@@ -385,7 +389,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Austin Steeves",
       "batter": "Jayden Smith",
       "outcome": "Walk",
       "count": "3-1",
@@ -396,12 +400,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Cooper Brass",
-        "2B": null,
+        "2B": "Mason Hamlin",
         "3B": null
       },
       "runners_after": {
         "1B": "Jayden Smith",
-        "2B": null,
+        "2B": "Mason Hamlin",
         "3B": null
       },
       "score": {
@@ -412,7 +416,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Austin Steeves",
       "batter": "DJ Massey",
       "outcome": "Grounded into double play",
       "count": "3-1",
@@ -423,12 +427,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Jayden Smith",
-        "2B": null,
+        "2B": "Mason Hamlin",
         "3B": null
       },
       "runners_after": {
         "1B": "Jayden Smith",
-        "2B": null,
+        "2B": "Mason Hamlin",
         "3B": null
       },
       "score": {
@@ -439,7 +443,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Colt Peterson",
       "batter": "Hunter Katschke",
       "outcome": "Pop out",
       "count": "2-1",
@@ -450,12 +454,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Jayden Smith",
-        "2B": null,
+        "2B": "Mason Hamlin",
         "3B": null
       },
       "runners_after": {
         "1B": "Jayden Smith",
-        "2B": null,
+        "2B": "Mason Hamlin",
         "3B": null
       },
       "score": {
@@ -508,8 +512,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jimmy Nati",
-        "2B": null,
+        "1B": null,
+        "2B": "Jimmy Nati",
         "3B": null
       },
       "score": {
@@ -530,14 +534,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Jimmy Nati",
-        "2B": null,
+        "1B": null,
+        "2B": "Jimmy Nati",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jimmy Nati",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 2,
@@ -554,19 +558,20 @@
       "pitches": "FBBF",
       "rbi": true,
       "runs_scored": [
-        "Eric Jeon"
+        "Eric Jeon",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Jimmy Nati",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "runners_after": {
-        "1B": "Jimmy Nati",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 2,
@@ -586,14 +591,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jimmy Nati",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "runners_after": {
-        "1B": "Jimmy Nati",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 2,
@@ -613,14 +618,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jimmy Nati",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "runners_after": {
         "1B": "Tatum Marsh",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 2,
@@ -642,12 +647,12 @@
       "runners_before": {
         "1B": "Tatum Marsh",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "runners_after": {
         "1B": "Ethan Hott",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 2,
@@ -663,18 +668,20 @@
       "count": "2-1",
       "pitches": "FBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Ethan Hott",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "runners_after": {
         "1B": "Rintaro Sasaki",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 2,
@@ -684,7 +691,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Aaron Rice",
       "batter": "Teddy Tokheim",
       "outcome": "Walk",
       "count": "3-2",
@@ -696,12 +703,12 @@
       "runners_before": {
         "1B": "Rintaro Sasaki",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "runners_after": {
         "1B": "Teddy Tokheim",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 2,
@@ -711,7 +718,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Aaron Rice",
       "batter": "Charlie Bates",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -723,12 +730,12 @@
       "runners_before": {
         "1B": "Teddy Tokheim",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "runners_after": {
         "1B": "Teddy Tokheim",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 2,
@@ -738,24 +745,26 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Aaron Rice",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Teddy Tokheim"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Teddy Tokheim",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "runners_after": {
-        "1B": "Teddy Tokheim",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 2,
@@ -765,24 +774,26 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Aaron Rice",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Teddy Tokheim",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "runners_after": {
-        "1B": "Teddy Tokheim",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 2,
@@ -792,7 +803,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Aaron Rice",
       "batter": "JJ Moran",
       "outcome": "Walk",
       "count": "3-2",
@@ -802,14 +813,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Teddy Tokheim",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "runners_after": {
         "1B": "JJ Moran",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 2,
@@ -819,26 +830,28 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Aaron Rice",
       "batter": "Jimmy Nati",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Jimmy Nati"
+        "Jimmy Nati",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "JJ Moran",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "runners_after": {
         "1B": "JJ Moran",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 2,
@@ -848,7 +861,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Aaron Rice",
       "batter": "Eric Jeon",
       "outcome": "Single",
       "count": "2-2",
@@ -860,12 +873,12 @@
       "runners_before": {
         "1B": "JJ Moran",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "runners_after": {
         "1B": "Eric Jeon",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 2,
@@ -875,7 +888,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Aaron Rice",
       "batter": "Luke Lavin",
       "outcome": "Flyout",
       "count": "1-0",
@@ -887,12 +900,12 @@
       "runners_before": {
         "1B": "Eric Jeon",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "runners_after": {
         "1B": "Eric Jeon",
         "2B": null,
-        "3B": null
+        "3B": "Jimmy Nati"
       },
       "score": {
         "away": 2,
@@ -902,7 +915,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Colt Peterson",
       "batter": "Kaden Carpenter",
       "outcome": "Home run",
       "count": "1-2",
@@ -931,7 +944,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Colt Peterson",
       "batter": "Mason Strong",
       "outcome": "Lineout",
       "count": "1-1",
@@ -958,7 +971,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Colt Peterson",
       "batter": "Brody Block",
       "outcome": "Double",
       "count": "1-1",
@@ -985,7 +998,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Colt Peterson",
       "batter": "Chipper Beck",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1012,7 +1025,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Colt Peterson",
       "batter": "Mason Hamlin",
       "outcome": "Walk",
       "count": "3-1",
@@ -1039,7 +1052,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Colt Peterson",
       "batter": "Cooper Brass",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1066,7 +1079,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Aaron Rice",
       "batter": "Tatum Marsh",
       "outcome": "Double",
       "count": "2-0",
@@ -1093,7 +1106,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Aaron Rice",
       "batter": "Ethan Hott",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1120,7 +1133,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Aaron Rice",
       "batter": "Rintaro Sasaki",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1147,14 +1160,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Aaron Rice",
       "batter": "Teddy Tokheim",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Teddy Tokheim"
+        "Teddy Tokheim",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1176,7 +1190,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Aaron Rice",
       "batter": "Charlie Bates",
       "outcome": "Home run",
       "count": "2-2",
@@ -1205,7 +1219,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Aaron Rice",
       "batter": "JJ Moran",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1232,7 +1246,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Jacob Beltran",
       "batter": "Jimmy Nati",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1259,7 +1273,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Colt Peterson",
       "batter": "Jayden Smith",
       "outcome": "Double",
       "count": "2-0",
@@ -1286,7 +1300,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Colt Peterson",
       "batter": "DJ Massey",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1313,13 +1327,15 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Colt Peterson",
       "batter": "Hunter Katschke",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1340,13 +1356,15 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Colt Peterson",
       "batter": "Kaden Carpenter",
       "outcome": "Double",
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1367,7 +1385,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Colt Peterson",
       "batter": "Mason Strong",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1394,7 +1412,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Colt Peterson",
       "batter": "Brody Block",
       "outcome": "Single",
       "count": "1-0",
@@ -1421,7 +1439,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Colt Peterson",
       "batter": "Chipper Beck",
       "outcome": "Walk",
       "count": "3-1",
@@ -1448,7 +1466,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Mike Erspamer",
       "batter": "Mason Hamlin",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1475,7 +1493,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Jacob Beltran",
       "batter": "Eric Jeon",
       "outcome": "Single",
       "count": "2-2",
@@ -1502,7 +1520,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Jacob Beltran",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1517,8 +1535,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Eric Jeon",
-        "2B": null,
+        "1B": null,
+        "2B": "Eric Jeon",
         "3B": null
       },
       "score": {
@@ -1529,7 +1547,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Jacob Beltran",
       "batter": "Luke Lavin",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1539,13 +1557,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Eric Jeon",
-        "2B": null,
+        "1B": null,
+        "2B": "Eric Jeon",
         "3B": null
       },
       "runners_after": {
-        "1B": "Eric Jeon",
-        "2B": null,
+        "1B": null,
+        "2B": "Eric Jeon",
         "3B": null
       },
       "score": {
@@ -1556,23 +1574,25 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Jacob Beltran",
       "batter": "Tatum Marsh",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Eric Jeon",
-        "2B": null,
+        "1B": null,
+        "2B": "Eric Jeon",
         "3B": null
       },
       "runners_after": {
         "1B": "Tatum Marsh",
-        "2B": null,
+        "2B": "Eric Jeon",
         "3B": null
       },
       "score": {
@@ -1583,25 +1603,26 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Jacob Beltran",
       "batter": "Cort MacDonald",
       "outcome": "Home run",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
       "runs_scored": [
-        "Cort MacDonald"
+        "Cort MacDonald",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Tatum Marsh",
-        "2B": null,
+        "2B": "Eric Jeon",
         "3B": null
       },
       "runners_after": {
         "1B": "Tatum Marsh",
-        "2B": null,
+        "2B": "Eric Jeon",
         "3B": null
       },
       "score": {
@@ -1612,7 +1633,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Jacob Beltran",
       "batter": "Rintaro Sasaki",
       "outcome": "Walk",
       "count": "3-2",
@@ -1623,12 +1644,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Tatum Marsh",
-        "2B": null,
+        "2B": "Eric Jeon",
         "3B": null
       },
       "runners_after": {
         "1B": "Rintaro Sasaki",
-        "2B": null,
+        "2B": "Eric Jeon",
         "3B": null
       },
       "score": {
@@ -1639,7 +1660,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Carter Seely",
       "batter": "Teddy Tokheim",
       "outcome": "Grounded into double play",
       "count": "2-1",
@@ -1650,12 +1671,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Rintaro Sasaki",
-        "2B": null,
+        "2B": "Eric Jeon",
         "3B": null
       },
       "runners_after": {
         "1B": "Rintaro Sasaki",
-        "2B": null,
+        "2B": "Eric Jeon",
         "3B": null
       },
       "score": {
@@ -1666,7 +1687,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Mike Erspamer",
       "batter": "Cooper Brass",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1693,7 +1714,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Mike Erspamer",
       "batter": "Jayden Smith",
       "outcome": "Single",
       "count": "1-1",
@@ -1720,7 +1741,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Mike Erspamer",
       "batter": "DJ Massey",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1747,13 +1768,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Mike Erspamer",
       "batter": "Hunter Katschke",
       "outcome": "Double",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1774,7 +1797,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Toran O'Harran",
       "batter": "Kaden Carpenter",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1801,7 +1824,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Carter Seely",
       "batter": "Charlie Bates",
       "outcome": "Walk",
       "count": "3-0",
@@ -1828,7 +1851,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Carter Seely",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1843,8 +1866,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Charlie Bates",
-        "2B": null,
+        "1B": null,
+        "2B": "Charlie Bates",
         "3B": null
       },
       "score": {
@@ -1855,7 +1878,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Carter Seely",
       "batter": "JJ Moran",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1865,13 +1888,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Charlie Bates",
-        "2B": null,
+        "1B": null,
+        "2B": "Charlie Bates",
         "3B": null
       },
       "runners_after": {
-        "1B": "Charlie Bates",
-        "2B": null,
+        "1B": null,
+        "2B": "Charlie Bates",
         "3B": null
       },
       "score": {
@@ -1882,22 +1905,24 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Carter Seely",
       "batter": "Jimmy Nati",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Charlie Bates",
-        "2B": null,
+        "1B": null,
+        "2B": "Charlie Bates",
         "3B": null
       },
       "runners_after": {
-        "1B": "Charlie Bates",
+        "1B": null,
         "2B": "Jimmy Nati",
         "3B": null
       },
@@ -1909,7 +1934,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Carter Seely",
       "batter": "Eric Jeon",
       "outcome": "Hit by pitch",
       "count": "2-1",
@@ -1919,7 +1944,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Charlie Bates",
+        "1B": null,
         "2B": "Jimmy Nati",
         "3B": null
       },
@@ -1936,7 +1961,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Carter Seely",
       "batter": "Luke Lavin",
       "outcome": "Groundout",
       "count": "2-0",
@@ -1963,7 +1988,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Carter Seely",
       "batter": "Tatum Marsh",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1990,7 +2015,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Toran O'Harran",
       "batter": "Mason Strong",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2017,7 +2042,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Toran O'Harran",
       "batter": "Brody Block",
       "outcome": "Double",
       "count": "2-0",
@@ -2044,7 +2069,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Toran O'Harran",
       "batter": "Chipper Beck",
       "outcome": "Flyout",
       "count": "2-1",
@@ -2071,7 +2096,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Andrew Shaw",
       "batter": "Mason Hamlin",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2098,7 +2123,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Cohen Baack",
       "batter": "Cort MacDonald",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2125,7 +2150,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Cohen Baack",
       "batter": "Brock Ketelsen",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2152,7 +2177,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Cohen Baack",
       "batter": "Teddy Tokheim",
       "outcome": "Single",
       "count": "2-1",
@@ -2179,7 +2204,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Cohen Baack",
       "batter": "Charlie Bates",
       "outcome": "Walk",
       "count": "3-2",
@@ -2206,7 +2231,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Cohen Baack",
       "batter": "Henry McDonald",
       "outcome": "Flyout",
       "count": "2-0",
@@ -2233,7 +2258,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Andrew Shaw",
       "batter": "Cooper Brass",
       "outcome": "Single",
       "count": "1-0",
@@ -2260,7 +2285,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Andrew Shaw",
       "batter": "Jayden Smith",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2287,7 +2312,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Andrew Shaw",
       "batter": "DJ Massey",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2314,7 +2339,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Trevor Moore",
       "batter": "Hunter Katschke",
       "outcome": "Groundout",
       "count": "2-1",
@@ -2341,7 +2366,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Chance Wallace",
       "batter": "Rashad Hayes",
       "outcome": "Walk",
       "count": "3-1",
@@ -2368,7 +2393,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Chance Wallace",
       "batter": "Eric Jeon",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2395,7 +2420,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Chance Wallace",
       "batter": "Sebastian David",
       "outcome": "Foul out",
       "count": "0-0",
@@ -2422,7 +2447,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Quinn Holt",
+      "pitcher": "Chance Wallace",
       "batter": "Tatum Marsh",
       "outcome": "Foul out",
       "count": "2-0",
@@ -2449,7 +2474,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Trevor Moore",
       "batter": "DeAnda,Jimmy grounded out to short, ss to 1b (1-2 SBK).",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2476,7 +2501,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Trevor Moore",
       "batter": "Joseph Barnhardt",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2503,7 +2528,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "Trevor Moore",
       "batter": "Brody Block",
       "outcome": "Walk",
       "count": "3-2",
@@ -2530,7 +2555,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -2545,8 +2570,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brody Block",
-        "2B": null,
+        "1B": null,
+        "2B": "Brody Block",
         "3B": null
       },
       "score": {
@@ -2557,7 +2582,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Quinten Marsh",
+      "pitcher": "",
       "batter": "Will Applegate",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2567,13 +2592,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brody Block",
-        "2B": null,
+        "1B": null,
+        "2B": "Brody Block",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brody Block",
-        "2B": null,
+        "1B": null,
+        "2B": "Brody Block",
         "3B": null
       },
       "score": {

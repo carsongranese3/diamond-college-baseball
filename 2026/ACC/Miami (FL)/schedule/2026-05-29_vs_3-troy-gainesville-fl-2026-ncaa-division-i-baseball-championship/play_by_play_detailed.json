@@ -3,7 +3,7 @@
   "date": "05/29/2026",
   "away_team": "Troy",
   "home_team": "Miami (FL)",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -691,7 +691,9 @@
       "pitches": "SFFFBFF",
       "rbi": true,
       "runs_scored": [
-        "Derek Williams"
+        "Derek Williams",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -908,7 +910,9 @@
       "count": "2-2",
       "pitches": "FBSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1151,7 +1155,10 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1199,7 +1206,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Rob Evans",
+      "pitcher": "Jack Durso",
       "batter": "Steven Meier",
       "outcome": "Walk",
       "count": "3-0",
@@ -1226,7 +1233,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Rob Evans",
+      "pitcher": "Jack Durso",
       "batter": "Drew Nelson",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1349,9 +1356,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Derek Williams",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Derek Williams"
       },
       "score": {
         "away": 3,
@@ -1371,14 +1378,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Derek Williams",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Derek Williams"
       },
       "runners_after": {
         "1B": "Alonzo Alvarez",
         "2B": null,
-        "3B": null
+        "3B": "Derek Williams"
       },
       "score": {
         "away": 3,
@@ -1400,7 +1407,7 @@
       "runners_before": {
         "1B": "Alonzo Alvarez",
         "2B": null,
-        "3B": null
+        "3B": "Derek Williams"
       },
       "runners_after": {
         "1B": "Alonzo Alvarez",
@@ -1739,7 +1746,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jack Durso",
+      "pitcher": "Lyndon Glidewell",
       "batter": "Josh Pyne",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1766,7 +1773,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jack Durso",
+      "pitcher": "Lyndon Glidewell",
       "batter": "Blake Cavill",
       "outcome": "Foul out",
       "count": "3-2",
@@ -1793,7 +1800,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Dylan Alonso",
+      "pitcher": "Noah Thigpen",
       "batter": "Derek Williams",
       "outcome": "Walk",
       "count": "3-2",
@@ -1820,7 +1827,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Dylan Alonso",
+      "pitcher": "Noah Thigpen",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1984,7 +1991,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Noah Thigpen",
+      "pitcher": "Tommy Egan",
       "batter": "Gabriel Milano",
       "outcome": "Flyout",
       "count": "1-2",
@@ -2011,7 +2018,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Noah Thigpen",
+      "pitcher": "Tommy Egan",
       "batter": "Vance Sheahan",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2126,7 +2133,8 @@
       "pitches": "KSBFFFBF",
       "rbi": true,
       "runs_scored": [
-        "Drew Nelson"
+        "Drew Nelson",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -2262,7 +2270,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2310,7 +2320,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Tommy Egan",
+      "pitcher": "Cooper Ellingworth",
       "batter": "Alex Sosa",
       "outcome": "Walk",
       "count": "3-2",
@@ -2337,13 +2347,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Tommy Egan",
+      "pitcher": "Cooper Ellingworth",
       "batter": "Alonzo Alvarez",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "KBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2370,7 +2382,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -2391,13 +2405,16 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cooper Ellingworth",
+      "pitcher": "",
       "batter": "Brandon DeGoti",
       "outcome": "Double",
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2418,7 +2435,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cooper Ellingworth",
+      "pitcher": "",
       "batter": "Vance Sheahan",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2445,7 +2462,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Lyndon Glidewell",
+      "pitcher": "",
       "batter": "Houston Markham",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2472,7 +2489,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Lyndon Glidewell",
+      "pitcher": "",
       "batter": "Aaron Piasecki",
       "outcome": "Flyout",
       "count": "0-2",
@@ -2499,7 +2516,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Lyndon Glidewell",
+      "pitcher": "",
       "batter": "Josh Pyne",
       "outcome": "Pop out",
       "count": "0-1",

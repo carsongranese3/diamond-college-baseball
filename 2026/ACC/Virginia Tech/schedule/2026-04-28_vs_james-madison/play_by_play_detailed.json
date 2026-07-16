@@ -3,7 +3,7 @@
   "date": "04/28/2026",
   "away_team": "James Madison",
   "home_team": "Virginia Tech",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -103,8 +103,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ike Schmidly",
-        "2B": null,
+        "1B": null,
+        "2B": "Ike Schmidly",
         "3B": null
       },
       "score": {
@@ -125,13 +125,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ike Schmidly",
-        "2B": null,
+        "1B": null,
+        "2B": "Ike Schmidly",
         "3B": null
       },
       "runners_after": {
         "1B": "Kyle Langley",
-        "2B": null,
+        "2B": "Ike Schmidly",
         "3B": null
       },
       "score": {
@@ -153,12 +153,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kyle Langley",
-        "2B": null,
+        "2B": "Ike Schmidly",
         "3B": null
       },
       "runners_after": {
         "1B": "Clay Thompson",
-        "2B": null,
+        "2B": "Ike Schmidly",
         "3B": null
       },
       "score": {
@@ -211,8 +211,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Grube",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Grube",
         "3B": null
       },
       "score": {
@@ -233,13 +233,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Sam Grube",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Grube",
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Grube",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Grube",
         "3B": null
       },
       "score": {
@@ -260,13 +260,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Sam Grube",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Grube",
         "3B": null
       },
       "runners_after": {
         "1B": "Henry Cooke",
-        "2B": null,
+        "2B": "Sam Grube",
         "3B": null
       },
       "score": {
@@ -277,7 +277,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Griffin Madden",
       "batter": "Ethan Ball",
       "outcome": "Walk",
       "count": "3-0",
@@ -288,12 +288,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Henry Cooke",
-        "2B": null,
+        "2B": "Sam Grube",
         "3B": null
       },
       "runners_after": {
         "1B": "Ethan Ball",
-        "2B": null,
+        "2B": "Sam Grube",
         "3B": null
       },
       "score": {
@@ -304,23 +304,26 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Griffin Madden",
       "batter": "Nick Locurto",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Ethan Ball",
-        "2B": null,
+        "2B": "Sam Grube",
         "3B": null
       },
       "runners_after": {
         "1B": "Nick Locurto",
-        "2B": null,
+        "2B": "Sam Grube",
         "3B": null
       },
       "score": {
@@ -331,7 +334,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Griffin Madden",
       "batter": "Willie Hurt",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -342,12 +345,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Nick Locurto",
-        "2B": null,
+        "2B": "Sam Grube",
         "3B": null
       },
       "runners_after": {
         "1B": "Nick Locurto",
-        "2B": null,
+        "2B": "Sam Grube",
         "3B": null
       },
       "score": {
@@ -358,7 +361,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Griffin Madden",
       "batter": "Pete Daniel",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -369,12 +372,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Nick Locurto",
-        "2B": null,
+        "2B": "Sam Grube",
         "3B": null
       },
       "runners_after": {
         "1B": "Nick Locurto",
-        "2B": null,
+        "2B": "Sam Grube",
         "3B": null
       },
       "score": {
@@ -466,7 +469,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Griffin Madden",
       "batter": "Owen Petrich",
       "outcome": "Double",
       "count": "1-1",
@@ -493,7 +496,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Griffin Madden",
       "batter": "Treyson Hughes",
       "outcome": "Walk",
       "count": "3-1",
@@ -520,13 +523,15 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Griffin Madden",
       "batter": "Sam Grube",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -547,7 +552,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Griffin Madden",
       "batter": "Ethan Gibson",
       "outcome": "Walk",
       "count": "3-0",
@@ -574,13 +579,15 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Griffin Madden",
       "batter": "Henry Cooke",
       "outcome": "Groundout",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -601,14 +608,16 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Sam Pearne",
       "batter": "Ethan Ball",
       "outcome": "Home run",
       "count": "2-2",
       "pitches": "KFBFB",
       "rbi": true,
       "runs_scored": [
-        "Ethan Ball"
+        "Ethan Ball",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -630,7 +639,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Sam Pearne",
       "batter": "Nick Locurto",
       "outcome": "Single",
       "count": "3-1",
@@ -657,7 +666,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Sam Pearne",
       "batter": "Willie Hurt",
       "outcome": "Single",
       "count": "3-2",
@@ -684,7 +693,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Sam Pearne",
       "batter": "Pete Daniel",
       "outcome": "Single",
       "count": "0-0",
@@ -711,7 +720,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Sam Pearne",
       "batter": "Owen Petrich",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -738,7 +747,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Sam Pearne",
       "batter": "Treyson Hughes",
       "outcome": "Groundout",
       "count": "2-1",
@@ -861,8 +870,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Reece Moody",
-        "2B": null,
+        "1B": null,
+        "2B": "Reece Moody",
         "3B": null
       },
       "score": {
@@ -879,17 +888,19 @@
       "count": "3-2",
       "pitches": "SBKBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Reece Moody",
-        "2B": null,
+        "1B": null,
+        "2B": "Reece Moody",
         "3B": null
       },
       "runners_after": {
         "1B": "Ike Schmidly",
-        "2B": null,
+        "2B": "Reece Moody",
         "3B": null
       },
       "score": {
@@ -911,12 +922,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Ike Schmidly",
-        "2B": null,
+        "2B": "Reece Moody",
         "3B": null
       },
       "runners_after": {
         "1B": "Ike Schmidly",
-        "2B": null,
+        "2B": "Reece Moody",
         "3B": null
       },
       "score": {
@@ -927,7 +938,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Luke McGrath",
       "batter": "Sam Grube",
       "outcome": "Groundout",
       "count": "2-2",
@@ -954,7 +965,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Luke McGrath",
       "batter": "Ethan Gibson",
       "outcome": "Double",
       "count": "2-2",
@@ -981,7 +992,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Luke McGrath",
       "batter": "Henry Cooke",
       "outcome": "Walk",
       "count": "3-2",
@@ -1008,7 +1019,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Luke McGrath",
       "batter": "Ethan Ball",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1035,7 +1046,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Luke McGrath",
       "batter": "Nick Locurto",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1116,7 +1127,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Madden Clement",
+      "pitcher": "Brody Roe",
       "batter": "Wyatt Campbell",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1143,7 +1154,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Luke McGrath",
       "batter": "Willie Hurt",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1170,7 +1181,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Luke McGrath",
       "batter": "Pete Daniel",
       "outcome": "Walk",
       "count": "3-2",
@@ -1197,7 +1208,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Luke McGrath",
       "batter": "Owen Petrich",
       "outcome": "Single",
       "count": "1-2",
@@ -1224,13 +1235,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Luke McGrath",
       "batter": "Treyson Hughes",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BBS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1251,7 +1264,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Luke McGrath",
       "batter": "Sam Grube",
       "outcome": "Single",
       "count": "2-2",
@@ -1278,13 +1291,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Luke McGrath",
       "batter": null,
       "outcome": "Baserunning",
       "count": "1-2",
       "pitches": "KBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1305,7 +1320,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Luke McGrath",
       "batter": "Treyson Hughes",
       "outcome": "\u2014",
       "count": null,
@@ -1332,7 +1347,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Madden Clement",
+      "pitcher": "Brody Roe",
       "batter": "Jack Anderson",
       "outcome": "Hit by pitch",
       "count": "0-2",
@@ -1359,7 +1374,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Madden Clement",
+      "pitcher": "Brody Roe",
       "batter": "Jack Cannizzaro",
       "outcome": "Foul out",
       "count": "1-0",
@@ -1386,7 +1401,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Madden Clement",
+      "pitcher": "Brody Roe",
       "batter": "Jackson Tone",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1413,7 +1428,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Madden Clement",
+      "pitcher": "Brody Roe",
       "batter": "Reece Moody",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1440,7 +1455,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Tyler Muscar",
       "batter": "Henry Cooke",
       "outcome": "Double",
       "count": "1-2",
@@ -1467,7 +1482,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Tyler Muscar",
       "batter": "Ethan Ball",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -1494,7 +1509,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Tyler Muscar",
       "batter": "Nick Locurto",
       "outcome": "Flyout",
       "count": "3-1",
@@ -1521,13 +1536,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Tyler Muscar",
       "batter": "Hudson Lutterman",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BFFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1548,13 +1565,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Bryce Greene",
       "batter": "Pete Daniel",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BKSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1575,13 +1594,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Bryce Greene",
       "batter": null,
       "outcome": "Baserunning",
       "count": "2-2",
       "pitches": "SBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1602,7 +1623,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Bryce Greene",
       "batter": "Treyson Hughes",
       "outcome": "Lineout",
       "count": "2-1",
@@ -1629,7 +1650,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Madden Clement",
+      "pitcher": "Brendan Yagesh",
       "batter": "Ike Schmidly",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1656,7 +1677,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Madden Clement",
+      "pitcher": "Brendan Yagesh",
       "batter": "Will Haacke",
       "outcome": "Double",
       "count": "1-0",
@@ -1683,7 +1704,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Madden Clement",
+      "pitcher": "Brendan Yagesh",
       "batter": "Clay Thompson",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1710,7 +1731,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Madden Clement",
+      "pitcher": "Brendan Yagesh",
       "batter": "Conner Worth",
       "outcome": "Walk",
       "count": "3-1",
@@ -1737,7 +1758,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Madden Clement",
+      "pitcher": "Brendan Yagesh",
       "batter": "Wyatt Campbell",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1764,7 +1785,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Bryce Greene",
       "batter": "CJ Oxendine",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1791,7 +1812,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Jonathan Strohecker",
       "batter": "Ethan Gibson",
       "outcome": "Single",
       "count": "2-2",
@@ -1818,7 +1839,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Jonathan Strohecker",
       "batter": "Anderson French",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1845,7 +1866,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Jonathan Strohecker",
       "batter": "Mycah Jordan",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -1872,13 +1893,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Jonathan Strohecker",
       "batter": "Nick Locurto",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1899,7 +1922,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Jonathan Strohecker",
       "batter": "Hudson Lutterman",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -1926,13 +1949,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Jonathan Strohecker",
       "batter": "Pete Daniel",
       "outcome": "Reached on error",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1953,7 +1978,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Trey Campos",
       "batter": "Owen Petrich",
       "outcome": "Fielder's choice",
       "count": "1-2",
@@ -1980,7 +2005,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Madden Clement",
+      "pitcher": "Luke Craytor",
       "batter": "Jack Anderson",
       "outcome": "Groundout",
       "count": "2-1",
@@ -2007,7 +2032,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Madden Clement",
+      "pitcher": "Luke Craytor",
       "batter": "Ben Barrow",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2034,7 +2059,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Madden Clement",
+      "pitcher": "Danny Lazaro",
       "batter": "Jackson Tone",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",

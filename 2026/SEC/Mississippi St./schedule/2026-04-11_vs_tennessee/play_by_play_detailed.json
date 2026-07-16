@@ -3,7 +3,7 @@
   "date": "04/11/2026",
   "away_team": "Tennessee",
   "home_team": "Mississippi St.",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -296,9 +296,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Manny Marin",
+        "1B": null,
         "2B": "Levi Clark",
-        "3B": null
+        "3B": "Manny Marin"
       },
       "score": {
         "away": 2,
@@ -314,18 +314,20 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Manny Marin"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Manny Marin",
+        "1B": null,
         "2B": "Levi Clark",
-        "3B": null
+        "3B": "Manny Marin"
       },
       "runners_after": {
         "1B": "Jay Abernathy",
-        "2B": "Levi Clark",
-        "3B": null
+        "2B": null,
+        "3B": "Levi Clark"
       },
       "score": {
         "away": 3,
@@ -346,13 +348,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Jay Abernathy",
-        "2B": "Levi Clark",
-        "3B": null
+        "2B": null,
+        "3B": "Levi Clark"
       },
       "runners_after": {
-        "1B": "Jay Abernathy",
-        "2B": "Levi Clark",
-        "3B": null
+        "1B": null,
+        "2B": "Jay Abernathy",
+        "3B": "Levi Clark"
       },
       "score": {
         "away": 3,
@@ -368,18 +370,20 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Levi Clark"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jay Abernathy",
-        "2B": "Levi Clark",
-        "3B": null
+        "1B": null,
+        "2B": "Jay Abernathy",
+        "3B": "Levi Clark"
       },
       "runners_after": {
-        "1B": "Jay Abernathy",
-        "2B": "Levi Clark",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Jay Abernathy"
       },
       "score": {
         "away": 4,
@@ -399,14 +403,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jay Abernathy",
-        "2B": "Levi Clark",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Jay Abernathy"
       },
       "runners_after": {
-        "1B": "Jay Abernathy",
-        "2B": "Levi Clark",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Jay Abernathy"
       },
       "score": {
         "away": 4,
@@ -783,7 +787,7 @@
       },
       "runners_after": {
         "1B": "Jay Abernathy",
-        "2B": null,
+        "2B": "Manny Marin",
         "3B": null
       },
       "score": {
@@ -805,13 +809,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Jay Abernathy",
-        "2B": null,
+        "2B": "Manny Marin",
         "3B": null
       },
       "runners_after": {
         "1B": "Garrett Wright",
-        "2B": null,
-        "3B": null
+        "2B": "Jay Abernathy",
+        "3B": "Manny Marin"
       },
       "score": {
         "away": 4,
@@ -832,13 +836,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Garrett Wright",
-        "2B": null,
-        "3B": null
+        "2B": "Jay Abernathy",
+        "3B": "Manny Marin"
       },
       "runners_after": {
-        "1B": "Garrett Wright",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Jay Abernathy",
+        "3B": "Manny Marin"
       },
       "score": {
         "away": 4,
@@ -1288,7 +1292,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jay Abernathy"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1555,6 +1561,33 @@
     {
       "inning": "Bottom 7",
       "pitcher": "Brandon Arvidson",
+      "batter": "ARVIDSON, B. to p for KUHNS, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 2
+      },
+      "description": "ARVIDSON, B. to p for KUHNS, T.."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Brandon Arvidson",
       "batter": "Reed Stallman",
       "outcome": "Single",
       "count": "1-0",
@@ -1749,7 +1782,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Manny Marin"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2067,7 +2102,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Brandon Arvidson",
+      "pitcher": "",
       "batter": "Reed Stallman",
       "outcome": "Lineout",
       "count": "1-0",
@@ -2094,7 +2129,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Brandon Arvidson",
+      "pitcher": "",
       "batter": "Ryder Woodson",
       "outcome": "Single",
       "count": "1-1",
@@ -2121,7 +2156,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Brandon Arvidson",
+      "pitcher": "",
       "batter": "Chone James",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",

@@ -3,7 +3,7 @@
   "date": "03/28/2026",
   "away_team": "Pittsburgh",
   "home_team": "Louisville",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -238,8 +238,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Alex Alicea",
-        "2B": null,
+        "1B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "score": {
@@ -260,13 +260,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Alex Alicea",
-        "2B": null,
+        "1B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "runners_after": {
-        "1B": "Alex Alicea",
-        "2B": null,
+        "1B": null,
+        "2B": "Alex Alicea",
         "3B": null
       },
       "score": {
@@ -1198,8 +1198,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Jimmy Nugent",
-        "3B": null
+        "2B": null,
+        "3B": "Jimmy Nugent"
       },
       "score": {
         "away": 4,
@@ -1220,8 +1220,8 @@
       "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Jimmy Nugent",
-        "3B": null
+        "2B": null,
+        "3B": "Jimmy Nugent"
       },
       "runners_after": {
         "1B": "Ky.",
@@ -1269,7 +1269,9 @@
       "count": "3-1",
       "pitches": "BKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1363,8 +1365,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bayram Hot",
-        "2B": null,
+        "1B": null,
+        "2B": "Bayram Hot",
         "3B": null
       },
       "score": {
@@ -1385,13 +1387,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Bayram Hot",
-        "2B": null,
+        "1B": null,
+        "2B": "Bayram Hot",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bayram Hot",
-        "2B": null,
+        "1B": null,
+        "2B": "Bayram Hot",
         "3B": null
       },
       "score": {
@@ -1797,8 +1799,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "score": {
@@ -1819,13 +1821,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "runners_after": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "score": {
@@ -1846,13 +1848,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "runners_after": {
         "1B": "Tague Davis",
-        "2B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "score": {
@@ -1869,12 +1871,14 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Lucas Moore"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Tague Davis",
-        "2B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "runners_after": {
@@ -2619,7 +2623,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jake Bean",
+      "pitcher": "",
       "batter": "Jackson Cooke",
       "outcome": "Hit by pitch",
       "count": "0-2",
@@ -2646,7 +2650,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jake Bean",
+      "pitcher": "",
       "batter": "AJ Nessler",
       "outcome": "Groundout",
       "count": "1-1",

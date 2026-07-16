@@ -3,7 +3,7 @@
   "date": "04/12/2026",
   "away_team": "Florida",
   "home_team": "Georgia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -68,7 +68,9 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Ethan Surowiec"
+        "Ethan Surowiec",
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -312,7 +314,10 @@
       "count": "2-1",
       "pitches": "BBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -640,7 +645,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -667,7 +674,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -694,7 +703,9 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -811,8 +822,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Blake Cyr",
-        "2B": null,
+        "1B": null,
+        "2B": "Blake Cyr",
         "3B": null
       },
       "score": {
@@ -833,13 +844,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Blake Cyr",
-        "2B": null,
+        "1B": null,
+        "2B": "Blake Cyr",
         "3B": null
       },
       "runners_after": {
         "1B": "Cade Kurland",
-        "2B": null,
+        "2B": "Blake Cyr",
         "3B": null
       },
       "score": {
@@ -861,12 +872,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Cade Kurland",
-        "2B": null,
+        "2B": "Blake Cyr",
         "3B": null
       },
       "runners_after": {
         "1B": "Cade Kurland",
-        "2B": null,
+        "2B": "Blake Cyr",
         "3B": null
       },
       "score": {
@@ -888,12 +899,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Cade Kurland",
-        "2B": null,
+        "2B": "Blake Cyr",
         "3B": null
       },
       "runners_after": {
         "1B": "Hayden Yost",
-        "2B": null,
+        "2B": "Blake Cyr",
         "3B": null
       },
       "score": {
@@ -905,22 +916,51 @@
     {
       "inning": "Top 3",
       "pitcher": "Jordan Stephens",
-      "batter": "Kolt Myers",
-      "outcome": "Walk",
-      "count": "3-2",
-      "pitches": "KFBBBB",
-      "rbi": true,
+      "batter": "Stephens, J. to p for Jameson.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
       "runs_scored": [],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Hayden Yost",
-        "2B": null,
+        "2B": "Blake Cyr",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Hayden Yost",
+        "2B": "Blake Cyr",
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 5
+      },
+      "description": "Stephens, J. to p for Jameson."
+    },
+    {
+      "inning": "Top 3",
+      "pitcher": "Jordan Stephens",
+      "batter": "Kolt Myers",
+      "outcome": "Walk",
+      "count": "3-2",
+      "pitches": "KFBBBB",
+      "rbi": true,
+      "runs_scored": [
+        null
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Hayden Yost",
+        "2B": "Blake Cyr",
         "3B": null
       },
       "runners_after": {
         "1B": "Kolt Myers",
-        "2B": null,
+        "2B": "Blake Cyr",
         "3B": null
       },
       "score": {
@@ -931,23 +971,25 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jordan Stephens",
+      "pitcher": "Justin Byrd",
       "batter": "Kyle Jones",
       "outcome": "Hit by pitch",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Kolt Myers",
-        "2B": null,
+        "2B": "Blake Cyr",
         "3B": null
       },
       "runners_after": {
         "1B": "Kyle Jones",
-        "2B": null,
+        "2B": "Blake Cyr",
         "3B": null
       },
       "score": {
@@ -964,12 +1006,15 @@
       "count": "0-2",
       "pitches": "KSFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Kyle Jones",
-        "2B": null,
+        "2B": "Blake Cyr",
         "3B": null
       },
       "runners_after": {
@@ -991,7 +1036,10 @@
       "count": "2-2",
       "pitches": "SBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1262,7 +1310,8 @@
       "pitches": "BK",
       "rbi": true,
       "runs_scored": [
-        "Hayden Yost"
+        "Hayden Yost",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1986,7 +2035,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Justin Byrd",
+      "pitcher": "Joe Nottingham",
       "batter": "Ethan Surowiec",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2013,7 +2062,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Justin Byrd",
+      "pitcher": "Joe Nottingham",
       "batter": "Karson Bowen",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2040,7 +2089,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Justin Byrd",
+      "pitcher": "Joe Nottingham",
       "batter": "Blake Cyr",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2229,7 +2278,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Joe Nottingham",
+      "pitcher": "Dylan Wood",
       "batter": "Cade Kurland",
       "outcome": "Groundout",
       "count": "1-0",
@@ -2256,7 +2305,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Joe Nottingham",
+      "pitcher": "Dylan Wood",
       "batter": "Landon Stripling",
       "outcome": "Foul out",
       "count": "1-1",
@@ -2283,7 +2332,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Joe Nottingham",
+      "pitcher": "Dylan Wood",
       "batter": "Hayden Yost",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2424,7 +2473,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2451,7 +2502,9 @@
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2499,7 +2552,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Dylan Wood",
+      "pitcher": "Zach Brown",
+      "batter": "Wood, Dylan to p for Nottingham.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 13,
+        "home": 7
+      },
+      "description": "Wood, Dylan to p for Nottingham."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "Zach Brown",
       "batter": "Kolt Myers",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2526,7 +2606,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Dylan Wood",
+      "pitcher": "",
       "batter": "Kyle Jones",
       "outcome": "Single",
       "count": "2-2",
@@ -2553,7 +2633,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Dylan Wood",
+      "pitcher": "",
       "batter": "Brendan Lawson",
       "outcome": "Walk",
       "count": "3-0",
@@ -2580,7 +2660,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Zach Brown",
+      "pitcher": "",
       "batter": "Ethan Surowiec",
       "outcome": "Fielder's choice",
       "count": "1-0",
@@ -2607,7 +2687,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Zach Brown",
+      "pitcher": "",
       "batter": "Karson Bowen",
       "outcome": "Fielder's choice",
       "count": "0-1",

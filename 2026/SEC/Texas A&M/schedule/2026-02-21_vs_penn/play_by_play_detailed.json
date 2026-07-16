@@ -3,7 +3,7 @@
   "date": "02/21/2026",
   "away_team": "Penn",
   "home_team": "Texas A&M",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -553,7 +553,9 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -805,8 +807,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Gavin Degnan",
-        "2B": null,
+        "1B": null,
+        "2B": "Gavin Degnan",
         "3B": null
       },
       "score": {
@@ -827,13 +829,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Gavin Degnan",
-        "2B": null,
+        "1B": null,
+        "2B": "Gavin Degnan",
         "3B": null
       },
       "runners_after": {
-        "1B": "Gavin Degnan",
-        "2B": null,
+        "1B": null,
+        "2B": "Gavin Degnan",
         "3B": null
       },
       "score": {
@@ -1277,6 +1279,33 @@
     {
       "inning": "Bottom 6",
       "pitcher": "Luke Pokrovsky",
+      "batter": "Pokrovsky, L to p for Coyne.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 0
+      },
+      "description": "Pokrovsky, L to p for Coyne."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Luke Pokrovsky",
       "batter": "Jake Duer",
       "outcome": "Groundout",
       "count": "3-1",
@@ -1492,7 +1521,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Luke Pokrovsky",
+      "pitcher": "Connor Darling",
       "batter": "Blake Binderup",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1897,7 +1926,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Juan Vargas",
+      "pitcher": "Clayton Freshcorn",
       "batter": "Ryan Taylor",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2038,7 +2067,9 @@
       "count": "3-2",
       "pitches": "KBBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2194,7 +2225,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Connor Darling",
+      "pitcher": "Benjamin Moulin",
       "batter": "Boston Kellner",
       "outcome": "Hit by pitch",
       "count": "2-1",
@@ -2329,7 +2360,7 @@
     },
     {
       "inning": "Top 11",
-      "pitcher": "Clayton Freshcorn",
+      "pitcher": "",
       "batter": "Jarrett Pokrovsky",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2437,13 +2468,15 @@
     },
     {
       "inning": "Bottom 11",
-      "pitcher": "Benjamin Moulin",
+      "pitcher": "",
       "batter": "Sawyer Farr",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {

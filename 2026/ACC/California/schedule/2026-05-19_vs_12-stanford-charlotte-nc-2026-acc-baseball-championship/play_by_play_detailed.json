@@ -3,7 +3,7 @@
   "date": "05/19/2026",
   "away_team": "California",
   "home_team": "Stanford",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -418,7 +418,9 @@
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -603,7 +605,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Aidan Keenan",
       "batter": "Carl Schmidt",
       "outcome": "Single",
       "count": "0-0",
@@ -630,7 +632,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Aidan Keenan",
       "batter": "Lawson Olmstead",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -657,7 +659,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Aidan Keenan",
       "batter": "Kalen Applefield",
       "outcome": "Pop out",
       "count": "1-1",
@@ -684,7 +686,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Aidan Keenan",
       "batter": "Brady Errecart",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -780,8 +782,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cort MacDonald",
-        "2B": null,
+        "1B": null,
+        "2B": "Cort MacDonald",
         "3B": null
       },
       "score": {
@@ -802,13 +804,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Cort MacDonald",
-        "2B": null,
+        "1B": null,
+        "2B": "Cort MacDonald",
         "3B": null
       },
       "runners_after": {
         "1B": "Charlie Bates",
-        "2B": null,
+        "2B": "Cort MacDonald",
         "3B": null
       },
       "score": {
@@ -819,7 +821,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Cade Colombara",
       "batter": "JJ Moran",
       "outcome": "Single",
       "count": "1-1",
@@ -830,12 +832,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Charlie Bates",
-        "2B": null,
+        "2B": "Cort MacDonald",
         "3B": null
       },
       "runners_after": {
         "1B": "JJ Moran",
-        "2B": null,
+        "2B": "Cort MacDonald",
         "3B": null
       },
       "score": {
@@ -846,23 +848,25 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Cade Colombara",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "JJ Moran",
-        "2B": null,
+        "2B": "Cort MacDonald",
         "3B": null
       },
       "runners_after": {
         "1B": "JJ Moran",
-        "2B": null,
+        "2B": "Cort MacDonald",
         "3B": null
       },
       "score": {
@@ -873,23 +877,25 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Cade Colombara",
       "batter": "Jimmy Nati",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "KBS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "JJ Moran",
-        "2B": null,
+        "2B": "Cort MacDonald",
         "3B": null
       },
       "runners_after": {
         "1B": "Jimmy Nati",
-        "2B": null,
+        "2B": "Cort MacDonald",
         "3B": null
       },
       "score": {
@@ -900,7 +906,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Cade Colombara",
       "batter": "Luke Lavin",
       "outcome": "Groundout",
       "count": "0-0",
@@ -911,12 +917,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Jimmy Nati",
-        "2B": null,
+        "2B": "Cort MacDonald",
         "3B": null
       },
       "runners_after": {
         "1B": "Jimmy Nati",
-        "2B": null,
+        "2B": "Cort MacDonald",
         "3B": null
       },
       "score": {
@@ -927,7 +933,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Aidan Keenan",
       "batter": "Ethan Kodama",
       "outcome": "Walk",
       "count": "3-2",
@@ -954,7 +960,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Aidan Keenan",
       "batter": "Gannon Snyder",
       "outcome": "Double",
       "count": "0-0",
@@ -981,7 +987,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Aidan Keenan",
       "batter": "Hideki Prather",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1008,7 +1014,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Aidan Keenan",
       "batter": "Jett Kenady",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1035,7 +1041,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Aidan Keenan",
       "batter": "Cade Campbell",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1062,7 +1068,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Cade Colombara",
       "batter": "Brock Sell",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1089,7 +1095,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Cade Colombara",
       "batter": "Rintaro Sasaki",
       "outcome": "Single",
       "count": "1-2",
@@ -1116,7 +1122,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Cade Colombara",
       "batter": "Teddy Tokheim",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1143,7 +1149,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Cade Colombara",
       "batter": "Cort MacDonald",
       "outcome": "Walk",
       "count": "3-2",
@@ -1170,14 +1176,16 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Cade Colombara",
       "batter": "Charlie Bates",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Charlie Bates"
+        "Charlie Bates",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1199,7 +1207,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Cade Colombara",
       "batter": "JJ Moran",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1226,7 +1234,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Mike Erspamer",
       "batter": "Carl Schmidt",
       "outcome": "Double",
       "count": "1-0",
@@ -1253,7 +1261,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Mike Erspamer",
       "batter": "Lawson Olmstead",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1280,7 +1288,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Mike Erspamer",
       "batter": "Kalen Applefield",
       "outcome": "Single",
       "count": "2-2",
@@ -1307,7 +1315,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Mike Erspamer",
       "batter": "Brady Errecart",
       "outcome": "Grounded into double play",
       "count": "0-0",
@@ -1334,7 +1342,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Cade Colombara",
       "batter": "Eric Jeon",
       "outcome": "Double",
       "count": "2-0",
@@ -1361,13 +1369,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Cole Clark",
       "batter": "Jimmy Nati",
       "outcome": "Double",
       "count": "2-2",
       "pitches": "KFBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1388,7 +1398,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Cole Clark",
       "batter": "Luke Lavin",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1415,7 +1425,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Cole Clark",
       "batter": "Brock Sell",
       "outcome": "Single",
       "count": "0-0",
@@ -1442,7 +1452,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Cole Clark",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1457,7 +1467,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brock Sell",
+        "1B": null,
         "2B": "Jimmy Nati",
         "3B": null
       },
@@ -1469,7 +1479,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Cole Clark",
       "batter": "Rintaro Sasaki",
       "outcome": "Walk",
       "count": "3-1",
@@ -1479,7 +1489,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brock Sell",
+        "1B": null,
         "2B": "Jimmy Nati",
         "3B": null
       },
@@ -1496,13 +1506,16 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Ethan Foley",
       "batter": "Teddy Tokheim",
       "outcome": "Double",
       "count": "2-1",
       "pitches": "KBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1523,13 +1536,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Ethan Foley",
       "batter": "Cort MacDonald",
       "outcome": "Double",
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1550,7 +1565,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Ethan Foley",
       "batter": "Charlie Bates",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1577,7 +1592,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Mike Erspamer",
       "batter": "Ethan Kodama",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1604,7 +1619,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Mike Erspamer",
       "batter": "Gannon Snyder",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1631,7 +1646,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Mike Erspamer",
       "batter": "Hideki Prather",
       "outcome": "Home run",
       "count": "0-0",
@@ -1660,7 +1675,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Mike Erspamer",
       "batter": "Jett Kenady",
       "outcome": "Lineout",
       "count": "0-0",
@@ -1687,7 +1702,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Ethan Foley",
       "batter": "JJ Moran",
       "outcome": "Double",
       "count": "0-0",
@@ -1714,7 +1729,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Ryan Spalliero",
       "batter": "Eric Jeon",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1741,7 +1756,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Ryan Spalliero",
       "batter": "Jimmy Nati",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1768,13 +1783,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Ryan Spalliero",
       "batter": "Luke Lavin",
       "outcome": "Reached on error",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1795,7 +1812,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Ryan Spalliero",
       "batter": "Brock Sell",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1822,7 +1839,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Ben Reimers",
       "batter": "Cade Campbell",
       "outcome": "Lineout",
       "count": "0-1",
@@ -1849,7 +1866,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Ben Reimers",
       "batter": "Carl Schmidt",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1876,7 +1893,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Ben Reimers",
       "batter": "Lawson Olmstead",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1903,7 +1920,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Ryan Spalliero",
       "batter": "Brock Ketelsen",
       "outcome": "Reached on error",
       "count": "0-0",
@@ -1930,7 +1947,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Trent Roach",
       "batter": "Teddy Tokheim",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1957,7 +1974,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Trent Roach",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1972,7 +1989,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brock Ketelsen",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1984,7 +2001,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Otto Espinoza",
+      "pitcher": "Trent Roach",
       "batter": "Cort MacDonald",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1994,12 +2011,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brock Ketelsen",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Brock Ketelsen",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2011,7 +2028,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Austin Steeves",
       "batter": "Taichi Nakao",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2038,7 +2055,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Austin Steeves",
       "batter": "Brady Errecart",
       "outcome": "Walk",
       "count": "3-0",
@@ -2065,14 +2082,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Austin Steeves",
       "batter": "Ethan Kodama",
       "outcome": "Home run",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Ethan Kodama"
+        "Ethan Kodama",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -2094,7 +2112,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": "Gannon Snyder",
       "outcome": "Single",
       "count": "2-2",
@@ -2121,7 +2139,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": "Hideki Prather",
       "outcome": "Groundout",
       "count": "2-1",
@@ -2148,7 +2166,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": "Jett Kenady",
       "outcome": "Lineout",
       "count": "0-0",

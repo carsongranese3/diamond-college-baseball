@@ -3,7 +3,7 @@
   "date": "02/24/2026",
   "away_team": "FIU",
   "home_team": "Florida",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -148,7 +148,10 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -358,7 +361,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Luke McNeillie",
+      "pitcher": "Ricky Reeth",
       "batter": "Cooper",
       "outcome": "Lineout",
       "count": "2-2",
@@ -709,7 +712,34 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Enrique",
+      "pitcher": "Enrique Sierra",
+      "batter": "Enrique",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Jacob Kendall",
+        "2B": "Blake Cyr",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Jacob Kendall",
+        "2B": "Blake Cyr",
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 0
+      },
+      "description": "Enrique Sier to p for Quin McManmo."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Enrique Sierra",
       "batter": "Kyle Jones",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -736,7 +766,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Enrique",
+      "pitcher": "Enrique Sierra",
       "batter": "Brendan Lawson",
       "outcome": "Double",
       "count": "3-2",
@@ -766,7 +796,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Enrique",
+      "pitcher": "Enrique Sierra",
       "batter": "Karson Bowen",
       "outcome": "Groundout",
       "count": "3-2",
@@ -880,7 +910,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -907,7 +939,9 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -955,7 +989,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Enrique",
+      "pitcher": "Enrique Sierra",
       "batter": "Cash Strayer",
       "outcome": "Lineout",
       "count": "3-2",
@@ -982,7 +1016,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Enrique",
+      "pitcher": "Enrique Sierra",
       "batter": "Ethan Surowiec",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1009,7 +1043,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Enrique",
+      "pitcher": "Enrique Sierra",
       "batter": "Cade Kurland",
       "outcome": "Double",
       "count": "3-1",
@@ -1036,7 +1070,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Enrique",
+      "pitcher": "Enrique Sierra",
       "batter": "Blake Cyr",
       "outcome": "Single",
       "count": "2-0",
@@ -1065,7 +1099,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Enrique",
+      "pitcher": "Enrique Sierra",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1080,8 +1114,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Blake Cyr",
-        "2B": null,
+        "1B": null,
+        "2B": "Blake Cyr",
         "3B": null
       },
       "score": {
@@ -1092,7 +1126,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Enrique",
+      "pitcher": "Enrique Sierra",
       "batter": "Jacob Kendall",
       "outcome": "Walk",
       "count": "3-2",
@@ -1102,13 +1136,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Blake Cyr",
-        "2B": null,
+        "1B": null,
+        "2B": "Blake Cyr",
         "3B": null
       },
       "runners_after": {
         "1B": "Jacob Kendall",
-        "2B": null,
+        "2B": "Blake Cyr",
         "3B": null
       },
       "score": {
@@ -1119,18 +1153,20 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Enrique",
+      "pitcher": "Enrique Sierra",
       "batter": "Landon Stripling",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "FKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Blake Cyr"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jacob Kendall",
-        "2B": null,
+        "2B": "Blake Cyr",
         "3B": null
       },
       "runners_after": {
@@ -1146,7 +1182,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Enrique",
+      "pitcher": "Cooper Foster",
       "batter": "Kyle Jones",
       "outcome": "Triple",
       "count": "1-0",
@@ -1176,7 +1212,34 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cooper",
+      "pitcher": "Cooper Foster",
+      "batter": "Cooper",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": "Kyle Jones"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": "Kyle Jones"
+      },
+      "score": {
+        "away": 4,
+        "home": 6
+      },
+      "description": "Cooper Foste to p for Enrique Sier."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Cooper Foster",
       "batter": "Brendan Lawson",
       "outcome": "Single",
       "count": "0-1",
@@ -1205,7 +1268,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cooper",
+      "pitcher": "Cooper Foster",
       "batter": "Karson Bowen",
       "outcome": "Walk",
       "count": "3-0",
@@ -1232,7 +1295,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cooper",
+      "pitcher": "Cooper Foster",
       "batter": "Cash Strayer",
       "outcome": "Single",
       "count": "2-2",
@@ -1261,7 +1324,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cooper",
+      "pitcher": "Cooper Foster",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1288,7 +1351,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cooper",
+      "pitcher": "Cooper Foster",
       "batter": "Ethan Surowiec",
       "outcome": "Single",
       "count": "2-0",
@@ -1398,7 +1461,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ricky Reeth",
+      "pitcher": "Jackson Hoyt",
       "batter": "Mario",
       "outcome": "Double",
       "count": "0-0",
@@ -1425,7 +1488,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ricky Reeth",
+      "pitcher": "Jackson Hoyt",
       "batter": "Hector",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1452,7 +1515,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ricky Reeth",
+      "pitcher": "Jackson Hoyt",
       "batter": "Marc",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1479,7 +1542,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cooper",
+      "pitcher": "Cooper Foster",
       "batter": "Cade Kurland",
       "outcome": "Single",
       "count": "1-1",
@@ -1506,7 +1569,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cooper",
+      "pitcher": "Cooper Foster",
       "batter": "Blake Cyr",
       "outcome": "Single",
       "count": "1-0",
@@ -1533,7 +1596,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cooper",
+      "pitcher": "Tyler Mecchella",
       "batter": "Jacob Kendall",
       "outcome": "Foul out",
       "count": "3-1",
@@ -1560,7 +1623,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cooper",
+      "pitcher": "Tyler Mecchella",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1587,7 +1650,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cooper",
+      "pitcher": "Tyler Mecchella",
       "batter": "Landon Stripling",
       "outcome": "Walk",
       "count": "3-0",
@@ -1614,7 +1677,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler",
+      "pitcher": "Tyler Mecchella",
+      "batter": "Tyler",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Landon Stripling",
+        "2B": "Blake Cyr",
+        "3B": "Cade Kurland"
+      },
+      "runners_after": {
+        "1B": "Landon Stripling",
+        "2B": "Blake Cyr",
+        "3B": "Cade Kurland"
+      },
+      "score": {
+        "away": 4,
+        "home": 9
+      },
+      "description": "Tyler Mecche to p for Cooper Foste."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Tyler Mecchella",
       "batter": "Kyle Jones",
       "outcome": "Walk",
       "count": "3-2",
@@ -1643,7 +1733,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler",
+      "pitcher": "Tyler Mecchella",
       "batter": "Brendan Lawson",
       "outcome": "Hit by pitch",
       "count": "3-2",
@@ -1672,7 +1762,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler",
+      "pitcher": "Brennan Confreda",
       "batter": "Karson Bowen",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1699,7 +1789,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler",
+      "pitcher": "Brennan Confreda",
       "batter": "Cash Strayer",
       "outcome": "Walk",
       "count": "3-2",
@@ -1728,7 +1818,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler",
+      "pitcher": "Brennan Confreda",
       "batter": "Ethan Surowiec",
       "outcome": "Double",
       "count": "1-1",
@@ -1759,7 +1849,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brennan",
+      "pitcher": "Rene Lastres",
+      "batter": "Brennan",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": "Ethan Surowiec",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Ethan Surowiec",
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 15
+      },
+      "description": "Brennan Conf to p for Tyler Mecche."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Rene Lastres",
       "batter": "Cade Kurland",
       "outcome": "Single",
       "count": "2-2",
@@ -1788,7 +1905,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brennan",
+      "pitcher": "Rene Lastres",
       "batter": "Blake Cyr",
       "outcome": "Walk",
       "count": "3-2",
@@ -1815,7 +1932,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brennan",
+      "pitcher": "Rene Lastres",
       "batter": "Jacob Kendall",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1869,7 +1986,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jackson Hoyt",
+      "pitcher": "Eli Blair",
       "batter": "Enrique",
       "outcome": "Single",
       "count": "2-1",
@@ -1896,7 +2013,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jackson Hoyt",
+      "pitcher": "Eli Blair",
       "batter": "Tracen",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1923,13 +2040,16 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jackson Hoyt",
+      "pitcher": "Eli Blair",
       "batter": "Andrew",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "BSS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1983,7 +2103,10 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2058,7 +2181,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Brennan",
+      "pitcher": "Rene Lastres",
       "batter": "Enrique",
       "outcome": "\u2014",
       "count": null,
@@ -2085,7 +2208,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Brennan",
+      "pitcher": "Rene Lastres",
       "batter": "Tracen",
       "outcome": "\u2014",
       "count": null,
@@ -2112,7 +2235,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Brennan",
+      "pitcher": "Rene Lastres",
       "batter": "Kyle",
       "outcome": "\u2014",
       "count": null,
@@ -2139,7 +2262,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Brennan",
+      "pitcher": "Rene Lastres",
       "batter": "Adonys",
       "outcome": "\u2014",
       "count": null,
@@ -2166,7 +2289,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Brennan",
+      "pitcher": "Taggert Cameron",
       "batter": "Caden",
       "outcome": "\u2014",
       "count": null,
@@ -2193,7 +2316,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Rene",
+      "pitcher": "Taggert Cameron",
+      "batter": "Rene",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 8,
+        "home": 16
+      },
+      "description": "Rene Lastres to p for Clayton Sher."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Taggert Cameron",
       "batter": "Landon Stripling",
       "outcome": "Flyout",
       "count": "2-2",
@@ -2220,7 +2370,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Rene",
+      "pitcher": "Taggert Cameron",
       "batter": "Kyle Jones",
       "outcome": "Groundout",
       "count": "2-1",
@@ -2247,7 +2397,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Rene",
+      "pitcher": "Taggert Cameron",
       "batter": "Kolt Myers",
       "outcome": "Double",
       "count": "2-1",
@@ -2274,7 +2424,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Rene",
+      "pitcher": "",
       "batter": "Karson Bowen",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2328,7 +2478,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Eli Blair",
+      "pitcher": "Caden McDonald",
       "batter": "Vicente",
       "outcome": "Grounded into double play",
       "count": "0-0",
@@ -2355,7 +2505,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Eli Blair",
+      "pitcher": "Caden McDonald",
       "batter": "Enrique",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2382,7 +2532,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Rene",
+      "pitcher": "",
       "batter": "Cash Strayer",
       "outcome": "Walk",
       "count": "3-0",
@@ -2409,7 +2559,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Rene",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2436,7 +2586,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Rene",
+      "pitcher": "",
       "batter": "Ethan Surowiec",
       "outcome": "Lineout",
       "count": "1-2",
@@ -2463,7 +2613,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Rene",
+      "pitcher": "",
       "batter": "Cade Kurland",
       "outcome": "Flyout",
       "count": "1-0",
@@ -2492,7 +2642,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Rene",
+      "pitcher": "",
       "batter": "Blake Cyr",
       "outcome": "Walk",
       "count": "3-0",
@@ -2519,7 +2669,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Taggert",
+      "pitcher": "",
+      "batter": "Taggert",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Blake Cyr",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Blake Cyr",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 8,
+        "home": 17
+      },
+      "description": "Taggert Came to p for Rene Lastres."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "",
       "batter": "Jacob Kendall",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2546,7 +2723,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Eli Blair",
+      "pitcher": "Caden McDonald",
       "batter": "Tracen",
       "outcome": "Single",
       "count": "1-1",
@@ -2654,7 +2831,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Taggert",
+      "pitcher": "",
       "batter": "Landon Stripling",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2681,7 +2858,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Taggert",
+      "pitcher": "",
       "batter": "Hayden Yost",
       "outcome": "Flyout",
       "count": "3-2",
@@ -2708,7 +2885,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Taggert",
+      "pitcher": "",
       "batter": "Kolt Myers",
       "outcome": "Single",
       "count": "1-0",
@@ -2735,7 +2912,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Taggert",
+      "pitcher": "",
       "batter": "Karson Bowen",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2843,13 +3020,16 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Caden McDonald",
+      "pitcher": "",
       "batter": "Caden",
       "outcome": "Double",
       "count": "2-2",
       "pitches": "BKFFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -2870,7 +3050,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Caden McDonald",
+      "pitcher": "",
       "batter": "Vicente",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2897,13 +3077,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Caden McDonald",
+      "pitcher": "",
       "batter": "Enrique",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2924,7 +3106,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Caden McDonald",
+      "pitcher": "",
       "batter": "Tracen",
       "outcome": "Grounded into double play",
       "count": "0-0",

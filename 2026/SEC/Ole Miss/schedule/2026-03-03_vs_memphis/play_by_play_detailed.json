@@ -3,7 +3,7 @@
   "date": "03/03/2026",
   "away_team": "Memphis",
   "home_team": "Ole Miss",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -94,7 +94,9 @@
       "count": "2-2",
       "pitches": "SBFBS",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -203,7 +205,8 @@
       "pitches": "BSB",
       "rbi": true,
       "runs_scored": [
-        "Judd Utermark"
+        "Judd Utermark",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -375,8 +378,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Harrington",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Harrington",
         "3B": null
       },
       "score": {
@@ -397,13 +400,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tyler Harrington",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Harrington",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Harrington",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Harrington",
         "3B": null
       },
       "score": {
@@ -424,13 +427,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tyler Harrington",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Harrington",
         "3B": null
       },
       "runners_after": {
         "1B": "Marcus Smith",
-        "2B": null,
+        "2B": "Tyler Harrington",
         "3B": null
       },
       "score": {
@@ -452,12 +455,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Marcus Smith",
-        "2B": null,
+        "2B": "Tyler Harrington",
         "3B": null
       },
       "runners_after": {
         "1B": "Marcus Smith",
-        "2B": null,
+        "2B": "Tyler Harrington",
         "3B": null
       },
       "score": {
@@ -564,9 +567,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Hayden Federico",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Hayden Federico"
       },
       "score": {
         "away": 1,
@@ -586,14 +589,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Hayden Federico",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Hayden Federico"
       },
       "runners_after": {
         "1B": "Dom Decker",
         "2B": null,
-        "3B": null
+        "3B": "Hayden Federico"
       },
       "score": {
         "away": 1,
@@ -609,18 +612,20 @@
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Dom Decker",
         "2B": null,
-        "3B": null
+        "3B": "Hayden Federico"
       },
       "runners_after": {
         "1B": "Judd Utermark",
         "2B": null,
-        "3B": null
+        "3B": "Hayden Federico"
       },
       "score": {
         "away": 1,
@@ -636,18 +641,20 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Judd Utermark",
         "2B": null,
-        "3B": null
+        "3B": "Hayden Federico"
       },
       "runners_after": {
         "1B": "Collin Reuter",
         "2B": null,
-        "3B": null
+        "3B": "Hayden Federico"
       },
       "score": {
         "away": 1,
@@ -669,12 +676,12 @@
       "runners_before": {
         "1B": "Collin Reuter",
         "2B": null,
-        "3B": null
+        "3B": "Hayden Federico"
       },
       "runners_after": {
         "1B": "Collin Reuter",
         "2B": null,
-        "3B": null
+        "3B": "Hayden Federico"
       },
       "score": {
         "away": 1,
@@ -696,12 +703,12 @@
       "runners_before": {
         "1B": "Collin Reuter",
         "2B": null,
-        "3B": null
+        "3B": "Hayden Federico"
       },
       "runners_after": {
         "1B": "Collin Reuter",
         "2B": null,
-        "3B": null
+        "3B": "Hayden Federico"
       },
       "score": {
         "away": 1,
@@ -1118,7 +1125,34 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "G.",
+      "pitcher": "Grayson Gibson",
+      "batter": "G. Gibson",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 5
+      },
+      "description": "G. Gibson to p for O. Kelly."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Grayson Gibson",
       "batter": "Marcus Smith",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1145,7 +1179,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "G.",
+      "pitcher": "Grayson Gibson",
       "batter": "Javon Hernandez",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1172,7 +1206,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "G.",
+      "pitcher": "Grayson Gibson",
       "batter": "Freddy Rodriguez",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1334,7 +1368,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "G.",
+      "pitcher": "Grayson Gibson",
       "batter": "Marcus Smith",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1361,7 +1395,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "G.",
+      "pitcher": "Grayson Gibson",
       "batter": "Shane Cox",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1388,7 +1422,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "G.",
+      "pitcher": "Grayson Gibson",
       "batter": "Webb Watson",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1449,7 +1483,8 @@
       "pitches": "BFB",
       "rbi": true,
       "runs_scored": [
-        "Judd Utermark"
+        "Judd Utermark",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1579,7 +1614,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "G.",
+      "pitcher": "Grayson Gibson",
       "batter": "Michael Gupton",
       "outcome": "Lineout",
       "count": "1-0",
@@ -1606,7 +1641,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "G.",
+      "pitcher": "Grayson Gibson",
       "batter": "Tyler Harrington",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1633,7 +1668,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "G.",
+      "pitcher": "Grayson Gibson",
       "batter": "Trae Cassidy",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1741,7 +1776,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "G.",
+      "pitcher": "Grayson Gibson",
       "batter": "B. Moseley",
       "outcome": "\u2014",
       "count": null,
@@ -1768,7 +1803,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "G.",
+      "pitcher": "Grayson Gibson",
       "batter": "Marcus Smith",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1795,7 +1830,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "G.",
+      "pitcher": "Landon Waters",
       "batter": "Javon Hernandez",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1822,7 +1857,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "G.",
+      "pitcher": "Landon Waters",
       "batter": "Freddy Rodriguez",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -1849,7 +1884,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "G.",
+      "pitcher": "Landon Waters",
       "batter": "Freddy Rodriguez",
       "outcome": "\u2014",
       "count": null,
@@ -1957,7 +1992,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "G.",
+      "pitcher": "Landon Waters",
       "batter": "O. Paino",
       "outcome": "\u2014",
       "count": null,
@@ -1984,7 +2019,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "G.",
+      "pitcher": "",
       "batter": "K. Perera",
       "outcome": "\u2014",
       "count": null,
@@ -2011,7 +2046,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "",
+      "batter": "L. Waters",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 7
+      },
+      "description": "L. Waters to p for G. Gibson."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": "Parker Price",
       "outcome": "Walk",
       "count": "3-2",
@@ -2038,7 +2100,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Shane Cox",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2065,7 +2127,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2092,7 +2154,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Webb Watson",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2119,7 +2181,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Brady McAbee",
       "outcome": "Groundout",
       "count": "2-2",

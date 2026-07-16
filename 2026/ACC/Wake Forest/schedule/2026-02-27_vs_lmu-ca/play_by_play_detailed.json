@@ -3,7 +3,7 @@
   "date": "02/27/2026",
   "away_team": "LMU (CA)",
   "home_team": "Wake Forest",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -103,8 +103,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "DJ Ghiorso",
-        "2B": null,
+        "1B": null,
+        "2B": "DJ Ghiorso",
         "3B": null
       },
       "score": {
@@ -125,13 +125,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "DJ Ghiorso",
-        "2B": null,
+        "1B": null,
+        "2B": "DJ Ghiorso",
         "3B": null
       },
       "runners_after": {
-        "1B": "DJ Ghiorso",
-        "2B": null,
+        "1B": null,
+        "2B": "DJ Ghiorso",
         "3B": null
       },
       "score": {
@@ -284,7 +284,10 @@
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Jackson Miller"
+        "Jackson Miller",
+        null,
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -366,7 +369,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -645,9 +650,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Lyall",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jake Lyall"
       },
       "score": {
         "away": 0,
@@ -667,14 +672,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jake Lyall",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jake Lyall"
       },
       "runners_after": {
         "1B": "Zion Williams",
         "2B": null,
-        "3B": null
+        "3B": "Jake Lyall"
       },
       "score": {
         "away": 0,
@@ -696,12 +701,12 @@
       "runners_before": {
         "1B": "Zion Williams",
         "2B": null,
-        "3B": null
+        "3B": "Jake Lyall"
       },
       "runners_after": {
         "1B": "Alex Gamboa",
         "2B": null,
-        "3B": null
+        "3B": "Jake Lyall"
       },
       "score": {
         "away": 0,
@@ -723,12 +728,12 @@
       "runners_before": {
         "1B": "Alex Gamboa",
         "2B": null,
-        "3B": null
+        "3B": "Jake Lyall"
       },
       "runners_after": {
         "1B": "Alex Gamboa",
         "2B": null,
-        "3B": null
+        "3B": "Jake Lyall"
       },
       "score": {
         "away": 0,
@@ -750,12 +755,12 @@
       "runners_before": {
         "1B": "Alex Gamboa",
         "2B": null,
-        "3B": null
+        "3B": "Jake Lyall"
       },
       "runners_after": {
         "1B": "Alex Gamboa",
         "2B": null,
-        "3B": null
+        "3B": "Jake Lyall"
       },
       "score": {
         "away": 0,
@@ -1050,8 +1055,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Javar Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Javar Williams",
         "3B": null
       },
       "score": {
@@ -1068,17 +1073,20 @@
       "count": "3-0",
       "pitches": "BBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Javar Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Javar Williams",
         "3B": null
       },
       "runners_after": {
         "1B": "Dalton Wentz",
-        "2B": null,
+        "2B": "Javar Williams",
         "3B": null
       },
       "score": {
@@ -1100,12 +1108,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Dalton Wentz",
-        "2B": null,
+        "2B": "Javar Williams",
         "3B": null
       },
       "runners_after": {
-        "1B": "Dalton Wentz",
-        "2B": null,
+        "1B": null,
+        "2B": "Javar Williams",
         "3B": null
       },
       "score": {
@@ -1126,13 +1134,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Dalton Wentz",
-        "2B": null,
+        "1B": null,
+        "2B": "Javar Williams",
         "3B": null
       },
       "runners_after": {
-        "1B": "Dalton Wentz",
-        "2B": null,
+        "1B": null,
+        "2B": "Javar Williams",
         "3B": null
       },
       "score": {
@@ -1239,7 +1247,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jaxson Wall",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1413,7 +1421,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jake Geis",
+      "pitcher": "Zach Bender",
       "batter": "Austin Hawke",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -1440,7 +1448,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jake Geis",
+      "pitcher": "Zach Bender",
       "batter": "JD Stein",
       "outcome": "Fielder's choice",
       "count": "3-2",
@@ -1467,7 +1475,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jake Geis",
+      "pitcher": "Zach Bender",
       "batter": "Javar Williams",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1494,7 +1502,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jake Geis",
+      "pitcher": "Zach Bender",
       "batter": "Kade Lewis",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1521,7 +1529,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jake Geis",
+      "pitcher": "Zach Bender",
       "batter": "Dalton Wentz",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1656,7 +1664,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jake Geis",
+      "pitcher": "Zach Bender",
       "batter": "Jordan Serrano",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1683,7 +1691,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jake Geis",
+      "pitcher": "Zach Bender",
       "batter": "Matt Conte",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1710,7 +1718,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jake Geis",
+      "pitcher": "Zach Bender",
       "batter": "Jackson Miller",
       "outcome": "Pop out",
       "count": "0-0",
@@ -1737,7 +1745,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Ryan Brennecke",
       "batter": "Jaxson Wall",
       "outcome": "Single",
       "count": "0-2",
@@ -1764,7 +1772,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Ryan Brennecke",
       "batter": "Zion Williams",
       "outcome": "Walk",
       "count": "3-1",
@@ -1791,7 +1799,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Ryan Brennecke",
       "batter": "Alex Gamboa",
       "outcome": "Infield fly",
       "count": "1-2",
@@ -1818,7 +1826,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Ryan Brennecke",
       "batter": "DJ Ghiorso",
       "outcome": "Walk",
       "count": "3-0",
@@ -1845,13 +1853,16 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Ryan Brennecke",
       "batter": "Zach Wadas",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1872,7 +1883,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Luke Schmolke",
       "batter": "Andrew Mhoon",
       "outcome": "Lineout",
       "count": "1-2",
@@ -1899,7 +1910,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Blake Morningstar",
+      "pitcher": "Luke Schmolke",
       "batter": "Cooper Whitton",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1926,7 +1937,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Geis",
+      "pitcher": "Zach Bender",
       "batter": "Jimmy Keenan",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1953,7 +1964,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Geis",
+      "pitcher": "Zach Bender",
       "batter": "Blake Schaaf",
       "outcome": "Double",
       "count": "2-2",
@@ -1980,7 +1991,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Geis",
+      "pitcher": "Zach Bender",
       "batter": "JD Stein",
       "outcome": "Hit by pitch",
       "count": "2-1",
@@ -2007,7 +2018,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Geis",
+      "pitcher": "Zach Bender",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2022,9 +2033,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "JD Stein",
+        "1B": null,
         "2B": "Blake Schaaf",
-        "3B": null
+        "3B": "JD Stein"
       },
       "score": {
         "away": 2,
@@ -2034,7 +2045,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Geis",
+      "pitcher": "Zach Bender",
       "batter": "Javar Williams",
       "outcome": "Walk",
       "count": "3-1",
@@ -2044,14 +2055,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "JD Stein",
+        "1B": null,
         "2B": "Blake Schaaf",
-        "3B": null
+        "3B": "JD Stein"
       },
       "runners_after": {
         "1B": "Javar Williams",
         "2B": "Blake Schaaf",
-        "3B": null
+        "3B": "JD Stein"
       },
       "score": {
         "away": 2,
@@ -2061,24 +2072,26 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Geis",
+      "pitcher": "Zach Bender",
       "batter": "Kade Lewis",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Javar Williams",
         "2B": "Blake Schaaf",
-        "3B": null
+        "3B": "JD Stein"
       },
       "runners_after": {
         "1B": "Kade Lewis",
         "2B": "Blake Schaaf",
-        "3B": null
+        "3B": "JD Stein"
       },
       "score": {
         "away": 2,
@@ -2088,24 +2101,26 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Geis",
+      "pitcher": "Zach Bender",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kade Lewis"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Kade Lewis",
         "2B": "Blake Schaaf",
-        "3B": null
+        "3B": "JD Stein"
       },
       "runners_after": {
-        "1B": "Kade Lewis",
+        "1B": null,
         "2B": "Blake Schaaf",
-        "3B": null
+        "3B": "JD Stein"
       },
       "score": {
         "away": 2,
@@ -2115,7 +2130,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Geis",
+      "pitcher": "Zach Bender",
       "batter": "Dalton Wentz",
       "outcome": "Walk",
       "count": "3-1",
@@ -2125,14 +2140,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Kade Lewis",
+        "1B": null,
         "2B": "Blake Schaaf",
-        "3B": null
+        "3B": "JD Stein"
       },
       "runners_after": {
         "1B": "Dalton Wentz",
         "2B": "Blake Schaaf",
-        "3B": null
+        "3B": "JD Stein"
       },
       "score": {
         "away": 2,
@@ -2142,24 +2157,26 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Geis",
+      "pitcher": "Caleb Sweeney",
       "batter": "Jordan Serrano",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Dalton Wentz",
         "2B": "Blake Schaaf",
-        "3B": null
+        "3B": "JD Stein"
       },
       "runners_after": {
         "1B": "Jordan Serrano",
         "2B": "Blake Schaaf",
-        "3B": null
+        "3B": "JD Stein"
       },
       "score": {
         "away": 2,
@@ -2169,24 +2186,26 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Geis",
+      "pitcher": "Caleb Sweeney",
       "batter": "Matt Conte",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "SKBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Jordan Serrano",
         "2B": "Blake Schaaf",
-        "3B": null
+        "3B": "JD Stein"
       },
       "runners_after": {
         "1B": "Matt Conte",
         "2B": "Blake Schaaf",
-        "3B": null
+        "3B": "JD Stein"
       },
       "score": {
         "away": 2,
@@ -2196,24 +2215,26 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Geis",
+      "pitcher": "Caleb Sweeney",
       "batter": "Jackson Miller",
       "outcome": "Fielder's choice",
       "count": "1-2",
       "pitches": "KBS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Matt Conte",
         "2B": "Blake Schaaf",
-        "3B": null
+        "3B": "JD Stein"
       },
       "runners_after": {
         "1B": "Jackson Miller",
         "2B": "Blake Schaaf",
-        "3B": null
+        "3B": "JD Stein"
       },
       "score": {
         "away": 2,

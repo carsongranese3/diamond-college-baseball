@@ -3,7 +3,7 @@
   "date": "05/31/2026",
   "away_team": "UCF",
   "home_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -339,7 +339,9 @@
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -456,8 +458,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Rembert",
-        "2B": null,
+        "1B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "score": {
@@ -478,13 +480,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Chris Rembert",
-        "2B": null,
+        "1B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Rembert",
-        "2B": null,
+        "1B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "score": {
@@ -505,13 +507,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Chris Rembert",
-        "2B": null,
+        "1B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "runners_after": {
         "1B": "Cade Belyeu",
-        "2B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "score": {
@@ -533,12 +535,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Cade Belyeu",
-        "2B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "runners_after": {
         "1B": "Mason McCraine",
-        "2B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "score": {
@@ -1177,12 +1179,41 @@
     {
       "inning": "Bottom 5",
       "pitcher": "Anthony Lariz",
+      "batter": "Lariz, A to p for Kimball, R.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Chase Fralick",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Chase Fralick",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 3
+      },
+      "description": "Lariz, A to p for Kimball, R."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Anthony Lariz",
       "batter": "Chris Rembert",
       "outcome": "Flyout",
       "count": "3-1",
       "pitches": "BBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1452,7 +1483,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Anthony Lariz",
+      "pitcher": "Matt Sauser",
       "batter": "Mason McCraine",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1476,6 +1507,33 @@
         "home": 6
       },
       "description": "McCraine, M. struck out looking (3-2 BBBKFK)."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Ryan Hetzler",
+      "batter": "Hetzler, R. to p for Petrovic, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 6
+      },
+      "description": "Hetzler, R. to p for Petrovic, A.."
     },
     {
       "inning": "Top 7",
@@ -1561,6 +1619,33 @@
     {
       "inning": "Bottom 7",
       "pitcher": "Matt Sauser",
+      "batter": "Sauser, M to p for Lariz, A.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 6
+      },
+      "description": "Sauser, M to p for Lariz, A."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Matt Sauser",
       "batter": "Eric Guevara",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1616,7 +1701,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Matt Sauser",
+      "pitcher": "Zachary Malvasio",
       "batter": "Chris Rembert",
       "outcome": "\u2014",
       "count": "2-0",
@@ -1643,7 +1728,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Matt Sauser",
+      "pitcher": "Zachary Malvasio",
       "batter": "Bub Terrell",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1752,6 +1837,33 @@
     {
       "inning": "Bottom 8",
       "pitcher": "Zachary Malvasio",
+      "batter": "Malvasio, Z to p for Sauser, M.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 7
+      },
+      "description": "Malvasio, Z to p for Sauser, M."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Zachary Malvasio",
       "batter": "Ethin Bingaman",
       "outcome": "Double",
       "count": "0-1",
@@ -1778,7 +1890,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Zachary Malvasio",
+      "pitcher": "Matthew Heyl",
       "batter": "Cade Belyeu",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1805,7 +1917,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Zachary Malvasio",
+      "pitcher": "Matthew Heyl",
       "batter": "Mason McCraine",
       "outcome": "Fielder's choice",
       "count": "0-0",
@@ -1832,7 +1944,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Zachary Malvasio",
+      "pitcher": "Matthew Heyl",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1847,8 +1959,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": "Ethin Bingaman",
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -1859,7 +1971,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Zachary Malvasio",
+      "pitcher": "Matthew Heyl",
       "batter": "Taylor Belza",
       "outcome": "Walk",
       "count": "3-1",
@@ -1869,13 +1981,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Mason McCraine",
-        "2B": "Ethin Bingaman",
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
         "1B": "Taylor Belza",
-        "2B": "Ethin Bingaman",
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -1886,18 +1998,47 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Matthew Heyl",
-      "batter": "Mason McCraine",
-      "outcome": "Double",
-      "count": "2-1",
-      "pitches": "BBF",
-      "rbi": true,
+      "pitcher": "Braden Calise",
+      "batter": "Heyl, M to p for Malvasio, Z.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
       "runs_scored": [],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Taylor Belza",
-        "2B": "Ethin Bingaman",
+        "2B": "Mason McCraine",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Taylor Belza",
+        "2B": "Mason McCraine",
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 7
+      },
+      "description": "Heyl, M to p for Malvasio, Z."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
+      "batter": "Mason McCraine",
+      "outcome": "Double",
+      "count": "2-1",
+      "pitches": "BBF",
+      "rbi": true,
+      "runs_scored": [
+        null
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Taylor Belza",
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
@@ -1913,7 +2054,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Matthew Heyl",
+      "pitcher": "",
       "batter": "Eric Guevara",
       "outcome": "Walk",
       "count": "3-2",
@@ -1940,7 +2081,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Matthew Heyl",
+      "pitcher": "",
       "batter": "UCF",
       "outcome": "Hit by pitch",
       "count": null,
@@ -1967,13 +2108,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Matthew Heyl",
+      "pitcher": "",
       "batter": "Chase Fralick",
       "outcome": "Hit by pitch",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1994,7 +2137,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Braden Calise",
+      "pitcher": "",
+      "batter": "Calise, B to p for Heyl, M.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Chase Fralick",
+        "2B": "Mason McCraine",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Chase Fralick",
+        "2B": "Mason McCraine",
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 9
+      },
+      "description": "Calise, B to p for Heyl, M."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Chris Rembert",
       "outcome": "Flyout",
       "count": "1-2",
@@ -2102,7 +2272,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": "Jordan Lodise",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",

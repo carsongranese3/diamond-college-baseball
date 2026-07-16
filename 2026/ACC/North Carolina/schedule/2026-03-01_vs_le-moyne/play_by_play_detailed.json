@@ -3,7 +3,7 @@
   "date": "03/01/2026",
   "away_team": "Le Moyne",
   "home_team": "North Carolina",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -158,7 +158,7 @@
       },
       "runners_after": {
         "1B": "Erik Paulsen",
-        "2B": null,
+        "2B": "Jake Schaffner",
         "3B": null
       },
       "score": {
@@ -180,12 +180,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Erik Paulsen",
-        "2B": null,
+        "2B": "Jake Schaffner",
         "3B": null
       },
       "runners_after": {
         "1B": "Erik Paulsen",
-        "2B": null,
+        "2B": "Jake Schaffner",
         "3B": null
       },
       "score": {
@@ -207,13 +207,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Erik Paulsen",
-        "2B": null,
+        "2B": "Jake Schaffner",
         "3B": null
       },
       "runners_after": {
         "1B": "Owen Hull",
-        "2B": null,
-        "3B": null
+        "2B": "Erik Paulsen",
+        "3B": "Jake Schaffner"
       },
       "score": {
         "away": 0,
@@ -229,16 +229,20 @@
       "count": "1-2",
       "pitches": "KBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jake Schaffner",
+        "Erik Paulsen",
+        "Owen Hull"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Owen Hull",
-        "2B": null,
-        "3B": null
+        "2B": "Erik Paulsen",
+        "3B": "Jake Schaffner"
       },
       "runners_after": {
-        "1B": "Owen Hull",
+        "1B": null,
         "2B": "Colin Hynek",
         "3B": null
       },
@@ -260,14 +264,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Owen Hull",
+        "1B": null,
         "2B": "Colin Hynek",
         "3B": null
       },
       "runners_after": {
-        "1B": "Owen Hull",
-        "2B": "Colin Hynek",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Colin Hynek"
       },
       "score": {
         "away": 0,
@@ -284,18 +288,19 @@
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
+        "Colin Hynek",
         "Cooper Nicholson"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Owen Hull",
-        "2B": "Colin Hynek",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Colin Hynek"
       },
       "runners_after": {
-        "1B": "Owen Hull",
-        "2B": "Colin Hynek",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -316,12 +321,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Owen Hull",
-        "2B": "Colin Hynek",
+        "1B": null,
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Owen Hull",
+        "1B": null,
         "2B": "Carter French",
         "3B": null
       },
@@ -343,7 +348,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Owen Hull",
+        "1B": null,
         "2B": "Carter French",
         "3B": null
       },
@@ -360,7 +365,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Billy Canale",
+      "pitcher": "Luke VanMarter",
       "batter": "Jake Schaffner",
       "outcome": "Walk",
       "count": "3-1",
@@ -376,8 +381,8 @@
       },
       "runners_after": {
         "1B": "Jake Schaffner",
-        "2B": "Carter French",
-        "3B": null
+        "2B": "Michael Maginnis",
+        "3B": "Carter French"
       },
       "score": {
         "away": 0,
@@ -387,24 +392,26 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Billy Canale",
+      "pitcher": "Luke VanMarter",
       "batter": "Gavin Gallaher",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "SKBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Carter French"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jake Schaffner",
-        "2B": "Carter French",
-        "3B": null
+        "2B": "Michael Maginnis",
+        "3B": "Carter French"
       },
       "runners_after": {
         "1B": "Gavin Gallaher",
-        "2B": "Carter French",
-        "3B": null
+        "2B": "Jake Schaffner",
+        "3B": "Michael Maginnis"
       },
       "score": {
         "away": 0,
@@ -414,22 +421,26 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Billy Canale",
+      "pitcher": "Luke VanMarter",
       "batter": "Erik Paulsen",
       "outcome": "Double",
       "count": "3-2",
       "pitches": "KBSFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Michael Maginnis",
+        "Jake Schaffner",
+        "Gavin Gallaher"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Gavin Gallaher",
-        "2B": "Carter French",
-        "3B": null
+        "2B": "Jake Schaffner",
+        "3B": "Michael Maginnis"
       },
       "runners_after": {
-        "1B": "Gavin Gallaher",
+        "1B": null,
         "2B": "Erik Paulsen",
         "3B": null
       },
@@ -441,7 +452,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Billy Canale",
+      "pitcher": "Luke VanMarter",
       "batter": "Macon Winslow",
       "outcome": "Walk",
       "count": "3-1",
@@ -451,7 +462,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Gavin Gallaher",
+        "1B": null,
         "2B": "Erik Paulsen",
         "3B": null
       },
@@ -468,7 +479,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Billy Canale",
+      "pitcher": "Luke VanMarter",
       "batter": "Owen Hull",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -592,7 +603,7 @@
       },
       "runners_after": {
         "1B": "Isaac Brozon",
-        "2B": null,
+        "2B": "Robert Wegrzyn",
         "3B": null
       },
       "score": {
@@ -614,12 +625,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Isaac Brozon",
-        "2B": null,
+        "2B": "Robert Wegrzyn",
         "3B": null
       },
       "runners_after": {
         "1B": "Isaac Brozon",
-        "2B": null,
+        "2B": "Robert Wegrzyn",
         "3B": null
       },
       "score": {
@@ -630,7 +641,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Billy Canale",
+      "pitcher": "Luke VanMarter",
       "batter": "Colin Hynek",
       "outcome": "Pop out",
       "count": "1-1",
@@ -657,7 +668,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Billy Canale",
+      "pitcher": "Luke VanMarter",
       "batter": "Cooper Nicholson",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -684,7 +695,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Billy Canale",
+      "pitcher": "Luke VanMarter",
       "batter": "Carter French",
       "outcome": "Flyout",
       "count": "1-0",
@@ -754,7 +765,7 @@
       },
       "runners_after": {
         "1B": "Paulie Goodness",
-        "2B": null,
+        "2B": "Ethan Farina",
         "3B": null
       },
       "score": {
@@ -776,13 +787,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Paulie Goodness",
-        "2B": null,
+        "2B": "Ethan Farina",
         "3B": null
       },
       "runners_after": {
         "1B": "Mike Whelehan",
-        "2B": null,
-        "3B": null
+        "2B": "Paulie Goodness",
+        "3B": "Ethan Farina"
       },
       "score": {
         "away": 0,
@@ -798,18 +809,20 @@
       "count": "2-2",
       "pitches": "BBSF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ethan Farina"
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Mike Whelehan",
-        "2B": null,
-        "3B": null
+        "2B": "Paulie Goodness",
+        "3B": "Ethan Farina"
       },
       "runners_after": {
         "1B": "Jack Cannon",
         "2B": null,
-        "3B": null
+        "3B": "Paulie Goodness"
       },
       "score": {
         "away": 1,
@@ -831,12 +844,12 @@
       "runners_before": {
         "1B": "Jack Cannon",
         "2B": null,
-        "3B": null
+        "3B": "Paulie Goodness"
       },
       "runners_after": {
         "1B": "Jack Cannon",
         "2B": null,
-        "3B": null
+        "3B": "Paulie Goodness"
       },
       "score": {
         "away": 1,
@@ -858,12 +871,12 @@
       "runners_before": {
         "1B": "Jack Cannon",
         "2B": null,
-        "3B": null
+        "3B": "Paulie Goodness"
       },
       "runners_after": {
         "1B": "Jack Cannon",
         "2B": null,
-        "3B": null
+        "3B": "Paulie Goodness"
       },
       "score": {
         "away": 1,
@@ -873,7 +886,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Billy Canale",
+      "pitcher": "Luke VanMarter",
       "batter": "Michael Maginnis",
       "outcome": "Groundout",
       "count": "0-0",
@@ -900,7 +913,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Billy Canale",
+      "pitcher": "Luke VanMarter",
       "batter": "Lee Sowers",
       "outcome": "Walk",
       "count": "3-0",
@@ -927,7 +940,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Billy Canale",
+      "pitcher": "Luke VanMarter",
       "batter": "Gavin Gallaher",
       "outcome": "Reached on error",
       "count": "0-0",
@@ -943,7 +956,7 @@
       },
       "runners_after": {
         "1B": "Gavin Gallaher",
-        "2B": null,
+        "2B": "Lee Sowers",
         "3B": null
       },
       "score": {
@@ -954,7 +967,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Billy Canale",
+      "pitcher": "Luke VanMarter",
       "batter": "Erik Paulsen",
       "outcome": "Single",
       "count": "1-1",
@@ -965,13 +978,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Gavin Gallaher",
-        "2B": null,
+        "2B": "Lee Sowers",
         "3B": null
       },
       "runners_after": {
         "1B": "Erik Paulsen",
-        "2B": null,
-        "3B": null
+        "2B": "Gavin Gallaher",
+        "3B": "Lee Sowers"
       },
       "score": {
         "away": 1,
@@ -981,24 +994,26 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Billy Canale",
+      "pitcher": "Luke VanMarter",
       "batter": "Macon Winslow",
       "outcome": "\u2014",
       "count": "1-2",
       "pitches": "BKF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Lee Sowers"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Erik Paulsen",
-        "2B": null,
-        "3B": null
+        "2B": "Gavin Gallaher",
+        "3B": "Lee Sowers"
       },
       "runners_after": {
         "1B": "Erik Paulsen",
         "2B": null,
-        "3B": null
+        "3B": "Gavin Gallaher"
       },
       "score": {
         "away": 1,
@@ -1008,24 +1023,26 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Billy Canale",
+      "pitcher": "Luke VanMarter",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Gavin Gallaher"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Erik Paulsen",
         "2B": null,
-        "3B": null
+        "3B": "Gavin Gallaher"
       },
       "runners_after": {
-        "1B": "Erik Paulsen",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Erik Paulsen"
       },
       "score": {
         "away": 1,
@@ -1035,22 +1052,24 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Billy Canale",
+      "pitcher": "Luke VanMarter",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Erik Paulsen"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Erik Paulsen",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Erik Paulsen"
       },
       "runners_after": {
-        "1B": "Erik Paulsen",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1062,7 +1081,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Billy Canale",
+      "pitcher": "Luke VanMarter",
       "batter": "Owen Hull",
       "outcome": "Walk",
       "count": "3-0",
@@ -1072,7 +1091,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Erik Paulsen",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1089,13 +1108,14 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Billy Canale",
+      "pitcher": "Luke VanMarter",
       "batter": "Colin Hynek",
       "outcome": "Home run",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
+        "Owen Hull",
         "Colin Hynek"
       ],
       "outs_before": 1,
@@ -1106,7 +1126,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Owen Hull",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1118,7 +1138,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Billy Canale",
+      "pitcher": "Luke VanMarter",
       "batter": "Cooper Nicholson",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1128,12 +1148,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Owen Hull",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Owen Hull",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1188,7 +1208,7 @@
       },
       "runners_after": {
         "1B": "Isaac Brozon",
-        "2B": null,
+        "2B": "Robert Wegrzyn",
         "3B": null
       },
       "score": {
@@ -1210,12 +1230,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Isaac Brozon",
-        "2B": null,
+        "2B": "Robert Wegrzyn",
         "3B": null
       },
       "runners_after": {
         "1B": "Isaac Brozon",
-        "2B": null,
+        "2B": "Robert Wegrzyn",
         "3B": null
       },
       "score": {
@@ -1237,12 +1257,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Isaac Brozon",
-        "2B": null,
+        "2B": "Robert Wegrzyn",
         "3B": null
       },
       "runners_after": {
         "1B": "Isaac Brozon",
-        "2B": null,
+        "2B": "Robert Wegrzyn",
         "3B": null
       },
       "score": {
@@ -1264,12 +1284,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Isaac Brozon",
-        "2B": null,
+        "2B": "Robert Wegrzyn",
         "3B": null
       },
       "runners_after": {
         "1B": "Paulie Goodness",
-        "2B": null,
+        "2B": "Robert Wegrzyn",
         "3B": null
       },
       "score": {
@@ -1280,7 +1300,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Billy Canale",
+      "pitcher": "Ian Goodness",
       "batter": "Carter French",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1307,7 +1327,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Billy Canale",
+      "pitcher": "Ian Goodness",
       "batter": "Michael Maginnis",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1334,7 +1354,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Billy Canale",
+      "pitcher": "Ian Goodness",
       "batter": "Lee Sowers",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1442,7 +1462,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Billy Canale",
+      "pitcher": "Ian Goodness",
       "batter": "Gavin Gallaher",
       "outcome": "Single",
       "count": "1-0",
@@ -1469,7 +1489,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Billy Canale",
+      "pitcher": "Ian Goodness",
       "batter": "Tyler Howe",
       "outcome": "Single",
       "count": "0-1",
@@ -1485,7 +1505,7 @@
       },
       "runners_after": {
         "1B": "Tyler Howe",
-        "2B": null,
+        "2B": "Gavin Gallaher",
         "3B": null
       },
       "score": {
@@ -1496,7 +1516,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Billy Canale",
+      "pitcher": "Ian Goodness",
       "batter": "Macon Winslow",
       "outcome": "Walk",
       "count": "3-2",
@@ -1507,13 +1527,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Tyler Howe",
-        "2B": null,
+        "2B": "Gavin Gallaher",
         "3B": null
       },
       "runners_after": {
         "1B": "Macon Winslow",
-        "2B": null,
-        "3B": null
+        "2B": "Tyler Howe",
+        "3B": "Gavin Gallaher"
       },
       "score": {
         "away": 1,
@@ -1523,24 +1543,26 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Billy Canale",
+      "pitcher": "Ian Goodness",
       "batter": "Sawyer Black",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Gavin Gallaher"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Macon Winslow",
-        "2B": null,
-        "3B": null
+        "2B": "Tyler Howe",
+        "3B": "Gavin Gallaher"
       },
       "runners_after": {
         "1B": "Sawyer Black",
-        "2B": null,
-        "3B": null
+        "2B": "Macon Winslow",
+        "3B": "Tyler Howe"
       },
       "score": {
         "away": 1,
@@ -1550,23 +1572,25 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Billy Canale",
+      "pitcher": "Ian Goodness",
       "batter": "KellisV,Rom sacrifice fly to lf, RBI (1-1 BF)",
       "outcome": "\u2014",
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Tyler Howe"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Sawyer Black",
-        "2B": null,
-        "3B": null
+        "2B": "Macon Winslow",
+        "3B": "Tyler Howe"
       },
       "runners_after": {
         "1B": "Sawyer Black",
-        "2B": null,
+        "2B": "Macon Winslow",
         "3B": null
       },
       "score": {
@@ -1577,7 +1601,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Billy Canale",
+      "pitcher": "Ian Goodness",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1588,13 +1612,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Sawyer Black",
-        "2B": null,
+        "2B": "Macon Winslow",
         "3B": null
       },
       "runners_after": {
-        "1B": "Sawyer Black",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Sawyer Black",
+        "3B": "Macon Winslow"
       },
       "score": {
         "away": 1,
@@ -1604,7 +1628,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Billy Canale",
+      "pitcher": "Ian Goodness",
       "batter": "AJ Terry",
       "outcome": "Walk",
       "count": "3-2",
@@ -1614,14 +1638,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Sawyer Black",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Sawyer Black",
+        "3B": "Macon Winslow"
       },
       "runners_after": {
         "1B": "AJ Terry",
-        "2B": null,
-        "3B": null
+        "2B": "Sawyer Black",
+        "3B": "Macon Winslow"
       },
       "score": {
         "away": 1,
@@ -1631,24 +1655,27 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Billy Canale",
+      "pitcher": "Colin Skermont",
       "batter": "Jadyn Nunez",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "BFBBF",
       "rbi": true,
       "runs_scored": [
+        "Macon Winslow",
+        "Sawyer Black",
+        "AJ Terry",
         "Jadyn Nunez"
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "AJ Terry",
-        "2B": null,
-        "3B": null
+        "2B": "Sawyer Black",
+        "3B": "Macon Winslow"
       },
       "runners_after": {
-        "1B": "AJ Terry",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1660,7 +1687,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Billy Canale",
+      "pitcher": "Colin Skermont",
       "batter": "Perry Hargett",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1670,12 +1697,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "AJ Terry",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "AJ Terry",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1687,7 +1714,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Billy Canale",
+      "pitcher": "Colin Skermont",
       "batter": "Lee Sowers",
       "outcome": "Single",
       "count": "1-0",
@@ -1697,7 +1724,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "AJ Terry",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1714,7 +1741,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Billy Canale",
+      "pitcher": "Colin Skermont",
       "batter": "Gavin Gallaher",
       "outcome": "Flyout",
       "count": "3-1",
@@ -1741,7 +1768,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Tom Chmielewski",
       "batter": "Derek Diaz",
       "outcome": "Walk",
       "count": "3-2",
@@ -1768,7 +1795,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Tom Chmielewski",
       "batter": "Robert Wegrzyn",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1795,7 +1822,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Tom Chmielewski",
       "batter": "Nick Kriegelstein",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1822,7 +1849,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Tom Chmielewski",
       "batter": "Landen Duprey",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1849,7 +1876,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Billy Canale",
+      "pitcher": "Colin Skermont",
       "batter": "Tyler Howe",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1876,7 +1903,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Billy Canale",
+      "pitcher": "Colin Skermont",
       "batter": "Macon Winslow",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1903,7 +1930,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Billy Canale",
+      "pitcher": "Colin Skermont",
       "batter": "Sawyer Black",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1930,7 +1957,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Billy Canale",
+      "pitcher": "Colin Skermont",
       "batter": "KellisV,Rom walked (3-2 BBKBKB)",
       "outcome": "Walk",
       "count": "3-2",
@@ -1946,7 +1973,7 @@
       },
       "runners_after": {
         "1B": "KellisV,Rom walked (3-2 BBKBKB)",
-        "2B": null,
+        "2B": "Macon Winslow",
         "3B": null
       },
       "score": {
@@ -1957,7 +1984,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Billy Canale",
+      "pitcher": "Colin Skermont",
       "batter": "AJ Terry",
       "outcome": "Walk",
       "count": "3-1",
@@ -1968,13 +1995,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "KellisV,Rom walked (3-2 BBKBKB)",
-        "2B": null,
+        "2B": "Macon Winslow",
         "3B": null
       },
       "runners_after": {
         "1B": "AJ Terry",
-        "2B": null,
-        "3B": null
+        "2B": "KellisV,Rom walked (3-2 BBKBKB)",
+        "3B": "Macon Winslow"
       },
       "score": {
         "away": 1,
@@ -1984,24 +2011,26 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Billy Canale",
+      "pitcher": "Colin Skermont",
       "batter": "Jadyn Nunez",
       "outcome": "Hit by pitch",
       "count": "0-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Macon Winslow"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "AJ Terry",
-        "2B": null,
-        "3B": null
+        "2B": "KellisV,Rom walked (3-2 BBKBKB)",
+        "3B": "Macon Winslow"
       },
       "runners_after": {
         "1B": "Jadyn Nunez",
-        "2B": null,
-        "3B": null
+        "2B": "AJ Terry",
+        "3B": "KellisV,Rom walked (3-2 BBKBKB)"
       },
       "score": {
         "away": 1,
@@ -2011,7 +2040,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Billy Canale",
+      "pitcher": "Nathan Hiscox",
       "batter": "Perry Hargett",
       "outcome": "Flyout",
       "count": "2-0",
@@ -2022,13 +2051,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jadyn Nunez",
-        "2B": null,
-        "3B": null
+        "2B": "AJ Terry",
+        "3B": "KellisV,Rom walked (3-2 BBKBKB)"
       },
       "runners_after": {
         "1B": "Jadyn Nunez",
-        "2B": null,
-        "3B": null
+        "2B": "AJ Terry",
+        "3B": "KellisV,Rom walked (3-2 BBKBKB)"
       },
       "score": {
         "away": 1,
@@ -2038,7 +2067,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Kyle Percival",
       "batter": "James Musso",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -2065,7 +2094,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Kyle Percival",
       "batter": "Tyler Campbell",
       "outcome": "Grounded into double play",
       "count": "1-1",
@@ -2080,7 +2109,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "James Musso",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2092,7 +2121,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Folger Boaz",
+      "pitcher": "Kyle Percival",
       "batter": "Mike Whelehan",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2102,12 +2131,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "James Musso",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "James Musso",
+        "1B": null,
         "2B": null,
         "3B": null
       },

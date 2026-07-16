@@ -3,7 +3,7 @@
   "date": "03/31/2026",
   "away_team": "FGCU",
   "home_team": "Miami (FL)",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -130,8 +130,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Ogden",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "score": {
@@ -152,14 +152,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Jake Ogden",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Ogden",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jake Ogden"
       },
       "score": {
         "away": 0,
@@ -179,14 +179,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Jake Ogden",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jake Ogden"
       },
       "runners_after": {
         "1B": "Daniel Cuvet",
         "2B": null,
-        "3B": null
+        "3B": "Jake Ogden"
       },
       "score": {
         "away": 0,
@@ -208,12 +208,12 @@
       "runners_before": {
         "1B": "Daniel Cuvet",
         "2B": null,
-        "3B": null
+        "3B": "Jake Ogden"
       },
       "runners_after": {
         "1B": "Daniel Cuvet",
         "2B": null,
-        "3B": null
+        "3B": "Jake Ogden"
       },
       "score": {
         "away": 0,
@@ -229,18 +229,20 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Daniel Cuvet",
         "2B": null,
-        "3B": null
+        "3B": "Jake Ogden"
       },
       "runners_after": {
         "1B": "Daniel Cuvet",
         "2B": null,
-        "3B": null
+        "3B": "Jake Ogden"
       },
       "score": {
         "away": 0,
@@ -262,12 +264,12 @@
       "runners_before": {
         "1B": "Daniel Cuvet",
         "2B": null,
-        "3B": null
+        "3B": "Jake Ogden"
       },
       "runners_after": {
         "1B": "Brylan West",
         "2B": null,
-        "3B": null
+        "3B": "Jake Ogden"
       },
       "score": {
         "away": 0,
@@ -289,12 +291,12 @@
       "runners_before": {
         "1B": "Brylan West",
         "2B": null,
-        "3B": null
+        "3B": "Jake Ogden"
       },
       "runners_after": {
         "1B": "Brylan West",
         "2B": null,
-        "3B": null
+        "3B": "Jake Ogden"
       },
       "score": {
         "away": 0,
@@ -391,7 +393,9 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -770,7 +774,9 @@
       "pitches": "KFBB",
       "rbi": true,
       "runs_scored": [
-        "Derek Williams"
+        "Derek Williams",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -819,7 +825,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Simon Aluko",
       "batter": "Alonzo Alvarez",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -934,7 +940,8 @@
       "pitches": "KBFBB",
       "rbi": true,
       "runs_scored": [
-        "Sebastian Lippman"
+        "Sebastian Lippman",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -983,7 +990,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Simon Aluko",
       "batter": "Vance Sheahan",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1010,7 +1017,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Simon Aluko",
       "batter": "Dylan Dubovik",
       "outcome": "Single",
       "count": "1-1",
@@ -1037,7 +1044,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Simon Aluko",
       "batter": "Fabio Peralta",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -1064,13 +1071,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Simon Aluko",
       "batter": "Jake Ogden",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "BBKFBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1091,13 +1100,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Simon Aluko",
       "batter": "Daniel Cuvet",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1118,7 +1129,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Ashton Pocol",
       "batter": "Alex Sosa",
       "outcome": "Pop out",
       "count": "2-1",
@@ -1145,7 +1156,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Ashton Pocol",
       "batter": "Derek Williams",
       "outcome": "Grounded into double play",
       "count": "1-2",
@@ -1172,7 +1183,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "TJ Coats",
+      "pitcher": "Jake Dorn",
       "batter": "Wilfred Gonzalez",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1199,7 +1210,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "TJ Coats",
+      "pitcher": "Jake Dorn",
       "batter": "Jon Embury",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1226,7 +1237,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "TJ Coats",
+      "pitcher": "Jake Dorn",
       "batter": "Javier Gorostola",
       "outcome": "Walk",
       "count": "3-2",
@@ -1253,7 +1264,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "TJ Coats",
+      "pitcher": "Jake Dorn",
       "batter": "Evan Dempsey",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1280,7 +1291,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Ashton Pocol",
       "batter": "Brylan West",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1307,7 +1318,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Ashton Pocol",
       "batter": "Alonzo Alvarez",
       "outcome": "Single",
       "count": "1-2",
@@ -1334,7 +1345,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Ashton Pocol",
       "batter": "Vance Sheahan",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1361,7 +1372,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Ashton Pocol",
       "batter": "Dylan Dubovik",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1388,7 +1399,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "TJ Coats",
+      "pitcher": "Jake Dorn",
       "batter": "Hessemyer,Cayden struck out swinging (2-2 BBKKS).",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1415,7 +1426,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "TJ Coats",
+      "pitcher": "Jake Dorn",
       "batter": "Jeremy Comer",
       "outcome": "Single",
       "count": "0-1",
@@ -1442,7 +1453,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "TJ Coats",
+      "pitcher": "Jake Dorn",
       "batter": "Cole Lasher",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1469,7 +1480,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "TJ Coats",
+      "pitcher": "Jake Dorn",
       "batter": "Sebastian Lippman",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1496,7 +1507,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Ryan Rushing",
       "batter": "Fabio Peralta",
       "outcome": "Single",
       "count": "3-2",
@@ -1523,7 +1534,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Ryan Rushing",
       "batter": "Jake Ogden",
       "outcome": "Single",
       "count": "0-1",
@@ -1550,7 +1561,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Ryan Rushing",
       "batter": "Daniel Cuvet",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1577,13 +1588,16 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Ryan Rushing",
       "batter": "Alex Sosa",
       "outcome": "Double",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1604,7 +1618,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Ryan Rushing",
       "batter": "Derek Williams",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1631,14 +1645,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Ryan Rushing",
       "batter": "Brylan West",
       "outcome": "Home run",
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
       "runs_scored": [
-        "Brylan West"
+        "Brylan West",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1660,7 +1675,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Ryan Rushing",
       "batter": "Alonzo Alvarez",
       "outcome": "Double",
       "count": "3-2",
@@ -1687,13 +1702,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Ryan Rushing",
       "batter": "Vance Sheahan",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "SBBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1714,7 +1731,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Logan Baisley",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1729,7 +1746,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Vance Sheahan",
+        "1B": null,
         "2B": "Alonzo Alvarez",
         "3B": null
       },
@@ -1741,7 +1758,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "TJ Coats",
+      "pitcher": "Jake Dorn",
       "batter": "Merrick Rapoza",
       "outcome": "Walk",
       "count": "3-0",
@@ -1768,7 +1785,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "TJ Coats",
+      "pitcher": "Jake Dorn",
       "batter": "Wilfred Gonzalez",
       "outcome": "Grounded into double play",
       "count": "2-1",
@@ -1795,7 +1812,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "TJ Coats",
+      "pitcher": "Jake Dorn",
       "batter": "Jon Embury",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1822,7 +1839,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Logan Baisley",
       "batter": "Dylan Dubovik",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1849,7 +1866,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Logan Baisley",
       "batter": "Fabio Peralta",
       "outcome": "Lineout",
       "count": "2-2",
@@ -1876,7 +1893,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Logan Baisley",
       "batter": "Jake Ogden",
       "outcome": "Single",
       "count": "0-1",
@@ -1903,13 +1920,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Logan Baisley",
       "batter": "Daniel Cuvet",
       "outcome": "Double",
       "count": "0-2",
       "pitches": "FK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1930,7 +1949,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Logan Baisley",
       "batter": "Alex Sosa",
       "outcome": "Walk",
       "count": "3-0",
@@ -1957,7 +1976,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Logan Baisley",
       "batter": "Derek Williams",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1984,7 +2003,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "TJ Coats",
+      "pitcher": "Lonzo Drummond",
       "batter": "Javier Gorostola",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2011,7 +2030,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "TJ Coats",
+      "pitcher": "Lonzo Drummond",
       "batter": "Evan Dempsey",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2038,7 +2057,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "TJ Coats",
+      "pitcher": "Lonzo Drummond",
       "batter": "Hessemyer,Cayden struck out swinging (2-2 FBSBS).",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2065,7 +2084,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Logan Eisenbarth",
       "batter": "Cian Copeland",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2092,7 +2111,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Logan Eisenbarth",
       "batter": "Jackson Hugus",
       "outcome": "Single",
       "count": "1-0",
@@ -2119,7 +2138,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Logan Eisenbarth",
       "batter": "Jailen Watkins",
       "outcome": "Hit by pitch",
       "count": "2-1",
@@ -2146,7 +2165,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Logan Eisenbarth",
       "batter": "Bennett Gary",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2173,7 +2192,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Preston Rogers",
+      "pitcher": "Logan Eisenbarth",
       "batter": "Mason Greenhouse",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2200,7 +2219,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "TJ Coats",
+      "pitcher": "Tate DeRias",
       "batter": "Jeremy Comer",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2227,7 +2246,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "TJ Coats",
+      "pitcher": "Tate DeRias",
       "batter": "Cole Lasher",
       "outcome": "Walk",
       "count": "3-1",
@@ -2254,7 +2273,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "TJ Coats",
+      "pitcher": "Tate DeRias",
       "batter": "Sebastian Lippman",
       "outcome": "Fielder's choice",
       "count": "2-1",
@@ -2281,13 +2300,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "TJ Coats",
+      "pitcher": "Tate DeRias",
       "batter": "Merrick Rapoza",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2308,7 +2329,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "TJ Coats",
+      "pitcher": "Tate DeRias",
       "batter": "Wilfred Gonzalez",
       "outcome": "Pop out",
       "count": "2-2",

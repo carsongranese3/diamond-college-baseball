@@ -3,7 +3,7 @@
   "date": "03/24/2026",
   "away_team": "Fla. Atlantic",
   "home_team": "Miami (FL)",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -175,7 +175,9 @@
       "count": "1-2",
       "pitches": "BKFF",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -331,7 +333,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Ryan Buckler",
       "batter": "Vance Sheahan",
       "outcome": "Walk",
       "count": "3-0",
@@ -358,7 +360,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Ryan Buckler",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -373,8 +375,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Vance Sheahan",
-        "2B": null,
+        "1B": null,
+        "2B": "Vance Sheahan",
         "3B": null
       },
       "score": {
@@ -385,7 +387,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Ryan Buckler",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -395,14 +397,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Vance Sheahan",
-        "2B": null,
+        "1B": null,
+        "2B": "Vance Sheahan",
         "3B": null
       },
       "runners_after": {
-        "1B": "Vance Sheahan",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Vance Sheahan"
       },
       "score": {
         "away": 0,
@@ -412,7 +414,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Ryan Buckler",
       "batter": "Alonzo Alvarez",
       "outcome": "Walk",
       "count": "3-2",
@@ -422,14 +424,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Vance Sheahan",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Vance Sheahan"
       },
       "runners_after": {
         "1B": "Alonzo Alvarez",
         "2B": null,
-        "3B": null
+        "3B": "Vance Sheahan"
       },
       "score": {
         "away": 0,
@@ -439,24 +441,26 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Ryan Buckler",
       "batter": "Dylan Dubovik",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Alonzo Alvarez",
         "2B": null,
-        "3B": null
+        "3B": "Vance Sheahan"
       },
       "runners_after": {
         "1B": "Dylan Dubovik",
         "2B": null,
-        "3B": null
+        "3B": "Vance Sheahan"
       },
       "score": {
         "away": 0,
@@ -466,7 +470,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Ryan Buckler",
       "batter": "Fabio Peralta",
       "outcome": "Fielder's choice",
       "count": "1-0",
@@ -478,12 +482,12 @@
       "runners_before": {
         "1B": "Dylan Dubovik",
         "2B": null,
-        "3B": null
+        "3B": "Vance Sheahan"
       },
       "runners_after": {
         "1B": "Fabio Peralta",
         "2B": null,
-        "3B": null
+        "3B": "Vance Sheahan"
       },
       "score": {
         "away": 0,
@@ -493,24 +497,26 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Ryan Buckler",
       "batter": null,
       "outcome": "Baserunning",
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Fabio Peralta",
         "2B": null,
-        "3B": null
+        "3B": "Vance Sheahan"
       },
       "runners_after": {
         "1B": "Fabio Peralta",
         "2B": null,
-        "3B": null
+        "3B": "Vance Sheahan"
       },
       "score": {
         "away": 0,
@@ -520,7 +526,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Ryan Buckler",
       "batter": "Daniel Cuvet",
       "outcome": "Single",
       "count": "0-1",
@@ -532,12 +538,12 @@
       "runners_before": {
         "1B": "Fabio Peralta",
         "2B": null,
-        "3B": null
+        "3B": "Vance Sheahan"
       },
       "runners_after": {
         "1B": "Daniel Cuvet",
         "2B": null,
-        "3B": null
+        "3B": "Vance Sheahan"
       },
       "score": {
         "away": 0,
@@ -547,7 +553,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Ryan Buckler",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -559,12 +565,12 @@
       "runners_before": {
         "1B": "Daniel Cuvet",
         "2B": null,
-        "3B": null
+        "3B": "Vance Sheahan"
       },
       "runners_after": {
-        "1B": "Daniel Cuvet",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Daniel Cuvet",
+        "3B": "Vance Sheahan"
       },
       "score": {
         "away": 0,
@@ -574,24 +580,27 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Ryan Buckler",
       "batter": "Alex Sosa",
       "outcome": "Double",
       "count": "2-2",
       "pitches": "BFFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Daniel Cuvet",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Daniel Cuvet",
+        "3B": "Vance Sheahan"
       },
       "runners_after": {
-        "1B": "Daniel Cuvet",
+        "1B": null,
         "2B": "Alex Sosa",
-        "3B": null
+        "3B": "Vance Sheahan"
       },
       "score": {
         "away": 0,
@@ -601,7 +610,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Ryan Buckler",
       "batter": "Derek Williams",
       "outcome": "Groundout",
       "count": "0-0",
@@ -611,14 +620,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Daniel Cuvet",
+        "1B": null,
         "2B": "Alex Sosa",
-        "3B": null
+        "3B": "Vance Sheahan"
       },
       "runners_after": {
-        "1B": "Daniel Cuvet",
+        "1B": null,
         "2B": "Alex Sosa",
-        "3B": null
+        "3B": "Vance Sheahan"
       },
       "score": {
         "away": 0,
@@ -628,7 +637,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Tate DeRias",
       "batter": "Marshall Lipsey",
       "outcome": "Groundout",
       "count": "2-1",
@@ -655,7 +664,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Tate DeRias",
       "batter": "TJ Gramesty",
       "outcome": "Single",
       "count": "0-0",
@@ -682,7 +691,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Tate DeRias",
       "batter": "Kyle Boylston",
       "outcome": "Walk",
       "count": "3-2",
@@ -709,7 +718,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Tate DeRias",
       "batter": "Nicholas Romano",
       "outcome": "Single",
       "count": "2-2",
@@ -736,13 +745,16 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Tate DeRias",
       "batter": "Michael Perazza",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -763,7 +775,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Tate DeRias",
       "batter": "John Martinez",
       "outcome": "\u2014",
       "count": "0-1",
@@ -790,7 +802,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Ryan Buckler",
       "batter": "Brylan West",
       "outcome": "Walk",
       "count": "3-2",
@@ -817,7 +829,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Cameron Horner",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -832,8 +844,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brylan West",
-        "2B": null,
+        "1B": null,
+        "2B": "Brylan West",
         "3B": null
       },
       "score": {
@@ -844,7 +856,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Cameron Horner",
       "batter": "Vance Sheahan",
       "outcome": "Walk",
       "count": "3-1",
@@ -854,13 +866,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Brylan West",
-        "2B": null,
+        "1B": null,
+        "2B": "Brylan West",
         "3B": null
       },
       "runners_after": {
         "1B": "Vance Sheahan",
-        "2B": null,
+        "2B": "Brylan West",
         "3B": null
       },
       "score": {
@@ -871,7 +883,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Cameron Horner",
       "batter": "Alonzo Alvarez",
       "outcome": "Walk",
       "count": "3-0",
@@ -882,12 +894,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Vance Sheahan",
-        "2B": null,
+        "2B": "Brylan West",
         "3B": null
       },
       "runners_after": {
         "1B": "Alonzo Alvarez",
-        "2B": null,
+        "2B": "Brylan West",
         "3B": null
       },
       "score": {
@@ -898,23 +910,25 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Cameron Horner",
       "batter": "Dylan Dubovik",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "KBBFFFFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Alonzo Alvarez",
-        "2B": null,
+        "2B": "Brylan West",
         "3B": null
       },
       "runners_after": {
         "1B": "Alonzo Alvarez",
-        "2B": null,
+        "2B": "Brylan West",
         "3B": null
       },
       "score": {
@@ -925,7 +939,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Brayden Gilson",
       "batter": "Fabio Peralta",
       "outcome": "Lineout",
       "count": "3-2",
@@ -936,12 +950,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Alonzo Alvarez",
-        "2B": null,
+        "2B": "Brylan West",
         "3B": null
       },
       "runners_after": {
         "1B": "Alonzo Alvarez",
-        "2B": null,
+        "2B": "Brylan West",
         "3B": null
       },
       "score": {
@@ -952,7 +966,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Brayden Gilson",
       "batter": "Jake Ogden",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -963,12 +977,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Alonzo Alvarez",
-        "2B": null,
+        "2B": "Brylan West",
         "3B": null
       },
       "runners_after": {
         "1B": "Alonzo Alvarez",
-        "2B": null,
+        "2B": "Brylan West",
         "3B": null
       },
       "score": {
@@ -979,7 +993,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Tate DeRias",
       "batter": "Brett Patten",
       "outcome": "Single",
       "count": "1-0",
@@ -1006,7 +1020,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Tate DeRias",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1021,8 +1035,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brett Patten",
-        "2B": null,
+        "1B": null,
+        "2B": "Brett Patten",
         "3B": null
       },
       "score": {
@@ -1033,25 +1047,26 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Tate DeRias",
       "batter": "Patrick Ward",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Patrick Ward"
+        "Patrick Ward",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Brett Patten",
-        "2B": null,
+        "1B": null,
+        "2B": "Brett Patten",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brett Patten",
-        "2B": null,
+        "1B": null,
+        "2B": "Brett Patten",
         "3B": null
       },
       "score": {
@@ -1062,7 +1077,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jake Dorn",
+      "pitcher": "TJ Coats",
       "batter": "Jonathan Lopez",
       "outcome": "Walk",
       "count": "3-1",
@@ -1072,13 +1087,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Brett Patten",
-        "2B": null,
+        "1B": null,
+        "2B": "Brett Patten",
         "3B": null
       },
       "runners_after": {
         "1B": "Jonathan Lopez",
-        "2B": null,
+        "2B": "Brett Patten",
         "3B": null
       },
       "score": {
@@ -1089,7 +1104,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jake Dorn",
+      "pitcher": "TJ Coats",
       "batter": "Marshall Lipsey",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1100,12 +1115,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Jonathan Lopez",
-        "2B": null,
+        "2B": "Brett Patten",
         "3B": null
       },
       "runners_after": {
         "1B": "Jonathan Lopez",
-        "2B": null,
+        "2B": "Brett Patten",
         "3B": null
       },
       "score": {
@@ -1116,7 +1131,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jake Dorn",
+      "pitcher": "TJ Coats",
       "batter": "TJ Gramesty",
       "outcome": "Fielder's choice",
       "count": "1-1",
@@ -1127,12 +1142,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Jonathan Lopez",
-        "2B": null,
+        "2B": "Brett Patten",
         "3B": null
       },
       "runners_after": {
         "1B": "TJ Gramesty",
-        "2B": null,
+        "2B": "Brett Patten",
         "3B": null
       },
       "score": {
@@ -1143,7 +1158,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jake Dorn",
+      "pitcher": "TJ Coats",
       "batter": "Kyle Boylston",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1154,12 +1169,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "TJ Gramesty",
-        "2B": null,
+        "2B": "Brett Patten",
         "3B": null
       },
       "runners_after": {
         "1B": "TJ Gramesty",
-        "2B": null,
+        "2B": "Brett Patten",
         "3B": null
       },
       "score": {
@@ -1170,7 +1185,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Brayden Gilson",
       "batter": "Daniel Cuvet",
       "outcome": "Single",
       "count": "0-0",
@@ -1197,7 +1212,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Brody Juntunen",
       "batter": "Alex Sosa",
       "outcome": "Walk",
       "count": "3-1",
@@ -1224,7 +1239,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Brody Juntunen",
       "batter": "Derek Williams",
       "outcome": "Single",
       "count": "1-0",
@@ -1251,7 +1266,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Brody Juntunen",
       "batter": "Brylan West",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1278,7 +1293,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Brody Juntunen",
       "batter": "Vance Sheahan",
       "outcome": "Lineout",
       "count": "0-1",
@@ -1305,13 +1320,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Brody Juntunen",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Derek Williams"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1320,7 +1337,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Derek Williams",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1332,17 +1349,20 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Brody Juntunen",
       "batter": "Alonzo Alvarez",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Derek Williams",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1359,7 +1379,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Brody Juntunen",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1374,8 +1394,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Alonzo Alvarez",
-        "2B": null,
+        "1B": null,
+        "2B": "Alonzo Alvarez",
         "3B": null
       },
       "score": {
@@ -1386,7 +1406,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Brody Juntunen",
       "batter": "Dylan Dubovik",
       "outcome": "Pop out",
       "count": "0-2",
@@ -1396,13 +1416,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Alonzo Alvarez",
-        "2B": null,
+        "1B": null,
+        "2B": "Alonzo Alvarez",
         "3B": null
       },
       "runners_after": {
-        "1B": "Alonzo Alvarez",
-        "2B": null,
+        "1B": null,
+        "2B": "Alonzo Alvarez",
         "3B": null
       },
       "score": {
@@ -1413,7 +1433,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jake Dorn",
+      "pitcher": "TJ Coats",
       "batter": "Nicholas Romano",
       "outcome": "Single",
       "count": "1-2",
@@ -1440,7 +1460,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jake Dorn",
+      "pitcher": "TJ Coats",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1455,8 +1475,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Nicholas Romano",
-        "2B": null,
+        "1B": null,
+        "2B": "Nicholas Romano",
         "3B": null
       },
       "score": {
@@ -1467,7 +1487,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jake Dorn",
+      "pitcher": "TJ Coats",
       "batter": "Michael Perazza",
       "outcome": "Pop out",
       "count": "2-2",
@@ -1477,13 +1497,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Nicholas Romano",
-        "2B": null,
+        "1B": null,
+        "2B": "Nicholas Romano",
         "3B": null
       },
       "runners_after": {
-        "1B": "Nicholas Romano",
-        "2B": null,
+        "1B": null,
+        "2B": "Nicholas Romano",
         "3B": null
       },
       "score": {
@@ -1494,7 +1514,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jake Dorn",
+      "pitcher": "TJ Coats",
       "batter": "John Martinez",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1504,13 +1524,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Nicholas Romano",
-        "2B": null,
+        "1B": null,
+        "2B": "Nicholas Romano",
         "3B": null
       },
       "runners_after": {
-        "1B": "Nicholas Romano",
-        "2B": null,
+        "1B": null,
+        "2B": "Nicholas Romano",
         "3B": null
       },
       "score": {
@@ -1521,7 +1541,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jake Dorn",
+      "pitcher": "TJ Coats",
       "batter": "Brett Patten",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1531,13 +1551,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Nicholas Romano",
-        "2B": null,
+        "1B": null,
+        "2B": "Nicholas Romano",
         "3B": null
       },
       "runners_after": {
-        "1B": "Nicholas Romano",
-        "2B": null,
+        "1B": null,
+        "2B": "Nicholas Romano",
         "3B": null
       },
       "score": {
@@ -1548,7 +1568,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Brody Juntunen",
       "batter": "Fabio Peralta",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1575,7 +1595,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Kyzer Smith",
       "batter": "Jake Ogden",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1602,7 +1622,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Kyzer Smith",
       "batter": "Daniel Cuvet",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1629,7 +1649,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Brixton Lofgren",
       "batter": "Patrick Ward",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1656,7 +1676,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Brixton Lofgren",
       "batter": "Jonathan Lopez",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1683,7 +1703,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Brixton Lofgren",
       "batter": "Marshall Lipsey",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1710,7 +1730,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Kyzer Smith",
       "batter": "Alex Sosa",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1737,7 +1757,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Kyzer Smith",
       "batter": "Derek Williams",
       "outcome": "Double",
       "count": "1-0",
@@ -1764,7 +1784,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Kyzer Smith",
       "batter": "Brylan West",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1791,13 +1811,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Kyzer Smith",
       "batter": "Vance Sheahan",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1818,7 +1840,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Kyzer Smith",
       "batter": "Alonzo Alvarez",
       "outcome": "Single",
       "count": "1-1",
@@ -1845,7 +1867,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Kyzer Smith",
       "batter": "Dylan Dubovik",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1872,7 +1894,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Brixton Lofgren",
       "batter": "TJ Gramesty",
       "outcome": "Single",
       "count": "0-0",
@@ -1899,7 +1921,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Brixton Lofgren",
       "batter": "Kyle Boylston",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1926,13 +1948,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Brixton Lofgren",
       "batter": "Nicholas Romano",
       "outcome": "Reached on error",
       "count": "0-2",
       "pitches": "SS",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1953,7 +1977,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Jack Durso",
       "batter": "Michael Perazza",
       "outcome": "Double",
       "count": "0-0",
@@ -1980,7 +2004,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Jack Durso",
       "batter": "John Martinez",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2007,13 +2031,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Jack Durso",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Michael Perazza"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2023,7 +2049,7 @@
       },
       "runners_after": {
         "1B": "Nicholas Romano",
-        "2B": "Michael Perazza",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -2034,7 +2060,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Jack Durso",
       "batter": "Brett Patten",
       "outcome": "Walk",
       "count": "3-2",
@@ -2045,12 +2071,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Nicholas Romano",
-        "2B": "Michael Perazza",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Brett Patten",
-        "2B": "Michael Perazza",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -2061,7 +2087,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Jack Durso",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2072,12 +2098,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Brett Patten",
-        "2B": "Michael Perazza",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Brett Patten",
-        "2B": "Michael Perazza",
+        "1B": null,
+        "2B": "Brett Patten",
         "3B": null
       },
       "score": {
@@ -2088,7 +2114,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Jack Durso",
       "batter": "Patrick Ward",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2098,13 +2124,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brett Patten",
-        "2B": "Michael Perazza",
+        "1B": null,
+        "2B": "Brett Patten",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brett Patten",
-        "2B": "Michael Perazza",
+        "1B": null,
+        "2B": "Brett Patten",
         "3B": null
       },
       "score": {
@@ -2115,7 +2141,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Carson Kimball",
       "batter": "Fabio Peralta",
       "outcome": "Single",
       "count": "3-2",
@@ -2142,7 +2168,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Zach Kilby",
       "batter": "Jake Ogden",
       "outcome": "Pop out",
       "count": "0-1",
@@ -2169,7 +2195,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Zach Kilby",
       "batter": "Daniel Cuvet",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2196,7 +2222,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Zach Kilby",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2211,8 +2237,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Fabio Peralta",
-        "2B": null,
+        "1B": null,
+        "2B": "Fabio Peralta",
         "3B": null
       },
       "score": {
@@ -2223,7 +2249,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Zach Kilby",
       "batter": "Alex Sosa",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2233,13 +2259,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Fabio Peralta",
-        "2B": null,
+        "1B": null,
+        "2B": "Fabio Peralta",
         "3B": null
       },
       "runners_after": {
-        "1B": "Fabio Peralta",
-        "2B": null,
+        "1B": null,
+        "2B": "Fabio Peralta",
         "3B": null
       },
       "score": {
@@ -2250,7 +2276,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "Jonathan Lopez",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2277,7 +2303,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "Danny Baez",
       "outcome": "Single",
       "count": "0-1",
@@ -2304,7 +2330,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "TJ Gramesty",
       "outcome": "Walk",
       "count": "3-0",
@@ -2331,7 +2357,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "Kyle Boylston",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2358,7 +2384,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Ryan Bilka",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -2385,7 +2411,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Zach Kilby",
       "batter": "Derek Williams",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -2412,7 +2438,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Zach Kilby",
       "batter": "Brylan West",
       "outcome": "Flyout",
       "count": "2-0",
@@ -2439,7 +2465,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Zach Kilby",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -2454,7 +2480,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Derek Williams",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2466,7 +2492,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Dalton Robinson",
+      "pitcher": "Zach Kilby",
       "batter": "Vance Sheahan",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2476,12 +2502,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Derek Williams",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Derek Williams",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2493,7 +2519,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Ryan Bilka",
       "batter": "Nicholas Romano",
       "outcome": "Single",
       "count": "1-0",
@@ -2520,7 +2546,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Ryan Bilka",
       "batter": "Michael Perazza",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2547,7 +2573,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jake Dorn",
+      "pitcher": "Ryan Bilka",
       "batter": "John Martinez",
       "outcome": "\u2014",
       "count": "1-1",

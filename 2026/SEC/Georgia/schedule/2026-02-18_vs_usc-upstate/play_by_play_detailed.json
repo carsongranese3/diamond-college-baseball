@@ -3,7 +3,7 @@
   "date": "02/18/2026",
   "away_team": "USC Upstate",
   "home_team": "Georgia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -67,7 +67,9 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -392,7 +394,8 @@
       "pitches": null,
       "rbi": true,
       "runs_scored": [
-        "Ryan Black"
+        "Ryan Black",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -714,13 +717,41 @@
     {
       "inning": "Bottom 3",
       "pitcher": "Juan Reyes",
+      "batter": "REYES, J. to p for EICHENBERGER.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": "Henry Allen",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Henry Allen",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 3
+      },
+      "description": "REYES, J. to p for EICHENBERGER."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Juan Reyes",
       "batter": "Ryan Black",
       "outcome": "Home run",
       "count": null,
       "pitches": null,
       "rbi": true,
       "runs_scored": [
-        "Ryan Black"
+        "Ryan Black",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -911,7 +942,9 @@
       "pitches": null,
       "rbi": true,
       "runs_scored": [
-        "Clayton Campidilli"
+        "Clayton Campidilli",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1068,7 +1101,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Juan Reyes",
+      "pitcher": "Andrew Kummer",
       "batter": "Brennan Hudson",
       "outcome": "Hit by pitch",
       "count": null,
@@ -1092,6 +1125,33 @@
         "home": 5
       },
       "description": "Hudson hit by pitch: Oriach advanced to second."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Andrew Kummer",
+      "batter": "KUMMER, A. to p for REYES, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Brennan Hudson",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Brennan Hudson",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 5
+      },
+      "description": "KUMMER, A. to p for REYES, J.."
     },
     {
       "inning": "Bottom 4",
@@ -1365,7 +1425,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Andrew Kummer",
+      "pitcher": "Cayden Mackey",
       "batter": "Scott Newman",
       "outcome": "Walk",
       "count": null,
@@ -1392,7 +1452,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Andrew Kummer",
+      "pitcher": "Cayden Mackey",
       "batter": "Tre Phelps",
       "outcome": "Foul out",
       "count": null,
@@ -1501,6 +1561,33 @@
     {
       "inning": "Bottom 6",
       "pitcher": "Cayden Mackey",
+      "batter": "MACKEY, C. to p for KUMMER, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 5
+      },
+      "description": "MACKEY, C. to p for KUMMER, A.."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Cayden Mackey",
       "batter": "Jordy Oriach",
       "outcome": "Single",
       "count": null,
@@ -1581,7 +1668,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cayden Mackey",
+      "pitcher": "Reece Hemmerling",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1596,8 +1683,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -1608,22 +1695,25 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cayden Mackey",
+      "pitcher": "Reece Hemmerling",
       "batter": "Henry Allen",
       "outcome": "Double",
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
+        "1B": null,
         "2B": "Henry Allen",
         "3B": null
       },
@@ -1635,7 +1725,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cayden Mackey",
+      "pitcher": "Reece Hemmerling",
       "batter": "Ryan Black",
       "outcome": "Walk",
       "count": null,
@@ -1645,7 +1735,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Daniel Jackson",
+        "1B": null,
         "2B": "Henry Allen",
         "3B": null
       },
@@ -1662,7 +1752,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cayden Mackey",
+      "pitcher": "Reece Hemmerling",
       "batter": "Kolby Branch",
       "outcome": "Walk",
       "count": null,
@@ -1695,7 +1785,10 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1716,13 +1809,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Reece Hemmerling",
+      "pitcher": "Wyatt Land",
       "batter": "Scott Newman",
       "outcome": "Groundout",
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1824,7 +1919,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Reece Hemmerling",
+      "pitcher": "Wyatt Land",
       "batter": "Tre Phelps",
       "outcome": "Hit by pitch",
       "count": null,
@@ -1851,13 +1946,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Reece Hemmerling",
+      "pitcher": "Wyatt Land",
       "batter": "Rylan Lujo",
       "outcome": "Double",
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1879,6 +1976,33 @@
     {
       "inning": "Bottom 7",
       "pitcher": "Wyatt Land",
+      "batter": "LAND, W. to p for HEMMERLING.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Tre Phelps",
+        "2B": "Rylan Lujo",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Tre Phelps",
+        "2B": "Rylan Lujo",
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 11
+      },
+      "description": "LAND, W. to p for HEMMERLING."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Brad Benton",
       "batter": "Daniel Jackson",
       "outcome": "Flyout",
       "count": null,
@@ -1905,13 +2029,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Wyatt Land",
+      "pitcher": "Brad Benton",
       "batter": "Jack Arcamone",
       "outcome": "Single",
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1932,7 +2058,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Wyatt Land",
+      "pitcher": "Brad Benton",
       "batter": "Henry Allen",
       "outcome": "Strikeout (swinging)",
       "count": null,
@@ -1959,7 +2085,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Wyatt Land",
+      "pitcher": "",
       "batter": "Ryan Black",
       "outcome": "Flyout",
       "count": null,
@@ -2073,7 +2199,10 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -2175,7 +2304,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brad Benton",
+      "pitcher": "",
+      "batter": "BENTON, B. to p for LAND, W..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 12
+      },
+      "description": "BENTON, B. to p for LAND, W.."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Kolby Branch",
       "outcome": "Groundout",
       "count": null,
@@ -2202,7 +2358,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brad Benton",
+      "pitcher": "",
       "batter": "Ty Peeples",
       "outcome": "Strikeout (swinging)",
       "count": null,
@@ -2229,7 +2385,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brad Benton",
+      "pitcher": "",
       "batter": "Scott Newman",
       "outcome": "Flyout",
       "count": null,
@@ -2364,7 +2520,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Paul Farley",
+      "pitcher": "",
       "batter": "Maloy Heaghney",
       "outcome": "Strikeout (looking)",
       "count": null,

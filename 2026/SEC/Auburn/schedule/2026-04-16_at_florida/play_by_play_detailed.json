@@ -3,7 +3,7 @@
   "date": "04/16/2026",
   "away_team": "Auburn",
   "home_team": "Florida",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -104,8 +104,8 @@
       },
       "runners_after": {
         "1B": "Eric Guevara",
-        "2B": "Chase Fralick",
-        "3B": null
+        "2B": null,
+        "3B": "Chase Fralick"
       },
       "score": {
         "away": 0,
@@ -126,13 +126,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Eric Guevara",
-        "2B": "Chase Fralick",
-        "3B": null
+        "2B": null,
+        "3B": "Chase Fralick"
       },
       "runners_after": {
         "1B": "Eric Guevara",
-        "2B": "Chase Fralick",
-        "3B": null
+        "2B": null,
+        "3B": "Chase Fralick"
       },
       "score": {
         "away": 0,
@@ -148,17 +148,19 @@
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Chase Fralick"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Eric Guevara",
-        "2B": "Chase Fralick",
-        "3B": null
+        "2B": null,
+        "3B": "Chase Fralick"
       },
       "runners_after": {
         "1B": "Logan Gregorio",
-        "2B": "Chase Fralick",
+        "2B": "Eric Guevara",
         "3B": null
       },
       "score": {
@@ -180,12 +182,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Logan Gregorio",
-        "2B": "Chase Fralick",
+        "2B": "Eric Guevara",
         "3B": null
       },
       "runners_after": {
         "1B": "Logan Gregorio",
-        "2B": "Chase Fralick",
+        "2B": "Eric Guevara",
         "3B": null
       },
       "score": {
@@ -878,6 +880,33 @@
     {
       "inning": "Bottom 3",
       "pitcher": "LJ Cormier",
+      "batter": "Cormier, L. to p for Alvarez, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Cade Kurland",
+        "2B": "Landon Stripling",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Cade Kurland",
+        "2B": "Landon Stripling",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 4
+      },
+      "description": "Cormier, L. to p for Alvarez, A.."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "LJ Cormier",
       "batter": "Cole Stanford",
       "outcome": "Fielder's choice",
       "count": "0-1",
@@ -1108,8 +1137,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brendan Lawson",
-        "2B": null,
+        "1B": null,
+        "2B": "Brendan Lawson",
         "3B": null
       },
       "score": {
@@ -1130,8 +1159,8 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brendan Lawson",
-        "2B": null,
+        "1B": null,
+        "2B": "Brendan Lawson",
         "3B": null
       },
       "runners_after": {
@@ -1147,7 +1176,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "LJ Cormier",
+      "pitcher": "Garrett Brewer",
       "batter": "Blake Cyr",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1244,7 +1273,7 @@
       },
       "runners_after": {
         "1B": "Brandon McCraine",
-        "2B": null,
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "score": {
@@ -1266,12 +1295,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Brandon McCraine",
-        "2B": null,
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "runners_after": {
         "1B": "Brandon McCraine",
-        "2B": null,
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "score": {
@@ -1293,12 +1322,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Brandon McCraine",
-        "2B": null,
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "runners_after": {
         "1B": "Brandon McCraine",
-        "2B": null,
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "score": {
@@ -1306,6 +1335,33 @@
         "home": 4
       },
       "description": "Fralick, C. struck out swinging (3-2 KBBBSS)."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Garrett Brewer",
+      "batter": "Brewer, G. to p for Cormier, L..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 4
+      },
+      "description": "Brewer, G. to p for Cormier, L.."
     },
     {
       "inning": "Bottom 5",
@@ -1417,7 +1473,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "Abe Chancellor",
       "batter": "Kyle Jones",
       "outcome": "Double",
       "count": "0-1",
@@ -1447,7 +1503,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "Abe Chancellor",
       "batter": "Brendan Lawson",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1528,7 +1584,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Aidan King",
+      "pitcher": "Ricky Reeth",
       "batter": "Logan Gregorio",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1552,6 +1608,33 @@
         "home": 6
       },
       "description": "Gregorio, L. flied out to lf (0-2 FKF)."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Abe Chancellor",
+      "batter": "Chancellor,A to p for Brewer, G..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 6
+      },
+      "description": "Chancellor,A to p for Brewer, G.."
     },
     {
       "inning": "Bottom 6",
@@ -1750,7 +1833,9 @@
       "count": "2-1",
       "pitches": "BBS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Eddie Madrigal"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1760,7 +1845,7 @@
       },
       "runners_after": {
         "1B": "Brandon McCraine",
-        "2B": "Eddie Madrigal",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1771,7 +1856,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ricky Reeth",
+      "pitcher": "Ernesto Lugo-Canchola",
       "batter": "Chris Rembert",
       "outcome": "Single",
       "count": "0-1",
@@ -1782,12 +1867,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Brandon McCraine",
-        "2B": "Eddie Madrigal",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Chris Rembert",
-        "2B": "Eddie Madrigal",
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "score": {
@@ -1804,17 +1889,19 @@
       "count": "2-2",
       "pitches": "BBSK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Brandon McCraine"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Chris Rembert",
-        "2B": "Eddie Madrigal",
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "runners_after": {
         "1B": "Chase Fralick",
-        "2B": "Eddie Madrigal",
+        "2B": "Chris Rembert",
         "3B": null
       },
       "score": {
@@ -1836,12 +1923,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Chase Fralick",
-        "2B": "Eddie Madrigal",
+        "2B": "Chris Rembert",
         "3B": null
       },
       "runners_after": {
         "1B": "Chase Fralick",
-        "2B": "Eddie Madrigal",
+        "2B": "Chris Rembert",
         "3B": null
       },
       "score": {
@@ -1987,7 +2074,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ernesto Lugo-Canchola",
+      "pitcher": "Joshua Whritenour",
       "batter": "Ethin Bingaman",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2014,7 +2101,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Abe Chancellor",
+      "pitcher": "",
       "batter": "Kyle Jones",
       "outcome": "\u2014",
       "count": "1-2",
@@ -2041,7 +2128,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Abe Chancellor",
+      "pitcher": "",
       "batter": "Brendan Lawson",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2068,7 +2155,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Abe Chancellor",
+      "pitcher": "",
       "batter": "Ethan Surowiec",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2176,7 +2263,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Joshua Whritenour",
+      "pitcher": "",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2191,8 +2278,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brandon McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "score": {
@@ -2203,7 +2290,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Joshua Whritenour",
+      "pitcher": "",
       "batter": "Chris Rembert",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2213,13 +2300,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brandon McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brandon McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Brandon McCraine",
         "3B": null
       },
       "score": {

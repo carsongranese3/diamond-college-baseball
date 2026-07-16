@@ -3,7 +3,7 @@
   "date": "04/14/2026",
   "away_team": "Liberty",
   "home_team": "Duke",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -94,7 +94,9 @@
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -122,7 +124,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Nick Barone"
+        "Nick Barone",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -267,9 +270,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kaden Smith",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Kaden Smith"
       },
       "score": {
         "away": 3,
@@ -285,18 +288,20 @@
       "count": "2-1",
       "pitches": "FBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Kaden Smith",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Kaden Smith"
       },
       "runners_after": {
-        "1B": "Kaden Smith",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Kaden Smith"
       },
       "score": {
         "away": 3,
@@ -312,18 +317,20 @@
       "count": "0-0",
       "pitches": "",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Kaden Smith",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Kaden Smith"
       },
       "runners_after": {
         "1B": "Collin Anderson",
         "2B": null,
-        "3B": null
+        "3B": "Kaden Smith"
       },
       "score": {
         "away": 3,
@@ -345,12 +352,12 @@
       "runners_before": {
         "1B": "Collin Anderson",
         "2B": null,
-        "3B": null
+        "3B": "Kaden Smith"
       },
       "runners_after": {
         "1B": "Collin Anderson",
         "2B": null,
-        "3B": null
+        "3B": "Kaden Smith"
       },
       "score": {
         "away": 3,
@@ -416,7 +423,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Caleb Anderson",
       "batter": "Josh Campos",
       "outcome": "Home run",
       "count": "0-0",
@@ -445,7 +452,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Caleb Anderson",
       "batter": "Tanner Marsh",
       "outcome": "Flyout",
       "count": "3-2",
@@ -472,7 +479,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Caleb Anderson",
       "batter": "Riley DeCandido",
       "outcome": "Flyout",
       "count": "1-2",
@@ -587,7 +594,8 @@
       "pitches": "F",
       "rbi": true,
       "runs_scored": [
-        "Jake Lambdin"
+        "Jake Lambdin",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -651,8 +659,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "RJ Hamilton",
-        "2B": null,
+        "1B": null,
+        "2B": "RJ Hamilton",
         "3B": null
       },
       "score": {
@@ -669,17 +677,19 @@
       "count": "2-2",
       "pitches": "KFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "RJ Hamilton",
-        "2B": null,
+        "1B": null,
+        "2B": "RJ Hamilton",
         "3B": null
       },
       "runners_after": {
         "1B": "Kaden Smith",
-        "2B": null,
+        "2B": "RJ Hamilton",
         "3B": null
       },
       "score": {
@@ -690,7 +700,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Jake Potts",
+      "pitcher": "Josh McCusker",
       "batter": "Matthew Strand",
       "outcome": "Single",
       "count": "1-2",
@@ -701,12 +711,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kaden Smith",
-        "2B": null,
+        "2B": "RJ Hamilton",
         "3B": null
       },
       "runners_after": {
         "1B": "Matthew Strand",
-        "2B": null,
+        "2B": "RJ Hamilton",
         "3B": null
       },
       "score": {
@@ -717,7 +727,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Jake Potts",
+      "pitcher": "Josh McCusker",
       "batter": "Collin Anderson",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -728,12 +738,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Matthew Strand",
-        "2B": null,
+        "2B": "RJ Hamilton",
         "3B": null
       },
       "runners_after": {
         "1B": "Collin Anderson",
-        "2B": null,
+        "2B": "RJ Hamilton",
         "3B": null
       },
       "score": {
@@ -744,23 +754,25 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Jake Potts",
+      "pitcher": "Josh McCusker",
       "batter": "Michael DiMartini",
       "outcome": "Hit by pitch",
       "count": "2-1",
       "pitches": "BKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Collin Anderson",
-        "2B": null,
+        "2B": "RJ Hamilton",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael DiMartini",
-        "2B": null,
+        "2B": "RJ Hamilton",
         "3B": null
       },
       "score": {
@@ -771,7 +783,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Jake Potts",
+      "pitcher": "Josh McCusker",
       "batter": "Coltin Quagliano",
       "outcome": "Groundout",
       "count": "1-0",
@@ -782,12 +794,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Michael DiMartini",
-        "2B": null,
+        "2B": "RJ Hamilton",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael DiMartini",
-        "2B": null,
+        "2B": "RJ Hamilton",
         "3B": null
       },
       "score": {
@@ -798,7 +810,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Caleb Anderson",
       "batter": "Jordan Jaffe",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -825,7 +837,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Caleb Anderson",
       "batter": "Jaxon Sorenson",
       "outcome": "Reached on error",
       "count": "1-2",
@@ -852,14 +864,15 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Caleb Anderson",
       "batter": "Nick Barone",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Nick Barone"
+        "Nick Barone",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -881,7 +894,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Caleb Anderson",
       "batter": "Easton Swofford",
       "outcome": "Flyout",
       "count": "1-0",
@@ -908,7 +921,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Caleb Anderson",
       "batter": "Landon Scilley",
       "outcome": "Groundout",
       "count": "2-0",
@@ -935,7 +948,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jake Potts",
+      "pitcher": "Josh McCusker",
       "batter": "Adin Zorn",
       "outcome": "Groundout",
       "count": "0-0",
@@ -962,7 +975,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jake Potts",
+      "pitcher": "Josh McCusker",
       "batter": "Brooks Perez",
       "outcome": "Walk",
       "count": "3-2",
@@ -989,7 +1002,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jake Potts",
+      "pitcher": "Josh McCusker",
       "batter": "Jake Lambdin",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1016,7 +1029,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jake Potts",
+      "pitcher": "Josh McCusker",
       "batter": "RJ Hamilton",
       "outcome": "Double",
       "count": "0-0",
@@ -1043,7 +1056,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jake Potts",
+      "pitcher": "Josh McCusker",
       "batter": "Kaden Smith",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1070,7 +1083,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Drew Bryan",
       "batter": "Kyle Hvidsten",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -1097,7 +1110,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Drew Bryan",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1112,8 +1125,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Hvidsten",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Hvidsten",
         "3B": null
       },
       "score": {
@@ -1124,7 +1137,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Drew Bryan",
       "batter": "Josh Campos",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1134,13 +1147,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Kyle Hvidsten",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Hvidsten",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Hvidsten",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Hvidsten",
         "3B": null
       },
       "score": {
@@ -1151,7 +1164,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Drew Bryan",
       "batter": "Tanner Marsh",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1161,13 +1174,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kyle Hvidsten",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Hvidsten",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Hvidsten",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Hvidsten",
         "3B": null
       },
       "score": {
@@ -1178,7 +1191,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Drew Bryan",
       "batter": "Riley DeCandido",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -1188,13 +1201,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kyle Hvidsten",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Hvidsten",
         "3B": null
       },
       "runners_after": {
         "1B": "Riley DeCandido",
-        "2B": null,
+        "2B": "Kyle Hvidsten",
         "3B": null
       },
       "score": {
@@ -1205,7 +1218,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Drew Bryan",
       "batter": "Jordan Jaffe",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1216,12 +1229,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Riley DeCandido",
-        "2B": null,
+        "2B": "Kyle Hvidsten",
         "3B": null
       },
       "runners_after": {
         "1B": "Riley DeCandido",
-        "2B": null,
+        "2B": "Kyle Hvidsten",
         "3B": null
       },
       "score": {
@@ -1232,7 +1245,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jake Potts",
+      "pitcher": "Josh McCusker",
       "batter": "Matthew Strand",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1259,7 +1272,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jake Potts",
+      "pitcher": "Jackson Evans",
       "batter": "Collin Anderson",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1286,7 +1299,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jake Potts",
+      "pitcher": "Jackson Evans",
       "batter": "Michael DiMartini",
       "outcome": "Home run",
       "count": "0-0",
@@ -1315,7 +1328,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jake Potts",
+      "pitcher": "Jackson Evans",
       "batter": "Coltin Quagliano",
       "outcome": "Single",
       "count": "0-2",
@@ -1342,7 +1355,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jake Potts",
+      "pitcher": "Jackson Evans",
       "batter": "Adin Zorn",
       "outcome": "Fielder's choice",
       "count": "0-2",
@@ -1369,7 +1382,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Drew Bryan",
       "batter": "Jaxon Sorenson",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1396,7 +1409,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Drew Bryan",
       "batter": "Nick Barone",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1423,7 +1436,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Drew Bryan",
       "batter": "Easton Swofford",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1450,7 +1463,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Drew Bryan",
       "batter": "Landon Scilley",
       "outcome": "Walk",
       "count": "3-2",
@@ -1477,13 +1490,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Marcello Mastroianni",
       "batter": "Kyle Hvidsten",
       "outcome": "Double",
       "count": "2-2",
       "pitches": "BKBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1504,13 +1519,16 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Marcello Mastroianni",
       "batter": "Josh Campos",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1531,7 +1549,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Marcello Mastroianni",
       "batter": "Tanner Marsh",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1558,7 +1576,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jake Potts",
+      "pitcher": "Jackson Evans",
       "batter": "Brooks Perez",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1585,7 +1603,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jake Potts",
+      "pitcher": "Brandon Dahlman",
       "batter": "Jake Lambdin",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1612,7 +1630,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jake Potts",
+      "pitcher": "Brandon Dahlman",
       "batter": "RJ Hamilton",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1639,7 +1657,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Marcello Mastroianni",
       "batter": "Riley DeCandido",
       "outcome": "Walk",
       "count": "3-2",
@@ -1666,7 +1684,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "David Boisvert",
       "batter": "Jordan Jaffe",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1693,7 +1711,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "David Boisvert",
       "batter": "Jaxon Sorenson",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1720,7 +1738,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "David Boisvert",
       "batter": "Nick Barone",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1747,7 +1765,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jake Potts",
+      "pitcher": "Brandon Dahlman",
       "batter": "Kaden Smith",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1774,7 +1792,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jake Potts",
+      "pitcher": "Brandon Dahlman",
       "batter": "Matthew Strand",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1801,7 +1819,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jake Potts",
+      "pitcher": "Brandon Dahlman",
       "batter": "Collin Anderson",
       "outcome": "Pop out",
       "count": "2-1",
@@ -1828,7 +1846,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "David Boisvert",
       "batter": "Easton Swofford",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1855,7 +1873,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "David Boisvert",
       "batter": "Landon Scilley",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1882,7 +1900,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "David Boisvert",
       "batter": "Kyle Hvidsten",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1909,7 +1927,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "David Boisvert",
       "batter": "Josh Campos",
       "outcome": "Single",
       "count": "0-0",
@@ -1936,13 +1954,16 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "David Boisvert",
       "batter": "Tanner Marsh",
       "outcome": "Reached on error",
       "count": "1-2",
       "pitches": "KFB",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1963,7 +1984,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "David Boisvert",
       "batter": "Riley DeCandido",
       "outcome": "Single",
       "count": "1-2",
@@ -1990,7 +2011,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "David Boisvert",
       "batter": "Jordan Jaffe",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2017,7 +2038,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jake Potts",
+      "pitcher": "Brandon Dahlman",
       "batter": "Michael DiMartini",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2044,7 +2065,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jake Potts",
+      "pitcher": "Brandon Dahlman",
       "batter": "Coltin Quagliano",
       "outcome": "Single",
       "count": "1-1",
@@ -2071,7 +2092,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jake Potts",
+      "pitcher": "Brandon Dahlman",
       "batter": "Adin Zorn",
       "outcome": "Grounded into double play",
       "count": "0-0",
@@ -2098,7 +2119,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Bennett LaPalm",
       "batter": "Jaxon Sorenson",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -2125,14 +2146,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Bennett LaPalm",
       "batter": "Nick Barone",
       "outcome": "Home run",
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": true,
       "runs_scored": [
-        "Nick Barone"
+        "Nick Barone",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -2154,7 +2176,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Bennett LaPalm",
       "batter": "Easton Swofford",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2181,7 +2203,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Bennett LaPalm",
       "batter": "Landon Scilley",
       "outcome": "Walk",
       "count": "3-2",
@@ -2208,7 +2230,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Grayson Walker",
       "batter": "Kyle Hvidsten",
       "outcome": "Walk",
       "count": "3-0",
@@ -2235,13 +2257,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Grayson Walker",
       "batter": "Josh Campos",
       "outcome": "Fielder's choice",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2262,13 +2286,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Grayson Walker",
       "batter": "Tanner Marsh",
       "outcome": "Reached on error",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2289,7 +2315,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Grayson Walker",
       "batter": "Riley DeCandido",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2316,7 +2342,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Potts",
+      "pitcher": "Brandon Dahlman",
       "batter": "Trevor Johnson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2343,7 +2369,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Potts",
+      "pitcher": "Aydan Decker-Petty",
       "batter": "Jake Lambdin",
       "outcome": "Walk",
       "count": "3-1",
@@ -2370,7 +2396,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Potts",
+      "pitcher": "Aydan Decker-Petty",
       "batter": "RJ Hamilton",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2397,7 +2423,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jake Potts",
+      "pitcher": "Aydan Decker-Petty",
       "batter": "Kaden Smith",
       "outcome": "Lineout",
       "count": "1-1",
@@ -2424,7 +2450,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Sammy Petrocelli",
       "batter": "Jordan Jaffe",
       "outcome": "Walk",
       "count": "3-0",
@@ -2451,7 +2477,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Sammy Petrocelli",
       "batter": "Jaxon Sorenson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2478,7 +2504,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Sammy Petrocelli",
       "batter": "Nick Barone",
       "outcome": "Walk",
       "count": "3-1",
@@ -2505,7 +2531,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Sammy Petrocelli",
       "batter": "John Simmons",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2532,13 +2558,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Sammy Petrocelli",
       "batter": "Anderson Fulk",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2559,7 +2587,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Sammy Petrocelli",
       "batter": "Charlie Brinkman",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -2586,7 +2614,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Aiden O'Connell",
+      "pitcher": "Sammy Petrocelli",
       "batter": "Josh Campos",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2613,7 +2641,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jake Potts",
+      "pitcher": "Aydan Decker-Petty",
       "batter": "Matthew Strand",
       "outcome": "Single",
       "count": "1-0",
@@ -2640,7 +2668,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jake Potts",
+      "pitcher": "Seth Way",
       "batter": "Collin Anderson",
       "outcome": "Walk",
       "count": "3-0",
@@ -2667,7 +2695,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jake Potts",
+      "pitcher": "Seth Way",
       "batter": "Michael DiMartini",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2694,7 +2722,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jake Potts",
+      "pitcher": "Seth Way",
       "batter": "Coltin Quagliano",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2721,7 +2749,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jake Potts",
+      "pitcher": "Seth Way",
       "batter": "Adin Zorn",
       "outcome": "Flyout",
       "count": "0-0",

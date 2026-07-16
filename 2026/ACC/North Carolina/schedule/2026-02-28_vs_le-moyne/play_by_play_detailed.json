@@ -3,7 +3,7 @@
   "date": "02/28/2026",
   "away_team": "Le Moyne",
   "home_team": "North Carolina",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -157,7 +157,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Schaffner",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -179,12 +179,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jake Schaffner",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Schaffner",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -310,7 +310,9 @@
       "count": "1-2",
       "pitches": "KBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -445,7 +447,9 @@
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -850,7 +854,9 @@
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -904,7 +910,9 @@
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -931,7 +939,10 @@
       "count": "1-2",
       "pitches": "SBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -986,7 +997,9 @@
       "pitches": "SBSBBF",
       "rbi": true,
       "runs_scored": [
-        "Erik Paulsen"
+        "Erik Paulsen",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1197,7 +1210,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Mitchell Earle",
+      "pitcher": "Eric Swiencicki",
       "batter": "Colin Hynek",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1224,7 +1237,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Mitchell Earle",
+      "pitcher": "Eric Swiencicki",
       "batter": "Cooper Nicholson",
       "outcome": "Pop out",
       "count": "0-0",
@@ -1347,8 +1360,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Adam Sullivan",
-        "2B": null,
+        "1B": null,
+        "2B": "Adam Sullivan",
         "3B": null
       },
       "score": {
@@ -1369,13 +1382,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Adam Sullivan",
-        "2B": null,
+        "1B": null,
+        "2B": "Adam Sullivan",
         "3B": null
       },
       "runners_after": {
-        "1B": "Adam Sullivan",
-        "2B": null,
+        "1B": null,
+        "2B": "Adam Sullivan",
         "3B": null
       },
       "score": {
@@ -1386,7 +1399,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Mitchell Earle",
+      "pitcher": "Eric Swiencicki",
       "batter": "Carter French",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1413,7 +1426,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Mitchell Earle",
+      "pitcher": "Eric Swiencicki",
       "batter": "Perry Hargett",
       "outcome": "Single",
       "count": "1-2",
@@ -1440,14 +1453,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Mitchell Earle",
+      "pitcher": "Eric Swiencicki",
       "batter": "Jake Schaffner",
       "outcome": "Home run",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "Jake Schaffner"
+        "Jake Schaffner",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1469,7 +1483,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Mitchell Earle",
+      "pitcher": "Eric Swiencicki",
       "batter": "Gavin Gallaher",
       "outcome": "Walk",
       "count": "3-2",
@@ -1496,7 +1510,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Mitchell Earle",
+      "pitcher": "Eric Swiencicki",
       "batter": "Erik Paulsen",
       "outcome": "Walk",
       "count": "3-1",
@@ -1523,13 +1537,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Mitchell Earle",
+      "pitcher": "Eric Swiencicki",
       "batter": "Macon Winslow",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1550,7 +1566,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Mitchell Earle",
+      "pitcher": "Eric Swiencicki",
       "batter": "Owen Hull",
       "outcome": "Fielder's choice",
       "count": "3-2",
@@ -1577,13 +1593,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Mitchell Earle",
+      "pitcher": "Jack Molini",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Owen Hull"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1592,7 +1610,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Owen Hull",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1604,7 +1622,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Mitchell Earle",
+      "pitcher": "Jack Molini",
       "batter": "KellisV,Rom flied out to rf (3-1 BBBF).",
       "outcome": "Flyout",
       "count": "3-1",
@@ -1614,12 +1632,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Owen Hull",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Owen Hull",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1687,7 +1705,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ryan Lynch",
+      "pitcher": "Matthew Matthijs",
       "batter": "Isaac Brozon",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1714,7 +1732,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ryan Lynch",
+      "pitcher": "Matthew Matthijs",
       "batter": "Paulie Goodness",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",

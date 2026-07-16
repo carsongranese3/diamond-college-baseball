@@ -3,7 +3,7 @@
   "date": "04/07/2026",
   "away_team": "James Madison",
   "home_team": "Virginia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -103,9 +103,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Reece Moody",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Reece Moody"
       },
       "score": {
         "away": 0,
@@ -125,14 +125,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Reece Moody",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Reece Moody"
       },
       "runners_after": {
-        "1B": "Reece Moody",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Reece Moody"
       },
       "score": {
         "away": 0,
@@ -152,14 +152,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Reece Moody",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Reece Moody"
       },
       "runners_after": {
-        "1B": "Reece Moody",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Reece Moody"
       },
       "score": {
         "away": 0,
@@ -256,7 +256,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -385,7 +387,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Griffin Polley",
       "batter": "Kyle Johnson",
       "outcome": "Flyout",
       "count": "0-1",
@@ -412,7 +414,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Griffin Polley",
       "batter": "Antonio Perrotta",
       "outcome": "Groundout",
       "count": "2-2",
@@ -439,7 +441,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Griffin Polley",
       "batter": "Noah Murray",
       "outcome": "Lineout",
       "count": "2-2",
@@ -547,7 +549,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Griffin Polley",
       "batter": "Noah Jouras",
       "outcome": "Groundout",
       "count": "0-0",
@@ -574,7 +576,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Griffin Polley",
       "batter": "AJ Gracia",
       "outcome": "Walk",
       "count": "3-2",
@@ -601,7 +603,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Griffin Polley",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -616,8 +618,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "AJ Gracia",
-        "2B": null,
+        "1B": null,
+        "2B": "AJ Gracia",
         "3B": null
       },
       "score": {
@@ -628,7 +630,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Griffin Polley",
       "batter": "Eric Becker",
       "outcome": "Walk",
       "count": "3-0",
@@ -638,13 +640,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "AJ Gracia",
-        "2B": null,
+        "1B": null,
+        "2B": "AJ Gracia",
         "3B": null
       },
       "runners_after": {
         "1B": "Eric Becker",
-        "2B": null,
+        "2B": "AJ Gracia",
         "3B": null
       },
       "score": {
@@ -655,7 +657,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Tyler Muscar",
       "batter": "Sam Harris",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -666,12 +668,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Eric Becker",
-        "2B": null,
+        "2B": "AJ Gracia",
         "3B": null
       },
       "runners_after": {
         "1B": "Eric Becker",
-        "2B": null,
+        "2B": "AJ Gracia",
         "3B": null
       },
       "score": {
@@ -682,7 +684,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Tyler Muscar",
       "batter": "Joe Tiroly",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -693,12 +695,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Eric Becker",
-        "2B": null,
+        "2B": "AJ Gracia",
         "3B": null
       },
       "runners_after": {
         "1B": "Eric Becker",
-        "2B": null,
+        "2B": "AJ Gracia",
         "3B": null
       },
       "score": {
@@ -779,8 +781,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Reece Moody",
-        "3B": null
+        "2B": null,
+        "3B": "Reece Moody"
       },
       "score": {
         "away": 0,
@@ -801,13 +803,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Reece Moody",
-        "3B": null
+        "2B": null,
+        "3B": "Reece Moody"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Reece Moody",
-        "3B": null
+        "2B": null,
+        "3B": "Reece Moody"
       },
       "score": {
         "away": 0,
@@ -828,13 +830,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Reece Moody",
-        "3B": null
+        "2B": null,
+        "3B": "Reece Moody"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Reece Moody",
-        "3B": null
+        "2B": null,
+        "3B": "Reece Moody"
       },
       "score": {
         "away": 0,
@@ -844,7 +846,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Tyler Muscar",
       "batter": "Harrison Didawick",
       "outcome": "Flyout",
       "count": "0-0",
@@ -871,7 +873,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Tyler Muscar",
       "batter": "Kyle Johnson",
       "outcome": "Walk",
       "count": "3-1",
@@ -898,7 +900,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Tyler Muscar",
       "batter": "Antonio Perrotta",
       "outcome": "Single",
       "count": "3-1",
@@ -925,14 +927,16 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Tyler Muscar",
       "batter": "Noah Murray",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "BBKFBF",
       "rbi": true,
       "runs_scored": [
-        "Noah Murray"
+        "Noah Murray",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -954,7 +958,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Brode Susce",
       "batter": "Noah Jouras",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -981,7 +985,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Brode Susce",
       "batter": "AJ Gracia",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1008,7 +1012,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Brode Susce",
       "batter": "Eric Becker",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -1035,7 +1039,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Sam Pearne",
       "batter": "Sam Harris",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1062,7 +1066,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Jayden Stroman",
       "batter": "Keegan Haesler",
       "outcome": "Walk",
       "count": "3-1",
@@ -1089,7 +1093,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Jayden Stroman",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1104,8 +1108,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Keegan Haesler",
-        "2B": null,
+        "1B": null,
+        "2B": "Keegan Haesler",
         "3B": null
       },
       "score": {
@@ -1116,23 +1120,25 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Jayden Stroman",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Keegan Haesler",
-        "2B": null,
+        "1B": null,
+        "2B": "Keegan Haesler",
         "3B": null
       },
       "runners_after": {
-        "1B": "Keegan Haesler",
-        "2B": null,
+        "1B": null,
+        "2B": "Keegan Haesler",
         "3B": null
       },
       "score": {
@@ -1143,7 +1149,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Jayden Stroman",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1153,13 +1159,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Keegan Haesler",
-        "2B": null,
+        "1B": null,
+        "2B": "Keegan Haesler",
         "3B": null
       },
       "runners_after": {
-        "1B": "Keegan Haesler",
-        "2B": null,
+        "1B": null,
+        "2B": "Keegan Haesler",
         "3B": null
       },
       "score": {
@@ -1170,7 +1176,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Jayden Stroman",
       "batter": "Jack Anderson",
       "outcome": "Walk",
       "count": "3-0",
@@ -1180,13 +1186,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Keegan Haesler",
-        "2B": null,
+        "1B": null,
+        "2B": "Keegan Haesler",
         "3B": null
       },
       "runners_after": {
         "1B": "Jack Anderson",
-        "2B": null,
+        "2B": "Keegan Haesler",
         "3B": null
       },
       "score": {
@@ -1197,7 +1203,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Jayden Stroman",
       "batter": "Kyle Langley",
       "outcome": "Foul out",
       "count": "2-1",
@@ -1208,12 +1214,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Jack Anderson",
-        "2B": null,
+        "2B": "Keegan Haesler",
         "3B": null
       },
       "runners_after": {
         "1B": "Jack Anderson",
-        "2B": null,
+        "2B": "Keegan Haesler",
         "3B": null
       },
       "score": {
@@ -1224,7 +1230,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Noah Yoder",
       "batter": "Clay Thompson",
       "outcome": "Walk",
       "count": "3-0",
@@ -1235,12 +1241,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Jack Anderson",
-        "2B": null,
+        "2B": "Keegan Haesler",
         "3B": null
       },
       "runners_after": {
         "1B": "Clay Thompson",
-        "2B": null,
+        "2B": "Keegan Haesler",
         "3B": null
       },
       "score": {
@@ -1251,23 +1257,25 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Noah Yoder",
       "batter": "Reece Moody",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Clay Thompson",
-        "2B": null,
+        "2B": "Keegan Haesler",
         "3B": null
       },
       "runners_after": {
         "1B": "Reece Moody",
-        "2B": null,
+        "2B": "Keegan Haesler",
         "3B": null
       },
       "score": {
@@ -1278,23 +1286,25 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Noah Yoder",
       "batter": "Ike Schmidly",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Reece Moody",
-        "2B": null,
+        "2B": "Keegan Haesler",
         "3B": null
       },
       "runners_after": {
         "1B": "Ike Schmidly",
-        "2B": null,
+        "2B": "Keegan Haesler",
         "3B": null
       },
       "score": {
@@ -1305,7 +1315,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Jack Guerrero",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1316,12 +1326,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Ike Schmidly",
-        "2B": null,
+        "2B": "Keegan Haesler",
         "3B": null
       },
       "runners_after": {
         "1B": "Ike Schmidly",
-        "2B": null,
+        "2B": "Keegan Haesler",
         "3B": null
       },
       "score": {
@@ -1332,7 +1342,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Conner Worth",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1343,12 +1353,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Ike Schmidly",
-        "2B": null,
+        "2B": "Keegan Haesler",
         "3B": null
       },
       "runners_after": {
         "1B": "Ike Schmidly",
-        "2B": null,
+        "2B": "Keegan Haesler",
         "3B": null
       },
       "score": {
@@ -1359,7 +1369,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Sam Pearne",
       "batter": "Joe Tiroly",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1386,7 +1396,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Sam Pearne",
       "batter": "Harrison Didawick",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1413,7 +1423,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Sam Pearne",
       "batter": "Kyle Johnson",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1440,7 +1450,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Keegan Haesler",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1467,7 +1477,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Cameron Aycock",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1494,7 +1504,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Jack Anderson",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1521,7 +1531,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Sam Pearne",
       "batter": "Antonio Perrotta",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1548,7 +1558,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Sam Pearne",
       "batter": "Noah Murray",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1575,7 +1585,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Sam Pearne",
       "batter": "Jake Weatherspoon",
       "outcome": "Single",
       "count": "0-2",
@@ -1602,7 +1612,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Sam Pearne",
       "batter": "AJ Gracia",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1629,7 +1639,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Kyle Langley",
       "outcome": "Single",
       "count": "0-0",
@@ -1656,7 +1666,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1671,8 +1681,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Langley",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "score": {
@@ -1683,7 +1693,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Clay Thompson",
       "outcome": "Single",
       "count": "3-2",
@@ -1693,13 +1703,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Kyle Langley",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "runners_after": {
         "1B": "Clay Thompson",
-        "2B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "score": {
@@ -1710,23 +1720,25 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Reece Moody",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Clay Thompson",
-        "2B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "runners_after": {
         "1B": "Reece Moody",
-        "2B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "score": {
@@ -1737,23 +1749,25 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Ike Schmidly",
       "outcome": "Reached on error",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Reece Moody",
-        "2B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "runners_after": {
         "1B": "Ike Schmidly",
-        "2B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "score": {
@@ -1764,7 +1778,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
@@ -1775,12 +1789,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Ike Schmidly",
-        "2B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "runners_after": {
         "1B": "Ike Schmidly",
-        "2B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "score": {
@@ -1791,23 +1805,26 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Conner Worth",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Ike Schmidly",
-        "2B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "runners_after": {
         "1B": "Conner Worth",
-        "2B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "score": {
@@ -1818,7 +1835,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Keegan Haesler",
       "outcome": "Single",
       "count": "2-1",
@@ -1829,12 +1846,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Conner Worth",
-        "2B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "runners_after": {
         "1B": "Keegan Haesler",
-        "2B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "score": {
@@ -1845,7 +1862,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Cameron Aycock",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1856,12 +1873,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Keegan Haesler",
-        "2B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "runners_after": {
         "1B": "Keegan Haesler",
-        "2B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "score": {
@@ -1872,7 +1889,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Jack Anderson",
       "outcome": "Pop out",
       "count": "1-0",
@@ -1883,12 +1900,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Keegan Haesler",
-        "2B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "runners_after": {
         "1B": "Keegan Haesler",
-        "2B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "score": {
@@ -1899,7 +1916,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Patrick Bauer",
       "batter": "Eric Becker",
       "outcome": "Hit by pitch",
       "count": "0-2",
@@ -1926,7 +1943,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Patrick Bauer",
       "batter": "Sam Harris",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1953,7 +1970,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Patrick Bauer",
       "batter": "Joe Tiroly",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1980,7 +1997,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Patrick Bauer",
       "batter": "Harrison Didawick",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2007,7 +2024,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Kyle Langley",
       "outcome": "Single",
       "count": "3-2",
@@ -2034,7 +2051,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Tyler Kapa",
       "batter": "Clay Thompson",
       "outcome": "Walk",
       "count": "3-0",
@@ -2061,7 +2078,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Tyler Kapa",
       "batter": "Reece Moody",
       "outcome": "Pop out",
       "count": "0-0",
@@ -2088,7 +2105,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Tyler Kapa",
       "batter": "Ike Schmidly",
       "outcome": "Walk",
       "count": "3-1",
@@ -2115,7 +2132,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Tyler Kapa",
       "batter": "Ben Barrow",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2142,7 +2159,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Tyler Kapa",
       "batter": "Conner Worth",
       "outcome": "Fielder's choice",
       "count": "0-2",
@@ -2169,7 +2186,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Patrick Bauer",
       "batter": "Kyle Johnson",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2196,7 +2213,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Patrick Bauer",
       "batter": "Antonio Perrotta",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -2223,7 +2240,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Patrick Bauer",
       "batter": "Noah Murray",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2250,7 +2267,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Patrick Bauer",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2277,13 +2294,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Patrick Bauer",
       "batter": "Jake Weatherspoon",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "KKBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2304,7 +2323,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Patrick Bauer",
       "batter": "AJ Gracia",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2331,7 +2350,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Tyler Kapa",
       "batter": "Keegan Haesler",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2358,7 +2377,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Tyler Kapa",
       "batter": "Cameron Aycock",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2385,7 +2404,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Tyler Kapa",
       "batter": "Jack Anderson",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2412,7 +2431,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Patrick Bauer",
       "batter": "Eric Becker",
       "outcome": "Walk",
       "count": "3-0",
@@ -2439,7 +2458,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Luke McGrath",
       "batter": "Sam Harris",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2466,14 +2485,15 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Luke McGrath",
       "batter": "Joe Tiroly",
       "outcome": "Home run",
       "count": "1-2",
       "pitches": "BFK",
       "rbi": true,
       "runs_scored": [
-        "Joe Tiroly"
+        "Joe Tiroly",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -2495,7 +2515,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Luke McGrath",
       "batter": "Harrison Didawick",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -2522,7 +2542,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Luke McGrath",
       "batter": "Kyle Johnson",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2549,7 +2569,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Luke McGrath",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2564,8 +2584,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Harrison Didawick",
-        "2B": null,
+        "1B": null,
+        "2B": "Harrison Didawick",
         "3B": null
       },
       "score": {
@@ -2576,7 +2596,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Luke McGrath",
       "batter": "Zach Jackson",
       "outcome": "Flyout",
       "count": "2-2",
@@ -2586,13 +2606,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Harrison Didawick",
-        "2B": null,
+        "1B": null,
+        "2B": "Harrison Didawick",
         "3B": null
       },
       "runners_after": {
-        "1B": "Harrison Didawick",
-        "2B": null,
+        "1B": null,
+        "2B": "Harrison Didawick",
         "3B": null
       },
       "score": {
@@ -2603,7 +2623,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Tyler Kapa",
       "batter": "Kyle Langley",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2630,7 +2650,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Tyler Kapa",
       "batter": "Clay Thompson",
       "outcome": "Single",
       "count": "1-0",
@@ -2657,7 +2677,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Tyler Kapa",
       "batter": "Reece Moody",
       "outcome": "Single",
       "count": "0-0",
@@ -2684,7 +2704,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Tyler Kapa",
       "batter": "Ike Schmidly",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2711,7 +2731,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Tyler Kapa",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2726,9 +2746,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Reece Moody",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Reece Moody"
       },
       "score": {
         "away": 7,
@@ -2738,7 +2758,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Tyler Kapa",
       "batter": "Ben Barrow",
       "outcome": "Walk",
       "count": "3-2",
@@ -2748,14 +2768,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Reece Moody",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Reece Moody"
       },
       "runners_after": {
         "1B": "Ben Barrow",
         "2B": null,
-        "3B": null
+        "3B": "Reece Moody"
       },
       "score": {
         "away": 7,
@@ -2765,24 +2785,26 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Tyler Kapa",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ben Barrow"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Ben Barrow",
         "2B": null,
-        "3B": null
+        "3B": "Reece Moody"
       },
       "runners_after": {
-        "1B": "Ben Barrow",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Reece Moody"
       },
       "score": {
         "away": 8,
@@ -2792,7 +2814,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Tyler Kapa",
       "batter": "Conner Worth",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2802,14 +2824,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Ben Barrow",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Reece Moody"
       },
       "runners_after": {
-        "1B": "Ben Barrow",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Reece Moody"
       },
       "score": {
         "away": 8,
@@ -2819,7 +2841,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Luke McGrath",
       "batter": "Noah Murray",
       "outcome": "Walk",
       "count": "3-0",
@@ -2846,7 +2868,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Griffin Madden",
       "batter": null,
       "outcome": "Baserunning",
       "count": "2-1",
@@ -2873,7 +2895,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Griffin Madden",
       "batter": "AJ Gracia",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -2900,7 +2922,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Griffin Madden",
       "batter": "Eric Becker",
       "outcome": "Single",
       "count": "3-1",
@@ -2927,7 +2949,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Griffin Madden",
       "batter": "Sam Harris",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2954,7 +2976,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Adam Horvath",
+      "pitcher": "Griffin Madden",
       "batter": "Joe Tiroly",
       "outcome": "Flyout",
       "count": "1-0",

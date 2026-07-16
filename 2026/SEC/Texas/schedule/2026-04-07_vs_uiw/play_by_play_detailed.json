@@ -3,7 +3,7 @@
   "date": "04/07/2026",
   "away_team": "UIW",
   "home_team": "Texas",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -184,9 +184,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Carson Tinney",
-        "2B": "Ethan Mendoza",
-        "3B": null
+        "1B": null,
+        "2B": "Carson Tinney",
+        "3B": "Ethan Mendoza"
       },
       "score": {
         "away": 0,
@@ -206,14 +206,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Carson Tinney",
-        "2B": "Ethan Mendoza",
-        "3B": null
+        "1B": null,
+        "2B": "Carson Tinney",
+        "3B": "Ethan Mendoza"
       },
       "runners_after": {
-        "1B": "Carson Tinney",
-        "2B": "Ethan Mendoza",
-        "3B": null
+        "1B": null,
+        "2B": "Carson Tinney",
+        "3B": "Ethan Mendoza"
       },
       "score": {
         "away": 0,
@@ -235,9 +235,9 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Carson Tinney",
-        "2B": "Ethan Mendoza",
-        "3B": null
+        "1B": null,
+        "2B": "Carson Tinney",
+        "3B": "Ethan Mendoza"
       },
       "runners_after": {
         "1B": null,
@@ -514,8 +514,8 @@
         "3B": "Ashton Larson"
       },
       "runners_after": {
-        "1B": "Duplantier J",
-        "2B": null,
+        "1B": null,
+        "2B": "Duplantier J",
         "3B": "Andrew Ermis"
       },
       "score": {
@@ -536,13 +536,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Duplantier J",
-        "2B": null,
+        "1B": null,
+        "2B": "Duplantier J",
         "3B": "Andrew Ermis"
       },
       "runners_after": {
         "1B": "Carson Tinney",
-        "2B": null,
+        "2B": "Duplantier J",
         "3B": "Andrew Ermis"
       },
       "score": {
@@ -564,12 +564,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Carson Tinney",
-        "2B": null,
+        "2B": "Duplantier J",
         "3B": "Andrew Ermis"
       },
       "runners_after": {
         "1B": "Carson Tinney",
-        "2B": null,
+        "2B": "Duplantier J",
         "3B": "Andrew Ermis"
       },
       "score": {
@@ -593,13 +593,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Carson Tinney",
-        "2B": null,
+        "2B": "Duplantier J",
         "3B": "Andrew Ermis"
       },
       "runners_after": {
         "1B": null,
         "2B": "Carson Tinney",
-        "3B": null
+        "3B": "Duplantier J"
       },
       "score": {
         "away": 0,
@@ -621,12 +621,12 @@
       "runners_before": {
         "1B": null,
         "2B": "Carson Tinney",
-        "3B": null
+        "3B": "Duplantier J"
       },
       "runners_after": {
         "1B": "Pack",
         "2B": "Carson Tinney",
-        "3B": null
+        "3B": "Duplantier J"
       },
       "score": {
         "away": 0,
@@ -643,14 +643,16 @@
       "pitches": "BKFB",
       "rbi": true,
       "runs_scored": [
-        "Carson Tinney"
+        "Carson Tinney",
+        "Duplantier J",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Pack",
         "2B": "Carson Tinney",
-        "3B": null
+        "3B": "Duplantier J"
       },
       "runners_after": {
         "1B": "Pack",
@@ -1142,7 +1144,9 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1263,7 +1267,7 @@
         "3B": "Ashton Larson"
       },
       "runners_after": {
-        "1B": "Duplantier J",
+        "1B": null,
         "2B": "Andrew Ermis",
         "3B": "Ashton Larson"
       },

@@ -3,7 +3,7 @@
   "date": "02/13/2026",
   "away_team": "Youngstown St.",
   "home_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -960,7 +960,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1005,6 +1007,33 @@
         "home": 1
       },
       "description": "Terrell, B. struck out swinging (1-2)."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Drew Whalen",
+      "batter": "Whalen, D. to p for Marciano, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 1
+      },
+      "description": "Whalen, D. to p for Marciano, J.."
     },
     {
       "inning": "Top 6",
@@ -1224,7 +1253,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Braden Gebhardt",
+      "pitcher": "Luke Zmolik",
       "batter": "Logan Gregorio",
       "outcome": "Fielder's choice",
       "count": "1-1",
@@ -1347,7 +1376,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Teddy Ruffner",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1356,6 +1385,33 @@
         "home": 1
       },
       "description": "RUFFNER, T. out at second c to 2b, caught stealing."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Luke Zmolik",
+      "batter": "ZMOLIK, L. to p for GEBHARDT, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 1
+      },
+      "description": "ZMOLIK, L. to p for GEBHARDT, B.."
     },
     {
       "inning": "Bottom 7",
@@ -1602,13 +1658,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke Zmolik",
+      "pitcher": "Sloan Ulrich",
       "batter": "Chase Fralick",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1629,7 +1687,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke Zmolik",
+      "pitcher": "Sloan Ulrich",
       "batter": "Todd Clay",
       "outcome": "Lineout",
       "count": "3-2",
@@ -1656,7 +1714,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Sloan Ulrich",
+      "pitcher": "",
+      "batter": "ULRICH, S. to p for ZMOLIK, L..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Chase Fralick",
+        "2B": "Eric Guevara",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Chase Fralick",
+        "2B": "Eric Guevara",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 2
+      },
+      "description": "ULRICH, S. to p for ZMOLIK, L.."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Logan Gregorio",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1683,7 +1768,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Sloan Ulrich",
+      "pitcher": "",
       "batter": "Lucas Steele",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1737,7 +1822,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Drew Whalen",
+      "pitcher": "Garrett Brewer",
       "batter": "Carter, B. to cf for Steele, L..",
       "outcome": "\u2014",
       "count": null,
@@ -1764,7 +1849,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Drew Whalen",
+      "pitcher": "Garrett Brewer",
       "batter": "Belyeu, C. to rf.",
       "outcome": "\u2014",
       "count": null,
@@ -1791,7 +1876,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Drew Whalen",
+      "pitcher": "Garrett Brewer",
       "batter": "Kendal Spencer",
       "outcome": "Walk",
       "count": "3-2",
@@ -1818,7 +1903,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Drew Whalen",
+      "pitcher": "",
       "batter": "Brayden Kuriger",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -1845,7 +1930,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Drew Whalen",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1860,9 +1945,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brayden Kuriger",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brayden Kuriger"
       },
       "score": {
         "away": 1,
@@ -1872,7 +1957,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "",
+      "batter": "Brewer, G. to p for Whalen, D..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": "Brayden Kuriger"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": "Brayden Kuriger"
+      },
+      "score": {
+        "away": 1,
+        "home": 2
+      },
+      "description": "Brewer, G. to p for Whalen, D.."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": "Luke Rossi",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1882,14 +1994,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Brayden Kuriger",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brayden Kuriger"
       },
       "runners_after": {
-        "1B": "Brayden Kuriger",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brayden Kuriger"
       },
       "score": {
         "away": 1,
@@ -1899,7 +2011,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "",
       "batter": "Brady Shannon",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1909,14 +2021,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brayden Kuriger",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brayden Kuriger"
       },
       "runners_after": {
-        "1B": "Brayden Kuriger",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brayden Kuriger"
       },
       "score": {
         "away": 1,
@@ -1926,7 +2038,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "",
       "batter": "Teddy Ruffner",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1936,14 +2048,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brayden Kuriger",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brayden Kuriger"
       },
       "runners_after": {
-        "1B": "Brayden Kuriger",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brayden Kuriger"
       },
       "score": {
         "away": 1,

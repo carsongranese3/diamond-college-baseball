@@ -3,7 +3,7 @@
   "date": "04/03/2026",
   "away_team": "Arkansas",
   "home_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -148,7 +148,9 @@
       "count": "1-2",
       "pitches": "KBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -184,7 +186,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Rembert",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -206,12 +208,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Chris Rembert",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Rembert",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -445,7 +447,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -508,8 +512,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethin Bingaman",
-        "2B": "Eric Guevara",
+        "1B": null,
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "score": {
@@ -530,13 +534,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Ethin Bingaman",
-        "2B": "Eric Guevara",
+        "1B": null,
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethin Bingaman",
-        "2B": "Eric Guevara",
+        "1B": null,
+        "2B": "Ethin Bingaman",
         "3B": null
       },
       "score": {
@@ -1536,8 +1540,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -1558,13 +1562,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -1575,7 +1579,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Hunter Dietz",
+      "pitcher": "Ethan McElvain",
       "batter": "Bristol Carter",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1585,13 +1589,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -1599,6 +1603,33 @@
         "home": 2
       },
       "description": "Carter, B. grounded out to ss (0-2 FFF)."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Jett Johnston",
+      "batter": "Johnston, J. to p for Marciano, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 2
+      },
+      "description": "Johnston, J. to p for Marciano, J.."
     },
     {
       "inning": "Top 8",
@@ -1663,7 +1694,8 @@
       "pitches": "KBKB",
       "rbi": true,
       "runs_scored": [
-        "Ryder Helfrick"
+        "Ryder Helfrick",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1874,7 +1906,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Jett Johnston",
+      "pitcher": "",
       "batter": "Zack Stewart",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1955,7 +1987,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Ethan McElvain",
+      "pitcher": "",
       "batter": "Ethin Bingaman",
       "outcome": "Flyout",
       "count": "1-2",

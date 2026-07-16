@@ -3,7 +3,7 @@
   "date": "02/27/2026",
   "away_team": "Baylor",
   "home_team": "Ole Miss",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -148,7 +148,9 @@
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -445,7 +447,9 @@
       "count": "2-2",
       "pitches": "BKBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1033,7 +1037,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Hunter Elliott",
+      "pitcher": "Hudson Calhoun",
       "batter": "Tyce Armstrong",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1148,7 +1152,8 @@
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "Tristan Bissetta"
+        "Tristan Bissetta",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1197,7 +1202,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
+      "batter": "H. Calhoun",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 3
+      },
+      "description": "H. Calhoun to p for H. Elliott."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Hudson Calhoun",
       "batter": "Travis Sanders",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1224,7 +1256,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Hunter Snow",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1251,7 +1283,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Brayden Buchanan",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1359,7 +1391,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Cade Dodson",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1386,7 +1418,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Ty Johnson",
       "outcome": "Pop out",
       "count": "0-2",
@@ -1413,7 +1445,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "JJ Kennett",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1521,7 +1553,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Charlie Atkinson",
+      "pitcher": "Grayson Murry",
       "batter": "Hayden Federico",
       "outcome": "Walk",
       "count": "3-2",
@@ -1602,7 +1634,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "T. Bissetta",
       "outcome": "\u2014",
       "count": null,
@@ -1629,7 +1661,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "B. Moseley",
       "outcome": "\u2014",
       "count": null,
@@ -1656,7 +1688,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Brady Janusek",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1683,7 +1715,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "H.",
+      "pitcher": "Landon Koenig",
       "batter": "Pearson Riebock",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1710,7 +1742,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "H.",
+      "pitcher": "Landon Koenig",
       "batter": "Tyce Armstrong",
       "outcome": "Walk",
       "count": "3-2",
@@ -1737,7 +1769,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "H.",
+      "pitcher": "Landon Koenig",
       "batter": "Travis Sanders",
       "outcome": "Single",
       "count": "0-1",
@@ -1764,14 +1796,16 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "H.",
+      "pitcher": "Landon Koenig",
       "batter": "Hunter Snow",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Hunter Snow"
+        "Hunter Snow",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1793,7 +1827,34 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
+      "batter": "L. Koenig",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Travis Sanders",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Travis Sanders",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 3
+      },
+      "description": "L. Koenig to p for H. Calhoun."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Landon Koenig",
       "batter": "John Youens",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1909,7 +1970,9 @@
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -2011,7 +2074,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Grayson Murry",
+      "pitcher": "Caleb Bunch",
       "batter": "Brayden Randle",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2038,7 +2101,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "Landon Waters",
       "batter": "Cade Dodson",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2065,7 +2128,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "Landon Waters",
       "batter": "Ty Johnson",
       "outcome": "Double",
       "count": "0-0",
@@ -2092,13 +2155,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "Landon Waters",
       "batter": "JJ Kennett",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "KS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2119,7 +2184,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "Landon Waters",
       "batter": "Brady Janusek",
       "outcome": "Single",
       "count": "0-1",
@@ -2146,7 +2211,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "Landon Waters",
       "batter": "Pearson Riebock",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2335,13 +2400,42 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "L.",
+      "pitcher": "",
+      "batter": "L. Waters",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 5
+      },
+      "description": "L. Waters to p for L. Koenig."
+    },
+    {
+      "inning": "Top 10",
+      "pitcher": "",
       "batter": "Tyce Armstrong",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "BSSF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -2362,7 +2456,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Travis Sanders",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2389,7 +2483,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Hunter Snow",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2416,7 +2510,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "John Youens",
       "outcome": "Single",
       "count": "1-1",
@@ -2443,7 +2537,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Cade Dodson",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2497,7 +2591,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Caleb Bunch",
+      "pitcher": "",
       "batter": "Dom Decker",
       "outcome": "Flyout",
       "count": "2-1",
@@ -2524,7 +2618,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Caleb Bunch",
+      "pitcher": "",
       "batter": "Brett Moseley",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",

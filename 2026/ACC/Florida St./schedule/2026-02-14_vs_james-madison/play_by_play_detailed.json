@@ -3,7 +3,7 @@
   "date": "02/14/2026",
   "away_team": "James Madison",
   "home_team": "Florida St.",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -229,7 +229,9 @@
       "count": "1-2",
       "pitches": "BFFFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -256,7 +258,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -373,8 +377,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Reece Moody",
-        "2B": "Keegan Haesler",
+        "1B": null,
+        "2B": "Reece Moody",
         "3B": null
       },
       "score": {
@@ -391,17 +395,19 @@
       "count": "2-1",
       "pitches": "SBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Reece Moody",
-        "2B": "Keegan Haesler",
+        "1B": null,
+        "2B": "Reece Moody",
         "3B": null
       },
       "runners_after": {
-        "1B": "Reece Moody",
-        "2B": "Keegan Haesler",
+        "1B": null,
+        "2B": "Reece Moody",
         "3B": null
       },
       "score": {
@@ -422,13 +428,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Reece Moody",
-        "2B": "Keegan Haesler",
+        "1B": null,
+        "2B": "Reece Moody",
         "3B": null
       },
       "runners_after": {
-        "1B": "Reece Moody",
-        "2B": "Keegan Haesler",
+        "1B": null,
+        "2B": "Reece Moody",
         "3B": null
       },
       "score": {
@@ -449,13 +455,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Reece Moody",
-        "2B": "Keegan Haesler",
+        "1B": null,
+        "2B": "Reece Moody",
         "3B": null
       },
       "runners_after": {
         "1B": "Kyle Langley",
-        "2B": "Keegan Haesler",
+        "2B": "Reece Moody",
         "3B": null
       },
       "score": {
@@ -477,12 +483,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kyle Langley",
-        "2B": "Keegan Haesler",
+        "2B": "Reece Moody",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Langley",
-        "2B": "Keegan Haesler",
+        "1B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "score": {
@@ -503,13 +509,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kyle Langley",
-        "2B": "Keegan Haesler",
+        "1B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "runners_after": {
         "1B": "Josiah Seguin",
-        "2B": "Keegan Haesler",
+        "2B": "Kyle Langley",
         "3B": null
       },
       "score": {
@@ -526,12 +532,15 @@
       "count": "1-2",
       "pitches": "BKFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Josiah Seguin",
-        "2B": "Keegan Haesler",
+        "2B": "Kyle Langley",
         "3B": null
       },
       "runners_after": {
@@ -547,7 +556,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cade O'Leary",
       "batter": "Wyatt Campbell",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -662,7 +671,9 @@
       "pitches": "SKB",
       "rbi": true,
       "runs_scored": [
-        "Brayden Dowd"
+        "Brayden Dowd",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -711,7 +722,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Luke Alexander",
       "batter": "Myles Bailey",
       "outcome": "Walk",
       "count": "3-2",
@@ -738,7 +749,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Luke Alexander",
       "batter": "Cal Fisher",
       "outcome": "Fielder's choice",
       "count": "1-1",
@@ -765,13 +776,15 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Luke Alexander",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Cal Fisher"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -780,7 +793,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cal Fisher",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -792,7 +805,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Luke Alexander",
       "batter": "Hunter Carns",
       "outcome": "Flyout",
       "count": "3-2",
@@ -802,12 +815,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cal Fisher",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Cal Fisher",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -819,7 +832,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cade O'Leary",
       "batter": "Clay Thompson",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -846,7 +859,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cade O'Leary",
       "batter": "Keegan Haesler",
       "outcome": "Groundout",
       "count": "1-0",
@@ -873,7 +886,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cade O'Leary",
       "batter": "Reece Moody",
       "outcome": "Walk",
       "count": "3-2",
@@ -900,7 +913,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cade O'Leary",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -915,8 +928,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Reece Moody",
-        "2B": null,
+        "1B": null,
+        "2B": "Reece Moody",
         "3B": null
       },
       "score": {
@@ -927,7 +940,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cade O'Leary",
       "batter": "Ryan Gocio",
       "outcome": "Flyout",
       "count": "2-2",
@@ -937,13 +950,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Reece Moody",
-        "2B": null,
+        "1B": null,
+        "2B": "Reece Moody",
         "3B": null
       },
       "runners_after": {
-        "1B": "Reece Moody",
-        "2B": null,
+        "1B": null,
+        "2B": "Reece Moody",
         "3B": null
       },
       "score": {
@@ -954,7 +967,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Luke Alexander",
       "batter": "Chase Williams",
       "outcome": "Groundout",
       "count": "0-0",
@@ -981,7 +994,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Luke Alexander",
       "batter": "Brody DeLamielleure",
       "outcome": "Pop out",
       "count": "0-1",
@@ -1008,7 +1021,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Luke Alexander",
       "batter": "Gabe Fraser",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1035,7 +1048,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cade O'Leary",
       "batter": "Jack Anderson",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1062,7 +1075,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cade O'Leary",
       "batter": "Kyle Langley",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1089,7 +1102,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cade O'Leary",
       "batter": "Josiah Seguin",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1116,7 +1129,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Luke Alexander",
       "batter": "Carter McCulley",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1143,7 +1156,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Luke Alexander",
       "batter": "Brayden Dowd",
       "outcome": "Single",
       "count": "1-1",
@@ -1170,7 +1183,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Luke Alexander",
       "batter": "Noah Sheffield",
       "outcome": "Single",
       "count": "0-0",
@@ -1197,13 +1210,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Luke Alexander",
       "batter": "Myles Bailey",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1224,13 +1239,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Alex Bingler",
       "batter": "Cal Fisher",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1251,7 +1268,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Alex Bingler",
       "batter": "Hunter Carns",
       "outcome": "Walk",
       "count": "3-1",
@@ -1278,7 +1295,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Alex Bingler",
       "batter": "Chase Williams",
       "outcome": "Grounded into double play",
       "count": "0-1",
@@ -1305,7 +1322,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cade O'Leary",
       "batter": "Ike Schmidly",
       "outcome": "Single",
       "count": "1-1",
@@ -1332,13 +1349,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cade O'Leary",
       "batter": "Wyatt Campbell",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1359,7 +1378,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cade O'Leary",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1375,8 +1394,8 @@
       },
       "runners_after": {
         "1B": "Ike Schmidly",
-        "2B": "Wyatt Campbell",
-        "3B": null
+        "2B": null,
+        "3B": "Wyatt Campbell"
       },
       "score": {
         "away": 4,
@@ -1386,23 +1405,25 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cade O'Leary",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Wyatt Campbell"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Ike Schmidly",
-        "2B": "Wyatt Campbell",
-        "3B": null
+        "2B": null,
+        "3B": "Wyatt Campbell"
       },
       "runners_after": {
         "1B": "Ike Schmidly",
-        "2B": "Wyatt Campbell",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1413,7 +1434,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cade O'Leary",
       "batter": "Clay Thompson",
       "outcome": "Walk",
       "count": "3-1",
@@ -1424,12 +1445,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Ike Schmidly",
-        "2B": "Wyatt Campbell",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Clay Thompson",
-        "2B": "Wyatt Campbell",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1440,7 +1461,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cooper Whited",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
@@ -1451,12 +1472,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Clay Thompson",
-        "2B": "Wyatt Campbell",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Clay Thompson",
-        "2B": "Wyatt Campbell",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1467,7 +1488,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cooper Whited",
       "batter": "Reece Moody",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1478,12 +1499,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Clay Thompson",
-        "2B": "Wyatt Campbell",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Clay Thompson",
-        "2B": "Wyatt Campbell",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1494,7 +1515,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cooper Whited",
       "batter": "Ryan Gocio",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1505,12 +1526,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Clay Thompson",
-        "2B": "Wyatt Campbell",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Clay Thompson",
-        "2B": "Wyatt Campbell",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1521,7 +1542,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Alex Bingler",
       "batter": "Brody DeLamielleure",
       "outcome": "Home run",
       "count": "0-0",
@@ -1550,7 +1571,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Jonathan Strohecker",
       "batter": "Gabe Fraser",
       "outcome": "Pop out",
       "count": "1-1",
@@ -1577,7 +1598,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Jonathan Strohecker",
       "batter": "Carter McCulley",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1604,7 +1625,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Jonathan Strohecker",
       "batter": "Brayden Dowd",
       "outcome": "Walk",
       "count": "3-2",
@@ -1631,13 +1652,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Jonathan Strohecker",
       "batter": "Noah Sheffield",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1658,7 +1681,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Jonathan Strohecker",
       "batter": "Myles Bailey",
       "outcome": "Walk",
       "count": "3-2",
@@ -1685,7 +1708,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Jonathan Strohecker",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1700,9 +1723,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Myles Bailey",
+        "1B": null,
         "2B": "Noah Sheffield",
-        "3B": null
+        "3B": "Myles Bailey"
       },
       "score": {
         "away": 5,
@@ -1712,24 +1735,27 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Jonathan Strohecker",
       "batter": "Cal Fisher",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "BSSFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Myles Bailey",
+        "1B": null,
         "2B": "Noah Sheffield",
-        "3B": null
+        "3B": "Myles Bailey"
       },
       "runners_after": {
         "1B": "Cal Fisher",
         "2B": "Noah Sheffield",
-        "3B": null
+        "3B": "Myles Bailey"
       },
       "score": {
         "away": 5,
@@ -1739,7 +1765,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Jonathan Strohecker",
       "batter": "Hunter Carns",
       "outcome": "Single",
       "count": "0-2",
@@ -1751,12 +1777,12 @@
       "runners_before": {
         "1B": "Cal Fisher",
         "2B": "Noah Sheffield",
-        "3B": null
+        "3B": "Myles Bailey"
       },
       "runners_after": {
         "1B": "Hunter Carns",
         "2B": "Noah Sheffield",
-        "3B": null
+        "3B": "Myles Bailey"
       },
       "score": {
         "away": 5,
@@ -1766,7 +1792,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Jonathan Strohecker",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1778,12 +1804,12 @@
       "runners_before": {
         "1B": "Hunter Carns",
         "2B": "Noah Sheffield",
-        "3B": null
+        "3B": "Myles Bailey"
       },
       "runners_after": {
         "1B": "Hunter Carns",
         "2B": "Noah Sheffield",
-        "3B": null
+        "3B": "Myles Bailey"
       },
       "score": {
         "away": 5,
@@ -1793,7 +1819,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Jonathan Strohecker",
       "batter": "Chase Williams",
       "outcome": "Walk",
       "count": "3-2",
@@ -1805,12 +1831,12 @@
       "runners_before": {
         "1B": "Hunter Carns",
         "2B": "Noah Sheffield",
-        "3B": null
+        "3B": "Myles Bailey"
       },
       "runners_after": {
         "1B": "Chase Williams",
         "2B": "Noah Sheffield",
-        "3B": null
+        "3B": "Myles Bailey"
       },
       "score": {
         "away": 5,
@@ -1820,7 +1846,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Jonathan Strohecker",
       "batter": "Brody DeLamielleure",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1832,12 +1858,12 @@
       "runners_before": {
         "1B": "Chase Williams",
         "2B": "Noah Sheffield",
-        "3B": null
+        "3B": "Myles Bailey"
       },
       "runners_after": {
         "1B": "Chase Williams",
         "2B": "Noah Sheffield",
-        "3B": null
+        "3B": "Myles Bailey"
       },
       "score": {
         "away": 5,
@@ -1847,7 +1873,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cooper Whited",
       "batter": "Jack Anderson",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1874,7 +1900,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cooper Whited",
       "batter": "Kyle Langley",
       "outcome": "Walk",
       "count": "3-2",
@@ -1901,7 +1927,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cooper Whited",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1916,8 +1942,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Langley",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "score": {
@@ -1928,7 +1954,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cooper Whited",
       "batter": "Josiah Seguin",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1938,13 +1964,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kyle Langley",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Langley",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "score": {
@@ -1955,7 +1981,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cooper Whited",
       "batter": "Ike Schmidly",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1965,13 +1991,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Kyle Langley",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Langley",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Langley",
         "3B": null
       },
       "score": {
@@ -1982,7 +2008,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Bryce Greene",
       "batter": "PaulinoJr,Kelvyn singled through the left side of the infield (2-1 BBK).",
       "outcome": "Single",
       "count": "2-1",
@@ -2009,7 +2035,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Bryce Greene",
       "batter": "Carter McCulley",
       "outcome": "Single",
       "count": "0-0",
@@ -2036,13 +2062,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Bryce Greene",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Carter McCulley"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -2051,7 +2079,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Carter McCulley",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2063,7 +2091,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Bryce Greene",
       "batter": "Brayden Dowd",
       "outcome": "Walk",
       "count": "3-0",
@@ -2073,7 +2101,7 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Carter McCulley",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2090,7 +2118,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Bryce Greene",
       "batter": "Eli Putnam",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2117,13 +2145,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Bryce Greene",
       "batter": "Myles Bailey",
       "outcome": "Single",
       "count": "3-1",
       "pitches": "BBBS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2144,13 +2174,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Lane Duff",
       "batter": "Cal Fisher",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2171,7 +2203,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Lane Duff",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2186,9 +2218,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cal Fisher",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cal Fisher"
       },
       "score": {
         "away": 5,
@@ -2198,24 +2230,26 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Lane Duff",
       "batter": "Nathan Cmeyla",
       "outcome": "Groundout",
       "count": "2-1",
       "pitches": "BBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cal Fisher",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cal Fisher"
       },
       "runners_after": {
-        "1B": "Cal Fisher",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cal Fisher"
       },
       "score": {
         "away": 5,
@@ -2225,7 +2259,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tyler Muscar",
+      "pitcher": "Lane Duff",
       "batter": "Chase Williams",
       "outcome": "Lineout",
       "count": "1-0",
@@ -2235,14 +2269,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Cal Fisher",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cal Fisher"
       },
       "runners_after": {
-        "1B": "Cal Fisher",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cal Fisher"
       },
       "score": {
         "away": 5,
@@ -2252,7 +2286,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cooper Whited",
       "batter": "Wyatt Campbell",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2279,7 +2313,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cole Stokes",
       "batter": "Jack Guerrero",
       "outcome": "Walk",
       "count": "3-1",
@@ -2306,7 +2340,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cole Stokes",
       "batter": "Keegan Haesler",
       "outcome": "Fielder's choice",
       "count": "2-1",
@@ -2333,7 +2367,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bryson Moore",
+      "pitcher": "Cole Stokes",
       "batter": "Reece Moody",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",

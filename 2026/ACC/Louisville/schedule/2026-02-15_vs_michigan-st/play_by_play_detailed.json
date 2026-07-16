@@ -3,7 +3,7 @@
   "date": "02/15/2026",
   "away_team": "Michigan St.",
   "home_team": "Louisville",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -130,9 +130,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Alex Alicea",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Alex Alicea"
       },
       "score": {
         "away": 0,
@@ -152,14 +152,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Alex Alicea",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Alex Alicea"
       },
       "runners_after": {
         "1B": "Lucas Moore",
         "2B": null,
-        "3B": null
+        "3B": "Alex Alicea"
       },
       "score": {
         "away": 0,
@@ -181,12 +181,12 @@
       "runners_before": {
         "1B": "Lucas Moore",
         "2B": null,
-        "3B": null
+        "3B": "Alex Alicea"
       },
       "runners_after": {
-        "1B": "Lucas Moore",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Lucas Moore",
+        "3B": "Alex Alicea"
       },
       "score": {
         "away": 0,
@@ -202,13 +202,15 @@
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Alex Alicea"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Lucas Moore",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Lucas Moore",
+        "3B": "Alex Alicea"
       },
       "runners_after": {
         "1B": "Ben Slanker",
@@ -570,8 +572,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "score": {
@@ -592,8 +594,8 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "runners_after": {
@@ -840,8 +842,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jax Hisle",
-        "2B": null,
+        "1B": null,
+        "2B": "Jax Hisle",
         "3B": null
       },
       "score": {
@@ -862,13 +864,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jax Hisle",
-        "2B": null,
+        "1B": null,
+        "2B": "Jax Hisle",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jax Hisle",
-        "2B": null,
+        "1B": null,
+        "2B": "Jax Hisle",
         "3B": null
       },
       "score": {
@@ -1015,6 +1017,33 @@
     {
       "inning": "Bottom 4",
       "pitcher": "Nolan Higgins",
+      "batter": "Higgins,N to p for Pikur,L.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 5
+      },
+      "description": "Higgins,N to p for Pikur,L."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Nolan Higgins",
       "batter": "George Baker",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -1083,8 +1112,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "George Baker",
-        "2B": null,
+        "1B": null,
+        "2B": "George Baker",
         "3B": null
       },
       "score": {
@@ -1105,13 +1134,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "George Baker",
-        "2B": null,
+        "1B": null,
+        "2B": "George Baker",
         "3B": null
       },
       "runners_after": {
-        "1B": "George Baker",
-        "2B": null,
+        "1B": null,
+        "2B": "George Baker",
         "3B": null
       },
       "score": {
@@ -1313,7 +1342,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Nolan Higgins",
+      "pitcher": "Gannon Grundman",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1328,8 +1357,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Griffin Crain",
-        "2B": null,
+        "1B": null,
+        "2B": "Griffin Crain",
         "3B": null
       },
       "score": {
@@ -1340,7 +1369,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Nolan Higgins",
+      "pitcher": "Gannon Grundman",
       "batter": "Bayram Hot",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1350,13 +1379,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Griffin Crain",
-        "2B": null,
+        "1B": null,
+        "2B": "Griffin Crain",
         "3B": null
       },
       "runners_after": {
-        "1B": "Griffin Crain",
-        "2B": null,
+        "1B": null,
+        "2B": "Griffin Crain",
         "3B": null
       },
       "score": {
@@ -1448,7 +1477,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Brandon Shannon",
       "batter": "Randy Seymour",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1472,6 +1501,33 @@
         "home": 6
       },
       "description": "Seymour,R flied out to rf (0-2 SK)."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Gannon Grundman",
+      "batter": "Grundman,G to p for Higgins,N.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 6
+      },
+      "description": "Grundman,G to p for Higgins,N."
     },
     {
       "inning": "Bottom 6",
@@ -1585,7 +1641,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gannon Grundman",
+      "pitcher": "Tommy Szczepanski",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1612,7 +1668,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gannon Grundman",
+      "pitcher": "Tommy Szczepanski",
       "batter": "Kade Elam",
       "outcome": "Walk",
       "count": "3-0",
@@ -1639,7 +1695,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gannon Grundman",
+      "pitcher": "Tommy Szczepanski",
       "batter": "Tague Davis",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1720,7 +1776,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brandon Shannon",
+      "pitcher": "Kian Vorster",
       "batter": "CJ Deckinga",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1735,7 +1791,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Parker Picot",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1912,7 +1968,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Tommy Szczepanski",
+      "pitcher": "Josh Klug",
       "batter": "Ben Slanker",
       "outcome": "Walk",
       "count": "3-0",
@@ -1939,7 +1995,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Tommy Szczepanski",
+      "pitcher": "Josh Klug",
       "batter": "Kade Elam",
       "outcome": "Foul out",
       "count": "3-1",
@@ -2009,7 +2065,7 @@
       },
       "runners_after": {
         "1B": "Adam Broski",
-        "2B": null,
+        "2B": "Jasen Oliver",
         "3B": null
       },
       "score": {
@@ -2031,12 +2087,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Adam Broski",
-        "2B": null,
+        "2B": "Jasen Oliver",
         "3B": null
       },
       "runners_after": {
         "1B": "Adam Broski",
-        "2B": null,
+        "2B": "Jasen Oliver",
         "3B": null
       },
       "score": {
@@ -2047,7 +2103,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Aaron England",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2058,13 +2114,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Adam Broski",
-        "2B": null,
+        "2B": "Jasen Oliver",
         "3B": null
       },
       "runners_after": {
-        "1B": "Adam Broski",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Adam Broski",
+        "3B": "Jasen Oliver"
       },
       "score": {
         "away": 0,
@@ -2074,7 +2130,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Kian Vorster",
+      "pitcher": "Aaron England",
       "batter": "Nick Williams",
       "outcome": "Walk",
       "count": "3-1",
@@ -2084,14 +2140,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Adam Broski",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Adam Broski",
+        "3B": "Jasen Oliver"
       },
       "runners_after": {
         "1B": "Nick Williams",
-        "2B": null,
-        "3B": null
+        "2B": "Adam Broski",
+        "3B": "Jasen Oliver"
       },
       "score": {
         "away": 0,
@@ -2107,18 +2163,20 @@
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jasen Oliver"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Nick Williams",
-        "2B": null,
-        "3B": null
+        "2B": "Adam Broski",
+        "3B": "Jasen Oliver"
       },
       "runners_after": {
-        "1B": "Nick Williams",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Nick Williams",
+        "3B": "Adam Broski"
       },
       "score": {
         "away": 1,
@@ -2138,12 +2196,39 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Nick Williams",
+        "1B": null,
+        "2B": "Nick Williams",
+        "3B": "Adam Broski"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Nick Williams",
+        "3B": "Adam Broski"
+      },
+      "score": {
+        "away": 1,
+        "home": 9
+      },
+      "description": "Seymour,R struck out swinging (1-2 FBFFS)."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Josh Klug",
+      "batter": "Klug,J to p for Szczepanski.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Nick Williams",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2151,7 +2236,7 @@
         "away": 1,
         "home": 9
       },
-      "description": "Seymour,R struck out swinging (1-2 FBFFS)."
+      "description": "Klug,J to p for Szczepanski."
     },
     {
       "inning": "Bottom 8",
@@ -2182,7 +2267,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Josh Klug",
+      "pitcher": "",
       "batter": "Jimmy Nugent",
       "outcome": "Flyout",
       "count": "2-0",
@@ -2209,7 +2294,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Josh Klug",
+      "pitcher": "",
       "batter": "Griffin Crain",
       "outcome": "Walk",
       "count": "3-2",
@@ -2236,7 +2321,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Josh Klug",
+      "pitcher": "",
       "batter": "Bayram Hot",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2332,7 +2417,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Trent Rice",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2354,7 +2439,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Trent Rice",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2371,7 +2456,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Aaron England",
+      "pitcher": "",
       "batter": "Jasen Oliver",
       "outcome": "Flyout",
       "count": "0-0",

@@ -3,7 +3,7 @@
   "date": "04/21/2026",
   "away_team": "UAB",
   "home_team": "Alabama",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -130,8 +130,8 @@
         "3B": "John Paul Head"
       },
       "runners_after": {
-        "1B": "Landon Beaver",
-        "2B": null,
+        "1B": null,
+        "2B": "Landon Beaver",
         "3B": "John Paul Head"
       },
       "score": {
@@ -152,13 +152,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Landon Beaver",
-        "2B": null,
+        "1B": null,
+        "2B": "Landon Beaver",
         "3B": "John Paul Head"
       },
       "runners_after": {
         "1B": "Max Price",
-        "2B": null,
+        "2B": "Landon Beaver",
         "3B": "John Paul Head"
       },
       "score": {
@@ -182,13 +182,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Max Price",
-        "2B": null,
+        "2B": "Landon Beaver",
         "3B": "John Paul Head"
       },
       "runners_after": {
         "1B": "Brady Waugh",
         "2B": "Max Price",
-        "3B": null
+        "3B": "Landon Beaver"
       },
       "score": {
         "away": 1,
@@ -205,14 +205,15 @@
       "pitches": "SFB",
       "rbi": true,
       "runs_scored": [
-        "Max Price"
+        "Max Price",
+        "Landon Beaver"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Brady Waugh",
         "2B": "Max Price",
-        "3B": null
+        "3B": "Landon Beaver"
       },
       "runners_after": {
         "1B": "Andrew Hunt",
@@ -800,7 +801,34 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "R.",
+      "pitcher": "Riley Miller",
+      "batter": "R. Miller",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Bryce Fowler",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Bryce Fowler",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 0
+      },
+      "description": "R. Miller to p for I. Warrick."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Riley Miller",
       "batter": "Justin Lebron",
       "outcome": "Single",
       "count": "1-0",
@@ -827,7 +855,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "R.",
+      "pitcher": "Riley Miller",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -842,8 +870,8 @@
         "3B": "Bryce Fowler"
       },
       "runners_after": {
-        "1B": "Justin Lebron",
-        "2B": null,
+        "1B": null,
+        "2B": "Justin Lebron",
         "3B": "Bryce Fowler"
       },
       "score": {
@@ -854,7 +882,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "R.",
+      "pitcher": "Riley Miller",
       "batter": "Brady Neal",
       "outcome": "Walk",
       "count": "3-2",
@@ -864,13 +892,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Justin Lebron",
-        "2B": null,
+        "1B": null,
+        "2B": "Justin Lebron",
         "3B": "Bryce Fowler"
       },
       "runners_after": {
         "1B": "Brady Neal",
-        "2B": null,
+        "2B": "Justin Lebron",
         "3B": "Bryce Fowler"
       },
       "score": {
@@ -881,7 +909,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "R.",
+      "pitcher": "Riley Miller",
       "batter": "Eric Hines",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -892,12 +920,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Brady Neal",
-        "2B": null,
+        "2B": "Justin Lebron",
         "3B": "Bryce Fowler"
       },
       "runners_after": {
         "1B": "Brady Neal",
-        "2B": null,
+        "2B": "Justin Lebron",
         "3B": "Bryce Fowler"
       },
       "score": {
@@ -969,7 +997,8 @@
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Baylor Roberts"
+        "Baylor Roberts",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1099,7 +1128,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "R.",
+      "pitcher": "Riley Miller",
       "batter": "John Lemm",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1126,7 +1155,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "R.",
+      "pitcher": "Riley Miller",
       "batter": "Luke Vaughn",
       "outcome": "Double",
       "count": "2-0",
@@ -1153,7 +1182,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "R.",
+      "pitcher": "Riley Miller",
       "batter": "Caleb Barnett",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1180,7 +1209,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "R.",
+      "pitcher": "Konner Keplinger",
       "batter": "Jason Torres",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1288,7 +1317,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "K.",
+      "pitcher": "Konner Keplinger",
+      "batter": "K. Keplinger",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 9,
+        "home": 0
+      },
+      "description": "K. Keplinger to p for R. Miller."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Konner Keplinger",
       "batter": "Brennan Holt",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1315,7 +1371,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "K.",
+      "pitcher": "Konner Keplinger",
       "batter": "Bryce Fowler",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1342,7 +1398,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "K.",
+      "pitcher": "Konner Keplinger",
       "batter": "Justin Lebron",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1504,7 +1560,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "K.",
+      "pitcher": "Konner Keplinger",
       "batter": "A. Cheeseman",
       "outcome": "\u2014",
       "count": null,
@@ -1531,7 +1587,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "K.",
+      "pitcher": "Konner Keplinger",
       "batter": "Brady Neal",
       "outcome": "Single",
       "count": "0-0",
@@ -1558,7 +1614,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "K.",
+      "pitcher": "Konner Keplinger",
       "batter": "Eric Hines",
       "outcome": "Fielder's choice",
       "count": "0-0",
@@ -1585,7 +1641,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "K.",
+      "pitcher": "Brooks House",
       "batter": "John Lemm",
       "outcome": "Home run",
       "count": "1-1",
@@ -1615,7 +1671,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "K.",
+      "pitcher": "Brooks House",
       "batter": "Luke Vaughn",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1642,7 +1698,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "K.",
+      "pitcher": "Brooks House",
       "batter": "Will Plattner",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1808,7 +1864,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "B.",
+      "pitcher": "Brooks House",
+      "batter": "B. House",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 11,
+        "home": 2
+      },
+      "description": "B. House to p for K. Keplinger."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Brooks House",
       "batter": "Jason Torres",
       "outcome": "Pop out",
       "count": "1-1",
@@ -1835,7 +1918,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "B.",
+      "pitcher": "Brooks House",
       "batter": "Brennan Holt",
       "outcome": "Pop out",
       "count": "1-2",
@@ -1862,7 +1945,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "B.",
+      "pitcher": "Brooks House",
       "batter": "Chase Kroberger",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1970,7 +2053,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "B.",
+      "pitcher": "Brooks House",
       "batter": "Justin Lebron",
       "outcome": "Lineout",
       "count": "0-1",
@@ -1997,7 +2080,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "B.",
+      "pitcher": "Brooks House",
       "batter": "Brady Neal",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2024,7 +2107,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "B.",
+      "pitcher": "Brooks House",
       "batter": "Eric Hines",
       "outcome": "Groundout",
       "count": "2-0",
@@ -2132,7 +2215,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "B.",
+      "pitcher": "",
       "batter": "Jojo Williamson",
       "outcome": "Flyout",
       "count": "3-2",
@@ -2159,7 +2242,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "B.",
+      "pitcher": "",
       "batter": "Peyton Steele",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2186,7 +2269,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "B.",
+      "pitcher": "",
       "batter": "Will Plattner",
       "outcome": "Single",
       "count": "3-1",
@@ -2213,7 +2296,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "B.",
+      "pitcher": "",
       "batter": "Evan Taylor",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",

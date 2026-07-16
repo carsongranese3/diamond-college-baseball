@@ -3,7 +3,7 @@
   "date": "05/29/2026",
   "away_team": "Milwaukee",
   "home_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -94,7 +94,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -122,7 +124,9 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Bradyn Horn"
+        "Bradyn Horn",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -339,7 +343,9 @@
       "count": "3-2",
       "pitches": "KFFBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -360,7 +366,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Jake Marciano",
+      "pitcher": "LJ Cormier",
       "batter": "Grant Ross",
       "outcome": "Single",
       "count": "0-1",
@@ -388,12 +394,41 @@
     {
       "inning": "Top 2",
       "pitcher": "LJ Cormier",
+      "batter": "Cormier, L. to p for Marciano, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Grant Ross",
+        "2B": "Christian Holmes",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Grant Ross",
+        "2B": "Christian Holmes",
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 0
+      },
+      "description": "Cormier, L. to p for Marciano, J.."
+    },
+    {
+      "inning": "Top 2",
+      "pitcher": "LJ Cormier",
       "batter": "Charlie Marion",
       "outcome": "Grounded into double play",
       "count": "2-1",
       "pitches": "FBB",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -852,7 +887,9 @@
       "count": "2-1",
       "pitches": "BFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -880,7 +917,9 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Charlie Marion"
+        "Charlie Marion",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -929,7 +968,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "LJ Cormier",
+      "pitcher": "Abe Chancellor",
       "batter": "Dominic Kibler",
       "outcome": "Flyout",
       "count": "0-0",
@@ -957,8 +996,8 @@
     {
       "inning": "Top 4",
       "pitcher": "Abe Chancellor",
-      "batter": null,
-      "outcome": "Stolen base",
+      "batter": "Chancellor,A to p for Cormier, L..",
+      "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
@@ -979,6 +1018,33 @@
         "away": 10,
         "home": 0
       },
+      "description": "Chancellor,A to p for Cormier, L.."
+    },
+    {
+      "inning": "Top 4",
+      "pitcher": "Abe Chancellor",
+      "batter": null,
+      "outcome": "Stolen base",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Dylan O'Connell",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Dylan O'Connell",
+        "3B": null
+      },
+      "score": {
+        "away": 10,
+        "home": 0
+      },
       "description": "O'CONNELL stole second."
     },
     {
@@ -993,13 +1059,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Dylan O'Connell",
-        "2B": null,
+        "1B": null,
+        "2B": "Dylan O'Connell",
         "3B": null
       },
       "runners_after": {
-        "1B": "Dylan O'Connell",
-        "2B": null,
+        "1B": null,
+        "2B": "Dylan O'Connell",
         "3B": null
       },
       "score": {
@@ -1079,8 +1145,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Rembert",
-        "2B": null,
+        "1B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "score": {
@@ -1101,13 +1167,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Chris Rembert",
-        "2B": null,
+        "1B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "runners_after": {
         "1B": "Bub Terrell",
-        "2B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "score": {
@@ -1125,18 +1191,20 @@
       "pitches": "KKBFBFBF",
       "rbi": true,
       "runs_scored": [
-        "Ethin Bingaman"
+        "Ethin Bingaman",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Bub Terrell",
-        "2B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "runners_after": {
         "1B": "Bub Terrell",
-        "2B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "score": {
@@ -1158,12 +1226,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Bub Terrell",
-        "2B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "runners_after": {
         "1B": "Bub Terrell",
-        "2B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "score": {
@@ -1185,12 +1253,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Bub Terrell",
-        "2B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "runners_after": {
         "1B": "Bub Terrell",
-        "2B": null,
+        "2B": "Chris Rembert",
         "3B": null
       },
       "score": {
@@ -1228,7 +1296,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Abe Chancellor",
+      "pitcher": "Marcel Kulik",
       "batter": "Connor Bozak",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1255,13 +1323,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Abe Chancellor",
+      "pitcher": "Marcel Kulik",
       "batter": "Joey Spence",
       "outcome": "Double",
       "count": "3-0",
       "pitches": "BBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1279,6 +1349,33 @@
         "home": 3
       },
       "description": "SPENCE doubled to right center, RBI (3-0 BBB); HADLEY scored."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Marcel Kulik",
+      "batter": "Kulik, M. to p for Chancellor,A.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": "Joey Spence",
+        "3B": "HADLEY"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Joey Spence",
+        "3B": "HADLEY"
+      },
+      "score": {
+        "away": 11,
+        "home": 3
+      },
+      "description": "Kulik, M. to p for Chancellor,A."
     },
     {
       "inning": "Top 5",
@@ -1378,8 +1475,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Taylor Belza",
-        "2B": null,
+        "1B": null,
+        "2B": "Taylor Belza",
         "3B": null
       },
       "score": {
@@ -1400,13 +1497,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Taylor Belza",
-        "2B": null,
+        "1B": null,
+        "2B": "Taylor Belza",
         "3B": null
       },
       "runners_after": {
-        "1B": "Taylor Belza",
-        "2B": null,
+        "1B": null,
+        "2B": "Taylor Belza",
         "3B": null
       },
       "score": {
@@ -1423,17 +1520,19 @@
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Taylor Belza",
-        "2B": null,
+        "1B": null,
+        "2B": "Taylor Belza",
         "3B": null
       },
       "runners_after": {
-        "1B": "Taylor Belza",
-        "2B": null,
+        "1B": null,
+        "2B": "Taylor Belza",
         "3B": null
       },
       "score": {
@@ -1456,13 +1555,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Taylor Belza",
-        "2B": null,
+        "1B": null,
+        "2B": "Taylor Belza",
         "3B": null
       },
       "runners_after": {
-        "1B": "Taylor Belza",
-        "2B": null,
+        "1B": null,
+        "2B": "Taylor Belza",
         "3B": null
       },
       "score": {
@@ -1483,13 +1582,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Taylor Belza",
-        "2B": null,
+        "1B": null,
+        "2B": "Taylor Belza",
         "3B": null
       },
       "runners_after": {
-        "1B": "Taylor Belza",
-        "2B": null,
+        "1B": null,
+        "2B": "Taylor Belza",
         "3B": null
       },
       "score": {
@@ -1662,7 +1761,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Marcel Kulik",
+      "pitcher": "Jett Johnston",
       "batter": "Dominic Kibler",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -1689,7 +1788,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Marcel Kulik",
+      "pitcher": "Jett Johnston",
       "batter": "Bradyn Horn",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1716,13 +1815,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Marcel Kulik",
+      "pitcher": "Jett Johnston",
       "batter": "HADLEY",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "BSK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1740,6 +1841,33 @@
         "home": 5
       },
       "description": "HADLEY doubled down the lf line, RBI (1-2 BSK); KIBLER scored."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Jett Johnston",
+      "batter": "Johnston, J. to p for Kulik, M..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Dominic Kibler",
+        "2B": "HADLEY",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Dominic Kibler",
+        "2B": "HADLEY",
+        "3B": null
+      },
+      "score": {
+        "away": 12,
+        "home": 5
+      },
+      "description": "Johnston, J. to p for Kulik, M.."
     },
     {
       "inning": "Top 7",
@@ -1885,7 +2013,8 @@
       "pitches": "KB",
       "rbi": true,
       "runs_scored": [
-        "Eric Guevara"
+        "Eric Guevara",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1988,7 +2117,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jett Johnston",
+      "pitcher": "Ethan Harden",
       "batter": "Charlie Marion",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2015,7 +2144,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jett Johnston",
+      "pitcher": "Ethan Harden",
       "batter": "Dylan O'Connell",
       "outcome": "Walk",
       "count": "3-2",
@@ -2042,7 +2171,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jett Johnston",
+      "pitcher": "Ethan Harden",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2069,7 +2198,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jett Johnston",
+      "pitcher": "Ethan Harden",
       "batter": "Dominic Kibler",
       "outcome": "Walk",
       "count": "1-0",
@@ -2096,7 +2225,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jett Johnston",
+      "pitcher": "Ethan Harden",
       "batter": "Bradyn Horn",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2204,7 +2333,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethan Harden",
+      "pitcher": "Christian Chatterton",
+      "batter": "Harden, E. to p for Johnston, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 12,
+        "home": 7
+      },
+      "description": "Harden, E. to p for Johnston, J.."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "Christian Chatterton",
       "batter": "HADLEY",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2231,7 +2387,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethan Harden",
+      "pitcher": "Justice de Jong",
       "batter": "Connor Bozak",
       "outcome": "Walk",
       "count": "3-1",
@@ -2258,7 +2414,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethan Harden",
+      "pitcher": "",
       "batter": "Joey Spence",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2285,7 +2441,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethan Harden",
+      "pitcher": "",
       "batter": "Christian Holmes",
       "outcome": "Walk",
       "count": "3-2",
@@ -2312,7 +2468,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Christian Chatterton",
+      "pitcher": "",
+      "batter": "Chatterton,C to p for Harden, E..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Christian Holmes",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Christian Holmes",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 12,
+        "home": 7
+      },
+      "description": "Chatterton,C to p for Harden, E.."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -2339,7 +2522,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Christian Chatterton",
+      "pitcher": "",
       "batter": "Grant Ross",
       "outcome": "Walk",
       "count": "3-2",
@@ -2366,13 +2549,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Christian Chatterton",
+      "pitcher": "",
       "batter": "Charlie Marion",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2393,7 +2578,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Christian Chatterton",
+      "pitcher": "",
       "batter": "de Jong, J. to p for Chatterton,C.",
       "outcome": "\u2014",
       "count": null,
@@ -2420,7 +2605,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Christian Chatterton",
+      "pitcher": "",
       "batter": "Dylan O'Connell",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2489,9 +2674,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cade Belyeu",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cade Belyeu"
       },
       "score": {
         "away": 13,
@@ -2511,14 +2696,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Cade Belyeu",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cade Belyeu"
       },
       "runners_after": {
-        "1B": "Cade Belyeu",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cade Belyeu"
       },
       "score": {
         "away": 13,
@@ -2538,14 +2723,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Cade Belyeu",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cade Belyeu"
       },
       "runners_after": {
         "1B": "Taylor Belza",
         "2B": null,
-        "3B": null
+        "3B": "Cade Belyeu"
       },
       "score": {
         "away": 13,
@@ -2567,12 +2752,12 @@
       "runners_before": {
         "1B": "Taylor Belza",
         "2B": null,
-        "3B": null
+        "3B": "Cade Belyeu"
       },
       "runners_after": {
         "1B": "Mason McCraine",
         "2B": null,
-        "3B": null
+        "3B": "Cade Belyeu"
       },
       "score": {
         "away": 13,
@@ -2588,18 +2773,20 @@
       "count": "1-2",
       "pitches": "KSFBFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Mason McCraine",
         "2B": null,
-        "3B": null
+        "3B": "Cade Belyeu"
       },
       "runners_after": {
         "1B": "Mason McCraine",
         "2B": null,
-        "3B": null
+        "3B": "Cade Belyeu"
       },
       "score": {
         "away": 13,
@@ -2621,12 +2808,12 @@
       "runners_before": {
         "1B": "Mason McCraine",
         "2B": null,
-        "3B": null
+        "3B": "Cade Belyeu"
       },
       "runners_after": {
         "1B": "Mason McCraine",
         "2B": null,
-        "3B": null
+        "3B": "Cade Belyeu"
       },
       "score": {
         "away": 13,

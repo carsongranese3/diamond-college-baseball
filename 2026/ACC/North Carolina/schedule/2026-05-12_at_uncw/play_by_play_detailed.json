@@ -3,7 +3,7 @@
   "date": "05/12/2026",
   "away_team": "North Carolina",
   "home_team": "UNCW",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -68,7 +68,9 @@
       "pitches": "BKFBB",
       "rbi": true,
       "runs_scored": [
-        "Gavin Gallaher"
+        "Gavin Gallaher",
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -416,14 +418,16 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Tj Ziermann",
       "batter": "Owen Hull",
       "outcome": "Home run",
       "count": "2-1",
       "pitches": "BFB",
       "rbi": true,
       "runs_scored": [
-        "Owen Hull"
+        "Owen Hull",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -445,7 +449,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Tj Ziermann",
       "batter": "Gavin Gallaher",
       "outcome": "Flyout",
       "count": "0-1",
@@ -553,13 +557,15 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Cameron Padgett",
       "batter": "Matous Bubenik",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "KSFBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -580,7 +586,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Cameron Padgett",
       "batter": "Aiden Evans",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -607,7 +613,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Tj Ziermann",
       "batter": "Macon Winslow",
       "outcome": "Flyout",
       "count": "1-1",
@@ -634,7 +640,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Tj Ziermann",
       "batter": "Erik Paulsen",
       "outcome": "Home run",
       "count": "0-1",
@@ -663,7 +669,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Tj Ziermann",
       "batter": "Cooper Nicholson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -690,7 +696,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Tj Ziermann",
       "batter": "Tyler Howe",
       "outcome": "Walk",
       "count": "3-0",
@@ -717,7 +723,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Tj Ziermann",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -732,9 +738,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Howe",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Tyler Howe"
       },
       "score": {
         "away": 7,
@@ -744,7 +750,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Tj Ziermann",
       "batter": "Colin Hynek",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -754,14 +760,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Tyler Howe",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Tyler Howe"
       },
       "runners_after": {
-        "1B": "Tyler Howe",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Tyler Howe"
       },
       "score": {
         "away": 7,
@@ -771,7 +777,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Cameron Padgett",
       "batter": "Trevor Lucas",
       "outcome": "Home run",
       "count": "0-0",
@@ -800,7 +806,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Cameron Padgett",
       "batter": "Mason Hughes",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -827,7 +833,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Cameron Padgett",
       "batter": "John Newton",
       "outcome": "Fielder's choice",
       "count": "2-2",
@@ -854,7 +860,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Cameron Padgett",
       "batter": "Kevin Jones",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -881,7 +887,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Cameron Padgett",
       "batter": "Will Tyrrell",
       "outcome": "Groundout",
       "count": "3-2",
@@ -908,7 +914,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Carver Pleasant",
       "batter": "Carter French",
       "outcome": "Reached on error",
       "count": "0-1",
@@ -935,7 +941,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Carver Pleasant",
       "batter": "Jake Schaffner",
       "outcome": "Single",
       "count": "0-0",
@@ -962,7 +968,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Carver Pleasant",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -977,9 +983,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Schaffner",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jake Schaffner"
       },
       "score": {
         "away": 7,
@@ -989,24 +995,26 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Carver Pleasant",
       "batter": "Owen Hull",
       "outcome": "Groundout",
       "count": "1-2",
       "pitches": "KBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jake Schaffner",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jake Schaffner"
       },
       "runners_after": {
-        "1B": "Jake Schaffner",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jake Schaffner"
       },
       "score": {
         "away": 8,
@@ -1016,24 +1024,26 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Carver Pleasant",
       "batter": "Gavin Gallaher",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jake Schaffner",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jake Schaffner"
       },
       "runners_after": {
-        "1B": "Jake Schaffner",
+        "1B": null,
         "2B": "Gavin Gallaher",
-        "3B": null
+        "3B": "Jake Schaffner"
       },
       "score": {
         "away": 9,
@@ -1043,7 +1053,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Carver Pleasant",
       "batter": "Macon Winslow",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1053,14 +1063,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jake Schaffner",
+        "1B": null,
         "2B": "Gavin Gallaher",
-        "3B": null
+        "3B": "Jake Schaffner"
       },
       "runners_after": {
-        "1B": "Jake Schaffner",
+        "1B": null,
         "2B": "Gavin Gallaher",
-        "3B": null
+        "3B": "Jake Schaffner"
       },
       "score": {
         "away": 9,
@@ -1070,7 +1080,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Carver Pleasant",
       "batter": "Erik Paulsen",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1080,14 +1090,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jake Schaffner",
+        "1B": null,
         "2B": "Gavin Gallaher",
-        "3B": null
+        "3B": "Jake Schaffner"
       },
       "runners_after": {
-        "1B": "Jake Schaffner",
+        "1B": null,
         "2B": "Gavin Gallaher",
-        "3B": null
+        "3B": "Jake Schaffner"
       },
       "score": {
         "away": 9,
@@ -1097,7 +1107,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Cameron Padgett",
       "batter": "Jake Bechtel",
       "outcome": "Single",
       "count": "2-1",
@@ -1124,14 +1134,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Cameron Padgett",
       "batter": "Cole Nelson",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "BKBFB",
       "rbi": true,
       "runs_scored": [
-        "Cole Nelson"
+        "Cole Nelson",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1153,7 +1164,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Matthew Matthijs",
       "batter": "Matous Bubenik",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1180,7 +1191,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Matthew Matthijs",
       "batter": "Aiden Evans",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1207,7 +1218,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Matthew Matthijs",
       "batter": "Trevor Lucas",
       "outcome": "Walk",
       "count": "3-1",
@@ -1234,7 +1245,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Matthew Matthijs",
       "batter": "Mason Hughes",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1261,7 +1272,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Jackson Caldwell",
       "batter": "Cooper Nicholson",
       "outcome": "Single",
       "count": "1-1",
@@ -1288,7 +1299,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Jackson Caldwell",
       "batter": "Tyler Howe",
       "outcome": "Single",
       "count": "1-2",
@@ -1315,13 +1326,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Jackson Caldwell",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Tyler Howe"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1330,7 +1343,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Howe",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1342,7 +1355,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Jackson Caldwell",
       "batter": "Colin Hynek",
       "outcome": "Flyout",
       "count": "3-1",
@@ -1352,12 +1365,12 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tyler Howe",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Howe",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1369,7 +1382,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Porter Braddy",
       "batter": "Carter French",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1379,7 +1392,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tyler Howe",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1396,7 +1409,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Porter Braddy",
       "batter": "Jake Schaffner",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1423,7 +1436,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Matthew Matthijs",
       "batter": "John Newton",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1450,7 +1463,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Matthew Matthijs",
       "batter": "Kevin Jones",
       "outcome": "Walk",
       "count": "3-2",
@@ -1477,7 +1490,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Matthew Matthijs",
       "batter": "Will Tyrrell",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1504,7 +1517,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Matthew Matthijs",
       "batter": "Jake Bechtel",
       "outcome": "Strikeout",
       "count": "1-3",
@@ -1531,7 +1544,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Matthew Matthijs",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1558,7 +1571,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Matthew Matthijs",
       "batter": "Cole Nelson",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1585,7 +1598,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Porter Braddy",
       "batter": "Owen Hull",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1612,7 +1625,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Porter Braddy",
       "batter": "Gavin Gallaher",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1639,7 +1652,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Porter Braddy",
       "batter": "Macon Winslow",
       "outcome": "Walk",
       "count": "3-2",
@@ -1666,7 +1679,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Porter Braddy",
       "batter": "Erik Paulsen",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1693,7 +1706,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Matthew Matthijs",
       "batter": "Micah Simpson",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1720,7 +1733,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Matthew Matthijs",
       "batter": "Aiden Evans",
       "outcome": "Pop out",
       "count": "3-2",
@@ -1747,7 +1760,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Matthew Matthijs",
       "batter": "Trevor Lucas",
       "outcome": "Home run",
       "count": "0-0",
@@ -1776,7 +1789,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Matthew Matthijs",
       "batter": "Mason Hughes",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1803,7 +1816,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Mason Ruh",
       "batter": "Cooper Nicholson",
       "outcome": "Pop out",
       "count": "1-1",
@@ -1830,7 +1843,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Mason Ruh",
       "batter": "Tyler Howe",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1857,7 +1870,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Mason Ruh",
       "batter": "Colin Hynek",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1884,7 +1897,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Matthew Matthijs",
       "batter": "John Newton",
       "outcome": "Walk",
       "count": "3-2",
@@ -1911,7 +1924,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Matthew Matthijs",
       "batter": "Kevin Jones",
       "outcome": "Single",
       "count": "3-2",
@@ -1938,7 +1951,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Matthew Matthijs",
       "batter": "Will Tyrrell",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1965,7 +1978,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Camron Seagraves",
       "batter": "Jake Bechtel",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1992,7 +2005,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Camron Seagraves",
       "batter": "Danny O'Brien",
       "outcome": "Walk",
       "count": "3-1",
@@ -2019,7 +2032,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Camron Seagraves",
       "batter": "Josh Martinez",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2046,7 +2059,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Mason Ruh",
       "batter": "Carter French",
       "outcome": "Double",
       "count": "1-1",
@@ -2073,7 +2086,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Mason Ruh",
       "batter": "Jake Schaffner",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2100,7 +2113,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Mason Ruh",
       "batter": "Owen Hull",
       "outcome": "Lineout",
       "count": "0-0",
@@ -2127,7 +2140,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Mason Ruh",
       "batter": "Gavin Gallaher",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2154,7 +2167,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Camron Seagraves",
       "batter": "Ryker Galaska",
       "outcome": "Walk",
       "count": "3-2",
@@ -2181,7 +2194,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Camron Seagraves",
       "batter": "Trevor Lucas",
       "outcome": "Walk",
       "count": "3-2",
@@ -2208,7 +2221,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Tom Chmielewski",
       "batter": "Mason Hughes",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2235,13 +2248,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Tom Chmielewski",
       "batter": "John Newton",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2262,7 +2277,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Tom Chmielewski",
       "batter": "Kevin Jones",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2289,7 +2304,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Tom Chmielewski",
       "batter": "Will Tyrrell",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2316,7 +2331,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Clay Masonis",
       "batter": "Macon Winslow",
       "outcome": "Single",
       "count": "0-0",
@@ -2343,7 +2358,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Clay Masonis",
       "batter": "Erik Paulsen",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2370,7 +2385,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Clay Masonis",
       "batter": "Cooper Nicholson",
       "outcome": "Single",
       "count": "3-2",
@@ -2397,7 +2412,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Clay Masonis",
       "batter": "Tyler Howe",
       "outcome": "Walk",
       "count": "3-2",
@@ -2424,7 +2439,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Clay Masonis",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2439,9 +2454,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Howe",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Tyler Howe"
       },
       "score": {
         "away": 10,
@@ -2451,22 +2466,24 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Clay Masonis",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Tyler Howe"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tyler Howe",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Tyler Howe"
       },
       "runners_after": {
-        "1B": "Tyler Howe",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2478,24 +2495,25 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Clay Masonis",
       "batter": "Colin Hynek",
       "outcome": "Home run",
       "count": "2-2",
       "pitches": "SSBB",
       "rbi": true,
       "runs_scored": [
-        "Colin Hynek"
+        "Colin Hynek",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tyler Howe",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Howe",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2507,7 +2525,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Bromley Thornton",
+      "pitcher": "Clay Masonis",
       "batter": "Carter French",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2517,12 +2535,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Tyler Howe",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Howe",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2534,7 +2552,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Tom Chmielewski",
       "batter": "Jake Bechtel",
       "outcome": "Pop out",
       "count": "0-2",
@@ -2561,7 +2579,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Tom Chmielewski",
       "batter": "Danny O'Brien",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2588,7 +2606,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jackson Rose",
+      "pitcher": "Tom Chmielewski",
       "batter": "Casey Carpenter",
       "outcome": "Strikeout (looking)",
       "count": "0-2",

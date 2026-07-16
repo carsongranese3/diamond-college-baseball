@@ -3,7 +3,7 @@
   "date": "02/21/2026",
   "away_team": "Marist",
   "home_team": "Vanderbilt",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -175,7 +175,9 @@
       "count": "1-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -203,7 +205,9 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Tommy Goodin"
+        "Tommy Goodin",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -420,7 +424,9 @@
       "count": "1-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -447,7 +453,9 @@
       "count": "0-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -510,8 +518,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mike Mancini",
-        "2B": null,
+        "1B": null,
+        "2B": "Mike Mancini",
         "3B": null
       },
       "score": {
@@ -532,13 +540,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Mike Mancini",
-        "2B": null,
+        "1B": null,
+        "2B": "Mike Mancini",
         "3B": null
       },
       "runners_after": {
-        "1B": "Mike Mancini",
-        "2B": null,
+        "1B": null,
+        "2B": "Mike Mancini",
         "3B": null
       },
       "score": {
@@ -555,16 +563,19 @@
       "count": "2-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Mike Mancini",
-        "2B": null,
+        "1B": null,
+        "2B": "Mike Mancini",
         "3B": null
       },
       "runners_after": {
-        "1B": "Mike Mancini",
+        "1B": null,
         "2B": "Tommy Goodin",
         "3B": null
       },
@@ -576,7 +587,34 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "J.",
+      "pitcher": "Jake Burt",
+      "batter": "J. Burt",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": "Tommy Goodin",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Tommy Goodin",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 8
+      },
+      "description": "J. Burt to p for T. Hartley."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Jake Burt",
       "batter": "Mack Whitcomb",
       "outcome": "Single",
       "count": "1-2",
@@ -586,7 +624,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Mike Mancini",
+        "1B": null,
         "2B": "Tommy Goodin",
         "3B": null
       },
@@ -603,7 +641,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "J.",
+      "pitcher": "Jake Burt",
       "batter": "Rustan Rigdon",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -738,7 +776,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "J.",
+      "pitcher": "Jake Burt",
       "batter": "Korbin Reynolds",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -765,7 +803,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "J.",
+      "pitcher": "Jake Burt",
       "batter": "Ryker Waite",
       "outcome": "Fielder's choice",
       "count": "0-2",
@@ -792,7 +830,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "J.",
+      "pitcher": "Jake Burt",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -807,8 +845,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ryker Waite",
-        "2B": null,
+        "1B": null,
+        "2B": "Ryker Waite",
         "3B": null
       },
       "score": {
@@ -819,25 +857,26 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "J.",
+      "pitcher": "Jake Burt",
       "batter": "Logan Johnstone",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Logan Johnstone"
+        "Logan Johnstone",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Ryker Waite",
-        "2B": null,
+        "1B": null,
+        "2B": "Ryker Waite",
         "3B": null
       },
       "runners_after": {
-        "1B": "Ryker Waite",
-        "2B": null,
+        "1B": null,
+        "2B": "Ryker Waite",
         "3B": null
       },
       "score": {
@@ -848,7 +887,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "J.",
+      "pitcher": "Jake Burt",
       "batter": "Brodie Johnston",
       "outcome": "Lineout",
       "count": "3-2",
@@ -858,13 +897,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Ryker Waite",
-        "2B": null,
+        "1B": null,
+        "2B": "Ryker Waite",
         "3B": null
       },
       "runners_after": {
-        "1B": "Ryker Waite",
-        "2B": null,
+        "1B": null,
+        "2B": "Ryker Waite",
         "3B": null
       },
       "score": {
@@ -875,7 +914,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "J.",
+      "pitcher": "Jake Burt",
       "batter": "Mike Mancini",
       "outcome": "Single",
       "count": "1-1",
@@ -885,13 +924,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Ryker Waite",
-        "2B": null,
+        "1B": null,
+        "2B": "Ryker Waite",
         "3B": null
       },
       "runners_after": {
         "1B": "Mike Mancini",
-        "2B": null,
+        "2B": "Ryker Waite",
         "3B": null
       },
       "score": {
@@ -902,7 +941,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "J.",
+      "pitcher": "Jake Burt",
       "batter": "Braden Holcomb",
       "outcome": "Single",
       "count": "0-1",
@@ -913,12 +952,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Mike Mancini",
-        "2B": null,
+        "2B": "Ryker Waite",
         "3B": null
       },
       "runners_after": {
         "1B": "Braden Holcomb",
-        "2B": null,
+        "2B": "Ryker Waite",
         "3B": null
       },
       "score": {
@@ -929,7 +968,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "J.",
+      "pitcher": "Aidan Vargas",
       "batter": "Tommy Goodin",
       "outcome": "Fielder's choice",
       "count": "1-2",
@@ -940,12 +979,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Braden Holcomb",
-        "2B": null,
+        "2B": "Ryker Waite",
         "3B": null
       },
       "runners_after": {
         "1B": "Tommy Goodin",
-        "2B": null,
+        "2B": "Ryker Waite",
         "3B": null
       },
       "score": {
@@ -1037,7 +1076,34 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "A.",
+      "pitcher": "Aidan Vargas",
+      "batter": "A. Vargas",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 10
+      },
+      "description": "A. Vargas to p for J. Burt."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Aidan Vargas",
       "batter": "Mack Whitcomb",
       "outcome": "Single",
       "count": "1-0",
@@ -1064,7 +1130,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "A.",
+      "pitcher": "Aidan Vargas",
       "batter": "Rustan Rigdon",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1091,7 +1157,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "A.",
+      "pitcher": "Aidan Vargas",
       "batter": "Korbin Reynolds",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1118,7 +1184,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "A.",
+      "pitcher": "Jason Bassett",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1145,7 +1211,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "A.",
+      "pitcher": "Jason Bassett",
       "batter": "Ryker Waite",
       "outcome": "Walk",
       "count": "3-1",
@@ -1172,7 +1238,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "A.",
+      "pitcher": "Jason Bassett",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1187,8 +1253,8 @@
         "3B": "Mack Whitcomb"
       },
       "runners_after": {
-        "1B": "Ryker Waite",
-        "2B": null,
+        "1B": null,
+        "2B": "Ryker Waite",
         "3B": "Mack Whitcomb"
       },
       "score": {
@@ -1199,7 +1265,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "A.",
+      "pitcher": "Jason Bassett",
       "batter": "Logan Johnstone",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1209,13 +1275,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Ryker Waite",
-        "2B": null,
+        "1B": null,
+        "2B": "Ryker Waite",
         "3B": "Mack Whitcomb"
       },
       "runners_after": {
-        "1B": "Ryker Waite",
-        "2B": null,
+        "1B": null,
+        "2B": "Ryker Waite",
         "3B": "Mack Whitcomb"
       },
       "score": {
@@ -1361,7 +1427,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "J.",
+      "pitcher": "Jason Bassett",
+      "batter": "J. Bassett",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 10
+      },
+      "description": "J. Bassett to p for A. Vargas."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Nick Buchman",
       "batter": "Brodie Johnston",
       "outcome": "Pop out",
       "count": "1-0",
@@ -1388,7 +1481,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "J.",
+      "pitcher": "Nick Buchman",
       "batter": "Will Hampton",
       "outcome": "Single",
       "count": "2-1",
@@ -1415,7 +1508,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "J.",
+      "pitcher": "Nick Buchman",
       "batter": "Braden Holcomb",
       "outcome": "Grounded into double play",
       "count": "1-1",
@@ -1529,7 +1622,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1631,7 +1726,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "J.",
+      "pitcher": "Nick Buchman",
       "batter": "T. Baer",
       "outcome": "\u2014",
       "count": null,
@@ -1658,7 +1753,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "J.",
+      "pitcher": "Nick Buchman",
       "batter": "M. Mayhugh",
       "outcome": "\u2014",
       "count": null,
@@ -1685,7 +1780,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "J.",
+      "pitcher": "Nick Buchman",
       "batter": "A. McNelly",
       "outcome": "\u2014",
       "count": null,
@@ -1712,7 +1807,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "J.",
+      "pitcher": "Nick Buchman",
       "batter": "L. Cedeno",
       "outcome": "\u2014",
       "count": null,
@@ -1739,7 +1834,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "N.",
+      "pitcher": "",
+      "batter": "N. Buchman",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 10
+      },
+      "description": "N. Buchman to p for J. Bassett."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "",
       "batter": "Chris Maldonado",
       "outcome": "Double",
       "count": "2-2",
@@ -1766,7 +1888,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Mack Whitcomb",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1793,13 +1915,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Rustan Rigdon",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1820,7 +1944,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Korbin Reynolds",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1847,13 +1971,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Ryker Waite",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1874,7 +2000,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1901,7 +2027,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Collin Brightwell",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1928,7 +2054,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Brodie Johnston",
       "outcome": "Groundout",
       "count": "2-0",

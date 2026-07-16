@@ -3,7 +3,7 @@
   "date": "04/18/2026",
   "away_team": "Clemson",
   "home_team": "Virginia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -76,8 +76,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tryston McCladdie",
-        "2B": null,
+        "1B": null,
+        "2B": "Tryston McCladdie",
         "3B": null
       },
       "score": {
@@ -98,13 +98,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Tryston McCladdie",
-        "2B": null,
+        "1B": null,
+        "2B": "Tryston McCladdie",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tryston McCladdie",
-        "2B": null,
+        "1B": null,
+        "2B": "Tryston McCladdie",
         "3B": null
       },
       "score": {
@@ -121,17 +121,19 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Tryston McCladdie",
-        "2B": null,
+        "1B": null,
+        "2B": "Tryston McCladdie",
         "3B": null
       },
       "runners_after": {
         "1B": "Jacob Jarrell",
-        "2B": null,
+        "2B": "Tryston McCladdie",
         "3B": null
       },
       "score": {
@@ -153,12 +155,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jacob Jarrell",
-        "2B": null,
+        "2B": "Tryston McCladdie",
         "3B": null
       },
       "runners_after": {
         "1B": "Jacob Jarrell",
-        "2B": null,
+        "2B": "Tryston McCladdie",
         "3B": null
       },
       "score": {
@@ -175,7 +177,9 @@
       "count": "0-1",
       "pitches": "F",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -601,7 +605,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Danny Nelson",
       "batter": "Harrison Didawick",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -628,7 +632,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Danny Nelson",
       "batter": "Joe Tiroly",
       "outcome": "Home run",
       "count": "0-0",
@@ -657,7 +661,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Danny Nelson",
       "batter": "Antonio Perrotta",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -792,7 +796,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Danny Nelson",
       "batter": "Jake Weatherspoon",
       "outcome": "Groundout",
       "count": "2-2",
@@ -819,7 +823,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Danny Nelson",
       "batter": "Sam Harris",
       "outcome": "Home run",
       "count": "2-2",
@@ -848,7 +852,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Danny Nelson",
       "batter": "Kyle Johnson",
       "outcome": "Flyout",
       "count": "1-3",
@@ -875,7 +879,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Danny Nelson",
       "batter": "Zach Jackson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -929,7 +933,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Jackson Moore",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -956,7 +960,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Tyler Lichtenberger",
       "outcome": "Single",
       "count": "1-1",
@@ -983,7 +987,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Nate Savoie",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1010,7 +1014,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Tryston McCladdie",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1037,7 +1041,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Danny Nelson",
       "batter": "RJ Holmes",
       "outcome": "Single",
       "count": "3-2",
@@ -1064,7 +1068,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Dion Brown",
       "batter": "Noah Murray",
       "outcome": "Pop out",
       "count": "3-2",
@@ -1091,7 +1095,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Dion Brown",
       "batter": "Harrison Didawick",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1118,7 +1122,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Luke Gaffney",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1145,7 +1149,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Jacob Jarrell",
       "outcome": "Single",
       "count": "2-2",
@@ -1172,7 +1176,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Bryce Clavon",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1199,7 +1203,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Jack Crighton",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1226,7 +1230,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Dion Brown",
       "batter": "Joe Tiroly",
       "outcome": "Single",
       "count": "1-1",
@@ -1253,7 +1257,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Dion Brown",
       "batter": "Antonio Perrotta",
       "outcome": "Pop out",
       "count": "1-1",
@@ -1280,7 +1284,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Dion Brown",
       "batter": "Jake Weatherspoon",
       "outcome": "Single",
       "count": "0-0",
@@ -1307,7 +1311,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Dion Brown",
       "batter": "Sam Harris",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1334,13 +1338,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Brendon Bennett",
       "batter": "Kyle Johnson",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1361,7 +1367,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Brendon Bennett",
       "batter": "Zach Jackson",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1388,7 +1394,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "FultzJr,Jason struck out looking (1-2 BSSK).",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1415,7 +1421,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Dylan Harrison",
       "outcome": "Single",
       "count": "0-0",
@@ -1442,7 +1448,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1457,8 +1463,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dylan Harrison",
-        "2B": null,
+        "1B": null,
+        "2B": "Dylan Harrison",
         "3B": null
       },
       "score": {
@@ -1469,7 +1475,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Tyler Lichtenberger",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1479,13 +1485,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Dylan Harrison",
-        "2B": null,
+        "1B": null,
+        "2B": "Dylan Harrison",
         "3B": null
       },
       "runners_after": {
-        "1B": "Dylan Harrison",
-        "2B": null,
+        "1B": null,
+        "2B": "Dylan Harrison",
         "3B": null
       },
       "score": {
@@ -1496,22 +1502,24 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Nate Savoie",
       "outcome": "Double",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Dylan Harrison",
-        "2B": null,
+        "1B": null,
+        "2B": "Dylan Harrison",
         "3B": null
       },
       "runners_after": {
-        "1B": "Dylan Harrison",
+        "1B": null,
         "2B": "Nate Savoie",
         "3B": null
       },
@@ -1523,7 +1531,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Tryston McCladdie",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1533,12 +1541,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Dylan Harrison",
+        "1B": null,
         "2B": "Nate Savoie",
         "3B": null
       },
       "runners_after": {
-        "1B": "Dylan Harrison",
+        "1B": null,
         "2B": "Nate Savoie",
         "3B": null
       },
@@ -1550,7 +1558,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Ariston Veasey",
       "batter": "RJ Holmes",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1577,7 +1585,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Ariston Veasey",
       "batter": "Noah Murray",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1604,7 +1612,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Ariston Veasey",
       "batter": "Harrison Didawick",
       "outcome": "Home run",
       "count": "2-2",
@@ -1633,7 +1641,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Ariston Veasey",
       "batter": "Joe Tiroly",
       "outcome": "Pop out",
       "count": "2-1",
@@ -1660,7 +1668,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "John Paone",
+      "pitcher": "Lucas Hartman",
       "batter": "Luke Gaffney",
       "outcome": "Home run",
       "count": "1-0",
@@ -1689,7 +1697,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "John Paone",
+      "pitcher": "Tyler Kapa",
       "batter": "Jacob Jarrell",
       "outcome": "Lineout",
       "count": "0-0",
@@ -1716,7 +1724,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "John Paone",
+      "pitcher": "Tyler Kapa",
       "batter": "Bryce Clavon",
       "outcome": "Home run",
       "count": "2-0",
@@ -1745,7 +1753,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "John Paone",
+      "pitcher": "Tyler Kapa",
       "batter": "Jack Crighton",
       "outcome": "Reached on error",
       "count": "0-2",
@@ -1772,7 +1780,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "John Paone",
+      "pitcher": "Tyler Kapa",
       "batter": "FultzJr,Jason popped up to shallow right field putout by 2b (3-2 BKKBB).",
       "outcome": "Pop out",
       "count": "3-2",
@@ -1799,7 +1807,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "John Paone",
+      "pitcher": "Tyler Kapa",
       "batter": "Dylan Harrison",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1826,7 +1834,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Ariston Veasey",
       "batter": "Antonio Perrotta",
       "outcome": "Double",
       "count": "1-0",
@@ -1853,7 +1861,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Ariston Veasey",
       "batter": "Jake Weatherspoon",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1880,7 +1888,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Ariston Veasey",
       "batter": "Sam Harris",
       "outcome": "Foul out",
       "count": "1-2",
@@ -1907,7 +1915,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Dane Moehler",
+      "pitcher": "Ariston Veasey",
       "batter": "Kyle Johnson",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1934,7 +1942,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "John Paone",
+      "pitcher": "Tyler Kapa",
       "batter": "Tyler Lichtenberger",
       "outcome": "Single",
       "count": "1-2",
@@ -1961,7 +1969,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "John Paone",
+      "pitcher": "Tyler Kapa",
       "batter": "Nate Savoie",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1988,7 +1996,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "John Paone",
+      "pitcher": "Tyler Kapa",
       "batter": "Tryston McCladdie",
       "outcome": "Pop out",
       "count": "1-2",
@@ -2015,7 +2023,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "John Paone",
+      "pitcher": "",
       "batter": "Luke Gaffney",
       "outcome": "Pop out",
       "count": "3-2",

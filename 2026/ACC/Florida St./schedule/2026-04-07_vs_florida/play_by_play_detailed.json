@@ -3,7 +3,7 @@
   "date": "04/07/2026",
   "away_team": "Florida",
   "home_team": "Florida St.",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -564,8 +564,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "John Stuetzer",
-        "2B": null,
+        "1B": null,
+        "2B": "John Stuetzer",
         "3B": null
       },
       "score": {
@@ -586,13 +586,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "John Stuetzer",
-        "2B": null,
+        "1B": null,
+        "2B": "John Stuetzer",
         "3B": null
       },
       "runners_after": {
         "1B": "Chase Williams",
-        "2B": null,
+        "2B": "John Stuetzer",
         "3B": null
       },
       "score": {
@@ -614,12 +614,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Chase Williams",
-        "2B": null,
+        "2B": "John Stuetzer",
         "3B": null
       },
       "runners_after": {
         "1B": "Chase Williams",
-        "2B": null,
+        "2B": "John Stuetzer",
         "3B": null
       },
       "score": {
@@ -636,17 +636,19 @@
       "count": "2-1",
       "pitches": "BFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Chase Williams",
-        "2B": null,
+        "2B": "John Stuetzer",
         "3B": null
       },
       "runners_after": {
         "1B": "Brayden Dowd",
-        "2B": null,
+        "2B": "John Stuetzer",
         "3B": null
       },
       "score": {
@@ -668,12 +670,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Brayden Dowd",
-        "2B": null,
+        "2B": "John Stuetzer",
         "3B": null
       },
       "runners_after": {
         "1B": "Brayden Dowd",
-        "2B": null,
+        "2B": "John Stuetzer",
         "3B": null
       },
       "score": {
@@ -819,7 +821,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Caden McDonald",
       "batter": "Cal Fisher",
       "outcome": "\u2014",
       "count": "3-2",
@@ -929,7 +931,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Gabe Nard",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -944,7 +946,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jacob Kendall",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -956,7 +958,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Gabe Nard",
       "batter": "Hayden Yost",
       "outcome": "Walk",
       "count": "3-2",
@@ -966,7 +968,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jacob Kendall",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -983,7 +985,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Gabe Nard",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -998,8 +1000,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Hayden Yost",
-        "2B": null,
+        "1B": null,
+        "2B": "Hayden Yost",
         "3B": null
       },
       "score": {
@@ -1010,7 +1012,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Gabe Nard",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1020,14 +1022,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Hayden Yost",
-        "2B": null,
+        "1B": null,
+        "2B": "Hayden Yost",
         "3B": null
       },
       "runners_after": {
-        "1B": "Hayden Yost",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Hayden Yost"
       },
       "score": {
         "away": 2,
@@ -1037,7 +1039,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Gabe Nard",
       "batter": "Kyle Jones",
       "outcome": "Walk",
       "count": "3-1",
@@ -1047,14 +1049,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Hayden Yost",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Hayden Yost"
       },
       "runners_after": {
         "1B": "Kyle Jones",
         "2B": null,
-        "3B": null
+        "3B": "Hayden Yost"
       },
       "score": {
         "away": 2,
@@ -1064,24 +1066,26 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Gabe Nard",
       "batter": "Ethan Surowiec",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Kyle Jones",
         "2B": null,
-        "3B": null
+        "3B": "Hayden Yost"
       },
       "runners_after": {
         "1B": "Ethan Surowiec",
         "2B": null,
-        "3B": null
+        "3B": "Hayden Yost"
       },
       "score": {
         "away": 3,
@@ -1091,24 +1095,26 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Gabe Nard",
       "batter": "Karson Bowen",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "BFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Ethan Surowiec",
         "2B": null,
-        "3B": null
+        "3B": "Hayden Yost"
       },
       "runners_after": {
         "1B": "Karson Bowen",
         "2B": null,
-        "3B": null
+        "3B": "Hayden Yost"
       },
       "score": {
         "away": 4,
@@ -1118,7 +1124,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Caden McDonald",
       "batter": "John Stuetzer",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1145,7 +1151,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Caden McDonald",
       "batter": "Carter McCulley",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1172,7 +1178,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Caden McDonald",
       "batter": "Chase Williams",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1199,7 +1205,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Cole Stokes",
       "batter": "Cade Kurland",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1226,7 +1232,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Cole Stokes",
       "batter": "Landon Stripling",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1253,7 +1259,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Cole Stokes",
       "batter": "Cole Stanford",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1280,7 +1286,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Caden McDonald",
       "batter": "Noah Sheffield",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1307,7 +1313,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Caden McDonald",
       "batter": "Brayden Dowd",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1334,7 +1340,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Caden McDonald",
       "batter": "Hunter Carns",
       "outcome": "Single",
       "count": "1-2",
@@ -1361,7 +1367,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Caden McDonald",
       "batter": "PaulinoJr,Kelvyn grounded out to short, ss to 1b (3-2 KBBKB).",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1388,7 +1394,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Cole Stokes",
       "batter": "Jacob Kendall",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1415,7 +1421,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Cole Stokes",
       "batter": "Kolt Myers",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1442,7 +1448,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Cole Stokes",
       "batter": "Hayden Yost",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -1469,7 +1475,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Cole Stokes",
       "batter": "Kyle Jones",
       "outcome": "Walk",
       "count": "3-2",
@@ -1496,7 +1502,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Brodie Purcell",
       "batter": "Ethan Surowiec",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1523,7 +1529,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Billy Barlow",
       "batter": "Eli Putnam",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1550,7 +1556,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Billy Barlow",
       "batter": "Cal Fisher",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1577,7 +1583,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Billy Barlow",
       "batter": "John Stuetzer",
       "outcome": "Single",
       "count": "1-2",
@@ -1604,7 +1610,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Billy Barlow",
       "batter": "Carter McCulley",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1631,7 +1637,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Ernesto Lugo-Canchola",
       "batter": "UF",
       "outcome": "\u2014",
       "count": null,
@@ -1658,7 +1664,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Ernesto Lugo-Canchola",
       "batter": "Chase Williams",
       "outcome": "Lineout",
       "count": "1-0",
@@ -1685,7 +1691,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Brodie Purcell",
       "batter": "Karson Bowen",
       "outcome": "Walk",
       "count": "3-1",
@@ -1712,7 +1718,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Brodie Purcell",
       "batter": "Cade Kurland",
       "outcome": "Pop out",
       "count": "3-2",
@@ -1739,7 +1745,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Brodie Purcell",
       "batter": "Landon Stripling",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1766,7 +1772,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Brodie Purcell",
       "batter": "Cole Stanford",
       "outcome": "Walk",
       "count": "3-2",
@@ -1793,7 +1799,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Brodie Purcell",
       "batter": "Jacob Kendall",
       "outcome": "Pop out",
       "count": "2-2",
@@ -1820,7 +1826,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Ernesto Lugo-Canchola",
       "batter": "Noah Sheffield",
       "outcome": "Single",
       "count": "2-2",
@@ -1847,7 +1853,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Ernesto Lugo-Canchola",
       "batter": "Brayden Dowd",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1874,14 +1880,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Luke McNeillie",
       "batter": "Hunter Carns",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Hunter Carns"
+        "Hunter Carns",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1903,7 +1910,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Luke McNeillie",
       "batter": "PaulinoJr,Kelvyn infield singled (2-2 BBKF).",
       "outcome": "Single",
       "count": "2-2",
@@ -1930,7 +1937,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Joshua Whritenour",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1957,7 +1964,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Joshua Whritenour",
       "batter": "Eli Putnam",
       "outcome": "Walk",
       "count": "3-0",
@@ -1984,7 +1991,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Joshua Whritenour",
       "batter": "Cal Fisher",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2011,7 +2018,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Joshua Whritenour",
       "batter": "John Stuetzer",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2038,7 +2045,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Jake Echols",
       "batter": "Kolt Myers",
       "outcome": "Reached on error",
       "count": "1-2",
@@ -2065,7 +2072,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Jake Echols",
       "batter": "Hayden Yost",
       "outcome": "Pop out",
       "count": "0-0",
@@ -2092,7 +2099,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Jake Echols",
       "batter": "Kyle Jones",
       "outcome": "Single",
       "count": "0-2",
@@ -2119,7 +2126,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Jake Echols",
       "batter": "Ethan Surowiec",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2146,7 +2153,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Cooper Whited",
+      "pitcher": "Jake Echols",
       "batter": "Karson Bowen",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2173,7 +2180,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Joshua Whritenour",
       "batter": "Carter McCulley",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2200,7 +2207,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Joshua Whritenour",
       "batter": "Chase Williams",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2227,7 +2234,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Joshua Whritenour",
       "batter": "Noah Sheffield",
       "outcome": "Single",
       "count": "1-1",
@@ -2254,7 +2261,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Cooper Walls",
+      "pitcher": "",
       "batter": "Brayden Dowd",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",

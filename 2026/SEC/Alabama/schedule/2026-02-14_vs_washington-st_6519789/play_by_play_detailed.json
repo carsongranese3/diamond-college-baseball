@@ -3,7 +3,7 @@
   "date": "02/14/2026(1)",
   "away_team": "Washington St.",
   "home_team": "Alabama",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -157,8 +157,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bryce Fowler",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Fowler",
         "3B": null
       },
       "score": {
@@ -179,8 +179,8 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bryce Fowler",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Fowler",
         "3B": null
       },
       "runners_after": {
@@ -509,7 +509,7 @@
       },
       "runners_after": {
         "1B": "Trevor Smith",
-        "2B": null,
+        "2B": "Luke Thiele",
         "3B": null
       },
       "score": {
@@ -531,12 +531,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Trevor Smith",
-        "2B": null,
+        "2B": "Luke Thiele",
         "3B": null
       },
       "runners_after": {
         "1B": "Trevor Smith",
-        "2B": null,
+        "2B": "Luke Thiele",
         "3B": null
       },
       "score": {
@@ -698,8 +698,8 @@
       },
       "runners_after": {
         "1B": "Matthew Priest",
-        "2B": "Ollie Obenour",
-        "3B": null
+        "2B": null,
+        "3B": "Ollie Obenour"
       },
       "score": {
         "away": 0,
@@ -720,13 +720,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Matthew Priest",
-        "2B": "Ollie Obenour",
-        "3B": null
+        "2B": null,
+        "3B": "Ollie Obenour"
       },
       "runners_after": {
         "1B": "Matthew Priest",
-        "2B": "Ollie Obenour",
-        "3B": null
+        "2B": null,
+        "3B": "Ollie Obenour"
       },
       "score": {
         "away": 0,
@@ -747,13 +747,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Matthew Priest",
-        "2B": "Ollie Obenour",
-        "3B": null
+        "2B": null,
+        "3B": "Ollie Obenour"
       },
       "runners_after": {
         "1B": "Matthew Priest",
-        "2B": "Ollie Obenour",
-        "3B": null
+        "2B": null,
+        "3B": "Ollie Obenour"
       },
       "score": {
         "away": 0,
@@ -1118,6 +1118,33 @@
     {
       "inning": "Bottom 5",
       "pitcher": "Erik Rodriguez",
+      "batter": "Rodriguez, E to p for Lewis, N.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Justin Lebron",
+        "2B": "Bryce Fowler",
+        "3B": "Brennan Holt"
+      },
+      "runners_after": {
+        "1B": "Justin Lebron",
+        "2B": "Bryce Fowler",
+        "3B": "Brennan Holt"
+      },
+      "score": {
+        "away": 0,
+        "home": 2
+      },
+      "description": "Rodriguez, E to p for Lewis, N."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Erik Rodriguez",
       "batter": "Jason Torres",
       "outcome": "Single",
       "count": "1-2",
@@ -1354,7 +1381,7 @@
       },
       "runners_after": {
         "1B": "Matthew Priest",
-        "2B": null,
+        "2B": "Ollie Obenour",
         "3B": null
       },
       "score": {
@@ -1371,17 +1398,19 @@
       "count": "1-2",
       "pitches": "FFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ollie Obenour"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Matthew Priest",
-        "2B": null,
+        "2B": "Ollie Obenour",
         "3B": null
       },
       "runners_after": {
         "1B": "Mason Pirello",
-        "2B": null,
+        "2B": "Matthew Priest",
         "3B": null
       },
       "score": {
@@ -1403,12 +1432,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Mason Pirello",
-        "2B": null,
+        "2B": "Matthew Priest",
         "3B": null
       },
       "runners_after": {
         "1B": "Mason Pirello",
-        "2B": null,
+        "2B": "Matthew Priest",
         "3B": null
       },
       "score": {
@@ -1529,7 +1558,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Erik Rodriguez",
+      "pitcher": "Trevor Stowe",
       "batter": "Bryce Fowler",
       "outcome": "Single",
       "count": "1-2",
@@ -1598,8 +1627,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cameron Macleod",
-        "2B": null,
+        "1B": null,
+        "2B": "Cameron Macleod",
         "3B": null
       },
       "score": {
@@ -1620,13 +1649,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cameron Macleod",
-        "2B": null,
+        "1B": null,
+        "2B": "Cameron Macleod",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cameron Macleod",
-        "2B": null,
+        "1B": null,
+        "2B": "Cameron Macleod",
         "3B": null
       },
       "score": {
@@ -1647,13 +1676,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cameron Macleod",
-        "2B": null,
+        "1B": null,
+        "2B": "Cameron Macleod",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cameron Macleod",
-        "2B": null,
+        "1B": null,
+        "2B": "Cameron Macleod",
         "3B": null
       },
       "score": {
@@ -1674,13 +1703,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Cameron Macleod",
-        "2B": null,
+        "1B": null,
+        "2B": "Cameron Macleod",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cameron Macleod",
-        "2B": null,
+        "1B": null,
+        "2B": "Cameron Macleod",
         "3B": null
       },
       "score": {
@@ -1688,6 +1717,33 @@
         "home": 6
       },
       "description": "Roy, G grounded out to (0-1 S)."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Trevor Stowe",
+      "batter": "Stowe, T to p for Rodriguez, E.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 6
+      },
+      "description": "Stowe, T to p for Rodriguez, E."
     },
     {
       "inning": "Bottom 7",
@@ -1772,7 +1828,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Trevor Stowe",
+      "pitcher": "Gabe Schneider",
       "batter": "John Lemm",
       "outcome": "Hit by pitch",
       "count": "3-1",
@@ -1799,7 +1855,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Trevor Stowe",
+      "pitcher": "Gabe Schneider",
       "batter": "Luke Vaughn",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1826,7 +1882,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Trevor Stowe",
+      "pitcher": "Gabe Schneider",
       "batter": "Peyton Steele",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1934,7 +1990,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Matthew Heiberger",
+      "pitcher": "Evan Steckmesser",
       "batter": "Mason Pirello",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1961,7 +2017,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Gabe Schneider",
+      "pitcher": "Austin Sheldon",
+      "batter": "Schneider, G to p for Stowe, T.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 6
+      },
+      "description": "Schneider, G to p for Stowe, T."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Austin Sheldon",
       "batter": "Justin Osterhouse",
       "outcome": "Walk",
       "count": "3-2",
@@ -1988,7 +2071,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Gabe Schneider",
+      "pitcher": "Austin Sheldon",
       "batter": "Will Plattner",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2015,7 +2098,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Gabe Schneider",
+      "pitcher": "",
       "batter": "Brennan Holt",
       "outcome": "Walk",
       "count": "3-1",
@@ -2042,7 +2125,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Austin Sheldon",
+      "pitcher": "",
+      "batter": "Sheldon, A to p for Schneider, G.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Brennan Holt",
+        "2B": "Justin Osterhouse",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Brennan Holt",
+        "2B": "Justin Osterhouse",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 6
+      },
+      "description": "Sheldon, A to p for Schneider, G."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Brady Neal",
       "outcome": "Single",
       "count": "0-0",
@@ -2071,7 +2181,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Austin Sheldon",
+      "pitcher": "",
       "batter": "Justin Lebron",
       "outcome": "Flyout",
       "count": "1-0",
@@ -2098,7 +2208,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Austin Sheldon",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2127,7 +2237,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Austin Sheldon",
+      "pitcher": "",
       "batter": "Jason Torres",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2208,7 +2318,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Evan Steckmesser",
+      "pitcher": "",
       "batter": "Joel Fernandez",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",

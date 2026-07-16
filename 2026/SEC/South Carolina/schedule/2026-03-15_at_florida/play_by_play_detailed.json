@@ -3,7 +3,7 @@
   "date": "03/15/2026",
   "away_team": "South Carolina",
   "home_team": "Florida",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -211,8 +211,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Jones",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Jones",
         "3B": null
       },
       "score": {
@@ -233,13 +233,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Kyle Jones",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Jones",
         "3B": null
       },
       "runners_after": {
         "1B": "Brendan Lawson",
-        "2B": null,
+        "2B": "Kyle Jones",
         "3B": null
       },
       "score": {
@@ -261,13 +261,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Brendan Lawson",
-        "2B": null,
+        "2B": "Kyle Jones",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brendan Lawson",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Brendan Lawson",
+        "3B": "Kyle Jones"
       },
       "score": {
         "away": 0,
@@ -287,14 +287,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Brendan Lawson",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Brendan Lawson",
+        "3B": "Kyle Jones"
       },
       "runners_after": {
-        "1B": "Brendan Lawson",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Brendan Lawson",
+        "3B": "Kyle Jones"
       },
       "score": {
         "away": 0,
@@ -314,14 +314,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Brendan Lawson",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Brendan Lawson",
+        "3B": "Kyle Jones"
       },
       "runners_after": {
         "1B": "Blake Cyr",
-        "2B": null,
-        "3B": null
+        "2B": "Brendan Lawson",
+        "3B": "Kyle Jones"
       },
       "score": {
         "away": 0,
@@ -337,18 +337,20 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kyle Jones"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Blake Cyr",
-        "2B": null,
-        "3B": null
+        "2B": "Brendan Lawson",
+        "3B": "Kyle Jones"
       },
       "runners_after": {
         "1B": null,
         "2B": "Blake Cyr",
-        "3B": null
+        "3B": "Brendan Lawson"
       },
       "score": {
         "away": 0,
@@ -365,14 +367,15 @@
       "pitches": "BFF",
       "rbi": true,
       "runs_scored": [
-        "Blake Cyr"
+        "Blake Cyr",
+        "Brendan Lawson"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": "Blake Cyr",
-        "3B": null
+        "3B": "Brendan Lawson"
       },
       "runners_after": {
         "1B": null,
@@ -1179,7 +1182,34 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
+      "batter": "B. Stone",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Ethan Surowiec",
+        "2B": "Brendan Lawson",
+        "3B": "Kyle Jones"
+      },
+      "runners_after": {
+        "1B": "Ethan Surowiec",
+        "2B": "Brendan Lawson",
+        "3B": "Kyle Jones"
+      },
+      "score": {
+        "away": 3,
+        "home": 6
+      },
+      "description": "B. Stone to p for Valentin."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Brandon Stone",
       "batter": "Blake Cyr",
       "outcome": "Walk",
       "count": "3-1",
@@ -1208,7 +1238,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Cash Strayer",
       "outcome": "Home run",
       "count": "0-1",
@@ -1240,7 +1270,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Colton Schwarz",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1267,7 +1297,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "B.",
+      "pitcher": "Cooper Parks",
       "batter": "Cole Stanford",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1348,7 +1378,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Luke McNeillie",
       "batter": "KJ Scobey",
       "outcome": "Single",
       "count": "0-1",
@@ -1375,7 +1405,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Luke McNeillie",
       "batter": "Talmadge LeCroy",
       "outcome": "Single",
       "count": "0-0",
@@ -1594,7 +1624,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cooper Parks",
+      "pitcher": "Cullen Horowicz",
       "batter": "Blake Cyr",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1837,7 +1867,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Cullen Horowicz",
+      "pitcher": "",
       "batter": "Jacob Kendall",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1891,7 +1921,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Luke McNeillie",
+      "pitcher": "",
       "batter": "Gavin Braland",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1918,7 +1948,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Luke McNeillie",
+      "pitcher": "",
       "batter": "Jake Randolph",
       "outcome": "Groundout",
       "count": "0-0",

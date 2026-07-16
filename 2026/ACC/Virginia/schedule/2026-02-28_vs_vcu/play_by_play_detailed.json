@@ -3,7 +3,7 @@
   "date": "02/28/2026",
   "away_team": "VCU",
   "home_team": "Virginia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -663,7 +663,9 @@
       "count": "3-1",
       "pitches": "BBSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -827,7 +829,10 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1037,13 +1042,16 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Max Stammel",
+      "pitcher": "Drew Koenen",
       "batter": "Cade Tousa",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "KBSBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1064,7 +1072,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Max Stammel",
+      "pitcher": "Drew Koenen",
       "batter": "Michael Petite",
       "outcome": "Fielder's choice",
       "count": "0-1",
@@ -1172,7 +1180,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Max Stammel",
+      "pitcher": "Drew Koenen",
       "batter": "Jacob Lee",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1199,7 +1207,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Max Stammel",
+      "pitcher": "Drew Koenen",
       "batter": "Nick Flores",
       "outcome": "Pop out",
       "count": "1-0",
@@ -1226,7 +1234,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Max Stammel",
+      "pitcher": "Drew Koenen",
       "batter": "Quinn Maher",
       "outcome": "Pop out",
       "count": "3-2",
@@ -1334,7 +1342,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Max Stammel",
+      "pitcher": "Lucas Hartman",
       "batter": "Trent Adelman",
       "outcome": "Walk",
       "count": "3-0",
@@ -1361,7 +1369,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Max Stammel",
+      "pitcher": "Lucas Hartman",
       "batter": null,
       "outcome": "Baserunning",
       "count": "3-1",
@@ -1388,7 +1396,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Max Stammel",
+      "pitcher": "Lucas Hartman",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1403,9 +1411,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Trent Adelman",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Trent Adelman"
       },
       "score": {
         "away": 3,
@@ -1415,24 +1423,26 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Max Stammel",
+      "pitcher": "Lucas Hartman",
       "batter": "Dante DeFranco",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BKBFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Trent Adelman",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Trent Adelman"
       },
       "runners_after": {
         "1B": "Dante DeFranco",
         "2B": null,
-        "3B": null
+        "3B": "Trent Adelman"
       },
       "score": {
         "away": 4,
@@ -1442,7 +1452,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Max Stammel",
+      "pitcher": "Lucas Hartman",
       "batter": "Brendan Horne",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1454,12 +1464,12 @@
       "runners_before": {
         "1B": "Dante DeFranco",
         "2B": null,
-        "3B": null
+        "3B": "Trent Adelman"
       },
       "runners_after": {
         "1B": "Dante DeFranco",
         "2B": null,
-        "3B": null
+        "3B": "Trent Adelman"
       },
       "score": {
         "away": 4,
@@ -1469,7 +1479,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Max Stammel",
+      "pitcher": "Lucas Hartman",
       "batter": "Cade Tousa",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1481,12 +1491,12 @@
       "runners_before": {
         "1B": "Dante DeFranco",
         "2B": null,
-        "3B": null
+        "3B": "Trent Adelman"
       },
       "runners_after": {
         "1B": "Dante DeFranco",
         "2B": null,
-        "3B": null
+        "3B": "Trent Adelman"
       },
       "score": {
         "away": 4,
@@ -1523,7 +1533,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Patrick Steitz",
+      "pitcher": "Everett Vaughan",
       "batter": "Noah Jouras",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1550,7 +1560,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Patrick Steitz",
+      "pitcher": "Everett Vaughan",
       "batter": "Eric Becker",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1577,7 +1587,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Max Stammel",
+      "pitcher": "Lucas Hartman",
       "batter": "Michael Petite",
       "outcome": "Reached on error",
       "count": "2-2",
@@ -1604,7 +1614,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Max Stammel",
+      "pitcher": "Lucas Hartman",
       "batter": "Jacob Lee",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1631,7 +1641,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Max Stammel",
+      "pitcher": "Lucas Hartman",
       "batter": "Nick Flores",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1658,13 +1668,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Max Stammel",
+      "pitcher": "Lucas Hartman",
       "batter": "Quinn Maher",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1685,7 +1697,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Max Stammel",
+      "pitcher": "Lucas Hartman",
       "batter": "Trent Adelman",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1712,7 +1724,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Patrick Steitz",
+      "pitcher": "Everett Vaughan",
       "batter": "AJ Gracia",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1739,7 +1751,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Patrick Steitz",
+      "pitcher": "Everett Vaughan",
       "batter": "Joe Tiroly",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1766,7 +1778,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Patrick Steitz",
+      "pitcher": "Everett Vaughan",
       "batter": "Sam Harris",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1793,7 +1805,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Max Stammel",
+      "pitcher": "Joe Colucci",
       "batter": "Teige Lethert",
       "outcome": "Home run",
       "count": "2-1",
@@ -1822,7 +1834,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Max Stammel",
+      "pitcher": "Joe Colucci",
       "batter": "Dante DeFranco",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1849,7 +1861,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Max Stammel",
+      "pitcher": "Joe Colucci",
       "batter": "Brendan Horne",
       "outcome": "Pop out",
       "count": "2-2",
@@ -1876,7 +1888,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Max Stammel",
+      "pitcher": "Joe Colucci",
       "batter": "Cade Tousa",
       "outcome": "Strikeout",
       "count": "0-3",
@@ -1903,7 +1915,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Patrick Steitz",
+      "pitcher": "Everett Vaughan",
       "batter": "Harrison Didawick",
       "outcome": "Walk",
       "count": "3-2",
@@ -1930,7 +1942,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Patrick Steitz",
+      "pitcher": "Dawson Newman",
       "batter": "Griffin Enis",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1957,7 +1969,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Patrick Steitz",
+      "pitcher": "Dawson Newman",
       "batter": "Noah Murray",
       "outcome": "Walk",
       "count": "3-1",
@@ -1984,7 +1996,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Patrick Steitz",
+      "pitcher": "Dawson Newman",
       "batter": "Kyle Johnson",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2011,13 +2023,15 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Patrick Steitz",
+      "pitcher": "Dawson Newman",
       "batter": "Noah Jouras",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2038,13 +2052,15 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Patrick Steitz",
+      "pitcher": "Dawson Newman",
       "batter": "Eric Becker",
       "outcome": "Reached on error",
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2065,7 +2081,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Patrick Steitz",
+      "pitcher": "Dawson Newman",
       "batter": "AJ Gracia",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -2092,7 +2108,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Patrick Steitz",
+      "pitcher": "Dawson Newman",
       "batter": "Joe Tiroly",
       "outcome": "Fielder's choice",
       "count": "1-2",
@@ -2119,7 +2135,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Max Stammel",
+      "pitcher": "Tyler Kapa",
       "batter": "Michael Petite",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2146,7 +2162,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Max Stammel",
+      "pitcher": "Tyler Kapa",
       "batter": "Jacob Lee",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2173,7 +2189,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Max Stammel",
+      "pitcher": "Tyler Kapa",
       "batter": "Nick Flores",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2200,7 +2216,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Patrick Steitz",
+      "pitcher": "Cooper Campbell",
       "batter": "Sam Harris",
       "outcome": "Lineout",
       "count": "0-0",
@@ -2227,7 +2243,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Patrick Steitz",
+      "pitcher": "Cooper Campbell",
       "batter": "Harrison Didawick",
       "outcome": "Lineout",
       "count": "3-2",
@@ -2254,7 +2270,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Patrick Steitz",
+      "pitcher": "Cooper Campbell",
       "batter": "Griffin Enis",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2281,7 +2297,7 @@
     },
     {
       "inning": "Top 11",
-      "pitcher": "Max Stammel",
+      "pitcher": "Tyler Kapa",
       "batter": "Quinn Maher",
       "outcome": "Single",
       "count": "1-1",
@@ -2308,7 +2324,7 @@
     },
     {
       "inning": "Top 11",
-      "pitcher": "Max Stammel",
+      "pitcher": "Tyler Kapa",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
@@ -2335,7 +2351,7 @@
     },
     {
       "inning": "Top 11",
-      "pitcher": "Max Stammel",
+      "pitcher": "Tyler Kapa",
       "batter": "Teige Lethert",
       "outcome": "Foul out",
       "count": "1-2",
@@ -2362,7 +2378,7 @@
     },
     {
       "inning": "Top 11",
-      "pitcher": "Max Stammel",
+      "pitcher": "Tyler Kapa",
       "batter": "Dante DeFranco",
       "outcome": "Single",
       "count": "0-1",
@@ -2389,7 +2405,7 @@
     },
     {
       "inning": "Top 11",
-      "pitcher": "Max Stammel",
+      "pitcher": "Tyler Kapa",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2404,8 +2420,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dante DeFranco",
-        "2B": null,
+        "1B": null,
+        "2B": "Dante DeFranco",
         "3B": null
       },
       "score": {
@@ -2416,7 +2432,7 @@
     },
     {
       "inning": "Top 11",
-      "pitcher": "Max Stammel",
+      "pitcher": "Tyler Kapa",
       "batter": "Brendan Horne",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2426,13 +2442,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Dante DeFranco",
-        "2B": null,
+        "1B": null,
+        "2B": "Dante DeFranco",
         "3B": null
       },
       "runners_after": {
-        "1B": "Dante DeFranco",
-        "2B": null,
+        "1B": null,
+        "2B": "Dante DeFranco",
         "3B": null
       },
       "score": {
@@ -2443,7 +2459,7 @@
     },
     {
       "inning": "Bottom 11",
-      "pitcher": "Patrick Steitz",
+      "pitcher": "Cooper Campbell",
       "batter": "Noah Murray",
       "outcome": "Walk",
       "count": "3-0",
@@ -2470,7 +2486,7 @@
     },
     {
       "inning": "Bottom 11",
-      "pitcher": "Patrick Steitz",
+      "pitcher": "Cooper Campbell",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-1",
@@ -2497,7 +2513,7 @@
     },
     {
       "inning": "Bottom 11",
-      "pitcher": "Patrick Steitz",
+      "pitcher": "Cooper Campbell",
       "batter": "Noah Jouras",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2524,13 +2540,15 @@
     },
     {
       "inning": "Bottom 11",
-      "pitcher": "Patrick Steitz",
+      "pitcher": "Cooper Campbell",
       "batter": "Eric Becker",
       "outcome": "Reached on error",
       "count": "3-2",
       "pitches": "KKBBB",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {

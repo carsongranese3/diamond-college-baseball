@@ -3,7 +3,7 @@
   "date": "05/24/2026",
   "away_team": "Arkansas",
   "home_team": "Georgia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -202,7 +202,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -229,7 +231,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -256,7 +260,9 @@
       "count": "2-1",
       "pitches": "KBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -311,7 +317,8 @@
       "pitches": "KBSB",
       "rbi": true,
       "runs_scored": [
-        "Jack Arcamone"
+        "Jack Arcamone",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -528,7 +535,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -879,7 +888,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -906,7 +917,9 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Tre Phelps"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -915,7 +928,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tre Phelps",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -937,12 +950,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Tre Phelps",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Tre Phelps",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1023,8 +1036,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Maika Niu",
-        "2B": null,
+        "1B": null,
+        "2B": "Maika Niu",
         "3B": null
       },
       "score": {
@@ -1045,13 +1058,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Maika Niu",
-        "2B": null,
+        "1B": null,
+        "2B": "Maika Niu",
         "3B": null
       },
       "runners_after": {
-        "1B": "Maika Niu",
-        "2B": null,
+        "1B": null,
+        "2B": "Maika Niu",
         "3B": null
       },
       "score": {
@@ -1072,13 +1085,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Maika Niu",
-        "2B": null,
+        "1B": null,
+        "2B": "Maika Niu",
         "3B": null
       },
       "runners_after": {
-        "1B": "Maika Niu",
-        "2B": null,
+        "1B": null,
+        "2B": "Maika Niu",
         "3B": null
       },
       "score": {
@@ -1646,8 +1659,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Rylan Lujo",
-        "2B": null,
+        "1B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "score": {
@@ -1668,13 +1681,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Rylan Lujo",
-        "2B": null,
+        "1B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "runners_after": {
         "1B": "Kenny Ishikawa",
-        "2B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "score": {
@@ -1691,17 +1704,19 @@
       "count": "3-2",
       "pitches": "BBKFBFFFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Kenny Ishikawa",
-        "2B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "runners_after": {
         "1B": "Ryan Wynn",
-        "2B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "score": {
@@ -1718,17 +1733,20 @@
       "count": "3-2",
       "pitches": "KBBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Ryan Wynn",
-        "2B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "runners_after": {
         "1B": "Jack Arcamone",
-        "2B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "score": {
@@ -1750,12 +1768,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jack Arcamone",
-        "2B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "runners_after": {
         "1B": "Jack Arcamone",
-        "2B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "score": {
@@ -1763,6 +1781,33 @@
         "home": 11
       },
       "description": "Branch struck out swinging (2-2 BKFBS)."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Jordan Stephens",
+      "batter": "Stephens, J. to p for Jameson.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 11
+      },
+      "description": "Stephens, J. to p for Jameson."
     },
     {
       "inning": "Top 7",
@@ -1847,7 +1892,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jordan Stephens",
+      "pitcher": "",
       "batter": "Zack Stewart",
       "outcome": "Groundout",
       "count": "1-0",

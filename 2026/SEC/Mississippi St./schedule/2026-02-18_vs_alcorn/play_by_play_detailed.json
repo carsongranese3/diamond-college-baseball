@@ -3,7 +3,7 @@
   "date": "02/18/2026",
   "away_team": "Alcorn",
   "home_team": "Mississippi St.",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -157,8 +157,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bryce Chance",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "score": {
@@ -179,13 +179,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Bryce Chance",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "runners_after": {
         "1B": "Aidan Teel",
-        "2B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "score": {
@@ -207,12 +207,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Aidan Teel",
-        "2B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "runners_after": {
         "1B": "Aidan Teel",
-        "2B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "score": {
@@ -234,13 +234,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Aidan Teel",
-        "2B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "runners_after": {
         "1B": "Aidan Teel",
         "2B": null,
-        "3B": null
+        "3B": "Bryce Chance"
       },
       "score": {
         "away": 0,
@@ -256,13 +256,15 @@
       "count": "2-2",
       "pitches": "KKFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Bryce Chance"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Aidan Teel",
         "2B": null,
-        "3B": null
+        "3B": "Bryce Chance"
       },
       "runners_after": {
         "1B": "Aidan Teel",
@@ -470,7 +472,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Tyler Pitzer",
+      "pitcher": "Maddox Miller",
       "batter": "Hollway, Jam struck out swinging (3-2 SBBBFFS).",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -494,6 +496,33 @@
         "home": 4
       },
       "description": "Hollway, Jam struck out swinging (3-2 SBBBFFS)."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Tristan Delaplante",
+      "batter": "Delaplante, to p for Wade, Caden.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 4
+      },
+      "description": "Delaplante, to p for Wade, Caden."
     },
     {
       "inning": "Bottom 2",
@@ -539,8 +568,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bryce Chance",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "score": {
@@ -561,8 +590,8 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bryce Chance",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "runners_after": {
@@ -677,7 +706,7 @@
       },
       "runners_after": {
         "1B": "Drew Wyers",
-        "2B": null,
+        "2B": "Vytas Valincius",
         "3B": "Ace Reese"
       },
       "score": {
@@ -695,13 +724,14 @@
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
+        "Vytas Valincius",
         "Ace Reese"
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Drew Wyers",
-        "2B": null,
+        "2B": "Vytas Valincius",
         "3B": "Ace Reese"
       },
       "runners_after": {
@@ -746,7 +776,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Tristan Delaplante",
+      "pitcher": "Garrett Oswald",
       "batter": "Andrew Raymond",
       "outcome": "Flyout",
       "count": "1-2",
@@ -773,7 +803,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Tristan Delaplante",
+      "pitcher": "Garrett Oswald",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -799,6 +829,33 @@
         "home": 9
       },
       "description": "Mershon advanced to second Bevis scored on a wild pitch, unearned."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Garrett Oswald",
+      "batter": "Oswald, Garr to p for Delaplante,.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": "Peter Mershon",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Peter Mershon",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 9
+      },
+      "description": "Oswald, Garr to p for Delaplante,."
     },
     {
       "inning": "Bottom 2",
@@ -910,7 +967,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Maddox Miller",
+      "pitcher": "Parker Rhodes",
       "batter": "Jullian Jarrett",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1074,7 +1131,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Garrett Oswald",
+      "pitcher": "Myles Dews",
       "batter": "Peter Mershon",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1101,13 +1158,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Garrett Oswald",
+      "pitcher": "Myles Dews",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1128,7 +1187,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Garrett Oswald",
+      "pitcher": "Myles Dews",
       "batter": "Andrew Raymond",
       "outcome": "Single",
       "count": "3-2",
@@ -1159,6 +1218,33 @@
     {
       "inning": "Bottom 3",
       "pitcher": "Myles Dews",
+      "batter": "Dews, Myles to p for Oswald, Garr.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Andrew Raymond",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Andrew Raymond",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 13
+      },
+      "description": "Dews, Myles to p for Oswald, Garr."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Myles Dews",
       "batter": "Gatlin Sanders",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1185,7 +1271,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Maddox Miller",
+      "pitcher": "Parker Rhodes",
       "batter": "Wyers",
       "outcome": "\u2014",
       "count": null,
@@ -1293,7 +1379,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Parker Rhodes",
+      "pitcher": "Jackson Logar",
       "batter": "Keaten Hawk",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1320,7 +1406,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Parker Rhodes",
+      "pitcher": "Jackson Logar",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1347,7 +1433,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Parker Rhodes",
+      "pitcher": "Jackson Logar",
       "batter": "Cooper Harris",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1374,7 +1460,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Myles Dews",
+      "pitcher": "Yoni Castro",
       "batter": "Dunn, Christ to c for Garcia, Nico.",
       "outcome": "\u2014",
       "count": null,
@@ -1401,7 +1487,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Myles Dews",
+      "pitcher": "Yoni Castro",
       "batter": "Jackson Owen",
       "outcome": "Walk",
       "count": "3-0",
@@ -1428,7 +1514,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Myles Dews",
+      "pitcher": "Yoni Castro",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1455,7 +1541,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Myles Dews",
+      "pitcher": "Yoni Castro",
       "batter": "Jacob Parker",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1482,7 +1568,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Myles Dews",
+      "pitcher": "Yoni Castro",
       "batter": "Chone James",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1509,7 +1595,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Parker Rhodes",
+      "pitcher": "Jackson Logar",
       "batter": "Valincius, V to rf.",
       "outcome": "\u2014",
       "count": null,
@@ -1563,7 +1649,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jackson Logar",
+      "pitcher": "Dane Burns",
       "batter": "Hollway, Jam walked (3-1 KBBBB).",
       "outcome": "Walk",
       "count": "3-1",
@@ -1590,7 +1676,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jackson Logar",
+      "pitcher": "Dane Burns",
       "batter": "Michael Bonelli",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1617,7 +1703,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jackson Logar",
+      "pitcher": "Dane Burns",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1632,8 +1718,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Hollway, Jam walked (3-1 KBBBB).",
-        "2B": null,
+        "1B": null,
+        "2B": "Hollway, Jam walked (3-1 KBBBB).",
         "3B": null
       },
       "score": {
@@ -1644,7 +1730,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jackson Logar",
+      "pitcher": "Dane Burns",
       "batter": "Christian Dunn",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1654,13 +1740,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Hollway, Jam walked (3-1 KBBBB).",
-        "2B": null,
+        "1B": null,
+        "2B": "Hollway, Jam walked (3-1 KBBBB).",
         "3B": null
       },
       "runners_after": {
-        "1B": "Hollway, Jam walked (3-1 KBBBB).",
-        "2B": null,
+        "1B": null,
+        "2B": "Hollway, Jam walked (3-1 KBBBB).",
         "3B": null
       },
       "score": {
@@ -1672,6 +1758,33 @@
     {
       "inning": "Bottom 5",
       "pitcher": "Yoni Castro",
+      "batter": "Castro, Yoni to p for Dews, Myles.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 13
+      },
+      "description": "Castro, Yoni to p for Dews, Myles."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Henry Allred",
       "batter": "Johnson, Cha to 1b for Harris, Coop.",
       "outcome": "\u2014",
       "count": null,
@@ -1698,7 +1811,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Yoni Castro",
+      "pitcher": "Henry Allred",
       "batter": "Vytas Valincius",
       "outcome": "Walk",
       "count": "3-2",
@@ -1725,7 +1838,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Yoni Castro",
+      "pitcher": "Henry Allred",
       "batter": "Drew Wyers",
       "outcome": "Single",
       "count": "2-2",
@@ -1741,7 +1854,7 @@
       },
       "runners_after": {
         "1B": "Drew Wyers",
-        "2B": null,
+        "2B": "Vytas Valincius",
         "3B": null
       },
       "score": {
@@ -1752,7 +1865,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Yoni Castro",
+      "pitcher": "Henry Allred",
       "batter": "Blake Bevis",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1763,13 +1876,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Drew Wyers",
-        "2B": null,
+        "2B": "Vytas Valincius",
         "3B": null
       },
       "runners_after": {
         "1B": null,
         "2B": "Drew Wyers",
-        "3B": null
+        "3B": "Vytas Valincius"
       },
       "score": {
         "away": 0,
@@ -1779,19 +1892,21 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Yoni Castro",
+      "pitcher": "Henry Allred",
       "batter": "Peter Mershon",
       "outcome": "Flyout",
       "count": "3-1",
       "pitches": "BSBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Vytas Valincius"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": "Drew Wyers",
-        "3B": null
+        "3B": "Vytas Valincius"
       },
       "runners_after": {
         "1B": null,
@@ -1806,7 +1921,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Yoni Castro",
+      "pitcher": "Chase Ragas",
       "batter": "Andrew Raymond",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1833,7 +1948,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Dane Burns",
+      "pitcher": "Tanner Beliveau",
       "batter": "Jullian Jarrett",
       "outcome": "Groundout",
       "count": "2-0",
@@ -1860,7 +1975,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Dane Burns",
+      "pitcher": "Tanner Beliveau",
       "batter": "Chance Thurston",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1887,7 +2002,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Dane Burns",
+      "pitcher": "Tanner Beliveau",
       "batter": "Clayvonje Wright",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1914,7 +2029,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Yoni Castro",
+      "pitcher": "Chase Ragas",
       "batter": "Thurston, Ch to cf.",
       "outcome": "\u2014",
       "count": null,
@@ -1941,7 +2056,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Yoni Castro",
+      "pitcher": "Chase Ragas",
       "batter": "Wright, Clay to dh.",
       "outcome": "\u2014",
       "count": null,
@@ -1968,7 +2083,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Yoni Castro",
+      "pitcher": "Chase Ragas",
       "batter": "Caston, Gavi to rf for Hawk, Keatan.",
       "outcome": "\u2014",
       "count": null,
@@ -1995,7 +2110,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Henry Allred",
+      "pitcher": "Chase Ragas",
+      "batter": "Allred, Henr to p for Castro, Yoni.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 14
+      },
+      "description": "Allred, Henr to p for Castro, Yoni."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Chase Ragas",
       "batter": "Gatlin Sanders",
       "outcome": "Lineout",
       "count": "2-0",
@@ -2022,7 +2164,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Henry Allred",
+      "pitcher": "",
       "batter": "Jackson Owen",
       "outcome": "Walk",
       "count": "3-1",
@@ -2049,7 +2191,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Henry Allred",
+      "pitcher": "",
       "batter": "Jacob Parker",
       "outcome": "Walk",
       "count": "3-2",
@@ -2076,7 +2218,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Henry Allred",
+      "pitcher": "",
       "batter": "Chone James",
       "outcome": "Single",
       "count": "0-2",
@@ -2105,7 +2247,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Henry Allred",
+      "pitcher": "",
       "batter": "Vytas Valincius",
       "outcome": "Walk",
       "count": "3-0",
@@ -2132,7 +2274,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Ragas",
+      "pitcher": "",
+      "batter": "Ragas, Chase to p for Allred, Henr.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Vytas Valincius",
+        "2B": "Chone James",
+        "3B": "Jacob Parker"
+      },
+      "runners_after": {
+        "1B": "Vytas Valincius",
+        "2B": "Chone James",
+        "3B": "Jacob Parker"
+      },
+      "score": {
+        "away": 0,
+        "home": 15
+      },
+      "description": "Ragas, Chase to p for Allred, Henr."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "",
       "batter": "Drew Wyers",
       "outcome": "Single",
       "count": "2-2",
@@ -2150,7 +2319,7 @@
       },
       "runners_after": {
         "1B": "Drew Wyers",
-        "2B": null,
+        "2B": "Vytas Valincius",
         "3B": "Chone James"
       },
       "score": {
@@ -2161,7 +2330,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Ragas",
+      "pitcher": "",
       "batter": "Blake Bevis",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2174,12 +2343,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Drew Wyers",
-        "2B": null,
+        "2B": "Vytas Valincius",
         "3B": "Chone James"
       },
       "runners_after": {
         "1B": "Drew Wyers",
-        "2B": null,
+        "2B": "Vytas Valincius",
         "3B": null
       },
       "score": {
@@ -2190,7 +2359,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Ragas",
+      "pitcher": "",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2201,13 +2370,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Drew Wyers",
-        "2B": null,
+        "2B": "Vytas Valincius",
         "3B": null
       },
       "runners_after": {
         "1B": null,
         "2B": "Drew Wyers",
-        "3B": null
+        "3B": "Vytas Valincius"
       },
       "score": {
         "away": 0,
@@ -2217,21 +2386,22 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Ragas",
+      "pitcher": "",
       "batter": "Peter Mershon",
       "outcome": "Single",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "Drew Wyers"
+        "Drew Wyers",
+        "Vytas Valincius"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": null,
         "2B": "Drew Wyers",
-        "3B": null
+        "3B": "Vytas Valincius"
       },
       "runners_after": {
         "1B": "Peter Mershon",
@@ -2246,7 +2416,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Ragas",
+      "pitcher": "",
       "batter": "Andrew Raymond",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -2273,7 +2443,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Ragas",
+      "pitcher": "",
       "batter": "Gatlin Sanders",
       "outcome": "Walk",
       "count": "3-0",
@@ -2300,7 +2470,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Ragas",
+      "pitcher": "",
       "batter": "Jackson Owen",
       "outcome": "Groundout",
       "count": "3-1",
@@ -2327,7 +2497,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tanner Beliveau",
+      "pitcher": "",
       "batter": "Gavin Caston",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2354,7 +2524,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tanner Beliveau",
+      "pitcher": "",
       "batter": "Johnson, Cha struck out looking (3-2 BBBKKK).",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2381,7 +2551,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tanner Beliveau",
+      "pitcher": "",
       "batter": "Patterson, D grounded out to 1b unassisted (3-2 BSBKB).",
       "outcome": "Groundout",
       "count": "3-2",

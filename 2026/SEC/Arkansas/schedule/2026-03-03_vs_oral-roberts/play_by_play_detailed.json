@@ -3,7 +3,7 @@
   "date": "03/03/2026",
   "away_team": "Oral Roberts",
   "home_team": "Arkansas",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -391,7 +391,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -499,7 +501,9 @@
       "count": "2-1",
       "pitches": "KBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -580,7 +584,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -616,8 +622,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Damian Ruiz",
-        "2B": "Maika Niu",
+        "1B": null,
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "score": {
@@ -638,13 +644,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Damian Ruiz",
-        "2B": "Maika Niu",
+        "1B": null,
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "runners_after": {
         "1B": "Ryder Helfrick",
-        "2B": "Maika Niu",
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "score": {
@@ -661,17 +667,19 @@
       "count": "3-2",
       "pitches": "BBFBS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Ryder Helfrick",
-        "2B": "Maika Niu",
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "runners_after": {
         "1B": "Ryder Helfrick",
-        "2B": "Maika Niu",
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "score": {
@@ -688,17 +696,19 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Ryder Helfrick",
-        "2B": "Maika Niu",
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "runners_after": {
         "1B": "Kuhio Aloy",
-        "2B": "Maika Niu",
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "score": {
@@ -720,12 +730,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Kuhio Aloy",
-        "2B": "Maika Niu",
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "runners_after": {
         "1B": "Kuhio Aloy",
-        "2B": "Maika Niu",
+        "2B": "Damian Ruiz",
         "3B": null
       },
       "score": {
@@ -1122,7 +1132,10 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1143,7 +1156,34 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "J.",
+      "pitcher": "Jack Hill",
+      "batter": "J. Hill",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Ryder Helfrick",
+        "2B": "Kuhio Aloy",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ryder Helfrick",
+        "2B": "Kuhio Aloy",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 7
+      },
+      "description": "J. Hill to p for Yeary."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Jack Hill",
       "batter": "Reese Robinett",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1170,7 +1210,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "J.",
+      "pitcher": "Jack Hill",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1199,7 +1239,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "J.",
+      "pitcher": "Jack Hill",
       "batter": "Maika Niu",
       "outcome": "Single",
       "count": "2-2",
@@ -1226,7 +1266,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "J.",
+      "pitcher": "Jack Hill",
       "batter": "Zack Stewart",
       "outcome": "Single",
       "count": "0-0",
@@ -1253,7 +1293,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "J.",
+      "pitcher": "Luke Puffinbarger",
       "batter": "Carson Brumbaugh",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1475,7 +1515,9 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1502,7 +1544,9 @@
       "count": "2-2",
       "pitches": "FBSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1523,7 +1567,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Luke Puffinbarger",
+      "pitcher": "Braydon Sanford",
       "batter": "Reese Robinett",
       "outcome": "Walk",
       "count": "3-2",
@@ -1739,7 +1783,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Braydon Sanford",
+      "pitcher": "Kash Ferris",
       "batter": "Christian Turner",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1984,7 +2028,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Kash Ferris",
+      "pitcher": "Dylan Christensen",
       "batter": "Kuhio Aloy",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2200,7 +2244,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Dylan Christensen",
+      "pitcher": "",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2227,7 +2271,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Dylan Christensen",
+      "pitcher": "",
       "batter": "Nolan Souza",
       "outcome": "Lineout",
       "count": "2-1",

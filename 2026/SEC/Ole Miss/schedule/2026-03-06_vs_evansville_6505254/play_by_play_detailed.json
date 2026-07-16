@@ -3,7 +3,7 @@
   "date": "03/06/2026(2)",
   "away_team": "Evansville",
   "home_team": "Ole Miss",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -202,7 +202,9 @@
       "count": "1-2",
       "pitches": "FBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -880,7 +882,9 @@
       "pitches": "KS",
       "rbi": true,
       "runs_scored": [
-        "Daniel Pacella"
+        "Daniel Pacella",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -963,7 +967,9 @@
       "pitches": "BFSFFB",
       "rbi": true,
       "runs_scored": [
-        "Judd Utermark"
+        "Judd Utermark",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1120,7 +1126,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Drew",
+      "pitcher": "Drew Fieger",
+      "batter": "Drew",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 8
+      },
+      "description": "Drew Fieger to p for Max Hansmann."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Drew Fieger",
       "batter": "Tristan Bissetta",
       "outcome": "Single",
       "count": "0-1",
@@ -1147,7 +1180,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Drew",
+      "pitcher": "Drew Fieger",
       "batter": "Brayden Randle",
       "outcome": "Single",
       "count": "3-1",
@@ -1174,13 +1207,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Drew",
+      "pitcher": "Drew Fieger",
       "batter": "Owen Paino",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "KF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1201,14 +1236,16 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Drew",
+      "pitcher": "Conner Vander-Luitgaren",
       "batter": "Daniel Pacella",
       "outcome": "Home run",
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": true,
       "runs_scored": [
-        "Daniel Pacella"
+        "Daniel Pacella",
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1230,7 +1267,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Conner",
+      "pitcher": "Conner Vander-Luitgaren",
+      "batter": "Conner",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Owen Paino",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Owen Paino",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 12
+      },
+      "description": "Conner Vande to p for Drew Fieger."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Conner Vander-Luitgaren",
       "batter": "Hayden Federico",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1257,7 +1321,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Conner",
+      "pitcher": "Conner Vander-Luitgaren",
       "batter": "Dom Decker",
       "outcome": "Walk",
       "count": "3-1",
@@ -1284,7 +1348,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Conner",
+      "pitcher": "Conner Vander-Luitgaren",
       "batter": "Judd Utermark",
       "outcome": "Walk",
       "count": "3-1",
@@ -1311,13 +1375,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Conner",
+      "pitcher": "Conner Vander-Luitgaren",
       "batter": "Will Furniss",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "SKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1338,7 +1404,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Conner",
+      "pitcher": "Parker MacCauley",
       "batter": "Collin Reuter",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1365,7 +1431,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Conner",
+      "pitcher": "Parker MacCauley",
       "batter": "Luke Romine",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1392,7 +1458,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Cade Townsend",
+      "pitcher": "Landon Waters",
       "batter": "L. Romine",
       "outcome": "\u2014",
       "count": null,
@@ -1419,7 +1485,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Cade Townsend",
+      "pitcher": "Landon Waters",
       "batter": "D. Pacella",
       "outcome": "\u2014",
       "count": null,
@@ -1446,7 +1512,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "L.",
+      "pitcher": "Landon Waters",
+      "batter": "L. Waters",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 13
+      },
+      "description": "L. Waters to p for C. Townsend."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Noah Allen",
       "batter": "Harrison",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1473,7 +1566,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "L.",
+      "pitcher": "Noah Allen",
       "batter": "Wyatt",
       "outcome": "Foul out",
       "count": "1-0",
@@ -1500,7 +1593,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "L.",
+      "pitcher": "Noah Allen",
       "batter": "Charlie",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1527,7 +1620,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Parker",
+      "pitcher": "Parker MacCauley",
+      "batter": "Parker",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 13
+      },
+      "description": "Parker MacCa to p for Conner Vande."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Parker MacCauley",
       "batter": "Brayden Randle",
       "outcome": "Hit by pitch",
       "count": "0-2",
@@ -1554,7 +1674,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Parker",
+      "pitcher": "Parker MacCauley",
       "batter": "Owen Paino",
       "outcome": "Walk",
       "count": "3-1",
@@ -1581,7 +1701,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Parker",
+      "pitcher": "Parker MacCauley",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -1608,7 +1728,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Parker",
+      "pitcher": "Parker MacCauley",
       "batter": "Kelven Perera",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1635,13 +1755,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Parker",
+      "pitcher": "",
       "batter": "Cannon Goldin",
       "outcome": "Flyout",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1662,7 +1784,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Parker",
+      "pitcher": "",
       "batter": "Dom Decker",
       "outcome": "Walk",
       "count": "3-1",
@@ -1689,7 +1811,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Parker",
+      "pitcher": "",
       "batter": "Topher Jones",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1716,7 +1838,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "L.",
+      "pitcher": "Noah Allen",
       "batter": "T. Jones",
       "outcome": "\u2014",
       "count": null,
@@ -1743,7 +1865,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "L.",
+      "pitcher": "Noah Allen",
       "batter": "B. Moseley",
       "outcome": "\u2014",
       "count": null,
@@ -1770,7 +1892,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "L.",
+      "pitcher": "Noah Allen",
       "batter": "K. Perera",
       "outcome": "\u2014",
       "count": null,
@@ -1797,7 +1919,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "C. Goldin",
       "outcome": "\u2014",
       "count": null,
@@ -1824,7 +1946,34 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "N.",
+      "pitcher": "",
+      "batter": "N. Allen",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 14
+      },
+      "description": "N. Allen to p for L. Waters."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "",
       "batter": "Reid",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1851,7 +2000,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Ximi",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1878,7 +2027,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Trenton",
       "outcome": "Double",
       "count": "0-2",
@@ -1905,7 +2054,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Mason",
       "outcome": "Walk",
       "count": "3-0",
@@ -1932,13 +2081,16 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Drew",
       "outcome": "Double",
       "count": "2-1",
       "pitches": "BKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1959,7 +2111,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "N.",
+      "pitcher": "",
       "batter": "Kaleb",
       "outcome": "Lineout",
       "count": "0-1",

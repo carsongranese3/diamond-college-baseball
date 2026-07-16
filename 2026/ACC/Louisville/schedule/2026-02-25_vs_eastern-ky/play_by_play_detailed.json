@@ -3,7 +3,7 @@
   "date": "02/25/2026",
   "away_team": "Eastern Ky.",
   "home_team": "Louisville",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -433,8 +433,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jax Hisle",
-        "2B": null,
+        "1B": null,
+        "2B": "Jax Hisle",
         "3B": null
       },
       "score": {
@@ -455,13 +455,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Jax Hisle",
-        "2B": null,
+        "1B": null,
+        "2B": "Jax Hisle",
         "3B": null
       },
       "runners_after": {
         "1B": "Bayram Hot",
-        "2B": null,
+        "2B": "Jax Hisle",
         "3B": null
       },
       "score": {
@@ -472,7 +472,34 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Jack",
+      "pitcher": "Jack Briese",
+      "batter": "Jack",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Bayram Hot",
+        "2B": "Jax Hisle",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Bayram Hot",
+        "2B": "Jax Hisle",
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 1
+      },
+      "description": "Jack Briese to p for J. Bingham."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Jack Briese",
       "batter": "Griffin Crain",
       "outcome": "\u2014",
       "count": "1-0",
@@ -483,13 +510,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Bayram Hot",
-        "2B": null,
+        "2B": "Jax Hisle",
         "3B": null
       },
       "runners_after": {
         "1B": null,
         "2B": "Bayram Hot",
-        "3B": null
+        "3B": "Jax Hisle"
       },
       "score": {
         "away": 2,
@@ -499,21 +526,22 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Jack",
+      "pitcher": "Jack Briese",
       "batter": "Jimmy Nugent",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Bayram Hot"
+        "Bayram Hot",
+        "Jax Hisle"
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": null,
         "2B": "Bayram Hot",
-        "3B": null
+        "3B": "Jax Hisle"
       },
       "runners_after": {
         "1B": "Jimmy Nugent",
@@ -528,7 +556,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Jack",
+      "pitcher": "Jack Briese",
       "batter": "AJ Martin",
       "outcome": "Groundout",
       "count": "0-2",
@@ -698,7 +726,9 @@
       "count": "1-2",
       "pitches": "KFBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -746,7 +776,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jack",
+      "pitcher": "Jack Briese",
       "batter": "Lucas Moore",
       "outcome": "Walk",
       "count": "3-0",
@@ -773,7 +803,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jack",
+      "pitcher": "Jack Briese",
       "batter": "Ky.",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -800,7 +830,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jack",
+      "pitcher": "Hayden Collins",
       "batter": "Tague Davis",
       "outcome": "Groundout",
       "count": "2-1",
@@ -827,7 +857,34 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "H.",
+      "pitcher": "Hayden Collins",
+      "batter": "H. Collins",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Ky.",
+        "2B": null,
+        "3B": "Lucas Moore"
+      },
+      "runners_after": {
+        "1B": "Ky.",
+        "2B": null,
+        "3B": "Lucas Moore"
+      },
+      "score": {
+        "away": 4,
+        "home": 3
+      },
+      "description": "H. Collins to p for Jack Briese."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Hayden Collins",
       "batter": "Kade Elam",
       "outcome": "Lineout",
       "count": "0-2",
@@ -854,14 +911,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "H.",
+      "pitcher": "Cooper Pumphrey",
       "batter": "Jax Hisle",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Lucas Moore"
+        "Lucas Moore",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -883,7 +941,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "H.",
+      "pitcher": "Cooper Pumphrey",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -910,7 +968,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "H.",
+      "pitcher": "Cooper Pumphrey",
       "batter": "Bayram Hot",
       "outcome": "Pop out",
       "count": "2-2",
@@ -1045,7 +1103,34 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "C.",
+      "pitcher": "Cooper Pumphrey",
+      "batter": "C. Pumphrey",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 5
+      },
+      "description": "C. Pumphrey to p for H. Collins."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Cooper Pumphrey",
       "batter": "Griffin Crain",
       "outcome": "Single",
       "count": "0-0",
@@ -1072,7 +1157,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "C.",
+      "pitcher": "Caleb Freeman",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1099,7 +1184,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "C.",
+      "pitcher": "Caleb Freeman",
       "batter": "Jimmy Nugent",
       "outcome": "Pop out",
       "count": "2-2",
@@ -1126,7 +1211,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "C.",
+      "pitcher": "Caleb Freeman",
       "batter": "AJ Martin",
       "outcome": "Reached on error",
       "count": "1-1",
@@ -1153,7 +1238,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "C.",
+      "pitcher": "Caleb Freeman",
       "batter": "Lucas Moore",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1342,7 +1427,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "C.",
+      "pitcher": "Cade Schneider",
+      "batter": "C. Freeman",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 5
+      },
+      "description": "C. Freeman to p for C. Pumphrey."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Cade Schneider",
       "batter": "Ky.",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1369,7 +1481,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "C.",
+      "pitcher": "Cade Schneider",
       "batter": "Tague Davis",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1396,7 +1508,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "C.",
+      "pitcher": "Cade Schneider",
       "batter": "Kade Elam",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1504,7 +1616,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Cade Schneider",
       "batter": "T. Phillips",
       "outcome": "\u2014",
       "count": null,
@@ -1531,7 +1643,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Addison Stockham",
+      "batter": "C. Schneider",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 5
+      },
+      "description": "C. Schneider to p for C. Freeman."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Addison Stockham",
       "batter": "Jax Hisle",
       "outcome": "Single",
       "count": "0-0",
@@ -1558,7 +1697,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Addison Stockham",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1573,8 +1712,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jax Hisle",
-        "2B": null,
+        "1B": null,
+        "2B": "Jax Hisle",
         "3B": null
       },
       "score": {
@@ -1585,7 +1724,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Addison Stockham",
       "batter": "Bayram Hot",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1595,13 +1734,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jax Hisle",
-        "2B": null,
+        "1B": null,
+        "2B": "Jax Hisle",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jax Hisle",
-        "2B": null,
+        "1B": null,
+        "2B": "Jax Hisle",
         "3B": null
       },
       "score": {
@@ -1612,7 +1751,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Addison Stockham",
       "batter": "Griffin Crain",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1622,13 +1761,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jax Hisle",
-        "2B": null,
+        "1B": null,
+        "2B": "Jax Hisle",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jax Hisle",
-        "2B": null,
+        "1B": null,
+        "2B": "Jax Hisle",
         "3B": null
       },
       "score": {
@@ -1639,7 +1778,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Addison Stockham",
       "batter": "Jimmy Nugent",
       "outcome": "Double",
       "count": "3-0",
@@ -1651,8 +1790,8 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jax Hisle",
-        "2B": null,
+        "1B": null,
+        "2B": "Jax Hisle",
         "3B": null
       },
       "runners_after": {
@@ -1668,7 +1807,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Jack Bell",
       "batter": "AJ Martin",
       "outcome": "Foul out",
       "count": "0-2",
@@ -1755,7 +1894,9 @@
       "count": "0-2",
       "pitches": "KF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -1803,7 +1944,34 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
+      "batter": "J. Brown",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Jay",
+        "2B": null,
+        "3B": "Dylan Littlefield"
+      },
+      "runners_after": {
+        "1B": "Jay",
+        "2B": null,
+        "3B": "Dylan Littlefield"
+      },
+      "score": {
+        "away": 5,
+        "home": 6
+      },
+      "description": "J. Brown to p for Hartman."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Jack Brown",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1830,7 +1998,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "Khaleel Pratt",
       "outcome": "Walk",
       "count": "3-1",
@@ -1857,7 +2025,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "Silas Shaffer",
       "outcome": "Grounded into double play",
       "count": "3-1",
@@ -1884,7 +2052,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "A.",
+      "pitcher": "Jack Bell",
+      "batter": "A. Stockham",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 6
+      },
+      "description": "A. Stockham to p for C. Schneider."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Jack Bell",
       "batter": "Lucas Moore",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1911,7 +2106,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "A.",
+      "pitcher": "Griffin Howell",
       "batter": "Ky.",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1938,7 +2133,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "A.",
+      "pitcher": "",
       "batter": "Tague Davis",
       "outcome": "Hit by pitch",
       "count": "3-2",
@@ -1965,7 +2160,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "A.",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1980,8 +2175,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tague Davis",
-        "2B": null,
+        "1B": null,
+        "2B": "Tague Davis",
         "3B": null
       },
       "score": {
@@ -1992,7 +2187,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "A.",
+      "pitcher": "",
       "batter": "Kade Elam",
       "outcome": "Walk",
       "count": "3-2",
@@ -2002,13 +2197,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Tague Davis",
-        "2B": null,
+        "1B": null,
+        "2B": "Tague Davis",
         "3B": null
       },
       "runners_after": {
         "1B": "Kade Elam",
-        "2B": null,
+        "2B": "Tague Davis",
         "3B": null
       },
       "score": {
@@ -2019,7 +2214,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "A.",
+      "pitcher": "",
       "batter": "Jax Hisle",
       "outcome": "Lineout",
       "count": "2-0",
@@ -2030,12 +2225,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Kade Elam",
-        "2B": null,
+        "2B": "Tague Davis",
         "3B": null
       },
       "runners_after": {
         "1B": "Kade Elam",
-        "2B": null,
+        "2B": "Tague Davis",
         "3B": null
       },
       "score": {
@@ -2046,7 +2241,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "Jackson",
       "outcome": "Lineout",
       "count": "2-1",
@@ -2073,7 +2268,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "Jack Brown",
       "batter": "Carson Bittner",
       "outcome": "Flyout",
       "count": "2-2",
@@ -2100,7 +2295,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "Aaron England",
       "batter": "Kobe",
       "outcome": "Groundout",
       "count": "1-0",
@@ -2127,7 +2322,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "A.",
+      "pitcher": "",
       "batter": "Ryan",
       "outcome": "\u2014",
       "count": null,
@@ -2154,7 +2349,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jack",
+      "pitcher": "",
+      "batter": "Jack",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 6
+      },
+      "description": "Jack Bell to p for A. Stockham."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Bayram Hot",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2181,7 +2403,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jack",
+      "pitcher": "",
       "batter": "Griffin Crain",
       "outcome": "Single",
       "count": "0-0",
@@ -2208,7 +2430,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jack",
+      "pitcher": "",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -2235,7 +2457,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jack",
+      "pitcher": "",
       "batter": "Jimmy Nugent",
       "outcome": "Single",
       "count": "2-1",
@@ -2262,7 +2484,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jack",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2277,8 +2499,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jimmy Nugent",
-        "2B": null,
+        "1B": null,
+        "2B": "Jimmy Nugent",
         "3B": null
       },
       "score": {
@@ -2289,7 +2511,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "G.",
+      "pitcher": "",
+      "batter": "G. Howell",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": "Jimmy Nugent",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Jimmy Nugent",
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 6
+      },
+      "description": "G. Howell to p for Jack Bell."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "George Baker",
       "outcome": "Groundout",
       "count": "2-1",
@@ -2299,13 +2548,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jimmy Nugent",
-        "2B": null,
+        "1B": null,
+        "2B": "Jimmy Nugent",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jimmy Nugent",
-        "2B": null,
+        "1B": null,
+        "2B": "Jimmy Nugent",
         "3B": null
       },
       "score": {
@@ -2316,7 +2565,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "J.",
+      "pitcher": "Aaron England",
       "batter": "Z. Davis",
       "outcome": "\u2014",
       "count": null,
@@ -2370,7 +2619,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Aaron England",
+      "pitcher": "",
       "batter": "Dylan Littlefield",
       "outcome": "Walk",
       "count": "3-1",
@@ -2397,7 +2646,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Aaron England",
+      "pitcher": "",
       "batter": "David Alvarez",
       "outcome": "Grounded into double play",
       "count": "0-2",

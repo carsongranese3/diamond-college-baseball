@@ -3,7 +3,7 @@
   "date": "03/14/2026",
   "away_team": "Alabama",
   "home_team": "Kentucky",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -76,8 +76,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Justin Lebron",
-        "2B": null,
+        "1B": null,
+        "2B": "Justin Lebron",
         "3B": null
       },
       "score": {
@@ -98,14 +98,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Justin Lebron",
-        "2B": null,
+        "1B": null,
+        "2B": "Justin Lebron",
         "3B": null
       },
       "runners_after": {
-        "1B": "Justin Lebron",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Justin Lebron"
       },
       "score": {
         "away": 0,
@@ -121,18 +121,20 @@
       "count": "3-2",
       "pitches": "SFBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Justin Lebron",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Justin Lebron"
       },
       "runners_after": {
-        "1B": "Justin Lebron",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Justin Lebron"
       },
       "score": {
         "away": 1,
@@ -152,14 +154,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Justin Lebron",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Justin Lebron"
       },
       "runners_after": {
         "1B": "Jason Torres",
         "2B": null,
-        "3B": null
+        "3B": "Justin Lebron"
       },
       "score": {
         "away": 1,
@@ -181,12 +183,12 @@
       "runners_before": {
         "1B": "Jason Torres",
         "2B": null,
-        "3B": null
+        "3B": "Justin Lebron"
       },
       "runners_after": {
         "1B": "Jason Torres",
         "2B": "John Lemm",
-        "3B": null
+        "3B": "Justin Lebron"
       },
       "score": {
         "away": 1,
@@ -208,12 +210,12 @@
       "runners_before": {
         "1B": "Jason Torres",
         "2B": "John Lemm",
-        "3B": null
+        "3B": "Justin Lebron"
       },
       "runners_after": {
         "1B": "Luke Vaughn",
         "2B": "John Lemm",
-        "3B": null
+        "3B": "Justin Lebron"
       },
       "score": {
         "away": 1,
@@ -229,18 +231,20 @@
       "count": "3-2",
       "pitches": "FFFBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Luke Vaughn",
         "2B": "John Lemm",
-        "3B": null
+        "3B": "Justin Lebron"
       },
       "runners_after": {
         "1B": "Will Plattner",
         "2B": "John Lemm",
-        "3B": null
+        "3B": "Justin Lebron"
       },
       "score": {
         "away": 2,
@@ -250,7 +254,34 @@
     },
     {
       "inning": "Top 1",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
+      "batter": "N. Adcock",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Will Plattner",
+        "2B": "John Lemm",
+        "3B": "Justin Lebron"
+      },
+      "runners_after": {
+        "1B": "Will Plattner",
+        "2B": "John Lemm",
+        "3B": "Justin Lebron"
+      },
+      "score": {
+        "away": 2,
+        "home": 0
+      },
+      "description": "N. Adcock to p for B. Cleaver."
+    },
+    {
+      "inning": "Top 1",
+      "pitcher": "Nile Adcock",
       "batter": "Peyton Steele",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -262,12 +293,12 @@
       "runners_before": {
         "1B": "Will Plattner",
         "2B": "John Lemm",
-        "3B": null
+        "3B": "Justin Lebron"
       },
       "runners_after": {
         "1B": "Will Plattner",
         "2B": "John Lemm",
-        "3B": null
+        "3B": "Justin Lebron"
       },
       "score": {
         "away": 2,
@@ -358,7 +389,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
       "batter": "Brennan Holt",
       "outcome": "Flyout",
       "count": "2-0",
@@ -385,7 +416,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "N.",
+      "pitcher": "Nile Adcock",
       "batter": "Bryce Fowler",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -412,7 +443,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "N.",
+      "pitcher": "Tommy Skelding",
       "batter": "Justin Lebron",
       "outcome": "Flyout",
       "count": "2-2",
@@ -520,7 +551,34 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "T.",
+      "pitcher": "Tommy Skelding",
+      "batter": "T. Skelding",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 0
+      },
+      "description": "T. Skelding to p for N. Adcock."
+    },
+    {
+      "inning": "Top 3",
+      "pitcher": "Tommy Skelding",
       "batter": "Brady Neal",
       "outcome": "Lineout",
       "count": "1-2",
@@ -547,7 +605,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "T.",
+      "pitcher": "Tommy Skelding",
       "batter": "Jason Torres",
       "outcome": "Flyout",
       "count": "0-0",
@@ -574,7 +632,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "T.",
+      "pitcher": "Tommy Skelding",
       "batter": "John Lemm",
       "outcome": "Home run",
       "count": "1-1",
@@ -603,7 +661,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "T.",
+      "pitcher": "Tommy Skelding",
       "batter": "Luke Vaughn",
       "outcome": "Flyout",
       "count": "0-1",
@@ -690,7 +748,9 @@
       "count": "2-1",
       "pitches": "BFB",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -792,7 +852,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "T.",
+      "pitcher": "Tommy Skelding",
       "batter": "Will Plattner",
       "outcome": "Double",
       "count": null,
@@ -819,7 +879,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "T.",
+      "pitcher": "Tommy Skelding",
       "batter": "Peyton Steele",
       "outcome": "Flyout",
       "count": "0-0",
@@ -846,7 +906,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "T.",
+      "pitcher": "Tommy Skelding",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -875,7 +935,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "T.",
+      "pitcher": "Tommy Skelding",
       "batter": "Brennan Holt",
       "outcome": "Walk",
       "count": "3-2",
@@ -902,7 +962,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "T.",
+      "pitcher": "Tommy Skelding",
       "batter": "Bryce Fowler",
       "outcome": "Single",
       "count": "0-0",
@@ -929,7 +989,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "T.",
+      "pitcher": "Tommy Skelding",
       "batter": "Justin Osterhouse",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -956,7 +1016,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "T.",
+      "pitcher": "Tommy Skelding",
       "batter": "Brady Neal",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1145,7 +1205,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "T.",
+      "pitcher": "Tommy Skelding",
       "batter": "S. Campbell",
       "outcome": "\u2014",
       "count": null,
@@ -1172,7 +1232,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "T.",
+      "pitcher": "Tommy Skelding",
       "batter": "Jason Torres",
       "outcome": "Walk",
       "count": "3-2",
@@ -1199,7 +1259,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "T.",
+      "pitcher": "Ira Austin",
       "batter": "John Lemm",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1226,7 +1286,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "T.",
+      "pitcher": "Ira Austin",
       "batter": "Luke Vaughn",
       "outcome": "Fielder's choice",
       "count": "3-2",
@@ -1253,7 +1313,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "T.",
+      "pitcher": "Ira Austin",
       "batter": "Will Plattner",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1340,7 +1400,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1367,7 +1429,10 @@
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1448,7 +1513,9 @@
       "count": "1-1",
       "pitches": "SB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1511,8 +1578,8 @@
         "3B": "Luke Lawrence"
       },
       "runners_after": {
-        "1B": "Scott Campbell",
-        "2B": "Jayce Tharnish",
+        "1B": null,
+        "2B": "Scott Campbell",
         "3B": "Luke Lawrence"
       },
       "score": {
@@ -1533,13 +1600,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Scott Campbell",
-        "2B": "Jayce Tharnish",
+        "1B": null,
+        "2B": "Scott Campbell",
         "3B": "Luke Lawrence"
       },
       "runners_after": {
-        "1B": "Scott Campbell",
-        "2B": "Jayce Tharnish",
+        "1B": null,
+        "2B": "Scott Campbell",
         "3B": "Luke Lawrence"
       },
       "score": {
@@ -1550,7 +1617,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "I.",
+      "pitcher": "Ira Austin",
+      "batter": "I. Austin",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 5
+      },
+      "description": "I. Austin to p for T. Skelding."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Burkley Bounds",
       "batter": "Peyton Steele",
       "outcome": "Lineout",
       "count": "0-0",
@@ -1577,7 +1671,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "I.",
+      "pitcher": "Burkley Bounds",
       "batter": "Brennan Holt",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -1604,7 +1698,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "I.",
+      "pitcher": "Burkley Bounds",
       "batter": "Bryce Fowler",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1631,7 +1725,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "I.",
+      "pitcher": "Burkley Bounds",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1658,7 +1752,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "I.",
+      "pitcher": "Burkley Bounds",
       "batter": "Justin Osterhouse",
       "outcome": "Walk",
       "count": "3-1",
@@ -1685,7 +1779,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "B.",
+      "pitcher": "Burkley Bounds",
+      "batter": "B. Bounds",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Justin Osterhouse",
+        "2B": null,
+        "3B": "Brennan Holt"
+      },
+      "runners_after": {
+        "1B": "Justin Osterhouse",
+        "2B": null,
+        "3B": "Brennan Holt"
+      },
+      "score": {
+        "away": 4,
+        "home": 5
+      },
+      "description": "B. Bounds to p for I. Austin."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Burkley Bounds",
       "batter": "Brady Neal",
       "outcome": "Walk",
       "count": "3-2",
@@ -1712,7 +1833,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "B.",
+      "pitcher": "Burkley Bounds",
       "batter": "Jason Torres",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1820,7 +1941,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "B.",
+      "pitcher": "Burkley Bounds",
       "batter": "John Lemm",
       "outcome": "\u2014",
       "count": "1-1",
@@ -1847,7 +1968,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "B.",
+      "pitcher": "Burkley Bounds",
       "batter": "Luke Vaughn",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1874,7 +1995,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "B.",
+      "pitcher": "Burkley Bounds",
       "batter": "Will Plattner",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1989,7 +2110,9 @@
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Hudson Brown"
+        "Hudson Brown",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -2065,7 +2188,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "B.",
+      "pitcher": "Burkley Bounds",
       "batter": "Peyton Steele",
       "outcome": "Groundout",
       "count": "2-0",
@@ -2092,7 +2215,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "B.",
+      "pitcher": "Burkley Bounds",
       "batter": "Brennan Holt",
       "outcome": "Single",
       "count": "1-0",
@@ -2119,7 +2242,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "B.",
+      "pitcher": "Burkley Bounds",
       "batter": "Bryce Fowler",
       "outcome": "Single",
       "count": "0-0",
@@ -2146,7 +2269,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "B.",
+      "pitcher": "Jack Bennett",
       "batter": "Justin Osterhouse",
       "outcome": "Grounded into double play",
       "count": "1-0",
@@ -2281,7 +2404,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "B.",
+      "pitcher": "Jack Bennett",
       "batter": "Brady Neal",
       "outcome": "Double",
       "count": "3-1",
@@ -2308,7 +2431,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "B.",
+      "pitcher": "Jack Bennett",
       "batter": "Jason Torres",
       "outcome": "Walk",
       "count": "3-1",
@@ -2335,7 +2458,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "B.",
+      "pitcher": "Jack Bennett",
       "batter": "John Lemm",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2362,13 +2485,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "B.",
+      "pitcher": "",
       "batter": "Luke Vaughn",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2389,7 +2514,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "J.",
+      "pitcher": "",
+      "batter": "J. Bennett",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Luke Vaughn",
+        "2B": "Brady Neal",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Luke Vaughn",
+        "2B": "Brady Neal",
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 8
+      },
+      "description": "J. Bennett to p for B. Bounds."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": "Will Plattner",
       "outcome": "Single",
       "count": "0-0",
@@ -2416,7 +2568,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "J.",
+      "pitcher": "",
       "batter": "Peyton Steele",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2443,13 +2595,16 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "J.",
+      "pitcher": "",
       "batter": "Brennan Holt",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2470,7 +2625,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "J.",
+      "pitcher": "",
       "batter": "Bryce Fowler",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",

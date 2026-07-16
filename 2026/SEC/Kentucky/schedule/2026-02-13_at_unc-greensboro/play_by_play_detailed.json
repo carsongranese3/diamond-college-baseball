@@ -3,7 +3,7 @@
   "date": "02/13/2026",
   "away_team": "Kentucky",
   "home_team": "UNC Greensboro",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -797,8 +797,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jayce Tharnish",
-        "2B": null,
+        "1B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "score": {
@@ -819,13 +819,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jayce Tharnish",
-        "2B": null,
+        "1B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "runners_after": {
         "1B": "Ryan Schwartz",
-        "2B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "score": {
@@ -847,12 +847,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Ryan Schwartz",
-        "2B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "runners_after": {
         "1B": "Ryan Schwartz",
-        "2B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "score": {
@@ -1133,7 +1133,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jaxon Jelkin",
+      "pitcher": "Connor Mattison",
       "batter": "Brody Gardner",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1202,8 +1202,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Scott Campbell",
-        "2B": null,
+        "1B": null,
+        "2B": "Scott Campbell",
         "3B": null
       },
       "score": {
@@ -1224,8 +1224,8 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Scott Campbell",
-        "2B": null,
+        "1B": null,
+        "2B": "Scott Campbell",
         "3B": null
       },
       "runners_after": {
@@ -1283,8 +1283,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jayce Tharnish",
-        "2B": null,
+        "1B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "score": {
@@ -1305,14 +1305,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jayce Tharnish",
-        "2B": null,
+        "1B": null,
+        "2B": "Jayce Tharnish",
         "3B": null
       },
       "runners_after": {
         "1B": "Tyler Bell",
         "2B": null,
-        "3B": null
+        "3B": "Jayce Tharnish"
       },
       "score": {
         "away": 11,
@@ -1334,12 +1334,12 @@
       "runners_before": {
         "1B": "Tyler Bell",
         "2B": null,
-        "3B": null
+        "3B": "Jayce Tharnish"
       },
       "runners_after": {
         "1B": "Ryan Schwartz",
         "2B": "Tyler Bell",
-        "3B": null
+        "3B": "Jayce Tharnish"
       },
       "score": {
         "away": 11,
@@ -1361,12 +1361,12 @@
       "runners_before": {
         "1B": "Ryan Schwartz",
         "2B": "Tyler Bell",
-        "3B": null
+        "3B": "Jayce Tharnish"
       },
       "runners_after": {
         "1B": "Ryan Schwartz",
         "2B": "Tyler Bell",
-        "3B": null
+        "3B": "Jayce Tharnish"
       },
       "score": {
         "away": 11,
@@ -1376,7 +1376,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "C.",
+      "pitcher": "Connor Mattison",
+      "batter": "C. Mattison",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 11,
+        "home": 0
+      },
+      "description": "C. Mattison to p for J. Jelkin."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Connor Mattison",
       "batter": "Luke Jenkins",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1403,7 +1430,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "C.",
+      "pitcher": "Connor Mattison",
       "batter": "Luke Holland",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1430,7 +1457,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "C.",
+      "pitcher": "Connor Mattison",
       "batter": "Jacob Budzik",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1621,7 +1648,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Connor Mattison",
       "batter": "Brantley Truitt",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1648,7 +1675,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Connor Mattison",
       "batter": "Jake Barbour",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1675,7 +1702,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "C.",
+      "pitcher": "Connor Mattison",
       "batter": "Jacob Dilley",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1837,7 +1864,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "C.",
+      "pitcher": "Connor Mattison",
       "batter": "B Van Cleave to 1b.",
       "outcome": "\u2014",
       "count": null,
@@ -1864,7 +1891,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "C.",
+      "pitcher": "Connor Mattison",
       "batter": "Parker Wight",
       "outcome": "Single",
       "count": "0-2",
@@ -1891,7 +1918,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "C.",
+      "pitcher": "Connor Mattison",
       "batter": "L. Lawrence",
       "outcome": "\u2014",
       "count": null,
@@ -1918,7 +1945,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "C.",
+      "pitcher": "Connor Mattison",
       "batter": "C. Cloud",
       "outcome": "\u2014",
       "count": null,
@@ -1945,7 +1972,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "C.",
+      "pitcher": "Connor Mattison",
       "batter": "E. Hindle",
       "outcome": "\u2014",
       "count": null,
@@ -1972,7 +1999,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "C.",
+      "pitcher": "Connor Mattison",
       "batter": "Muller",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1999,7 +2026,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "C.",
+      "pitcher": "Tristan Hunter",
       "batter": "Brody Gardner",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2026,7 +2053,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "C.",
+      "pitcher": "Tristan Hunter",
       "batter": "Luke Jenkins",
       "outcome": "\u2014",
       "count": "1-1",
@@ -2217,7 +2244,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "Tristan Hunter",
       "batter": "Luke Holland",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2244,7 +2271,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "Tristan Hunter",
       "batter": "Jacob Budzik",
       "outcome": "Triple",
       "count": "3-2",
@@ -2271,7 +2298,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "Tristan Hunter",
       "batter": "Brantley Truitt",
       "outcome": "Pop out",
       "count": "1-2",
@@ -2298,7 +2325,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "C.",
+      "pitcher": "Tristan Hunter",
       "batter": "Jake Barbour",
       "outcome": "Single",
       "count": "1-1",
@@ -2327,7 +2354,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "T.",
+      "pitcher": "",
+      "batter": "T. Hunter",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Jake Barbour",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Jake Barbour",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 13,
+        "home": 1
+      },
+      "description": "T. Hunter to p for C. Mattison."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Jacob Dilley",
       "outcome": "Single",
       "count": null,
@@ -2354,7 +2408,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "Parker Wight",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2408,7 +2462,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nolan Winfield",
+      "pitcher": "",
       "batter": "Will Marcy",
       "outcome": "\u2014",
       "count": "1-1",
@@ -2435,7 +2489,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nolan Winfield",
+      "pitcher": "",
       "batter": "T. Hunter",
       "outcome": "\u2014",
       "count": null,
@@ -2462,7 +2516,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nolan Winfield",
+      "pitcher": "",
       "batter": "/ to p for T. Hunter.",
       "outcome": "\u2014",
       "count": null,
@@ -2489,7 +2543,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nolan Winfield",
+      "pitcher": "",
       "batter": "T. Hunter",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2516,7 +2570,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nolan Winfield",
+      "pitcher": "",
       "batter": "Tagger Tyson",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2543,7 +2597,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "T. Hunter",
       "outcome": "\u2014",
       "count": null,
@@ -2570,7 +2624,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "T. Tyson",
       "outcome": "\u2014",
       "count": null,
@@ -2597,7 +2651,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "/ to dh.",
       "outcome": "\u2014",
       "count": null,
@@ -2624,7 +2678,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "Muller",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2651,7 +2705,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "JJ Parsons",
       "outcome": "Home run",
       "count": "2-0",
@@ -2680,7 +2734,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "Landon Polk",
       "outcome": "Lineout",
       "count": "1-0",
@@ -2707,7 +2761,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "Anthony Ruocco",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",

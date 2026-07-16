@@ -3,7 +3,7 @@
   "date": "04/14/2026",
   "away_team": "Bethune-Cookman",
   "home_team": "Florida",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -405,7 +405,7 @@
       },
       "runners_after": {
         "1B": "Jose Fernandez",
-        "2B": null,
+        "2B": "Michael Rodriguez",
         "3B": null
       },
       "score": {
@@ -416,7 +416,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Jackson Hoyt",
+      "pitcher": "Billy Barlow",
       "batter": "Christopher Watson",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -427,13 +427,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Jose Fernandez",
-        "2B": null,
+        "2B": "Michael Rodriguez",
         "3B": null
       },
       "runners_after": {
         "1B": "Christopher Watson",
-        "2B": null,
-        "3B": null
+        "2B": "Jose Fernandez",
+        "3B": "Michael Rodriguez"
       },
       "score": {
         "away": 1,
@@ -449,17 +449,19 @@
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Michael Rodriguez"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Christopher Watson",
-        "2B": null,
-        "3B": null
+        "2B": "Jose Fernandez",
+        "3B": "Michael Rodriguez"
       },
       "runners_after": {
         "1B": "Darryl Lee",
-        "2B": null,
+        "2B": "Christopher Watson",
         "3B": null
       },
       "score": {
@@ -476,18 +478,20 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Christopher Watson"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Darryl Lee",
-        "2B": null,
+        "2B": "Christopher Watson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Darryl Lee",
+        "1B": null,
         "2B": "Andrey Martinez",
-        "3B": null
+        "3B": "Darryl Lee"
       },
       "score": {
         "away": 3,
@@ -507,14 +511,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Darryl Lee",
+        "1B": null,
         "2B": "Andrey Martinez",
-        "3B": null
+        "3B": "Darryl Lee"
       },
       "runners_after": {
-        "1B": "Darryl Lee",
+        "1B": null,
         "2B": "Andrey Martinez",
-        "3B": null
+        "3B": "Darryl Lee"
       },
       "score": {
         "away": 3,
@@ -712,6 +716,33 @@
         "home": 2
       },
       "description": "Surowiec walked (3-1 BBFBB) Lawson advanced to second."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Anthony Anselmo",
+      "batter": "Anselmo, A. to p for Turner, D..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Ethan Surowiec",
+        "2B": "Brendan Lawson",
+        "3B": "Justin Nadeau"
+      },
+      "runners_after": {
+        "1B": "Ethan Surowiec",
+        "2B": "Brendan Lawson",
+        "3B": "Justin Nadeau"
+      },
+      "score": {
+        "away": 3,
+        "home": 2
+      },
+      "description": "Anselmo, A. to p for Turner, D.."
     },
     {
       "inning": "Bottom 2",
@@ -960,7 +991,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Billy Barlow",
+      "pitcher": "Caden McDonald",
       "batter": "Christopher Watson",
       "outcome": "Walk",
       "count": "3-1",
@@ -1029,7 +1060,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Christopher Watson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1220,7 +1251,7 @@
       "runners_after": {
         "1B": "Lucean, M. singled to center field (0-0)",
         "2B": null,
-        "3B": null
+        "3B": "Michael Rodriguez"
       },
       "score": {
         "away": 4,
@@ -1236,13 +1267,15 @@
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Michael Rodriguez"
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
         "1B": "Lucean, M. singled to center field (0-0)",
         "2B": null,
-        "3B": null
+        "3B": "Michael Rodriguez"
       },
       "runners_after": {
         "1B": "Lucean, M. singled to center field (0-0)",
@@ -1273,7 +1306,7 @@
       },
       "runners_after": {
         "1B": "Erick Almonte",
-        "2B": null,
+        "2B": "Lucean, M. singled to center field (0-0)",
         "3B": null
       },
       "score": {
@@ -1295,12 +1328,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Erick Almonte",
-        "2B": null,
+        "2B": "Lucean, M. singled to center field (0-0)",
         "3B": null
       },
       "runners_after": {
         "1B": "Erick Almonte",
-        "2B": null,
+        "2B": "Lucean, M. singled to center field (0-0)",
         "3B": null
       },
       "score": {
@@ -1322,12 +1355,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Erick Almonte",
-        "2B": null,
+        "2B": "Lucean, M. singled to center field (0-0)",
         "3B": null
       },
       "runners_after": {
         "1B": "Erick Almonte",
-        "2B": null,
+        "2B": "Lucean, M. singled to center field (0-0)",
         "3B": null
       },
       "score": {
@@ -1527,7 +1560,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Caden McDonald",
+      "pitcher": "Eli Blair",
       "batter": "Andrey Martinez",
       "outcome": "Foul out",
       "count": "0-0",
@@ -1635,7 +1668,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Anthony Anselmo",
+      "pitcher": "Jean Zambrano",
       "batter": "Brendan Lawson",
       "outcome": "Hit by pitch",
       "count": "3-2",
@@ -1659,6 +1692,33 @@
         "home": 2
       },
       "description": "Lawson hit by pitch (3-2 BKBSB) K. Jones advanced to second."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Jean Zambrano",
+      "batter": "Zambrano, J. to p for Anselmo, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Brendan Lawson",
+        "2B": "Kyle Jones",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Brendan Lawson",
+        "2B": "Kyle Jones",
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 2
+      },
+      "description": "Zambrano, J. to p for Anselmo, A.."
     },
     {
       "inning": "Bottom 6",
@@ -1775,7 +1835,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Eli Blair",
+      "pitcher": "Cooper Walls",
       "batter": "Lucean, M. walked (3-1 BBBKB).",
       "outcome": "Walk",
       "count": "3-1",
@@ -1818,7 +1878,7 @@
       },
       "runners_after": {
         "1B": "Jeter Polledo",
-        "2B": null,
+        "2B": "Lucean, M. walked (3-1 BBBKB).",
         "3B": null
       },
       "score": {
@@ -1840,12 +1900,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Jeter Polledo",
-        "2B": null,
+        "2B": "Lucean, M. walked (3-1 BBBKB).",
         "3B": null
       },
       "runners_after": {
         "1B": "Bethune-Cookman",
-        "2B": null,
+        "2B": "Lucean, M. walked (3-1 BBBKB).",
         "3B": null
       },
       "score": {
@@ -1862,12 +1922,14 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Lucean, M. walked (3-1 BBBKB)."
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Bethune-Cookman",
-        "2B": null,
+        "2B": "Lucean, M. walked (3-1 BBBKB).",
         "3B": null
       },
       "runners_after": {
@@ -1883,13 +1945,16 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Schuyler Sandford",
       "batter": "Michael Rodriguez",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Erick Almonte",
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1910,7 +1975,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cooper Walls",
+      "pitcher": "Schuyler Sandford",
       "batter": "Jose Fernandez",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -1926,7 +1991,7 @@
       },
       "runners_after": {
         "1B": "Jose Fernandez",
-        "2B": null,
+        "2B": "Michael Rodriguez",
         "3B": null
       },
       "score": {
@@ -1948,13 +2013,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Jose Fernandez",
-        "2B": null,
+        "2B": "Michael Rodriguez",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jose Fernandez",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Jose Fernandez",
+        "3B": "Michael Rodriguez"
       },
       "score": {
         "away": 8,
@@ -1974,14 +2039,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jose Fernandez",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Jose Fernandez",
+        "3B": "Michael Rodriguez"
       },
       "runners_after": {
-        "1B": "Jose Fernandez",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Jose Fernandez",
+        "3B": "Michael Rodriguez"
       },
       "score": {
         "away": 8,
@@ -1997,18 +2062,20 @@
       "count": "3-2",
       "pitches": "FBBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Michael Rodriguez"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jose Fernandez",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Jose Fernandez",
+        "3B": "Michael Rodriguez"
       },
       "runners_after": {
         "1B": "Darryl Lee",
         "2B": null,
-        "3B": null
+        "3B": "Jose Fernandez"
       },
       "score": {
         "away": 9,
@@ -2024,16 +2091,19 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Darryl Lee",
+        "Jose Fernandez"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Darryl Lee",
         "2B": null,
-        "3B": null
+        "3B": "Jose Fernandez"
       },
       "runners_after": {
-        "1B": "Darryl Lee",
+        "1B": null,
         "2B": "Andrey Martinez",
         "3B": null
       },
@@ -2051,17 +2121,19 @@
       "count": "1-2",
       "pitches": "BFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Andrey Martinez"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Darryl Lee",
+        "1B": null,
         "2B": "Andrey Martinez",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael Rodriguez",
-        "2B": "Andrey Martinez",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -2083,13 +2155,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Michael Rodriguez",
-        "2B": "Andrey Martinez",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Michael Rodriguez",
-        "2B": "Andrey Martinez",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Michael Rodriguez"
       },
       "score": {
         "away": 12,
@@ -2109,14 +2181,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Michael Rodriguez",
-        "2B": "Andrey Martinez",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Michael Rodriguez"
       },
       "runners_after": {
-        "1B": "Michael Rodriguez",
-        "2B": "Andrey Martinez",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Michael Rodriguez"
       },
       "score": {
         "away": 12,
@@ -2136,14 +2208,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Michael Rodriguez",
-        "2B": "Andrey Martinez",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Michael Rodriguez"
       },
       "runners_after": {
-        "1B": "Michael Rodriguez",
-        "2B": "Andrey Martinez",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Michael Rodriguez"
       },
       "score": {
         "away": 12,
@@ -2180,7 +2252,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jean Zambrano",
+      "pitcher": "Justin Morales",
       "batter": "Hayden Yost",
       "outcome": "Walk",
       "count": "3-0",
@@ -2207,7 +2279,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jean Zambrano",
+      "pitcher": "Justin Morales",
       "batter": "Justin Nadeau",
       "outcome": "Walk",
       "count": "3-0",
@@ -2231,6 +2303,33 @@
         "home": 5
       },
       "description": "Nadeau walked (3-0 BBBB) H. Yost advanced to second."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Justin Morales",
+      "batter": "Morales, J. to p for Zambrano, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Justin Nadeau",
+        "2B": "Hayden Yost",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Justin Nadeau",
+        "2B": "Hayden Yost",
+        "3B": null
+      },
+      "score": {
+        "away": 12,
+        "home": 5
+      },
+      "description": "Morales, J. to p for Zambrano, J.."
     },
     {
       "inning": "Bottom 7",
@@ -2564,7 +2663,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "",
       "batter": "Andrey Martinez",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2591,7 +2690,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Schuyler Sandford",
+      "pitcher": "",
       "batter": "Michael Rodriguez",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2618,7 +2717,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Justin Morales",
+      "pitcher": "",
       "batter": "Cole Stanford",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2645,7 +2744,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Justin Morales",
+      "pitcher": "",
       "batter": "Hayden Yost",
       "outcome": "Pop out",
       "count": "0-1",
@@ -2672,7 +2771,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Justin Morales",
+      "pitcher": "",
       "batter": "Justin Nadeau",
       "outcome": "Strikeout (looking)",
       "count": "1-2",

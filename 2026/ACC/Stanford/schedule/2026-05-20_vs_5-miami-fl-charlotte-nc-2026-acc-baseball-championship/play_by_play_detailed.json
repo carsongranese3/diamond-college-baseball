@@ -3,7 +3,7 @@
   "date": "05/20/2026",
   "away_team": "Stanford",
   "home_team": "Miami (FL)",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -202,7 +202,9 @@
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -387,7 +389,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Cohen Gomez",
       "batter": "Gabriel Milano",
       "outcome": "Walk",
       "count": "3-1",
@@ -414,7 +416,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Cohen Gomez",
       "batter": "Vance Sheahan",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -441,13 +443,15 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Cohen Gomez",
       "batter": "Fabio Peralta",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "FBS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -468,13 +472,15 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Cohen Gomez",
       "batter": "Jake Ogden",
       "outcome": "Fielder's choice",
       "count": "0-2",
       "pitches": "KF",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -495,7 +501,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Cohen Gomez",
       "batter": "Max Galvin",
       "outcome": "Lineout",
       "count": "0-1",
@@ -632,7 +638,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Cohen Gomez",
       "batter": "Derek Williams",
       "outcome": "Single",
       "count": "2-1",
@@ -659,7 +665,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Cohen Gomez",
       "batter": "Alex Sosa",
       "outcome": "Fielder's choice",
       "count": "0-1",
@@ -686,7 +692,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Cohen Gomez",
       "batter": "Alonzo Alvarez",
       "outcome": "Double",
       "count": "0-0",
@@ -713,7 +719,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Kassius Thomas",
       "batter": "Dylan Dubovik",
       "outcome": "Fielder's choice",
       "count": "0-1",
@@ -740,7 +746,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Kassius Thomas",
       "batter": "Gabriel Milano",
       "outcome": "Groundout",
       "count": "1-0",
@@ -848,7 +854,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Kassius Thomas",
       "batter": "Vance Sheahan",
       "outcome": "Reached on error",
       "count": "0-1",
@@ -875,7 +881,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Kassius Thomas",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -890,8 +896,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Vance Sheahan",
-        "2B": null,
+        "1B": null,
+        "2B": "Vance Sheahan",
         "3B": null
       },
       "score": {
@@ -902,7 +908,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Kassius Thomas",
       "batter": "Fabio Peralta",
       "outcome": "Walk",
       "count": "3-2",
@@ -912,13 +918,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Vance Sheahan",
-        "2B": null,
+        "1B": null,
+        "2B": "Vance Sheahan",
         "3B": null
       },
       "runners_after": {
         "1B": "Fabio Peralta",
-        "2B": null,
+        "2B": "Vance Sheahan",
         "3B": null
       },
       "score": {
@@ -929,7 +935,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Kassius Thomas",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
@@ -940,12 +946,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Fabio Peralta",
-        "2B": null,
+        "2B": "Vance Sheahan",
         "3B": null
       },
       "runners_after": {
         "1B": "Fabio Peralta",
-        "2B": null,
+        "2B": "Vance Sheahan",
         "3B": null
       },
       "score": {
@@ -956,23 +962,26 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Kassius Thomas",
       "batter": "Max Galvin",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Fabio Peralta",
-        "2B": null,
+        "2B": "Vance Sheahan",
         "3B": null
       },
       "runners_after": {
         "1B": "Max Galvin",
-        "2B": null,
+        "2B": "Vance Sheahan",
         "3B": null
       },
       "score": {
@@ -983,7 +992,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Kassius Thomas",
       "batter": "Derek Williams",
       "outcome": "Groundout",
       "count": "0-0",
@@ -994,12 +1003,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Max Galvin",
-        "2B": null,
+        "2B": "Vance Sheahan",
         "3B": null
       },
       "runners_after": {
         "1B": "Max Galvin",
-        "2B": null,
+        "2B": "Vance Sheahan",
         "3B": null
       },
       "score": {
@@ -1010,7 +1019,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Kassius Thomas",
       "batter": "Alex Sosa",
       "outcome": "Walk",
       "count": "3-2",
@@ -1021,12 +1030,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Max Galvin",
-        "2B": null,
+        "2B": "Vance Sheahan",
         "3B": null
       },
       "runners_after": {
         "1B": "Alex Sosa",
-        "2B": null,
+        "2B": "Vance Sheahan",
         "3B": null
       },
       "score": {
@@ -1037,7 +1046,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Kassius Thomas",
       "batter": "Alonzo Alvarez",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1048,12 +1057,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Alex Sosa",
-        "2B": null,
+        "2B": "Vance Sheahan",
         "3B": null
       },
       "runners_after": {
         "1B": "Alex Sosa",
-        "2B": null,
+        "2B": "Vance Sheahan",
         "3B": null
       },
       "score": {
@@ -1199,7 +1208,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Trevor Moore",
       "batter": "Dylan Dubovik",
       "outcome": "Single",
       "count": "1-2",
@@ -1226,7 +1235,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Trevor Moore",
       "batter": "Gabriel Milano",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1253,7 +1262,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Trevor Moore",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1268,9 +1277,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dylan Dubovik",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Dylan Dubovik"
       },
       "score": {
         "away": 2,
@@ -1280,24 +1289,26 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Trevor Moore",
       "batter": "Vance Sheahan",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "KBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Dylan Dubovik",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Dylan Dubovik"
       },
       "runners_after": {
         "1B": "Vance Sheahan",
         "2B": null,
-        "3B": null
+        "3B": "Dylan Dubovik"
       },
       "score": {
         "away": 2,
@@ -1307,7 +1318,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Trevor Moore",
       "batter": "Fabio Peralta",
       "outcome": "Walk",
       "count": "3-0",
@@ -1319,12 +1330,12 @@
       "runners_before": {
         "1B": "Vance Sheahan",
         "2B": null,
-        "3B": null
+        "3B": "Dylan Dubovik"
       },
       "runners_after": {
         "1B": "Fabio Peralta",
         "2B": null,
-        "3B": null
+        "3B": "Dylan Dubovik"
       },
       "score": {
         "away": 2,
@@ -1334,7 +1345,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Trevor Moore",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1346,12 +1357,12 @@
       "runners_before": {
         "1B": "Fabio Peralta",
         "2B": null,
-        "3B": null
+        "3B": "Dylan Dubovik"
       },
       "runners_after": {
         "1B": "Fabio Peralta",
         "2B": null,
-        "3B": null
+        "3B": "Dylan Dubovik"
       },
       "score": {
         "away": 2,
@@ -1361,24 +1372,26 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Trevor Moore",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Fabio Peralta"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Fabio Peralta",
         "2B": null,
-        "3B": null
+        "3B": "Dylan Dubovik"
       },
       "runners_after": {
-        "1B": "Fabio Peralta",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Dylan Dubovik"
       },
       "score": {
         "away": 2,
@@ -1388,7 +1401,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Trevor Moore",
       "batter": "Jake Ogden",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1398,14 +1411,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Fabio Peralta",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Dylan Dubovik"
       },
       "runners_after": {
-        "1B": "Fabio Peralta",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Dylan Dubovik"
       },
       "score": {
         "away": 2,
@@ -1415,7 +1428,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Trevor Moore",
       "batter": "Max Galvin",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1425,14 +1438,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Fabio Peralta",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Dylan Dubovik"
       },
       "runners_after": {
-        "1B": "Fabio Peralta",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Dylan Dubovik"
       },
       "score": {
         "away": 2,
@@ -1523,7 +1536,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Trevor Moore",
       "batter": "Derek Williams",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1550,7 +1563,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Sam Garewal",
       "batter": "Alex Sosa",
       "outcome": "Single",
       "count": "1-0",
@@ -1577,14 +1590,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Sam Garewal",
       "batter": "Alonzo Alvarez",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "KFBBB",
       "rbi": true,
       "runs_scored": [
-        "Alonzo Alvarez"
+        "Alonzo Alvarez",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1606,7 +1620,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Sam Garewal",
       "batter": "Dylan Dubovik",
       "outcome": "Pop out",
       "count": "0-2",
@@ -1633,7 +1647,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Ben Reimers",
       "batter": "Gabriel Milano",
       "outcome": "Double",
       "count": "1-0",
@@ -1660,7 +1674,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Ben Reimers",
       "batter": "Vance Sheahan",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1768,7 +1782,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Ben Reimers",
       "batter": "Fabio Peralta",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1795,7 +1809,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Nick Dugan",
       "batter": "Jake Ogden",
       "outcome": "Single",
       "count": "3-1",
@@ -1822,7 +1836,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Nick Dugan",
       "batter": "Max Galvin",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1849,13 +1863,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Nick Dugan",
       "batter": "Derek Williams",
       "outcome": "Reached on error",
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1876,7 +1892,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Nick Dugan",
       "batter": "Alex Sosa",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1903,7 +1919,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Rob Evans",
+      "pitcher": "Jake Dorn",
       "batter": "Brock Sell",
       "outcome": "Single",
       "count": "1-1",
@@ -1930,7 +1946,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Rob Evans",
+      "pitcher": "Jake Dorn",
       "batter": "Rintaro Sasaki",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1957,7 +1973,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Rob Evans",
+      "pitcher": "Jake Dorn",
       "batter": "Teddy Tokheim",
       "outcome": "Single",
       "count": "1-2",
@@ -1984,7 +2000,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Rob Evans",
+      "pitcher": "Jake Dorn",
       "batter": "Cort MacDonald",
       "outcome": "Infield fly",
       "count": "2-2",
@@ -2011,7 +2027,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Rob Evans",
+      "pitcher": "Jake Dorn",
       "batter": "Rashad Hayes",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2038,7 +2054,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Nick Dugan",
       "batter": "Alonzo Alvarez",
       "outcome": "Double",
       "count": "0-0",
@@ -2065,7 +2081,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Liam Golden",
       "batter": "Dylan Dubovik",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2092,13 +2108,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Liam Golden",
       "batter": null,
       "outcome": "Baserunning",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2119,7 +2137,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Andrew Shaw",
+      "pitcher": "Liam Golden",
       "batter": "Vance Sheahan",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2146,7 +2164,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Rob Evans",
+      "pitcher": "Jake Dorn",
       "batter": "Quinten Marsh",
       "outcome": "Walk",
       "count": "3-1",
@@ -2173,7 +2191,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Rob Evans",
+      "pitcher": "Jake Dorn",
       "batter": "Brock Ketelsen",
       "outcome": "Walk",
       "count": "3-2",
@@ -2200,7 +2218,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Rob Evans",
+      "pitcher": "Jake Dorn",
       "batter": "Jimmy Nati",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2227,7 +2245,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Rob Evans",
+      "pitcher": "Jake Dorn",
       "batter": "Henry McDonald",
       "outcome": "Walk",
       "count": "3-2",
@@ -2254,7 +2272,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Rob Evans",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "Philip Cheong",
       "outcome": "Fielder's choice",
       "count": "0-1",
@@ -2281,7 +2299,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Rob Evans",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "Quinten Marsh",
       "outcome": "Groundout",
       "count": "3-2",

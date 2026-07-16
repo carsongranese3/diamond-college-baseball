@@ -3,7 +3,7 @@
   "date": "04/02/2026",
   "away_team": "Louisville",
   "home_team": "Duke",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -266,8 +266,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Kaden Smith",
-        "3B": null
+        "2B": null,
+        "3B": "Kaden Smith"
       },
       "score": {
         "away": 0,
@@ -288,13 +288,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Kaden Smith",
-        "3B": null
+        "2B": null,
+        "3B": "Kaden Smith"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Kaden Smith",
-        "3B": null
+        "2B": null,
+        "3B": "Kaden Smith"
       },
       "score": {
         "away": 0,
@@ -445,7 +445,10 @@
       "count": "0-2",
       "pitches": "KS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -697,9 +700,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "RJ Hamilton",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "score": {
         "away": 0,
@@ -715,18 +718,20 @@
       "count": "3-1",
       "pitches": "BKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "RJ Hamilton",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "runners_after": {
         "1B": "Kaden Smith",
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "score": {
         "away": 0,
@@ -748,12 +753,12 @@
       "runners_before": {
         "1B": "Kaden Smith",
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "runners_after": {
         "1B": "Kaden Smith",
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "score": {
         "away": 0,
@@ -775,12 +780,12 @@
       "runners_before": {
         "1B": "Kaden Smith",
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "runners_after": {
         "1B": "Kaden Smith",
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "score": {
         "away": 0,
@@ -802,12 +807,12 @@
       "runners_before": {
         "1B": "Kaden Smith",
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "runners_after": {
         "1B": "Collin Anderson",
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "score": {
         "away": 0,
@@ -829,12 +834,12 @@
       "runners_before": {
         "1B": "Collin Anderson",
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "runners_after": {
         "1B": "Coltin Quagliano",
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "score": {
         "away": 0,
@@ -856,12 +861,12 @@
       "runners_before": {
         "1B": "Coltin Quagliano",
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "runners_after": {
         "1B": "Coltin Quagliano",
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "score": {
         "away": 0,
@@ -1361,7 +1366,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1376,8 +1381,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Zion Rose",
-        "2B": null,
+        "1B": null,
+        "2B": "Zion Rose",
         "3B": null
       },
       "score": {
@@ -1388,7 +1393,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Ben Slanker",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1398,13 +1403,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Zion Rose",
-        "2B": null,
+        "1B": null,
+        "2B": "Zion Rose",
         "3B": null
       },
       "runners_after": {
-        "1B": "Zion Rose",
-        "2B": null,
+        "1B": null,
+        "2B": "Zion Rose",
         "3B": null
       },
       "score": {
@@ -1523,13 +1528,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ethan Eberle",
+      "pitcher": "Jake Schweitzer",
       "batter": "RJ Hamilton",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "BBBKK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1550,7 +1557,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ethan Eberle",
+      "pitcher": "Jake Schweitzer",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1577,7 +1584,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Jimmy Nugent",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1604,7 +1611,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Kade Elam",
       "outcome": "Triple",
       "count": "0-0",
@@ -1631,7 +1638,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Alex Alicea",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1658,7 +1665,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Griffin Crain",
       "outcome": "Walk",
       "count": "3-2",
@@ -1685,13 +1692,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Lucas Moore",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "BKF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1712,7 +1721,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Bayram Hot",
       "outcome": "Single",
       "count": "2-1",
@@ -1739,7 +1748,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Tague Davis",
       "outcome": "Pop out",
       "count": "1-1",
@@ -1766,7 +1775,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ethan Eberle",
+      "pitcher": "Jake Schweitzer",
       "batter": "Kaden Smith",
       "outcome": "Single",
       "count": "0-1",
@@ -1793,7 +1802,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ethan Eberle",
+      "pitcher": "Jake Schweitzer",
       "batter": "Matthew Strand",
       "outcome": "Grounded into double play",
       "count": "0-0",
@@ -1820,7 +1829,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ethan Eberle",
+      "pitcher": "Jake Schweitzer",
       "batter": "Jake Lambdin",
       "outcome": "Reached on error",
       "count": "2-2",
@@ -1847,13 +1856,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ethan Eberle",
+      "pitcher": "Jake Schweitzer",
       "batter": "Collin Anderson",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1874,7 +1885,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ethan Eberle",
+      "pitcher": "Jake Schweitzer",
       "batter": "Coltin Quagliano",
       "outcome": "Fielder's choice",
       "count": "0-0",
@@ -1901,7 +1912,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Zion Rose",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1928,7 +1939,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Ben Slanker",
       "outcome": "Double",
       "count": "0-1",
@@ -1955,7 +1966,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Jimmy Nugent",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1982,7 +1993,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Kade Elam",
       "outcome": "Lineout",
       "count": "0-0",
@@ -2009,7 +2020,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ethan Eberle",
+      "pitcher": "Jake Schweitzer",
       "batter": "Michael DiMartini",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2036,7 +2047,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ethan Eberle",
+      "pitcher": "Jake Schweitzer",
       "batter": "Brooks Perez",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2063,7 +2074,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ethan Eberle",
+      "pitcher": "Jake Schweitzer",
       "batter": "Tyler Albright",
       "outcome": "Reached on error",
       "count": "2-1",
@@ -2090,7 +2101,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ethan Eberle",
+      "pitcher": "",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -2105,7 +2116,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Albright",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2117,7 +2128,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Tague Davis",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2144,7 +2155,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Griffin Crain",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2171,7 +2182,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Lucas Moore",
       "outcome": "Home run",
       "count": "1-1",
@@ -2200,7 +2211,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Bayram Hot",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",

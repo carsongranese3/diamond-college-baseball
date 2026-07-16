@@ -3,7 +3,7 @@
   "date": "05/12/2026",
   "away_team": "Penn St.",
   "home_team": "Pittsburgh",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -184,9 +184,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Caden Dulin",
+        "1B": null,
         "2B": "Lorenzo Carrier",
-        "3B": null
+        "3B": "Caden Dulin"
       },
       "score": {
         "away": 0,
@@ -202,18 +202,20 @@
       "count": "2-2",
       "pitches": "BKBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Caden Dulin"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Caden Dulin",
+        "1B": null,
         "2B": "Lorenzo Carrier",
-        "3B": null
+        "3B": "Caden Dulin"
       },
       "runners_after": {
         "1B": "Kai Wagner",
-        "2B": "Lorenzo Carrier",
-        "3B": null
+        "2B": null,
+        "3B": "Lorenzo Carrier"
       },
       "score": {
         "away": 0,
@@ -229,18 +231,20 @@
       "count": "3-2",
       "pitches": "SFBFBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Lorenzo Carrier"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Kai Wagner",
-        "2B": "Lorenzo Carrier",
-        "3B": null
+        "2B": null,
+        "3B": "Lorenzo Carrier"
       },
       "runners_after": {
         "1B": "Trey Fenderson",
-        "2B": "Lorenzo Carrier",
-        "3B": null
+        "2B": null,
+        "3B": "Kai Wagner"
       },
       "score": {
         "away": 0,
@@ -261,13 +265,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Trey Fenderson",
-        "2B": "Lorenzo Carrier",
-        "3B": null
+        "2B": null,
+        "3B": "Kai Wagner"
       },
       "runners_after": {
-        "1B": "Trey Fenderson",
-        "2B": "Lorenzo Carrier",
-        "3B": null
+        "1B": null,
+        "2B": "Trey Fenderson",
+        "3B": "Kai Wagner"
       },
       "score": {
         "away": 0,
@@ -287,14 +291,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Trey Fenderson",
-        "2B": "Lorenzo Carrier",
-        "3B": null
+        "1B": null,
+        "2B": "Trey Fenderson",
+        "3B": "Kai Wagner"
       },
       "runners_after": {
         "1B": "Carter Dierdorf",
-        "2B": "Lorenzo Carrier",
-        "3B": null
+        "2B": "Trey Fenderson",
+        "3B": "Kai Wagner"
       },
       "score": {
         "away": 0,
@@ -304,23 +308,26 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Mason Butash",
+      "pitcher": "Frankie Sanchez",
       "batter": "Sebastian Pisacreta",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "FBKBBFFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kai Wagner",
+        "Trey Fenderson"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Carter Dierdorf",
-        "2B": "Lorenzo Carrier",
-        "3B": null
+        "2B": "Trey Fenderson",
+        "3B": "Kai Wagner"
       },
       "runners_after": {
         "1B": "Sebastian Pisacreta",
-        "2B": "Lorenzo Carrier",
+        "2B": "Carter Dierdorf",
         "3B": null
       },
       "score": {
@@ -331,7 +338,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Mason Butash",
+      "pitcher": "Frankie Sanchez",
       "batter": "Joey Baran",
       "outcome": "Flyout",
       "count": "3-1",
@@ -342,13 +349,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Sebastian Pisacreta",
-        "2B": "Lorenzo Carrier",
+        "2B": "Carter Dierdorf",
         "3B": null
       },
       "runners_after": {
         "1B": "Sebastian Pisacreta",
-        "2B": "Lorenzo Carrier",
-        "3B": null
+        "2B": null,
+        "3B": "Carter Dierdorf"
       },
       "score": {
         "away": 0,
@@ -358,7 +365,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Mason Butash",
+      "pitcher": "Frankie Sanchez",
       "batter": "Mason Ligenza",
       "outcome": "Flyout",
       "count": "0-2",
@@ -369,13 +376,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Sebastian Pisacreta",
-        "2B": "Lorenzo Carrier",
-        "3B": null
+        "2B": null,
+        "3B": "Carter Dierdorf"
       },
       "runners_after": {
         "1B": "Sebastian Pisacreta",
-        "2B": "Lorenzo Carrier",
-        "3B": null
+        "2B": null,
+        "3B": "Carter Dierdorf"
       },
       "score": {
         "away": 0,
@@ -455,8 +462,8 @@
       },
       "runners_after": {
         "1B": "Spencer Barnett",
-        "2B": "Jesse Jaconski",
-        "3B": null
+        "2B": null,
+        "3B": "Jesse Jaconski"
       },
       "score": {
         "away": 0,
@@ -472,17 +479,19 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jesse Jaconski"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Spencer Barnett",
-        "2B": "Jesse Jaconski",
-        "3B": null
+        "2B": null,
+        "3B": "Jesse Jaconski"
       },
       "runners_after": {
         "1B": "Spencer Barnett",
-        "2B": "Jesse Jaconski",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -504,12 +513,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Spencer Barnett",
-        "2B": "Jesse Jaconski",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Preston Yaucher",
-        "2B": "Jesse Jaconski",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -520,7 +529,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Mason Butash",
+      "pitcher": "Frankie Sanchez",
       "batter": "AJ Nessler",
       "outcome": "Single",
       "count": "1-0",
@@ -547,7 +556,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Mason Butash",
+      "pitcher": "Frankie Sanchez",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -562,8 +571,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "AJ Nessler",
-        "2B": null,
+        "1B": null,
+        "2B": "AJ Nessler",
         "3B": null
       },
       "score": {
@@ -574,7 +583,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Mason Butash",
+      "pitcher": "Frankie Sanchez",
       "batter": "Caden Dulin",
       "outcome": "Single",
       "count": "1-1",
@@ -584,8 +593,8 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "AJ Nessler",
-        "2B": null,
+        "1B": null,
+        "2B": "AJ Nessler",
         "3B": null
       },
       "runners_after": {
@@ -601,7 +610,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Mason Butash",
+      "pitcher": "Frankie Sanchez",
       "batter": "Lorenzo Carrier",
       "outcome": "Double",
       "count": "0-2",
@@ -616,9 +625,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Caden Dulin",
+        "1B": null,
         "2B": "Lorenzo Carrier",
-        "3B": null
+        "3B": "Caden Dulin"
       },
       "score": {
         "away": 1,
@@ -628,7 +637,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Mason Butash",
+      "pitcher": "Frankie Sanchez",
       "batter": "Kai Wagner",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -638,14 +647,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Caden Dulin",
+        "1B": null,
         "2B": "Lorenzo Carrier",
-        "3B": null
+        "3B": "Caden Dulin"
       },
       "runners_after": {
-        "1B": "Caden Dulin",
+        "1B": null,
         "2B": "Lorenzo Carrier",
-        "3B": null
+        "3B": "Caden Dulin"
       },
       "score": {
         "away": 1,
@@ -655,7 +664,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Mason Butash",
+      "pitcher": "Frankie Sanchez",
       "batter": "Trey Fenderson",
       "outcome": "Walk",
       "count": "3-0",
@@ -665,14 +674,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Caden Dulin",
+        "1B": null,
         "2B": "Lorenzo Carrier",
-        "3B": null
+        "3B": "Caden Dulin"
       },
       "runners_after": {
         "1B": "Trey Fenderson",
         "2B": "Lorenzo Carrier",
-        "3B": null
+        "3B": "Caden Dulin"
       },
       "score": {
         "away": 1,
@@ -682,22 +691,26 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Mason Butash",
+      "pitcher": "Frankie Sanchez",
       "batter": "Carter Dierdorf",
       "outcome": "Double",
       "count": "2-2",
       "pitches": "BSFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Caden Dulin",
+        "Lorenzo Carrier",
+        "Trey Fenderson"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Trey Fenderson",
         "2B": "Lorenzo Carrier",
-        "3B": null
+        "3B": "Caden Dulin"
       },
       "runners_after": {
-        "1B": "Trey Fenderson",
+        "1B": null,
         "2B": "Carter Dierdorf",
         "3B": null
       },
@@ -709,7 +722,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Mason Butash",
+      "pitcher": "Frankie Sanchez",
       "batter": "Sebastian Pisacreta",
       "outcome": "Walk",
       "count": "3-2",
@@ -719,7 +732,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Trey Fenderson",
+        "1B": null,
         "2B": "Carter Dierdorf",
         "3B": null
       },
@@ -736,7 +749,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Mason Butash",
+      "pitcher": "Harrison Lollin",
       "batter": "Joey Baran",
       "outcome": "Walk",
       "count": "3-2",
@@ -752,8 +765,8 @@
       },
       "runners_after": {
         "1B": "Joey Baran",
-        "2B": "Carter Dierdorf",
-        "3B": null
+        "2B": "Sebastian Pisacreta",
+        "3B": "Carter Dierdorf"
       },
       "score": {
         "away": 1,
@@ -763,24 +776,26 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Mason Butash",
+      "pitcher": "Harrison Lollin",
       "batter": "Mason Ligenza",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Carter Dierdorf"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Joey Baran",
-        "2B": "Carter Dierdorf",
-        "3B": null
+        "2B": "Sebastian Pisacreta",
+        "3B": "Carter Dierdorf"
       },
       "runners_after": {
         "1B": "Mason Ligenza",
-        "2B": "Carter Dierdorf",
-        "3B": null
+        "2B": "Joey Baran",
+        "3B": "Sebastian Pisacreta"
       },
       "score": {
         "away": 1,
@@ -790,7 +805,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Mason Butash",
+      "pitcher": "Harrison Lollin",
       "batter": "AJ Nessler",
       "outcome": "Pop out",
       "count": "3-2",
@@ -801,13 +816,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Mason Ligenza",
-        "2B": "Carter Dierdorf",
-        "3B": null
+        "2B": "Joey Baran",
+        "3B": "Sebastian Pisacreta"
       },
       "runners_after": {
         "1B": "Mason Ligenza",
-        "2B": "Carter Dierdorf",
-        "3B": null
+        "2B": "Joey Baran",
+        "3B": "Sebastian Pisacreta"
       },
       "score": {
         "away": 1,
@@ -817,7 +832,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Joey Ciancimino",
       "batter": "Jayden Davis",
       "outcome": "Pop out",
       "count": "1-2",
@@ -844,7 +859,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Joey Ciancimino",
       "batter": "Michael Anderson",
       "outcome": "Flyout",
       "count": "0-0",
@@ -871,7 +886,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Joey Ciancimino",
       "batter": "Bryce Molinaro",
       "outcome": "Home run",
       "count": "3-2",
@@ -900,7 +915,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Joey Ciancimino",
       "batter": "Kevin Karstetter",
       "outcome": "Single",
       "count": "0-0",
@@ -927,7 +942,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Joey Ciancimino",
       "batter": "Jesse Jaconski",
       "outcome": "Groundout",
       "count": "0-0",
@@ -954,7 +969,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Mason Butash",
+      "pitcher": "Robert Brown III",
       "batter": "Caden Dulin",
       "outcome": "Pop out",
       "count": "0-2",
@@ -981,7 +996,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Mason Butash",
+      "pitcher": "Robert Brown III",
       "batter": "Lorenzo Carrier",
       "outcome": "Single",
       "count": "3-2",
@@ -1008,7 +1023,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Mason Butash",
+      "pitcher": "Robert Brown III",
       "batter": "Kai Wagner",
       "outcome": "Walk",
       "count": "3-1",
@@ -1024,7 +1039,7 @@
       },
       "runners_after": {
         "1B": "Kai Wagner",
-        "2B": null,
+        "2B": "Lorenzo Carrier",
         "3B": null
       },
       "score": {
@@ -1035,23 +1050,25 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Mason Butash",
+      "pitcher": "Robert Brown III",
       "batter": "Trey Fenderson",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Lorenzo Carrier"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Kai Wagner",
-        "2B": null,
+        "2B": "Lorenzo Carrier",
         "3B": null
       },
       "runners_after": {
         "1B": "Trey Fenderson",
-        "2B": null,
+        "2B": "Kai Wagner",
         "3B": null
       },
       "score": {
@@ -1062,7 +1079,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Mason Butash",
+      "pitcher": "Robert Brown III",
       "batter": "Carter Dierdorf",
       "outcome": "Walk",
       "count": "3-2",
@@ -1073,13 +1090,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Trey Fenderson",
-        "2B": null,
+        "2B": "Kai Wagner",
         "3B": null
       },
       "runners_after": {
         "1B": "Carter Dierdorf",
-        "2B": null,
-        "3B": null
+        "2B": "Trey Fenderson",
+        "3B": "Kai Wagner"
       },
       "score": {
         "away": 2,
@@ -1089,24 +1106,26 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Mason Butash",
+      "pitcher": "Robert Brown III",
       "batter": "Sebastian Pisacreta",
       "outcome": "\u2014",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kai Wagner"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Carter Dierdorf",
-        "2B": null,
-        "3B": null
+        "2B": "Trey Fenderson",
+        "3B": "Kai Wagner"
       },
       "runners_after": {
-        "1B": "Carter Dierdorf",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Carter Dierdorf",
+        "3B": "Trey Fenderson"
       },
       "score": {
         "away": 2,
@@ -1116,7 +1135,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Mason Butash",
+      "pitcher": "Robert Brown III",
       "batter": "Joey Baran",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1126,14 +1145,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Carter Dierdorf",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Carter Dierdorf",
+        "3B": "Trey Fenderson"
       },
       "runners_after": {
-        "1B": "Carter Dierdorf",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Carter Dierdorf",
+        "3B": "Trey Fenderson"
       },
       "score": {
         "away": 2,
@@ -1143,7 +1162,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Freddy Beruvides Jr.",
       "batter": "Spencer Barnett",
       "outcome": "Home run",
       "count": "3-2",
@@ -1172,7 +1191,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Freddy Beruvides Jr.",
       "batter": "Avery Smith",
       "outcome": "Home run",
       "count": "2-0",
@@ -1201,7 +1220,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Freddy Beruvides Jr.",
       "batter": "Maddox McDonald",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1228,7 +1247,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Freddy Beruvides Jr.",
       "batter": "Preston Yaucher",
       "outcome": "Single",
       "count": "1-0",
@@ -1255,13 +1274,14 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Freddy Beruvides Jr.",
       "batter": "Jayden Davis",
       "outcome": "Home run",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
+        "Preston Yaucher",
         "Jayden Davis"
       ],
       "outs_before": 1,
@@ -1272,7 +1292,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Preston Yaucher",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1284,7 +1304,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Daniel McAuliff",
       "batter": "Michael Anderson",
       "outcome": "Pop out",
       "count": "2-0",
@@ -1294,12 +1314,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Preston Yaucher",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Preston Yaucher",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1311,7 +1331,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Daniel McAuliff",
       "batter": "Bryce Molinaro",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -1321,7 +1341,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Preston Yaucher",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1338,7 +1358,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Daniel McAuliff",
       "batter": "Kevin Karstetter",
       "outcome": "Single",
       "count": "1-0",
@@ -1355,7 +1375,7 @@
       "runners_after": {
         "1B": "Kevin Karstetter",
         "2B": null,
-        "3B": null
+        "3B": "Bryce Molinaro"
       },
       "score": {
         "away": 6,
@@ -1365,7 +1385,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Daniel McAuliff",
       "batter": "Jesse Jaconski",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1377,12 +1397,12 @@
       "runners_before": {
         "1B": "Kevin Karstetter",
         "2B": null,
-        "3B": null
+        "3B": "Bryce Molinaro"
       },
       "runners_after": {
         "1B": "Kevin Karstetter",
         "2B": null,
-        "3B": null
+        "3B": "Bryce Molinaro"
       },
       "score": {
         "away": 6,
@@ -1392,7 +1412,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Mason Butash",
+      "pitcher": "Robert Brown III",
       "batter": "Mason Ligenza",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1419,7 +1439,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Mason Butash",
+      "pitcher": "Robert Brown III",
       "batter": "AJ Nessler",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1446,7 +1466,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Mason Butash",
+      "pitcher": "Robert Brown III",
       "batter": "Caden Dulin",
       "outcome": "Single",
       "count": "1-2",
@@ -1473,7 +1493,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Mason Butash",
+      "pitcher": "Robert Brown III",
       "batter": "Lorenzo Carrier",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1500,7 +1520,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Daniel McAuliff",
       "batter": "Spencer Barnett",
       "outcome": "Home run",
       "count": "1-0",
@@ -1529,7 +1549,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Daniel McAuliff",
       "batter": "Avery Smith",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1556,7 +1576,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Daniel McAuliff",
       "batter": "Maddox McDonald",
       "outcome": "Single",
       "count": "1-2",
@@ -1583,7 +1603,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Daniel McAuliff",
       "batter": "Preston Yaucher",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1610,7 +1630,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Daniel McAuliff",
       "batter": "Jayden Davis",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1637,7 +1657,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Mason Butash",
+      "pitcher": "Robert Brown III",
       "batter": "Kai Wagner",
       "outcome": "Pop out",
       "count": "3-2",
@@ -1664,7 +1684,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Mason Butash",
+      "pitcher": "Robert Brown III",
       "batter": "Trey Fenderson",
       "outcome": "Reached on error",
       "count": "0-1",
@@ -1691,7 +1711,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Mason Butash",
+      "pitcher": "Robert Brown III",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1706,7 +1726,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Trey Fenderson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1718,7 +1738,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Mason Butash",
+      "pitcher": "Robert Brown III",
       "batter": "Carter Dierdorf",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1728,12 +1748,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Trey Fenderson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Trey Fenderson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1745,7 +1765,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Daniel McAuliff",
       "batter": "Michael Anderson",
       "outcome": "Foul out",
       "count": "0-0",
@@ -1772,7 +1792,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Daniel McAuliff",
       "batter": "Bryce Molinaro",
       "outcome": "Single",
       "count": "1-2",
@@ -1799,7 +1819,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Daniel McAuliff",
       "batter": "Kevin Karstetter",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1826,7 +1846,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Eddie Smink",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1841,7 +1861,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bryce Molinaro",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1853,7 +1873,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Mason Butash",
+      "pitcher": "Ethan Bauerschmidt",
       "batter": "Sebastian Pisacreta",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1880,7 +1900,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Mason Butash",
+      "pitcher": "Ethan Bauerschmidt",
       "batter": "Joey Baran",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1907,7 +1927,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Mason Butash",
+      "pitcher": "Ethan Bauerschmidt",
       "batter": "Mason Ligenza",
       "outcome": "Home run",
       "count": "1-2",
@@ -1936,7 +1956,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Mason Butash",
+      "pitcher": "Ethan Bauerschmidt",
       "batter": "AJ Nessler",
       "outcome": "Groundout",
       "count": "3-1",
@@ -1963,7 +1983,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Eddie Smink",
       "batter": "Jesse Jaconski",
       "outcome": "Single",
       "count": "3-1",
@@ -1990,7 +2010,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Eddie Smink",
       "batter": "Spencer Barnett",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2017,7 +2037,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Eddie Smink",
       "batter": "Avery Smith",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2032,8 +2052,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jesse Jaconski",
-        "2B": null,
+        "1B": null,
+        "2B": "Jesse Jaconski",
         "3B": null
       },
       "score": {
@@ -2044,7 +2064,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Eddie Smink",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -2054,14 +2074,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jesse Jaconski",
-        "2B": null,
+        "1B": null,
+        "2B": "Jesse Jaconski",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jesse Jaconski",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jesse Jaconski"
       },
       "score": {
         "away": 7,
@@ -2071,7 +2091,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Eddie Smink",
       "batter": "Maddox McDonald",
       "outcome": "Walk",
       "count": "3-1",
@@ -2081,14 +2101,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jesse Jaconski",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jesse Jaconski"
       },
       "runners_after": {
         "1B": "Maddox McDonald",
         "2B": null,
-        "3B": null
+        "3B": "Jesse Jaconski"
       },
       "score": {
         "away": 7,
@@ -2098,7 +2118,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Michael Savarese",
+      "pitcher": "Eddie Smink",
       "batter": "Preston Yaucher",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2110,12 +2130,12 @@
       "runners_before": {
         "1B": "Maddox McDonald",
         "2B": null,
-        "3B": null
+        "3B": "Jesse Jaconski"
       },
       "runners_after": {
         "1B": "Maddox McDonald",
         "2B": null,
-        "3B": null
+        "3B": "Jesse Jaconski"
       },
       "score": {
         "away": 7,
@@ -2125,7 +2145,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Mason Butash",
+      "pitcher": "Dimond Loosli",
       "batter": "Caden Dulin",
       "outcome": "Pop out",
       "count": "2-0",
@@ -2152,7 +2172,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Mason Butash",
+      "pitcher": "Dimond Loosli",
       "batter": "Lorenzo Carrier",
       "outcome": "Single",
       "count": "0-1",
@@ -2179,7 +2199,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Mason Butash",
+      "pitcher": "Dimond Loosli",
       "batter": "Kai Wagner",
       "outcome": "Single",
       "count": "1-1",
@@ -2195,7 +2215,7 @@
       },
       "runners_after": {
         "1B": "Kai Wagner",
-        "2B": null,
+        "2B": "Lorenzo Carrier",
         "3B": null
       },
       "score": {
@@ -2206,7 +2226,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Mason Butash",
+      "pitcher": "Dimond Loosli",
       "batter": "Trey Fenderson",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2217,12 +2237,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kai Wagner",
-        "2B": null,
+        "2B": "Lorenzo Carrier",
         "3B": null
       },
       "runners_after": {
         "1B": "Kai Wagner",
-        "2B": null,
+        "2B": "Lorenzo Carrier",
         "3B": null
       },
       "score": {
@@ -2233,7 +2253,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Mason Butash",
+      "pitcher": "Dimond Loosli",
       "batter": "Carter Dierdorf",
       "outcome": "Walk",
       "count": "3-2",
@@ -2244,13 +2264,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kai Wagner",
-        "2B": null,
+        "2B": "Lorenzo Carrier",
         "3B": null
       },
       "runners_after": {
         "1B": "Carter Dierdorf",
-        "2B": null,
-        "3B": null
+        "2B": "Kai Wagner",
+        "3B": "Lorenzo Carrier"
       },
       "score": {
         "away": 7,
@@ -2260,7 +2280,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Mason Butash",
+      "pitcher": "Dimond Loosli",
       "batter": "Sebastian Pisacreta",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2271,13 +2291,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Carter Dierdorf",
-        "2B": null,
-        "3B": null
+        "2B": "Kai Wagner",
+        "3B": "Lorenzo Carrier"
       },
       "runners_after": {
         "1B": "Carter Dierdorf",
-        "2B": null,
-        "3B": null
+        "2B": "Kai Wagner",
+        "3B": "Lorenzo Carrier"
       },
       "score": {
         "away": 7,
@@ -2287,7 +2307,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Michael Savarese",
+      "pitcher": "David Leslie",
       "batter": "Jayden Davis",
       "outcome": "Walk",
       "count": "3-1",
@@ -2314,7 +2334,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Michael Savarese",
+      "pitcher": "David Leslie",
       "batter": "Michael Anderson",
       "outcome": "Single",
       "count": "1-2",
@@ -2330,7 +2350,7 @@
       },
       "runners_after": {
         "1B": "Michael Anderson",
-        "2B": null,
+        "2B": "Jayden Davis",
         "3B": null
       },
       "score": {
@@ -2341,7 +2361,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Michael Savarese",
+      "pitcher": "David Leslie",
       "batter": "Bryce Molinaro",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2352,12 +2372,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Michael Anderson",
-        "2B": null,
+        "2B": "Jayden Davis",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael Anderson",
-        "2B": null,
+        "2B": "Jayden Davis",
         "3B": null
       },
       "score": {
@@ -2368,7 +2388,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Michael Savarese",
+      "pitcher": "David Leslie",
       "batter": "Kevin Karstetter",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2379,12 +2399,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Michael Anderson",
-        "2B": null,
+        "2B": "Jayden Davis",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael Anderson",
-        "2B": null,
+        "2B": "Jayden Davis",
         "3B": null
       },
       "score": {
@@ -2395,7 +2415,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Michael Savarese",
+      "pitcher": "David Leslie",
       "batter": "Jesse Jaconski",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2406,12 +2426,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Michael Anderson",
-        "2B": null,
+        "2B": "Jayden Davis",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael Anderson",
-        "2B": null,
+        "2B": "Jayden Davis",
         "3B": null
       },
       "score": {
@@ -2422,7 +2442,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Mason Butash",
+      "pitcher": "Matthew VanOstenbridge",
       "batter": "Joey Baran",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2449,7 +2469,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Mason Butash",
+      "pitcher": "Matthew VanOstenbridge",
       "batter": "Mason Ligenza",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2476,7 +2496,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Mason Butash",
+      "pitcher": "Matthew VanOstenbridge",
       "batter": "AJ Nessler",
       "outcome": "Single",
       "count": "1-1",
@@ -2503,7 +2523,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Mason Butash",
+      "pitcher": "Matthew VanOstenbridge",
       "batter": "Caden Dulin",
       "outcome": "Pop out",
       "count": "3-2",
@@ -2530,7 +2550,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Michael Savarese",
+      "pitcher": "David Leslie",
       "batter": "Spencer Barnett",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2557,7 +2577,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Michael Savarese",
+      "pitcher": "David Leslie",
       "batter": "Avery Smith",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2584,7 +2604,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Michael Savarese",
+      "pitcher": "David Leslie",
       "batter": "Jack Porter",
       "outcome": "Double",
       "count": "1-2",
@@ -2611,7 +2631,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Michael Savarese",
+      "pitcher": "David Leslie",
       "batter": "Foul",
       "outcome": "\u2014",
       "count": null,
@@ -2638,7 +2658,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Michael Savarese",
+      "pitcher": "David Leslie",
       "batter": "Preston Yaucher",
       "outcome": "Single",
       "count": "0-1",
@@ -2654,8 +2674,8 @@
       },
       "runners_after": {
         "1B": "Preston Yaucher",
-        "2B": "Jack Porter",
-        "3B": null
+        "2B": null,
+        "3B": "Jack Porter"
       },
       "score": {
         "away": 7,
@@ -2665,7 +2685,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Michael Savarese",
+      "pitcher": "",
       "batter": "Jayden Davis",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2676,13 +2696,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Preston Yaucher",
-        "2B": "Jack Porter",
-        "3B": null
+        "2B": null,
+        "3B": "Jack Porter"
       },
       "runners_after": {
         "1B": "Preston Yaucher",
-        "2B": "Jack Porter",
-        "3B": null
+        "2B": null,
+        "3B": "Jack Porter"
       },
       "score": {
         "away": 7,

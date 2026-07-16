@@ -3,7 +3,7 @@
   "date": "03/17/2026",
   "away_team": "Charlotte",
   "home_team": "South Carolina",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -562,8 +562,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Spencer Nolan",
-        "2B": null,
+        "1B": null,
+        "2B": "Spencer Nolan",
         "3B": null
       },
       "score": {
@@ -584,13 +584,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Spencer Nolan",
-        "2B": null,
+        "1B": null,
+        "2B": "Spencer Nolan",
         "3B": null
       },
       "runners_after": {
-        "1B": "Spencer Nolan",
-        "2B": null,
+        "1B": null,
+        "2B": "Spencer Nolan",
         "3B": null
       },
       "score": {
@@ -689,7 +689,9 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Will Craddock"
+        "Will Craddock",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -744,7 +746,9 @@
       "count": "3-2",
       "pitches": "FBFFBFFBFFFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -762,6 +766,33 @@
         "home": 4
       },
       "description": "Scobey doubled down the lf line, RBI (3-2 FBFFBFFBFFFF); LeCroy scored."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Joseph Taylor",
+      "batter": "Taylor, J. to p for Oxborrow, C..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Patrick Evans",
+        "2B": "KJ Scobey",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Patrick Evans",
+        "2B": "KJ Scobey",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 4
+      },
+      "description": "Taylor, J. to p for Oxborrow, C.."
     },
     {
       "inning": "Bottom 3",
@@ -906,7 +937,9 @@
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -933,7 +966,9 @@
       "count": "0-2",
       "pitches": "FS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -954,7 +989,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Logan Prisco",
+      "pitcher": "Connor Chicoli",
       "batter": "Spencer Nolan",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1104,8 +1139,8 @@
         "3B": "Tyler Bak"
       },
       "runners_after": {
-        "1B": "Patrick Evans",
-        "2B": null,
+        "1B": null,
+        "2B": "Patrick Evans",
         "3B": "Tyler Bak"
       },
       "score": {
@@ -1122,17 +1157,19 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Patrick Evans",
-        "2B": null,
+        "1B": null,
+        "2B": "Patrick Evans",
         "3B": "Tyler Bak"
       },
       "runners_after": {
         "1B": "Dawson Harman",
-        "2B": null,
+        "2B": "Patrick Evans",
         "3B": "Tyler Bak"
       },
       "score": {
@@ -1154,12 +1191,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Dawson Harman",
-        "2B": null,
+        "2B": "Patrick Evans",
         "3B": "Tyler Bak"
       },
       "runners_after": {
         "1B": "Dawson Harman",
-        "2B": null,
+        "2B": "Patrick Evans",
         "3B": "Tyler Bak"
       },
       "score": {
@@ -1170,7 +1207,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Joseph Taylor",
+      "pitcher": "Andrew Kribbs",
       "batter": "Talmadge LeCroy",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1181,12 +1218,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Dawson Harman",
-        "2B": null,
+        "2B": "Patrick Evans",
         "3B": "Tyler Bak"
       },
       "runners_after": {
         "1B": "Dawson Harman",
-        "2B": null,
+        "2B": "Patrick Evans",
         "3B": "Tyler Bak"
       },
       "score": {
@@ -1197,7 +1234,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Riley Goodman",
+      "pitcher": "Logan Prisco",
       "batter": "Dawson Bryce",
       "outcome": "Lineout",
       "count": "0-1",
@@ -1284,7 +1321,9 @@
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1311,7 +1350,9 @@
       "count": "2-1",
       "pitches": "KBB",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1347,8 +1388,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Robert Nedry",
-        "2B": "Cody Gunderson",
+        "1B": null,
+        "2B": "Robert Nedry",
         "3B": null
       },
       "score": {
@@ -1369,13 +1410,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Robert Nedry",
-        "2B": "Cody Gunderson",
+        "1B": null,
+        "2B": "Robert Nedry",
         "3B": null
       },
       "runners_after": {
         "1B": "Adrian Jimenez",
-        "2B": "Cody Gunderson",
+        "2B": "Robert Nedry",
         "3B": null
       },
       "score": {
@@ -1386,7 +1427,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Josh Gregoire",
+      "pitcher": "Riley Goodman",
       "batter": "Cale Stricklin",
       "outcome": "Walk",
       "count": "3-0",
@@ -1397,12 +1438,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Adrian Jimenez",
-        "2B": "Cody Gunderson",
+        "2B": "Robert Nedry",
         "3B": null
       },
       "runners_after": {
         "1B": "Cale Stricklin",
-        "2B": "Cody Gunderson",
+        "2B": "Robert Nedry",
         "3B": null
       },
       "score": {
@@ -1419,17 +1460,19 @@
       "count": "3-2",
       "pitches": "KSBBBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Cale Stricklin",
-        "2B": "Cody Gunderson",
+        "2B": "Robert Nedry",
         "3B": null
       },
       "runners_after": {
         "1B": "Spencer Nolan",
-        "2B": "Cody Gunderson",
+        "2B": "Robert Nedry",
         "3B": null
       },
       "score": {
@@ -1447,18 +1490,21 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Todd Hudson"
+        "Todd Hudson",
+        null,
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Spencer Nolan",
-        "2B": "Cody Gunderson",
+        "2B": "Robert Nedry",
         "3B": null
       },
       "runners_after": {
         "1B": "Spencer Nolan",
-        "2B": "Cody Gunderson",
+        "2B": "Robert Nedry",
         "3B": null
       },
       "score": {
@@ -1480,12 +1526,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Spencer Nolan",
-        "2B": "Cody Gunderson",
+        "2B": "Robert Nedry",
         "3B": null
       },
       "runners_after": {
         "1B": "Spencer Nolan",
-        "2B": "Cody Gunderson",
+        "2B": "Robert Nedry",
         "3B": null
       },
       "score": {
@@ -1493,6 +1539,33 @@
         "home": 5
       },
       "description": "Bryce, D. grounded out to p (1-1 FB)."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Andrew Kribbs",
+      "batter": "Kribbs, A. to p for Taylor, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 9,
+        "home": 5
+      },
+      "description": "Kribbs, A. to p for Taylor, J.."
     },
     {
       "inning": "Bottom 5",
@@ -1550,7 +1623,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Andrew Kribbs",
+      "pitcher": "Chase Carson",
       "batter": "Ethan Lizama",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1577,7 +1650,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Hudson Lee",
+      "pitcher": "Josh Gregoire",
       "batter": "Dylan Koontz",
       "outcome": "Walk",
       "count": "3-1",
@@ -1619,8 +1692,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dylan Koontz",
-        "2B": null,
+        "1B": null,
+        "2B": "Dylan Koontz",
         "3B": null
       },
       "score": {
@@ -1641,14 +1714,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Dylan Koontz",
-        "2B": null,
+        "1B": null,
+        "2B": "Dylan Koontz",
         "3B": null
       },
       "runners_after": {
-        "1B": "Dylan Koontz",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Dylan Koontz"
       },
       "score": {
         "away": 9,
@@ -1668,14 +1741,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Dylan Koontz",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Dylan Koontz"
       },
       "runners_after": {
         "1B": "Alec DeMartino",
         "2B": null,
-        "3B": null
+        "3B": "Dylan Koontz"
       },
       "score": {
         "away": 9,
@@ -1697,12 +1770,12 @@
       "runners_before": {
         "1B": "Alec DeMartino",
         "2B": null,
-        "3B": null
+        "3B": "Dylan Koontz"
       },
       "runners_after": {
         "1B": "Cody Gunderson",
         "2B": null,
-        "3B": null
+        "3B": "Dylan Koontz"
       },
       "score": {
         "away": 9,
@@ -1724,12 +1797,12 @@
       "runners_before": {
         "1B": "Cody Gunderson",
         "2B": null,
-        "3B": null
+        "3B": "Dylan Koontz"
       },
       "runners_after": {
         "1B": "Cody Gunderson",
         "2B": null,
-        "3B": null
+        "3B": "Dylan Koontz"
       },
       "score": {
         "away": 9,
@@ -1751,12 +1824,12 @@
       "runners_before": {
         "1B": "Cody Gunderson",
         "2B": null,
-        "3B": null
+        "3B": "Dylan Koontz"
       },
       "runners_after": {
         "1B": "Adrian Jimenez",
         "2B": null,
-        "3B": null
+        "3B": "Dylan Koontz"
       },
       "score": {
         "away": 9,
@@ -1766,7 +1839,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Parker Marlatt",
+      "pitcher": "Hudson Lee",
       "batter": "Cale Stricklin",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1778,12 +1851,12 @@
       "runners_before": {
         "1B": "Adrian Jimenez",
         "2B": null,
-        "3B": null
+        "3B": "Dylan Koontz"
       },
       "runners_after": {
         "1B": "Adrian Jimenez",
         "2B": null,
-        "3B": null
+        "3B": "Dylan Koontz"
       },
       "score": {
         "away": 9,
@@ -1793,7 +1866,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Andrew Kribbs",
+      "pitcher": "Chase Carson",
       "batter": "Logan Sutter",
       "outcome": "Walk",
       "count": "3-0",
@@ -1820,7 +1893,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Carson",
+      "pitcher": "Adam Stanton",
+      "batter": "Carson, C. to p for Kribbs, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Logan Sutter",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Logan Sutter",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 9,
+        "home": 5
+      },
+      "description": "Carson, C. to p for Kribbs, A.."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Adam Stanton",
       "batter": "Tyler Bak",
       "outcome": "Walk",
       "count": "3-1",
@@ -1847,7 +1947,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Chase Carson",
+      "pitcher": "Adam Stanton",
       "batter": "Patrick Evans",
       "outcome": "Walk",
       "count": "3-0",
@@ -1875,12 +1975,41 @@
     {
       "inning": "Bottom 6",
       "pitcher": "Adam Stanton",
+      "batter": "Stanton, A. to p for Carson, C..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Patrick Evans",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Patrick Evans",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 9,
+        "home": 5
+      },
+      "description": "Stanton, A. to p for Carson, C.."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Adam Stanton",
       "batter": "Dawson Harman",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1934,7 +2063,10 @@
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2267,7 +2399,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Robert Nedry",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2285,11 +2417,13 @@
       "count": "1-1",
       "pitches": "BS",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Robert Nedry",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2333,7 +2467,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Zach Russell",
+      "pitcher": "Parker Marlatt",
       "batter": "Spencer Nolan",
       "outcome": "Groundout",
       "count": "3-1",
@@ -2528,7 +2662,9 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2576,7 +2712,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Adam Stanton",
+      "pitcher": "",
       "batter": "Will Craddock",
       "outcome": "Single",
       "count": "1-2",
@@ -2603,7 +2739,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Adam Stanton",
+      "pitcher": "",
       "batter": "Talmadge LeCroy",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2630,7 +2766,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Adam Stanton",
+      "pitcher": "",
       "batter": "KJ Scobey",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2657,7 +2793,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Adam Stanton",
+      "pitcher": "",
       "batter": "Luke Yuhasz",
       "outcome": "Groundout",
       "count": "0-1",

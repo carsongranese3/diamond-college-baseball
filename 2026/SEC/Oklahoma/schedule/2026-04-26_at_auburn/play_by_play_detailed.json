@@ -3,7 +3,7 @@
   "date": "04/26/2026",
   "away_team": "Oklahoma",
   "home_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -94,7 +94,9 @@
       "count": "2-1",
       "pitches": "BBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -121,7 +123,9 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -745,7 +749,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Chase Fralick"
+        "Chase Fralick",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -866,8 +871,8 @@
       },
       "runners_after": {
         "1B": "Eric Guevara",
-        "2B": "Bub Terrell",
-        "3B": null
+        "2B": null,
+        "3B": "Bub Terrell"
       },
       "score": {
         "away": 2,
@@ -888,13 +893,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Eric Guevara",
-        "2B": "Bub Terrell",
-        "3B": null
+        "2B": null,
+        "3B": "Bub Terrell"
       },
       "runners_after": {
         "1B": "Mason McCraine",
-        "2B": "Bub Terrell",
-        "3B": null
+        "2B": null,
+        "3B": "Bub Terrell"
       },
       "score": {
         "away": 2,
@@ -904,7 +909,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Cord Rager",
+      "pitcher": "Jason Bodin",
       "batter": "Eddie Madrigal",
       "outcome": "Flyout",
       "count": "1-1",
@@ -915,13 +920,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Mason McCraine",
-        "2B": "Bub Terrell",
-        "3B": null
+        "2B": null,
+        "3B": "Bub Terrell"
       },
       "runners_after": {
         "1B": "Mason McCraine",
-        "2B": "Bub Terrell",
-        "3B": null
+        "2B": null,
+        "3B": "Bub Terrell"
       },
       "score": {
         "away": 2,
@@ -1027,7 +1032,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brendan Brock",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1036,6 +1041,33 @@
         "home": 4
       },
       "description": "Brock, B. out at second c to ss, caught stealing."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Jason Bodin",
+      "batter": "Bodin, J. to p for Rager, C..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 4
+      },
+      "description": "Bodin, J. to p for Rager, C.."
     },
     {
       "inning": "Bottom 4",
@@ -1081,8 +1113,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "score": {
@@ -1103,13 +1135,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "score": {
@@ -1126,16 +1158,18 @@
       "count": "1-2",
       "pitches": "KBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": "Eric Guevara",
         "3B": null
       },
@@ -1157,7 +1191,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bristol Carter",
+        "1B": null,
         "2B": "Eric Guevara",
         "3B": null
       },
@@ -1174,7 +1208,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jason Bodin",
+      "pitcher": "Gavyn Jones",
       "batter": "Chris Rembert",
       "outcome": "Fielder's choice",
       "count": "2-1",
@@ -1201,14 +1235,16 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jason Bodin",
+      "pitcher": "Gavyn Jones",
       "batter": "Ethin Bingaman",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Ethin Bingaman"
+        "Ethin Bingaman",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1227,6 +1263,33 @@
         "home": 8
       },
       "description": "Bingaman, E. homered to right center, 3 RBI (1-0 B); Rembert, C. scored; Guevara, E. scored."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Gavyn Jones",
+      "batter": "Jones, G. to p for Bodin, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Chris Rembert",
+        "2B": "Eric Guevara",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Chris Rembert",
+        "2B": "Eric Guevara",
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 8
+      },
+      "description": "Jones, G. to p for Bodin, J.."
     },
     {
       "inning": "Bottom 4",
@@ -1527,7 +1590,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Alex Petrovic",
+      "pitcher": "Garrett Brewer",
       "batter": "Nolan Stevens",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1554,7 +1617,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gavyn Jones",
+      "pitcher": "Nick Wesloski",
       "batter": "Stevens, N. to rf.",
       "outcome": "\u2014",
       "count": null,
@@ -1581,7 +1644,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gavyn Jones",
+      "pitcher": "Nick Wesloski",
       "batter": "Mason McCraine",
       "outcome": "Single",
       "count": "1-0",
@@ -1608,14 +1671,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gavyn Jones",
+      "pitcher": "Jackson Cleveland",
       "batter": "Eric Guevara",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Eric Guevara"
+        "Eric Guevara",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1637,7 +1701,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gavyn Jones",
+      "pitcher": "Jackson Cleveland",
       "batter": "Chase Fralick",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1664,7 +1728,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nick Wesloski",
+      "pitcher": "Jackson Cleveland",
+      "batter": "Wesloski, N. to p for Jones, G..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Mason McCraine",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Mason McCraine",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 10
+      },
+      "description": "Wesloski, N. to p for Jones, G.."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Jackson Cleveland",
       "batter": "Chris Rembert",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1691,7 +1782,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nick Wesloski",
+      "pitcher": "Jackson Cleveland",
       "batter": "Ethin Bingaman",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1715,6 +1806,33 @@
         "home": 10
       },
       "description": "Bingaman, E. grounded out to ss (2-2 FBSBF)."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Garrett Brewer",
+      "batter": "Brewer, G. to p for Petrovic, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 10
+      },
+      "description": "Brewer, G. to p for Petrovic, A.."
     },
     {
       "inning": "Top 7",
@@ -1745,7 +1863,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "Ryan Hetzler",
       "batter": "Connor Larkin",
       "outcome": "Double",
       "count": "1-1",
@@ -1772,7 +1890,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "Ryan Hetzler",
       "batter": "Jason Walk",
       "outcome": "Walk",
       "count": "3-2",
@@ -1800,12 +1918,41 @@
     {
       "inning": "Top 7",
       "pitcher": "Ryan Hetzler",
+      "batter": "Hetzler, R. to p for Brewer, G..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Jason Walk",
+        "2B": "Connor Larkin",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Jason Walk",
+        "2B": "Connor Larkin",
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 10
+      },
+      "description": "Hetzler, R. to p for Brewer, G.."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Ryan Hetzler",
       "batter": "Trey Gambill",
       "outcome": "Flyout",
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -1877,6 +2024,33 @@
         "home": 10
       },
       "description": "Willits, J. flied out to lf down the lf line (3-2 BBFSBFF)."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Jackson Cleveland",
+      "batter": "Cleveland, J to p for Wesloski, N..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 10
+      },
+      "description": "Cleveland, J to p for Wesloski, N.."
     },
     {
       "inning": "Bottom 7",
@@ -1961,7 +2135,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Bristol Carter",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2015,7 +2189,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": "Brendan Brock",
       "outcome": "Flyout",
       "count": "0-2",
@@ -2042,7 +2216,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": "Nolan Stevens",
       "outcome": "Home run",
       "count": "2-2",
@@ -2071,7 +2245,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ryan Hetzler",
+      "pitcher": "",
       "batter": "Kyle Branch",
       "outcome": "Pop out",
       "count": "0-0",
@@ -2098,7 +2272,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Mason McCraine",
       "outcome": "Double",
       "count": "2-2",
@@ -2125,7 +2299,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Eric Guevara",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -2152,7 +2326,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Chase Fralick",
       "outcome": "Single",
       "count": "2-2",
@@ -2179,13 +2353,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Chris Rembert",
       "outcome": "Fielder's choice",
       "count": "2-2",
       "pitches": "KBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -2206,14 +2382,16 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Cleveland",
+      "pitcher": "",
       "batter": "Ethin Bingaman",
       "outcome": "Home run",
       "count": "0-2",
       "pitches": "FK",
       "rbi": true,
       "runs_scored": [
-        "Ethin Bingaman"
+        "Ethin Bingaman",
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,

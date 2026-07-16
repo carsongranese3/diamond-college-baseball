@@ -3,7 +3,7 @@
   "date": "03/28/2026",
   "away_team": "Tennessee",
   "home_team": "Vanderbilt",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -769,7 +769,9 @@
       "count": "1-2",
       "pitches": "",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -797,7 +799,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Ryker Waite"
+        "Ryker Waite",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -853,7 +856,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Mike Mancini"
+        "Mike Mancini",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1178,7 +1182,10 @@
       "count": "1-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1233,7 +1240,9 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Henry Ford"
+        "Henry Ford",
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -2389,7 +2398,7 @@
     },
     {
       "inning": "Bottom 11",
-      "pitcher": "Cam Appenzeller",
+      "pitcher": "Bo Rhudy",
       "batter": "Mike Mancini",
       "outcome": "Groundout",
       "count": "2-0",
@@ -2521,6 +2530,33 @@
         "home": 5
       },
       "description": "GRIMMER, B. reached on a fielder's choice (2-1); WRIGHT, G. out at second ss unassisted."
+    },
+    {
+      "inning": "Bottom 12",
+      "pitcher": "Bo Rhudy",
+      "batter": "RHUDY, B. to p for APPENZELLER.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 5
+      },
+      "description": "RHUDY, B. to p for APPENZELLER."
     },
     {
       "inning": "Bottom 12",
@@ -2674,8 +2710,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Manny Marin",
-        "2B": null,
+        "1B": null,
+        "2B": "Manny Marin",
         "3B": null
       },
       "score": {
@@ -2696,13 +2732,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Manny Marin",
-        "2B": null,
+        "1B": null,
+        "2B": "Manny Marin",
         "3B": null
       },
       "runners_after": {
-        "1B": "Manny Marin",
-        "2B": null,
+        "1B": null,
+        "2B": "Manny Marin",
         "3B": null
       },
       "score": {
@@ -2723,13 +2759,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Manny Marin",
-        "2B": null,
+        "1B": null,
+        "2B": "Manny Marin",
         "3B": null
       },
       "runners_after": {
         "1B": "Reese Chapman",
-        "2B": null,
+        "2B": "Manny Marin",
         "3B": null
       },
       "score": {
@@ -2751,12 +2787,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Reese Chapman",
-        "2B": null,
+        "2B": "Manny Marin",
         "3B": null
       },
       "runners_after": {
         "1B": "Reese Chapman",
-        "2B": null,
+        "2B": "Manny Marin",
         "3B": null
       },
       "score": {
@@ -2944,8 +2980,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Garrett Wright",
-        "2B": null,
+        "1B": null,
+        "2B": "Garrett Wright",
         "3B": null
       },
       "score": {
@@ -2966,13 +3002,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Garrett Wright",
-        "2B": null,
+        "1B": null,
+        "2B": "Garrett Wright",
         "3B": null
       },
       "runners_after": {
         "1B": "Blake Grimmer",
-        "2B": null,
+        "2B": "Garrett Wright",
         "3B": null
       },
       "score": {
@@ -2994,12 +3030,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Blake Grimmer",
-        "2B": null,
+        "2B": "Garrett Wright",
         "3B": null
       },
       "runners_after": {
         "1B": "Blake Grimmer",
-        "2B": null,
+        "2B": "Garrett Wright",
         "3B": null
       },
       "score": {
@@ -3037,7 +3073,7 @@
     },
     {
       "inning": "Bottom 14",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "Brady Frederick",
       "batter": "Mack Whitcomb",
       "outcome": "Flyout",
       "count": "1-0",
@@ -3064,7 +3100,7 @@
     },
     {
       "inning": "Bottom 14",
-      "pitcher": "Bo Rhudy",
+      "pitcher": "Brady Frederick",
       "batter": "Mike Mancini",
       "outcome": "Flyout",
       "count": "3-2",
@@ -3223,6 +3259,33 @@
         "home": 5
       },
       "description": "ABERNATHY, J grounded out to ss (2-1)."
+    },
+    {
+      "inning": "Bottom 15",
+      "pitcher": "Brady Frederick",
+      "batter": "FREDERICK, B to p for RHUDY, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 5
+      },
+      "description": "FREDERICK, B to p for RHUDY, B.."
     },
     {
       "inning": "Bottom 15",
@@ -3403,8 +3466,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Garrett Wright",
-        "2B": null,
+        "1B": null,
+        "2B": "Garrett Wright",
         "3B": null
       },
       "score": {
@@ -3425,13 +3488,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Garrett Wright",
-        "2B": null,
+        "1B": null,
+        "2B": "Garrett Wright",
         "3B": null
       },
       "runners_after": {
-        "1B": "Garrett Wright",
-        "2B": null,
+        "1B": null,
+        "2B": "Garrett Wright",
         "3B": null
       },
       "score": {
@@ -3452,14 +3515,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Garrett Wright",
-        "2B": null,
+        "1B": null,
+        "2B": "Garrett Wright",
         "3B": null
       },
       "runners_after": {
-        "1B": "Garrett Wright",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Garrett Wright"
       },
       "score": {
         "away": 5,
@@ -3479,14 +3542,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Garrett Wright",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Garrett Wright"
       },
       "runners_after": {
-        "1B": "Garrett Wright",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Garrett Wright"
       },
       "score": {
         "away": 5,
@@ -3496,7 +3559,7 @@
     },
     {
       "inning": "Bottom 16",
-      "pitcher": "Brady Frederick",
+      "pitcher": "Brayden Krenzel",
       "batter": "Logan Johnstone",
       "outcome": "Flyout",
       "count": "2-1",
@@ -3523,7 +3586,7 @@
     },
     {
       "inning": "Bottom 16",
-      "pitcher": "Brady Frederick",
+      "pitcher": "Brayden Krenzel",
       "batter": "Rustan Rigdon",
       "outcome": "Walk",
       "count": "3-1",
@@ -3550,7 +3613,7 @@
     },
     {
       "inning": "Bottom 16",
-      "pitcher": "Brady Frederick",
+      "pitcher": "",
       "batter": "Max Jensen",
       "outcome": "Walk",
       "count": "3-2",
@@ -3577,9 +3640,9 @@
     },
     {
       "inning": "Bottom 16",
-      "pitcher": "Brayden Krenzel",
-      "batter": null,
-      "outcome": "Stolen base",
+      "pitcher": "",
+      "batter": "KRENZEL, B. to p for FREDERICK, B.",
+      "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
@@ -3600,15 +3663,15 @@
         "away": 5,
         "home": 5
       },
-      "description": "Jensen stole second; Rigdon stole third."
+      "description": "KRENZEL, B. to p for FREDERICK, B."
     },
     {
       "inning": "Bottom 16",
-      "pitcher": "Brayden Krenzel",
-      "batter": "Ryker Waite",
-      "outcome": "Walk",
-      "count": "2-1",
-      "pitches": "",
+      "pitcher": "",
+      "batter": null,
+      "outcome": "Stolen base",
+      "count": null,
+      "pitches": null,
       "rbi": false,
       "runs_scored": [],
       "outs_before": 1,
@@ -3619,9 +3682,36 @@
         "3B": null
       },
       "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": "Max Jensen"
+      },
+      "score": {
+        "away": 5,
+        "home": 5
+      },
+      "description": "Jensen stole second; Rigdon stole third."
+    },
+    {
+      "inning": "Bottom 16",
+      "pitcher": "",
+      "batter": "Ryker Waite",
+      "outcome": "Walk",
+      "count": "2-1",
+      "pitches": "",
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": "Max Jensen"
+      },
+      "runners_after": {
         "1B": "Ryker Waite",
         "2B": null,
-        "3B": null
+        "3B": "Max Jensen"
       },
       "score": {
         "away": 5,
@@ -3631,24 +3721,26 @@
     },
     {
       "inning": "Bottom 16",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "",
       "batter": "Mack Whitcomb",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Ryker Waite",
         "2B": null,
-        "3B": null
+        "3B": "Max Jensen"
       },
       "runners_after": {
         "1B": "Mack Whitcomb",
         "2B": null,
-        "3B": null
+        "3B": "Max Jensen"
       },
       "score": {
         "away": 5,

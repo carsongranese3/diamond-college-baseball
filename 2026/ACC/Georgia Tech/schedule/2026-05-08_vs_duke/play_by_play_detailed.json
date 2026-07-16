@@ -3,7 +3,7 @@
   "date": "05/08/2026",
   "away_team": "Duke",
   "home_team": "Georgia Tech",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -76,7 +76,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "RJ Hamilton",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -98,12 +98,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "RJ Hamilton",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "RJ Hamilton",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -213,8 +213,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jarren Advincula",
-        "2B": null,
+        "1B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "score": {
@@ -235,13 +235,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jarren Advincula",
-        "2B": null,
+        "1B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "runners_after": {
         "1B": "Vahn Lackey",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "score": {
@@ -263,12 +263,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Vahn Lackey",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "runners_after": {
         "1B": "Vahn Lackey",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "score": {
@@ -290,12 +290,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Vahn Lackey",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "runners_after": {
-        "1B": "Vahn Lackey",
-        "2B": null,
+        "1B": null,
+        "2B": "Vahn Lackey",
         "3B": null
       },
       "score": {
@@ -316,13 +316,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Vahn Lackey",
-        "2B": null,
+        "1B": null,
+        "2B": "Vahn Lackey",
         "3B": null
       },
       "runners_after": {
-        "1B": "Vahn Lackey",
-        "2B": null,
+        "1B": null,
+        "2B": "Vahn Lackey",
         "3B": null
       },
       "score": {
@@ -855,7 +855,8 @@
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "Ryan Zuckerman"
+        "Ryan Zuckerman",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -937,7 +938,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -1029,8 +1032,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Drew Burress",
-        "2B": null,
+        "1B": null,
+        "2B": "Drew Burress",
         "3B": null
       },
       "score": {
@@ -1051,13 +1054,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Drew Burress",
-        "2B": null,
+        "1B": null,
+        "2B": "Drew Burress",
         "3B": null
       },
       "runners_after": {
-        "1B": "Drew Burress",
-        "2B": null,
+        "1B": null,
+        "2B": "Drew Burress",
         "3B": null
       },
       "score": {
@@ -1157,7 +1160,9 @@
       "count": "3-2",
       "pitches": "BBKBS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1261,7 +1266,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Feehery",
       "batter": "Will Baker",
       "outcome": "Walk",
       "count": "3-1",
@@ -1288,7 +1293,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Feehery",
       "batter": "Ryan Zuckerman",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1315,13 +1320,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Feehery",
       "batter": "Kent Schmidt",
       "outcome": "Double",
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1342,7 +1349,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Feehery",
       "batter": "Alex Hernandez",
       "outcome": "Walk",
       "count": "3-0",
@@ -1369,7 +1376,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Feehery",
       "batter": "Parker Brosius",
       "outcome": "Walk",
       "count": "3-2",
@@ -1396,7 +1403,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Carson Kerce",
       "outcome": "Foul out",
       "count": "1-0",
@@ -1423,7 +1430,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Drew Burress",
       "outcome": "Fielder's choice",
       "count": "2-2",
@@ -1477,7 +1484,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate McKee",
+      "pitcher": "Caden Gaudette",
       "batter": "RJ Hamilton",
       "outcome": "Single",
       "count": "0-0",
@@ -1504,14 +1511,16 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate McKee",
+      "pitcher": "Caden Gaudette",
       "batter": "Kaden Smith",
       "outcome": "Home run",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Kaden Smith"
+        "Kaden Smith",
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1533,7 +1542,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate McKee",
+      "pitcher": "Caden Gaudette",
       "batter": "Matthew Strand",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1560,7 +1569,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate McKee",
+      "pitcher": "Caden Gaudette",
       "batter": "Collin Anderson",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -1587,7 +1596,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate McKee",
+      "pitcher": "Caden Gaudette",
       "batter": "Michael DiMartini",
       "outcome": "Single",
       "count": "0-1",
@@ -1614,7 +1623,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate McKee",
+      "pitcher": "Caden Gaudette",
       "batter": "Bobby Marsh",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1641,7 +1650,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate McKee",
+      "pitcher": "Caden Gaudette",
       "batter": "Adin Zorn",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1668,7 +1677,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Jarren Advincula",
       "outcome": "Single",
       "count": "0-1",
@@ -1695,7 +1704,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Vahn Lackey",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1722,7 +1731,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1737,8 +1746,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jarren Advincula",
-        "2B": null,
+        "1B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "score": {
@@ -1749,23 +1758,25 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Will Baker",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "FSB",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jarren Advincula",
-        "2B": null,
+        "1B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "runners_after": {
         "1B": "Will Baker",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "score": {
@@ -1776,7 +1787,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Ryan Zuckerman",
       "outcome": "Fielder's choice",
       "count": "2-0",
@@ -1787,12 +1798,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Will Baker",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "runners_after": {
         "1B": "Ryan Zuckerman",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "score": {
@@ -1803,7 +1814,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Kent Schmidt",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1814,12 +1825,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Ryan Zuckerman",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "runners_after": {
         "1B": "Ryan Zuckerman",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "score": {
@@ -1830,7 +1841,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Caden Gaudette",
       "batter": "Coltin Quagliano",
       "outcome": "Single",
       "count": "0-1",
@@ -1857,7 +1868,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Jake Lambdin",
       "outcome": "Catcher interference",
       "count": "0-0",
@@ -1884,13 +1895,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "RJ Hamilton",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "KF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1911,7 +1924,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1926,9 +1939,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "RJ Hamilton",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "score": {
         "away": 7,
@@ -1938,7 +1951,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Kaden Smith",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1948,14 +1961,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "RJ Hamilton",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "runners_after": {
-        "1B": "RJ Hamilton",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "score": {
         "away": 7,
@@ -1965,7 +1978,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Matthew Strand",
       "outcome": "Foul out",
       "count": "0-1",
@@ -1975,14 +1988,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "RJ Hamilton",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "runners_after": {
-        "1B": "RJ Hamilton",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "score": {
         "away": 7,
@@ -1992,24 +2005,27 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Collin Anderson",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "KKBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "RJ Hamilton",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "runners_after": {
         "1B": "Collin Anderson",
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "score": {
         "away": 9,
@@ -2019,7 +2035,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Michael DiMartini",
       "outcome": "Flyout",
       "count": "1-0",
@@ -2031,12 +2047,12 @@
       "runners_before": {
         "1B": "Collin Anderson",
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "runners_after": {
         "1B": "Collin Anderson",
         "2B": null,
-        "3B": null
+        "3B": "RJ Hamilton"
       },
       "score": {
         "away": 9,
@@ -2046,7 +2062,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Alex Hernandez",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2073,7 +2089,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Parker Brosius",
       "outcome": "Home run",
       "count": "1-2",
@@ -2102,7 +2118,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Carson Kerce",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2129,7 +2145,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Drew Burress",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2156,7 +2172,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Bobby Marsh",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2183,7 +2199,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Adam Troch",
       "outcome": "Foul out",
       "count": "0-0",
@@ -2210,7 +2226,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Coltin Quagliano",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2237,7 +2253,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Jarren Advincula",
       "outcome": "Groundout",
       "count": "2-1",
@@ -2264,7 +2280,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Vahn Lackey",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2291,7 +2307,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Will Baker",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2318,7 +2334,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Jake Lambdin",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2345,7 +2361,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "RJ Hamilton",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2372,7 +2388,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Kaden Smith",
       "outcome": "Single",
       "count": "0-0",
@@ -2399,7 +2415,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Matthew Strand",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2426,7 +2442,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Ryan Zuckerman",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2453,7 +2469,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Kent Schmidt",
       "outcome": "Walk",
       "count": "3-2",
@@ -2480,7 +2496,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Alex Hernandez",
       "outcome": "Single",
       "count": "1-1",
@@ -2507,7 +2523,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Peter Lemke",
+      "pitcher": "Jack Hedrick",
       "batter": "Parker Brosius",
       "outcome": "Fielder's choice",
       "count": "0-0",
@@ -2534,7 +2550,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Peter Lemke",
+      "pitcher": "David Boisvert",
       "batter": "Dominic Stephenson",
       "outcome": "\u2014",
       "count": null,
@@ -2561,7 +2577,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Collin Anderson",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2588,7 +2604,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Tate McKee",
+      "pitcher": "Mason Patel",
       "batter": "Michael DiMartini",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2615,7 +2631,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Tate McKee",
+      "pitcher": "",
       "batter": "Bobby Marsh",
       "outcome": "Walk",
       "count": "3-1",
@@ -2642,7 +2658,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Tate McKee",
+      "pitcher": "",
       "batter": "Adam Troch",
       "outcome": "Foul out",
       "count": "2-2",
@@ -2669,7 +2685,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Peter Lemke",
+      "pitcher": "David Boisvert",
       "batter": "Carson Kerce",
       "outcome": "Triple",
       "count": "0-1",
@@ -2696,13 +2712,15 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Peter Lemke",
+      "pitcher": "",
       "batter": null,
       "outcome": "Baserunning",
       "count": "1-2",
       "pitches": "BKF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {

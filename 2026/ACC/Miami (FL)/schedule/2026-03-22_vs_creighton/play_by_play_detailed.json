@@ -3,7 +3,7 @@
   "date": "03/22/2026",
   "away_team": "Creighton",
   "home_team": "Miami (FL)",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -202,7 +202,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -229,7 +231,9 @@
       "count": "2-2",
       "pitches": "KFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -265,8 +269,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Derek Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Derek Williams",
         "3B": null
       },
       "score": {
@@ -287,13 +291,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Derek Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Derek Williams",
         "3B": null
       },
       "runners_after": {
-        "1B": "Derek Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "Derek Williams",
         "3B": null
       },
       "score": {
@@ -481,8 +485,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Vance Sheahan",
-        "2B": null,
+        "1B": null,
+        "2B": "Vance Sheahan",
         "3B": null
       },
       "score": {
@@ -503,13 +507,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Vance Sheahan",
-        "2B": null,
+        "1B": null,
+        "2B": "Vance Sheahan",
         "3B": null
       },
       "runners_after": {
-        "1B": "Vance Sheahan",
-        "2B": null,
+        "1B": null,
+        "2B": "Vance Sheahan",
         "3B": null
       },
       "score": {
@@ -526,16 +530,18 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Vance Sheahan"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Vance Sheahan",
-        "2B": null,
+        "1B": null,
+        "2B": "Vance Sheahan",
         "3B": null
       },
       "runners_after": {
-        "1B": "Vance Sheahan",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -557,7 +563,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Vance Sheahan",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -689,7 +695,8 @@
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Ben North"
+        "Ben North",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -767,7 +774,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Evan Stratton",
       "batter": "Derek Williams",
       "outcome": "Home run",
       "count": "2-2",
@@ -796,7 +803,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Evan Stratton",
       "batter": "Brylan West",
       "outcome": "Home run",
       "count": "3-2",
@@ -825,7 +832,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Evan Stratton",
       "batter": "Alonzo Alvarez",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -852,7 +859,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Evan Stratton",
       "batter": "Dylan Dubovik",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -879,7 +886,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Evan Stratton",
       "batter": "Vance Sheahan",
       "outcome": "Foul out",
       "count": "2-2",
@@ -1014,7 +1021,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Evan Stratton",
       "batter": "Fabio Peralta",
       "outcome": "Walk",
       "count": "3-2",
@@ -1041,7 +1048,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Evan Stratton",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1056,8 +1063,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Fabio Peralta",
-        "2B": null,
+        "1B": null,
+        "2B": "Fabio Peralta",
         "3B": null
       },
       "score": {
@@ -1068,25 +1075,26 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Evan Stratton",
       "batter": "Jake Ogden",
       "outcome": "Home run",
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
       "runs_scored": [
-        "Jake Ogden"
+        "Jake Ogden",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Fabio Peralta",
-        "2B": null,
+        "1B": null,
+        "2B": "Fabio Peralta",
         "3B": null
       },
       "runners_after": {
-        "1B": "Fabio Peralta",
-        "2B": null,
+        "1B": null,
+        "2B": "Fabio Peralta",
         "3B": null
       },
       "score": {
@@ -1097,7 +1105,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Evan Stratton",
       "batter": "Daniel Cuvet",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1107,13 +1115,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Fabio Peralta",
-        "2B": null,
+        "1B": null,
+        "2B": "Fabio Peralta",
         "3B": null
       },
       "runners_after": {
         "1B": "Daniel Cuvet",
-        "2B": null,
+        "2B": "Fabio Peralta",
         "3B": null
       },
       "score": {
@@ -1124,7 +1132,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eli Nissen",
+      "pitcher": "JT Adams",
       "batter": "Alex Sosa",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1135,12 +1143,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Daniel Cuvet",
-        "2B": null,
+        "2B": "Fabio Peralta",
         "3B": null
       },
       "runners_after": {
         "1B": "Daniel Cuvet",
-        "2B": null,
+        "2B": "Fabio Peralta",
         "3B": null
       },
       "score": {
@@ -1151,18 +1159,20 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eli Nissen",
+      "pitcher": "JT Adams",
       "batter": "Derek Williams",
       "outcome": "Double",
       "count": "3-1",
       "pitches": "SBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Daniel Cuvet",
-        "2B": null,
+        "2B": "Fabio Peralta",
         "3B": null
       },
       "runners_after": {
@@ -1178,7 +1188,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eli Nissen",
+      "pitcher": "JT Adams",
       "batter": "Brylan West",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1205,7 +1215,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eli Nissen",
+      "pitcher": "JT Adams",
       "batter": "Alonzo Alvarez",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1313,13 +1323,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "TJ Coats",
       "batter": "Ben North",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "BKS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1340,7 +1352,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "TJ Coats",
       "batter": "Connor Capece",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1367,13 +1379,16 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "TJ Coats",
       "batter": "Isaac Wachsmann",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1394,7 +1409,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "TJ Coats",
       "batter": "Chris Baillargeon",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1421,7 +1436,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Eli Nissen",
+      "pitcher": "JT Adams",
       "batter": "Dylan Dubovik",
       "outcome": "Double",
       "count": "0-2",
@@ -1448,13 +1463,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Shea Wendt",
       "batter": "Vance Sheahan",
       "outcome": "Flyout",
       "count": "1-2",
       "pitches": "KBF",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -1475,7 +1492,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Shea Wendt",
       "batter": "Fabio Peralta",
       "outcome": "Single",
       "count": "2-1",
@@ -1502,7 +1519,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Shea Wendt",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
@@ -1529,7 +1546,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Shea Wendt",
       "batter": "Daniel Cuvet",
       "outcome": "Walk",
       "count": "0-0",
@@ -1556,7 +1573,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Shea Wendt",
       "batter": "Alex Sosa",
       "outcome": "Walk",
       "count": "3-1",
@@ -1583,7 +1600,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Shea Wendt",
       "batter": "Derek Williams",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1610,7 +1627,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "TJ Coats",
       "batter": "Nick Venteicher",
       "outcome": "Single",
       "count": "2-2",
@@ -1637,7 +1654,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "TJ Coats",
       "batter": "Jaxon Goldberg",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1664,7 +1681,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "TJ Coats",
       "batter": "Brody Shinkle",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1691,7 +1708,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "TJ Coats",
       "batter": "Rocco Gump",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1718,7 +1735,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Shea Wendt",
       "batter": "Brylan West",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1745,7 +1762,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Shea Wendt",
       "batter": "Cian Copeland",
       "outcome": "Walk",
       "count": "3-0",
@@ -1772,7 +1789,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Joe Hauser",
       "batter": "Dylan Dubovik",
       "outcome": "Walk",
       "count": "3-2",
@@ -1799,13 +1816,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Joe Hauser",
       "batter": "Vance Sheahan",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "KSBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1826,7 +1845,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Joe Hauser",
       "batter": "Fabio Peralta",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1853,7 +1872,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Joe Hauser",
       "batter": "Jake Ogden",
       "outcome": "Walk",
       "count": "3-2",
@@ -1880,13 +1899,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Joe Hauser",
       "batter": "Daniel Cuvet",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBBFFFFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1907,13 +1928,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Joe Hauser",
       "batter": "Alex Sosa",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "FBKFBFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1934,7 +1957,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Matt Goldenbaum",
       "batter": "Derek Williams",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1961,7 +1984,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "Jack Durso",
       "batter": "Nate McHugh",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1988,7 +2011,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "Jack Durso",
       "batter": "Ben North",
       "outcome": "Walk",
       "count": "3-1",
@@ -2015,7 +2038,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "Jack Durso",
       "batter": "Cooper Fuchino",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2042,7 +2065,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "Jack Durso",
       "batter": "Isaac Wachsmann",
       "outcome": "Walk",
       "count": "3-1",
@@ -2069,7 +2092,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "Jack Durso",
       "batter": "Chris Baillargeon",
       "outcome": "Fielder's choice",
       "count": "2-2",
@@ -2096,7 +2119,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Matt Goldenbaum",
       "batter": "Brylan West",
       "outcome": "Single",
       "count": "1-1",
@@ -2123,7 +2146,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Matt Goldenbaum",
       "batter": "Cian Copeland",
       "outcome": "Groundout",
       "count": "3-1",
@@ -2150,7 +2173,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Jimmy Burke",
       "batter": "Dylan Dubovik",
       "outcome": "Lineout",
       "count": "0-0",
@@ -2177,7 +2200,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Jimmy Burke",
       "batter": "Vance Sheahan",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2204,7 +2227,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "Brixton Lofgren",
       "batter": "Nick Venteicher",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2231,7 +2254,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "Brixton Lofgren",
       "batter": "Jaxon Goldberg",
       "outcome": "Flyout",
       "count": "3-1",
@@ -2258,7 +2281,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "Brixton Lofgren",
       "batter": "Joe Washburn",
       "outcome": "Walk",
       "count": "3-2",
@@ -2285,7 +2308,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Lazaro Collera",
+      "pitcher": "Brixton Lofgren",
       "batter": "Rocco Gump",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2312,7 +2335,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Jimmy Burke",
       "batter": "Fabio Peralta",
       "outcome": "Walk",
       "count": "3-1",
@@ -2339,7 +2362,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Jimmy Burke",
       "batter": "Jailen Watkins",
       "outcome": "Walk",
       "count": "3-1",
@@ -2366,7 +2389,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Robert O'Malley",
       "batter": "Gabriel Milano",
       "outcome": "Walk",
       "count": "3-1",
@@ -2393,13 +2416,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Robert O'Malley",
       "batter": "Jackson Hugus",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BKBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -2420,13 +2445,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli Nissen",
+      "pitcher": "Robert O'Malley",
       "batter": "Bennett Gary",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "KKBBFFFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {

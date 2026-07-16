@@ -3,7 +3,7 @@
   "date": "03/01/2026",
   "away_team": "Dartmouth",
   "home_team": "LSU",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -771,7 +771,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1050,8 +1052,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Andersen",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Andersen",
         "3B": null
       },
       "score": {
@@ -1072,13 +1074,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Sam Andersen",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Andersen",
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Andersen",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Andersen",
         "3B": null
       },
       "score": {
@@ -1099,13 +1101,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Sam Andersen",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Andersen",
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Andersen",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Andersen",
         "3B": null
       },
       "score": {
@@ -1126,13 +1128,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Sam Andersen",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Andersen",
         "3B": null
       },
       "runners_after": {
         "1B": "Taer Rodriguez",
-        "2B": null,
+        "2B": "Sam Andersen",
         "3B": null
       },
       "score": {
@@ -1320,8 +1322,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "A.J. DeMastrie",
-        "2B": null,
+        "1B": null,
+        "2B": "A.J. DeMastrie",
         "3B": null
       },
       "score": {
@@ -1342,13 +1344,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "A.J. DeMastrie",
-        "2B": null,
+        "1B": null,
+        "2B": "A.J. DeMastrie",
         "3B": null
       },
       "runners_after": {
-        "1B": "A.J. DeMastrie",
-        "2B": null,
+        "1B": null,
+        "2B": "A.J. DeMastrie",
         "3B": null
       },
       "score": {
@@ -1467,7 +1469,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Eddie Albert",
+      "pitcher": "Nate Kugler",
       "batter": "Tanner Reaves",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1629,7 +1631,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eddie Albert",
+      "pitcher": "Nate Kugler",
       "batter": "Smith, Mason to 2b for Murray, H..",
       "outcome": "\u2014",
       "count": null,
@@ -1656,7 +1658,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eddie Albert",
+      "pitcher": "Nate Kugler",
       "batter": "Suarez, Milo to 1b.",
       "outcome": "\u2014",
       "count": null,
@@ -1680,6 +1682,33 @@
         "home": 2
       },
       "description": "Suarez, Milo to 1b."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Nate Kugler",
+      "batter": "Kugler, Nate to p for Albert, E..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 2
+      },
+      "description": "Kugler, Nate to p for Albert, E.."
     },
     {
       "inning": "Bottom 8",
@@ -1710,7 +1739,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nate Kugler",
+      "pitcher": "",
       "batter": "Derek Curiel",
       "outcome": "Reached on error",
       "count": "2-2",
@@ -1737,13 +1766,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nate Kugler",
+      "pitcher": "",
       "batter": "Jake Brown",
       "outcome": "Double",
       "count": "0-2",
       "pitches": "KSF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1764,7 +1795,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nate Kugler",
+      "pitcher": "",
       "batter": "Zach Yorke",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1791,7 +1822,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nate Kugler",
+      "pitcher": "",
       "batter": "Steven Milam",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1887,8 +1918,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "A.J. DeMastrie",
-        "2B": null,
+        "1B": null,
+        "2B": "A.J. DeMastrie",
         "3B": null
       },
       "score": {
@@ -1909,13 +1940,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "A.J. DeMastrie",
-        "2B": null,
+        "1B": null,
+        "2B": "A.J. DeMastrie",
         "3B": null
       },
       "runners_after": {
-        "1B": "A.J. DeMastrie",
-        "2B": null,
+        "1B": null,
+        "2B": "A.J. DeMastrie",
         "3B": null
       },
       "score": {
@@ -1936,14 +1967,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "A.J. DeMastrie",
-        "2B": null,
+        "1B": null,
+        "2B": "A.J. DeMastrie",
         "3B": null
       },
       "runners_after": {
-        "1B": "A.J. DeMastrie",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "A.J. DeMastrie"
       },
       "score": {
         "away": 0,
@@ -1963,14 +1994,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "A.J. DeMastrie",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "A.J. DeMastrie"
       },
       "runners_after": {
         "1B": "Chris Miller",
         "2B": null,
-        "3B": null
+        "3B": "A.J. DeMastrie"
       },
       "score": {
         "away": 0,
@@ -1992,12 +2023,12 @@
       "runners_before": {
         "1B": "Chris Miller",
         "2B": null,
-        "3B": null
+        "3B": "A.J. DeMastrie"
       },
       "runners_after": {
         "1B": "Chris Miller",
         "2B": null,
-        "3B": null
+        "3B": "A.J. DeMastrie"
       },
       "score": {
         "away": 0,

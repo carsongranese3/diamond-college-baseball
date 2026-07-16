@@ -3,7 +3,7 @@
   "date": "03/31/2026",
   "away_team": "Georgia St.",
   "home_team": "Georgia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -310,7 +310,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -683,6 +685,33 @@
     {
       "inning": "Top 4",
       "pitcher": "Jordan Stephens",
+      "batter": "Stephens, J. to p for Ishikawa.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 0
+      },
+      "description": "Stephens, J. to p for Ishikawa."
+    },
+    {
+      "inning": "Top 4",
+      "pitcher": "Jordan Stephens",
       "batter": "Carter",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -898,7 +927,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jordan Stephens",
+      "pitcher": "Caleb Jameson",
       "batter": "Jae",
       "outcome": "Walk",
       "count": "3-0",
@@ -959,7 +988,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Wills"
+        "Wills",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -981,7 +1011,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Caleb Jameson",
+      "pitcher": "Joe Nottingham",
       "batter": "Nick",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1041,7 +1071,9 @@
       "count": "3-2",
       "pitches": "KBFBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1096,7 +1128,8 @@
       "pitches": "BBFB",
       "rbi": true,
       "runs_scored": [
-        "Tre Phelps"
+        "Tre Phelps",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1118,7 +1151,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cooper",
+      "pitcher": "Cooper Lewis",
+      "batter": "Cooper",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": "Kolby Branch",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Kolby Branch",
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 3
+      },
+      "description": "Cooper Lewis to p for Hunter Atkin."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Cooper Lewis",
       "batter": "Daniel Jackson",
       "outcome": "Single",
       "count": "3-2",
@@ -1145,7 +1205,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cooper",
+      "pitcher": "Cooper Lewis",
       "batter": "Henry Allen",
       "outcome": "Double",
       "count": "0-0",
@@ -1172,7 +1232,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cooper",
+      "pitcher": "Cooper Lewis",
       "batter": "Rylan Lujo",
       "outcome": "Walk",
       "count": "3-0",
@@ -1199,13 +1259,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Cooper",
+      "pitcher": "Brian Crooms",
       "batter": "Jordy Oriach",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "KBBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1226,13 +1288,42 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brian",
+      "pitcher": "Brian Crooms",
+      "batter": "Brian",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Jordy Oriach",
+        "2B": "Henry Allen",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Jordy Oriach",
+        "2B": "Henry Allen",
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 4
+      },
+      "description": "Brian Crooms to p for Cooper Lewis."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Brian Crooms",
       "batter": "Bryce Calloway",
       "outcome": "Hit by pitch",
       "count": "3-0",
       "pitches": "BBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1253,7 +1344,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brian",
+      "pitcher": "Brian Crooms",
       "batter": "Brennan Hudson",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1280,7 +1371,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brian",
+      "pitcher": "Will Bartkoski",
       "batter": "Kolby Branch",
       "outcome": "Pop out",
       "count": "0-1",
@@ -1388,7 +1479,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Brian",
+      "pitcher": "Will Bartkoski",
       "batter": "Ryan Black",
       "outcome": "Walk",
       "count": "3-2",
@@ -1415,7 +1506,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Will",
+      "pitcher": "Will Bartkoski",
+      "batter": "Will",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Ryan Black",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ryan Black",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 5
+      },
+      "description": "Will Bartkos to p for Brian Crooms."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Will Bartkoski",
       "batter": "Tre Phelps",
       "outcome": "Single",
       "count": "1-1",
@@ -1442,7 +1560,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Will",
+      "pitcher": "William Petteys",
       "batter": "Daniel Jackson",
       "outcome": "Grounded into double play",
       "count": "1-1",
@@ -1469,7 +1587,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Will",
+      "pitcher": "William Petteys",
       "batter": "Henry Allen",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1550,7 +1668,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Joe Nottingham",
+      "pitcher": "Teddy Brennan",
       "batter": "Jae",
       "outcome": "Foul out",
       "count": "0-0",
@@ -1577,7 +1695,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Will",
+      "pitcher": "William Petteys",
       "batter": "Rylan Lujo",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1604,7 +1722,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "William",
+      "pitcher": "Joshua Evans",
+      "batter": "William",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 5
+      },
+      "description": "William Pett to p for Will Bartkos."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Joshua Evans",
       "batter": "Jordy Oriach",
       "outcome": "Walk",
       "count": "3-1",
@@ -1631,7 +1776,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "William",
+      "pitcher": "Nicholas Holbrook",
       "batter": "Bryce Calloway",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1658,7 +1803,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "William",
+      "pitcher": "Nicholas Holbrook",
       "batter": "Brennan Hudson",
       "outcome": "Walk",
       "count": "3-2",
@@ -1685,13 +1830,42 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Joshua",
+      "pitcher": "Michael Caruso",
+      "batter": "Joshua",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Brennan Hudson",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Brennan Hudson",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 5
+      },
+      "description": "Joshua Evans to p for William Pett."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Michael Caruso",
       "batter": "Kolby Branch",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1712,7 +1886,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Joshua",
+      "pitcher": "Michael Caruso",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1739,7 +1913,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Joshua",
+      "pitcher": "Michael Caruso",
       "batter": "Ryan Black",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1820,7 +1994,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Teddy Brennan",
+      "pitcher": "Grant Edwards",
       "batter": "Cole",
       "outcome": "Walk",
       "count": "3-0",
@@ -1854,7 +2028,9 @@
       "pitches": "KKBFF",
       "rbi": true,
       "runs_scored": [
-        "John"
+        "John",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1903,7 +2079,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Grant Edwards",
+      "pitcher": "Thomas Ellisen",
       "batter": "Sam",
       "outcome": "Double",
       "count": "2-2",
@@ -1937,7 +2113,9 @@
       "pitches": "BS",
       "rbi": true,
       "runs_scored": [
-        "Adam"
+        "Adam",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -2013,7 +2191,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Joshua",
+      "pitcher": "Michael Caruso",
       "batter": "Hunter",
       "outcome": "\u2014",
       "count": null,
@@ -2040,7 +2218,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Joshua",
+      "pitcher": "Michael Caruso",
       "batter": "Sam",
       "outcome": "\u2014",
       "count": null,
@@ -2067,7 +2245,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nicholas",
+      "pitcher": "Niall Todd",
+      "batter": "Nicholas",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 9,
+        "home": 6
+      },
+      "description": "Nicholas Hol to p for Joshua Evans."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Niall Todd",
       "batter": "Lucas",
       "outcome": "\u2014",
       "count": null,
@@ -2094,7 +2299,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nicholas",
+      "pitcher": "Niall Todd",
       "batter": "Austin",
       "outcome": "\u2014",
       "count": null,
@@ -2121,7 +2326,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nicholas",
+      "pitcher": "Jacob Crews",
       "batter": "Tre Phelps",
       "outcome": "Hit by pitch",
       "count": "2-0",
@@ -2148,7 +2353,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nicholas",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2175,7 +2380,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nicholas",
+      "pitcher": "",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -2202,13 +2407,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nicholas",
+      "pitcher": "",
       "batter": "Daniel Jackson",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "BKBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -2229,7 +2436,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Michael",
+      "pitcher": "",
+      "batter": "Michael",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Daniel Jackson",
+        "2B": null,
+        "3B": "Tre Phelps"
+      },
+      "runners_after": {
+        "1B": "Daniel Jackson",
+        "2B": null,
+        "3B": "Tre Phelps"
+      },
+      "score": {
+        "away": 9,
+        "home": 7
+      },
+      "description": "Michael Caru to p for Nicholas Hol."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Henry Allen",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2256,7 +2490,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Michael",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2271,8 +2505,8 @@
         "3B": "Tre Phelps"
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": "Tre Phelps"
       },
       "score": {
@@ -2283,22 +2517,24 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Michael",
+      "pitcher": "",
       "batter": "Rylan Lujo",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "BKS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": "Tre Phelps"
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
+        "1B": null,
         "2B": "Rylan Lujo",
         "3B": "Tre Phelps"
       },
@@ -2310,7 +2546,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Michael",
+      "pitcher": "",
       "batter": "Ty Peeples",
       "outcome": "Walk",
       "count": "3-1",
@@ -2320,7 +2556,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Daniel Jackson",
+        "1B": null,
         "2B": "Rylan Lujo",
         "3B": "Tre Phelps"
       },
@@ -2337,7 +2573,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Michael",
+      "pitcher": "",
       "batter": "Adam",
       "outcome": "\u2014",
       "count": null,
@@ -2364,7 +2600,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Michael",
+      "pitcher": "",
       "batter": "Scott Newman",
       "outcome": "Walk",
       "count": "3-0",
@@ -2391,13 +2627,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Michael",
+      "pitcher": "",
       "batter": "Brennan Hudson",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2418,13 +2656,42 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Niall",
+      "pitcher": "",
+      "batter": "Niall",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Brennan Hudson",
+        "2B": "Rylan Lujo",
+        "3B": "Tre Phelps"
+      },
+      "runners_after": {
+        "1B": "Brennan Hudson",
+        "2B": "Rylan Lujo",
+        "3B": "Tre Phelps"
+      },
+      "score": {
+        "away": 9,
+        "home": 9
+      },
+      "description": "Niall Todd to p for Michael Caru."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Kolby Branch",
       "outcome": "Fielder's choice",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2445,7 +2712,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Niall",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2472,13 +2739,16 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Niall",
+      "pitcher": "",
       "batter": "Ryan Wynn",
       "outcome": "Double",
       "count": "2-1",
       "pitches": "BSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2499,14 +2769,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Niall",
+      "pitcher": "",
       "batter": "Tre Phelps",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Tre Phelps"
+        "Tre Phelps",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -2528,7 +2799,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jacob",
+      "pitcher": "",
+      "batter": "Jacob",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": "Ryan Wynn",
+        "3B": "Kolby Branch"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Ryan Wynn",
+        "3B": "Kolby Branch"
+      },
+      "score": {
+        "away": 9,
+        "home": 14
+      },
+      "description": "Jacob Crews to p for Niall Todd."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Daniel Jackson",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2609,7 +2907,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Thomas Ellisen",
+      "pitcher": "",
       "batter": "Cole",
       "outcome": "\u2014",
       "count": null,
@@ -2636,7 +2934,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Thomas Ellisen",
+      "pitcher": "",
       "batter": "Cole",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",

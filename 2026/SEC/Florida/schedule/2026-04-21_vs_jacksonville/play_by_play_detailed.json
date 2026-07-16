@@ -3,7 +3,7 @@
   "date": "04/21/2026",
   "away_team": "Jacksonville",
   "home_team": "Florida",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -1603,8 +1603,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Sammy Mummau",
-        "3B": null
+        "2B": null,
+        "3B": "Sammy Mummau"
       },
       "score": {
         "away": 4,
@@ -1627,8 +1627,8 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Sammy Mummau",
-        "3B": null
+        "2B": null,
+        "3B": "Sammy Mummau"
       },
       "runners_after": {
         "1B": null,
@@ -1867,7 +1867,9 @@
       "count": "1-1",
       "pitches": "SB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2189,7 +2191,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ricky Reeth",
+      "pitcher": "",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,

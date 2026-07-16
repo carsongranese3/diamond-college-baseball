@@ -3,7 +3,7 @@
   "date": "04/25/2026",
   "away_team": "Texas",
   "home_team": "Vanderbilt",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -175,7 +175,9 @@
       "count": "1-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -203,7 +205,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Braden Holcomb"
+        "Braden Holcomb",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -744,7 +747,9 @@
       "count": "2-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -771,7 +776,9 @@
       "count": "1-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -927,7 +934,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Thomas Burns",
+      "pitcher": "Ruger Riojas",
       "batter": "Will Hampton",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1374,9 +1381,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ryker Waite",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Ryker Waite"
       },
       "score": {
         "away": 0,
@@ -1396,14 +1403,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Ryker Waite",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Ryker Waite"
       },
       "runners_after": {
-        "1B": "Ryker Waite",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Ryker Waite"
       },
       "score": {
         "away": 0,
@@ -1563,8 +1570,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mike Mancini",
-        "2B": null,
+        "1B": null,
+        "2B": "Mike Mancini",
         "3B": null
       },
       "score": {
@@ -1585,13 +1592,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Mike Mancini",
-        "2B": null,
+        "1B": null,
+        "2B": "Mike Mancini",
         "3B": null
       },
       "runners_after": {
         "1B": "Braden Holcomb",
-        "2B": null,
+        "2B": "Mike Mancini",
         "3B": null
       },
       "score": {
@@ -1602,23 +1609,52 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jason Flores",
-      "batter": "Colin Barczi",
-      "outcome": "Fielder's choice",
-      "count": "0-0",
-      "pitches": "",
+      "pitcher": "Thomas Burns",
+      "batter": "Flores",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
       "rbi": false,
       "runs_scored": [],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Braden Holcomb",
-        "2B": null,
+        "2B": "Mike Mancini",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Braden Holcomb",
+        "2B": "Mike Mancini",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 5
+      },
+      "description": "Flores Jas to p for Burns."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Jason Flores",
+      "batter": "Colin Barczi",
+      "outcome": "Fielder's choice",
+      "count": "0-0",
+      "pitches": "",
+      "rbi": false,
+      "runs_scored": [
+        null
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Braden Holcomb",
+        "2B": "Mike Mancini",
         "3B": null
       },
       "runners_after": {
         "1B": "Colin Barczi",
-        "2B": null,
+        "2B": "Mike Mancini",
         "3B": null
       },
       "score": {
@@ -1640,12 +1676,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Colin Barczi",
-        "2B": null,
+        "2B": "Mike Mancini",
         "3B": null
       },
       "runners_after": {
         "1B": "Tommy Goodin",
-        "2B": null,
+        "2B": "Mike Mancini",
         "3B": null
       },
       "score": {
@@ -1667,12 +1703,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Tommy Goodin",
-        "2B": null,
+        "2B": "Mike Mancini",
         "3B": null
       },
       "runners_after": {
         "1B": "Rustan Rigdon",
-        "2B": null,
+        "2B": "Mike Mancini",
         "3B": null
       },
       "score": {
@@ -1694,12 +1730,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Rustan Rigdon",
-        "2B": null,
+        "2B": "Mike Mancini",
         "3B": null
       },
       "runners_after": {
         "1B": "Rustan Rigdon",
-        "2B": null,
+        "2B": "Mike Mancini",
         "3B": null
       },
       "score": {
@@ -1914,8 +1950,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mike Mancini",
-        "2B": null,
+        "1B": null,
+        "2B": "Mike Mancini",
         "3B": null
       },
       "score": {
@@ -1936,13 +1972,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Mike Mancini",
-        "2B": null,
+        "1B": null,
+        "2B": "Mike Mancini",
         "3B": null
       },
       "runners_after": {
-        "1B": "Mike Mancini",
-        "2B": null,
+        "1B": null,
+        "2B": "Mike Mancini",
         "3B": null
       },
       "score": {

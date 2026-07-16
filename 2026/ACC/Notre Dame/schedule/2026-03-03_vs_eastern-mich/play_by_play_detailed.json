@@ -3,7 +3,7 @@
   "date": "03/03/2026",
   "away_team": "Eastern Mich.",
   "home_team": "Notre Dame",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -481,8 +481,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "TJ Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "TJ Williams",
         "3B": null
       },
       "score": {
@@ -503,13 +503,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "TJ Williams",
-        "2B": null,
+        "1B": null,
+        "2B": "TJ Williams",
         "3B": null
       },
       "runners_after": {
         "1B": "Devan Zirwas",
-        "2B": null,
+        "2B": "TJ Williams",
         "3B": null
       },
       "score": {
@@ -520,7 +520,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Aiden Zerr",
+      "pitcher": "Xavier Hirsch",
       "batter": "Ty Stecko",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -531,12 +531,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Devan Zirwas",
-        "2B": null,
+        "2B": "TJ Williams",
         "3B": null
       },
       "runners_after": {
         "1B": "Devan Zirwas",
-        "2B": null,
+        "2B": "TJ Williams",
         "3B": null
       },
       "score": {
@@ -547,23 +547,25 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Aiden Zerr",
+      "pitcher": "Xavier Hirsch",
       "batter": "Nathan Borchardt",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Devan Zirwas",
-        "2B": null,
+        "2B": "TJ Williams",
         "3B": null
       },
       "runners_after": {
         "1B": "Nathan Borchardt",
-        "2B": null,
+        "2B": "TJ Williams",
         "3B": null
       },
       "score": {
@@ -574,7 +576,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Aiden Zerr",
+      "pitcher": "Xavier Hirsch",
       "batter": "Kevin Krill",
       "outcome": "Groundout",
       "count": "2-2",
@@ -585,12 +587,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Nathan Borchardt",
-        "2B": null,
+        "2B": "TJ Williams",
         "3B": null
       },
       "runners_after": {
         "1B": "Nathan Borchardt",
-        "2B": null,
+        "2B": "TJ Williams",
         "3B": null
       },
       "score": {
@@ -661,7 +663,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -709,7 +713,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Carter White",
       "batter": "Noah Coy",
       "outcome": "Walk",
       "count": "3-0",
@@ -736,13 +740,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Carter White",
       "batter": "Mark Quatrani",
       "outcome": "Hit by pitch",
       "count": "0-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -763,13 +769,16 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Carter White",
       "batter": "Bino Watters",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "KSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -790,7 +799,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Nick Keane",
       "batter": "Jayce Lee",
       "outcome": "Walk",
       "count": "3-2",
@@ -817,13 +826,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Nick Keane",
       "batter": "Parker Brzustewicz",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -844,13 +855,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Nick Keane",
       "batter": "Mason Barth",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "SKBBBFFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -871,13 +884,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Cal Rutherford",
       "batter": null,
       "outcome": "Baserunning",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Dylan Passo"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -887,7 +902,7 @@
       },
       "runners_after": {
         "1B": "Mason Barth",
-        "2B": "Dylan Passo",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -898,7 +913,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Cal Rutherford",
       "batter": "Brandon Logan",
       "outcome": "Walk",
       "count": "3-0",
@@ -909,12 +924,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Mason Barth",
-        "2B": "Dylan Passo",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Brandon Logan",
-        "2B": "Dylan Passo",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -925,7 +940,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Cal Rutherford",
       "batter": "Drew Berkland",
       "outcome": "Fielder's choice",
       "count": "3-2",
@@ -936,12 +951,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Brandon Logan",
-        "2B": "Dylan Passo",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Drew Berkland",
-        "2B": "Dylan Passo",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -952,7 +967,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Aiden Zerr",
+      "pitcher": "Xavier Hirsch",
       "batter": "Bruce Jellison",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -979,7 +994,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Aiden Zerr",
+      "pitcher": "Xavier Hirsch",
       "batter": "Phillip Thigpen",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1006,7 +1021,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Aiden Zerr",
+      "pitcher": "Xavier Hirsch",
       "batter": "John Hale",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1033,7 +1048,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Cal Rutherford",
       "batter": "Noah Coy",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1060,7 +1075,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Cal Rutherford",
       "batter": "Mark Quatrani",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1087,7 +1102,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Cal Rutherford",
       "batter": "Bino Watters",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1114,7 +1129,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Aiden Zerr",
+      "pitcher": "Xavier Hirsch",
       "batter": "TJ Williams",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1141,7 +1156,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Aiden Zerr",
+      "pitcher": "Xavier Hirsch",
       "batter": "Keegan Knupp",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1168,7 +1183,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Aiden Zerr",
+      "pitcher": "Xavier Hirsch",
       "batter": "Devan Zirwas",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1195,7 +1210,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Cal Rutherford",
       "batter": "Jayce Lee",
       "outcome": "Triple",
       "count": "3-2",
@@ -1222,13 +1237,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Cal Rutherford",
       "batter": null,
       "outcome": "Baserunning",
       "count": "1-2",
       "pitches": "FBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1249,7 +1266,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Cal Rutherford",
       "batter": "Mason Barth",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1276,7 +1293,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Cal Rutherford",
       "batter": "Dylan Passo",
       "outcome": "Pop out",
       "count": "0-0",
@@ -1303,7 +1320,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Aiden Zerr",
+      "pitcher": "William Jaisle",
       "batter": "Ty Stecko",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1330,7 +1347,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Aiden Zerr",
+      "pitcher": "William Jaisle",
       "batter": "Nathan Borchardt",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1357,7 +1374,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Aiden Zerr",
+      "pitcher": "William Jaisle",
       "batter": "Kevin Krill",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1384,7 +1401,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Cal Rutherford",
       "batter": "Brandon Logan",
       "outcome": "Walk",
       "count": "3-0",
@@ -1411,7 +1428,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Cal Rutherford",
       "batter": "Drew Berkland",
       "outcome": "Single",
       "count": "0-2",
@@ -1438,7 +1455,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Henry Slaby",
       "batter": "Noah Coy",
       "outcome": "Infield fly",
       "count": "2-2",
@@ -1465,13 +1482,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Henry Slaby",
       "batter": "Mark Quatrani",
       "outcome": "Groundout",
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1492,7 +1511,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Henry Slaby",
       "batter": "Bino Watters",
       "outcome": "Walk",
       "count": "3-2",
@@ -1519,7 +1538,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Henry Slaby",
       "batter": "Jayce Lee",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1546,7 +1565,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Aiden Zerr",
+      "pitcher": "Chase Van Ameyde",
       "batter": "Bruce Jellison",
       "outcome": "Walk",
       "count": "3-0",
@@ -1573,7 +1592,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Aiden Zerr",
+      "pitcher": "Chase Van Ameyde",
       "batter": "Phillip Thigpen",
       "outcome": "Walk",
       "count": "3-1",
@@ -1600,7 +1619,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Aiden Zerr",
+      "pitcher": "Chase Van Ameyde",
       "batter": "John Hale",
       "outcome": "Lineout",
       "count": "2-1",
@@ -1627,7 +1646,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Aiden Zerr",
+      "pitcher": "Chase Van Ameyde",
       "batter": "TJ Williams",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1654,7 +1673,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Aiden Zerr",
+      "pitcher": "Chase Van Ameyde",
       "batter": "Keegan Knupp",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1681,7 +1700,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Henry Slaby",
       "batter": "Parker Brzustewicz",
       "outcome": "Walk",
       "count": "3-1",
@@ -1708,7 +1727,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Henry Slaby",
       "batter": "Mason Barth",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -1735,7 +1754,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Ethan Rowland",
       "batter": "Dylan Passo",
       "outcome": "Infield fly",
       "count": "1-1",
@@ -1762,7 +1781,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Ethan Rowland",
       "batter": "Brandon Logan",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1789,7 +1808,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Jack Angus",
       "batter": "Drew Berkland",
       "outcome": "Fielder's choice",
       "count": "0-1",
@@ -1816,7 +1835,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Aiden Zerr",
+      "pitcher": "Garrett Snyder",
       "batter": "Tristan Crane",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1843,7 +1862,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Aiden Zerr",
+      "pitcher": "Garrett Snyder",
       "batter": "Ty Stecko",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1870,7 +1889,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Aiden Zerr",
+      "pitcher": "Garrett Snyder",
       "batter": "Demir Heidelberg",
       "outcome": "Single",
       "count": "0-0",
@@ -1897,7 +1916,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Aiden Zerr",
+      "pitcher": "Garrett Snyder",
       "batter": "Kevin Krill",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1924,7 +1943,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Jack Angus",
       "batter": "Noah Coy",
       "outcome": "Foul out",
       "count": "0-0",
@@ -1951,7 +1970,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Jack Angus",
       "batter": "Caleb Ricks",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1978,7 +1997,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Gregory Kennedy",
       "batter": "Andrew Graham",
       "outcome": "Walk",
       "count": "3-2",
@@ -2005,13 +2024,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Gregory Kennedy",
       "batter": "Jayce Lee",
       "outcome": "Triple",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2032,7 +2053,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Malcolm Gillies",
       "batter": "Parker Brzustewicz",
       "outcome": "Walk",
       "count": "3-1",
@@ -2059,13 +2080,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Eli Henderson",
+      "pitcher": "Malcolm Gillies",
       "batter": "Mason Barth",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "BFBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {

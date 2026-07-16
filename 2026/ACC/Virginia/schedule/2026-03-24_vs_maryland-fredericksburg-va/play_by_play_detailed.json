@@ -3,7 +3,7 @@
   "date": "03/24/2026",
   "away_team": "Maryland",
   "home_team": "Virginia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -265,8 +265,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jordan Crosland",
-        "2B": null,
+        "1B": null,
+        "2B": "Jordan Crosland",
         "3B": null
       },
       "score": {
@@ -287,13 +287,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jordan Crosland",
-        "2B": null,
+        "1B": null,
+        "2B": "Jordan Crosland",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jordan Crosland",
-        "2B": null,
+        "1B": null,
+        "2B": "Jordan Crosland",
         "3B": null
       },
       "score": {
@@ -373,8 +373,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Harrison Didawick",
-        "2B": null,
+        "1B": null,
+        "2B": "Harrison Didawick",
         "3B": null
       },
       "score": {
@@ -395,13 +395,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Harrison Didawick",
-        "2B": null,
+        "1B": null,
+        "2B": "Harrison Didawick",
         "3B": null
       },
       "runners_after": {
-        "1B": "Harrison Didawick",
-        "2B": null,
+        "1B": null,
+        "2B": "Harrison Didawick",
         "3B": null
       },
       "score": {
@@ -418,17 +418,19 @@
       "count": "2-2",
       "pitches": "KBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Harrison Didawick",
-        "2B": null,
+        "1B": null,
+        "2B": "Harrison Didawick",
         "3B": null
       },
       "runners_after": {
         "1B": "Kyle Johnson",
-        "2B": null,
+        "2B": "Harrison Didawick",
         "3B": null
       },
       "score": {
@@ -450,12 +452,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Kyle Johnson",
-        "2B": null,
+        "2B": "Harrison Didawick",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Harrison Didawick",
         "3B": null
       },
       "score": {
@@ -553,7 +555,9 @@
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -580,7 +584,9 @@
       "count": "1-2",
       "pitches": "BKK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -601,13 +607,15 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Kevin Jaxel",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ryan Costello"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -617,7 +625,7 @@
       },
       "runners_after": {
         "1B": "Ty Kaunas",
-        "2B": "Ryan Costello",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -628,7 +636,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Kevin Jaxel",
       "batter": "David Mendez",
       "outcome": "Pop out",
       "count": "3-2",
@@ -639,12 +647,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Ty Kaunas",
-        "2B": "Ryan Costello",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Ty Kaunas",
-        "2B": "Ryan Costello",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -655,7 +663,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Kevin Jaxel",
       "batter": "Rylen Stockton",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -666,12 +674,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Ty Kaunas",
-        "2B": "Ryan Costello",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Ty Kaunas",
-        "2B": "Ryan Costello",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -763,13 +771,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Brayden Ryan",
       "batter": "AJ Gracia",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -790,13 +800,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Brayden Ryan",
       "batter": "Sam Harris",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -817,13 +829,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Brayden Ryan",
       "batter": "Joe Tiroly",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "FBBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -844,7 +858,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Brayden Ryan",
       "batter": "Harrison Didawick",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -871,7 +885,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Brayden Ryan",
       "batter": "Noah Murray",
       "outcome": "Flyout",
       "count": "0-1",
@@ -898,7 +912,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Kevin Jaxel",
       "batter": "Jordan Crosland",
       "outcome": "Single",
       "count": "1-0",
@@ -925,7 +939,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Kevin Jaxel",
       "batter": "JonesII,Paul doubled to right center (1-0 B); Crosland,Jordan advanced from first base to third base.",
       "outcome": "Double",
       "count": "1-0",
@@ -952,13 +966,15 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Kevin Jaxel",
       "batter": null,
       "outcome": "Baserunning",
       "count": "3-2",
       "pitches": "KBBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -979,7 +995,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Kevin Jaxel",
       "batter": "Aden Hill",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1006,7 +1022,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Kevin Jaxel",
       "batter": "Brayden Martin",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1033,7 +1049,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Brayden Ryan",
       "batter": "Kyle Johnson",
       "outcome": "Foul out",
       "count": "3-2",
@@ -1060,7 +1076,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Brayden Ryan",
       "batter": "Jake Weatherspoon",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1087,7 +1103,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Brayden Ryan",
       "batter": "Griffin Enis",
       "outcome": "Single",
       "count": "1-2",
@@ -1114,7 +1130,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Brayden Ryan",
       "batter": "Eric Becker",
       "outcome": "Single",
       "count": "0-0",
@@ -1141,13 +1157,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Brayden Ryan",
       "batter": "AJ Gracia",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "KBFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1168,7 +1186,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Brayden Ryan",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1183,8 +1201,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "AJ Gracia",
-        "2B": null,
+        "1B": null,
+        "2B": "AJ Gracia",
         "3B": null
       },
       "score": {
@@ -1195,7 +1213,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Brayden Ryan",
       "batter": "Sam Harris",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1205,13 +1223,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "AJ Gracia",
-        "2B": null,
+        "1B": null,
+        "2B": "AJ Gracia",
         "3B": null
       },
       "runners_after": {
-        "1B": "AJ Gracia",
-        "2B": null,
+        "1B": null,
+        "2B": "AJ Gracia",
         "3B": null
       },
       "score": {
@@ -1222,7 +1240,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Kevin Jaxel",
       "batter": "Ty Kaunas",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1249,7 +1267,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Kevin Jaxel",
       "batter": "Ryan Costello",
       "outcome": "Double",
       "count": "0-0",
@@ -1276,7 +1294,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Kevin Jaxel",
       "batter": "David Mendez",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1303,7 +1321,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Kevin Jaxel",
       "batter": "Rylen Stockton",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1330,7 +1348,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Brayden Ryan",
       "batter": "Joe Tiroly",
       "outcome": "Reached on error",
       "count": "0-0",
@@ -1357,7 +1375,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Brayden Ryan",
       "batter": "Harrison Didawick",
       "outcome": "Grounded into double play",
       "count": "2-1",
@@ -1384,7 +1402,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Brayden Ryan",
       "batter": "Noah Murray",
       "outcome": "Single",
       "count": "1-2",
@@ -1411,7 +1429,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Brayden Ryan",
       "batter": "Kyle Johnson",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1438,7 +1456,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Kevin Jaxel",
       "batter": "Jordan Crosland",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1465,7 +1483,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Brendan Cowen",
       "batter": "JonesII,Paul singled up the middle (0-1 K).",
       "outcome": "Single",
       "count": "0-1",
@@ -1492,7 +1510,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Brendan Cowen",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1507,8 +1525,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "JonesII,Paul singled up the middle (0-1 K).",
-        "2B": null,
+        "1B": null,
+        "2B": "JonesII,Paul singled up the middle (0-1 K).",
         "3B": null
       },
       "score": {
@@ -1519,7 +1537,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Brendan Cowen",
       "batter": "Jackson Sirois",
       "outcome": "Single",
       "count": "3-2",
@@ -1529,13 +1547,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "JonesII,Paul singled up the middle (0-1 K).",
-        "2B": null,
+        "1B": null,
+        "2B": "JonesII,Paul singled up the middle (0-1 K).",
         "3B": null
       },
       "runners_after": {
         "1B": "Jackson Sirois",
-        "2B": null,
+        "2B": "JonesII,Paul singled up the middle (0-1 K).",
         "3B": null
       },
       "score": {
@@ -1546,18 +1564,20 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Brendan Cowen",
       "batter": "Aden Hill",
       "outcome": "Double",
       "count": "2-1",
       "pitches": "BKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Jackson Sirois",
-        "2B": null,
+        "2B": "JonesII,Paul singled up the middle (0-1 K).",
         "3B": null
       },
       "runners_after": {
@@ -1573,13 +1593,15 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Brendan Cowen",
       "batter": "Brayden Martin",
       "outcome": "Reached on error",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1600,7 +1622,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Brendan Cowen",
       "batter": "Ty Kaunas",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1627,7 +1649,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Brendan Cowen",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -1642,9 +1664,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brayden Martin",
+        "1B": null,
         "2B": "Aden Hill",
-        "3B": null
+        "3B": "Brayden Martin"
       },
       "score": {
         "away": 6,
@@ -1654,7 +1676,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Brendan Cowen",
       "batter": "Ryan Costello",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1664,14 +1686,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brayden Martin",
+        "1B": null,
         "2B": "Aden Hill",
-        "3B": null
+        "3B": "Brayden Martin"
       },
       "runners_after": {
-        "1B": "Brayden Martin",
+        "1B": null,
         "2B": "Aden Hill",
-        "3B": null
+        "3B": "Brayden Martin"
       },
       "score": {
         "away": 6,
@@ -1681,7 +1703,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Ryan Bailey",
       "batter": "Jake Weatherspoon",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1708,7 +1730,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Ryan Bailey",
       "batter": "Griffin Enis",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1735,7 +1757,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Ryan Bailey",
       "batter": "Eric Becker",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1762,7 +1784,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Matt Augustin",
       "batter": "David Mendez",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1789,7 +1811,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Matt Augustin",
       "batter": "Rylen Stockton",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1816,7 +1838,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Matt Augustin",
       "batter": "Jordan Crosland",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1843,7 +1865,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Ryan Bailey",
       "batter": "AJ Gracia",
       "outcome": "Single",
       "count": "2-2",
@@ -1870,7 +1892,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Ryan Bailey",
       "batter": "Sam Harris",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1897,7 +1919,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Ryan Bailey",
       "batter": "Joe Tiroly",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1924,7 +1946,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Ryan Bailey",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1939,8 +1961,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "AJ Gracia",
-        "2B": null,
+        "1B": null,
+        "2B": "AJ Gracia",
         "3B": null
       },
       "score": {
@@ -1951,22 +1973,24 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Ryan Bailey",
       "batter": "Harrison Didawick",
       "outcome": "Double",
       "count": "3-2",
       "pitches": "KBBFFFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "AJ Gracia",
-        "2B": null,
+        "1B": null,
+        "2B": "AJ Gracia",
         "3B": null
       },
       "runners_after": {
-        "1B": "AJ Gracia",
+        "1B": null,
         "2B": "Harrison Didawick",
         "3B": null
       },
@@ -1978,17 +2002,19 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Ryan Bailey",
       "batter": "Noah Murray",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "AJ Gracia",
+        "1B": null,
         "2B": "Harrison Didawick",
         "3B": null
       },
@@ -2005,7 +2031,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Ryan Bailey",
       "batter": "Kyle Johnson",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2032,7 +2058,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Matt Augustin",
       "batter": "JonesII,Paul struck out looking (1-2 BSSK).",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2059,7 +2085,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Tyler Kapa",
       "batter": "Jackson Sirois",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2086,7 +2112,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jayden Stroman",
+      "pitcher": "Tyler Kapa",
       "batter": "Aden Hill",
       "outcome": "Flyout",
       "count": "1-2",
@@ -2113,7 +2139,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Logan Hastings",
       "batter": "Jake Weatherspoon",
       "outcome": "Single",
       "count": "2-1",
@@ -2140,7 +2166,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Logan Hastings",
       "batter": "Antonio Perrotta",
       "outcome": "Single",
       "count": "3-2",
@@ -2167,7 +2193,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Logan Hastings",
       "batter": "Eric Becker",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -2194,13 +2220,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Logan Hastings",
       "batter": "AJ Gracia",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBBKSFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -2221,7 +2249,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Logan Hastings",
       "batter": "Sam Harris",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2248,13 +2276,17 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Logan Hastings",
       "batter": "Joe Tiroly",
       "outcome": "Double",
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2275,7 +2307,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Landon Edwards",
       "batter": "Harrison Didawick",
       "outcome": "Groundout",
       "count": "1-0",
@@ -2302,7 +2334,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Landon Edwards",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -2318,8 +2350,8 @@
       },
       "runners_after": {
         "1B": "AJ Gracia",
-        "2B": "Joe Tiroly",
-        "3B": null
+        "2B": null,
+        "3B": "Joe Tiroly"
       },
       "score": {
         "away": 6,
@@ -2329,24 +2361,26 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Landon Edwards",
       "batter": "Noah Murray",
       "outcome": "Single",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "AJ Gracia",
-        "2B": "Joe Tiroly",
-        "3B": null
+        "2B": null,
+        "3B": "Joe Tiroly"
       },
       "runners_after": {
         "1B": "Noah Murray",
-        "2B": "Joe Tiroly",
-        "3B": null
+        "2B": null,
+        "3B": "Joe Tiroly"
       },
       "score": {
         "away": 6,
@@ -2356,7 +2390,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Landon Edwards",
       "batter": "Kyle Johnson",
       "outcome": "Walk",
       "count": "3-1",
@@ -2367,13 +2401,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Noah Murray",
-        "2B": "Joe Tiroly",
-        "3B": null
+        "2B": null,
+        "3B": "Joe Tiroly"
       },
       "runners_after": {
         "1B": "Kyle Johnson",
-        "2B": "Joe Tiroly",
-        "3B": null
+        "2B": null,
+        "3B": "Joe Tiroly"
       },
       "score": {
         "away": 6,
@@ -2383,7 +2417,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Landon Edwards",
       "batter": "Jake Weatherspoon",
       "outcome": "Walk",
       "count": "3-1",
@@ -2394,13 +2428,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kyle Johnson",
-        "2B": "Joe Tiroly",
-        "3B": null
+        "2B": null,
+        "3B": "Joe Tiroly"
       },
       "runners_after": {
         "1B": "Jake Weatherspoon",
-        "2B": "Joe Tiroly",
-        "3B": null
+        "2B": null,
+        "3B": "Joe Tiroly"
       },
       "score": {
         "away": 6,
@@ -2410,24 +2444,26 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Landon Edwards",
       "batter": "Zach Jackson",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jake Weatherspoon",
-        "2B": "Joe Tiroly",
-        "3B": null
+        "2B": null,
+        "3B": "Joe Tiroly"
       },
       "runners_after": {
         "1B": "Zach Jackson",
-        "2B": "Joe Tiroly",
-        "3B": null
+        "2B": null,
+        "3B": "Joe Tiroly"
       },
       "score": {
         "away": 6,
@@ -2437,24 +2473,26 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Landon Edwards",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Zach Jackson"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Zach Jackson",
-        "2B": "Joe Tiroly",
-        "3B": null
+        "2B": null,
+        "3B": "Joe Tiroly"
       },
       "runners_after": {
-        "1B": "Zach Jackson",
-        "2B": "Joe Tiroly",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Joe Tiroly"
       },
       "score": {
         "away": 6,
@@ -2464,24 +2502,27 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nic Morlang",
+      "pitcher": "Landon Edwards",
       "batter": "Eric Becker",
       "outcome": "Double",
       "count": "2-1",
       "pitches": "BBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Zach Jackson",
-        "2B": "Joe Tiroly",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Joe Tiroly"
       },
       "runners_after": {
-        "1B": "Zach Jackson",
+        "1B": null,
         "2B": "Eric Becker",
-        "3B": null
+        "3B": "Joe Tiroly"
       },
       "score": {
         "away": 6,

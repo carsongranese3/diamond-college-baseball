@@ -3,7 +3,7 @@
   "date": "03/31/2026",
   "away_team": "Virginia Tech",
   "home_team": "Radford",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -367,6 +367,33 @@
     {
       "inning": "Top 2",
       "pitcher": "Eli Baker",
+      "batter": "BAKER, E. to p for NOONAN, P..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 0
+      },
+      "description": "BAKER, E. to p for NOONAN, P.."
+    },
+    {
+      "inning": "Top 2",
+      "pitcher": "Eli Baker",
       "batter": "Pete Daniel",
       "outcome": "Groundout",
       "count": "1-0",
@@ -435,7 +462,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Breckin Nace",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -457,12 +484,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Breckin Nace",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Breckin Nace",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -555,7 +582,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Eli Baker",
+      "pitcher": "Will Palmer",
       "batter": "Sam Grube",
       "outcome": "Hit by pitch",
       "count": "0-2",
@@ -582,7 +609,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Eli Baker",
+      "pitcher": "Will Palmer",
       "batter": "Henry Cooke",
       "outcome": "Double",
       "count": "3-1",
@@ -612,7 +639,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Eli Baker",
+      "pitcher": "Will Palmer",
       "batter": "Nick Locurto",
       "outcome": "Home run",
       "count": "0-1",
@@ -639,6 +666,33 @@
         "home": 0
       },
       "description": "N. Locurto homered to left field, 2 RBI (0-1 K) H. Cooke scored."
+    },
+    {
+      "inning": "Top 3",
+      "pitcher": "Will Palmer",
+      "batter": "PALMER, W. to p for BAKER, E..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 8,
+        "home": 0
+      },
+      "description": "PALMER, W. to p for BAKER, E.."
     },
     {
       "inning": "Top 3",
@@ -723,7 +777,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Will Palmer",
+      "pitcher": "Mason Hatcher",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -738,8 +792,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Gates",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Gates",
         "3B": null
       },
       "score": {
@@ -750,7 +804,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Will Palmer",
+      "pitcher": "Mason Hatcher",
       "batter": "Treyson Hughes",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -760,13 +814,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Sam Gates",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Gates",
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Gates",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Gates",
         "3B": null
       },
       "score": {
@@ -846,8 +900,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Sparrer",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Sparrer",
         "3B": null
       },
       "score": {
@@ -864,16 +918,18 @@
       "count": "2-2",
       "pitches": "KBBFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Tyler Sparrer"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tyler Sparrer",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Sparrer",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Sparrer",
+        "1B": null,
         "2B": "Junho Son",
         "3B": null
       },
@@ -891,17 +947,19 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Junho Son"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tyler Sparrer",
+        "1B": null,
         "2B": "Junho Son",
         "3B": null
       },
       "runners_after": {
         "1B": "Hunter Keen",
-        "2B": "Junho Son",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -923,12 +981,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Hunter Keen",
-        "2B": "Junho Son",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Eli Hudgins",
-        "2B": "Junho Son",
+        "2B": "Hunter Keen",
         "3B": null
       },
       "score": {
@@ -950,13 +1008,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Eli Hudgins",
-        "2B": "Junho Son",
+        "2B": "Hunter Keen",
         "3B": null
       },
       "runners_after": {
         "1B": "Breckin Nace",
-        "2B": "Junho Son",
-        "3B": null
+        "2B": "Eli Hudgins",
+        "3B": "Hunter Keen"
       },
       "score": {
         "away": 8,
@@ -966,24 +1024,53 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "J.",
-      "batter": "Brady Powell",
-      "outcome": "Hit by pitch",
-      "count": "3-0",
-      "pitches": "BBBB",
-      "rbi": true,
+      "pitcher": "Jacob Exum",
+      "batter": "J. Exum",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
       "runs_scored": [],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Breckin Nace",
-        "2B": "Junho Son",
-        "3B": null
+        "2B": "Eli Hudgins",
+        "3B": "Hunter Keen"
+      },
+      "runners_after": {
+        "1B": "Breckin Nace",
+        "2B": "Eli Hudgins",
+        "3B": "Hunter Keen"
+      },
+      "score": {
+        "away": 8,
+        "home": 2
+      },
+      "description": "J. Exum to p for A. Robertson."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Jacob Exum",
+      "batter": "Brady Powell",
+      "outcome": "Hit by pitch",
+      "count": "3-0",
+      "pitches": "BBBB",
+      "rbi": true,
+      "runs_scored": [
+        "Hunter Keen"
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Breckin Nace",
+        "2B": "Eli Hudgins",
+        "3B": "Hunter Keen"
       },
       "runners_after": {
         "1B": "Brady Powell",
-        "2B": "Junho Son",
-        "3B": null
+        "2B": "Breckin Nace",
+        "3B": "Eli Hudgins"
       },
       "score": {
         "away": 8,
@@ -993,7 +1080,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "J.",
+      "pitcher": "Jacob Exum",
       "batter": "Noah Toole",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1004,13 +1091,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Brady Powell",
-        "2B": "Junho Son",
-        "3B": null
+        "2B": "Breckin Nace",
+        "3B": "Eli Hudgins"
       },
       "runners_after": {
         "1B": "Brady Powell",
-        "2B": "Junho Son",
-        "3B": null
+        "2B": "Breckin Nace",
+        "3B": "Eli Hudgins"
       },
       "score": {
         "away": 8,
@@ -1020,7 +1107,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Will Palmer",
+      "pitcher": "Mason Hatcher",
       "batter": "Pete Daniel",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1047,7 +1134,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Will Palmer",
+      "pitcher": "Mason Hatcher",
       "batter": "Ethan Ball",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1074,7 +1161,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Will Palmer",
+      "pitcher": "Mason Hatcher",
       "batter": "Sam Grube",
       "outcome": "Single",
       "count": "2-1",
@@ -1101,7 +1188,34 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Mason Hatcher",
+      "pitcher": "Ben Keefe",
+      "batter": "HATCHER, M. to p for PALMER, W..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Sam Grube",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Sam Grube",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 8,
+        "home": 3
+      },
+      "description": "HATCHER, M. to p for PALMER, W.."
+    },
+    {
+      "inning": "Top 4",
+      "pitcher": "Ben Keefe",
       "batter": "Henry Cooke",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1128,7 +1242,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "J.",
+      "pitcher": "Jacob Exum",
       "batter": "Mason Self",
       "outcome": "Groundout",
       "count": "3-1",
@@ -1155,7 +1269,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "J.",
+      "pitcher": "Jacob Exum",
       "batter": "Tyler Sparrer",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1182,7 +1296,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "J.",
+      "pitcher": "Brody Roe",
       "batter": "Brady Whitacre",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1209,7 +1323,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Mason Hatcher",
+      "pitcher": "Ben Keefe",
       "batter": "Nick Locurto",
       "outcome": "Home run",
       "count": "0-2",
@@ -1238,7 +1352,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Mason Hatcher",
+      "pitcher": "Ben Keefe",
       "batter": "Sam Gates",
       "outcome": "Single",
       "count": "3-2",
@@ -1265,7 +1379,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Mason Hatcher",
+      "pitcher": "Ben Keefe",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1280,8 +1394,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Gates",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Gates",
         "3B": null
       },
       "score": {
@@ -1292,7 +1406,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Mason Hatcher",
+      "pitcher": "Ben Keefe",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -1302,8 +1416,8 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Sam Gates",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Gates",
         "3B": null
       },
       "runners_after": {
@@ -1319,7 +1433,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Mason Hatcher",
+      "pitcher": "Ben Keefe",
       "batter": "Ethan Gibson",
       "outcome": "Walk",
       "count": "3-2",
@@ -1347,8 +1461,8 @@
     {
       "inning": "Top 5",
       "pitcher": "Ben Keefe",
-      "batter": null,
-      "outcome": "Stolen base",
+      "batter": "KEEFE, B. to p for HATCHER, M..",
+      "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
@@ -1369,11 +1483,38 @@
         "away": 9,
         "home": 3
       },
+      "description": "KEEFE, B. to p for HATCHER, M.."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Hunter Howard",
+      "batter": null,
+      "outcome": "Stolen base",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Ethan Gibson",
+        "2B": null,
+        "3B": "Sam Gates"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Ethan Gibson",
+        "3B": "Sam Gates"
+      },
+      "score": {
+        "away": 9,
+        "home": 3
+      },
       "description": "E. Gibson stole second."
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ben Keefe",
+      "pitcher": "Hunter Howard",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -1385,8 +1526,8 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Ethan Gibson",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethan Gibson",
         "3B": "Sam Gates"
       },
       "runners_after": {
@@ -1402,7 +1543,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ben Keefe",
+      "pitcher": "Hunter Howard",
       "batter": "Anderson French",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1429,7 +1570,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ben Keefe",
+      "pitcher": "Hunter Howard",
       "batter": "Treyson Hughes",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1458,7 +1599,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ben Keefe",
+      "pitcher": "Hunter Howard",
       "batter": "Pete Daniel",
       "outcome": "Single",
       "count": "2-2",
@@ -1485,7 +1626,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ben Keefe",
+      "pitcher": "Hunter Howard",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1512,7 +1653,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "J.",
+      "pitcher": "Brody Roe",
       "batter": "S. Gates",
       "outcome": "\u2014",
       "count": null,
@@ -1539,7 +1680,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "J.",
+      "pitcher": "Brody Roe",
       "batter": "H. Lutterman",
       "outcome": "\u2014",
       "count": null,
@@ -1566,7 +1707,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "B.",
+      "pitcher": "Danny Lazaro",
+      "batter": "B. Roe",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 11,
+        "home": 3
+      },
+      "description": "B. Roe to p for J. Exum."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Danny Lazaro",
       "batter": "Junho Son",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1593,7 +1761,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "B.",
+      "pitcher": "Danny Lazaro",
       "batter": "Hunter Keen",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1620,7 +1788,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "B.",
+      "pitcher": "Danny Lazaro",
       "batter": "Eli Hudgins",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1647,7 +1815,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ben Keefe",
+      "pitcher": "Hunter Howard",
       "batter": "Ethan Ball",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1674,7 +1842,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ben Keefe",
+      "pitcher": "Hunter Howard",
       "batter": "Sam Grube",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1701,7 +1869,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ben Keefe",
+      "pitcher": "Hunter Howard",
       "batter": "Henry Cooke",
       "outcome": "Groundout",
       "count": "2-0",
@@ -1728,7 +1896,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "D.",
+      "pitcher": "Danny Lazaro",
+      "batter": "D. Lazaro",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 11,
+        "home": 3
+      },
+      "description": "D. Lazaro to p for B. Roe."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Danny Lazaro",
       "batter": "Breckin Nace",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1755,7 +1950,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "D.",
+      "pitcher": "Danny Lazaro",
       "batter": "Brady Powell",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1782,7 +1977,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "D.",
+      "pitcher": "Danny Lazaro",
       "batter": "Noah Toole",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1810,6 +2005,33 @@
     {
       "inning": "Top 7",
       "pitcher": "Hunter Howard",
+      "batter": "HOWARD, H. to p for KEEFE, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 11,
+        "home": 3
+      },
+      "description": "HOWARD, H. to p for KEEFE, B.."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Corey Costello",
       "batter": "Nick Locurto",
       "outcome": "Walk",
       "count": "3-1",
@@ -1836,7 +2058,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Hunter Howard",
+      "pitcher": "Corey Costello",
       "batter": "Sam Gates",
       "outcome": "Single",
       "count": "2-2",
@@ -1863,7 +2085,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Hunter Howard",
+      "pitcher": "Corey Costello",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1878,8 +2100,8 @@
         "3B": "Nick Locurto"
       },
       "runners_after": {
-        "1B": "Sam Gates",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Gates",
         "3B": "Nick Locurto"
       },
       "score": {
@@ -1890,7 +2112,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Hunter Howard",
+      "pitcher": "Corey Costello",
       "batter": "Owen Petrich",
       "outcome": "Walk",
       "count": "3-2",
@@ -1900,13 +2122,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Sam Gates",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Gates",
         "3B": "Nick Locurto"
       },
       "runners_after": {
         "1B": "Owen Petrich",
-        "2B": null,
+        "2B": "Sam Gates",
         "3B": "Nick Locurto"
       },
       "score": {
@@ -1917,7 +2139,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Hunter Howard",
+      "pitcher": "Corey Costello",
       "batter": "Anderson French",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1928,12 +2150,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Owen Petrich",
-        "2B": null,
+        "2B": "Sam Gates",
         "3B": "Nick Locurto"
       },
       "runners_after": {
         "1B": "Owen Petrich",
-        "2B": null,
+        "2B": "Sam Gates",
         "3B": "Nick Locurto"
       },
       "score": {
@@ -1944,7 +2166,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Hunter Howard",
+      "pitcher": "Corey Costello",
       "batter": "Hudson Lutterman",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1955,12 +2177,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Owen Petrich",
-        "2B": null,
+        "2B": "Sam Gates",
         "3B": "Nick Locurto"
       },
       "runners_after": {
         "1B": "Owen Petrich",
-        "2B": null,
+        "2B": "Sam Gates",
         "3B": "Nick Locurto"
       },
       "score": {
@@ -1971,7 +2193,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Hunter Howard",
+      "pitcher": "Andrew Steinhaus",
       "batter": "Pete Daniel",
       "outcome": "Walk",
       "count": "3-2",
@@ -1984,13 +2206,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Owen Petrich",
-        "2B": null,
+        "2B": "Sam Gates",
         "3B": "Nick Locurto"
       },
       "runners_after": {
         "1B": "Pete Daniel",
         "2B": "Owen Petrich",
-        "3B": null
+        "3B": "Sam Gates"
       },
       "score": {
         "away": 12,
@@ -2000,7 +2222,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Hunter Howard",
+      "pitcher": "Andrew Steinhaus",
       "batter": "Ethan Ball",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2012,12 +2234,12 @@
       "runners_before": {
         "1B": "Pete Daniel",
         "2B": "Owen Petrich",
-        "3B": null
+        "3B": "Sam Gates"
       },
       "runners_after": {
         "1B": "Pete Daniel",
         "2B": "Owen Petrich",
-        "3B": null
+        "3B": "Sam Gates"
       },
       "score": {
         "away": 12,
@@ -2027,7 +2249,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "D.",
+      "pitcher": "Danny Lazaro",
       "batter": "O. Petrich",
       "outcome": "\u2014",
       "count": null,
@@ -2054,7 +2276,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "D.",
+      "pitcher": "Danny Lazaro",
       "batter": "Mason Self",
       "outcome": "Walk",
       "count": "3-2",
@@ -2081,7 +2303,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "D.",
+      "pitcher": "Tyler Stone",
       "batter": "Tyler Sparrer",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2108,7 +2330,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "D.",
+      "pitcher": "Tyler Stone",
       "batter": "Brady Whitacre",
       "outcome": "Grounded into double play",
       "count": "0-0",
@@ -2123,7 +2345,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason Self",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2135,7 +2357,34 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Corey Costello",
+      "pitcher": "Andrew Steinhaus",
+      "batter": "COSTELLO, C. to p for HOWARD, H..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 12,
+        "home": 3
+      },
+      "description": "COSTELLO, C. to p for HOWARD, H.."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "",
       "batter": "Sam Grube",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2162,7 +2411,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Corey Costello",
+      "pitcher": "",
       "batter": "Henry Cooke",
       "outcome": "Walk",
       "count": "3-2",
@@ -2189,7 +2438,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Corey Costello",
+      "pitcher": "",
       "batter": "Nick Locurto",
       "outcome": "Double",
       "count": "1-1",
@@ -2216,7 +2465,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Corey Costello",
+      "pitcher": "",
       "batter": "Sam Gates",
       "outcome": "Groundout",
       "count": "1-0",
@@ -2245,7 +2494,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Corey Costello",
+      "pitcher": "",
       "batter": "Owen Petrich",
       "outcome": "Groundout",
       "count": "1-0",
@@ -2272,7 +2521,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "D.",
+      "pitcher": "Tyler Stone",
       "batter": "Junho Son",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -2299,7 +2548,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "D.",
+      "pitcher": "Tyler Stone",
       "batter": "Hunter Keen",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2326,7 +2575,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "D.",
+      "pitcher": "Jake Wise",
       "batter": "Eli Hudgins",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2353,7 +2602,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "D.",
+      "pitcher": "Jake Wise",
       "batter": "Breckin Nace",
       "outcome": "Single",
       "count": "0-1",
@@ -2370,7 +2619,7 @@
       "runners_after": {
         "1B": "Breckin Nace",
         "2B": null,
-        "3B": null
+        "3B": "Junho Son"
       },
       "score": {
         "away": 13,
@@ -2380,7 +2629,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "T.",
+      "pitcher": "Jake Wise",
+      "batter": "T. Stone",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Breckin Nace",
+        "2B": null,
+        "3B": "Junho Son"
+      },
+      "runners_after": {
+        "1B": "Breckin Nace",
+        "2B": null,
+        "3B": "Junho Son"
+      },
+      "score": {
+        "away": 13,
+        "home": 3
+      },
+      "description": "T. Stone to p for D. Lazaro."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Logan Eisenreich",
       "batter": "Brady Powell",
       "outcome": "Hit by pitch",
       "count": "3-2",
@@ -2392,12 +2668,12 @@
       "runners_before": {
         "1B": "Breckin Nace",
         "2B": null,
-        "3B": null
+        "3B": "Junho Son"
       },
       "runners_after": {
         "1B": "Brady Powell",
         "2B": null,
-        "3B": null
+        "3B": "Junho Son"
       },
       "score": {
         "away": 13,
@@ -2407,7 +2683,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "T.",
+      "pitcher": "Logan Eisenreich",
       "batter": "Noah Toole",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2419,12 +2695,12 @@
       "runners_before": {
         "1B": "Brady Powell",
         "2B": null,
-        "3B": null
+        "3B": "Junho Son"
       },
       "runners_after": {
         "1B": "Brady Powell",
         "2B": null,
-        "3B": null
+        "3B": "Junho Son"
       },
       "score": {
         "away": 13,
@@ -2434,7 +2710,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Corey Costello",
+      "pitcher": "",
       "batter": "AARON, C. to 2b for KEEN, H..",
       "outcome": "\u2014",
       "count": null,
@@ -2461,7 +2737,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Corey Costello",
+      "pitcher": "",
       "batter": "EDWARDS, L to cf for HUDGINS, E..",
       "outcome": "\u2014",
       "count": null,
@@ -2488,7 +2764,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Corey Costello",
+      "pitcher": "",
       "batter": "ZELAZNY, Z. to lf.",
       "outcome": "\u2014",
       "count": null,
@@ -2515,7 +2791,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Corey Costello",
+      "pitcher": "",
       "batter": "SIMPSON, B. to rf.",
       "outcome": "\u2014",
       "count": null,
@@ -2542,7 +2818,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Corey Costello",
+      "pitcher": "",
       "batter": "TOOLE, N. to ss.",
       "outcome": "\u2014",
       "count": null,
@@ -2569,7 +2845,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Andrew Steinhaus",
+      "pitcher": "",
+      "batter": "STEINHAUS, A to p for COSTELLO, C..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 13,
+        "home": 3
+      },
+      "description": "STEINHAUS, A to p for COSTELLO, C.."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": "Anderson French",
       "outcome": "Groundout",
       "count": "1-0",
@@ -2596,7 +2899,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Andrew Steinhaus",
+      "pitcher": "",
       "batter": "Hudson Lutterman",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2623,7 +2926,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Andrew Steinhaus",
+      "pitcher": "",
       "batter": "Pete Daniel",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2650,7 +2953,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "T.",
+      "pitcher": "Logan Eisenreich",
       "batter": "Mason Self",
       "outcome": "Single",
       "count": "3-1",
@@ -2677,7 +2980,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2692,8 +2995,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason Self",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason Self",
         "3B": null
       },
       "score": {
@@ -2704,7 +3007,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "T.",
+      "pitcher": "",
       "batter": "Tyler Sparrer",
       "outcome": "Walk",
       "count": "3-1",
@@ -2714,13 +3017,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Mason Self",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason Self",
         "3B": null
       },
       "runners_after": {
         "1B": "Tyler Sparrer",
-        "2B": null,
+        "2B": "Mason Self",
         "3B": null
       },
       "score": {
@@ -2731,7 +3034,34 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "J.",
+      "pitcher": "",
+      "batter": "J. Wise",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Tyler Sparrer",
+        "2B": "Mason Self",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Tyler Sparrer",
+        "2B": "Mason Self",
+        "3B": null
+      },
+      "score": {
+        "away": 13,
+        "home": 3
+      },
+      "description": "J. Wise to p for T. Stone."
+    },
+    {
+      "inning": "Bottom 9",
+      "pitcher": "",
       "batter": "Brady Whitacre",
       "outcome": "Walk",
       "count": "3-2",
@@ -2742,13 +3072,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Tyler Sparrer",
-        "2B": null,
+        "2B": "Mason Self",
         "3B": null
       },
       "runners_after": {
         "1B": "Brady Whitacre",
-        "2B": null,
-        "3B": null
+        "2B": "Tyler Sparrer",
+        "3B": "Mason Self"
       },
       "score": {
         "away": 13,
@@ -2758,7 +3088,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "J.",
+      "pitcher": "",
       "batter": "Junho Son",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2769,13 +3099,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Brady Whitacre",
-        "2B": null,
-        "3B": null
+        "2B": "Tyler Sparrer",
+        "3B": "Mason Self"
       },
       "runners_after": {
         "1B": "Brady Whitacre",
-        "2B": null,
-        "3B": null
+        "2B": "Tyler Sparrer",
+        "3B": "Mason Self"
       },
       "score": {
         "away": 13,
@@ -2785,24 +3115,26 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "J.",
+      "pitcher": "",
       "batter": "Carrington Aaron",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "BBBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Mason Self"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Brady Whitacre",
-        "2B": null,
-        "3B": null
+        "2B": "Tyler Sparrer",
+        "3B": "Mason Self"
       },
       "runners_after": {
         "1B": "Carrington Aaron",
-        "2B": null,
-        "3B": null
+        "2B": "Brady Whitacre",
+        "3B": "Tyler Sparrer"
       },
       "score": {
         "away": 13,
@@ -2812,24 +3144,26 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Logan Eisenreich",
+      "pitcher": "",
       "batter": "Lucas Edwards",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBBKKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Tyler Sparrer"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Carrington Aaron",
-        "2B": null,
-        "3B": null
+        "2B": "Brady Whitacre",
+        "3B": "Tyler Sparrer"
       },
       "runners_after": {
         "1B": "Lucas Edwards",
-        "2B": null,
-        "3B": null
+        "2B": "Carrington Aaron",
+        "3B": "Brady Whitacre"
       },
       "score": {
         "away": 13,
@@ -2839,7 +3173,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Logan Eisenreich",
+      "pitcher": "",
       "batter": "Zachary Zelazny",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2850,13 +3184,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Lucas Edwards",
-        "2B": null,
-        "3B": null
+        "2B": "Carrington Aaron",
+        "3B": "Brady Whitacre"
       },
       "runners_after": {
         "1B": "Lucas Edwards",
-        "2B": null,
-        "3B": null
+        "2B": "Carrington Aaron",
+        "3B": "Brady Whitacre"
       },
       "score": {
         "away": 13,
@@ -2866,7 +3200,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Logan Eisenreich",
+      "pitcher": "",
       "batter": "Brooks Simpson",
       "outcome": "Groundout",
       "count": "2-1",
@@ -2877,13 +3211,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Lucas Edwards",
-        "2B": null,
-        "3B": null
+        "2B": "Carrington Aaron",
+        "3B": "Brady Whitacre"
       },
       "runners_after": {
         "1B": "Lucas Edwards",
-        "2B": null,
-        "3B": null
+        "2B": "Carrington Aaron",
+        "3B": "Brady Whitacre"
       },
       "score": {
         "away": 13,

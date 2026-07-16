@@ -3,7 +3,7 @@
   "date": "04/04/2026",
   "away_team": "Georgia",
   "home_team": "Mississippi St.",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -76,8 +76,8 @@
         "3B": "Tre Phelps"
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": "Tre Phelps"
       },
       "score": {
@@ -98,13 +98,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": "Tre Phelps"
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": "Tre Phelps"
       },
       "score": {
@@ -125,13 +125,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": "Tre Phelps"
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": "Tre Phelps"
       },
       "score": {
@@ -152,13 +152,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": "Tre Phelps"
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": "Tre Phelps"
       },
       "score": {
@@ -211,9 +211,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bryce Chance",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Bryce Chance"
       },
       "score": {
         "away": 0,
@@ -236,9 +236,9 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Bryce Chance",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Bryce Chance"
       },
       "runners_after": {
         "1B": null,
@@ -307,7 +307,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Kenny Ishikawa",
+      "pitcher": "Grant Edwards",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -729,8 +729,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -751,13 +751,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael O'Shaughnessy",
-        "2B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -779,12 +779,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Michael O'Shaughnessy",
-        "2B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael O'Shaughnessy",
-        "2B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -806,13 +806,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Michael O'Shaughnessy",
-        "2B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael O'Shaughnessy",
         "2B": null,
-        "3B": null
+        "3B": "Daniel Jackson"
       },
       "score": {
         "away": 0,
@@ -834,12 +834,12 @@
       "runners_before": {
         "1B": "Michael O'Shaughnessy",
         "2B": null,
-        "3B": null
+        "3B": "Daniel Jackson"
       },
       "runners_after": {
         "1B": "Michael O'Shaughnessy",
         "2B": null,
-        "3B": null
+        "3B": "Daniel Jackson"
       },
       "score": {
         "away": 0,
@@ -855,13 +855,15 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Daniel Jackson"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Michael O'Shaughnessy",
         "2B": null,
-        "3B": null
+        "3B": "Daniel Jackson"
       },
       "runners_after": {
         "1B": "Rylan Lujo",
@@ -1324,7 +1326,7 @@
       },
       "runners_after": {
         "1B": "Jordy Oriach",
-        "2B": null,
+        "2B": "Henry Allen",
         "3B": null
       },
       "score": {
@@ -1335,7 +1337,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Brendan Sweeney",
+      "pitcher": "Ben Davis",
       "batter": "Rylan Lujo",
       "outcome": "Home run",
       "count": "0-0",
@@ -1343,13 +1345,14 @@
       "rbi": true,
       "runs_scored": [
         "Jordy Oriach",
+        "Henry Allen",
         "Rylan Lujo"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jordy Oriach",
-        "2B": null,
+        "2B": "Henry Allen",
         "3B": null
       },
       "runners_after": {
@@ -1365,7 +1368,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Brendan Sweeney",
+      "pitcher": "Ben Davis",
       "batter": "Brennan Hudson",
       "outcome": "Home run",
       "count": "2-0",
@@ -1583,7 +1586,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ben Davis",
+      "pitcher": "Dane Burns",
       "batter": "Michael O'Shaughnessy",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1748,7 +1751,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ben Davis",
+      "pitcher": "Dane Burns",
       "batter": "Henry Allen",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1802,7 +1805,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Dane Burns",
+      "pitcher": "Tyler Pitzer",
       "batter": "Rylan Lujo",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1829,7 +1832,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Dane Burns",
+      "pitcher": "Maddox Miller",
       "batter": "Brennan Hudson",
       "outcome": "Single",
       "count": "2-1",
@@ -1856,7 +1859,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tyler Pitzer",
+      "pitcher": "Maddox Miller",
       "batter": "Kolby Branch",
       "outcome": "Fielder's choice",
       "count": "2-0",
@@ -1925,8 +1928,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bryce Chance",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "score": {
@@ -1947,13 +1950,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bryce Chance",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bryce Chance",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "score": {
@@ -1974,13 +1977,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Bryce Chance",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bryce Chance",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "score": {
@@ -2001,13 +2004,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Bryce Chance",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bryce Chance",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Chance",
         "3B": null
       },
       "score": {
@@ -2072,7 +2075,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Maddox Miller",
+      "pitcher": "Maddox Webb",
       "batter": "Daniel Jackson",
       "outcome": "Flyout",
       "count": "0-2",
@@ -2099,7 +2102,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Maddox Miller",
+      "pitcher": "Maddox Webb",
       "batter": "Michael O'Shaughnessy",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2639,7 +2642,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Maddox Webb",
+      "pitcher": "",
       "batter": "Michael O'Shaughnessy",
       "outcome": "Home run",
       "count": "0-0",
@@ -2670,7 +2673,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Maddox Webb",
+      "pitcher": "",
       "batter": "Henry Allen",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2697,7 +2700,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "Maddox Webb",
+      "pitcher": "",
       "batter": "Jordy Oriach",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",

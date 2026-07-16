@@ -3,7 +3,7 @@
   "date": "05/09/2026(1)",
   "away_team": "Texas A&M",
   "home_team": "Ole Miss",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -130,8 +130,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dom Decker",
-        "2B": null,
+        "1B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -152,13 +152,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Dom Decker",
-        "2B": null,
+        "1B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "runners_after": {
-        "1B": "Dom Decker",
-        "2B": null,
+        "1B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -179,13 +179,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Dom Decker",
-        "2B": null,
+        "1B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "runners_after": {
         "1B": "Judd Utermark",
-        "2B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -207,12 +207,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Judd Utermark",
-        "2B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "runners_after": {
         "1B": "Judd Utermark",
-        "2B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -234,12 +234,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Judd Utermark",
-        "2B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "runners_after": {
         "1B": "Judd Utermark",
-        "2B": null,
+        "2B": "Dom Decker",
         "3B": null
       },
       "score": {
@@ -558,7 +558,9 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Chris Hacopian"
+        "Chris Hacopian",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -721,7 +723,10 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -775,7 +780,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -884,7 +891,8 @@
       "pitches": "BBKBSF",
       "rbi": true,
       "runs_scored": [
-        "Ben Royo"
+        "Ben Royo",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -906,7 +914,34 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "L.",
+      "pitcher": "Landon Waters",
+      "batter": "L. Waters",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Jorian Wilson",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Jorian Wilson",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 3
+      },
+      "description": "L. Waters to p for C. Townsend."
+    },
+    {
+      "inning": "Top 4",
+      "pitcher": "Landon Waters",
       "batter": "Sawyer Farr",
       "outcome": "Single",
       "count": "0-0",
@@ -933,7 +968,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "L.",
+      "pitcher": "Landon Waters",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -960,7 +995,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "L.",
+      "pitcher": "Landon Waters",
       "batter": "Gavin Grahovac",
       "outcome": "Groundout",
       "count": "3-2",
@@ -987,14 +1022,15 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "L.",
+      "pitcher": "Landon Waters",
       "batter": "Caden Sorrell",
       "outcome": "Home run",
       "count": "1-1",
       "pitches": "SB",
       "rbi": true,
       "runs_scored": [
-        "Caden Sorrell"
+        "Caden Sorrell",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1016,7 +1052,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "L.",
+      "pitcher": "Landon Waters",
       "batter": "Chris Hacopian",
       "outcome": "Single",
       "count": "1-2",
@@ -1043,7 +1079,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "L.",
+      "pitcher": "Landon Waters",
       "batter": "Jake Duer",
       "outcome": "Lineout",
       "count": "0-2",
@@ -1157,7 +1193,9 @@
       "count": "3-1",
       "pitches": "BBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1211,7 +1249,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1286,7 +1326,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "L.",
+      "pitcher": "Landon Waters",
       "batter": "Bear Harrison",
       "outcome": "Single",
       "count": "0-0",
@@ -1313,7 +1353,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
       "batter": "Jorian Wilson",
       "outcome": "Single",
       "count": "3-2",
@@ -1340,7 +1380,34 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
+      "batter": "L. Koenig",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Jorian Wilson",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Jorian Wilson",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 9,
+        "home": 5
+      },
+      "description": "L. Koenig to p for L. Waters."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Landon Koenig",
       "batter": "Blake Binderup",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1367,7 +1434,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
       "batter": "Ben Royo",
       "outcome": "Walk",
       "count": "3-2",
@@ -1394,7 +1461,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1423,7 +1490,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
       "batter": "Sawyer Farr",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1450,13 +1517,16 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
       "batter": "Gavin Grahovac",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1477,7 +1547,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1504,7 +1574,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
       "batter": "Caden Sorrell",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1666,7 +1736,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
       "batter": "K. Perera",
       "outcome": "\u2014",
       "count": null,
@@ -1693,7 +1763,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "L.",
+      "pitcher": "Leo Odom",
       "batter": "Chris Hacopian",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1720,7 +1790,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "L.",
+      "pitcher": "Leo Odom",
       "batter": "Jake Duer",
       "outcome": "Walk",
       "count": "3-2",
@@ -1747,14 +1817,15 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "L.",
+      "pitcher": "Leo Odom",
       "batter": "Bear Harrison",
       "outcome": "Home run",
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
       "runs_scored": [
-        "Bear Harrison"
+        "Bear Harrison",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1776,7 +1847,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "L.",
+      "pitcher": "Leo Odom",
+      "batter": "L. Odom",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Jake Duer",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Jake Duer",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 14,
+        "home": 5
+      },
+      "description": "L. Odom to p for L. Koenig."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Leo Odom",
       "batter": "Jorian Wilson",
       "outcome": "Walk",
       "count": "3-2",
@@ -1803,7 +1901,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "L.",
+      "pitcher": "Owen Kelly",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1830,7 +1928,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "L.",
+      "pitcher": "Owen Kelly",
       "batter": "Blake Binderup",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1857,13 +1955,15 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "L.",
+      "pitcher": "Owen Kelly",
       "batter": "Ben Royo",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1884,7 +1984,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "L.",
+      "pitcher": "Owen Kelly",
       "batter": "Sawyer Farr",
       "outcome": "Walk",
       "count": "3-1",
@@ -1911,13 +2011,16 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "L.",
+      "pitcher": "Owen Kelly",
       "batter": "Gavin Grahovac",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1938,7 +2041,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "O.",
+      "pitcher": "Owen Kelly",
+      "batter": "O. Kelly",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Sawyer Farr",
+        "2B": "Gavin Grahovac",
+        "3B": "Jorian Wilson"
+      },
+      "runners_after": {
+        "1B": "Sawyer Farr",
+        "2B": "Gavin Grahovac",
+        "3B": "Jorian Wilson"
+      },
+      "score": {
+        "away": 17,
+        "home": 5
+      },
+      "description": "O. Kelly to p for L. Odom."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Owen Kelly",
       "batter": "Caden Sorrell",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2046,7 +2176,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "O.",
+      "pitcher": "",
       "batter": "B. Randle",
       "outcome": "\u2014",
       "count": null,
@@ -2073,7 +2203,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "O.",
+      "pitcher": "",
       "batter": "O. Paino",
       "outcome": "\u2014",
       "count": null,
@@ -2100,7 +2230,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "O.",
+      "pitcher": "",
       "batter": "Chris Hacopian",
       "outcome": "Home run",
       "count": "3-1",
@@ -2129,7 +2259,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "O.",
+      "pitcher": "",
       "batter": "Jake Duer",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2156,7 +2286,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "O.",
+      "pitcher": "",
       "batter": "Bear Harrison",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2183,7 +2313,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "O.",
+      "pitcher": "",
       "batter": "Jorian Wilson",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -2210,7 +2340,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "O.",
+      "pitcher": "",
       "batter": "Blake Binderup",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",

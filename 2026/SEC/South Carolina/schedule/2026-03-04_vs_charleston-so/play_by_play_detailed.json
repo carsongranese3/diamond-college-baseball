@@ -3,7 +3,7 @@
   "date": "03/04/2026",
   "away_team": "Charleston So.",
   "home_team": "South Carolina",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -148,7 +148,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -193,6 +195,33 @@
         "home": 1
       },
       "description": "Scobey walked (3-2 BBKBSB)."
+    },
+    {
+      "inning": "Bottom 1",
+      "pitcher": "Aydan Smith",
+      "batter": "SMITH,Ayden to p for HOPKE,Kale.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "KJ Scobey",
+        "2B": "Patrick Evans",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "KJ Scobey",
+        "2B": "Patrick Evans",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "SMITH,Ayden to p for HOPKE,Kale."
     },
     {
       "inning": "Bottom 1",
@@ -387,7 +416,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Aydan Smith",
+      "pitcher": "Zach Stichweh",
       "batter": "Erik Parker",
       "outcome": "Groundout",
       "count": "0-0",
@@ -546,6 +575,33 @@
         "home": 2
       },
       "description": "BARILE,G. lined out to 2b (0-0)."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Zach Stichweh",
+      "batter": "STICHWEH,Z. to p for SMITH,Ayden.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 2
+      },
+      "description": "STICHWEH,Z. to p for SMITH,Ayden."
     },
     {
       "inning": "Bottom 3",
@@ -981,7 +1037,34 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
+      "batter": "B. Stone",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Blake Edgmon",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Blake Edgmon",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 2
+      },
+      "description": "B. Stone to p for Chicoli."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Brandon Stone",
       "batter": "Garrison Barile",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1008,7 +1091,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Chandler Tuupo",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1035,7 +1118,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Zach Stichweh",
+      "pitcher": "Drew Dawson",
       "batter": "Aaron Jamison",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1062,7 +1145,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Zach Stichweh",
+      "pitcher": "Drew Dawson",
       "batter": "Erik Parker",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1089,7 +1172,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Zach Stichweh",
+      "pitcher": "Drew Dawson",
       "batter": "Will Craddock",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1116,7 +1199,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Lucas Pringle",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1143,7 +1226,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Tyler Wright",
       "outcome": "Single",
       "count": "0-1",
@@ -1170,7 +1253,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -1185,8 +1268,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Wright",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Wright",
         "3B": null
       },
       "score": {
@@ -1197,7 +1280,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Nathan Martinez",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1207,13 +1290,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Tyler Wright",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Wright",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Wright",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Wright",
         "3B": null
       },
       "score": {
@@ -1224,23 +1307,25 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Gavin Speirs",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Tyler Wright",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Wright",
         "3B": null
       },
       "runners_after": {
         "1B": "Gavin Speirs",
-        "2B": null,
+        "2B": "Tyler Wright",
         "3B": null
       },
       "score": {
@@ -1251,7 +1336,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Kain Collins",
       "outcome": "Single",
       "count": "1-0",
@@ -1262,12 +1347,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Gavin Speirs",
-        "2B": null,
+        "2B": "Tyler Wright",
         "3B": null
       },
       "runners_after": {
         "1B": "Kain Collins",
-        "2B": null,
+        "2B": "Tyler Wright",
         "3B": null
       },
       "score": {
@@ -1278,7 +1363,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Blake Edgmon",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1289,12 +1374,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Kain Collins",
-        "2B": null,
+        "2B": "Tyler Wright",
         "3B": null
       },
       "runners_after": {
         "1B": "Kain Collins",
-        "2B": null,
+        "2B": "Tyler Wright",
         "3B": null
       },
       "score": {
@@ -1305,7 +1390,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Drew Dawson",
+      "pitcher": "Tyler Henshaw",
+      "batter": "DAWSON,Drew to p for STICHWEH,Z..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 2
+      },
+      "description": "DAWSON,Drew to p for STICHWEH,Z.."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Tyler Henshaw",
       "batter": "Tyler Bak",
       "outcome": "Single",
       "count": "3-2",
@@ -1332,7 +1444,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Drew Dawson",
+      "pitcher": "Christian Krause",
       "batter": "Talmadge LeCroy",
       "outcome": "Walk",
       "count": "3-2",
@@ -1359,7 +1471,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Drew Dawson",
+      "pitcher": "Christian Krause",
       "batter": "KJ Scobey",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1386,7 +1498,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tyler Henshaw",
+      "pitcher": "Christian Krause",
+      "batter": "HENSHAW,T. to p for DAWSON,Drew.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Talmadge LeCroy",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Talmadge LeCroy",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 2
+      },
+      "description": "HENSHAW,T. to p for DAWSON,Drew."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Christian Krause",
       "batter": "Jack Reynolds",
       "outcome": "Lineout",
       "count": "0-0",
@@ -1413,13 +1552,16 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Tyler Henshaw",
+      "pitcher": "Christian Krause",
       "batter": "Ethan Lizama",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1437,6 +1579,33 @@
         "home": 4
       },
       "description": "Lizama doubled to right center, 2 RBI, advanced to third on the throw (1-0 B); LeCroy scored; Bak scored."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Christian Krause",
+      "batter": "KRAUSE,C. to p for HENSHAW,T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Talmadge LeCroy",
+        "2B": "Ethan Lizama",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Talmadge LeCroy",
+        "2B": "Ethan Lizama",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 4
+      },
+      "description": "KRAUSE,C. to p for HENSHAW,T.."
     },
     {
       "inning": "Bottom 6",
@@ -1467,7 +1636,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Caden Wolfley",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1494,7 +1663,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Garrison Barile",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1521,7 +1690,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Chandler Tuupo",
       "outcome": "Single",
       "count": "2-1",
@@ -1548,7 +1717,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Lucas Pringle",
       "outcome": "Walk",
       "count": "3-1",
@@ -1575,7 +1744,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "B.",
+      "pitcher": "Alex Valentin",
       "batter": "Tyler Wright",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1683,7 +1852,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Christian Krause",
+      "pitcher": "",
       "batter": "Tyler Bak",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -1710,7 +1879,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Christian Krause",
+      "pitcher": "",
       "batter": "Talmadge LeCroy",
       "outcome": "Lineout",
       "count": "1-0",
@@ -1818,7 +1987,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Christian Krause",
+      "pitcher": "",
       "batter": "KJ Scobey",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1845,7 +2014,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Christian Krause",
+      "pitcher": "",
       "batter": "Jack Reynolds",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1872,7 +2041,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Christian Krause",
+      "pitcher": "",
       "batter": "Ethan Lizama",
       "outcome": "Pop out",
       "count": "1-1",
@@ -1899,7 +2068,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Christian Krause",
+      "pitcher": "",
       "batter": "Luke Yuhasz",
       "outcome": "Fielder's choice",
       "count": "0-0",
@@ -2007,7 +2176,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Alex Valentin",
+      "pitcher": "",
       "batter": "Chandler Tuupo",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",

@@ -3,7 +3,7 @@
   "date": "04/25/2026(2)",
   "away_team": "Georgia",
   "home_team": "Ole Miss",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -365,7 +365,8 @@
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Austin Fawley"
+        "Austin Fawley",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -528,7 +529,9 @@
       "count": "1-2",
       "pitches": "KFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -564,8 +567,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -586,13 +589,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael O'Shaughnessy",
-        "2B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -614,12 +617,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Michael O'Shaughnessy",
-        "2B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael O'Shaughnessy",
-        "2B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -798,7 +801,9 @@
       "count": "2-1",
       "pitches": "BBS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1106,8 +1111,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -1128,8 +1133,8 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "runners_after": {
@@ -1152,7 +1157,8 @@
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "Rylan Lujo"
+        "Rylan Lujo",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1174,7 +1180,34 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "W.",
+      "pitcher": "Wil Libbert",
+      "batter": "W. Libbert",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": "Daniel Jackson"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": "Daniel Jackson"
+      },
+      "score": {
+        "away": 4,
+        "home": 3
+      },
+      "description": "W. Libbert to p for C. Townsend."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Wil Libbert",
       "batter": "Kenny Ishikawa",
       "outcome": "Single",
       "count": "2-1",
@@ -1201,7 +1234,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "W.",
+      "pitcher": "Wil Libbert",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1228,7 +1261,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "W.",
+      "pitcher": "Wil Libbert",
       "batter": "Henry Allen",
       "outcome": "Walk",
       "count": "3-2",
@@ -1255,14 +1288,16 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "W.",
+      "pitcher": "Wil Libbert",
       "batter": "Brennan Hudson",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Brennan Hudson"
+        "Brennan Hudson",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1284,7 +1319,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "W.",
+      "pitcher": "Wil Libbert",
       "batter": "Kolby Branch",
       "outcome": "Single",
       "count": "2-1",
@@ -1311,7 +1346,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "W.",
+      "pitcher": "Terry Hayes Jr.",
       "batter": "Ryan Black",
       "outcome": "Single",
       "count": "1-2",
@@ -1338,7 +1373,34 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "T.",
+      "pitcher": "Terry Hayes Jr.",
+      "batter": "T. Hayes",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Ryan Black",
+        "2B": "Kenny Ishikawa",
+        "3B": "Daniel Jackson"
+      },
+      "runners_after": {
+        "1B": "Ryan Black",
+        "2B": "Kenny Ishikawa",
+        "3B": "Daniel Jackson"
+      },
+      "score": {
+        "away": 7,
+        "home": 3
+      },
+      "description": "T. Hayes Jr. to p for W. Libbert."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Terry Hayes Jr.",
       "batter": "Tre Phelps",
       "outcome": "Single",
       "count": "0-2",
@@ -1365,7 +1427,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "T.",
+      "pitcher": "Terry Hayes Jr.",
       "batter": "Daniel Jackson",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1479,7 +1541,9 @@
       "count": "3-2",
       "pitches": "FBKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1527,7 +1591,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "T.",
+      "pitcher": "Terry Hayes Jr.",
       "batter": "C. Reuter",
       "outcome": "\u2014",
       "count": null,
@@ -1554,7 +1618,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "T.",
+      "pitcher": "JP Robertson",
       "batter": "Michael O'Shaughnessy",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -1581,7 +1645,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "T.",
+      "pitcher": "JP Robertson",
       "batter": "Rylan Lujo",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1608,7 +1672,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "T.",
+      "pitcher": "JP Robertson",
       "batter": "Kenny Ishikawa",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1635,7 +1699,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
+      "batter": "J. Robertson",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Michael O'Shaughnessy",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Michael O'Shaughnessy",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 4
+      },
+      "description": "J. Robertson to p for T. Hayes Jr.."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "JP Robertson",
       "batter": "Henry Allen",
       "outcome": "Single",
       "count": "3-2",
@@ -1662,7 +1753,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": "Brennan Hudson",
       "outcome": "Lineout",
       "count": "1-1",
@@ -1826,7 +1917,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": "Kolby Branch",
       "outcome": "Single",
       "count": "3-2",
@@ -1853,7 +1944,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": "Ryan Black",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1880,7 +1971,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": "Tre Phelps",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1907,7 +1998,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": "Daniel Jackson",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2069,7 +2160,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": "Michael O'Shaughnessy",
       "outcome": "Walk",
       "count": "3-1",
@@ -2096,7 +2187,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": "Rylan Lujo",
       "outcome": "Fielder's choice",
       "count": "0-1",
@@ -2123,7 +2214,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2138,8 +2229,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Rylan Lujo",
-        "2B": null,
+        "1B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "score": {
@@ -2150,7 +2241,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": "Kenny Ishikawa",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2160,13 +2251,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Rylan Lujo",
-        "2B": null,
+        "1B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "runners_after": {
-        "1B": "Rylan Lujo",
-        "2B": null,
+        "1B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "score": {
@@ -2177,7 +2268,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
       "batter": "Henry Allen",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2187,13 +2278,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Rylan Lujo",
-        "2B": null,
+        "1B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "runners_after": {
-        "1B": "Rylan Lujo",
-        "2B": null,
+        "1B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "score": {
@@ -2339,7 +2430,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "J.",
+      "pitcher": "Hudson Calhoun",
       "batter": "C. Goldin",
       "outcome": "\u2014",
       "count": null,
@@ -2366,7 +2457,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "J.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Brennan Hudson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2393,7 +2484,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "J.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Kolby Branch",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2420,7 +2511,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "J.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Ryan Black",
       "outcome": "Walk",
       "count": "3-1",
@@ -2447,7 +2538,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "J.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Tre Phelps",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2508,7 +2599,8 @@
       "pitches": "F",
       "rbi": true,
       "runs_scored": [
-        "Will Furniss"
+        "Will Furniss",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -2638,7 +2730,34 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
+      "batter": "H. Calhoun",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 7
+      },
+      "description": "H. Calhoun to p for J. Robertson."
+    },
+    {
+      "inning": "Top 10",
+      "pitcher": "Hudson Calhoun",
       "batter": "Daniel Jackson",
       "outcome": "Single",
       "count": "3-2",
@@ -2665,7 +2784,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Michael O'Shaughnessy",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2692,7 +2811,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Rylan Lujo",
       "outcome": "Walk",
       "count": null,
@@ -2719,7 +2838,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Cole Johnson",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2746,7 +2865,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Henry Allen",
       "outcome": "Walk",
       "count": "3-2",
@@ -2773,7 +2892,7 @@
     },
     {
       "inning": "Top 10",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Brennan Hudson",
       "outcome": "Flyout",
       "count": "1-0",
@@ -2800,7 +2919,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Matt Scott",
+      "pitcher": "Grant Edwards",
       "batter": "Johnson, Col to rf.",
       "outcome": "\u2014",
       "count": null,
@@ -2827,7 +2946,7 @@
     },
     {
       "inning": "Bottom 10",
-      "pitcher": "Matt Scott",
+      "pitcher": "Grant Edwards",
       "batter": "Collin Reuter",
       "outcome": "Walk",
       "count": "3-1",
@@ -2935,7 +3054,7 @@
     },
     {
       "inning": "Top 11",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "K. Perera",
       "outcome": "\u2014",
       "count": null,
@@ -2962,7 +3081,7 @@
     },
     {
       "inning": "Top 11",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Kolby Branch",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2989,7 +3108,7 @@
     },
     {
       "inning": "Top 11",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Ryan Black",
       "outcome": "Single",
       "count": "1-1",
@@ -3016,7 +3135,7 @@
     },
     {
       "inning": "Top 11",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Tre Phelps",
       "outcome": "Walk",
       "count": "3-2",
@@ -3043,7 +3162,7 @@
     },
     {
       "inning": "Top 11",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Daniel Jackson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -3070,7 +3189,7 @@
     },
     {
       "inning": "Top 11",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Michael O'Shaughnessy",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -3151,7 +3270,7 @@
     },
     {
       "inning": "Bottom 11",
-      "pitcher": "Grant Edwards",
+      "pitcher": "Justin Byrd",
       "batter": "Hayden Federico",
       "outcome": "Groundout",
       "count": "2-0",
@@ -3178,7 +3297,7 @@
     },
     {
       "inning": "Bottom 11",
-      "pitcher": "Grant Edwards",
+      "pitcher": "Justin Byrd",
       "batter": "Luke Romine",
       "outcome": "\u2014",
       "count": "1-0",
@@ -3205,7 +3324,7 @@
     },
     {
       "inning": "Top 12",
-      "pitcher": "H.",
+      "pitcher": "Hudson Calhoun",
       "batter": "Rylan Lujo",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -3232,7 +3351,7 @@
     },
     {
       "inning": "Top 12",
-      "pitcher": "H.",
+      "pitcher": "Owen Hancock",
       "batter": "Cole Johnson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -3259,7 +3378,7 @@
     },
     {
       "inning": "Top 12",
-      "pitcher": "H.",
+      "pitcher": "Owen Hancock",
       "batter": "Henry Allen",
       "outcome": "Lineout",
       "count": "2-2",
@@ -3313,7 +3432,7 @@
     },
     {
       "inning": "Bottom 12",
-      "pitcher": "Justin Byrd",
+      "pitcher": "Paul Farley",
       "batter": "Kelven Perera",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -3340,7 +3459,7 @@
     },
     {
       "inning": "Bottom 12",
-      "pitcher": "Justin Byrd",
+      "pitcher": "Paul Farley",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -3367,7 +3486,7 @@
     },
     {
       "inning": "Bottom 12",
-      "pitcher": "Justin Byrd",
+      "pitcher": "Paul Farley",
       "batter": "Cannon Goldin",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -3448,7 +3567,7 @@
     },
     {
       "inning": "Top 13",
-      "pitcher": "H.",
+      "pitcher": "Owen Hancock",
       "batter": "Brennan Hudson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -3475,7 +3594,7 @@
     },
     {
       "inning": "Top 13",
-      "pitcher": "H.",
+      "pitcher": "Owen Hancock",
       "batter": "Kolby Branch",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -3502,7 +3621,7 @@
     },
     {
       "inning": "Top 13",
-      "pitcher": "H.",
+      "pitcher": "Owen Hancock",
       "batter": "Ryan Black",
       "outcome": "Groundout",
       "count": "2-2",
@@ -3664,7 +3783,7 @@
     },
     {
       "inning": "Top 14",
-      "pitcher": "H.",
+      "pitcher": "Noah Allen",
       "batter": "Tre Phelps",
       "outcome": "Home run",
       "count": "2-0",
@@ -3693,7 +3812,7 @@
     },
     {
       "inning": "Top 14",
-      "pitcher": "H.",
+      "pitcher": "",
       "batter": "Daniel Jackson",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -3720,7 +3839,34 @@
     },
     {
       "inning": "Top 14",
-      "pitcher": "O.",
+      "pitcher": "",
+      "batter": "O. Hancock",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Daniel Jackson",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Daniel Jackson",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 8,
+        "home": 7
+      },
+      "description": "O. Hancock to p for H. Calhoun."
+    },
+    {
+      "inning": "Top 14",
+      "pitcher": "",
       "batter": "Michael O'Shaughnessy",
       "outcome": "Flyout",
       "count": "3-1",
@@ -3747,7 +3893,7 @@
     },
     {
       "inning": "Top 14",
-      "pitcher": "O.",
+      "pitcher": "",
       "batter": "Rylan Lujo",
       "outcome": "Single",
       "count": "0-0",
@@ -3774,7 +3920,7 @@
     },
     {
       "inning": "Top 14",
-      "pitcher": "O.",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -3801,7 +3947,7 @@
     },
     {
       "inning": "Top 14",
-      "pitcher": "O.",
+      "pitcher": "",
       "batter": "Jordy Oriach",
       "outcome": "Walk",
       "count": "3-0",
@@ -3828,7 +3974,7 @@
     },
     {
       "inning": "Top 14",
-      "pitcher": "O.",
+      "pitcher": "",
       "batter": "Henry Allen",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -3855,13 +4001,15 @@
     },
     {
       "inning": "Top 14",
-      "pitcher": "O.",
+      "pitcher": "",
       "batter": "Brennan Hudson",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BBKBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -3882,7 +4030,34 @@
     },
     {
       "inning": "Top 14",
-      "pitcher": "N.",
+      "pitcher": "",
+      "batter": "Henry Allen",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Brennan Hudson",
+        "2B": null,
+        "3B": "Rylan Lujo"
+      },
+      "runners_after": {
+        "1B": "Brennan Hudson",
+        "2B": null,
+        "3B": "Rylan Lujo"
+      },
+      "score": {
+        "away": 9,
+        "home": 7
+      },
+      "description": "N. Allen to p for O. Hancock."
+    },
+    {
+      "inning": "Top 14",
+      "pitcher": "",
       "batter": "Kolby Branch",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -3963,7 +4138,7 @@
     },
     {
       "inning": "Bottom 14",
-      "pitcher": "Paul Farley",
+      "pitcher": "",
       "batter": "Cannon Goldin",
       "outcome": "Foul out",
       "count": "2-1",
@@ -3990,7 +4165,7 @@
     },
     {
       "inning": "Bottom 14",
-      "pitcher": "Paul Farley",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -4017,7 +4192,7 @@
     },
     {
       "inning": "Bottom 14",
-      "pitcher": "Paul Farley",
+      "pitcher": "",
       "batter": "Dom Decker",
       "outcome": "Walk",
       "count": "3-2",
@@ -4044,7 +4219,7 @@
     },
     {
       "inning": "Bottom 14",
-      "pitcher": "Paul Farley",
+      "pitcher": "",
       "batter": "Tristan Bissetta",
       "outcome": "\u2014",
       "count": "1-0",

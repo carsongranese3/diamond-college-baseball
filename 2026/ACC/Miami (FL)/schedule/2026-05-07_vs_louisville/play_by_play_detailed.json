@@ -3,7 +3,7 @@
   "date": "05/07/2026",
   "away_team": "Louisville",
   "home_team": "Miami (FL)",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -121,7 +121,10 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -202,7 +205,9 @@
       "count": "3-2",
       "pitches": "BBFFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -979,7 +984,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Ty Starke",
       "batter": "Fabio Peralta",
       "outcome": "Walk",
       "count": "3-0",
@@ -1006,13 +1011,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Ty Starke",
       "batter": "Jake Ogden",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1033,7 +1040,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Ty Starke",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1048,8 +1055,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Ogden",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "score": {
@@ -1060,7 +1067,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Ty Starke",
       "batter": "Max Galvin",
       "outcome": "Walk",
       "count": "3-1",
@@ -1070,13 +1077,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jake Ogden",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "runners_after": {
         "1B": "Max Galvin",
-        "2B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "score": {
@@ -1087,23 +1094,25 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Peter Michael",
       "batter": "Derek Williams",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Max Galvin",
-        "2B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "runners_after": {
         "1B": "Derek Williams",
-        "2B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "score": {
@@ -1114,23 +1123,25 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Peter Michael",
       "batter": "Alex Sosa",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BBKF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Derek Williams",
-        "2B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "runners_after": {
         "1B": "Alex Sosa",
-        "2B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "score": {
@@ -1141,23 +1152,26 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Peter Michael",
       "batter": "Brylan West",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Alex Sosa",
-        "2B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "runners_after": {
         "1B": "Brylan West",
-        "2B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "score": {
@@ -1168,7 +1182,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Peter Michael",
       "batter": "Alonzo Alvarez",
       "outcome": "Walk",
       "count": "3-2",
@@ -1179,12 +1193,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Brylan West",
-        "2B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "runners_after": {
         "1B": "Alonzo Alvarez",
-        "2B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "score": {
@@ -1195,23 +1209,25 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Jake Schweitzer",
       "batter": "Vance Sheahan",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Alonzo Alvarez",
-        "2B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "runners_after": {
         "1B": "Vance Sheahan",
-        "2B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "score": {
@@ -1222,23 +1238,25 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Jake Schweitzer",
       "batter": "Gabriel Milano",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Vance Sheahan",
-        "2B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "runners_after": {
         "1B": "Gabriel Milano",
-        "2B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "score": {
@@ -1249,23 +1267,25 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Jake Schweitzer",
       "batter": "Fabio Peralta",
       "outcome": "Groundout",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Gabriel Milano",
-        "2B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "runners_after": {
         "1B": "Gabriel Milano",
-        "2B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "score": {
@@ -1276,23 +1296,25 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Jake Schweitzer",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Gabriel Milano"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Gabriel Milano",
-        "2B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "runners_after": {
-        "1B": "Gabriel Milano",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "score": {
@@ -1303,7 +1325,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Jake Schweitzer",
       "batter": "Jake Ogden",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1313,13 +1335,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Gabriel Milano",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "runners_after": {
-        "1B": "Gabriel Milano",
-        "2B": null,
+        "1B": null,
+        "2B": "Jake Ogden",
         "3B": null
       },
       "score": {
@@ -1417,7 +1439,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1444,7 +1468,9 @@
       "count": "2-1",
       "pitches": "FBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1519,7 +1545,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Jake Schweitzer",
       "batter": "Max Galvin",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1546,7 +1572,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Jake Schweitzer",
       "batter": "Derek Williams",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1573,7 +1599,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Jake Schweitzer",
       "batter": "Alex Sosa",
       "outcome": "Single",
       "count": "0-0",
@@ -1600,7 +1626,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Jake Schweitzer",
       "batter": "Brylan West",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1627,7 +1653,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Rob Evans",
+      "pitcher": "Nick Robert",
       "batter": "Kade Elam",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1654,7 +1680,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Rob Evans",
+      "pitcher": "Nick Robert",
       "batter": "Tague Davis",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1681,7 +1707,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Rob Evans",
+      "pitcher": "Nick Robert",
       "batter": "Zion Rose",
       "outcome": "Double",
       "count": "3-2",
@@ -1708,7 +1734,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Rob Evans",
+      "pitcher": "Nick Robert",
       "batter": "Lucas Moore",
       "outcome": "Pop out",
       "count": "1-2",
@@ -1735,7 +1761,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Jake Schweitzer",
       "batter": "Alonzo Alvarez",
       "outcome": "Single",
       "count": "0-1",
@@ -1762,7 +1788,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Jake Schweitzer",
       "batter": "Vance Sheahan",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1789,7 +1815,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Jake Schweitzer",
       "batter": "Gabriel Milano",
       "outcome": "Single",
       "count": "1-0",
@@ -1816,7 +1842,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Jake Schweitzer",
       "batter": "Fabio Peralta",
       "outcome": "Walk",
       "count": "3-1",
@@ -1843,13 +1869,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Jake Schweitzer",
       "batter": "Jake Ogden",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "SSF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1870,7 +1898,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Jake Schweitzer",
       "batter": "Max Galvin",
       "outcome": "Walk",
       "count": "3-1",
@@ -1897,13 +1925,16 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Jake Schweitzer",
       "batter": "Derek Williams",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1924,7 +1955,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Nicholas Ballard",
       "batter": "Alex Sosa",
       "outcome": "Walk",
       "count": "3-0",
@@ -1951,7 +1982,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Nicholas Ballard",
       "batter": "Brylan West",
       "outcome": "Lineout",
       "count": "2-2",
@@ -1978,7 +2009,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Rob Evans",
+      "pitcher": "Nick Robert",
       "batter": "Tague Davis",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2005,7 +2036,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Rob Evans",
+      "pitcher": "Nick Robert",
       "batter": "Jimmy Nugent",
       "outcome": "Walk",
       "count": "3-0",
@@ -2032,7 +2063,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Rob Evans",
+      "pitcher": "Nick Robert",
       "batter": "Griffin Crain",
       "outcome": "Single",
       "count": "2-1",
@@ -2059,7 +2090,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Rob Evans",
+      "pitcher": "Jake Dorn",
       "batter": "Bayram Hot",
       "outcome": "Walk",
       "count": "3-1",
@@ -2086,14 +2117,17 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Rob Evans",
+      "pitcher": "Jake Dorn",
       "batter": "Ben Slanker",
       "outcome": "Home run",
       "count": "0-2",
       "pitches": "KS",
       "rbi": true,
       "runs_scored": [
-        "Ben Slanker"
+        "Ben Slanker",
+        null,
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -2115,7 +2149,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Rob Evans",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "Kade Elam",
       "outcome": "Foul out",
       "count": "1-2",
@@ -2142,7 +2176,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Rob Evans",
+      "pitcher": "Packy Bradley-Cooney",
       "batter": "George Baker",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2169,7 +2203,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Nicholas Ballard",
       "batter": "Alonzo Alvarez",
       "outcome": "Lineout",
       "count": "3-2",
@@ -2196,7 +2230,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Nicholas Ballard",
       "batter": "Vance Sheahan",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2223,7 +2257,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Nicholas Ballard",
       "batter": "Gabriel Milano",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -2250,7 +2284,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Wyatt Danilowicz",
+      "pitcher": "Nicholas Ballard",
       "batter": "Fabio Peralta",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2277,7 +2311,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Rob Evans",
+      "pitcher": "Lyndon Glidewell",
       "batter": "Zion Rose",
       "outcome": "Single",
       "count": "1-2",
@@ -2304,7 +2338,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Rob Evans",
+      "pitcher": "Lyndon Glidewell",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2319,8 +2353,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Zion Rose",
-        "2B": null,
+        "1B": null,
+        "2B": "Zion Rose",
         "3B": null
       },
       "score": {
@@ -2331,7 +2365,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Rob Evans",
+      "pitcher": "Lyndon Glidewell",
       "batter": "Drew Freeman",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2341,13 +2375,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Zion Rose",
-        "2B": null,
+        "1B": null,
+        "2B": "Zion Rose",
         "3B": null
       },
       "runners_after": {
-        "1B": "Zion Rose",
-        "2B": null,
+        "1B": null,
+        "2B": "Zion Rose",
         "3B": null
       },
       "score": {
@@ -2358,7 +2392,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Rob Evans",
+      "pitcher": "Lyndon Glidewell",
       "batter": "Tague Davis",
       "outcome": "Lineout",
       "count": "1-1",
@@ -2368,13 +2402,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Zion Rose",
-        "2B": null,
+        "1B": null,
+        "2B": "Zion Rose",
         "3B": null
       },
       "runners_after": {
-        "1B": "Zion Rose",
-        "2B": null,
+        "1B": null,
+        "2B": "Zion Rose",
         "3B": null
       },
       "score": {
@@ -2385,7 +2419,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Rob Evans",
+      "pitcher": "Lyndon Glidewell",
       "batter": "Kyle Campbell",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2395,13 +2429,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Zion Rose",
-        "2B": null,
+        "1B": null,
+        "2B": "Zion Rose",
         "3B": null
       },
       "runners_after": {
-        "1B": "Zion Rose",
-        "2B": null,
+        "1B": null,
+        "2B": "Zion Rose",
         "3B": null
       },
       "score": {

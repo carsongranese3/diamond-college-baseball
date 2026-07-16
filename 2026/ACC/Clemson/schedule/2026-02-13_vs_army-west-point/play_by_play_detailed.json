@@ -3,7 +3,7 @@
   "date": "02/13/2026",
   "away_team": "Army West Point",
   "home_team": "Clemson",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -364,7 +364,9 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1582,7 +1584,8 @@
       "pitches": null,
       "rbi": true,
       "runs_scored": [
-        "Jacob Jarrell"
+        "Jacob Jarrell",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1604,7 +1607,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Andrew Berg",
+      "pitcher": "Jakob Vanderhave",
       "batter": "LICHTENBERGE",
       "outcome": "Strikeout (swinging)",
       "count": null,
@@ -1835,9 +1838,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tryston McCladdie",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Tryston McCladdie"
       },
       "score": {
         "away": 2,
@@ -1853,18 +1856,20 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Tryston McCladdie",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Tryston McCladdie"
       },
       "runners_after": {
-        "1B": "Tryston McCladdie",
+        "1B": null,
         "2B": "Nate Savoie",
-        "3B": null
+        "3B": "Tryston McCladdie"
       },
       "score": {
         "away": 2,
@@ -1884,14 +1889,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tryston McCladdie",
+        "1B": null,
         "2B": "Nate Savoie",
-        "3B": null
+        "3B": "Tryston McCladdie"
       },
       "runners_after": {
-        "1B": "Tryston McCladdie",
+        "1B": null,
         "2B": "Nate Savoie",
-        "3B": null
+        "3B": "Tryston McCladdie"
       },
       "score": {
         "away": 2,
@@ -1911,14 +1916,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tryston McCladdie",
+        "1B": null,
         "2B": "Nate Savoie",
-        "3B": null
+        "3B": "Tryston McCladdie"
       },
       "runners_after": {
         "1B": "Ty Dalley",
         "2B": "Nate Savoie",
-        "3B": null
+        "3B": "Tryston McCladdie"
       },
       "score": {
         "away": 2,
@@ -1928,7 +1933,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jakob Vanderhave",
+      "pitcher": "",
       "batter": "Jack Crighton",
       "outcome": "Grounded into double play",
       "count": null,
@@ -1940,12 +1945,12 @@
       "runners_before": {
         "1B": "Ty Dalley",
         "2B": "Nate Savoie",
-        "3B": null
+        "3B": "Tryston McCladdie"
       },
       "runners_after": {
         "1B": "Ty Dalley",
         "2B": "Nate Savoie",
-        "3B": null
+        "3B": "Tryston McCladdie"
       },
       "score": {
         "away": 2,

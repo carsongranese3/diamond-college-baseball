@@ -3,7 +3,7 @@
   "date": "05/29/2026",
   "away_team": "NC State",
   "home_team": "UCF",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -148,7 +148,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -184,8 +186,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mikey Ryan",
-        "2B": "Chris McHugh",
+        "1B": null,
+        "2B": "Mikey Ryan",
         "3B": null
       },
       "score": {
@@ -206,13 +208,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Mikey Ryan",
-        "2B": "Chris McHugh",
+        "1B": null,
+        "2B": "Mikey Ryan",
         "3B": null
       },
       "runners_after": {
         "1B": "Rett Johnson",
-        "2B": "Chris McHugh",
+        "2B": "Mikey Ryan",
         "3B": null
       },
       "score": {
@@ -229,17 +231,20 @@
       "count": "3-2",
       "pitches": "BSBSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Rett Johnson",
-        "2B": "Chris McHugh",
+        "2B": "Mikey Ryan",
         "3B": null
       },
       "runners_after": {
         "1B": "Dalton Bargo",
-        "2B": "Chris McHugh",
+        "2B": "Mikey Ryan",
         "3B": null
       },
       "score": {
@@ -261,12 +266,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Dalton Bargo",
-        "2B": "Chris McHugh",
+        "2B": "Mikey Ryan",
         "3B": null
       },
       "runners_after": {
         "1B": "Dalton Bargo",
-        "2B": "Chris McHugh",
+        "2B": "Mikey Ryan",
         "3B": null
       },
       "score": {
@@ -338,7 +343,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Andrew Williamson"
+        "Andrew Williamson",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -809,8 +815,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Andrew Wiggins",
-        "2B": null,
+        "1B": null,
+        "2B": "Andrew Wiggins",
         "3B": null
       },
       "score": {
@@ -831,13 +837,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Andrew Wiggins",
-        "2B": null,
+        "1B": null,
+        "2B": "Andrew Wiggins",
         "3B": null
       },
       "runners_after": {
-        "1B": "Andrew Wiggins",
-        "2B": null,
+        "1B": null,
+        "2B": "Andrew Wiggins",
         "3B": null
       },
       "score": {
@@ -908,7 +914,9 @@
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -944,8 +952,8 @@
         "3B": "Smith"
       },
       "runners_after": {
-        "1B": "Zak Skinner",
-        "2B": null,
+        "1B": null,
+        "2B": "Zak Skinner",
         "3B": "Smith"
       },
       "score": {
@@ -966,13 +974,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Zak Skinner",
-        "2B": null,
+        "1B": null,
+        "2B": "Zak Skinner",
         "3B": "Smith"
       },
       "runners_after": {
-        "1B": "Zak Skinner",
-        "2B": null,
+        "1B": null,
+        "2B": "Zak Skinner",
         "3B": "Smith"
       },
       "score": {
@@ -989,17 +997,19 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Zak Skinner",
-        "2B": null,
+        "1B": null,
+        "2B": "Zak Skinner",
         "3B": "Smith"
       },
       "runners_after": {
         "1B": "Landon Moran",
-        "2B": null,
+        "2B": "Zak Skinner",
         "3B": "Smith"
       },
       "score": {
@@ -1091,7 +1101,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Camden Wicker",
+      "pitcher": "Kaniel Rosado",
       "batter": "Ty Head",
       "outcome": "Walk",
       "count": "3-2",
@@ -1115,6 +1125,33 @@
         "home": 5
       },
       "description": "HEAD, Ty walked (3-2 BKBKBB); MCHUGH, Chri advanced to second."
+    },
+    {
+      "inning": "Top 4",
+      "pitcher": "Kaniel Rosado",
+      "batter": "Rosado, K to p for Wicker, C.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Ty Head",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ty Head",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 5
+      },
+      "description": "Rosado, K to p for Wicker, C."
     },
     {
       "inning": "Top 4",
@@ -1422,7 +1459,9 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Andrew Williamson"
+        "Andrew Williamson",
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1606,7 +1645,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Kaniel Rosado",
+      "pitcher": "Max Murray",
       "batter": "Ty Head",
       "outcome": "Groundout",
       "count": "2-0",
@@ -1714,7 +1753,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Kaniel Rosado",
+      "pitcher": "Max Murray",
       "batter": "Mikey Ryan",
       "outcome": "Single",
       "count": "3-1",
@@ -1738,6 +1777,33 @@
         "home": 8
       },
       "description": "RYAN, Mikey singled to left field (3-1 BBKB)."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Max Murray",
+      "batter": "Murray, M to p for Rosado, K.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Mikey Ryan",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Mikey Ryan",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 8
+      },
+      "description": "Murray, M to p for Rosado, K."
     },
     {
       "inning": "Top 7",
@@ -1850,6 +1916,33 @@
     {
       "inning": "Bottom 7",
       "pitcher": "Sam Harris",
+      "batter": "HARRIS, Sam to p for NANCE, Ander.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 8
+      },
+      "description": "HARRIS, Sam to p for NANCE, Ander."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Sam Harris",
       "batter": "Smith",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1932,7 +2025,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Sam Harris",
+      "pitcher": "Julien Peissel",
       "batter": "Javier Crespo",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1959,7 +2052,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Max Murray",
+      "pitcher": "Anthony Lariz",
       "batter": "Rett Johnson",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1986,7 +2079,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Max Murray",
+      "pitcher": "Anthony Lariz",
       "batter": "Luke Nixon",
       "outcome": "Groundout",
       "count": "1-0",
@@ -2013,7 +2106,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Max Murray",
+      "pitcher": "Anthony Lariz",
       "batter": "Chris McHugh",
       "outcome": "Double",
       "count": "1-1",
@@ -2041,6 +2134,33 @@
     {
       "inning": "Top 8",
       "pitcher": "Anthony Lariz",
+      "batter": "Lariz, A to p for Murray, M.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": "Chris McHugh",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Chris McHugh",
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 9
+      },
+      "description": "Lariz, A to p for Murray, M."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Anthony Lariz",
       "batter": "Ty Head",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2064,6 +2184,33 @@
         "home": 9
       },
       "description": "HEAD, Ty struck out looking (3-2 BBBKKK)."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Julien Peissel",
+      "batter": "PEISSEL, Jul to p for HARRIS, Sam.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 9
+      },
+      "description": "PEISSEL, Jul to p for HARRIS, Sam."
     },
     {
       "inning": "Bottom 8",
@@ -2121,7 +2268,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Julien Peissel",
+      "pitcher": "",
       "batter": "Stephen Chucka",
       "outcome": "\u2014",
       "count": null,
@@ -2148,7 +2295,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Julien Peissel",
+      "pitcher": "",
       "batter": "Stephen Chucka",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2175,7 +2322,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Julien Peissel",
+      "pitcher": "",
       "batter": "Jordan Lodise",
       "outcome": "Fielder's choice",
       "count": "1-1",
@@ -2202,7 +2349,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Julien Peissel",
+      "pitcher": "",
       "batter": "Austin Jacobs",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2229,7 +2376,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Anthony Lariz",
+      "pitcher": "",
       "batter": "Mikey Ryan",
       "outcome": "Single",
       "count": "1-2",
@@ -2256,7 +2403,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Anthony Lariz",
+      "pitcher": "",
       "batter": "Rett Johnson",
       "outcome": "Flyout",
       "count": "1-2",
@@ -2283,7 +2430,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Anthony Lariz",
+      "pitcher": "",
       "batter": "Dalton Bargo",
       "outcome": "Foul out",
       "count": "3-2",
@@ -2310,7 +2457,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Anthony Lariz",
+      "pitcher": "",
       "batter": "Andrew Wiggins",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",

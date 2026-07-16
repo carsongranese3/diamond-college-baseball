@@ -3,7 +3,7 @@
   "date": "06/20/2026",
   "away_team": "Oklahoma",
   "home_team": "North Carolina",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -76,8 +76,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Camden Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Camden Johnson",
         "3B": null
       },
       "score": {
@@ -95,18 +95,19 @@
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "Deiten Lachance"
+        "Deiten Lachance",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Camden Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Camden Johnson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Camden Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Camden Johnson",
         "3B": null
       },
       "score": {
@@ -127,13 +128,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Camden Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Camden Johnson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Camden Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Camden Johnson",
         "3B": null
       },
       "score": {
@@ -154,13 +155,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Camden Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Camden Johnson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Camden Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Camden Johnson",
         "3B": null
       },
       "score": {
@@ -231,7 +232,10 @@
       "count": "3-2",
       "pitches": "KBBBFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -339,7 +343,9 @@
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -935,7 +941,10 @@
       "count": "2-2",
       "pitches": "BKKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -971,8 +980,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Branch",
-        "2B": "Dasan Harris",
+        "1B": null,
+        "2B": "Kyle Branch",
         "3B": null
       },
       "score": {
@@ -993,14 +1002,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kyle Branch",
-        "2B": "Dasan Harris",
+        "1B": null,
+        "2B": "Kyle Branch",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Branch",
-        "2B": "Dasan Harris",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Kyle Branch"
       },
       "score": {
         "away": 5,
@@ -1016,24 +1025,53 @@
       "count": "2-2",
       "pitches": "BKBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kyle Branch",
-        "2B": "Dasan Harris",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Kyle Branch"
       },
       "runners_after": {
         "1B": "Jason Walk",
-        "2B": "Dasan Harris",
-        "3B": null
+        "2B": null,
+        "3B": "Kyle Branch"
       },
       "score": {
         "away": 6,
         "home": 3
       },
       "description": "Walk, J. singled to shortstop, RBI (2-2 BKBK); Branch, K. scored."
+    },
+    {
+      "inning": "Top 4",
+      "pitcher": "Walker McDuffie",
+      "batter": "McDuffie, W. to p for DeCaro, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Jason Walk",
+        "2B": null,
+        "3B": "Kyle Branch"
+      },
+      "runners_after": {
+        "1B": "Jason Walk",
+        "2B": null,
+        "3B": "Kyle Branch"
+      },
+      "score": {
+        "away": 6,
+        "home": 3
+      },
+      "description": "McDuffie, W. to p for DeCaro, J.."
     },
     {
       "inning": "Top 4",
@@ -1048,13 +1086,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Jason Walk",
-        "2B": "Dasan Harris",
-        "3B": null
+        "2B": null,
+        "3B": "Kyle Branch"
       },
       "runners_after": {
-        "1B": "Jason Walk",
-        "2B": "Dasan Harris",
-        "3B": null
+        "1B": null,
+        "2B": "Jason Walk",
+        "3B": "Kyle Branch"
       },
       "score": {
         "away": 6,
@@ -1070,18 +1108,20 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jason Walk",
-        "2B": "Dasan Harris",
-        "3B": null
+        "1B": null,
+        "2B": "Jason Walk",
+        "3B": "Kyle Branch"
       },
       "runners_after": {
         "1B": "Camden Johnson",
-        "2B": "Dasan Harris",
-        "3B": null
+        "2B": "Jason Walk",
+        "3B": "Kyle Branch"
       },
       "score": {
         "away": 7,
@@ -1102,13 +1142,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Camden Johnson",
-        "2B": "Dasan Harris",
-        "3B": null
+        "2B": "Jason Walk",
+        "3B": "Kyle Branch"
       },
       "runners_after": {
-        "1B": "Camden Johnson",
-        "2B": "Dasan Harris",
-        "3B": null
+        "1B": null,
+        "2B": "Jason Walk",
+        "3B": "Camden Johnson"
       },
       "score": {
         "away": 7,
@@ -1128,14 +1168,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Camden Johnson",
-        "2B": "Dasan Harris",
-        "3B": null
+        "1B": null,
+        "2B": "Jason Walk",
+        "3B": "Camden Johnson"
       },
       "runners_after": {
-        "1B": "Camden Johnson",
-        "2B": "Dasan Harris",
-        "3B": null
+        "1B": null,
+        "2B": "Jason Walk",
+        "3B": "Camden Johnson"
       },
       "score": {
         "away": 7,
@@ -1529,7 +1569,9 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1577,7 +1619,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Walker McDuffie",
+      "pitcher": "Tom Chmielewski",
       "batter": "Deiten Lachance",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1601,6 +1643,33 @@
         "home": 3
       },
       "description": "LaChance, D. flied out to lf (1-2 BFF)."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Gavyn Jones",
+      "batter": "Jones, G. to p for Rager, C..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 8,
+        "home": 3
+      },
+      "description": "Jones, G. to p for Rager, C.."
     },
     {
       "inning": "Bottom 6",
@@ -1739,7 +1808,34 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Chmielew",
+      "pitcher": "Tom Chmielewski",
+      "batter": "Chmielew, T. to p for McDuffie, W..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 8,
+        "home": 3
+      },
+      "description": "Chmielew, T. to p for McDuffie, W.."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Tom Chmielewski",
       "batter": "Jaxon Willits",
       "outcome": "Single",
       "count": "2-2",
@@ -1766,7 +1862,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Chmielew",
+      "pitcher": "Tom Chmielewski",
       "batter": "Trey Gambill",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1793,7 +1889,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Chmielew",
+      "pitcher": "Tom Chmielewski",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1808,7 +1904,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jaxon Willits",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1820,7 +1916,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Chmielew",
+      "pitcher": "Tom Chmielewski",
       "batter": "Brendan Brock",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1830,12 +1926,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jaxon Willits",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jaxon Willits",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1943,8 +2039,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Erik Paulsen",
-        "2B": null,
+        "1B": null,
+        "2B": "Erik Paulsen",
         "3B": null
       },
       "score": {
@@ -1965,13 +2061,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Erik Paulsen",
-        "2B": null,
+        "1B": null,
+        "2B": "Erik Paulsen",
         "3B": null
       },
       "runners_after": {
-        "1B": "Erik Paulsen",
-        "2B": null,
+        "1B": null,
+        "2B": "Erik Paulsen",
         "3B": null
       },
       "score": {
@@ -1982,7 +2078,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Chmielew",
+      "pitcher": "Tom Chmielewski",
       "batter": "Dasan Harris",
       "outcome": "Single",
       "count": "1-2",
@@ -2009,7 +2105,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Chmielew",
+      "pitcher": "Tom Chmielewski",
       "batter": null,
       "outcome": "Baserunning",
       "count": "1-1",
@@ -2036,7 +2132,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Chmielew",
+      "pitcher": "Tom Chmielewski",
       "batter": "Kyle Branch",
       "outcome": "Lineout",
       "count": "1-1",
@@ -2063,7 +2159,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Chmielew",
+      "pitcher": "Tom Chmielewski",
       "batter": "Jason Walk",
       "outcome": "Pop out",
       "count": "3-2",
@@ -2090,7 +2186,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Gavyn Jones",
+      "pitcher": "LJ Mercurius",
       "batter": "Colin Hynek",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2114,6 +2210,33 @@
         "home": 3
       },
       "description": "Hynek, C. struck out swinging (3-2 BBBKFS)."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "LJ Mercurius",
+      "batter": "Mercurius, L to p for Jones, G..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 8,
+        "home": 3
+      },
+      "description": "Mercurius, L to p for Jones, G.."
     },
     {
       "inning": "Bottom 8",
@@ -2198,7 +2321,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Chmielew",
+      "pitcher": "Cameron Padgett",
       "batter": "Camden Johnson",
       "outcome": "Walk",
       "count": "3-2",
@@ -2222,6 +2345,33 @@
         "home": 3
       },
       "description": "Johnson, C. walked (3-2 BBBKKB)."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "Cameron Padgett",
+      "batter": "Padgett, C. to p for Chmielew, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Camden Johnson",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Camden Johnson",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 8,
+        "home": 3
+      },
+      "description": "Padgett, C. to p for Chmielew, T.."
     },
     {
       "inning": "Top 9",
@@ -2252,13 +2402,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Cameron Padgett",
+      "pitcher": "",
       "batter": "Jaxon Willits",
       "outcome": "Grounded into double play",
       "count": "3-2",
       "pitches": "KFFBBBF",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -2279,7 +2431,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Cameron Padgett",
+      "pitcher": "",
       "batter": "Trey Gambill",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2333,7 +2485,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "LJ Mercurius",
+      "pitcher": "",
       "batter": "Owen Hull",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2360,7 +2512,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "LJ Mercurius",
+      "pitcher": "",
       "batter": "Gavin Gallaher",
       "outcome": "Walk",
       "count": "3-1",
@@ -2387,7 +2539,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "LJ Mercurius",
+      "pitcher": "",
       "batter": "Erik Paulsen",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",

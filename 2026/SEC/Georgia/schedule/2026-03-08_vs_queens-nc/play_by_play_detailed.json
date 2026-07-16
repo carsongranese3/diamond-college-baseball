@@ -3,7 +3,7 @@
   "date": "03/08/2026",
   "away_team": "Queens (NC)",
   "home_team": "Georgia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -149,7 +149,8 @@
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Daniel Jackson"
+        "Daniel Jackson",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -340,7 +341,8 @@
       "pitches": "BKB",
       "rbi": true,
       "runs_scored": [
-        "Anibal Rivera"
+        "Anibal Rivera",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -503,7 +505,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1123,6 +1127,33 @@
     {
       "inning": "Bottom 5",
       "pitcher": "Kensen Green",
+      "batter": "GREEN, K to p for GOWAN, J.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 5
+      },
+      "description": "GREEN, K to p for GOWAN, J."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Kensen Green",
       "batter": "Jordy Oriach",
       "outcome": "Hit by pitch",
       "count": "3-1",
@@ -1257,7 +1288,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Kensen Green",
+      "pitcher": "Avery Booker",
       "batter": "Cole Johnson",
       "outcome": "Hit by pitch",
       "count": "2-0",
@@ -1281,6 +1312,33 @@
         "home": 5
       },
       "description": "Johnson, Col hit by pitch (2-0 BB): Branch advanced to second: Arcamone advanced to third."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Avery Booker",
+      "batter": "BOOKER, A to p for GREEN, K.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Cole Johnson",
+        "2B": "Jack Arcamone",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Cole Johnson",
+        "2B": "Jack Arcamone",
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 5
+      },
+      "description": "BOOKER, A to p for GREEN, K."
     },
     {
       "inning": "Bottom 5",
@@ -1488,8 +1546,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -1510,13 +1568,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Daniel Jackson",
-        "2B": null,
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "runners_after": {
         "1B": "Jordy Oriach",
-        "2B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -1527,25 +1585,27 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Avery Booker",
+      "pitcher": "Johnny Joseph",
       "batter": "Henry Allen",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Henry Allen"
+        "Henry Allen",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jordy Oriach",
-        "2B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "runners_after": {
         "1B": "Jordy Oriach",
-        "2B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -1556,7 +1616,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Avery Booker",
+      "pitcher": "Johnny Joseph",
       "batter": "Jack Arcamone",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1567,12 +1627,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jordy Oriach",
-        "2B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "runners_after": {
         "1B": "Jordy Oriach",
-        "2B": null,
+        "2B": "Daniel Jackson",
         "3B": null
       },
       "score": {
@@ -1580,6 +1640,33 @@
         "home": 8
       },
       "description": "Arcamone struck out looking (0-2 FSK)."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Dylan Wood",
+      "batter": "Wood, Dylan to p for Brown.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 8
+      },
+      "description": "Wood, Dylan to p for Brown."
     },
     {
       "inning": "Top 7",
@@ -1637,7 +1724,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Dylan Wood",
+      "pitcher": "Paul Farley",
       "batter": "Hunter Huneycutt",
       "outcome": "Walk",
       "count": "3-2",
@@ -1691,13 +1778,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Paul Farley",
+      "pitcher": "",
       "batter": "Thomas Mathay",
       "outcome": "Fielder's choice",
       "count": "2-2",
       "pitches": "FFBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1718,7 +1807,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Paul Farley",
+      "pitcher": "",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1733,7 +1822,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Thomas Mathay",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1742,6 +1831,33 @@
         "home": 8
       },
       "description": "MATHAY, T advanced to second: RIVERA, A out at home c to p."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Johnny Joseph",
+      "batter": "JOSEPH, J to p for BOOKER, A.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 8
+      },
+      "description": "JOSEPH, J to p for BOOKER, A."
     },
     {
       "inning": "Bottom 7",
@@ -1799,7 +1915,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Johnny Joseph",
+      "pitcher": "Brayden Martino",
       "batter": "Rylan Lujo",
       "outcome": "Walk",
       "count": "3-1",
@@ -1826,13 +1942,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Johnny Joseph",
+      "pitcher": "",
       "batter": "Brennan Hudson",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1853,13 +1971,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Johnny Joseph",
+      "pitcher": "",
       "batter": "Tre Phelps",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1880,14 +2000,44 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Brayden Martino",
+      "pitcher": "",
+      "batter": "MARTINO, B to p for JOSEPH, J.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Tre Phelps",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Tre Phelps",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 10
+      },
+      "description": "MARTINO, B to p for JOSEPH, J."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "",
       "batter": "Daniel Jackson",
       "outcome": "Home run",
       "count": "3-1",
       "pitches": "KBBB",
       "rbi": true,
       "runs_scored": [
-        "Daniel Jackson"
+        "Daniel Jackson",
+        null,
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,

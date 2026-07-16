@@ -3,7 +3,7 @@
   "date": "03/28/2026",
   "away_team": "Stanford",
   "home_team": "Virginia Tech",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -103,8 +103,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Charlie Bates",
-        "2B": null,
+        "1B": null,
+        "2B": "Charlie Bates",
         "3B": null
       },
       "score": {
@@ -125,13 +125,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Charlie Bates",
-        "2B": null,
+        "1B": null,
+        "2B": "Charlie Bates",
         "3B": null
       },
       "runners_after": {
-        "1B": "Charlie Bates",
-        "2B": null,
+        "1B": null,
+        "2B": "Charlie Bates",
         "3B": null
       },
       "score": {
@@ -391,7 +391,9 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -446,7 +448,9 @@
       "pitches": "SBBS",
       "rbi": true,
       "runs_scored": [
-        "Henry Cooke"
+        "Henry Cooke",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -632,7 +636,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Parker Warner",
       "batter": "Pete Daniel",
       "outcome": "Flyout",
       "count": "0-2",
@@ -659,7 +663,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Parker Warner",
       "batter": "Ethan Ball",
       "outcome": "Walk",
       "count": "3-2",
@@ -686,7 +690,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Parker Warner",
       "batter": "Hudson Lutterman",
       "outcome": "Flyout",
       "count": "1-2",
@@ -713,7 +717,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Parker Warner",
       "batter": "Nick Locurto",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -821,7 +825,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Parker Warner",
       "batter": "Sam Gates",
       "outcome": "Groundout",
       "count": "1-0",
@@ -848,7 +852,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Parker Warner",
       "batter": "Owen Petrich",
       "outcome": "Groundout",
       "count": "1-1",
@@ -875,7 +879,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Parker Warner",
       "batter": "Henry Cooke",
       "outcome": "Walk",
       "count": "3-0",
@@ -902,14 +906,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Parker Warner",
       "batter": "Ethan Gibson",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "BKBFBFF",
       "rbi": true,
       "runs_scored": [
-        "Ethan Gibson"
+        "Ethan Gibson",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -931,7 +936,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Parker Warner",
       "batter": "Sam Grube",
       "outcome": "Single",
       "count": "2-0",
@@ -958,7 +963,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Parker Warner",
       "batter": "Pete Daniel",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1120,7 +1125,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Parker Warner",
       "batter": "Ethan Ball",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1147,7 +1152,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Parker Warner",
       "batter": "Hudson Lutterman",
       "outcome": "Walk",
       "count": "3-2",
@@ -1174,7 +1179,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Parker Warner",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1189,8 +1194,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Hudson Lutterman",
-        "2B": null,
+        "1B": null,
+        "2B": "Hudson Lutterman",
         "3B": null
       },
       "score": {
@@ -1201,7 +1206,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Parker Warner",
       "batter": "Nick Locurto",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1211,13 +1216,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Hudson Lutterman",
-        "2B": null,
+        "1B": null,
+        "2B": "Hudson Lutterman",
         "3B": null
       },
       "runners_after": {
-        "1B": "Hudson Lutterman",
-        "2B": null,
+        "1B": null,
+        "2B": "Hudson Lutterman",
         "3B": null
       },
       "score": {
@@ -1228,7 +1233,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Parker Warner",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1238,14 +1243,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Hudson Lutterman",
-        "2B": null,
+        "1B": null,
+        "2B": "Hudson Lutterman",
         "3B": null
       },
       "runners_after": {
-        "1B": "Hudson Lutterman",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Hudson Lutterman"
       },
       "score": {
         "away": 1,
@@ -1255,7 +1260,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Parker Warner",
       "batter": "Sam Gates",
       "outcome": "Walk",
       "count": "3-2",
@@ -1265,14 +1270,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Hudson Lutterman",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Hudson Lutterman"
       },
       "runners_after": {
         "1B": "Sam Gates",
         "2B": null,
-        "3B": null
+        "3B": "Hudson Lutterman"
       },
       "score": {
         "away": 1,
@@ -1282,7 +1287,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Parker Warner",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1294,12 +1299,12 @@
       "runners_before": {
         "1B": "Sam Gates",
         "2B": null,
-        "3B": null
+        "3B": "Hudson Lutterman"
       },
       "runners_after": {
-        "1B": "Sam Gates",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Sam Gates",
+        "3B": "Hudson Lutterman"
       },
       "score": {
         "away": 1,
@@ -1309,24 +1314,27 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Parker Warner",
       "batter": "Owen Petrich",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Sam Gates",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Sam Gates",
+        "3B": "Hudson Lutterman"
       },
       "runners_after": {
         "1B": "Owen Petrich",
-        "2B": null,
-        "3B": null
+        "2B": "Sam Gates",
+        "3B": "Hudson Lutterman"
       },
       "score": {
         "away": 1,
@@ -1336,7 +1344,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Parker Warner",
       "batter": "Henry Cooke",
       "outcome": "Single",
       "count": "0-0",
@@ -1347,13 +1355,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Owen Petrich",
-        "2B": null,
-        "3B": null
+        "2B": "Sam Gates",
+        "3B": "Hudson Lutterman"
       },
       "runners_after": {
         "1B": "Henry Cooke",
-        "2B": null,
-        "3B": null
+        "2B": "Sam Gates",
+        "3B": "Hudson Lutterman"
       },
       "score": {
         "away": 1,
@@ -1363,7 +1371,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Parker Warner",
       "batter": "Ethan Gibson",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1374,13 +1382,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Henry Cooke",
-        "2B": null,
-        "3B": null
+        "2B": "Sam Gates",
+        "3B": "Hudson Lutterman"
       },
       "runners_after": {
         "1B": "Henry Cooke",
-        "2B": null,
-        "3B": null
+        "2B": "Sam Gates",
+        "3B": "Hudson Lutterman"
       },
       "score": {
         "away": 1,
@@ -1471,7 +1479,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Ben Reimers",
       "batter": "Sam Grube",
       "outcome": "Lineout",
       "count": "1-2",
@@ -1498,7 +1506,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Ben Reimers",
       "batter": "Pete Daniel",
       "outcome": "Hit by pitch",
       "count": "3-1",
@@ -1525,7 +1533,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Ben Reimers",
       "batter": "Ethan Ball",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -1552,7 +1560,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Ben Reimers",
       "batter": "Hudson Lutterman",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1579,7 +1587,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Ben Reimers",
       "batter": "Nick Locurto",
       "outcome": "Walk",
       "count": "3-2",
@@ -1606,13 +1614,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Ben Reimers",
       "batter": "Sam Gates",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1633,7 +1643,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Austin Steeves",
       "batter": "Owen Petrich",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1741,7 +1751,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Austin Steeves",
       "batter": "Henry Cooke",
       "outcome": "Walk",
       "count": "3-0",
@@ -1768,7 +1778,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Austin Steeves",
       "batter": "Ethan Gibson",
       "outcome": "Flyout",
       "count": "3-1",
@@ -1795,7 +1805,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Austin Steeves",
       "batter": "Sam Grube",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1822,7 +1832,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Austin Steeves",
       "batter": "Pete Daniel",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1876,7 +1886,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Danny Lazaro",
       "batter": "Rintaro Sasaki",
       "outcome": "Walk",
       "count": "3-0",
@@ -1903,7 +1913,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Ethan Grim",
       "batter": "Teddy Tokheim",
       "outcome": "Single",
       "count": "0-0",
@@ -1930,7 +1940,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Ethan Grim",
       "batter": "Charlie Bates",
       "outcome": "Walk",
       "count": "3-2",
@@ -1957,13 +1967,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Ethan Grim",
       "batter": "JJ Moran",
       "outcome": "Hit by pitch",
       "count": "3-1",
       "pitches": "BBKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1984,7 +1996,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Chase Swift",
       "batter": "Jimmy Nati",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2011,7 +2023,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Chase Swift",
       "batter": "Eric Jeon",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2038,7 +2050,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Austin Steeves",
       "batter": "Ethan Ball",
       "outcome": "Groundout",
       "count": "1-0",
@@ -2065,7 +2077,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Austin Steeves",
       "batter": "Hudson Lutterman",
       "outcome": "Flyout",
       "count": "0-2",
@@ -2092,7 +2104,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Austin Steeves",
       "batter": "Nick Locurto",
       "outcome": "Double",
       "count": "3-1",
@@ -2119,7 +2131,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Austin Steeves",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2135,8 +2147,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Nick Locurto",
-        "3B": null
+        "2B": null,
+        "3B": "Nick Locurto"
       },
       "score": {
         "away": 2,
@@ -2146,7 +2158,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Sam Garewal",
+      "pitcher": "Austin Steeves",
       "batter": "Sam Gates",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -2157,13 +2169,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Nick Locurto",
-        "3B": null
+        "2B": null,
+        "3B": "Nick Locurto"
       },
       "runners_after": {
         "1B": "Sam Gates",
-        "2B": "Nick Locurto",
-        "3B": null
+        "2B": null,
+        "3B": "Nick Locurto"
       },
       "score": {
         "away": 2,
@@ -2173,24 +2185,26 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Sam Garewal",
+      "pitcher": "",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Sam Gates"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Sam Gates",
-        "2B": "Nick Locurto",
-        "3B": null
+        "2B": null,
+        "3B": "Nick Locurto"
       },
       "runners_after": {
-        "1B": "Sam Gates",
-        "2B": "Nick Locurto",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Nick Locurto"
       },
       "score": {
         "away": 2,
@@ -2200,7 +2214,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Chase Swift",
       "batter": "Philip Cheong",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2227,7 +2241,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Chase Swift",
       "batter": "Nolan Stoll",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2254,7 +2268,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Brett Renfrow",
+      "pitcher": "Chase Swift",
       "batter": "Rashad Hayes",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",

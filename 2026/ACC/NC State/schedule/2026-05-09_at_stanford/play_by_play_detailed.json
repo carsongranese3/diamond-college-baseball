@@ -3,7 +3,7 @@
   "date": "05/09/2026",
   "away_team": "NC State",
   "home_team": "Stanford",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -176,7 +176,8 @@
       "pitches": "FFBFF",
       "rbi": true,
       "runs_scored": [
-        "Teddy Tokheim"
+        "Teddy Tokheim",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -531,7 +532,8 @@
       "pitches": "BFB",
       "rbi": true,
       "runs_scored": [
-        "Teddy Tokheim"
+        "Teddy Tokheim",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -688,7 +690,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Aiden Kitchings",
       "batter": "JJ Moran",
       "outcome": "Walk",
       "count": "3-2",
@@ -715,7 +717,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Aiden Kitchings",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -730,8 +732,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "JJ Moran",
-        "2B": null,
+        "1B": null,
+        "2B": "JJ Moran",
         "3B": null
       },
       "score": {
@@ -742,7 +744,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Aiden Kitchings",
       "batter": "Charlie Bates",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -752,13 +754,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "JJ Moran",
-        "2B": null,
+        "1B": null,
+        "2B": "JJ Moran",
         "3B": null
       },
       "runners_after": {
         "1B": "Charlie Bates",
-        "2B": null,
+        "2B": "JJ Moran",
         "3B": null
       },
       "score": {
@@ -769,7 +771,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Jimmy Nati",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -780,12 +782,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Charlie Bates",
-        "2B": null,
+        "2B": "JJ Moran",
         "3B": null
       },
       "runners_after": {
         "1B": "Charlie Bates",
-        "2B": null,
+        "2B": "JJ Moran",
         "3B": null
       },
       "score": {
@@ -796,7 +798,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Luke Lavin",
       "outcome": "Grounded into double play",
       "count": "2-2",
@@ -807,12 +809,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Charlie Bates",
-        "2B": null,
+        "2B": "JJ Moran",
         "3B": null
       },
       "runners_after": {
         "1B": "Charlie Bates",
-        "2B": null,
+        "2B": "JJ Moran",
         "3B": null
       },
       "score": {
@@ -877,7 +879,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Austin Steeves",
       "batter": "Andrew Wiggins",
       "outcome": "Walk",
       "count": "3-0",
@@ -904,13 +906,15 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Austin Steeves",
       "batter": "Christian Serrano",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -931,13 +935,15 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Austin Steeves",
       "batter": "Dalton Bargo",
       "outcome": "Groundout",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -958,7 +964,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Austin Steeves",
       "batter": "Vincent DeCarlo",
       "outcome": "Walk",
       "count": "3-0",
@@ -985,7 +991,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Cohen Gomez",
       "batter": "Rett Johnson",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1012,7 +1018,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Brock Sell",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1039,7 +1045,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Eric Jeon",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1066,7 +1072,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Teddy Tokheim",
       "outcome": "Single",
       "count": "3-1",
@@ -1093,7 +1099,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Cort MacDonald",
       "outcome": "Lineout",
       "count": "1-0",
@@ -1120,7 +1126,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Sam Garewal",
       "batter": "Luke Nixon",
       "outcome": "Single",
       "count": "0-0",
@@ -1147,7 +1153,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Sam Garewal",
       "batter": "Chris McHugh",
       "outcome": "Double",
       "count": "2-2",
@@ -1174,7 +1180,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Sam Garewal",
       "batter": "Ty Head",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1201,7 +1207,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Sam Garewal",
       "batter": "Rett Johnson",
       "outcome": "Walk",
       "count": "3-1",
@@ -1228,13 +1234,16 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Sam Garewal",
       "batter": "Andrew Wiggins",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "KFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1255,7 +1264,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Sam Garewal",
       "batter": "Christian Serrano",
       "outcome": "Foul out",
       "count": "0-0",
@@ -1282,13 +1291,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Sam Garewal",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Andrew Wiggins"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1297,7 +1308,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Andrew Wiggins",
+        "1B": null,
         "2B": "Chris McHugh",
         "3B": null
       },
@@ -1309,7 +1320,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Sam Garewal",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -1319,12 +1330,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Andrew Wiggins",
+        "1B": null,
         "2B": "Chris McHugh",
         "3B": null
       },
       "runners_after": {
-        "1B": "Andrew Wiggins",
+        "1B": null,
         "2B": "Chris McHugh",
         "3B": null
       },
@@ -1336,7 +1347,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Sam Garewal",
       "batter": "Dalton Bargo",
       "outcome": "Walk",
       "count": "3-1",
@@ -1346,7 +1357,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Andrew Wiggins",
+        "1B": null,
         "2B": "Chris McHugh",
         "3B": null
       },
@@ -1363,13 +1374,16 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Ben Reimers",
       "batter": "Vincent DeCarlo",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1390,7 +1404,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Ben Reimers",
       "batter": "Rett Johnson",
       "outcome": "Lineout",
       "count": "3-2",
@@ -1417,7 +1431,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Rintaro Sasaki",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1444,7 +1458,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "JJ Moran",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1471,7 +1485,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Charlie Bates",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1498,7 +1512,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": "Luke Nixon",
       "outcome": "Single",
       "count": "0-0",
@@ -1525,7 +1539,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": "Chris McHugh",
       "outcome": "Pop out",
       "count": "2-1",
@@ -1552,7 +1566,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1567,8 +1581,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Luke Nixon",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Nixon",
         "3B": null
       },
       "score": {
@@ -1579,7 +1593,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": "Ty Head",
       "outcome": "Walk",
       "count": "3-0",
@@ -1589,13 +1603,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Luke Nixon",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Nixon",
         "3B": null
       },
       "runners_after": {
         "1B": "Ty Head",
-        "2B": null,
+        "2B": "Luke Nixon",
         "3B": null
       },
       "score": {
@@ -1606,23 +1620,25 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": "Rett Johnson",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Ty Head",
-        "2B": null,
+        "2B": "Luke Nixon",
         "3B": null
       },
       "runners_after": {
         "1B": "Rett Johnson",
-        "2B": null,
+        "2B": "Luke Nixon",
         "3B": null
       },
       "score": {
@@ -1633,23 +1649,25 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Rett Johnson"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Rett Johnson",
-        "2B": null,
+        "2B": "Luke Nixon",
         "3B": null
       },
       "runners_after": {
-        "1B": "Rett Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Nixon",
         "3B": null
       },
       "score": {
@@ -1660,25 +1678,26 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": "Andrew Wiggins",
       "outcome": "Home run",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Andrew Wiggins"
+        "Andrew Wiggins",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Rett Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Nixon",
         "3B": null
       },
       "runners_after": {
-        "1B": "Rett Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Nixon",
         "3B": null
       },
       "score": {
@@ -1689,7 +1708,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": "Christian Serrano",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1699,13 +1718,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Rett Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Nixon",
         "3B": null
       },
       "runners_after": {
-        "1B": "Rett Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Nixon",
         "3B": null
       },
       "score": {
@@ -1716,7 +1735,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": "Dalton Bargo",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1726,13 +1745,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Rett Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Nixon",
         "3B": null
       },
       "runners_after": {
-        "1B": "Rett Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Nixon",
         "3B": null
       },
       "score": {
@@ -1743,7 +1762,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Jimmy Nati",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1770,7 +1789,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Nolan Stoll",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1797,7 +1816,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Brock Sell",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1824,7 +1843,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": "Vincent DeCarlo",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1851,7 +1870,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": "Rett Johnson",
       "outcome": "Single",
       "count": "0-1",
@@ -1878,7 +1897,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": "Luke Nixon",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1905,7 +1924,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Colt Peterson",
       "batter": "Chris McHugh",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1932,7 +1951,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Eric Jeon",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1959,7 +1978,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Teddy Tokheim",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1986,7 +2005,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Cort MacDonald",
       "outcome": "Pop out",
       "count": "2-1",
@@ -2013,7 +2032,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Quinten Marsh",
       "batter": "Ty Head",
       "outcome": "Home run",
       "count": "2-2",
@@ -2042,7 +2061,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Quinten Marsh",
       "batter": "Rett Johnson",
       "outcome": "Single",
       "count": "1-0",
@@ -2069,7 +2088,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Quinten Marsh",
       "batter": "Andrew Wiggins",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2096,7 +2115,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Quinten Marsh",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2111,8 +2130,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Rett Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Rett Johnson",
         "3B": null
       },
       "score": {
@@ -2123,7 +2142,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Quinten Marsh",
       "batter": "Christian Serrano",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2133,13 +2152,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Rett Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Rett Johnson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Rett Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Rett Johnson",
         "3B": null
       },
       "score": {
@@ -2150,7 +2169,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Quinten Marsh",
       "batter": "Dalton Bargo",
       "outcome": "Single",
       "count": "1-2",
@@ -2160,13 +2179,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Rett Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Rett Johnson",
         "3B": null
       },
       "runners_after": {
         "1B": "Dalton Bargo",
-        "2B": null,
+        "2B": "Rett Johnson",
         "3B": null
       },
       "score": {
@@ -2177,7 +2196,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Quinten Marsh",
       "batter": "Vincent DeCarlo",
       "outcome": "Fielder's choice",
       "count": "2-1",
@@ -2188,12 +2207,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Dalton Bargo",
-        "2B": null,
+        "2B": "Rett Johnson",
         "3B": null
       },
       "runners_after": {
         "1B": "Vincent DeCarlo",
-        "2B": null,
+        "2B": "Rett Johnson",
         "3B": null
       },
       "score": {
@@ -2204,7 +2223,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Rintaro Sasaki",
       "outcome": "Home run",
       "count": "0-0",
@@ -2233,7 +2252,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "JJ Moran",
       "outcome": "Pop out",
       "count": "0-2",
@@ -2260,7 +2279,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Rashad Hayes",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2287,7 +2306,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Brock Ketelsen",
       "outcome": "Walk",
       "count": "3-1",
@@ -2314,7 +2333,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Nolan Stoll",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2341,7 +2360,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Liam Golden",
       "batter": "Rett Johnson",
       "outcome": "Groundout",
       "count": "3-1",
@@ -2368,7 +2387,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Liam Golden",
       "batter": "Luke Nixon",
       "outcome": "Lineout",
       "count": "2-1",
@@ -2395,7 +2414,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Toran O'Harran",
+      "pitcher": "Liam Golden",
       "batter": "Chris McHugh",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2422,7 +2441,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Philip Cheong",
       "outcome": "Single",
       "count": "1-2",
@@ -2449,7 +2468,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Eric Jeon",
       "outcome": "Foul out",
       "count": "0-1",
@@ -2476,13 +2495,15 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Sam Harris",
       "batter": "Henry McDonald",
       "outcome": "Double",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2503,7 +2524,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Michael Ragusa",
       "batter": "Cort MacDonald",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2530,7 +2551,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Luke Hemric",
+      "pitcher": "Michael Ragusa",
       "batter": "Rintaro Sasaki",
       "outcome": "Groundout",
       "count": "1-1",

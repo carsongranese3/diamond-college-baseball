@@ -3,7 +3,7 @@
   "date": "05/09/2026",
   "away_team": "LSU",
   "home_team": "Georgia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -472,7 +472,9 @@
       "count": "0-2",
       "pitches": "SK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -527,7 +529,10 @@
       "pitches": "BF",
       "rbi": true,
       "runs_scored": [
-        "Michael O'Shaughnessy"
+        "Michael O'Shaughnessy",
+        null,
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -591,8 +596,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Rylan Lujo",
-        "2B": null,
+        "1B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "score": {
@@ -609,17 +614,19 @@
       "count": "3-2",
       "pitches": "BBFBFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Rylan Lujo",
-        "2B": null,
+        "1B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "runners_after": {
         "1B": "Kenny Ishikawa",
-        "2B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "score": {
@@ -637,18 +644,19 @@
       "pitches": "KB",
       "rbi": true,
       "runs_scored": [
-        "Jordy Oriach"
+        "Jordy Oriach",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Kenny Ishikawa",
-        "2B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "runners_after": {
         "1B": "Kenny Ishikawa",
-        "2B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "score": {
@@ -670,12 +678,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Kenny Ishikawa",
-        "2B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "runners_after": {
         "1B": "Kenny Ishikawa",
-        "2B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "score": {
@@ -697,12 +705,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kenny Ishikawa",
-        "2B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "runners_after": {
         "1B": "Kenny Ishikawa",
-        "2B": null,
+        "2B": "Rylan Lujo",
         "3B": null
       },
       "score": {
@@ -827,7 +835,11 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1475,7 +1487,9 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1583,7 +1597,9 @@
       "count": "0-2",
       "pitches": "KFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1793,7 +1809,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ethan Plog",
+      "pitcher": "Zion Theophilus",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1826,7 +1842,9 @@
       "count": "2-1",
       "pitches": "BBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -1853,7 +1871,9 @@
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1889,8 +1909,8 @@
         "3B": "Ryan Black"
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
-        "2B": "Kolby Branch",
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": "Ryan Black"
       },
       "score": {
@@ -1911,13 +1931,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Daniel Jackson",
-        "2B": "Kolby Branch",
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": "Ryan Black"
       },
       "runners_after": {
-        "1B": "Daniel Jackson",
-        "2B": "Kolby Branch",
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": "Ryan Black"
       },
       "score": {
@@ -1938,13 +1958,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Daniel Jackson",
-        "2B": "Kolby Branch",
+        "1B": null,
+        "2B": "Daniel Jackson",
         "3B": "Ryan Black"
       },
       "runners_after": {
         "1B": "Rylan Lujo",
-        "2B": "Kolby Branch",
+        "2B": "Daniel Jackson",
         "3B": "Ryan Black"
       },
       "score": {
@@ -1966,12 +1986,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Rylan Lujo",
-        "2B": "Kolby Branch",
+        "2B": "Daniel Jackson",
         "3B": "Ryan Black"
       },
       "runners_after": {
         "1B": "Rylan Lujo",
-        "2B": "Kolby Branch",
+        "2B": "Daniel Jackson",
         "3B": "Ryan Black"
       },
       "score": {
@@ -2307,6 +2327,33 @@
     {
       "inning": "Top 8",
       "pitcher": "Jordan Stephens",
+      "batter": "Stephens, J. to p for Ellisen.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Steven Milam",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Steven Milam",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 12
+      },
+      "description": "Stephens, J. to p for Ellisen."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Jordan Stephens",
       "batter": "Seth Dardar",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2366,7 +2413,9 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -2394,7 +2443,9 @@
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "Chris Stanfield"
+        "Chris Stanfield",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -2416,7 +2467,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Jordan Stephens",
+      "pitcher": "Matt Scott",
       "batter": "Mason Braun",
       "outcome": "Groundout",
       "count": "3-1",
@@ -2688,7 +2739,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Matt Scott",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2717,7 +2768,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Matt Scott",
+      "pitcher": "",
       "batter": "Yamin",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",

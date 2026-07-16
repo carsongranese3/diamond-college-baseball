@@ -3,7 +3,7 @@
   "date": "03/19/2026",
   "away_team": "Oklahoma",
   "home_team": "LSU",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -283,7 +283,9 @@
       "count": "3-1",
       "pitches": "BBBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -472,7 +474,9 @@
       "count": "3-2",
       "pitches": "KBSBBF",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -553,7 +557,9 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jake Brown"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -562,7 +568,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Brown",
+        "1B": null,
         "2B": "Trent Caraway",
         "3B": null
       },
@@ -580,11 +586,13 @@
       "count": "2-2",
       "pitches": "SKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jake Brown",
+        "1B": null,
         "2B": "Trent Caraway",
         "3B": null
       },
@@ -629,12 +637,41 @@
     {
       "inning": "Bottom 2",
       "pitcher": "Xander Mercurius",
+      "batter": "Mercurius, X to p for Johnson, Cam.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Serna",
+        "2B": "Trent Caraway",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Serna",
+        "2B": "Trent Caraway",
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 4
+      },
+      "description": "Mercurius, X to p for Johnson, Cam."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Xander Mercurius",
       "batter": "John Pearson",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1336,7 +1373,9 @@
       "count": "0-2",
       "pitches": "KSS",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1627,7 +1666,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Xander Mercurius",
+      "pitcher": "Nate Smithburg",
       "batter": "Dickerson, D to rf.",
       "outcome": "\u2014",
       "count": null,
@@ -1654,7 +1693,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Xander Mercurius",
+      "pitcher": "Nate Smithburg",
       "batter": "Serna",
       "outcome": "Double",
       "count": "0-0",
@@ -1681,7 +1720,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Xander Mercurius",
+      "pitcher": "Isaac Williams",
       "batter": "John Pearson",
       "outcome": "Double",
       "count": "2-2",
@@ -1708,7 +1747,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Xander Mercurius",
+      "pitcher": "Isaac Williams",
       "batter": "Cade Arrambide",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1735,13 +1774,43 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nate Smithburg",
+      "pitcher": "Isaac Williams",
+      "batter": "Smithburg, N to p for Mercurius, X.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": "John Pearson",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "John Pearson",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 5
+      },
+      "description": "Smithburg, N to p for Mercurius, X."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Jaden Barfield",
       "batter": "Zach Yorke",
       "outcome": "Single",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1762,7 +1831,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nate Smithburg",
+      "pitcher": "Jaden Barfield",
       "batter": "Trent Caraway",
       "outcome": "Walk",
       "count": "3-2",
@@ -1789,7 +1858,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Isaac Williams",
+      "pitcher": "Jaden Barfield",
+      "batter": "Williams, I. to p for Smithburg, N.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Trent Caraway",
+        "2B": "John Pearson",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Trent Caraway",
+        "2B": "John Pearson",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 7
+      },
+      "description": "Williams, I. to p for Smithburg, N."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "",
       "batter": "Chris Stanfield",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1816,7 +1912,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Isaac Williams",
+      "pitcher": "",
       "batter": "Steven Milam",
       "outcome": "Flyout",
       "count": "3-1",
@@ -1924,7 +2020,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Casan Evans",
+      "pitcher": "Ethan Plog",
       "batter": "Trey Gambill",
       "outcome": "Walk",
       "count": "3-2",
@@ -1951,7 +2047,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ethan Plog",
+      "pitcher": "Zac Cowan",
       "batter": "Camden Johnson",
       "outcome": "Single",
       "count": "2-1",
@@ -2005,7 +2101,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Isaac Williams",
+      "pitcher": "",
       "batter": "Walters, U. to 2b for Harris, D..",
       "outcome": "\u2014",
       "count": null,
@@ -2032,7 +2128,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Isaac Williams",
+      "pitcher": "",
       "batter": "Jake Brown",
       "outcome": "Walk",
       "count": "3-0",
@@ -2059,7 +2155,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jaden Barfield",
+      "pitcher": "",
+      "batter": "Barfield, J to p for Williams, I..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Jake Brown",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Jake Brown",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 7
+      },
+      "description": "Barfield, J to p for Williams, I.."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Derek Curiel",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2086,7 +2209,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jaden Barfield",
+      "pitcher": "",
       "batter": "Serna",
       "outcome": "Single",
       "count": "0-2",
@@ -2113,7 +2236,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jaden Barfield",
+      "pitcher": "",
       "batter": "Jack Ruckert",
       "outcome": "Grounded into double play",
       "count": "0-0",
@@ -2194,7 +2317,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Zac Cowan",
+      "pitcher": "",
       "batter": "Alec Blair",
       "outcome": "Groundout",
       "count": "0-0",

@@ -3,7 +3,7 @@
   "date": "02/27/2026",
   "away_team": "Fresno St.",
   "home_team": "Stanford",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -94,7 +94,9 @@
       "count": "1-1",
       "pitches": "SB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -238,8 +240,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tatum Marsh",
-        "2B": null,
+        "1B": null,
+        "2B": "Tatum Marsh",
         "3B": null
       },
       "score": {
@@ -260,13 +262,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Tatum Marsh",
-        "2B": null,
+        "1B": null,
+        "2B": "Tatum Marsh",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tatum Marsh",
-        "2B": null,
+        "1B": null,
+        "2B": "Tatum Marsh",
         "3B": null
       },
       "score": {
@@ -287,13 +289,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Tatum Marsh",
-        "2B": null,
+        "1B": null,
+        "2B": "Tatum Marsh",
         "3B": null
       },
       "runners_after": {
         "1B": "Brady Reynolds",
-        "2B": null,
+        "2B": "Tatum Marsh",
         "3B": null
       },
       "score": {
@@ -310,17 +312,19 @@
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Brady Reynolds",
-        "2B": null,
+        "2B": "Tatum Marsh",
         "3B": null
       },
       "runners_after": {
         "1B": "Jimmy Nati",
-        "2B": null,
+        "2B": "Tatum Marsh",
         "3B": null
       },
       "score": {
@@ -342,12 +346,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Jimmy Nati",
-        "2B": null,
+        "2B": "Tatum Marsh",
         "3B": null
       },
       "runners_after": {
         "1B": "Rintaro Sasaki",
-        "2B": null,
+        "2B": "Tatum Marsh",
         "3B": null
       },
       "score": {
@@ -369,12 +373,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Rintaro Sasaki",
-        "2B": null,
+        "2B": "Tatum Marsh",
         "3B": null
       },
       "runners_after": {
         "1B": "Rintaro Sasaki",
-        "2B": null,
+        "2B": "Tatum Marsh",
         "3B": null
       },
       "score": {
@@ -797,7 +801,8 @@
       "pitches": "SBF",
       "rbi": true,
       "runs_scored": [
-        "Jimmy Nati"
+        "Jimmy Nati",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1230,7 +1235,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1266,8 +1273,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Sky Collins",
-        "2B": null,
+        "1B": null,
+        "2B": "Sky Collins",
         "3B": null
       },
       "score": {
@@ -1284,17 +1291,20 @@
       "count": "3-2",
       "pitches": "BSFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Sky Collins",
-        "2B": null,
+        "1B": null,
+        "2B": "Sky Collins",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael Boyd",
-        "2B": null,
+        "2B": "Sky Collins",
         "3B": null
       },
       "score": {
@@ -1316,12 +1326,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Michael Boyd",
-        "2B": null,
+        "2B": "Sky Collins",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael Boyd",
-        "2B": null,
+        "2B": "Sky Collins",
         "3B": null
       },
       "score": {
@@ -1469,7 +1479,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Drew Townson",
+      "pitcher": "BJ Rodriguez",
       "batter": "Luke Lavin",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1550,7 +1560,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Trevor Moore",
       "batter": "Brady Hewitt",
       "outcome": "Single",
       "count": "3-2",
@@ -1577,7 +1587,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Trevor Moore",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1592,8 +1602,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brady Hewitt",
-        "2B": null,
+        "1B": null,
+        "2B": "Brady Hewitt",
         "3B": null
       },
       "score": {
@@ -1604,7 +1614,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Trevor Moore",
       "batter": "Jett Ruby",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1614,13 +1624,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brady Hewitt",
-        "2B": null,
+        "1B": null,
+        "2B": "Brady Hewitt",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brady Hewitt",
-        "2B": null,
+        "1B": null,
+        "2B": "Brady Hewitt",
         "3B": null
       },
       "score": {
@@ -1631,7 +1641,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Drew Townson",
+      "pitcher": "BJ Rodriguez",
       "batter": "Brock Sell",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1658,7 +1668,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Drew Townson",
+      "pitcher": "BJ Rodriguez",
       "batter": "Charlie Bates",
       "outcome": "Single",
       "count": "2-1",
@@ -1685,7 +1695,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Drew Townson",
+      "pitcher": "BJ Rodriguez",
       "batter": "Tatum Marsh",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1712,7 +1722,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Drew Townson",
+      "pitcher": "BJ Rodriguez",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1727,9 +1737,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Charlie Bates",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Charlie Bates"
       },
       "score": {
         "away": 4,
@@ -1739,7 +1749,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Drew Townson",
+      "pitcher": "BJ Rodriguez",
       "batter": "JJ Moran",
       "outcome": "Hit by pitch",
       "count": "2-1",
@@ -1749,14 +1759,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Charlie Bates",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Charlie Bates"
       },
       "runners_after": {
         "1B": "JJ Moran",
         "2B": null,
-        "3B": null
+        "3B": "Charlie Bates"
       },
       "score": {
         "away": 4,
@@ -1766,24 +1776,26 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Drew Townson",
+      "pitcher": "BJ Rodriguez",
       "batter": "Brady Reynolds",
       "outcome": "Reached on error",
       "count": "0-0",
       "pitches": "",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "JJ Moran",
         "2B": null,
-        "3B": null
+        "3B": "Charlie Bates"
       },
       "runners_after": {
         "1B": "Brady Reynolds",
         "2B": null,
-        "3B": null
+        "3B": "Charlie Bates"
       },
       "score": {
         "away": 4,
@@ -1793,7 +1805,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Drew Townson",
+      "pitcher": "BJ Rodriguez",
       "batter": "Jimmy Nati",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -1805,12 +1817,12 @@
       "runners_before": {
         "1B": "Brady Reynolds",
         "2B": null,
-        "3B": null
+        "3B": "Charlie Bates"
       },
       "runners_after": {
         "1B": "Jimmy Nati",
         "2B": null,
-        "3B": null
+        "3B": "Charlie Bates"
       },
       "score": {
         "away": 4,
@@ -1820,7 +1832,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Drew Townson",
+      "pitcher": "BJ Rodriguez",
       "batter": "Rintaro Sasaki",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1832,12 +1844,12 @@
       "runners_before": {
         "1B": "Jimmy Nati",
         "2B": null,
-        "3B": null
+        "3B": "Charlie Bates"
       },
       "runners_after": {
         "1B": "Jimmy Nati",
         "2B": null,
-        "3B": null
+        "3B": "Charlie Bates"
       },
       "score": {
         "away": 4,
@@ -1847,7 +1859,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Trevor Moore",
       "batter": "Owen Faust",
       "outcome": "Single",
       "count": "1-1",
@@ -1874,7 +1886,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Trevor Moore",
       "batter": "Griffen Sotomayor",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1901,7 +1913,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Trevor Moore",
       "batter": "Sky Collins",
       "outcome": "Single",
       "count": "1-0",
@@ -1928,13 +1940,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Trevor Moore",
       "batter": "Michael Boyd",
       "outcome": "Fielder's choice",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1955,7 +1969,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Trevor Moore",
       "batter": "Marcus Nolen",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1982,7 +1996,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Drew Townson",
+      "pitcher": "BJ Rodriguez",
       "batter": "Teddy Tokheim",
       "outcome": "Lineout",
       "count": "2-2",
@@ -2009,7 +2023,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Drew Townson",
+      "pitcher": "BJ Rodriguez",
       "batter": "Luke Lavin",
       "outcome": "Single",
       "count": "0-1",
@@ -2036,7 +2050,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Drew Townson",
+      "pitcher": "BJ Rodriguez",
       "batter": "Brock Sell",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2063,7 +2077,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Drew Townson",
+      "pitcher": "BJ Rodriguez",
       "batter": "Charlie Bates",
       "outcome": "Flyout",
       "count": "2-1",
@@ -2090,7 +2104,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Trevor Moore",
       "batter": "Austin Young",
       "outcome": "Groundout",
       "count": "1-0",
@@ -2117,7 +2131,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Trevor Moore",
       "batter": "Barclay Ovalle",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2144,7 +2158,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Trevor Moore",
       "batter": "Brady Hewitt",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2171,7 +2185,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Drew Townson",
+      "pitcher": "Douglas Crystal",
       "batter": "Tatum Marsh",
       "outcome": "Groundout",
       "count": "0-2",
@@ -2198,7 +2212,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Drew Townson",
+      "pitcher": "Douglas Crystal",
       "batter": "JJ Moran",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2225,7 +2239,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Drew Townson",
+      "pitcher": "Douglas Crystal",
       "batter": "Brock Ketelsen",
       "outcome": "Walk",
       "count": "3-1",
@@ -2252,7 +2266,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Drew Townson",
+      "pitcher": "Douglas Crystal",
       "batter": "Jimmy Nati",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2279,7 +2293,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Trevor Moore",
       "batter": "Jett Ruby",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2306,7 +2320,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Colt Peterson",
       "batter": "Owen Faust",
       "outcome": "Walk",
       "count": "3-2",
@@ -2333,7 +2347,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nick Dugan",
+      "pitcher": "Colt Peterson",
       "batter": "Griffen Sotomayor",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2360,7 +2374,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nick Dugan",
+      "pitcher": "",
       "batter": "Sky Collins",
       "outcome": "Walk",
       "count": "3-0",
@@ -2387,7 +2401,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nick Dugan",
+      "pitcher": "",
       "batter": "Michael Boyd",
       "outcome": "Flyout",
       "count": "3-1",
@@ -2414,7 +2428,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Drew Townson",
+      "pitcher": "Douglas Crystal",
       "batter": "Rintaro Sasaki",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2441,7 +2455,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Drew Townson",
+      "pitcher": "Douglas Crystal",
       "batter": "Teddy Tokheim",
       "outcome": "Walk",
       "count": "3-0",
@@ -2468,7 +2482,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Drew Townson",
+      "pitcher": "Douglas Crystal",
       "batter": "Luke Lavin",
       "outcome": "Flyout",
       "count": "1-0",
@@ -2495,13 +2509,15 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Drew Townson",
+      "pitcher": "Douglas Crystal",
       "batter": "Brock Sell",
       "outcome": "Triple",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {

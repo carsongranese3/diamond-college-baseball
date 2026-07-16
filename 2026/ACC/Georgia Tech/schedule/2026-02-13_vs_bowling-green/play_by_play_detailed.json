@@ -3,7 +3,7 @@
   "date": "02/13/2026",
   "away_team": "Bowling Green",
   "home_team": "Georgia Tech",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -582,7 +582,9 @@
       "count": "2-1",
       "pitches": "BKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -855,7 +857,9 @@
       "pitches": "FK",
       "rbi": true,
       "runs_scored": [
-        "Caleb Daniel"
+        "Caleb Daniel",
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -973,8 +977,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Drew Burress",
-        "2B": null,
+        "1B": null,
+        "2B": "Drew Burress",
         "3B": null
       },
       "score": {
@@ -995,13 +999,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Drew Burress",
-        "2B": null,
+        "1B": null,
+        "2B": "Drew Burress",
         "3B": null
       },
       "runners_after": {
         "1B": "Kent Schmidt",
-        "2B": null,
+        "2B": "Drew Burress",
         "3B": null
       },
       "score": {
@@ -1023,12 +1027,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kent Schmidt",
-        "2B": null,
+        "2B": "Drew Burress",
         "3B": null
       },
       "runners_after": {
         "1B": "Kent Schmidt",
-        "2B": null,
+        "2B": "Drew Burress",
         "3B": null
       },
       "score": {
@@ -1147,7 +1151,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Titus Lotz",
       "batter": "Ryan Zuckerman",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1174,7 +1178,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Titus Lotz",
       "batter": "Will Baker",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1201,7 +1205,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Titus Lotz",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1216,8 +1220,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Vahn Lackey",
-        "2B": null,
+        "1B": null,
+        "2B": "Vahn Lackey",
         "3B": null
       },
       "score": {
@@ -1228,7 +1232,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Titus Lotz",
       "batter": "Caleb Daniel",
       "outcome": "Hit by pitch",
       "count": "3-2",
@@ -1238,13 +1242,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Vahn Lackey",
-        "2B": null,
+        "1B": null,
+        "2B": "Vahn Lackey",
         "3B": null
       },
       "runners_after": {
         "1B": "Caleb Daniel",
-        "2B": null,
+        "2B": "Vahn Lackey",
         "3B": null
       },
       "score": {
@@ -1255,7 +1259,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Titus Lotz",
       "batter": "Carson Kerce",
       "outcome": "Fielder's choice",
       "count": "1-2",
@@ -1266,12 +1270,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Caleb Daniel",
-        "2B": null,
+        "2B": "Vahn Lackey",
         "3B": null
       },
       "runners_after": {
         "1B": "Carson Kerce",
-        "2B": null,
+        "2B": "Vahn Lackey",
         "3B": null
       },
       "score": {
@@ -1282,7 +1286,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate McKee",
+      "pitcher": "Dylan Loy",
       "batter": "Vinny Salvione",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1309,7 +1313,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate McKee",
+      "pitcher": "Dylan Loy",
       "batter": "Sam Seidel",
       "outcome": "Walk",
       "count": "3-1",
@@ -1336,7 +1340,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate McKee",
+      "pitcher": "Dylan Loy",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1351,8 +1355,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Seidel",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Seidel",
         "3B": null
       },
       "score": {
@@ -1363,7 +1367,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate McKee",
+      "pitcher": "Dylan Loy",
       "batter": "Brady Birchmeier",
       "outcome": "Single",
       "count": "1-2",
@@ -1373,13 +1377,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Sam Seidel",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Seidel",
         "3B": null
       },
       "runners_after": {
         "1B": "Brady Birchmeier",
-        "2B": null,
+        "2B": "Sam Seidel",
         "3B": null
       },
       "score": {
@@ -1390,7 +1394,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate McKee",
+      "pitcher": "Dylan Loy",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1401,13 +1405,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Brady Birchmeier",
-        "2B": null,
+        "2B": "Sam Seidel",
         "3B": null
       },
       "runners_after": {
         "1B": "Brady Birchmeier",
         "2B": null,
-        "3B": null
+        "3B": "Sam Seidel"
       },
       "score": {
         "away": 1,
@@ -1417,7 +1421,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate McKee",
+      "pitcher": "Dylan Loy",
       "batter": "Anthony Mitta",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1429,12 +1433,12 @@
       "runners_before": {
         "1B": "Brady Birchmeier",
         "2B": null,
-        "3B": null
+        "3B": "Sam Seidel"
       },
       "runners_after": {
         "1B": "Brady Birchmeier",
         "2B": null,
-        "3B": null
+        "3B": "Sam Seidel"
       },
       "score": {
         "away": 1,
@@ -1444,7 +1448,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate McKee",
+      "pitcher": "Dylan Loy",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1456,12 +1460,12 @@
       "runners_before": {
         "1B": "Brady Birchmeier",
         "2B": null,
-        "3B": null
+        "3B": "Sam Seidel"
       },
       "runners_after": {
-        "1B": "Brady Birchmeier",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Brady Birchmeier",
+        "3B": "Sam Seidel"
       },
       "score": {
         "away": 1,
@@ -1471,7 +1475,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate McKee",
+      "pitcher": "Dylan Loy",
       "batter": "Zack Horky",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1481,14 +1485,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brady Birchmeier",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Brady Birchmeier",
+        "3B": "Sam Seidel"
       },
       "runners_after": {
-        "1B": "Brady Birchmeier",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Brady Birchmeier",
+        "3B": "Sam Seidel"
       },
       "score": {
         "away": 1,
@@ -1498,7 +1502,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Titus Lotz",
       "batter": "Jarren Advincula",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -1525,7 +1529,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Titus Lotz",
       "batter": "Drew Burress",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1552,7 +1556,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Titus Lotz",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1567,8 +1571,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jarren Advincula",
-        "2B": null,
+        "1B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "score": {
@@ -1579,7 +1583,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Titus Lotz",
       "batter": "Kent Schmidt",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -1589,13 +1593,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jarren Advincula",
-        "2B": null,
+        "1B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "runners_after": {
         "1B": "Kent Schmidt",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "score": {
@@ -1606,7 +1610,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Titus Lotz",
       "batter": "Alex Hernandez",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1617,12 +1621,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kent Schmidt",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "runners_after": {
         "1B": "Kent Schmidt",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "score": {
@@ -1633,7 +1637,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Titus Lotz",
       "batter": "Vahn Lackey",
       "outcome": "Walk",
       "count": "3-1",
@@ -1644,12 +1648,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Kent Schmidt",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "runners_after": {
         "1B": "Vahn Lackey",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "score": {
@@ -1660,23 +1664,25 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Titus Lotz",
       "batter": "Ryan Zuckerman",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "SBBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Vahn Lackey",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "runners_after": {
         "1B": "Ryan Zuckerman",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "score": {
@@ -1687,23 +1693,26 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Titus Lotz",
       "batter": "Will Baker",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "KFBFBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Ryan Zuckerman",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "runners_after": {
         "1B": "Will Baker",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "score": {
@@ -1714,7 +1723,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Ethan Papacek",
       "batter": "Caleb Daniel",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1725,12 +1734,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Will Baker",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "runners_after": {
         "1B": "Will Baker",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "score": {
@@ -1741,7 +1750,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Dylan Loy",
       "batter": "Pauly Mancino",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1768,7 +1777,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Charlie Willcox",
       "batter": "Brayden CURLIS",
       "outcome": "Walk",
       "count": "3-0",
@@ -1795,7 +1804,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Charlie Willcox",
       "batter": "Cooper McKenzie",
       "outcome": "Single",
       "count": "3-1",
@@ -1822,7 +1831,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Charlie Willcox",
       "batter": "Chase CHOPIN",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1849,13 +1858,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Charlie Willcox",
       "batter": "Vinny Salvione",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BBS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1876,13 +1887,15 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Charlie Willcox",
       "batter": "Sam Seidel",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "KSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1903,7 +1916,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate McKee",
+      "pitcher": "Charlie Willcox",
       "batter": "Brady Birchmeier",
       "outcome": "Groundout",
       "count": "3-1",
@@ -1930,7 +1943,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Ethan Papacek",
       "batter": "Carson Kerce",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1957,7 +1970,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Ethan Papacek",
       "batter": "Jarren Advincula",
       "outcome": "Single",
       "count": "1-1",
@@ -1984,7 +1997,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Ethan Papacek",
       "batter": "Drew Burress",
       "outcome": "Flyout",
       "count": "1-2",
@@ -2011,7 +2024,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Ethan Papacek",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2026,8 +2039,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jarren Advincula",
-        "2B": null,
+        "1B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "score": {
@@ -2038,7 +2051,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Ethan Papacek",
       "batter": "Kent Schmidt",
       "outcome": "Walk",
       "count": "3-2",
@@ -2048,13 +2061,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Jarren Advincula",
-        "2B": null,
+        "1B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "runners_after": {
         "1B": "Kent Schmidt",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "score": {
@@ -2065,23 +2078,25 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Ethan Papacek",
       "batter": "Alex Hernandez",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BBKF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Kent Schmidt",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "runners_after": {
         "1B": "Alex Hernandez",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "score": {
@@ -2092,7 +2107,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Ethan Papacek",
       "batter": "Vahn Lackey",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2103,12 +2118,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Alex Hernandez",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "runners_after": {
         "1B": "Alex Hernandez",
-        "2B": null,
+        "2B": "Jarren Advincula",
         "3B": null
       },
       "score": {
@@ -2119,7 +2134,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Tate McKee",
+      "pitcher": "Charlie Willcox",
       "batter": "Anthony Mitta",
       "outcome": "Single",
       "count": "1-0",
@@ -2146,7 +2161,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Tate McKee",
+      "pitcher": "Charlie Willcox",
       "batter": "Zack Horky",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2173,7 +2188,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Tate McKee",
+      "pitcher": "Charlie Willcox",
       "batter": "Pauly Mancino",
       "outcome": "Single",
       "count": "1-1",
@@ -2200,7 +2215,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Tate McKee",
+      "pitcher": "Charlie Willcox",
       "batter": "Brayden CURLIS",
       "outcome": "Pop out",
       "count": "0-2",
@@ -2227,13 +2242,15 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Tate McKee",
+      "pitcher": "Charlie Willcox",
       "batter": "Cooper McKenzie",
       "outcome": "Reached on error",
       "count": "3-1",
       "pitches": "BBKB",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2254,7 +2271,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Tate McKee",
+      "pitcher": "Charlie Willcox",
       "batter": "Chase CHOPIN",
       "outcome": "Walk",
       "count": "3-0",
@@ -2281,7 +2298,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Tate McKee",
+      "pitcher": "Caden Gaudette",
       "batter": "Vinny Salvione",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2308,7 +2325,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Ethan Papacek",
       "batter": "Ryan Zuckerman",
       "outcome": "Walk",
       "count": "3-0",
@@ -2335,7 +2352,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Ethan Papacek",
       "batter": "Will Baker",
       "outcome": "Double",
       "count": "1-2",
@@ -2362,13 +2379,16 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Ethan Papacek",
       "batter": "Caleb Daniel",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "FKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -2389,7 +2409,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jacob Turner",
+      "pitcher": "Ethan Papacek",
       "batter": "Carson Kerce",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2416,7 +2436,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jacob Turner",
+      "pitcher": "CJ Boudreaux",
       "batter": "Jarren Advincula",
       "outcome": "Groundout",
       "count": "1-0",
@@ -2443,7 +2463,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jacob Turner",
+      "pitcher": "CJ Boudreaux",
       "batter": "Drew Burress",
       "outcome": "Walk",
       "count": "3-2",
@@ -2470,7 +2490,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jacob Turner",
+      "pitcher": "CJ Boudreaux",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2485,8 +2505,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Drew Burress",
-        "2B": "Caleb Daniel",
+        "1B": null,
+        "2B": "Drew Burress",
         "3B": null
       },
       "score": {
@@ -2497,7 +2517,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jacob Turner",
+      "pitcher": "CJ Boudreaux",
       "batter": "Kent Schmidt",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2507,13 +2527,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Drew Burress",
-        "2B": "Caleb Daniel",
+        "1B": null,
+        "2B": "Drew Burress",
         "3B": null
       },
       "runners_after": {
-        "1B": "Drew Burress",
-        "2B": "Caleb Daniel",
+        "1B": null,
+        "2B": "Drew Burress",
         "3B": null
       },
       "score": {
@@ -2524,7 +2544,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Tate McKee",
+      "pitcher": "James Vicens",
       "batter": "Sam Seidel",
       "outcome": "Walk",
       "count": "3-0",
@@ -2551,7 +2571,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Tate McKee",
+      "pitcher": "James Vicens",
       "batter": "Brady Birchmeier",
       "outcome": "Walk",
       "count": "3-1",
@@ -2578,7 +2598,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Tate McKee",
+      "pitcher": "James Vicens",
       "batter": "Anthony Mitta",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2605,7 +2625,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Tate McKee",
+      "pitcher": "James Vicens",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2620,9 +2640,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brady Birchmeier",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brady Birchmeier"
       },
       "score": {
         "away": 4,
@@ -2632,24 +2652,26 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Tate McKee",
+      "pitcher": "James Vicens",
       "batter": "Zack Horky",
       "outcome": "Reached on error",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Brady Birchmeier",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Brady Birchmeier"
       },
       "runners_after": {
         "1B": "Zack Horky",
         "2B": null,
-        "3B": null
+        "3B": "Brady Birchmeier"
       },
       "score": {
         "away": 5,
@@ -2659,7 +2681,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Tate McKee",
+      "pitcher": "James Vicens",
       "batter": "Pauly Mancino",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2671,12 +2693,12 @@
       "runners_before": {
         "1B": "Zack Horky",
         "2B": null,
-        "3B": null
+        "3B": "Brady Birchmeier"
       },
       "runners_after": {
         "1B": "Zack Horky",
         "2B": null,
-        "3B": null
+        "3B": "Brady Birchmeier"
       },
       "score": {
         "away": 5,
@@ -2686,7 +2708,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Tate McKee",
+      "pitcher": "James Vicens",
       "batter": "Brayden CURLIS",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2698,12 +2720,12 @@
       "runners_before": {
         "1B": "Zack Horky",
         "2B": null,
-        "3B": null
+        "3B": "Brady Birchmeier"
       },
       "runners_after": {
         "1B": "Zack Horky",
         "2B": null,
-        "3B": null
+        "3B": "Brady Birchmeier"
       },
       "score": {
         "away": 5,

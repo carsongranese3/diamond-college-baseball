@@ -3,7 +3,7 @@
   "date": "04/29/2026",
   "away_team": "Kent St.",
   "home_team": "Pittsburgh",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -49,8 +49,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Luke Matthews",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Matthews",
         "3B": null
       },
       "score": {
@@ -71,13 +71,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Luke Matthews",
-        "2B": null,
+        "1B": null,
+        "2B": "Luke Matthews",
         "3B": null
       },
       "runners_after": {
         "1B": "Ripken Reese",
-        "2B": null,
+        "2B": "Luke Matthews",
         "3B": null
       },
       "score": {
@@ -99,13 +99,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Ripken Reese",
-        "2B": null,
+        "2B": "Luke Matthews",
         "3B": null
       },
       "runners_after": {
-        "1B": "Ripken Reese",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Ripken Reese",
+        "3B": "Luke Matthews"
       },
       "score": {
         "away": 0,
@@ -121,18 +121,20 @@
       "count": "3-2",
       "pitches": "BBSBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Luke Matthews"
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Ripken Reese",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Ripken Reese",
+        "3B": "Luke Matthews"
       },
       "runners_after": {
-        "1B": "Ripken Reese",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Ripken Reese"
       },
       "score": {
         "away": 1,
@@ -152,14 +154,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ripken Reese",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Ripken Reese"
       },
       "runners_after": {
-        "1B": "Ripken Reese",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Ripken Reese"
       },
       "score": {
         "away": 1,
@@ -179,14 +181,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ripken Reese",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Ripken Reese"
       },
       "runners_after": {
         "1B": "Brody Williams",
         "2B": null,
-        "3B": null
+        "3B": "Ripken Reese"
       },
       "score": {
         "away": 1,
@@ -196,7 +198,7 @@
     },
     {
       "inning": "Top 1",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Joey Ciancimino",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -208,12 +210,12 @@
       "runners_before": {
         "1B": "Brody Williams",
         "2B": null,
-        "3B": null
+        "3B": "Ripken Reese"
       },
       "runners_after": {
-        "1B": "Brody Williams",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Brody Williams",
+        "3B": "Ripken Reese"
       },
       "score": {
         "away": 1,
@@ -223,7 +225,7 @@
     },
     {
       "inning": "Top 1",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Joey Ciancimino",
       "batter": "Alejandro Covas",
       "outcome": "Hit by pitch",
       "count": "2-1",
@@ -233,14 +235,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brody Williams",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Brody Williams",
+        "3B": "Ripken Reese"
       },
       "runners_after": {
         "1B": "Alejandro Covas",
-        "2B": null,
-        "3B": null
+        "2B": "Brody Williams",
+        "3B": "Ripken Reese"
       },
       "score": {
         "away": 1,
@@ -250,24 +252,26 @@
     },
     {
       "inning": "Top 1",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Joey Ciancimino",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ripken Reese"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Alejandro Covas",
-        "2B": null,
-        "3B": null
+        "2B": "Brody Williams",
+        "3B": "Ripken Reese"
       },
       "runners_after": {
-        "1B": "Alejandro Covas",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Alejandro Covas",
+        "3B": "Brody Williams"
       },
       "score": {
         "away": 2,
@@ -277,7 +281,7 @@
     },
     {
       "inning": "Top 1",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Joey Ciancimino",
       "batter": "Hunter Klotz",
       "outcome": "Flyout",
       "count": "2-2",
@@ -287,14 +291,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Alejandro Covas",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Alejandro Covas",
+        "3B": "Brody Williams"
       },
       "runners_after": {
-        "1B": "Alejandro Covas",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Alejandro Covas",
+        "3B": "Brody Williams"
       },
       "score": {
         "away": 2,
@@ -346,7 +350,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "AJ Nessler",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -368,12 +372,12 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "AJ Nessler",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "AJ Nessler",
+        "1B": null,
         "2B": "Lorenzo Carrier",
         "3B": null
       },
@@ -391,17 +395,19 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Lorenzo Carrier"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "AJ Nessler",
+        "1B": null,
         "2B": "Lorenzo Carrier",
         "3B": null
       },
       "runners_after": {
-        "1B": "AJ Nessler",
-        "2B": "Lorenzo Carrier",
+        "1B": null,
+        "2B": null,
         "3B": "Kai Wagner"
       },
       "score": {
@@ -422,13 +428,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "AJ Nessler",
-        "2B": "Lorenzo Carrier",
+        "1B": null,
+        "2B": null,
         "3B": "Kai Wagner"
       },
       "runners_after": {
-        "1B": "AJ Nessler",
-        "2B": "Lorenzo Carrier",
+        "1B": null,
+        "2B": null,
         "3B": "Kai Wagner"
       },
       "score": {
@@ -439,7 +445,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Joey Ciancimino",
       "batter": "Max Humphrey",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -466,7 +472,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Joey Ciancimino",
       "batter": "Grady Mee",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -493,7 +499,7 @@
     },
     {
       "inning": "Top 2",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Joey Ciancimino",
       "batter": "Luke Matthews",
       "outcome": "Flyout",
       "count": "1-1",
@@ -590,7 +596,7 @@
       },
       "runners_after": {
         "1B": "Carter Dierdorf",
-        "2B": null,
+        "2B": "Sebastian Pisacreta",
         "3B": null
       },
       "score": {
@@ -612,12 +618,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Carter Dierdorf",
-        "2B": null,
+        "2B": "Sebastian Pisacreta",
         "3B": null
       },
       "runners_after": {
-        "1B": "Carter Dierdorf",
-        "2B": null,
+        "1B": null,
+        "2B": "Sebastian Pisacreta",
         "3B": null
       },
       "score": {
@@ -628,7 +634,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Andrew Luczak",
       "batter": "Ripken Reese",
       "outcome": "Walk",
       "count": "3-1",
@@ -655,7 +661,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Andrew Luczak",
       "batter": "Sawyer Solitaria",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -671,7 +677,7 @@
       },
       "runners_after": {
         "1B": "Sawyer Solitaria",
-        "2B": null,
+        "2B": "Ripken Reese",
         "3B": null
       },
       "score": {
@@ -682,7 +688,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Andrew Luczak",
       "batter": "RienstraKirac,Micah struck out swinging (3-2 BBKFFBS).",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -693,12 +699,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Sawyer Solitaria",
-        "2B": null,
+        "2B": "Ripken Reese",
         "3B": null
       },
       "runners_after": {
         "1B": "Sawyer Solitaria",
-        "2B": null,
+        "2B": "Ripken Reese",
         "3B": null
       },
       "score": {
@@ -709,23 +715,25 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Andrew Luczak",
       "batter": "Brody Williams",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ripken Reese"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Sawyer Solitaria",
-        "2B": null,
+        "2B": "Ripken Reese",
         "3B": null
       },
       "runners_after": {
         "1B": "Brody Williams",
-        "2B": null,
+        "2B": "Sawyer Solitaria",
         "3B": null
       },
       "score": {
@@ -736,7 +744,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Andrew Luczak",
       "batter": "Alejandro Covas",
       "outcome": "Fielder's choice",
       "count": "0-2",
@@ -747,7 +755,7 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Brody Williams",
-        "2B": null,
+        "2B": "Sawyer Solitaria",
         "3B": null
       },
       "runners_after": {
@@ -790,7 +798,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Gavin Jones",
       "batter": "Caden Dulin",
       "outcome": "Groundout",
       "count": "3-2",
@@ -817,7 +825,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Gavin Jones",
       "batter": "Lorenzo Carrier",
       "outcome": "Groundout",
       "count": "0-0",
@@ -844,7 +852,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Hunter Klotz",
       "outcome": "Walk",
       "count": "3-2",
@@ -871,7 +879,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Max Humphrey",
       "outcome": "Fielder's choice",
       "count": "1-2",
@@ -898,7 +906,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Grady Mee",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -914,7 +922,7 @@
       },
       "runners_after": {
         "1B": "Grady Mee",
-        "2B": null,
+        "2B": "Max Humphrey",
         "3B": null
       },
       "score": {
@@ -925,7 +933,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Luke Matthews",
       "outcome": "Flyout",
       "count": "3-1",
@@ -936,13 +944,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Grady Mee",
-        "2B": null,
+        "2B": "Max Humphrey",
         "3B": null
       },
       "runners_after": {
         "1B": "Grady Mee",
         "2B": null,
-        "3B": null
+        "3B": "Max Humphrey"
       },
       "score": {
         "away": 3,
@@ -952,22 +960,25 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Vincent Spizzoucco",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Grady Mee",
+        "Max Humphrey"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Grady Mee",
         "2B": null,
-        "3B": null
+        "3B": "Max Humphrey"
       },
       "runners_after": {
-        "1B": "Grady Mee",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -979,7 +990,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Ripken Reese",
       "outcome": "Groundout",
       "count": "1-2",
@@ -989,12 +1000,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Grady Mee",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Grady Mee",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1006,7 +1017,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Gavin Jones",
       "batter": "Kai Wagner",
       "outcome": "Walk",
       "count": "3-2",
@@ -1033,7 +1044,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Gavin Jones",
       "batter": "Trey Fenderson",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1060,7 +1071,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Gavin Jones",
       "batter": "Joey Baran",
       "outcome": "Grounded into double play",
       "count": "1-2",
@@ -1075,7 +1086,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kai Wagner",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1087,7 +1098,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Daniel McAuliff",
       "batter": "Sawyer Solitaria",
       "outcome": "Reached on error",
       "count": "2-2",
@@ -1114,7 +1125,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Daniel McAuliff",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1129,7 +1140,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Sawyer Solitaria",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1141,7 +1152,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Daniel McAuliff",
       "batter": "RienstraKirac,Micah reached on a fielding error fielding by 2b by Fenderson,Trey (E4) (2-2 KBBKF).",
       "outcome": "Reached on error",
       "count": "2-2",
@@ -1151,7 +1162,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Sawyer Solitaria",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1168,7 +1179,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Daniel McAuliff",
       "batter": "Brody Williams",
       "outcome": "Single",
       "count": "0-1",
@@ -1184,7 +1195,7 @@
       },
       "runners_after": {
         "1B": "Brody Williams",
-        "2B": null,
+        "2B": "RienstraKirac,Micah reached on a fielding error fielding by 2b by Fenderson,Trey (E4) (2-2 KBBKF).",
         "3B": null
       },
       "score": {
@@ -1195,23 +1206,25 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Daniel McAuliff",
       "batter": "Alejandro Covas",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BFBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "RienstraKirac,Micah reached on a fielding error fielding by 2b by Fenderson,Trey (E4) (2-2 KBBKF)."
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Brody Williams",
-        "2B": null,
+        "2B": "RienstraKirac,Micah reached on a fielding error fielding by 2b by Fenderson,Trey (E4) (2-2 KBBKF).",
         "3B": null
       },
       "runners_after": {
         "1B": "Alejandro Covas",
-        "2B": null,
+        "2B": "Brody Williams",
         "3B": null
       },
       "score": {
@@ -1222,7 +1235,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Freddy Beruvides Jr.",
       "batter": "Hunter Klotz",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1233,12 +1246,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Alejandro Covas",
-        "2B": null,
+        "2B": "Brody Williams",
         "3B": null
       },
       "runners_after": {
         "1B": "Alejandro Covas",
-        "2B": null,
+        "2B": "Brody Williams",
         "3B": null
       },
       "score": {
@@ -1249,7 +1262,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Freddy Beruvides Jr.",
       "batter": "Max Humphrey",
       "outcome": "Single",
       "count": "0-0",
@@ -1260,13 +1273,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Alejandro Covas",
-        "2B": null,
+        "2B": "Brody Williams",
         "3B": null
       },
       "runners_after": {
         "1B": "Max Humphrey",
-        "2B": null,
-        "3B": null
+        "2B": "Alejandro Covas",
+        "3B": "Brody Williams"
       },
       "score": {
         "away": 6,
@@ -1276,7 +1289,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Freddy Beruvides Jr.",
       "batter": "Grady Mee",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1287,13 +1300,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Max Humphrey",
-        "2B": null,
-        "3B": null
+        "2B": "Alejandro Covas",
+        "3B": "Brody Williams"
       },
       "runners_after": {
         "1B": "Max Humphrey",
-        "2B": null,
-        "3B": null
+        "2B": "Alejandro Covas",
+        "3B": "Brody Williams"
       },
       "score": {
         "away": 6,
@@ -1303,7 +1316,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Gavin Jones",
       "batter": "Sebastian Pisacreta",
       "outcome": "Foul out",
       "count": "0-2",
@@ -1330,7 +1343,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Gavin Jones",
       "batter": "Carter Dierdorf",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1357,7 +1370,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Gavin Jones",
       "batter": "Julian Irizarry",
       "outcome": "Walk",
       "count": "3-2",
@@ -1384,7 +1397,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Gavin Jones",
       "batter": "AJ Nessler",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1411,7 +1424,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Freddy Beruvides Jr.",
       "batter": "Luke Matthews",
       "outcome": "Single",
       "count": "1-2",
@@ -1438,7 +1451,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Freddy Beruvides Jr.",
       "batter": "Ripken Reese",
       "outcome": "Walk",
       "count": "3-1",
@@ -1454,7 +1467,7 @@
       },
       "runners_after": {
         "1B": "Ripken Reese",
-        "2B": null,
+        "2B": "Luke Matthews",
         "3B": null
       },
       "score": {
@@ -1465,7 +1478,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Michael Savarese",
       "batter": "Sawyer Solitaria",
       "outcome": "Fielder's choice",
       "count": "1-2",
@@ -1476,12 +1489,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Ripken Reese",
-        "2B": null,
+        "2B": "Luke Matthews",
         "3B": null
       },
       "runners_after": {
         "1B": "Sawyer Solitaria",
-        "2B": null,
+        "2B": "Ripken Reese",
         "3B": null
       },
       "score": {
@@ -1492,7 +1505,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Michael Savarese",
       "batter": "RienstraKirac,Micah walked (3-0 BBBB)",
       "outcome": "Walk",
       "count": "3-0",
@@ -1503,13 +1516,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Sawyer Solitaria",
-        "2B": null,
+        "2B": "Ripken Reese",
         "3B": null
       },
       "runners_after": {
         "1B": "RienstraKirac,Micah walked (3-0 BBBB)",
-        "2B": null,
-        "3B": null
+        "2B": "Sawyer Solitaria",
+        "3B": "Ripken Reese"
       },
       "score": {
         "away": 6,
@@ -1519,23 +1532,25 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Michael Savarese",
       "batter": "Brody Williams",
       "outcome": "\u2014",
       "count": "3-1",
       "pitches": "BSBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ripken Reese"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "RienstraKirac,Micah walked (3-0 BBBB)",
-        "2B": null,
-        "3B": null
+        "2B": "Sawyer Solitaria",
+        "3B": "Ripken Reese"
       },
       "runners_after": {
         "1B": "RienstraKirac,Micah walked (3-0 BBBB)",
-        "2B": null,
+        "2B": "Sawyer Solitaria",
         "3B": null
       },
       "score": {
@@ -1546,7 +1561,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Michael Savarese",
       "batter": "Alejandro Covas",
       "outcome": "Fielder's choice",
       "count": "3-1",
@@ -1557,12 +1572,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "RienstraKirac,Micah walked (3-0 BBBB)",
-        "2B": null,
+        "2B": "Sawyer Solitaria",
         "3B": null
       },
       "runners_after": {
         "1B": "Alejandro Covas",
-        "2B": null,
+        "2B": "Sawyer Solitaria",
         "3B": null
       },
       "score": {
@@ -1573,7 +1588,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Brody Krzysiak",
       "batter": "Caden Dulin",
       "outcome": "Walk",
       "count": "3-2",
@@ -1600,7 +1615,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Brody Krzysiak",
       "batter": "Lorenzo Carrier",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1615,8 +1630,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Caden Dulin",
-        "2B": null,
+        "1B": null,
+        "2B": "Caden Dulin",
         "3B": null
       },
       "score": {
@@ -1627,7 +1642,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Brody Krzysiak",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1637,14 +1652,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Caden Dulin",
-        "2B": null,
+        "1B": null,
+        "2B": "Caden Dulin",
         "3B": null
       },
       "runners_after": {
-        "1B": "Caden Dulin",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Caden Dulin"
       },
       "score": {
         "away": 7,
@@ -1654,22 +1669,24 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Brody Krzysiak",
       "batter": "Kai Wagner",
       "outcome": "Double",
       "count": "2-2",
       "pitches": "KKBFBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Caden Dulin"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Caden Dulin",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Caden Dulin"
       },
       "runners_after": {
-        "1B": "Caden Dulin",
+        "1B": null,
         "2B": "Kai Wagner",
         "3B": null
       },
@@ -1681,7 +1698,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Brody Krzysiak",
       "batter": "Trey Fenderson",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1691,14 +1708,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Caden Dulin",
+        "1B": null,
         "2B": "Kai Wagner",
         "3B": null
       },
       "runners_after": {
-        "1B": "Caden Dulin",
-        "2B": "Kai Wagner",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Kai Wagner"
       },
       "score": {
         "away": 7,
@@ -1708,7 +1725,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Brody Krzysiak",
       "batter": "Joey Baran",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1718,14 +1735,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Caden Dulin",
-        "2B": "Kai Wagner",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Kai Wagner"
       },
       "runners_after": {
-        "1B": "Caden Dulin",
-        "2B": "Kai Wagner",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Kai Wagner"
       },
       "score": {
         "away": 7,
@@ -1735,7 +1752,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Brandon Reiter",
       "batter": "Hunter Klotz",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1762,7 +1779,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Brandon Reiter",
       "batter": "Max Humphrey",
       "outcome": "Hit by pitch",
       "count": "2-0",
@@ -1789,7 +1806,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Brandon Reiter",
       "batter": "Grady Mee",
       "outcome": "Single",
       "count": "0-0",
@@ -1805,7 +1822,7 @@
       },
       "runners_after": {
         "1B": "Grady Mee",
-        "2B": null,
+        "2B": "Max Humphrey",
         "3B": null
       },
       "score": {
@@ -1816,7 +1833,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Brandon Reiter",
       "batter": "Luke Matthews",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1827,12 +1844,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Grady Mee",
-        "2B": null,
+        "2B": "Max Humphrey",
         "3B": null
       },
       "runners_after": {
         "1B": "Grady Mee",
-        "2B": null,
+        "2B": "Max Humphrey",
         "3B": null
       },
       "score": {
@@ -1843,7 +1860,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Brandon Reiter",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1854,13 +1871,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Grady Mee",
-        "2B": null,
+        "2B": "Max Humphrey",
         "3B": null
       },
       "runners_after": {
-        "1B": "Grady Mee",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Grady Mee",
+        "3B": "Max Humphrey"
       },
       "score": {
         "away": 7,
@@ -1870,24 +1887,26 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Brandon Reiter",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Max Humphrey"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Grady Mee",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Grady Mee",
+        "3B": "Max Humphrey"
       },
       "runners_after": {
-        "1B": "Grady Mee",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Grady Mee"
       },
       "score": {
         "away": 8,
@@ -1897,22 +1916,24 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Brandon Reiter",
       "batter": "Ripken Reese",
       "outcome": "Strikeout",
       "count": "2-3",
       "pitches": "KKBFBS",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Grady Mee"
+      ],
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Grady Mee",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Grady Mee"
       },
       "runners_after": {
-        "1B": "Grady Mee",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1924,7 +1945,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Eddie Smink",
       "batter": "Ripken Reese",
       "outcome": "\u2014",
       "count": null,
@@ -1934,12 +1955,12 @@
       "outs_before": 3,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Grady Mee",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Grady Mee",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1951,7 +1972,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Caden Leonard",
       "batter": "Sebastian Pisacreta",
       "outcome": "Walk",
       "count": "3-0",
@@ -1978,7 +1999,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Caden Leonard",
       "batter": "Carter Dierdorf",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1993,8 +2014,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Sebastian Pisacreta",
-        "2B": null,
+        "1B": null,
+        "2B": "Sebastian Pisacreta",
         "3B": null
       },
       "score": {
@@ -2005,7 +2026,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Caden Leonard",
       "batter": "Julian Irizarry",
       "outcome": "Flyout",
       "count": "2-1",
@@ -2015,13 +2036,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Sebastian Pisacreta",
-        "2B": null,
+        "1B": null,
+        "2B": "Sebastian Pisacreta",
         "3B": null
       },
       "runners_after": {
-        "1B": "Sebastian Pisacreta",
-        "2B": null,
+        "1B": null,
+        "2B": "Sebastian Pisacreta",
         "3B": null
       },
       "score": {
@@ -2032,24 +2053,25 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Caden Leonard",
       "batter": "AJ Nessler",
       "outcome": "Home run",
       "count": "2-2",
       "pitches": "SFBBF",
       "rbi": true,
       "runs_scored": [
+        "Sebastian Pisacreta",
         "AJ Nessler"
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Sebastian Pisacreta",
-        "2B": null,
+        "1B": null,
+        "2B": "Sebastian Pisacreta",
         "3B": null
       },
       "runners_after": {
-        "1B": "Sebastian Pisacreta",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2061,7 +2083,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Caden Leonard",
       "batter": "Caden Dulin",
       "outcome": "Single",
       "count": "0-0",
@@ -2071,7 +2093,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Sebastian Pisacreta",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2088,7 +2110,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Caden Leonard",
       "batter": "Lorenzo Carrier",
       "outcome": "Foul out",
       "count": "1-2",
@@ -2115,7 +2137,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Eddie Smink",
       "batter": "Sawyer Solitaria",
       "outcome": "Pop out",
       "count": "1-2",
@@ -2142,7 +2164,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Eddie Smink",
       "batter": "RienstraKirac,Micah walked (3-2 BBBKFB).",
       "outcome": "Walk",
       "count": "3-2",
@@ -2169,7 +2191,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Eddie Smink",
       "batter": "Brody Williams",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -2185,7 +2207,7 @@
       },
       "runners_after": {
         "1B": "Brody Williams",
-        "2B": null,
+        "2B": "RienstraKirac,Micah walked (3-2 BBBKFB).",
         "3B": null
       },
       "score": {
@@ -2196,7 +2218,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Eddie Smink",
       "batter": "Alejandro Covas",
       "outcome": "Flyout",
       "count": "2-1",
@@ -2207,13 +2229,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Brody Williams",
-        "2B": null,
+        "2B": "RienstraKirac,Micah walked (3-2 BBBKFB).",
         "3B": null
       },
       "runners_after": {
         "1B": "Brody Williams",
         "2B": null,
-        "3B": null
+        "3B": "RienstraKirac,Micah walked (3-2 BBBKFB)."
       },
       "score": {
         "away": 9,
@@ -2223,7 +2245,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Eddie Smink",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2235,12 +2257,12 @@
       "runners_before": {
         "1B": "Brody Williams",
         "2B": null,
-        "3B": null
+        "3B": "RienstraKirac,Micah walked (3-2 BBBKFB)."
       },
       "runners_after": {
-        "1B": "Brody Williams",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Brody Williams",
+        "3B": "RienstraKirac,Micah walked (3-2 BBBKFB)."
       },
       "score": {
         "away": 9,
@@ -2250,19 +2272,22 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Eddie Smink",
       "batter": "Hunter Klotz",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "BFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "RienstraKirac,Micah walked (3-2 BBBKFB).",
+        "Brody Williams"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brody Williams",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Brody Williams",
+        "3B": "RienstraKirac,Micah walked (3-2 BBBKFB)."
       },
       "runners_after": {
         "1B": "Hunter Klotz",
@@ -2277,7 +2302,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Eddie Smink",
       "batter": "Nolan Belcher",
       "outcome": "Walk",
       "count": "3-1",
@@ -2293,7 +2318,7 @@
       },
       "runners_after": {
         "1B": "Nolan Belcher",
-        "2B": null,
+        "2B": "Hunter Klotz",
         "3B": null
       },
       "score": {
@@ -2304,7 +2329,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Chase Kriebel",
       "batter": "Grady Mee",
       "outcome": "Hit by pitch",
       "count": "2-0",
@@ -2315,13 +2340,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Nolan Belcher",
-        "2B": null,
+        "2B": "Hunter Klotz",
         "3B": null
       },
       "runners_after": {
         "1B": "Grady Mee",
-        "2B": null,
-        "3B": null
+        "2B": "Nolan Belcher",
+        "3B": "Hunter Klotz"
       },
       "score": {
         "away": 11,
@@ -2331,24 +2356,27 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Chase Kriebel",
       "batter": "Luke Matthews",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "FBKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Hunter Klotz",
+        "Nolan Belcher"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Grady Mee",
-        "2B": null,
-        "3B": null
+        "2B": "Nolan Belcher",
+        "3B": "Hunter Klotz"
       },
       "runners_after": {
         "1B": "Luke Matthews",
         "2B": null,
-        "3B": null
+        "3B": "Grady Mee"
       },
       "score": {
         "away": 13,
@@ -2358,7 +2386,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Noah Czajkowski",
       "batter": "Ripken Reese",
       "outcome": "Flyout",
       "count": "2-2",
@@ -2370,12 +2398,12 @@
       "runners_before": {
         "1B": "Luke Matthews",
         "2B": null,
-        "3B": null
+        "3B": "Grady Mee"
       },
       "runners_after": {
         "1B": "Luke Matthews",
         "2B": null,
-        "3B": null
+        "3B": "Grady Mee"
       },
       "score": {
         "away": 13,
@@ -2385,7 +2413,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Parker Lind",
       "batter": "Kai Wagner",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2412,7 +2440,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Parker Lind",
       "batter": "Trey Fenderson",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2439,7 +2467,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Parker Lind",
       "batter": "Joey Baran",
       "outcome": "Hit by pitch",
       "count": "3-0",
@@ -2466,7 +2494,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Parker Lind",
       "batter": "Sebastian Pisacreta",
       "outcome": "Reached on error",
       "count": "2-1",
@@ -2483,7 +2511,7 @@
       "runners_after": {
         "1B": "Sebastian Pisacreta",
         "2B": null,
-        "3B": null
+        "3B": "Joey Baran"
       },
       "score": {
         "away": 13,
@@ -2493,7 +2521,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Parker Lind",
       "batter": "Carter Dierdorf",
       "outcome": "Walk",
       "count": "3-1",
@@ -2505,12 +2533,12 @@
       "runners_before": {
         "1B": "Sebastian Pisacreta",
         "2B": null,
-        "3B": null
+        "3B": "Joey Baran"
       },
       "runners_after": {
         "1B": "Carter Dierdorf",
-        "2B": null,
-        "3B": null
+        "2B": "Sebastian Pisacreta",
+        "3B": "Joey Baran"
       },
       "score": {
         "away": 13,
@@ -2520,24 +2548,26 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Parker Lind",
       "batter": "Jackson Cooke",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "FBBKFFBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Joey Baran"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Carter Dierdorf",
-        "2B": null,
-        "3B": null
+        "2B": "Sebastian Pisacreta",
+        "3B": "Joey Baran"
       },
       "runners_after": {
         "1B": "Jackson Cooke",
-        "2B": null,
-        "3B": null
+        "2B": "Carter Dierdorf",
+        "3B": "Sebastian Pisacreta"
       },
       "score": {
         "away": 13,
@@ -2547,7 +2577,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Parker Lind",
       "batter": "AJ Nessler",
       "outcome": "Pop out",
       "count": "1-1",
@@ -2558,13 +2588,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jackson Cooke",
-        "2B": null,
-        "3B": null
+        "2B": "Carter Dierdorf",
+        "3B": "Sebastian Pisacreta"
       },
       "runners_after": {
         "1B": "Jackson Cooke",
-        "2B": null,
-        "3B": null
+        "2B": "Carter Dierdorf",
+        "3B": "Sebastian Pisacreta"
       },
       "score": {
         "away": 13,
@@ -2574,7 +2604,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Noah Czajkowski",
       "batter": "Sawyer Solitaria",
       "outcome": "Foul out",
       "count": "0-2",
@@ -2601,7 +2631,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Noah Czajkowski",
       "batter": "RienstraKirac,Micah popped up to 2b (2-2 BBKK).",
       "outcome": "Pop out",
       "count": "2-2",
@@ -2628,7 +2658,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Noah Czajkowski",
       "batter": "Brody Williams",
       "outcome": "Single",
       "count": "0-1",
@@ -2655,7 +2685,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Sam Bryan",
+      "pitcher": "Noah Czajkowski",
       "batter": "Alejandro Covas",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -2671,7 +2701,7 @@
       },
       "runners_after": {
         "1B": "Alejandro Covas",
-        "2B": null,
+        "2B": "Brody Williams",
         "3B": null
       },
       "score": {
@@ -2682,7 +2712,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Sam Bryan",
+      "pitcher": "",
       "batter": "Hunter Klotz",
       "outcome": "Foul out",
       "count": "1-2",
@@ -2693,12 +2723,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Alejandro Covas",
-        "2B": null,
+        "2B": "Brody Williams",
         "3B": null
       },
       "runners_after": {
         "1B": "Alejandro Covas",
-        "2B": null,
+        "2B": "Brody Williams",
         "3B": null
       },
       "score": {
@@ -2709,7 +2739,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Peyton Williams",
       "batter": "Caden Dulin",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2736,7 +2766,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Peyton Williams",
       "batter": "Lorenzo Carrier",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2763,7 +2793,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Nick Guidas",
+      "pitcher": "Peyton Williams",
       "batter": "Kai Wagner",
       "outcome": "Strikeout (looking)",
       "count": "1-2",

@@ -3,7 +3,7 @@
   "date": "03/11/2026",
   "away_team": "Nevada",
   "home_team": "Stanford",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -175,7 +175,9 @@
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -212,7 +214,7 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Charlie Bates",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -234,12 +236,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Charlie Bates",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Charlie Bates",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -474,7 +476,9 @@
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -528,7 +532,9 @@
       "count": "3-2",
       "pitches": "BBKBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -555,7 +561,10 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -603,13 +612,16 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Ryan Oakes",
       "batter": "Jimmy Nati",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BKKBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -630,7 +642,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Ryan Oakes",
       "batter": "Brady Reynolds",
       "outcome": "Walk",
       "count": "3-0",
@@ -657,7 +669,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Ryan Oakes",
       "batter": "Eric Jeon",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -772,7 +784,9 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Junhyuk Kwon"
+        "Junhyuk Kwon",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -821,7 +835,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Andrew Shaw",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -836,8 +850,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lee Matsuzaki",
-        "2B": null,
+        "1B": null,
+        "2B": "Lee Matsuzaki",
         "3B": null
       },
       "score": {
@@ -848,7 +862,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Andrew Shaw",
       "batter": "Jacob Doyle",
       "outcome": "Walk",
       "count": "3-2",
@@ -858,13 +872,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Lee Matsuzaki",
-        "2B": null,
+        "1B": null,
+        "2B": "Lee Matsuzaki",
         "3B": null
       },
       "runners_after": {
         "1B": "Jacob Doyle",
-        "2B": null,
+        "2B": "Lee Matsuzaki",
         "3B": null
       },
       "score": {
@@ -875,7 +889,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Andrew Shaw",
       "batter": "CruzJr,Mikey infield fly to first base (3-2 KFBBB).",
       "outcome": "Infield fly",
       "count": "3-2",
@@ -886,12 +900,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Jacob Doyle",
-        "2B": null,
+        "2B": "Lee Matsuzaki",
         "3B": null
       },
       "runners_after": {
         "1B": "Jacob Doyle",
-        "2B": null,
+        "2B": "Lee Matsuzaki",
         "3B": null
       },
       "score": {
@@ -902,7 +916,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Andrew Shaw",
       "batter": "Jackson Waller",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -913,12 +927,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jacob Doyle",
-        "2B": null,
+        "2B": "Lee Matsuzaki",
         "3B": null
       },
       "runners_after": {
         "1B": "Jacob Doyle",
-        "2B": null,
+        "2B": "Lee Matsuzaki",
         "3B": null
       },
       "score": {
@@ -929,7 +943,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Ryan Oakes",
       "batter": "Luke Lavin",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -956,7 +970,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Ryan Oakes",
       "batter": "Tatum Marsh",
       "outcome": "Groundout",
       "count": "0-0",
@@ -983,7 +997,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Ryan Oakes",
       "batter": "Rintaro Sasaki",
       "outcome": "Single",
       "count": "2-2",
@@ -1010,7 +1024,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Ryan Oakes",
       "batter": "Teddy Tokheim",
       "outcome": "Foul out",
       "count": "0-0",
@@ -1037,7 +1051,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Andrew Shaw",
       "batter": "Nate Snakenborg",
       "outcome": "Single",
       "count": "1-1",
@@ -1064,7 +1078,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Trevor Moore",
       "batter": "Jack Metcho",
       "outcome": "Grounded into double play",
       "count": "1-2",
@@ -1091,7 +1105,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Trevor Moore",
       "batter": "Rominic Quiban",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1118,7 +1132,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Payton Dixon",
       "batter": "Charlie Bates",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1145,7 +1159,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Payton Dixon",
       "batter": "JJ Moran",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1172,7 +1186,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Payton Dixon",
       "batter": "Jimmy Nati",
       "outcome": "Home run",
       "count": "1-0",
@@ -1201,7 +1215,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Payton Dixon",
       "batter": "Ethan Hott",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1228,7 +1242,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Payton Dixon",
       "batter": "Eric Jeon",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1255,7 +1269,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Trevor Moore",
       "batter": "Jayce Dobie",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1282,7 +1296,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Brock Ketelsen",
       "batter": "Junhyuk Kwon",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1309,7 +1323,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Brock Ketelsen",
       "batter": "Lee Matsuzaki",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1336,7 +1350,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Payton Dixon",
       "batter": "Luke Lavin",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1363,7 +1377,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Payton Dixon",
       "batter": "Tatum Marsh",
       "outcome": "Foul out",
       "count": "2-1",
@@ -1390,7 +1404,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Payton Dixon",
       "batter": "Rintaro Sasaki",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1417,7 +1431,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Brock Ketelsen",
       "batter": "Jacob Doyle",
       "outcome": "Reached on error",
       "count": "0-0",
@@ -1444,7 +1458,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Brock Ketelsen",
       "batter": "CruzJr,Mikey singled to center field (2-1 FBB); Doyle,Jacob advanced from first base to third base.",
       "outcome": "Single",
       "count": "2-1",
@@ -1471,13 +1485,15 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Brock Ketelsen",
       "batter": null,
       "outcome": "Baserunning",
       "count": "3-1",
       "pitches": "BFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1498,7 +1514,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Brock Ketelsen",
       "batter": "Nate Snakenborg",
       "outcome": "Walk",
       "count": "3-2",
@@ -1525,7 +1541,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Brock Ketelsen",
       "batter": "Jack Metcho",
       "outcome": "Walk",
       "count": "3-2",
@@ -1552,13 +1568,15 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Brock Ketelsen",
       "batter": "Rominic Quiban",
       "outcome": "Groundout",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -1579,13 +1597,15 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Brock Ketelsen",
       "batter": "Jayce Dobie",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "KKFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1606,7 +1626,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Kainoa Kaneshiro",
       "batter": "Teddy Tokheim",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1633,7 +1653,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Kainoa Kaneshiro",
       "batter": "Charlie Bates",
       "outcome": "Pop out",
       "count": "1-0",
@@ -1660,7 +1680,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Kainoa Kaneshiro",
       "batter": "JJ Moran",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1687,7 +1707,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Toran O'Harran",
       "batter": "Junhyuk Kwon",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -1714,7 +1734,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Toran O'Harran",
       "batter": "Lee Matsuzaki",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1741,7 +1761,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Toran O'Harran",
       "batter": "Jacob Doyle",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1768,7 +1788,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Toran O'Harran",
       "batter": "CruzJr,Mikey struck out swinging (2-2 BKSBFS).",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1795,7 +1815,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Kainoa Kaneshiro",
       "batter": "Jimmy Nati",
       "outcome": "Home run",
       "count": "0-2",
@@ -1824,7 +1844,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Kainoa Kaneshiro",
       "batter": "Ethan Hott",
       "outcome": "Single",
       "count": "1-2",
@@ -1851,7 +1871,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Kainoa Kaneshiro",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1866,8 +1886,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethan Hott",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethan Hott",
         "3B": null
       },
       "score": {
@@ -1878,7 +1898,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Kainoa Kaneshiro",
       "batter": "Eric Jeon",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1888,13 +1908,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Ethan Hott",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethan Hott",
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethan Hott",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethan Hott",
         "3B": null
       },
       "score": {
@@ -1905,7 +1925,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Kainoa Kaneshiro",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1915,14 +1935,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Ethan Hott",
-        "2B": null,
+        "1B": null,
+        "2B": "Ethan Hott",
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethan Hott",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Ethan Hott"
       },
       "score": {
         "away": 7,
@@ -1932,24 +1952,26 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Kainoa Kaneshiro",
       "batter": "Luke Lavin",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Ethan Hott",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Ethan Hott"
       },
       "runners_after": {
         "1B": "Luke Lavin",
         "2B": null,
-        "3B": null
+        "3B": "Ethan Hott"
       },
       "score": {
         "away": 7,
@@ -1959,7 +1981,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Kainoa Kaneshiro",
       "batter": "Tatum Marsh",
       "outcome": "Single",
       "count": "0-0",
@@ -1971,12 +1993,12 @@
       "runners_before": {
         "1B": "Luke Lavin",
         "2B": null,
-        "3B": null
+        "3B": "Ethan Hott"
       },
       "runners_after": {
         "1B": "Tatum Marsh",
         "2B": null,
-        "3B": null
+        "3B": "Ethan Hott"
       },
       "score": {
         "away": 7,
@@ -1986,24 +2008,26 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Kainoa Kaneshiro",
       "batter": "Rintaro Sasaki",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Tatum Marsh",
         "2B": null,
-        "3B": null
+        "3B": "Ethan Hott"
       },
       "runners_after": {
         "1B": "Rintaro Sasaki",
         "2B": null,
-        "3B": null
+        "3B": "Ethan Hott"
       },
       "score": {
         "away": 7,
@@ -2013,7 +2037,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Eric Valdez",
       "batter": "Teddy Tokheim",
       "outcome": "Walk",
       "count": "3-1",
@@ -2025,12 +2049,12 @@
       "runners_before": {
         "1B": "Rintaro Sasaki",
         "2B": null,
-        "3B": null
+        "3B": "Ethan Hott"
       },
       "runners_after": {
         "1B": "Teddy Tokheim",
         "2B": null,
-        "3B": null
+        "3B": "Ethan Hott"
       },
       "score": {
         "away": 7,
@@ -2040,24 +2064,26 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Eric Valdez",
       "batter": "Charlie Bates",
       "outcome": "Fielder's choice",
       "count": "3-0",
       "pitches": "BBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Teddy Tokheim",
         "2B": null,
-        "3B": null
+        "3B": "Ethan Hott"
       },
       "runners_after": {
         "1B": "Charlie Bates",
         "2B": null,
-        "3B": null
+        "3B": "Ethan Hott"
       },
       "score": {
         "away": 7,
@@ -2067,7 +2093,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Eric Valdez",
       "batter": "JJ Moran",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -2079,12 +2105,12 @@
       "runners_before": {
         "1B": "Charlie Bates",
         "2B": null,
-        "3B": null
+        "3B": "Ethan Hott"
       },
       "runners_after": {
         "1B": "JJ Moran",
         "2B": null,
-        "3B": null
+        "3B": "Ethan Hott"
       },
       "score": {
         "away": 7,
@@ -2094,24 +2120,26 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Eric Valdez",
       "batter": "Jimmy Nati",
       "outcome": "Hit by pitch",
       "count": "0-1",
       "pitches": "SB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "JJ Moran",
         "2B": null,
-        "3B": null
+        "3B": "Ethan Hott"
       },
       "runners_after": {
         "1B": "Jimmy Nati",
         "2B": null,
-        "3B": null
+        "3B": "Ethan Hott"
       },
       "score": {
         "away": 7,
@@ -2121,7 +2149,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Eric Valdez",
       "batter": "Ethan Hott",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2133,12 +2161,12 @@
       "runners_before": {
         "1B": "Jimmy Nati",
         "2B": null,
-        "3B": null
+        "3B": "Ethan Hott"
       },
       "runners_after": {
         "1B": "Jimmy Nati",
         "2B": null,
-        "3B": null
+        "3B": "Ethan Hott"
       },
       "score": {
         "away": 7,
@@ -2148,7 +2176,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Toran O'Harran",
       "batter": "Jackson Waller",
       "outcome": "Single",
       "count": "2-2",
@@ -2175,7 +2203,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Mike Erspamer",
       "batter": "Nate Snakenborg",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2202,7 +2230,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Mike Erspamer",
       "batter": "Jack Metcho",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2229,7 +2257,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Mike Erspamer",
       "batter": "Rominic Quiban",
       "outcome": "Walk",
       "count": "3-0",
@@ -2256,7 +2284,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Mike Erspamer",
       "batter": "Jayce Dobie",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2283,7 +2311,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Greyson Osbun",
       "batter": "Eric Jeon",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2310,7 +2338,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Greyson Osbun",
       "batter": "Luke Lavin",
       "outcome": "Walk",
       "count": "3-2",
@@ -2337,7 +2365,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jayce Dobie",
+      "pitcher": "Greyson Osbun",
       "batter": "Tatum Marsh",
       "outcome": "Grounded into double play",
       "count": "1-0",
@@ -2364,7 +2392,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Mike Erspamer",
       "batter": "Junhyuk Kwon",
       "outcome": "Single",
       "count": "3-2",
@@ -2391,7 +2419,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Colt Peterson",
       "batter": "Noah Blythe",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2418,7 +2446,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Colt Peterson",
       "batter": "Sam Kane",
       "outcome": "Single",
       "count": "1-2",
@@ -2445,7 +2473,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Colt Peterson",
       "batter": "CruzJr,Mikey walked (3-2 BBBKFB); Kane,Sam advanced to second base.",
       "outcome": "Walk",
       "count": "3-2",
@@ -2472,13 +2500,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Colt Peterson",
       "batter": null,
       "outcome": "Baserunning",
       "count": "1-2",
       "pitches": "BKFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2499,7 +2529,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Cohen Gomez",
+      "pitcher": "Colt Peterson",
       "batter": "Nate Snakenborg",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",

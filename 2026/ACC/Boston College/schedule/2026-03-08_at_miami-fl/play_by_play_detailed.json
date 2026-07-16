@@ -3,7 +3,7 @@
   "date": "03/08/2026",
   "away_team": "Boston College",
   "home_team": "Miami (FL)",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -202,7 +202,9 @@
       "count": "0-2",
       "pitches": "FK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -256,7 +258,9 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -346,9 +350,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Luke Gallo",
+        "1B": null,
         "2B": "Jack Toomey",
-        "3B": null
+        "3B": "Luke Gallo"
       },
       "score": {
         "away": 1,
@@ -364,18 +368,20 @@
       "count": "2-1",
       "pitches": "KBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Luke Gallo",
+        "1B": null,
         "2B": "Jack Toomey",
-        "3B": null
+        "3B": "Luke Gallo"
       },
       "runners_after": {
-        "1B": "Luke Gallo",
+        "1B": null,
         "2B": "Jack Toomey",
-        "3B": null
+        "3B": "Luke Gallo"
       },
       "score": {
         "away": 2,
@@ -395,14 +401,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Luke Gallo",
+        "1B": null,
         "2B": "Jack Toomey",
-        "3B": null
+        "3B": "Luke Gallo"
       },
       "runners_after": {
-        "1B": "Luke Gallo",
+        "1B": null,
         "2B": "Jack Toomey",
-        "3B": null
+        "3B": "Luke Gallo"
       },
       "score": {
         "away": 2,
@@ -844,14 +850,16 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Jack Durso",
       "batter": "Cesar Gonzalez",
       "outcome": "Home run",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "Cesar Gonzalez"
+        "Cesar Gonzalez",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -873,7 +881,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Jack Durso",
       "batter": "Colin Larson",
       "outcome": "Pop out",
       "count": "1-1",
@@ -900,7 +908,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Jack Durso",
       "batter": "Julio Solier",
       "outcome": "Single",
       "count": "1-2",
@@ -927,7 +935,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Jack Durso",
       "batter": "Ty Mainolfi",
       "outcome": "Fielder's choice",
       "count": "1-1",
@@ -954,7 +962,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brady Miller",
+      "pitcher": "Jacob Burnham",
       "batter": "Derek Williams",
       "outcome": "Home run",
       "count": "1-1",
@@ -983,7 +991,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brady Miller",
+      "pitcher": "Jacob Burnham",
       "batter": "Brylan West",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1010,7 +1018,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brady Miller",
+      "pitcher": "Jacob Burnham",
       "batter": "Dylan Dubovik",
       "outcome": "Walk",
       "count": "3-2",
@@ -1037,7 +1045,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brady Miller",
+      "pitcher": "Jacob Burnham",
       "batter": "Vance Sheahan",
       "outcome": "Double",
       "count": "1-0",
@@ -1064,13 +1072,16 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brady Miller",
+      "pitcher": "Jacob Burnham",
       "batter": "Fabio Peralta",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BBKF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1091,7 +1102,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brady Miller",
+      "pitcher": "John Kwiatkowski",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1106,8 +1117,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Fabio Peralta",
-        "2B": "Vance Sheahan",
+        "1B": null,
+        "2B": "Fabio Peralta",
         "3B": null
       },
       "score": {
@@ -1118,7 +1129,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brady Miller",
+      "pitcher": "John Kwiatkowski",
       "batter": "Jake Ogden",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1128,13 +1139,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Fabio Peralta",
-        "2B": "Vance Sheahan",
+        "1B": null,
+        "2B": "Fabio Peralta",
         "3B": null
       },
       "runners_after": {
-        "1B": "Fabio Peralta",
-        "2B": "Vance Sheahan",
+        "1B": null,
+        "2B": "Fabio Peralta",
         "3B": null
       },
       "score": {
@@ -1145,7 +1156,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brady Miller",
+      "pitcher": "John Kwiatkowski",
       "batter": "Michael Torres",
       "outcome": "Reached on error",
       "count": "2-1",
@@ -1155,13 +1166,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Fabio Peralta",
-        "2B": "Vance Sheahan",
+        "1B": null,
+        "2B": "Fabio Peralta",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael Torres",
-        "2B": "Vance Sheahan",
+        "2B": "Fabio Peralta",
         "3B": null
       },
       "score": {
@@ -1172,23 +1183,25 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brady Miller",
+      "pitcher": "John Kwiatkowski",
       "batter": "Daniel Cuvet",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Michael Torres",
-        "2B": "Vance Sheahan",
+        "2B": "Fabio Peralta",
         "3B": null
       },
       "runners_after": {
         "1B": "Daniel Cuvet",
-        "2B": "Vance Sheahan",
+        "2B": "Fabio Peralta",
         "3B": null
       },
       "score": {
@@ -1199,7 +1212,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brady Miller",
+      "pitcher": "John Kwiatkowski",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1210,12 +1223,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Daniel Cuvet",
-        "2B": "Vance Sheahan",
+        "2B": "Fabio Peralta",
         "3B": null
       },
       "runners_after": {
-        "1B": "Daniel Cuvet",
-        "2B": "Vance Sheahan",
+        "1B": null,
+        "2B": "Fabio Peralta",
         "3B": null
       },
       "score": {
@@ -1226,7 +1239,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Jack Durso",
       "batter": "Nick Wang",
       "outcome": "Walk",
       "count": "3-1",
@@ -1253,7 +1266,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Jack Durso",
       "batter": "Nick Wang",
       "outcome": "\u2014",
       "count": null,
@@ -1280,7 +1293,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "TJ Coats",
       "batter": "Jack Toomey",
       "outcome": "Walk",
       "count": "3-2",
@@ -1307,7 +1320,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "TJ Coats",
       "batter": "Esteban Garcia",
       "outcome": "Walk",
       "count": "3-1",
@@ -1334,7 +1347,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "TJ Coats",
       "batter": "Danny Surowiec",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1361,13 +1374,16 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "TJ Coats",
       "batter": "Luke Gallo",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1388,7 +1404,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Tate DeRias",
+      "pitcher": "TJ Coats",
       "batter": "Cesar Gonzalez",
       "outcome": "Single",
       "count": "2-2",
@@ -1415,7 +1431,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brady Miller",
+      "pitcher": "John Kwiatkowski",
       "batter": "Alex Sosa",
       "outcome": "Single",
       "count": "0-0",
@@ -1442,7 +1458,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brady Miller",
+      "pitcher": "John Kwiatkowski",
       "batter": "Derek Williams",
       "outcome": "Foul out",
       "count": "0-2",
@@ -1469,7 +1485,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brady Miller",
+      "pitcher": "John Kwiatkowski",
       "batter": "Brylan West",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1496,7 +1512,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brady Miller",
+      "pitcher": "John Kwiatkowski",
       "batter": "Dylan Dubovik",
       "outcome": "Single",
       "count": "2-2",
@@ -1523,7 +1539,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Brady Miller",
+      "pitcher": "John Kwiatkowski",
       "batter": "Vance Sheahan",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1550,7 +1566,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate DeRias",
+      "pitcher": "TJ Coats",
       "batter": "Colin Larson",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1577,7 +1593,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate DeRias",
+      "pitcher": "TJ Coats",
       "batter": "Julio Solier",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1604,7 +1620,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Lyndon Glidewell",
       "batter": "Ty Mainolfi",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1631,7 +1647,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Brady Miller",
+      "pitcher": "Kyle Kipp",
       "batter": "Fabio Peralta",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1658,7 +1674,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Brady Miller",
+      "pitcher": "Kyle Kipp",
       "batter": "Jake Ogden",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1685,7 +1701,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Brady Miller",
+      "pitcher": "Kyle Kipp",
       "batter": "Michael Torres",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1712,7 +1728,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Lyndon Glidewell",
       "batter": "Nick Wang",
       "outcome": "Home run",
       "count": "1-2",
@@ -1741,7 +1757,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Lyndon Glidewell",
       "batter": "Jack Toomey",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1768,7 +1784,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Lyndon Glidewell",
       "batter": "Esteban Garcia",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1795,7 +1811,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Lyndon Glidewell",
       "batter": "Danny Surowiec",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1822,7 +1838,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Brady Miller",
+      "pitcher": "Kyle Kipp",
       "batter": "Daniel Cuvet",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1849,7 +1865,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Brady Miller",
+      "pitcher": "Kyle Kipp",
       "batter": "Alex Sosa",
       "outcome": "Hit by pitch",
       "count": "2-1",
@@ -1876,7 +1892,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Brady Miller",
+      "pitcher": "Kyle Kipp",
       "batter": "Derek Williams",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1903,7 +1919,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Brady Miller",
+      "pitcher": "Kyle Kipp",
       "batter": "Brylan West",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1930,7 +1946,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Lyndon Glidewell",
       "batter": "Luke Gallo",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1957,7 +1973,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Lazaro Collera",
       "batter": "Cesar Gonzalez",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1984,7 +2000,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Lazaro Collera",
       "batter": "Colin Larson",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2011,7 +2027,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brady Miller",
+      "pitcher": "Kyle Kipp",
       "batter": "Dylan Dubovik",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2038,7 +2054,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brady Miller",
+      "pitcher": "Kyle Kipp",
       "batter": "Vance Sheahan",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2065,7 +2081,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brady Miller",
+      "pitcher": "Kyle Kipp",
       "batter": "Fabio Peralta",
       "outcome": "Walk",
       "count": "3-1",
@@ -2092,7 +2108,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brady Miller",
+      "pitcher": "Kyle Kipp",
       "batter": "Jake Ogden",
       "outcome": "Single",
       "count": "0-1",
@@ -2119,7 +2135,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brady Miller",
+      "pitcher": "Kyle Kipp",
       "batter": "Michael Torres",
       "outcome": "Walk",
       "count": "3-2",
@@ -2146,7 +2162,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Brady Miller",
+      "pitcher": "Kyle Kipp",
       "batter": "Daniel Cuvet",
       "outcome": "Groundout",
       "count": "1-0",
@@ -2173,7 +2189,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Lazaro Collera",
       "batter": "Julio Solier",
       "outcome": "Single",
       "count": "3-2",
@@ -2200,7 +2216,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Lazaro Collera",
       "batter": "Ty Mainolfi",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2227,7 +2243,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Brixton Lofgren",
       "batter": "Nick Wang",
       "outcome": "Walk",
       "count": "3-2",
@@ -2254,7 +2270,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Tate DeRias",
+      "pitcher": "Brixton Lofgren",
       "batter": "Jack Toomey",
       "outcome": "Walk",
       "count": "3-2",
@@ -2281,13 +2297,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Tate DeRias",
+      "pitcher": "",
       "batter": null,
       "outcome": "Baserunning",
       "count": "2-2",
       "pitches": "SBSFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2308,7 +2326,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Tate DeRias",
+      "pitcher": "",
       "batter": "Ben Williams",
       "outcome": "Pop out",
       "count": "0-1",
@@ -2335,7 +2353,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Brady Miller",
+      "pitcher": "Kyle Kipp",
       "batter": "Alex Sosa",
       "outcome": "Flyout",
       "count": "2-1",
@@ -2362,7 +2380,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Brady Miller",
+      "pitcher": "Kyle Kipp",
       "batter": "Derek Williams",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2389,7 +2407,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Brady Miller",
+      "pitcher": "Kyle Kipp",
       "batter": "Brylan West",
       "outcome": "Strikeout (looking)",
       "count": "0-2",

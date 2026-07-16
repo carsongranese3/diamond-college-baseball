@@ -3,7 +3,7 @@
   "date": "03/17/2026",
   "away_team": "Georgia Tech",
   "home_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -94,7 +94,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -256,7 +258,9 @@
       "count": "3-1",
       "pitches": "BSBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -529,7 +533,8 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Chris Rembert"
+        "Chris Rembert",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1232,7 +1237,9 @@
       "count": "3-2",
       "pitches": "BKKBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1259,7 +1266,9 @@
       "count": "3-2",
       "pitches": "BBBKSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1286,7 +1295,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1313,7 +1324,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1340,7 +1353,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1358,6 +1373,33 @@
         "home": 9
       },
       "description": "Rembert, C. singled to left field, RBI (0-1 K); Belyeu, C. advanced to third, out at home lf to ss to c; Steele, L. scored."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Christian Chatterton",
+      "batter": "Chatterton,C to p for Alvarez, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 9
+      },
+      "description": "Chatterton,C to p for Alvarez, A.."
     },
     {
       "inning": "Top 6",
@@ -1718,7 +1760,9 @@
       "count": "1-2",
       "pitches": "KBFFFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1739,7 +1783,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Christian Chatterton",
+      "pitcher": "LJ Cormier",
       "batter": "Parker Brosius",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1847,7 +1891,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Carson Ballard",
+      "pitcher": "Justin Shadek",
       "batter": "Cade Belyeu",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1871,6 +1915,33 @@
         "home": 9
       },
       "description": "Belyeu, C. struck out swinging (3-2 BBKFBS)."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "LJ Cormier",
+      "batter": "Cormier, L. to p for Chatterton,C.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 9
+      },
+      "description": "Cormier, L. to p for Chatterton,C."
     },
     {
       "inning": "Top 8",
@@ -2036,7 +2107,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Justin Shadek",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2051,8 +2122,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bub Terrell",
-        "2B": null,
+        "1B": null,
+        "2B": "Bub Terrell",
         "3B": null
       },
       "score": {
@@ -2063,7 +2134,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Justin Shadek",
+      "pitcher": "",
       "batter": "Ethin Bingaman",
       "outcome": "Flyout",
       "count": "1-2",
@@ -2073,13 +2144,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Bub Terrell",
-        "2B": null,
+        "1B": null,
+        "2B": "Bub Terrell",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bub Terrell",
-        "2B": null,
+        "1B": null,
+        "2B": "Bub Terrell",
         "3B": null
       },
       "score": {
@@ -2144,7 +2215,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "LJ Cormier",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2171,7 +2242,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "LJ Cormier",
+      "pitcher": "",
       "batter": "Drew Burress",
       "outcome": "Pop out",
       "count": "3-2",
@@ -2198,7 +2269,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "LJ Cormier",
+      "pitcher": "",
       "batter": "Alex Hernandez",
       "outcome": "Groundout",
       "count": "2-0",

@@ -3,7 +3,7 @@
   "date": "03/31/2026",
   "away_team": "Belmont",
   "home_team": "Vanderbilt",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -418,7 +418,10 @@
       "count": "0-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -454,9 +457,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ryker Waite",
+        "1B": null,
         "2B": "Rustan Rigdon",
-        "3B": null
+        "3B": "Ryker Waite"
       },
       "score": {
         "away": 0,
@@ -476,14 +479,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ryker Waite",
+        "1B": null,
         "2B": "Rustan Rigdon",
-        "3B": null
+        "3B": "Ryker Waite"
       },
       "runners_after": {
         "1B": "Logan Johnstone",
         "2B": "Rustan Rigdon",
-        "3B": null
+        "3B": "Ryker Waite"
       },
       "score": {
         "away": 0,
@@ -499,18 +502,20 @@
       "count": "2-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Logan Johnstone",
         "2B": "Rustan Rigdon",
-        "3B": null
+        "3B": "Ryker Waite"
       },
       "runners_after": {
         "1B": "Tommy Goodin",
         "2B": "Rustan Rigdon",
-        "3B": null
+        "3B": "Ryker Waite"
       },
       "score": {
         "away": 0,
@@ -526,18 +531,20 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Tommy Goodin",
         "2B": "Rustan Rigdon",
-        "3B": null
+        "3B": "Ryker Waite"
       },
       "runners_after": {
         "1B": "Brodie Johnston",
         "2B": "Rustan Rigdon",
-        "3B": null
+        "3B": "Ryker Waite"
       },
       "score": {
         "away": 0,
@@ -547,7 +554,34 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Cole",
+      "pitcher": "Cole Kenyon",
+      "batter": "Cole",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Brodie Johnston",
+        "2B": "Rustan Rigdon",
+        "3B": "Ryker Waite"
+      },
+      "runners_after": {
+        "1B": "Brodie Johnston",
+        "2B": "Rustan Rigdon",
+        "3B": "Ryker Waite"
+      },
+      "score": {
+        "away": 0,
+        "home": 4
+      },
+      "description": "Cole Kenyon to p for Andrew Perry."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Cole Kenyon",
       "batter": "Braden Holcomb",
       "outcome": "Lineout",
       "count": "1-0",
@@ -559,12 +593,12 @@
       "runners_before": {
         "1B": "Brodie Johnston",
         "2B": "Rustan Rigdon",
-        "3B": null
+        "3B": "Ryker Waite"
       },
       "runners_after": {
         "1B": "Brodie Johnston",
         "2B": "Rustan Rigdon",
-        "3B": null
+        "3B": "Ryker Waite"
       },
       "score": {
         "away": 0,
@@ -655,7 +689,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Cole",
+      "pitcher": "Cole Kenyon",
       "batter": "Mike Mancini",
       "outcome": "Walk",
       "count": "3-2",
@@ -682,7 +716,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Cole",
+      "pitcher": "Cole Kenyon",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -709,7 +743,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Cole",
+      "pitcher": "Cole Kenyon",
       "batter": "Rustan Rigdon",
       "outcome": "Pop out",
       "count": "2-2",
@@ -736,7 +770,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Cole",
+      "pitcher": "Cole Kenyon",
       "batter": "Chris Maldonado",
       "outcome": "Single",
       "count": "3-2",
@@ -763,7 +797,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Cole",
+      "pitcher": "Cole Kenyon",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -790,7 +824,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Cole",
+      "pitcher": "Cole Kenyon",
       "batter": "Mack Whitcomb",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -904,7 +938,9 @@
       "count": "1-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -952,7 +988,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cole",
+      "pitcher": "Cole Kenyon",
       "batter": "Ryker Waite",
       "outcome": "Walk",
       "count": "3-2",
@@ -979,13 +1015,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cole",
+      "pitcher": "Cole Kenyon",
       "batter": "Logan Johnstone",
       "outcome": "Double",
       "count": "3-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1006,13 +1044,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Cole",
+      "pitcher": "Brooks McDonnough",
       "batter": "Tommy Goodin",
       "outcome": "Double",
       "count": "1-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1033,7 +1073,34 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brooks",
+      "pitcher": "Brooks McDonnough",
+      "batter": "Brooks",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Ryker Waite",
+        "2B": "Tommy Goodin",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ryker Waite",
+        "2B": "Tommy Goodin",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 6
+      },
+      "description": "Brooks McDon to p for Cole Kenyon."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Brooks McDonnough",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1060,13 +1127,15 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brooks",
+      "pitcher": "Brooks McDonnough",
       "batter": "Brodie Johnston",
       "outcome": "Lineout",
       "count": "1-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -1087,7 +1156,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brooks",
+      "pitcher": "Brooks McDonnough",
       "batter": "Braden Holcomb",
       "outcome": "Double",
       "count": "0-0",
@@ -1114,7 +1183,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brooks",
+      "pitcher": "Lake Morris",
       "batter": "Mike Mancini",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1141,7 +1210,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Brooks",
+      "pitcher": "Lake Morris",
       "batter": "Rustan Rigdon",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1249,7 +1318,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Lake",
+      "pitcher": "Lake Morris",
+      "batter": "Lake",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 7
+      },
+      "description": "Lake Morris to p for Brooks McDon."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Lake Morris",
       "batter": "Chris Maldonado",
       "outcome": "Lineout",
       "count": "1-2",
@@ -1276,7 +1372,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Lake",
+      "pitcher": "Lake Morris",
       "batter": "Mack Whitcomb",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1303,7 +1399,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Lake",
+      "pitcher": "Aubrey Moraitakis",
       "batter": "Ryker Waite",
       "outcome": "Single",
       "count": "0-1",
@@ -1330,7 +1426,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Lake",
+      "pitcher": "Aubrey Moraitakis",
       "batter": "Logan Johnstone",
       "outcome": "Single",
       "count": "2-1",
@@ -1357,7 +1453,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Lake",
+      "pitcher": "Aubrey Moraitakis",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1471,7 +1567,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1519,7 +1617,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Lake",
+      "pitcher": "Aubrey Moraitakis",
       "batter": "Tommy Goodin",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1546,7 +1644,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Aubrey",
+      "pitcher": "Aubrey Moraitakis",
+      "batter": "Aubrey",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 7
+      },
+      "description": "Aubrey Morai to p for Lake Morris."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Aubrey Moraitakis",
       "batter": "Brodie Johnston",
       "outcome": "Walk",
       "count": "3-0",
@@ -1573,7 +1698,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Aubrey",
+      "pitcher": "Jonathon Van Ness",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1600,7 +1725,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Aubrey",
+      "pitcher": "Jonathon Van Ness",
       "batter": "Braden Holcomb",
       "outcome": "Walk",
       "count": "3-2",
@@ -1627,13 +1752,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Aubrey",
+      "pitcher": "Jonathon Van Ness",
       "batter": "Mike Mancini",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1654,7 +1781,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Aubrey",
+      "pitcher": "Jonathon Van Ness",
       "batter": "Rustan Rigdon",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1681,7 +1808,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Aubrey",
+      "pitcher": "Jonathon Van Ness",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1708,7 +1835,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Aubrey",
+      "pitcher": "Jonathon Van Ness",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1737,7 +1864,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Aubrey",
+      "pitcher": "Jonathon Van Ness",
       "batter": "Chris Maldonado",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1872,7 +1999,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jonathon",
+      "pitcher": "Sam Heyman",
+      "batter": "Jonathon",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 9
+      },
+      "description": "Jonathon Van to p for Aubrey Morai."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Sam Heyman",
       "batter": "Mack Whitcomb",
       "outcome": "Home run",
       "count": "0-0",
@@ -1901,7 +2055,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jonathon",
+      "pitcher": "Sam Heyman",
       "batter": "Collin Brightwell",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1928,7 +2082,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jonathon",
+      "pitcher": "Sam Heyman",
       "batter": "Logan Johnstone",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1955,7 +2109,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Jonathon",
+      "pitcher": "Sam Heyman",
       "batter": "Tommy Goodin",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2063,7 +2217,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jonathon",
+      "pitcher": "",
       "batter": "Brady",
       "outcome": "\u2014",
       "count": null,
@@ -2090,7 +2244,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jonathon",
+      "pitcher": "",
       "batter": "Brody",
       "outcome": "\u2014",
       "count": null,
@@ -2117,7 +2271,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Sam",
+      "pitcher": "",
+      "batter": "Sam",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 10
+      },
+      "description": "Sam Heyman to p for Jonathon Van."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Brodie Johnston",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2144,7 +2325,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Sam",
+      "pitcher": "",
       "batter": "Braden Holcomb",
       "outcome": "Single",
       "count": "1-1",
@@ -2171,13 +2352,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Sam",
+      "pitcher": "",
       "batter": "Mike Mancini",
       "outcome": "Reached on error",
       "count": "1-1",
       "pitches": "",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2198,7 +2381,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Sam",
+      "pitcher": "",
       "batter": "Rustan Rigdon",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2225,7 +2408,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Sam",
+      "pitcher": "",
       "batter": "Chris Maldonado",
       "outcome": "Lineout",
       "count": "3-1",
@@ -2312,7 +2495,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {

@@ -3,7 +3,7 @@
   "date": "02/22/2026",
   "away_team": "LSU",
   "home_team": "UCF",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -103,8 +103,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Derek Curiel",
-        "2B": null,
+        "1B": null,
+        "2B": "Derek Curiel",
         "3B": null
       },
       "score": {
@@ -125,13 +125,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Derek Curiel",
-        "2B": null,
+        "1B": null,
+        "2B": "Derek Curiel",
         "3B": null
       },
       "runners_after": {
-        "1B": "Derek Curiel",
-        "2B": null,
+        "1B": null,
+        "2B": "Derek Curiel",
         "3B": null
       },
       "score": {
@@ -526,7 +526,9 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -629,12 +631,41 @@
     {
       "inning": "Top 3",
       "pitcher": "Chandler Dorsey",
+      "batter": "Dorsey, C to p for Wicker, C.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Cade Arrambide",
+        "2B": "Derek Curiel",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Cade Arrambide",
+        "2B": "Derek Curiel",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 0
+      },
+      "description": "Dorsey, C to p for Wicker, C."
+    },
+    {
+      "inning": "Top 3",
+      "pitcher": "Chandler Dorsey",
       "batter": "Seth Dardar",
       "outcome": "Flyout",
       "count": "0-2",
       "pitches": "KF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -927,7 +958,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Chandler Dorsey",
+      "pitcher": "Michael Gillen",
       "batter": "Zach Yorke",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1024,8 +1055,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Javier Crespo",
-        "3B": null
+        "2B": null,
+        "3B": "Javier Crespo"
       },
       "score": {
         "away": 3,
@@ -1046,13 +1077,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Javier Crespo",
-        "3B": null
+        "2B": null,
+        "3B": "Javier Crespo"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Javier Crespo",
-        "3B": null
+        "2B": null,
+        "3B": "Javier Crespo"
       },
       "score": {
         "away": 3,
@@ -1073,19 +1104,46 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Javier Crespo",
-        "3B": null
+        "2B": null,
+        "3B": "Javier Crespo"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Javier Crespo",
-        "3B": null
+        "2B": null,
+        "3B": "Javier Crespo"
       },
       "score": {
         "away": 3,
         "home": 0
       },
       "description": "Skinner, Z struck out swinging, out at first c to 1b (2-2 SBBKS)."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Michael Gillen",
+      "batter": "Gillen, M to p for Dorsey, C.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 0
+      },
+      "description": "Gillen, M to p for Dorsey, C."
     },
     {
       "inning": "Top 5",
@@ -1123,7 +1181,8 @@
       "pitches": "BFFBBFF",
       "rbi": true,
       "runs_scored": [
-        "Cade Arrambide"
+        "Cade Arrambide",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1145,7 +1204,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Michael Gillen",
+      "pitcher": "Kevin Schoneboom",
       "batter": "Seth Dardar",
       "outcome": "Walk",
       "count": "3-1",
@@ -1172,7 +1231,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Michael Gillen",
+      "pitcher": "Kevin Schoneboom",
       "batter": "Brayden Simpson",
       "outcome": "Walk",
       "count": "3-2",
@@ -1196,6 +1255,33 @@
         "home": 0
       },
       "description": "Simpson walked (3-2 BBKBKFB); Dardar advanced to second."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Kevin Schoneboom",
+      "batter": "Schoneboom,K to p for Gillen, M.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Brayden Simpson",
+        "2B": null,
+        "3B": "Steven Milam"
+      },
+      "runners_after": {
+        "1B": "Brayden Simpson",
+        "2B": null,
+        "3B": "Steven Milam"
+      },
+      "score": {
+        "away": 5,
+        "home": 0
+      },
+      "description": "Schoneboom,K to p for Gillen, M."
     },
     {
       "inning": "Top 5",
@@ -1232,7 +1318,9 @@
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1259,7 +1347,9 @@
       "count": "1-2",
       "pitches": "KBSF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1430,9 +1520,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Braden Calise",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Braden Calise"
       },
       "score": {
         "away": 7,
@@ -1452,14 +1542,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Braden Calise",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Braden Calise"
       },
       "runners_after": {
-        "1B": "Braden Calise",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Braden Calise"
       },
       "score": {
         "away": 7,
@@ -1496,7 +1586,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Kevin Schoneboom",
+      "pitcher": "Roman Kimball",
       "batter": "Steven Milam",
       "outcome": "Walk",
       "count": "3-2",
@@ -1523,7 +1613,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Kevin Schoneboom",
+      "pitcher": "Roman Kimball",
       "batter": "Cade Arrambide",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1550,7 +1640,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Kevin Schoneboom",
+      "pitcher": "Roman Kimball",
       "batter": "Seth Dardar",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1685,7 +1775,34 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Roman Kimball",
+      "pitcher": "Kaniel Rosado",
+      "batter": "Kimball, R to p for Schoneboom,K.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 0
+      },
+      "description": "Kimball, R to p for Schoneboom,K."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Kaniel Rosado",
       "batter": "Brayden Simpson",
       "outcome": "Single",
       "count": "2-1",
@@ -1712,7 +1829,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Roman Kimball",
+      "pitcher": "Kaniel Rosado",
       "batter": "Mason Braun",
       "outcome": "Single",
       "count": "1-0",
@@ -1739,7 +1856,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Roman Kimball",
+      "pitcher": "Kaniel Rosado",
       "batter": "Trent Caraway",
       "outcome": "Walk",
       "count": "3-2",
@@ -1766,13 +1883,43 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Kaniel Rosado",
+      "pitcher": "",
+      "batter": "Rosado, K to p for Kimball, R.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Trent Caraway",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Trent Caraway",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 0
+      },
+      "description": "Rosado, K to p for Kimball, R."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "",
       "batter": "Derek Curiel",
       "outcome": "Double",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1793,13 +1940,16 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Kaniel Rosado",
+      "pitcher": "",
       "batter": "Jake Brown",
       "outcome": "Single",
       "count": "3-1",
       "pitches": "SBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1820,7 +1970,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Kaniel Rosado",
+      "pitcher": "",
       "batter": "Jake Brown",
       "outcome": "\u2014",
       "count": null,
@@ -1847,7 +1997,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Kaniel Rosado",
+      "pitcher": "",
       "batter": "John Pearson",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1874,7 +2024,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Kaniel Rosado",
+      "pitcher": "",
       "batter": "Steven Milam",
       "outcome": "Flyout",
       "count": "0-2",
@@ -2009,7 +2159,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Mavrick Rizy",
+      "pitcher": "",
       "batter": "Braden Calise",
       "outcome": "Flyout",
       "count": "1-2",

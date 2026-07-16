@@ -3,7 +3,7 @@
   "date": "02/14/2026",
   "away_team": "Houston",
   "home_team": "Boston College",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -157,7 +157,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Nick Wang",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -265,7 +265,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dylan Maxcey",
+        "1B": null,
         "2B": "Antonelli Savattere",
         "3B": null
       },
@@ -320,7 +320,7 @@
       },
       "runners_after": {
         "1B": "Kyle Wolff",
-        "2B": null,
+        "2B": "Jack Toomey",
         "3B": null
       },
       "score": {
@@ -342,13 +342,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Kyle Wolff",
-        "2B": null,
+        "2B": "Jack Toomey",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Wolff",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Kyle Wolff",
+        "3B": "Jack Toomey"
       },
       "score": {
         "away": 0,
@@ -368,14 +368,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Kyle Wolff",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Kyle Wolff",
+        "3B": "Jack Toomey"
       },
       "runners_after": {
-        "1B": "Kyle Wolff",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Kyle Wolff",
+        "3B": "Jack Toomey"
       },
       "score": {
         "away": 0,
@@ -395,14 +395,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kyle Wolff",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Kyle Wolff",
+        "3B": "Jack Toomey"
       },
       "runners_after": {
-        "1B": "Kyle Wolff",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Kyle Wolff",
+        "3B": "Jack Toomey"
       },
       "score": {
         "away": 0,
@@ -412,7 +412,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Sean Hard",
+      "pitcher": "Luke D'Ancona",
       "batter": "Blake Fields",
       "outcome": "Single",
       "count": "1-0",
@@ -439,7 +439,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Sean Hard",
+      "pitcher": "Luke D'Ancona",
       "batter": "Jackson LaLima",
       "outcome": "Strikeout",
       "count": "1-3",
@@ -466,7 +466,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Sean Hard",
+      "pitcher": "Luke D'Ancona",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -481,8 +481,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Blake Fields",
-        "2B": null,
+        "1B": null,
+        "2B": "Blake Fields",
         "3B": null
       },
       "score": {
@@ -493,7 +493,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Sean Hard",
+      "pitcher": "Luke D'Ancona",
       "batter": "Tyler Cox",
       "outcome": "Flyout",
       "count": "1-2",
@@ -503,14 +503,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Blake Fields",
-        "2B": null,
+        "1B": null,
+        "2B": "Blake Fields",
         "3B": null
       },
       "runners_after": {
-        "1B": "Blake Fields",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Blake Fields"
       },
       "score": {
         "away": 0,
@@ -520,19 +520,21 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Sean Hard",
+      "pitcher": "Luke D'Ancona",
       "batter": "Tre Broussard",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "BKFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Blake Fields"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Blake Fields",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Blake Fields"
       },
       "runners_after": {
         "1B": "Tre Broussard",
@@ -547,7 +549,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Sean Hard",
+      "pitcher": "Luke D'Ancona",
       "batter": "Xavier Perez",
       "outcome": "Strikeout",
       "count": "0-3",
@@ -643,8 +645,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Carter Hendrickson",
-        "2B": null,
+        "1B": null,
+        "2B": "Carter Hendrickson",
         "3B": null
       },
       "score": {
@@ -661,12 +663,14 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Carter Hendrickson"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Carter Hendrickson",
-        "2B": null,
+        "1B": null,
+        "2B": "Carter Hendrickson",
         "3B": null
       },
       "runners_after": {
@@ -697,8 +701,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ty Mainolfi",
-        "2B": null,
+        "1B": null,
+        "2B": "Ty Mainolfi",
         "3B": null
       },
       "score": {
@@ -719,13 +723,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ty Mainolfi",
-        "2B": null,
+        "1B": null,
+        "2B": "Ty Mainolfi",
         "3B": null
       },
       "runners_after": {
         "1B": "Jack Toomey",
-        "2B": null,
+        "2B": "Ty Mainolfi",
         "3B": null
       },
       "score": {
@@ -747,13 +751,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Jack Toomey",
-        "2B": null,
+        "2B": "Ty Mainolfi",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jack Toomey",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Jack Toomey",
+        "3B": "Ty Mainolfi"
       },
       "score": {
         "away": 1,
@@ -773,14 +777,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jack Toomey",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Jack Toomey",
+        "3B": "Ty Mainolfi"
       },
       "runners_after": {
-        "1B": "Jack Toomey",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Jack Toomey",
+        "3B": "Ty Mainolfi"
       },
       "score": {
         "away": 1,
@@ -790,7 +794,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Sean Hard",
+      "pitcher": "Luke D'Ancona",
       "batter": "Antonelli Savattere",
       "outcome": "Single",
       "count": "1-2",
@@ -817,7 +821,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Sean Hard",
+      "pitcher": "Luke D'Ancona",
       "batter": "Riley Jackson",
       "outcome": "Strikeout",
       "count": "3-3",
@@ -844,7 +848,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Sean Hard",
+      "pitcher": "Luke D'Ancona",
       "batter": "Dylan Maxcey",
       "outcome": "Flyout",
       "count": "0-1",
@@ -871,7 +875,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Sean Hard",
+      "pitcher": "Luke D'Ancona",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -886,8 +890,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Antonelli Savattere",
-        "2B": null,
+        "1B": null,
+        "2B": "Antonelli Savattere",
         "3B": null
       },
       "score": {
@@ -898,7 +902,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Sean Hard",
+      "pitcher": "Luke D'Ancona",
       "batter": "McClane Helton",
       "outcome": "Walk",
       "count": "3-2",
@@ -908,13 +912,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Antonelli Savattere",
-        "2B": null,
+        "1B": null,
+        "2B": "Antonelli Savattere",
         "3B": null
       },
       "runners_after": {
         "1B": "McClane Helton",
-        "2B": null,
+        "2B": "Antonelli Savattere",
         "3B": null
       },
       "score": {
@@ -925,22 +929,25 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Sean Hard",
+      "pitcher": "Luke D'Ancona",
       "batter": "Blake Fields",
       "outcome": "Double",
       "count": "3-2",
       "pitches": "KKBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Antonelli Savattere",
+        "McClane Helton"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "McClane Helton",
-        "2B": null,
+        "2B": "Antonelli Savattere",
         "3B": null
       },
       "runners_after": {
-        "1B": "McClane Helton",
+        "1B": null,
         "2B": "Blake Fields",
         "3B": null
       },
@@ -952,7 +959,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Sean Hard",
+      "pitcher": "Luke D'Ancona",
       "batter": "Jackson LaLima",
       "outcome": "Groundout",
       "count": "0-1",
@@ -962,12 +969,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "McClane Helton",
+        "1B": null,
         "2B": "Blake Fields",
         "3B": null
       },
       "runners_after": {
-        "1B": "McClane Helton",
+        "1B": null,
         "2B": "Blake Fields",
         "3B": null
       },
@@ -1060,7 +1067,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Sean Hard",
+      "pitcher": "John D Mitchell",
       "batter": "Tyler Cox",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -1087,7 +1094,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Sean Hard",
+      "pitcher": "John D Mitchell",
       "batter": "Tre Broussard",
       "outcome": "Strikeout",
       "count": "2-2",
@@ -1114,7 +1121,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Sean Hard",
+      "pitcher": "John D Mitchell",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1141,7 +1148,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Sean Hard",
+      "pitcher": "John D Mitchell",
       "batter": "Xavier Perez",
       "outcome": "Pop out",
       "count": "2-1",
@@ -1168,7 +1175,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Sean Hard",
+      "pitcher": "John D Mitchell",
       "batter": "Antonelli Savattere",
       "outcome": "Strikeout",
       "count": "0-2",
@@ -1249,7 +1256,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Kendall Hoffman",
+      "pitcher": "Jackson Baker",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1264,7 +1271,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Carter Hendrickson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1276,7 +1283,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Kendall Hoffman",
+      "pitcher": "Jackson Baker",
       "batter": "Nick Wang",
       "outcome": "Strikeout",
       "count": "1-3",
@@ -1286,12 +1293,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Carter Hendrickson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Carter Hendrickson",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1303,7 +1310,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Sean Hard",
+      "pitcher": "John Kwiatkowski",
       "batter": "Riley Jackson",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1330,7 +1337,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Sean Hard",
+      "pitcher": "Sean Budis",
       "batter": "Dylan Maxcey",
       "outcome": "Strikeout",
       "count": "0-3",
@@ -1357,7 +1364,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Sean Hard",
+      "pitcher": "Sean Budis",
       "batter": "McClane Helton",
       "outcome": "Walk",
       "count": "3-0",
@@ -1384,7 +1391,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Sean Hard",
+      "pitcher": "Sean Budis",
       "batter": "Blake Fields",
       "outcome": "Walk",
       "count": "3-2",
@@ -1401,7 +1408,7 @@
       "runners_after": {
         "1B": "Blake Fields",
         "2B": null,
-        "3B": null
+        "3B": "McClane Helton"
       },
       "score": {
         "away": 3,
@@ -1411,23 +1418,25 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Sean Hard",
+      "pitcher": "Sean Budis",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "McClane Helton"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Blake Fields",
         "2B": null,
-        "3B": null
+        "3B": "McClane Helton"
       },
       "runners_after": {
-        "1B": "Blake Fields",
-        "2B": null,
+        "1B": null,
+        "2B": "Blake Fields",
         "3B": null
       },
       "score": {
@@ -1438,7 +1447,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Sean Hard",
+      "pitcher": "Sean Budis",
       "batter": "Jackson LaLima",
       "outcome": "Reached on error",
       "count": "0-1",
@@ -1448,14 +1457,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Blake Fields",
-        "2B": null,
+        "1B": null,
+        "2B": "Blake Fields",
         "3B": null
       },
       "runners_after": {
         "1B": "Jackson LaLima",
         "2B": null,
-        "3B": null
+        "3B": "Blake Fields"
       },
       "score": {
         "away": 4,
@@ -1465,7 +1474,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Sean Hard",
+      "pitcher": "Sean Budis",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1477,12 +1486,12 @@
       "runners_before": {
         "1B": "Jackson LaLima",
         "2B": null,
-        "3B": null
+        "3B": "Blake Fields"
       },
       "runners_after": {
-        "1B": "Jackson LaLima",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Blake Fields"
       },
       "score": {
         "away": 4,
@@ -1492,7 +1501,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kendall Hoffman",
+      "pitcher": "Jackson Baker",
       "batter": "Ty Mainolfi",
       "outcome": "Strikeout",
       "count": "2-3",
@@ -1519,7 +1528,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kendall Hoffman",
+      "pitcher": "Jackson Baker",
       "batter": "Jack Toomey",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1546,7 +1555,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kendall Hoffman",
+      "pitcher": "Jackson Baker",
       "batter": "Kyle Wolff",
       "outcome": "Lineout",
       "count": "2-0",
@@ -1573,7 +1582,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sean Hard",
+      "pitcher": "Sean Budis",
       "batter": "Tyler Cox",
       "outcome": "Single",
       "count": "2-2",
@@ -1600,7 +1609,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sean Hard",
+      "pitcher": "Sean Budis",
       "batter": "Tre Broussard",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -1616,7 +1625,7 @@
       },
       "runners_after": {
         "1B": "Tre Broussard",
-        "2B": null,
+        "2B": "Tyler Cox",
         "3B": null
       },
       "score": {
@@ -1627,7 +1636,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sean Hard",
+      "pitcher": "Sean Budis",
       "batter": "Xavier Perez",
       "outcome": "\u2014",
       "count": "0-0",
@@ -1638,13 +1647,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Tre Broussard",
-        "2B": null,
+        "2B": "Tyler Cox",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tre Broussard",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Tre Broussard",
+        "3B": "Tyler Cox"
       },
       "score": {
         "away": 4,
@@ -1654,7 +1663,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sean Hard",
+      "pitcher": "Peter Schaefer",
       "batter": "Antonelli Savattere",
       "outcome": "Strikeout",
       "count": "3-3",
@@ -1664,14 +1673,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tre Broussard",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Tre Broussard",
+        "3B": "Tyler Cox"
       },
       "runners_after": {
-        "1B": "Tre Broussard",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Tre Broussard",
+        "3B": "Tyler Cox"
       },
       "score": {
         "away": 4,
@@ -1681,7 +1690,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sean Hard",
+      "pitcher": "Peter Schaefer",
       "batter": "Riley Jackson",
       "outcome": "Walk",
       "count": "3-1",
@@ -1691,14 +1700,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tre Broussard",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Tre Broussard",
+        "3B": "Tyler Cox"
       },
       "runners_after": {
         "1B": "Riley Jackson",
-        "2B": null,
-        "3B": null
+        "2B": "Tre Broussard",
+        "3B": "Tyler Cox"
       },
       "score": {
         "away": 4,
@@ -1708,7 +1717,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sean Hard",
+      "pitcher": "Peter Schaefer",
       "batter": "Dylan Maxcey",
       "outcome": "Lineout",
       "count": "1-1",
@@ -1719,13 +1728,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Riley Jackson",
-        "2B": null,
-        "3B": null
+        "2B": "Tre Broussard",
+        "3B": "Tyler Cox"
       },
       "runners_after": {
         "1B": "Riley Jackson",
-        "2B": null,
-        "3B": null
+        "2B": "Tre Broussard",
+        "3B": "Tyler Cox"
       },
       "score": {
         "away": 4,
@@ -1735,7 +1744,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Kendall Hoffman",
+      "pitcher": "Jackson Baker",
       "batter": "Julio Solier",
       "outcome": "Strikeout",
       "count": "2-3",
@@ -1762,7 +1771,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Kendall Hoffman",
+      "pitcher": "Jackson Baker",
       "batter": "Cesar Gonzalez",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1789,7 +1798,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Kendall Hoffman",
+      "pitcher": "Jackson Baker",
       "batter": "Colin Larson",
       "outcome": "Single",
       "count": "0-0",
@@ -1816,7 +1825,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Kendall Hoffman",
+      "pitcher": "Jackson Baker",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1831,8 +1840,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Colin Larson",
-        "2B": null,
+        "1B": null,
+        "2B": "Colin Larson",
         "3B": null
       },
       "score": {
@@ -1843,7 +1852,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Kendall Hoffman",
+      "pitcher": "Jackson Baker",
       "batter": "Sean Martinez",
       "outcome": "Groundout",
       "count": "2-0",
@@ -1853,13 +1862,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Colin Larson",
-        "2B": null,
+        "1B": null,
+        "2B": "Colin Larson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Colin Larson",
-        "2B": null,
+        "1B": null,
+        "2B": "Colin Larson",
         "3B": null
       },
       "score": {
@@ -1870,7 +1879,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sean Hard",
+      "pitcher": "Peter Schaefer",
       "batter": "McClane Helton",
       "outcome": "Strikeout",
       "count": "3-3",
@@ -1897,7 +1906,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sean Hard",
+      "pitcher": "Peter Schaefer",
       "batter": "Blake Fields",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -1924,7 +1933,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sean Hard",
+      "pitcher": "Peter Schaefer",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1939,7 +1948,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Blake Fields",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1951,7 +1960,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sean Hard",
+      "pitcher": "Peter Schaefer",
       "batter": "Jackson LaLima",
       "outcome": "Hit by pitch",
       "count": "4-2",
@@ -1961,7 +1970,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Blake Fields",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1978,7 +1987,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sean Hard",
+      "pitcher": "Peter Schaefer",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1993,9 +2002,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jackson LaLima",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jackson LaLima"
       },
       "score": {
         "away": 4,
@@ -2005,7 +2014,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Sean Hard",
+      "pitcher": "Peter Schaefer",
       "batter": "Tyler Cox",
       "outcome": "Flyout",
       "count": "1-0",
@@ -2015,14 +2024,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jackson LaLima",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jackson LaLima"
       },
       "runners_after": {
-        "1B": "Jackson LaLima",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Jackson LaLima"
       },
       "score": {
         "away": 4,
@@ -2032,7 +2041,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Kendall Hoffman",
+      "pitcher": "Jackson Baker",
       "batter": "Carter Hendrickson",
       "outcome": "Single",
       "count": "3-2",
@@ -2059,7 +2068,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Kendall Hoffman",
+      "pitcher": "Jackson Baker",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2086,7 +2095,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Kendall Hoffman",
+      "pitcher": "Jackson Baker",
       "batter": "Ben Williams",
       "outcome": "\u2014",
       "count": null,
@@ -2113,7 +2122,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Kendall Hoffman",
+      "pitcher": "Tyler Bryan",
       "batter": "Nick Wang",
       "outcome": "Walk",
       "count": "3-0",
@@ -2140,7 +2149,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Kendall Hoffman",
+      "pitcher": "Tyler Bryan",
       "batter": "Ty Mainolfi",
       "outcome": "Flyout",
       "count": "3-1",
@@ -2167,7 +2176,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Kendall Hoffman",
+      "pitcher": "Tyler Bryan",
       "batter": "Jack Toomey",
       "outcome": "Single",
       "count": "1-2",
@@ -2183,7 +2192,7 @@
       },
       "runners_after": {
         "1B": "Jack Toomey",
-        "2B": null,
+        "2B": "Nick Wang",
         "3B": null
       },
       "score": {
@@ -2194,7 +2203,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Kendall Hoffman",
+      "pitcher": "Tyler Bryan",
       "batter": "Esteban Garcia",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2205,12 +2214,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Jack Toomey",
-        "2B": null,
+        "2B": "Nick Wang",
         "3B": null
       },
       "runners_after": {
         "1B": "Jack Toomey",
-        "2B": null,
+        "2B": "Nick Wang",
         "3B": null
       },
       "score": {
@@ -2221,7 +2230,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Sean Hard",
+      "pitcher": "Bobby Chicoine",
       "batter": "Tre Broussard",
       "outcome": "Single",
       "count": "0-1",
@@ -2248,7 +2257,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Sean Hard",
+      "pitcher": "Matthew Spada",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2275,7 +2284,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Sean Hard",
+      "pitcher": "Matthew Spada",
       "batter": "Xavier Perez",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2302,13 +2311,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Sean Hard",
+      "pitcher": "Matthew Spada",
       "batter": "Antonelli Savattere",
       "outcome": "\u2014",
       "count": "2-2",
       "pitches": "BKFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2329,7 +2340,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Sean Hard",
+      "pitcher": "Matthew Spada",
       "batter": "Riley Jackson",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2356,7 +2367,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Kendall Hoffman",
+      "pitcher": "Tyler Bryan",
       "batter": "Julio Solier",
       "outcome": "Flyout",
       "count": "3-1",
@@ -2383,7 +2394,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Kendall Hoffman",
+      "pitcher": "Tyler Bryan",
       "batter": "Gunnar Johnson",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2410,7 +2421,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Kendall Hoffman",
+      "pitcher": "",
       "batter": "Colin Larson",
       "outcome": "Groundout",
       "count": "3-2",

@@ -3,7 +3,7 @@
   "date": "02/27/2026",
   "away_team": "UCLA",
   "home_team": "Tennessee",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -256,7 +256,9 @@
       "count": "2-1",
       "pitches": "BFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -500,7 +502,8 @@
       "pitches": "KB",
       "rbi": true,
       "runs_scored": [
-        "Mulivai Levu"
+        "Mulivai Levu",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -935,7 +938,9 @@
       "count": "3-2",
       "pitches": "FBSBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1342,7 +1347,10 @@
       "count": "1-1",
       "pitches": "BS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1369,7 +1377,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1443,6 +1453,33 @@
         "home": 4
       },
       "description": "Gasparino homered to center field, RBI (1-1 BS)."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Brandon Arvidson",
+      "batter": "ARVIDSON, B. to p for KUHNS, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 6,
+        "home": 4
+      },
+      "description": "ARVIDSON, B. to p for KUHNS, T.."
     },
     {
       "inning": "Top 7",
@@ -1554,14 +1591,16 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brandon Arvidson",
+      "pitcher": "Sawyer Deering",
       "batter": "Roman Martin",
       "outcome": "Home run",
       "count": "3-2",
       "pitches": "KBBKB",
       "rbi": true,
       "runs_scored": [
-        "Roman Martin"
+        "Roman Martin",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1584,6 +1623,33 @@
     {
       "inning": "Top 7",
       "pitcher": "Sawyer Deering",
+      "batter": "DEERING, S. to p for ARVIDSON, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Mulivai Levu",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Mulivai Levu",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 9,
+        "home": 4
+      },
+      "description": "DEERING, S. to p for ARVIDSON, B.."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Taylor Tracey",
       "batter": "Payton Brennan",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -1610,7 +1676,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sawyer Deering",
+      "pitcher": "Taylor Tracey",
       "batter": "Aiden Aguayo",
       "outcome": "Walk",
       "count": "3-1",
@@ -1638,12 +1704,42 @@
     {
       "inning": "Top 7",
       "pitcher": "Taylor Tracey",
+      "batter": "TRACEY, T. to p for DEERING, S..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Aiden Aguayo",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Aiden Aguayo",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 9,
+        "home": 4
+      },
+      "description": "TRACEY, T. to p for DEERING, S.."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Nic Abraham",
       "batter": "Cashel Dugger",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1664,7 +1760,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Taylor Tracey",
+      "pitcher": "Nic Abraham",
       "batter": "Will Gasparino",
       "outcome": "Walk",
       "count": "3-1",
@@ -1691,7 +1787,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Taylor Tracey",
+      "pitcher": "Nic Abraham",
       "batter": "Dominic Cadiz",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1778,7 +1874,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1823,6 +1921,33 @@
         "home": 5
       },
       "description": "CLARK, L. flied out to rf (3-1 BBSB)."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Nic Abraham",
+      "batter": "ABRAHAM, N. to p for TRACEY, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 11,
+        "home": 5
+      },
+      "description": "ABRAHAM, N. to p for TRACEY, T.."
     },
     {
       "inning": "Top 8",
@@ -2030,8 +2155,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Blaine Brown",
-        "2B": null,
+        "1B": null,
+        "2B": "Blaine Brown",
         "3B": null
       },
       "score": {
@@ -2052,13 +2177,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Blaine Brown",
-        "2B": null,
+        "1B": null,
+        "2B": "Blaine Brown",
         "3B": null
       },
       "runners_after": {
         "1B": "Tyler Myatt",
-        "2B": null,
+        "2B": "Blaine Brown",
         "3B": null
       },
       "score": {
@@ -2080,12 +2205,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Tyler Myatt",
-        "2B": null,
+        "2B": "Blaine Brown",
         "3B": null
       },
       "runners_after": {
         "1B": "Stone Lawless",
-        "2B": null,
+        "2B": "Blaine Brown",
         "3B": null
       },
       "score": {
@@ -2107,12 +2232,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Stone Lawless",
-        "2B": null,
+        "2B": "Blaine Brown",
         "3B": null
       },
       "runners_after": {
         "1B": "Stone Lawless",
-        "2B": null,
+        "2B": "Blaine Brown",
         "3B": null
       },
       "score": {
@@ -2134,12 +2259,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Stone Lawless",
-        "2B": null,
+        "2B": "Blaine Brown",
         "3B": null
       },
       "runners_after": {
         "1B": "Stone Lawless",
-        "2B": null,
+        "2B": "Blaine Brown",
         "3B": null
       },
       "score": {
@@ -2177,7 +2302,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nic Abraham",
+      "pitcher": "",
       "batter": "Cashel Dugger",
       "outcome": "Grounded into double play",
       "count": "0-0",
@@ -2204,7 +2329,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nic Abraham",
+      "pitcher": "",
       "batter": "Will Gasparino",
       "outcome": "Home run",
       "count": "1-0",
@@ -2233,7 +2358,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nic Abraham",
+      "pitcher": "",
       "batter": "Aidan Espinoza",
       "outcome": "Single",
       "count": "1-2",
@@ -2260,7 +2385,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nic Abraham",
+      "pitcher": "",
       "batter": "Dean West",
       "outcome": "Flyout",
       "count": "0-1",

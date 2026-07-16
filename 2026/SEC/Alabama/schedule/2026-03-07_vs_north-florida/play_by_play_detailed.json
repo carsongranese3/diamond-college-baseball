@@ -3,7 +3,7 @@
   "date": "03/07/2026",
   "away_team": "North Florida",
   "home_team": "Alabama",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -103,8 +103,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Matthew Farner",
-        "2B": null,
+        "1B": null,
+        "2B": "Matthew Farner",
         "3B": null
       },
       "score": {
@@ -121,17 +121,19 @@
       "count": "2-1",
       "pitches": "BSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Matthew Farner",
-        "2B": null,
+        "1B": null,
+        "2B": "Matthew Farner",
         "3B": null
       },
       "runners_after": {
         "1B": "Boone Hosey",
-        "2B": null,
+        "2B": "Matthew Farner",
         "3B": null
       },
       "score": {
@@ -153,12 +155,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Boone Hosey",
-        "2B": null,
+        "2B": "Matthew Farner",
         "3B": null
       },
       "runners_after": {
         "1B": "Boone Hosey",
-        "2B": null,
+        "2B": "Matthew Farner",
         "3B": null
       },
       "score": {
@@ -312,7 +314,10 @@
       "count": "2-1",
       "pitches": "BKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -393,7 +398,9 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -447,7 +454,10 @@
       "count": "2-2",
       "pitches": "BBFS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -465,6 +475,33 @@
         "home": 6
       },
       "description": "Fowler doubled down the lf line, 2 RBI (2-2 BBFS); Holt advanced to third; Osterhouse scored; Torres scored."
+    },
+    {
+      "inning": "Bottom 1",
+      "pitcher": "Clay Hendry",
+      "batter": "NIKOLIS, T. to p for HENDRY, C..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Brennan Holt",
+        "2B": "Bryce Fowler",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Brennan Holt",
+        "2B": "Bryce Fowler",
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 6
+      },
+      "description": "NIKOLIS, T. to p for HENDRY, C.."
     },
     {
       "inning": "Bottom 1",
@@ -969,8 +1006,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Gialdri Gomez",
-        "2B": null,
+        "1B": null,
+        "2B": "Gialdri Gomez",
         "3B": null
       },
       "score": {
@@ -991,13 +1028,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Gialdri Gomez",
-        "2B": null,
+        "1B": null,
+        "2B": "Gialdri Gomez",
         "3B": null
       },
       "runners_after": {
         "1B": "Seth Alford",
-        "2B": null,
+        "2B": "Gialdri Gomez",
         "3B": null
       },
       "score": {
@@ -1019,12 +1056,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Seth Alford",
-        "2B": null,
+        "2B": "Gialdri Gomez",
         "3B": null
       },
       "runners_after": {
         "1B": "Seth Alford",
-        "2B": null,
+        "2B": "Gialdri Gomez",
         "3B": null
       },
       "score": {
@@ -1041,17 +1078,19 @@
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Seth Alford",
-        "2B": null,
+        "2B": "Gialdri Gomez",
         "3B": null
       },
       "runners_after": {
         "1B": "Drew Buchanan",
-        "2B": null,
+        "2B": "Gialdri Gomez",
         "3B": null
       },
       "score": {
@@ -1073,13 +1112,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Drew Buchanan",
-        "2B": null,
+        "2B": "Gialdri Gomez",
         "3B": null
       },
       "runners_after": {
-        "1B": "Drew Buchanan",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Gialdri Gomez",
+        "3B": "Drew Buchanan"
       },
       "score": {
         "away": 2,
@@ -1099,14 +1138,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Drew Buchanan",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Gialdri Gomez",
+        "3B": "Drew Buchanan"
       },
       "runners_after": {
-        "1B": "Drew Buchanan",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Gialdri Gomez",
+        "3B": "Drew Buchanan"
       },
       "score": {
         "away": 2,
@@ -1149,7 +1188,9 @@
       "count": "2-2",
       "pitches": "SFBBFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1467,7 +1508,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Trevor Nikolis",
+      "pitcher": "Jeremiah Stewart",
       "batter": "Brennan Holt",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1590,8 +1631,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Seth Alford",
-        "2B": null,
+        "1B": null,
+        "2B": "Seth Alford",
         "3B": null
       },
       "score": {
@@ -1612,13 +1653,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Seth Alford",
-        "2B": null,
+        "1B": null,
+        "2B": "Seth Alford",
         "3B": null
       },
       "runners_after": {
         "1B": "Santiago Ordonez",
-        "2B": null,
+        "2B": "Seth Alford",
         "3B": null
       },
       "score": {
@@ -1635,17 +1676,19 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Santiago Ordonez",
-        "2B": null,
+        "2B": "Seth Alford",
         "3B": null
       },
       "runners_after": {
         "1B": "Drew Buchanan",
-        "2B": null,
+        "2B": "Seth Alford",
         "3B": null
       },
       "score": {
@@ -1667,12 +1710,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Drew Buchanan",
-        "2B": null,
+        "2B": "Seth Alford",
         "3B": null
       },
       "runners_after": {
         "1B": "Drew Buchanan",
-        "2B": null,
+        "2B": "Seth Alford",
         "3B": null
       },
       "score": {
@@ -1694,12 +1737,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Drew Buchanan",
-        "2B": null,
+        "2B": "Seth Alford",
         "3B": null
       },
       "runners_after": {
         "1B": "Drew Buchanan",
-        "2B": null,
+        "2B": "Seth Alford",
         "3B": null
       },
       "score": {
@@ -1707,6 +1750,33 @@
         "home": 7
       },
       "description": "FARNER, M. struck out looking (0-2 KSK)."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Jeremiah Stewart",
+      "batter": "STEWART, J. to p for NIKOLIS, T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 7
+      },
+      "description": "STEWART, J. to p for NIKOLIS, T.."
     },
     {
       "inning": "Bottom 6",
@@ -1779,8 +1849,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Justin Lebron",
-        "2B": null,
+        "1B": null,
+        "2B": "Justin Lebron",
         "3B": null
       },
       "score": {
@@ -1801,13 +1871,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Justin Lebron",
-        "2B": null,
+        "1B": null,
+        "2B": "Justin Lebron",
         "3B": null
       },
       "runners_after": {
         "1B": "Brady Neal",
-        "2B": null,
+        "2B": "Justin Lebron",
         "3B": null
       },
       "score": {
@@ -1829,12 +1899,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Brady Neal",
-        "2B": null,
+        "2B": "Justin Lebron",
         "3B": null
       },
       "runners_after": {
         "1B": "Brady Neal",
-        "2B": null,
+        "2B": "Justin Lebron",
         "3B": null
       },
       "score": {
@@ -1926,7 +1996,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Sam Mitchell",
+      "pitcher": "Luke Smyers",
       "batter": "Sean Benjamin",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2013,7 +2083,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -2103,8 +2175,8 @@
         "3B": "John Lemm"
       },
       "runners_after": {
-        "1B": "Brennan Holt",
-        "2B": null,
+        "1B": null,
+        "2B": "Brennan Holt",
         "3B": "John Lemm"
       },
       "score": {
@@ -2121,17 +2193,19 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Brennan Holt",
-        "2B": null,
+        "1B": null,
+        "2B": "Brennan Holt",
         "3B": "John Lemm"
       },
       "runners_after": {
         "1B": "Bryce Fowler",
-        "2B": null,
+        "2B": "Brennan Holt",
         "3B": "John Lemm"
       },
       "score": {
@@ -2153,12 +2227,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Bryce Fowler",
-        "2B": null,
+        "2B": "Brennan Holt",
         "3B": "John Lemm"
       },
       "runners_after": {
         "1B": "Bryce Fowler",
-        "2B": null,
+        "2B": "Brennan Holt",
         "3B": "John Lemm"
       },
       "score": {
@@ -2250,7 +2324,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Luke Smyers",
+      "pitcher": "Anthony Pesci",
       "batter": "Drew Buchanan",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2304,7 +2378,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jeremiah Stewart",
+      "pitcher": "",
       "batter": "Andrew Purdy",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2331,7 +2405,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jeremiah Stewart",
+      "pitcher": "",
       "batter": "John Lemm",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2439,7 +2513,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Anthony Pesci",
+      "pitcher": "",
       "batter": "Boone Hosey",
       "outcome": "Strikeout (looking)",
       "count": "1-2",

@@ -3,7 +3,7 @@
   "date": "05/30/2026",
   "away_team": "Auburn",
   "home_team": "NC State",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -49,8 +49,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -71,13 +71,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
         "1B": "Eric Guevara",
-        "2B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -95,18 +95,20 @@
       "pitches": "KFFB",
       "rbi": true,
       "runs_scored": [
-        "Chase Fralick"
+        "Chase Fralick",
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Eric Guevara",
-        "2B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
         "1B": "Eric Guevara",
-        "2B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -128,12 +130,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Eric Guevara",
-        "2B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
         "1B": "Chris Rembert",
-        "2B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -155,13 +157,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Chris Rembert",
-        "2B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Rembert",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Mason McCraine",
+        "3B": "Chris Rembert"
       },
       "score": {
         "away": 3,
@@ -177,18 +179,20 @@
       "count": "2-2",
       "pitches": "FBBKF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Chris Rembert",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Mason McCraine",
+        "3B": "Chris Rembert"
       },
       "runners_after": {
-        "1B": "Chris Rembert",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Mason McCraine",
+        "3B": "Chris Rembert"
       },
       "score": {
         "away": 4,
@@ -210,14 +214,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Chris Rembert",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Mason McCraine",
+        "3B": "Chris Rembert"
       },
       "runners_after": {
-        "1B": "Chris Rembert",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Mason McCraine",
+        "3B": "Chris Rembert"
       },
       "score": {
         "away": 5,
@@ -237,14 +241,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Chris Rembert",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Mason McCraine",
+        "3B": "Chris Rembert"
       },
       "runners_after": {
         "1B": "Cade Belyeu",
-        "2B": null,
-        "3B": null
+        "2B": "Mason McCraine",
+        "3B": "Chris Rembert"
       },
       "score": {
         "away": 5,
@@ -265,13 +269,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Cade Belyeu",
-        "2B": null,
-        "3B": null
+        "2B": "Mason McCraine",
+        "3B": "Chris Rembert"
       },
       "runners_after": {
         "1B": "Mason McCraine",
-        "2B": null,
-        "3B": null
+        "2B": "Mason McCraine",
+        "3B": "Chris Rembert"
       },
       "score": {
         "away": 5,
@@ -287,18 +291,20 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Mason McCraine",
-        "2B": null,
-        "3B": null
+        "2B": "Mason McCraine",
+        "3B": "Chris Rembert"
       },
       "runners_after": {
         "1B": "Taylor Belza",
-        "2B": null,
-        "3B": null
+        "2B": "Mason McCraine",
+        "3B": "Chris Rembert"
       },
       "score": {
         "away": 6,
@@ -309,23 +315,52 @@
     {
       "inning": "Top 1",
       "pitcher": "Heath Andrews",
-      "batter": "Mason McCraine",
-      "outcome": "Single",
-      "count": "0-1",
-      "pitches": "S",
-      "rbi": true,
+      "batter": "ANDREWS, Hea to p for CONSIGLIO, C.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
       "runs_scored": [],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Taylor Belza",
-        "2B": null,
-        "3B": null
+        "2B": "Mason McCraine",
+        "3B": "Chris Rembert"
+      },
+      "runners_after": {
+        "1B": "Taylor Belza",
+        "2B": "Mason McCraine",
+        "3B": "Chris Rembert"
+      },
+      "score": {
+        "away": 6,
+        "home": 0
+      },
+      "description": "ANDREWS, Hea to p for CONSIGLIO, C."
+    },
+    {
+      "inning": "Top 1",
+      "pitcher": "Heath Andrews",
+      "batter": "Mason McCraine",
+      "outcome": "Single",
+      "count": "0-1",
+      "pitches": "S",
+      "rbi": true,
+      "runs_scored": [
+        null
+      ],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Taylor Belza",
+        "2B": "Mason McCraine",
+        "3B": "Chris Rembert"
       },
       "runners_after": {
         "1B": "Mason McCraine",
-        "2B": null,
-        "3B": null
+        "2B": "Mason McCraine",
+        "3B": "Chris Rembert"
       },
       "score": {
         "away": 7,
@@ -346,13 +381,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Mason McCraine",
-        "2B": null,
-        "3B": null
+        "2B": "Mason McCraine",
+        "3B": "Chris Rembert"
       },
       "runners_after": {
         "1B": "Eric Guevara",
-        "2B": null,
-        "3B": null
+        "2B": "Mason McCraine",
+        "3B": "Chris Rembert"
       },
       "score": {
         "away": 7,
@@ -368,18 +403,20 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Eric Guevara",
-        "2B": null,
-        "3B": null
+        "2B": "Mason McCraine",
+        "3B": "Chris Rembert"
       },
       "runners_after": {
         "1B": "Eric Guevara",
-        "2B": null,
-        "3B": null
+        "2B": "Mason McCraine",
+        "3B": "Chris Rembert"
       },
       "score": {
         "away": 8,
@@ -400,13 +437,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Eric Guevara",
-        "2B": null,
-        "3B": null
+        "2B": "Mason McCraine",
+        "3B": "Chris Rembert"
       },
       "runners_after": {
         "1B": "Eric Guevara",
-        "2B": null,
-        "3B": null
+        "2B": "Mason McCraine",
+        "3B": "Chris Rembert"
       },
       "score": {
         "away": 8,
@@ -558,7 +595,8 @@
       "pitches": "KB",
       "rbi": true,
       "runs_scored": [
-        "Cade Belyeu"
+        "Cade Belyeu",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -748,7 +786,9 @@
       "count": "2-2",
       "pitches": "BKSBFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -775,7 +815,9 @@
       "count": "1-2",
       "pitches": "BFK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -991,7 +1033,9 @@
       "count": "1-2",
       "pitches": "BKK",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1018,7 +1062,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1045,7 +1091,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1073,7 +1121,8 @@
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Dalton Bargo"
+        "Dalton Bargo",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1191,8 +1240,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Bub Terrell",
-        "2B": null,
+        "1B": null,
+        "2B": "Bub Terrell",
         "3B": null
       },
       "score": {
@@ -1210,18 +1259,19 @@
       "pitches": "BBBK",
       "rbi": true,
       "runs_scored": [
-        "Ethin Bingaman"
+        "Ethin Bingaman",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Bub Terrell",
-        "2B": null,
+        "1B": null,
+        "2B": "Bub Terrell",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bub Terrell",
-        "2B": null,
+        "1B": null,
+        "2B": "Bub Terrell",
         "3B": null
       },
       "score": {
@@ -1242,13 +1292,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bub Terrell",
-        "2B": null,
+        "1B": null,
+        "2B": "Bub Terrell",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bub Terrell",
-        "2B": null,
+        "1B": null,
+        "2B": "Bub Terrell",
         "3B": null
       },
       "score": {
@@ -1269,13 +1319,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Bub Terrell",
-        "2B": null,
+        "1B": null,
+        "2B": "Bub Terrell",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bub Terrell",
-        "2B": null,
+        "1B": null,
+        "2B": "Bub Terrell",
         "3B": null
       },
       "score": {
@@ -1296,13 +1346,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Bub Terrell",
-        "2B": null,
+        "1B": null,
+        "2B": "Bub Terrell",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bub Terrell",
-        "2B": null,
+        "1B": null,
+        "2B": "Bub Terrell",
         "3B": null
       },
       "score": {
@@ -1644,7 +1694,8 @@
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Cade Belyeu"
+        "Cade Belyeu",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1666,7 +1717,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Heath Andrews",
+      "pitcher": "Ryder Garino",
       "batter": "Mason McCraine",
       "outcome": "Single",
       "count": "0-0",
@@ -1690,6 +1741,33 @@
         "home": 7
       },
       "description": "McCraine, B. singled through the left side (0-0)."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Ryder Garino",
+      "batter": "GARINO, Ryde to p for ANDREWS, Hea.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Mason McCraine",
+        "2B": "Ethin Bingaman",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Mason McCraine",
+        "2B": "Ethin Bingaman",
+        "3B": null
+      },
+      "score": {
+        "away": 14,
+        "home": 7
+      },
+      "description": "GARINO, Ryde to p for ANDREWS, Hea."
     },
     {
       "inning": "Top 6",
@@ -1780,7 +1858,10 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1817,8 +1898,8 @@
       },
       "runners_after": {
         "1B": "Eric Guevara",
-        "2B": "Chase Fralick",
-        "3B": null
+        "2B": null,
+        "3B": "Chase Fralick"
       },
       "score": {
         "away": 16,
@@ -1834,18 +1915,20 @@
       "count": "3-2",
       "pitches": "BFFBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Eric Guevara",
-        "2B": "Chase Fralick",
-        "3B": null
+        "2B": null,
+        "3B": "Chase Fralick"
       },
       "runners_after": {
         "1B": "Chris Rembert",
-        "2B": "Chase Fralick",
-        "3B": null
+        "2B": null,
+        "3B": "Chase Fralick"
       },
       "score": {
         "away": 17,
@@ -1866,13 +1949,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Chris Rembert",
-        "2B": "Chase Fralick",
-        "3B": null
+        "2B": null,
+        "3B": "Chase Fralick"
       },
       "runners_after": {
         "1B": "Chris Rembert",
-        "2B": "Chase Fralick",
-        "3B": null
+        "2B": null,
+        "3B": "Chase Fralick"
       },
       "score": {
         "away": 17,
@@ -1991,12 +2074,41 @@
     {
       "inning": "Bottom 6",
       "pitcher": "Griffin Graves",
+      "batter": "Graves, G. to p for Alvarez, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Rett Johnson",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Rett Johnson",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 17,
+        "home": 7
+      },
+      "description": "Graves, G. to p for Alvarez, A.."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Griffin Graves",
       "batter": "Luke Nixon",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "BFFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2023,7 +2135,9 @@
       "count": "2-2",
       "pitches": "BSSBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2233,7 +2347,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Griffin Graves",
+      "pitcher": "Garrett Brewer",
       "batter": "Rett Johnson",
       "outcome": "Single",
       "count": "0-0",
@@ -2260,7 +2374,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Griffin Graves",
+      "pitcher": "Garrett Brewer",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2275,9 +2389,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Rett Johnson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Rett Johnson"
       },
       "score": {
         "away": 17,
@@ -2288,23 +2402,52 @@
     {
       "inning": "Bottom 7",
       "pitcher": "Garrett Brewer",
+      "batter": "Brewer, G. to p for Graves, G..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": "Rett Johnson"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": "Rett Johnson"
+      },
+      "score": {
+        "away": 17,
+        "home": 9
+      },
+      "description": "Brewer, G. to p for Graves, G.."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Jackson Sanders",
       "batter": "Dalton Bargo",
       "outcome": "Double",
       "count": "2-2",
       "pitches": "KFFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Rett Johnson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Rett Johnson"
       },
       "runners_after": {
-        "1B": "Rett Johnson",
+        "1B": null,
         "2B": "Dalton Bargo",
-        "3B": null
+        "3B": "Rett Johnson"
       },
       "score": {
         "away": 17,
@@ -2314,24 +2457,26 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "Jackson Sanders",
       "batter": "Christian Serrano",
       "outcome": "Flyout",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Rett Johnson",
+        "1B": null,
         "2B": "Dalton Bargo",
-        "3B": null
+        "3B": "Rett Johnson"
       },
       "runners_after": {
-        "1B": "Rett Johnson",
+        "1B": null,
         "2B": "Dalton Bargo",
-        "3B": null
+        "3B": "Rett Johnson"
       },
       "score": {
         "away": 17,
@@ -2341,9 +2486,38 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Garrett Brewer",
+      "pitcher": "Jackson Sanders",
       "batter": null,
       "outcome": "Wild pitch",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [
+        "Dalton Bargo"
+      ],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": "Dalton Bargo",
+        "3B": "Rett Johnson"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": "Rett Johnson"
+      },
+      "score": {
+        "away": 17,
+        "home": 12
+      },
+      "description": "BARGO, Dalto scored on a wild pitch."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Jackson Sanders",
+      "batter": "Sanders, J. to p for Brewer, G..",
+      "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
@@ -2351,20 +2525,20 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Rett Johnson",
-        "2B": "Dalton Bargo",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Rett Johnson"
       },
       "runners_after": {
-        "1B": "Rett Johnson",
-        "2B": "Dalton Bargo",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Rett Johnson"
       },
       "score": {
         "away": 17,
         "home": 12
       },
-      "description": "BARGO, Dalto scored on a wild pitch."
+      "description": "Sanders, J. to p for Brewer, G.."
     },
     {
       "inning": "Bottom 7",
@@ -2380,14 +2554,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Rett Johnson",
-        "2B": "Dalton Bargo",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Rett Johnson"
       },
       "runners_after": {
-        "1B": "Rett Johnson",
-        "2B": "Dalton Bargo",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Rett Johnson"
       },
       "score": {
         "away": 17,
@@ -2407,14 +2581,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Rett Johnson",
-        "2B": "Dalton Bargo",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Rett Johnson"
       },
       "runners_after": {
-        "1B": "Rett Johnson",
-        "2B": "Dalton Bargo",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Rett Johnson"
       },
       "score": {
         "away": 17,
@@ -2451,7 +2625,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ryder Garino",
+      "pitcher": "Luke Hemric",
       "batter": "Mason McCraine",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2478,7 +2652,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ryder Garino",
+      "pitcher": "Luke Hemric",
       "batter": "Eric Guevara",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2505,7 +2679,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ryder Garino",
+      "pitcher": "",
       "batter": "Chase Fralick",
       "outcome": "Foul out",
       "count": "0-1",
@@ -2640,7 +2814,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ryder Garino",
+      "pitcher": "",
       "batter": "Chris Rembert",
       "outcome": "Single",
       "count": "0-0",
@@ -2667,7 +2841,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Luke Hemric",
+      "pitcher": "",
+      "batter": "HEMRIC, Luke to p for GARINO, Ryde.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Chris Rembert",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Chris Rembert",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 17,
+        "home": 13
+      },
+      "description": "HEMRIC, Luke to p for GARINO, Ryde."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": "Bub Terrell",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2694,7 +2895,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Luke Hemric",
+      "pitcher": "",
       "batter": "Ethin Bingaman",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2721,7 +2922,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Luke Hemric",
+      "pitcher": "",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -2736,7 +2937,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Chris Rembert",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -2748,7 +2949,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jackson Sanders",
+      "pitcher": "",
       "batter": "Rett Johnson",
       "outcome": "Flyout",
       "count": "3-2",
@@ -2775,7 +2976,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jackson Sanders",
+      "pitcher": "",
       "batter": "Dalton Bargo",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2802,7 +3003,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jackson Sanders",
+      "pitcher": "",
       "batter": "Christian Serrano",
       "outcome": "Strikeout (looking)",
       "count": "3-2",

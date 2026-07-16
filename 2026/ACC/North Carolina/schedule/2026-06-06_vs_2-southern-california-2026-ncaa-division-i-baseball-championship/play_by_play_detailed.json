@@ -3,7 +3,7 @@
   "date": "06/06/2026",
   "away_team": "North Carolina",
   "home_team": "Southern California",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -429,7 +429,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jack Basser",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -451,12 +451,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jack Basser",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Jack Basser",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -538,7 +538,7 @@
       },
       "runners_after": {
         "1B": "Owen Hull",
-        "2B": null,
+        "2B": "Jake Schaffner",
         "3B": null
       },
       "score": {
@@ -560,13 +560,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Owen Hull",
-        "2B": null,
+        "2B": "Jake Schaffner",
         "3B": null
       },
       "runners_after": {
         "1B": "Macon Winslow",
-        "2B": null,
-        "3B": null
+        "2B": "Owen Hull",
+        "3B": "Jake Schaffner"
       },
       "score": {
         "away": 1,
@@ -587,13 +587,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Macon Winslow",
-        "2B": null,
-        "3B": null
+        "2B": "Owen Hull",
+        "3B": "Jake Schaffner"
       },
       "runners_after": {
         "1B": "Macon Winslow",
-        "2B": null,
-        "3B": null
+        "2B": "Owen Hull",
+        "3B": "Jake Schaffner"
       },
       "score": {
         "away": 1,
@@ -614,13 +614,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Macon Winslow",
-        "2B": null,
-        "3B": null
+        "2B": "Owen Hull",
+        "3B": "Jake Schaffner"
       },
       "runners_after": {
         "1B": "Macon Winslow",
-        "2B": null,
-        "3B": null
+        "2B": "Owen Hull",
+        "3B": "Jake Schaffner"
       },
       "score": {
         "away": 1,
@@ -971,7 +971,7 @@
       "runners_after": {
         "1B": "Owen Hull",
         "2B": null,
-        "3B": null
+        "3B": "Gavin Gallaher"
       },
       "score": {
         "away": 1,
@@ -993,12 +993,12 @@
       "runners_before": {
         "1B": "Owen Hull",
         "2B": null,
-        "3B": null
+        "3B": "Gavin Gallaher"
       },
       "runners_after": {
-        "1B": "Owen Hull",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Gavin Gallaher"
       },
       "score": {
         "away": 1,
@@ -1116,7 +1116,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Grant Govel",
+      "pitcher": "Sax Matson",
       "batter": "Erik Paulsen",
       "outcome": "Home run",
       "count": "1-1",
@@ -1145,7 +1145,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Grant Govel",
+      "pitcher": "Sax Matson",
       "batter": "Colin Hynek",
       "outcome": "Single",
       "count": "2-2",
@@ -1172,7 +1172,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Grant Govel",
+      "pitcher": "Sax Matson",
       "batter": "Tyler Howe",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -1188,7 +1188,7 @@
       },
       "runners_after": {
         "1B": "Tyler Howe",
-        "2B": null,
+        "2B": "Colin Hynek",
         "3B": null
       },
       "score": {
@@ -1199,7 +1199,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Grant Govel",
+      "pitcher": "Sax Matson",
       "batter": "Cooper Nicholson",
       "outcome": "\u2014",
       "count": "0-0",
@@ -1210,13 +1210,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Tyler Howe",
-        "2B": null,
+        "2B": "Colin Hynek",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Howe",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Tyler Howe",
+        "3B": "Colin Hynek"
       },
       "score": {
         "away": 2,
@@ -1226,23 +1226,25 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Grant Govel",
+      "pitcher": "Sax Matson",
       "batter": "KellisV,Rom sacrifice fly to lf, RBI (0-0)",
       "outcome": "\u2014",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Colin Hynek"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Tyler Howe",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Tyler Howe",
+        "3B": "Colin Hynek"
       },
       "runners_after": {
-        "1B": "Tyler Howe",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Howe",
         "3B": null
       },
       "score": {
@@ -1253,7 +1255,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Grant Govel",
+      "pitcher": "Sax Matson",
       "batter": "Jake Schaffner",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1263,13 +1265,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tyler Howe",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Howe",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyler Howe",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyler Howe",
         "3B": null
       },
       "score": {
@@ -1388,7 +1390,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Grant Govel",
+      "pitcher": "Sax Matson",
       "batter": "Gavin Gallaher",
       "outcome": "Walk",
       "count": "3-0",
@@ -1415,7 +1417,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Grant Govel",
+      "pitcher": "Gavin Lauridsen",
       "batter": "Owen Hull",
       "outcome": "Single",
       "count": "2-0",
@@ -1432,7 +1434,7 @@
       "runners_after": {
         "1B": "Owen Hull",
         "2B": null,
-        "3B": null
+        "3B": "Gavin Gallaher"
       },
       "score": {
         "away": 3,
@@ -1442,24 +1444,26 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Grant Govel",
+      "pitcher": "Gavin Lauridsen",
       "batter": "Macon Winslow",
       "outcome": "\u2014",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Gavin Gallaher"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Owen Hull",
         "2B": null,
-        "3B": null
+        "3B": "Gavin Gallaher"
       },
       "runners_after": {
-        "1B": "Owen Hull",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Owen Hull"
       },
       "score": {
         "away": 4,
@@ -1469,7 +1473,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Grant Govel",
+      "pitcher": "Gavin Lauridsen",
       "batter": "Erik Paulsen",
       "outcome": "Walk",
       "count": "0-0",
@@ -1479,14 +1483,14 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Owen Hull",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Owen Hull"
       },
       "runners_after": {
         "1B": "Erik Paulsen",
         "2B": null,
-        "3B": null
+        "3B": "Owen Hull"
       },
       "score": {
         "away": 4,
@@ -1496,7 +1500,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Grant Govel",
+      "pitcher": "Gavin Lauridsen",
       "batter": "Colin Hynek",
       "outcome": "Walk",
       "count": "3-0",
@@ -1508,12 +1512,12 @@
       "runners_before": {
         "1B": "Erik Paulsen",
         "2B": null,
-        "3B": null
+        "3B": "Owen Hull"
       },
       "runners_after": {
         "1B": "Colin Hynek",
-        "2B": null,
-        "3B": null
+        "2B": "Erik Paulsen",
+        "3B": "Owen Hull"
       },
       "score": {
         "away": 4,
@@ -1523,7 +1527,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Grant Govel",
+      "pitcher": "Gavin Lauridsen",
       "batter": "Tyler Howe",
       "outcome": "Grounded into double play",
       "count": "0-1",
@@ -1534,13 +1538,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Colin Hynek",
-        "2B": null,
-        "3B": null
+        "2B": "Erik Paulsen",
+        "3B": "Owen Hull"
       },
       "runners_after": {
         "1B": "Colin Hynek",
         "2B": null,
-        "3B": null
+        "3B": "Owen Hull"
       },
       "score": {
         "away": 4,
@@ -1631,7 +1635,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Grant Govel",
+      "pitcher": "Rohan Kasanagottu",
       "batter": "Cooper Nicholson",
       "outcome": "Single",
       "count": "1-1",
@@ -1658,7 +1662,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Grant Govel",
+      "pitcher": "Rohan Kasanagottu",
       "batter": "Carter French",
       "outcome": "Foul out",
       "count": "2-1",
@@ -1685,7 +1689,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Grant Govel",
+      "pitcher": "Rohan Kasanagottu",
       "batter": "Jake Schaffner",
       "outcome": "\u2014",
       "count": "0-0",
@@ -1700,8 +1704,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cooper Nicholson",
-        "2B": null,
+        "1B": null,
+        "2B": "Cooper Nicholson",
         "3B": null
       },
       "score": {
@@ -1712,7 +1716,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Grant Govel",
+      "pitcher": "Rohan Kasanagottu",
       "batter": "Gavin Gallaher",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1722,13 +1726,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cooper Nicholson",
-        "2B": null,
+        "1B": null,
+        "2B": "Cooper Nicholson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cooper Nicholson",
-        "2B": null,
+        "1B": null,
+        "2B": "Cooper Nicholson",
         "3B": null
       },
       "score": {
@@ -1820,7 +1824,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Grant Govel",
+      "pitcher": "Henry Chabot",
       "batter": "Owen Hull",
       "outcome": "Walk",
       "count": "3-2",
@@ -1847,7 +1851,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Grant Govel",
+      "pitcher": "Garren Rizzo",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1862,8 +1866,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Owen Hull",
-        "2B": null,
+        "1B": null,
+        "2B": "Owen Hull",
         "3B": null
       },
       "score": {
@@ -1874,7 +1878,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Grant Govel",
+      "pitcher": "Garren Rizzo",
       "batter": "Macon Winslow",
       "outcome": "Walk",
       "count": "3-0",
@@ -1884,13 +1888,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Owen Hull",
-        "2B": null,
+        "1B": null,
+        "2B": "Owen Hull",
         "3B": null
       },
       "runners_after": {
         "1B": "Macon Winslow",
-        "2B": null,
+        "2B": "Owen Hull",
         "3B": null
       },
       "score": {
@@ -1901,7 +1905,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Grant Govel",
+      "pitcher": "Garren Rizzo",
       "batter": "Erik Paulsen",
       "outcome": "Groundout",
       "count": "0-2",
@@ -1912,13 +1916,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Macon Winslow",
-        "2B": null,
+        "2B": "Owen Hull",
         "3B": null
       },
       "runners_after": {
-        "1B": "Macon Winslow",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Macon Winslow",
+        "3B": "Owen Hull"
       },
       "score": {
         "away": 4,
@@ -1928,7 +1932,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Grant Govel",
+      "pitcher": "Garren Rizzo",
       "batter": "Colin Hynek",
       "outcome": "Foul out",
       "count": "2-2",
@@ -1938,14 +1942,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Macon Winslow",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Macon Winslow",
+        "3B": "Owen Hull"
       },
       "runners_after": {
-        "1B": "Macon Winslow",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Macon Winslow",
+        "3B": "Owen Hull"
       },
       "score": {
         "away": 4,
@@ -1955,7 +1959,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Grant Govel",
+      "pitcher": "Garren Rizzo",
       "batter": "Tyler Howe",
       "outcome": "Walk",
       "count": "3-1",
@@ -1965,14 +1969,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Macon Winslow",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Macon Winslow",
+        "3B": "Owen Hull"
       },
       "runners_after": {
         "1B": "Tyler Howe",
-        "2B": null,
-        "3B": null
+        "2B": "Macon Winslow",
+        "3B": "Owen Hull"
       },
       "score": {
         "away": 4,
@@ -1982,7 +1986,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Grant Govel",
+      "pitcher": "Garren Rizzo",
       "batter": "Cooper Nicholson",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1993,13 +1997,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Tyler Howe",
-        "2B": null,
-        "3B": null
+        "2B": "Macon Winslow",
+        "3B": "Owen Hull"
       },
       "runners_after": {
         "1B": "Tyler Howe",
-        "2B": null,
-        "3B": null
+        "2B": "Macon Winslow",
+        "3B": "Owen Hull"
       },
       "score": {
         "away": 4,

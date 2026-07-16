@@ -3,7 +3,7 @@
   "date": "05/29/2026",
   "away_team": "Missouri St.",
   "home_team": "Arkansas",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -132,8 +132,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Taeg Gollert",
-        "2B": null,
+        "1B": null,
+        "2B": "Taeg Gollert",
         "3B": null
       },
       "score": {
@@ -150,17 +150,19 @@
       "count": "1-2",
       "pitches": "KSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Taeg Gollert",
-        "2B": null,
+        "1B": null,
+        "2B": "Taeg Gollert",
         "3B": null
       },
       "runners_after": {
         "1B": "Caden Bogenpohl",
-        "2B": null,
+        "2B": "Taeg Gollert",
         "3B": null
       },
       "score": {
@@ -182,12 +184,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Caden Bogenpohl",
-        "2B": null,
+        "2B": "Taeg Gollert",
         "3B": null
       },
       "runners_after": {
         "1B": "Jax Ryan",
-        "2B": null,
+        "2B": "Taeg Gollert",
         "3B": null
       },
       "score": {
@@ -209,12 +211,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jax Ryan",
-        "2B": null,
+        "2B": "Taeg Gollert",
         "3B": null
       },
       "runners_after": {
         "1B": "Jax Ryan",
-        "2B": null,
+        "2B": "Taeg Gollert",
         "3B": null
       },
       "score": {
@@ -825,7 +827,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1023,8 +1027,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Nolan Souza",
-        "2B": null,
+        "1B": null,
+        "2B": "Nolan Souza",
         "3B": null
       },
       "score": {
@@ -1041,17 +1045,19 @@
       "count": "2-2",
       "pitches": "BBKS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Nolan Souza",
-        "2B": null,
+        "1B": null,
+        "2B": "Nolan Souza",
         "3B": null
       },
       "runners_after": {
         "1B": "Maika Niu",
-        "2B": null,
+        "2B": "Nolan Souza",
         "3B": null
       },
       "score": {
@@ -1073,12 +1079,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Maika Niu",
-        "2B": null,
+        "2B": "Nolan Souza",
         "3B": null
       },
       "runners_after": {
-        "1B": "Maika Niu",
-        "2B": null,
+        "1B": null,
+        "2B": "Maika Niu",
         "3B": null
       },
       "score": {
@@ -1099,13 +1105,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Maika Niu",
-        "2B": null,
+        "1B": null,
+        "2B": "Maika Niu",
         "3B": null
       },
       "runners_after": {
         "1B": "Carter Rutenbar",
-        "2B": null,
+        "2B": "Maika Niu",
         "3B": null
       },
       "score": {
@@ -1127,12 +1133,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Carter Rutenbar",
-        "2B": null,
+        "2B": "Maika Niu",
         "3B": null
       },
       "runners_after": {
         "1B": "Carter Rutenbar",
-        "2B": null,
+        "2B": "Maika Niu",
         "3B": null
       },
       "score": {
@@ -1279,6 +1285,33 @@
     {
       "inning": "Bottom 5",
       "pitcher": "Brock Lucas",
+      "batter": "Lucas,B. to p for Knight,M..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 1
+      },
+      "description": "Lucas,B. to p for Knight,M.."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Brock Lucas",
       "batter": "Damian Ruiz",
       "outcome": "Single",
       "count": "1-1",
@@ -1338,7 +1371,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1365,7 +1400,9 @@
       "count": "1-2",
       "pitches": "SKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1392,7 +1429,9 @@
       "count": "2-1",
       "pitches": "BBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1441,12 +1480,41 @@
     {
       "inning": "Bottom 5",
       "pitcher": "Tyler Charlton",
+      "batter": "Charlton,T. to p for Lucas,B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Nolan Souza",
+        "2B": "Ryder Helfrick",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Nolan Souza",
+        "2B": "Ryder Helfrick",
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 4
+      },
+      "description": "Charlton,T. to p for Lucas,B.."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Tyler Charlton",
       "batter": "Maika Niu",
       "outcome": "Double",
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1494,13 +1562,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Tyler Charlton",
+      "pitcher": "Owen Slater",
       "batter": "Reese Robinett",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1522,12 +1592,41 @@
     {
       "inning": "Bottom 5",
       "pitcher": "Owen Slater",
+      "batter": "Slater,O. to p for Charlton,T..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Reese Robinett",
+        "2B": "Maika Niu",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Reese Robinett",
+        "2B": "Maika Niu",
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 6
+      },
+      "description": "Slater,O. to p for Charlton,T.."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Owen Slater",
       "batter": "Damian Ruiz",
       "outcome": "Fielder's choice",
       "count": "0-2",
       "pitches": "SS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1797,7 +1896,9 @@
       "count": "3-2",
       "pitches": "BKBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1833,8 +1934,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Maika Niu",
-        "2B": null,
+        "1B": null,
+        "2B": "Maika Niu",
         "3B": null
       },
       "score": {
@@ -1855,13 +1956,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Maika Niu",
-        "2B": null,
+        "1B": null,
+        "2B": "Maika Niu",
         "3B": null
       },
       "runners_after": {
-        "1B": "Maika Niu",
-        "2B": null,
+        "1B": null,
+        "2B": "Maika Niu",
         "3B": null
       },
       "score": {
@@ -2034,7 +2135,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Owen Slater",
+      "pitcher": "Lance Wade",
       "batter": "Camden Kozeal",
       "outcome": "Walk",
       "count": "3-0",
@@ -2061,7 +2162,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Owen Slater",
+      "pitcher": "Lance Wade",
       "batter": "Ryder Helfrick",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -2202,7 +2303,10 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2278,6 +2382,33 @@
     {
       "inning": "Bottom 8",
       "pitcher": "Lance Wade",
+      "batter": "Wade,L. to p for Slater,O..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 8
+      },
+      "description": "Wade,L. to p for Slater,O.."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Lance Wade",
       "batter": "Zack Stewart",
       "outcome": "Walk",
       "count": "3-0",
@@ -2331,7 +2462,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Lance Wade",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2346,8 +2477,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "TJ Pompey",
-        "2B": null,
+        "1B": null,
+        "2B": "TJ Pompey",
         "3B": null
       },
       "score": {
@@ -2358,7 +2489,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Lance Wade",
+      "pitcher": "",
       "batter": "Nolan Souza",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2368,13 +2499,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "TJ Pompey",
-        "2B": null,
+        "1B": null,
+        "2B": "TJ Pompey",
         "3B": null
       },
       "runners_after": {
-        "1B": "TJ Pompey",
-        "2B": null,
+        "1B": null,
+        "2B": "TJ Pompey",
         "3B": null
       },
       "score": {
@@ -2385,22 +2516,24 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Lance Wade",
+      "pitcher": "",
       "batter": "Maika Niu",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "TJ Pompey",
-        "2B": null,
+        "1B": null,
+        "2B": "TJ Pompey",
         "3B": null
       },
       "runners_after": {
-        "1B": "TJ Pompey",
+        "1B": null,
         "2B": "Maika Niu",
         "3B": null
       },
@@ -2412,7 +2545,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Lance Wade",
+      "pitcher": "",
       "batter": "Carter Rutenbar",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2422,12 +2555,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "TJ Pompey",
+        "1B": null,
         "2B": "Maika Niu",
         "3B": null
       },
       "runners_after": {
-        "1B": "TJ Pompey",
+        "1B": null,
         "2B": "Maika Niu",
         "3B": null
       },

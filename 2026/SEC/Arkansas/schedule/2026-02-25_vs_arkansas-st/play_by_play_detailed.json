@@ -3,7 +3,7 @@
   "date": "02/25/2026",
   "away_team": "Arkansas St.",
   "home_team": "Arkansas",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -202,7 +202,9 @@
       "count": "1-2",
       "pitches": "BFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -737,6 +739,33 @@
     {
       "inning": "Bottom 4",
       "pitcher": "Ryan Ashford",
+      "batter": "Ashford, Rya to p for Maloney, Col.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "Ashford, Rya to p for Maloney, Col."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Ryan Ashford",
       "batter": "Nolan Souza",
       "outcome": "Flyout",
       "count": "0-0",
@@ -859,8 +888,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Aidan Houseworth",
-        "2B": null,
+        "1B": null,
+        "2B": "Aidan Houseworth",
         "3B": null
       },
       "score": {
@@ -881,13 +910,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Aidan Houseworth",
-        "2B": null,
+        "1B": null,
+        "2B": "Aidan Houseworth",
         "3B": null
       },
       "runners_after": {
-        "1B": "Aidan Houseworth",
-        "2B": null,
+        "1B": null,
+        "2B": "Aidan Houseworth",
         "3B": null
       },
       "score": {
@@ -908,13 +937,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Aidan Houseworth",
-        "2B": null,
+        "1B": null,
+        "2B": "Aidan Houseworth",
         "3B": null
       },
       "runners_after": {
-        "1B": "Aidan Houseworth",
-        "2B": null,
+        "1B": null,
+        "2B": "Aidan Houseworth",
         "3B": null
       },
       "score": {
@@ -935,13 +964,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Aidan Houseworth",
-        "2B": null,
+        "1B": null,
+        "2B": "Aidan Houseworth",
         "3B": null
       },
       "runners_after": {
         "1B": "Raul Torres",
-        "2B": null,
+        "2B": "Aidan Houseworth",
         "3B": null
       },
       "score": {
@@ -963,12 +992,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Raul Torres",
-        "2B": null,
+        "2B": "Aidan Houseworth",
         "3B": null
       },
       "runners_after": {
         "1B": "Kaden Amundson",
-        "2B": null,
+        "2B": "Aidan Houseworth",
         "3B": null
       },
       "score": {
@@ -1006,7 +1035,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ryan Ashford",
+      "pitcher": "Tyler Weimer",
       "batter": "Carson Brumbaugh",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1030,6 +1059,33 @@
         "home": 1
       },
       "description": "Brumbaugh grounded out to p, bunt, SAC (0-0); Turner advanced to second."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Tyler Weimer",
+      "batter": "Weimer, Tyle to p for Ashford, Rya.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Christian Turner",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Christian Turner",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "Weimer, Tyle to p for Ashford, Rya."
     },
     {
       "inning": "Bottom 5",
@@ -1264,8 +1320,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Nolan Souza",
-        "2B": null,
+        "1B": null,
+        "2B": "Nolan Souza",
         "3B": null
       },
       "score": {
@@ -1286,13 +1342,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Nolan Souza",
-        "2B": null,
+        "1B": null,
+        "2B": "Nolan Souza",
         "3B": null
       },
       "runners_after": {
-        "1B": "Nolan Souza",
-        "2B": null,
+        "1B": null,
+        "2B": "Nolan Souza",
         "3B": null
       },
       "score": {
@@ -1313,13 +1369,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Nolan Souza",
-        "2B": null,
+        "1B": null,
+        "2B": "Nolan Souza",
         "3B": null
       },
       "runners_after": {
-        "1B": "Nolan Souza",
-        "2B": null,
+        "1B": null,
+        "2B": "Nolan Souza",
         "3B": null
       },
       "score": {
@@ -1465,7 +1521,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Tyler Weimer",
+      "pitcher": "Kole Turner",
       "batter": "Maika Niu",
       "outcome": "Single",
       "count": "2-2",
@@ -1489,6 +1545,33 @@
         "home": 1
       },
       "description": "Niu singled to third base (2-2 SBFB)."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Kole Turner",
+      "batter": "Christian Turner",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Maika Niu",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Maika Niu",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "Turner, Kole to p for Weimer, Tyle."
     },
     {
       "inning": "Bottom 7",
@@ -1654,7 +1737,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Kole Turner",
+      "pitcher": "Isaac Sewell",
       "batter": "Cooke, Couga to 1b.",
       "outcome": "\u2014",
       "count": null,
@@ -1681,7 +1764,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Kole Turner",
+      "pitcher": "Jelle van der Lelie",
       "batter": "Manuel, Cole to c for Williams, Ja.",
       "outcome": "\u2014",
       "count": null,
@@ -1708,7 +1791,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Kole Turner",
+      "pitcher": "Jelle van der Lelie",
       "batter": "Reese Robinett",
       "outcome": "Single",
       "count": "0-1",
@@ -1735,7 +1818,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Kole Turner",
+      "pitcher": "",
       "batter": "Kuhio Aloy",
       "outcome": "Grounded into double play",
       "count": "1-0",
@@ -1762,7 +1845,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Isaac Sewell",
+      "pitcher": "",
+      "batter": "Sewell, Isaa to p for Turner, Kole.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Reese Robinett",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Reese Robinett",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 1
+      },
+      "description": "Sewell, Isaa to p for Turner, Kole."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Nolan Souza",
       "outcome": "Walk",
       "count": "3-1",
@@ -1789,7 +1899,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Isaac Sewell",
+      "pitcher": "",
       "batter": "van der Leli to p for Sewell, Isaa.",
       "outcome": "\u2014",
       "count": null,
@@ -1816,7 +1926,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Isaac Sewell",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1831,8 +1941,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Nolan Souza",
-        "2B": null,
+        "1B": null,
+        "2B": "Nolan Souza",
         "3B": null
       },
       "score": {
@@ -1843,7 +1953,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Isaac Sewell",
+      "pitcher": "",
       "batter": "Carter Rutenbar",
       "outcome": "Walk",
       "count": "1-1",
@@ -1853,13 +1963,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Nolan Souza",
-        "2B": null,
+        "1B": null,
+        "2B": "Nolan Souza",
         "3B": null
       },
       "runners_after": {
         "1B": "Carter Rutenbar",
-        "2B": null,
+        "2B": "Nolan Souza",
         "3B": null
       },
       "score": {
@@ -1870,7 +1980,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Isaac Sewell",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1881,12 +1991,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Carter Rutenbar",
-        "2B": null,
+        "2B": "Nolan Souza",
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": null,
+        "2B": "Nolan Souza",
         "3B": "Carter Rutenbar"
       },
       "score": {
@@ -1897,7 +2007,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Isaac Sewell",
+      "pitcher": "",
       "batter": "TJ Pompey",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1908,12 +2018,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": null,
+        "2B": "Nolan Souza",
         "3B": "Carter Rutenbar"
       },
       "runners_after": {
         "1B": null,
-        "2B": null,
+        "2B": "Nolan Souza",
         "3B": "Carter Rutenbar"
       },
       "score": {

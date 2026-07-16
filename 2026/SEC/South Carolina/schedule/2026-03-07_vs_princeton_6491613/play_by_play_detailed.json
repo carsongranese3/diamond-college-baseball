@@ -3,7 +3,7 @@
   "date": "03/07/2026(2)",
   "away_team": "Princeton",
   "home_team": "South Carolina",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -94,7 +94,9 @@
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -130,8 +132,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Koonin",
-        "2B": "Bennett Crerar",
+        "1B": null,
+        "2B": "Jake Koonin",
         "3B": null
       },
       "score": {
@@ -152,13 +154,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Jake Koonin",
-        "2B": "Bennett Crerar",
+        "1B": null,
+        "2B": "Jake Koonin",
         "3B": null
       },
       "runners_after": {
-        "1B": "Jake Koonin",
-        "2B": "Bennett Crerar",
+        "1B": null,
+        "2B": "Jake Koonin",
         "3B": null
       },
       "score": {
@@ -337,7 +339,9 @@
       "count": "2-1",
       "pitches": "BBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1141,13 +1145,16 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Liam Kinneen",
+      "pitcher": "Ryan Penney",
       "batter": "Will Craddock",
       "outcome": "Single",
       "count": "0-2",
       "pitches": "KF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1168,7 +1175,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Liam Kinneen",
+      "pitcher": "Ryan Penney",
       "batter": "Talmadge LeCroy",
       "outcome": "Pop out",
       "count": "2-1",
@@ -1251,7 +1258,34 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
+      "batter": "B. Stone",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 2
+      },
+      "description": "B. Stone to p for Foster."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Brandon Stone",
       "batter": "Dylan Zdunek",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1278,7 +1312,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Brady Kaufman",
       "outcome": "Pop out",
       "count": "1-2",
@@ -1302,6 +1336,33 @@
         "home": 2
       },
       "description": "Kaufman, B. popped up to ss (1-2 BSK)."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Ryan Penney",
+      "batter": "Penney, R. to p for Kinneen, L..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 2
+      },
+      "description": "Penney, R. to p for Kinneen, L.."
     },
     {
       "inning": "Bottom 6",
@@ -1386,7 +1447,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Isaac Lamson",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1413,7 +1474,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Tommy Googins",
       "outcome": "Single",
       "count": "0-2",
@@ -1440,7 +1501,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Grant Werdesheim",
       "outcome": "Single",
       "count": "0-1",
@@ -1467,7 +1528,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Joe Montembeau",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -1494,7 +1555,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Bennett Crerar",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1521,7 +1582,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Tomas Cernius",
       "outcome": "\u2014",
       "count": "0-0",
@@ -1716,7 +1777,9 @@
       "count": "3-1",
       "pitches": "BBKBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1764,7 +1827,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Parker",
       "outcome": "\u2014",
       "count": null,
@@ -1791,7 +1854,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Jake Koonin",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1818,7 +1881,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Dylan Zdunek",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1845,7 +1908,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Brady Kaufman",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1955,7 +2018,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ryan Penney",
+      "pitcher": "",
       "batter": "Erik Parker",
       "outcome": "Single",
       "count": "0-1",
@@ -1982,7 +2045,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ryan Penney",
+      "pitcher": "",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2009,7 +2072,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ryan Penney",
+      "pitcher": "",
       "batter": "Beau Hollins",
       "outcome": "Walk",
       "count": "3-2",
@@ -2036,7 +2099,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ryan Penney",
+      "pitcher": "",
       "batter": "Tyler Bak",
       "outcome": "Flyout",
       "count": "2-1",
@@ -2063,7 +2126,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Isaac Lamson",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2090,7 +2153,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Tommy Googins",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2117,7 +2180,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "B.",
+      "pitcher": "Brandon Stone",
       "batter": "Grant Werdesheim",
       "outcome": "Single",
       "count": "1-1",
@@ -2144,7 +2207,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "B.",
+      "pitcher": "",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -2159,8 +2222,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Grant Werdesheim",
-        "2B": null,
+        "1B": null,
+        "2B": "Grant Werdesheim",
         "3B": null
       },
       "score": {
@@ -2171,7 +2234,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "B.",
+      "pitcher": "",
       "batter": "Joe Montembeau",
       "outcome": "Reached on error",
       "count": "1-2",
@@ -2181,13 +2244,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Grant Werdesheim",
-        "2B": null,
+        "1B": null,
+        "2B": "Grant Werdesheim",
         "3B": null
       },
       "runners_after": {
         "1B": "Joe Montembeau",
-        "2B": null,
+        "2B": "Grant Werdesheim",
         "3B": null
       },
       "score": {
@@ -2198,7 +2261,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "B.",
+      "pitcher": "",
       "batter": "Bennett Crerar",
       "outcome": "Pop out",
       "count": "0-0",
@@ -2209,12 +2272,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Joe Montembeau",
-        "2B": null,
+        "2B": "Grant Werdesheim",
         "3B": null
       },
       "runners_after": {
         "1B": "Joe Montembeau",
-        "2B": null,
+        "2B": "Grant Werdesheim",
         "3B": null
       },
       "score": {

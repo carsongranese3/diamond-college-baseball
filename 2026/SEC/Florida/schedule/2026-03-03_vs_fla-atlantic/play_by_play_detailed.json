@@ -3,7 +3,7 @@
   "date": "03/03/2026",
   "away_team": "Fla. Atlantic",
   "home_team": "Florida",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -130,8 +130,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kyle Jones",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Jones",
         "3B": null
       },
       "score": {
@@ -152,8 +152,8 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kyle Jones",
-        "2B": null,
+        "1B": null,
+        "2B": "Kyle Jones",
         "3B": null
       },
       "runners_after": {
@@ -782,8 +782,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Brett Patten",
-        "2B": null,
+        "1B": null,
+        "2B": "Brett Patten",
         "3B": null
       },
       "score": {
@@ -804,13 +804,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Brett Patten",
-        "2B": null,
+        "1B": null,
+        "2B": "Brett Patten",
         "3B": null
       },
       "runners_after": {
-        "1B": "Brett Patten",
-        "2B": null,
+        "1B": null,
+        "2B": "Brett Patten",
         "3B": null
       },
       "score": {
@@ -908,7 +908,9 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Blake Cyr"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -917,9 +919,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cole Stanford",
-        "2B": "Blake Cyr",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Cole Stanford"
       },
       "score": {
         "away": 0,
@@ -941,13 +943,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cole Stanford",
-        "2B": "Blake Cyr",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Cole Stanford"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Blake Cyr",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -969,12 +971,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": null,
-        "2B": "Blake Cyr",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": null,
-        "2B": "Blake Cyr",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1093,7 +1095,34 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Z.",
+      "pitcher": "Zach Kilby",
+      "batter": "Z. Kilby",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 4
+      },
+      "description": "Z. Kilby to p for K. Adetuyi."
+    },
+    {
+      "inning": "Bottom 5",
+      "pitcher": "Zach Kilby",
       "batter": "Kyle Jones",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1120,7 +1149,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Z.",
+      "pitcher": "Zach Kilby",
       "batter": "Brendan Lawson",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1147,7 +1176,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Z.",
+      "pitcher": "Zach Kilby",
       "batter": "Ethan Surowiec",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1282,7 +1311,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Z.",
+      "pitcher": "Zach Kilby",
       "batter": "Karson Bowen",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1309,7 +1338,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Z.",
+      "pitcher": "Zach Kilby",
       "batter": "Cash Strayer",
       "outcome": "Single",
       "count": "1-1",
@@ -1336,7 +1365,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Z.",
+      "pitcher": "Zach Kilby",
       "batter": "Blake Cyr",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -1363,7 +1392,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Z.",
+      "pitcher": "Zach Kilby",
       "batter": "Cole Stanford",
       "outcome": "Pop out",
       "count": "0-1",
@@ -1390,7 +1419,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Z.",
+      "pitcher": "Kyzer Smith",
       "batter": "Colton Schwarz",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1498,7 +1527,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "K.",
+      "pitcher": "Kyzer Smith",
+      "batter": "K. Smith",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 4
+      },
+      "description": "K. Smith to p for Z. Kilby."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Kyzer Smith",
       "batter": "Ashton Wilson",
       "outcome": "Lineout",
       "count": "2-0",
@@ -1525,7 +1581,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "K.",
+      "pitcher": "Kyzer Smith",
       "batter": "Kyle Jones",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1552,7 +1608,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "K.",
+      "pitcher": "Kyzer Smith",
       "batter": "Brendan Lawson",
       "outcome": "Hit by pitch",
       "count": "0-2",
@@ -1579,7 +1635,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "K.",
+      "pitcher": "Kyzer Smith",
       "batter": "Ethan Surowiec",
       "outcome": "Single",
       "count": "0-0",
@@ -1606,7 +1662,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "K.",
+      "pitcher": "Kyzer Smith",
       "batter": "Karson Bowen",
       "outcome": "Walk",
       "count": "3-0",
@@ -1633,7 +1689,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "K.",
+      "pitcher": "Kyzer Smith",
       "batter": "Cash Strayer",
       "outcome": "Lineout",
       "count": "0-0",
@@ -1741,7 +1797,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "K.",
+      "pitcher": "Brayden Gilson",
       "batter": "Blake Cyr",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1768,7 +1824,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "K.",
+      "pitcher": "Brayden Gilson",
       "batter": "Cole Stanford",
       "outcome": "Walk",
       "count": "3-1",
@@ -1795,7 +1851,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "B.",
+      "pitcher": "Brayden Gilson",
+      "batter": "B. Gilson",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Cole Stanford",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Cole Stanford",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 4
+      },
+      "description": "B. Gilson to p for K. Smith."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Colton Schwarz",
       "outcome": "Single",
       "count": "3-1",
@@ -1822,7 +1905,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "B.",
+      "pitcher": "",
       "batter": "Hayden Yost",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1849,7 +1932,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "B.",
+      "pitcher": "",
       "batter": "Kyle Jones",
       "outcome": "Fielder's choice",
       "count": "0-0",

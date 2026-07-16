@@ -3,7 +3,7 @@
   "date": "03/03/2026",
   "away_team": "UIW",
   "home_team": "Texas A&M",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -556,7 +556,8 @@
       "pitches": "BKB",
       "rbi": true,
       "runs_scored": [
-        "Caden Sorrell"
+        "Caden Sorrell",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1536,7 +1537,8 @@
       "pitches": "BBBK",
       "rbi": true,
       "runs_scored": [
-        "Caden Sorrell"
+        "Caden Sorrell",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1792,8 +1794,8 @@
         "3B": "Bear Harrison"
       },
       "runners_after": {
-        "1B": "Travis Chestnut",
-        "2B": null,
+        "1B": null,
+        "2B": "Travis Chestnut",
         "3B": "Bear Harrison"
       },
       "score": {
@@ -1814,13 +1816,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Travis Chestnut",
-        "2B": null,
+        "1B": null,
+        "2B": "Travis Chestnut",
         "3B": "Bear Harrison"
       },
       "runners_after": {
         "1B": "KIEL",
-        "2B": null,
+        "2B": "Travis Chestnut",
         "3B": "Bear Harrison"
       },
       "score": {
@@ -1844,13 +1846,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "KIEL",
-        "2B": null,
+        "2B": "Travis Chestnut",
         "3B": "Bear Harrison"
       },
       "runners_after": {
         "1B": "KIEL",
         "2B": null,
-        "3B": null
+        "3B": "Travis Chestnut"
       },
       "score": {
         "away": 1,
@@ -1872,12 +1874,12 @@
       "runners_before": {
         "1B": "KIEL",
         "2B": null,
-        "3B": null
+        "3B": "Travis Chestnut"
       },
       "runners_after": {
         "1B": "KIEL",
         "2B": null,
-        "3B": null
+        "3B": "Travis Chestnut"
       },
       "score": {
         "away": 1,
@@ -1899,12 +1901,12 @@
       "runners_before": {
         "1B": "KIEL",
         "2B": null,
-        "3B": null
+        "3B": "Travis Chestnut"
       },
       "runners_after": {
         "1B": "KIEL",
         "2B": null,
-        "3B": null
+        "3B": "Travis Chestnut"
       },
       "score": {
         "away": 1,
@@ -1926,12 +1928,12 @@
       "runners_before": {
         "1B": "KIEL",
         "2B": null,
-        "3B": null
+        "3B": "Travis Chestnut"
       },
       "runners_after": {
         "1B": "Jake Duer",
         "2B": null,
-        "3B": null
+        "3B": "Travis Chestnut"
       },
       "score": {
         "away": 1,
@@ -1947,13 +1949,15 @@
       "count": "2-1",
       "pitches": "BKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Travis Chestnut"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jake Duer",
         "2B": null,
-        "3B": null
+        "3B": "Travis Chestnut"
       },
       "runners_after": {
         "1B": "Boston Kellner",

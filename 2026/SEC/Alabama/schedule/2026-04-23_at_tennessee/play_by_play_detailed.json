@@ -3,7 +3,7 @@
   "date": "04/23/2026",
   "away_team": "Alabama",
   "home_team": "Tennessee",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -270,8 +270,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Henry Ford",
-        "3B": null
+        "2B": null,
+        "3B": "Henry Ford"
       },
       "score": {
         "away": 1,
@@ -287,17 +287,19 @@
       "count": "3-2",
       "pitches": "BBBKFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Henry Ford"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": null,
-        "2B": "Henry Ford",
-        "3B": null
+        "2B": null,
+        "3B": "Henry Ford"
       },
       "runners_after": {
         "1B": "Blake Grimmer",
-        "2B": "Henry Ford",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -319,12 +321,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Blake Grimmer",
-        "2B": "Henry Ford",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Blake Grimmer",
-        "2B": "Henry Ford",
+        "1B": null,
+        "2B": "Blake Grimmer",
         "3B": null
       },
       "score": {
@@ -345,13 +347,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Blake Grimmer",
-        "2B": "Henry Ford",
+        "1B": null,
+        "2B": "Blake Grimmer",
         "3B": null
       },
       "runners_after": {
         "1B": "Stone Lawless",
-        "2B": "Henry Ford",
+        "2B": "Blake Grimmer",
         "3B": null
       },
       "score": {
@@ -373,12 +375,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Stone Lawless",
-        "2B": "Henry Ford",
+        "2B": "Blake Grimmer",
         "3B": null
       },
       "runners_after": {
         "1B": "Stone Lawless",
-        "2B": "Henry Ford",
+        "2B": "Blake Grimmer",
         "3B": null
       },
       "score": {
@@ -513,8 +515,8 @@
       },
       "runners_after": {
         "1B": "Brennan Holt",
-        "2B": "Justin Lebron",
-        "3B": null
+        "2B": null,
+        "3B": "Justin Lebron"
       },
       "score": {
         "away": 1,
@@ -537,8 +539,8 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Brennan Holt",
-        "2B": "Justin Lebron",
-        "3B": null
+        "2B": null,
+        "3B": "Justin Lebron"
       },
       "runners_after": {
         "1B": null,
@@ -833,7 +835,8 @@
       "rbi": true,
       "runs_scored": [
         "John Lemm",
-        "Eric Hines"
+        "Eric Hines",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -951,8 +954,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Reese Chapman",
-        "2B": null,
+        "1B": null,
+        "2B": "Reese Chapman",
         "3B": null
       },
       "score": {
@@ -973,13 +976,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Reese Chapman",
-        "2B": null,
+        "1B": null,
+        "2B": "Reese Chapman",
         "3B": null
       },
       "runners_after": {
-        "1B": "Reese Chapman",
-        "2B": null,
+        "1B": null,
+        "2B": "Reese Chapman",
         "3B": null
       },
       "score": {
@@ -1225,7 +1228,7 @@
       "runners_after": {
         "1B": "Levi Clark",
         "2B": null,
-        "3B": null
+        "3B": "Manny Marin"
       },
       "score": {
         "away": 6,
@@ -1241,17 +1244,19 @@
       "count": "1-2",
       "pitches": "FFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Manny Marin"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Levi Clark",
         "2B": null,
-        "3B": null
+        "3B": "Manny Marin"
       },
       "runners_after": {
         "1B": "Garrett Wright",
-        "2B": null,
+        "2B": "Levi Clark",
         "3B": null
       },
       "score": {
@@ -1273,13 +1278,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Garrett Wright",
-        "2B": null,
+        "2B": "Levi Clark",
         "3B": null
       },
       "runners_after": {
-        "1B": "Garrett Wright",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Garrett Wright",
+        "3B": "Levi Clark"
       },
       "score": {
         "away": 6,
@@ -1299,14 +1304,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Garrett Wright",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Garrett Wright",
+        "3B": "Levi Clark"
       },
       "runners_after": {
-        "1B": "Garrett Wright",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Garrett Wright",
+        "3B": "Levi Clark"
       },
       "score": {
         "away": 6,
@@ -1645,6 +1650,33 @@
     {
       "inning": "Top 6",
       "pitcher": "Brayden Krenzel",
+      "batter": "KRENZEL, B. to p for APPENZELLER.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 9,
+        "home": 4
+      },
+      "description": "KRENZEL, B. to p for APPENZELLER."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "Brayden Krenzel",
       "batter": "John Lemm",
       "outcome": "Walk",
       "count": "3-2",
@@ -1671,7 +1703,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Brayden Krenzel",
+      "pitcher": "Mark Hindy",
       "batter": "Jason Torres",
       "outcome": "Fielder's choice",
       "count": "2-1",
@@ -1786,6 +1818,7 @@
       "pitches": "KB",
       "rbi": true,
       "runs_scored": [
+        "Levi Clark",
         "Henry Ford"
       ],
       "outs_before": 2,
@@ -1796,7 +1829,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Levi Clark",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1818,12 +1851,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Levi Clark",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Levi Clark",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1832,6 +1865,33 @@
         "home": 6
       },
       "description": "CHAPMAN, R. grounded out to 1b unassisted (3-2 KBBBF)."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Mark Hindy",
+      "batter": "HINDY, M. to p for KRENZEL, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 9,
+        "home": 6
+      },
+      "description": "HINDY, M. to p for KRENZEL, B.."
     },
     {
       "inning": "Top 7",
@@ -1889,7 +1949,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Mark Hindy",
+      "pitcher": "Brady Frederick",
       "batter": "Justin Lebron",
       "outcome": "Hit by pitch",
       "count": "2-1",
@@ -1916,7 +1976,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Mark Hindy",
+      "pitcher": "Brady Frederick",
       "batter": "Brennan Holt",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1943,7 +2003,34 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brady Frederick",
+      "pitcher": "Nic Abraham",
+      "batter": "FREDERICK, B to p for HINDY, M..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Brennan Holt",
+        "2B": "Justin Lebron",
+        "3B": "Peyton Steele"
+      },
+      "runners_after": {
+        "1B": "Brennan Holt",
+        "2B": "Justin Lebron",
+        "3B": "Peyton Steele"
+      },
+      "score": {
+        "away": 9,
+        "home": 6
+      },
+      "description": "FREDERICK, B to p for HINDY, M.."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Nic Abraham",
       "batter": "Brady Neal",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -1972,7 +2059,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Brady Frederick",
+      "pitcher": "Nic Abraham",
       "batter": "Bryce Fowler",
       "outcome": "Walk",
       "count": "3-2",
@@ -1998,6 +2085,33 @@
         "home": 6
       },
       "description": "Fowler walked, RBI (3-2 BKSFBFBFFFFFB) Neal advanced to second Holt advanced to third Lebron scored."
+    },
+    {
+      "inning": "Top 7",
+      "pitcher": "Nic Abraham",
+      "batter": "ABRAHAM, N. to p for FREDERICK, B.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Bryce Fowler",
+        "2B": "Brady Neal",
+        "3B": "Brennan Holt"
+      },
+      "runners_after": {
+        "1B": "Bryce Fowler",
+        "2B": "Brady Neal",
+        "3B": "Brennan Holt"
+      },
+      "score": {
+        "away": 11,
+        "home": 6
+      },
+      "description": "ABRAHAM, N. to p for FREDERICK, B."
     },
     {
       "inning": "Top 7",
@@ -2180,9 +2294,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Stone Lawless",
+        "1B": null,
         "2B": "Blaine Brown",
-        "3B": null
+        "3B": "Stone Lawless"
       },
       "score": {
         "away": 12,
@@ -2198,17 +2312,20 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Blaine Brown",
+        "Stone Lawless"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Stone Lawless",
+        "1B": null,
         "2B": "Blaine Brown",
-        "3B": null
+        "3B": "Stone Lawless"
       },
       "runners_after": {
         "1B": "Manny Marin",
-        "2B": "Blaine Brown",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -2230,12 +2347,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Manny Marin",
-        "2B": "Blaine Brown",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Manny Marin",
-        "2B": "Blaine Brown",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -2300,7 +2417,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Nic Abraham",
+      "pitcher": "Sawyer Deering",
       "batter": "Justin Lebron",
       "outcome": "Flyout",
       "count": "2-1",
@@ -2435,7 +2552,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nic Abraham",
+      "pitcher": "Sawyer Deering",
       "batter": "Brennan Holt",
       "outcome": "Single",
       "count": "1-0",
@@ -2462,7 +2579,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nic Abraham",
+      "pitcher": "",
       "batter": "Brady Neal",
       "outcome": "Foul out",
       "count": "2-1",
@@ -2489,7 +2606,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nic Abraham",
+      "pitcher": "",
       "batter": "Bryce Fowler",
       "outcome": "Double",
       "count": "0-1",
@@ -2516,7 +2633,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Sawyer Deering",
+      "pitcher": "",
+      "batter": "DEERING, S. to p for ABRAHAM, N..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": "Bryce Fowler",
+        "3B": "Brennan Holt"
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Bryce Fowler",
+        "3B": "Brennan Holt"
+      },
+      "score": {
+        "away": 12,
+        "home": 8
+      },
+      "description": "DEERING, S. to p for ABRAHAM, N.."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": "Eric Hines",
       "outcome": "Fielder's choice",
       "count": "1-1",
@@ -2543,7 +2687,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Sawyer Deering",
+      "pitcher": "",
       "batter": "John Lemm",
       "outcome": "Groundout",
       "count": "1-1",

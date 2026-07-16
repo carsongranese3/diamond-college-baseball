@@ -3,7 +3,7 @@
   "date": "03/21/2026",
   "away_team": "Kentucky",
   "home_team": "Ole Miss",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -94,7 +94,10 @@
       "count": "1-2",
       "pitches": "SBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -499,7 +502,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -859,8 +864,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Owen Jenkins",
-        "2B": null,
+        "1B": null,
+        "2B": "Owen Jenkins",
         "3B": null
       },
       "score": {
@@ -881,13 +886,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Owen Jenkins",
-        "2B": null,
+        "1B": null,
+        "2B": "Owen Jenkins",
         "3B": null
       },
       "runners_after": {
-        "1B": "Owen Jenkins",
-        "2B": null,
+        "1B": null,
+        "2B": "Owen Jenkins",
         "3B": null
       },
       "score": {
@@ -986,7 +991,10 @@
       "pitches": "FBB",
       "rbi": true,
       "runs_scored": [
-        "Daniel Pacella"
+        "Daniel Pacella",
+        null,
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1035,7 +1043,34 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "J.",
+      "pitcher": "Jack Bennett",
+      "batter": "J. Bennett",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Austin Fawley",
+        "2B": "Will Furniss",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Austin Fawley",
+        "2B": "Will Furniss",
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 5
+      },
+      "description": "J. Bennett to p for N. Harris."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Jack Bennett",
       "batter": "Brayden Randle",
       "outcome": "Fielder's choice",
       "count": "3-1",
@@ -1062,7 +1097,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "J.",
+      "pitcher": "Jack Bennett",
       "batter": "Hayden Federico",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1089,7 +1124,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "J.",
+      "pitcher": "Jack Bennett",
       "batter": "Judd Utermark",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1170,7 +1205,34 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
+      "batter": "L. Koenig",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Hudson Brown",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Hudson Brown",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 5
+      },
+      "description": "L. Koenig to p for W. Libbert."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Landon Koenig",
       "batter": "Ethan Hindle",
       "outcome": "Walk",
       "count": "3-2",
@@ -1197,7 +1259,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
       "batter": "Caeden Cloud",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1224,14 +1286,17 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
       "batter": "Carson Hansen",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Carson Hansen"
+        "Carson Hansen",
+        null,
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1253,7 +1318,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
       "batter": "Owen Jenkins",
       "outcome": "Single",
       "count": "2-0",
@@ -1280,7 +1345,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1307,7 +1372,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
       "batter": "Ryan Schwartz",
       "outcome": "Single",
       "count": "3-1",
@@ -1334,13 +1399,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "L.",
+      "pitcher": "Walker Hooks",
       "batter": "Jayce Tharnish",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "FBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1361,13 +1428,42 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
+      "batter": "W. Hooks",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Jayce Tharnish",
+        "2B": "Owen Jenkins",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Jayce Tharnish",
+        "2B": "Owen Jenkins",
+        "3B": null
+      },
+      "score": {
+        "away": 7,
+        "home": 5
+      },
+      "description": "W. Hooks to p for L. Koenig."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Walker Hooks",
       "batter": "Luke Lawrence",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1388,7 +1484,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Tyler Bell",
       "outcome": "Walk",
       "count": "3-1",
@@ -1415,7 +1511,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Hudson Brown",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1442,7 +1538,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Ethan Hindle",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1469,7 +1565,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "J.",
+      "pitcher": "Jack Bennett",
       "batter": "Tristan Bissetta",
       "outcome": "Walk",
       "count": "3-2",
@@ -1496,7 +1592,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "J.",
+      "pitcher": "Jack Bennett",
       "batter": "Will Furniss",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1523,7 +1619,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "J.",
+      "pitcher": "Jack Bennett",
       "batter": "Collin Reuter",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1550,7 +1646,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "J.",
+      "pitcher": "Jack Bennett",
       "batter": "Dom Decker",
       "outcome": "Lineout",
       "count": "0-1",
@@ -1577,7 +1673,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Caeden Cloud",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1604,7 +1700,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Carson Hansen",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1631,7 +1727,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Owen Jenkins",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1658,7 +1754,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "J.",
+      "pitcher": "Jack Bennett",
       "batter": "Daniel Pacella",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -1685,7 +1781,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "J.",
+      "pitcher": "Jack Bennett",
       "batter": "Austin Fawley",
       "outcome": "Walk",
       "count": "3-0",
@@ -1712,7 +1808,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "J.",
+      "pitcher": "Jack Bennett",
       "batter": "Brayden Randle",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1739,13 +1835,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "J.",
+      "pitcher": "Jack Bennett",
       "batter": "Hayden Federico",
       "outcome": "Flyout",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1766,7 +1864,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "J.",
+      "pitcher": "Connor Mattison",
       "batter": "Judd Utermark",
       "outcome": "Lineout",
       "count": "2-0",
@@ -1793,7 +1891,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Ryan Schwartz",
       "outcome": "Single",
       "count": "0-0",
@@ -1820,7 +1918,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Jayce Tharnish",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1847,7 +1945,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1874,7 +1972,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -1901,7 +1999,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Luke Lawrence",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1928,7 +2026,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "C.",
+      "pitcher": "Connor Mattison",
+      "batter": "C. Mattison",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 8,
+        "home": 6
+      },
+      "description": "C. Mattison to p for J. Bennett."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Connor Mattison",
       "batter": "Tristan Bissetta",
       "outcome": "Home run",
       "count": "1-0",
@@ -1957,7 +2082,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "C.",
+      "pitcher": "Burkley Bounds",
       "batter": "Will Furniss",
       "outcome": "Single",
       "count": "0-1",
@@ -1984,14 +2109,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "C.",
+      "pitcher": "Burkley Bounds",
       "batter": "Collin Reuter",
       "outcome": "Home run",
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
       "runs_scored": [
-        "Collin Reuter"
+        "Collin Reuter",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -2013,7 +2139,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "B.",
+      "pitcher": "Burkley Bounds",
+      "batter": "B. Bounds",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Will Furniss",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Will Furniss",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 8,
+        "home": 9
+      },
+      "description": "B. Bounds to p for C. Mattison."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Burkley Bounds",
       "batter": "Dom Decker",
       "outcome": "Walk",
       "count": "3-2",
@@ -2040,7 +2193,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "B.",
+      "pitcher": "Burkley Bounds",
       "batter": "Daniel Pacella",
       "outcome": "Grounded into double play",
       "count": "0-1",
@@ -2067,7 +2220,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "B.",
+      "pitcher": "Burkley Bounds",
       "batter": "Austin Fawley",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2094,7 +2247,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "B. Moseley",
       "outcome": "\u2014",
       "count": null,
@@ -2121,7 +2274,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Tyler Bell",
       "outcome": "Home run",
       "count": "3-2",
@@ -2150,7 +2303,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Hudson Brown",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2177,7 +2330,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Ethan Hindle",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2204,7 +2357,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Caeden Cloud",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2231,7 +2384,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "B.",
+      "pitcher": "Burkley Bounds",
       "batter": "Brayden Randle",
       "outcome": "Double",
       "count": "0-1",
@@ -2258,7 +2411,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "B.",
+      "pitcher": "Ira Austin",
       "batter": "Hayden Federico",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2285,7 +2438,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "B.",
+      "pitcher": "Ira Austin",
       "batter": "Judd Utermark",
       "outcome": "Walk",
       "count": "3-0",
@@ -2312,7 +2465,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "B.",
+      "pitcher": "Jackson Soucie",
       "batter": "Tristan Bissetta",
       "outcome": "Walk",
       "count": null,
@@ -2339,13 +2492,43 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "I.",
+      "pitcher": "",
+      "batter": "I. Austin",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Tristan Bissetta",
+        "2B": "Brayden Randle",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Tristan Bissetta",
+        "2B": "Brayden Randle",
+        "3B": null
+      },
+      "score": {
+        "away": 9,
+        "home": 9
+      },
+      "description": "I. Austin to p for B. Bounds."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Will Furniss",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "KB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -2366,13 +2549,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "I.",
+      "pitcher": "",
       "batter": "Collin Reuter",
       "outcome": "Flyout",
       "count": "1-1",
       "pitches": "BS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -2393,7 +2578,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "J.",
+      "pitcher": "",
+      "batter": "J. Soucie",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Will Furniss",
+        "2B": "Brayden Randle",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Will Furniss",
+        "2B": "Brayden Randle",
+        "3B": null
+      },
+      "score": {
+        "away": 9,
+        "home": 12
+      },
+      "description": "J. Soucie to p for I. Austin."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Dom Decker",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2420,7 +2632,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "",
       "batter": "Carson Hansen",
       "outcome": "\u2014",
       "count": "1-2",
@@ -2447,7 +2659,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "",
       "batter": "Owen Jenkins",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2474,7 +2686,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "W.",
+      "pitcher": "",
       "batter": "Ryan Schwartz",
       "outcome": "Flyout",
       "count": "1-2",

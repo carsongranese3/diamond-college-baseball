@@ -3,7 +3,7 @@
   "date": "05/29/2026",
   "away_team": "Jacksonville St.",
   "home_team": "Virginia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -284,7 +284,8 @@
       "pitches": "KB",
       "rbi": true,
       "runs_scored": [
-        "Cooper Blauser"
+        "Cooper Blauser",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -555,7 +556,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -582,7 +585,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1050,8 +1055,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Caleb Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Caleb Johnson",
         "3B": null
       },
       "score": {
@@ -1072,13 +1077,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Caleb Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Caleb Johnson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Caleb Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Caleb Johnson",
         "3B": null
       },
       "score": {
@@ -1099,13 +1104,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Caleb Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Caleb Johnson",
         "3B": null
       },
       "runners_after": {
         "1B": "Trey King",
-        "2B": null,
+        "2B": "Caleb Johnson",
         "3B": null
       },
       "score": {
@@ -1127,13 +1132,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Trey King",
-        "2B": null,
+        "2B": "Caleb Johnson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Trey King",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Caleb Johnson",
+        "3B": "Trey King"
       },
       "score": {
         "away": 4,
@@ -1149,18 +1154,20 @@
       "count": "3-2",
       "pitches": "BBKBFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Trey King",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Caleb Johnson",
+        "3B": "Trey King"
       },
       "runners_after": {
-        "1B": "Trey King",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Caleb Johnson",
+        "3B": "Trey King"
       },
       "score": {
         "away": 5,
@@ -1176,18 +1183,20 @@
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Trey King",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Caleb Johnson",
+        "3B": "Trey King"
       },
       "runners_after": {
         "1B": "Brady Thomas",
-        "2B": null,
-        "3B": null
+        "2B": "Caleb Johnson",
+        "3B": "Trey King"
       },
       "score": {
         "away": 6,
@@ -1208,13 +1217,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Brady Thomas",
-        "2B": null,
-        "3B": null
+        "2B": "Caleb Johnson",
+        "3B": "Trey King"
       },
       "runners_after": {
         "1B": "Brady Thomas",
         "2B": "Sam Richardson",
-        "3B": null
+        "3B": "Trey King"
       },
       "score": {
         "away": 6,
@@ -1236,12 +1245,12 @@
       "runners_before": {
         "1B": "Brady Thomas",
         "2B": "Sam Richardson",
-        "3B": null
+        "3B": "Trey King"
       },
       "runners_after": {
         "1B": "Brady Thomas",
         "2B": "Sam Richardson",
-        "3B": null
+        "3B": "Trey King"
       },
       "score": {
         "away": 6,
@@ -1251,24 +1260,27 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Kevin Jaxel",
       "batter": "Matthew Cash",
       "outcome": "Single",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Brady Thomas",
         "2B": "Sam Richardson",
-        "3B": null
+        "3B": "Trey King"
       },
       "runners_after": {
         "1B": "Matthew Cash",
         "2B": "Sam Richardson",
-        "3B": null
+        "3B": "Trey King"
       },
       "score": {
         "away": 8,
@@ -1278,19 +1290,21 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Kevin Jaxel",
       "batter": "Trey Majette",
       "outcome": "Triple",
       "count": "0-2",
       "pitches": "KF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Matthew Cash",
         "2B": "Sam Richardson",
-        "3B": null
+        "3B": "Trey King"
       },
       "runners_after": {
         "1B": "Matthew Cash",
@@ -1305,7 +1319,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Kevin Jaxel",
       "batter": "Jaxon Pate",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1392,7 +1406,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1428,9 +1444,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Joe Tiroly",
+        "1B": null,
         "2B": "RJ Holmes",
-        "3B": null
+        "3B": "Joe Tiroly"
       },
       "score": {
         "away": 9,
@@ -1450,14 +1466,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Joe Tiroly",
+        "1B": null,
         "2B": "RJ Holmes",
-        "3B": null
+        "3B": "Joe Tiroly"
       },
       "runners_after": {
-        "1B": "Joe Tiroly",
+        "1B": null,
         "2B": "RJ Holmes",
-        "3B": null
+        "3B": "Joe Tiroly"
       },
       "score": {
         "away": 9,
@@ -1467,24 +1483,26 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Maddox McDougall",
       "batter": null,
       "outcome": "Baserunning",
       "count": "2-2",
       "pitches": "FBSBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Joe Tiroly",
+        "1B": null,
         "2B": "RJ Holmes",
-        "3B": null
+        "3B": "Joe Tiroly"
       },
       "runners_after": {
-        "1B": "Joe Tiroly",
+        "1B": null,
         "2B": "RJ Holmes",
-        "3B": null
+        "3B": "Joe Tiroly"
       },
       "score": {
         "away": 9,
@@ -1494,7 +1512,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Maddox McDougall",
       "batter": "Sam Harris",
       "outcome": "Walk",
       "count": "3-2",
@@ -1504,14 +1522,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Joe Tiroly",
+        "1B": null,
         "2B": "RJ Holmes",
-        "3B": null
+        "3B": "Joe Tiroly"
       },
       "runners_after": {
         "1B": "Sam Harris",
         "2B": "RJ Holmes",
-        "3B": null
+        "3B": "Joe Tiroly"
       },
       "score": {
         "away": 9,
@@ -1521,7 +1539,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Maddox McDougall",
       "batter": "Zach Jackson",
       "outcome": "Walk",
       "count": "3-2",
@@ -1533,12 +1551,12 @@
       "runners_before": {
         "1B": "Sam Harris",
         "2B": "RJ Holmes",
-        "3B": null
+        "3B": "Joe Tiroly"
       },
       "runners_after": {
         "1B": "Zach Jackson",
         "2B": "RJ Holmes",
-        "3B": null
+        "3B": "Joe Tiroly"
       },
       "score": {
         "away": 9,
@@ -1548,7 +1566,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Maddox McDougall",
       "batter": "Antonio Perrotta",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1560,12 +1578,12 @@
       "runners_before": {
         "1B": "Zach Jackson",
         "2B": "RJ Holmes",
-        "3B": null
+        "3B": "Joe Tiroly"
       },
       "runners_after": {
         "1B": "Zach Jackson",
         "2B": "RJ Holmes",
-        "3B": null
+        "3B": "Joe Tiroly"
       },
       "score": {
         "away": 9,
@@ -1575,7 +1593,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Kevin Jaxel",
       "batter": "Caleb Johnson",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1602,7 +1620,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Kevin Jaxel",
       "batter": "Trey King",
       "outcome": "Single",
       "count": "2-1",
@@ -1629,7 +1647,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Kevin Jaxel",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1644,8 +1662,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Trey King",
-        "2B": null,
+        "1B": null,
+        "2B": "Trey King",
         "3B": null
       },
       "score": {
@@ -1656,7 +1674,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Kevin Jaxel",
       "batter": "Grayson Ashe",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1666,13 +1684,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Trey King",
-        "2B": null,
+        "1B": null,
+        "2B": "Trey King",
         "3B": null
       },
       "runners_after": {
-        "1B": "Trey King",
-        "2B": null,
+        "1B": null,
+        "2B": "Trey King",
         "3B": null
       },
       "score": {
@@ -1683,22 +1701,24 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Kevin Jaxel",
       "batter": "Brady Thomas",
       "outcome": "Double",
       "count": "0-2",
       "pitches": "FKF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Trey King",
-        "2B": null,
+        "1B": null,
+        "2B": "Trey King",
         "3B": null
       },
       "runners_after": {
-        "1B": "Trey King",
+        "1B": null,
         "2B": "Brady Thomas",
         "3B": null
       },
@@ -1710,7 +1730,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Kevin Jaxel",
       "batter": "Sam Richardson",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1720,12 +1740,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Trey King",
+        "1B": null,
         "2B": "Brady Thomas",
         "3B": null
       },
       "runners_after": {
-        "1B": "Trey King",
+        "1B": null,
         "2B": "Brady Thomas",
         "3B": null
       },
@@ -1737,7 +1757,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Maddox McDougall",
       "batter": "Noah Murray",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1764,7 +1784,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Maddox McDougall",
       "batter": "RJ Holmes",
       "outcome": "Double",
       "count": "3-1",
@@ -1791,13 +1811,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Maddox McDougall",
       "batter": "AJ Gracia",
       "outcome": "Double",
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1818,14 +1840,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Maddox McDougall",
       "batter": "Joe Tiroly",
       "outcome": "Home run",
       "count": "0-2",
       "pitches": "SS",
       "rbi": true,
       "runs_scored": [
-        "Joe Tiroly"
+        "Joe Tiroly",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1847,7 +1870,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Maddox McDougall",
       "batter": "Harrison Didawick",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1874,7 +1897,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Maddox McDougall",
       "batter": "Jake Weatherspoon",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1901,7 +1924,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Kevin Jaxel",
       "batter": "Cooper Blauser",
       "outcome": "Walk",
       "count": "3-0",
@@ -1928,7 +1951,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Matthew Cash",
       "outcome": "Walk",
       "count": "3-0",
@@ -1955,7 +1978,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Trey Majette",
       "outcome": "Strikeout",
       "count": "1-2",
@@ -1982,7 +2005,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1997,9 +2020,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Matthew Cash",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Matthew Cash"
       },
       "score": {
         "away": 10,
@@ -2009,24 +2032,26 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Jaxon Pate",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "KBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Matthew Cash",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Matthew Cash"
       },
       "runners_after": {
         "1B": "Jaxon Pate",
         "2B": null,
-        "3B": null
+        "3B": "Matthew Cash"
       },
       "score": {
         "away": 11,
@@ -2036,24 +2061,26 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Caleb Johnson",
       "outcome": "Groundout",
       "count": "0-2",
       "pitches": "KF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jaxon Pate",
         "2B": null,
-        "3B": null
+        "3B": "Matthew Cash"
       },
       "runners_after": {
         "1B": "Jaxon Pate",
         "2B": null,
-        "3B": null
+        "3B": "Matthew Cash"
       },
       "score": {
         "away": 12,
@@ -2063,24 +2090,26 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Trey King",
       "outcome": "Double",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jaxon Pate",
         "2B": null,
-        "3B": null
+        "3B": "Matthew Cash"
       },
       "runners_after": {
         "1B": "Jaxon Pate",
         "2B": "Trey King",
-        "3B": null
+        "3B": "Matthew Cash"
       },
       "score": {
         "away": 13,
@@ -2090,7 +2119,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Grayson Ashe",
       "outcome": "Lineout",
       "count": "0-1",
@@ -2102,12 +2131,12 @@
       "runners_before": {
         "1B": "Jaxon Pate",
         "2B": "Trey King",
-        "3B": null
+        "3B": "Matthew Cash"
       },
       "runners_after": {
         "1B": "Jaxon Pate",
         "2B": "Trey King",
-        "3B": null
+        "3B": "Matthew Cash"
       },
       "score": {
         "away": 13,
@@ -2117,7 +2146,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Maddox McDougall",
       "batter": "Sam Harris",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2144,7 +2173,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Chase Horst",
       "batter": "Zach Jackson",
       "outcome": "Single",
       "count": "0-0",
@@ -2171,7 +2200,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Chase Horst",
       "batter": "Antonio Perrotta",
       "outcome": "Grounded into double play",
       "count": "1-0",
@@ -2198,7 +2227,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Lucas Hartman",
       "batter": "Brady Thomas",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2225,7 +2254,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Christian Lucarelli",
       "batter": "Sam Richardson",
       "outcome": "Hit by pitch",
       "count": "0-0",
@@ -2252,7 +2281,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Noah Yoder",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2267,8 +2296,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Richardson",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Richardson",
         "3B": null
       },
       "score": {
@@ -2279,7 +2308,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Noah Yoder",
       "batter": "Cooper Blauser",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2289,13 +2318,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Sam Richardson",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Richardson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Sam Richardson",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Richardson",
         "3B": null
       },
       "score": {
@@ -2306,7 +2335,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Noah Yoder",
       "batter": "Matthew Cash",
       "outcome": "Walk",
       "count": "3-2",
@@ -2316,13 +2345,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Sam Richardson",
-        "2B": null,
+        "1B": null,
+        "2B": "Sam Richardson",
         "3B": null
       },
       "runners_after": {
         "1B": "Matthew Cash",
-        "2B": null,
+        "2B": "Sam Richardson",
         "3B": null
       },
       "score": {
@@ -2333,7 +2362,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Noah Yoder",
       "batter": "Luke Williams",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2344,12 +2373,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Matthew Cash",
-        "2B": null,
+        "2B": "Sam Richardson",
         "3B": null
       },
       "runners_after": {
         "1B": "Matthew Cash",
-        "2B": null,
+        "2B": "Sam Richardson",
         "3B": null
       },
       "score": {
@@ -2360,7 +2389,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Chase Horst",
       "batter": "Noah Murray",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2387,7 +2416,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Chase Horst",
       "batter": "RJ Holmes",
       "outcome": "Walk",
       "count": "3-0",
@@ -2414,7 +2443,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Chase Horst",
       "batter": "AJ Gracia",
       "outcome": "Foul out",
       "count": "1-1",
@@ -2441,13 +2470,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Chase Horst",
       "batter": "Joe Tiroly",
       "outcome": "Double",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2468,13 +2499,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Chase Horst",
       "batter": "Harrison Didawick",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "BKFBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2495,7 +2528,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Chase Horst",
       "batter": "Jake Weatherspoon",
       "outcome": "Single",
       "count": "2-1",
@@ -2522,7 +2555,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Skyler Hutto",
       "batter": "Sam Harris",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2549,7 +2582,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Noah Yoder",
       "batter": "Jaxon Pate",
       "outcome": "Walk",
       "count": "3-0",
@@ -2576,14 +2609,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Noah Yoder",
       "batter": "Caleb Johnson",
       "outcome": "Home run",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Caleb Johnson"
+        "Caleb Johnson",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -2605,7 +2639,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Dean Kampschror",
       "batter": "Trey King",
       "outcome": "Lineout",
       "count": "3-1",
@@ -2632,7 +2666,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Dean Kampschror",
       "batter": "Grayson Ashe",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2659,7 +2693,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Dean Kampschror",
       "batter": "Pena,Orlando hit by pitch (2-1 BFBB).",
       "outcome": "Hit by pitch",
       "count": "2-1",
@@ -2686,7 +2720,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Dean Kampschror",
       "batter": "Sam Richardson",
       "outcome": "Single",
       "count": "0-1",
@@ -2713,7 +2747,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Henry Zatkowski",
+      "pitcher": "Dean Kampschror",
       "batter": "Cooper Blauser",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2740,7 +2774,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Skyler Hutto",
       "batter": "Zach Jackson",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2767,7 +2801,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Skyler Hutto",
       "batter": "Antonio Perrotta",
       "outcome": "Walk",
       "count": "3-2",
@@ -2794,7 +2828,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Skyler Hutto",
       "batter": "Noah Murray",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2821,7 +2855,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Skyler Hutto",
       "batter": "RJ Holmes",
       "outcome": "Walk",
       "count": "3-2",
@@ -2848,7 +2882,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Beau Bryans",
+      "pitcher": "Skyler Hutto",
       "batter": "AJ Gracia",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",

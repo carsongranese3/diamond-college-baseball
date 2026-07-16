@@ -3,7 +3,7 @@
   "date": "02/28/2026",
   "away_team": "Northwestern",
   "home_team": "Georgia Tech",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -229,7 +229,9 @@
       "count": "3-2",
       "pitches": "BBBKK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -283,7 +285,10 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -454,8 +459,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jay Slater",
-        "2B": null,
+        "1B": null,
+        "2B": "Jay Slater",
         "3B": null
       },
       "score": {
@@ -472,17 +477,19 @@
       "count": "3-1",
       "pitches": "KBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Jay Slater",
-        "2B": null,
+        "1B": null,
+        "2B": "Jay Slater",
         "3B": null
       },
       "runners_after": {
         "1B": "DEGROOT,LOGAN singled to center field, RBI (3-1 KBBB); SLATER,JAY scored from second base.",
-        "2B": null,
+        "2B": "Jay Slater",
         "3B": null
       },
       "score": {
@@ -504,12 +511,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "DEGROOT,LOGAN singled to center field, RBI (3-1 KBBB); SLATER,JAY scored from second base.",
-        "2B": null,
+        "2B": "Jay Slater",
         "3B": null
       },
       "runners_after": {
         "1B": "DEGROOT,LOGAN singled to center field, RBI (3-1 KBBB); SLATER,JAY scored from second base.",
-        "2B": null,
+        "2B": "Jay Slater",
         "3B": null
       },
       "score": {
@@ -527,18 +534,19 @@
       "pitches": "F",
       "rbi": true,
       "runs_scored": [
-        "Jack Lausch"
+        "Jack Lausch",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "DEGROOT,LOGAN singled to center field, RBI (3-1 KBBB); SLATER,JAY scored from second base.",
-        "2B": null,
+        "2B": "Jay Slater",
         "3B": null
       },
       "runners_after": {
         "1B": "DEGROOT,LOGAN singled to center field, RBI (3-1 KBBB); SLATER,JAY scored from second base.",
-        "2B": null,
+        "2B": "Jay Slater",
         "3B": null
       },
       "score": {
@@ -560,7 +568,7 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "DEGROOT,LOGAN singled to center field, RBI (3-1 KBBB); SLATER,JAY scored from second base.",
-        "2B": null,
+        "2B": "Jay Slater",
         "3B": null
       },
       "runners_after": {
@@ -744,7 +752,10 @@
       "count": "3-2",
       "pitches": "BBKKBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1008,13 +1019,15 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Jake Rifenburg",
       "batter": "Drew Burress",
       "outcome": "Hit by pitch",
       "count": "1-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1035,14 +1048,17 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Jake Rifenburg",
       "batter": "Nathanael Coupet",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Nathanael Coupet"
+        "Nathanael Coupet",
+        null,
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1064,7 +1080,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Jake Rifenburg",
       "batter": "Jarren Advincula",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1091,7 +1107,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Jake Rifenburg",
       "batter": "Vahn Lackey",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1118,7 +1134,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Jake Rifenburg",
       "batter": "Will Baker",
       "outcome": "Foul out",
       "count": "2-0",
@@ -1253,7 +1269,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Jake Rifenburg",
       "batter": "Ryan Zuckerman",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1280,7 +1296,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Jake Rifenburg",
       "batter": "Caleb Daniel",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1307,7 +1323,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Jake Rifenburg",
       "batter": "Drew Rogers",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -1334,7 +1350,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Jake Rifenburg",
       "batter": "Carson Kerce",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1361,7 +1377,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jake Lankie",
       "batter": "Nick Barron",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1388,7 +1404,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jake Lankie",
       "batter": "Owen McElfatrick",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1415,7 +1431,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jake Lankie",
       "batter": "Jay Slater",
       "outcome": "Reached on error",
       "count": "0-1",
@@ -1442,7 +1458,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jake Lankie",
       "batter": "DEGROOT,LOGAN struck out swinging (2-2 BSBKFS).",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1469,7 +1485,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Jake Rifenburg",
       "batter": "Drew Burress",
       "outcome": "Single",
       "count": "1-2",
@@ -1496,7 +1512,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Jake Rifenburg",
       "batter": "Nathanael Coupet",
       "outcome": "Single",
       "count": "0-0",
@@ -1523,13 +1539,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Jake Rifenburg",
       "batter": "Jarren Advincula",
       "outcome": "Single",
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1550,7 +1568,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Jake Rifenburg",
       "batter": "Vahn Lackey",
       "outcome": "Fielder's choice",
       "count": "1-2",
@@ -1577,7 +1595,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Jake Rifenburg",
       "batter": "Will Baker",
       "outcome": "Fielder's choice",
       "count": "0-1",
@@ -1604,13 +1622,15 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Jake Rifenburg",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Will Baker"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1619,7 +1639,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Will Baker",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1631,7 +1651,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jake Lankie",
       "batter": "Noah Brocklebank",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1658,7 +1678,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jake Lankie",
       "batter": "Jack Lausch",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1685,7 +1705,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jake Lankie",
       "batter": "Ryan Kucherak",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1712,7 +1732,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Jake Rifenburg",
       "batter": "Ryan Zuckerman",
       "outcome": "Single",
       "count": "3-2",
@@ -1739,7 +1759,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Jake Rifenburg",
       "batter": "Caleb Daniel",
       "outcome": "Single",
       "count": "0-1",
@@ -1766,7 +1786,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Jake Rifenburg",
       "batter": "Drew Rogers",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1793,7 +1813,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Jake Rifenburg",
       "batter": "Carson Kerce",
       "outcome": "Grounded into double play",
       "count": "0-0",
@@ -1820,7 +1840,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jake Lankie",
       "batter": "Jackson Freeman",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1847,7 +1867,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jake Lankie",
       "batter": "Noah Ruiz",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1874,7 +1894,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jake Lankie",
       "batter": "Nick Barron",
       "outcome": "Single",
       "count": "2-2",
@@ -1901,7 +1921,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jake Lankie",
       "batter": "Owen McElfatrick",
       "outcome": "Walk",
       "count": "3-1",
@@ -1928,7 +1948,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Dylan Loy",
+      "pitcher": "Jake Lankie",
       "batter": "Jay Slater",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1955,7 +1975,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Carter Danz",
       "batter": "Drew Burress",
       "outcome": "Single",
       "count": "2-2",
@@ -1982,7 +2002,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Carter Danz",
       "batter": "Nathanael Coupet",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2009,7 +2029,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Carter Danz",
       "batter": "Jarren Advincula",
       "outcome": "Single",
       "count": "0-0",
@@ -2036,7 +2056,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Carter Danz",
       "batter": "Vahn Lackey",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -2063,13 +2083,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ryan Weaver",
+      "pitcher": "Carter Danz",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {

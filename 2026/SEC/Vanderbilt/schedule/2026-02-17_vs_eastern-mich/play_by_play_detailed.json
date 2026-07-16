@@ -3,7 +3,7 @@
   "date": "02/17/2026",
   "away_team": "Eastern Mich.",
   "home_team": "Vanderbilt",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -203,7 +203,9 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Braden Holcomb"
+        "Braden Holcomb",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -252,7 +254,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Ethan Davis",
+      "pitcher": "Gregory Kennedy",
       "batter": null,
       "outcome": "Caught stealing",
       "count": null,
@@ -361,6 +363,33 @@
     {
       "inning": "Bottom 2",
       "pitcher": "Gregory Kennedy",
+      "batter": "KENNEDY, G to p for DAVIS, E.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 3
+      },
+      "description": "KENNEDY, G to p for DAVIS, E."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Gregory Kennedy",
       "batter": "Ryker Waite",
       "outcome": "Single",
       "count": "2-0",
@@ -447,7 +476,9 @@
       "count": "3-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -690,7 +721,9 @@
       "count": "1-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -717,7 +750,9 @@
       "count": "2-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -738,7 +773,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Gregory Kennedy",
+      "pitcher": "Brian Henson Jr",
       "batter": "Logan Johnstone",
       "outcome": "Lineout",
       "count": "1-0",
@@ -879,7 +914,9 @@
       "count": "1-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 3,
       "outs_after": 3,
       "runners_before": {
@@ -906,7 +943,9 @@
       "count": "3-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 3,
       "outs_after": 3,
       "runners_before": {
@@ -954,7 +993,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "HENSON",
+      "pitcher": "Brian Henson Jr",
       "batter": "Logan Johnstone",
       "outcome": "Walk",
       "count": "3-2",
@@ -981,7 +1020,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "HENSON",
+      "pitcher": "Brian Henson Jr",
       "batter": "Colin Barczi",
       "outcome": "Fielder's choice",
       "count": "1-1",
@@ -1008,7 +1047,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "HENSON",
+      "pitcher": "Brian Henson Jr",
       "batter": "Brodie Johnston",
       "outcome": "Single",
       "count": "0-0",
@@ -1035,14 +1074,16 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "HENSON",
+      "pitcher": "Brian Henson Jr",
       "batter": "Tommy Goodin",
       "outcome": "Home run",
       "count": "1-1",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Tommy Goodin"
+        "Tommy Goodin",
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1064,7 +1105,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "HENSON",
+      "pitcher": "Brian Henson Jr",
       "batter": "Braden Holcomb",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1091,7 +1132,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "HENSON",
+      "pitcher": "Henry Slaby",
       "batter": "Rustan Rigdon",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1606,7 +1647,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Henry Slaby",
+      "pitcher": "Aidan Norris",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1633,7 +1674,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Henry Slaby",
+      "pitcher": "Aidan Norris",
       "batter": "Ryker Waite",
       "outcome": "Walk",
       "count": "3-2",
@@ -1661,12 +1702,41 @@
     {
       "inning": "Bottom 6",
       "pitcher": "Aidan Norris",
+      "batter": "NORRIS, A to p for SLABY.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Ryker Waite",
+        "2B": null,
+        "3B": "Rustan Rigdon"
+      },
+      "runners_after": {
+        "1B": "Ryker Waite",
+        "2B": null,
+        "3B": "Rustan Rigdon"
+      },
+      "score": {
+        "away": 2,
+        "home": 10
+      },
+      "description": "NORRIS, A to p for SLABY."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Aidan Norris",
       "batter": "Korbin Reynolds",
       "outcome": "Lineout",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1822,7 +1892,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Aidan Norris",
+      "pitcher": "",
       "batter": "Colin Barczi",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1849,14 +1919,15 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Aidan Norris",
+      "pitcher": "",
       "batter": "Brodie Johnston",
       "outcome": "Home run",
       "count": "3-1",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Brodie Johnston"
+        "Brodie Johnston",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,

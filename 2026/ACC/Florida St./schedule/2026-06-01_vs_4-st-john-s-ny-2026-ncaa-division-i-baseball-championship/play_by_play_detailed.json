@@ -3,7 +3,7 @@
   "date": "06/01/2026",
   "away_team": "Florida St.",
   "home_team": "St. John's (NY)",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -157,7 +157,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Jon LeGrande",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -179,7 +179,7 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Jon LeGrande",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -792,7 +792,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Payton Manca",
+      "pitcher": "John Abraham",
       "batter": "McMillan,Shaun walked (3-1 BBFBB).",
       "outcome": "Walk",
       "count": "3-1",
@@ -819,7 +819,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Payton Manca",
+      "pitcher": "John Abraham",
       "batter": "Adam Agresti",
       "outcome": "Walk",
       "count": "3-2",
@@ -846,7 +846,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Payton Manca",
+      "pitcher": "John Abraham",
       "batter": "Will Cowan",
       "outcome": "Pop out",
       "count": "0-1",
@@ -873,7 +873,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Payton Manca",
+      "pitcher": "John Abraham",
       "batter": "Ayden Frey",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -900,7 +900,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Payton Manca",
+      "pitcher": "John Abraham",
       "batter": "Cristian Bernardini",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1023,8 +1023,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "John Stuetzer",
-        "2B": null,
+        "1B": null,
+        "2B": "John Stuetzer",
         "3B": null
       },
       "score": {
@@ -1045,13 +1045,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "John Stuetzer",
-        "2B": null,
+        "1B": null,
+        "2B": "John Stuetzer",
         "3B": null
       },
       "runners_after": {
         "1B": "Brayden Dowd",
-        "2B": null,
+        "2B": "John Stuetzer",
         "3B": null
       },
       "score": {
@@ -1073,13 +1073,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Brayden Dowd",
-        "2B": null,
+        "2B": "John Stuetzer",
         "3B": null
       },
       "runners_after": {
         "1B": "Brayden Dowd",
         "2B": null,
-        "3B": null
+        "3B": "John Stuetzer"
       },
       "score": {
         "away": 1,
@@ -1095,18 +1095,20 @@
       "count": "2-2",
       "pitches": "BKKFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Brayden Dowd",
         "2B": null,
-        "3B": null
+        "3B": "John Stuetzer"
       },
       "runners_after": {
         "1B": "Brody DeLamielleure",
         "2B": null,
-        "3B": null
+        "3B": "John Stuetzer"
       },
       "score": {
         "away": 2,
@@ -1128,12 +1130,12 @@
       "runners_before": {
         "1B": "Brody DeLamielleure",
         "2B": null,
-        "3B": null
+        "3B": "John Stuetzer"
       },
       "runners_after": {
         "1B": "Brody DeLamielleure",
         "2B": null,
-        "3B": null
+        "3B": "John Stuetzer"
       },
       "score": {
         "away": 2,
@@ -1143,7 +1145,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Payton Manca",
+      "pitcher": "John Abraham",
       "batter": "Rob Mansour",
       "outcome": "Walk",
       "count": "3-1",
@@ -1170,7 +1172,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Payton Manca",
+      "pitcher": "John Abraham",
       "batter": "Dylan Fitzsimmons",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1197,7 +1199,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Payton Manca",
+      "pitcher": "John Abraham",
       "batter": "Jon LeGrande",
       "outcome": "Single",
       "count": "1-0",
@@ -1224,7 +1226,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Payton Manca",
+      "pitcher": "John Abraham",
       "batter": "Jayder Raifstanger",
       "outcome": "Walk",
       "count": "3-1",
@@ -1251,7 +1253,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Payton Manca",
+      "pitcher": "John Abraham",
       "batter": "McMillan,Shaun struck out swinging (1-2 SBKS).",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1278,14 +1280,17 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Payton Manca",
+      "pitcher": "John Abraham",
       "batter": "Adam Agresti",
       "outcome": "Home run",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Adam Agresti"
+        "Adam Agresti",
+        null,
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1307,7 +1312,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Payton Manca",
+      "pitcher": "Kevin Mebil",
       "batter": "Will Cowan",
       "outcome": "Lineout",
       "count": "1-2",
@@ -1334,7 +1339,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Evan Hoeckele",
+      "pitcher": "Jack Nestler",
       "batter": "Nathan Cmeyla",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1361,7 +1366,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Evan Hoeckele",
+      "pitcher": "Jack Nestler",
       "batter": "Ben Barrett",
       "outcome": "Lineout",
       "count": "2-1",
@@ -1388,7 +1393,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Evan Hoeckele",
+      "pitcher": "Jack Nestler",
       "batter": "Gabe Fraser",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1415,7 +1420,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Payton Manca",
+      "pitcher": "Kevin Mebil",
       "batter": "Ayden Frey",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1442,7 +1447,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Payton Manca",
+      "pitcher": "Kevin Mebil",
       "batter": "Cristian Bernardini",
       "outcome": "Reached on error",
       "count": "2-2",
@@ -1469,7 +1474,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Payton Manca",
+      "pitcher": "Kevin Mebil",
       "batter": "Rob Mansour",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1496,7 +1501,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Payton Manca",
+      "pitcher": "Kevin Mebil",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1511,9 +1516,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cristian Bernardini",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cristian Bernardini"
       },
       "score": {
         "away": 2,
@@ -1523,22 +1528,24 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Payton Manca",
+      "pitcher": "Kevin Mebil",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Cristian Bernardini"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cristian Bernardini",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Cristian Bernardini"
       },
       "runners_after": {
-        "1B": "Cristian Bernardini",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1550,7 +1557,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Payton Manca",
+      "pitcher": "Kevin Mebil",
       "batter": "Dylan Fitzsimmons",
       "outcome": "Groundout",
       "count": "2-0",
@@ -1560,12 +1567,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Cristian Bernardini",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Cristian Bernardini",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1577,7 +1584,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Evan Hoeckele",
+      "pitcher": "Jack Nestler",
       "batter": "Carter McCulley",
       "outcome": "Single",
       "count": "2-2",
@@ -1604,7 +1611,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Evan Hoeckele",
+      "pitcher": "Jack Nestler",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1619,8 +1626,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Carter McCulley",
-        "2B": null,
+        "1B": null,
+        "2B": "Carter McCulley",
         "3B": null
       },
       "score": {
@@ -1631,7 +1638,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Evan Hoeckele",
+      "pitcher": "Jack Nestler",
       "batter": "Cal Fisher",
       "outcome": "Walk",
       "count": "3-2",
@@ -1641,13 +1648,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Carter McCulley",
-        "2B": null,
+        "1B": null,
+        "2B": "Carter McCulley",
         "3B": null
       },
       "runners_after": {
         "1B": "Cal Fisher",
-        "2B": null,
+        "2B": "Carter McCulley",
         "3B": null
       },
       "score": {
@@ -1658,7 +1665,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Evan Hoeckele",
+      "pitcher": "Jack Nestler",
       "batter": "John Stuetzer",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1669,12 +1676,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Cal Fisher",
-        "2B": null,
+        "2B": "Carter McCulley",
         "3B": null
       },
       "runners_after": {
         "1B": "Cal Fisher",
-        "2B": null,
+        "2B": "Carter McCulley",
         "3B": null
       },
       "score": {
@@ -1685,7 +1692,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Evan Hoeckele",
+      "pitcher": "Jack Nestler",
       "batter": "Brayden Dowd",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1696,12 +1703,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Cal Fisher",
-        "2B": null,
+        "2B": "Carter McCulley",
         "3B": null
       },
       "runners_after": {
         "1B": "Cal Fisher",
-        "2B": null,
+        "2B": "Carter McCulley",
         "3B": null
       },
       "score": {
@@ -1712,7 +1719,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Evan Hoeckele",
+      "pitcher": "Victor Frederick",
       "batter": "Brody DeLamielleure",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1723,12 +1730,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Cal Fisher",
-        "2B": null,
+        "2B": "Carter McCulley",
         "3B": null
       },
       "runners_after": {
         "1B": "Cal Fisher",
-        "2B": null,
+        "2B": "Carter McCulley",
         "3B": null
       },
       "score": {
@@ -1739,7 +1746,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Payton Manca",
+      "pitcher": "Kevin Mebil",
       "batter": "Jon LeGrande",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1766,7 +1773,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Payton Manca",
+      "pitcher": "Kevin Mebil",
       "batter": "Jayder Raifstanger",
       "outcome": "Walk",
       "count": "3-2",
@@ -1793,7 +1800,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Payton Manca",
+      "pitcher": "Cole Stokes",
       "batter": "McMillan,Shaun flied out to cf (2-0 BB).",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1820,7 +1827,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Payton Manca",
+      "pitcher": "Gabe Nard",
       "batter": "Adam Agresti",
       "outcome": "Walk",
       "count": "3-1",
@@ -1847,7 +1854,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Payton Manca",
+      "pitcher": "Gabe Nard",
       "batter": "Will Cowan",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1874,7 +1881,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Evan Hoeckele",
+      "pitcher": "Victor Frederick",
       "batter": "Hunter Carns",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1901,7 +1908,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Evan Hoeckele",
+      "pitcher": "Victor Frederick",
       "batter": "Nathan Cmeyla",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1928,7 +1935,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Evan Hoeckele",
+      "pitcher": "Victor Frederick",
       "batter": "Ben Barrett",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1955,7 +1962,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Payton Manca",
+      "pitcher": "Gabe Nard",
       "batter": "Ayden Frey",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1982,7 +1989,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Payton Manca",
+      "pitcher": "Gabe Nard",
       "batter": "Cristian Bernardini",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2009,7 +2016,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Payton Manca",
+      "pitcher": "",
       "batter": "Rob Mansour",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2036,7 +2043,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Evan Hoeckele",
+      "pitcher": "Victor Frederick",
       "batter": "Gabe Fraser",
       "outcome": "Single",
       "count": "1-1",
@@ -2063,7 +2070,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Evan Hoeckele",
+      "pitcher": "Victor Frederick",
       "batter": "Carter McCulley",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2090,14 +2097,15 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Evan Hoeckele",
+      "pitcher": "Victor Frederick",
       "batter": "Cal Fisher",
       "outcome": "Home run",
       "count": "2-2",
       "pitches": "BFKB",
       "rbi": true,
       "runs_scored": [
-        "Cal Fisher"
+        "Cal Fisher",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -2119,7 +2127,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Evan Hoeckele",
+      "pitcher": "Victor Frederick",
       "batter": "John Stuetzer",
       "outcome": "Lineout",
       "count": "2-1",
@@ -2146,7 +2154,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Evan Hoeckele",
+      "pitcher": "Victor Frederick",
       "batter": "Brayden Dowd",
       "outcome": "Walk",
       "count": "3-1",
@@ -2173,7 +2181,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Evan Hoeckele",
+      "pitcher": "Victor Frederick",
       "batter": "Brody DeLamielleure",
       "outcome": "Strikeout (looking)",
       "count": "2-2",

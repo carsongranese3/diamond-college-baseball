@@ -3,7 +3,7 @@
   "date": "02/20/2026",
   "away_team": "Army West Point",
   "home_team": "South Carolina",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -292,8 +292,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Addison Ainsworth",
-        "2B": null,
+        "1B": null,
+        "2B": "Addison Ainsworth",
         "3B": null
       },
       "score": {
@@ -314,13 +314,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Addison Ainsworth",
-        "2B": null,
+        "1B": null,
+        "2B": "Addison Ainsworth",
         "3B": null
       },
       "runners_after": {
-        "1B": "Addison Ainsworth",
-        "2B": null,
+        "1B": null,
+        "2B": "Addison Ainsworth",
         "3B": null
       },
       "score": {
@@ -341,13 +341,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Addison Ainsworth",
-        "2B": null,
+        "1B": null,
+        "2B": "Addison Ainsworth",
         "3B": null
       },
       "runners_after": {
-        "1B": "Addison Ainsworth",
-        "2B": null,
+        "1B": null,
+        "2B": "Addison Ainsworth",
         "3B": null
       },
       "score": {
@@ -618,8 +618,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "David Dubrule",
-        "2B": null,
+        "1B": null,
+        "2B": "David Dubrule",
         "3B": null
       },
       "score": {
@@ -640,13 +640,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "David Dubrule",
-        "2B": null,
+        "1B": null,
+        "2B": "David Dubrule",
         "3B": null
       },
       "runners_after": {
-        "1B": "David Dubrule",
-        "2B": null,
+        "1B": null,
+        "2B": "David Dubrule",
         "3B": null
       },
       "score": {
@@ -667,13 +667,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "David Dubrule",
-        "2B": null,
+        "1B": null,
+        "2B": "David Dubrule",
         "3B": null
       },
       "runners_after": {
         "1B": "Jack Quinlan",
-        "2B": null,
+        "2B": "David Dubrule",
         "3B": null
       },
       "score": {
@@ -690,17 +690,19 @@
       "count": "2-1",
       "pitches": "FBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jack Quinlan",
-        "2B": null,
+        "2B": "David Dubrule",
         "3B": null
       },
       "runners_after": {
         "1B": "Addison Ainsworth",
-        "2B": null,
+        "2B": "David Dubrule",
         "3B": null
       },
       "score": {
@@ -722,12 +724,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Addison Ainsworth",
-        "2B": null,
+        "2B": "David Dubrule",
         "3B": null
       },
       "runners_after": {
         "1B": "Addison Ainsworth",
-        "2B": null,
+        "2B": "David Dubrule",
         "3B": null
       },
       "score": {
@@ -934,7 +936,8 @@
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Chris Barr"
+        "Chris Barr",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1313,7 +1316,9 @@
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1664,7 +1669,9 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1746,7 +1753,9 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Josiah Overbeek"
+        "Josiah Overbeek",
+        null,
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -2154,7 +2163,9 @@
       "count": "1-1",
       "pitches": "BK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2208,7 +2219,9 @@
       "count": "3-1",
       "pitches": "KBBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2229,13 +2242,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jakob Vanderhave",
+      "pitcher": "Josiah Overbeek",
       "batter": "Logan Sutter",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "BKKBBFB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -2256,7 +2271,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jakob Vanderhave",
+      "pitcher": "Josiah Overbeek",
       "batter": "Tyler Bak",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2391,7 +2406,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jakob Vanderhave",
+      "pitcher": "Josiah Overbeek",
       "batter": "KJ Scobey",
       "outcome": "Flyout",
       "count": "2-2",
@@ -2418,7 +2433,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jakob Vanderhave",
+      "pitcher": "Josiah Overbeek",
       "batter": "Reese Moore",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2445,7 +2460,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jakob Vanderhave",
+      "pitcher": "Josiah Overbeek",
       "batter": "Talmadge LeCroy",
       "outcome": "Home run",
       "count": "2-2",
@@ -2474,7 +2489,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Jakob Vanderhave",
+      "pitcher": "Josiah Overbeek",
       "batter": "Ethan Lizama",
       "outcome": "Lineout",
       "count": "3-1",

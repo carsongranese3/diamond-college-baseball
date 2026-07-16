@@ -3,7 +3,7 @@
   "date": "02/15/2026",
   "away_team": "Washington",
   "home_team": "Boston College",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -50,7 +50,7 @@
       },
       "runners_after": {
         "1B": "Tyler Cowan",
-        "2B": null,
+        "2B": "Blake Wilson",
         "3B": null
       },
       "score": {
@@ -72,12 +72,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Tyler Cowan",
-        "2B": null,
+        "2B": "Blake Wilson",
         "3B": null
       },
       "runners_after": {
         "1B": "Colton Bower",
-        "2B": null,
+        "2B": "Tyler Cowan",
         "3B": null
       },
       "score": {
@@ -99,13 +99,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Colton Bower",
-        "2B": null,
+        "2B": "Tyler Cowan",
         "3B": null
       },
       "runners_after": {
         "1B": "Aidan Dougherty",
         "2B": null,
-        "3B": null
+        "3B": "Tyler Cowan"
       },
       "score": {
         "away": 0,
@@ -127,12 +127,12 @@
       "runners_before": {
         "1B": "Aidan Dougherty",
         "2B": null,
-        "3B": null
+        "3B": "Tyler Cowan"
       },
       "runners_after": {
-        "1B": "Aidan Dougherty",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Aidan Dougherty",
+        "3B": "Tyler Cowan"
       },
       "score": {
         "away": 0,
@@ -152,14 +152,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Aidan Dougherty",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Aidan Dougherty",
+        "3B": "Tyler Cowan"
       },
       "runners_after": {
-        "1B": "Aidan Dougherty",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Aidan Dougherty",
+        "3B": "Tyler Cowan"
       },
       "score": {
         "away": 0,
@@ -265,8 +265,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ty Mainolfi",
-        "2B": null,
+        "1B": null,
+        "2B": "Ty Mainolfi",
         "3B": null
       },
       "score": {
@@ -287,14 +287,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ty Mainolfi",
-        "2B": null,
+        "1B": null,
+        "2B": "Ty Mainolfi",
         "3B": null
       },
       "runners_after": {
         "1B": "Jack Toomey",
         "2B": null,
-        "3B": null
+        "3B": "Ty Mainolfi"
       },
       "score": {
         "away": 0,
@@ -310,18 +310,20 @@
       "count": "0-2",
       "pitches": "KK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ty Mainolfi"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Jack Toomey",
         "2B": null,
-        "3B": null
+        "3B": "Ty Mainolfi"
       },
       "runners_after": {
         "1B": "Kyle Wolff",
         "2B": null,
-        "3B": null
+        "3B": "Jack Toomey"
       },
       "score": {
         "away": 0,
@@ -343,12 +345,12 @@
       "runners_before": {
         "1B": "Kyle Wolff",
         "2B": null,
-        "3B": null
+        "3B": "Jack Toomey"
       },
       "runners_after": {
         "1B": "Kyle Wolff",
         "2B": null,
-        "3B": null
+        "3B": "Jack Toomey"
       },
       "score": {
         "away": 0,
@@ -508,8 +510,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Gunnar Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Gunnar Johnson",
         "3B": null
       },
       "score": {
@@ -530,13 +532,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Gunnar Johnson",
-        "2B": null,
+        "1B": null,
+        "2B": "Gunnar Johnson",
         "3B": null
       },
       "runners_after": {
         "1B": "Colin Larson",
-        "2B": null,
+        "2B": "Gunnar Johnson",
         "3B": null
       },
       "score": {
@@ -558,13 +560,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Colin Larson",
-        "2B": null,
+        "2B": "Gunnar Johnson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Colin Larson",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Colin Larson",
+        "3B": "Gunnar Johnson"
       },
       "score": {
         "away": 0,
@@ -580,16 +582,19 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Gunnar Johnson",
+        "Colin Larson"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Colin Larson",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Colin Larson",
+        "3B": "Gunnar Johnson"
       },
       "runners_after": {
-        "1B": "Colin Larson",
+        "1B": null,
         "2B": null,
         "3B": "Julio Solier"
       },
@@ -607,18 +612,20 @@
       "count": "3-1",
       "pitches": "BBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Julio Solier"
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Colin Larson",
+        "1B": null,
         "2B": null,
         "3B": "Julio Solier"
       },
       "runners_after": {
-        "1B": "Colin Larson",
+        "1B": null,
         "2B": null,
-        "3B": "Julio Solier"
+        "3B": null
       },
       "score": {
         "away": 0,
@@ -638,14 +645,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Colin Larson",
+        "1B": null,
         "2B": null,
-        "3B": "Julio Solier"
+        "3B": null
       },
       "runners_after": {
-        "1B": "Colin Larson",
+        "1B": null,
         "2B": null,
-        "3B": "Julio Solier"
+        "3B": null
       },
       "score": {
         "away": 0,
@@ -913,7 +920,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Aidan Dougherty",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1114,7 +1121,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Gunnar Nichols",
+      "pitcher": "Jackson Thomas",
       "batter": "Julio Solier",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1141,7 +1148,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Gunnar Nichols",
+      "pitcher": "Jackson Thomas",
       "batter": "Nick Wang",
       "outcome": "Home run",
       "count": "3-1",
@@ -1170,7 +1177,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Gunnar Nichols",
+      "pitcher": "Jackson Thomas",
       "batter": "Ty Mainolfi",
       "outcome": "Walk",
       "count": "3-0",
@@ -1197,13 +1204,14 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Gunnar Nichols",
+      "pitcher": "Jackson Thomas",
       "batter": "Jack Toomey",
       "outcome": "Home run",
       "count": "3-1",
       "pitches": "SBBB",
       "rbi": true,
       "runs_scored": [
+        "Ty Mainolfi",
         "Jack Toomey"
       ],
       "outs_before": 1,
@@ -1214,7 +1222,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ty Mainolfi",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1226,7 +1234,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Gunnar Nichols",
+      "pitcher": "Jackson Thomas",
       "batter": "Kyle Wolff",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1236,12 +1244,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ty Mainolfi",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Ty Mainolfi",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1253,7 +1261,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Gunnar Nichols",
+      "pitcher": "Jackson Thomas",
       "batter": "Ben Williams",
       "outcome": "Reached on error",
       "count": "2-0",
@@ -1263,7 +1271,7 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ty Mainolfi",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -1280,7 +1288,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Gunnar Nichols",
+      "pitcher": "Jackson Thomas",
       "batter": "Gunnar Johnson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1307,7 +1315,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tyler Mudd",
+      "pitcher": "Chase Hartsell",
       "batter": "Tyler Cowan",
       "outcome": "Walk",
       "count": "3-2",
@@ -1334,7 +1342,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tyler Mudd",
+      "pitcher": "Chase Hartsell",
       "batter": "Colton Bower",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1361,7 +1369,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tyler Mudd",
+      "pitcher": "Chase Hartsell",
       "batter": "Aidan Dougherty",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1388,7 +1396,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tyler Mudd",
+      "pitcher": "Chase Hartsell",
       "batter": "Braeden Terry",
       "outcome": "Foul out",
       "count": "1-1",
@@ -1415,7 +1423,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gunnar Nichols",
+      "pitcher": "Jackson Thomas",
       "batter": "Colin Larson",
       "outcome": "Walk",
       "count": "3-2",
@@ -1442,7 +1450,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gunnar Nichols",
+      "pitcher": "Jackson Thomas",
       "batter": "Sean Martinez",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1469,7 +1477,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gunnar Nichols",
+      "pitcher": "Jackson Thomas",
       "batter": "Julio Solier",
       "outcome": "Single",
       "count": "0-1",
@@ -1485,7 +1493,7 @@
       },
       "runners_after": {
         "1B": "Julio Solier",
-        "2B": null,
+        "2B": "Colin Larson",
         "3B": null
       },
       "score": {
@@ -1496,7 +1504,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gunnar Nichols",
+      "pitcher": "Jackson Thomas",
       "batter": "Nick Wang",
       "outcome": "Walk",
       "count": "3-2",
@@ -1507,13 +1515,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Julio Solier",
-        "2B": null,
+        "2B": "Colin Larson",
         "3B": null
       },
       "runners_after": {
         "1B": "Nick Wang",
-        "2B": null,
-        "3B": null
+        "2B": "Julio Solier",
+        "3B": "Colin Larson"
       },
       "score": {
         "away": 0,
@@ -1523,23 +1531,25 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gunnar Nichols",
+      "pitcher": "Jackson Thomas",
       "batter": "Ty Mainolfi",
       "outcome": "\u2014",
       "count": "1-2",
       "pitches": "BFKFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Colin Larson"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Nick Wang",
-        "2B": null,
-        "3B": null
+        "2B": "Julio Solier",
+        "3B": "Colin Larson"
       },
       "runners_after": {
         "1B": "Nick Wang",
-        "2B": null,
+        "2B": "Julio Solier",
         "3B": null
       },
       "score": {
@@ -1550,7 +1560,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gunnar Nichols",
+      "pitcher": "Jackson Thomas",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1561,13 +1571,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Nick Wang",
-        "2B": null,
+        "2B": "Julio Solier",
         "3B": null
       },
       "runners_after": {
-        "1B": "Nick Wang",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Nick Wang",
+        "3B": "Julio Solier"
       },
       "score": {
         "away": 0,
@@ -1577,7 +1587,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gunnar Nichols",
+      "pitcher": "Jackson Thomas",
       "batter": "Jack Toomey",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1587,14 +1597,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Nick Wang",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Nick Wang",
+        "3B": "Julio Solier"
       },
       "runners_after": {
-        "1B": "Nick Wang",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Nick Wang",
+        "3B": "Julio Solier"
       },
       "score": {
         "away": 0,
@@ -1604,7 +1614,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tyler Mudd",
+      "pitcher": "Chase Hartsell",
       "batter": "Ethan Swidler",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1631,7 +1641,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tyler Mudd",
+      "pitcher": "Chase Hartsell",
       "batter": "Casen Taggart",
       "outcome": "Lineout",
       "count": "0-0",
@@ -1658,7 +1668,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Tyler Mudd",
+      "pitcher": "Chase Hartsell",
       "batter": "Ian Draper",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1685,7 +1695,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Gunnar Nichols",
+      "pitcher": "Jaxson Gore",
       "batter": "Kyle Wolff",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1712,7 +1722,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Gunnar Nichols",
+      "pitcher": "Jaxson Gore",
       "batter": "Esteban Garcia",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1739,7 +1749,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Gunnar Nichols",
+      "pitcher": "Jaxson Gore",
       "batter": "Gunnar Johnson",
       "outcome": "Hit by pitch",
       "count": "2-0",
@@ -1766,7 +1776,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Gunnar Nichols",
+      "pitcher": "Jaxson Gore",
       "batter": "Colin Larson",
       "outcome": "Walk",
       "count": "3-1",
@@ -1782,7 +1792,7 @@
       },
       "runners_after": {
         "1B": "Colin Larson",
-        "2B": null,
+        "2B": "Gunnar Johnson",
         "3B": null
       },
       "score": {
@@ -1793,7 +1803,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Gunnar Nichols",
+      "pitcher": "Jaxson Gore",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1804,13 +1814,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Colin Larson",
-        "2B": null,
+        "2B": "Gunnar Johnson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Colin Larson",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Colin Larson",
+        "3B": "Gunnar Johnson"
       },
       "score": {
         "away": 0,
@@ -1820,19 +1830,22 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Gunnar Nichols",
+      "pitcher": "Jaxson Gore",
       "batter": "Sean Martinez",
       "outcome": "Single",
       "count": "1-1",
       "pitches": "BF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Gunnar Johnson",
+        "Colin Larson"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Colin Larson",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Colin Larson",
+        "3B": "Gunnar Johnson"
       },
       "runners_after": {
         "1B": "Sean Martinez",

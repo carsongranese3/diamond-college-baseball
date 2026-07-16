@@ -3,7 +3,7 @@
   "date": "03/01/2026",
   "away_team": "Nebraska",
   "home_team": "Auburn",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -49,7 +49,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mac Moyer",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -71,12 +71,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Mac Moyer",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Mac Moyer",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -98,12 +98,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Mac Moyer",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Mac Moyer",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -202,7 +202,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -445,7 +447,9 @@
       "count": "3-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -535,9 +539,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lucas Steele",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Lucas Steele"
       },
       "score": {
         "away": 0,
@@ -554,19 +558,21 @@
       "pitches": "",
       "rbi": true,
       "runs_scored": [
-        "Chase Fralick"
+        "Chase Fralick",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Lucas Steele",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Lucas Steele"
       },
       "runners_after": {
-        "1B": "Lucas Steele",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Lucas Steele"
       },
       "score": {
         "away": 0,
@@ -586,14 +592,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Lucas Steele",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Lucas Steele"
       },
       "runners_after": {
         "1B": "Bub Terrell",
         "2B": null,
-        "3B": null
+        "3B": "Lucas Steele"
       },
       "score": {
         "away": 0,
@@ -615,12 +621,12 @@
       "runners_before": {
         "1B": "Bub Terrell",
         "2B": null,
-        "3B": null
+        "3B": "Lucas Steele"
       },
       "runners_after": {
         "1B": "Bub Terrell",
         "2B": null,
-        "3B": null
+        "3B": "Lucas Steele"
       },
       "score": {
         "away": 0,
@@ -708,6 +714,33 @@
         "home": 5
       },
       "description": "Buck, J. flied out to cf (0-1)."
+    },
+    {
+      "inning": "Bottom 3",
+      "pitcher": "Kevin Mannell",
+      "batter": "Mannell, K. to p for Blachowicz.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 5
+      },
+      "description": "Mannell, K. to p for Blachowicz."
     },
     {
       "inning": "Bottom 3",
@@ -834,8 +867,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Case Sanderson",
-        "2B": null,
+        "1B": null,
+        "2B": "Case Sanderson",
         "3B": null
       },
       "score": {
@@ -856,13 +889,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Case Sanderson",
-        "2B": null,
+        "1B": null,
+        "2B": "Case Sanderson",
         "3B": null
       },
       "runners_after": {
         "1B": "Josh Overbeek",
-        "2B": null,
+        "2B": "Case Sanderson",
         "3B": null
       },
       "score": {
@@ -884,12 +917,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Josh Overbeek",
-        "2B": null,
+        "2B": "Case Sanderson",
         "3B": null
       },
       "runners_after": {
         "1B": "Dylan Carey",
-        "2B": null,
+        "2B": "Case Sanderson",
         "3B": null
       },
       "score": {
@@ -911,12 +944,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Dylan Carey",
-        "2B": null,
+        "2B": "Case Sanderson",
         "3B": null
       },
       "runners_after": {
         "1B": "Dylan Carey",
-        "2B": null,
+        "2B": "Case Sanderson",
         "3B": null
       },
       "score": {
@@ -933,17 +966,19 @@
       "count": "2-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Dylan Carey",
-        "2B": null,
+        "2B": "Case Sanderson",
         "3B": null
       },
       "runners_after": {
         "1B": "Cole Kitchens",
-        "2B": null,
+        "2B": "Case Sanderson",
         "3B": null
       },
       "score": {
@@ -960,17 +995,19 @@
       "count": null,
       "pitches": null,
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": "Cole Kitchens",
-        "2B": null,
+        "2B": "Case Sanderson",
         "3B": null
       },
       "runners_after": {
         "1B": "Cole Kitchens",
-        "2B": null,
+        "2B": "Case Sanderson",
         "3B": null
       },
       "score": {
@@ -992,12 +1029,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Cole Kitchens",
-        "2B": null,
+        "2B": "Case Sanderson",
         "3B": null
       },
       "runners_after": {
         "1B": "Cole Kitchens",
-        "2B": null,
+        "2B": "Case Sanderson",
         "3B": null
       },
       "score": {
@@ -1050,8 +1087,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -1068,17 +1105,19 @@
       "count": "3-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
         "1B": "Lucas Steele",
-        "2B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -1100,12 +1139,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Lucas Steele",
-        "2B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
         "1B": "Bristol Carter",
-        "2B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -1127,12 +1166,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Bristol Carter",
-        "2B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "score": {
@@ -1153,13 +1192,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "score": {
@@ -1180,13 +1219,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "runners_after": {
-        "1B": "Bristol Carter",
-        "2B": null,
+        "1B": null,
+        "2B": "Bristol Carter",
         "3B": null
       },
       "score": {
@@ -1414,6 +1453,33 @@
     {
       "inning": "Top 6",
       "pitcher": "LJ Cormier",
+      "batter": "Cormier, L. to p for Petrovic, A..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Josh Overbeek",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Josh Overbeek",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 6
+      },
+      "description": "Cormier, L. to p for Petrovic, A.."
+    },
+    {
+      "inning": "Top 6",
+      "pitcher": "LJ Cormier",
       "batter": "Dylan Carey",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1575,7 +1641,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Kevin Mannell",
+      "pitcher": "Braxton Stewart",
       "batter": "Bristol Carter",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1710,7 +1776,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Kevin Mannell",
+      "pitcher": "Braxton Stewart",
       "batter": "Worthley, Je to c.",
       "outcome": "\u2014",
       "count": null,
@@ -1734,6 +1800,33 @@
         "home": 6
       },
       "description": "Worthley, Je to c."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Braxton Stewart",
+      "batter": "Stewart, B. to p for Mannell, K..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 6
+      },
+      "description": "Stewart, B. to p for Mannell, K.."
     },
     {
       "inning": "Bottom 7",
@@ -1764,7 +1857,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Braxton Stewart",
+      "pitcher": "Auden Pankonin",
       "batter": "Bub Terrell",
       "outcome": "\u2014",
       "count": "1-2",
@@ -1791,7 +1884,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Braxton Stewart",
+      "pitcher": "Auden Pankonin",
       "batter": "Eric Guevara",
       "outcome": "Hit by pitch",
       "count": "2-0",
@@ -1818,7 +1911,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Braxton Stewart",
+      "pitcher": "Auden Pankonin",
       "batter": "Mason McCraine",
       "outcome": "Walk",
       "count": "3-2",
@@ -1845,7 +1938,34 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Auden Pankonin",
+      "pitcher": "Grant Cleavinger",
+      "batter": "Pankonin, A. to p for Stewart, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Mason McCraine",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Mason McCraine",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 6
+      },
+      "description": "Pankonin, A. to p for Stewart, B.."
+    },
+    {
+      "inning": "Bottom 7",
+      "pitcher": "Jace Ziola",
       "batter": "Chris Rembert",
       "outcome": "Walk",
       "count": "3-1",
@@ -1872,13 +1992,16 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Auden Pankonin",
+      "pitcher": "Jace Ziola",
       "batter": "Logan Gregorio",
       "outcome": "Single",
       "count": "2-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1899,7 +2022,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Auden Pankonin",
+      "pitcher": "Jace Ziola",
       "batter": "Mason McCraine",
       "outcome": "Walk",
       "count": "3-2",
@@ -1926,7 +2049,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Grant Cleavinger",
+      "pitcher": "Cooper Grace",
       "batter": "Lucas Steele",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1980,7 +2103,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "LJ Cormier",
+      "pitcher": "Drew Whalen",
       "batter": "Dylan Carey",
       "outcome": "Double",
       "count": null,
@@ -2008,12 +2131,41 @@
     {
       "inning": "Top 8",
       "pitcher": "Drew Whalen",
+      "batter": "Whalen, D. to p for Cormier, L..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Josh Overbeek",
+        "2B": "Dylan Carey",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Josh Overbeek",
+        "2B": "Dylan Carey",
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 8
+      },
+      "description": "Whalen, D. to p for Cormier, L.."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Drew Whalen",
       "batter": "Max Buettenback",
       "outcome": "Flyout",
       "count": "0-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -2061,7 +2213,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Drew Whalen",
+      "pitcher": "Ethin Bingaman",
       "batter": "Devin Nunez",
       "outcome": "Walk",
       "count": "3-2",
@@ -2088,7 +2240,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Drew Whalen",
+      "pitcher": "Ethin Bingaman",
       "batter": "Jeter Worthley",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2115,7 +2267,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jace Ziola",
+      "pitcher": "Cooper Grace",
+      "batter": "Ziola, J. to p for Cleavinger.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 8
+      },
+      "description": "Ziola, J. to p for Cleavinger."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Cooper Grace",
       "batter": "Bristol Carter",
       "outcome": "Walk",
       "count": "3-1",
@@ -2142,7 +2321,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jace Ziola",
+      "pitcher": "Caleb Clark",
       "batter": "Chase Fralick",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -2169,7 +2348,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jace Ziola",
+      "pitcher": "Caleb Clark",
       "batter": "Bub Terrell",
       "outcome": "Walk",
       "count": "3-0",
@@ -2196,13 +2375,42 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cooper Grace",
+      "pitcher": "Caleb Clark",
+      "batter": "Grace, C. to p for Ziola, J..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Bub Terrell",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Bub Terrell",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 8
+      },
+      "description": "Grace, C. to p for Ziola, J.."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Caleb Clark",
       "batter": "Eric Guevara",
       "outcome": "Walk",
       "count": "3-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -2223,13 +2431,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cooper Grace",
+      "pitcher": "",
       "batter": "Mason McCraine",
       "outcome": "Walk",
       "count": "3-1",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -2250,13 +2460,15 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Cooper Grace",
+      "pitcher": "",
       "batter": "Chris Rembert",
       "outcome": "Walk",
       "count": "3-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -2277,13 +2489,42 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Caleb Clark",
+      "pitcher": "",
+      "batter": "Clark, C. to p for Grace, C..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Chris Rembert",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Chris Rembert",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 11
+      },
+      "description": "Clark, C. to p for Grace, C.."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Logan Gregorio",
       "outcome": "Grounded into double play",
       "count": "3-2",
       "pitches": "",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -2304,7 +2545,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Caleb Clark",
+      "pitcher": "",
       "batter": "Mason McCraine",
       "outcome": "Walk",
       "count": "3-2",
@@ -2331,7 +2572,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Caleb Clark",
+      "pitcher": "",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2346,8 +2587,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -2358,7 +2599,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Caleb Clark",
+      "pitcher": "",
       "batter": "Lucas Steele",
       "outcome": "Walk",
       "count": "3-1",
@@ -2368,13 +2609,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Mason McCraine",
-        "2B": null,
+        "1B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
         "1B": "Lucas Steele",
-        "2B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -2385,7 +2626,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Caleb Clark",
+      "pitcher": "",
       "batter": "Bristol Carter",
       "outcome": "Groundout",
       "count": "2-1",
@@ -2396,12 +2637,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Lucas Steele",
-        "2B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "runners_after": {
         "1B": "Lucas Steele",
-        "2B": null,
+        "2B": "Mason McCraine",
         "3B": null
       },
       "score": {
@@ -2409,6 +2650,33 @@
         "home": 12
       },
       "description": "Carter, B. grounded out to 1b unassisted (2-1)."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "Ethin Bingaman",
+      "batter": "Bingaman, E. to p for Whalen, D..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 12
+      },
+      "description": "Bingaman, E. to p for Whalen, D.."
     },
     {
       "inning": "Top 9",
@@ -2466,7 +2734,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethin Bingaman",
+      "pitcher": "",
       "batter": "Case Sanderson",
       "outcome": "Double",
       "count": "2-2",
@@ -2493,7 +2761,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethin Bingaman",
+      "pitcher": "",
       "batter": "Josh Overbeek",
       "outcome": "Pop out",
       "count": "1-0",
@@ -2520,7 +2788,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethin Bingaman",
+      "pitcher": "",
       "batter": "Dylan Carey",
       "outcome": "Pop out",
       "count": "1-0",

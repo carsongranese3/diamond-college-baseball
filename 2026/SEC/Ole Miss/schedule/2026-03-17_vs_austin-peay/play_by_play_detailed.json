@@ -3,7 +3,7 @@
   "date": "03/17/2026",
   "away_team": "Austin Peay",
   "home_team": "Ole Miss",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -149,7 +149,8 @@
       "pitches": "K",
       "rbi": true,
       "runs_scored": [
-        "Tristan Bissetta"
+        "Tristan Bissetta",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -240,9 +241,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Collin Reuter",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Collin Reuter"
       },
       "score": {
         "away": 0,
@@ -262,14 +263,14 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Collin Reuter",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Collin Reuter"
       },
       "runners_after": {
-        "1B": "Collin Reuter",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Collin Reuter"
       },
       "score": {
         "away": 0,
@@ -289,14 +290,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Collin Reuter",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Collin Reuter"
       },
       "runners_after": {
-        "1B": "Collin Reuter",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Collin Reuter"
       },
       "score": {
         "away": 0,
@@ -316,14 +317,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Collin Reuter",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Collin Reuter"
       },
       "runners_after": {
-        "1B": "Collin Reuter",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Collin Reuter"
       },
       "score": {
         "away": 0,
@@ -411,6 +412,33 @@
         "home": 2
       },
       "description": "PROCTOR, K. grounded into double play ss to 2b to 1b (0-0); CONLEY, T. out on the play."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Elijah Underhill",
+      "batter": "UNDERHILL, E to p for COX, C..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 2
+      },
+      "description": "UNDERHILL, E to p for COX, C.."
     },
     {
       "inning": "Bottom 2",
@@ -528,7 +556,9 @@
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -555,7 +585,10 @@
       "count": "3-1",
       "pitches": "BBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -576,7 +609,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Elijah Underhill",
+      "pitcher": "Brody Lanham",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -605,7 +638,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Elijah Underhill",
+      "pitcher": "Brody Lanham",
       "batter": "Will Furniss",
       "outcome": "Walk",
       "count": "3-2",
@@ -633,12 +666,41 @@
     {
       "inning": "Bottom 2",
       "pitcher": "Brody Lanham",
+      "batter": "LANHAM, B. to p for UNDERHILL, E.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Will Furniss",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Will Furniss",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 6
+      },
+      "description": "LANHAM, B. to p for UNDERHILL, E."
+    },
+    {
+      "inning": "Bottom 2",
+      "pitcher": "Brody Lanham",
       "batter": "Tate Sirmans",
       "outcome": "Fielder's choice",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -674,8 +736,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tate Sirmans",
-        "2B": null,
+        "1B": null,
+        "2B": "Tate Sirmans",
         "3B": null
       },
       "score": {
@@ -696,13 +758,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Tate Sirmans",
-        "2B": null,
+        "1B": null,
+        "2B": "Tate Sirmans",
         "3B": null
       },
       "runners_after": {
         "1B": "Brayden Randle",
-        "2B": null,
+        "2B": "Tate Sirmans",
         "3B": null
       },
       "score": {
@@ -724,12 +786,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Brayden Randle",
-        "2B": null,
+        "2B": "Tate Sirmans",
         "3B": null
       },
       "runners_after": {
         "1B": "Brayden Randle",
-        "2B": null,
+        "2B": "Tate Sirmans",
         "3B": null
       },
       "score": {
@@ -740,7 +802,34 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "T.",
+      "pitcher": "Terry Hayes Jr.",
+      "batter": "T. Hayes",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 7
+      },
+      "description": "T. Hayes Jr. to p for O. Kelly."
+    },
+    {
+      "inning": "Top 3",
+      "pitcher": "Terry Hayes Jr.",
       "batter": "Mason Pangborn",
       "outcome": "Hit by pitch",
       "count": "3-2",
@@ -767,7 +856,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "T.",
+      "pitcher": "Terry Hayes Jr.",
       "batter": "Keaton Cottam",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -794,7 +883,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "T.",
+      "pitcher": "Terry Hayes Jr.",
       "batter": "Paris Pridgen",
       "outcome": "Walk",
       "count": "3-2",
@@ -821,7 +910,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "T.",
+      "pitcher": "Terry Hayes Jr.",
       "batter": "Zion Taylor",
       "outcome": "Fielder's choice",
       "count": "2-2",
@@ -848,13 +937,15 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "T.",
+      "pitcher": "Terry Hayes Jr.",
       "batter": "Ray Velazquez",
       "outcome": "Single",
       "count": "3-2",
       "pitches": "BBBKS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -875,13 +966,16 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "T.",
+      "pitcher": "Grayson Gibson",
       "batter": "Ty Wisdom",
       "outcome": "Double",
       "count": "3-2",
       "pitches": "BKBBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -902,13 +996,42 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "G.",
+      "pitcher": "Grayson Gibson",
+      "batter": "G. Gibson",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Ray Velazquez",
+        "2B": "Ty Wisdom",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Ray Velazquez",
+        "2B": "Ty Wisdom",
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 7
+      },
+      "description": "G. Gibson to p for T. Hayes Jr.."
+    },
+    {
+      "inning": "Top 3",
+      "pitcher": "Grayson Gibson",
       "batter": "Cole Johnson",
       "outcome": "Double",
       "count": "0-1",
       "pitches": "S",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -929,7 +1052,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "G.",
+      "pitcher": "Grayson Gibson",
       "batter": "Trevor Conley",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1017,7 +1140,8 @@
       "pitches": "BBFB",
       "rbi": true,
       "runs_scored": [
-        "Tristan Bissetta"
+        "Tristan Bissetta",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1066,7 +1190,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Brody Lanham",
+      "pitcher": "Bryce McCain",
       "batter": "Collin Reuter",
       "outcome": "Hit by pitch",
       "count": "1-0",
@@ -1093,7 +1217,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Brody Lanham",
+      "pitcher": "Bryce McCain",
       "batter": "Will Furniss",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1120,7 +1244,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "G.",
+      "pitcher": "Grayson Gibson",
       "batter": "Kyler Proctor",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1147,7 +1271,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "G.",
+      "pitcher": "Grayson Gibson",
       "batter": "Mason Pangborn",
       "outcome": "Walk",
       "count": "3-1",
@@ -1174,7 +1298,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "G.",
+      "pitcher": "Grayson Gibson",
       "batter": "Keaton Cottam",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1201,7 +1325,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "G.",
+      "pitcher": "Grayson Gibson",
       "batter": "Paris Pridgen",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1225,6 +1349,33 @@
         "home": 9
       },
       "description": "PRIDGEN, P. struck out swinging (0-2 KKFS)."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Bryce McCain",
+      "batter": "MCCAIN, B. to p for LANHAM, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 4,
+        "home": 9
+      },
+      "description": "MCCAIN, B. to p for LANHAM, B.."
     },
     {
       "inning": "Bottom 4",
@@ -1336,7 +1487,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "G.",
+      "pitcher": "Grayson Gibson",
       "batter": "Zion Taylor",
       "outcome": "Single",
       "count": "3-1",
@@ -1363,7 +1514,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "G.",
+      "pitcher": "Grayson Gibson",
       "batter": "Ray Velazquez",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1390,7 +1541,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "G.",
+      "pitcher": "Grayson Gibson",
       "batter": "Ty Wisdom",
       "outcome": "Lineout",
       "count": "0-0",
@@ -1417,13 +1568,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "G.",
+      "pitcher": "Owen Hancock",
       "batter": "Cole Johnson",
       "outcome": "Double",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1444,7 +1597,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "G.",
+      "pitcher": "Owen Hancock",
       "batter": "Trevor Conley",
       "outcome": "Single",
       "count": "0-0",
@@ -1471,9 +1624,9 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "O.",
-      "batter": null,
-      "outcome": "Stolen base",
+      "pitcher": "Owen Hancock",
+      "batter": "O. Hancock",
+      "outcome": "\u2014",
       "count": null,
       "pitches": null,
       "rbi": false,
@@ -1494,11 +1647,38 @@
         "away": 5,
         "home": 9
       },
+      "description": "O. Hancock to p for G. Gibson."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Owen Hancock",
+      "batter": null,
+      "outcome": "Stolen base",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Trevor Conley",
+        "2B": "Cole Johnson",
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": "Trevor Conley",
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 9
+      },
       "description": "CONLEY, T. stole second."
     },
     {
       "inning": "Top 5",
-      "pitcher": "O.",
+      "pitcher": "Owen Hancock",
       "batter": "Kyler Proctor",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1508,13 +1688,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Trevor Conley",
-        "2B": "Cole Johnson",
+        "1B": null,
+        "2B": "Trevor Conley",
         "3B": null
       },
       "runners_after": {
-        "1B": "Trevor Conley",
-        "2B": "Cole Johnson",
+        "1B": null,
+        "2B": "Trevor Conley",
         "3B": null
       },
       "score": {
@@ -1633,7 +1813,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "O.",
+      "pitcher": "Owen Hancock",
       "batter": "Mason Pangborn",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1660,7 +1840,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "O.",
+      "pitcher": "Owen Hancock",
       "batter": "Keaton Cottam",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1687,7 +1867,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "O.",
+      "pitcher": "Owen Hancock",
       "batter": "Paris Pridgen",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1795,7 +1975,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "O.",
+      "pitcher": "Owen Hancock",
       "batter": "Zion Taylor",
       "outcome": "Single",
       "count": "0-0",
@@ -1822,7 +2002,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "O.",
+      "pitcher": "JP Robertson",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
@@ -1849,7 +2029,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "O.",
+      "pitcher": "JP Robertson",
       "batter": "Ty Wisdom",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1876,7 +2056,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "O.",
+      "pitcher": "JP Robertson",
       "batter": "Cole Johnson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1903,7 +2083,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Bryce McCain",
+      "pitcher": "Dylan Kazee",
       "batter": "Owen Paino",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1930,7 +2110,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Bryce McCain",
+      "pitcher": "Jackson Hohensee",
       "batter": "Dom Decker",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1957,7 +2137,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Bryce McCain",
+      "pitcher": "Jackson Hohensee",
       "batter": "Hayden Federico",
       "outcome": "Lineout",
       "count": "3-2",
@@ -1984,7 +2164,34 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "JP Robertson",
+      "batter": "J. Robertson",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 9
+      },
+      "description": "J. Robertson to p for O. Hancock."
+    },
+    {
+      "inning": "Top 8",
+      "pitcher": "Landon Waters",
       "batter": "B. Moseley",
       "outcome": "\u2014",
       "count": null,
@@ -2011,7 +2218,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "Landon Waters",
       "batter": "Trevor Conley",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2038,7 +2245,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "Landon Waters",
       "batter": "Kyler Proctor",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2065,7 +2272,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "J.",
+      "pitcher": "Landon Waters",
       "batter": "Mason Pangborn",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2092,7 +2299,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Dylan Kazee",
+      "pitcher": "",
+      "batter": "KAZEE, D. to p for MCCAIN, B..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 9
+      },
+      "description": "KAZEE, D. to p for MCCAIN, B.."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Tristan Bissetta",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2119,7 +2353,34 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Hohensee",
+      "pitcher": "",
+      "batter": "HOHENSEE, J. to p for KAZEE, D..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 9
+      },
+      "description": "HOHENSEE, J. to p for KAZEE, D.."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "",
       "batter": "Judd Utermark",
       "outcome": "Groundout",
       "count": "0-0",
@@ -2146,7 +2407,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Jackson Hohensee",
+      "pitcher": "",
       "batter": "Collin Reuter",
       "outcome": "Flyout",
       "count": "3-2",
@@ -2173,7 +2434,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "",
+      "batter": "L. Waters",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 5,
+        "home": 9
+      },
+      "description": "L. Waters to p for J. Robertson."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": "Keaton Cottam",
       "outcome": "Walk",
       "count": "3-2",
@@ -2200,7 +2488,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Paris Pridgen",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -2227,7 +2515,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Zion Taylor",
       "outcome": "Groundout",
       "count": "1-2",
@@ -2254,7 +2542,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Ray Velazquez",
       "outcome": "Groundout",
       "count": "3-2",

@@ -3,7 +3,7 @@
   "date": "04/04/2026",
   "away_team": "Texas",
   "home_team": "South Carolina",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -148,7 +148,10 @@
       "count": "2-2",
       "pitches": "BBKFFFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -985,7 +988,9 @@
       "count": "2-1",
       "pitches": "BSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -1955,7 +1960,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Cooper Parks",
+      "pitcher": "",
       "batter": "Aiden Robbins",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",

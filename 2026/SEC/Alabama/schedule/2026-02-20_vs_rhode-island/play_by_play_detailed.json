@@ -3,7 +3,7 @@
   "date": "02/20/2026",
   "away_team": "Rhode Island",
   "home_team": "Alabama",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -542,8 +542,8 @@
         "3B": "Brennan Holt"
       },
       "runners_after": {
-        "1B": "Bryce Fowler",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Fowler",
         "3B": "Brennan Holt"
       },
       "score": {
@@ -564,13 +564,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Bryce Fowler",
-        "2B": null,
+        "1B": null,
+        "2B": "Bryce Fowler",
         "3B": "Brennan Holt"
       },
       "runners_after": {
         "1B": "Justin Lebron",
-        "2B": null,
+        "2B": "Bryce Fowler",
         "3B": "Brennan Holt"
       },
       "score": {
@@ -594,13 +594,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Justin Lebron",
-        "2B": null,
+        "2B": "Bryce Fowler",
         "3B": "Brennan Holt"
       },
       "runners_after": {
         "1B": "Brady Neal",
         "2B": "Justin Lebron",
-        "3B": null
+        "3B": "Bryce Fowler"
       },
       "score": {
         "away": 0,
@@ -618,14 +618,15 @@
       "rbi": true,
       "runs_scored": [
         "Brady Neal",
-        "Justin Lebron"
+        "Justin Lebron",
+        "Bryce Fowler"
       ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Brady Neal",
         "2B": "Justin Lebron",
-        "3B": null
+        "3B": "Bryce Fowler"
       },
       "runners_after": {
         "1B": null,
@@ -1357,7 +1358,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -1686,7 +1689,8 @@
       "pitches": "BB",
       "rbi": true,
       "runs_scored": [
-        "Justin Osterhouse"
+        "Justin Osterhouse",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -1847,7 +1851,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Tyler Fay",
+      "pitcher": "Connor Lehman",
       "batter": "Barnett",
       "outcome": "\u2014",
       "count": null,
@@ -1955,7 +1959,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Connor Lehman",
+      "pitcher": "Owen Sarna",
       "batter": "Adonis Medina",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2173,7 +2177,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Owen Sarna",
+      "pitcher": "",
       "batter": "Aidan Botti",
       "outcome": "Groundout",
       "count": "0-0",

@@ -3,7 +3,7 @@
   "date": "04/19/2026",
   "away_team": "Pittsburgh",
   "home_team": "Virginia Tech",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -400,8 +400,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Willie Hurt",
-        "2B": null,
+        "1B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "score": {
@@ -418,17 +418,19 @@
       "count": "2-1",
       "pitches": "KBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Willie Hurt",
-        "2B": null,
+        "1B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "runners_after": {
         "1B": "Sam Gates",
-        "2B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "score": {
@@ -450,12 +452,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Sam Gates",
-        "2B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "runners_after": {
         "1B": "Sam Gates",
-        "2B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "score": {
@@ -477,12 +479,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Sam Gates",
-        "2B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "runners_after": {
         "1B": "Anderson French",
-        "2B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "score": {
@@ -504,12 +506,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Anderson French",
-        "2B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "runners_after": {
         "1B": "Anderson French",
-        "2B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "score": {
@@ -581,7 +583,9 @@
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Caden Dulin"
+        "Caden Dulin",
+        null,
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -900,7 +904,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Aiden Robertson",
       "batter": "AJ Nessler",
       "outcome": "Groundout",
       "count": "2-2",
@@ -969,8 +973,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Willie Hurt",
-        "2B": null,
+        "1B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "score": {
@@ -991,13 +995,13 @@
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
-        "1B": "Willie Hurt",
-        "2B": null,
+        "1B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "runners_after": {
         "1B": "Sam Gates",
-        "2B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "score": {
@@ -1014,17 +1018,19 @@
       "count": "1-2",
       "pitches": "KSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
         "1B": "Sam Gates",
-        "2B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "runners_after": {
         "1B": "Sam Gates",
-        "2B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "score": {
@@ -1046,12 +1052,12 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Sam Gates",
-        "2B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "runners_after": {
         "1B": "Anderson French",
-        "2B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "score": {
@@ -1062,7 +1068,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Brandon Reiter",
       "batter": "Sam Grube",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1073,12 +1079,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Anderson French",
-        "2B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "runners_after": {
         "1B": "Anderson French",
-        "2B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "score": {
@@ -1089,7 +1095,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Brandon Reiter",
       "batter": "Nick Locurto",
       "outcome": "Walk",
       "count": "3-0",
@@ -1100,12 +1106,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Anderson French",
-        "2B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "runners_after": {
         "1B": "Nick Locurto",
-        "2B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "score": {
@@ -1116,7 +1122,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Brandon Reiter",
       "batter": "Ethan Ball",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1127,12 +1133,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Nick Locurto",
-        "2B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "runners_after": {
         "1B": "Nick Locurto",
-        "2B": null,
+        "2B": "Willie Hurt",
         "3B": null
       },
       "score": {
@@ -1143,7 +1149,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Aiden Robertson",
       "batter": "Caden Dulin",
       "outcome": "Double",
       "count": "0-0",
@@ -1170,13 +1176,15 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Aiden Robertson",
       "batter": "Lorenzo Carrier",
       "outcome": "Single",
       "count": "1-2",
       "pitches": "KSBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1197,7 +1205,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Aiden Robertson",
       "batter": "Kai Wagner",
       "outcome": "Walk",
       "count": "3-0",
@@ -1224,7 +1232,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Preston Crowl",
       "batter": "Trey Fenderson",
       "outcome": "Infield fly",
       "count": "1-2",
@@ -1251,7 +1259,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Preston Crowl",
       "batter": "Carter Dierdorf",
       "outcome": "Infield fly",
       "count": "0-1",
@@ -1278,7 +1286,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Preston Crowl",
       "batter": "Sebastian Pisacreta",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1305,7 +1313,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Brandon Reiter",
       "batter": "Hudson Lutterman",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1332,7 +1340,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Brandon Reiter",
       "batter": "Ethan Gibson",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1359,7 +1367,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Brandon Reiter",
       "batter": "Willie Hurt",
       "outcome": "Walk",
       "count": "3-1",
@@ -1386,7 +1394,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Brandon Reiter",
       "batter": "Sam Gates",
       "outcome": "Groundout",
       "count": "3-1",
@@ -1413,7 +1421,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Preston Crowl",
       "batter": "Jackson Cooke",
       "outcome": "Reached on error",
       "count": "0-0",
@@ -1440,7 +1448,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Preston Crowl",
       "batter": "Julian Irizarry",
       "outcome": "Flyout",
       "count": "1-0",
@@ -1467,7 +1475,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Preston Crowl",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1494,7 +1502,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Preston Crowl",
       "batter": "AJ Nessler",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1521,7 +1529,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Preston Crowl",
       "batter": "Caden Dulin",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1548,7 +1556,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Brandon Reiter",
       "batter": "Owen Petrich",
       "outcome": "Walk",
       "count": "3-0",
@@ -1575,7 +1583,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Brandon Reiter",
       "batter": "Anderson French",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1602,7 +1610,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Sam Grube",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1629,7 +1637,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Nick Locurto",
       "outcome": "Reached on error",
       "count": "0-0",
@@ -1656,7 +1664,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Ethan Ball",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1683,7 +1691,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Preston Crowl",
       "batter": "Lorenzo Carrier",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1710,7 +1718,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Preston Crowl",
       "batter": "Kai Wagner",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1737,7 +1745,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Preston Crowl",
       "batter": "Trey Fenderson",
       "outcome": "Single",
       "count": "0-1",
@@ -1764,7 +1772,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Preston Crowl",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1779,8 +1787,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Trey Fenderson",
-        "2B": null,
+        "1B": null,
+        "2B": "Trey Fenderson",
         "3B": null
       },
       "score": {
@@ -1791,7 +1799,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Preston Crowl",
       "batter": "Carter Dierdorf",
       "outcome": "Walk",
       "count": "3-2",
@@ -1801,13 +1809,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Trey Fenderson",
-        "2B": null,
+        "1B": null,
+        "2B": "Trey Fenderson",
         "3B": null
       },
       "runners_after": {
         "1B": "Carter Dierdorf",
-        "2B": null,
+        "2B": "Trey Fenderson",
         "3B": null
       },
       "score": {
@@ -1818,7 +1826,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Preston Crowl",
       "batter": "Sebastian Pisacreta",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1829,12 +1837,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Carter Dierdorf",
-        "2B": null,
+        "2B": "Trey Fenderson",
         "3B": null
       },
       "runners_after": {
         "1B": "Carter Dierdorf",
-        "2B": null,
+        "2B": "Trey Fenderson",
         "3B": null
       },
       "score": {
@@ -1845,7 +1853,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Hudson Lutterman",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1872,7 +1880,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Ethan Gibson",
       "outcome": "Double",
       "count": "1-0",
@@ -1899,7 +1907,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Vincent Spizzoucco",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1915,8 +1923,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Ethan Gibson",
-        "3B": null
+        "2B": null,
+        "3B": "Ethan Gibson"
       },
       "score": {
         "away": 4,
@@ -1926,7 +1934,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Willie Hurt",
       "outcome": "Walk",
       "count": "3-1",
@@ -1937,13 +1945,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Ethan Gibson",
-        "3B": null
+        "2B": null,
+        "3B": "Ethan Gibson"
       },
       "runners_after": {
         "1B": "Willie Hurt",
-        "2B": "Ethan Gibson",
-        "3B": null
+        "2B": null,
+        "3B": "Ethan Gibson"
       },
       "score": {
         "away": 4,
@@ -1953,7 +1961,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Sam Gates",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1964,13 +1972,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Willie Hurt",
-        "2B": "Ethan Gibson",
-        "3B": null
+        "2B": null,
+        "3B": "Ethan Gibson"
       },
       "runners_after": {
         "1B": "Willie Hurt",
-        "2B": "Ethan Gibson",
-        "3B": null
+        "2B": null,
+        "3B": "Ethan Gibson"
       },
       "score": {
         "away": 4,
@@ -1980,26 +1988,28 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Owen Petrich",
       "outcome": "Home run",
       "count": "1-1",
       "pitches": "FB",
       "rbi": true,
       "runs_scored": [
-        "Owen Petrich"
+        "Owen Petrich",
+        null,
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Willie Hurt",
-        "2B": "Ethan Gibson",
-        "3B": null
+        "2B": null,
+        "3B": "Ethan Gibson"
       },
       "runners_after": {
         "1B": "Willie Hurt",
-        "2B": "Ethan Gibson",
-        "3B": null
+        "2B": null,
+        "3B": "Ethan Gibson"
       },
       "score": {
         "away": 4,
@@ -2009,7 +2019,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Anderson French",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2020,13 +2030,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Willie Hurt",
-        "2B": "Ethan Gibson",
-        "3B": null
+        "2B": null,
+        "3B": "Ethan Gibson"
       },
       "runners_after": {
         "1B": "Willie Hurt",
-        "2B": "Ethan Gibson",
-        "3B": null
+        "2B": null,
+        "3B": "Ethan Gibson"
       },
       "score": {
         "away": 4,
@@ -2036,7 +2046,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Joey Baran",
       "outcome": "Single",
       "count": "1-2",
@@ -2063,7 +2073,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Julian Irizarry",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2090,7 +2100,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "AJ Nessler",
       "outcome": "Flyout",
       "count": "2-2",
@@ -2117,7 +2127,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Caden Dulin",
       "outcome": "Single",
       "count": "0-0",
@@ -2144,7 +2154,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Lorenzo Carrier",
       "outcome": "Walk",
       "count": "3-2",
@@ -2171,7 +2181,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Kai Wagner",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2198,7 +2208,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Sam Grube",
       "outcome": "Flyout",
       "count": "1-0",
@@ -2225,7 +2235,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Nick Locurto",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2252,7 +2262,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Ethan Ball",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2279,7 +2289,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Trey Fenderson",
       "outcome": "Hit by pitch",
       "count": "2-2",
@@ -2306,7 +2316,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Carter Dierdorf",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2333,7 +2343,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Sebastian Pisacreta",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2360,7 +2370,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": null,
       "outcome": "Passed ball",
       "count": null,
@@ -2375,9 +2385,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Trey Fenderson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Trey Fenderson"
       },
       "score": {
         "away": 4,
@@ -2387,24 +2397,26 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Brendan Yagesh",
       "batter": "Joey Baran",
       "outcome": "Double",
       "count": "3-2",
       "pitches": "FBBKB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Trey Fenderson",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Trey Fenderson"
       },
       "runners_after": {
-        "1B": "Trey Fenderson",
+        "1B": null,
         "2B": "Joey Baran",
-        "3B": null
+        "3B": "Trey Fenderson"
       },
       "score": {
         "away": 5,
@@ -2414,7 +2426,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethan Grim",
+      "pitcher": "Luke Craytor",
       "batter": "Previous",
       "outcome": "\u2014",
       "count": null,
@@ -2424,14 +2436,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Trey Fenderson",
+        "1B": null,
         "2B": "Joey Baran",
-        "3B": null
+        "3B": "Trey Fenderson"
       },
       "runners_after": {
-        "1B": "Trey Fenderson",
+        "1B": null,
         "2B": "Joey Baran",
-        "3B": null
+        "3B": "Trey Fenderson"
       },
       "score": {
         "away": 5,
@@ -2441,7 +2453,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Ethan Grim",
+      "pitcher": "",
       "batter": "TarpleyJr,Derrick struck out swinging (1-2 KBSFS).",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2451,14 +2463,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Trey Fenderson",
+        "1B": null,
         "2B": "Joey Baran",
-        "3B": null
+        "3B": "Trey Fenderson"
       },
       "runners_after": {
-        "1B": "Trey Fenderson",
+        "1B": null,
         "2B": "Joey Baran",
-        "3B": null
+        "3B": "Trey Fenderson"
       },
       "score": {
         "away": 5,
@@ -2468,7 +2480,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Drew Lafferty",
+      "pitcher": "Vincent Spizzoucco",
       "batter": "Hudson Lutterman",
       "outcome": "Home run",
       "count": "2-2",

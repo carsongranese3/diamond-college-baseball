@@ -3,7 +3,7 @@
   "date": "05/02/2026(1)",
   "away_team": "Pittsburgh",
   "home_team": "Florida St.",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -418,7 +418,10 @@
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -473,7 +476,8 @@
       "pitches": "F",
       "rbi": true,
       "runs_scored": [
-        "John Stuetzer"
+        "John Stuetzer",
+        null
       ],
       "outs_before": 1,
       "outs_after": 1,
@@ -1286,7 +1290,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1313,7 +1319,9 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1367,7 +1375,10 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1388,7 +1399,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": "Brayden Dowd",
       "outcome": "Walk",
       "count": "0-0",
@@ -1415,13 +1426,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": "Brody DeLamielleure",
       "outcome": "Single",
       "count": "2-2",
       "pitches": "FSBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1442,13 +1455,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -1469,7 +1484,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": "Nathan Cmeyla",
       "outcome": "Flyout",
       "count": "2-0",
@@ -1577,7 +1592,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": "Gabe Fraser",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -1604,7 +1619,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": "Eli Putnam",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1631,7 +1646,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": "Cal Fisher",
       "outcome": "Flyout",
       "count": "2-2",
@@ -1739,7 +1754,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": "Carter McCulley",
       "outcome": "Single",
       "count": "0-0",
@@ -1766,7 +1781,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": "John Stuetzer",
       "outcome": "Fielder's choice",
       "count": "3-1",
@@ -1793,7 +1808,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": "Brayden Dowd",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1820,7 +1835,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Antonio Doganiero",
+      "pitcher": "Daniel McAuliff",
       "batter": "Brody DeLamielleure",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1889,8 +1904,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Caden Dulin",
-        "2B": null,
+        "1B": null,
+        "2B": "Caden Dulin",
         "3B": null
       },
       "score": {
@@ -1911,13 +1926,13 @@
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Caden Dulin",
-        "2B": null,
+        "1B": null,
+        "2B": "Caden Dulin",
         "3B": null
       },
       "runners_after": {
-        "1B": "Caden Dulin",
-        "2B": null,
+        "1B": null,
+        "2B": "Caden Dulin",
         "3B": null
       },
       "score": {
@@ -1938,13 +1953,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Caden Dulin",
-        "2B": null,
+        "1B": null,
+        "2B": "Caden Dulin",
         "3B": null
       },
       "runners_after": {
-        "1B": "Caden Dulin",
-        "2B": null,
+        "1B": null,
+        "2B": "Caden Dulin",
         "3B": null
       },
       "score": {
@@ -1965,13 +1980,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Caden Dulin",
-        "2B": null,
+        "1B": null,
+        "2B": "Caden Dulin",
         "3B": null
       },
       "runners_after": {
-        "1B": "Caden Dulin",
-        "2B": null,
+        "1B": null,
+        "2B": "Caden Dulin",
         "3B": null
       },
       "score": {

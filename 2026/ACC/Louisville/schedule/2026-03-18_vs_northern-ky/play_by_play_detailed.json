@@ -3,7 +3,7 @@
   "date": "03/18/2026",
   "away_team": "Northern Ky.",
   "home_team": "Louisville",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -213,8 +213,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Zion Rose",
-        "2B": null,
+        "1B": null,
+        "2B": "Zion Rose",
         "3B": null
       },
       "score": {
@@ -237,8 +237,8 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Zion Rose",
-        "2B": null,
+        "1B": null,
+        "2B": "Zion Rose",
         "3B": null
       },
       "runners_after": {
@@ -543,8 +543,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "score": {
@@ -565,8 +565,8 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Lucas Moore",
-        "2B": null,
+        "1B": null,
+        "2B": "Lucas Moore",
         "3B": null
       },
       "runners_after": {
@@ -1064,8 +1064,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Zion Rose",
-        "2B": null,
+        "1B": null,
+        "2B": "Zion Rose",
         "3B": null
       },
       "score": {
@@ -1086,13 +1086,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Zion Rose",
-        "2B": null,
+        "1B": null,
+        "2B": "Zion Rose",
         "3B": null
       },
       "runners_after": {
         "1B": "Zach Davis",
-        "2B": null,
+        "2B": "Zion Rose",
         "3B": null
       },
       "score": {
@@ -1109,12 +1109,14 @@
       "count": "1-0",
       "pitches": "B",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Zion Rose"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Zach Davis",
-        "2B": null,
+        "2B": "Zion Rose",
         "3B": null
       },
       "runners_after": {
@@ -1461,7 +1463,8 @@
       "pitches": "B",
       "rbi": true,
       "runs_scored": [
-        "Ben Slanker"
+        "Ben Slanker",
+        null
       ],
       "outs_before": 2,
       "outs_after": 2,
@@ -1569,7 +1572,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Eli Hoyt",
+      "pitcher": "Anthony Karbowski",
       "batter": "Z. Davis",
       "outcome": "\u2014",
       "count": null,
@@ -1596,7 +1599,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Eli Hoyt",
+      "pitcher": "Anthony Karbowski",
       "batter": "Ky.",
       "outcome": "\u2014",
       "count": null,
@@ -1731,7 +1734,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Anthony Karbowski",
+      "pitcher": "Peter Michael",
       "batter": "Alex Brazer",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1758,7 +1761,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Anthony Karbowski",
+      "pitcher": "Peter Michael",
       "batter": "Ethan Thomas",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1785,7 +1788,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Gannon Wentz",
+      "pitcher": "Jackson Fraser",
       "batter": "Harrison",
       "outcome": "\u2014",
       "count": null,
@@ -1920,7 +1923,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jackson Fraser",
+      "pitcher": "Will Franklin",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1947,7 +1950,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Jackson Fraser",
+      "pitcher": "Will Franklin",
       "batter": "AJ Martin",
       "outcome": "Walk",
       "count": "3-1",
@@ -2031,7 +2034,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Will Franklin",
+      "pitcher": "",
       "batter": "Drew Freeman",
       "outcome": "Foul out",
       "count": "2-2",
@@ -2058,7 +2061,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Anthony Karbowski",
+      "pitcher": "Peter Michael",
       "batter": "A. Martin",
       "outcome": "\u2014",
       "count": null,
@@ -2112,7 +2115,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Peter Michael",
+      "pitcher": "",
       "batter": "Nolan Sparks",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2139,7 +2142,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Peter Michael",
+      "pitcher": "",
       "batter": "Zach Pomatto",
       "outcome": "\u2014",
       "count": null,
@@ -2166,7 +2169,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Peter Michael",
+      "pitcher": "",
       "batter": "Zach Pomatto",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -2193,7 +2196,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Peter Michael",
+      "pitcher": "",
       "batter": "Jackson Wang",
       "outcome": "Lineout",
       "count": "0-0",

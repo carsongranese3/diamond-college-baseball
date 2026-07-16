@@ -3,7 +3,7 @@
   "date": "03/24/2026",
   "away_team": "Illinois",
   "home_team": "Missouri",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -50,7 +50,7 @@
       },
       "runners_after": {
         "1B": "Michael Farina",
-        "2B": null,
+        "2B": "Nick Groves",
         "3B": null
       },
       "score": {
@@ -72,13 +72,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Michael Farina",
-        "2B": null,
+        "2B": "Nick Groves",
         "3B": null
       },
       "runners_after": {
         "1B": "Jack Zebig",
-        "2B": null,
-        "3B": null
+        "2B": "Michael Farina",
+        "3B": "Nick Groves"
       },
       "score": {
         "away": 0,
@@ -99,13 +99,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Jack Zebig",
-        "2B": null,
-        "3B": null
+        "2B": "Michael Farina",
+        "3B": "Nick Groves"
       },
       "runners_after": {
         "1B": "Jack Zebig",
-        "2B": null,
-        "3B": null
+        "2B": "Michael Farina",
+        "3B": "Nick Groves"
       },
       "score": {
         "away": 0,
@@ -126,13 +126,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Jack Zebig",
-        "2B": null,
-        "3B": null
+        "2B": "Michael Farina",
+        "3B": "Nick Groves"
       },
       "runners_after": {
         "1B": "Jack Zebig",
-        "2B": null,
-        "3B": null
+        "2B": "Michael Farina",
+        "3B": "Nick Groves"
       },
       "score": {
         "away": 0,
@@ -153,13 +153,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jack Zebig",
-        "2B": null,
-        "3B": null
+        "2B": "Michael Farina",
+        "3B": "Nick Groves"
       },
       "runners_after": {
         "1B": "Daniel Contreras",
         "2B": null,
-        "3B": null
+        "3B": "Nick Groves"
       },
       "score": {
         "away": 0,
@@ -196,7 +196,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Reed",
       "batter": "Kaden Peer",
       "outcome": "Fielder's choice",
       "count": "0-2",
@@ -223,7 +223,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Reed",
       "batter": "Pierre Seals",
       "outcome": "Single",
       "count": "0-1",
@@ -239,7 +239,7 @@
       },
       "runners_after": {
         "1B": "Pierre Seals",
-        "2B": null,
+        "2B": "Kaden Peer",
         "3B": null
       },
       "score": {
@@ -250,7 +250,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Reed",
       "batter": "Jase Woita",
       "outcome": "Walk",
       "count": "3-2",
@@ -261,13 +261,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Pierre Seals",
-        "2B": null,
+        "2B": "Kaden Peer",
         "3B": null
       },
       "runners_after": {
         "1B": "Jase Woita",
-        "2B": null,
-        "3B": null
+        "2B": "Pierre Seals",
+        "3B": "Kaden Peer"
       },
       "score": {
         "away": 0,
@@ -277,24 +277,27 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Reed",
       "batter": "Cameron Benson",
       "outcome": "Reached on error",
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kaden Peer",
+        "Pierre Seals"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Jase Woita",
-        "2B": null,
-        "3B": null
+        "2B": "Pierre Seals",
+        "3B": "Kaden Peer"
       },
       "runners_after": {
         "1B": "Cameron Benson",
         "2B": null,
-        "3B": null
+        "3B": "Jase Woita"
       },
       "score": {
         "away": 0,
@@ -304,22 +307,25 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Reed",
       "batter": "Blaize Ward",
       "outcome": "Double",
       "count": "0-1",
       "pitches": "K",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Jase Woita",
+        "Cameron Benson"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Cameron Benson",
         "2B": null,
-        "3B": null
+        "3B": "Jase Woita"
       },
       "runners_after": {
-        "1B": "Cameron Benson",
+        "1B": null,
         "2B": "Blaize Ward",
         "3B": null
       },
@@ -331,7 +337,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Reed",
       "batter": "Jamal George",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -341,12 +347,12 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Cameron Benson",
+        "1B": null,
         "2B": "Blaize Ward",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cameron Benson",
+        "1B": null,
         "2B": "Blaize Ward",
         "3B": null
       },
@@ -358,7 +364,7 @@
     },
     {
       "inning": "Bottom 1",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Reed",
       "batter": "Keegan Knutson",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -368,12 +374,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Cameron Benson",
+        "1B": null,
         "2B": "Blaize Ward",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cameron Benson",
+        "1B": null,
         "2B": "Blaize Ward",
         "3B": null
       },
@@ -466,7 +472,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Reed",
       "batter": "Isaiah Frost",
       "outcome": "Groundout",
       "count": "0-0",
@@ -493,7 +499,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Reed",
       "batter": "Kam Durnin",
       "outcome": "Walk",
       "count": "3-1",
@@ -520,7 +526,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Reed",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -535,8 +541,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kam Durnin",
-        "2B": null,
+        "1B": null,
+        "2B": "Kam Durnin",
         "3B": null
       },
       "score": {
@@ -547,7 +553,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Reed",
       "batter": "Kaden Peer",
       "outcome": "Hit by pitch",
       "count": "3-1",
@@ -557,13 +563,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Kam Durnin",
-        "2B": null,
+        "1B": null,
+        "2B": "Kam Durnin",
         "3B": null
       },
       "runners_after": {
         "1B": "Kaden Peer",
-        "2B": null,
+        "2B": "Kam Durnin",
         "3B": null
       },
       "score": {
@@ -574,7 +580,7 @@
     },
     {
       "inning": "Bottom 2",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Reed",
       "batter": "Pierre Seals",
       "outcome": "Grounded into double play",
       "count": "3-2",
@@ -585,12 +591,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Kaden Peer",
-        "2B": null,
+        "2B": "Kam Durnin",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kaden Peer",
-        "2B": null,
+        "1B": null,
+        "2B": "Kam Durnin",
         "3B": null
       },
       "score": {
@@ -709,7 +715,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Mommer",
       "batter": "Jase Woita",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -736,7 +742,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Mommer",
       "batter": "Cameron Benson",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -763,7 +769,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Mommer",
       "batter": "Blaize Ward",
       "outcome": "Groundout",
       "count": "1-1",
@@ -790,7 +796,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "PJ Green",
+      "pitcher": "Keyler Gonzalez",
       "batter": "Collin Jennings",
       "outcome": "Single",
       "count": "0-0",
@@ -817,7 +823,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "PJ Green",
+      "pitcher": "Keyler Gonzalez",
       "batter": "Daniel Contreras",
       "outcome": "Groundout",
       "count": "3-1",
@@ -832,8 +838,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Collin Jennings",
-        "2B": null,
+        "1B": null,
+        "2B": "Collin Jennings",
         "3B": null
       },
       "score": {
@@ -844,7 +850,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "PJ Green",
+      "pitcher": "Keyler Gonzalez",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -854,14 +860,14 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Collin Jennings",
-        "2B": null,
+        "1B": null,
+        "2B": "Collin Jennings",
         "3B": null
       },
       "runners_after": {
-        "1B": "Collin Jennings",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Collin Jennings"
       },
       "score": {
         "away": 0,
@@ -871,7 +877,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "PJ Green",
+      "pitcher": "Keyler Gonzalez",
       "batter": "Kyle Schupmann",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -881,14 +887,14 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Collin Jennings",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Collin Jennings"
       },
       "runners_after": {
-        "1B": "Collin Jennings",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Collin Jennings"
       },
       "score": {
         "away": 0,
@@ -898,7 +904,7 @@
     },
     {
       "inning": "Top 4",
-      "pitcher": "PJ Green",
+      "pitcher": "Keyler Gonzalez",
       "batter": "Will Johannes",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -908,14 +914,14 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Collin Jennings",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Collin Jennings"
       },
       "runners_after": {
-        "1B": "Collin Jennings",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Collin Jennings"
       },
       "score": {
         "away": 0,
@@ -925,7 +931,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Mommer",
       "batter": "Jamal George",
       "outcome": "Lineout",
       "count": "1-1",
@@ -952,7 +958,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Mommer",
       "batter": "Keegan Knutson",
       "outcome": "Groundout",
       "count": "2-2",
@@ -979,7 +985,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Mommer",
       "batter": "Isaiah Frost",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -1006,7 +1012,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "PJ Green",
+      "pitcher": "Keyler Gonzalez",
       "batter": "JR Nelson",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1033,7 +1039,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "PJ Green",
+      "pitcher": "Keyler Gonzalez",
       "batter": "Nick Groves",
       "outcome": "Single",
       "count": "0-0",
@@ -1060,7 +1066,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "PJ Green",
+      "pitcher": "Keyler Gonzalez",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1075,8 +1081,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Nick Groves",
-        "2B": null,
+        "1B": null,
+        "2B": "Nick Groves",
         "3B": null
       },
       "score": {
@@ -1087,7 +1093,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "PJ Green",
+      "pitcher": "Keyler Gonzalez",
       "batter": "Michael Farina",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -1097,13 +1103,13 @@
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Nick Groves",
-        "2B": null,
+        "1B": null,
+        "2B": "Nick Groves",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael Farina",
-        "2B": null,
+        "2B": "Nick Groves",
         "3B": null
       },
       "score": {
@@ -1114,7 +1120,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "PJ Green",
+      "pitcher": "Keyler Gonzalez",
       "batter": "Jack Zebig",
       "outcome": "Walk",
       "count": "3-1",
@@ -1125,13 +1131,13 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Michael Farina",
-        "2B": null,
+        "2B": "Nick Groves",
         "3B": null
       },
       "runners_after": {
         "1B": "Jack Zebig",
-        "2B": null,
-        "3B": null
+        "2B": "Michael Farina",
+        "3B": "Nick Groves"
       },
       "score": {
         "away": 0,
@@ -1141,7 +1147,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "PJ Green",
+      "pitcher": "Keyler Gonzalez",
       "batter": "AJ Putty",
       "outcome": "Pop out",
       "count": "0-1",
@@ -1152,13 +1158,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Jack Zebig",
-        "2B": null,
-        "3B": null
+        "2B": "Michael Farina",
+        "3B": "Nick Groves"
       },
       "runners_after": {
         "1B": "Jack Zebig",
-        "2B": null,
-        "3B": null
+        "2B": "Michael Farina",
+        "3B": "Nick Groves"
       },
       "score": {
         "away": 0,
@@ -1168,7 +1174,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "PJ Green",
+      "pitcher": "Keyler Gonzalez",
       "batter": "Collin Jennings",
       "outcome": "Groundout",
       "count": "2-1",
@@ -1179,13 +1185,13 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jack Zebig",
-        "2B": null,
-        "3B": null
+        "2B": "Michael Farina",
+        "3B": "Nick Groves"
       },
       "runners_after": {
         "1B": "Jack Zebig",
-        "2B": null,
-        "3B": null
+        "2B": "Michael Farina",
+        "3B": "Nick Groves"
       },
       "score": {
         "away": 0,
@@ -1195,7 +1201,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Mommer",
       "batter": "Kam Durnin",
       "outcome": "Flyout",
       "count": "3-2",
@@ -1222,7 +1228,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Mommer",
       "batter": "Kaden Peer",
       "outcome": "Walk",
       "count": "3-2",
@@ -1249,7 +1255,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Mommer",
       "batter": "Pierre Seals",
       "outcome": "Flyout",
       "count": "0-1",
@@ -1276,7 +1282,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Mommer",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1291,8 +1297,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kaden Peer",
-        "2B": null,
+        "1B": null,
+        "2B": "Kaden Peer",
         "3B": null
       },
       "score": {
@@ -1303,7 +1309,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Sam Mommer",
       "batter": "Jase Woita",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1313,13 +1319,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Kaden Peer",
-        "2B": null,
+        "1B": null,
+        "2B": "Kaden Peer",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kaden Peer",
-        "2B": null,
+        "1B": null,
+        "2B": "Kaden Peer",
         "3B": null
       },
       "score": {
@@ -1330,7 +1336,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "PJ Green",
+      "pitcher": "Keyler Gonzalez",
       "batter": "Daniel Contreras",
       "outcome": "Lineout",
       "count": "1-0",
@@ -1357,7 +1363,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "PJ Green",
+      "pitcher": "Keyler Gonzalez",
       "batter": "Kyle Schupmann",
       "outcome": "Double",
       "count": "2-1",
@@ -1384,7 +1390,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "PJ Green",
+      "pitcher": "Keyler Gonzalez",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -1400,8 +1406,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Kyle Schupmann",
-        "3B": null
+        "2B": null,
+        "3B": "Kyle Schupmann"
       },
       "score": {
         "away": 0,
@@ -1411,23 +1417,25 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "PJ Green",
+      "pitcher": "Keyler Gonzalez",
       "batter": "Will Johannes",
       "outcome": "Strikeout",
       "count": "2-3",
       "pitches": "KKBFBS",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Kyle Schupmann"
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Kyle Schupmann",
-        "3B": null
+        "2B": null,
+        "3B": "Kyle Schupmann"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Kyle Schupmann",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1438,7 +1446,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "PJ Green",
+      "pitcher": "Keyler Gonzalez",
       "batter": "JR Nelson",
       "outcome": "Single",
       "count": "3-1",
@@ -1449,12 +1457,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": null,
-        "2B": "Kyle Schupmann",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "JR Nelson",
-        "2B": "Kyle Schupmann",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1465,7 +1473,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "PJ Green",
+      "pitcher": "Kadden Drew",
       "batter": "Nick Groves",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1476,12 +1484,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "JR Nelson",
-        "2B": "Kyle Schupmann",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "JR Nelson",
-        "2B": "Kyle Schupmann",
+        "1B": null,
+        "2B": "JR Nelson",
         "3B": null
       },
       "score": {
@@ -1492,7 +1500,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "PJ Green",
+      "pitcher": "Kadden Drew",
       "batter": "Michael Farina",
       "outcome": "Flyout",
       "count": "1-1",
@@ -1502,13 +1510,13 @@
       "outs_before": 3,
       "outs_after": 3,
       "runners_before": {
-        "1B": "JR Nelson",
-        "2B": "Kyle Schupmann",
+        "1B": null,
+        "2B": "JR Nelson",
         "3B": null
       },
       "runners_after": {
-        "1B": "JR Nelson",
-        "2B": "Kyle Schupmann",
+        "1B": null,
+        "2B": "JR Nelson",
         "3B": null
       },
       "score": {
@@ -1519,7 +1527,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Olivier Martel",
       "batter": "Cameron Benson",
       "outcome": "Double",
       "count": "1-2",
@@ -1546,7 +1554,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Olivier Martel",
       "batter": "Blaize Ward",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1573,7 +1581,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Olivier Martel",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -1589,8 +1597,8 @@
       },
       "runners_after": {
         "1B": null,
-        "2B": "Cameron Benson",
-        "3B": null
+        "2B": null,
+        "3B": "Cameron Benson"
       },
       "score": {
         "away": 1,
@@ -1600,23 +1608,25 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Olivier Martel",
       "batter": "Jamal George",
       "outcome": "\u2014",
       "count": "1-2",
       "pitches": "FSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Cameron Benson"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Cameron Benson",
-        "3B": null
+        "2B": null,
+        "3B": "Cameron Benson"
       },
       "runners_after": {
         "1B": null,
-        "2B": "Cameron Benson",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1627,7 +1637,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Olivier Martel",
       "batter": "Keegan Knutson",
       "outcome": "Single",
       "count": "0-1",
@@ -1638,12 +1648,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": null,
-        "2B": "Cameron Benson",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Keegan Knutson",
-        "2B": "Cameron Benson",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1654,7 +1664,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Olivier Martel",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1665,12 +1675,12 @@
       "outs_after": 1,
       "runners_before": {
         "1B": "Keegan Knutson",
-        "2B": "Cameron Benson",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Keegan Knutson",
-        "2B": "Cameron Benson",
+        "1B": null,
+        "2B": "Keegan Knutson",
         "3B": null
       },
       "score": {
@@ -1681,7 +1691,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Olivier Martel",
       "batter": "Isaiah Frost",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1691,13 +1701,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Keegan Knutson",
-        "2B": "Cameron Benson",
+        "1B": null,
+        "2B": "Keegan Knutson",
         "3B": null
       },
       "runners_after": {
-        "1B": "Keegan Knutson",
-        "2B": "Cameron Benson",
+        "1B": null,
+        "2B": "Keegan Knutson",
         "3B": null
       },
       "score": {
@@ -1708,7 +1718,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "PJ Green",
+      "pitcher": "Kadden Drew",
       "batter": "Jack Zebig",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1735,7 +1745,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "PJ Green",
+      "pitcher": "Kadden Drew",
       "batter": "AJ Putty",
       "outcome": "Walk",
       "count": "3-0",
@@ -1762,7 +1772,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "PJ Green",
+      "pitcher": "Kadden Drew",
       "batter": "Collin Jennings",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -1778,7 +1788,7 @@
       },
       "runners_after": {
         "1B": "Collin Jennings",
-        "2B": null,
+        "2B": "AJ Putty",
         "3B": null
       },
       "score": {
@@ -1789,7 +1799,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "PJ Green",
+      "pitcher": "Eli Skidmore",
       "batter": "Daniel Contreras",
       "outcome": "Flyout",
       "count": "0-0",
@@ -1800,12 +1810,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Collin Jennings",
-        "2B": null,
+        "2B": "AJ Putty",
         "3B": null
       },
       "runners_after": {
         "1B": "Collin Jennings",
-        "2B": null,
+        "2B": "AJ Putty",
         "3B": null
       },
       "score": {
@@ -1816,7 +1826,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "PJ Green",
+      "pitcher": "Eli Skidmore",
       "batter": "Kyle Schupmann",
       "outcome": "Lineout",
       "count": "0-1",
@@ -1827,12 +1837,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Collin Jennings",
-        "2B": null,
+        "2B": "AJ Putty",
         "3B": null
       },
       "runners_after": {
         "1B": "Collin Jennings",
-        "2B": null,
+        "2B": "AJ Putty",
         "3B": null
       },
       "score": {
@@ -1843,7 +1853,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Liam McKillop",
       "batter": "Kam Durnin",
       "outcome": "Single",
       "count": "2-0",
@@ -1870,7 +1880,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Liam McKillop",
       "batter": "Kaden Peer",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1897,7 +1907,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Liam McKillop",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -1912,8 +1922,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Kam Durnin",
-        "2B": null,
+        "1B": null,
+        "2B": "Kam Durnin",
         "3B": null
       },
       "score": {
@@ -1924,7 +1934,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Liam McKillop",
       "batter": "Pierre Seals",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1934,13 +1944,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kam Durnin",
-        "2B": null,
+        "1B": null,
+        "2B": "Kam Durnin",
         "3B": null
       },
       "runners_after": {
-        "1B": "Kam Durnin",
-        "2B": null,
+        "1B": null,
+        "2B": "Kam Durnin",
         "3B": null
       },
       "score": {
@@ -1951,7 +1961,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Liam McKillop",
       "batter": "Jase Woita",
       "outcome": "Hit by pitch",
       "count": "0-2",
@@ -1961,13 +1971,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Kam Durnin",
-        "2B": null,
+        "1B": null,
+        "2B": "Kam Durnin",
         "3B": null
       },
       "runners_after": {
         "1B": "Jase Woita",
-        "2B": null,
+        "2B": "Kam Durnin",
         "3B": null
       },
       "score": {
@@ -1978,7 +1988,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Liam McKillop",
       "batter": "Cameron Benson",
       "outcome": "Groundout",
       "count": "0-0",
@@ -1989,12 +1999,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Jase Woita",
-        "2B": null,
+        "2B": "Kam Durnin",
         "3B": null
       },
       "runners_after": {
         "1B": "Jase Woita",
-        "2B": null,
+        "2B": "Kam Durnin",
         "3B": null
       },
       "score": {
@@ -2005,7 +2015,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "PJ Green",
+      "pitcher": "Eli Skidmore",
       "batter": "Cameron Chee-Aloy",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -2032,7 +2042,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "PJ Green",
+      "pitcher": "Eli Skidmore",
       "batter": "JR Nelson",
       "outcome": "Walk",
       "count": "3-2",
@@ -2059,7 +2069,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "PJ Green",
+      "pitcher": "Eli Skidmore",
       "batter": "Nick Groves",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -2086,7 +2096,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "PJ Green",
+      "pitcher": "Eli Skidmore",
       "batter": "Michael Farina",
       "outcome": "Hit by pitch",
       "count": "0-1",
@@ -2102,7 +2112,7 @@
       },
       "runners_after": {
         "1B": "Michael Farina",
-        "2B": null,
+        "2B": "JR Nelson",
         "3B": null
       },
       "score": {
@@ -2113,7 +2123,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "PJ Green",
+      "pitcher": "Eli Skidmore",
       "batter": "Jack Zebig",
       "outcome": "Flyout",
       "count": "1-1",
@@ -2124,12 +2134,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Michael Farina",
-        "2B": null,
+        "2B": "JR Nelson",
         "3B": null
       },
       "runners_after": {
         "1B": "Michael Farina",
-        "2B": null,
+        "2B": "JR Nelson",
         "3B": null
       },
       "score": {
@@ -2140,7 +2150,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Richie LaCien",
       "batter": "Blaize Ward",
       "outcome": "Walk",
       "count": "3-2",
@@ -2167,7 +2177,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Richie LaCien",
       "batter": "Mateo Serna",
       "outcome": "Pop out",
       "count": "2-1",
@@ -2194,7 +2204,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Richie LaCien",
       "batter": "Keegan Knutson",
       "outcome": "Reached on error",
       "count": "0-0",
@@ -2221,7 +2231,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Richie LaCien",
       "batter": "Isaiah Frost",
       "outcome": "Walk",
       "count": "3-2",
@@ -2237,7 +2247,7 @@
       },
       "runners_after": {
         "1B": "Isaiah Frost",
-        "2B": null,
+        "2B": "Keegan Knutson",
         "3B": null
       },
       "score": {
@@ -2248,7 +2258,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Richie LaCien",
       "batter": "Kam Durnin",
       "outcome": "Strikeout (looking)",
       "count": "0-2",
@@ -2259,12 +2269,12 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Isaiah Frost",
-        "2B": null,
+        "2B": "Keegan Knutson",
         "3B": null
       },
       "runners_after": {
         "1B": "Isaiah Frost",
-        "2B": null,
+        "2B": "Keegan Knutson",
         "3B": null
       },
       "score": {
@@ -2275,7 +2285,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ben Plumley",
+      "pitcher": "Richie LaCien",
       "batter": "Kaden Peer",
       "outcome": "Flyout",
       "count": "0-1",
@@ -2286,12 +2296,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Isaiah Frost",
-        "2B": null,
+        "2B": "Keegan Knutson",
         "3B": null
       },
       "runners_after": {
         "1B": "Isaiah Frost",
-        "2B": null,
+        "2B": "Keegan Knutson",
         "3B": null
       },
       "score": {
@@ -2302,7 +2312,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "PJ Green",
+      "pitcher": "Sam Rosand",
       "batter": "AJ Putty",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2329,7 +2339,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "PJ Green",
+      "pitcher": "Sam Rosand",
       "batter": "Collin Jennings",
       "outcome": "Groundout",
       "count": "0-1",
@@ -2356,7 +2366,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "PJ Green",
+      "pitcher": "Sam Rosand",
       "batter": "Cole Warehime",
       "outcome": "Hit by pitch",
       "count": "1-2",
@@ -2383,7 +2393,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "PJ Green",
+      "pitcher": "Sam Rosand",
       "batter": null,
       "outcome": "Baserunning",
       "count": null,
@@ -2398,8 +2408,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Cole Warehime",
-        "2B": null,
+        "1B": null,
+        "2B": "Cole Warehime",
         "3B": null
       },
       "score": {
@@ -2410,7 +2420,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "PJ Green",
+      "pitcher": "Sam Rosand",
       "batter": "Kyle Schupmann",
       "outcome": "Groundout",
       "count": "2-2",
@@ -2420,13 +2430,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Cole Warehime",
-        "2B": null,
+        "1B": null,
+        "2B": "Cole Warehime",
         "3B": null
       },
       "runners_after": {
-        "1B": "Cole Warehime",
-        "2B": null,
+        "1B": null,
+        "2B": "Cole Warehime",
         "3B": null
       },
       "score": {

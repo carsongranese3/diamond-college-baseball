@@ -3,7 +3,7 @@
   "date": "06/14/2026",
   "away_team": "West Virginia",
   "home_team": "North Carolina",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -229,7 +229,9 @@
       "count": "3-0",
       "pitches": "BBBB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -256,7 +258,9 @@
       "count": "0-2",
       "pitches": "KS",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -553,7 +557,9 @@
       "count": "2-0",
       "pitches": "BB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -616,7 +622,7 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Gavin Kelly",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -638,12 +644,12 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Gavin Kelly",
+        "1B": null,
         "2B": null,
         "3B": null
       },
       "runners_after": {
-        "1B": "Gavin Kelly",
+        "1B": null,
         "2B": null,
         "3B": null
       },
@@ -823,7 +829,9 @@
       "count": "0-0",
       "pitches": "",
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -1057,6 +1065,33 @@
         "home": 2
       },
       "description": "Guzman, A. singled up the middle (1-0 B)."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Walker McDuffie",
+      "batter": "McDuffie, W. to p for Lynch, R..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Armani Guzman",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Armani Guzman",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 2
+      },
+      "description": "McDuffie, W. to p for Lynch, R.."
     },
     {
       "inning": "Top 5",
@@ -1453,8 +1488,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyrus Hall",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyrus Hall",
         "3B": null
       },
       "score": {
@@ -1475,13 +1510,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Tyrus Hall",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyrus Hall",
         "3B": null
       },
       "runners_after": {
-        "1B": "Tyrus Hall",
-        "2B": null,
+        "1B": null,
+        "2B": "Tyrus Hall",
         "3B": null
       },
       "score": {
@@ -1579,7 +1614,10 @@
       "count": "1-2",
       "pitches": "BFF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1606,7 +1644,9 @@
       "count": "0-1",
       "pitches": "F",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 0,
       "runners_before": {
@@ -1790,6 +1830,33 @@
     {
       "inning": "Bottom 8",
       "pitcher": "Reese Bassinger",
+      "batter": "Bassinger, R to p for Yehl, M..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Cooper Nicholson",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Cooper Nicholson",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 5
+      },
+      "description": "Bassinger, R to p for Yehl, M.."
+    },
+    {
+      "inning": "Bottom 8",
+      "pitcher": "Reese Bassinger",
       "batter": null,
       "outcome": "Baserunning",
       "count": "0-0",
@@ -1885,9 +1952,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Carter French",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Carter French"
       },
       "score": {
         "away": 2,
@@ -1907,14 +1974,14 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Carter French",
+        "1B": null,
         "2B": null,
-        "3B": null
+        "3B": "Carter French"
       },
       "runners_after": {
         "1B": "Jake Schaffner",
         "2B": null,
-        "3B": null
+        "3B": "Carter French"
       },
       "score": {
         "away": 2,
@@ -1936,12 +2003,12 @@
       "runners_before": {
         "1B": "Jake Schaffner",
         "2B": null,
-        "3B": null
+        "3B": "Carter French"
       },
       "runners_after": {
         "1B": "Jake Schaffner",
         "2B": null,
-        "3B": null
+        "3B": "Carter French"
       },
       "score": {
         "away": 2,
@@ -2005,7 +2072,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Walker McDuffie",
+      "pitcher": "Caden Glauber",
       "batter": "Brodie Kresser",
       "outcome": "Single",
       "count": "0-2",
@@ -2033,6 +2100,33 @@
     {
       "inning": "Top 9",
       "pitcher": "Caden Glauber",
+      "batter": "Glauber, C. to p for McDuffie, W..",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "Brodie Kresser",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Brodie Kresser",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 2,
+        "home": 5
+      },
+      "description": "Glauber, C. to p for McDuffie, W.."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": "Ben Lumsden",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2059,7 +2153,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Caden Glauber",
+      "pitcher": "",
       "batter": "Tyrus Hall",
       "outcome": "Strikeout (looking)",
       "count": "0-2",

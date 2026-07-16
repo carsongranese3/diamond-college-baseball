@@ -3,7 +3,7 @@
   "date": "04/22/2026",
   "away_team": "Notre Dame",
   "home_team": "Michigan St.",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -94,7 +94,9 @@
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
@@ -170,12 +172,41 @@
     {
       "inning": "Top 1",
       "pitcher": "Andrew Siler",
+      "batter": "Siler,A to p for Chambers,B.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 1,
+      "outs_after": 1,
+      "runners_before": {
+        "1B": "J Lee walked (3-0)",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "J Lee walked (3-0)",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 0
+      },
+      "description": "Siler,A to p for Chambers,B."
+    },
+    {
+      "inning": "Top 1",
+      "pitcher": "Andrew Siler",
       "batter": "D Passo flied out to cf, SF, RBI (0-0)",
       "outcome": "Flyout",
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
@@ -202,7 +233,9 @@
       "count": "2-2",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -250,7 +283,7 @@
     },
     {
       "inning": "Top 1",
-      "pitcher": "Andrew Siler",
+      "pitcher": "Ben Kochany",
       "batter": "J Zee lined out to lf (1-1).",
       "outcome": "Lineout",
       "count": "1-1",
@@ -355,6 +388,33 @@
         "home": 0
       },
       "description": "Seymour,R grounded out to 2b (3-2)."
+    },
+    {
+      "inning": "Top 2",
+      "pitcher": "Ben Kochany",
+      "batter": "Kochany,B to p for Siler,A.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 0
+      },
+      "description": "Kochany,B to p for Siler,A."
     },
     {
       "inning": "Top 2",
@@ -509,7 +569,7 @@
       },
       "runners_after": {
         "1B": "Ryan McKay",
-        "2B": null,
+        "2B": "Khamaree Thomas",
         "3B": null
       },
       "score": {
@@ -526,12 +586,15 @@
       "count": "0-0",
       "pitches": "",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Ryan McKay",
+        "Khamaree Thomas"
+      ],
       "outs_before": 1,
       "outs_after": 1,
       "runners_before": {
         "1B": "Ryan McKay",
-        "2B": null,
+        "2B": "Khamaree Thomas",
         "3B": null
       },
       "runners_after": {
@@ -590,7 +653,7 @@
       },
       "runners_after": {
         "1B": "Adam Broski",
-        "2B": null,
+        "2B": "Parker Picot",
         "3B": null
       },
       "score": {
@@ -612,12 +675,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Adam Broski",
-        "2B": null,
+        "2B": "Parker Picot",
         "3B": null
       },
       "runners_after": {
         "1B": "Adam Broski",
-        "2B": null,
+        "2B": "Parker Picot",
         "3B": null
       },
       "score": {
@@ -682,7 +745,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Ben Kochany",
+      "pitcher": "Logan Pikur",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -709,7 +772,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Ben Kochany",
+      "pitcher": "Logan Pikur",
       "batter": "D Passo reached on a fielder's choice (2-2)",
       "outcome": "Fielder's choice",
       "count": "2-2",
@@ -736,7 +799,7 @@
     },
     {
       "inning": "Top 3",
-      "pitcher": "Ben Kochany",
+      "pitcher": "Logan Pikur",
       "batter": "PBrzustewicz",
       "outcome": "Fielder's choice",
       "count": "2-1",
@@ -763,7 +826,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Ty Uber",
+      "pitcher": "Eli Thurmond",
       "batter": "E Thurmond to p for T Uber.",
       "outcome": "\u2014",
       "count": null,
@@ -790,7 +853,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Ty Uber",
+      "pitcher": "Eli Thurmond",
       "batter": "Issac Sturgess",
       "outcome": "Single",
       "count": "1-2",
@@ -817,7 +880,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Ty Uber",
+      "pitcher": "Eli Thurmond",
       "batter": "Randy Seymour",
       "outcome": "Flyout",
       "count": "1-2",
@@ -844,7 +907,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Ty Uber",
+      "pitcher": "Eli Thurmond",
       "batter": "Khamaree Thomas",
       "outcome": "Pop out",
       "count": "0-2",
@@ -871,7 +934,7 @@
     },
     {
       "inning": "Bottom 3",
-      "pitcher": "Ty Uber",
+      "pitcher": "Eli Thurmond",
       "batter": "Dayton Murphy",
       "outcome": "Fielder's choice",
       "count": "0-1",
@@ -895,6 +958,33 @@
         "home": 2
       },
       "description": "Murphy,D reached on a fielder's choice (0-1) Sturgess,I out at second ss to 2b."
+    },
+    {
+      "inning": "Top 4",
+      "pitcher": "Logan Pikur",
+      "batter": "Pikur,L to p for Kochany,B.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 2
+      },
+      "description": "Pikur,L to p for Kochany,B."
     },
     {
       "inning": "Top 4",
@@ -1060,7 +1150,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ty Uber",
+      "pitcher": "Eli Thurmond",
       "batter": "Ryan McKay",
       "outcome": "Flyout",
       "count": "2-1",
@@ -1087,7 +1177,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ty Uber",
+      "pitcher": "Eli Thurmond",
       "batter": "CJ Deckinga",
       "outcome": "Pop out",
       "count": "2-1",
@@ -1114,7 +1204,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ty Uber",
+      "pitcher": "Eli Thurmond",
       "batter": "Parker Picot",
       "outcome": "Double",
       "count": "0-0",
@@ -1141,7 +1231,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "Ty Uber",
+      "pitcher": "Caden Crowell",
       "batter": "Adam Broski",
       "outcome": "Pop out",
       "count": "0-0",
@@ -1168,7 +1258,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Logan Pikur",
+      "pitcher": "Gannon Grundman",
       "batter": "J Lee tripled to right center, out at third cf to ss to (1-2).",
       "outcome": "Triple",
       "count": "1-2",
@@ -1195,7 +1285,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Logan Pikur",
+      "pitcher": "Gannon Grundman",
       "batter": "D Passo singled to right field (0-0).",
       "outcome": "Single",
       "count": "0-0",
@@ -1222,7 +1312,7 @@
     },
     {
       "inning": "Top 5",
-      "pitcher": "Logan Pikur",
+      "pitcher": "Gannon Grundman",
       "batter": "PBrzustewicz",
       "outcome": "Single",
       "count": "0-2",
@@ -1246,6 +1336,33 @@
         "home": 2
       },
       "description": "PBrzustewicz singled up the middle (0-2) D Passo advanced to second."
+    },
+    {
+      "inning": "Top 5",
+      "pitcher": "Gannon Grundman",
+      "batter": "Grundman,G to p for Pikur,L.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "PBrzustewicz",
+        "2B": null,
+        "3B": "J Lee tripled to right center, out at third cf to ss to (1-2)."
+      },
+      "runners_after": {
+        "1B": "PBrzustewicz",
+        "2B": null,
+        "3B": "J Lee tripled to right center, out at third cf to ss to (1-2)."
+      },
+      "score": {
+        "away": 3,
+        "home": 2
+      },
+      "description": "Grundman,G to p for Pikur,L."
     },
     {
       "inning": "Top 5",
@@ -1303,7 +1420,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ty Uber",
+      "pitcher": "Caden Crowell",
       "batter": "C Crowell to p for E Thurmond.",
       "outcome": "\u2014",
       "count": null,
@@ -1330,7 +1447,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ty Uber",
+      "pitcher": "Caden Crowell",
       "batter": "Noah Bright",
       "outcome": "Foul out",
       "count": "1-0",
@@ -1357,7 +1474,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ty Uber",
+      "pitcher": "Caden Crowell",
       "batter": "Issac Sturgess",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1384,7 +1501,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "Ty Uber",
+      "pitcher": "Caden Crowell",
       "batter": "Randy Seymour",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1465,7 +1582,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Gannon Grundman",
+      "pitcher": "Tommy Szczepanski",
       "batter": "N Coy grounded out to ss (0-1)",
       "outcome": "Groundout",
       "count": "0-1",
@@ -1492,7 +1609,7 @@
     },
     {
       "inning": "Top 6",
-      "pitcher": "Gannon Grundman",
+      "pitcher": "Tommy Szczepanski",
       "batter": "M Quatrani popped up to rf (2-2).",
       "outcome": "Pop out",
       "count": "2-2",
@@ -1519,7 +1636,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ty Uber",
+      "pitcher": "Caden Crowell",
       "batter": "Khamaree Thomas",
       "outcome": "Groundout",
       "count": "1-0",
@@ -1546,7 +1663,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ty Uber",
+      "pitcher": "Caden Crowell",
       "batter": "Dayton Murphy",
       "outcome": "Pop out",
       "count": "1-2",
@@ -1573,7 +1690,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "Ty Uber",
+      "pitcher": "Caden Crowell",
       "batter": "Ryan McKay",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1600,7 +1717,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Gannon Grundman",
+      "pitcher": "Tommy Szczepanski",
       "batter": "J Lee grounded out to 2b (2-2).",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1627,7 +1744,7 @@
     },
     {
       "inning": "Top 7",
-      "pitcher": "Gannon Grundman",
+      "pitcher": "Tommy Szczepanski",
       "batter": "D Passo struck out swinging (1-2).",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -1708,7 +1825,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ty Uber",
+      "pitcher": "Caden Crowell",
       "batter": "CJ Deckinga",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1735,7 +1852,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ty Uber",
+      "pitcher": "Oisin Lee",
       "batter": "Parker Picot",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1762,7 +1879,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "Ty Uber",
+      "pitcher": "Oisin Lee",
       "batter": "Adam Broski",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1789,7 +1906,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Tommy Szczepanski",
+      "pitcher": "Nolan Higgins",
       "batter": "J Zee struck out swinging (2-2).",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1816,7 +1933,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Tommy Szczepanski",
+      "pitcher": "Nolan Higgins",
       "batter": "D Berkland grounded out to ss (1-2).",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1843,7 +1960,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Tommy Szczepanski",
+      "pitcher": "Nolan Higgins",
       "batter": "B Watters singled through the left side (1-2).",
       "outcome": "Single",
       "count": "1-2",
@@ -1870,7 +1987,7 @@
     },
     {
       "inning": "Top 8",
-      "pitcher": "Tommy Szczepanski",
+      "pitcher": "",
       "batter": "N Coy popped up to ss (1-1).",
       "outcome": "Pop out",
       "count": "1-1",
@@ -1897,7 +2014,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ty Uber",
+      "pitcher": "Oisin Lee",
       "batter": "O Lee to p for C Crowell.",
       "outcome": "\u2014",
       "count": null,
@@ -1924,7 +2041,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ty Uber",
+      "pitcher": "William Jaisle",
       "batter": "Noah Bright",
       "outcome": "Strikeout (looking)",
       "count": "1-2",
@@ -1951,7 +2068,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ty Uber",
+      "pitcher": "William Jaisle",
       "batter": "Issac Sturgess",
       "outcome": "Strikeout (swinging)",
       "count": "2-2",
@@ -1978,7 +2095,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "Ty Uber",
+      "pitcher": "William Jaisle",
       "batter": "Randy Seymour",
       "outcome": "Flyout",
       "count": "0-0",
@@ -2005,7 +2122,34 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nolan Higgins",
+      "pitcher": "",
+      "batter": "Higgins,N to p for Szczepanski.",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": null,
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 3,
+        "home": 2
+      },
+      "description": "Higgins,N to p for Szczepanski."
+    },
+    {
+      "inning": "Top 9",
+      "pitcher": "",
       "batter": "M Quatrani grounded out to (3-2).",
       "outcome": "Groundout",
       "count": "3-2",
@@ -2032,7 +2176,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nolan Higgins",
+      "pitcher": "",
       "batter": "J Lee struck out swinging, grounded out to c unassisted (1-2).",
       "outcome": "Strikeout (swinging)",
       "count": "1-2",
@@ -2059,7 +2203,7 @@
     },
     {
       "inning": "Top 9",
-      "pitcher": "Nolan Higgins",
+      "pitcher": "",
       "batter": "D Passo grounded out to ss (1-1).",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2086,7 +2230,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Ty Uber",
+      "pitcher": "William Jaisle",
       "batter": "M Quatrani to c.",
       "outcome": "\u2014",
       "count": null,
@@ -2113,7 +2257,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Ty Uber",
+      "pitcher": "",
       "batter": "W Jaisle to p for S Miranda.",
       "outcome": "\u2014",
       "count": null,
@@ -2140,7 +2284,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Ty Uber",
+      "pitcher": "",
       "batter": "Khamaree Thomas",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2167,7 +2311,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Ty Uber",
+      "pitcher": "",
       "batter": "Dayton Murphy",
       "outcome": "Hit by pitch",
       "count": "1-1",
@@ -2194,7 +2338,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Ty Uber",
+      "pitcher": "",
       "batter": null,
       "outcome": "Wild pitch",
       "count": null,
@@ -2209,8 +2353,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Dayton Murphy",
-        "2B": null,
+        "1B": null,
+        "2B": "Dayton Murphy",
         "3B": null
       },
       "score": {
@@ -2221,7 +2365,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Ty Uber",
+      "pitcher": "",
       "batter": "Ryan McKay",
       "outcome": "Groundout",
       "count": "1-1",
@@ -2231,13 +2375,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Dayton Murphy",
-        "2B": null,
+        "1B": null,
+        "2B": "Dayton Murphy",
         "3B": null
       },
       "runners_after": {
-        "1B": "Dayton Murphy",
-        "2B": null,
+        "1B": null,
+        "2B": "Dayton Murphy",
         "3B": null
       },
       "score": {
@@ -2248,7 +2392,7 @@
     },
     {
       "inning": "Bottom 9",
-      "pitcher": "Ty Uber",
+      "pitcher": "",
       "batter": "CJ Deckinga",
       "outcome": "Strikeout (swinging)",
       "count": "3-2",
@@ -2258,13 +2402,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Dayton Murphy",
-        "2B": null,
+        "1B": null,
+        "2B": "Dayton Murphy",
         "3B": null
       },
       "runners_after": {
-        "1B": "Dayton Murphy",
-        "2B": null,
+        "1B": null,
+        "2B": "Dayton Murphy",
         "3B": null
       },
       "score": {

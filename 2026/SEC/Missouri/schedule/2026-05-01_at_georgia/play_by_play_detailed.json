@@ -3,7 +3,7 @@
   "date": "05/01/2026",
   "away_team": "Missouri",
   "home_team": "Georgia",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -958,7 +958,9 @@
       "count": "3-1",
       "pitches": "BBSB",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -1752,8 +1754,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Tre Phelps",
-        "2B": null,
+        "1B": null,
+        "2B": "Tre Phelps",
         "3B": null
       },
       "score": {
@@ -1774,13 +1776,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Tre Phelps",
-        "2B": null,
+        "1B": null,
+        "2B": "Tre Phelps",
         "3B": null
       },
       "runners_after": {
         "1B": "Jordy Oriach",
-        "2B": null,
+        "2B": "Tre Phelps",
         "3B": null
       },
       "score": {
@@ -1802,13 +1804,13 @@
       "outs_after": 2,
       "runners_before": {
         "1B": "Jordy Oriach",
-        "2B": null,
+        "2B": "Tre Phelps",
         "3B": null
       },
       "runners_after": {
         "1B": "Jordy Oriach",
         "2B": null,
-        "3B": null
+        "3B": "Tre Phelps"
       },
       "score": {
         "away": 0,
@@ -1830,12 +1832,12 @@
       "runners_before": {
         "1B": "Jordy Oriach",
         "2B": null,
-        "3B": null
+        "3B": "Tre Phelps"
       },
       "runners_after": {
         "1B": "Kenny Ishikawa",
         "2B": null,
-        "3B": null
+        "3B": "Tre Phelps"
       },
       "score": {
         "away": 0,
@@ -1851,18 +1853,21 @@
       "count": "3-2",
       "pitches": "BBKBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null,
+        null
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
         "1B": "Kenny Ishikawa",
         "2B": null,
-        "3B": null
+        "3B": "Tre Phelps"
       },
       "runners_after": {
         "1B": "Ryan Black",
         "2B": null,
-        "3B": null
+        "3B": "Tre Phelps"
       },
       "score": {
         "away": 0,
@@ -1884,12 +1889,12 @@
       "runners_before": {
         "1B": "Ryan Black",
         "2B": null,
-        "3B": null
+        "3B": "Tre Phelps"
       },
       "runners_after": {
         "1B": "Brennan Hudson",
         "2B": null,
-        "3B": null
+        "3B": "Tre Phelps"
       },
       "score": {
         "away": 0,

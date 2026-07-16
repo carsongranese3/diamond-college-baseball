@@ -3,7 +3,7 @@
   "date": "03/15/2026",
   "away_team": "Ole Miss",
   "home_team": "Texas",
-  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher tracked via in-text pitching changes.",
+  "note": "Broken-down from the saved play_by_play.json (both teams' at-bats). Top = away batting, Bottom = home batting; outs/bases tracked per half-inning, pitcher-of-record reconstructed from box-score BF.",
   "plays": [
     {
       "inning": "Top 1",
@@ -475,7 +475,9 @@
       "count": "3-1",
       "pitches": "BBBK",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        null
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
@@ -592,8 +594,8 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Hayden Federico",
-        "2B": null,
+        "1B": null,
+        "2B": "Hayden Federico",
         "3B": null
       },
       "score": {
@@ -614,13 +616,13 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Hayden Federico",
-        "2B": null,
+        "1B": null,
+        "2B": "Hayden Federico",
         "3B": null
       },
       "runners_after": {
-        "1B": "Hayden Federico",
-        "2B": null,
+        "1B": null,
+        "2B": "Hayden Federico",
         "3B": null
       },
       "score": {
@@ -641,13 +643,13 @@
       "outs_before": 2,
       "outs_after": 3,
       "runners_before": {
-        "1B": "Hayden Federico",
-        "2B": null,
+        "1B": null,
+        "2B": "Hayden Federico",
         "3B": null
       },
       "runners_after": {
-        "1B": "Hayden Federico",
-        "2B": null,
+        "1B": null,
+        "2B": "Hayden Federico",
         "3B": null
       },
       "score": {
@@ -881,7 +883,8 @@
       "pitches": "FBBF",
       "rbi": true,
       "runs_scored": [
-        "Casey Borba"
+        "Casey Borba",
+        null
       ],
       "outs_before": 0,
       "outs_after": 0,
@@ -930,7 +933,34 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
+      "batter": "W. Hooks",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 0,
+      "outs_after": 0,
+      "runners_before": {
+        "1B": "Duplantier J",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Duplantier J",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 0,
+        "home": 5
+      },
+      "description": "W. Hooks to p for W. Libbert."
+    },
+    {
+      "inning": "Bottom 4",
+      "pitcher": "Walker Hooks",
       "batter": "Ashton Larson",
       "outcome": "Single",
       "count": "1-0",
@@ -946,7 +976,7 @@
       },
       "runners_after": {
         "1B": "Ashton Larson",
-        "2B": null,
+        "2B": "Duplantier J",
         "3B": null
       },
       "score": {
@@ -957,7 +987,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
@@ -968,13 +998,13 @@
       "outs_after": 0,
       "runners_before": {
         "1B": "Ashton Larson",
-        "2B": null,
+        "2B": "Duplantier J",
         "3B": null
       },
       "runners_after": {
-        "1B": "Ashton Larson",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Ashton Larson",
+        "3B": "Duplantier J"
       },
       "score": {
         "away": 0,
@@ -984,23 +1014,25 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Ethan Mendoza",
       "outcome": "Groundout",
       "count": "2-2",
       "pitches": "KBFBF",
       "rbi": true,
-      "runs_scored": [],
+      "runs_scored": [
+        "Duplantier J"
+      ],
       "outs_before": 0,
       "outs_after": 1,
       "runners_before": {
-        "1B": "Ashton Larson",
-        "2B": null,
-        "3B": null
+        "1B": null,
+        "2B": "Ashton Larson",
+        "3B": "Duplantier J"
       },
       "runners_after": {
-        "1B": "Ashton Larson",
-        "2B": null,
+        "1B": null,
+        "2B": "Ashton Larson",
         "3B": null
       },
       "score": {
@@ -1011,7 +1043,7 @@
     },
     {
       "inning": "Bottom 4",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Carson Tinney",
       "outcome": "\u2014",
       "count": "0-0",
@@ -1021,8 +1053,8 @@
       "outs_before": 1,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ashton Larson",
-        "2B": null,
+        "1B": null,
+        "2B": "Ashton Larson",
         "3B": null
       },
       "runners_after": {
@@ -1202,7 +1234,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Aiden Robbins",
       "outcome": "Flyout",
       "count": "1-2",
@@ -1229,7 +1261,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Adrian Rodriguez",
       "outcome": "Reached on error",
       "count": "1-2",
@@ -1256,7 +1288,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Temo Becerra",
       "outcome": "Groundout",
       "count": "1-1",
@@ -1283,7 +1315,7 @@
     },
     {
       "inning": "Bottom 5",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Pack",
       "outcome": "Foul out",
       "count": "0-0",
@@ -1418,7 +1450,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Casey Borba",
       "outcome": "Groundout",
       "count": "1-2",
@@ -1445,7 +1477,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Duplantier J",
       "outcome": "Groundout",
       "count": "3-2",
@@ -1472,7 +1504,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Maddox Monsour",
       "outcome": "Single",
       "count": "0-0",
@@ -1499,7 +1531,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "W.",
+      "pitcher": "Walker Hooks",
       "batter": "Ethan Mendoza",
       "outcome": "Walk",
       "count": "3-1",
@@ -1526,13 +1558,15 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "W.",
+      "pitcher": "Landon Koenig",
       "batter": null,
       "outcome": "Stolen base",
       "count": null,
       "pitches": null,
       "rbi": false,
-      "runs_scored": [],
+      "runs_scored": [
+        "Maddox Monsour"
+      ],
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
@@ -1541,9 +1575,9 @@
         "3B": null
       },
       "runners_after": {
-        "1B": "Ethan Mendoza",
-        "2B": "Maddox Monsour",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Ethan Mendoza"
       },
       "score": {
         "away": 1,
@@ -1553,7 +1587,7 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "W.",
+      "pitcher": "Landon Koenig",
       "batter": "Carson Tinney",
       "outcome": "Single",
       "count": "1-2",
@@ -1565,13 +1599,13 @@
       "outs_before": 2,
       "outs_after": 2,
       "runners_before": {
-        "1B": "Ethan Mendoza",
-        "2B": "Maddox Monsour",
-        "3B": null
+        "1B": null,
+        "2B": null,
+        "3B": "Ethan Mendoza"
       },
       "runners_after": {
         "1B": "Carson Tinney",
-        "2B": "Maddox Monsour",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1582,7 +1616,34 @@
     },
     {
       "inning": "Bottom 6",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
+      "batter": "L. Koenig",
+      "outcome": "\u2014",
+      "count": null,
+      "pitches": null,
+      "rbi": false,
+      "runs_scored": [],
+      "outs_before": 2,
+      "outs_after": 2,
+      "runners_before": {
+        "1B": "Carson Tinney",
+        "2B": null,
+        "3B": null
+      },
+      "runners_after": {
+        "1B": "Carson Tinney",
+        "2B": null,
+        "3B": null
+      },
+      "score": {
+        "away": 1,
+        "home": 8
+      },
+      "description": "L. Koenig to p for W. Hooks."
+    },
+    {
+      "inning": "Bottom 6",
+      "pitcher": "Landon Koenig",
       "batter": "Aiden Robbins",
       "outcome": "Strikeout (looking)",
       "count": "3-2",
@@ -1593,12 +1654,12 @@
       "outs_after": 3,
       "runners_before": {
         "1B": "Carson Tinney",
-        "2B": "Maddox Monsour",
+        "2B": null,
         "3B": null
       },
       "runners_after": {
         "1B": "Carson Tinney",
-        "2B": "Maddox Monsour",
+        "2B": null,
         "3B": null
       },
       "score": {
@@ -1746,7 +1807,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
       "batter": "Adrian Rodriguez",
       "outcome": "Flyout",
       "count": "0-2",
@@ -1773,7 +1834,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
       "batter": "Temo Becerra",
       "outcome": "Groundout",
       "count": "2-2",
@@ -1800,7 +1861,7 @@
     },
     {
       "inning": "Bottom 7",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
       "batter": "Pack",
       "outcome": "Lineout",
       "count": "3-1",
@@ -1908,7 +1969,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "L.",
+      "pitcher": "Landon Koenig",
       "batter": "Casey Borba",
       "outcome": "Strikeout (swinging)",
       "count": "0-2",
@@ -1935,7 +1996,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Duplantier J",
       "outcome": "Strikeout (looking)",
       "count": "2-2",
@@ -1962,7 +2023,7 @@
     },
     {
       "inning": "Bottom 8",
-      "pitcher": "L.",
+      "pitcher": "",
       "batter": "Callum Early",
       "outcome": "Groundout",
       "count": "0-1",
