@@ -189,13 +189,14 @@ function BbxPlayerOfWeek({ onTeam, league }) {
        : !p ? <div className="bbx-faint bbx-pad">No qualifying {side} last week.</div>
        : (
         <div className="bbx-potw__body">
-          <div className="bbx-potw__cutout"><span>PLAYER<br />CUTOUT</span></div>
           <div className="bbx-potw__main">
             <button className="bbx-potw__teamline" onClick={() => team && onTeam && onTeam(p.team)}>
-              <HPLogo team={team} size={18} />
               <span>{(p.teamName || "").toUpperCase()} · {p.pos}</span>
             </button>
-            <div className="bbx-potw__name">{(p.player || "").toUpperCase()}</div>
+            <div className="bbx-potw__nameline">
+              <div className="bbx-potw__name">{(p.player || "").toUpperCase()}</div>
+              <HPLogo team={team} size={56} />
+            </div>
             <div className="bbx-potw__wk">{bbxWeekLabel(data.window)}</div>
             <div className="bbx-statgrid">
               {p.basic.map((s) => (

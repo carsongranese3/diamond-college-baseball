@@ -279,13 +279,12 @@ function StagePlayersToWatch({ league, onTeam }) {
             return (
               <button key={i} className="stg-pcard stg-pcard--btn"
                       onClick={() => team && onTeam && onTeam(p.team)}>
-                <div className="stg-pcard__photo">
-                  <span>PLAYER CUTOUT</span>
-                  <div className="stg-pcard__logo"><HPLogo team={team} size={26} /></div>
-                </div>
                 <div className="stg-pcard__body">
                   <div className="mono stg-faint stg-pcard__pos">{(p.abbr || stgAbbr(team))} · {p.pos}</div>
-                  <div className="stg-pcard__name">{(p.player || "").toUpperCase()}</div>
+                  <div className="stg-pcard__nameline">
+                    <div className="stg-pcard__name">{(p.player || "").toUpperCase()}</div>
+                    <HPLogo team={team} size={40} />
+                  </div>
                   <div className="stg-pcard__line">
                     {p.basic.map((s, j) => (
                       <div key={j}><div className="stg-pcard__n">{s.value}</div><div className="mono stg-pcard__l">{s.label}</div></div>
