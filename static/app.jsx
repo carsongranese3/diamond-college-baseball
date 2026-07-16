@@ -54,8 +54,13 @@ function pathForView(view) {
       const params = {};
       if (view.statMode === "players") {
         params.mode = "players";
-        if (view.statView === "pitching") params.view = "pitching";
+        if (view.statView === "pitching" || view.statView === "fielding") params.view = view.statView;
         if (view.statLevel === "advanced") params.level = "advanced";
+      } else if (view.statMode === "situational") {
+        params.mode = "situational";
+        // Batting/Pitching is situational's section — share the Players `view`
+        // param so each is its own link (batting is the default, so omit it).
+        if (view.statView === "pitching") params.view = "pitching";
       }
       return base + buildQuery(params);
     }
@@ -117,8 +122,8 @@ function viewForPath(pathname, search) {
     const teamTab = ["home", "schedule", "roster", "stats"].includes(rest[1]) ? rest[1] : "home";
     const v = { name: "team", teamId, teamTab };
     if (teamTab === "stats") {
-      v.statMode = sp.get("mode") === "players" ? "players" : "team";
-      v.statView = sp.get("view") === "pitching" ? "pitching" : "batting";
+      v.statMode = ["players", "situational"].includes(sp.get("mode")) ? sp.get("mode") : "team";
+      v.statView = ["pitching", "fielding"].includes(sp.get("view")) ? sp.get("view") : "batting";
       v.statLevel = sp.get("level") === "advanced" ? "advanced" : "basic";
     }
     return v;
