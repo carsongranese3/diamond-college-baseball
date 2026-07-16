@@ -202,6 +202,131 @@ def _load(game_dir):
     return out
 
 
+def _load_detailed(game_dir):
+    """Optionally load play_by_play_detailed.json; returns parsed dict or None.
+    A missing, iCloud-offloaded, or corrupt file returns None without raising —
+    the caller treats it as absent and sets pbp=[]."""
+    path = os.path.join(game_dir, "play_by_play_detailed.json")
+    if not os.path.exists(path) or _dataless(path):
+        return None
+    try:
+        with open(path, encoding="utf-8") as fh:
+            return json.load(fh)
+    except (json.JSONDecodeError, OSError):
+        return None
+
+
+def _ordinal(n):
+    """Return ordinal suffix string for integer n (1->'1ST', 2->'2ND', …)."""
+    if n == 1:
+        return "1ST"
+    if n == 2:
+        return "2ND"
+    if n == 3:
+        return "3RD"
+    if 11 <= (n % 100) <= 13:
+        return f"{n}TH"
+    last = n % 10
+    if last == 1:
+        return f"{n}ST"
+    if last == 2:
+        return f"{n}ND"
+    if last == 3:
+        return f"{n}RD"
+    return f"{n}TH"
+
+
+def _build_pbp(detailed):
+    """Map play_by_play_detailed.json's plays list into grouped half-inning dicts.
+    Returns [] when detailed is falsy or has no usable plays."""
+    if not detailed:
+        return []
+    raw_plays = detailed.get("plays") or []
+    if not raw_plays:
+        return []
+
+    halves = []
+    current_inning_str = None
+    current_half = None
+    current_plays = []
+
+    def _flush(inning_str, plays):
+        """Build one half-inning group from accumulated plays."""
+        # Parse "Top 1" / "Bottom 9" / "Bot 3" etc.
+        parts = inning_str.split() if inning_str else []
+        half_word = parts[0].lower() if parts else ""
+        if half_word in ("top",):
+            half = "top"
+        elif half_word in ("bottom", "bot"):
+            half = "bottom"
+        else:
+            half = half_word  # best-effort
+        try:
+            inn_num = int(parts[1]) if len(parts) > 1 else 0
+        except (ValueError, IndexError):
+            inn_num = 0
+        label = f"{'TOP' if half == 'top' else 'BOT'} {_ordinal(inn_num)}" if inn_num else inning_str
+        batting_side = "away" if half == "top" else "home"
+
+        mapped = []
+        total_runs = 0
+        last_score = {"away": 0, "home": 0}
+        for p in plays:
+            try:
+                ra = p.get("runners_after") or {}
+                bases = {
+                    "1B": ra.get("1B") is not None,
+                    "2B": ra.get("2B") is not None,
+                    "3B": ra.get("3B") is not None,
+                }
+                rs = p.get("runs_scored") or []
+                p_runs = len(rs)
+                total_runs += p_runs
+                sc = p.get("score") or {"away": 0, "home": 0}
+                last_score = {"away": to_int(sc.get("away")), "home": to_int(sc.get("home"))}
+                mapped.append({
+                    "batter": p.get("batter") or "",
+                    "pitcher": p.get("pitcher") or "",
+                    "outcome": p.get("outcome") or "—",
+                    "count": p.get("count") or "",
+                    "pitches": p.get("pitches") or "",
+                    "outsAfter": to_int(p.get("outs_after")),
+                    "bases": bases,
+                    "runs": p_runs,
+                    "rbi": bool(p.get("rbi")),
+                    "score": last_score,
+                    "description": p.get("description") or "",
+                })
+            except Exception:
+                continue  # skip a malformed play rather than 500
+        return {
+            "half": half,
+            "inning": inn_num,
+            "label": label,
+            "battingSide": batting_side,
+            "plays": mapped,
+            "scoreAfter": last_score,
+            "runs": total_runs,
+        }
+
+    for play in raw_plays:
+        try:
+            inn_str = play.get("inning") or ""
+        except Exception:
+            continue
+        if inn_str != current_inning_str:
+            if current_inning_str is not None and current_plays:
+                halves.append(_flush(current_inning_str, current_plays))
+            current_inning_str = inn_str
+            current_plays = []
+        current_plays.append(play)
+
+    if current_inning_str is not None and current_plays:
+        halves.append(_flush(current_inning_str, current_plays))
+
+    return halves
+
+
 def _iter_games(team_dir):
     sched_dir = os.path.join(team_dir, "schedule")
     if not os.path.isdir(sched_dir):
@@ -253,6 +378,13 @@ def team_stats(seo, name):
             pit_raw = json.load(fh).get("players") or []
     except (OSError, ValueError):
         return None  # stats files not built yet -> caller falls back to the API path
+
+    # Fielding is optional: older data has no fielding.json -> keep placeholders.
+    try:
+        with open(os.path.join(stats_dir, "fielding.json"), encoding="utf-8") as fh:
+            fld_raw = json.load(fh).get("players") or []
+    except (OSError, ValueError):
+        fld_raw = []
 
     batters = []
     for b in bat_raw:
@@ -306,6 +438,7 @@ def team_stats(seo, name):
             "w": to_int(p.get("w")), "l": to_int(p.get("l")), "sv": to_int(p.get("s")),
             "ip": p.get("ip") or outs_to_ip(outs),
             "h": h, "r": r, "er": er, "bb": bb, "k": k,
+            "ks": to_int(p.get("ks")), "kl": to_int(p.get("kl")),
             # Full counting line for the column picker: outs, unearned runs, inherited
             # runners, batted-ball types, GIDP, pitch counts, and the allowed-hit line.
             "outs": outs, "ur": r - er, "bf": bf,
@@ -343,6 +476,11 @@ def team_stats(seo, name):
     p_k = sum(p["k"] for p in pitchers)
     p_hra = sum(p["_hra"] for p in pitchers)
     total_sv = sum(p["sv"] for p in pitchers)
+    # Opponent batting average against the staff — H / (BF − BB − HBP).
+    p_bf = sum(p["bf"] for p in pitchers)
+    p_hbp = sum(p["hbp"] for p in pitchers)
+    p_ab = p_bf - p_bb - p_hbp
+    team_oba = fmt3(p_h / p_ab) if p_ab > 0 else "—"
 
     _qual = [b for b in batters if b["ab"] >= max(20, tab // 80)]
     avg_l = max(_qual, key=lambda r: float(r["avg"] or 0), default=None)
@@ -364,6 +502,48 @@ def team_stats(seo, name):
     for p in pitchers:
         p.pop("_outs", None); p.pop("_hra", None)
 
+    # Fielding: per-player rows (with computed fielding %) + team totals. Team
+    # double plays come from staff GIDP induced, NOT the sum of per-player DP
+    # (one double play credits several fielders, so summing IDP overcounts).
+    fielders = []
+    f_po = f_a = f_e = f_tp = f_pb = f_sba = f_csb = 0
+    for fr in fld_raw:
+        # `pos` is a list of per-position stat lines; add fielding % to each and
+        # roll them up into the player's overall totals.
+        positions = []
+        t_po = t_a = t_e = t_g = 0
+        for ent in fr.get("pos") or []:
+            po, a, e = to_int(ent.get("po")), to_int(ent.get("a")), to_int(ent.get("e"))
+            ch = po + a + e
+            f_po += po; f_a += a; f_e += e
+            f_tp += to_int(ent.get("tp")); f_pb += to_int(ent.get("pb"))
+            f_sba += to_int(ent.get("sba")); f_csb += to_int(ent.get("csb"))
+            t_po += po; t_a += a; t_e += e; t_g += to_int(ent.get("g"))
+            entd = {
+                "pos": ent.get("pos", ""), "g": to_int(ent.get("g")),
+                "po": po, "a": a, "e": e, "tc": to_int(ent.get("tc")) or ch,
+                "dp": to_int(ent.get("dp")), "tp": to_int(ent.get("tp")),
+                "fpct": fmt3((po + a) / ch) if ch else "—",
+            }
+            if ent.get("pos") == "C":  # catcher-only stats
+                entd.update(ci=to_int(ent.get("ci")), pb=to_int(ent.get("pb")),
+                            sba=to_int(ent.get("sba")), csb=to_int(ent.get("csb")))
+            elif ent.get("pos") in ("LF", "CF", "RF", "OF"):  # outfield assists
+                entd["ofa"] = to_int(ent.get("ofa"))
+            positions.append(entd)
+        t_ch = t_po + t_a + t_e
+        fielders.append({
+            "name": fr.get("name", ""), "num": fr.get("num", ""),
+            "pos": positions[0]["pos"] if positions else "",  # primary, for convenience
+            "g": t_g, "tc": t_ch, "po": t_po, "a": t_a, "e": t_e,
+            "fpct": fmt3((t_po + t_a) / t_ch) if t_ch else "—",
+            "positions": positions,
+        })
+    fielders.sort(key=lambda x: x["tc"], reverse=True)
+    team_chances = f_po + f_a + f_e
+    team_fpct = fmt3((f_po + f_a) / team_chances) if team_chances else "—"
+    team_dp = sum(to_int(p.get("gidp")) for p in pit_raw)
+
     games = max([b["g"] for b in batters] + [p["g"] for p in pitchers] + [0])
     b_avg = th / tab if tab else 0.0
     b_obp = (th + tbb + thbp) / (tab + tbb + thbp) if (tab + tbb + thbp) else 0.0
@@ -378,11 +558,16 @@ def team_stats(seo, name):
         "pitching": {"era": fmt2((p_er * 9 / p_ipnum) if p_ipnum else 0.0),
                      "whip": fmt2(((p_bb + p_h) / p_ipnum) if p_ipnum else 0.0),
                      "k": p_k, "bb": p_bb, "sv": total_sv, "ip": outs_to_ip(p_outs),
-                     "hr_a": p_hra, "oba": "—"},
-        # Fielding isn't part of the stats files yet -> placeholders.
-        "fielding": {"pct": "—", "e": "—", "dp": "—", "fp": "—"},
+                     "hr_a": p_hra, "oba": team_oba},
+        "fielding": ({"pct": team_fpct, "fp": team_fpct,
+                      "po": f_po, "a": f_a, "e": f_e, "tc": team_chances,
+                      "dp": team_dp, "tp": f_tp,
+                      "pb": f_pb, "sba": f_sba, "csb": f_csb}
+                     if fielders else
+                     {k: "—" for k in ("pct", "fp", "po", "a", "e", "tc",
+                                       "dp", "tp", "pb", "sba", "csb")}),
         "leaders": leaders,
-        "roster": {"batters": batters, "pitchers": pitchers},
+        "roster": {"batters": batters, "pitchers": pitchers, "fielders": fielders},
     }
 
 
@@ -541,6 +726,7 @@ def game(seo, name, iso, host_runs=None, opp_seo=None):
                         "home": _box_rows_bat((players.get("home") or {}).get("batting"), home["name"])},
             "pitchers": pitchers,
             "plays": data["plays"] or [],
+            "pbp": _build_pbp(_load_detailed(_dir)),
             "notes": [],
             "_source": "local",
         }
@@ -758,7 +944,7 @@ def player(seo, name, player_name):
             continue
         b = {k: 0 for k in ("g", "ab", "r", "h", "2b", "3b", "hr", "rbi",
                             "bb", "k", "hbp", "sf", "sb")}
-        p = {k: 0 for k in ("g", "outs", "h", "r", "er", "bb", "k")}
+        p = {k: 0 for k in ("g", "outs", "h", "r", "er", "bb", "k", "bf", "hb")}
         games = []
         for _dir, data in _iter_games(team_dir):
             side = (data.get("players") or {}).get(_host_side(data, name)) or {}
@@ -793,7 +979,7 @@ def player(seo, name, player_name):
                 p["g"] += 1
                 p["outs"] += ip_to_outs(prow.get("IP"))
                 for src, dst in (("H", "h"), ("R", "r"), ("ER", "er"),
-                                 ("BB", "bb"), ("SO", "k")):
+                                 ("BB", "bb"), ("SO", "k"), ("BF", "bf"), ("HB", "hb")):
                     p[dst] += to_int(prow.get(src))
 
         if not games:
@@ -814,10 +1000,12 @@ def player(seo, name, player_name):
         pitching = None
         if p["g"]:
             ipnum = p["outs"] / 3 if p["outs"] else 0.0
+            p_ab = p["bf"] - p["bb"] - p["hb"]
             pitching = {"g": p["g"], "ip": outs_to_ip(p["outs"]), "h": p["h"],
                         "r": p["r"], "er": p["er"], "bb": p["bb"], "k": p["k"],
                         "era": fmt2(p["er"] * 9 / ipnum) if ipnum else "—",
-                        "whip": fmt2((p["bb"] + p["h"]) / ipnum) if ipnum else "—"}
+                        "whip": fmt2((p["bb"] + p["h"]) / ipnum) if ipnum else "—",
+                        "oba": fmt3(p["h"] / p_ab) if p_ab > 0 else "—"}
 
         seasons.append({"year": year, "batting": batting,
                         "pitching": pitching, "games": games})
@@ -829,6 +1017,528 @@ def player(seo, name, player_name):
 
 
 # ── Roster file (built by build_roster.py) ───────────────────────────────────
+# ── Team situational batting splits (from play_by_play_detailed.json) ─────────
+
+_SPLITS_SUFFIX = {"jr", "sr", "ii", "iii", "iv", "v"}
+
+
+def _splits_last_key(full):
+    """Roster full name ('Carson Tinney', 'Anthony Pack Jr.') -> (last, first-init).
+    Strips name suffixes so 'Pack Jr.' and 'Pack' resolve to the same last key."""
+    toks = re.sub(r"[.,]", " ", full or "").split()
+    if not toks:
+        return None, ""
+    fi = toks[0][0].lower()
+    while len(toks) > 1 and toks[-1].lower() in _SPLITS_SUFFIX:
+        toks.pop()
+    return toks[-1].lower(), fi
+
+
+def _splits_pbp_keys(name):
+    """Candidate (last, first-init) interpretations of a PBP batter string.
+
+    PBP batter fields come in several forms — 'Tinney', 'Pack Jr., Anthony',
+    'Galloway, R.', 'Duplantier J'. We return every plausible reading; the caller
+    keeps a play only if one of them matches a real roster surname, so garbage
+    batter values (first-name-only fragments, a whole leaked play description) and
+    opponent names simply never match and are dropped."""
+    name = (name or "").strip()
+    out = []
+    if "," in name:                              # "Last, First" / "Last, F."
+        last, rest = name.split(",", 1)
+        ltoks = re.sub(r"[.]", " ", last).split()
+        while len(ltoks) > 1 and ltoks[-1].lower() in _SPLITS_SUFFIX:
+            ltoks.pop()
+        if ltoks:
+            out.append((ltoks[-1].lower(),
+                        rest.strip()[:1].lower() if rest.strip() else ""))
+        return out
+    toks = re.sub(r"[.]", " ", name).split()
+    while len(toks) > 1 and toks[-1].lower() in _SPLITS_SUFFIX:
+        toks.pop()
+    if not toks:
+        return out
+    if len(toks) == 1:
+        out.append((toks[0].lower(), ""))
+    else:
+        # 'Duplantier J' -> surname is the FIRST token, 'J' a first-initial.
+        if len(toks[-1]) == 1:
+            out.append((toks[0].lower(), toks[-1][0].lower()))
+        # 'Anthony Pack' -> surname is the LAST token (First Last).
+        out.append((toks[-1].lower(), toks[0][0].lower()))
+    return out
+
+
+def _splits_resolve(batter_pbp, by_last):
+    """Roster norm-key for a PBP batter, or None when the batter isn't on the
+    batting roster (so the play is dropped rather than inventing a player)."""
+    for lk, fi in _splits_pbp_keys(batter_pbp):
+        cands = by_last.get(lk)
+        if not cands:
+            continue
+        if len(cands) == 1:
+            return cands[0][0]
+        return next((nk for nk, f in cands if f and f == fi), cands[0][0])
+    return None
+
+
+# Outcome -> XBH column to increment (also scores H + AB).
+_SPLITS_HIT = {"Single": "1B", "Double": "2B", "Triple": "3B", "Home run": "HR"}
+
+# Outcomes that score a walk (BB; not AB).
+_SPLITS_WALK = {"Walk", "Intentional walk"}
+
+# Outcomes that cost an AB but not a hit (outs + reached without a hit).
+_SPLITS_AB_OUT = {
+    "Groundout", "Flyout", "Lineout", "Pop out", "Foul out", "Infield fly",
+    "Grounded into double play",
+    "Reached on error", "Fielder's choice", "Catcher interference",
+}
+
+# Outcomes where the batter put the ball in play off the bat (used for the
+# pitching side's "s" contact-pitch bonus below) — same as _SPLITS_AB_OUT
+# minus Catcher interference, which isn't a batted ball.
+_SPLITS_CONTACT_OUT = _SPLITS_AB_OUT - {"Catcher interference"}
+
+# A PBP name token as it appears in narrative baserunning/description text
+# ("Willits, J.", "Gambill,Trey", "Brendan Brock", "GRINDLINGER", "L.
+# Lawrence") — mirrors the variety of stylings _splits_pbp_keys() already
+# knows how to read, just anchored for scanning raw sentence text instead of
+# a single isolated batter field.
+_SPLITS_NAME_RE = r"[A-Z][A-Za-z']*\.?(?:,\s*[A-Za-z]+\.?)?(?:\s[A-Z][A-Za-z.']*\.?)?"
+
+# "<runner> stole second/third/home[ base]." — a stolen base. Matched
+# independently of this play's own top-level `outcome` classification: it
+# fires whether the play IS a standalone "Stolen base" event or the clause is
+# embedded alongside the batter's own PA (e.g. a strikeout with a runner
+# thrown in/safe on the same pitch — stats.ncaa.org's PBP often folds both
+# into one play's description).
+_SPLITS_STOLE_RE = re.compile(rf"({_SPLITS_NAME_RE})\s+stole\s+(?:second|third|home)\b")
+
+# "<runner> out at <base> ..., caught stealing." / "<runner> out caught
+# stealing at <base>, ...". Requires "caught stealing" to land before the next
+# clause boundary (period/semicolon) so it can't reach across an unrelated
+# out earlier in a multi-event play description.
+_SPLITS_CS_RE = re.compile(
+    rf"({_SPLITS_NAME_RE})\s+out\s+(?:at\s+\w+[^.;]*?caught stealing"
+    rf"|caught stealing\s+at\s+\w+)"
+)
+
+
+def _splits_new_bat_cell():
+    """Fresh all-zero situational cell for one batter/(mask,outs) combination.
+    Shared by the per-PA cell-creation path and the SB/CS runner-crediting
+    path below (a runner can pick up a cell here before ever batting in it)."""
+    return {
+        "PA": 0, "AB": 0, "H": 0, "1B": 0, "2B": 0, "3B": 0,
+        "HR": 0, "RBI": 0, "BB": 0, "SO": 0,
+        "HBP": 0, "IBB": 0, "ROE": 0, "FC": 0,
+        "GB": 0, "FB": 0, "LD": 0, "PU": 0,
+        "KS": 0, "KL": 0,
+        "SF": 0, "SH": 0, "SB": 0, "CS": 0,
+    }
+
+
+def _splits_new_pitch_cell():
+    """Fresh all-zero situational cell for one pitcher/(mask,outs) combination.
+    Shared by the per-PA cell-creation path and the wp/bk runner-event path
+    below (those can post to a cell before the pitcher ever faces a batter in
+    it)."""
+    return {
+        "bf": 0, "ab": 0, "h": 0, "bb": 0, "so": 0,
+        "hr": 0, "outs": 0, "r": 0,
+        "1B": 0, "2B": 0, "3B": 0,
+        "gb": 0, "fb": 0, "ld": 0, "pu": 0,
+        "hbp": 0,
+        "b": 0, "s": 0,
+        "wp": 0, "bk": 0,
+        "er": 0,
+    }
+
+
+def team_splits(seo, name):
+    """Situational batting splits per batter, aggregated from all saved detailed
+    PBP files. Returns the contract dict or None if the team folder is missing."""
+    team_dir = _find_dir(seo, name)
+    if not team_dir:
+        return None
+
+    col = for_seo(seo)
+
+    # Load batting stats for roster identity and season OPS baseline.
+    stats_dir = os.path.join(team_dir, "stats")
+    try:
+        with open(os.path.join(stats_dir, "batting.json"), encoding="utf-8") as fh:
+            bat_raw = json.load(fh).get("players") or []
+    except (OSError, ValueError):
+        bat_raw = []
+
+    # Load pitching stats for pitcher-roster identity (mirrors bat_raw above).
+    try:
+        with open(os.path.join(stats_dir, "pitching.json"), encoding="utf-8") as fh:
+            pitch_raw = json.load(fh).get("players") or []
+    except (OSError, ValueError):
+        pitch_raw = []
+
+    tab = sum(to_int(b.get("ab")) for b in bat_raw)
+    th  = sum(to_int(b.get("h"))  for b in bat_raw)
+    tbb = sum(to_int(b.get("bb")) for b in bat_raw)
+    ttb = sum(to_int(b.get("tb")) for b in bat_raw)
+    if tab and (tab + tbb):
+        s_obp = (th + tbb) / (tab + tbb)   # simplified OBP per design.md contract
+        s_slg = ttb / tab
+        s_ops = round(s_obp + s_slg, 6)
+    else:
+        s_ops = 0.0
+
+    # Roster: norm-key -> {num, name, pos, cells}. Seeded from stats/batting.json.
+    roster = {}
+    by_last = {}  # last-name -> [(norm-key, first-init)] for PBP name resolution
+    for b in bat_raw:
+        pname = (b.get("name") or "").strip()
+        if not pname:
+            continue
+        nkey = _norm(pname)
+        roster[nkey] = {
+            "num": b.get("num", ""), "name": pname,
+            "pos": b.get("pos", ""), "cells": {},
+        }
+        lk, fi = _splits_last_key(pname)
+        if lk:
+            by_last.setdefault(lk, []).append((nkey, fi))
+
+    # Pitcher roster: norm-key -> {num, name, pos, cells}. Seeded from
+    # stats/pitching.json (analogous to the batting roster above).
+    pitch_roster = {}
+    by_last_pitch = {}  # last-name -> [(norm-key, first-init)] for PBP resolution
+    for p in pitch_raw:
+        pname = (p.get("name") or "").strip()
+        if not pname:
+            continue
+        nkey = _norm(pname)
+        pitch_roster[nkey] = {
+            "num": p.get("num", ""), "name": pname,
+            "pos": p.get("pos", ""), "cells": {},
+        }
+        lk, fi = _splits_last_key(pname)
+        if lk:
+            by_last_pitch.setdefault(lk, []).append((nkey, fi))
+
+    games_total = 0
+    games_with_pbp = 0
+
+    for game_dir, data in _iter_games(team_dir):
+        games_total += 1
+        detailed = _load_detailed(game_dir)
+        plays = (detailed or {}).get("plays") or []
+        if not plays:
+            continue
+        games_with_pbp += 1
+        host_side = _host_side(data, name)
+
+        for play in plays:
+            try:
+                # Batting side: "away" bats in the Top half, "home" in the Bottom.
+                inn = play.get("inning") or ""
+                bat_side = "away" if inn.lower().startswith("top") else "home"
+                is_batting = bat_side == host_side  # else our team is pitching
+
+                # runners_before -> base-state mask (bit0=1B, bit1=2B, bit2=3B).
+                rb = play.get("runners_before")
+                if rb is None:
+                    continue
+                mask = (
+                    (1 if rb.get("1B") is not None else 0)
+                    | (2 if rb.get("2B") is not None else 0)
+                    | (4 if rb.get("3B") is not None else 0)
+                )
+
+                outs_before = play.get("outs_before")
+                if outs_before is None:
+                    continue
+                try:
+                    outs_int = int(outs_before)
+                except (TypeError, ValueError):
+                    continue
+                if outs_int not in (0, 1, 2):
+                    continue
+                outs_str = str(outs_int)
+
+                outcome = play.get("outcome") or "—"
+                desc_text = play.get("description") or ""
+                desc_low = desc_text.lower()
+
+                # Baserunner steal / caught-stealing events, credited to the
+                # RUNNER (parsed from the description), not the batter — not a
+                # PA, so handled here regardless of this play's own outcome:
+                # a steal/CS can be this play's sole event (outcome "Stolen
+                # base"/"Caught stealing", batter blank) or embedded alongside
+                # a separate batter's own PA (e.g. a strikeout with a runner
+                # thrown out on the same pitch, one saved play). Runners are
+                # resolved against the same batting roster as the batter
+                # (`by_last`); unresolved names are dropped like any other
+                # unresolved batter. Cell key is this play's own mask/outs
+                # (the base/out state the steal attempt happened in).
+                if is_batting:
+                    cell_key = f"{mask}-{outs_str}"
+                    for rm in _SPLITS_STOLE_RE.finditer(desc_text):
+                        rkey = _splits_resolve(rm.group(1), by_last)
+                        if rkey is None:
+                            continue
+                        rcells = roster[rkey]["cells"]
+                        if cell_key not in rcells:
+                            rcells[cell_key] = _splits_new_bat_cell()
+                        rcells[cell_key]["SB"] += 1
+                    for rm in _SPLITS_CS_RE.finditer(desc_text):
+                        rkey = _splits_resolve(rm.group(1), by_last)
+                        if rkey is None:
+                            continue
+                        rcells = roster[rkey]["cells"]
+                        if cell_key not in rcells:
+                            rcells[cell_key] = _splits_new_bat_cell()
+                        rcells[cell_key]["CS"] += 1
+
+                # Wild pitch / balk: credited to the CURRENT PITCHER, while our
+                # team is pitching (`is_batting` False since these happen
+                # during the opponent's batting half). Not a PA. Counted from
+                # the description text (not the play's own `outcome`) because
+                # a wild pitch/balk is frequently embedded alongside a
+                # different, unrelated batter outcome in the same saved play
+                # (a strikeout/walk/etc. on the same pitch a runner advanced) —
+                # `outcome` only ever reflects ONE of those, so gating on it
+                # would silently drop most wild pitches/balks. Presence, not
+                # `.count()`: a single wild pitch/balk that moves TWO runners
+                # is narrated once per runner ("X advanced to second on a wild
+                # pitch Y advanced to third on a wild pitch.") — that's one
+                # physical event, not two, and `.count()` would double it
+                # (verified: presence-based counting landed at 40/39 wp and
+                # 4/4 bk against Oklahoma's season total; `.count()` over-shot
+                # to 50/6).
+                if not is_batting:
+                    wp_n = 1 if "wild pitch" in desc_low else 0
+                    bk_n = 1 if "balk" in desc_low else 0
+                    if wp_n or bk_n:
+                        pitcher_pbp = (play.get("pitcher") or "").strip()
+                        pkey = _splits_resolve(pitcher_pbp, by_last_pitch) if pitcher_pbp else None
+                        if pkey is not None:
+                            cell_key = f"{mask}-{outs_str}"
+                            pcells = pitch_roster[pkey]["cells"]
+                            if cell_key not in pcells:
+                                pcells[cell_key] = _splits_new_pitch_cell()
+                            pcells[cell_key]["wp"] += wp_n
+                            pcells[cell_key]["bk"] += bk_n
+
+                # Runs allowed (r/er): credited to the CURRENT PITCHER for
+                # EVERY play with a run scored while we're pitching, PA or
+                # not — placed here, before the PA skip filter, specifically
+                # so it also catches runs that score on a non-PA play (Wild
+                # pitch, Passed ball, Stolen base, Balk, a runner advancing on
+                # an error): those plays' `outcome` isn't a recognized PA type,
+                # so they'd otherwise be dropped by the skip filter below
+                # before ever reaching the PA-path r/er accumulation — which
+                # is why r/er previously undercounted the season total by
+                # ~35% even though this same mechanism is already used for
+                # wp/bk above. `er` is best-effort: `max(0, runs_scored count
+                # - "unearned" mentions in the description)`. This is the ONLY
+                # place r/er are counted now — the PA path below no longer
+                # touches them, so a play is never double-counted.
+                if not is_batting:
+                    runs_n = len(play.get("runs_scored") or [])
+                    if runs_n:
+                        pitcher_pbp = (play.get("pitcher") or "").strip()
+                        pkey = _splits_resolve(pitcher_pbp, by_last_pitch) if pitcher_pbp else None
+                        if pkey is not None:
+                            cell_key = f"{mask}-{outs_str}"
+                            pcells = pitch_roster[pkey]["cells"]
+                            if cell_key not in pcells:
+                                pcells[cell_key] = _splits_new_pitch_cell()
+                            pcells[cell_key]["r"]  += runs_n
+                            unearned_n = desc_low.count("unearned")
+                            pcells[cell_key]["er"] += max(0, runs_n - unearned_n)
+
+                # Classify: skip non-PA runner events and unknown outcomes.
+                xbh = _SPLITS_HIT.get(outcome)
+                if (xbh is None
+                        and outcome not in _SPLITS_WALK
+                        and outcome != "Hit by pitch"
+                        and not outcome.startswith("Strikeout")
+                        and outcome not in _SPLITS_AB_OUT):
+                    continue  # "—", Wild pitch, Passed ball, Stolen base, etc.
+
+                if is_batting:
+                    # Resolve batter to a roster player; drop plays whose batter
+                    # isn't on the batting roster (variant garbage / opponents) so
+                    # the Situational player list mirrors the player-stats batters.
+                    batter_pbp = (play.get("batter") or "").strip()
+                    if not batter_pbp:
+                        continue
+                    nkey = _splits_resolve(batter_pbp, by_last)
+                    if nkey is None:
+                        continue
+
+                    cell_key = f"{mask}-{outs_str}"
+                    cells = roster[nkey]["cells"]
+                    if cell_key not in cells:
+                        cells[cell_key] = _splits_new_bat_cell()
+                    cell = cells[cell_key]
+                    cell["PA"] += 1
+                    cell["RBI"] += len(play.get("runs_scored") or [])
+
+                    if xbh:                                # Single/Double/Triple/HR
+                        cell["H"]  += 1
+                        cell[xbh]  += 1
+                        cell["AB"] += 1
+                    elif outcome in _SPLITS_WALK:          # Walk / Intentional walk
+                        cell["BB"] += 1
+                        if outcome == "Intentional walk":
+                            cell["IBB"] += 1
+                    elif outcome == "Hit by pitch":        # PA only
+                        cell["HBP"] += 1
+                    elif outcome.startswith("Strikeout"):  # Strikeout (swinging/looking)
+                        cell["SO"] += 1
+                        cell["AB"] += 1
+                        if outcome == "Strikeout (swinging)":
+                            cell["KS"] += 1
+                        elif outcome == "Strikeout (looking)":
+                            cell["KL"] += 1
+                        # generic "Strikeout" (no type) stays SO-only, not KS/KL.
+                    else:                                  # _SPLITS_AB_OUT
+                        cell["AB"] += 1
+                        if outcome == "Reached on error":
+                            cell["ROE"] += 1
+                        elif outcome == "Fielder's choice":
+                            cell["FC"] += 1
+                        # Batted-ball type on outs only (hits carry no ball-type
+                        # tag in the PBP source, so this is outs-only by design).
+                        if outcome in ("Groundout", "Grounded into double play"):
+                            cell["GB"] += 1
+                        elif outcome == "Flyout":
+                            cell["FB"] += 1
+                        elif outcome == "Lineout":
+                            cell["LD"] += 1
+                        elif outcome in ("Pop out", "Infield fly"):
+                            cell["PU"] += 1
+                        # "Foul out" -> ambiguous ball type, left uncounted.
+
+                    # Sacrifice fly / sacrifice bunt: purely additive counters,
+                    # detected from the free-text description and layered on
+                    # TOP OF (never instead of) the normal AB/GB/FB/LD/PU
+                    # counting above — a sac fly still counts as a normal
+                    # Flyout (AB+FB) and a sac bunt as a normal Groundout
+                    # (AB+GB), matching every other team's uniform AB
+                    # accounting. Kept in the data for reference but NOT
+                    # surfaced in the frontend: detection from the description
+                    # text is unreliable (see docs/data-shapes.md) and badly
+                    # undercounts for most teams, so these two fields must
+                    # never change PA/AB/GB/FB/LD/PU. A "sacrifice bunt"
+                    # mention that also says "fielder's choice" means the
+                    # batter reached base safely (not a true sacrifice), so
+                    # that case is excluded.
+                    if "sacrifice fly" in desc_low:
+                        cell["SF"] += 1
+                    elif ("sacrifice bunt" in desc_low
+                            and "fielder's choice" not in desc_low):
+                        cell["SH"] += 1
+                else:
+                    # Pitching side: resolve the play's pitcher to our pitching
+                    # roster; drop plays whose pitcher isn't a roster pitcher
+                    # (variant garbage / opponent's own pitcher never applies here
+                    # since these are plays where WE are pitching).
+                    pitcher_pbp = (play.get("pitcher") or "").strip()
+                    if not pitcher_pbp:
+                        continue
+                    pkey = _splits_resolve(pitcher_pbp, by_last_pitch)
+                    if pkey is None:
+                        continue
+
+                    outs_after = play.get("outs_after")
+                    try:
+                        outs_delta = int(outs_after) - outs_int
+                    except (TypeError, ValueError):
+                        outs_delta = 0
+                    if outs_delta < 0:
+                        outs_delta = 0
+
+                    cell_key = f"{mask}-{outs_str}"
+                    cells = pitch_roster[pkey]["cells"]
+                    if cell_key not in cells:
+                        cells[cell_key] = _splits_new_pitch_cell()
+                    cell = cells[cell_key]
+                    cell["bf"]   += 1
+                    cell["outs"] += outs_delta
+                    # r/er are NOT counted here — see the all-plays block
+                    # above (before the skip filter), which is the single
+                    # place they're accumulated so a play is never
+                    # double-counted.
+
+                    # Pitch-count breakdown from the play's `pitches` sequence
+                    # (e.g. "BKKFK"). B = ball. K/F/S = called/foul/swinging
+                    # strike, already in the sequence. A ball put in play isn't
+                    # itself a pitch-sequence letter, so a contact PA (hit or
+                    # batted-ball out) gets +1 strike for the contact pitch.
+                    # We don't store total pitches (PT) — just b/s.
+                    pitches_seq = play.get("pitches") or ""
+                    cell["b"] += pitches_seq.count("B")
+                    cell["s"] += (pitches_seq.count("K") + pitches_seq.count("F")
+                                  + pitches_seq.count("S"))
+                    if xbh or outcome in _SPLITS_CONTACT_OUT:
+                        cell["s"] += 1
+
+                    if xbh:                                # Single/Double/Triple/HR
+                        cell["h"]  += 1
+                        cell["ab"] += 1
+                        if xbh == "HR":
+                            cell["hr"] += 1
+                        elif xbh in ("1B", "2B", "3B"):
+                            cell[xbh] += 1
+                    elif outcome in _SPLITS_WALK:          # Walk / Intentional walk
+                        cell["bb"] += 1
+                    elif outcome == "Hit by pitch":        # BF only
+                        cell["hbp"] += 1
+                    elif outcome.startswith("Strikeout"):  # Strikeout (swinging/looking)
+                        cell["so"] += 1
+                        cell["ab"] += 1
+                    else:                                  # _SPLITS_AB_OUT
+                        cell["ab"] += 1
+                        # Batted-ball type on outs only (same outs-only caveat
+                        # as the batting side's GB/FB/LD/PU — hits carry no
+                        # ball-type tag in the PBP source).
+                        if outcome in ("Groundout", "Grounded into double play"):
+                            cell["gb"] += 1
+                        elif outcome == "Flyout":
+                            cell["fb"] += 1
+                        elif outcome == "Lineout":
+                            cell["ld"] += 1
+                        elif outcome in ("Pop out", "Infield fly"):
+                            cell["pu"] += 1
+                        # "Foul out" -> ambiguous ball type, left uncounted.
+            except Exception:
+                continue  # never raise on a malformed play
+
+    players_out = [
+        {"num": pr["num"], "name": pr["name"], "pos": pr["pos"], "cells": pr["cells"]}
+        for pr in roster.values()
+        if pr["cells"]
+    ]
+    pitchers_out = [
+        {"num": pr["num"], "name": pr["name"], "pos": pr["pos"], "cells": pr["cells"]}
+        for pr in pitch_roster.values()
+        if pr["cells"]
+    ]
+
+    return {
+        "seo": seo,
+        "name": name,
+        "color": col["color"],
+        "ink":   col["ink"],
+        "gamesTotal":    games_total,
+        "gamesWithPbp":  games_with_pbp,
+        "season": {"ab": tab, "h": th, "bb": tbb, "tb": ttb, "ops": s_ops},
+        "players": players_out,
+        "pitchers": pitchers_out,
+    }
+
+
 def read_roster(seo, team_name):
     """Return the team's roster as a list of {num, name, pos, role, g} parsed
     from 2026/<Team>/roster.txt (generated by build_roster.py). Returns None if

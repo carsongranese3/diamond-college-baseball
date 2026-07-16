@@ -575,10 +575,12 @@ def _batter_week_card(seo, pname, c, team_by):
         "pos": c.get("pos") or "",
         "basic": [{"label": "AVG", "value": boxutil.fmt3(avg)},
                   {"label": "HR", "value": str(c["hr"])},
-                  {"label": "RBI", "value": str(c["rbi"])}],
+                  {"label": "RBI", "value": str(c["rbi"])},
+                  {"label": "BB", "value": str(c["bb"])}],
         "adv": [{"label": "OPS", "value": boxutil.fmt3(obp + slg)},
                 {"label": "ISO", "value": boxutil.fmt3(slg - avg)},
-                {"label": "OBP", "value": boxutil.fmt3(obp)}],
+                {"label": "OBP", "value": boxutil.fmt3(obp)},
+                {"label": "GPA", "value": boxutil.fmt3((1.8 * obp + slg) / 4)}],
     }
 
 
@@ -592,10 +594,12 @@ def _pitcher_week_card(seo, pname, c, team_by):
         "pos": "P",
         "basic": [{"label": "ERA", "value": boxutil.fmt2(era)},
                   {"label": "K", "value": str(c["k"])},
+                  {"label": "BB", "value": str(c["bb"])},
                   {"label": "IP", "value": boxutil.outs_to_ip(outs)}],
         "adv": [{"label": "FIP", "value": boxutil.fip(c["hr"], c["bb"], c["hbp"], c["k"], outs)},
                 {"label": "WHIP", "value": boxutil.fmt2(whip)},
-                {"label": "K/9", "value": boxutil.per9(c["k"], outs)}],
+                {"label": "K/9", "value": boxutil.per9(c["k"], outs)},
+                {"label": "BB/9", "value": boxutil.per9(c["bb"], outs)}],
     }
 
 
@@ -824,6 +828,18 @@ def team(seo):
         return local if local is not None else compute_team_stats(seo, sched)
 
     return jsonify(_memo(f"team:{seo}", 21600, producer))
+
+
+@app.route("/api/team/<seo>/splits")
+def team_splits(seo):
+    data = _season_for_league("ncaa")
+    if not any(t["id"] == seo for t in data["teams"]):
+        abort(404)
+    result = _memo(f"splits:{seo}", 21600,
+                   lambda: local_data.team_splits(seo, _team_name(seo)))
+    if result is None:
+        abort(404)
+    return jsonify(result)
 
 
 @app.route("/api/roster/<seo>")
