@@ -86,6 +86,21 @@ window.fetchTeam = function (seo) {
   return _teamCache[seo];
 };
 
+// Per-team situational splits from saved play-by-play data.
+// Returns GET /api/team/<seo>/splits — cached per team, never refetched.
+const _splitsCache = {};
+window.fetchTeamSplits = function (seo) {
+  if (!_splitsCache[seo]) {
+    _splitsCache[seo] = fetch(
+      "/api/team/" + encodeURIComponent(seo) + "/splits"
+    ).then((r) => {
+      if (!r.ok) throw new Error("splits " + r.status);
+      return r.json();
+    });
+  }
+  return _splitsCache[seo];
+};
+
 // Pass the host team + date + the host's run total so the backend can match
 // this game to a locally-saved 2026/ folder (real play-by-play); it falls back
 // to the ncaa.com API when there's no local copy.

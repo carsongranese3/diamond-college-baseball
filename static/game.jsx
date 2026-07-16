@@ -123,7 +123,16 @@ const GameDetail = ({ game, hostTeamId, onBack, onTeamClick, onPlayerClick, back
         <PitcherTable rows={detail.pitchers[statTeam]} seo={detail.line[statTeam].seo} onPlayerClick={onPlayerClick} />
       </section>
 
-      {detail.plays && detail.plays.length > 0 && (
+      {detail.pbp && detail.pbp.length > 0 ? (
+        <section className="boxscore">
+          <Eyebrow>Play-by-play</Eyebrow>
+          <InningGroupedPBP
+            pbp={detail.pbp}
+            away={detail.line.away}
+            home={detail.line.home}
+          />
+        </section>
+      ) : detail.plays && detail.plays.length > 0 ? (
         <section className="boxscore">
           <Eyebrow>Play-by-play</Eyebrow>
           <div className="pbp">
@@ -135,7 +144,7 @@ const GameDetail = ({ game, hostTeamId, onBack, onTeamClick, onPlayerClick, back
             ))}
           </div>
         </section>
-      )}
+      ) : null}
 
       {detail.notes && detail.notes.length > 0 && (
         <section className="boxscore boxscore--notes">
@@ -311,5 +320,105 @@ const PitcherTable = ({ rows, seo, onPlayerClick }) => (
     </tbody>
   </table>
 );
+
+// ─── Inning-grouped play-by-play components ───
+
+// Three rotated squares showing base occupancy (3B · 2B · 1B left to right)
+const BaseDiagram = ({ bases }) => (
+  <span className="pbp__bases" aria-hidden="true">
+    {['3B', '2B', '1B'].map(b => (
+      <span
+        key={b}
+        className={`pbp__base${bases && bases[b] ? ' pbp__base--on' : ''}`}
+      />
+    ))}
+  </span>
+);
+
+// Single play row inside a half-inning group
+const PlayRow = ({ play }) => {
+  const hasCount = play.count || play.pitches;
+  const countText = hasCount
+    ? `(${[play.count, play.pitches].filter(Boolean).join(' ')})`
+    : null;
+
+  // Chip: show when runs scored or RBI credited; prefer "RBI" label when applicable
+  const showChip = play.runs > 0 || play.rbi;
+  const chip = showChip ? (play.rbi ? 'RBI' : `${play.runs}R`) : null;
+
+  return (
+    <div className="pbp__play" title={play.description || undefined}>
+      <div className="pbp__play-main">
+        <span className="pbp__batter">{play.batter}</span>
+        <span className="pbp__outcome">{play.outcome}</span>
+        {countText && <span className="pbp__count mono">{countText}</span>}
+      </div>
+      <div className="pbp__play-meta">
+        <BaseDiagram bases={play.bases} />
+        <span className="pbp__outs" aria-label={`${play.outsAfter} out`}>
+          {[0, 1, 2].map(n => (
+            <span
+              key={n}
+              className={`pbp__out-dot${n < play.outsAfter ? ' pbp__out-dot--on' : ''}`}
+              aria-hidden="true"
+            />
+          ))}
+        </span>
+        <span className="pbp__score mono">
+          {play.score ? `${play.score.away}–${play.score.home}` : ''}
+        </span>
+        {chip && <span className="pbp__rbi">{chip}</span>}
+      </div>
+    </div>
+  );
+};
+
+// Top-level grouped feed; each half-inning is collapsible (default expanded)
+const InningGroupedPBP = ({ pbp, away, home }) => {
+  const [collapsed, setCollapsed] = React.useState(new Set());
+
+  const toggle = (i) => {
+    setCollapsed(prev => {
+      const next = new Set(prev);
+      next.has(i) ? next.delete(i) : next.add(i);
+      return next;
+    });
+  };
+
+  const awayMark = away.mark || away.name;
+  const homeMark = home.mark || home.name;
+
+  return (
+    <div className="pbp pbp--grouped">
+      {pbp.map((half, i) => {
+        const isCollapsed = collapsed.has(i);
+        return (
+          <div className="pbp__inning" key={i}>
+            <button
+              className="pbp__inning-head"
+              onClick={() => toggle(i)}
+              aria-expanded={!isCollapsed}
+            >
+              <span className="pbp__inning-label">{half.label}</span>
+              <span className="pbp__inning-score mono">
+                {awayMark} {half.scoreAfter.away} · {homeMark} {half.scoreAfter.home}
+              </span>
+              <span className="pbp__inning-toggle" aria-hidden="true">
+                {isCollapsed ? '▶' : '▼'}
+              </span>
+            </button>
+            {!isCollapsed && half.plays.length > 0 && (
+              <div className="pbp__plays">
+                {half.plays.map((play, j) => (
+                  <PlayRow key={j} play={play} />
+                ))}
+              </div>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
 window.GameDetail = GameDetail;
