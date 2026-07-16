@@ -547,20 +547,52 @@ def _prev_week_window():
     return this_tue - datetime.timedelta(days=7), this_tue - datetime.timedelta(days=1)
 
 
-# Player-of-week scoring formulas, shared by Player of the Week and Players to Watch.
-# Batter = on-base (incl. HBP) + slugging; pitcher = game-score style. Each returns
-# None below the volume guard so unqualified lines are skipped.
-def _batter_week_score(c):
-    ab, pa = c["ab"], c["ab"] + c["bb"] + c["hbp"]
-    if pa < 6:                               # ≥6 plate appearances
-        return None
-    return (c["h"] + c["bb"] + c["hbp"]) / pa + (c["tb"] / ab if ab else 0)
+# Composite ranking shared by Player of the Week and Players to Watch — the SAME
+# formula as the homepage "Players of the Season": batters combine OPS + HR + RBI
+# (each normalized to the pool max), pitchers combine ERA + WHIP + SO (min-max
+# normalized, ERA & WHIP inverted since lower is better). Higher score = better. The
+# volume guard is applied by the caller before scoring, so the pool min/max aren't
+# skewed by tiny-sample lines. `_score_*` take [(seo, name, counts), ...] and return
+# [(score, seo, name, counts), ...].
+def _bat_triple(c):
+    ab = c["ab"]
+    denom = ab + c["bb"] + c["hbp"]
+    obp = (c["h"] + c["bb"] + c["hbp"]) / denom if denom else 0.0
+    slg = c["tb"] / ab if ab else 0.0
+    return (obp + slg, c["hr"], c["rbi"])            # (ops, hr, rbi)
 
 
-def _pitcher_week_score(c):
-    if c["outs"] < 9:                        # ≥3 IP
-        return None
-    return c["outs"] - 2 * c["r"] - c["h"] - c["bb"]
+def _pit_triple(c):
+    outs = c["outs"]
+    era = c["er"] * 27 / outs if outs else 0.0
+    whip = (c["h"] + c["bb"]) * 3 / outs if outs else 0.0
+    return (era, whip, c["k"])                       # (era, whip, so)
+
+
+def _score_bats(entries):
+    if not entries:
+        return []
+    triples = [_bat_triple(c) for _s, _n, c in entries]
+    mo = max([t[0] for t in triples] + [1e-9])
+    mh = max([t[1] for t in triples] + [1e-9])
+    mr = max([t[2] for t in triples] + [1e-9])
+    return [(o / mo + h / mh + r / mr, seo, name, c)
+            for (seo, name, c), (o, h, r) in zip(entries, triples)]
+
+
+def _score_pits(entries):
+    if not entries:
+        return []
+    triples = [_pit_triple(c) for _s, _n, c in entries]
+
+    def _rng(i):
+        xs = [t[i] for t in triples]
+        mn = min(xs)
+        return mn, max(max(xs) - mn, 1e-9)
+    (e_min, e_span), (w_min, w_span), (s_min, s_span) = _rng(0), _rng(1), _rng(2)
+    return [((1 - (e - e_min) / e_span) + (1 - (w - w_min) / w_span) + (s - s_min) / s_span,
+             seo, name, c)
+            for (seo, name, c), (e, w, s) in zip(entries, triples)]
 
 
 def _batter_week_card(seo, pname, c, team_by):
@@ -613,16 +645,18 @@ def _player_of_week(league="sec"):
     start, end = _prev_week_window()
     lines = local_data.week_player_lines(teams, start.isoformat(), end.isoformat())
 
-    best_bat = best_pit = None  # (score, seo, name, weekly_counts)
+    bat_entries, pit_entries = [], []          # qualified (seo, name, weekly_counts)
     for seo, d in lines.items():
         for pname, c in d["batting"].items():
-            s = _batter_week_score(c)
-            if s is not None and (best_bat is None or s > best_bat[0]):
-                best_bat = (s, seo, pname, c)
+            if c["ab"] + c["bb"] + c["hbp"] >= 6:        # ≥6 plate appearances
+                bat_entries.append((seo, pname, c))
         for pname, c in d["pitching"].items():
-            s = _pitcher_week_score(c)
-            if s is not None and (best_pit is None or s > best_pit[0]):
-                best_pit = (s, seo, pname, c)
+            if c["outs"] >= 9:                           # ≥3 IP
+                pit_entries.append((seo, pname, c))
+    scored_bat = _score_bats(bat_entries)
+    scored_pit = _score_pits(pit_entries)
+    best_bat = max(scored_bat, key=lambda x: x[0]) if scored_bat else None
+    best_pit = max(scored_pit, key=lambda x: x[0]) if scored_pit else None
 
     batter = _batter_week_card(*best_bat[1:], team_by) if best_bat else None
     pitcher = _pitcher_week_card(*best_pit[1:], team_by) if best_pit else None
@@ -727,35 +761,35 @@ def _players_to_watch(league="sec", n=4):
     field = _round_field(ph, schedules)
     per_team = 2 if ph == "cws_finals" else 1    # finals: 2 per remaining team, else 1
 
-    bats, pits = [], []          # each team's best (score, seo, name, counts)
+    bat_entries, pit_entries = [], []    # qualified (seo, name, counts) across the field
     for seo, d in lines.items():
         if field is not None and seo not in field:
             continue
         gp = sum(1 for g in (schedules.get(seo) or []) if g.get("result"))
         bat_min = max(6, 2 * gp)     # ≥2 PA per team game (qualified-ish hitter)
         pit_min = max(9, gp)         # ≥~1 IP per 3 team games
-        cb, cp = [], []
         for pname, c in d["batting"].items():
-            if c["ab"] + c["bb"] + c["hbp"] < bat_min:
-                continue
-            s = _batter_week_score(c)
-            if s is not None:
-                cb.append((s, seo, pname, c))
+            if c["ab"] + c["bb"] + c["hbp"] >= bat_min:
+                bat_entries.append((seo, pname, c))
         for pname, c in d["pitching"].items():
-            if c["outs"] < pit_min:
-                continue
-            s = _pitcher_week_score(c)
-            if s is not None:
-                cp.append((s, seo, pname, c))
-        cb.sort(key=lambda x: x[0], reverse=True)
-        cp.sort(key=lambda x: x[0], reverse=True)
-        bats.extend(cb[:per_team])   # top `per_team` from this team
-        pits.extend(cp[:per_team])
-    bats.sort(key=lambda x: x[0], reverse=True)
-    pits.sort(key=lambda x: x[0], reverse=True)
+            if c["outs"] >= pit_min:
+                pit_entries.append((seo, pname, c))
+
+    # Score the whole qualified pool once (the composite normalizes across it), then
+    # keep the top `per_team` from each team and the best `n` overall.
+    def _top(scored):
+        by_team = {}
+        for e in sorted(scored, key=lambda x: x[0], reverse=True):
+            by_team.setdefault(e[1], []).append(e)
+        chosen = [e for lst in by_team.values() for e in lst[:per_team]]
+        chosen.sort(key=lambda x: x[0], reverse=True)
+        return chosen[:n]
+
+    bats = _top(_score_bats(bat_entries))
+    pits = _top(_score_pits(pit_entries))
     return {
-        "batters": [_batter_week_card(seo, p, c, team_by) for _s, seo, p, c in bats[:n]],
-        "pitchers": [_pitcher_week_card(seo, p, c, team_by) for _s, seo, p, c in pits[:n]],
+        "batters": [_batter_week_card(seo, p, c, team_by) for _s, seo, p, c in bats],
+        "pitchers": [_pitcher_week_card(seo, p, c, team_by) for _s, seo, p, c in pits],
     }
 
 
