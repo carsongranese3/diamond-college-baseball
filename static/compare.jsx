@@ -85,6 +85,7 @@
     { id: "pitching", num: "03", title: "Pitching", stats: [
       { label: "ERA", dir: -1, get: (t, s) => rate(s.pitching.era) },
       { label: "WHIP", dir: -1, get: (t, s) => rate(s.pitching.whip) },
+      { label: "OppAvg", dir: -1, get: (t, s) => rate(s.pitching.oba) },
       { label: "Strikeouts", dir: 1, get: (t, s) => int(s.pitching.k) },
       { label: "K / 9", dir: 1, get: (t, s) => per9(s.pitching.k, s.pitching.ip) },
       { label: "Walks", dir: -1, get: (t, s) => int(s.pitching.bb) },
@@ -109,6 +110,7 @@
   ];
   const PLAYER_PIT = [
     { k: "era", label: "ERA", dir: -1 }, { k: "whip", label: "WHIP", dir: -1 },
+    { k: "oba", label: "OppAvg", dir: -1 },
     { k: "k", label: "Strikeouts", dir: 1 }, { k: "k9", label: "K / 9", dir: 1 },
     { k: "bb", label: "Walks", dir: -1 }, { k: "bb9", label: "BB / 9", dir: -1 },
     { k: "ip", label: "Innings", dir: 1 },

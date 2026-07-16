@@ -21,6 +21,7 @@ const PlayerPitchingTotals = ({ p }) => (
   <div className="stat-grid stat-grid--4">
     <StatCell label="ERA"  value={p.era} />
     <StatCell label="WHIP" value={p.whip} />
+    <StatCell label="OppAvg" value={p.oba} />
     <StatCell label="IP"   value={p.ip} />
     <StatCell label="K"    value={p.k} />
     <StatCell label="G"    value={p.g} />
