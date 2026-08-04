@@ -956,6 +956,40 @@ def index(_clientpath=""):
     return send_from_directory(app.static_folder, "index.html")
 
 
+# ── Startup pre-warm ─────────────────────────────────────────────────────────
+# `_mem` is per-process and empty on boot, so without this the first visitor
+# after a deploy — or after the 6h season TTL lapses — pays for the whole
+# bootstrap build. Warm it on a daemon thread at import time so the app is ready
+# before anyone asks. Under gunicorn each worker imports this module and warms
+# its OWN memo, which is what we want since workers don't share `_mem`.
+# Set DISABLE_PREWARM=1 to turn it off.
+
+def _prewarm():
+    try:
+        t0 = time.time()
+        _bootstrap_payload()
+        _site_phase()
+        print(f"[prewarm] bootstrap ready in {time.time() - t0:.1f}s", file=sys.stderr)
+    except Exception as e:          # a warm failure must never stop the app serving
+        print(f"[prewarm] skipped: {type(e).__name__}: {e}", file=sys.stderr)
+
+
+def _start_prewarm():
+    if os.environ.get("DISABLE_PREWARM") == "1":
+        return
+    # `python app.py` runs behind the Werkzeug reloader, which imports this module
+    # in BOTH the supervisor and the child; only the child (WERKZEUG_RUN_MAIN=true)
+    # actually serves, so warming in the supervisor would just duplicate the work.
+    # Under gunicorn there's no reloader, the variable is absent, and every worker
+    # warms itself.
+    if __name__ == "__main__" and os.environ.get("WERKZEUG_RUN_MAIN") != "true":
+        return
+    threading.Thread(target=_prewarm, name="prewarm", daemon=True).start()
+
+
+_start_prewarm()
+
+
 if __name__ == "__main__":
     # threaded=True: a slow first-time team crawl (~50 box-score API calls)
     # must not block the rest of the site / the preview health check.

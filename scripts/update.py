@@ -486,6 +486,13 @@ def run_for_conference(conf_name, team, build_stats, build_records, build_roster
         rpath, rplayers = build_roster.build_for_team(t)
         if rpath:
             print(f"     roster.txt: {rplayers} players")
+        # schedule_digest.json — the per-game rows local_data.schedules() reads at
+        # request time. Regenerate here so the COMMITTED digest matches the games
+        # now on disk; a stale one makes the server fall back to walking every
+        # game folder (~180 file opens per team) on every cold build.
+        ngames = ld.rebuild_schedule_digest(t)
+        if ngames is not None:
+            print(f"     schedule_digest.json: {ngames} games")
         if not ok:
             failed = True
             break  # stop on first failure

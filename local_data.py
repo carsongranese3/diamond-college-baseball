@@ -741,11 +741,125 @@ def game(seo, name, iso, host_runs=None, opp_seo=None):
 _OPP_ALIASES = {"miami": "miami-fl"}
 
 
+# ── Schedule digest ──────────────────────────────────────────────────────────
+# schedules() below used to open every file in every game folder on every cold
+# build — ~5,800 opens across SEC+ACC. That's ~2s on local SSD but tens of
+# seconds on Azure App Service, where /home is an SMB mount and per-file latency
+# dominates. The team-INDEPENDENT half of each game row (everything actually read
+# off disk) is cached to one small file per team, so a cold build costs ~1 open
+# per team instead of ~180. The team-DEPENDENT half (opponent seo/rank/logo/conf,
+# which comes from the live API team list) is still applied on every call, so
+# rankings stay current.
+#
+# Self-populating: a missing or stale digest just falls back to the full walk and
+# rewrites itself. Staleness is one scandir per team (game-folder count) — if a
+# pull adds or removes games the digest is rebuilt automatically. On a read-only
+# filesystem the write fails silently and behavior is exactly as it was before.
+
+_DIGEST_FILE = "schedule_digest.json"
+_DIGEST_VERSION = 1
+
+
+def _game_dir_count(team_dir):
+    """How many game folders are on disk — the digest's staleness check."""
+    try:
+        with os.scandir(os.path.join(team_dir, "schedule")) as it:
+            return sum(1 for e in it if e.is_dir())
+    except OSError:
+        return -1
+
+
+def _read_digest(team_dir):
+    """The cached per-game rows, or None when absent, unreadable, or stale."""
+    try:
+        with open(os.path.join(team_dir, _DIGEST_FILE), "r", encoding="utf-8") as fh:
+            d = json.load(fh)
+    except (OSError, ValueError):
+        return None
+    if d.get("version") != _DIGEST_VERSION:
+        return None
+    if d.get("games_on_disk") != _game_dir_count(team_dir):
+        return None
+    rows = d.get("rows")
+    return rows if isinstance(rows, list) else None
+
+
+def _write_digest(team_dir, rows):
+    """Best-effort. A read-only deploy (or any OSError) just leaves it uncached."""
+    path = os.path.join(team_dir, _DIGEST_FILE)
+    tmp = f"{path}.{os.getpid()}.tmp"
+    try:
+        with open(tmp, "w", encoding="utf-8") as fh:
+            json.dump({"version": _DIGEST_VERSION,
+                       "games_on_disk": _game_dir_count(team_dir),
+                       "rows": rows}, fh)
+        os.replace(tmp, path)
+    except OSError:
+        try:
+            os.remove(tmp)
+        except OSError:
+            pass
+
+
+def _build_rows(team_dir, name):
+    """Walk the game folders and extract the team-independent per-game rows —
+    every value schedules() reads off disk. `opp_raw` is kept alongside the
+    cleaned name because _phase() matches the raw box-score event text."""
+    rows = []
+    for _dir, data in _iter_games(team_dir):
+        box = data["box"]
+        ls = box.get("line_score") or {}
+        host = _host_side(data, name)
+        other = "away" if host == "home" else "home"
+        rows.append({
+            "id": box.get("contest_id"),
+            "date": _fmt_date(box.get("date")),
+            "iso": _iso(box.get("date")),
+            "opp_name": _clean_opp(box.get("opponent", "")),
+            "opp_raw": box.get("opponent", ""),
+            "home": host == "home",
+            "us": to_int((ls.get(host) or {}).get("r"), None),
+            "them": to_int((ls.get(other) or {}).get("r"), None),
+            "result": (box.get("result") or "").strip()[:1].upper(),
+        })
+    return rows
+
+
+def _schedule_rows(team_dir, name):
+    """Per-game rows from the digest when it's fresh, else a full walk (cached
+    on the way out)."""
+    rows = _read_digest(team_dir)
+    if rows is not None:
+        return rows
+    rows = _build_rows(team_dir, name)
+    _write_digest(team_dir, rows)
+    return rows
+
+
+def rebuild_schedule_digest(label):
+    """Force-rebuild one team's digest. `label` is the team folder name (e.g.
+    "Alabama"), matching scripts/build_stats.py's build_for_team(). Returns the
+    game count written, or None when the team folder isn't found.
+
+    Run this after a pull so the COMMITTED digest is current: a stale digest on a
+    read-only deploy falls back to the full walk on every request and can't cache
+    the result, which is the slowest possible path."""
+    team_dir = _find_dir(label, label)
+    if not team_dir:
+        return None
+    rows = _build_rows(team_dir, label)
+    _write_digest(team_dir, rows)
+    return len(rows)
+
+
 def schedules(teams):
     """{seo: [games]} built from the local 2026/ folders, in the same shape
     season.build_season produces — so the Scores view and team schedule lists
     render unchanged. `teams` (the API-built list) supplies opponent seo/rank/logo
     for conference opponents; rankings and logos still come from the API.
+
+    Per-game disk reads come from the schedule digest above; only the opponent
+    decoration is recomputed per call, so live rankings/logos stay current.
     """
     # Normalized seo/name -> team, so a game's opponent can be matched to a
     # conference team (for its real logo slug, rank, and the conference flag).
@@ -771,25 +885,19 @@ def schedules(teams):
         if not team_dir:
             continue
         games = []
-        for _dir, data in _iter_games(team_dir):
-            box = data["box"]
-            ls = box.get("line_score") or {}
-            opp_name = _clean_opp(box.get("opponent", ""))
+        for r in _schedule_rows(team_dir, name):
+            opp_name = r["opp_name"]
             opp_t = lookup.get(_norm(opp_name))
             # Canonical seo via alias even when the opponent isn't in THIS conference,
             # so an out-of-conference Miami still resolves to its real team/logo
             # globally (conf stays False — see below — since it's not a league game).
             opp_id = (opp_t["id"] if opp_t else
                       _OPP_ALIASES.get(_norm(opp_name)) or _slug(opp_name))
-            host = _host_side(data, name)
-            other = "away" if host == "home" else "home"
-            us = to_int((ls.get(host) or {}).get("r"), None)
-            them = to_int((ls.get(other) or {}).get("r"), None)
-            res = (box.get("result") or "").strip()[:1].upper()
+            us, them, res = r["us"], r["them"], r["result"]
             games.append({
-                "id": box.get("contest_id"),
-                "date": _fmt_date(box.get("date")),
-                "iso": _iso(box.get("date")),
+                "id": r["id"],
+                "date": r["date"],
+                "iso": r["iso"],
                 "opp": {
                     "id": opp_id,
                     "name": opp_t["name"] if opp_t else opp_name,
@@ -799,12 +907,12 @@ def schedules(teams):
                     "rank": opp_t["rank"] if opp_t else None,
                     "conf": opp_t is not None,
                 },
-                "home": host == "home",
+                "home": r["home"],
                 "score": ({"us": us, "them": them}
                           if us is not None and them is not None else None),
                 "result": res if res in ("W", "L") else None,
                 "time": None,
-                "phase": _phase(box.get("opponent", ""), _iso(box.get("date"))),
+                "phase": _phase(r["opp_raw"], r["iso"]),
             })
         games.sort(key=lambda g: g["iso"])
         out[seo] = games
