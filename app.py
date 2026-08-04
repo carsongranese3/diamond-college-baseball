@@ -392,7 +392,8 @@ def _stat_leaders(league="sec"):
             stats = None
         roster = (stats or {}).get("roster") or {}
         ident = {"team": t["name"], "seo": t["id"], "abbr": t.get("mark"),
-                 "color": t.get("color"), "logo": t.get("logo")}
+                 "color": t.get("color"), "logo": t.get("logo"),
+                 "conference": t.get("conference")}
         # Ship each qualified player's FULL counting line (everything local_data
         # exposes) + team identity, so the frontend can show / compute any stat —
         # basic counting, the stored rates, or the advanced metrics it derives.
@@ -550,10 +551,14 @@ def _prev_week_window():
 # Composite ranking shared by Player of the Week and Players to Watch — the SAME
 # formula as the homepage "Players of the Season": batters combine OPS + HR + RBI
 # (each normalized to the pool max), pitchers combine ERA + WHIP + SO (min-max
-# normalized, ERA & WHIP inverted since lower is better). Higher score = better. The
-# volume guard is applied by the caller before scoring, so the pool min/max aren't
-# skewed by tiny-sample lines. `_score_*` take [(seo, name, counts), ...] and return
-# [(score, seo, name, counts), ...].
+# normalized, ERA & WHIP inverted since lower is better). Higher score = better.
+#
+# The normalization COEFFICIENTS are computed from the NATIONAL pool (every league's
+# qualified players), so a player is always measured against everyone — not just his
+# own conference. `_*_coeffs` build the yardstick from a reference pool; `_score_*`
+# then score any subset of players against it. Volume-guarded entries are passed in so
+# tiny-sample lines don't skew the coefficients. Entries are [(seo, name, counts), ...];
+# scores come back as [(score, seo, name, counts), ...].
 def _bat_triple(c):
     ab = c["ab"]
     denom = ab + c["bb"] + c["hbp"]
@@ -569,30 +574,42 @@ def _pit_triple(c):
     return (era, whip, c["k"])                       # (era, whip, so)
 
 
-def _score_bats(entries):
-    if not entries:
-        return []
+def _bat_coeffs(entries):
+    """Per-stat maxima (OPS, HR, RBI) for the batter composite, from a reference pool."""
     triples = [_bat_triple(c) for _s, _n, c in entries]
-    mo = max([t[0] for t in triples] + [1e-9])
-    mh = max([t[1] for t in triples] + [1e-9])
-    mr = max([t[2] for t in triples] + [1e-9])
-    return [(o / mo + h / mh + r / mr, seo, name, c)
-            for (seo, name, c), (o, h, r) in zip(entries, triples)]
+    return (max([t[0] for t in triples] + [1e-9]),
+            max([t[1] for t in triples] + [1e-9]),
+            max([t[2] for t in triples] + [1e-9]))
 
 
-def _score_pits(entries):
-    if not entries:
-        return []
+def _pit_coeffs(entries):
+    """Per-stat (min, span) for the pitcher composite (ERA, WHIP, SO), from a pool."""
     triples = [_pit_triple(c) for _s, _n, c in entries]
 
     def _rng(i):
-        xs = [t[i] for t in triples]
+        xs = [t[i] for t in triples] or [0.0]
         mn = min(xs)
         return mn, max(max(xs) - mn, 1e-9)
-    (e_min, e_span), (w_min, w_span), (s_min, s_span) = _rng(0), _rng(1), _rng(2)
-    return [((1 - (e - e_min) / e_span) + (1 - (w - w_min) / w_span) + (s - s_min) / s_span,
-             seo, name, c)
-            for (seo, name, c), (e, w, s) in zip(entries, triples)]
+    return (_rng(0), _rng(1), _rng(2))
+
+
+def _score_bats(entries, coeffs):
+    mo, mh, mr = coeffs
+    out = []
+    for seo, name, c in entries:
+        o, h, r = _bat_triple(c)
+        out.append((o / mo + h / mh + r / mr, seo, name, c))
+    return out
+
+
+def _score_pits(entries, coeffs):
+    (e_min, e_span), (w_min, w_span), (s_min, s_span) = coeffs
+    out = []
+    for seo, name, c in entries:
+        e, w, s = _pit_triple(c)
+        out.append(((1 - (e - e_min) / e_span) + (1 - (w - w_min) / w_span) + (s - s_min) / s_span,
+                    seo, name, c))
+    return out
 
 
 def _batter_week_card(seo, pname, c, team_by):
@@ -639,27 +656,32 @@ def _player_of_week(league="sec"):
     """Best batter + best pitcher over the PREVIOUS Tue-Mon week in a league, by the
     weekly formulas above. Each winner carries their team and that week's stat line.
     Returns {window, batter|None, pitcher|None}."""
-    data = _season_for_league(league)
-    teams = data["teams"]
-    team_by = {t["id"]: t for t in teams}
     start, end = _prev_week_window()
-    lines = local_data.week_player_lines(teams, start.isoformat(), end.isoformat())
+    # National pool (every conference) sets the composite coefficients so the winner is
+    # measured against all players, not just his league; the selection is the league's
+    # own best line, scored against that national yardstick.
+    nat = _season_for_league("ncaa")
+    nat_by = {t["id"]: t for t in nat["teams"]}
+    lines = local_data.week_player_lines(nat["teams"], start.isoformat(), end.isoformat())
 
-    bat_entries, pit_entries = [], []          # qualified (seo, name, weekly_counts)
+    bat_all, pit_all = [], []          # qualified (seo, name, weekly_counts) nationwide
     for seo, d in lines.items():
         for pname, c in d["batting"].items():
             if c["ab"] + c["bb"] + c["hbp"] >= 6:        # ≥6 plate appearances
-                bat_entries.append((seo, pname, c))
+                bat_all.append((seo, pname, c))
         for pname, c in d["pitching"].items():
             if c["outs"] >= 9:                           # ≥3 IP
-                pit_entries.append((seo, pname, c))
-    scored_bat = _score_bats(bat_entries)
-    scored_pit = _score_pits(pit_entries)
+                pit_all.append((seo, pname, c))
+    bat_co, pit_co = _bat_coeffs(bat_all), _pit_coeffs(pit_all)
+
+    lg_ids = {t["id"] for t in _season_for_league(league)["teams"]}
+    scored_bat = _score_bats([e for e in bat_all if e[0] in lg_ids], bat_co)
+    scored_pit = _score_pits([e for e in pit_all if e[0] in lg_ids], pit_co)
     best_bat = max(scored_bat, key=lambda x: x[0]) if scored_bat else None
     best_pit = max(scored_pit, key=lambda x: x[0]) if scored_pit else None
 
-    batter = _batter_week_card(*best_bat[1:], team_by) if best_bat else None
-    pitcher = _pitcher_week_card(*best_pit[1:], team_by) if best_pit else None
+    batter = _batter_week_card(*best_bat[1:], nat_by) if best_bat else None
+    pitcher = _pitcher_week_card(*best_pit[1:], nat_by) if best_pit else None
     return {"window": {"start": start.isoformat(), "end": end.isoformat()},
             "batter": batter, "pitcher": pitcher}
 
@@ -747,36 +769,43 @@ def _players_to_watch(league="sec", n=4):
     # (its field at the start) — eliminated teams drop off as the rounds advance. Use
     # the SAME site phase the homepage shows, so the two never disagree at a boundary.
     ph = _site_phase()["phase"]
-    # The CWS Finals is a national event between two (often cross-conference)
-    # finalists, so pull from the whole NCAA pool regardless of the selected league —
-    # otherwise a conference view (e.g. SEC) would drop the other finalist.
+    today = clock.today().isoformat()
+
+    def _qualify(lines, scheds):
+        """Volume-guarded (seo, name, counts) — thresholds scale with games played."""
+        bat, pit = [], []
+        for seo, d in lines.items():
+            gp = sum(1 for g in (scheds.get(seo) or []) if g.get("result"))
+            bat_min, pit_min = max(6, 2 * gp), max(9, gp)
+            for pname, c in d["batting"].items():
+                if c["ab"] + c["bb"] + c["hbp"] >= bat_min:
+                    bat.append((seo, pname, c))
+            for pname, c in d["pitching"].items():
+                if c["outs"] >= pit_min:
+                    pit.append((seo, pname, c))
+        return bat, pit
+
+    # National pool (every conference) sets the composite coefficients, so players are
+    # ranked against the whole country rather than only their own league.
+    nat = _season_for_league("ncaa")
+    nat_by = {t["id"]: t for t in nat["teams"]}
+    nat_bat, nat_pit = _qualify(
+        local_data.week_player_lines(nat["teams"], "2026-01-01", today),
+        nat.get("schedules") or {})
+    bat_co, pit_co = _bat_coeffs(nat_bat), _pit_coeffs(nat_pit)
+
+    # Selection scope: the league (whole NCAA for the CWS Finals, a national event
+    # between two often cross-conference finalists) narrowed to the postseason field.
     pool = "ncaa" if ph == "cws_finals" else league
     data = _season_for_league(pool)
-    teams = data["teams"]
-    schedules = data.get("schedules") or {}
-    team_by = {t["id"]: t for t in teams}
-    today = clock.today().isoformat()
-    lines = local_data.week_player_lines(teams, "2026-01-01", today)   # season to date
-
-    field = _round_field(ph, schedules)
+    field = _round_field(ph, data.get("schedules") or {})
     per_team = 2 if ph == "cws_finals" else 1    # finals: 2 per remaining team, else 1
+    sel_ids = {t["id"] for t in data["teams"]}
+    keep = lambda seo: seo in sel_ids and (field is None or seo in field)
+    scored_bat = _score_bats([e for e in nat_bat if keep(e[0])], bat_co)
+    scored_pit = _score_pits([e for e in nat_pit if keep(e[0])], pit_co)
 
-    bat_entries, pit_entries = [], []    # qualified (seo, name, counts) across the field
-    for seo, d in lines.items():
-        if field is not None and seo not in field:
-            continue
-        gp = sum(1 for g in (schedules.get(seo) or []) if g.get("result"))
-        bat_min = max(6, 2 * gp)     # ≥2 PA per team game (qualified-ish hitter)
-        pit_min = max(9, gp)         # ≥~1 IP per 3 team games
-        for pname, c in d["batting"].items():
-            if c["ab"] + c["bb"] + c["hbp"] >= bat_min:
-                bat_entries.append((seo, pname, c))
-        for pname, c in d["pitching"].items():
-            if c["outs"] >= pit_min:
-                pit_entries.append((seo, pname, c))
-
-    # Score the whole qualified pool once (the composite normalizes across it), then
-    # keep the top `per_team` from each team and the best `n` overall.
+    # Keep the top `per_team` from each team, then the best `n` overall.
     def _top(scored):
         by_team = {}
         for e in sorted(scored, key=lambda x: x[0], reverse=True):
@@ -785,11 +814,11 @@ def _players_to_watch(league="sec", n=4):
         chosen.sort(key=lambda x: x[0], reverse=True)
         return chosen[:n]
 
-    bats = _top(_score_bats(bat_entries))
-    pits = _top(_score_pits(pit_entries))
+    bats = _top(scored_bat)
+    pits = _top(scored_pit)
     return {
-        "batters": [_batter_week_card(seo, p, c, team_by) for _s, seo, p, c in bats],
-        "pitchers": [_pitcher_week_card(seo, p, c, team_by) for _s, seo, p, c in pits],
+        "batters": [_batter_week_card(seo, p, c, nat_by) for _s, seo, p, c in bats],
+        "pitchers": [_pitcher_week_card(seo, p, c, nat_by) for _s, seo, p, c in pits],
     }
 
 

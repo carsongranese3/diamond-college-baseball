@@ -364,29 +364,32 @@ const HP_POST_PHASES = new Set([
   "sec_tournament", "regionals", "super_regionals", "cws", "cws_finals",
 ]);
 
-// Players of the Season — the 4 best batters (by OPS) and 4 best pitchers (by ERA)
-// in the league, toggled. No team/position limits: it's a straight top-4, so four
-// teammates can all appear. Cards link to the player page.
+// Players of the Season — the 4 best batters (OPS+HR+RBI) and 4 best pitchers
+// (ERA+WHIP+SO) in the selected league, toggled. The normalization coefficients come
+// from the NATIONAL pool (all conferences), so a player is ranked against everyone,
+// not just his league; we then filter to the league for the top-4 shown. No team/
+// position limits: four teammates can all appear. Cards link to the player page.
 function HPPlayersOfSeason({ league, onPlayer, onTeam }) {
   const [data, setData] = React.useState(null);
   const [view, setView] = React.useState("batting");   // batting | pitching
   React.useEffect(() => {
+    // Always pull the national pool — it's the yardstick and is league-independent.
     let live = true;
-    setData(null);
-    window.fetchStatLeaders(league).then((d) => live && setData(d)).catch(() => live && setData(false));
+    window.fetchStatLeaders("NCAA").then((d) => live && setData(d)).catch(() => live && setData(false));
     return () => { live = false; };
-  }, [league]);
+  }, []);
   const bat = view === "batting";
   const players = React.useMemo(() => {
     if (!data) return [];
+    const num = (v) => parseFloat(v) || 0;
+    const inLeague = (p) => league === "NCAA"
+      || (p.conference || "").toUpperCase() === String(league).toUpperCase();
     if (!bat) {
-      // Pitchers: a composite of ERA + WHIP + SO. ERA and WHIP are lower-is-better
-      // (inverted), SO is higher-is-better; each is min–max normalized to 0–1 across
-      // the pool and summed (0–3) so all three carry equal weight, best score first.
-      const pool = data.pitchers || [];
-      const num = (v) => parseFloat(v) || 0;
+      // Pitchers: ERA + WHIP + SO. ERA/WHIP lower-is-better (inverted), SO higher; each
+      // min–max normalized against the NATIONAL pool and summed (0–3), best first.
+      const all = data.pitchers || [];
       const rng = (key) => {
-        const xs = pool.map((p) => num(p[key]));
+        const xs = all.map((p) => num(p[key]));
         const mn = Math.min(...xs);
         return [mn, Math.max(Math.max(...xs) - mn, 1e-9)];
       };
@@ -395,18 +398,15 @@ function HPPlayersOfSeason({ league, onPlayer, onTeam }) {
         (1 - (num(p.era) - eMin) / eSpan) +
         (1 - (num(p.whip) - wMin) / wSpan) +
         ((num(p.k) - sMin) / sSpan);
-      return [...pool].sort((a, b) => score(b) - score(a)).slice(0, 4);
+      return all.filter(inLeague).sort((a, b) => score(b) - score(a)).slice(0, 4);
     }
-    // Batters: a composite of OPS + HR + RBI. Each is normalized to the league max
-    // so the rate (OPS) and the two counts (HR, RBI) carry equal weight, then summed
-    // (0–3); the highest all-around score ranks first.
-    const pool = data.batters || [];
-    const num = (v) => parseFloat(v) || 0;
-    const cap = (key) => Math.max(1, ...pool.map((p) => num(p[key])));
+    // Batters: OPS + HR + RBI, each normalized to the NATIONAL per-stat max and summed.
+    const all = data.batters || [];
+    const cap = (key) => Math.max(1, ...all.map((p) => num(p[key])));
     const maxOps = cap("ops"), maxHr = cap("hr"), maxRbi = cap("rbi");
     const score = (p) => num(p.ops) / maxOps + num(p.hr) / maxHr + num(p.rbi) / maxRbi;
-    return [...pool].sort((a, b) => score(b) - score(a)).slice(0, 4);
-  }, [data, view]);
+    return all.filter(inLeague).sort((a, b) => score(b) - score(a)).slice(0, 4);
+  }, [data, view, league]);
   const statLine = (p) => bat
     ? [["AVG", p.avg], ["HR", p.hr], ["RBI", p.rbi], ["OPS", p.ops]]
     : [["ERA", p.era], ["WHIP", p.whip], ["SO", p.k], ["IP", p.ip]];
