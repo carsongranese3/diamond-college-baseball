@@ -150,13 +150,23 @@ window.__bootstrapReady = fetch("/api/bootstrap")
     window.SUPER_REGIONALS = d.super_regionals || [];  // [{ id, top:{seo,name,logo,seed}, bottom:{...}, city }]
     window.REGIONAL_CITY_BY_TEAM = d.regional_cities || {};  // { team_seo: host_city } — name a regional by host city
     window.SEASON_CLOCK = d.clock || {};   // { override: "2026-05-15"|null, today: "2026-06-03" } — dev time machine
+    if (window.__bootDone) window.__bootDone();
   })
   .catch((err) => {
-    document.getElementById("root").innerHTML =
-      '<div style="padding:48px;font-family:sans-serif;color:#74808a">' +
-      "Failed to load season data: " +
-      err.message +
-      ". Is the Flask server running?</div>";
+    if (window.__bootDone) window.__bootDone();
+    // Reuse the boot splash's chrome so the failure state stays theme-aware and
+    // centered instead of a bare string in the corner. A cold Azure container is
+    // the most likely cause, so lead with "try again" rather than a stack detail.
+    const boot = document.getElementById("boot");
+    if (boot) {
+      boot.innerHTML =
+        '<div class="boot__mark" style="animation:none">◆</div>' +
+        '<div class="boot__title">DIAMOND</div>' +
+        '<div class="boot__msg">Couldn\'t load season data — the server may still be starting up.</div>' +
+        '<button class="boot__retry" type="button">Try again</button>';
+      const retry = boot.querySelector(".boot__retry");
+      if (retry) retry.addEventListener("click", () => window.location.reload());
+    }
     throw err;
   });
 

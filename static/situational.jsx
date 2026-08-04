@@ -53,9 +53,11 @@ window.SituationalView = function SituationalView({ team, data, viewMode: viewMo
   const _fPct = (x) => (x == null ? "—" : `${(x * 100).toFixed(1)}%`);
 
   // Expand the selected (mask, outs) into the concrete cell keys to sum.
-  // mask === "any"  → all 8 base states; outs === "any" → all 3 out counts.
+  // mask === "any" → any base OCCUPIED, i.e. masks 1-7 (bases-empty, mask 0, is
+  // excluded — it's its own state, reachable by deselecting every base).
+  // outs === "any" → all 3 out counts.
   const _keysFor = (m, o) => {
-    const masks    = m === "any" ? [0, 1, 2, 3, 4, 5, 6, 7] : [m];
+    const masks    = m === "any" ? [1, 2, 3, 4, 5, 6, 7] : [m];
     const outsList = o === "any" ? [0, 1, 2] : [o];
     const keys = [];
     masks.forEach((mm) => outsList.forEach((oo) => keys.push(`${mm}-${oo}`)));
@@ -550,15 +552,16 @@ window.SituationalView = function SituationalView({ team, data, viewMode: viewMo
   // aggregate cells) ─────────────────────────────────────────────────────────
   // Independent of the selected mask/outs — always computed over the full
   // 8×3 grid, PLUS a 4th "any outs" cell per concrete mask row, PLUS one
-  // extra "any bases" row (mask="any") with its own any/0/1/2 cells (the
-  // any-any cell being the grand total) — so clicking a cell can jump the
+  // extra "any base" row (mask="any") with its own any/0/1/2 cells (the
+  // any-any cell being every PA with a runner on — NOT the grand total, since
+  // bases-empty is excluded) — so clicking a cell can jump the
   // selector straight to it. Both batting and pitching cells carry every
   // selectable stat (all `_teamCellBatting`/`_teamCellPitching` fields are
   // spread onto the cell) since any of the 15 batting / 13 pitching stat
   // pills can render a grid.
   // Every aggregate cell is built by calling the same
   // team-cell helper with mask and/or outs set to "any" — `_agg`/`_aggPitcher`
-  // already sum the underlying counts across all 8 masks / 3 out states via
+  // already sum the underlying counts across masks 1-7 / all 3 out states via
   // `_keysFor` before any rate is computed, so this mirrors the diamond's
   // base-Any button and the outs-Any dot exactly (never an average of rates).
   const heatData = React.useMemo(() => {
@@ -573,7 +576,7 @@ window.SituationalView = function SituationalView({ team, data, viewMode: viewMo
         const tAny = _teamCellPitching(data.pitchers, m, "any");
         cells.push({ mask: m, outs: "any", sample: tAny.BF, ...tAny });
       }
-      // "Any bases" row — one cell per outs column, aggregated over all 8 masks.
+      // "Any base" row — one cell per outs column, aggregated over masks 1-7.
       ["any", 0, 1, 2].forEach((o) => {
         const t = _teamCellPitching(data.pitchers, "any", o);
         cells.push({ mask: "any", outs: o, sample: t.BF, ...t });
@@ -590,7 +593,7 @@ window.SituationalView = function SituationalView({ team, data, viewMode: viewMo
       const tAny = _teamCellBatting(data.players, m, "any");
       cells.push({ mask: m, outs: "any", sample: tAny.PA, ...tAny });
     }
-    // "Any bases" row — one cell per outs column, aggregated over all 8 masks.
+    // "Any base" row — one cell per outs column, aggregated over masks 1-7.
     ["any", 0, 1, 2].forEach((o) => {
       const t = _teamCellBatting(data.players, "any", o);
       cells.push({ mask: "any", outs: o, sample: t.PA, ...t });
@@ -870,7 +873,7 @@ window.SituationalView = function SituationalView({ team, data, viewMode: viewMo
     3: "1ST & 2ND",   5: "CORNERS",  6: "2ND & 3RD",  7: "LOADED",
   };
   const outsLabel = outs === "any" ? "ANY OUTS" : `${outs} ${outs === 1 ? "OUT" : "OUTS"}`;
-  const baseLabel = mask === "any" ? "ANY BASE STATE" : (BASE_LABELS[mask] || "??");
+  const baseLabel = mask === "any" ? "ANY BASE" : (BASE_LABELS[mask] || "??");
   const isRisp    = mask !== "any" && (mask & 6) !== 0;   // RISP = runner on 2B or 3B
 
   const sampleN   = computed ? computed.sampleN : 0;
@@ -901,7 +904,7 @@ window.SituationalView = function SituationalView({ team, data, viewMode: viewMo
     any: "Any", 0: "Empty", 1: "1B", 2: "2B", 3: "1B2B", 4: "3B", 5: "1B3B", 6: "2B3B", 7: "LOADED",
   };
   const HEAT_TOOLTIP_LABELS = {
-    any: "Any bases", 0: "Bases empty", 1: "1B", 2: "2B", 3: "1B2B", 4: "3B", 5: "1B3B", 6: "2B3B", 7: "Loaded",
+    any: "Any base occupied", 0: "Bases empty", 1: "1B", 2: "2B", 3: "1B2B", 4: "3B", 5: "1B3B", 6: "2B3B", 7: "Loaded",
   };
   const heatByKey = {};
   (heatData || []).forEach((c) => { heatByKey[`${c.mask}-${c.outs}`] = c; });
@@ -1139,7 +1142,7 @@ window.SituationalView = function SituationalView({ team, data, viewMode: viewMo
               <span className="split-base-label split-base-label--3b">3B</span>
             </div>
 
-            {/* Any base state — aggregates all 8 masks for the selected outs */}
+            {/* Any base — aggregates masks 1-7 (runners on) for the selected outs */}
             <button
               className="split-any-btn split-base-any"
               onClick={() => setMask("any")}
@@ -1147,7 +1150,7 @@ window.SituationalView = function SituationalView({ team, data, viewMode: viewMo
                 ? { background: teamColor, borderColor: teamColor, color: teamInk }
                 : {}}
               aria-pressed={mask === "any"}
-              aria-label="Any base state"
+              aria-label="Any base occupied"
             >Any</button>
           </div>
 

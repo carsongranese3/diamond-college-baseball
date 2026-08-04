@@ -16,12 +16,85 @@
 
   <link rel="stylesheet" href="/static/styles.css" />
 
+  <!-- Boot splash. Inlined (not in styles.css) and using literal palette values
+       rather than var(--…) so it paints on the FIRST frame, before styles.css or
+       the React/Babel CDN scripts resolve. Mirrors the [data-theme] set above. -->
+  <style>
+    #boot { position: fixed; inset: 0; z-index: 9999;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: #f3efe6; color: #0f1820;
+      font-family: "Inter Tight", Inter, "Helvetica Neue", Arial, sans-serif; }
+    :root[data-theme="dark"] #boot { background: #0A0E16; color: #ece7db; }
+
+    #boot .boot__mark { font-size: 30px; line-height: 1; color: #0033a0;
+      animation: bootPulse 1.6s ease-in-out infinite; }
+    :root[data-theme="dark"] #boot .boot__mark { color: #3d7be0; }
+
+    #boot .boot__title { margin-top: 10px; font-size: 19px; font-weight: 800;
+      letter-spacing: .16em; }
+
+    #boot .boot__bar { margin-top: 22px; width: 180px; height: 2px; border-radius: 2px;
+      overflow: hidden; background: rgba(15, 24, 32, .12); }
+    :root[data-theme="dark"] #boot .boot__bar { background: rgba(255, 255, 255, .13); }
+    #boot .boot__bar span { display: block; width: 40%; height: 100%; background: #0033a0;
+      animation: bootSlide 1.4s ease-in-out infinite; }
+    :root[data-theme="dark"] #boot .boot__bar span { background: #3d7be0; }
+
+    #boot .boot__msg { margin-top: 18px; max-width: 300px; padding: 0 20px;
+      font-size: 12px; letter-spacing: .03em; line-height: 1.6; text-align: center;
+      color: #74808a; }
+    :root[data-theme="dark"] #boot .boot__msg { color: #8b949d; }
+
+    #boot .boot__retry { margin-top: 18px; padding: 7px 16px; border-radius: 4px;
+      font-size: 12px; letter-spacing: .04em; cursor: pointer;
+      border: 1px solid rgba(15, 24, 32, .22); background: none; color: inherit; }
+    :root[data-theme="dark"] #boot .boot__retry { border-color: rgba(255, 255, 255, .26); }
+
+    @keyframes bootPulse { 0%, 100% { opacity: 1 } 50% { opacity: .35 } }
+    @keyframes bootSlide { 0% { transform: translateX(-100%) } 100% { transform: translateX(350%) } }
+    @media (prefers-reduced-motion: reduce) {
+      #boot .boot__mark { animation: none; }
+      #boot .boot__bar span { animation: none; width: 100%; opacity: .5; }
+    }
+  </style>
+
   <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <!-- Shown until /api/bootstrap resolves. Lives INSIDE #root so it is torn
+         down naturally; app.jsx removes it explicitly before React mounts. -->
+    <div id="boot" role="status" aria-live="polite">
+      <div class="boot__mark">◆</div>
+      <div class="boot__title">DIAMOND</div>
+      <div class="boot__bar"><span></span></div>
+      <div class="boot__msg" id="boot-msg">Loading season data…</div>
+    </div>
+  </div>
+
+  <!-- Cold-start messaging. Azure App Service idles the container out, so the
+       first request after a quiet period waits on a container boot AND the
+       bootstrap crawl. Escalate the wording rather than leave a stalled spinner.
+       Inline + immediate so the clock starts at parse time, not after bootstrap.js. -->
+  <script>
+    (function () {
+      var el = document.getElementById("boot-msg");
+      if (!el) return;
+      var timers = [
+        setTimeout(function () {
+          el.textContent = "Waking the server… the first load after it's been idle can take up to a minute.";
+        }, 6000),
+        setTimeout(function () {
+          el.textContent = "Still waking… building this season's schedules and standings.";
+        }, 20000),
+      ];
+      // bootstrap.js calls this on success or failure so a late timer can't
+      // overwrite the error message or fire after the app has already rendered.
+      window.__bootDone = function () { timers.forEach(clearTimeout); };
+    })();
+  </script>
 
   <!-- Fetches /api/bootstrap and populates window globals before React renders -->
   <script src="/static/bootstrap.js"></script>

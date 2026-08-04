@@ -491,5 +491,10 @@ const Topbar = ({ section, onHome, onStandings, onScores, onStats, onCompare, on
 };
 
 window.__bootstrapReady.then(() => {
+  // Drop the boot splash before mounting. Explicit rather than relying on
+  // createRoot clearing the container, so there's no window where the fixed
+  // overlay sits on top of a rendered app.
+  const boot = document.getElementById("boot");
+  if (boot) boot.remove();
   ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 });

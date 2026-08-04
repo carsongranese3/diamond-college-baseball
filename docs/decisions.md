@@ -170,3 +170,25 @@ counts) vs Advanced (calculated: FPCT, RF/G, TC/G, CS%).
   picked`. Caught-stealing/pickoffs already contained "out" so the existing out
   branch covers them (no double-count). Re-derived all 1934 games again.
   OU bases-loaded 75 → 87; runners-in-scoring-position up; total PA still 2511.
+
+## Situational base "Any" now means any base OCCUPIED (2026-08-02)
+
+The diamond's **Any** button previously aggregated all 8 base states (masks 0-7),
+making it a grand total that included bases-empty. It now aggregates **masks 1-7**
+— every state with at least one runner on. Bases-empty (mask 0) is excluded and
+remains its own selectable state, reached by deselecting every base.
+
+- **One-line change** in `static/situational.jsx::_keysFor`; every consumer
+  (`_agg`, `_aggPitcher`, `_teamCellBatting`, `_teamCellPitching`, the heatmap's
+  "any" row, and the `sampleN` PA/BF readout) routes through it, so all stay
+  consistent with no other logic touched. Frontend-only — no backend or data change.
+- **Labels updated** to stop implying "all situations": diamond sublabel
+  `ANY BASE STATE` → `ANY BASE`, heatmap tooltip `Any bases` → `Any base occupied`,
+  button `aria-label` → `Any base occupied`. The compact heatmap grid cell and the
+  diamond button both stay `Any` — the tooltip and sublabel carry the meaning.
+- **`isRisp` deliberately unchanged** — it stays false while `mask === "any"`,
+  which is correct: "any base occupied" includes runner-on-1B-only, which is not
+  scoring position.
+- **The any/any heatmap cell is no longer the grand total.** Nothing consumed it
+  as one (the heat min/max normalization already filters `mask !== "any"`), but
+  the comment that claimed it was has been corrected.
