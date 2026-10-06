@@ -196,11 +196,11 @@ if __name__ == "__main__":
     print("Building schedules (saved box scores + ncaa.com upcoming)…", flush=True)
     results = write_team_schedules(labels)
     if not results:
-        print(f"No SEC team matched {arg!r} (or it has no 2026/ folder).")
+        print(f"No SEC team matched {arg!r} (or it has no Data/2026/ folder).")
         sys.exit(1)
     total = 0
     for label, n, played in results:
         total += n
         print(f"  {label}: {n} games ({played} played, {n - played} upcoming) "
-              f"-> 2026/{label}/schedule.json")
+              f"-> Data/2026/{label}/schedule.json")
     print(f"wrote {len(results)} schedule.json file(s), {total} games total.")

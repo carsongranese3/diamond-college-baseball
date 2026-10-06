@@ -1,9 +1,9 @@
 """Fill in missing game data for a team by pulling it from stats.ncaa.org.
 
-For each team it looks at, this FIRST refreshes 2026/<Team>/schedule.json from the
+For each team it looks at, this FIRST refreshes Data/2026/<Team>/schedule.json from the
 live ncaa.com API (so the played-game count always reflects reality, including
 games played today), THEN compares that count to how many game folders are
-actually saved under 2026/<Team>/schedule/. When they differ, it boots the
+actually saved under Data/2026/<Team>/schedule/. When they differ, it boots the
 stealth browser (ncaa_stats), works out which games have no saved folder, and
 pulls them — looking first at games AFTER the last saved game, then backward
 through the earlier games to fill any gaps.
@@ -12,7 +12,7 @@ Only games stats.ncaa.org actually has a box score for are pulled (unplayed and
 TBA games have no contest page, so they're never attempted). Each missing game is
 saved exactly like pull_game_stats.py does:
 
-    2026/<Team>/schedule/<date>_<vs|at>_<opponent>/
+    Data/2026/<Team>/schedule/<date>_<vs|at>_<opponent>/
         boxscore.json  player_stats.json  play_by_play.json
 
 The run STOPS on the first game that fails to pull (e.g. an Akamai IP block), so
@@ -37,7 +37,7 @@ import sys
 import time
 
 # ─── CONFIG ──────────────────────────────────────────────────────────────────
-CONFERENCE = "all"   # which conference folder under 2026/ to update
+CONFERENCE = "all"   # which conference folder under Data/2026/ to update
 TEAM = "all"         # a team folder label (e.g. "Arkansas"), or "all" for the whole
                      # conference
 BULK_EVERY = 0       # bulk mode: rotate (restart) the stealth browser every N games
@@ -74,12 +74,12 @@ import local_data as ld  # team-folder lookup (handles the conference layer)
 
 print = functools.partial(print, flush=True)  # live progress in the terminal
 
-# A conference's team labels double as their 2026/<Conf>/<Team> folder names and the
+# A conference's team labels double as their Data/2026/<Conf>/<Team> folder names and the
 # school names passed to ncaa_stats — so each name must match an `ncaa_name` in the
 # collegebaseball lookup table (all of the below are verified to resolve). Only
 # baseball-sponsoring members are listed (e.g. ACC omits Syracuse & SMU, Big Ten
 # omits Wisconsin, Big 12 omits Colorado & Iowa St. — none field baseball). A
-# conference NOT listed here has its teams discovered from its 2026/<Conf>/ folders.
+# conference NOT listed here has its teams discovered from its Data/2026/<Conf>/ folders.
 CONFERENCE_TEAMS = {
     "SEC": [
         "Alabama", "Arkansas", "Auburn", "Florida", "Georgia", "Kentucky", "LSU",
@@ -110,11 +110,11 @@ _ACTIVE_CONFERENCE = CONFERENCE
 
 
 def _season_root():
-    return os.path.join(_PROJECT_ROOT, str(SEASON))
+    return os.path.join(_PROJECT_ROOT, "Data", str(SEASON))
 
 
 def _resolve_conference(name):
-    """Match a conference name (case-insensitively) to its actual 2026/ folder name,
+    """Match a conference name (case-insensitively) to its actual Data/2026/ folder name,
     preferring an existing folder, then a known-mapping key, else the name as given."""
     season_root = _season_root()
     if os.path.isdir(season_root):
@@ -140,14 +140,14 @@ def _conf_seo(conference):
 
 def conference_teams(conference):
     """Team labels for a conference: its explicit roster if known, otherwise the
-    team folders present under 2026/<conference>/."""
+    team folders present under Data/2026/<conference>/."""
     if conference in CONFERENCE_TEAMS:
         return list(CONFERENCE_TEAMS[conference])
     return [label for label, _ in ld.team_dirs(_conf_root(conference))]
 
 
 def _all_conferences():
-    """Every conference folder under 2026/ (e.g. ['ACC', 'SEC']) — the onboarded
+    """Every conference folder under Data/2026/ (e.g. ['ACC', 'SEC']) — the onboarded
     set CONFERENCE='all' iterates over. A folder is a conference if it isn't itself
     a team folder (mirrors how the app discovers conferences)."""
     root = _season_root()
@@ -167,8 +167,8 @@ def _slug(text):
 
 def _team_root(label):
     # Resolve the team's existing folder, which sits under a conference
-    # (2026/<Conf>/<label>/). A brand-new team is placed under the conference being
-    # processed (2026/<_ACTIVE_CONFERENCE>/<label>/).
+    # (Data/2026/<Conf>/<label>/). A brand-new team is placed under the conference being
+    # processed (Data/2026/<_ACTIVE_CONFERENCE>/<label>/).
     found = ld._find_dir(label, label, _season_root())
     return found or os.path.join(_conf_root(_ACTIVE_CONFERENCE), label)
 
@@ -178,7 +178,7 @@ def _schedule_dir(label):
 
 
 def _played_count(label):
-    """How many games in 2026/<label>/schedule.json have been played (result set),
+    """How many games in Data/2026/<label>/schedule.json have been played (result set),
     or None if the file is missing/unreadable. Box scores only exist for played
     games, so this is the count we compare against the saved folders."""
     path = os.path.join(_team_root(label), "schedule.json")
@@ -442,7 +442,7 @@ def run_for_conference(conf_name, team, build_stats, build_records, build_roster
                   f"and TEAM = {t!r} (or run: update.py {c!r} {t!r}).")
         else:
             print("  CONFERENCE must be one of: " + ", ".join(CONFERENCE_TEAMS)
-                  + " (others are read from their 2026/<Conf>/ folders).")
+                  + " (others are read from their Data/2026/<Conf>/ folders).")
         return
 
     if team.lower() == "all":
@@ -525,11 +525,11 @@ def main():
         elif f == "--force":
             _FORCE = True
 
-    # CONFERENCE = "all" (or `update.py all`) walks every conference folder under 2026/.
+    # CONFERENCE = "all" (or `update.py all`) walks every conference folder under Data/2026/.
     if conf_name.lower() == "all":
         conferences = _all_conferences()
         if not conferences:
-            print("  No conference folders found under 2026/.")
+            print("  No conference folders found under Data/2026/.")
             return
         print(f"Updating ALL conferences: {', '.join(conferences)}")
     else:

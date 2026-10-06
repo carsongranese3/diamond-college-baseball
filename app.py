@@ -64,10 +64,10 @@ def _league_json(prefix, ttl, fn, by_date=False):
 # /api/dev/update for {running} and reloads when it flips false.
 
 # Which conferences the Update button pulls. None = every conference that already
-# has a data folder under 2026/ (currently SEC + ACC). To also pull conferences
+# has a data folder under Data/2026/ (currently SEC + ACC). To also pull conferences
 # update.py knows but that aren't onboarded yet, list them explicitly -- e.g.
 #   UPDATE_CONFERENCES = ["SEC", "ACC", "Big Ten", "Big 12"]
-# (labels must match update.py's CONFERENCE_TEAMS keys / 2026/ folder names).
+# (labels must match update.py's CONFERENCE_TEAMS keys / Data/2026/ folder names).
 UPDATE_CONFERENCES = None
 
 _update_lock = threading.Lock()
@@ -105,10 +105,10 @@ def _run_update(conf_labels):
 
 # ── Conferences / leagues ────────────────────────────────────────────────────
 # "League" in the API is either a conference (its scoreboard seo: sec/acc/…) or
-# "ncaa" meaning every conference that has a 2026/<Conf>/ data folder.
+# "ncaa" meaning every conference that has a Data/2026/<Conf>/ data folder.
 
 def _available_confs():
-    """[(label, seo)] for each conference folder under the 2026/ data root, e.g.
+    """[(label, seo)] for each conference folder under the Data/2026/ data root, e.g.
     [("ACC", "acc"), ("SEC", "sec")]."""
     root = local_data.DATA_ROOT
     out = []
@@ -907,7 +907,7 @@ def team_splits(seo):
 
 @app.route("/api/roster/<seo>")
 def roster(seo):
-    """Team roster, read from 2026/<Team>/roster.txt (built by build_roster.py)."""
+    """Team roster, read from Data/2026/<Team>/roster.txt (built by build_roster.py)."""
     data = local_data.read_roster(seo, _team_name(seo))
     if data is None:
         abort(404)
@@ -916,7 +916,7 @@ def roster(seo):
 
 @app.route("/api/player/<seo>")
 def player(seo):
-    # Per-season totals + game log for one player, built solely from 2026/ (and
+    # Per-season totals + game log for one player, built solely from Data/2026/ (and
     # future-season) folders. The team name is resolved server-side from the seo.
     player_name = request.args.get("player", "")
 

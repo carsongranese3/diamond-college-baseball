@@ -92,7 +92,7 @@ When `team` + `iso` are provided the endpoint first attempts `local_data.game()`
   ],
 
   "notes": [],
-  "_source": "local"  // "local" when served from 2026/ folder, absent on live-API path
+  "_source": "local"  // "local" when served from Data/2026/ folder, absent on live-API path
 }
 ```
 

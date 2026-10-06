@@ -239,7 +239,7 @@ def _mark_for(name, seo):
 
 def postseason_schedules():
     """Every NCAA-tournament game (Regionals, Super Regionals, CWS) from the bracket,
-    INCLUDING matchups between teams not in any tracked conference — the local 2026/
+    INCLUDING matchups between teams not in any tracked conference — the local Data/2026/
     box scores only cover SEC/ACC, so the rest of the 64-team field is filled here.
 
     Returns {"games": {seo: [game, ...]}, "teams": {seo: stub}} — per-game entries in

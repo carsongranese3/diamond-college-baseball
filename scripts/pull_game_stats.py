@@ -461,8 +461,8 @@ def _ensure_detailed(game_dir, rebuild):
 def pull(school=TEAM_SCHOOL, label=TEAM_LABEL, season=SEASON, limit=LIMIT,
          force=FORCE, start_date=START_DATE, end_date=END_DATE, shutdown=True):
     # Write into the team's existing folder, which may sit under a conference
-    # (e.g. 2026/SEC/<label>/); fall back to a flat path for a brand-new team.
-    season_root = os.path.join(_PROJECT_ROOT, str(season))
+    # (e.g. Data/2026/SEC/<label>/); fall back to a flat path for a brand-new team.
+    season_root = os.path.join(_PROJECT_ROOT, "Data", str(season))
     out_root = ld._find_dir(label, label, season_root) \
         or os.path.join(season_root, label)
     os.makedirs(out_root, exist_ok=True)

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A college-baseball web app ("Diamond/SEC"): a Flask backend serving a single-page React frontend. The backend assembles team schedules, standings, box scores, stats, and postseason brackets from two upstream sources, and the frontend renders them. Originally SEC-only, now multi-conference (`2026/<Conference>/<Team>/`, currently SEC + ACC).
+A college-baseball web app ("Diamond/SEC"): a Flask backend serving a single-page React frontend. The backend assembles team schedules, standings, box scores, stats, and postseason brackets from two upstream sources, and the frontend renders them. Originally SEC-only, now multi-conference (`Data/2026/<Conference>/<Team>/`, currently SEC + ACC).
 
 ## Running
 
@@ -31,16 +31,16 @@ The app blends two upstreams with very different cost/quality:
 
 2. **stats.ncaa.org** (`ncaa_stats.py`) — the official portal, behind Akamai bot protection that 403s plain HTTP clients. Accessed via **Camoufox** (a stealth Firefox) running on a single dedicated browser thread fed by a queue, with every page cached to `cache_ncaa_stats/`. Slow but authoritative: real per-game box scores AND play-by-play for *every* game, including the early non-conference games ncaa.com lacks.
 
-**The pattern throughout:** prefer the richer locally-saved stats.ncaa.org data when a game/team has been pulled, fall back to the live API otherwise. `local_data.py` reads the saved `2026/` folders and returns game-detail / team-stats in the *same shapes* as `gamedetail.py` / `stats.py` so callers and the frontend need no special-casing (it returns `None` when nothing is saved → caller falls back to the API).
+**The pattern throughout:** prefer the richer locally-saved stats.ncaa.org data when a game/team has been pulled, fall back to the live API otherwise. `local_data.py` reads the saved `Data/2026/` folders and returns game-detail / team-stats in the *same shapes* as `gamedetail.py` / `stats.py` so callers and the frontend need no special-casing (it returns `None` when nothing is saved → caller falls back to the API).
 
-Both caches (`cache/`, `cache_ncaa_stats/`) and the `2026/` data tree are gitignored and large; they're excluded from VS Code indexing in `.vscode/settings.json`.
+Both caches (`cache/`, `cache_ncaa_stats/`) and the `Data/2026/` data tree are gitignored and large; they're excluded from VS Code indexing in `.vscode/settings.json`.
 
-## The `2026/` data tree
+## The `Data/2026/` data tree
 
 Generated, on-disk season data, **nested by conference**:
 
 ```
-2026/<Conference>/<Team>/
+Data/2026/<Conference>/<Team>/
   schedule.json          full season: every game (played + upcoming) — see pull_schedule.py
   schedule/<date>_<vs|at>_<opp>[_id]/
     boxscore.json        line score (innings + R/H/E) for both teams
@@ -63,7 +63,7 @@ Generated, on-disk season data, **nested by conference**:
 
 ## Backend layout (`app.py` + modules)
 
-`app.py` is the Flask app: an in-process memoizer (`_memo`), the `/api/*` endpoints, and a catch-all that serves the SPA. Key concept — **"league"**: a request's `?league=` is either a single conference seo (`sec`, `acc`) or `ncaa`, meaning *all* conferences that have a `2026/<Conf>/` folder. `/api/bootstrap` merges every conference into one team list (each team tagged with its `conference`); other endpoints scope by `?league=`.
+`app.py` is the Flask app: an in-process memoizer (`_memo`), the `/api/*` endpoints, and a catch-all that serves the SPA. Key concept — **"league"**: a request's `?league=` is either a single conference seo (`sec`, `acc`) or `ncaa`, meaning *all* conferences that have a `Data/2026/<Conf>/` folder. `/api/bootstrap` merges every conference into one team list (each team tagged with its `conference`); other endpoints scope by `?league=`.
 
 Supporting modules:
 - `season.py` — discovers conference teams and builds schedules by crawling the date-based scoreboard and pivoting per team (RPI gives the canonical team list + records + RPI rank; poll gives ranking).
@@ -83,7 +83,7 @@ Supporting modules:
 ## Where things live
 - Specs: `specs/`
 - API / endpoint docs: `docs/api.md` (the live surface is the `/api/*` routes in `app.py`)
-- Normalized data shapes: `docs/data-shapes.md` (the on-disk `2026/` shapes are described above)
+- Normalized data shapes: `docs/data-shapes.md` (the on-disk `Data/2026/` shapes are described above)
 - Decisions log: `docs/decisions.md`
 - Design reference, if a prototype was provided: `design/` (pulled files) + `docs/design.md` (mapping)
 

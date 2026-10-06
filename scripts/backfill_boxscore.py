@@ -39,8 +39,8 @@ def _cached(cid):
 
 def main():
     arg = sys.argv[1] if len(sys.argv) > 1 else None
-    pattern = (f"2026/{arg}/schedule/*/boxscore.json" if arg
-               else "2026/*/schedule/*/boxscore.json")
+    pattern = (f"Data/2026/*/{arg}/schedule/*/boxscore.json" if arg
+               else "Data/2026/*/*/schedule/*/boxscore.json")
     paths = sorted(glob.glob(os.path.join(_PROJECT_ROOT, pattern)))
     updated = skipped_nocache = unchanged = errors = 0
 

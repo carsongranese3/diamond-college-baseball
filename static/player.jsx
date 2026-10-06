@@ -1,4 +1,4 @@
-// Player detail view — per-season totals + game-by-game log (local 2026/ data).
+// Player detail view — per-season totals + game-by-game log (local Data/2026/ data).
 
 const PlayerBattingTotals = ({ b }) => (
   <div className="stat-grid stat-grid--4">

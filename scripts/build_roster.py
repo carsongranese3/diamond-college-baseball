@@ -1,13 +1,13 @@
 """Generate a roster.txt for each team folder, listing every player by jersey #.
 
-Reads the per-game player_stats.json files inside each 2026/<Team>/ folder and
+Reads the per-game player_stats.json files inside each Data/2026/<Team>/ folder and
 writes a roster.txt with one player per line (sorted by jersey number). Players
 who appear in both the batting and pitching lines get a "Two-way" tag.
 
 The web app's Roster tab reads these files via /api/roster/<seo>.
 
 Run:
-    .venv/bin/python scripts/build_roster.py              # all teams under 2026/
+    .venv/bin/python scripts/build_roster.py              # all teams under Data/2026/
     .venv/bin/python scripts/build_roster.py Texas        # just one team
 """
 

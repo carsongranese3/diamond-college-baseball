@@ -161,7 +161,7 @@ counts) vs Advanced (calculated: FPCT, RF/G, TC/G, CS%).
   was already saved). Oklahoma bases-loaded PA 6 → 75; runner-on-1B 41% → 24%;
   total PA unchanged (2511) = redistribution, not double-count. Fixes ALL
   situational splits/heatmaps (RISP etc.) across every team.
-- **Note**: the `2026/` data tree IS git-tracked (only `cache_ncaa_stats/` is
+- **Note**: the `Data/2026/` data tree IS git-tracked (only `cache_ncaa_stats/` is
   gitignored), so the rebuild is a ~1934-file diff. Server memoizes `splits:{seo}`
   (6h TTL) — restart to refresh (done this session).
 - **Stolen-base advances — FIXED (same session)**: the runner loop had no
@@ -192,3 +192,11 @@ remains its own selectable state, reached by deselecting every base.
 - **The any/any heatmap cell is no longer the grand total.** Nothing consumed it
   as one (the heat min/max normalization already filters `mask !== "any"`), but
   the comment that claimed it was has been corrected.
+
+## Season data moved under `Data/` (2026-10-06)
+
+- The season tree now lives at `Data/2026/<Conf>/<Team>/` (moved with `git mv`,
+  so history is preserved). `local_data.DATA_ROOT` is the single source of truth
+  for readers; `scripts/update.py` and `scripts/pull_game_stats.py` build
+  `Data/<season>` from `_PROJECT_ROOT`. `_year_roots()` scans `Data/` for
+  sibling year folders, so future seasons go in `Data/<YYYY>/`.
