@@ -9,7 +9,7 @@ The app blends **two upstream data sources** with very different cost and qualit
 1. **henrygd NCAA API** (`ncaa-api.henrygd.me`) — a JSON mirror of ncaa.com. Cheap and live, but incomplete (no per-team schedules or baseball standings, misses early non-conference box scores). Used for the team list, rankings, the live bracket, logos, and scoreboards.
 2. **stats.ncaa.org** — the official portal, behind Akamai bot protection. Reached only via a stealth browser (Camoufox). Slow but authoritative: real per-game box scores and play-by-play for every game.
 
-The pattern throughout: **prefer the richer locally-saved stats.ncaa.org data when a game/team has been pulled, fall back to the live API otherwise.** Saved data lives on disk under `Data/2026/` (gitignored). The frontend transpiles JSX in the browser (no build step).
+The pattern throughout: **prefer the richer locally-saved stats.ncaa.org data when a game/team has been pulled, fall back to the live API otherwise.** Saved data lives on disk under `Data/2026/` (git-tracked). The frontend transpiles JSX in the browser (no build step).
 
 ---
 
@@ -79,7 +79,7 @@ Generates the `Data/2026/` data tree from stats.ncaa.org.
 
 ---
 
-## Data & cache folders (all gitignored, regenerated)
+## Data & cache folders (generated)
 
 | Folder | ~Size | Contents |
 |---|---|---|
@@ -90,7 +90,7 @@ Generates the `Data/2026/` data tree from stats.ncaa.org.
 | **`.venv-dev/`** | 571 MB | Scraping virtualenv (Camoufox + stats stack). |
 | **`__pycache__/`** | — | Compiled Python. |
 
-> The repo is ~1.1 GB on disk but only ~6 MB is tracked by git — the four heavyweights above are all gitignored and regenerate.
+> `Data/2026/` and `cache/` are git-tracked; `cache_ncaa_stats/`, the venvs, and `__pycache__/` are gitignored and regenerate.
 
 ---
 
@@ -100,7 +100,7 @@ Generates the `Data/2026/` data tree from stats.ncaa.org.
 |---|---|
 | **`.github/workflows/deploy.yml`** | CI: deploys to an Azure Web App on push to `main` (and manual dispatch). |
 | **`.vscode/settings.json`** | Pins the Python interpreter and excludes the huge generated folders from indexing/search. |
-| **`.gitignore`** | Ignores the venvs, caches, `Data/2026/`, `__pycache__`, `.DS_Store`. |
+| **`.gitignore`** | Ignores the venvs, `cache_ncaa_stats/`, `__pycache__`, `*.pyc`, `.DS_Store`, `.vscode/`. |
 | **`CLAUDE.md`** | Guidance for Claude Code working in this repo (architecture + commands). |
 | **`repo_description.md`** | This file. |
 
