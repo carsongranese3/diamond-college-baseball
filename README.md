@@ -91,6 +91,10 @@ Set `DISABLE_PREWARM=1` to skip warming the bootstrap cache at startup.
 The app uses the saved stats.ncaa.org data when a game has been pulled and falls back
 to the live API otherwise.
 
+The game data in `Data/2026/` and `cache/` belongs to the NCAA. It's included only so
+the site runs from a fresh clone, isn't covered by this repo's license, and isn't
+meant to be redistributed.
+
 ## Refreshing the data
 
 The scraping scripts use a separate virtualenv with heavier dependencies:
