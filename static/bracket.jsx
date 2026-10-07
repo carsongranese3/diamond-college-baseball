@@ -5,7 +5,7 @@
 const _bracketCache = {};
 function fetchBracket(which) {
   if (!_bracketCache[which]) {
-    _bracketCache[which] = fetch("/api/bracket/" + which)
+    _bracketCache[which] = fetch(window.apiUrl("/api/bracket/" + which))
       .then((r) => { if (!r.ok) throw new Error("bracket " + r.status); return r.json(); });
   }
   return _bracketCache[which];
@@ -16,7 +16,7 @@ const _confBracketCache = {};
 function fetchConfBracket(league) {
   const key = league || window.CURRENT_LEAGUE || "sec";
   if (!_confBracketCache[key]) {
-    _confBracketCache[key] = fetch("/api/bracket/conf/" + encodeURIComponent(key))
+    _confBracketCache[key] = fetch(window.apiUrl("/api/bracket/conf/" + encodeURIComponent(key)))
       .then((r) => { if (!r.ok) throw new Error("conf bracket " + r.status); return r.json(); });
   }
   return _confBracketCache[key];

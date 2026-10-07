@@ -2,6 +2,39 @@
 
 All endpoints are served by `app.py`. The SPA shell is served by the catch-all at `GET /`.
 
+## The `asof` query parameter (every `/api/*` endpoint)
+
+`?asof=YYYY-MM-DD` makes the response reflect the site as of that date: games after it are
+unplayed (results/scores nulled), records / standings / phase / This-Week / rankings history
+rewind, and all stats (team, player, leaders, splits, players-to-watch, POTW) count only games
+dated on or before it. Resolved per request by `clock.today()` — no server-side state.
+
+- **Honored range:** `[2026-02-13, min(real today, 2026-06-30)]`, strict `YYYY-MM-DD`.
+  Anything else (malformed, before the season, in the future) is silently ignored and the
+  request behaves as **today** (the real date, capped at the season end).
+- **No spoilers:** `/api/bracket/ncaa`, `/api/bracket/conf/<league>`, the bootstrap
+  `super_regionals` / postseason schedules treat games after `asof` as unplayed (and the
+  participants of later-round games are hidden). `GET /api/game/<id>?...&iso=<date after asof>`
+  returns **404**.
+- **Leader qualification** (`/api/conference-leaders`, `/api/stat-leaders`): batting
+  `AB >= min(50, 2 x team games played)`, pitching `IP >= min(20, team games played)`.
+- Not date-aware: `/api/rankings/top25` (live poll) and `/api/roster/<seo>`.
+
+## `GET /api/bootstrap` — `clock`
+
+```json
+"clock": {"today": "2026-04-15", "asof": "2026-04-15", "live": false,
+          "min": "2026-02-13", "max": "2026-06-30",
+          "phases": [{"key": "regular", "label": "Regular Season",
+                      "start": "2026-02-13", "end": "2026-05-18"}, ...]}
+```
+
+`today` is the effective date (the honored as-of date, else the real date capped at the season
+end). `asof` is the honored as-of string, or `null` when absent/ignored; `live` is
+`asof == null`. `min`/`max` bound the valid as-of range (`max` = `min(real today, season end)`).
+`phases` are the chronological season windows (`phase._WINDOWS`, labelled by
+`phase._SITE_LABEL`). The former `/api/dev/clock` and `/api/dev/update` routes are removed.
+
 ---
 
 ## `GET /api/game/<game_id>`
@@ -13,7 +46,7 @@ Single-game box score, line score, play-by-play, and batter/pitcher tables.
 | Param | Required | Description |
 |-------|----------|-------------|
 | `team` | no | ncaa.com seo slug of the team whose local folder to search first |
-| `iso`  | no | ISO date (`YYYY-MM-DD`) of the game |
+| `iso`  | no | ISO date (`YYYY-MM-DD`) of the game. With `asof`, a game dated after it returns 404 |
 | `runs` | no | Host team's run total — disambiguates doubleheaders |
 | `opp`  | no | Opponent ncaa.com seo slug (used for the logo) |
 
@@ -289,8 +322,10 @@ situational SB/CS totals land within a handful of counts of the season
 
 ### Notes
 
-- Memoized under key `splits:<seo>` with a 21 600 s (6 h) TTL (single unparameterized
-  payload covering both `players` and `pitchers` — no separate memo key or query param).
+- Memoized under key `splits:<seo>:<effective date>` with a 21 600 s (6 h) TTL (one
+  payload covering both `players` and `pitchers`). Accepts `asof`: only games on/before it
+  are read, and the roster/OPS baseline is summed from per-game files rather than
+  `stats/*.json` when `asof` precedes the team's last saved game.
 - `gamesWithPbp == 0` → `players: []` and `pitchers: []` (no PBP saved yet).
 - Players appearing in PBP but not in `stats/batting.json` (or pitchers not in
   `stats/pitching.json`) are dropped, not invented — never surface with blank identity.

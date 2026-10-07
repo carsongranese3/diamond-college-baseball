@@ -60,7 +60,7 @@ function stgInRound(gphase, round) {
 }
 
 /* ---------- real-data helpers ---------- */
-function stgToday() { return (window.SEASON_CLOCK || {}).today || window.SEASON_UPDATED; }
+function stgToday() { return (window.SEASON_CLOCK || {}).today; }
 function stgAbbr(t) { return (t && (t.mark || (t.name || "").slice(0, 3).toUpperCase())) || "—"; }
 function stgRec(t) { return t && t.ovrW != null ? `${t.ovrW}–${t.ovrL}` : ""; }
 
@@ -96,7 +96,7 @@ function stgDay() {
 }
 
 // Has the team actually PLAYED a round later than `round` (advanced past it)?
-// Only counts games with a result, so in the time machine a future round that's
+// Only counts games with a result, so when viewing an earlier date a future round that's
 // still on the schedule (result cleared) doesn't read as "advanced".
 function stgAdvancedPast(sched, round) {
   const i = stgRoundIndex(round);

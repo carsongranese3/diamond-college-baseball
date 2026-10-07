@@ -16,7 +16,8 @@ def _pkey(p):
             (p.get("firstName") or "").strip())
 
 
-def compute_team_stats(seo, schedule):
+def compute_team_stats(seo, schedule, asof=None):
+    """`asof` (ISO date) skips games dated after it."""
     bat = {}
     pit = {}
     field = {"po": 0, "a": 0, "e": 0, "dp": 0}
@@ -24,6 +25,8 @@ def compute_team_stats(seo, schedule):
 
     for entry in schedule:
         if not entry.get("result") or not entry.get("id"):
+            continue
+        if asof and (entry.get("iso") or "") > asof:
             continue
         try:
             box = ncaa.boxscore(entry["id"])

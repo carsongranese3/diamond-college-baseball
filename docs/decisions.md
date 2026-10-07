@@ -200,3 +200,46 @@ remains its own selectable state, reached by deselecting every base.
   for readers; `scripts/update.py` and `scripts/pull_game_stats.py` build
   `Data/<season>` from `_PROJECT_ROOT`. `_year_roots()` scans `Data/` for
   sibling year folders, so future seasons go in `Data/<YYYY>/`.
+
+## Dev tools removed; per-request "as-of date" replaces the time machine (2026-10-06)
+
+- **Removed:** the dev `Update` button (`/api/dev/update`, `_run_update`,
+  `UPDATE_CONFERENCES`) and the dev `DevClock` time machine (`/api/dev/clock`, the
+  process-global `clock.TEST` / `_DATE`). Data refreshes are run by hand with
+  `scripts/update.py`.
+- **Replacement — "view as of a date":** the date travels in the URL
+  (`?asof=YYYY-MM-DD`). **No `asof` in the URL means today** (the real date) — the
+  default, unadorned site is always live. Invalid or out-of-range dates fall back to
+  today.
+- **Per-request, not global:** `clock.today()` resolves from the current Flask
+  request's `asof` arg (falling back to the real date outside a request / when
+  absent). Each viewer sees their own date; gunicorn workers can't disagree.
+- **Stats rewind too (option 2):** team / player / leaders / splits stats only sum
+  games played on or before the as-of date. Every memo key for date-sensitive data
+  includes the effective date.
+- **UI:** a date chip in the top bar (calendar picker + prev/next day arrows +
+  phase shortcuts from `phase.py`), a visible "Viewing <date>" banner with a
+  "Back to today" action when not live. Navigation preserves `asof`.
+- **Valid range:** `asof` is honored only within `[SEASON_START (2026-02-13),
+  min(real today, SEASON_END 2026-06-30)]`. Anything else (malformed, before the
+  season, in the future) is ignored → today. The bootstrap reports `asof: null` in
+  that case and the frontend strips the bad param from the URL.
+- **Bootstrap contract:** `/api/bootstrap` `clock` becomes
+  `{today, asof, live, min, max, phases:[{key,label,start,end}]}` — `today` is the
+  effective (as-of or real, season-clamped) date; `live` = no as-of in effect.
+  Every `/api/*` endpoint accepts `?asof=`; the frontend forwards it on every call.
+- **Changing the date is a full page load** (navigate to the URL with/without
+  `?asof=`), so the frontend's page-lifetime caches never mix dates. In-app
+  navigation preserves `?asof=`.
+- **Precomputed season totals** (`stats/*.json`, `records.json`) are used only when
+  as-of is at/after the team's last saved game; otherwise totals are aggregated from
+  per-game files with a date cutoff (aggregation extracted from
+  `scripts/build_stats.py` into a reusable, side-effect-free function).
+- **No spoilers:** bracket / postseason data (NCAA bracket, super regionals, conf
+  tournament bracket, postseason fill) treat games after as-of as unplayed. Game
+  detail for a game dated after as-of returns 404.
+- **Leader qualification scales early in the season:** batting needs
+  `AB >= min(50, 2 × team games played)`, pitching `IP >= min(20, 1 × team games
+  played)` — unchanged for the full season, sensible for early dates.
+- **Memo cache gets a bound** (expired-entry sweep / size cap) since keys now
+  multiply by date.

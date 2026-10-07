@@ -8,7 +8,6 @@ Endpoints:
 
 import datetime
 import os
-import subprocess
 import sys
 import threading
 import time
@@ -35,72 +34,43 @@ app = Flask(__name__, static_folder="static", static_url_path="/static")
 
 _mem = {}
 _mem_lock = threading.Lock()
+# Date-keyed entries multiply with every as-of date viewed, so the memo is bounded:
+# past _MEM_SWEEP entries each write drops expired ones, and past _MEM_MAX the
+# oldest are evicted too.
+_MEM_SWEEP = 400
+_MEM_MAX = 1500
 
 
 def _memo(key, ttl, producer):
     now = time.time()
     with _mem_lock:
         hit = _mem.get(key)
-        if hit and now - hit[0] < ttl:
+        if hit and now - hit[0] < hit[2]:
             return hit[1]
     value = producer()
     with _mem_lock:
-        _mem[key] = (now, value)
+        _mem[key] = (now, value, ttl)
+        if len(_mem) > _MEM_SWEEP:
+            for k in [k for k, v in _mem.items() if now - v[0] >= v[2]]:
+                del _mem[k]
+            if len(_mem) > _MEM_MAX:
+                for k in sorted(_mem, key=lambda k: _mem[k][0])[:len(_mem) - _MEM_MAX]:
+                    del _mem[k]
     return value
+
+
+def _dkey():
+    """The effective date as a memo-key part: the request's as-of date, else the real
+    date capped at the season end. Every date-sensitive memo key includes it."""
+    return clock.effective_iso()
 
 
 def _league_json(prefix, ttl, fn, by_date=False):
     """A ?league=-scoped, memoized JSON endpoint. by_date keys the cache on the
-    effective date too (for week-relative data + the dev time machine)."""
+    effective date too (for week-relative data + the as-of date)."""
     league = request.args.get("league", "sec")
-    key = f"{prefix}:{clock.today().isoformat()}:{league}" if by_date else f"{prefix}:{league}"
+    key = f"{prefix}:{_dkey()}:{league}" if by_date else f"{prefix}:{league}"
     return jsonify(_memo(key, ttl, lambda: fn(league)))
-
-
-# ── Dev "Update" — run scripts/update.py to pull fresh data ───────────────────
-# A single-user dev tool (like the time machine): the bottom-left Update button
-# kicks this off, polls it, then reloads. update.py boots the stealth browser and
-# can run for minutes, so it runs in a background thread; the frontend polls
-# /api/dev/update for {running} and reloads when it flips false.
-
-# Which conferences the Update button pulls. None = every conference that already
-# has a data folder under Data/2026/ (currently SEC + ACC). To also pull conferences
-# update.py knows but that aren't onboarded yet, list them explicitly -- e.g.
-#   UPDATE_CONFERENCES = ["SEC", "ACC", "Big Ten", "Big 12"]
-# (labels must match update.py's CONFERENCE_TEAMS keys / Data/2026/ folder names).
-UPDATE_CONFERENCES = None
-
-_update_lock = threading.Lock()
-_update = {"running": False, "ok": None, "log": ""}
-
-
-def _update_conferences():
-    """The conference folder-labels one Update run pulls (one update.py pass each)."""
-    if UPDATE_CONFERENCES:
-        return list(UPDATE_CONFERENCES)
-    return [label for label, _seo in _available_confs()]
-
-
-def _run_update(conf_labels):
-    """Run scripts/update.py once per conference (team='all'), capture its output,
-    then drop the memo cache so the next bootstrap reflects the freshly pulled data.
-    Launched with the current interpreter — update.py re-execs itself into .venv-dev
-    (where the scraping stack lives) when needed."""
-    script = os.path.join(os.path.dirname(__file__), "scripts", "update.py")
-    chunks, ok = [], True
-    for label in conf_labels:
-        try:
-            proc = subprocess.run([sys.executable, script, label, "all"],
-                                  capture_output=True, text=True, timeout=3600)
-            chunks.append(proc.stdout + proc.stderr)
-            ok = ok and proc.returncode == 0
-        except Exception as e:                       # timeout, missing interpreter, …
-            chunks.append(f"{label}: {type(e).__name__}: {e}")
-            ok = False
-    with _mem_lock:
-        _mem.clear()
-    with _update_lock:
-        _update.update(running=False, ok=ok, log="\n".join(chunks))
 
 
 # ── Conferences / leagues ────────────────────────────────────────────────────
@@ -136,27 +106,29 @@ def _season_for_league(league):
     def build():
         teams, schedules = [], {}
         for label, seo in _confs_for_league(league):
-            d = _memo(f"season:conf:{seo}", season.SEASON_AGGREGATE_TTL,
+            d = _memo(f"season:conf:{seo}:{_dkey()}", season.SEASON_AGGREGATE_TTL,
                       lambda seo=seo: season.build_season(conf=seo))
             teams += [{**t, "conference": label} for t in d["teams"]]
             schedules.update(d["schedules"])
         return {"teams": teams, "schedules": schedules,
                 "updated": datetime.datetime.now().isoformat(timespec="minutes")}
-    return _memo(f"season:{league}", season.SEASON_AGGREGATE_TTL, build)
+    return _memo(f"season:{league}:{_dkey()}", season.SEASON_AGGREGATE_TTL, build)
 
 
-def _conf_full(label, seo, asof, test):
+def _conf_full(label, seo, asof):
     """(teams-with-records, full-schedules) for one conference — played games from
     saved box scores, plus upcoming (scoreboard) and bracket-scheduled games, with
-    each team tagged by conference. The per-conference half of /api/bootstrap."""
-    data = _memo(f"season:conf:{seo}", season.SEASON_AGGREGATE_TTL,
+    each team tagged by conference. The per-conference half of /api/bootstrap.
+    `asof` is the honored as-of date (ISO) or None; results after it are nulled."""
+    dkey = _dkey()
+    data = _memo(f"season:conf:{seo}:{dkey}", season.SEASON_AGGREGATE_TTL,
                  lambda seo=seo: season.build_season(conf=seo))
     schedules = _memo(f"local_schedules:{seo}", season.SEASON_AGGREGATE_TTL,
                       lambda seo=seo, data=data: local_data.schedules(data["teams"]))
-    upcoming = _memo(f"upcoming:{seo}:{asof}", 1800,
+    upcoming = _memo(f"upcoming:{seo}:{dkey}", 1800,
                      lambda seo=seo: season.upcoming_schedules(conf=seo))
     conf_seos = {t["id"] for t in data["teams"]}
-    bracket_up = _memo(f"bracket_up:{seo}:{asof}", 1800,
+    bracket_up = _memo(f"bracket_up:{seo}:{dkey}", 1800,
                        lambda conf_seos=conf_seos: season.bracket_upcoming(conf_seos))
     full = {}
     for tseo, played in schedules.items():
@@ -165,7 +137,7 @@ def _conf_full(label, seo, asof, test):
                                 if g.get("iso") not in played_dates]
         have_dates = {g.get("iso") for g in games}
         games += [g for g in bracket_up.get(tseo, []) if g.get("iso") not in have_dates]
-        if test:
+        if asof:
             games = [dict(g, result=None, score=None) if (g.get("iso") or "") > asof else g
                      for g in games]
         games.sort(key=lambda g: g.get("iso") or "")
@@ -191,10 +163,10 @@ _ROUND_PHASE = {"regular": "regular",
 def _cws_finals_started():
     """True once the effective date has reached the CWS Finals' first scheduled game
     (the finals start date comes from the bracket, so it's data-driven — not a fixed
-    calendar guess — yet still respects the dev time machine via clock.today()). Until
+    calendar guess — yet still respects the as-of date via clock.today()). Until
     then the site stays on the CWS bracket screen, so the two stages stay distinct."""
     try:
-        center = _memo("bracket_ncaa", 1800, bracket.ncaa_bracket).get("center") or {}
+        center = _bracket_ncaa().get("center") or {}
     except Exception:
         return False
     start = (center.get("finals") or {}).get("startDate")
@@ -245,12 +217,19 @@ def _live_phase(full):
     return {"phase": key, "label": phase._SITE_LABEL.get(key, datebased["label"])}
 
 
+def _bracket_ncaa():
+    """The NCAA bracket for this request's date (games after the as-of date are
+    unplayed — no spoilers), memoized 30 min per effective date."""
+    asof = clock.asof_iso()
+    return _memo(f"bracket_ncaa:{_dkey()}", 1800, lambda: bracket.ncaa_bracket(asof=asof))
+
+
 def _super_regionals():
     """The Super Regional matchups (each: two teams + their official national
     seeds) from the NCAA bracket — for the homepage 'The Field' and team pages.
     Empty list if the bracket isn't available."""
     try:
-        tree = bracket.ncaa_bracket().get("tree") or {}
+        tree = _bracket_ncaa().get("tree") or {}
     except Exception:
         return []
     out = []
@@ -269,9 +248,27 @@ def _regional_cities():
     """{team_seo: host_city} for every team in every NCAA regional, so any team's
     regional can be named by its host city ("Austin Regional") from the homepage."""
     try:
-        return bracket.ncaa_bracket().get("regional_cities") or {}
+        return _bracket_ncaa().get("regional_cities") or {}
     except Exception:
         return {}
+
+
+def _team_stats(seo, name, sched):
+    """Season stats for one team as of this request's date (memoized per date, shared
+    by the team page + both leaderboards). Prefers the locally-saved stats.ncaa.org
+    data; falls back to the ncaa.com API. Only games on/before the as-of date count."""
+    asof = clock.asof_iso()
+    return _memo(f"team:{seo}:{_dkey()}", 21600,
+                 lambda: local_data.team_stats(seo, name, asof)
+                 or (compute_team_stats(seo, sched, asof) if sched is not None else None))
+
+
+def _qualifiers(stats):
+    """(min AB, min IP) for leaderboard qualification: 50 AB / 20 IP over a full
+    season, scaled down early (2 AB and 1 IP per team game) so an early as-of date
+    still has leaders."""
+    gp = (stats or {}).get("_games") or 0
+    return min(50, 2 * gp), min(20, gp)
 
 
 def _ip_float(ip):
@@ -293,22 +290,20 @@ def _conference_leaders(league="sec"):
         seo, name = t["id"], t["name"]
         sched = data["schedules"].get(seo)
         try:
-            stats = _memo(f"team:{seo}", 21600,
-                          lambda seo=seo, name=name, sched=sched:
-                          local_data.team_stats(seo, name)
-                          or (compute_team_stats(seo, sched) if sched else None))
+            stats = _team_stats(seo, name, sched)
         except Exception:
             stats = None
+        min_ab, min_ip = _qualifiers(stats)
         roster = (stats or {}).get("roster") or {}
         for b in roster.get("batters", []):
             try:
                 ab = int(b.get("ab") or 0)
             except (TypeError, ValueError):
                 ab = 0
-            if ab >= 50 and b.get("avg"):
+            if ab >= min_ab and b.get("avg"):
                 avg_pool.append((_ip_float(b["avg"]), t, b, b["avg"]))
             # OPS — computable advanced stat (replaces wRC+ from the mockup).
-            if ab >= 50 and b.get("ops"):
+            if ab >= min_ab and b.get("ops"):
                 ops_pool.append((_ip_float(b["ops"]), t, b, b["ops"]))
             try:
                 hr = int(b.get("hr") or 0)
@@ -323,7 +318,7 @@ def _conference_leaders(league="sec"):
             if rbi > 0:
                 rbi_pool.append((rbi, t, b, str(rbi)))
         for p in roster.get("pitchers", []):
-            qual = _ip_float(p.get("ip")) >= 20
+            qual = _ip_float(p.get("ip")) >= min_ip
             if qual and p.get("era"):
                 era_pool.append((_ip_float(p["era"]), t, p, p["era"]))
             # WHIP + FIP — computable advanced pitching stats (lower is better).
@@ -369,7 +364,8 @@ def _conference_leaders(league="sec"):
 
 @app.route("/api/conference-leaders")
 def conference_leaders():
-    return _league_json("conference_leaders", season.SEASON_AGGREGATE_TTL, _conference_leaders)
+    return _league_json("conference_leaders", season.SEASON_AGGREGATE_TTL, _conference_leaders,
+                        by_date=True)
 
 
 def _stat_leaders(league="sec"):
@@ -384,12 +380,10 @@ def _stat_leaders(league="sec"):
         seo, name = t["id"], t["name"]
         sched = data["schedules"].get(seo)
         try:
-            stats = _memo(f"team:{seo}", 21600,
-                          lambda seo=seo, name=name, sched=sched:
-                          local_data.team_stats(seo, name)
-                          or (compute_team_stats(seo, sched) if sched else None))
+            stats = _team_stats(seo, name, sched)
         except Exception:
             stats = None
+        min_ab, min_ip = _qualifiers(stats)
         roster = (stats or {}).get("roster") or {}
         ident = {"team": t["name"], "seo": t["id"], "abbr": t.get("mark"),
                  "color": t.get("color"), "logo": t.get("logo"),
@@ -402,10 +396,10 @@ def _stat_leaders(league="sec"):
                 ab = int(b.get("ab") or 0)
             except (TypeError, ValueError):
                 ab = 0
-            if ab >= 50:                       # qualified batters only
+            if ab >= min_ab:                   # qualified batters only
                 batters.append({**b, **ident, "type": "B"})
         for p in roster.get("pitchers", []):
-            if _ip_float(p.get("ip")) >= 20:    # qualified pitchers only
+            if _ip_float(p.get("ip")) >= min_ip:   # qualified pitchers only
                 pitchers.append({**p, **ident, "type": "P"})
     return {"batters": batters, "pitchers": pitchers,
             "teams": len(data["teams"]), "updated": data["updated"]}
@@ -413,7 +407,8 @@ def _stat_leaders(league="sec"):
 
 @app.route("/api/stat-leaders")
 def stat_leaders():
-    return _league_json("stat_leaders", season.SEASON_AGGREGATE_TTL, _stat_leaders)
+    return _league_json("stat_leaders", season.SEASON_AGGREGATE_TTL, _stat_leaders,
+                        by_date=True)
 
 
 def _rankings_history(league="sec"):
@@ -424,7 +419,7 @@ def _rankings_history(league="sec"):
     {weeks: [{n, start, end}], teams: {seo: [{n, rank, confW, confL, ovrW, ovrL}]}}."""
     data = _season_for_league(league)
     teams = data["teams"]
-    weekly = local_data.weekly_records(teams)
+    weekly = local_data.weekly_records(teams, clock.asof_iso())
     name_by = {t["id"]: t["name"] for t in teams}
     by_team = {seo: {w["n"]: w for w in rows} for seo, rows in weekly.items()}
     week_ns = sorted({w["n"] for rows in weekly.values() for w in rows})
@@ -446,7 +441,8 @@ def _rankings_history(league="sec"):
 
 @app.route("/api/rankings/history")
 def rankings_history():
-    return _league_json("rankings_history", season.SEASON_AGGREGATE_TTL, _rankings_history)
+    return _league_json("rankings_history", season.SEASON_AGGREGATE_TTL, _rankings_history,
+                        by_date=True)
 
 
 def _slug(name):
@@ -696,8 +692,7 @@ def _round_field(phase_key, schedules):
         return None
     if phase_key == "cws_finals":
         try:
-            finals = (_memo("bracket_ncaa", 1800, bracket.ncaa_bracket)
-                      .get("center") or {}).get("finals") or {}
+            finals = (_bracket_ncaa().get("center") or {}).get("finals") or {}
         except Exception:
             return None
         seos = {(finals.get("top") or {}).get("seo"),
@@ -716,14 +711,13 @@ def _bootstrap_payload():
     """(all_teams, full, post_teams): the merged team list, full per-team schedules
     (with per-game phase), and non-conference postseason stubs. Shared by /api/bootstrap
     and the site-phase computation so the homepage and every phase-dependent endpoint
-    are built from the exact same data. Memoized per effective date + test flag."""
-    asof = season._today().isoformat()
-    test = clock.is_test()
+    are built from the exact same data. Memoized per effective date."""
+    asof = clock.asof_iso()          # None when live: nothing to hide
 
     def build():
         all_teams, full = [], {}
         for label, seo in _available_confs():
-            teams, conf_full = _conf_full(label, seo, asof, test)
+            teams, conf_full = _conf_full(label, seo, asof)
             all_teams += teams
             full.update(conf_full)
         # Fill the full NCAA-tournament field from the bracket (non-SEC/ACC matchups);
@@ -738,14 +732,14 @@ def _bootstrap_payload():
             existing = full.get(seo, [])
             have = {(g.get("iso"), nrm((g.get("opp") or {}).get("id"))) for g in existing}
             add = [g for g in games if (g.get("iso"), nrm((g.get("opp") or {}).get("id"))) not in have]
-            if test:
+            if asof:
                 add = [dict(g, result=None, score=None) if (g.get("iso") or "") > asof else g for g in add]
             if add:
                 full[seo] = sorted(existing + add, key=lambda g: g.get("iso") or "")
         post_teams = [stub for seo, stub in post["teams"].items() if seo not in known]
         return all_teams, full, post_teams
 
-    return _memo(f"bootstrap_payload:{asof}:{test}", 1800, build)
+    return _memo(f"bootstrap_payload:{_dkey()}", 1800, build)
 
 
 def _site_phase():
@@ -775,7 +769,8 @@ def _players_to_watch(league="sec", n=4):
         """Volume-guarded (seo, name, counts) — thresholds scale with games played."""
         bat, pit = [], []
         for seo, d in lines.items():
-            gp = sum(1 for g in (scheds.get(seo) or []) if g.get("result"))
+            gp = sum(1 for g in (scheds.get(seo) or [])
+                     if g.get("result") and (g.get("iso") or "") <= today)
             bat_min, pit_min = max(6, 2 * gp), max(9, gp)
             for pname, c in d["batting"].items():
                 if c["ab"] + c["bb"] + c["hbp"] >= bat_min:
@@ -824,13 +819,29 @@ def _players_to_watch(league="sec", n=4):
 
 @app.route("/api/player-of-week")
 def player_of_week():
-    # by_date so the time machine picks the right prior week.
+    # by_date so the as-of date picks the right prior week.
     return _league_json("potw", 1800, _player_of_week, by_date=True)
 
 
 @app.route("/api/players-to-watch")
 def players_to_watch():
     return _league_json("ptw", 1800, _players_to_watch, by_date=True)
+
+
+def _clock_state():
+    """The `clock` block of /api/bootstrap: the effective date, the honored as-of date
+    (null when live), the valid as-of range, and the season phase windows."""
+    asof = clock.asof_iso()
+    return {
+        "today": _dkey(),
+        "asof": asof,
+        "live": asof is None,
+        "min": clock.SEASON_START.isoformat(),
+        "max": min(datetime.date.today(), clock.SEASON_END).isoformat(),
+        "phases": [{"key": key, "label": phase._SITE_LABEL[key],
+                    "start": start.isoformat(), "end": end.isoformat()}
+                   for key, start, end in phase._WINDOWS],
+    }
 
 
 @app.route("/api/bootstrap")
@@ -845,36 +856,10 @@ def bootstrap():
         "schedules": full,
         "updated": datetime.datetime.now().isoformat(timespec="minutes"),
         "phase": _live_phase(full),
-        "super_regionals": _memo("super_regionals", 1800, _super_regionals),
-        "regional_cities": _memo("regional_cities", 1800, _regional_cities),
-        "clock": clock.state(),
+        "super_regionals": _memo(f"super_regionals:{_dkey()}", 1800, _super_regionals),
+        "regional_cities": _memo(f"regional_cities:{_dkey()}", 1800, _regional_cities),
+        "clock": _clock_state(),
     })
-
-
-@app.route("/api/dev/clock")
-def dev_clock():
-    """Test-only time machine. ?test=1&date=2026-05-15 turns it on for that date;
-    ?test=0 turns it off. No param just reports the current state."""
-    if "test" in request.args:
-        clock.configure(request.args.get("test") in ("1", "true", "on"),
-                        request.args.get("date"))
-    return jsonify(clock.state())
-
-
-@app.route("/api/dev/update", methods=["GET", "POST"])
-def dev_update():
-    """Dev-only data refresh. POST starts scripts/update.py in the background for
-    every conference in UPDATE_CONFERENCES (all teams); GET reports {running, ok}.
-    The button reloads the page once running flips false so the new data shows."""
-    if request.method == "POST":
-        with _update_lock:
-            if not _update["running"]:
-                labels = _update_conferences()
-                _update.update(running=True, ok=None, log="")
-                threading.Thread(target=_run_update, args=(labels,),
-                                 daemon=True).start()
-    with _update_lock:
-        return jsonify({k: _update[k] for k in ("running", "ok")})
 
 
 @app.route("/api/team/<seo>")
@@ -885,12 +870,8 @@ def team(seo):
     if sched is None:
         abort(404)
 
-    def producer():
-        # Prefer locally-saved stats.ncaa.org data; fall back to the ncaa.com API.
-        local = local_data.team_stats(seo, _team_name(seo))
-        return local if local is not None else compute_team_stats(seo, sched)
-
-    return jsonify(_memo(f"team:{seo}", 21600, producer))
+    # Prefer locally-saved stats.ncaa.org data; fall back to the ncaa.com API.
+    return jsonify(_team_stats(seo, _team_name(seo), sched))
 
 
 @app.route("/api/team/<seo>/splits")
@@ -898,8 +879,9 @@ def team_splits(seo):
     data = _season_for_league("ncaa")
     if not any(t["id"] == seo for t in data["teams"]):
         abort(404)
-    result = _memo(f"splits:{seo}", 21600,
-                   lambda: local_data.team_splits(seo, _team_name(seo)))
+    asof = clock.asof_iso()
+    result = _memo(f"splits:{seo}:{_dkey()}", 21600,
+                   lambda: local_data.team_splits(seo, _team_name(seo), asof))
     if result is None:
         abort(404)
     return jsonify(result)
@@ -919,11 +901,12 @@ def player(seo):
     # Per-season totals + game log for one player, built solely from Data/2026/ (and
     # future-season) folders. The team name is resolved server-side from the seo.
     player_name = request.args.get("player", "")
+    asof = clock.asof_iso()
 
     def producer():
-        return local_data.player(seo, _team_name(seo), player_name)
+        return local_data.player(seo, _team_name(seo), player_name, asof)
 
-    result = _memo(f"player:{seo}:{player_name}", 21600, producer)
+    result = _memo(f"player:{seo}:{player_name}:{_dkey()}", 21600, producer)
     if result is None:
         abort(404)
     return jsonify(result)
@@ -936,6 +919,9 @@ def game(game_id):
     runs = request.args.get("runs")
     opp = request.args.get("opp")
     key = f"game:{game_id}:{seo}:{iso}:{opp}"
+    asof = clock.asof_iso()
+    if asof and iso and iso > asof:
+        abort(404)                     # no spoilers: the game hasn't happened yet
 
     def producer():
         # Prefer the locally-saved game (real play-by-play); else the API.
@@ -957,7 +943,7 @@ def game(game_id):
 def bracket_ncaa():
     # Full 64-team NCAA bracket, straight from the API (covers every team, not
     # just the SEC ones). Cached 30 min since the tournament is live.
-    return jsonify(_memo("bracket_ncaa", 1800, bracket.ncaa_bracket))
+    return jsonify(_bracket_ncaa())
 
 
 @app.route("/api/bracket/conf/<league>")
@@ -968,6 +954,10 @@ def bracket_conf(league):
     data = _season_for_league(league)
     schedules = _memo(f"local_schedules:{league.lower()}", season.SEASON_AGGREGATE_TTL,
                       lambda: local_data.schedules(data["teams"]))
+    asof = clock.asof_iso()
+    if asof:                           # no spoilers: drop games after the as-of date
+        schedules = {seo: [g for g in games if (g.get("iso") or "") <= asof]
+                     for seo, games in schedules.items()}
     phase_label = bracket.conf_tourney_phase(schedules)
     if not phase_label:
         return jsonify({"title": "", "seeds": [], "rounds": []})

@@ -327,11 +327,15 @@ def _build_pbp(detailed):
     return halves
 
 
-def _iter_games(team_dir):
+def _iter_games(team_dir, asof=None):
+    """Yield (game_dir, data) per saved game; with `asof` (ISO date) skip games
+    dated after it (folder names lead with the ISO date)."""
     sched_dir = os.path.join(team_dir, "schedule")
     if not os.path.isdir(sched_dir):
         return
     for d in sorted(os.listdir(sched_dir)):
+        if asof and d[:10] > asof:
+            continue
         full = os.path.join(sched_dir, d)
         if os.path.isdir(full):
             data = _load(full)
@@ -360,31 +364,56 @@ def _host_side(data, team_name):
     return "home" if box.get("home") else "away"
 
 
+def _last_game_iso(team_dir):
+    """ISO date of the team's last saved game folder ('' if none)."""
+    sched_dir = os.path.join(team_dir, "schedule")
+    if not os.path.isdir(sched_dir):
+        return ""
+    return max((d[:10] for d in os.listdir(sched_dir)), default="")
+
+
+def _rewound_rows(team_dir, asof):
+    """(batting, pitching, fielding) raw season rows summed from the per-game files
+    for games on/before `asof` — the same rows stats/*.json hold, but cut off at a
+    past date. None when `asof` is unset or at/after the team's last saved game, so
+    the caller keeps the fast precomputed read."""
+    if not asof or asof >= _last_game_iso(team_dir):
+        return None
+    import stat_agg                  # lazy: stat_agg imports this module
+    return stat_agg.aggregate(team_dir, os.path.basename(team_dir), asof)
+
+
 # ── Team season stats (built from the per-team stats/ season-total files) ────
-def team_stats(seo, name):
+def team_stats(seo, name, asof=None):
     """Team season stats for the team page, built entirely from the team's
     stats/ files (stats/batting.json + stats/pitching.json — basic counting
     stats only; every rate/derived stat, plus W/L/SV, is computed here). Returns
     None when those files don't exist yet, so the caller falls back to the live
-    API path. (Fielding isn't carried in the stats files yet, so it renders "—".)"""
+    API path. (Fielding isn't carried in the stats files yet, so it renders "—".)
+    With `asof` (ISO date) before the team's last saved game, the totals are summed
+    from the per-game files up to that date instead of read from the stats files."""
     team_dir = _find_dir(seo, name)
     if not team_dir:
         return None
     stats_dir = os.path.join(team_dir, "stats")
-    try:
-        with open(os.path.join(stats_dir, "batting.json"), encoding="utf-8") as fh:
-            bat_raw = json.load(fh).get("players") or []
-        with open(os.path.join(stats_dir, "pitching.json"), encoding="utf-8") as fh:
-            pit_raw = json.load(fh).get("players") or []
-    except (OSError, ValueError):
-        return None  # stats files not built yet -> caller falls back to the API path
+    rewound = _rewound_rows(team_dir, asof)
+    if rewound is not None:
+        bat_raw, pit_raw, fld_raw = rewound
+    else:
+        try:
+            with open(os.path.join(stats_dir, "batting.json"), encoding="utf-8") as fh:
+                bat_raw = json.load(fh).get("players") or []
+            with open(os.path.join(stats_dir, "pitching.json"), encoding="utf-8") as fh:
+                pit_raw = json.load(fh).get("players") or []
+        except (OSError, ValueError):
+            return None  # stats files not built yet -> caller falls back to the API path
 
-    # Fielding is optional: older data has no fielding.json -> keep placeholders.
-    try:
-        with open(os.path.join(stats_dir, "fielding.json"), encoding="utf-8") as fh:
-            fld_raw = json.load(fh).get("players") or []
-    except (OSError, ValueError):
-        fld_raw = []
+        # Fielding is optional: older data has no fielding.json -> keep placeholders.
+        try:
+            with open(os.path.join(stats_dir, "fielding.json"), encoding="utf-8") as fh:
+                fld_raw = json.load(fh).get("players") or []
+        except (OSError, ValueError):
+            fld_raw = []
 
     batters = []
     for b in bat_raw:
@@ -952,12 +981,44 @@ def regular_season_records(schedules):
     return out
 
 
-def weekly_records(teams):
+def _rewind_weeks(team_dir, weeks, asof):
+    """Cut a records.json week list off at `asof`: drop weeks that start after it, and
+    for the week containing it recompute the cumulative record from schedule.json
+    through `asof` (the stored snapshot is as of the week's end), ending that row at
+    `asof`. Same regular-season / W-L / conf rules as scripts/build_records.py."""
+    out = [w for w in weeks if (w.get("start") or "") <= asof]
+    if not out or (out[-1].get("end") or "") <= asof:
+        return out
+    try:
+        with open(os.path.join(team_dir, "schedule.json"), encoding="utf-8") as fh:
+            games = json.load(fh).get("games") or []
+    except (OSError, ValueError):
+        return out[:-1]
+    ow = ol = cw = cl = 0
+    for g in games:
+        iso = g.get("iso") or ""
+        d = phase._parse_iso(iso)
+        if (d is None or iso > asof or phase._phase_for_date(d) != "regular"
+                or g.get("result") not in ("W", "L")):
+            continue
+        conf = bool((g.get("opp") or {}).get("conf"))
+        if g["result"] == "W":
+            ow += 1
+            cw += 1 if conf else 0
+        else:
+            ol += 1
+            cl += 1 if conf else 0
+    out[-1] = {**out[-1], "end": asof, "ovrW": ow, "ovrL": ol, "confW": cw, "confL": cl}
+    return out
+
+
+def weekly_records(teams, asof=None):
     """{seo: [week rows]} read from each team's records.json (precomputed by
     scripts/build_records.py). Each row is a cumulative weekly snapshot:
     {n, start, end, ovrW, ovrL, confW, confL}. Teams without a records.json are
     omitted. The team's folder is located the same way as everywhere else, via
-    _find_dir, so the keys are seos that match the API team list."""
+    _find_dir, so the keys are seos that match the API team list. With `asof` (ISO
+    date) the rows stop at that date (see _rewind_weeks)."""
     out = {}
     for t in teams:
         team_dir = _find_dir(t["id"], t["name"])
@@ -968,7 +1029,8 @@ def weekly_records(teams):
             continue
         try:
             with open(path, encoding="utf-8") as fh:
-                out[t["id"]] = json.load(fh).get("weeks") or []
+                weeks = json.load(fh).get("weeks") or []
+            out[t["id"]] = _rewind_weeks(team_dir, weeks, asof) if asof else weeks
         except (OSError, ValueError):
             continue
     return out
@@ -1035,10 +1097,11 @@ def _pit_game_line(row):
             "era": fmt2(er * 9 / (outs / 3)) if outs else ""}
 
 
-def player(seo, name, player_name):
+def player(seo, name, player_name, asof=None):
     """Per-season batting/pitching totals + a game-by-game log for one player,
     across every saved season. Players are matched by name (jersey #s change
-    year to year). Returns None if the player has no saved games.
+    year to year). Returns None if the player has no saved games. With `asof` (ISO
+    date) later seasons are skipped and the as-of season only counts games through it.
     """
     pnorm = _norm(player_name)
     if not pnorm:
@@ -1047,14 +1110,17 @@ def player(seo, name, player_name):
     seasons = []
 
     for year, root in _year_roots():
+        if asof and year > int(asof[:4]):
+            continue                          # a season after the as-of date
         team_dir = _find_dir(seo, name, root)
         if not team_dir:
             continue
+        cutoff = asof if asof and year == int(asof[:4]) else None
         b = {k: 0 for k in ("g", "ab", "r", "h", "2b", "3b", "hr", "rbi",
                             "bb", "k", "hbp", "sf", "sb")}
         p = {k: 0 for k in ("g", "outs", "h", "r", "er", "bb", "k", "bf", "hb")}
         games = []
-        for _dir, data in _iter_games(team_dir):
+        for _dir, data in _iter_games(team_dir, cutoff):
             side = (data.get("players") or {}).get(_host_side(data, name)) or {}
             brow = next((r for r in side.get("batting", [])
                          if _norm(r.get("Name")) == pnorm), None)
@@ -1264,9 +1330,10 @@ def _splits_new_pitch_cell():
     }
 
 
-def team_splits(seo, name):
+def team_splits(seo, name, asof=None):
     """Situational batting splits per batter, aggregated from all saved detailed
-    PBP files. Returns the contract dict or None if the team folder is missing."""
+    PBP files (through `asof`, an ISO date, when given). Returns the contract dict
+    or None if the team folder is missing."""
     team_dir = _find_dir(seo, name)
     if not team_dir:
         return None
@@ -1275,18 +1342,22 @@ def team_splits(seo, name):
 
     # Load batting stats for roster identity and season OPS baseline.
     stats_dir = os.path.join(team_dir, "stats")
-    try:
-        with open(os.path.join(stats_dir, "batting.json"), encoding="utf-8") as fh:
-            bat_raw = json.load(fh).get("players") or []
-    except (OSError, ValueError):
-        bat_raw = []
+    rewound = _rewound_rows(team_dir, asof)
+    if rewound is not None:
+        bat_raw, pitch_raw, _fld = rewound     # summed from per-game files through asof
+    else:
+        try:
+            with open(os.path.join(stats_dir, "batting.json"), encoding="utf-8") as fh:
+                bat_raw = json.load(fh).get("players") or []
+        except (OSError, ValueError):
+            bat_raw = []
 
-    # Load pitching stats for pitcher-roster identity (mirrors bat_raw above).
-    try:
-        with open(os.path.join(stats_dir, "pitching.json"), encoding="utf-8") as fh:
-            pitch_raw = json.load(fh).get("players") or []
-    except (OSError, ValueError):
-        pitch_raw = []
+        # Load pitching stats for pitcher-roster identity (mirrors bat_raw above).
+        try:
+            with open(os.path.join(stats_dir, "pitching.json"), encoding="utf-8") as fh:
+                pitch_raw = json.load(fh).get("players") or []
+        except (OSError, ValueError):
+            pitch_raw = []
 
     tab = sum(to_int(b.get("ab")) for b in bat_raw)
     th  = sum(to_int(b.get("h"))  for b in bat_raw)
@@ -1335,7 +1406,7 @@ def team_splits(seo, name):
     games_total = 0
     games_with_pbp = 0
 
-    for game_dir, data in _iter_games(team_dir):
+    for game_dir, data in _iter_games(team_dir, asof):
         games_total += 1
         detailed = _load_detailed(game_dir)
         plays = (detailed or {}).get("plays") or []

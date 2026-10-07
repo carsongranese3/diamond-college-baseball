@@ -1,42 +1,59 @@
-"""Effective "today" for the app, with a dev time-machine (test mode).
+"""Effective "today" for the app, with a per-request "as-of" date.
 
-`TEST` is the master switch:
-  * TEST = False  -> everything behaves normally (the real date; no time travel).
-  * TEST = True   -> the whole site behaves as though it were the test date: games
-    after it read as not-yet-played, so the phase / standings / This-Week reflect
-    that day.
+A request's `?asof=YYYY-MM-DD` makes the whole site behave as of that day: games
+after it read as not-yet-played, so the phase / standings / This-Week / stats all
+reflect that day. No `asof` (or an invalid / out-of-range one) means today, the real
+date. Each request resolves its own date, so concurrent viewers never disagree.
 
-Everything date-aware goes through clock.today(). Toggle it via /api/dev/clock.
-It's a process-global, so it's a single-user dev tool, not per-request.
+Everything date-aware goes through clock.today(). Outside a request (the startup
+pre-warm thread, scripts) there is no `asof`, so it's simply the real date.
 """
 
 import datetime
 
-TEST = False     # the "test" variable — master switch for the time machine
-_DATE = None     # the test date (datetime.date) used while TEST is on
+try:
+    from flask import has_request_context, request
+except ImportError:          # the data scripts (.venv-dev) run without Flask
+    def has_request_context():
+        return False
+    request = None
+
+SEASON_START = datetime.date(2026, 2, 13)
+SEASON_END = datetime.date(2026, 6, 30)
 
 
-def configure(test, date_iso):
-    """Set the test flag and date (date_iso = 'YYYY-MM-DD'; falsy/invalid -> None)."""
-    global TEST, _DATE
-    TEST = bool(test)
+def asof():
+    """The honored as-of date for this request, or None. Honored only when it parses
+    as YYYY-MM-DD and falls in [SEASON_START, min(real today, SEASON_END)]; anything
+    else (malformed, before the season, in the future) is ignored -> None."""
+    if not has_request_context():
+        return None
+    raw = request.args.get("asof")
+    if not raw:
+        return None
     try:
-        _DATE = datetime.date.fromisoformat(date_iso) if date_iso else None
-    except (TypeError, ValueError):
-        _DATE = None
+        d = datetime.date.fromisoformat(raw)
+    except ValueError:
+        return None
+    if raw != d.isoformat():              # reject loose forms like 20260415
+        return None
+    if SEASON_START <= d <= min(datetime.date.today(), SEASON_END):
+        return d
+    return None
 
 
-def is_test():
-    """True only when test mode is on AND a valid test date is set."""
-    return TEST and _DATE is not None
+def asof_iso():
+    """asof() as an ISO string, or None."""
+    d = asof()
+    return d.isoformat() if d else None
 
 
 def today():
-    """The effective current date — the test date in test mode, else the real date."""
-    return _DATE if is_test() else datetime.date.today()
+    """The effective current date — the request's as-of date, else the real date."""
+    return asof() or datetime.date.today()
 
 
-def state():
-    """Current clock state for the API / dev widget."""
-    return {"test": TEST, "date": _DATE.isoformat() if _DATE else None,
-            "today": today().isoformat()}
+def effective_iso():
+    """today() clamped to the modeled season, as an ISO string — the date-key for
+    memoized data (as-of date, or the real date capped at the season end)."""
+    return min(today(), SEASON_END).isoformat()

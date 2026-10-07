@@ -72,7 +72,7 @@ Supporting modules:
 - `stats.py` / `boxutil.py` — sum per-game box scores into season totals; box-score / innings-pitched / name math.
 - `gamedetail.py` — build the line-score + batter/pitcher tables for one game.
 - `colors.py` / `cities.py` — curated team colors (keyed by ncaa.com seo) and tournament host cities (regionals are named for the host *city*, not school).
-- `clock.py` — dev "time machine". `TEST` flag + a date makes the whole site behave as of that day (games after it read as not-yet-played). Everything date-aware must go through `clock.today()`. It's a process-global single-user dev tool, toggled via `/api/dev/clock`.
+- `clock.py` — the effective "today". A request's `?asof=YYYY-MM-DD` (valid within `[2026-02-13, min(real today, 2026-06-30)]`, else ignored) makes the whole site — schedules, standings, phase, brackets, and all stats — behave as of that day; no `asof` means today. It's per-request (read from the Flask request; real date outside one), so everything date-aware must go through `clock.today()` and every date-sensitive `_memo` key must include the effective date. The frontend forwards `asof` on every API call via `window.apiUrl` and preserves it across navigation. When `asof` precedes a team's last saved game, stats are aggregated per game via `stat_agg.py` instead of read from the precomputed `stats/*.json`.
 
 ## Frontend (`static/`)
 

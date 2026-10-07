@@ -29,8 +29,8 @@ def _norm(name):
 
 
 def _today():
-    # clock.today() is the real date, or the dev-clock override when one is set.
-    # Stay within the modeled 2026 season if it's later.
+    # clock.today() is the request's as-of date, else the real date. Stay within the
+    # modeled 2026 season if it's later.
     return min(clock.today(), datetime.date(2026, 6, 30))
 
 

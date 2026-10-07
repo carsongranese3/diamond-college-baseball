@@ -2223,26 +2223,41 @@ a { color: inherit; text-decoration: none; }
 .hp-standings__team { display: flex; align-items: center; gap: 10px; min-width: 0; }
 .hp-standings__name { font-weight: 700; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-/* dev time-machine widget (test feature) */
-.devclock { position: fixed; bottom: 14px; right: 14px; z-index: 60; display: flex; align-items: center; gap: 8px;
-  background: var(--paper); border: 1px solid var(--line-2); border-radius: 7px; padding: 7px 10px;
-  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.16); }
-.devclock--active { border-color: var(--gold); box-shadow: 0 3px 16px color-mix(in oklab, var(--gold) 40%, transparent); }
-.devclock__label { font-size: 9.5px; letter-spacing: .12em; color: var(--muted); }
-.devclock--active .devclock__label { color: var(--gold); }
-.devclock__input { font-size: 11px; border: 1px solid var(--line); border-radius: 4px; padding: 3px 6px;
-  background: var(--bg); color: var(--ink); color-scheme: dark light; }
-.devclock__btn { font-size: 9.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
-  padding: 4px 9px; border-radius: 4px; background: var(--accent); color: #fff; }
-.devclock__btn--reset { background: transparent; color: var(--muted); border: 1px solid var(--line-2); }
-
-/* dev "Update" button — bottom-left, mirrors the devclock chrome */
-.devupd { position: fixed; bottom: 14px; left: 14px; z-index: 60;
-  background: var(--paper); border: 1px solid var(--line-2); border-radius: 7px; padding: 7px 10px;
-  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.16); }
-.devupd__btn { font-size: 9.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
-  padding: 4px 11px; border-radius: 4px; background: var(--accent); color: #fff; cursor: pointer; }
-.devupd__btn--busy { background: var(--gold); cursor: default; }
+/* ─── As-of date control (top bar chip + popover + banner) ─── */
+.asof { position: relative; flex: 0 0 auto; }
+.asof__chip { display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 11px;
+  border: 1px solid var(--line-2); border-radius: 999px; font-size: 11px; letter-spacing: .04em;
+  color: var(--ink-2); background: transparent; cursor: pointer; white-space: nowrap; transition: 120ms; }
+.asof__chip:hover { color: var(--ink); background: var(--hover); }
+.asof__chip--on { border-color: var(--gold); color: var(--gold); }
+.asof__icon { font-size: 12px; line-height: 1; }
+.asof__pop { position: absolute; top: calc(100% + 8px); right: 0; z-index: 40; width: 300px; max-width: calc(100vw - 36px);
+  background: var(--paper); border: 1px solid var(--line-2); border-radius: 8px; padding: 14px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2); display: flex; flex-direction: column; gap: 10px; }
+.asof__label { font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.asof__row { display: flex; align-items: center; gap: 8px; }
+.asof__input { flex: 1 1 auto; min-width: 0; height: 34px; font-size: 13px; padding: 0 8px;
+  border: 1px solid var(--line-2); border-radius: 6px; background: var(--bg); color: var(--ink); color-scheme: light dark; }
+.asof__arrow { flex: 0 0 auto; width: 34px; height: 34px; border: 1px solid var(--line-2); border-radius: 6px;
+  font-size: 18px; line-height: 1; color: var(--ink); cursor: pointer; }
+.asof__arrow:hover:not(:disabled) { background: var(--hover); }
+.asof__arrow:disabled, .asof__today:disabled { opacity: .4; cursor: default; }
+.asof__phases { display: flex; flex-wrap: wrap; gap: 6px; }
+.asof__phase { padding: 6px 10px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 12px;
+  color: var(--ink-2); cursor: pointer; }
+.asof__phase:hover { background: var(--hover); color: var(--ink); }
+.asof__phase--on { border-color: var(--gold); color: var(--gold); }
+.asof__today { height: 34px; border-radius: 6px; background: var(--accent); color: #fff; font-size: 12px;
+  font-weight: 700; letter-spacing: .04em; cursor: pointer; }
+.asof-banner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px 14px;
+  padding: 7px 32px; font-size: 13px; color: var(--ink);
+  background: color-mix(in oklab, var(--gold) 16%, var(--paper)); border-bottom: 1px solid var(--gold); }
+.asof-banner__btn { font-size: 12px; font-weight: 700; color: var(--accent); text-decoration: underline;
+  text-underline-offset: 2px; cursor: pointer; padding: 2px 0; }
+@media (max-width: 900px) {
+  .asof-banner { padding: 7px 18px; }
+  .topbar__right { flex-wrap: wrap; justify-content: flex-end; gap: 8px 10px; }
+}
 
 /* conference leaders (homepage right column) */
 .hp-cl-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 22px; }

@@ -23,6 +23,13 @@ function buildQuery(params) {
   return q ? "?" + q : "";
 }
 
+// Keep the as-of date in the URL across in-app navigation (merged into any query
+// the view already emits).
+function withAsof(path) {
+  if (!path || !window.ASOF) return path;
+  return path + (path.indexOf("?") < 0 ? "?" : "&") + "asof=" + encodeURIComponent(window.ASOF);
+}
+
 function pathForView(view) {
   switch (view.name) {
     case "home": return "/";
@@ -159,7 +166,7 @@ const App = () => {
   // a spurious history entry; later changes push so back/forward works.
   const firstSync = React.useRef(true);
   React.useEffect(() => {
-    const path = pathForView(view);
+    const path = withAsof(pathForView(view));
     const current = window.location.pathname + window.location.search;
     if (path && path !== current) {
       if (firstSync.current) window.history.replaceState({}, "", path);
@@ -254,6 +261,7 @@ const App = () => {
               onStats={goStats} onCompare={goCompare} onBracket={goBracket}
               theme={theme} onToggleTheme={toggleTheme}
               league={league} leagues={window.LEAGUES || []} onLeague={setLeague} />
+      <AsofBanner />
       <main className="container">
         {view.name === "home" && (() => {
           const ph = (window.SEASON_PHASE && window.SEASON_PHASE.phase) || "regular";
@@ -365,87 +373,106 @@ const App = () => {
       <footer className="footer">
         <span>An original editorial mockup — not affiliated with the SEC, NCAA, or any university.</span>
       </footer>
-      <DevClock />
-      <UpdateButton />
     </div>
   );
 };
 
-// Dev-only "Update" button (bottom-left): runs scripts/update.py on the server to
-// pull fresh game data for every conference with data (SEC + ACC today — see the
-// backend's UPDATE_CONFERENCES), regardless of the league tab in view, then reloads
-// so the new data shows. The update runs in the background; we poll until it
-// finishes. If the page is reloaded mid-run, we pick the run back up on mount.
-const UpdateButton = () => {
-  const [running, setRunning] = React.useState(false);
-  // Only reload once we've SEEN the run go true→false, so a stale/early "not
-  // running" reading can never refresh the page before the update is actually done.
-  const sawRunning = React.useRef(false);
-  const poll = React.useCallback(() => {
-    fetch("/api/dev/update")
-      .then((r) => r.json())
-      .then((s) => {
-        if (s.running) {                       // still working — keep waiting
-          sawRunning.current = true;
-          setRunning(true);
-          setTimeout(poll, 2000);
-        } else if (sawRunning.current) {       // it ran and is now finished — refresh
-          window.location.reload();
-        } else {                               // nothing in flight — don't refresh
-          setRunning(false);
-        }
-      })
-      .catch(() => setTimeout(poll, 4000));     // network blip — never reload on error
-  }, []);
-  // Resume waiting if an update is already in flight when this mounts.
+// ── As-of date ──────────────────────────────────────────────────────────────
+// The whole site can be viewed as of a past date via ?asof=YYYY-MM-DD (window.ASOF,
+// validated by the server -> SEASON_CLOCK). Changing it is a full page load so the
+// page-lifetime fetch caches never mix dates.
+const _clk = () => window.SEASON_CLOCK || {};
+const _isoShift = (iso, days) => {
+  const d = new Date(iso + "T00:00:00Z");
+  d.setUTCDate(d.getUTCDate() + days);
+  return d.toISOString().slice(0, 10);
+};
+const _fmtAsof = (iso) => {
+  const d = new Date((iso || "") + "T00:00:00Z");
+  return isNaN(d) ? (iso || "") : d.toLocaleDateString("en-US",
+    { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
+};
+// Reload the current page with ?asof=<iso> (or none = today), keeping other params.
+const gotoAsof = (iso) => {
+  const clk = _clk();
+  const u = new URL(window.location.href);
+  if (!iso || (clk.max && iso >= clk.max)) u.searchParams.delete("asof");
+  else u.searchParams.set("asof", iso);
+  window.location.assign(u.pathname + u.search + u.hash);
+};
+
+const DateControl = () => {
+  const clk = _clk();
+  const [open, setOpen] = React.useState(false);
+  const wrap = React.useRef(null);
   React.useEffect(() => {
-    fetch("/api/dev/update")
-      .then((r) => r.json())
-      .then((s) => { if (s.running) { sawRunning.current = true; setRunning(true); poll(); } })
-      .catch(() => {});
-  }, [poll]);
-  const start = () => {
-    if (running) return;
-    setRunning(true);
-    sawRunning.current = false;
-    fetch("/api/dev/update", { method: "POST" })
-      .then((r) => r.json())
-      .then((s) => {                           // server registers the run before replying
-        if (s.running) sawRunning.current = true;
-        setTimeout(poll, 2000);
-      })
-      .catch(() => setRunning(false));
-  };
+    if (!open) return;
+    const onDown = (e) => { if (wrap.current && !wrap.current.contains(e.target)) setOpen(false); };
+    const onKey = (e) => { if (e.key === "Escape") setOpen(false); };
+    document.addEventListener("mousedown", onDown);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+  if (!clk.today || !clk.min || !clk.max) return null;
+  const cur = clk.today;
+  const clamp = (iso) => (iso < clk.min ? clk.min : iso > clk.max ? clk.max : iso);
+  const phases = (clk.phases || []).filter((p) => p.start <= clk.max);
   return (
-    <div className="devupd">
-      <button className={"devupd__btn mono" + (running ? " devupd__btn--busy" : "")}
-              disabled={running} onClick={start}>
-        {running ? "Updating…" : "Update"}
+    <div className="asof" ref={wrap}>
+      <button type="button"
+              className={"asof__chip mono" + (clk.live ? "" : " asof__chip--on")}
+              aria-haspopup="dialog" aria-expanded={open}
+              title="View the site as of a date"
+              onClick={() => setOpen((o) => !o)}>
+        <span className="asof__icon" aria-hidden="true">&#9719;</span>
+        <span>{clk.live ? "Today" : _fmtAsof(cur)}</span>
       </button>
+      {open && (
+        <div className="asof__pop" role="dialog" aria-label="View the site as of a date">
+          <div className="asof__label">View site as of</div>
+          <div className="asof__row">
+            <button type="button" className="asof__arrow" aria-label="Previous day"
+                    disabled={cur <= clk.min} onClick={() => gotoAsof(_isoShift(cur, -1))}>&lsaquo;</button>
+            <input type="date" className="asof__input mono" aria-label="As-of date"
+                   value={cur} min={clk.min} max={clk.max}
+                   onChange={(e) => { if (e.target.value) gotoAsof(clamp(e.target.value)); }} />
+            <button type="button" className="asof__arrow" aria-label="Next day"
+                    disabled={cur >= clk.max} onClick={() => gotoAsof(_isoShift(cur, 1))}>&rsaquo;</button>
+          </div>
+          {phases.length > 0 && (
+            <>
+              <div className="asof__label">Jump to the end of</div>
+              <div className="asof__phases">
+                {phases.map((p) => {
+                  const to = clamp(p.end);
+                  return (
+                    <button type="button" key={p.key}
+                            className={"asof__phase" + (to === cur ? " asof__phase--on" : "")}
+                            onClick={() => gotoAsof(to)}>{p.label}</button>
+                  );
+                })}
+              </div>
+            </>
+          )}
+          <button type="button" className="asof__today" disabled={clk.live}
+                  onClick={() => gotoAsof(null)}>Back to today</button>
+        </div>
+      )}
     </div>
   );
 };
 
-// Test-only "time machine": set the effective date and the whole site behaves as
-// though it's that day (phase, played vs upcoming games, standings, This Week…).
-const DevClock = () => {
-  const clk = window.SEASON_CLOCK || {};
-  const [date, setDate] = React.useState(clk.date || clk.today || "");
-  const go = (qs) =>
-    fetch("/api/dev/clock?" + qs)
-      .then(() => window.location.reload())
-      .catch(() => window.location.reload());
+// Slim banner under the top bar whenever the site is being viewed as of a past date.
+const AsofBanner = () => {
+  const clk = _clk();
+  if (clk.live !== false || !clk.today) return null;
   return (
-    <div className={`devclock ${clk.test ? "devclock--active" : ""}`}>
-      <span className="devclock__label mono">{clk.test ? "TEST" : "LIVE"}</span>
-      <input type="date" className="devclock__input mono" value={date}
-             min="2026-02-13" max="2026-06-30"
-             onChange={(e) => setDate(e.target.value)} />
-      <button className="devclock__btn mono"
-              onClick={() => go("test=1&date=" + encodeURIComponent(date))}>Set</button>
-      {clk.test && (
-        <button className="devclock__btn devclock__btn--reset mono" onClick={() => go("test=0")}>Off</button>
-      )}
+    <div className="asof-banner" role="status">
+      <span>Viewing the site as of <strong>{_fmtAsof(clk.today)}</strong></span>
+      <button type="button" className="asof-banner__btn" onClick={() => gotoAsof(null)}>Back to today</button>
     </div>
   );
 };
@@ -479,6 +506,7 @@ const Topbar = ({ section, onHome, onStandings, onScores, onStats, onCompare, on
             ))}
           </div>
         )}
+        <DateControl />
         <button
           className="topbar__theme"
           onClick={onToggleTheme}

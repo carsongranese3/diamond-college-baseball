@@ -105,10 +105,47 @@ def _super_host(games, sbox):
     return None, None
 
 
-def ncaa_bracket(year=2026):
+def _game_iso(g):
+    """'06/20/2026' (a bracket game's startDate) -> '2026-06-20', or ''."""
+    try:
+        mo, da, yr = (g.get("startDate") or "").split("/")
+        return f"{yr}-{mo}-{da}"
+    except ValueError:
+        return ""
+
+
+def _hide_after(raw, asof):
+    """Bracket games with every result after `asof` (ISO date) scrubbed — treated as
+    unplayed (pending, no scores/winner), so a past-date view has no spoilers. Teams
+    that only got into a later game BECAUSE of a result are blanked too: any game in
+    the super regional / CWS / finals sections, and regional games past each
+    section's first two (whose participants are set by earlier results)."""
+    first_two = {}
+    for g in raw:
+        first_two.setdefault(g.get("sectionId"), []).append(g.get("bracketPositionId") or 0)
+    first_two = {sid: set(sorted(p)[:2]) for sid, p in first_two.items()}
+    out = []
+    for g in raw:
+        iso = _game_iso(g)
+        if not iso or iso <= asof:
+            out.append(g)
+            continue
+        sid = g.get("sectionId")
+        later = (sid is not None and sid // 100 >= 2) or \
+                (g.get("bracketPositionId") or 0) not in first_two.get(sid, ())
+        teams = [] if later else [
+            {**t, "score": None, "isWinner": False} for t in (g.get("teams") or [])]
+        out.append({**g, "gameState": "P", "teams": teams})
+    return out
+
+
+def ncaa_bracket(year=2026, asof=None):
+    """`asof` (ISO date): treat games after it as unplayed (see _hide_after)."""
     data = ncaa.bracket(year)
     ch = (data.get("championships") or [{}])[0]
     raw = ch.get("games") or []
+    if asof:
+        raw = _hide_after(raw, asof)
 
     sections = {}
     for g in raw:
@@ -275,7 +312,7 @@ def ncaa_bracket(year=2026):
 
     # First (scheduled) date of the best-of-3 finals, as ISO — the day the CWS Finals
     # begin. The site uses this to switch from the CWS screen to the Finals screen on
-    # the right calendar day (respecting the dev time machine), not just whenever the
+    # the right calendar day (respecting the as-of date), not just whenever the
     # live bracket happens to have the matchup. None until the finals are scheduled.
     def _iso(d):                                   # "06/20/2026" -> "2026-06-20"
         try:

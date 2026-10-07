@@ -100,7 +100,7 @@ const Scores = ({ onGameClick, initialDate, onDateChange, league }) => {
   // Default to today if it has games, else the most recent past date with games.
   const defaultIdx = React.useMemo(() => {
     if (!dates.length) return 0;
-    const todayIso = new Date().toISOString().slice(0, 10);
+    const todayIso = (window.SEASON_CLOCK || {}).today || new Date().toISOString().slice(0, 10);
     let idx = -1;
     for (let i = 0; i < dates.length && dates[i] <= todayIso; i++) idx = i;
     return idx >= 0 ? idx : dates.length - 1;

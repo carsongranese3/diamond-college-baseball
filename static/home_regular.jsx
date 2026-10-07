@@ -29,7 +29,7 @@ function bbxTickerGames(league) {
     for (const g of sch[seo] || []) if (g.iso) all.push([seo, g]);
   }
   const onDay = (d) => all.filter(([, g]) => g.iso === d);
-  let day = (window.SEASON_CLOCK || {}).today || window.SEASON_UPDATED;
+  let day = (window.SEASON_CLOCK || {}).today;
   if (!onDay(day).length) {
     const played = all.filter(([, g]) => g.result).map(([, g]) => g.iso).sort();
     day = played[played.length - 1] || day;
@@ -57,7 +57,7 @@ function BbxTicker({ onGame, league }) {
   // "Live" = we're showing the effective today's slate AND at least one game isn't
   // final yet. When everything's final (or we've fallen back to a past date's
   // finals), the strip goes quiet instead of flashing the red LIVE banner.
-  const today = (window.SEASON_CLOCK || {}).today || window.SEASON_UPDATED;
+  const today = (window.SEASON_CLOCK || {}).today;
   const live = day === today && rows.some((g) => !g.final);
   const Row = ({ t, score, lead }) => (
     <div className={"bbx-tk__line" + (lead ? " bbx-tk__line--lead" : "")}>
