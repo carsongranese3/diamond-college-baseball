@@ -1,5 +1,7 @@
 # ◆ Diamond — college baseball
 
+**Live site: [collegebaseball.carsontech.ai](https://collegebaseball.carsontech.ai)**
+
 A college-baseball site for the 2026 season: standings, scores, box scores, team and
 player pages, stat leaders, head-to-head comparisons, and the full postseason —
 conference tournaments → regionals → super regionals → College World Series → Finals.
