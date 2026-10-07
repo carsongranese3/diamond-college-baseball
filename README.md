@@ -146,7 +146,7 @@ docs/                API reference, data shapes, decisions log
 
 For more detail:
 
-- [`repo_description.md`](repo_description.md): a file-by-file guide.
+- [`docs/repo_description.md`](docs/repo_description.md): a file-by-file guide.
 - [`docs/api.md`](docs/api.md): the `/api/*` endpoints.
 - [`docs/data-shapes.md`](docs/data-shapes.md): the data formats.
 - [`docs/decisions.md`](docs/decisions.md): why things are the way they are.
@@ -156,3 +156,15 @@ For more detail:
 Pushing to `main` deploys to an Azure Web App through
 [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). Production runs
 gunicorn against `app:app`.
+
+## How this was built
+
+I designed the architecture and made the calls: the two-source data strategy, flat
+JSON files instead of a database, the caching layers, and the hosting setup. Those
+decisions are recorded with their reasoning in [`docs/decisions.md`](docs/decisions.md).
+
+The implementation was built with Claude Code, using a team of specialist agents
+(requirements, exploration, data, backend, frontend, QA and DevOps) coordinated
+through [`CLAUDE.md`](CLAUDE.md). New screens such as the situational splits started
+as prototypes in Claude Design, saved in `design/`, and were then rebuilt against the
+real data in the app's own styling.

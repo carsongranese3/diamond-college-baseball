@@ -55,4 +55,4 @@ Reuses `_league_json` / `_memo`, `local_data.team_stats`, `compute_team_stats`, 
 5. No regressions; `git diff --stat` shows only intended files.
 
 ## Files touched
-`app.py`, `static/stats.jsx` (new), `static/bootstrap.js`, `static/app.jsx`, `static/index.html`, `static/styles.css`, `stat_page.md`.
+`app.py`, `static/stats.jsx` (new), `static/bootstrap.js`, `static/app.jsx`, `static/index.html`, `static/styles.css`, `specs/stat_page.md`.

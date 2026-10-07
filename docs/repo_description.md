@@ -102,7 +102,7 @@ Generates the `Data/2026/` data tree from stats.ncaa.org.
 | **`.vscode/settings.json`** | Pins the Python interpreter and excludes the huge generated folders from indexing/search. |
 | **`.gitignore`** | Ignores the venvs, `cache_ncaa_stats/`, `__pycache__`, `*.pyc`, `.DS_Store`, `.vscode/`. |
 | **`CLAUDE.md`** | Guidance for Claude Code working in this repo (architecture + commands). |
-| **`repo_description.md`** | This file. |
+| **`docs/repo_description.md`** | This file. |
 
 ---
 
