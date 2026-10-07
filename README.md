@@ -29,6 +29,39 @@ single-page React frontend with no build step.
 
 ![Situational batting: team AVG, OBP and SLG for every base and out state, with the matching player lines below](docs/screenshots/situational.png)
 
+## Engineering notes
+
+**Two data sources, each used for what it's good at.** The henrygd API is fast and live
+but incomplete: it has no per-team schedules and misses early non-conference box
+scores. stats.ncaa.org has every game, but it sits behind bot protection that blocks
+ordinary HTTP clients. So the scraper pulls stats.ncaa.org offline through a stealth
+browser and saves each game to disk, and the app prefers that saved data and falls
+back to the live API. `local_data.py` returns the same shapes as the API-backed
+modules, so nothing downstream has to know which source answered.
+
+**Caching in layers, from fastest to slowest:**
+
+| Layer | What it holds |
+|---|---|
+| Browser | The bootstrap payload, plus team stats and box scores fetched on demand and kept in memory, so reopening a view makes no request. |
+| Server memo | Responses kept in process with per-key lifetimes: 30 minutes for live data, 6 hours for season aggregates and team pages, 24 hours for some per-game data. A background thread warms the bootstrap payload at startup, so the first visitor after a deploy doesn't wait. |
+| Precomputed files | Season totals, rosters and weekly records built offline, so a page reads totals instead of summing every game. |
+| API response cache | Every upstream response saved to disk. Finished games and past days are kept forever because they can't change; today's games expire in 30 minutes; failed lookups are remembered for 6 hours so dead games aren't re-requested. Requests are throttled to the API's 5 per second. |
+
+**Fixing a slowdown that only happened in production.** Building schedules cold opened
+about 5,800 files across the SEC and ACC. That took about 2 seconds on a laptop but
+tens of seconds on Azure, where the app's storage is a network share and every file
+open is a round trip. A per-team `schedule_digest.json` caches the parts of each game
+row that come from disk, cutting a cold build from about 180 file opens per team to
+one. It rebuilds itself when the number of saved games changes, and live details like
+rankings are still applied on every request so they stay current.
+
+**Viewing the site as of any date.** `?asof=YYYY-MM-DD` is read per request, and every
+date-aware piece of the app goes through one `clock.today()`. Every cache key that
+depends on the date includes it, so two visitors looking at different dates never see
+each other's results. When the date falls mid-season, stats are summed game by game
+up to that day instead of read from the season totals.
+
 ## Quick start
 
 Needs Python 3.12+.
