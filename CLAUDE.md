@@ -21,7 +21,7 @@ There is **no build step** for the frontend: `static/index.html` loads React + B
 - **`.venv`** — runs the web app. Deps: `requirements.txt` (Flask, gunicorn).
 - **`.venv-dev`** — runs the data-pull scripts. Deps: `requirements-dev.txt`, which adds Camoufox (stealth browser), BeautifulSoup/lxml, and the `collegebaseball` school-id table. After installing, run `python -m camoufox fetch` once.
 
-There are no automated tests, linters, or a Makefile in this repo.
+Tests: `.venv/bin/python -m unittest discover -s tests` (standard-library `unittest`, run in GitHub Actions by `.github/workflows/tests.yml`). No linters or Makefile.
 
 ## Two data sources (this is the core architecture)
 
@@ -87,9 +87,9 @@ Supporting modules:
 - Decisions log: `docs/decisions.md`
 - Design reference, if a prototype was provided: `design/` (pulled files) + `docs/design.md` (mapping)
 
-> There is no automated test suite, linter, or build step in this repo (see "Running" above). The
-> QA agent verifies by running `.venv/bin/python app.py` and exercising the affected `/api/*`
-> endpoints and views in the browser, not by running a test command.
+> The test suite (`tests/`) covers the stat math, the `?asof=` rule and saved-data reconciliation.
+> The QA agent runs it, and also verifies by running `.venv/bin/python app.py` and exercising the
+> affected `/api/*` endpoints and views in the browser. There is no linter or build step.
 
 ---
 

@@ -1,5 +1,7 @@
 # ◆ Diamond — college baseball
 
+[![tests](https://github.com/carsongranese3/diamond-college-baseball/actions/workflows/tests.yml/badge.svg)](https://github.com/carsongranese3/diamond-college-baseball/actions/workflows/tests.yml)
+
 **Live site: [collegebaseball.carsontech.ai](https://collegebaseball.carsontech.ai)**
 
 A college-baseball site for the 2026 season: standings, scores, box scores, team and
@@ -80,6 +82,11 @@ site runs without pulling anything. The frontend is JSX that the browser transpi
 runtime, so you edit a `.jsx` file and reload.
 
 Set `DISABLE_PREWARM=1` to skip warming the bootstrap cache at startup.
+
+Run the tests with `.venv/bin/python -m unittest discover -s tests`. They cover the
+stat math (innings-pitched thirds, AVG/OBP-style rates, FIP, BABIP, LOB%), the `?asof=`
+date rule, and a check that every team's saved season totals equal a fresh sum of its
+saved games. GitHub Actions runs them on every push.
 
 ## Where the data comes from
 
