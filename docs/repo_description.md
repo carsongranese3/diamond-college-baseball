@@ -89,7 +89,7 @@ Generates the `Data/2026/` data tree from stats.ncaa.org.
 |---|---|---|
 | **`Data/2026/`** | 130 MB | The season data tree, nested by conference: `Data/2026/<Conf>/<Team>/` with `schedule.json` (full season), `schedule/<date>_<vs\|at>_<opp>/` box-score folders (`boxscore.json`, `player_stats.json`, `play_by_play.json`), `stats/{batting,pitching}.json`, `records.json`, `roster.txt`. |
 | **`cache/`** | 27 MB | Cached henrygd NCAA API responses (`ncaa.py`). |
-| **`cache_ncaa_stats/`** | 359 MB | Cached stats.ncaa.org pages (`ncaa_stats.py`), so the slow browser cost is paid once per URL. |
+| **`cache_ncaa_stats/`** | 359 MB | Cached stats.ncaa.org pages (`ncaa_stats.py`), so the slow browser cost is paid once per URL. Not in git; backed up to Box at `Baseball/cache_ncaa_stats` (`rclone copy box:Baseball/cache_ncaa_stats cache_ncaa_stats`). |
 | **`.venv/`** | 14 MB | Web-app virtualenv (Flask). |
 | **`.venv-dev/`** | 571 MB | Scraping virtualenv (Camoufox + stats stack). |
 | **`__pycache__/`** | — | Compiled Python. |

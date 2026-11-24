@@ -35,7 +35,7 @@ The app blends two upstreams with very different cost/quality:
 
 **The pattern throughout:** prefer the richer locally-saved stats.ncaa.org data when a game/team has been pulled, fall back to the live API otherwise. `local_data.py` reads the saved `Data/2026/` folders and returns game-detail / team-stats in the *same shapes* as `gamedetail.py` / `stats.py` so callers and the frontend need no special-casing (it returns `None` when nothing is saved → caller falls back to the API).
 
-The caches (`cache/`, `cache_ncaa_stats/`) and the `Data/2026/` data tree are large and excluded from VS Code indexing in `.vscode/settings.json`. `cache_ncaa_stats/` is the only data directory that is gitignored (`.vscode/` is also ignored, so those exclusions are local); `cache/` and the `Data/2026/` tree are git-tracked.
+The caches (`cache/`, `cache_ncaa_stats/`) and the `Data/2026/` data tree are large and excluded from VS Code indexing in `.vscode/settings.json`. `cache_ncaa_stats/` is the only data directory that is gitignored (`.vscode/` is also ignored, so those exclusions are local); `cache/` and the `Data/2026/` tree are git-tracked. A backup of `cache_ncaa_stats/` (4,111 files, 362 MB, as of 2026-11-24) lives in Box at `Baseball/cache_ncaa_stats`; restore it into a fresh clone with `rclone copy box:Baseball/cache_ncaa_stats cache_ncaa_stats` (assumes an rclone remote named `box`).
 
 ## The `Data/2026/` data tree
 
