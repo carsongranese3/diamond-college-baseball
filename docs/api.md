@@ -344,5 +344,13 @@ See `app.py` for the full route list. Key routes:
 | `GET` | `/api/game/<id>` | Single-game detail (see above) |
 | `GET` | `/api/bracket/ncaa` | Full 64-team NCAA bracket |
 | `GET` | `/api/bracket/conf/<league>` | Conference tournament bracket |
-| `GET` | `/api/player/<seo>/<name>` | Per-player season history |
-| `GET` | `/api/compare` | Side-by-side team or player comparison |
+| `GET` | `/api/player/<seo>?player=<name>` | Per-player season totals + game log (404 if not found) |
+| `GET` | `/api/roster/<seo>` | Team roster from `roster.txt` (404 if none saved) |
+| `GET` | `/api/conference-leaders?league=` | Top-3 leaders per stat pooled across the league's teams |
+| `GET` | `/api/stat-leaders?league=` | Flat lists of qualified batters and pitchers for the Stats page |
+| `GET` | `/api/rankings/history?league=` | Weekly standings rank per team: `{weeks, teams}` |
+| `GET` | `/api/rankings/top25` | Official D1 Top 25 poll (not league-scoped) |
+| `GET` | `/api/player-of-week?league=` | Best batter + pitcher of the previous Tue-Mon week |
+| `GET` | `/api/players-to-watch?league=` | Top batters + pitchers for the season to date, one per team |
+
+`/compare` is a client-side SPA route only (no `/api/compare`). League-scoped routes default to `league=sec`; most accept `asof`.

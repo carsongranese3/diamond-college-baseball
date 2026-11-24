@@ -1,5 +1,7 @@
 # CLAUDE.md
 
+> **Team:** carson-team — agent files in `~/.claude/teams/carson-team/`.
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## What this is
@@ -12,7 +14,7 @@ A college-baseball web app ("Diamond/SEC"): a Flask backend serving a single-pag
 .venv/bin/python app.py     # dev server at http://localhost:5050 (debug, threaded)
 ```
 
-Production entrypoint is gunicorn against `app:app` (see `requirements.txt`).
+Production entrypoint is gunicorn against `app:app` (see `requirements.txt`). `.github/workflows/deploy.yml` deploys to an Azure Web App on push to `main`. Set `DISABLE_PREWARM=1` to turn off the startup cache prewarm (`app.py`).
 
 There is **no build step** for the frontend: `static/index.html` loads React + Babel from a CDN and transpiles the `.jsx` files in the browser at runtime. Editing a `.jsx` file and reloading the page is the full dev loop. New view files must be added as `<script type="text/babel">` tags in `index.html`.
 
@@ -33,7 +35,7 @@ The app blends two upstreams with very different cost/quality:
 
 **The pattern throughout:** prefer the richer locally-saved stats.ncaa.org data when a game/team has been pulled, fall back to the live API otherwise. `local_data.py` reads the saved `Data/2026/` folders and returns game-detail / team-stats in the *same shapes* as `gamedetail.py` / `stats.py` so callers and the frontend need no special-casing (it returns `None` when nothing is saved → caller falls back to the API).
 
-The caches (`cache/`, `cache_ncaa_stats/`) and the `Data/2026/` data tree are large and excluded from VS Code indexing in `.vscode/settings.json`. Only `cache_ncaa_stats/` is gitignored; `cache/` and the `Data/2026/` tree are git-tracked.
+The caches (`cache/`, `cache_ncaa_stats/`) and the `Data/2026/` data tree are large and excluded from VS Code indexing in `.vscode/settings.json`. `cache_ncaa_stats/` is the only data directory that is gitignored (`.vscode/` is also ignored, so those exclusions are local); `cache/` and the `Data/2026/` tree are git-tracked.
 
 ## The `Data/2026/` data tree
 
@@ -46,7 +48,9 @@ Data/2026/<Conference>/<Team>/
     boxscore.json        line score (innings + R/H/E) for both teams
     player_stats.json    per-team batting/pitching/fielding lines
   stats/batting.json     season counting-stat totals, one row per player
-  stats/pitching.json    (rate stats like AVG/ERA/OPS are NOT stored — computed by readers)
+  stats/pitching.json
+  stats/fielding.json    (rate stats like AVG/ERA/OPS are NOT stored — computed by readers)
+  schedule_digest.json   per-game rows `local_data.schedules()` reads at request time (rebuilt by `update.py` / `local_data.rebuild_schedule_digest`)
   records.json           cumulative overall + conference record snapshot per week
   roster.txt             one player per line, by jersey #
 ```
@@ -58,7 +62,7 @@ Data/2026/<Conference>/<Team>/
 - `pull_game_stats.py` — save a team's full season, one folder per game, from stats.ncaa.org (boots Camoufox).
 - `pull_schedule.py` — write `schedule.json`: played games from the saved box-score folders, upcoming from the live scoreboard.
 - `update.py` — the incremental driver: refresh `schedule.json`, diff played-count vs saved folders, pull only the missing games.
-- `build_stats.py` / `build_roster.py` / `build_records.py` — aggregate the saved per-game files into `stats/`, `roster.txt`, `records.json`.
+- `build_stats.py` / `build_roster.py` / `build_records.py` — aggregate the saved per-game files into `stats/` (batting, pitching, fielding), `roster.txt`, `records.json`.
 - `backfill_boxscore.py` — add `info`/`decisions` to saved boxscores from cache only (no network).
 
 ## Backend layout (`app.py` + modules)
@@ -78,7 +82,10 @@ Supporting modules:
 
 `bootstrap.js` runs before React: it fetches `/api/bootstrap` and populates `window` globals the views read synchronously — `TEAMS`, `TEAM_BY_ID`, `SCHEDULES`, `LEAGUES`, `leagueTeams(league)`, `SEASON_PHASE`, `SUPER_REGIONALS`, `SEASON_CLOCK`, `CURRENT_LEAGUE`, etc. It also exposes lazy, memoized fetchers (`fetchTeam`, `fetchGame`, `fetchRoster`, `fetchPlayer`, `fetchConferenceLeaders`, …) since per-team stats and per-game box scores are expensive crawls fetched on demand.
 
-`app.jsx` is the SPA shell: top-bar league selector (NCAA/conference), view router, and theme (persisted in `localStorage`, applied pre-paint in `index.html` to avoid a flash). The other `.jsx` files are views (`standings`, `team`, `game`, `scores`, `player`, `compare`, `bracket`, `home`, `teamhome`, `home_regular`, `stage_page`). `components.jsx` holds shared pieces. All styling is in `styles.css`.
+`app.jsx` is the SPA shell: top-bar league selector (NCAA/conference), view router, and theme (persisted in `localStorage`, applied pre-paint in `index.html` to avoid a flash). The other `.jsx` files are views (`standings`, `team`, `game`, `scores`, `player`, `compare`, `bracket`, `home`, `teamhome`, `home_regular`, `stage_page`, `situational`, `stats`). `components.jsx` holds shared pieces. All styling is in `styles.css`.
+
+## Conventions
+- Large files (over ~2,000 lines or ~200KB: logs, data extracts, long specs): use the headroom skill to outline them first and read only the needed line ranges, never Read them whole.
 
 ## Where things live
 - Specs: `specs/`

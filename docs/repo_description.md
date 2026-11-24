@@ -17,19 +17,23 @@ The pattern throughout: **prefer the richer locally-saved stats.ncaa.org data wh
 
 | File | Lines | What it does |
 |---|---|---|
-| **`app.py`** | ~865 | The Flask app. In-process memoizer (`_memo`), all `/api/*` endpoints (bootstrap, team, game, player, standings, leaders, brackets, players-to-watch), the data-driven site-phase logic (`_live_phase`, `_cws_finals_started`), the NCAA-Top-25 logo resolver, and the SPA catch-all that serves `index.html`. |
+| **`app.py`** | ~1015 | The Flask app. In-process memoizer (`_memo`), all `/api/*` endpoints (bootstrap, team, game, player, standings, leaders, brackets, players-to-watch), the data-driven site-phase logic (`_live_phase`, `_cws_finals_started`), the NCAA-Top-25 logo resolver, and the SPA catch-all that serves `index.html`. |
 | **`ncaa.py`** | ~193 | Cached client for the henrygd NCAA API. `get()` caches every response to `cache/` (immutable data forever, recent data with a short TTL); typed helpers for `scoreboard`, `rpi`, `top25`, `bracket`, `boxscore`, `logo_url`, etc. Rate-limited and retrying. |
 | **`ncaa_stats.py`** | ~602 | Fetches stats.ncaa.org through a **Camoufox stealth browser** (defeats the Akamai 403). One long-lived browser thread fed by a queue; every page cached to `cache_ncaa_stats/`. Exposes a team's schedule, per-contest box score, decisions, play-by-play. Used only by the `scripts/` pipeline (dev env). |
 | **`season.py`** | ~453 | Discovers each conference's teams and builds schedules by crawling the date-based scoreboard and pivoting per team (ncaa.com has no per-team schedule). RPI supplies the canonical team list + records + RPI rank. Also builds the NCAA-tournament fill (`postseason_schedules`) and the phase windows' upcoming games. |
-| **`local_data.py`** | ~807 | Reads the locally-saved stats.ncaa.org data from the `Data/2026/` folders. Largest module: conference-aware folder lookup (`_find_dir`, `team_dirs`), per-game detail, season stat aggregation, weekly records — all produced in the *same shapes* as `gamedetail.py`/`stats.py` so the app needs no special-casing. Returns `None` when nothing is saved → caller falls back to the API. |
-| **`bracket.py`** | ~445 | Builds the front-end bracket data. `ncaa_bracket()` normalizes the henrygd 64-team championship bracket (regions, rounds, super-regional tree, CWS halves + finals). `conf_bracket()` reconstructs any conference tournament from its locally-saved games. |
+| **`local_data.py`** | ~1753 | Reads the locally-saved stats.ncaa.org data from the `Data/2026/` folders. Largest module: conference-aware folder lookup (`_find_dir`, `team_dirs`), per-game detail, season stat aggregation, weekly records — all produced in the *same shapes* as `gamedetail.py`/`stats.py` so the app needs no special-casing. Returns `None` when nothing is saved → caller falls back to the API. |
+| **`bracket.py`** | ~485 | Builds the front-end bracket data. `ncaa_bracket()` normalizes the henrygd 64-team championship bracket (regions, rounds, super-regional tree, CWS halves + finals). `conf_bracket()` reconstructs any conference tournament from its locally-saved games. |
 | **`phase.py`** | ~120 | "Where in the season are we?" Resolves regular / conference tournament / regionals / supers / CWS / CWS Finals from per-season **date windows** (the box-score text never names the NCAA round). `game_phase()` per game, `current_phase()` site-wide, `round_by_date()` for upcoming games. |
-| **`stats.py`** | ~207 | Aggregates a team's real season batting/pitching by summing every box score (each box score's block is per-game, not cumulative). |
+| **`stats.py`** | ~210 | Aggregates a team's real season batting/pitching by summing every box score (each box score's block is per-game, not cumulative). |
 | **`gamedetail.py`** | ~170 | Builds the game-detail payload (line score + batter/pitcher tables) from a real box score + game metadata. |
 | **`boxutil.py`** | ~118 | Shared box-score helpers: innings-pitched math, name/number formatting, rate-stat formatting. |
 | **`colors.py`** | ~91 | Curated team colors (band/ink) for Power-4 programs, keyed by ncaa.com seo slug. Seeds the band/accents on views built from the scoreboard crawl (which carries no colors). |
 | **`cities.py`** | ~48 | Host cities for NCAA regional/super-regional sites, keyed by seo (regionals are named for the host *city*, not the school). |
-| **`clock.py`** | ~60 | The effective "today": a per-request `?asof=YYYY-MM-DD` makes the whole site (incl. stats) behave as of that day; absent/invalid means today. Everything date-aware goes through `clock.today()`. |
+| **`stat_agg.py`** | ~397 | Per-game season aggregation used when `?asof=` precedes a team's last saved game, instead of the precomputed `stats/*.json`. |
+| **`clock.py`** | ~59 | The effective "today": a per-request `?asof=YYYY-MM-DD` makes the whole site (incl. stats) behave as of that day; absent/invalid means today. Everything date-aware goes through `clock.today()`. |
+
+### `tests/`
+`test_stats.py` — standard-library `unittest` suite (stat math, the `?asof=` rule, saved-data reconciliation); run in CI by `.github/workflows/tests.yml`.
 
 ### Requirements
 - **`requirements.txt`** — web-app deps only (Flask, gunicorn). The `.venv` that runs the server.
@@ -46,9 +50,9 @@ Generates the `Data/2026/` data tree from stats.ncaa.org.
 | **`update.py`** | The incremental driver. Refreshes each team's `schedule.json` from the live API, diffs played-count vs saved box-score folders, and pulls only the missing games (boots the stealth browser). Stops on the first Akamai block. Re-execs itself into `.venv-dev`. Run by hand to refresh data. |
 | **`pull_game_stats.py`** | Saves a team's full season, one folder per game, from stats.ncaa.org (box score + player stats + play-by-play). |
 | **`pull_schedule.py`** | Writes a team's full-season `schedule.json`: played games from saved box-score folders + scoreboard "recent finals" + upcoming from the scoreboard + bracket-scheduled postseason. Light deps (no browser). |
-| **`build_stats.py`** | Aggregates saved per-game box scores into `Data/2026/<Team>/stats/{batting,pitching}.json` (counting stats only; rates computed by readers). |
-| **`build_roster.py`** | Writes `Data/2026/<Team>/roster.txt` from the saved per-game player stats. |
-| **`build_records.py`** | Writes `Data/2026/<Team>/records.json` — cumulative overall + conference record snapshot per week (powers the standings-over-time graph). |
+| **`build_stats.py`** | Aggregates saved per-game box scores into `Data/2026/<Conf>/<Team>/stats/{batting,pitching,fielding}.json` (counting stats only; rates computed by readers). |
+| **`build_roster.py`** | Writes `Data/2026/<Conf>/<Team>/roster.txt` from the saved per-game player stats. |
+| **`build_records.py`** | Writes `Data/2026/<Conf>/<Team>/records.json` — cumulative overall + conference record snapshot per week (powers the standings-over-time graph). |
 | **`backfill_boxscore.py`** | Adds `info`/`decisions` fields to already-saved box scores from the local cache only (no network). |
 
 ---
@@ -100,7 +104,7 @@ Generates the `Data/2026/` data tree from stats.ncaa.org.
 |---|---|
 | **`.github/workflows/deploy.yml`** | CI: deploys to an Azure Web App on push to `main` (and manual dispatch). |
 | **`.vscode/settings.json`** | Pins the Python interpreter and excludes the huge generated folders from indexing/search. |
-| **`.gitignore`** | Ignores the venvs, `cache_ncaa_stats/`, `__pycache__`, `*.pyc`, `.DS_Store`, `.vscode/`. |
+| **`.gitignore`** | Ignores the venvs, `cache_ncaa_stats/`, `__pycache__`, `*.pyc`, `.DS_Store`, `.vscode/`, `.claude/agents/carson-team`, and machine-local `.claude/` files. |
 | **`CLAUDE.md`** | Guidance for Claude Code working in this repo (architecture + commands). |
 | **`docs/repo_description.md`** | This file. |
 
